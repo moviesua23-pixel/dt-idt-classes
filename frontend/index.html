@@ -1,4 +1,4 @@
-﻿﻿<!doctype html><html><head><meta charset="UTF-8">
+﻿﻿﻿<!doctype html><html><head><meta charset="UTF-8">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <title>Tax Study Studio</title>
 <meta name="claude:viewport-fit-sides" content="cover">
@@ -2841,7 +2841,7 @@ function vChapters(r){
    <div class="head"><div class="eyebrow rise" style="--i:1">Indirect Tax · Phase 2 Pipeline</div>
    <h1 class="rise" style="--i:2"><span>${s.name}</span> Syllabus</h1></div>
    <div class="empty rise" style="padding:48px 24px;max-width:580px;margin:32px auto;background:var(--surface);border:1px dashed var(--line);border-radius:20px;text-align:center">
-     <div style="font-size:2.8rem;margin-bottom:14px">ðŸ“‚</div>
+     <div style="font-size:2.8rem;margin-bottom:14px">📂</div>
      <b style="font-size:1.35rem;display:block;margin-bottom:10px">No Indirect Tax Question Bank Uploaded Yet</b>
      <p style="margin-bottom:24px;color:var(--ink-2);line-height:1.6">The pipeline has cataloged 25 chapters and extracted 10 questions for <b>Direct Tax</b> from <code>AIR1 DT Question Bank.pdf</code>.<br>To extract and view Indirect Tax chapters, upload the IDT Question Bank PDF in the Developer Portal.</p>
      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
@@ -2979,7 +2979,7 @@ function renderFlowchartHtml(q, p){
 
           ${s.formula_box ? `
             <div class="ppt-formula-box">
-              <div class="ppt-formula-tag">ðŸ§® STATUTORY COMPUTATIONAL FORMULA</div>
+              <div class="ppt-formula-tag">🧮 STATUTORY COMPUTATIONAL FORMULA</div>
               <div class="ppt-formula-text">${esc(s.formula_box.formula_text || '')}</div>
               ${s.formula_box.example_calc ? `<div class="ppt-formula-example"><span class="pfe-tag">WORKED EXAMPLE</span>${esc(s.formula_box.example_calc)}</div>` : ''}
             </div>
@@ -2996,15 +2996,15 @@ function renderFlowchartHtml(q, p){
         <div class="flow-node" data-t0="0" data-t1="7.5" id="fn-q9-1">
           <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
             <span class="flow-badge blue">Step 1 · Base Tax Rate</span>
-            <span class="flow-active-badge">â— EXPLAINING NOW</span>
+            <span class="flow-active-badge">● EXPLAINING NOW</span>
           </div>
-          <div class="flow-title">Domestic Co. Turnover â‰¤ ₹ 400 Cr</div>
-          <div class="flow-desc">Tax rate is <b>25%</b> if turnover in previous year â‰¤ ₹ 400 Cr. Otherwise standard rate of <b>30%</b> applies.</div>
+          <div class="flow-title">Domestic Co. Turnover ≤ ₹ 400 Cr</div>
+          <div class="flow-desc">Tax rate is <b>25%</b> if turnover in previous year ≤ ₹ 400 Cr. Otherwise standard rate of <b>30%</b> applies.</div>
         </div>
         <div class="flow-node" data-t0="7.5" data-t1="16.0" id="fn-q9-2">
           <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
             <span class="flow-badge gold">Step 2 · Surcharge Slabs</span>
-            <span class="flow-active-badge">â— EXPLAINING NOW</span>
+            <span class="flow-active-badge">● EXPLAINING NOW</span>
           </div>
           <div class="flow-title">Total Income > ₹ 1 Cr vs > ₹ 10 Cr</div>
           <div class="flow-desc">Surcharge is <b>7%</b> if TI > ₹ 1 Cr up to ₹ 10 Cr. Surcharge increases to <b>12%</b> if Total Income exceeds ₹ 10 Crores.</div>
@@ -3127,11 +3127,11 @@ function renderCardBodyContent(pt){
     out += `
       <div class="mm-trap-panel">
         <div class="mm-trap-row wrong">
-          <span class="mm-trap-badge wrong">âš ï¸ COMMON MISTAKE</span>
+          <span class="mm-trap-badge wrong">⚠️ COMMON MISTAKE</span>
           <span class="mm-trap-text">${highlightKeywords(pt.trap_data.mistake, pt.highlights)}</span>
         </div>
         <div class="mm-trap-row correct">
-          <span class="mm-trap-badge correct">âœ“ STATUTORY RULE</span>
+          <span class="mm-trap-badge correct">✓ STATUTORY RULE</span>
           <span class="mm-trap-text">${highlightKeywords(pt.trap_data.statutory_rule, pt.highlights)}</span>
         </div>
       </div>
@@ -3165,7 +3165,7 @@ function renderCardBodyContent(pt){
         </div>
         ${pt.example_calc.inputs ? `<div class="mm-example-inputs"><b>Assumptions:</b> ${highlightKeywords(pt.example_calc.inputs, pt.highlights)}</div>` : ''}
         <div class="mm-example-steps">
-          ${(pt.example_calc.steps || []).map(st => `<div class="mm-example-step-line"><span class="step-bullet">â–¸</span><span>${highlightKeywords(st, pt.highlights)}</span></div>`).join('')}
+          ${(pt.example_calc.steps || []).map(st => `<div class="mm-example-step-line"><span class="step-bullet">▸</span><span>${highlightKeywords(st, pt.highlights)}</span></div>`).join('')}
         </div>
       </div>
     `;
@@ -3344,7 +3344,7 @@ function renderTheaterModalHtml(q, p){
       <!-- Right: Direct Close Button -->
       <div class="vtb-right">
         <button id="vclose" class="vtb-close-btn" aria-label="Close presentation (Escape)" title="Close presentation (Escape)">
-          <span style="font-size:1.1rem;line-height:1">âœ•</span> Close Presentation
+          <span style="font-size:1.1rem;line-height:1">✕</span> Close Presentation
         </button>
       </div>
     </div>
@@ -3365,7 +3365,7 @@ function renderTheaterModalHtml(q, p){
       </div>
       <input type="range" class="vtd-seek" id="vtd-seek" min="0" max="1000" value="0" aria-label="Seek audio">
       <button id="vtd-speed" class="vtd-speed-pill" title="Toggle Playback Speed">1.0x</button>
-      <button id="vtd-close" class="vtd-close-pill" aria-label="Close presentation" title="Close presentation">âœ• Close</button>
+      <button id="vtd-close" class="vtd-close-pill" aria-label="Close presentation" title="Close presentation">✕ Close</button>
     </div>
   </div>
   `;
@@ -3433,7 +3433,7 @@ function vStudio(r){
           <h4>Voice-Synced Provision Mind Map</h4>
           <p>Follow each branch and its detailed points as they are explained.</p>
         </div>
-        <button class="tlc-btn" id="vtog-btn">â¤¢ Launch Fullscreen</button>
+        <button class="tlc-btn" id="vtog-btn">⤢ Launch Fullscreen</button>
       </div>
     </div>
 
@@ -4283,13 +4283,13 @@ function makePlayer(p, q){
         cardEl.className = `mm-infographic-card ${theme} ${isFull ? 'card-fullwidth' : ''} status-${pStatus}`;
         if(cTagEl){
           if(pStatus === "active" && cur < Number(pt.t0 || 0)){
-            cTagEl.textContent = "â†— NEXT POINT";
+            cTagEl.textContent = "→ NEXT POINT";
             cTagEl.className = "mm-card-live-strip tag-active";
           } else if(pStatus === "active"){
-            cTagEl.textContent = "â— EXPLAINING NOW";
+            cTagEl.textContent = "● EXPLAINING NOW";
             cTagEl.className = "mm-card-live-strip tag-active";
           } else if(pStatus === "done"){
-            cTagEl.textContent = "âœ“ Done";
+            cTagEl.textContent = "✓ Done";
             cTagEl.className = "mm-card-live-strip tag-done";
           } else if(pStatus === "reference"){
             cTagEl.textContent = "Reference";
@@ -4335,7 +4335,7 @@ function makePlayer(p, q){
   const liveText = $("#mm-live-text");
   if(liveText){
     if(st.activePoint && cur < Number(st.activePoint.t0 || 0)){
-      liveText.textContent = "à´…à´Ÿàµà´¤àµà´¤ à´ªàµ‹à´¯à´¿à´¨àµà´±à´¿à´²àµ‡à´•àµà´•àµ à´®à´¾à´±àµà´¨àµà´¨àµ”¦";
+      liveText.textContent = "അടുത്ത പോയിന്റിലേക്ക് മാറുന്നു...";
     } else if(st.activePoint && st.activePoint.voice_sync_text){
       liveText.textContent = st.activePoint.voice_sync_text;
     } else if(st.activeFlowStep && st.activeFlowStep.step){
@@ -4343,7 +4343,7 @@ function makePlayer(p, q){
     } else if(st.activeBranch && st.activeBranch.branch_title){
       liveText.textContent = `Explaining: ${st.activeBranch.branch_title}`;
     } else if(st.allMastered){
-      liveText.textContent = "âœ“ Complete Concept Tree Mastered!";
+      liveText.textContent = "✓ Complete Concept Tree Mastered!";
     } else {
       liveText.textContent = `§ ${esc(mm.doctrine || '')} · Spoken Malayalam Teacher Audio`;
     }
@@ -4361,7 +4361,7 @@ function makePlayer(p, q){
     } else if(st.activeBranch){
       vtdLabel.textContent = st.activeBranch.branch_title;
     } else if(st.allMastered){
-      vtdLabel.textContent = "âœ“ Concept Tree Complete";
+      vtdLabel.textContent = "✓ Concept Tree Complete";
     } else {
       vtdLabel.textContent = `§ ${mm.root?.badge || "Direct Tax"}`;
     }
