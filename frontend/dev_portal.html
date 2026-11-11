@@ -188,20 +188,58 @@
       <!-- Upload Panel -->
       <div class="panel">
         <h2 class="panel-title">📄 Upload Study Material PDFs</h2>
-        <p style="font-size: 0.86rem; color: var(--text-muted);">Select PDFs to store for cloud processing and sync to Google Drive & Sheets:</p>
+        <p style="font-size: 0.86rem; color: var(--text-muted);">Select PDFs to store in Google Drive for automated Gemini analysis & GitHub Actions pipeline:</p>
         
-        <div class="uploader-box" onclick="document.getElementById('file-dt').click()">
-          <span class="uploader-icon">📘</span>
-          <span class="uploader-text" id="txt-dt">Direct Tax (DT) PDF</span>
-          <span class="uploader-sub">Click to select PDF or drag and drop</span>
-          <input type="file" id="file-dt" accept="application/pdf" style="display:none" onchange="handleFileSelect(this, 'DT')">
+        <!-- DT Uploader Card -->
+        <div class="upload-card" style="border: 1px solid var(--border); border-radius: 12px; padding: 18px; background: var(--surface-2); display: flex; flex-direction: column; gap: 12px;">
+          <div style="display: flex; align-items: center; justify-content: space-between;">
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <span style="font-size: 1.8rem;">📘</span>
+              <div>
+                <div style="font-weight: 700; font-size: 1rem; color: var(--text);">Direct Tax (DT) PDF</div>
+                <div style="font-size: 0.78rem; color: var(--text-muted);">Target: Google Drive / DT/ folder</div>
+              </div>
+            </div>
+            <a href="https://drive.google.com/drive/folders/1WxVQYSmEMLkmVro8_2h-PpuR_xf6jdUK" target="_blank" class="badge-link" style="font-size:0.75rem; text-decoration:none; color:var(--primary); font-weight:600;">Open Folder ↗</a>
+          </div>
+
+          <div style="display: flex; align-items: center; gap: 10px; background: #FFF; border: 1px dashed #CBD5E1; border-radius: 8px; padding: 10px 14px;">
+            <input type="file" id="file-dt" accept="application/pdf" style="display:none" onchange="handleFileSelect(this, 'DT')">
+            <button type="button" class="btn btn-secondary" onclick="document.getElementById('file-dt').click()" style="padding: 7px 14px; font-size: 0.85rem; white-space: nowrap;">
+              📁 Choose DT PDF
+            </button>
+            <span id="txt-dt" style="font-size: 0.85rem; color: var(--text-muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; flex: 1;">No file chosen</span>
+          </div>
+
+          <button type="button" class="btn btn-primary" onclick="uploadPdfToDrive('DT')" id="btn-upload-dt" style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px; padding: 11px; font-weight: 700; font-size: 0.92rem;">
+            <span>⬆️</span> Upload DT PDF to Google Drive
+          </button>
         </div>
 
-        <div class="uploader-box" onclick="document.getElementById('file-idt').click()">
-          <span class="uploader-icon">📗</span>
-          <span class="uploader-text" id="txt-idt">Indirect Tax (IDT) PDF</span>
-          <span class="uploader-sub">Click to select PDF or drag and drop</span>
-          <input type="file" id="file-idt" accept="application/pdf" style="display:none" onchange="handleFileSelect(this, 'IDT')">
+        <!-- IDT Uploader Card -->
+        <div class="upload-card" style="border: 1px solid var(--border); border-radius: 12px; padding: 18px; background: var(--surface-2); display: flex; flex-direction: column; gap: 12px; margin-top: 6px;">
+          <div style="display: flex; align-items: center; justify-content: space-between;">
+            <div style="display: flex; align-items: center; gap: 10px;">
+              <span style="font-size: 1.8rem;">📗</span>
+              <div>
+                <div style="font-weight: 700; font-size: 1rem; color: var(--text);">Indirect Tax (IDT) PDF</div>
+                <div style="font-size: 0.78rem; color: var(--text-muted);">Target: Google Drive / IDT/ folder</div>
+              </div>
+            </div>
+            <a href="https://drive.google.com/drive/folders/1IocQtpcYXAmX7LWezv5AkxebDNiNI1GZ" target="_blank" class="badge-link" style="font-size:0.75rem; text-decoration:none; color:var(--primary); font-weight:600;">Open Folder ↗</a>
+          </div>
+
+          <div style="display: flex; align-items: center; gap: 10px; background: #FFF; border: 1px dashed #CBD5E1; border-radius: 8px; padding: 10px 14px;">
+            <input type="file" id="file-idt" accept="application/pdf" style="display:none" onchange="handleFileSelect(this, 'IDT')">
+            <button type="button" class="btn btn-secondary" onclick="document.getElementById('file-idt').click()" style="padding: 7px 14px; font-size: 0.85rem; white-space: nowrap;">
+              📁 Choose IDT PDF
+            </button>
+            <span id="txt-idt" style="font-size: 0.85rem; color: var(--text-muted); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; flex: 1;">No file chosen</span>
+          </div>
+
+          <button type="button" class="btn btn-primary" onclick="uploadPdfToDrive('IDT')" id="btn-upload-idt" style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 8px; padding: 11px; font-weight: 700; font-size: 0.92rem; background: #0D9488;">
+            <span>⬆️</span> Upload IDT PDF to Google Drive
+          </button>
         </div>
       </div>
 
@@ -299,9 +337,32 @@
       if (input.files && input.files[0]) {
         const file = input.files[0];
         const label = document.getElementById(subject === 'DT' ? 'txt-dt' : 'txt-idt');
-        label.textContent = `✓ Selected: ${file.name} (${(file.size / (1024*1024)).toFixed(1)} MB)`;
-        showToast(`Selected ${file.name} for ${subject}. Ready to sync to Google Drive!`);
+        const btn = document.getElementById(subject === 'DT' ? 'btn-upload-dt' : 'btn-upload-idt');
+        const sizeMb = (file.size / (1024*1024)).toFixed(1);
+        label.innerHTML = `<b>${file.name}</b> (${sizeMb} MB)`;
+        label.style.color = '#0F172A';
+        btn.innerHTML = `<span>⬆️</span> Upload <b>${file.name}</b> to Google Drive (${subject}/)`;
+        showToast(`Selected "${file.name}" for ${subject}. Click the Upload button to send to Google Drive!`);
       }
+    }
+
+    function uploadPdfToDrive(subject) {
+      const input = document.getElementById(subject === 'DT' ? 'file-dt' : 'file-idt');
+      const targetFolderUrl = subject === 'DT' 
+        ? 'https://drive.google.com/drive/folders/1WxVQYSmEMLkmVro8_2h-PpuR_xf6jdUK'
+        : 'https://drive.google.com/drive/folders/1IocQtpcYXAmX7LWezv5AkxebDNiNI1GZ';
+      
+      const fileName = input.files && input.files[0] ? input.files[0].name : null;
+
+      if (fileName) {
+        showToast(`📂 Opening Google Drive ${subject}/ folder... Drop "${fileName}" to upload!`);
+      } else {
+        showToast(`💡 Opening Google Drive ${subject}/ folder... You can upload your PDF directly!`);
+      }
+
+      setTimeout(() => {
+        window.open(targetFolderUrl, '_blank');
+      }, 500);
     }
 
     async function loadSheetData() {
