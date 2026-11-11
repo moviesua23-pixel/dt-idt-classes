@@ -1,0 +1,1974 @@
+{
+  "q1": {
+    "doctrine": "Bhargava: Fee to Self-Created Trust",
+    "root": {
+      "id": "root",
+      "title": "Bhargava: Fee to Self-Created Trust",
+      "badge": "Section 4 · Section 28",
+      "t1": 13.128
+    },
+    "total_duration": 93.504,
+    "branches": [
+      {
+        "branch_id": "q1-branch-1",
+        "branch_title": "Facts and question",
+        "number": "1.1",
+        "badge": "Facts and question",
+        "icon": "scales",
+        "t0": 0.0,
+        "t1": 24.48,
+        "points": [
+          {
+            "id": "q1-beat-1-0",
+            "title": "Professional fee and trust",
+            "number": "1.1.1",
+            "badge": "Rule",
+            "body": [
+              "Bhargava earns ₹5 lakh for Supreme Court work.",
+              "He creates the charitable trust himself after receiving the fee."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 0.0,
+            "t1": 13.128,
+            "voice_sync_text": "ഇപ്പോൾ ചോദ്യം ഒന്ന് നോക്കാം. ഭാർഗവയ്ക്ക് ലഭിച്ച അഞ്ച് ലക്ഷം രൂപയുടെ professional fee, അദ്ദേഹം തന്നെ പിന്നീട് trust-ലേക്ക് മാറ്റി. ഇത് diversion ആണോ application ആണോ എന്നതാണ് ചോദ്യം.",
+            "icon": "check",
+            "highlights": []
+          },
+          {
+            "id": "q1-beat-2-0",
+            "title": "Who created the obligation?",
+            "number": "1.1.2",
+            "badge": "Rule",
+            "body": [
+              "The client paid Bhargava; the client did not create or own the trust.",
+              "No binding trust obligation was imposed on Bhargava by the client."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 13.248,
+            "t1": 24.48,
+            "voice_sync_text": "ക്ലയന്റ് trust സൃഷ്ടിച്ചിട്ടില്ല, പണം നേരിട്ട് trust-ന് നൽകിയതുമില്ല. ഭാർഗവയ്ക്കു മേൽ നിയമപരമായി ബാധകമായ trust obligation ക്ലയന്റ് ഏർപ്പെടുത്തിയിട്ടില്ല.",
+            "icon": "check",
+            "highlights": []
+          }
+        ],
+        "flow_summary": []
+      },
+      {
+        "branch_id": "q1-branch-2",
+        "branch_title": "Legal test",
+        "number": "1.2",
+        "badge": "Legal test",
+        "icon": "scales",
+        "t0": 24.6,
+        "t1": 47.472,
+        "points": [
+          {
+            "id": "q1-beat-3-0",
+            "title": "Diversion at source",
+            "number": "1.2.1",
+            "badge": "Rule",
+            "body": [
+              "A prior enforceable obligation must take income away before it reaches the assessee.",
+              "If the assessee first earns and owns it, later use is application."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 24.6,
+            "t1": 35.856,
+            "voice_sync_text": "Diversion ഉണ്ടാകാൻ വരുമാനം ലഭിക്കുന്നതിന് മുമ്പ് source-ൽ തന്നെ ബാധകമായ നിയമബാധ്യത വേണം. ആദ്യം വരുമാനം വ്യക്തിക്ക് ലഭിച്ചാൽ പിന്നീടുള്ള വിനിയോഗം application ആണ്.",
+            "icon": "check",
+            "highlights": []
+          },
+          {
+            "id": "q1-beat-4-0",
+            "title": "Apply the title test",
+            "number": "1.2.2",
+            "badge": "Rule",
+            "body": [
+              "Ask whether Bhargava ever acquired the professional fee.",
+              "Here the fee became his professional income before he settled it on the trust."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 35.976,
+            "t1": 47.472,
+            "voice_sync_text": "ഭാർഗവയ്ക്ക് ഫീസിന്റെ ഉടമസ്ഥാവകാശം ആദ്യം ലഭിച്ചോ എന്ന് പരിശോധിക്കാം. ഇവിടെ ഫീസ് ആദ്യം അദ്ദേഹത്തിന്റെ professional income ആയി; അതിനുശേഷമാണ് trust-ലേക്ക് നൽകിയത്.",
+            "icon": "check",
+            "highlights": []
+          }
+        ],
+        "flow_summary": []
+      },
+      {
+        "branch_id": "q1-branch-3",
+        "branch_title": "Apply to facts",
+        "number": "1.3",
+        "badge": "Apply to facts",
+        "icon": "scales",
+        "t0": 47.592,
+        "t1": 68.76,
+        "points": [
+          {
+            "id": "q1-beat-5-0",
+            "title": "Self-created trust",
+            "number": "1.3.1",
+            "badge": "Rule",
+            "body": [
+              "Bhargava executed the trust deed himself.",
+              "The charity arrangement was his own decision, not an overriding title."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 47.592,
+            "t1": 58.848,
+            "voice_sync_text": "Trust deed ഭാർഗവ തന്നെയാണ് തയ്യാറാക്കി നടപ്പാക്കിയത്. അതിനാൽ ഇത് വരുമാനത്തിന്റെ source-നെ ബാധിക്കുന്ന പുറംനിയമബാധ്യതയല്ല; അദ്ദേഹത്തിന്റെ സ്വന്തം തീരുമാനമാണ്.",
+            "icon": "check",
+            "highlights": []
+          },
+          {
+            "id": "q1-beat-6-0",
+            "title": "No diversion before receipt",
+            "number": "1.3.2",
+            "badge": "Rule",
+            "body": [
+              "Nothing diverted the ₹5 lakh before it accrued to Bhargava.",
+              "The full fee first reached him as professional income."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 58.968,
+            "t1": 68.76,
+            "voice_sync_text": "അഞ്ച് ലക്ഷം രൂപ ഭാർഗവയ്ക്ക് ലഭിക്കുന്നതിന് മുമ്പ് അത് trust-ലേക്ക് മാറ്റിയിട്ടില്ല. മുഴുവൻ ഫീസും ആദ്യം അദ്ദേഹത്തിന് professional income ആയി ലഭിച്ചു.",
+            "icon": "check",
+            "highlights": []
+          }
+        ],
+        "flow_summary": []
+      },
+      {
+        "branch_id": "q1-branch-4",
+        "branch_title": "Tax treatment",
+        "number": "1.4",
+        "badge": "Tax treatment",
+        "icon": "scales",
+        "t0": 68.88,
+        "t1": 93.504,
+        "points": [
+          {
+            "id": "q1-beat-7-0",
+            "title": "Application of income",
+            "number": "1.4.1",
+            "badge": "Rule",
+            "body": [
+              "The later transfer to the trust is application of income.",
+              "Using income for charity does not erase the income already earned."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 68.88,
+            "t1": 78.984,
+            "voice_sync_text": "അതിനാൽ trust-ലേക്കുള്ള പിന്നീട് നടത്തിയ കൈമാറ്റം application of income ആണ്. charity-ക്കായി ചെലവഴിച്ചതുകൊണ്ട് ഇതിനകം നേടിയ വരുമാനം ഇല്ലാതാകില്ല.",
+            "icon": "check",
+            "highlights": []
+          },
+          {
+            "id": "q1-beat-8-0",
+            "title": "Taxable under Section 28",
+            "number": "1.4.2",
+            "badge": "Rule",
+            "body": [
+              "Include the ₹5 lakh professional fee in taxable professional income.",
+              "Conclusion: assessable under Profits and Gains of Business or Profession."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 79.104,
+            "t1": 93.504,
+            "voice_sync_text": "അവസാനമായി, അഞ്ച് ലക്ഷം രൂപയുടെ fee ഭാർഗവയുടെ professional income-ൽ ഉൾപ്പെടുത്തണം. Section 28 പ്രകാരം Profits and Gains of Business or Profession എന്ന തലക്കെട്ടിൽ ഇത് taxable ആണ്.",
+            "icon": "check",
+            "highlights": []
+          }
+        ],
+        "flow_summary": []
+      }
+    ]
+  },
+  "q2": {
+    "doctrine": "XYZ Ltd: Purchase-Deed Charge",
+    "root": {
+      "id": "root",
+      "title": "XYZ Ltd: Purchase-Deed Charge",
+      "badge": "Section 4",
+      "t1": 13.224
+    },
+    "total_duration": 92.424,
+    "branches": [
+      {
+        "branch_id": "q2-branch-1",
+        "branch_title": "Facts",
+        "number": "1.1",
+        "badge": "Facts",
+        "icon": "scales",
+        "t0": 0.0,
+        "t1": 24.096,
+        "points": [
+          {
+            "id": "q2-beat-1-0",
+            "title": "Business takeover",
+            "number": "1.1.1",
+            "badge": "Rule",
+            "body": [
+              "XYZ Ltd buys a running sole-proprietor business through a sale deed.",
+              "It agrees to pay the former owner’s wife ₹15,000 each year."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 0.0,
+            "t1": 13.224,
+            "voice_sync_text": "ഇപ്പോൾ XYZ Limited-ന്റെ business takeover നോക്കാം. ഒരു running business sale deed വഴി വാങ്ങുമ്പോൾ, മുൻ ഉടമയുടെ ഭാര്യയ്ക്ക് വർഷം പതിനയ്യായിരം രൂപ നൽകാമെന്ന് കമ്പനി സമ്മതിച്ചു.",
+            "icon": "check",
+            "highlights": []
+          },
+          {
+            "id": "q2-beat-2-0",
+            "title": "Condition tied to purchase",
+            "number": "1.1.2",
+            "badge": "Rule",
+            "body": [
+              "The deed makes payment a condition of purchasing the business.",
+              "The charge is specified against XYZ’s net profits."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 13.344,
+            "t1": 24.096,
+            "voice_sync_text": "ഈ payment business വാങ്ങുന്നതിനുള്ള sale deed-ിലെ നിബന്ധനയാണ്. തുക കമ്പനിയുടെ net profits-ൽ charge ചെയ്തിട്ടുണ്ടെന്നും deed വ്യക്തമാക്കുന്നു.",
+            "icon": "check",
+            "highlights": []
+          }
+        ],
+        "flow_summary": []
+      },
+      {
+        "branch_id": "q2-branch-2",
+        "branch_title": "Legal test",
+        "number": "1.2",
+        "badge": "Legal test",
+        "icon": "scales",
+        "t0": 24.216,
+        "t1": 48.888,
+        "points": [
+          {
+            "id": "q2-beat-3-0",
+            "title": "Source versus later use",
+            "number": "1.2.1",
+            "badge": "Rule",
+            "body": [
+              "Diversion: obligation is attached to the income-producing source.",
+              "Application: income accrues first, then the assessee spends it."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 24.216,
+            "t1": 34.248,
+            "voice_sync_text": "ഇവിടെ പരിശോധിക്കേണ്ടത് obligation വരുമാനത്തിന്റെ source-നോടാണോ ബന്ധിപ്പിച്ചിരിക്കുന്നത്, അല്ലെങ്കിൽ വരുമാനം ലഭിച്ച ശേഷം ചെലവാക്കുന്നതാണോ എന്നതാണ്.",
+            "icon": "check",
+            "highlights": []
+          },
+          {
+            "id": "q2-beat-4-0",
+            "title": "Jit & Pal X-Rays test",
+            "number": "1.2.2",
+            "badge": "Rule",
+            "body": [
+              "Was the charge an integral term of the purchase deed? Yes.",
+              "Does it attach to the acquired business source? Yes."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 34.368,
+            "t1": 48.888,
+            "voice_sync_text": "Jit and Pal X-Rays കേസിലെ പരിശോധന പ്രയോഗിക്കാം: charge purchase deed-ിന്റെ അവിഭാജ്യ നിബന്ധനയാണോ? ആണ്. വാങ്ങിയ business എന്ന source-നോട് നേരിട്ട് ബന്ധമുണ്ടോ? ഉണ്ട്.",
+            "icon": "check",
+            "highlights": []
+          }
+        ],
+        "flow_summary": []
+      },
+      {
+        "branch_id": "q2-branch-3",
+        "branch_title": "Apply to facts",
+        "number": "1.3",
+        "badge": "Apply to facts",
+        "icon": "scales",
+        "t0": 49.008,
+        "t1": 69.168,
+        "points": [
+          {
+            "id": "q2-beat-5-0",
+            "title": "Obligation travels with business",
+            "number": "1.3.1",
+            "badge": "Rule",
+            "body": [
+              "XYZ accepted the charge to acquire the going concern.",
+              "The obligation existed before profits arose under XYZ’s ownership."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 49.008,
+            "t1": 60.048,
+            "voice_sync_text": "പ്രവർത്തിക്കുന്ന business വാങ്ങാൻ XYZ ഈ ബാധ്യത സ്വീകരിച്ചു. XYZ-യുടെ ഉടമസ്ഥതയിൽ profits ഉണ്ടാകുന്നതിന് മുമ്പേ obligation നിലവിലുണ്ടായിരുന്നു.",
+            "icon": "check",
+            "highlights": []
+          },
+          {
+            "id": "q2-beat-6-0",
+            "title": "Not a voluntary profit use",
+            "number": "1.3.2",
+            "badge": "Rule",
+            "body": [
+              "Payment is not a later personal or voluntary disposal of earned profits.",
+              "The deed limits the company’s title at the source."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 60.168,
+            "t1": 69.168,
+            "voice_sync_text": "നേടിയ profits കമ്പനി പിന്നീട് സ്വമേധയാ മറ്റൊരാൾക്ക് നൽകുന്നതല്ല ഇത്. deed തന്നെ source-ൽ കമ്പനിയുടെ അവകാശത്തെ ബാധിക്കുന്നു.",
+            "icon": "check",
+            "highlights": []
+          }
+        ],
+        "flow_summary": []
+      },
+      {
+        "branch_id": "q2-branch-4",
+        "branch_title": "Tax treatment",
+        "number": "1.4",
+        "badge": "Tax treatment",
+        "icon": "scales",
+        "t0": 69.288,
+        "t1": 92.424,
+        "points": [
+          {
+            "id": "q2-beat-7-0",
+            "title": "Diversion by overriding charge",
+            "number": "1.4.1",
+            "badge": "Rule",
+            "body": [
+              "The ₹15,000 charge is diverted from the source under the deed.",
+              "It is not merely an application of XYZ’s profits."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 69.288,
+            "t1": 80.088,
+            "voice_sync_text": "അതിനാൽ deed പ്രകാരമുള്ള പതിനയ്യായിരം രൂപ source-ൽ നിന്നുള്ള diversion ആണ്. ഇത് XYZ-യുടെ profits ലഭിച്ചശേഷമുള്ള സാധാരണ application അല്ല.",
+            "icon": "check",
+            "highlights": []
+          },
+          {
+            "id": "q2-beat-8-0",
+            "title": "Apply the case principle",
+            "number": "1.4.2",
+            "badge": "Rule",
+            "body": [
+              "Jit & Pal X-Rays supports diversion where the purchase deed creates the source-linked charge.",
+              "Conclusion: diversion of income by overriding charge."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 80.208,
+            "t1": 92.424,
+            "voice_sync_text": "Jit and Pal X-Rays വിധി, purchase deed വഴി source-നോട് ബന്ധിപ്പിച്ച charge diversion ആണെന്ന് പിന്തുണയ്ക്കുന്നു. അതിനാൽ ഇത് overriding charge മുഖേനയുള്ള diversion ആണ്.",
+            "icon": "check",
+            "highlights": []
+          }
+        ],
+        "flow_summary": []
+      }
+    ]
+  },
+  "q3": {
+    "doctrine": "MKG Agency: Profit Share to Mother",
+    "root": {
+      "id": "root",
+      "title": "MKG Agency: Profit Share to Mother",
+      "badge": "Section 4",
+      "t1": 10.944
+    },
+    "total_duration": 92.592,
+    "branches": [
+      {
+        "branch_id": "q3-branch-1",
+        "branch_title": "Facts",
+        "number": "1.1",
+        "badge": "Facts",
+        "icon": "scales",
+        "t0": 0.0,
+        "t1": 25.56,
+        "points": [
+          {
+            "id": "q3-beat-1-0",
+            "title": "Partnership deed",
+            "number": "1.1.1",
+            "badge": "Rule",
+            "body": [
+              "MKG Agency was a father and three sons partnership.",
+              "The deed required 20% of profits to be paid to the mother after the father’s death."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 0.0,
+            "t1": 10.944,
+            "voice_sync_text": "MKG Agency-യിൽ അച്ഛനും മൂന്ന് മക്കളുമാണ് പങ്കാളികൾ. അച്ഛന്റെ മരണശേഷം profits-ന്റെ ഇരുപത് ശതമാനം അമ്മയ്ക്ക് നൽകണമെന്ന് partnership deed പറയുന്നു.",
+            "icon": "check",
+            "highlights": []
+          },
+          {
+            "id": "q3-beat-2-0",
+            "title": "Payment in the year",
+            "number": "1.1.2",
+            "badge": "Rule",
+            "body": [
+              "Father died in March 2025; sons continued the firm.",
+              "In P.Y. 2025–26 the firm paid ₹1 lakh, equal to 20% of profits."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 11.064,
+            "t1": 25.56,
+            "voice_sync_text": "അച്ഛൻ 2025 മാർച്ചിൽ മരിച്ചു; മക്കൾ business തുടർന്നു. 2025–26 previous year-ൽ profits-ന്റെ ഇരുപത് ശതമാനമായ ഒരു ലക്ഷം രൂപ firm അമ്മയ്ക്ക് നൽകി.",
+            "icon": "check",
+            "highlights": []
+          }
+        ],
+        "flow_summary": []
+      },
+      {
+        "branch_id": "q3-branch-2",
+        "branch_title": "Legal test",
+        "number": "1.2",
+        "badge": "Legal test",
+        "icon": "scales",
+        "t0": 25.68,
+        "t1": 44.928,
+        "points": [
+          {
+            "id": "q3-beat-3-0",
+            "title": "Deed creates prior title",
+            "number": "1.2.1",
+            "badge": "Rule",
+            "body": [
+              "The payment obligation is written into the partnership deed.",
+              "It applies when profits arise after the father’s death."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 25.68,
+            "t1": 35.784,
+            "voice_sync_text": "Payment obligation partnership deed-ിൽ തന്നെയുണ്ട്. അച്ഛന്റെ മരണശേഷം profits ഉണ്ടാകുമ്പോൾ തന്നെ ആ നിബന്ധന പ്രവർത്തിക്കുന്നു.",
+            "icon": "check",
+            "highlights": []
+          },
+          {
+            "id": "q3-beat-4-0",
+            "title": "Identify who owns the share",
+            "number": "1.2.2",
+            "badge": "Rule",
+            "body": [
+              "The mother has an overriding right to the specified 20% share.",
+              "The firm does not receive that portion for its own beneficial use."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 35.904,
+            "t1": 44.928,
+            "voice_sync_text": "നിശ്ചയിച്ച ഇരുപത് ശതമാനത്തിൽ അമ്മയ്ക്കാണ് overriding right. ആ ഭാഗം firm-ന്റെ സ്വന്തം ഉപയോഗത്തിനുള്ള വരുമാനമായി ലഭിക്കുന്നതല്ല.",
+            "icon": "check",
+            "highlights": []
+          }
+        ],
+        "flow_summary": []
+      },
+      {
+        "branch_id": "q3-branch-3",
+        "branch_title": "Apply to facts",
+        "number": "1.3",
+        "badge": "Apply to facts",
+        "icon": "scales",
+        "t0": 45.048,
+        "t1": 66.984,
+        "points": [
+          {
+            "id": "q3-beat-5-0",
+            "title": "Diversion at source",
+            "number": "1.3.1",
+            "badge": "Rule",
+            "body": [
+              "The deed charge attaches to the profit source.",
+              "The firm receives or handles the amount for the mother under her superior title."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 45.048,
+            "t1": 55.32,
+            "voice_sync_text": "Deed-ിലെ charge profits എന്ന source-നോട് ചേർന്നിരിക്കുന്നു. അമ്മയുടെ മെച്ചപ്പെട്ട അവകാശപ്രകാരം firm ആ തുക കൈകാര്യം ചെയ്യുന്നതാണ്.",
+            "icon": "check",
+            "highlights": []
+          },
+          {
+            "id": "q3-beat-6-0",
+            "title": "Not a deduction claim",
+            "number": "1.3.2",
+            "badge": "Rule",
+            "body": [
+              "Treat the ₹1 lakh as excluded from the firm’s income.",
+              "The answer is source diversion, not a post-accrual expense deduction."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 55.44,
+            "t1": 66.984,
+            "voice_sync_text": "ഒരു ലക്ഷം രൂപയെ firm-ന്റെ വരുമാനത്തിൽ നിന്ന് ഒഴിവാക്കുന്നതാണ് ശരിയായ സമീപനം. ഇത് വരുമാനം ലഭിച്ച ശേഷമുള്ള expense deduction അല്ല; source-ൽ diversion ആണ്.",
+            "icon": "check",
+            "highlights": []
+          }
+        ],
+        "flow_summary": []
+      },
+      {
+        "branch_id": "q3-branch-4",
+        "branch_title": "Authority",
+        "number": "1.4",
+        "badge": "Authority",
+        "icon": "scales",
+        "t0": 67.104,
+        "t1": 92.592,
+        "points": [
+          {
+            "id": "q3-beat-7-0",
+            "title": "Nariman B. Bharucha & Sons",
+            "number": "1.4.1",
+            "badge": "Rule",
+            "body": [
+              "The question-bank answer relies on CIT v. Nariman B. Bharucha & Sons.",
+              "The case supports diversion under a deed-based overriding title."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 67.104,
+            "t1": 81.144,
+            "voice_sync_text": "ചോദ്യത്തിന്റെ മാതൃകാ ഉത്തരത്തിൽ CIT v. Nariman B. Bharucha and Sons എന്ന വിധിയാണ് ആശ്രയിക്കുന്നത്. deed മുഖേനയുള്ള overriding title diversion ആകാമെന്ന തത്വം അത് പിന്തുണയ്ക്കുന്നു.",
+            "icon": "check",
+            "highlights": []
+          },
+          {
+            "id": "q3-beat-8-0",
+            "title": "Exclude ₹1 lakh",
+            "number": "1.4.2",
+            "badge": "Rule",
+            "body": [
+              "The firm’s claim is correct in substance as exclusion from its income.",
+              "Conclusion: ₹1 lakh is diverted to the mother and is not the firm’s income."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 81.264,
+            "t1": 92.592,
+            "voice_sync_text": "അതിനാൽ firm-ന്റെ വാദം തത്വത്തിൽ ശരിയാണ്; ഒരു ലക്ഷം രൂപ വരുമാനത്തിൽ നിന്ന് ഒഴിവാക്കണം. അത് അമ്മയിലേക്കുള്ള diversion ആണ്, firm-ന്റെ സ്വന്തം income അല്ല.",
+            "icon": "check",
+            "highlights": []
+          }
+        ],
+        "flow_summary": []
+      }
+    ]
+  },
+  "q4": {
+    "doctrine": "Old-Regime Tax: Age-Based Slabs",
+    "root": {
+      "id": "root",
+      "title": "Old-Regime Tax: Age-Based Slabs",
+      "badge": "Section 4 · Section 115BAC(6) · Annual Finance Act (First Schedule, Part I)",
+      "t1": 14.784
+    },
+    "total_duration": 107.904,
+    "branches": [
+      {
+        "branch_id": "q4-branch-1",
+        "branch_title": "Question setup",
+        "number": "1.1",
+        "badge": "Question setup",
+        "icon": "scales",
+        "t0": 0.0,
+        "t1": 27.24,
+        "points": [
+          {
+            "id": "q4-beat-1-0",
+            "title": "Income and regime choice",
+            "number": "1.1.1",
+            "badge": "Rule",
+            "body": [
+              "Total income: ₹16,00,000 from house property and FD interest.",
+              "Arjun opts out of the default regime; compare ages 52, 64 and 83."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 0.0,
+            "t1": 14.784,
+            "voice_sync_text": "അർജുന്റെ മൊത്തവരുമാനം പതിനാറ് ലക്ഷം രൂപയാണ്; house property-യും FD interest-ഉം ഉൾപ്പെടുന്നു. Default regime-ൽ നിന്ന് മാറി പഴയ regime തിരഞ്ഞെടുക്കുന്നു. മൂന്ന് പ്രായങ്ങൾക്കുള്ള tax താരതമ്യം ചെയ്യാം.",
+            "icon": "check",
+            "highlights": []
+          },
+          {
+            "id": "q4-beat-2-0",
+            "title": "Basic exemption by age",
+            "number": "1.1.2",
+            "badge": "Rule",
+            "body": [
+              "Age 52: first ₹2,50,000 is nil.",
+              "Age 64: first ₹3,00,000 is nil; age 83: first ₹5,00,000 is nil."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 14.904,
+            "t1": 27.24,
+            "voice_sync_text": "പ്രായം അനുസരിച്ച് basic exemption മാറുന്നു: 52 വയസ്സിൽ രണ്ടര ലക്ഷം, 64 വയസ്സിൽ മൂന്ന് ലക്ഷം, 83 വയസ്സിൽ അഞ്ച് ലക്ഷം രൂപ വരെ നികുതിയില്ല.",
+            "icon": "check",
+            "highlights": []
+          }
+        ],
+        "flow_summary": []
+      },
+      {
+        "branch_id": "q4-branch-2",
+        "branch_title": "Applicable slabs",
+        "number": "1.2",
+        "badge": "Applicable slabs",
+        "icon": "scales",
+        "t0": 27.36,
+        "t1": 53.256,
+        "points": [
+          {
+            "id": "q4-beat-3-0",
+            "title": "Old-regime rates used",
+            "number": "1.2.1",
+            "badge": "Rule",
+            "body": [
+              "5% applies to the next slab up to ₹5 lakh, subject to age exemption.",
+              "20% applies from ₹5–10 lakh; 30% applies above ₹10 lakh."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 27.36,
+            "t1": 39.744,
+            "voice_sync_text": "കണക്കിൽ അഞ്ച് ലക്ഷം രൂപവരെ ബാധകമായ ഭാഗത്തിന് അഞ്ച് ശതമാനം, അഞ്ച് മുതൽ പത്ത് ലക്ഷം വരെ ഇരുപത് ശതമാനം, പത്ത് ലക്ഷത്തിന് മുകളിലെ തുകയ്ക്ക് മുപ്പത് ശതമാനം നിരക്കാണ്.",
+            "icon": "check",
+            "highlights": []
+          },
+          {
+            "id": "q4-beat-4-0",
+            "title": "Age 52 calculation",
+            "number": "1.2.2",
+            "badge": "Table",
+            "body": [
+              "Tax before cess: ₹12,500 + ₹1,00,000 + ₹1,80,000 = ₹2,92,500.",
+              "4% cess: ₹11,700; final tax: ₹3,04,200."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 39.864,
+            "t1": 53.256,
+            "voice_sync_text": "52 വയസ്സിൽ cess-നു മുമ്പുള്ള tax രണ്ട് ലക്ഷം തൊണ്ണൂറ്റിരണ്ടായിരത്തി അഞ്ഞൂറ്. 4% cess പതിനൊന്നായിരത്തി എഴുനൂറ് ചേർത്താൽ final tax ₹3,04,200.",
+            "icon": "check",
+            "highlights": []
+          }
+        ],
+        "flow_summary": []
+      },
+      {
+        "branch_id": "q4-branch-3",
+        "branch_title": "Compute tax",
+        "number": "1.3",
+        "badge": "Compute tax",
+        "icon": "scales",
+        "t0": 53.376,
+        "t1": 77.04,
+        "points": [
+          {
+            "id": "q4-beat-5-0",
+            "title": "Age 64 calculation",
+            "number": "1.3.1",
+            "badge": "Table",
+            "body": [
+              "Tax before cess: ₹10,000 + ₹1,00,000 + ₹1,80,000 = ₹2,90,000.",
+              "4% cess: ₹11,600; final tax: ₹3,01,600."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 53.376,
+            "t1": 64.416,
+            "voice_sync_text": "64 വയസ്സിൽ tax രണ്ട് ലക്ഷം തൊണ്ണൂറായിരം. അതിന്റെ 4% cess പതിനൊന്നായിരത്തി അറുനൂറ്; ആകെ tax ₹3,01,600.",
+            "icon": "check",
+            "highlights": []
+          },
+          {
+            "id": "q4-beat-6-0",
+            "title": "Age 83 calculation",
+            "number": "1.3.2",
+            "badge": "Table",
+            "body": [
+              "Tax before cess: ₹1,00,000 + ₹1,80,000 = ₹2,80,000.",
+              "4% cess: ₹11,200; final tax: ₹2,91,200."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 64.536,
+            "t1": 77.04,
+            "voice_sync_text": "83 വയസ്സിൽ അഞ്ച് ലക്ഷം വരെ exemption ഉള്ളതിനാൽ tax രണ്ട് ലക്ഷം എൺപതിനായിരം. cess പതിനൊന്നായിരത്തി ഇരുനൂറ് ചേർത്ത് tax ₹2,91,200.",
+            "icon": "check",
+            "highlights": []
+          }
+        ],
+        "flow_summary": []
+      },
+      {
+        "branch_id": "q4-branch-4",
+        "branch_title": "Compare results",
+        "number": "1.4",
+        "badge": "Compare results",
+        "icon": "scales",
+        "t0": 77.16,
+        "t1": 107.904,
+        "points": [
+          {
+            "id": "q4-beat-7-0",
+            "title": "Age changes exemption",
+            "number": "1.4.1",
+            "badge": "Rule",
+            "body": [
+              "Higher age raises the basic exemption limit.",
+              "The 30% tax on income above ₹10 lakh is common to all three calculations."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 77.16,
+            "t1": 88.008,
+            "voice_sync_text": "പ്രായം കൂടുമ്പോൾ exemption limit ഉയരുന്നു. എന്നാൽ പത്ത് ലക്ഷത്തിന് മുകളിലുള്ള ആറു ലക്ഷം രൂപയ്ക്കുള്ള മുപ്പത് ശതമാനം tax മൂന്നുപേർക്കും ഒരുപോലെയാണ്.",
+            "icon": "check",
+            "highlights": []
+          },
+          {
+            "id": "q4-beat-8-0",
+            "title": "Final liability summary",
+            "number": "1.4.2",
+            "badge": "Rule",
+            "body": [
+              "Age 52: ₹3,04,200; age 64: ₹3,01,600.",
+              "Age 83: ₹2,91,200, including 4% cess."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 88.128,
+            "t1": 107.904,
+            "voice_sync_text": "ചുരുക്കത്തിൽ, 52 വയസ്സിൽ ₹3,04,200; 64 വയസ്സിൽ ₹3,01,600; 83 വയസ്സിൽ ₹2,91,200 ആണ് final tax liability. ഈ തുകകളിൽ 4% cess ഉൾപ്പെടുന്നു.",
+            "icon": "check",
+            "highlights": []
+          }
+        ],
+        "flow_summary": []
+      }
+    ]
+  },
+  "q5": {
+    "doctrine": "Section 87A Rebate: Old Regime",
+    "root": {
+      "id": "root",
+      "title": "Section 87A Rebate: Old Regime",
+      "badge": "Section 87A · Section 115BAC(6)",
+      "t1": 10.56
+    },
+    "total_duration": 89.496,
+    "branches": [
+      {
+        "branch_id": "q5-branch-1",
+        "branch_title": "Question setup",
+        "number": "1.1",
+        "badge": "Question setup",
+        "icon": "scales",
+        "t0": 0.0,
+        "t1": 22.728,
+        "points": [
+          {
+            "id": "q5-beat-1-0",
+            "title": "Eligibility facts",
+            "number": "1.1.1",
+            "badge": "Rule",
+            "body": [
+              "Manish is 47 and resident in India.",
+              "Total income is ₹4,15,000; he opts out of the default regime."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 0.0,
+            "t1": 10.56,
+            "voice_sync_text": "മനീഷ് 47 വയസ്സുള്ള resident ആണ്. അദ്ദേഹത്തിന്റെ total income നാല് ലക്ഷം പതിനയ്യായിരം രൂപയാണ്; default regime-ൽ നിന്ന് മാറിയിട്ടുണ്ട്.",
+            "icon": "check",
+            "highlights": []
+          },
+          {
+            "id": "q5-beat-2-0",
+            "title": "Compute tax before rebate",
+            "number": "1.1.2",
+            "badge": "Table",
+            "body": [
+              "Basic exemption: ₹2,50,000.",
+              "Taxable slab amount: ₹4,15,000 − ₹2,50,000 = ₹1,65,000 at 5%."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 10.68,
+            "t1": 22.728,
+            "voice_sync_text": "പഴയ regime-ൽ basic exemption രണ്ടര ലക്ഷം രൂപയാണ്. ശേഷിക്കുന്ന ഒരു ലക്ഷം അറുപത്തയ്യായിരത്തിന് അഞ്ച് ശതമാനം കണക്കാക്കുമ്പോൾ tax ₹8,250.",
+            "icon": "check",
+            "highlights": []
+          }
+        ],
+        "flow_summary": []
+      },
+      {
+        "branch_id": "q5-branch-2",
+        "branch_title": "Old-regime tax",
+        "number": "1.2",
+        "badge": "Old-regime tax",
+        "icon": "scales",
+        "t0": 22.848,
+        "t1": 49.008,
+        "points": [
+          {
+            "id": "q5-beat-3-0",
+            "title": "Tax payable before relief",
+            "number": "1.2.1",
+            "badge": "Table",
+            "body": [
+              "₹1,65,000 × 5% = ₹8,250.",
+              "Calculate tax first, then apply Section 87A rebate."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 22.848,
+            "t1": 35.64,
+            "voice_sync_text": "ആദ്യം ₹1,65,000-ന്റെ അഞ്ച് ശതമാനമായ ₹8,250 tax കണക്കാക്കണം. അതിനുശേഷമാണ് Section 87A rebate കുറയ്ക്കുന്നത്.",
+            "icon": "check",
+            "highlights": []
+          },
+          {
+            "id": "q5-beat-4-0",
+            "title": "Who qualifies here?",
+            "number": "1.2.2",
+            "badge": "Rule",
+            "body": [
+              "Resident individual with total income not exceeding ₹5,00,000.",
+              "Manish meets both conditions."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 35.76,
+            "t1": 49.008,
+            "voice_sync_text": "പഴയ regime-ൽ total income അഞ്ച് ലക്ഷം രൂപ കവിയാത്ത resident individual-ന് Section 87A rebate ലഭിക്കും. മനീഷ് resident ആണ്, income പരിധിക്കുള്ളിലുമാണ്.",
+            "icon": "check",
+            "highlights": []
+          }
+        ],
+        "flow_summary": []
+      },
+      {
+        "branch_id": "q5-branch-3",
+        "branch_title": "Section 87A",
+        "number": "1.3",
+        "badge": "Section 87A",
+        "icon": "scales",
+        "t0": 49.128,
+        "t1": 69.0,
+        "points": [
+          {
+            "id": "q5-beat-5-0",
+            "title": "Rebate amount",
+            "number": "1.3.1",
+            "badge": "Rule",
+            "body": [
+              "Rebate is lower of tax payable or ₹12,500.",
+              "Lower amount here: ₹8,250."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 49.128,
+            "t1": 59.784,
+            "voice_sync_text": "Rebate എന്നത് tax payable-ഉം ₹12,500-ഉം തമ്മിലുള്ള കുറഞ്ഞ തുകയാണ്. ഇവിടെ കുറഞ്ഞ തുക ₹8,250 ആണ്.",
+            "icon": "check",
+            "highlights": []
+          },
+          {
+            "id": "q5-beat-6-0",
+            "title": "Reduce tax to nil",
+            "number": "1.3.2",
+            "badge": "Rule",
+            "body": [
+              "Tax before rebate: ₹8,250.",
+              "Less Section 87A rebate: ₹8,250."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 59.904,
+            "t1": 69.0,
+            "voice_sync_text": "Rebate കുറയ്ക്കുന്നതിന് മുമ്പ് tax ₹8,250 ആണ്. അതിൽ നിന്ന് അതേ തുകയുടെ rebate കുറയ്ക്കുമ്പോൾ tax nil ആകുന്നു.",
+            "icon": "check",
+            "highlights": []
+          }
+        ],
+        "flow_summary": []
+      },
+      {
+        "branch_id": "q5-branch-4",
+        "branch_title": "Cess treatment",
+        "number": "1.4",
+        "badge": "Cess treatment",
+        "icon": "scales",
+        "t0": 69.12,
+        "t1": 89.496,
+        "points": [
+          {
+            "id": "q5-beat-7-0",
+            "title": "Cess after rebate",
+            "number": "1.4.1",
+            "badge": "Rule",
+            "body": [
+              "Health and Education Cess applies to tax after rebate.",
+              "With tax reduced to nil, cess is also nil."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 69.12,
+            "t1": 80.232,
+            "voice_sync_text": "Section 87A rebate കുറച്ച ശേഷമുള്ള tax-ലാണ് cess കണക്കാക്കുന്നത്. ഇവിടെ tax nil ആയതിനാൽ cess-ും nil ആണ്.",
+            "icon": "check",
+            "highlights": []
+          },
+          {
+            "id": "q5-beat-8-0",
+            "title": "Final liability",
+            "number": "1.4.2",
+            "badge": "Rule",
+            "body": [
+              "Section 87A rebate fully offsets the tax.",
+              "Final tax liability: Nil."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 80.352,
+            "t1": 89.496,
+            "voice_sync_text": "അവസാനമായി Section 87A rebate മുഴുവൻ tax ഇല്ലാതാക്കുന്നു. അതിനാൽ മനീഷിന്റെ final tax liability nil ആണ്.",
+            "icon": "check",
+            "highlights": []
+          }
+        ],
+        "flow_summary": []
+      }
+    ]
+  },
+  "q6": {
+    "doctrine": "Section 115BAC: Default-Regime Tax",
+    "root": {
+      "id": "root",
+      "title": "Section 115BAC: Default-Regime Tax",
+      "badge": "Section 4 · Section 115BAC(1A)",
+      "t1": 14.472
+    },
+    "total_duration": 93.384,
+    "branches": [
+      {
+        "branch_id": "q6-branch-1",
+        "branch_title": "Question setup",
+        "number": "1.1",
+        "badge": "Question setup",
+        "icon": "scales",
+        "t0": 0.0,
+        "t1": 22.968,
+        "points": [
+          {
+            "id": "q6-beat-1-0",
+            "title": "Income and section",
+            "number": "1.1.1",
+            "badge": "Rule",
+            "body": [
+              "Mr. X total income: ₹16,00,000.",
+              "A.Y. 2026–27; default regime under Section 115BAC."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 0.0,
+            "t1": 14.472,
+            "voice_sync_text": "മിസ്റ്റർ X-ന്റെ total income പതിനാറ് ലക്ഷം രൂപയാണ്. Assessment Year 2026–27-ൽ Section 115BAC default regime പ്രകാരമാണ് കണക്കാക്കേണ്ടത്.",
+            "icon": "check",
+            "highlights": []
+          },
+          {
+            "id": "q6-beat-2-0",
+            "title": "First two slabs",
+            "number": "1.1.2",
+            "badge": "Table",
+            "body": [
+              "First ₹4,00,000: nil tax.",
+              "Next ₹4,00,000, from ₹4–8 lakh, at 5% = ₹20,000."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 14.592,
+            "t1": 22.968,
+            "voice_sync_text": "ആദ്യത്തെ നാല് ലക്ഷം രൂപയ്ക്ക് tax ഇല്ല. അടുത്ത നാല് ലക്ഷം രൂപയ്ക്ക് അഞ്ച് ശതമാനം; അതായത് ₹20,000.",
+            "icon": "check",
+            "highlights": []
+          }
+        ],
+        "flow_summary": []
+      },
+      {
+        "branch_id": "q6-branch-2",
+        "branch_title": "Slabs",
+        "number": "1.2",
+        "badge": "Slabs",
+        "icon": "scales",
+        "t0": 23.088,
+        "t1": 46.416,
+        "points": [
+          {
+            "id": "q6-beat-3-0",
+            "title": "Next two slabs",
+            "number": "1.2.1",
+            "badge": "Table",
+            "body": [
+              "₹8–12 lakh at 10% = ₹40,000.",
+              "₹12–16 lakh at 15% = ₹60,000."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 23.088,
+            "t1": 34.992,
+            "voice_sync_text": "എട്ട് മുതൽ പന്ത്രണ്ട് ലക്ഷം വരെ പത്ത് ശതമാനം, അതായത് ₹40,000. പന്ത്രണ്ട് മുതൽ പതിനാറ് ലക്ഷം വരെ പതിനഞ്ച് ശതമാനം, അതായത് ₹60,000.",
+            "icon": "check",
+            "highlights": []
+          },
+          {
+            "id": "q6-beat-4-0",
+            "title": "Add slab taxes",
+            "number": "1.2.2",
+            "badge": "Table",
+            "body": [
+              "₹20,000 + ₹40,000 + ₹60,000 = ₹1,20,000.",
+              "This is income-tax before cess."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 35.112,
+            "t1": 46.416,
+            "voice_sync_text": "Slab tax കൂട്ടിയാൽ ഇരുപതിനായിരം, നാൽപ്പതിനായിരം, അറുപതിനായിരം ചേർന്ന് ₹1,20,000. ഇത് cess-നു മുമ്പുള്ള income tax ആണ്.",
+            "icon": "check",
+            "highlights": []
+          }
+        ],
+        "flow_summary": []
+      },
+      {
+        "branch_id": "q6-branch-3",
+        "branch_title": "Compute tax",
+        "number": "1.3",
+        "badge": "Compute tax",
+        "icon": "scales",
+        "t0": 46.536,
+        "t1": 65.4,
+        "points": [
+          {
+            "id": "q6-beat-5-0",
+            "title": "Add Health and Education Cess",
+            "number": "1.3.1",
+            "badge": "Table",
+            "body": [
+              "Cess rate: 4% of ₹1,20,000.",
+              "Cess = ₹4,800."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 46.536,
+            "t1": 54.48,
+            "voice_sync_text": "ഇപ്പോൾ ₹1,20,000-ന്റെ നാല് ശതമാനം cess കണക്കാക്കാം. അത് ₹4,800 ആണ്.",
+            "icon": "check",
+            "highlights": []
+          },
+          {
+            "id": "q6-beat-6-0",
+            "title": "Section 87A threshold",
+            "number": "1.3.2",
+            "badge": "Rule",
+            "body": [
+              "Total income is ₹16 lakh, above the ₹12 lakh rebate threshold.",
+              "No Section 87A rebate applies on these facts."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 54.6,
+            "t1": 65.4,
+            "voice_sync_text": "Total income ₹16 ലക്ഷം ആയതിനാൽ ₹12 ലക്ഷം rebate പരിധി കവിയുന്നു. അതിനാൽ ഈ കണക്കിൽ Section 87A rebate ലഭ്യമല്ല.",
+            "icon": "check",
+            "highlights": []
+          }
+        ],
+        "flow_summary": []
+      },
+      {
+        "branch_id": "q6-branch-4",
+        "branch_title": "Conclusion",
+        "number": "1.4",
+        "badge": "Conclusion",
+        "icon": "scales",
+        "t0": 65.52,
+        "t1": 93.384,
+        "points": [
+          {
+            "id": "q6-beat-7-0",
+            "title": "Final tax liability",
+            "number": "1.4.1",
+            "badge": "Rule",
+            "body": [
+              "Tax before cess: ₹1,20,000.",
+              "Add cess ₹4,800; final liability ₹1,24,800."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 65.52,
+            "t1": 78.168,
+            "voice_sync_text": "Cess-നു മുമ്പുള്ള tax ₹1,20,000; cess ₹4,800. ആകെ final tax liability ₹1,24,800 ആണ്.",
+            "icon": "check",
+            "highlights": []
+          },
+          {
+            "id": "q6-beat-8-0",
+            "title": "Remember the sequence",
+            "number": "1.4.2",
+            "badge": "Rule",
+            "body": [
+              "Apply each slab progressively.",
+              "Add the 4% cess after tax and eligible rebate are determined."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 78.288,
+            "t1": 93.384,
+            "voice_sync_text": "ഓരോ slab-ലും വരുന്ന തുകയ്ക്ക് അതിന്റെ നിരക്ക് വേർതിരിച്ച് പ്രയോഗിക്കുക. Tax-ും ലഭിക്കേണ്ട rebate-ും നിശ്ചയിച്ച ശേഷം മാത്രമാണ് 4% cess ചേർക്കേണ്ടത്.",
+            "icon": "check",
+            "highlights": []
+          }
+        ],
+        "flow_summary": []
+      }
+    ]
+  },
+  "q7": {
+    "doctrine": "Section 87A: Rebate in Default Regime",
+    "root": {
+      "id": "root",
+      "title": "Section 87A: Rebate in Default Regime",
+      "badge": "Section 115BAC · Section 87A",
+      "t1": 11.952
+    },
+    "total_duration": 82.392,
+    "branches": [
+      {
+        "branch_id": "q7-branch-1",
+        "branch_title": "Question setup",
+        "number": "1.1",
+        "badge": "Question setup",
+        "icon": "scales",
+        "t0": 0.0,
+        "t1": 21.936,
+        "points": [
+          {
+            "id": "q7-beat-1-0",
+            "title": "Eligibility facts",
+            "number": "1.1.1",
+            "badge": "Rule",
+            "body": [
+              "Mahesh is a resident individual, age 32.",
+              "Total income: ₹11,00,000 under Section 115BAC default regime."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 0.0,
+            "t1": 11.952,
+            "voice_sync_text": "മഹേഷ് 32 വയസ്സുള്ള resident individual ആണ്. Section 115BAC default regime-ൽ അദ്ദേഹത്തിന്റെ total income പതിനൊന്ന് ലക്ഷം രൂപയാണ്.",
+            "icon": "check",
+            "highlights": []
+          },
+          {
+            "id": "q7-beat-2-0",
+            "title": "First slabs",
+            "number": "1.1.2",
+            "badge": "Table",
+            "body": [
+              "First ₹4 lakh: nil.",
+              "₹4–8 lakh at 5% = ₹20,000."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 12.072,
+            "t1": 21.936,
+            "voice_sync_text": "ആദ്യത്തെ നാല് ലക്ഷം രൂപയ്ക്ക് tax ഇല്ല. നാല് മുതൽ എട്ട് ലക്ഷം വരെയുള്ള നാല് ലക്ഷത്തിന് അഞ്ച് ശതമാനം, അതായത് ₹20,000.",
+            "icon": "check",
+            "highlights": []
+          }
+        ],
+        "flow_summary": []
+      },
+      {
+        "branch_id": "q7-branch-2",
+        "branch_title": "Slab tax",
+        "number": "1.2",
+        "badge": "Slab tax",
+        "icon": "scales",
+        "t0": 22.056,
+        "t1": 48.072,
+        "points": [
+          {
+            "id": "q7-beat-3-0",
+            "title": "Remaining income",
+            "number": "1.2.1",
+            "badge": "Table",
+            "body": [
+              "₹8–11 lakh = ₹3 lakh at 10% = ₹30,000.",
+              "Total income-tax before rebate = ₹50,000."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 22.056,
+            "t1": 32.592,
+            "voice_sync_text": "എട്ട് മുതൽ പതിനൊന്ന് ലക്ഷം വരെയുള്ള മൂന്ന് ലക്ഷത്തിന് പത്ത് ശതമാനം, ₹30,000. അതിനാൽ rebate-നു മുമ്പുള്ള tax ആകെ ₹50,000.",
+            "icon": "check",
+            "highlights": []
+          },
+          {
+            "id": "q7-beat-4-0",
+            "title": "Current threshold",
+            "number": "1.2.2",
+            "badge": "Rule",
+            "body": [
+              "For A.Y. 2026–27, eligible resident individuals may get rebate when total income is within ₹12 lakh.",
+              "Mahesh’s ₹11 lakh income is within the limit."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 32.712,
+            "t1": 48.072,
+            "voice_sync_text": "2026–27 assessment year-ൽ നിബന്ധനകൾ പാലിക്കുന്ന resident individual-ന് total income ₹12 ലക്ഷം പരിധിക്കുള്ളിലാണെങ്കിൽ rebate ലഭിക്കും. മഹേഷിന്റെ വരുമാനം ആ പരിധിക്കുള്ളിലാണ്.",
+            "icon": "check",
+            "highlights": []
+          }
+        ],
+        "flow_summary": []
+      },
+      {
+        "branch_id": "q7-branch-3",
+        "branch_title": "Section 87A",
+        "number": "1.3",
+        "badge": "Section 87A",
+        "icon": "scales",
+        "t0": 48.192,
+        "t1": 65.496,
+        "points": [
+          {
+            "id": "q7-beat-5-0",
+            "title": "Rebate limit",
+            "number": "1.3.1",
+            "badge": "Rule",
+            "body": [
+              "Rebate is lower of tax payable or ₹60,000.",
+              "Here lower amount is ₹50,000."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 48.192,
+            "t1": 58.752,
+            "voice_sync_text": "Rebate tax payable-ഉം ₹60,000-ഉം തമ്മിലുള്ള കുറഞ്ഞ തുകയാണ്. ഇവിടെ tax ₹50,000 മാത്രമായതിനാൽ rebate ₹50,000.",
+            "icon": "check",
+            "highlights": []
+          },
+          {
+            "id": "q7-beat-6-0",
+            "title": "Tax becomes nil",
+            "number": "1.3.2",
+            "badge": "Rule",
+            "body": [
+              "Tax before rebate: ₹50,000.",
+              "Less rebate: ₹50,000; balance tax is nil."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 58.872,
+            "t1": 65.496,
+            "voice_sync_text": "₹50,000 tax-ൽ നിന്ന് അതേ തുകയുടെ rebate കുറച്ചാൽ balance tax nil ആണ്.",
+            "icon": "check",
+            "highlights": []
+          }
+        ],
+        "flow_summary": []
+      },
+      {
+        "branch_id": "q7-branch-4",
+        "branch_title": "Cess treatment",
+        "number": "1.4",
+        "badge": "Cess treatment",
+        "icon": "scales",
+        "t0": 65.616,
+        "t1": 82.392,
+        "points": [
+          {
+            "id": "q7-beat-7-0",
+            "title": "Cess after rebate",
+            "number": "1.4.1",
+            "badge": "Rule",
+            "body": [
+              "Cess is calculated on tax remaining after rebate.",
+              "No tax remains, so cess is nil."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 65.616,
+            "t1": 73.8,
+            "voice_sync_text": "Rebate കുറച്ചശേഷം ശേഷിക്കുന്ന tax-ലാണ് cess കണക്കാക്കുന്നത്. Tax ഒന്നും ശേഷിക്കാത്തതിനാൽ cess nil ആണ്.",
+            "icon": "check",
+            "highlights": []
+          },
+          {
+            "id": "q7-beat-8-0",
+            "title": "Final result",
+            "number": "1.4.2",
+            "badge": "Rule",
+            "body": [
+              "Section 87A rebate fully covers the tax.",
+              "Final tax liability: Nil."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 73.92,
+            "t1": 82.392,
+            "voice_sync_text": "അതിനാൽ Section 87A rebate tax മുഴുവനായി ഇല്ലാതാക്കുന്നു. മഹേഷിന്റെ final tax liability nil ആണ്.",
+            "icon": "check",
+            "highlights": []
+          }
+        ],
+        "flow_summary": []
+      }
+    ]
+  },
+  "q8": {
+    "doctrine": "Section 87A: Marginal Rebate at ₹12.5 Lakh",
+    "root": {
+      "id": "root",
+      "title": "Section 87A: Marginal Rebate at ₹12.5 Lakh",
+      "badge": "Section 115BAC · Section 87A",
+      "t1": 14.784
+    },
+    "total_duration": 97.08,
+    "branches": [
+      {
+        "branch_id": "q8-branch-1",
+        "branch_title": "Question setup",
+        "number": "1.1",
+        "badge": "Question setup",
+        "icon": "scales",
+        "t0": 0.0,
+        "t1": 26.784,
+        "points": [
+          {
+            "id": "q8-beat-1-0",
+            "title": "Income crosses threshold",
+            "number": "1.1.1",
+            "badge": "Rule",
+            "body": [
+              "Nitin is a resident individual under Section 115BAC.",
+              "Total income ₹12,50,000 exceeds the ₹12,00,000 rebate threshold by ₹50,000."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 0.0,
+            "t1": 14.784,
+            "voice_sync_text": "നിതിൻ Section 115BAC പ്രകാരമുള്ള resident individual ആണ്. അദ്ദേഹത്തിന്റെ ₹12,50,000 income, ₹12 ലക്ഷം പരിധിയെ ₹50,000 കൊണ്ട് കവിയുന്നു.",
+            "icon": "check",
+            "highlights": []
+          },
+          {
+            "id": "q8-beat-2-0",
+            "title": "Tax up to ₹12 lakh",
+            "number": "1.1.2",
+            "badge": "Table",
+            "body": [
+              "Tax on ₹4–8 lakh at 5% = ₹20,000.",
+              "Tax on ₹8–12 lakh at 10% = ₹40,000; subtotal ₹60,000."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 14.904,
+            "t1": 26.784,
+            "voice_sync_text": "നാല് മുതൽ എട്ട് ലക്ഷം വരെ tax ₹20,000. എട്ട് മുതൽ പന്ത്രണ്ട് ലക്ഷം വരെ ₹40,000. അതിനാൽ ₹12 ലക്ഷം വരെ tax ₹60,000.",
+            "icon": "check",
+            "highlights": []
+          }
+        ],
+        "flow_summary": []
+      },
+      {
+        "branch_id": "q8-branch-2",
+        "branch_title": "Compute tax",
+        "number": "1.2",
+        "badge": "Compute tax",
+        "icon": "scales",
+        "t0": 26.904,
+        "t1": 50.184,
+        "points": [
+          {
+            "id": "q8-beat-3-0",
+            "title": "Tax on excess ₹50,000",
+            "number": "1.2.1",
+            "badge": "Table",
+            "body": [
+              "₹12–12.5 lakh at 15% = ₹7,500.",
+              "Total tax before rebate = ₹67,500."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 26.904,
+            "t1": 37.296,
+            "voice_sync_text": "പന്ത്രണ്ട് ലക്ഷത്തിന് മുകളിലുള്ള അമ്പതിനായിരത്തിന് പതിനഞ്ച് ശതമാനം, അതായത് ₹7,500. ആകെ tax ₹67,500.",
+            "icon": "check",
+            "highlights": []
+          },
+          {
+            "id": "q8-beat-4-0",
+            "title": "Compare tax rise with income rise",
+            "number": "1.2.2",
+            "badge": "Rule",
+            "body": [
+              "Income exceeds ₹12 lakh by ₹50,000.",
+              "Tax ₹67,500 is greater than the ₹50,000 excess; marginal rebate is needed."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 37.416,
+            "t1": 50.184,
+            "voice_sync_text": "വരുമാനം പരിധിയെ ₹50,000 മാത്രമാണ് കവിയുന്നത്, എന്നാൽ tax ₹67,500 ആയി. വരുമാനത്തിലെ അധികത്തെക്കാൾ tax വർധിച്ചതിനാൽ marginal rebate വേണം.",
+            "icon": "check",
+            "highlights": []
+          }
+        ],
+        "flow_summary": []
+      },
+      {
+        "branch_id": "q8-branch-3",
+        "branch_title": "Marginal rebate",
+        "number": "1.3",
+        "badge": "Marginal rebate",
+        "icon": "scales",
+        "t0": 50.304,
+        "t1": 76.944,
+        "points": [
+          {
+            "id": "q8-beat-5-0",
+            "title": "Calculate rebate",
+            "number": "1.3.1",
+            "badge": "Table",
+            "body": [
+              "Rebate = ₹67,500 − ₹50,000 = ₹17,500.",
+              "This limits tax after rebate to the income excess of ₹50,000."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 50.304,
+            "t1": 65.304,
+            "voice_sync_text": "Marginal rebate ₹67,500-ൽ നിന്ന് ₹50,000 കുറച്ചത്, അതായത് ₹17,500. ഇതോടെ rebate ശേഷമുള്ള tax അധിക വരുമാനമായ ₹50,000-ൽ പരിമിതപ്പെടുന്നു.",
+            "icon": "check",
+            "highlights": []
+          },
+          {
+            "id": "q8-beat-6-0",
+            "title": "Tax before cess",
+            "number": "1.3.2",
+            "badge": "Table",
+            "body": [
+              "₹67,500 − ₹17,500 = ₹50,000.",
+              "This is the tax amount before cess."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 65.424,
+            "t1": 76.944,
+            "voice_sync_text": "Rebate കുറച്ചശേഷം ₹67,500-ൽ നിന്ന് ₹17,500 കുറച്ച് ₹50,000 ശേഷിക്കുന്നു. ഇത് cess-നു മുമ്പുള്ള tax ആണ്.",
+            "icon": "check",
+            "highlights": []
+          }
+        ],
+        "flow_summary": []
+      },
+      {
+        "branch_id": "q8-branch-4",
+        "branch_title": "After rebate",
+        "number": "1.4",
+        "badge": "After rebate",
+        "icon": "scales",
+        "t0": 77.064,
+        "t1": 97.08,
+        "points": [
+          {
+            "id": "q8-beat-7-0",
+            "title": "Add 4% cess",
+            "number": "1.4.1",
+            "badge": "Table",
+            "body": [
+              "4% of ₹50,000 = ₹2,000.",
+              "Tax including cess = ₹52,000."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 77.064,
+            "t1": 85.056,
+            "voice_sync_text": "₹50,000-ന്റെ നാല് ശതമാനം cess ₹2,000 ആണ്. അത് ചേർത്താൽ tax ₹52,000.",
+            "icon": "check",
+            "highlights": []
+          },
+          {
+            "id": "q8-beat-8-0",
+            "title": "Final liability",
+            "number": "1.4.2",
+            "badge": "Rule",
+            "body": [
+              "Marginal rebate prevents tax from rising beyond the threshold excess before cess.",
+              "Final liability including cess: ₹52,000."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 85.176,
+            "t1": 97.08,
+            "voice_sync_text": "Marginal rebate മൂലം cess-നു മുമ്പുള്ള tax അധിക വരുമാനമായ ₹50,000-ൽ ഒതുങ്ങുന്നു. cess ഉൾപ്പെടെയുള്ള final liability ₹52,000 ആണ്.",
+            "icon": "check",
+            "highlights": []
+          }
+        ],
+        "flow_summary": []
+      }
+    ]
+  },
+  "q9": {
+    "doctrine": "X Ltd: Marginal Relief above ₹1 Crore",
+    "root": {
+      "id": "root",
+      "title": "X Ltd: Marginal Relief above ₹1 Crore",
+      "badge": "Section 4 · Annual Finance Act",
+      "t1": 19.512
+    },
+    "total_duration": 118.704,
+    "branches": [
+      {
+        "branch_id": "q9-branch-1",
+        "branch_title": "Question setup",
+        "number": "1.1",
+        "badge": "Question setup",
+        "icon": "scales",
+        "t0": 0.0,
+        "t1": 34.8,
+        "points": [
+          {
+            "id": "q9-beat-1-0",
+            "title": "Company and income",
+            "number": "1.1.1",
+            "badge": "Rule",
+            "body": [
+              "Domestic company X Ltd; total income ₹1,01,00,000.",
+              "A.Y. 2026–27; no capital gains; no Section 115BAA/115BAB option."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 0.0,
+            "t1": 19.512,
+            "voice_sync_text": "X Limited ഒരു domestic company ആണ്; total income ₹1 കോടി 1 ലക്ഷം. 2026–27 assessment year-ൽ capital gains ഇല്ല, Section 115BAA അല്ലെങ്കിൽ 115BAB തിരഞ്ഞെടുക്കിയിട്ടില്ല.",
+            "icon": "check",
+            "highlights": []
+          },
+          {
+            "id": "q9-beat-2-0",
+            "title": "Turnover determines base rate",
+            "number": "1.1.2",
+            "badge": "Rule",
+            "body": [
+              "P.Y. 2023–24 gross receipts: ₹402 crore, above ₹400 crore.",
+              "Use the 30% domestic-company base rate in the question’s computation."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 19.632,
+            "t1": 34.8,
+            "voice_sync_text": "2023–24 previous year-ലെ gross receipts ₹402 കോടി, അതായത് ₹400 കോടിക്ക് മുകളിൽ. ചോദ്യത്തിലെ കണക്കിൽ 30% company base rate ഉപയോഗിക്കുന്നു.",
+            "icon": "check",
+            "highlights": []
+          }
+        ],
+        "flow_summary": []
+      },
+      {
+        "branch_id": "q9-branch-2",
+        "branch_title": "Applicable rate",
+        "number": "1.2",
+        "badge": "Applicable rate",
+        "icon": "scales",
+        "t0": 34.92,
+        "t1": 64.032,
+        "points": [
+          {
+            "id": "q9-beat-3-0",
+            "title": "Surcharge at this income",
+            "number": "1.2.1",
+            "badge": "Rule",
+            "body": [
+              "Income exceeds ₹1 crore but is within ₹10 crore.",
+              "The question applies 7% surcharge; combined rate shown is 32.1%."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 34.92,
+            "t1": 46.992,
+            "voice_sync_text": "വരുമാനം ഒരു കോടിക്ക് മുകളിലും പത്ത് കോടിക്കുള്ളിലുമാണ്. ചോദ്യത്തിലെ കണക്കുപ്രകാരം surcharge 7%; ചേർന്നുള്ള നിരക്ക് 32.1% ആണ്.",
+            "icon": "check",
+            "highlights": []
+          },
+          {
+            "id": "q9-beat-4-0",
+            "title": "Tax before marginal relief",
+            "number": "1.2.2",
+            "badge": "Table",
+            "body": [
+              "₹1,01,00,000 × 32.1% = ₹32,42,100.",
+              "This amount is greater than tax at the threshold plus the income excess."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 47.112,
+            "t1": 64.032,
+            "voice_sync_text": "₹1,01,00,000-ന്റെ 32.1% ₹32,42,100 ആണ്. ഇത് threshold-ലെ tax-ും അധിക വരുമാനവും ചേർത്ത പരിധിയെക്കാൾ കൂടുതലാണ്.",
+            "icon": "check",
+            "highlights": []
+          }
+        ],
+        "flow_summary": []
+      },
+      {
+        "branch_id": "q9-branch-3",
+        "branch_title": "Marginal relief",
+        "number": "1.3",
+        "badge": "Marginal relief",
+        "icon": "scales",
+        "t0": 64.152,
+        "t1": 96.6,
+        "points": [
+          {
+            "id": "q9-beat-5-0",
+            "title": "Set the cap",
+            "number": "1.3.1",
+            "badge": "Table",
+            "body": [
+              "Tax on ₹1 crore at 30% plus 7% surcharge = ₹30,00,000.",
+              "Add income above ₹1 crore: ₹1,00,000; capped amount = ₹31,00,000."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 64.152,
+            "t1": 81.624,
+            "voice_sync_text": "ഒരു കോടി രൂപയിലെ 30% tax-ും 7% surcharge-ും ചേർന്ന് ₹30,00,000. അതിന് മുകളിലുള്ള വരുമാനം ₹1,00,000 ചേർത്താൽ capped amount ₹31,00,000.",
+            "icon": "check",
+            "highlights": []
+          },
+          {
+            "id": "q9-beat-6-0",
+            "title": "Find relief",
+            "number": "1.3.2",
+            "badge": "Table",
+            "body": [
+              "Tax before relief: ₹32,42,100.",
+              "Less cap ₹31,00,000; marginal relief = ₹1,42,100."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 81.744,
+            "t1": 96.6,
+            "voice_sync_text": "Relief-നു മുമ്പുള്ള tax ₹32,42,100. അതിൽ നിന്ന് cap ആയ ₹31,00,000 കുറച്ചാൽ marginal relief ₹1,42,100.",
+            "icon": "check",
+            "highlights": []
+          }
+        ],
+        "flow_summary": []
+      },
+      {
+        "branch_id": "q9-branch-4",
+        "branch_title": "Apply relief",
+        "number": "1.4",
+        "badge": "Apply relief",
+        "icon": "scales",
+        "t0": 96.72,
+        "t1": 118.704,
+        "points": [
+          {
+            "id": "q9-beat-7-0",
+            "title": "Tax payable per question answer",
+            "number": "1.4.1",
+            "badge": "Rule",
+            "body": [
+              "Tax is capped at ₹31,00,000 in the question-bank computation.",
+              "The question’s stated result is before any separately added cess."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 96.72,
+            "t1": 106.368,
+            "voice_sync_text": "ചോദ്യബാങ്കിന്റെ ഉത്തരത്തിൽ relief-നുശേഷമുള്ള tax ₹31,00,000 ആയി പരിമിതപ്പെടുത്തുന്നു. ആ ഉത്തരത്തിൽ cess പ്രത്യേകം ചേർത്തിട്ടില്ല.",
+            "icon": "check",
+            "highlights": []
+          },
+          {
+            "id": "q9-beat-8-0",
+            "title": "Exam answer",
+            "number": "1.4.2",
+            "badge": "Rule",
+            "body": [
+              "Marginal relief available: ₹1,42,100.",
+              "Tax after relief as stated in the supplied answer: ₹31,00,000."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 106.488,
+            "t1": 118.704,
+            "voice_sync_text": "പരീക്ഷാ ഉത്തരമായി, marginal relief ₹1,42,100. നൽകിയിരിക്കുന്ന ഉത്തരപ്രകാരം relief ശേഷമുള്ള tax ₹31,00,000 ആണ്.",
+            "icon": "check",
+            "highlights": []
+          }
+        ],
+        "flow_summary": []
+      }
+    ]
+  },
+  "q10": {
+    "doctrine": "Y Ltd: Marginal Relief above ₹10 Crore",
+    "root": {
+      "id": "root",
+      "title": "Y Ltd: Marginal Relief above ₹10 Crore",
+      "badge": "Section 4 · Finance Act",
+      "t1": 18.888
+    },
+    "total_duration": 117.408,
+    "branches": [
+      {
+        "branch_id": "q10-branch-1",
+        "branch_title": "Question setup",
+        "number": "1.1",
+        "badge": "Question setup",
+        "icon": "scales",
+        "t0": 0.0,
+        "t1": 32.448,
+        "points": [
+          {
+            "id": "q10-beat-1-0",
+            "title": "Company and income",
+            "number": "1.1.1",
+            "badge": "Rule",
+            "body": [
+              "Domestic company Y Ltd; total income ₹10,01,00,000.",
+              "A.Y. 2026–27; no capital gains; no Section 115BAA/115BAB option."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 0.0,
+            "t1": 18.888,
+            "voice_sync_text": "Y Limited domestic company ആണ്; total income ₹10 കോടി 1 ലക്ഷം. 2026–27 assessment year-ൽ capital gains ഇല്ല, 115BAA അല്ലെങ്കിൽ 115BAB option എടുത്തിട്ടില്ല.",
+            "icon": "check",
+            "highlights": []
+          },
+          {
+            "id": "q10-beat-2-0",
+            "title": "Turnover determines base rate",
+            "number": "1.1.2",
+            "badge": "Rule",
+            "body": [
+              "P.Y. 2023–24 gross receipts: ₹410 crore, above ₹400 crore.",
+              "Use the 30% base rate in the question’s calculation."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 19.008,
+            "t1": 32.448,
+            "voice_sync_text": "2023–24-ലെ gross receipts ₹410 കോടി, ₹400 കോടിക്ക് മുകളിൽ. അതിനാൽ ചോദ്യത്തിലെ കണക്കിൽ 30% base rate ആണ്.",
+            "icon": "check",
+            "highlights": []
+          }
+        ],
+        "flow_summary": []
+      },
+      {
+        "branch_id": "q10-branch-2",
+        "branch_title": "Applicable rate",
+        "number": "1.2",
+        "badge": "Applicable rate",
+        "icon": "scales",
+        "t0": 32.568,
+        "t1": 63.12,
+        "points": [
+          {
+            "id": "q10-beat-3-0",
+            "title": "Surcharge above ₹10 crore",
+            "number": "1.2.1",
+            "badge": "Rule",
+            "body": [
+              "Income exceeds ₹10 crore, so the question applies 12% surcharge.",
+              "Combined rate used in the answer: 33.6%."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 32.568,
+            "t1": 44.016,
+            "voice_sync_text": "വരുമാനം പത്ത് കോടി കവിയുന്നതിനാൽ ചോദ്യത്തിൽ 12% surcharge പ്രയോഗിക്കുന്നു. ഉത്തരത്തിൽ ഉപയോഗിച്ച combined rate 33.6% ആണ്.",
+            "icon": "check",
+            "highlights": []
+          },
+          {
+            "id": "q10-beat-4-0",
+            "title": "Tax before relief",
+            "number": "1.2.2",
+            "badge": "Table",
+            "body": [
+              "₹10,01,00,000 × 33.6% = ₹3,36,33,600.",
+              "Compare this with threshold tax plus the ₹1 lakh excess."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 44.136,
+            "t1": 63.12,
+            "voice_sync_text": "₹10,01,00,000-ന്റെ 33.6% ₹3,36,33,600 ആണ്. ഇത് പത്ത് കോടി threshold-ലെ tax-ും അധികമായ ഒരു ലക്ഷവും ചേർന്ന പരിധിയുമായി താരതമ്യം ചെയ്യണം.",
+            "icon": "check",
+            "highlights": []
+          }
+        ],
+        "flow_summary": []
+      },
+      {
+        "branch_id": "q10-branch-3",
+        "branch_title": "Marginal relief",
+        "number": "1.3",
+        "badge": "Marginal relief",
+        "icon": "scales",
+        "t0": 63.24,
+        "t1": 92.784,
+        "points": [
+          {
+            "id": "q10-beat-5-0",
+            "title": "Set the cap",
+            "number": "1.3.1",
+            "badge": "Table",
+            "body": [
+              "Tax on ₹10 crore at 32.1% = ₹3,21,00,000.",
+              "Add income above ₹10 crore of ₹1,00,000; cap = ₹3,22,00,000."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 63.24,
+            "t1": 76.608,
+            "voice_sync_text": "പത്ത് കോടി രൂപയിലെ 32.1% tax ₹3,21,00,000. അധിക വരുമാനമായ ഒരു ലക്ഷം ചേർത്താൽ cap ₹3,22,00,000.",
+            "icon": "check",
+            "highlights": []
+          },
+          {
+            "id": "q10-beat-6-0",
+            "title": "Find relief",
+            "number": "1.3.2",
+            "badge": "Table",
+            "body": [
+              "Tax before relief: ₹3,36,33,600.",
+              "Less cap ₹3,22,00,000; marginal relief = ₹14,33,600."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 76.728,
+            "t1": 92.784,
+            "voice_sync_text": "Relief-നു മുമ്പുള്ള tax ₹3,36,33,600. അതിൽ നിന്ന് cap ആയ ₹3,22,00,000 കുറച്ചാൽ marginal relief ₹14,33,600.",
+            "icon": "check",
+            "highlights": []
+          }
+        ],
+        "flow_summary": []
+      },
+      {
+        "branch_id": "q10-branch-4",
+        "branch_title": "Apply relief",
+        "number": "1.4",
+        "badge": "Apply relief",
+        "icon": "scales",
+        "t0": 92.904,
+        "t1": 117.408,
+        "points": [
+          {
+            "id": "q10-beat-7-0",
+            "title": "Tax payable per question answer",
+            "number": "1.4.1",
+            "badge": "Rule",
+            "body": [
+              "Tax after marginal relief is capped at ₹3,22,00,000.",
+              "The supplied answer states this amount before any separate cess."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 92.904,
+            "t1": 103.44,
+            "voice_sync_text": "Marginal relief പ്രയോഗിച്ചതിനു ശേഷം tax ₹3,22,00,000-ൽ പരിമിതപ്പെടുന്നു. നൽകിയ ഉത്തരത്തിൽ cess പ്രത്യേകം ചേർക്കുന്നില്ല.",
+            "icon": "check",
+            "highlights": []
+          },
+          {
+            "id": "q10-beat-8-0",
+            "title": "Exam answer",
+            "number": "1.4.2",
+            "badge": "Rule",
+            "body": [
+              "Marginal relief available: ₹14,33,600.",
+              "Tax after relief as stated in the supplied answer: ₹3,22,00,000."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 103.56,
+            "t1": 117.408,
+            "voice_sync_text": "ചോദ്യത്തിന്റെ അന്തിമ ഉത്തരം: marginal relief ₹14,33,600. നൽകിയിരിക്കുന്ന ഉത്തരപ്രകാരം relief ശേഷമുള്ള tax ₹3,22,00,000 ആണ്.",
+            "icon": "check",
+            "highlights": []
+          }
+        ],
+        "flow_summary": []
+      }
+    ]
+  },
+  "question_to_mindmap": {
+    "1": "q1",
+    "2": "q2",
+    "3": "q3",
+    "4": "q4",
+    "5": "q5",
+    "6": "q6",
+    "7": "q7",
+    "8": "q8",
+    "9": "q9",
+    "10": "q10"
+  }
+}

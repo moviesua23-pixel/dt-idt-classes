@@ -1,0 +1,143 @@
+[
+  {
+    "id": "INTRO",
+    "number": "1",
+    "block": 0,
+    "block_name": "Provision heading",
+    "narration_ml": "ഇന്ന് default regime-ലെ Section 87A rebate വ്യവസ്ഥ മാത്രം നോക്കാം.",
+    "card": {
+      "title": "Section 87A Rebate: Default Regime",
+      "type": "intro",
+      "lines": [],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L01",
+    "number": "1.1.1",
+    "block": 1,
+    "block_name": "Eligibility",
+    "narration_ml": "Section 87A rebate resident individual-നാണ്. Default regime-ിലെ പരിധി old regime-ിലെ പരിധിയിൽ നിന്ന് വ്യത്യസ്തമാണ്.",
+    "card": {
+      "title": "Eligible person",
+      "type": "rule",
+      "lines": [
+        "Section 87A rebate is available to a resident individual.",
+        "The default regime’s limit is distinct from the old-regime limit."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L02",
+    "number": "1.1.2",
+    "block": 1,
+    "block_name": "Eligibility",
+    "narration_ml": "2026–27 assessment year-ൽ സാധാരണ rebate ലഭിക്കാൻ total income ₹12,00,000 കവിയരുത്. നിയമപ്രകാരമുള്ള income computation കഴിഞ്ഞാണ് പരിധി പരിശോധിക്കുന്നത്.",
+    "card": {
+      "title": "Income threshold",
+      "type": "rule",
+      "lines": [
+        "For A.Y. 2026–27, total income must not exceed ₹12,00,000 for the standard rebate.",
+        "Check total income after applying the Act’s computation rules."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L03",
+    "number": "1.2.1",
+    "block": 2,
+    "block_name": "Rebate amount",
+    "narration_ml": "അടയ്ക്കേണ്ട income tax-ന്റെ 100% വരെ rebate ലഭിക്കും. Default regime-ൽ rebate-ന്റെ പരമാവധി ₹60,000 ആണ്.",
+    "card": {
+      "title": "Maximum and cap",
+      "type": "rule",
+      "lines": [
+        "Rebate is up to 100% of income-tax payable.",
+        "Maximum rebate under the default regime: ₹60,000."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L04",
+    "number": "1.2.2",
+    "block": 2,
+    "block_name": "Rebate amount",
+    "narration_ml": "ഇത് total income കുറയ്ക്കുന്നതല്ല, tax കുറയ്ക്കുന്നതാണ്. അർഹമായ income tax-നെക്കാൾ rebate കൂടുതലാകില്ല.",
+    "card": {
+      "title": "Rebate is tax relief",
+      "type": "rule",
+      "lines": [
+        "It reduces tax, not total income.",
+        "It cannot exceed the eligible income-tax payable."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L05",
+    "number": "1.3.1",
+    "block": 3,
+    "block_name": "Calculation order",
+    "narration_ml": "Section 115BAC slab നിരക്കുകൾ progressive ആയി പ്രയോഗിച്ച് ആദ്യം rebate-നു മുമ്പുള്ള income tax കണക്കാക്കുക.",
+    "card": {
+      "title": "Compute slab tax",
+      "type": "rule",
+      "lines": [
+        "Apply Section 115BAC slab rates progressively.",
+        "Determine income-tax before rebate."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L06",
+    "number": "1.3.2",
+    "block": 3,
+    "block_name": "Calculation order",
+    "narration_ml": "അർഹതയുണ്ടെങ്കിൽ tax payable-ഉം ₹60,000-ഉം തമ്മിലുള്ള കുറഞ്ഞ തുക കുറയ്ക്കുക. ശേഷിക്കുന്ന tax-ലാണ് cess കണക്കാക്കുന്നത്.",
+    "card": {
+      "title": "Deduct the rebate",
+      "type": "rule",
+      "lines": [
+        "Where eligible, reduce tax by the lower of tax payable or ₹60,000.",
+        "Then compute cess on the remaining tax."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L07",
+    "number": "1.4.1",
+    "block": 4,
+    "block_name": "Boundary and conditions",
+    "narration_ml": "Income ₹12,00,000 കവിയുമ്പോൾ സാധാരണ threshold rebate ലഭ്യമല്ല. പരിധിക്ക് തൊട്ടുമുകളിലെ tax വർധന marginal rebate വഴി നിയന്ത്രിക്കാം.",
+    "card": {
+      "title": "Income above ₹12 lakh",
+      "type": "rule",
+      "lines": [
+        "The standard full-threshold rebate is not available above ₹12 lakh.",
+        "Marginal rebate may limit the tax increase immediately above the threshold."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L08",
+    "number": "1.4.2",
+    "block": 4,
+    "block_name": "Boundary and conditions",
+    "narration_ml": "Rebate കഴിഞ്ഞ് Health and Education Cess 4% കണക്കാക്കുക. Special-rate income-ന് rebate സംബന്ധിച്ച പ്രത്യേക നിയന്ത്രണങ്ങളുണ്ടാകാം; ബാധകമായ നിയമം പരിശോധിക്കണം.",
+    "card": {
+      "title": "Cess and special income",
+      "type": "rule",
+      "lines": [
+        "Health and Education Cess is 4% after rebate.",
+        "Special-rate income may have separate rebate restrictions; check the applicable law."
+      ],
+      "highlights": []
+    }
+  }
+]

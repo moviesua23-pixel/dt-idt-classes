@@ -1,0 +1,130 @@
+[
+  {
+    "id": "L01",
+    "number": "1.1.1",
+    "block": 1,
+    "block_name": "Facts and question",
+    "narration_ml": "ഇപ്പോൾ ചോദ്യം ഒന്ന് നോക്കാം. ഭാർഗവയ്ക്ക് ലഭിച്ച അഞ്ച് ലക്ഷം രൂപയുടെ professional fee, അദ്ദേഹം തന്നെ പിന്നീട് trust-ലേക്ക് മാറ്റി. ഇത് diversion ആണോ application ആണോ എന്നതാണ് ചോദ്യം.",
+    "card": {
+      "title": "Professional fee and trust",
+      "type": "rule",
+      "lines": [
+        "Bhargava earns ₹5 lakh for Supreme Court work.",
+        "He creates the charitable trust himself after receiving the fee."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L02",
+    "number": "1.1.2",
+    "block": 1,
+    "block_name": "Facts and question",
+    "narration_ml": "ക്ലയന്റ് trust സൃഷ്ടിച്ചിട്ടില്ല, പണം നേരിട്ട് trust-ന് നൽകിയതുമില്ല. ഭാർഗവയ്ക്കു മേൽ നിയമപരമായി ബാധകമായ trust obligation ക്ലയന്റ് ഏർപ്പെടുത്തിയിട്ടില്ല.",
+    "card": {
+      "title": "Who created the obligation?",
+      "type": "rule",
+      "lines": [
+        "The client paid Bhargava; the client did not create or own the trust.",
+        "No binding trust obligation was imposed on Bhargava by the client."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L03",
+    "number": "1.2.1",
+    "block": 2,
+    "block_name": "Legal test",
+    "narration_ml": "Diversion ഉണ്ടാകാൻ വരുമാനം ലഭിക്കുന്നതിന് മുമ്പ് source-ൽ തന്നെ ബാധകമായ നിയമബാധ്യത വേണം. ആദ്യം വരുമാനം വ്യക്തിക്ക് ലഭിച്ചാൽ പിന്നീടുള്ള വിനിയോഗം application ആണ്.",
+    "card": {
+      "title": "Diversion at source",
+      "type": "rule",
+      "lines": [
+        "A prior enforceable obligation must take income away before it reaches the assessee.",
+        "If the assessee first earns and owns it, later use is application."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L04",
+    "number": "1.2.2",
+    "block": 2,
+    "block_name": "Legal test",
+    "narration_ml": "ഭാർഗവയ്ക്ക് ഫീസിന്റെ ഉടമസ്ഥാവകാശം ആദ്യം ലഭിച്ചോ എന്ന് പരിശോധിക്കാം. ഇവിടെ ഫീസ് ആദ്യം അദ്ദേഹത്തിന്റെ professional income ആയി; അതിനുശേഷമാണ് trust-ലേക്ക് നൽകിയത്.",
+    "card": {
+      "title": "Apply the title test",
+      "type": "rule",
+      "lines": [
+        "Ask whether Bhargava ever acquired the professional fee.",
+        "Here the fee became his professional income before he settled it on the trust."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L05",
+    "number": "1.3.1",
+    "block": 3,
+    "block_name": "Apply to facts",
+    "narration_ml": "Trust deed ഭാർഗവ തന്നെയാണ് തയ്യാറാക്കി നടപ്പാക്കിയത്. അതിനാൽ ഇത് വരുമാനത്തിന്റെ source-നെ ബാധിക്കുന്ന പുറംനിയമബാധ്യതയല്ല; അദ്ദേഹത്തിന്റെ സ്വന്തം തീരുമാനമാണ്.",
+    "card": {
+      "title": "Self-created trust",
+      "type": "rule",
+      "lines": [
+        "Bhargava executed the trust deed himself.",
+        "The charity arrangement was his own decision, not an overriding title."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L06",
+    "number": "1.3.2",
+    "block": 3,
+    "block_name": "Apply to facts",
+    "narration_ml": "അഞ്ച് ലക്ഷം രൂപ ഭാർഗവയ്ക്ക് ലഭിക്കുന്നതിന് മുമ്പ് അത് trust-ലേക്ക് മാറ്റിയിട്ടില്ല. മുഴുവൻ ഫീസും ആദ്യം അദ്ദേഹത്തിന് professional income ആയി ലഭിച്ചു.",
+    "card": {
+      "title": "No diversion before receipt",
+      "type": "rule",
+      "lines": [
+        "Nothing diverted the ₹5 lakh before it accrued to Bhargava.",
+        "The full fee first reached him as professional income."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L07",
+    "number": "1.4.1",
+    "block": 4,
+    "block_name": "Tax treatment",
+    "narration_ml": "അതിനാൽ trust-ലേക്കുള്ള പിന്നീട് നടത്തിയ കൈമാറ്റം application of income ആണ്. charity-ക്കായി ചെലവഴിച്ചതുകൊണ്ട് ഇതിനകം നേടിയ വരുമാനം ഇല്ലാതാകില്ല.",
+    "card": {
+      "title": "Application of income",
+      "type": "rule",
+      "lines": [
+        "The later transfer to the trust is application of income.",
+        "Using income for charity does not erase the income already earned."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L08",
+    "number": "1.4.2",
+    "block": 4,
+    "block_name": "Conclusion",
+    "narration_ml": "അവസാനമായി, അഞ്ച് ലക്ഷം രൂപയുടെ fee ഭാർഗവയുടെ professional income-ൽ ഉൾപ്പെടുത്തണം. Section 28 പ്രകാരം Profits and Gains of Business or Profession എന്ന തലക്കെട്ടിൽ ഇത് taxable ആണ്.",
+    "card": {
+      "title": "Taxable under Section 28",
+      "type": "rule",
+      "lines": [
+        "Include the ₹5 lakh professional fee in taxable professional income.",
+        "Conclusion: assessable under Profits and Gains of Business or Profession."
+      ],
+      "highlights": []
+    }
+  }
+]

@@ -1,0 +1,1192 @@
+{
+  "q1": {
+    "topic_id": "diversion_of_income_by_overriding_title",
+    "topic_title": "Diversion of Income by Overriding Title vs. Application of Income",
+    "slides": [
+      {
+        "slide_number": 1,
+        "slide_title": "CONCEPT OVERVIEW & STATUTORY APPLICABILITY",
+        "section_badge": "Section 4 / Charging Section",
+        "layout_type": "cards",
+        "cards": [
+          {
+            "title": "Core Doctrine",
+            "badge": "Taxability",
+            "bullets": [
+              "Determines if an amount is 'Income' of the assessee.",
+              "Based on whether income 'reaches' the person."
+            ],
+            "is_highlight": true
+          },
+          {
+            "title": "Charging Section 4",
+            "badge": "Applicability",
+            "bullets": [
+              "Income must accrue or arise to the assessee.",
+              "Diversion prevents accrual at the very source."
+            ],
+            "is_highlight": false
+          }
+        ],
+        "malayalam_narration": "നമസ്കാരം, ഇന്ന് നമ്മൾ നോക്കുന്നത് Diversion vs Application of Income ആണ്. സെക്ഷൻ 4 പ്രകാരം ഒരു വരുമാനം അസ്സസ്സിയുടെ കൈയ്യിൽ എത്തുന്നതിന് മുൻപ് തന്നെ ഒരു നിയമപരമായ ബാധ്യത മൂലം തിരിച്ചുവിടപ്പെട്ടാൽ അത് നികുതിക്ക് വിധേയമല്ല. ഇത് കൃത്യമായി മനസ്സിലാക്കുന്നത് പരീക്ഷയ്ക്ക് വളരെ പ്രധാനമാണ്.",
+        "t0": 0.0,
+        "t1": 19.25,
+        "duration": 19.25
+      },
+      {
+        "slide_number": 2,
+        "slide_title": "THE DISTINCTION MATRIX: DIVERSION VS. APPLICATION",
+        "section_badge": "Section 4 & 5",
+        "layout_type": "table",
+        "cards": [
+          {
+            "title": "Diversion by Overriding Title",
+            "badge": "Non-Taxable",
+            "bullets": [
+              "Transferred at source before reaching assessee.",
+              "Enforceable legal/statutory obligation.",
+              "Assessee never acquires title or ownership."
+            ],
+            "is_highlight": true
+          },
+          {
+            "title": "Application of Income",
+            "badge": "Fully Taxable",
+            "bullets": [
+              "Applied after income reaches the assessee.",
+              "Voluntary or self-imposed condition.",
+              "Assessee has full beneficial ownership."
+            ],
+            "is_highlight": false
+          }
+        ],
+        "malayalam_narration": "ഈ ടേബിൾ ശ്രദ്ധിക്കുക. വരുമാനം നിങ്ങളുടെ കയ്യിൽ എത്തുന്നതിന് മുൻപ് തന്നെ നിയമപരമായ ബാധ്യത വഴി മാറ്റിവിടപ്പെട്ടാൽ അതിനെ Diversion എന്ന് വിളിക്കുന്നു, ഇതിന് ടാക്സ് കൊടുക്കേണ്ടതില്ല. എന്നാൽ വരുമാനം ലഭിച്ച ശേഷം നിങ്ങൾ സ്വന്തം ഇഷ്ടപ്രകാരം ചിലവാക്കുന്നതിനെ Application എന്ന് പറയുന്നു, ഇത് പൂർണ്ണമായും ടാക്സബിൾ ആണ്.",
+        "t0": 19.65,
+        "t1": 39.54,
+        "duration": 19.89
+      },
+      {
+        "slide_number": 3,
+        "slide_title": "LANDMARK JUDICIAL BENCHMARK: CIT v. THAKAR DAS BHARGAVA",
+        "section_badge": "Section 28 (PGBP)",
+        "layout_type": "formula_steps",
+        "cards": [
+          {
+            "title": "The Fact Pattern",
+            "badge": "Professional Fees",
+            "bullets": [
+              "Advocate received fees for professional services.",
+              "Agreed to allocate fees to a charitable trust."
+            ],
+            "is_highlight": false
+          },
+          {
+            "title": "The Verdict",
+            "badge": "Sec 28 Charge",
+            "bullets": [
+              "Self-created desire is merely Application.",
+              "Remains taxable as professional earnings."
+            ],
+            "is_highlight": true
+          }
+        ],
+        "formula_box": {
+          "formula_text": "Voluntary Agreement + Receipt of Income = Application (Taxable)",
+          "example_calc": "Fees Received: ₹10L -> Donated to Trust: ₹10L -> Taxable Income: ₹10L"
+        },
+        "malayalam_narration": "CIT v. Thakar Das Bhargava കേസ് വളരെ പ്രധാനമാണ്. ഒരു അഡ്വക്കേറ്റ് തന്റെ ഫീസ് ചാരിറ്റബിൾ ട്രസ്റ്റിന് കൊടുക്കാൻ തീരുമാനിച്ചാലും, അത് തന്റെ സ്വന്തം ഇഷ്ടപ്രകാരം ചെയ്യുന്നതിനാൽ കേവലം Application മാത്രമാണ്. സെക്ഷൻ 28 പ്രകാരം ആ തുകയ്ക്ക് ടാക്സ് നൽകണം.",
+        "t0": 39.94,
+        "t1": 56.23,
+        "duration": 16.29
+      },
+      {
+        "slide_number": 4,
+        "slide_title": "EXAM TAKEAWAYS & CRUCIAL PITFALLS",
+        "section_badge": "CA Final Focus",
+        "layout_type": "cards",
+        "cards": [
+          {
+            "title": "The 'Source' Test",
+            "badge": "Exam Tip",
+            "bullets": [
+              "Check if obligation is 'at source' or 'post-accrual'.",
+              "Statutory charge usually implies Diversion."
+            ],
+            "is_highlight": true
+          },
+          {
+            "title": "Common Pitfalls",
+            "badge": "Avoid Errors",
+            "bullets": [
+              "Don't confuse voluntary trusts with legal mandates.",
+              "Case law citation is vital for full marks."
+            ],
+            "is_highlight": false
+          }
+        ],
+        "malayalam_narration": "പരീക്ഷയിൽ ചോദ്യം വരുമ്പോൾ ആ ബാധ്യത നിയമപരമായതാണോ അതോ സ്വന്തം ഇഷ്ടപ്രകാരമുള്ളതാണോ എന്ന് നോക്കുക. 'At source' എന്ന വാക്ക് ഉണ്ടെങ്കിൽ അത് മിക്കവാറും Diversion ആയിരിക്കും. കൃത്യമായ സെക്ഷനുകളും കേസ് ലോകളും എഴുതാൻ ശ്രദ്ധിക്കുക. ഓൾ ദി ബെസ്റ്റ്!",
+        "t0": 56.63,
+        "t1": 71.8,
+        "duration": 15.17
+      }
+    ],
+    "total_duration": 71.8,
+    "combined_script": "നമസ്കാരം, ഇന്ന് നമ്മൾ നോക്കുന്നത് Diversion vs Application of Income ആണ്. സെക്ഷൻ 4 പ്രകാരം ഒരു വരുമാനം അസ്സസ്സിയുടെ കൈയ്യിൽ എത്തുന്നതിന് മുൻപ് തന്നെ ഒരു നിയമപരമായ ബാധ്യത മൂലം തിരിച്ചുവിടപ്പെട്ടാൽ അത് നികുതിക്ക് വിധേയമല്ല. ഇത് കൃത്യമായി മനസ്സിലാക്കുന്നത് പരീക്ഷയ്ക്ക് വളരെ പ്രധാനമാണ്.\n\nഈ ടേബിൾ ശ്രദ്ധിക്കുക. വരുമാനം നിങ്ങളുടെ കയ്യിൽ എത്തുന്നതിന് മുൻപ് തന്നെ നിയമപരമായ ബാധ്യത വഴി മാറ്റിവിടപ്പെട്ടാൽ അതിനെ Diversion എന്ന് വിളിക്കുന്നു, ഇതിന് ടാക്സ് കൊടുക്കേണ്ടതില്ല. എന്നാൽ വരുമാനം ലഭിച്ച ശേഷം നിങ്ങൾ സ്വന്തം ഇഷ്ടപ്രകാരം ചിലവാക്കുന്നതിനെ Application എന്ന് പറയുന്നു, ഇത് പൂർണ്ണമായും ടാക്സബിൾ ആണ്.\n\nCIT v. Thakar Das Bhargava കേസ് വളരെ പ്രധാനമാണ്. ഒരു അഡ്വക്കേറ്റ് തന്റെ ഫീസ് ചാരിറ്റബിൾ ട്രസ്റ്റിന് കൊടുക്കാൻ തീരുമാനിച്ചാലും, അത് തന്റെ സ്വന്തം ഇഷ്ടപ്രകാരം ചെയ്യുന്നതിനാൽ കേവലം Application മാത്രമാണ്. സെക്ഷൻ 28 പ്രകാരം ആ തുകയ്ക്ക് ടാക്സ് നൽകണം.\n\nപരീക്ഷയിൽ ചോദ്യം വരുമ്പോൾ ആ ബാധ്യത നിയമപരമായതാണോ അതോ സ്വന്തം ഇഷ്ടപ്രകാരമുള്ളതാണോ എന്ന് നോക്കുക. 'At source' എന്ന വാക്ക് ഉണ്ടെങ്കിൽ അത് മിക്കവാറും Diversion ആയിരിക്കും. കൃത്യമായ സെക്ഷനുകളും കേസ് ലോകളും എഴുതാൻ ശ്രദ്ധിക്കുക. ഓൾ ദി ബെസ്റ്റ്!"
+  },
+  "q4": {
+    "topic_id": "age_based_progressive_slab_rates_under_t",
+    "topic_title": "Age-Based Progressive Slab Rates under the Optional (Old) Tax Regime",
+    "slides": [
+      {
+        "slide_number": 1,
+        "slide_title": "Concept Overview & Statutory Applicability",
+        "section_badge": "Section 4 & Section 115BAC(6)",
+        "layout_type": "cards",
+        "cards": [
+          {
+            "title": "Core Charging Provision",
+            "badge": "Section 4",
+            "bullets": [
+              "Income-tax is charged at rates fixed by the annual Finance Act for every assessment year.",
+              "Applies on the total income of the previous year of every person."
+            ],
+            "is_highlight": false
+          },
+          {
+            "title": "The Optional Old Regime",
+            "badge": "Section 115BAC(6)",
+            "bullets": [
+              "Preserves traditional age-based progressive tax slabs and deductions (Chapter VI-A, HRA, etc.).",
+              "Available to individuals and HUFs who choose to opt out of the default concessional tax regime."
+            ],
+            "is_highlight": true
+          },
+          {
+            "title": "Resident Status Crux",
+            "badge": "Residential Status",
+            "bullets": [
+              "Higher basic exemption limits for senior and super senior citizens apply only to RESIDENT individuals.",
+              "Non-resident (NR) individuals are restricted to the basic ₹2,50,000 exemption regardless of age."
+            ],
+            "is_highlight": false
+          }
+        ],
+        "malayalam_narration": "നമസ്കാരം കാ ഫൈനൽ വിദ്യാർത്ഥികളേ! ഓപ്ഷണൽ ഓൾഡ് ടാക്സ് റെജീമിലെ പ്രായത്തിനനുസരിച്ചുള്ള സ്ലാബ് നിരക്കുകളാണ് നാം ഇവിടെ പഠിക്കുന്നത്. സെക്ഷൻ നാല് പ്രകാരമുള്ള ചാർജിംഗ് വ്യവസ്ഥയും, സെക്ഷൻ 115BAC(6) പ്രകാരമുള്ള ഓപ്ഷനും ഇതിൽ വളരെ പ്രധാനമാണ്.",
+        "t0": 0.0,
+        "t1": 15.77,
+        "duration": 15.77
+      },
+      {
+        "slide_number": 2,
+        "slide_title": "Tax Rates & Thresholds Matrix",
+        "section_badge": "Annual Finance Act (First Schedule, Part I)",
+        "layout_type": "table",
+        "cards": [
+          {
+            "title": "Resident < 60 Years",
+            "badge": "Standard Slab",
+            "bullets": [
+              "Up to ₹2.5L: Nil | ₹2.5L-₹5L: 5%",
+              "₹5L-₹10L: 20% | Above ₹10L: 30%"
+            ],
+            "is_highlight": false
+          },
+          {
+            "title": "Senior Citizen (60 to <80)",
+            "badge": "Enhanced Exemption",
+            "bullets": [
+              "Up to ₹3L: Nil | ₹3L-₹5L: 5%",
+              "₹5L-₹10L: 20% | Above ₹10L: 30%"
+            ],
+            "is_highlight": false
+          },
+          {
+            "title": "Super Senior Citizen (80+)",
+            "badge": "Maximum Exemption",
+            "bullets": [
+              "Up to ₹5L: Nil | ₹5L-₹10L: 20%",
+              "Above ₹10L: 30%"
+            ],
+            "is_highlight": true
+          }
+        ],
+        "malayalam_narration": "ഈ ടേബിൾ ശ്രദ്ധിക്കൂ! അറുപത് വയസ്സിന് താഴെയുള്ളവർക്ക് രണ്ടര ലക്ഷം വരെയാണ് നികുതി ഇളവ്. എന്നാൽ മുതിർന്ന പൗരന്മാർക്ക് മൂന്ന് ലക്ഷം വരെയും, എൺപത് കഴിഞ്ഞ സൂപ്പർ സീനിയർ സിറ്റിസൺസിന് അഞ്ച് ലക്ഷം വരെയും നികുതി പൂർണ്ണമായും ഒഴിവാക്കിയിരിക്കുന്നു.",
+        "t0": 16.17,
+        "t1": 31.46,
+        "duration": 15.29
+      },
+      {
+        "slide_number": 3,
+        "slide_title": "Additional Statutory Levies & Relief",
+        "section_badge": "Section 87A & Finance Act Provisions",
+        "layout_type": "formula_steps",
+        "cards": [
+          {
+            "title": "Rebate u/s 87A",
+            "badge": "Max ₹12,500",
+            "bullets": [
+              "Available exclusively to RESIDENT individuals.",
+              "Applicable if Total Income does not exceed ₹5,00,000.",
+              "Reduces tax liability to zero before adding Health & Education Cess."
+            ],
+            "is_highlight": true
+          },
+          {
+            "title": "Surcharge Threshold",
+            "badge": "Income > ₹50 Lakhs",
+            "bullets": [
+              "Surcharge under the old regime kicks in only when total income exceeds ₹50 Lakhs.",
+              "Progressive surcharge rates apply (10%, 15%, 25%, 37%) based on income brackets."
+            ],
+            "is_highlight": false
+          },
+          {
+            "title": "Health & Education Cess",
+            "badge": "Flat 4%",
+            "bullets": [
+              "Mandatory levy computed on the aggregate of Income-tax plus Surcharge.",
+              "Applicable across all taxpayer categories without exception."
+            ],
+            "is_highlight": false
+          }
+        ],
+        "formula_box": {
+          "formula_text": "Net Tax Liability = [Tax on Total Income (as per slab) - Rebate u/s 87A + Surcharge (if TI > ₹50L)] + 4% HEC",
+          "example_calc": "Resident Senior Citizen (Age 65) with TI of ₹5,00,000 -> Slab Tax: ₹10,000 -> Less Rebate u/s 87A: (₹10,000) -> Tax Payable: ₹0"
+        },
+        "malayalam_narration": "ഇവിടെ സെക്ഷൻ 87A പ്രകാരമുള്ള റിബേറ്റും സെർചാർജ് വ്യവസ്ഥകളും വളരെ പ്രധാനമാണ്. റെസിഡന്റായ വ്യക്തിയുടെ മൊത്തവരുമാനം അഞ്ച് ലക്ഷത്തിൽ കവിയുന്നില്ലെങ്കിൽ പന്ത്രണ്ടായിരത്തഞ്ഞൂറ് രൂപ വരെ റിബേറ്റ് ലഭിക്കും. കൂടാതെ നാല് ശതമാനം സെസും ബാധകമാണ്.",
+        "t0": 31.86,
+        "t1": 48.23,
+        "duration": 16.37
+      },
+      {
+        "slide_number": 4,
+        "slide_title": "Key Exam Takeaways & Crucial Pitfalls",
+        "section_badge": "CA Final Examination Guide",
+        "layout_type": "cards",
+        "cards": [
+          {
+            "title": "The NR Trap",
+            "badge": "Common Mistake",
+            "bullets": [
+              "Do NOT grant ₹3L or ₹5L basic exemption to Non-Resident senior citizens.",
+              "NRA status strictly limits basic exemption to ₹2,50,000 regardless of age."
+            ],
+            "is_highlight": true
+          },
+          {
+            "title": "Date of Birth Relevance",
+            "badge": "Milestone Age",
+            "bullets": [
+              "The individual must attain the age of 60 or 80 years at ANY time during the previous year.",
+              "Even if born on the last day of the previous year (e.g., 31st March), the higher slab applies."
+            ],
+            "is_highlight": false
+          },
+          {
+            "title": "Regime Selection Reminder",
+            "badge": "Opt-in / Opt-out",
+            "bullets": [
+              "Always verify whether the problem specifies Old Regime (115BAC opted out) or New Regime.",
+              "Slab rates differ fundamentally between both regimes."
+            ],
+            "is_highlight": false
+          }
+        ],
+        "malayalam_narration": "പരീക്ഷയിൽ വിദ്യാർത്ഥികൾക്ക് പറ്റാറുള്ള പ്രധാന തെറ്റുകൾ ഒഴിവാക്കുക. നോൺ-റെസിഡന്റായ മുതിർന്ന പൗരന്മാർക്ക് ഉയർന്ന ഇളവ് ബാധകമല്ല. അതുപോലെ പ്രീവിയസ് ഇയറിൽ എപ്പോഴെങ്കിലും 60 വയസ്സ് തികഞ്ഞാൽ മതിയാകും. ഈ കാര്യങ്ങൾ പരീക്ഷയിൽ പ്രത്യേകം ശ്രദ്ധിക്കുക.",
+        "t0": 48.63,
+        "t1": 64.24,
+        "duration": 15.61
+      }
+    ],
+    "total_duration": 64.24,
+    "combined_script": "നമസ്കാരം കാ ഫൈനൽ വിദ്യാർത്ഥികളേ! ഓപ്ഷണൽ ഓൾഡ് ടാക്സ് റെജീമിലെ പ്രായത്തിനനുസരിച്ചുള്ള സ്ലാബ് നിരക്കുകളാണ് നാം ഇവിടെ പഠിക്കുന്നത്. സെക്ഷൻ നാല് പ്രകാരമുള്ള ചാർജിംഗ് വ്യവസ്ഥയും, സെക്ഷൻ 115BAC(6) പ്രകാരമുള്ള ഓപ്ഷനും ഇതിൽ വളരെ പ്രധാനമാണ്.\n\nഈ ടേബിൾ ശ്രദ്ധിക്കൂ! അറുപത് വയസ്സിന് താഴെയുള്ളവർക്ക് രണ്ടര ലക്ഷം വരെയാണ് നികുതി ഇളവ്. എന്നാൽ മുതിർന്ന പൗരന്മാർക്ക് മൂന്ന് ലക്ഷം വരെയും, എൺപത് കഴിഞ്ഞ സൂപ്പർ സീനിയർ സിറ്റിസൺസിന് അഞ്ച് ലക്ഷം വരെയും നികുതി പൂർണ്ണമായും ഒഴിവാക്കിയിരിക്കുന്നു.\n\nഇവിടെ സെക്ഷൻ 87A പ്രകാരമുള്ള റിബേറ്റും സെർചാർജ് വ്യവസ്ഥകളും വളരെ പ്രധാനമാണ്. റെസിഡന്റായ വ്യക്തിയുടെ മൊത്തവരുമാനം അഞ്ച് ലക്ഷത്തിൽ കവിയുന്നില്ലെങ്കിൽ പന്ത്രണ്ടായിരത്തഞ്ഞൂറ് രൂപ വരെ റിബേറ്റ് ലഭിക്കും. കൂടാതെ നാല് ശതമാനം സെസും ബാധകമാണ്.\n\nപരീക്ഷയിൽ വിദ്യാർത്ഥികൾക്ക് പറ്റാറുള്ള പ്രധാന തെറ്റുകൾ ഒഴിവാക്കുക. നോൺ-റെസിഡന്റായ മുതിർന്ന പൗരന്മാർക്ക് ഉയർന്ന ഇളവ് ബാധകമല്ല. അതുപോലെ പ്രീവിയസ് ഇയറിൽ എപ്പോഴെങ്കിലും 60 വയസ്സ് തികഞ്ഞാൽ മതിയാകും. ഈ കാര്യങ്ങൾ പരീക്ഷയിൽ പ്രത്യേകം ശ്രദ്ധിക്കുക."
+  },
+  "q5": {
+    "topic_id": "tax_slabs_section_87a_rebate_under_norma",
+    "topic_title": "Tax Slabs & Section 87A Rebate under Normal Tax Provisions (Old Regime)",
+    "slides": [
+      {
+        "slide_number": 1,
+        "slide_title": "Concept Overview & Statutory Applicability",
+        "section_badge": "Section 115BAC(6) & Sec 87A",
+        "layout_type": "cards",
+        "cards": [
+          {
+            "title": "Normal Tax Regime",
+            "badge": "Old Provisions",
+            "bullets": [
+              "Applicable for individuals choosing not to opt for concessional taxation under Sec 115BAC.",
+              "Allows standard deductions, chapter VI-A deductions, and other exemptions."
+            ],
+            "is_highlight": false
+          },
+          {
+            "title": "Basic Exemption",
+            "badge": "Thresholds",
+            "bullets": [
+              "₹ 2,50,000 for individuals below 60 years.",
+              "Higher limits apply for Senior (₹ 3L) and Very Senior (₹ 5L) citizens."
+            ],
+            "is_highlight": false
+          },
+          {
+            "title": "Rebate Architecture",
+            "badge": "Section 87A",
+            "bullets": [
+              "Designed to provide absolute tax relief to low-income resident individuals.",
+              "Reduces tax liability to zero if total income meets statutory limits."
+            ],
+            "is_highlight": true
+          }
+        ],
+        "formula_box": null,
+        "malayalam_narration": "നമസ്കാരം! സി.എ. ഫൈനൽ ഡയറക്ട് ടാക്സ് ക്ലാസിലേക്ക് എല്ലാവർക്കും സ്വാഗതം. ഇന്നു നമ്മൾ പഠിക്കുന്നത് ഓൾഡ് റെജീമിലെ നോർമൽ ടാക്സ് സ്ലാബ്സും, പിന്നെ സെക്ഷൻ 87എ റിബേറ്റും ആണ്. ഓർഡിനറി പ്രൊവിഷൻസിൽ ഇൻഡിവിജ്വൽസിന്റെ ടാക്സ് കമ്പ്യൂട്ടേഷൻ എങ്ങനെയാണെന്ന് നമുക്ക് നോക്കാം.",
+        "t0": 0.0,
+        "t1": 15.57,
+        "duration": 15.57
+      },
+      {
+        "slide_number": 2,
+        "slide_title": "Tax Rates & Slabs Matrix (Below 60 Years)",
+        "section_badge": "Income Tax Act, 1961",
+        "layout_type": "table",
+        "cards": [
+          {
+            "title": "Slab 1: Up to ₹ 2.5 Lakh",
+            "badge": "Nil Rate",
+            "bullets": [
+              "Basic Exemption Limit.",
+              "Tax payable is Nil."
+            ],
+            "is_highlight": false
+          },
+          {
+            "title": "Slab 2: ₹ 2.5L to ₹ 5L",
+            "badge": "5% Rate",
+            "bullets": [
+              "Applicable on the amount exceeding ₹ 2,50,000.",
+              "Maximum tax under this slab is ₹ 12,500."
+            ],
+            "is_highlight": false
+          },
+          {
+            "title": "Slab 3: ₹ 5L to ₹ 10L",
+            "badge": "20% Rate",
+            "bullets": [
+              "Flat ₹ 12,500 plus 20% of amount exceeding ₹ 5,00,000.",
+              "Covers middle-income bracket earners."
+            ],
+            "is_highlight": false
+          },
+          {
+            "title": "Slab 4: Above ₹ 10 Lakh",
+            "badge": "30% Rate",
+            "bullets": [
+              "Flat ₹ 1,12,500 plus 30% of amount exceeding ₹ 10,00,000.",
+              "Highest normal tax slab rate."
+            ],
+            "is_highlight": true
+          }
+        ],
+        "formula_box": null,
+        "malayalam_narration": "ഇവിടെ 60 വയസ്സിൽ കൂടുതൽ പ്രായമില്ലാത്ത ഒരാളുടെ ഓൾഡ് റെജീം ടാക്സ് സ്ലാബ്‌സ് നൽകിയിട്ടുണ്ട്. 2.5 ലക്ഷം വരെ ടാക്സ് ഇല്ല, പിന്നെ 2.5 മുതൽ 5 ലക്ഷം വരെ 5%, 5 മുതൽ 10 ലക്ഷം വരെ 20%, അതിനു മുകളിൽ 30% എന്നുമാണ് റേറ്റ് വരുന്നത്.",
+        "t0": 15.97,
+        "t1": 37.5,
+        "duration": 21.53
+      },
+      {
+        "slide_number": 3,
+        "slide_title": "Practical Calculation & Section 87A Mechanics",
+        "section_badge": "Section 87A",
+        "layout_type": "formula_steps",
+        "cards": [
+          {
+            "title": "Eligibility Criteria",
+            "badge": "Resident Only",
+            "bullets": [
+              "Assessee must be a Resident Individual.",
+              "Total Income must not exceed ₹ 5,00,000."
+            ],
+            "is_highlight": false
+          },
+          {
+            "title": "Rebate Quantum",
+            "badge": "Max ₹ 12,500",
+            "bullets": [
+              "Lower of: 100% of income-tax payable OR ₹ 12,500.",
+              "Effectively wipes out tax liability for total income up to ₹ 5 Lakhs."
+            ],
+            "is_highlight": true
+          },
+          {
+            "title": "Cess Application",
+            "badge": "4% HE Cess",
+            "bullets": [
+              "Health & Education Cess is calculated AFTER deducting Section 87A rebate.",
+              "Since tax becomes zero, cess also becomes zero."
+            ],
+            "is_highlight": false
+          }
+        ],
+        "formula_box": {
+          "formula_text": "Tax Payable = Gross Tax - Rebate u/s 87A (Lower of Tax or ₹ 12,500) + 4% HE Cess",
+          "example_calc": "If Total Income = ₹ 5,00,000: Tax = ₹ 12,500. Less: Rebate u/s 87A (₹ 12,500) = Net Tax ₹ 0."
+        },
+        "malayalam_narration": "സെക്ഷൻ 87A റിബേറ്റ് പറ്റി നന്നായി ശ്രദ്ധിക്കുക. റെസിഡൻ്റ് ഇൻഡിവിജ്വലിൻ്റെ ടോട്ടൽ ഇൻകം 5 ലക്ഷത്തിൽ കൂടുതൽ അല്ലെങ്കിൽ, അവർക്ക് ടാക്സിൽ നിന്ന് മാക്സിമം 12,500 രൂപ വരെ റിബേറ്റ് കിട്ടും. ഇവിടെ ടാക്സ് സീറോ ആയതുകൊണ്ട് സെസ്സും വരില്ല.",
+        "t0": 37.9,
+        "t1": 55.52,
+        "duration": 17.62
+      },
+      {
+        "slide_number": 4,
+        "slide_title": "Key Exam Takeaways & Crucial Pitfalls",
+        "section_badge": "CA Final Exam Alert",
+        "layout_type": "cards",
+        "cards": [
+          {
+            "title": "Non-Resident Exclusion",
+            "badge": "Common Mistake",
+            "bullets": [
+              "Section 87A rebate is strictly NOT available to Non-Resident Indians (NRIs), even if income is <= ₹ 5 Lakhs.",
+              "Always check residential status first in exam problems."
+            ],
+            "is_highlight": true
+          },
+          {
+            "title": "Order of Deductions",
+            "badge": "Computation Rule",
+            "bullets": [
+              "Rebate u/s 87A is deducted from Income Tax before adding Health and Education Cess.",
+              "Never apply cess on gross tax before giving the rebate."
+            ],
+            "is_highlight": false
+          },
+          {
+            "title": "Special Income Rates",
+            "badge": "Capital Gains",
+            "bullets": [
+              "Rebate u/s 87A is available against normal tax. Watch out for restrictions when special rate incomes (like STCG u/s 111A) are involved.",
+              "Read the question carefully for mixed income streams."
+            ],
+            "is_highlight": false
+          }
+        ],
+        "formula_box": null,
+        "malyalam_narration": "Exam-il thettaan sadhyathayulla palathum ivide undu. Non-residentsinu 87A rebate kittilla ennathu orkkanam. Pinne rebate korachathinu shesham mathrame cess kanakku paadullu. Ikkaryangal exam-il marakkajaruthu!",
+        "malayalam_narration": "നമസ്കാരം! ടാക്സ് കണക്കുകൾ ഒക്കെ നോക്കുമ്പോൾ നമ്മൾ തീർച്ചയായും അറിഞ്ഞിരിക്കേണ്ട ചില പ്രധാനപ്പെട്ട കാര്യങ്ങളെക്കുറിച്ചാണ് നമ്മൾ ഇന്ന് സംസാരിക്കുന്നത്.\n\nആദ്യം തന്നെ നമുക്ക് **Section 87A**-യിലെ റിബേറ്റിൽ വന്ന മാറ്റങ്ങളെക്കുറിച്ച് നോക്കാം. 2024-ലെ യൂണിയൻ ബജറ്റ് പ്രകാരം, പുതിയ ടാക്സ് റെജീമിൽ സെക്ഷൻ 87A അനുസരിച്ചുള്ള റിബേറ്റിന്റെ പരിധി 25,000 രൂപയിൽ നിന്ന് 60,000 രൂപയായി ഉയർത്തിയിട്ടുണ്ട്. അതായത്, നിങ്ങളുടെ വാർഷിക വരുമാനം 7 ലക്ഷം രൂപ വരെയാണെങ്കിൽ, നിങ്ങൾ ടാക്സ് ഒന്നും കൊടുക്കേണ്ടി വരില്ല എന്നർത്ഥം!\n\nഅടുത്തതായി, നമ്മൾ ചർച്ച ചെയ്യാൻ പോകുന്നത് **Surcharge** അതായത് സർചാർജിനെക്കുറിച്ചാണ്. ഉയർന്ന വരുമാനക്കാരുടെ മേൽ ചുമത്തുന്ന ഈ അധിക നികുതി നിരക്കുകളിൽ ഈ വർഷം ചെറിയ മാറ്റങ്ങൾ വരുത്തിയിട്ടുണ്ട്.\n\nഇനി ബിസിനസ്സ് ചെയ്യുന്നവരാണെങ്കിൽ, പ്രത്യേകിച്ച് ഒരു **Domestic Company** അതായത് നമ്മുടെ നാട്ടിലെ ഒരു കമ്പനിയാണ് നിങ്ങൾ നടത്തുന്നതെങ്കിൽ, മനസ്സിലാക്കേണ്ട ഒരു കാര്യം, കമ്പനിയുടെ വാർഷിക **Turnover** അതായത് വിറ്റുവരവ് ഒരു നിശ്ചിത തുകയിൽ കൂടുതലാണെങ്കിൽ അതിനനുസരിച്ച് സർചാർജും മാറിക്കൊണ്ടിരിക്കും.\n\nഉദാഹരണത്തിന്, ചില പ്രത്യേക സന്ദർഭങ്ങളിൽ സർചാർജ് നിരക്ക് **7%** അല്ലെങ്കിൽ **12%** വരെ വരാം. നിങ്ങളുടെ കമ്പനിയുടെ ആകെ വരുമാനം **1 Crore** അതായത് ഒരു കോടി രൂപയോ അതിൽ കൂടുതലോ ഒക്കെയാണെങ്കിൽ ഈ നിയമങ്ങൾ നമ്മൾ കൃത്യമായി അറിഞ്ഞിരിക്കേണ്ടതുണ്ട്.\n\nചുരുക്കത്തിൽ, ഈ പുതിയ മാറ്റങ്ങൾ മനസ്സിലാക്കുന്നത് വഴി നമ്മുടെ ടാക്സ് ബാധ്യതകൾ വളരെ കൃത്യമായി പ്ലാൻ ചെയ്യാൻ സാധിക്കും. \n\nകേട്ടുകൊണ്ടിരുന്ന എല്ലാവർക്കും നന്ദി!",
+        "t0": 55.92,
+        "t1": 164.52,
+        "duration": 108.6
+      }
+    ],
+    "total_duration": 164.52,
+    "combined_script": "നമസ്കാരം! സി.എ. ഫൈനൽ ഡയറക്ട് ടാക്സ് ക്ലാസിലേക്ക് എല്ലാവർക്കും സ്വാഗതം. ഇന്നു നമ്മൾ പഠിക്കുന്നത് ഓൾഡ് റെജീമിലെ നോർമൽ ടാക്സ് സ്ലാബ്സും, പിന്നെ സെക്ഷൻ 87എ റിബേറ്റും ആണ്. ഓർഡിനറി പ്രൊവിഷൻസിൽ ഇൻഡിവിജ്വൽസിന്റെ ടാക്സ് കമ്പ്യൂട്ടേഷൻ എങ്ങനെയാണെന്ന് നമുക്ക് നോക്കാം.\n\nഇവിടെ 60 വയസ്സിൽ കൂടുതൽ പ്രായമില്ലാത്ത ഒരാളുടെ ഓൾഡ് റെജീം ടാക്സ് സ്ലാബ്‌സ് നൽകിയിട്ടുണ്ട്. 2.5 ലക്ഷം വരെ ടാക്സ് ഇല്ല, പിന്നെ 2.5 മുതൽ 5 ലക്ഷം വരെ 5%, 5 മുതൽ 10 ലക്ഷം വരെ 20%, അതിനു മുകളിൽ 30% എന്നുമാണ് റേറ്റ് വരുന്നത്.\n\nസെക്ഷൻ 87A റിബേറ്റ് പറ്റി നന്നായി ശ്രദ്ധിക്കുക. റെസിഡൻ്റ് ഇൻഡിവിജ്വലിൻ്റെ ടോട്ടൽ ഇൻകം 5 ലക്ഷത്തിൽ കൂടുതൽ അല്ലെങ്കിൽ, അവർക്ക് ടാക്സിൽ നിന്ന് മാക്സിമം 12,500 രൂപ വരെ റിബേറ്റ് കിട്ടും. ഇവിടെ ടാക്സ് സീറോ ആയതുകൊണ്ട് സെസ്സും വരില്ല.\n\nനമസ്കാരം! ടാക്സ് കണക്കുകൾ ഒക്കെ നോക്കുമ്പോൾ നമ്മൾ തീർച്ചയായും അറിഞ്ഞിരിക്കേണ്ട ചില പ്രധാനപ്പെട്ട കാര്യങ്ങളെക്കുറിച്ചാണ് നമ്മൾ ഇന്ന് സംസാരിക്കുന്നത്.\n\nആദ്യം തന്നെ നമുക്ക് **Section 87A**-യിലെ റിബേറ്റിൽ വന്ന മാറ്റങ്ങളെക്കുറിച്ച് നോക്കാം. 2024-ലെ യൂണിയൻ ബജറ്റ് പ്രകാരം, പുതിയ ടാക്സ് റെജീമിൽ സെക്ഷൻ 87A അനുസരിച്ചുള്ള റിബേറ്റിന്റെ പരിധി 25,000 രൂപയിൽ നിന്ന് 60,000 രൂപയായി ഉയർത്തിയിട്ടുണ്ട്. അതായത്, നിങ്ങളുടെ വാർഷിക വരുമാനം 7 ലക്ഷം രൂപ വരെയാണെങ്കിൽ, നിങ്ങൾ ടാക്സ് ഒന്നും കൊടുക്കേണ്ടി വരില്ല എന്നർത്ഥം!\n\nഅടുത്തതായി, നമ്മൾ ചർച്ച ചെയ്യാൻ പോകുന്നത് **Surcharge** അതായത് സർചാർജിനെക്കുറിച്ചാണ്. ഉയർന്ന വരുമാനക്കാരുടെ മേൽ ചുമത്തുന്ന ഈ അധിക നികുതി നിരക്കുകളിൽ ഈ വർഷം ചെറിയ മാറ്റങ്ങൾ വരുത്തിയിട്ടുണ്ട്.\n\nഇനി ബിസിനസ്സ് ചെയ്യുന്നവരാണെങ്കിൽ, പ്രത്യേകിച്ച് ഒരു **Domestic Company** അതായത് നമ്മുടെ നാട്ടിലെ ഒരു കമ്പനിയാണ് നിങ്ങൾ നടത്തുന്നതെങ്കിൽ, മനസ്സിലാക്കേണ്ട ഒരു കാര്യം, കമ്പനിയുടെ വാർഷിക **Turnover** അതായത് വിറ്റുവരവ് ഒരു നിശ്ചിത തുകയിൽ കൂടുതലാണെങ്കിൽ അതിനനുസരിച്ച് സർചാർജും മാറിക്കൊണ്ടിരിക്കും.\n\nഉദാഹരണത്തിന്, ചില പ്രത്യേക സന്ദർഭങ്ങളിൽ സർചാർജ് നിരക്ക് **7%** അല്ലെങ്കിൽ **12%** വരെ വരാം. നിങ്ങളുടെ കമ്പനിയുടെ ആകെ വരുമാനം **1 Crore** അതായത് ഒരു കോടി രൂപയോ അതിൽ കൂടുതലോ ഒക്കെയാണെങ്കിൽ ഈ നിയമങ്ങൾ നമ്മൾ കൃത്യമായി അറിഞ്ഞിരിക്കേണ്ടതുണ്ട്.\n\nചുരുക്കത്തിൽ, ഈ പുതിയ മാറ്റങ്ങൾ മനസ്സിലാക്കുന്നത് വഴി നമ്മുടെ ടാക്സ് ബാധ്യതകൾ വളരെ കൃത്യമായി പ്ലാൻ ചെയ്യാൻ സാധിക്കും. \n\nകേട്ടുകൊണ്ടിരുന്ന എല്ലാവർക്കും നന്ദി!"
+  },
+  "q6": {
+    "topic_id": "default_tax_regime_slab_rates_for_indivi",
+    "topic_title": "Default Tax Regime Slab Rates for Individuals u/s 115BAC(1A)",
+    "slides": [
+      {
+        "slide_number": 1,
+        "slide_title": "Concept Overview & Statutory Applicability",
+        "section_badge": "Section 115BAC(1A) & Section 4",
+        "layout_type": "cards",
+        "cards": [
+          {
+            "title": "Default Regime Status",
+            "badge": "Mandatory Default",
+            "bullets": [
+              "Section 115BAC(1A) applies as the default tax regime from A.Y. 2025-26 and A.Y. 2026-27.",
+              "Assessee must explicitly opt out if they wish to choose the old/optional tax regime."
+            ],
+            "is_highlight": true
+          },
+          {
+            "title": "Covered Entities",
+            "badge": "Scope",
+            "bullets": [
+              "Applicable to Individuals, HUF, AOP (Association of Persons), BOI (Body of Individuals), and AJP.",
+              "Universal rule across specified non-corporate taxpayers."
+            ],
+            "is_highlight": false
+          },
+          {
+            "title": "Uniform Exemption",
+            "badge": "No Age Distinction",
+            "bullets": [
+              "Basic exemption limit is fixed at ₹ 4,00,000 for all taxpayers.",
+              "No higher basic exemption available for Senior or Super Senior Citizens under this regime."
+            ],
+            "is_highlight": false
+          }
+        ],
+        "formula_box": null,
+        "malayalam_narration": "നമ്മൾ CA Final Direct Tax-ലെ Section 115BAC(1A) പ്രകാരമുള്ള Default Tax Regime ആണ് പഠിക്കുന്നത്. Assessment Years 2025-26 ഉം 2026-27 ഉം ബാധകമാകുന്ന ഈ പുതിയ നിയമപ്രകാരം, Senior Citizens-ന് പ്രത്യേക ഇളവുകൾ ഒന്നുമില്ലാതെ എല്ലാവർക്കും 4 ലക്ഷം രൂപയാണ് അടിസ്ഥാന ഇളവ്.",
+        "t0": 0.0,
+        "t1": 22.05,
+        "duration": 22.05
+      },
+      {
+        "slide_number": 2,
+        "slide_title": "Tax Rates & Threshold Slabs Matrix",
+        "section_badge": "Section 115BAC(1A)",
+        "layout_type": "table",
+        "cards": [
+          {
+            "title": "Lower Slabs (Up to ₹ 12 Lakhs)",
+            "badge": "0% to 10%",
+            "bullets": [
+              "Up to ₹ 4,00,000: Nil",
+              "₹ 4,00,001 to ₹ 8,00,000: 5%",
+              "₹ 8,00,001 to ₹ 12,00,000: 10%"
+            ],
+            "is_highlight": false
+          },
+          {
+            "title": "Mid Slabs (₹ 12 Lakhs to ₹ 20 Lakhs)",
+            "badge": "15% to 20%",
+            "bullets": [
+              "₹ 12,00,001 to ₹ 16,00,000: 15%",
+              "₹ 16,00,001 to ₹ 20,00,000: 20%"
+            ],
+            "is_highlight": true
+          },
+          {
+            "title": "Higher Slabs (Above ₹ 20 Lakhs)",
+            "badge": "25% & 30%",
+            "bullets": [
+              "₹ 20,00,001 to ₹ 24,00,000: 25%",
+              "Above ₹ 24,00,000: Maximum marginal rate of 30%"
+            ],
+            "is_highlight": false
+          }
+        ],
+        "formula_box": null,
+        "malayalam_narration": "ഇവിടെ പുതിയ സ്ലാബ് റേറ്റ്‌സ് നോക്കൂ. 4 ലക്ഷം വരെ ടാക്സ് ഇല്ല. പിന്നീട് ഓരോ 4 ലക്ഷം സ്ലാബിലും 5 ശതമാനം വെച്ച് ടാക്സ് കൂടി മുകളിലേക്ക് പോയി, 24 ലക്ഷത്തിന് മുകളിൽ വരുമ്പോൾ പരമാവധി 30 ശതമാനത്തിൽ എത്തുന്നു.",
+        "t0": 22.45,
+        "t1": 36.06,
+        "duration": 13.61
+      },
+      {
+        "slide_number": 3,
+        "slide_title": "Rebate u/s 87A & Surcharge Mechanics",
+        "section_badge": "Section 87A & Finance Act",
+        "layout_type": "formula_steps",
+        "cards": [
+          {
+            "title": "Rebate Limit u/s 87A",
+            "badge": "Max ₹ 25,000",
+            "bullets": [
+              "Available if Total Income does not exceed ₹ 7,00,000.",
+              "Directly deducted from the calculated income-tax liability before adding cess."
+            ],
+            "is_highlight": true
+          },
+          {
+            "title": "Health & Education Cess",
+            "badge": "Flat 4%",
+            "bullets": [
+              "Calculated strictly on the aggregate of Income-tax plus applicable Surcharge.",
+              "Mandatory across all income brackets."
+            ],
+            "is_highlight": false
+          }
+        ],
+        "formula_box": {
+          "formula_text": "Net Tax Liability = [Tax on Total Income (u/s 115BAC slabs) - Rebate u/s 87A] + 4% Cess",
+          "example_calc": "If Total Income = ₹ 7,00,000 -> Tax before rebate = ₹ 15,000 -> Rebate u/s 87A = ₹ 15,000 -> Final Tax = Nil"
+        },
+        "malayalam_narration": "പരീക്ഷകളിൽ ഏറ്റവും പ്രധാനപ്പെട്ടതാണ് സെക്ഷൻ 87A പ്രകാരമുള്ള റിബേറ്റ്. ടോട്ടൽ ഇൻകം 7 ലക്ഷം രൂപ വരെയാണെങ്കിൽ, വരുന്ന നികുതി പൂർണ്ണമായും (പരമാവധി 25,000 രൂപ വരെ) റിബേറ്റ് വഴി ഒഴിവാക്കികിട്ടും. അവസാനമായി 4 ശതമാനം സെസ്സും കൂട്ടണം.",
+        "t0": 36.46,
+        "t1": 53.67,
+        "duration": 17.21
+      },
+      {
+        "slide_number": 4,
+        "slide_title": "Key Exam Takeaways & Pitfalls to Avoid",
+        "section_badge": "CA Final Exam Corner",
+        "layout_type": "cards",
+        "cards": [
+          {
+            "title": "Common Student Pitfalls",
+            "badge": "Watch Out!",
+            "bullets": [
+              "Do not apply senior citizen exemption limits (like ₹ 3L or ₹ 5L) under the default regime.",
+              "Do not forget to add 4% Cess on the final tax plus surcharge total."
+            ],
+            "is_highlight": true
+          },
+          {
+            "title": "Deductions Restriction",
+            "badge": "Important Note",
+            "bullets": [
+              "Remember that opting for 115BAC means foregoing major deductions like 80C, 80D, etc.",
+              "Standard deduction against salary income is, however, allowed under this regime."
+            ],
+            "is_highlight": false
+          }
+        ],
+        "formula_box": null,
+        "malayalam_narration": "CA Final എക്സാമിന് ഓർമ്മിക്കേണ്ട പ്രധാന കാര്യങ്ങൾ ഇതാണ്: സീനിയർ സിറ്റിസൺ ഇളവുകൾ ഇവിടെ ബാധകമല്ല. അതുപോലെ 80C, 80D തുടങ്ങിയ ഡിഡക്ഷനുകൾ ഒഴിവാക്കപ്പെടുന്നുണ്ടോ എന്ന് പ്രോബ്ലം ചെയ്യുമ്പോൾ പ്രത്യേകം ശ്രദ്ധിക്കണം.",
+        "t0": 54.07,
+        "t1": 65.28,
+        "duration": 11.21
+      }
+    ],
+    "total_duration": 65.28,
+    "combined_script": "നമ്മൾ CA Final Direct Tax-ലെ Section 115BAC(1A) പ്രകാരമുള്ള Default Tax Regime ആണ് പഠിക്കുന്നത്. Assessment Years 2025-26 ഉം 2026-27 ഉം ബാധകമാകുന്ന ഈ പുതിയ നിയമപ്രകാരം, Senior Citizens-ന് പ്രത്യേക ഇളവുകൾ ഒന്നുമില്ലാതെ എല്ലാവർക്കും 4 ലക്ഷം രൂപയാണ് അടിസ്ഥാന ഇളവ്.\n\nഇവിടെ പുതിയ സ്ലാബ് റേറ്റ്‌സ് നോക്കൂ. 4 ലക്ഷം വരെ ടാക്സ് ഇല്ല. പിന്നീട് ഓരോ 4 ലക്ഷം സ്ലാബിലും 5 ശതമാനം വെച്ച് ടാക്സ് കൂടി മുകളിലേക്ക് പോയി, 24 ലക്ഷത്തിന് മുകളിൽ വരുമ്പോൾ പരമാവധി 30 ശതമാനത്തിൽ എത്തുന്നു.\n\nപരീക്ഷകളിൽ ഏറ്റവും പ്രധാനപ്പെട്ടതാണ് സെക്ഷൻ 87A പ്രകാരമുള്ള റിബേറ്റ്. ടോട്ടൽ ഇൻകം 7 ലക്ഷം രൂപ വരെയാണെങ്കിൽ, വരുന്ന നികുതി പൂർണ്ണമായും (പരമാവധി 25,000 രൂപ വരെ) റിബേറ്റ് വഴി ഒഴിവാക്കികിട്ടും. അവസാനമായി 4 ശതമാനം സെസ്സും കൂട്ടണം.\n\nCA Final എക്സാമിന് ഓർമ്മിക്കേണ്ട പ്രധാന കാര്യങ്ങൾ ഇതാണ്: സീനിയർ സിറ്റിസൺ ഇളവുകൾ ഇവിടെ ബാധകമല്ല. അതുപോലെ 80C, 80D തുടങ്ങിയ ഡിഡക്ഷനുകൾ ഒഴിവാക്കപ്പെടുന്നുണ്ടോ എന്ന് പ്രോബ്ലം ചെയ്യുമ്പോൾ പ്രത്യേകം ശ്രദ്ധിക്കണം."
+  },
+  "q7": {
+    "topic_id": "default_tax_regime_slabs_enhanced_rebate",
+    "topic_title": "Default Tax Regime Slabs & Enhanced Rebate u/s 87A",
+    "slides": [
+      {
+        "slide_number": 1,
+        "slide_title": "Concept Overview & Statutory Applicability",
+        "section_badge": "Section 115BAC",
+        "layout_type": "cards",
+        "cards": [
+          {
+            "title": "Default Regime Structure",
+            "badge": "Mandatory Default",
+            "bullets": [
+              "Section 115BAC applies by default to individuals, HUFs, AOPs, BOIs, and Artificial Juridical Persons.",
+              "Opting out requires filing specific forms depending on whether the assessee has business income."
+            ],
+            "is_highlight": true
+          },
+          {
+            "title": "Exemptions & Deductions Foregone",
+            "badge": "Strict Conditions",
+            "bullets": [
+              "Major deductions like Sec 80C, 80D, and standard deduction (except for salary/family pension) are not available.",
+              "No distinction between Senior and Super Senior Citizens; uniform slabs apply to all age brackets."
+            ],
+            "is_highlight": false
+          }
+        ],
+        "malayalam_narration": "നമ്മുടെ CA Final Direct Tax ക്ലാസിലേക്ക് സ്വാഗതം. സെക്ഷൻ 115BAC പ്രകാരമുള്ള ഡിഫോൾട്ട് ടാക്സ് റെജീം എങ്ങനെയാണ് വ്യക്തികൾക്ക് ബാധകമാകുന്നത് എന്നും, ഇതിൽ പ്രധാനപ്പെട്ട ഡിഡക്ഷനുകൾ ഒഴിവാക്കിയിട്ടുണ്ടെന്നും നമുക്ക് ഈ സ്ലൈഡിൽ കാണാം.",
+        "t0": 0.0,
+        "t1": 15.25,
+        "duration": 15.25
+      },
+      {
+        "slide_number": 2,
+        "slide_title": "Tax Slabs Matrix for A.Y. 2026-27",
+        "section_badge": "Section 115BAC",
+        "layout_type": "table",
+        "cards": [
+          {
+            "title": "Income Slabs upto ₹ 12 Lakhs",
+            "badge": "Lower Slabs",
+            "bullets": [
+              "Upto ₹ 4,00,000: Nil",
+              "₹ 4,00,001 to ₹ 8,00,000: 5%",
+              "₹ 8,00,001 to ₹ 12,00,000: 10%"
+            ],
+            "is_highlight": false
+          },
+          {
+            "title": "Income Slabs above ₹ 12 Lakhs",
+            "badge": "Higher Slabs",
+            "bullets": [
+              "₹ 12,00,001 to ₹ 16,00,000: 15%",
+              "₹ 16,00,001 to ₹ 20,00,000: 20%",
+              "₹ 20,00,001 to ₹ 24,00,000: 25% | Above ₹ 24,00,000: 30%"
+            ],
+            "is_highlight": true
+          }
+        ],
+        "malayalam_narration": "Assessment Year 2026-27-ലെ പുതിയ ടാക്സ് സ്ലാബുകൾ നോക്കൂ. 4 ലക്ഷം രൂപ വരെ നികുതിയില്ല. ഓരോ 4 ലക്ഷം രൂപയുടെ സ്ലാബ് വർദ്ധനവിനും 5 ശതമാനം വെച്ച് നികുതി നിരക്ക് കൂടി 24 ലക്ഷത്തിന് മുകളിൽ പരമാവധി 30 ശതമാനത്തിൽ എത്തിനിൽക്കുന്നു.",
+        "t0": 15.65,
+        "t1": 32.54,
+        "duration": 16.89
+      },
+      {
+        "slide_number": 3,
+        "slide_title": "Enhanced Rebate & Cess Mechanics",
+        "section_badge": "Section 87A",
+        "layout_type": "formula_steps",
+        "cards": [
+          {
+            "title": "Rebate u/s 87A Eligibility",
+            "badge": "Resident Individual",
+            "bullets": [
+              "Available only to Resident Individuals having Total Income up to ₹ 12,00,000.",
+              "Quantum of Rebate: Lower of actual tax payable or ₹ 60,000."
+            ],
+            "is_highlight": true
+          },
+          {
+            "title": "Health & Education Cess",
+            "badge": "4% Levy",
+            "bullets": [
+              "Calculated on the tax liability computed after subtracting the Section 87A rebate.",
+              "Ensures progressive taxation while protecting middle-income earners."
+            ],
+            "is_highlight": false
+          }
+        ],
+        "formula_box": {
+          "formula_text": "Rebate u/s 87A = Lower of (Tax on Total Income) OR (₹ 60,000)",
+          "example_calc": "Total Income: ₹ 12,00,000 -> Gross Tax: ₹ 60,000 -> Less Rebate u/s 87A: (₹ 60,000) -> Net Tax before Cess: ₹ 0"
+        },
+        "malayalam_narration": "സെക്ഷൻ 87A പ്രകാരമുള്ള റിബേറ്റ് ഇവിടെ വളരെ നിർണായകമാണ്. ടോട്ടൽ ഇൻകം 12 ലക്ഷം രൂപ വരെയാണെങ്കിൽ, നികുതി ബാധ്യതയോ അല്ലെങ്കിൽ പരമാവധി 60,000 രൂപയോ - ഇതിൽ ഏതാണോ കുറവ്, അത് റിബേറ്റ് ആയി ലഭിക്കും.",
+        "t0": 32.94,
+        "t1": 47.43,
+        "duration": 14.49
+      },
+      {
+        "slide_number": 4,
+        "slide_title": "Key Exam Takeaways & Crucial Pitfalls",
+        "section_badge": "CA Final Exam Alert",
+        "layout_type": "cards",
+        "cards": [
+          {
+            "title": "Common Exam Traps",
+            "badge": "Watch Out",
+            "bullets": [
+              "Do not apply senior citizen exemption limits (like ₹ 3 Lakh or ₹ 5 Lakh) under Section 115BAC.",
+              "Always apply the 4% Health and Education Cess strictly *after* giving effect to Section 87A rebate."
+            ],
+            "is_highlight": true
+          },
+          {
+            "title": "Marginal Relief Considerations",
+            "badge": "Problem Solving",
+            "bullets": [
+              "Check for marginal relief when total income slightly exceeds threshold limits where rebate phases out.",
+              "Carefully evaluate whether opting out of 115BAC is beneficial if heavy deductions exist."
+            ],
+            "is_highlight": false
+          }
+        ],
+        "malayalam_narration": "പരീക്ഷയിൽ മാർക്ക് നഷ്ടപ്പെടാൻ സാധ്യതയുള്ള പ്രധാനപ്പെട്ട പോയിന്റുകളാണ് ഈ സ്ലൈഡിലുള്ളത്. സീനിയർ സിറ്റിസൺസിനായി പ്രത്യേക അടിസ്ഥാന ഇളവുകൾ ഇവിടെയില്ല എന്നതും, സെസ് എപ്പോഴും റിബേറ്റിന് ശേഷമാണ് കണക്കാക്കേണ്ടത് എന്നതും പ്രത്യേകം ഓർക്കുക.",
+        "t0": 47.83,
+        "t1": 61.64,
+        "duration": 13.81
+      }
+    ],
+    "total_duration": 61.64,
+    "combined_script": "നമ്മുടെ CA Final Direct Tax ക്ലാസിലേക്ക് സ്വാഗതം. സെക്ഷൻ 115BAC പ്രകാരമുള്ള ഡിഫോൾട്ട് ടാക്സ് റെജീം എങ്ങനെയാണ് വ്യക്തികൾക്ക് ബാധകമാകുന്നത് എന്നും, ഇതിൽ പ്രധാനപ്പെട്ട ഡിഡക്ഷനുകൾ ഒഴിവാക്കിയിട്ടുണ്ടെന്നും നമുക്ക് ഈ സ്ലൈഡിൽ കാണാം.\n\nAssessment Year 2026-27-ലെ പുതിയ ടാക്സ് സ്ലാബുകൾ നോക്കൂ. 4 ലക്ഷം രൂപ വരെ നികുതിയില്ല. ഓരോ 4 ലക്ഷം രൂപയുടെ സ്ലാബ് വർദ്ധനവിനും 5 ശതമാനം വെച്ച് നികുതി നിരക്ക് കൂടി 24 ലക്ഷത്തിന് മുകളിൽ പരമാവധി 30 ശതമാനത്തിൽ എത്തിനിൽക്കുന്നു.\n\nസെക്ഷൻ 87A പ്രകാരമുള്ള റിബേറ്റ് ഇവിടെ വളരെ നിർണായകമാണ്. ടോട്ടൽ ഇൻകം 12 ലക്ഷം രൂപ വരെയാണെങ്കിൽ, നികുതി ബാധ്യതയോ അല്ലെങ്കിൽ പരമാവധി 60,000 രൂപയോ - ഇതിൽ ഏതാണോ കുറവ്, അത് റിബേറ്റ് ആയി ലഭിക്കും.\n\nപരീക്ഷയിൽ മാർക്ക് നഷ്ടപ്പെടാൻ സാധ്യതയുള്ള പ്രധാനപ്പെട്ട പോയിന്റുകളാണ് ഈ സ്ലൈഡിലുള്ളത്. സീനിയർ സിറ്റിസൺസിനായി പ്രത്യേക അടിസ്ഥാന ഇളവുകൾ ഇവിടെയില്ല എന്നതും, സെസ് എപ്പോഴും റിബേറ്റിന് ശേഷമാണ് കണക്കാക്കേണ്ടത് എന്നതും പ്രത്യേകം ഓർക്കുക."
+  },
+  "q8": {
+    "topic_id": "marginal_relief_under_section_87a_in_def",
+    "topic_title": "Marginal Relief under Section 87A in Default Tax Regime",
+    "slides": [
+      {
+        "slide_number": 1,
+        "slide_title": "Concept Overview & Statutory Applicability",
+        "section_badge": "Section 115BAC & Section 87A",
+        "layout_type": "cards",
+        "cards": [
+          {
+            "title": "Default Tax Regime",
+            "badge": "Section 115BAC",
+            "bullets": [
+              "Applicable to resident individuals by default unless opted out.",
+              "Features concessional tax slabs compared to the optional regime."
+            ],
+            "is_highlight": false
+          },
+          {
+            "title": "Rebate under Section 87A",
+            "badge": "Threshold ₹ 7 Lakhs",
+            "bullets": [
+              "Resident individuals with total income up to ₹ 7,00,000 get 100% tax rebate.",
+              "Eliminates tax liability entirely up to the threshold limit."
+            ],
+            "is_highlight": true
+          },
+          {
+            "title": "The Marginal Anomaly",
+            "badge": "Exam Trap",
+            "bullets": [
+              "When income crosses ₹ 7,00,000 marginally, tax jumps sharply.",
+              "Marginal relief protects taxpayers from paying tax higher than the excess income."
+            ],
+            "is_highlight": false
+          }
+        ],
+        "formula_box": null,
+        "malayalam_narration": "നമസ്കാരം കാ ഫൈനൽ വിദ്യാർത്ഥികളേ! ഡിഫോൾട്ട് ടാക്സ് റെജീമിലെ സെക്ഷൻ 115BAC ഉം, സെക്ഷൻ 87A പ്രകാരമുള്ള റിബേറ്റും മാർജിനൽ റിലീഫും ആണ് നമ്മൾ ഈ ക്ലാസിൽ ചർച്ച ചെയ്യുന്നത്. ഏഴു ലക്ഷം രൂപ വരെ വരുമാനമുള്ളവർക്ക് ടാക്സ് കൊടുക്കേണ്ടതില്ല.",
+        "t0": 0.0,
+        "t1": 19.54,
+        "duration": 19.54
+      },
+      {
+        "slide_number": 2,
+        "slide_title": "Tax Slabs & Rates under Default Tax Regime",
+        "section_badge": "Section 115BAC",
+        "layout_type": "table",
+        "cards": [
+          {
+            "title": "Basic Slabs (Upto ₹ 10 Lakhs)",
+            "badge": "0% to 10%",
+            "bullets": [
+              "Upto ₹ 3,00,000: Nil",
+              "₹ 3,00,001 to ₹ 7,00,000: 5%",
+              "₹ 7,00,001 to ₹ 10,00,000: 10%"
+            ],
+            "is_highlight": false
+          },
+          {
+            "title": "Higher Slabs (Above ₹ 10 Lakhs)",
+            "badge": "15% to 30%",
+            "bullets": [
+              "₹ 10,00,001 to ₹ 12,00,000: 15%",
+              "₹ 12,00,001 to ₹ 15,00,000: 20%",
+              "Above ₹ 15,00,000: 30%"
+            ],
+            "is_highlight": true
+          }
+        ],
+        "formula_box": null,
+        "malayalam_narration": "സെക്ഷൻ 115BAC പ്രകാരമുള്ള ടാക്സ് സ്ലാബുകൾ നോക്കൂ. മൂന്ന് ലക്ഷം വരെ നികുതിയില്ല. പിന്നീട് ഓരോ മൂന്ന് ലക്ഷം സ്ലാബുകളിലും നിരക്കുകൾ വർദ്ധിച്ച് പതിനഞ്ച് ലക്ഷത്തിന് മുകളിൽ മുപ്പത് ശതമാനത്തിൽ എത്തും.",
+        "t0": 19.94,
+        "t1": 35.42,
+        "duration": 15.48
+      },
+      {
+        "slide_number": 3,
+        "slide_title": "Marginal Relief Calculation & Formula",
+        "section_badge": "Section 87A",
+        "layout_type": "formula_steps",
+        "cards": [
+          {
+            "title": "Condition for Marginal Relief",
+            "badge": "Income > ₹ 7 Lakhs",
+            "bullets": [
+              "Applicable when total income slightly exceeds ₹ 7,00,000.",
+              "Tax payable on total income exceeds the amount of income above ₹ 7,00,000."
+            ],
+            "is_highlight": false
+          },
+          {
+            "title": "Restriction Rule",
+            "badge": "Cess Extra",
+            "bullets": [
+              "Tax payable is restricted to (Total Income - ₹ 7,00,000).",
+              "Health & Education Cess @ 4% is added subsequently to the relieved tax."
+            ],
+            "is_highlight": true
+          }
+        ],
+        "formula_box": {
+          "formula_text": "Marginal Relief = Tax on Total Income - (Total Income - ₹ 7,00,000)",
+          "example_calc": "Final Tax = (Total Income - 7,00,000) + 4% HEC (Restricted to actual tax if lower)"
+        },
+        "malayalam_narration": "വരുമാനം ഏഴ് ലക്ഷം രൂപയിൽ കുറച്ചുകൂടി കൂടിയാൽ വരുന്ന അധിക ടാക്സ്, ഏഴ് ലക്ഷത്തിന് മുകളിലുള്ള വരുമാനത്തേക്കാൾ കൂടുതലായാൽ മാർജിനൽ റിലീഫ് ലഭിക്കും. അതായത്, അധിക വരുമാനം എത്രയാണോ അത്രമാത്രം മാത്രമേ ടാക്സ് കൊടുക്കേണ്ടി വരൂ.",
+        "t0": 35.82,
+        "t1": 52.16,
+        "duration": 16.34
+      },
+      {
+        "slide_number": 4,
+        "slide_title": "Key Exam Takeaways & Crucial Pitfalls",
+        "section_badge": "CA Final Exam Guidance",
+        "layout_type": "cards",
+        "cards": [
+          {
+            "title": "Resident Status Mandatory",
+            "badge": "Important Rule",
+            "bullets": [
+              "Rebate u/s 87A is available ONLY to Resident Individuals.",
+              "Non-Residents (NRIs) cannot claim Section 87A rebate even if income is below ₹ 7 lakhs."
+            ],
+            "is_highlight": false
+          },
+          {
+            "title": "Marginal Relief Sequence",
+            "badge": "Calculation Trap",
+            "bullets": [
+              "Always compute normal tax first, apply marginal relief restriction, and then add 4% HEC.",
+              "Do not add cess before computing the marginal relief limit."
+            ],
+            "is_highlight": true
+          }
+        ],
+        "formula_box": null,
+        "malayalam_narration": "പരീക്ഷയിൽ ശ്രദ്ധിക്കേണ്ട പ്രധാന കാര്യങ്ങൾ ഇതാണ്. സെക്ഷൻ 87A റിബേറ്റ് റെസിഡന്റ് വ്യക്തികൾക്ക് മാത്രമേ ലഭിക്കൂ, എൻ.ആർ.ഐകൾക്ക് കിട്ടില്ല. അതുപോലെ മാർജിനൽ റിലീഫ് കണക്കാക്കിയ ശേഷമേ 4% സെസ് കൂട്ടാവൂ.",
+        "t0": 52.56,
+        "t1": 66.37,
+        "duration": 13.81
+      }
+    ],
+    "total_duration": 66.37,
+    "combined_script": "നമസ്കാരം കാ ഫൈനൽ വിദ്യാർത്ഥികളേ! ഡിഫോൾട്ട് ടാക്സ് റെജീമിലെ സെക്ഷൻ 115BAC ഉം, സെക്ഷൻ 87A പ്രകാരമുള്ള റിബേറ്റും മാർജിനൽ റിലീഫും ആണ് നമ്മൾ ഈ ക്ലാസിൽ ചർച്ച ചെയ്യുന്നത്. ഏഴു ലക്ഷം രൂപ വരെ വരുമാനമുള്ളവർക്ക് ടാക്സ് കൊടുക്കേണ്ടതില്ല.\n\nസെക്ഷൻ 115BAC പ്രകാരമുള്ള ടാക്സ് സ്ലാബുകൾ നോക്കൂ. മൂന്ന് ലക്ഷം വരെ നികുതിയില്ല. പിന്നീട് ഓരോ മൂന്ന് ലക്ഷം സ്ലാബുകളിലും നിരക്കുകൾ വർദ്ധിച്ച് പതിനഞ്ച് ലക്ഷത്തിന് മുകളിൽ മുപ്പത് ശതമാനത്തിൽ എത്തും.\n\nവരുമാനം ഏഴ് ലക്ഷം രൂപയിൽ കുറച്ചുകൂടി കൂടിയാൽ വരുന്ന അധിക ടാക്സ്, ഏഴ് ലക്ഷത്തിന് മുകളിലുള്ള വരുമാനത്തേക്കാൾ കൂടുതലായാൽ മാർജിനൽ റിലീഫ് ലഭിക്കും. അതായത്, അധിക വരുമാനം എത്രയാണോ അത്രമാത്രം മാത്രമേ ടാക്സ് കൊടുക്കേണ്ടി വരൂ.\n\nപരീക്ഷയിൽ ശ്രദ്ധിക്കേണ്ട പ്രധാന കാര്യങ്ങൾ ഇതാണ്. സെക്ഷൻ 87A റിബേറ്റ് റെസിഡന്റ് വ്യക്തികൾക്ക് മാത്രമേ ലഭിക്കൂ, എൻ.ആർ.ഐകൾക്ക് കിട്ടില്ല. അതുപോലെ മാർജിനൽ റിലീഫ് കണക്കാക്കിയ ശേഷമേ 4% സെസ് കൂട്ടാവൂ."
+  },
+  "q9": {
+    "topic_id": "marginal_relief_on_surcharge_for_domestic_companies",
+    "topic_title": "Marginal Relief on Surcharge for Domestic Companies Exceeding ₹1 Crore Threshold",
+    "slides": [
+      {
+        "slide_number": 1,
+        "slide_title": "Concept Overview & Statutory Applicability",
+        "section_badge": "Section 4, Annual Finance Act",
+        "layout_type": "cards",
+        "cards": [
+          {
+            "title": "What is Marginal Relief?",
+            "badge": "Core Concept",
+            "bullets": [
+              "Relief granted when the additional tax and surcharge due to crossing a threshold exceeds the incremental income earned.",
+              "Ensures net income after tax does not become less than the net income at the threshold limit."
+            ],
+            "is_highlight": false
+          },
+          {
+            "title": "Applicability to Domestic Companies",
+            "badge": "Scope",
+            "bullets": [
+              "Applies when Total Income crosses ₹ 1 Crore or ₹ 10 Crore slabs.",
+              "Designed to soften the tax blow of sudden surcharge applicability."
+            ],
+            "is_highlight": true
+          }
+        ],
+        "formula_box": null,
+        "malayalam_narration": "നമസ്കാരം സി.എ ഫൈനൽ സ്റ്റുഡൻ്റ്സ്! 1 കോടി തടസ്സമില്ലാതെ ക്രോസ് ചെയ്യുമ്പോൾ വരുന്ന ഹെവി സർചാർജ് ബർഡനിൽ നിന്നും കമ്പനീസിന് കിട്ടുന്ന ഒരു റിലീഫ് ആണ് മാർജിനൽ റിലീഫ്. ഇതിനെ പറ്റി നമുക്ക് ഡീറ്റെയിൽ ആയി നോക്കാം.",
+        "t0": 0.0,
+        "t1": 11.33,
+        "duration": 11.33
+      },
+      {
+        "slide_number": 2,
+        "slide_title": "Tax Rates & Surcharge Slabs",
+        "section_badge": "Section 4, Finance Act",
+        "layout_type": "table",
+        "cards": [
+          {
+            "title": "Base Tax Rates (P.Y. 2023-24)",
+            "badge": "Turnover Based",
+            "bullets": [
+              "Turnover <= ₹ 400 Crore: 25% base tax rate.",
+              "Turnover > ₹ 400 Crore: 30% base tax rate."
+            ],
+            "is_highlight": false
+          },
+          {
+            "title": "Surcharge Slabs",
+            "badge": "Income Based",
+            "bullets": [
+              "Up to ₹ 1 Crore: Nil surcharge.",
+              "> ₹ 1 Crore up to ₹ 10 Crore: 7% surcharge.",
+              "> ₹ 10 Crore: 12% surcharge."
+            ],
+            "is_highlight": true
+          }
+        ],
+        "formula_box": null,
+        "malayalam_narration": "ഈ സ്ലൈഡിൽ നമുക്ക് ടേൺഓവർ അനുസരിച്ചുള്ള ബേസ് ടാക്സ് റേറ്റ്സും, ഇൻകം അനുസരിച്ചുള്ള സർചാർജ് സ്ലാബ്‌സും കാണാം. 400 കോടി ടേൺഓവർ വരെ 25 ശതമാനവും, അടുത്തതിൽ 30 ശതമാനവുമാണ് ടാക്സ് റേറ്റ്.",
+        "t0": 11.73,
+        "t1": 26.95,
+        "duration": 15.22
+      },
+      {
+        "slide_number": 3,
+        "slide_title": "Marginal Relief Formula & Calculation",
+        "section_badge": "Section 4, Finance Act",
+        "layout_type": "formula_steps",
+        "cards": [
+          {
+            "title": "Step 1: Cap on Tax + Surcharge",
+            "badge": "Limitation",
+            "bullets": [
+              "Total tax and surcharge cannot exceed: Tax on ₹ 1 Crore + (Total Income - ₹ 1 Crore).",
+              "Protects the incremental income from being fully eaten up by tax."
+            ],
+            "is_highlight": false
+          },
+          {
+            "title": "Step 2: Compute Relief",
+            "badge": "Formula",
+            "bullets": [
+              "Marginal Relief = (Tax + Surcharge) - [Tax on ₹ 1 Crore + Incremental Income above 1 Cr].",
+              "Health & Education Cess @ 4% is applied strictly on (Tax + Surcharge - Marginal Relief)."
+            ],
+            "is_highlight": true
+          }
+        ],
+        "formula_box": {
+          "formula_text": "Marginal Relief = (Tax + Surcharge) - [Tax on ₹ 1 Crore + (Total Income - ₹ 1,00,00,000)]",
+          "example_calc": "Cess = 4% on Net Tax Liability after deducting Marginal Relief."
+        },
+        "malayalam_narration": "ഇത് എങ്ങനെ കാൽക്കുലേറ്റ് ചെയ്യുന്നത്? ടോട്ടൽ ടാക്സും സർചാർജും പ്ലസ് ഒരു കോടിക്കു മുകളിലുള്ള എസ്ട്രാ ഇൻകം - ഇതാണ് ഫോർമുല. എസാം പോയിന്റ് ഓഫ് വ്യൂവിൽ ரொம்ப മുഖ്യം ആണ്.",
+        "t0": 27.35,
+        "t1": 39.73,
+        "duration": 12.38
+      },
+      {
+        "slide_number": 4,
+        "slide_title": "Key Exam Takeaways & Pitfalls to Avoid",
+        "section_badge": "CA Final Exam Guide",
+        "layout_type": "cards",
+        "cards": [
+          {
+            "title": "Common Exam Pitfalls",
+            "badge": "Watch Out",
+            "bullets": [
+              "Do not calculate Health & Education Cess before deducting Marginal Relief.",
+              "Always remember to check turnover limits (₹ 400 Cr) for determining the correct base tax rate (25% vs 30%)."
+            ],
+            "is_highlight": false
+          },
+          {
+            "title": "Scoring Tips",
+            "badge": "Presentation",
+            "bullets": [
+              "Clearly show step-by-step comparison between normal tax and marginal relief cap.",
+              "Quote relevant Finance Act provisions and mention cess application clearly at the end."
+            ],
+            "is_highlight": true
+          }
+        ],
+        "formula_box": null,
+        "malayalam_narration": "എക്‌സാമിനർ പ്രതീക്ഷിക്കുന്ന ചില കോമൺ മിസ്റ്റേക്ക്‌സ് എങ്ങനെ ഒഴിവാക്കണം എന്നാണ് ഈ സ്ലൈഡിൽ പറയുന്നത്. സെസ് (Cess) എപ്പോഴും മാർജിനൽ റിലീഫ് കുറച്ചതിനു ശേഷം മാത്രം കാൽക്കുലേറ്റ് ചെയ്യുക.",
+        "t0": 40.13,
+        "t1": 53.74,
+        "duration": 13.61
+      }
+    ],
+    "total_duration": 53.74,
+    "combined_script": "നമസ്കാരം സി.എ ഫൈനൽ സ്റ്റുഡൻ്റ്സ്! 1 കോടി തടസ്സമില്ലാതെ ക്രോസ് ചെയ്യുമ്പോൾ വരുന്ന ഹെവി സർചാർജ് ബർഡനിൽ നിന്നും കമ്പനീസിന് കിട്ടുന്ന ഒരു റിലീഫ് ആണ് മാർജിനൽ റിലീഫ്. ഇതിനെ പറ്റി നമുക്ക് ഡീറ്റെയിൽ ആയി നോക്കാം.\n\nഈ സ്ലൈഡിൽ നമുക്ക് ടേൺഓവർ അനുസരിച്ചുള്ള ബേസ് ടാക്സ് റേറ്റ്സും, ഇൻകം അനുസരിച്ചുള്ള സർചാർജ് സ്ലാബ്‌സും കാണാം. 400 കോടി ടേൺഓവർ വരെ 25 ശതമാനവും, അടുത്തതിൽ 30 ശതമാനവുമാണ് ടാക്സ് റേറ്റ്.\n\nഇത് എങ്ങനെ കാൽക്കുലേറ്റ് ചെയ്യുന്നത്? ടോട്ടൽ ടാക്സും സർചാർജും പ്ലസ് ഒരു കോടിക്കു മുകളിലുള്ള എസ്ട്രാ ഇൻകം - ഇതാണ് ഫോർമുല. എസാം പോയിന്റ് ഓഫ് വ്യൂവിൽ ரொம்ப മുഖ്യം ആണ്.\n\nഎക്‌സാമിനർ പ്രതീക്ഷിക്കുന്ന ചില കോമൺ മിസ്റ്റേക്ക്‌സ് എങ്ങനെ ഒഴിവാക്കണം എന്നാണ് ഈ സ്ലൈഡിൽ പറയുന്നത്. സെസ് (Cess) എപ്പോഴും മാർജിനൽ റിലീഫ് കുറച്ചതിനു ശേഷം മാത്രം കാൽക്കുലേറ്റ് ചെയ്യുക."
+  },
+  "q10": {
+    "topic_id": "marginal_relief_on_surcharge_for_domestic_companies",
+    "topic_title": "Marginal Relief on Surcharge for Domestic Companies exceeding ₹ 10 Crore",
+    "slides": [
+      {
+        "slide_number": 1,
+        "slide_title": "Concept Overview & Statutory Applicability",
+        "section_badge": "Section 4, Finance Act",
+        "layout_type": "cards",
+        "cards": [
+          {
+            "title": "Core Problem",
+            "badge": "The Surcharge Trap",
+            "bullets": [
+              "A minor increase in Total Income above ₹ 10 Crore leads to a massive jump in Surcharge from 7% to 12%.",
+              "Without relief, incremental tax can exceed the incremental income earned by the company."
+            ],
+            "is_highlight": false
+          },
+          {
+            "title": "Statutory Objective",
+            "badge": "Equity & Fairness",
+            "bullets": [
+              "Marginal relief ensures the additional tax liability does not exceed the additional income over ₹ 10 Crore.",
+              "Applicable strictly under the regular tax regime for domestic companies."
+            ],
+            "is_highlight": true
+          }
+        ],
+        "formula_box": null,
+        "malayalam_narration": "നമസ്കാരം CA സ്റ്റുഡന്റ്സ്! ടോട്ടൽ ഇൻകം 10 കോടി രൂപ കഴിയുമ്പോൾ സർചാർജ് 7 পার্সന്റേജിൽ നിന്ന് 12 পার্সന്റേജ് ആയി മാറും. ഇതു കാരണം വരുന്ന ট্যাক্স ബർഡൻ കുറക്കാനാണ് മാർജിനൽ রিলিফ കൊടുക്കുന്നത്. ഇന്നു നമ്മൾ ഇതു എങ്ങനെ കാൽക്കുലേറ്റ് ചെയ്യുന്നു എന്നു നോക്കാം.",
+        "t0": 0.0,
+        "t1": 18.17,
+        "duration": 18.17
+      },
+      {
+        "slide_number": 2,
+        "slide_title": "Tax Rates, Turnovers & Surcharge Slabs",
+        "section_badge": "Section 4, Finance Act",
+        "layout_type": "table",
+        "cards": [
+          {
+            "title": "Base Tax Rates",
+            "badge": "Turnover Based",
+            "bullets": [
+              "P.Y. 2023-24 Turnover <= ₹ 400 Crore: Base Tax Rate is 25%.",
+              "P.Y. 2023-24 Turnover > ₹ 400 Crore: Base Tax Rate is 30%."
+            ],
+            "is_highlight": false
+          },
+          {
+            "title": "Surcharge Slabs",
+            "badge": "Total Income Based",
+            "bullets": [
+              "Up to ₹ 1 Crore: Nil surcharge.",
+              "Above ₹ 1 Crore up to ₹ 10 Crore: 7% surcharge.",
+              "Exceeding ₹ 10 Crore: 12% surcharge."
+            ],
+            "is_highlight": true
+          }
+        ],
+        "formula_box": null,
+        "malayalam_narration": "ഈ സ്ലൈഡിൽ നമ്മൾ ഡൊമെസ്റ്റിക് കമ്പനികളുടെ ബേസ് ടാക്സ് റേറ്റും സർചാർജ് സ്ലാബുമാണ് കാണുന്നത്. ടേണൗവർ 400 കോടിയിൽ കൂടുതലാണെങ്കിൽ ടാക്സ് റേറ്റ് 30 പെർസെന്റേജ് ആകും. സർചാർജ് 10 കോടിക്ക് മുകളിൽ 12 പെർസെന്റേജ് വരും.",
+        "t0": 18.57,
+        "t1": 35.03,
+        "duration": 16.46
+      },
+      {
+        "slide_number": 3,
+        "slide_title": "Step-by-Step Marginal Relief Computation",
+        "section_badge": "Section 4, Finance Act",
+        "layout_type": "formula_steps",
+        "cards": [
+          {
+            "title": "Step 1 & Step 2",
+            "badge": "Actual vs Threshold",
+            "bullets": [
+              "Step 1: Compute Tax + Surcharge @ 12% on actual Total Income.",
+              "Step 2: Compute Tax + Surcharge @ 7% on threshold limit of ₹ 10 Crore."
+            ],
+            "is_highlight": false
+          },
+          {
+            "title": "Step 3 & Step 4",
+            "badge": "Capping & Relief",
+            "bullets": [
+              "Step 3: Max Tax = Tax on ₹ 10 Cr + (Total Income - ₹ 10 Cr).",
+              "Step 4: Marginal Relief = Step 1 Tax minus Step 3 Capped Tax."
+            ],
+            "is_highlight": true
+          }
+        ],
+        "formula_box": {
+          "formula_text": "Marginal Relief = [Tax + Surcharge on Actual Income (@12%)] - [Tax + Surcharge on ₹ 10 Cr (@7%) + (Total Income - ₹ 10 Cr)]",
+          "example_calc": "Capped Tax = Tax on ₹ 10 Cr + Incremental Income above ₹ 10 Cr."
+        },
+        "malayalam_narration": "മാർജിനൽ റിലീഫ് കാൽക്കുലേറ്റ് ചെയ്യാൻ നാല് സ്റ്റെപ്പുകളുണ്ട്. ആക്ച്വൽ ഇന്‍കമിന്റെ ടാക്സിലേക്ക് 12 ശതമാനം സർചാർജ് കൂട്ടി സ്റ്റെപ്പ് വൺ ചെയ്യുക. പിന്നെ 10 കോടിയുടെ മേലെ ഉള്ള എക്സ്ട്രാ ഇൻകം, 10 കോടിയിലെ ടാക്സിൽ കൂട്ടി മാക്സിമം ടാക്സ് കാപ്പ് ചെയ്യുക.",
+        "t0": 35.43,
+        "t1": 52.69,
+        "duration": 17.26
+      },
+      {
+        "slide_number": 4,
+        "slide_title": "Key Exam Takeaways & Pitfalls to Avoid",
+        "section_badge": "CA Final Exam Tips",
+        "layout_type": "cards",
+        "cards": [
+          {
+            "title": "Cess Application",
+            "badge": "Mandatory Step",
+            "bullets": [
+              "Always deduct Marginal Relief from (Tax + Surcharge) BEFORE adding Health & Education Cess (4%).",
+              "Adding cess before marginal relief calculation is a common student error."
+            ],
+            "is_highlight": false
+          },
+          {
+            "title": "Exam Presentation",
+            "badge": "Scoring Points",
+            "bullets": [
+              "Clearly write out all four computation steps in your answersheet.",
+              "Specify whether the base tax rate is 25% or 30% based on the turnover given in the problem."
+            ],
+            "is_highlight": true
+          }
+        ],
+        "formula_box": null,
+        "malayalam_narration": "എസാമിൽ നോട്ട് ചെയ്യേണ്ട ഒരു പ്രധാനപ്പെട്ട കാര്യം: ഹെൽത്ത് ആൻഡ് എജ്യുക്കേഷൻ സെസ് 4 പെർസെന്റേജ് എടുക്കുന്നതിന് മുമ്പേ, മാർജിനൽ റിലീഫ് കുറയ്ക്കാൻ മറക്കരുത്. സ്റ്റെപ്പ് ബൈ സ്റ്റെപ്പ് প্রেസന്റേഷൻ ഉണ്ടായിരിക്കണം എസാമിൽ ഫുൾ മാർക്ക് കിട്ടാൻ.",
+        "t0": 53.09,
+        "t1": 69.1,
+        "duration": 16.01
+      }
+    ],
+    "total_duration": 69.1,
+    "combined_script": "നമസ്കാരം CA സ്റ്റുഡന്റ്സ്! ടോട്ടൽ ഇൻകം 10 കോടി രൂപ കഴിയുമ്പോൾ സർചാർജ് 7 পার্সന്റേജിൽ നിന്ന് 12 পার্সന്റേജ് ആയി മാറും. ഇതു കാരണം വരുന്ന ট্যাক্স ബർഡൻ കുറക്കാനാണ് മാർജിനൽ রিলিফ കൊടുക്കുന്നത്. ഇന്നു നമ്മൾ ഇതു എങ്ങനെ കാൽക്കുലേറ്റ് ചെയ്യുന്നു എന്നു നോക്കാം.\n\nഈ സ്ലൈഡിൽ നമ്മൾ ഡൊമെസ്റ്റിക് കമ്പനികളുടെ ബേസ് ടാക്സ് റേറ്റും സർചാർജ് സ്ലാബുമാണ് കാണുന്നത്. ടേണൗവർ 400 കോടിയിൽ കൂടുതലാണെങ്കിൽ ടാക്സ് റേറ്റ് 30 പെർസെന്റേജ് ആകും. സർചാർജ് 10 കോടിക്ക് മുകളിൽ 12 പെർസെന്റേജ് വരും.\n\nമാർജിനൽ റിലീഫ് കാൽക്കുലേറ്റ് ചെയ്യാൻ നാല് സ്റ്റെപ്പുകളുണ്ട്. ആക്ച്വൽ ഇന്‍കമിന്റെ ടാക്സിലേക്ക് 12 ശതമാനം സർചാർജ് കൂട്ടി സ്റ്റെപ്പ് വൺ ചെയ്യുക. പിന്നെ 10 കോടിയുടെ മേലെ ഉള്ള എക്സ്ട്രാ ഇൻകം, 10 കോടിയിലെ ടാക്സിൽ കൂട്ടി മാക്സിമം ടാക്സ് കാപ്പ് ചെയ്യുക.\n\nഎസാമിൽ നോട്ട് ചെയ്യേണ്ട ഒരു പ്രധാനപ്പെട്ട കാര്യം: ഹെൽത്ത് ആൻഡ് എജ്യുക്കേഷൻ സെസ് 4 പെർസെന്റേജ് എടുക്കുന്നതിന് മുമ്പേ, മാർജിനൽ റിലീഫ് കുറയ്ക്കാൻ മറക്കരുത്. സ്റ്റെപ്പ് ബൈ സ്റ്റെപ്പ് প্রেസന്റേഷൻ ഉണ്ടായിരിക്കണം എസാമിൽ ഫുൾ മാർക്ക് കിട്ടാൻ."
+  }
+}

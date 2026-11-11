@@ -1,0 +1,212 @@
+[
+  {
+    "id": "L01",
+    "block": 1,
+    "block_name": "Scope/Applicability",
+    "narration_ml": "Section 115BAC default tax regime-ൽ Resident Individuals-ന്റെ Total Income-നാണ് നിശ്ചിത slab rates പ്രകാരം നികുതി കണക്കാക്കുന്നത്. ഈ ഘടനയാണ് ബാധകമായ regime വ്യക്തമാക്കുന്നത്.",
+    "card": {
+      "title": "Default Regime Scope",
+      "type": "rule",
+      "lines": [
+        "Section 115BAC sets the default-regime tax rules.",
+        "The narration identifies Resident Individuals for the described rebate rules.",
+        "Tax is computed on Total Income using the applicable slabs."
+      ],
+      "highlights": [
+        "Section 115BAC",
+        "Resident Individuals",
+        "Total Income"
+      ],
+      "review_flag": "REVIEW REQUIRED: provisions.json shows slabs beginning at ₹ 3,00,000 and omits the narration values; the narration states slabs beginning at ₹ 4,00,000 and rebate threshold/amount ₹ 12,00,000 / ₹ 60,000. Confirm against the question bank PDF."
+    }
+  },
+  {
+    "id": "L02",
+    "block": 1,
+    "block_name": "Scope/Applicability",
+    "narration_ml": "Section 87A rebate Resident Individuals-ന് മാത്രമാണ്; eligibility Total Income threshold, അതിനുള്ള statutory conditions എന്നിവ അനുസരിച്ചാണ് തീരുമാനിക്കുന്നത്.",
+    "card": {
+      "title": "Section 87A Eligibility",
+      "type": "rule",
+      "lines": [
+        "The narration limits the rebate to Resident Individuals.",
+        "Eligibility depends on the applicable Total Income threshold.",
+        "Apply Section 87A after computing income-tax under the relevant regime."
+      ],
+      "highlights": [
+        "Section 87A",
+        "Resident Individuals",
+        "Income threshold"
+      ],
+      "review_flag": "REVIEW REQUIRED: provisions.json shows slabs beginning at ₹ 3,00,000 and omits the narration values; the narration states slabs beginning at ₹ 4,00,000 and rebate threshold/amount ₹ 12,00,000 / ₹ 60,000. Confirm against the question bank PDF."
+    }
+  },
+  {
+    "id": "L03",
+    "block": 2,
+    "block_name": "Rates/Matrix",
+    "narration_ml": "Narration-consistent slab schedule-ൽ ₹ 4,00,000 വരെ Nil ആണ്; ₹ 4,00,001 മുതൽ ₹ 12,00,000 വരെയുള്ള slabs-ൽ 5%, 10% നിരക്കുകൾ ബാധകമാണ്.",
+    "card": {
+      "title": "Initial Tax Slabs",
+      "type": "table",
+      "lines": [
+        "Income up to ₹ 4,00,000 is taxed at Nil rate.",
+        "Income from ₹ 4,00,001 to ₹ 8,00,000 is taxed at 5%.",
+        "Income from ₹ 8,00,001 to ₹ 12,00,000 is taxed at 10%."
+      ],
+      "table": {
+        "headers": [
+          "Total Income Slab",
+          "Rate of Tax"
+        ],
+        "rows": [
+          [
+            "Up to ₹ 4,00,000",
+            "Nil"
+          ],
+          [
+            "₹ 4,00,001 – ₹ 8,00,000",
+            "5%"
+          ],
+          [
+            "₹ 8,00,001 – ₹ 12,00,000",
+            "10%"
+          ]
+        ]
+      },
+      "highlights": [
+        "Nil",
+        "5%",
+        "10%"
+      ],
+      "review_flag": "REVIEW REQUIRED: provisions.json shows slabs beginning at ₹ 3,00,000 and omits the narration values; the narration states slabs beginning at ₹ 4,00,000 and rebate threshold/amount ₹ 12,00,000 / ₹ 60,000. Confirm against the question bank PDF."
+    }
+  },
+  {
+    "id": "L04",
+    "block": 2,
+    "block_name": "Rates/Matrix",
+    "narration_ml": "₹ 12,00,000-ന് മുകളിലുള്ള slabs-ൽ ₹ 4,00,000 വീതമുള്ള ഘട്ടങ്ങളായി 15%, 20%, 25% നിരക്കുകളും ₹ 24,00,000-ന് മുകളിൽ 30% നിരക്കും ബാധകമാണ്.",
+    "card": {
+      "title": "Upper Tax Slabs",
+      "type": "table",
+      "lines": [
+        "Income from ₹ 12,00,001 to ₹ 16,00,000 is taxed at 15%.",
+        "Income from ₹ 16,00,001 to ₹ 20,00,000 is taxed at 20%, and ₹ 20,00,001 to ₹ 24,00,000 at 25%.",
+        "Income above ₹ 24,00,000 is taxed at 30%."
+      ],
+      "table": {
+        "headers": [
+          "Total Income Slab",
+          "Rate of Tax"
+        ],
+        "rows": [
+          [
+            "₹ 12,00,001 – ₹ 16,00,000",
+            "15%"
+          ],
+          [
+            "₹ 16,00,001 – ₹ 20,00,000",
+            "20%"
+          ],
+          [
+            "₹ 20,00,001 – ₹ 24,00,000",
+            "25%"
+          ],
+          [
+            "Above ₹ 24,00,000",
+            "30%"
+          ]
+        ]
+      },
+      "highlights": [
+        "15%",
+        "20%",
+        "25%",
+        "30%"
+      ],
+      "review_flag": "REVIEW REQUIRED: provisions.json shows slabs beginning at ₹ 3,00,000 and omits the narration values; the narration states slabs beginning at ₹ 4,00,000 and rebate threshold/amount ₹ 12,00,000 / ₹ 60,000. Confirm against the question bank PDF."
+    }
+  },
+  {
+    "id": "L05",
+    "block": 3,
+    "block_name": "Computation/Relief",
+    "narration_ml": "Narration-consistent rule പ്രകാരം Resident Individual-ന്റെ Total Income ₹ 12,00,000 കവിയാത്താൽ Section 87A പ്രകാരം ₹ 60,000 വരെയുള്ള നികുതി rebate ആയി ലഭിക്കും.",
+    "card": {
+      "title": "Full Rebate Threshold",
+      "type": "rule",
+      "lines": [
+        "Available to Resident Individuals under Section 87A.",
+        "The stated Total Income threshold is ₹ 12,00,000.",
+        "The narration states a maximum rebate of ₹ 60,000."
+      ],
+      "highlights": [
+        "Section 87A",
+        "₹ 12,00,000",
+        "₹ 60,000"
+      ],
+      "review_flag": "REVIEW REQUIRED: provisions.json shows slabs beginning at ₹ 3,00,000 and omits the narration values; the narration states slabs beginning at ₹ 4,00,000 and rebate threshold/amount ₹ 12,00,000 / ₹ 60,000. Confirm against the question bank PDF."
+    }
+  },
+  {
+    "id": "L06",
+    "block": 3,
+    "block_name": "Computation/Relief",
+    "narration_ml": "Income ₹ 12,00,000 കവിയുമ്പോൾ slab tax-ഉം ₹ 12,00,000-ന് മുകളിലുള്ള അധിക വരുമാനവും താരതമ്യം ചെയ്ത് marginal relief കണക്കാക്കണം.",
+    "card": {
+      "title": "Marginal Relief Test",
+      "type": "formula",
+      "lines": [
+        "Apply when Total Income exceeds the ₹ 12,00,000 threshold.",
+        "Compare slab tax with income exceeding the threshold.",
+        "Relief limits tax before cess to the excess income amount."
+      ],
+      "highlights": [
+        "₹ 12,00,000 threshold",
+        "Section 87A"
+      ],
+      "review_flag": "REVIEW REQUIRED: provisions.json shows slabs beginning at ₹ 3,00,000 and omits the narration values; the narration states slabs beginning at ₹ 4,00,000 and rebate threshold/amount ₹ 12,00,000 / ₹ 60,000. Confirm against the question bank PDF."
+    }
+  },
+  {
+    "id": "L07",
+    "block": 4,
+    "block_name": "Exam Cautions",
+    "narration_ml": "Marginal relief-ന്റെ ലക്ഷ്യം threshold-നെ അല്പം കവിയുന്ന വരുമാനത്തിന് അധിക വരുമാനത്തേക്കാൾ കൂടുതലായ നികുതി വരുന്നത് തടയുന്നതാണ്. ഇതാണ് relief-ന്റെ പ്രധാന പരിധി.",
+    "card": {
+      "title": "Marginal Relief Limit",
+      "type": "caution",
+      "lines": [
+        "Tax before cess cannot exceed the income above the threshold.",
+        "Compare the calculated slab tax with that excess income.",
+        "The lower amount is the tax payable before cess under the stated formula."
+      ],
+      "highlights": [
+        "Before cess",
+        "Excess income cap"
+      ],
+      "review_flag": "REVIEW REQUIRED: provisions.json shows slabs beginning at ₹ 3,00,000 and omits the narration values; the narration states slabs beginning at ₹ 4,00,000 and rebate threshold/amount ₹ 12,00,000 / ₹ 60,000. Confirm against the question bank PDF."
+    }
+  },
+  {
+    "id": "L08",
+    "block": 4,
+    "block_name": "Exam Cautions",
+    "narration_ml": "Marginal relief കണക്കാക്കിയ ശേഷമുള്ള tax-ൽ മാത്രമേ 4% Health and Education Cess ചേർക്കാവൂ; relief-ന് മുമ്പ് cess കണക്കാക്കരുത്.",
+    "card": {
+      "title": "Apply Cess Last",
+      "type": "rule",
+      "lines": [
+        "Health and Education Cess is charged at 4%.",
+        "Calculate it on tax after marginal relief.",
+        "Do not add cess before determining the marginal-relief amount."
+      ],
+      "highlights": [
+        "4% HEC",
+        "After marginal relief"
+      ],
+      "review_flag": "REVIEW REQUIRED: provisions.json shows slabs beginning at ₹ 3,00,000 and omits the narration values; the narration states slabs beginning at ₹ 4,00,000 and rebate threshold/amount ₹ 12,00,000 / ₹ 60,000. Confirm against the question bank PDF."
+    }
+  }
+]

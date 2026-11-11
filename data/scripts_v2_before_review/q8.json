@@ -1,0 +1,210 @@
+[
+  {
+    "id": "L01",
+    "block": 1,
+    "block_name": "Scope/Applicability",
+    "narration_ml": "Section 115BAC default tax regime resident individuals-ന് ബാധകമാണ്, ഇത് total income-ന്റെ അടിസ്ഥാനത്തിലുള്ള പ്രത്യേക tax slabs നൽകുന്നു.",
+    "card": {
+      "title": "Applicability of Section 115BAC",
+      "type": "rule",
+      "lines": [
+        "Applicable to Resident Individuals under Default Tax Regime.",
+        "Governed by the provisions of Section 115BAC.",
+        "Tax is computed on the Total Income of the assessee.",
+        "Mandatory application unless opted out specifically."
+      ],
+      "highlights": [
+        "Section 115BAC",
+        "Resident Individuals",
+        "Default Tax Regime"
+      ]
+    }
+  },
+  {
+    "id": "L02",
+    "block": 1,
+    "block_name": "Scope/Applicability",
+    "narration_ml": "Section 87A പ്രകാരം resident individuals-ന് മാത്രമേ rebate ലഭിക്കുകയുള്ളൂ, ഇത് default tax regime-ൽ പ്രത്യേക threshold limits അടിസ്ഥാനമാക്കിയാണ് കണക്കാക്കുന്നത്.",
+    "card": {
+      "title": "Eligibility for Section 87A Rebate",
+      "type": "authority",
+      "lines": [
+        "Rebate is available only to Resident Individuals.",
+        "Applicable when Total Income is within threshold limits.",
+        "Provides relief against the income-tax payable.",
+        "Calculated based on Section 87A statutory provisions."
+      ],
+      "highlights": [
+        "Section 87A",
+        "Resident Individuals",
+        "Rebate"
+      ]
+    }
+  },
+  {
+    "id": "L03",
+    "block": 2,
+    "block_name": "Rates/Matrix",
+    "narration_ml": "Section 115BAC പ്രകാരം 3,00,000 രൂപ വരെയുള്ള വരുമാനത്തിന് tax നൽകേണ്ടതില്ല, എന്നാൽ 3,00,001 മുതൽ 10,00,000 രൂപ വരെ വിവിധ നിരക്കുകൾ ബാധകമാണ്.",
+    "card": {
+      "title": "Tax Slabs Part One",
+      "type": "table",
+      "lines": [
+        "Nil rate applies for income up to 3,00,000.",
+        "5% rate for income between 3,00,001 and 7,00,000.",
+        "10% rate for income between 7,00,001 and 10,00,000.",
+        "Slabs are specific to the Default Tax Regime."
+      ],
+      "table": {
+        "headers": [
+          "Total Income Slab",
+          "Applicable Tax Rate"
+        ],
+        "rows": [
+          [
+            "Upto ₹ 3,00,000",
+            "Nil"
+          ],
+          [
+            "₹ 3,00,001 – ₹ 7,00,000",
+            "5%"
+          ],
+          [
+            "₹ 7,00,001 – ₹ 10,00,000",
+            "10%"
+          ]
+        ]
+      },
+      "highlights": [
+        "₹ 3,00,000",
+        "5%",
+        "10%"
+      ]
+    }
+  },
+  {
+    "id": "L04",
+    "block": 2,
+    "block_name": "Rates/Matrix",
+    "narration_ml": "10,00,001 രൂപയ്ക്ക് മുകളിലുള്ള വരുമാനത്തിന് 15 ശതമാനം മുതൽ 30 ശതമാനം വരെയുള്ള ഉയർന്ന tax rates ആണ് default regime-ൽ നിശ്ചയിച്ചിരിക്കുന്നത്.",
+    "card": {
+      "title": "Tax Slabs Part Two",
+      "type": "table",
+      "lines": [
+        "15% rate for income between 10,00,001 and 12,00,000.",
+        "20% rate for income between 12,00,001 and 15,00,000.",
+        "30% rate for income exceeding 15,00,000.",
+        "Highest slab rate is capped at 30%."
+      ],
+      "table": {
+        "headers": [
+          "Total Income Slab",
+          "Applicable Tax Rate"
+        ],
+        "rows": [
+          [
+            "₹ 10,00,001 – ₹ 12,00,000",
+            "15%"
+          ],
+          [
+            "₹ 12,00,001 – ₹ 15,00,000",
+            "20%"
+          ],
+          [
+            "Above ₹ 15,00,000",
+            "30%"
+          ]
+        ]
+      },
+      "highlights": [
+        "15%",
+        "20%",
+        "30%"
+      ]
+    }
+  },
+  {
+    "id": "L05",
+    "block": 3,
+    "block_name": "Computation/Relief",
+    "narration_ml": "Total income നിശ്ചിത threshold limit വരെയാണെങ്കിൽ Section 87A പ്രകാരം 100 ശതമാനം income tax rebate ആയി ക്ലെയിം ചെയ്യാൻ സാധിക്കുന്നതാണ്.",
+    "card": {
+      "title": "Standard Rebate Mechanism",
+      "type": "rule",
+      "lines": [
+        "100% rebate of income-tax payable if within threshold.",
+        "Applicable to resident individuals only.",
+        "Rebate is applied before adding cess.",
+        "Threshold limit determines the eligibility for full rebate."
+      ],
+      "highlights": [
+        "100% Rebate",
+        "Threshold Limit",
+        "Income-tax Payable"
+      ]
+    }
+  },
+  {
+    "id": "L06",
+    "block": 3,
+    "block_name": "Computation/Relief",
+    "narration_ml": "വരുമാനം threshold limit-ന് തൊട്ടുമുകളിൽ വരുമ്പോൾ tax payable എന്നത് threshold-ന് മുകളിലുള്ള വരുമാനത്തേക്കാൾ കൂടാൻ പാടില്ല എന്ന തത്വമാണ് marginal relief.",
+    "card": {
+      "title": "Marginal Relief Formula",
+      "type": "formula",
+      "lines": [
+        "Rebate = Tax on Total Income - (Total Income - Threshold Limit).",
+        "Ensures tax doesn't exceed income above threshold.",
+        "Applied when income marginally exceeds the limit.",
+        "Calculated specifically under Section 87A."
+      ],
+      "highlights": [
+        "Marginal Relief",
+        "Threshold Limit",
+        "Tax Formula"
+      ]
+    }
+  },
+  {
+    "id": "L07",
+    "block": 4,
+    "block_name": "Exam Cautions",
+    "narration_ml": "Rebate u/s 87A കണക്കാക്കുന്നത് tax on total income-ൽ നിന്നും total income-ഉം threshold limit-ഉം തമ്മിലുള്ള വ്യത്യാസം കുറച്ചുകൊണ്ടാണ്.",
+    "card": {
+      "title": "Tax Restriction Rule",
+      "type": "caution",
+      "lines": [
+        "Tax payable before cess is restricted.",
+        "Restriction: (Total Income - Threshold Limit).",
+        "Compare calculated tax with income exceeding threshold.",
+        "Always apply the lower of the two values."
+      ],
+      "highlights": [
+        "Tax Restriction",
+        "Total Income",
+        "Threshold"
+      ]
+    }
+  },
+  {
+    "id": "L08",
+    "block": 4,
+    "block_name": "Exam Cautions",
+    "narration_ml": "Final tax payable കണക്കാക്കുമ്പോൾ marginal relief കുറച്ചതിനുശേഷം ലഭിക്കുന്ന തുകയോടൊപ്പം 4 percent health and education cess നിർബന്ധമായും ചേർക്കേണ്ടതാണ്.",
+    "card": {
+      "title": "Final Tax and Cess",
+      "type": "caution",
+      "lines": [
+        "Final Tax = Restricted Tax + 4% Cess.",
+        "Cess is calculated on the tax after marginal relief.",
+        "Health & Education Cess is mandatory.",
+        "Do not apply cess before calculating marginal relief."
+      ],
+      "highlights": [
+        "4% Cess",
+        "Health & Education Cess",
+        "Final Tax"
+      ]
+    }
+  }
+]

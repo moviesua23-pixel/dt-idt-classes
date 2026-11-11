@@ -1,0 +1,130 @@
+[
+  {
+    "id": "L01",
+    "number": "1.1.1",
+    "block": 1,
+    "block_name": "Facts",
+    "narration_ml": "MKG Agency-യിൽ അച്ഛനും മൂന്ന് മക്കളുമാണ് പങ്കാളികൾ. അച്ഛന്റെ മരണശേഷം profits-ന്റെ ഇരുപത് ശതമാനം അമ്മയ്ക്ക് നൽകണമെന്ന് partnership deed പറയുന്നു.",
+    "card": {
+      "title": "Partnership deed",
+      "type": "rule",
+      "lines": [
+        "MKG Agency was a father and three sons partnership.",
+        "The deed required 20% of profits to be paid to the mother after the father’s death."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L02",
+    "number": "1.1.2",
+    "block": 1,
+    "block_name": "Facts",
+    "narration_ml": "അച്ഛൻ 2025 മാർച്ചിൽ മരിച്ചു; മക്കൾ business തുടർന്നു. 2025–26 previous year-ൽ profits-ന്റെ ഇരുപത് ശതമാനമായ ഒരു ലക്ഷം രൂപ firm അമ്മയ്ക്ക് നൽകി.",
+    "card": {
+      "title": "Payment in the year",
+      "type": "rule",
+      "lines": [
+        "Father died in March 2025; sons continued the firm.",
+        "In P.Y. 2025–26 the firm paid ₹1 lakh, equal to 20% of profits."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L03",
+    "number": "1.2.1",
+    "block": 2,
+    "block_name": "Legal test",
+    "narration_ml": "Payment obligation partnership deed-ിൽ തന്നെയുണ്ട്. അച്ഛന്റെ മരണശേഷം profits ഉണ്ടാകുമ്പോൾ തന്നെ ആ നിബന്ധന പ്രവർത്തിക്കുന്നു.",
+    "card": {
+      "title": "Deed creates prior title",
+      "type": "rule",
+      "lines": [
+        "The payment obligation is written into the partnership deed.",
+        "It applies when profits arise after the father’s death."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L04",
+    "number": "1.2.2",
+    "block": 2,
+    "block_name": "Legal test",
+    "narration_ml": "നിശ്ചയിച്ച ഇരുപത് ശതമാനത്തിൽ അമ്മയ്ക്കാണ് overriding right. ആ ഭാഗം firm-ന്റെ സ്വന്തം ഉപയോഗത്തിനുള്ള വരുമാനമായി ലഭിക്കുന്നതല്ല.",
+    "card": {
+      "title": "Identify who owns the share",
+      "type": "rule",
+      "lines": [
+        "The mother has an overriding right to the specified 20% share.",
+        "The firm does not receive that portion for its own beneficial use."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L05",
+    "number": "1.3.1",
+    "block": 3,
+    "block_name": "Apply to facts",
+    "narration_ml": "Deed-ിലെ charge profits എന്ന source-നോട് ചേർന്നിരിക്കുന്നു. അമ്മയുടെ മെച്ചപ്പെട്ട അവകാശപ്രകാരം firm ആ തുക കൈകാര്യം ചെയ്യുന്നതാണ്.",
+    "card": {
+      "title": "Diversion at source",
+      "type": "rule",
+      "lines": [
+        "The deed charge attaches to the profit source.",
+        "The firm receives or handles the amount for the mother under her superior title."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L06",
+    "number": "1.3.2",
+    "block": 3,
+    "block_name": "Apply to facts",
+    "narration_ml": "ഒരു ലക്ഷം രൂപയെ firm-ന്റെ വരുമാനത്തിൽ നിന്ന് ഒഴിവാക്കുന്നതാണ് ശരിയായ സമീപനം. ഇത് വരുമാനം ലഭിച്ച ശേഷമുള്ള expense deduction അല്ല; source-ൽ diversion ആണ്.",
+    "card": {
+      "title": "Not a deduction claim",
+      "type": "rule",
+      "lines": [
+        "Treat the ₹1 lakh as excluded from the firm’s income.",
+        "The answer is source diversion, not a post-accrual expense deduction."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L07",
+    "number": "1.4.1",
+    "block": 4,
+    "block_name": "Authority",
+    "narration_ml": "ചോദ്യത്തിന്റെ മാതൃകാ ഉത്തരത്തിൽ CIT v. Nariman B. Bharucha and Sons എന്ന വിധിയാണ് ആശ്രയിക്കുന്നത്. deed മുഖേനയുള്ള overriding title diversion ആകാമെന്ന തത്വം അത് പിന്തുണയ്ക്കുന്നു.",
+    "card": {
+      "title": "Nariman B. Bharucha & Sons",
+      "type": "rule",
+      "lines": [
+        "The question-bank answer relies on CIT v. Nariman B. Bharucha & Sons.",
+        "The case supports diversion under a deed-based overriding title."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L08",
+    "number": "1.4.2",
+    "block": 4,
+    "block_name": "Conclusion",
+    "narration_ml": "അതിനാൽ firm-ന്റെ വാദം തത്വത്തിൽ ശരിയാണ്; ഒരു ലക്ഷം രൂപ വരുമാനത്തിൽ നിന്ന് ഒഴിവാക്കണം. അത് അമ്മയിലേക്കുള്ള diversion ആണ്, firm-ന്റെ സ്വന്തം income അല്ല.",
+    "card": {
+      "title": "Exclude ₹1 lakh",
+      "type": "rule",
+      "lines": [
+        "The firm’s claim is correct in substance as exclusion from its income.",
+        "Conclusion: ₹1 lakh is diverted to the mother and is not the firm’s income."
+      ],
+      "highlights": []
+    }
+  }
+]

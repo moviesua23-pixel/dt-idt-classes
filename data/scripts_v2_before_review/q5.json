@@ -1,0 +1,196 @@
+[
+  {
+    "id": "L01",
+    "block": 1,
+    "block_name": "Scope/Applicability",
+    "narration_ml": "Old Regime പ്രകാരം 60 വയസ്സിൽ താഴെയുള്ള വ്യക്തികൾക്ക് ബാധകമായ ടാക്സ് സ്ലാബുകളെക്കുറിച്ചും Section 115BAC(6) പ്രകാരമുള്ള ഓപ്ഷനുകളെക്കുറിച്ചും ഈ ഭാഗം വിശദീകരിക്കുന്നു.",
+    "card": {
+      "title": "Scope of Old Tax Regime",
+      "type": "rule",
+      "lines": [
+        "Applicable to Individuals below 60 years of age.",
+        "Governed by Section 115BAC(6) for opting out of default regime.",
+        "Covers the computation of Total Income under normal provisions.",
+        "Focuses on the Basic Exemption Limit and slab-based taxation."
+      ],
+      "highlights": [
+        "Section 115BAC(6)",
+        "Old Regime",
+        "Individual",
+        "Basic Exemption Limit"
+      ]
+    }
+  },
+  {
+    "id": "L02",
+    "block": 1,
+    "block_name": "Scope/Applicability",
+    "narration_ml": "ഈ ടാക്സ് നിരക്കുകളും Section 87A പ്രകാരമുള്ള Rebate ആനുകൂല്യങ്ങളും പ്രധാനമായും ഇന്ത്യയിലെ Resident Individual-കൾക്ക് മാത്രമാണ് ലഭ്യമാകുന്നത്.",
+    "card": {
+      "title": "Residential Status Requirement",
+      "type": "authority",
+      "lines": [
+        "Provisions apply specifically to Resident Individuals.",
+        "Section 87A benefits are restricted to residents only.",
+        "Non-residents are excluded from Section 87A rebate eligibility.",
+        "Status must be determined as per Section 6 criteria."
+      ],
+      "highlights": [
+        "Resident Individual",
+        "Section 87A",
+        "Eligibility"
+      ]
+    }
+  },
+  {
+    "id": "L03",
+    "block": 2,
+    "block_name": "Rates/Matrix",
+    "narration_ml": "Total Income-ന്റെ അടിസ്ഥാനത്തിൽ നാല് വ്യത്യസ്ത സ്ലാബുകളിലായാണ് ടാക്സ് നിരക്കുകൾ നിശ്ചയിച്ചിരിക്കുന്നത്, ഇതിൽ 2,50,000 രൂപ വരെയുള്ള വരുമാനത്തിന് ടാക്സ് നൽകേണ്ടതില്ല.",
+    "card": {
+      "title": "Old Regime Tax Slab Rates",
+      "type": "table",
+      "lines": [
+        "Progressive tax rates based on income slabs.",
+        "Basic Exemption Limit is set at ₹ 2,50,000.",
+        "Tax liability increases as income crosses defined thresholds."
+      ],
+      "table": {
+        "headers": [
+          "Total Income Slab",
+          "Applicable Tax Rate"
+        ],
+        "rows": [
+          [
+            "Up to ₹ 2,50,000",
+            "Nil (Basic Exemption Limit)"
+          ],
+          [
+            "₹ 2,50,001 – ₹ 5,00,000",
+            "5% of amount exceeding ₹ 2,50,000"
+          ],
+          [
+            "₹ 5,00,001 – ₹ 10,00,000",
+            "₹ 12,500 + 20% of amount exceeding ₹ 5,00,000"
+          ],
+          [
+            "Above ₹ 10,00,000",
+            "₹ 1,12,500 + 30% of amount exceeding ₹ 10,00,000"
+          ]
+        ]
+      },
+      "highlights": [
+        "₹ 2,50,000",
+        "5%",
+        "20%",
+        "30%"
+      ]
+    }
+  },
+  {
+    "id": "L04",
+    "block": 2,
+    "block_name": "Rates/Matrix",
+    "narration_ml": "5,00,000 രൂപയ്ക്ക് മുകളിലുള്ള വരുമാനത്തിന് 20 ശതമാനവും 10,00,000 രൂപയ്ക്ക് മുകളിലുള്ള വരുമാനത്തിന് 30 ശതമാനവുമാണ് നിശ്ചയിച്ചിട്ടുള്ള ടാക്സ് നിരക്കുകൾ.",
+    "card": {
+      "title": "Higher Income Tax Brackets",
+      "type": "rate",
+      "lines": [
+        "Income between ₹ 5,00,001 and ₹ 10,00,000 taxed at 20%.",
+        "Income exceeding ₹ 10,00,000 taxed at 30%.",
+        "Fixed tax components of ₹ 12,500 and ₹ 1,12,500 apply.",
+        "Rates are exclusive of Surcharge and Cess."
+      ],
+      "highlights": [
+        "20% Rate",
+        "30% Rate",
+        "₹ 1,12,500"
+      ]
+    }
+  },
+  {
+    "id": "L05",
+    "block": 3,
+    "block_name": "Computation/Relief",
+    "narration_ml": "Total Income 5,00,000 രൂപയിൽ താഴെയുള്ളവർക്ക് ടാക്സ് തുകയോ അല്ലെങ്കിൽ 12,500 രൂപയോ ഏതാണോ കുറവ് അത് Section 87A പ്രകാരം Rebate ആയി കുറയ്ക്കാം.",
+    "card": {
+      "title": "Section 87A Rebate Calculation",
+      "type": "formula",
+      "lines": [
+        "Applicable if Total Income ≤ ₹ 5,00,000.",
+        "Rebate Quantum: Lower of 100% of tax or ₹ 12,500.",
+        "Rebate is applied before adding Health and Education Cess.",
+        "Reduces tax liability to zero for income up to ₹ 5,00,000."
+      ],
+      "highlights": [
+        "Section 87A",
+        "₹ 5,00,000",
+        "₹ 12,500",
+        "100% of Tax"
+      ]
+    }
+  },
+  {
+    "id": "L06",
+    "block": 3,
+    "block_name": "Computation/Relief",
+    "narration_ml": "Rebate കുറച്ചതിനുശേഷം വരുന്ന നെറ്റ് ടാക്സ് തുകയുടെ 4 ശതമാനം Health and Education Cess ആയി എല്ലാ സ്ലാബുകളിലും നിർബന്ധമായും കണക്കാക്കേണ്ടതുണ്ട്.",
+    "card": {
+      "title": "Health and Education Cess",
+      "type": "rate",
+      "lines": [
+        "Rate of 4% applicable on income-tax payable.",
+        "Calculated after deducting Section 87A rebate.",
+        "Mandatory levy on all categories of taxpayers.",
+        "Applied to the sum of Income Tax and Surcharge."
+      ],
+      "highlights": [
+        "4% Cess",
+        "Health & Education Cess",
+        "Post-Rebate"
+      ]
+    }
+  },
+  {
+    "id": "L07",
+    "block": 4,
+    "block_name": "Exam Cautions",
+    "narration_ml": "Total Income 5,00,000 രൂപയ്ക്ക് മുകളിൽ ഒരു രൂപ കൂടിയാൽ പോലും Section 87A പ്രകാരമുള്ള 12,500 രൂപയുടെ Rebate പൂർണ്ണമായും നഷ്ടപ്പെടുമെന്നത് ശ്രദ്ധിക്കുക.",
+    "card": {
+      "title": "Rebate Threshold Trap",
+      "type": "caution",
+      "lines": [
+        "Rebate is strictly unavailable if Total Income > ₹ 5,00,000.",
+        "No marginal relief available for Section 87A rebate.",
+        "Even a small excess over ₹ 5,00,000 triggers full tax.",
+        "Ensure Total Income is rounded off as per Section 288A."
+      ],
+      "highlights": [
+        "Threshold Limit",
+        "No Marginal Relief",
+        "₹ 5,00,000"
+      ]
+    }
+  },
+  {
+    "id": "L08",
+    "block": 4,
+    "block_name": "Exam Cautions",
+    "narration_ml": "Non-Resident Individual-കൾക്ക് അവരുടെ വരുമാനം 5,00,000 രൂപയിൽ താഴെയാണെങ്കിൽ പോലും Section 87A പ്രകാരമുള്ള ടാക്സ് Rebate ക്ലെയിം ചെയ്യാൻ സാധിക്കില്ല.",
+    "card": {
+      "title": "Non-Resident Restrictions",
+      "type": "caution",
+      "lines": [
+        "Section 87A rebate is only for Resident Individuals.",
+        "Non-residents must pay tax even if income is ≤ ₹ 5,00,000.",
+        "Basic Exemption Limit of ₹ 2,50,000 applies to non-residents.",
+        "Verify residential status before applying rebate."
+      ],
+      "highlights": [
+        "Non-Resident",
+        "Rebate Denied",
+        "Resident Only"
+      ]
+    }
+  }
+]

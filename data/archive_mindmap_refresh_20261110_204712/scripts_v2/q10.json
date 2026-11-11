@@ -1,0 +1,199 @@
+[
+  {
+    "id": "L01",
+    "block": 1,
+    "block_name": "Scope/Applicability",
+    "narration_ml": "Domestic Companies-ന്റെ Total Turnover അല്ലെങ്കിൽ Gross Receipts അടിസ്ഥാനമാക്കിയാണ് Finance Act പ്രകാരം Base Tax Rate നിശ്ചയിക്കുന്നത് എന്ന് പ്രത്യേകം ശ്രദ്ധിക്കുക.",
+    "card": {
+      "title": "Domestic Company Tax Scope",
+      "type": "rule",
+      "lines": [
+        "Applicability based on Finance Act provisions.",
+        "Tax rates determined by Total Turnover/Gross Receipts.",
+        "Relevant for Previous Year 2023-24."
+      ],
+      "highlights": [
+        "Domestic Company",
+        "Finance Act",
+        "Total Turnover"
+      ]
+    }
+  },
+  {
+    "id": "L02",
+    "block": 1,
+    "block_name": "Scope/Applicability",
+    "narration_ml": "Total Income ഒരു നിശ്ചിത പരിധി കടക്കുമ്പോൾ Domestic Companies-ന് മേൽ Surcharge ബാധകമാകുന്നു, ഇത് Income Slab അനുസരിച്ച് വ്യത്യാസപ്പെടും.",
+    "card": {
+      "title": "Surcharge Applicability Thresholds",
+      "type": "rule",
+      "lines": [
+        "Surcharge is an additional tax on tax.",
+        "Applicable when Total Income exceeds ₹ 1 Crore.",
+        "Higher rate applies when income exceeds ₹ 10 Crore."
+      ],
+      "highlights": [
+        "Surcharge",
+        "Total Income",
+        "₹ 1 Crore"
+      ]
+    }
+  },
+  {
+    "id": "L03",
+    "block": 2,
+    "block_name": "Rates/Matrix",
+    "narration_ml": "Previous Year 2023-24-ലെ Total Turnover 400 Crore രൂപയിൽ താഴെയാണെങ്കിൽ 25 ശതമാനവും അതിൽ കൂടുതലാണെങ്കിൽ 30 ശതമാനവുമാണ് Base Tax Rate.",
+    "card": {
+      "title": "Base Tax Rate Matrix",
+      "type": "table",
+      "lines": [
+        "Base tax rate depends on turnover in P.Y. 2023-24.",
+        "Lower rate of 25% for smaller companies.",
+        "Standard rate of 30% for others."
+      ],
+      "table": {
+        "headers": [
+          "Total Turnover / Gross Receipts (P.Y. 2023-24)",
+          "Base Tax Rate"
+        ],
+        "rows": [
+          [
+            "$\\le$ ₹ 400 Crore",
+            "25%"
+          ],
+          [
+            "Exceeding ₹ 400 Crore",
+            "30%"
+          ]
+        ]
+      },
+      "highlights": [
+        "25%",
+        "30%",
+        "₹ 400 Crore"
+      ]
+    }
+  },
+  {
+    "id": "L04",
+    "block": 2,
+    "block_name": "Rates/Matrix",
+    "narration_ml": "Total Income 1 Crore മുതൽ 10 Crore വരെയാണെങ്കിൽ 7 ശതമാനവും 10 Crore-ന് മുകളിലാണെങ്കിൽ 12 ശതമാനവുമാണ് Surcharge Rate ബാധകമാകുന്നത്.",
+    "card": {
+      "title": "Surcharge Rate Matrix",
+      "type": "table",
+      "lines": [
+        "Surcharge rates are progressive based on income.",
+        "Nil surcharge for income up to ₹ 1 Crore.",
+        "Maximum surcharge rate is 12%."
+      ],
+      "table": {
+        "headers": [
+          "Total Income Slab",
+          "Surcharge Rate"
+        ],
+        "rows": [
+          [
+            "Up to ₹ 1 Crore",
+            "Nil"
+          ],
+          [
+            "> ₹ 1 Crore but $\\le$ ₹ 10 Crore",
+            "7%"
+          ],
+          [
+            "> ₹ 10 Crore",
+            "12%"
+          ]
+        ]
+      },
+      "highlights": [
+        "7%",
+        "12%",
+        "₹ 10 Crore"
+      ]
+    }
+  },
+  {
+    "id": "L05",
+    "block": 3,
+    "block_name": "Computation/Relief",
+    "narration_ml": "Total Income 10 Crore രൂപ കവിയുമ്പോൾ ഉണ്ടാകുന്ന അധിക നികുതി ഭാരം കുറയ്ക്കുന്നതിനായി Marginal Relief എന്ന ആനുകൂല്യം നിയമം നൽകുന്നുണ്ട്.",
+    "card": {
+      "title": "Marginal Relief Doctrine",
+      "type": "rule",
+      "lines": [
+        "Relief provided when income exceeds ₹ 10 Crore.",
+        "Ensures tax increase doesn't exceed income increase.",
+        "Calculated before Health and Education Cess."
+      ],
+      "highlights": [
+        "Marginal Relief",
+        "₹ 10 Crore",
+        "Surcharge"
+      ]
+    }
+  },
+  {
+    "id": "L06",
+    "block": 3,
+    "block_name": "Computation/Relief",
+    "narration_ml": "Step 1-ലെ Tax plus Surcharge തുകയിൽ നിന്നും Step 3-ലെ Capped Tax കുറച്ചാൽ ലഭിക്കുന്ന തുകയാണ് Marginal Relief ആയി കണക്കാക്കുന്നത്.",
+    "card": {
+      "title": "Marginal Relief Formula",
+      "type": "formula",
+      "lines": [
+        "Step 1: Tax + Surcharge @ 12% on Total Income.",
+        "Step 2: Tax + Surcharge @ 7% on ₹ 10 Crore.",
+        "Step 3: Capped Tax = (Tax on ₹ 10 Cr) + (Total Income - ₹ 10 Cr).",
+        "Step 4: Relief = Step 1 Tax - Step 3 Capped Tax."
+      ],
+      "highlights": [
+        "Capped Tax",
+        "Step 1 Tax",
+        "Step 3 Tax"
+      ]
+    }
+  },
+  {
+    "id": "L07",
+    "block": 4,
+    "block_name": "Exam Cautions",
+    "narration_ml": "Marginal Relief കുറച്ചതിന് ശേഷമുള്ള തുകയുടെ മേൽ 4 ശതമാനം Health and Education Cess നിർബന്ധമായും കണക്കാക്കേണ്ടതുണ്ട് എന്ന് ഓർക്കുക.",
+    "card": {
+      "title": "Cess Application Rule",
+      "type": "caution",
+      "lines": [
+        "Health & Education Cess is always 4%.",
+        "Apply on (Tax + Surcharge - Marginal Relief).",
+        "Cess is the final step in computation."
+      ],
+      "highlights": [
+        "4% Cess",
+        "Final Tax",
+        "Marginal Relief"
+      ]
+    }
+  },
+  {
+    "id": "L08",
+    "block": 4,
+    "block_name": "Exam Cautions",
+    "narration_ml": "Total Income 10 Crore രൂപയ്ക്ക് തൊട്ടുമുകളിൽ വരുമ്പോൾ മാത്രമേ ഈ പ്രത്യേക Marginal Relief computation ആവശ്യമായി വരുന്നുള്ളൂ എന്ന് മനസ്സിലാക്കുക.",
+    "card": {
+      "title": "Critical Threshold Caution",
+      "type": "caution",
+      "lines": [
+        "Verify if Total Income exceeds ₹ 10 Crore exactly.",
+        "Marginal Relief is not applicable if Step 1 < Step 3.",
+        "Ensure correct Surcharge rate (12%) is used for Step 1."
+      ],
+      "highlights": [
+        "₹ 10 Crore",
+        "12% Surcharge",
+        "Threshold"
+      ]
+    }
+  }
+]

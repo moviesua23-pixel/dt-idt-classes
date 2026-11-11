@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaxMaster · Sentence Audio Sync Tuner</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700;800&family=Noto+Sans+Malayalam:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #0F172A;
+      --surface: #1E293B;
+      --surface-card: #27354A;
+      --border: #334155;
+      --accent: #38BDF8;
+      --accent-rgb: 56, 189, 248;
+      --ink: #F8FAFC;
+      --muted: #94A3B8;
+      --green: #10B981;
+      --red: #EF4444;
+      --yellow: #F59E0B;
+      --f-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --f-mono: 'JetBrains Mono', monospace;
+      --f-ml: 'Noto Sans Malayalam', sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--f-sans);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Header Bar */
+    header {
+      background: rgba(15, 23, 42, 0.95);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border);
+      padding: 14px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .brand-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(56, 189, 248, 0.15);
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      padding: 6px 14px;
+      border-radius: 999px;
+      color: var(--accent);
+      font-family: var(--f-mono);
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+    }
+    .topic-select {
+      background: var(--surface);
+      color: var(--ink);
+      border: 1px solid var(--border);
+      padding: 8px 16px;
+      border-radius: 10px;
+      font-size: 0.92rem;
+      font-weight: 600;
+      outline: none;
+      cursor: pointer;
+    }
+    .topic-select:focus { border-color: var(--accent); }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .btn {
+      padding: 8px 18px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 0.88rem;
+      border: 1px solid transparent;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.2s ease;
+    }
+    .btn-primary {
+      background: #0284C7;
+      color: #FFFFFF;
+      box-shadow: 0 4px 14px rgba(2, 132, 199, 0.4);
+    }
+    .btn-primary:hover { background: #0369A1; transform: translateY(-1px); }
+    .btn-save {
+      background: #059669;
+      color: #FFFFFF;
+      box-shadow: 0 4px 14px rgba(5, 150, 105, 0.4);
+    }
+    .btn-save:hover { background: #047857; transform: translateY(-1px); }
+    .btn-outline {
+      background: transparent;
+      border-color: var(--border);
+      color: var(--muted);
+    }
+    .btn-outline:hover { background: var(--surface); color: var(--ink); }
+
+    /* Audio Controller Dock */
+    .audio-dock {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 28px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      position: sticky;
+      top: 61px;
+      z-index: 90;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    }
+    .dock-top-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .playback-controls {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .play-btn {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #0F172A;
+      display: grid;
+      place-items: center;
+      border: none;
+      cursor: pointer;
+      font-size: 1.1rem;
+      font-weight: 800;
+      transition: transform 0.2s;
+    }
+    .play-btn:hover { transform: scale(1.06); }
+    .time-readout {
+      font-family: var(--f-mono);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--ink);
+      min-width: 140px;
+    }
+    .speed-group {
+      display: inline-flex;
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      padding: 3px;
+      gap: 4px;
+    }
+    .speed-btn {
+      background: transparent;
+      border: none;
+      color: var(--muted);
+      padding: 4px 10px;
+      border-radius: 999px;
+      font-family: var(--f-mono);
+      font-size: 0.78rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .speed-btn.active {
+      background: var(--accent);
+      color: #0F172A;
+    }
+
+    .lead-config {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid var(--border);
+      padding: 6px 14px;
+      border-radius: 10px;
+      font-size: 0.82rem;
+      font-family: var(--f-mono);
+    }
+    .lead-input {
+      width: 60px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      color: var(--ink);
+      border-radius: 6px;
+      padding: 2px 6px;
+      font-family: var(--f-mono);
+      text-align: center;
+      font-weight: 700;
+    }
+
+    .scrub-container {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .scrub-bar {
+      flex: 1;
+      height: 8px;
+      -webkit-appearance: none;
+      background: #334155;
+      border-radius: 999px;
+      outline: none;
+      cursor: pointer;
+    }
+    .scrub-bar::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: var(--accent);
+      cursor: pointer;
+      box-shadow: 0 0 10px var(--accent);
+    }
+
+    /* Hotkey Bar */
+    .hotkey-bar {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      font-size: 0.78rem;
+      color: var(--muted);
+      flex-wrap: wrap;
+    }
+    .key-badge {
+      display: inline-block;
+      background: #334155;
+      color: var(--ink);
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-family: var(--f-mono);
+      font-weight: 700;
+    }
+
+    /* Main Container */
+    main {
+      flex: 1;
+      max-width: 1300px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 24px 20px 80px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .beat-card {
+      background: var(--surface);
+      border: 1.5px solid var(--border);
+      border-radius: 16px;
+      padding: 16px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      position: relative;
+    }
+    .beat-card.playing-now {
+      border-color: var(--accent);
+      background: #18283E;
+      box-shadow: 0 0 20px rgba(56, 189, 248, 0.15);
+    }
+    .beat-card.target-stamp {
+      border-color: #F59E0B;
+      box-shadow: 0 0 24px rgba(245, 158, 11, 0.25);
+    }
+    .target-indicator {
+      position: absolute;
+      top: 14px;
+      right: 18px;
+      background: #F59E0B;
+      color: #000;
+      font-family: var(--f-mono);
+      font-size: 0.7rem;
+      font-weight: 800;
+      padding: 3px 10px;
+      border-radius: 999px;
+      display: none;
+    }
+    .beat-card.target-stamp .target-indicator {
+      display: inline-block;
+    }
+
+    .beat-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+    .beat-meta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .beat-num {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: #334155;
+      display: grid;
+      place-items: center;
+      font-family: var(--f-mono);
+      font-size: 0.8rem;
+      font-weight: 800;
+    }
+    .beat-card.playing-now .beat-num { background: var(--accent); color: #0F172A; }
+    .beat-title {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--ink);
+    }
+    .slide-badge {
+      font-family: var(--f-mono);
+      font-size: 0.72rem;
+      color: var(--muted);
+      background: rgba(255,255,255,0.06);
+      padding: 3px 8px;
+      border-radius: 6px;
+    }
+
+    .beat-text {
+      font-family: var(--f-ml);
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #F1F5F9;
+      background: rgba(15, 23, 42, 0.4);
+      padding: 12px 16px;
+      border-radius: 10px;
+      border-left: 4px solid var(--accent);
+    }
+
+    .beat-controls {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .time-inputs {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--f-mono);
+      font-size: 0.85rem;
+    }
+    .time-field {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .time-field input {
+      width: 72px;
+      background: var(--bg);
+      border: 1px solid var(--border);
+      color: #38BDF8;
+      border-radius: 6px;
+      padding: 4px 8px;
+      font-family: var(--f-mono);
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-align: center;
+    }
+    .dur-badge {
+      font-family: var(--f-mono);
+      font-size: 0.78rem;
+      color: var(--muted);
+      background: rgba(255,255,255,0.05);
+      padding: 4px 8px;
+      border-radius: 6px;
+    }
+
+    .beat-buttons {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-nudge {
+      background: #334155;
+      color: var(--ink);
+      border: none;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-family: var(--f-mono);
+      font-size: 0.75rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .btn-nudge:hover { background: #475569; }
+    .btn-play-from {
+      background: rgba(56, 189, 248, 0.15);
+      border: 1px solid rgba(56, 189, 248, 0.35);
+      color: var(--accent);
+      padding: 4px 12px;
+      border-radius: 6px;
+      font-family: var(--f-mono);
+      font-size: 0.78rem;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .btn-play-from:hover { background: rgba(56, 189, 248, 0.25); }
+    .btn-stamp {
+      background: #F59E0B;
+      color: #000;
+      border: none;
+      padding: 4px 12px;
+      border-radius: 6px;
+      font-family: var(--f-mono);
+      font-size: 0.78rem;
+      font-weight: 800;
+      cursor: pointer;
+    }
+    .btn-stamp:hover { background: #D97706; }
+
+    /* Toast */
+    #toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #10B981;
+      color: #FFFFFF;
+      font-weight: 700;
+      padding: 12px 24px;
+      border-radius: 10px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+      z-index: 9999;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.3s ease;
+      pointer-events: none;
+    }
+    #toast.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="header-left">
+      <div class="brand-pill">🎙️ AUDIO SYNC TUNER</div>
+      <select class="topic-select" id="topic-select">
+        <option value="q1">Q1 · Diversion of Income by Overriding Title</option>
+        <option value="q2">Q2 · Voluntary Payment u/s 28</option>
+        <option value="q3">Q3 · Overriding Legal Obligation Test</option>
+        <option value="q4" selected>Q4 · Age-Based Slab Rates (Optional Regime)</option>
+        <option value="q5">Q5 · Normal Regime Slabs & Section 87A Rebate</option>
+        <option value="q6">Q6 · Default Tax Regime u/s 115BAC (A.Y. 2026-27)</option>
+        <option value="q7">Q7 · Default Regime Slabs & ₹12L Rebate</option>
+        <option value="q8">Q8 · Marginal Relief u/s 87A (Default Regime)</option>
+        <option value="q9">Q9 · Domestic Company Surcharge (> ₹1 Cr)</option>
+        <option value="q10">Q10 · Domestic Company Surcharge (> ₹10 Cr)</option>
+      </select>
+    </div>
+    <div class="header-actions">
+      <button class="btn btn-outline" id="btn-preview">👁️ Preview Mind Map</button>
+      <button class="btn btn-save" id="btn-save">💾 Save Overrides (Ctrl+S)</button>
+    </div>
+  </header>
+
+  <div class="audio-dock">
+    <div class="dock-top-row">
+      <div class="playback-controls">
+        <button class="play-btn" id="play-btn" title="Toggle Audio (Shift+Space)">▶</button>
+        <div class="time-readout" id="time-readout">0.00s / 0.00s</div>
+        <div class="speed-group">
+          <button class="speed-btn" data-spd="0.5">0.5x</button>
+          <button class="speed-btn" data-spd="0.75">0.75x</button>
+          <button class="speed-btn active" data-spd="1.0">1.0x</button>
+          <button class="speed-btn" data-spd="1.25">1.25x</button>
+          <button class="speed-btn" data-spd="1.5">1.5x</button>
+        </div>
+      </div>
+
+      <div class="lead-config">
+        <span>SYNC_LEAD_SEC:</span>
+        <input type="number" class="lead-input" id="sync-lead-input" step="0.05" min="0" max="1" value="0.25">
+        <span>s</span>
+      </div>
+    </div>
+
+    <div class="scrub-container">
+      <input type="range" class="scrub-bar" id="scrub-bar" min="0" max="1000" value="0">
+    </div>
+
+    <div class="hotkey-bar">
+      <span><span class="key-badge">SPACE</span> Stamp next sentence start & advance</span>
+      <span><span class="key-badge">BACKSPACE</span> Undo / Go to previous</span>
+      <span><span class="key-badge">SHIFT+SPACE</span> Play / Pause</span>
+      <span><span class="key-badge">CTRL+S</span> Save Overrides</span>
+    </div>
+  </div>
+
+  <main id="beats-container">
+    <div style="text-align:center;padding:40px;color:var(--muted)">Loading beat data...</div>
+  </main>
+
+  <div id="toast">Overrides Saved Successfully!</div>
+
+  <script>
+    let appData = null;
+    let currentTopic = "q4";
+    let beats = [];
+    let activeStampIdx = 0;
+    const audio = new Audio();
+    audio.preload = "auto";
+
+    const playBtn = document.getElementById("play-btn");
+    const timeReadout = document.getElementById("time-readout");
+    const scrubBar = document.getElementById("scrub-bar");
+    const topicSelect = document.getElementById("topic-select");
+    const beatsContainer = document.getElementById("beats-container");
+    const syncLeadInput = document.getElementById("sync-lead-input");
+    const btnSave = document.getElementById("btn-save");
+    const btnPreview = document.getElementById("btn-preview");
+    const toast = document.getElementById("toast");
+
+    // Load initial data
+    async function init() {
+      try {
+        const res = await fetch("/api/data");
+        appData = await res.json();
+        loadTopic(currentTopic);
+      } catch (err) {
+        console.error("Failed to load /api/data:", err);
+      }
+    }
+
+    function loadTopic(tKey) {
+      currentTopic = tKey;
+      topicSelect.value = tKey;
+      const mm = appData.mindmaps[tKey];
+      if (!mm) {
+        beatsContainer.innerHTML = "<div style='padding:40px;text-align:center'>Topic not found.</div>";
+        return;
+      }
+
+      // Collect spoken beats
+      beats = [];
+      (mm.branches || []).forEach((b, bi) => {
+        (b.points || []).forEach((pt, pi) => {
+          if (pt.spoken === true) {
+            beats.push({
+              id: pt.id,
+              branch_id: b.branch_id,
+              branch_title: b.branch_title,
+              title: pt.title,
+              t0: parseFloat(pt.t0 || 0),
+              t1: parseFloat(pt.t1 || 0),
+              text: pt.voice_sync_text || (Array.isArray(pt.body) ? pt.body.join(" ") : pt.body) || pt.title
+            });
+          }
+        });
+      });
+
+      // Load audio
+      const audioUrl = `/audio/${tKey}.mp3`;
+      audio.src = audioUrl;
+      audio.load();
+      activeStampIdx = 0;
+      renderBeats();
+    }
+
+    function renderBeats() {
+      beatsContainer.innerHTML = beats.map((b, idx) => {
+        const dur = (b.t1 - b.t0).toFixed(2);
+        return `
+          <div class="beat-card ${idx === activeStampIdx ? 'target-stamp' : ''}" id="card-beat-${idx}" data-idx="${idx}">
+            <span class="target-indicator">● NEXT STAMP (SPACE)</span>
+            <div class="beat-head">
+              <div class="beat-meta">
+                <span class="beat-num">${idx + 1}</span>
+                <span class="beat-title">${b.title}</span>
+                <span class="slide-badge">${b.branch_title}</span>
+              </div>
+            </div>
+            <div class="beat-text">${b.text}</div>
+            <div class="beat-controls">
+              <div class="time-inputs">
+                <div class="time-field">
+                  <span>Start (t0):</span>
+                  <input type="number" step="0.05" value="${b.t0.toFixed(2)}" onchange="updateBeatTime(${idx}, 't0', this.value)">
+                  <span>s</span>
+                </div>
+                <div class="time-field">
+                  <span>End (t1):</span>
+                  <input type="number" step="0.05" value="${b.t1.toFixed(2)}" onchange="updateBeatTime(${idx}, 't1', this.value)">
+                  <span>s</span>
+                </div>
+                <span class="dur-badge" id="dur-${idx}">Dur: ${dur}s</span>
+              </div>
+              <div class="beat-buttons">
+                <button class="btn-nudge" onclick="nudgeBeat(${idx}, -0.1)">-0.1s</button>
+                <button class="btn-nudge" onclick="nudgeBeat(${idx}, +0.1)">+0.1s</button>
+                <button class="btn-play-from" onclick="playFromBeat(${idx})">▶ Play from here</button>
+                <button class="btn-stamp" onclick="stampBeat(${idx})">🔴 Stamp (Space)</button>
+              </div>
+            </div>
+          </div>
+        `;
+      }).join("");
+    }
+
+    function updateBeatTime(idx, field, val) {
+      val = parseFloat(val);
+      if (isNaN(val)) return;
+      beats[idx][field] = val;
+      const durEl = document.getElementById(`dur-${idx}`);
+      if (durEl) {
+        durEl.textContent = `Dur: ${(beats[idx].t1 - beats[idx].t0).toFixed(2)}s`;
+      }
+    }
+
+    function nudgeBeat(idx, delta) {
+      beats[idx].t0 = Math.max(0, parseFloat((beats[idx].t0 + delta).toFixed(2)));
+      beats[idx].t1 = Math.max(beats[idx].t0, parseFloat((beats[idx].t1 + delta).toFixed(2)));
+      renderBeats();
+    }
+
+    function playFromBeat(idx) {
+      const lead = parseFloat(syncLeadInput.value) || 0.25;
+      audio.currentTime = Math.max(0, beats[idx].t0 - lead);
+      audio.play();
+    }
+
+    function stampBeat(idx) {
+      const cur = parseFloat(audio.currentTime.toFixed(2));
+      beats[idx].t0 = cur;
+      if (idx > 0) {
+        beats[idx - 1].t1 = Math.max(beats[idx - 1].t0, parseFloat((cur - 0.05).toFixed(2)));
+      }
+      activeStampIdx = Math.min(beats.length - 1, idx + 1);
+      renderBeats();
+      // Scroll target into view
+      const targetEl = document.getElementById(`card-beat-${activeStampIdx}`);
+      if (targetEl) targetEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    function undoStamp() {
+      activeStampIdx = Math.max(0, activeStampIdx - 1);
+      renderBeats();
+      const targetEl = document.getElementById(`card-beat-${activeStampIdx}`);
+      if (targetEl) targetEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+
+    // Audio playback events
+    playBtn.onclick = () => {
+      if (audio.paused) audio.play();
+      else audio.pause();
+    };
+
+    audio.onplay = () => { playBtn.textContent = "⏸"; };
+    audio.onpause = () => { playBtn.textContent = "▶"; };
+
+    audio.ontimeupdate = () => {
+      const cur = audio.currentTime || 0;
+      const dur = audio.duration || 1;
+      timeReadout.textContent = `${cur.toFixed(2)}s / ${dur.toFixed(2)}s`;
+      scrubBar.value = (cur / dur) * 1000;
+
+      // Highlight active playing beat
+      const lead = parseFloat(syncLeadInput.value) || 0.25;
+      beats.forEach((b, idx) => {
+        const card = document.getElementById(`card-beat-${idx}`);
+        if (!card) return;
+        const isPlaying = (cur >= b.t0 - lead && cur < b.t1);
+        card.classList.toggle("playing-now", isPlaying);
+      });
+    };
+
+    scrubBar.oninput = () => {
+      const dur = audio.duration || 1;
+      audio.currentTime = (scrubBar.value / 1000) * dur;
+    };
+
+    // Speed options
+    document.querySelectorAll(".speed-btn").forEach(btn => {
+      btn.onclick = () => {
+        document.querySelectorAll(".speed-btn").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        audio.playbackRate = parseFloat(btn.dataset.spd);
+      };
+    });
+
+    topicSelect.onchange = (e) => {
+      loadTopic(e.target.value);
+    };
+
+    // Keyboard Shortcuts
+    window.addEventListener("keydown", (e) => {
+      if (e.target.tagName === "INPUT" || e.target.tagName === "SELECT") return;
+
+      if (e.code === "Space") {
+        if (e.shiftKey) {
+          e.preventDefault();
+          playBtn.click();
+        } else {
+          e.preventDefault();
+          stampBeat(activeStampIdx);
+        }
+      } else if (e.code === "Backspace") {
+        e.preventDefault();
+        undoStamp();
+      } else if (e.code === "ArrowLeft") {
+        audio.currentTime = Math.max(0, audio.currentTime - 1.0);
+      } else if (e.code === "ArrowRight") {
+        audio.currentTime = Math.min(audio.duration || 999, audio.currentTime + 1.0);
+      } else if (e.ctrlKey && e.key === "s") {
+        e.preventDefault();
+        saveOverrides();
+      }
+    });
+
+    async function saveOverrides() {
+      const overrides = {};
+      beats.forEach(b => {
+        overrides[b.id] = {
+          t0: b.t0,
+          t1: b.t1
+        };
+      });
+
+      try {
+        const res = await fetch("/api/timing-overrides", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            topic: currentTopic,
+            overrides: overrides
+          })
+        });
+        const data = await res.json();
+        showToast(`Saved ${data.saved_beats} beats for ${currentTopic.toUpperCase()}!`);
+      } catch (err) {
+        alert("Failed to save overrides: " + err.message);
+      }
+    }
+
+    btnSave.onclick = saveOverrides;
+
+    btnPreview.onclick = () => {
+      window.open(`/#dt-c1-${currentTopic}`, "_blank");
+    };
+
+    function showToast(msg) {
+      toast.textContent = msg;
+      toast.classList.add("show");
+      setTimeout(() => toast.classList.remove("show"), 2500);
+    }
+
+    init();
+  </script>
+</body>
+</html>

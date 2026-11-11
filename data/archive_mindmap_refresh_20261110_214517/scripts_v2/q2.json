@@ -1,0 +1,130 @@
+[
+  {
+    "id": "L01",
+    "number": "1.1.1",
+    "block": 1,
+    "block_name": "Facts",
+    "narration_ml": "ഇപ്പോൾ XYZ Limited-ന്റെ business takeover നോക്കാം. ഒരു running business sale deed വഴി വാങ്ങുമ്പോൾ, മുൻ ഉടമയുടെ ഭാര്യയ്ക്ക് വർഷം പതിനയ്യായിരം രൂപ നൽകാമെന്ന് കമ്പനി സമ്മതിച്ചു.",
+    "card": {
+      "title": "Business takeover",
+      "type": "rule",
+      "lines": [
+        "XYZ Ltd buys a running sole-proprietor business through a sale deed.",
+        "It agrees to pay the former owner’s wife ₹15,000 each year."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L02",
+    "number": "1.1.2",
+    "block": 1,
+    "block_name": "Facts",
+    "narration_ml": "ഈ payment business വാങ്ങുന്നതിനുള്ള sale deed-ിലെ നിബന്ധനയാണ്. തുക കമ്പനിയുടെ net profits-ൽ charge ചെയ്തിട്ടുണ്ടെന്നും deed വ്യക്തമാക്കുന്നു.",
+    "card": {
+      "title": "Condition tied to purchase",
+      "type": "rule",
+      "lines": [
+        "The deed makes payment a condition of purchasing the business.",
+        "The charge is specified against XYZ’s net profits."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L03",
+    "number": "1.2.1",
+    "block": 2,
+    "block_name": "Legal test",
+    "narration_ml": "ഇവിടെ പരിശോധിക്കേണ്ടത് obligation വരുമാനത്തിന്റെ source-നോടാണോ ബന്ധിപ്പിച്ചിരിക്കുന്നത്, അല്ലെങ്കിൽ വരുമാനം ലഭിച്ച ശേഷം ചെലവാക്കുന്നതാണോ എന്നതാണ്.",
+    "card": {
+      "title": "Source versus later use",
+      "type": "rule",
+      "lines": [
+        "Diversion: obligation is attached to the income-producing source.",
+        "Application: income accrues first, then the assessee spends it."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L04",
+    "number": "1.2.2",
+    "block": 2,
+    "block_name": "Legal test",
+    "narration_ml": "Jit and Pal X-Rays കേസിലെ പരിശോധന പ്രയോഗിക്കാം: charge purchase deed-ിന്റെ അവിഭാജ്യ നിബന്ധനയാണോ? ആണ്. വാങ്ങിയ business എന്ന source-നോട് നേരിട്ട് ബന്ധമുണ്ടോ? ഉണ്ട്.",
+    "card": {
+      "title": "Jit & Pal X-Rays test",
+      "type": "rule",
+      "lines": [
+        "Was the charge an integral term of the purchase deed? Yes.",
+        "Does it attach to the acquired business source? Yes."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L05",
+    "number": "1.3.1",
+    "block": 3,
+    "block_name": "Apply to facts",
+    "narration_ml": "പ്രവർത്തിക്കുന്ന business വാങ്ങാൻ XYZ ഈ ബാധ്യത സ്വീകരിച്ചു. XYZ-യുടെ ഉടമസ്ഥതയിൽ profits ഉണ്ടാകുന്നതിന് മുമ്പേ obligation നിലവിലുണ്ടായിരുന്നു.",
+    "card": {
+      "title": "Obligation travels with business",
+      "type": "rule",
+      "lines": [
+        "XYZ accepted the charge to acquire the going concern.",
+        "The obligation existed before profits arose under XYZ’s ownership."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L06",
+    "number": "1.3.2",
+    "block": 3,
+    "block_name": "Apply to facts",
+    "narration_ml": "നേടിയ profits കമ്പനി പിന്നീട് സ്വമേധയാ മറ്റൊരാൾക്ക് നൽകുന്നതല്ല ഇത്. deed തന്നെ source-ൽ കമ്പനിയുടെ അവകാശത്തെ ബാധിക്കുന്നു.",
+    "card": {
+      "title": "Not a voluntary profit use",
+      "type": "rule",
+      "lines": [
+        "Payment is not a later personal or voluntary disposal of earned profits.",
+        "The deed limits the company’s title at the source."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L07",
+    "number": "1.4.1",
+    "block": 4,
+    "block_name": "Tax treatment",
+    "narration_ml": "അതിനാൽ deed പ്രകാരമുള്ള പതിനയ്യായിരം രൂപ source-ൽ നിന്നുള്ള diversion ആണ്. ഇത് XYZ-യുടെ profits ലഭിച്ചശേഷമുള്ള സാധാരണ application അല്ല.",
+    "card": {
+      "title": "Diversion by overriding charge",
+      "type": "rule",
+      "lines": [
+        "The ₹15,000 charge is diverted from the source under the deed.",
+        "It is not merely an application of XYZ’s profits."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L08",
+    "number": "1.4.2",
+    "block": 4,
+    "block_name": "Conclusion",
+    "narration_ml": "Jit and Pal X-Rays വിധി, purchase deed വഴി source-നോട് ബന്ധിപ്പിച്ച charge diversion ആണെന്ന് പിന്തുണയ്ക്കുന്നു. അതിനാൽ ഇത് overriding charge മുഖേനയുള്ള diversion ആണ്.",
+    "card": {
+      "title": "Apply the case principle",
+      "type": "rule",
+      "lines": [
+        "Jit & Pal X-Rays supports diversion where the purchase deed creates the source-linked charge.",
+        "Conclusion: diversion of income by overriding charge."
+      ],
+      "highlights": []
+    }
+  }
+]

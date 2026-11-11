@@ -1,0 +1,12 @@
+﻿.env
+config/service_account.json
+*.log
+__pycache__/
+*.pyc
+data/audio_temp/
+.vscode/
+*.pdf
+*.rar
+*.zip
+data/audio_temp_rebuild/
+scratch/

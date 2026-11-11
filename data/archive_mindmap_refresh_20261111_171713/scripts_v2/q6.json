@@ -1,0 +1,143 @@
+[
+  {
+    "id": "INTRO",
+    "number": "1",
+    "block": 0,
+    "block_name": "Provision heading",
+    "narration_ml": "ഇന്ന് Section 115BAC default regime-ലെ tax slab നിയമങ്ങൾ മാത്രം പഠിക്കാം.",
+    "card": {
+      "title": "Section 115BAC: Default-Regime Slabs",
+      "type": "intro",
+      "lines": [],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L01",
+    "number": "1.1.1",
+    "block": 1,
+    "block_name": "Section 115BAC framework",
+    "narration_ml": "Section 115BAC(1A) നിർദ്ദിഷ്ട വിഭാഗങ്ങൾക്ക് default regime നൽകുന്നു. ബാധകമായ option വ്യവസ്ഥകൾ പാലിച്ച് അർഹരായവർക്ക് old regime തിരഞ്ഞെടുക്കാം.",
+    "card": {
+      "title": "Default regime",
+      "type": "rule",
+      "lines": [
+        "Section 115BAC(1A) provides the default regime for specified persons.",
+        "Eligible taxpayers may opt for the old regime subject to the applicable option rules."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L02",
+    "number": "1.1.2",
+    "block": 1,
+    "block_name": "Section 115BAC framework",
+    "narration_ml": "Individuals, HUF, co-operative society അല്ലാത്ത AOP, BOI, AJP എന്നിവർക്കാണ് വ്യവസ്ഥ ബാധകമാകുന്നത്. ഈ regime തിരഞ്ഞെടുക്കുമ്പോൾ അതിലെ നിബന്ധനകളും deduction നിയന്ത്രണങ്ങളും ബാധകമാണ്.",
+    "card": {
+      "title": "Specified taxpayer classes",
+      "type": "rule",
+      "lines": [
+        "Individuals, HUFs, AOPs (other than co-operative societies), BOIs and AJPs.",
+        "The section’s conditions and disallowances apply when this regime is chosen."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L03",
+    "number": "1.2.1",
+    "block": 2,
+    "block_name": "Slabs: first part",
+    "narration_ml": "₹4,00,000 വരെ tax ഇല്ല. ₹4,00,000 മുതൽ ₹8,00,000 വരെയുള്ള slab-ിന് 5% ആണ്.",
+    "card": {
+      "title": "Nil and 5% slabs",
+      "type": "rule",
+      "lines": [
+        "Up to ₹4,00,000: nil.",
+        "₹4,00,001–₹8,00,000: 5%."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L04",
+    "number": "1.2.2",
+    "block": 2,
+    "block_name": "Slabs: first part",
+    "narration_ml": "₹8,00,000 മുതൽ ₹12,00,000 വരെയുള്ള slab-ിന് 10% ആണ്. ഓരോ നിരക്കും അതത് slab-ിലെ വരുമാനഭാഗത്തിന് മാത്രം പ്രയോഗിക്കുന്ന progressive രീതിയാണ്.",
+    "card": {
+      "title": "10% slab",
+      "type": "rule",
+      "lines": [
+        "₹8,00,001–₹12,00,000: 10%.",
+        "Tax is progressive: each rate applies only to its slab portion."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L05",
+    "number": "1.3.1",
+    "block": 3,
+    "block_name": "Slabs: upper part",
+    "narration_ml": "₹12,00,000 മുതൽ ₹16,00,000 വരെ 15%; ₹16,00,000 മുതൽ ₹20,00,000 വരെ 20%. മുൻ slab-ുകളിലെ tax കൂട്ടിച്ചേർത്താണ് തുടർന്നുള്ള tax കണ്ടെത്തുന്നത്.",
+    "card": {
+      "title": "15% and 20% slabs",
+      "type": "rule",
+      "lines": [
+        "₹12–16 lakh: 15%; ₹16–20 lakh: 20%.",
+        "Each slab has a fixed tax accumulated from the earlier slabs."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L06",
+    "number": "1.3.2",
+    "block": 3,
+    "block_name": "Slabs: upper part",
+    "narration_ml": "₹20,00,000 മുതൽ ₹24,00,000 വരെ 25% ആണ്. ₹24,00,000-ന് മുകളിലുള്ള ഭാഗത്തിന് 30% ആണ്.",
+    "card": {
+      "title": "25% and 30% slabs",
+      "type": "rule",
+      "lines": [
+        "₹20–24 lakh: 25%.",
+        "Above ₹24 lakh: 30%."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L07",
+    "number": "1.4.1",
+    "block": 4,
+    "block_name": "Reliefs and regime features",
+    "narration_ml": "ഈ regime-ൽ മുതിർന്ന പ്രായവിഭാഗങ്ങൾക്ക് basic exemption ഉയരുന്നില്ല. പ്രായം നോക്കാതെ ഒരേ slab പരിധികളാണ് ഉപയോഗിക്കുന്നത്.",
+    "card": {
+      "title": "No age-based exemption increase",
+      "type": "rule",
+      "lines": [
+        "The basic exemption under this regime does not rise for senior age groups.",
+        "Use the same slab thresholds regardless of age."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L08",
+    "number": "1.4.2",
+    "block": 4,
+    "block_name": "Reliefs and regime features",
+    "narration_ml": "Total income ₹12,00,000 കവിയാത്ത അർഹനായ resident individual-ന് Section 87A പ്രകാരം പരമാവധി ₹60,000 rebate ലഭിക്കും. Rebate-ന് ശേഷം 4% cess ചേർക്കുക; പരിധിക്ക് തൊട്ടുമുകളിലെ വരുമാനത്തിൽ marginal rebate ബാധകമായേക്കാം.",
+    "card": {
+      "title": "Rebate and cess",
+      "type": "rule",
+      "lines": [
+        "Eligible resident individuals: Section 87A rebate up to ₹60,000 when total income is within ₹12 lakh.",
+        "Apply 4% cess after eligible rebate; marginal rebate may apply just above the threshold."
+      ],
+      "highlights": []
+    }
+  }
+]

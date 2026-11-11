@@ -1,0 +1,200 @@
+[
+  {
+    "id": "L01",
+    "block": 1,
+    "block_name": "Scope/Applicability",
+    "narration_ml": "Section 4 പ്രകാരം Income Tax ഈടാക്കുന്നത് Total Income-ന്മേലാണ്, എന്നാൽ Diversion of Income by Overriding Title വഴി ലഭിക്കുന്ന തുക ഈ പരിധിയിൽ ഉൾപ്പെടില്ല.",
+    "card": {
+      "title": "Section 4 Charging Principle",
+      "type": "rule",
+      "lines": [
+        "Section 4 establishes the charge of Income Tax on Total Income.",
+        "The doctrine distinguishes between income diverted before accrual and income applied after accrual.",
+        "Diversion by Overriding Title results in the exclusion of such amounts from the assessee's income."
+      ],
+      "highlights": [
+        "Section 4",
+        "Total Income",
+        "Overriding Title"
+      ]
+    }
+  },
+  {
+    "id": "L02",
+    "block": 1,
+    "block_name": "Scope/Applicability",
+    "narration_ml": "ഒരു വരുമാനം Assessee-ലേക്ക് എത്തുന്നതിന് മുൻപ് തന്നെ ഒരു നിയമപരമായ ബാധ്യത വഴി മാറ്റപ്പെടുന്നുണ്ടെങ്കിൽ അതിനെ Diversion of Income by Overriding Title എന്ന് വിളിക്കുന്നു.",
+    "card": {
+      "title": "Overriding Title Doctrine",
+      "type": "rule",
+      "lines": [
+        "An obligation must be attached to the source of income for it to be a diversion.",
+        "The transfer of income must happen before it reaches or accrues to the assessee.",
+        "This doctrine ensures only the real income of the assessee is subjected to tax."
+      ],
+      "highlights": [
+        "Source of Income",
+        "Accrual",
+        "Real Income"
+      ]
+    }
+  },
+  {
+    "id": "L03",
+    "block": 2,
+    "block_name": "Rates/Matrix",
+    "narration_ml": "Diversion of Income-ഉം Application of Income-ഉം തമ്മിലുള്ള പ്രധാന വ്യത്യാസങ്ങൾ അവയുടെ Nature of Obligation-ലും Timing of Transfer-ലും അധിഷ്ഠിതമാണ്.",
+    "card": {
+      "title": "Distinction Matrix Part I",
+      "type": "table",
+      "lines": [
+        "The nature of obligation determines the classification of the income flow.",
+        "Timing of transfer is critical to distinguish between diversion and application.",
+        "Obligations attached to the source itself constitute a valid diversion."
+      ],
+      "table": {
+        "headers": [
+          "Basis",
+          "Diversion by Overriding Title",
+          "Application of Income"
+        ],
+        "rows": [
+          [
+            "Nature of Obligation",
+            "Obligation is attached to the source itself.",
+            "Obligation arises after the income reaches the assessee."
+          ],
+          [
+            "Timing of Transfer",
+            "Income is diverted before it reaches or accrues to the assessee.",
+            "Income is spent/discharged after it has accrued or been received."
+          ]
+        ]
+      },
+      "highlights": [
+        "Nature of Obligation",
+        "Timing of Transfer",
+        "Source"
+      ]
+    }
+  },
+  {
+    "id": "L04",
+    "block": 2,
+    "block_name": "Rates/Matrix",
+    "narration_ml": "Taxability-യുടെ കാര്യത്തിൽ Diversion of Income ഒഴിവാക്കപ്പെടുമ്പോൾ, Application of Income പൂർണ്ണമായും Assessee-യുടെ കൈകളിൽ Taxable ആയി മാറുന്നു.",
+    "card": {
+      "title": "Distinction Matrix Part II",
+      "type": "table",
+      "lines": [
+        "Diversion of income is not taxable in the hands of the assessee.",
+        "Application of income is fully taxable with no deduction allowed.",
+        "CIT v. Sitaldas Tirathdas (SC) is the landmark ruling for diversion."
+      ],
+      "table": {
+        "headers": [
+          "Basis",
+          "Diversion by Overriding Title",
+          "Application of Income"
+        ],
+        "rows": [
+          [
+            "Taxability",
+            "Not taxable in the hands of the assessee (excluded from Total Income).",
+            "Fully taxable in the hands of the assessee (no deduction allowed)."
+          ],
+          [
+            "Legal Benchmark",
+            "Landmark Ruling: CIT v. Sitaldas Tirathdas (SC).",
+            "General principle of utilization of earned profits."
+          ]
+        ]
+      },
+      "highlights": [
+        "Taxability",
+        "CIT v. Sitaldas Tirathdas",
+        "Total Income"
+      ]
+    }
+  },
+  {
+    "id": "L05",
+    "block": 3,
+    "block_name": "Computation/Relief",
+    "narration_ml": "Diversion of Income വഴി മാറ്റപ്പെടുന്ന തുക Total Income കണക്കാക്കുമ്പോൾ ഉൾപ്പെടുത്താൻ പാടില്ലാത്തതും അത് പൂർണ്ണമായും Excluded ആയതുമായ ഒരു ഇനമാണ്.",
+    "card": {
+      "title": "Exclusion from Total Income",
+      "type": "rule",
+      "lines": [
+        "Amounts diverted by overriding title are excluded from the computation of Total Income.",
+        "Such amounts never form part of the assessee's income stream.",
+        "No specific deduction section is required as the amount is not income."
+      ],
+      "highlights": [
+        "Total Income",
+        "Exclusion",
+        "Income Stream"
+      ]
+    }
+  },
+  {
+    "id": "L06",
+    "block": 3,
+    "block_name": "Computation/Relief",
+    "narration_ml": "Voluntary ആയി മാറ്റിവെക്കുന്ന വരുമാനം diversion ആയി കണക്കാക്കില്ല; നിയമപരമായ മുൻകൂർ ബാധ്യത income source-നോട് ചേർന്നിരിക്കണം. ഈ വ്യത്യാസമാണ് taxability തീരുമാനിക്കുന്നത്.",
+    "card": {
+      "title": "Taxability of Applied Income",
+      "type": "rule",
+      "lines": [
+        "Income applied after accrual is included in the Total Income of the assessee.",
+        "Utilization of earned profits does not reduce the tax liability.",
+        "The discharge of a personal or subsequent obligation is considered application."
+      ],
+      "highlights": [
+        "Accrual",
+        "Earned Profits",
+        "Tax Liability"
+      ]
+    }
+  },
+  {
+    "id": "L07",
+    "block": 4,
+    "block_name": "Exam Cautions",
+    "narration_ml": "Jit & Pal X-Rays (P.) കേസ് പ്രകാരം ഒരു ബാധ്യത Purchase Deed-ന്റെ ഭാഗമാണെങ്കിൽ അത് Diversion of Income ആയി കണക്കാക്കണം.",
+    "card": {
+      "title": "The Integral Condition Test",
+      "type": "authority",
+      "lines": [
+        "Refer to the ruling in Jit & Pal X-Rays (P.) for the integral condition test.",
+        "An overriding charge must be an integral condition of the purchase deed.",
+        "The charge must be attached directly to the business undertaking or source."
+      ],
+      "highlights": [
+        "Jit & Pal X-Rays (P.)",
+        "Integral Condition",
+        "Purchase Deed"
+      ]
+    }
+  },
+  {
+    "id": "L08",
+    "block": 4,
+    "block_name": "Exam Cautions",
+    "narration_ml": "CIT v. Sitaldas Tirathdas കേസ് പ്രകാരം വരുമാനത്തിന്റെ Source-ൽ തന്നെ ബാധ്യത ഉണ്ടോ അതോ ലഭിച്ച ശേഷമാണോ എന്ന് പരിശോധിക്കുന്നത് പരീക്ഷകളിൽ വളരെ പ്രധാനമാണ്.",
+    "card": {
+      "title": "Critical Exam Benchmarks",
+      "type": "caution",
+      "lines": [
+        "Distinguish between a charge on the source and a mere application of profit.",
+        "Ensure the obligation exists before the income accrues to the assessee.",
+        "Verify if the legal benchmark of CIT v. Sitaldas Tirathdas (SC) is satisfied."
+      ],
+      "highlights": [
+        "Charge on Source",
+        "Accrual",
+        "Legal Benchmark"
+      ]
+    }
+  }
+]

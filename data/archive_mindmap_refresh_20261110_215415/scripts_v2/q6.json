@@ -1,0 +1,143 @@
+[
+  {
+    "id": "INTRO",
+    "number": "1",
+    "block": 0,
+    "block_name": "Provision heading",
+    "narration_ml": "ഇന്ന് Section 115BAC default regime പ്രകാരമുള്ള tax slab calculation നോക്കാം. ആദ്യം വിഷയം മാത്രം പരിചയപ്പെടാം.",
+    "card": {
+      "title": "Section 115BAC: Default-Regime Tax",
+      "type": "intro",
+      "lines": [],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L01",
+    "number": "1.1.1",
+    "block": 1,
+    "block_name": "Question setup",
+    "narration_ml": "മിസ്റ്റർ X-ന്റെ total income പതിനാറ് ലക്ഷം രൂപയാണ്. Assessment Year 2026–27-ൽ Section 115BAC default regime പ്രകാരമാണ് കണക്കാക്കേണ്ടത്.",
+    "card": {
+      "title": "Income and section",
+      "type": "rule",
+      "lines": [
+        "Mr. X total income: ₹16,00,000.",
+        "A.Y. 2026–27; default regime under Section 115BAC."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L02",
+    "number": "1.1.2",
+    "block": 1,
+    "block_name": "Slabs",
+    "narration_ml": "ആദ്യത്തെ നാല് ലക്ഷം രൂപയ്ക്ക് tax ഇല്ല. അടുത്ത നാല് ലക്ഷം രൂപയ്ക്ക് അഞ്ച് ശതമാനം; അതായത് ₹20,000.",
+    "card": {
+      "title": "First two slabs",
+      "type": "table",
+      "lines": [
+        "First ₹4,00,000: nil tax.",
+        "Next ₹4,00,000, from ₹4–8 lakh, at 5% = ₹20,000."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L03",
+    "number": "1.2.1",
+    "block": 2,
+    "block_name": "Slabs",
+    "narration_ml": "എട്ട് മുതൽ പന്ത്രണ്ട് ലക്ഷം വരെ പത്ത് ശതമാനം, അതായത് ₹40,000. പന്ത്രണ്ട് മുതൽ പതിനാറ് ലക്ഷം വരെ പതിനഞ്ച് ശതമാനം, അതായത് ₹60,000.",
+    "card": {
+      "title": "Next two slabs",
+      "type": "table",
+      "lines": [
+        "₹8–12 lakh at 10% = ₹40,000.",
+        "₹12–16 lakh at 15% = ₹60,000."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L04",
+    "number": "1.2.2",
+    "block": 2,
+    "block_name": "Compute tax",
+    "narration_ml": "Slab tax കൂട്ടിയാൽ ഇരുപതിനായിരം, നാൽപ്പതിനായിരം, അറുപതിനായിരം ചേർന്ന് ₹1,20,000. ഇത് cess-നു മുമ്പുള്ള income tax ആണ്.",
+    "card": {
+      "title": "Add slab taxes",
+      "type": "table",
+      "lines": [
+        "₹20,000 + ₹40,000 + ₹60,000 = ₹1,20,000.",
+        "This is income-tax before cess."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L05",
+    "number": "1.3.1",
+    "block": 3,
+    "block_name": "Compute tax",
+    "narration_ml": "ഇപ്പോൾ ₹1,20,000-ന്റെ നാല് ശതമാനം cess കണക്കാക്കാം. അത് ₹4,800 ആണ്.",
+    "card": {
+      "title": "Add Health and Education Cess",
+      "type": "table",
+      "lines": [
+        "Cess rate: 4% of ₹1,20,000.",
+        "Cess = ₹4,800."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L06",
+    "number": "1.3.2",
+    "block": 3,
+    "block_name": "Check relief",
+    "narration_ml": "Total income ₹16 ലക്ഷം ആയതിനാൽ ₹12 ലക്ഷം rebate പരിധി കവിയുന്നു. അതിനാൽ ഈ കണക്കിൽ Section 87A rebate ലഭ്യമല്ല.",
+    "card": {
+      "title": "Section 87A threshold",
+      "type": "rule",
+      "lines": [
+        "Total income is ₹16 lakh, above the ₹12 lakh rebate threshold.",
+        "No Section 87A rebate applies on these facts."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L07",
+    "number": "1.4.1",
+    "block": 4,
+    "block_name": "Conclusion",
+    "narration_ml": "Cess-നു മുമ്പുള്ള tax ₹1,20,000; cess ₹4,800. ആകെ final tax liability ₹1,24,800 ആണ്.",
+    "card": {
+      "title": "Final tax liability",
+      "type": "rule",
+      "lines": [
+        "Tax before cess: ₹1,20,000.",
+        "Add cess ₹4,800; final liability ₹1,24,800."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L08",
+    "number": "1.4.2",
+    "block": 4,
+    "block_name": "Method recap",
+    "narration_ml": "ഓരോ slab-ലും വരുന്ന തുകയ്ക്ക് അതിന്റെ നിരക്ക് വേർതിരിച്ച് പ്രയോഗിക്കുക. Tax-ും ലഭിക്കേണ്ട rebate-ും നിശ്ചയിച്ച ശേഷം മാത്രമാണ് 4% cess ചേർക്കേണ്ടത്.",
+    "card": {
+      "title": "Remember the sequence",
+      "type": "rule",
+      "lines": [
+        "Apply each slab progressively.",
+        "Add the 4% cess after tax and eligible rebate are determined."
+      ],
+      "highlights": []
+    }
+  }
+]

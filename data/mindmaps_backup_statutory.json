@@ -1,0 +1,3670 @@
+{
+  "question_to_mindmap": {
+    "1": "q1",
+    "2": "q2",
+    "3": "q3",
+    "4": "q4",
+    "5": "q5",
+    "6": "q6",
+    "7": "q7",
+    "8": "q8",
+    "9": "q9",
+    "10": "q10"
+  },
+  "q1": {
+    "question_id": "q1",
+    "question_title": "Diversion vs Application of Income: Legal Concepts & SC Benchmarks",
+    "audio_file": "data/audio/q1.mp3",
+    "total_duration": 80.808,
+    "branches": [
+      {
+        "branch_id": "b1_core",
+        "branch_title": "Total Income & The Overriding Title Rule",
+        "badge": "§ 4 Charging Section",
+        "icon": "scales",
+        "t0": 0.0,
+        "t1": 17.71,
+        "points": [
+          {
+            "id": "q1_p1_1",
+            "title": "Section 4 Statutory Charge",
+            "body": "Income-tax is charged under Section 4 on the Total Income of the previous year accruing or arising to the assessee.",
+            "spoken": true,
+            "reference": false,
+            "t0": 0.0,
+            "t1": 5.9,
+            "voice_sync_text": "Section 4 പ്രകാരം assessee-ക്ക് ലഭിക്കുന്ന Total Income-ന്മേലാണ് നികുതി ചുമത്തുന്നത്.",
+            "icon": "scales",
+            "highlights": [
+              "Section 4",
+              "Total Income"
+            ]
+          },
+          {
+            "id": "q1_p1_2",
+            "title": "Overriding Legal Title Exception",
+            "body": "Income diverted before reaching the assessee's hands by virtue of an overriding title never forms part of taxable income.",
+            "spoken": true,
+            "reference": false,
+            "t0": 5.9,
+            "t1": 17.71,
+            "voice_sync_text": "എന്നാൽ വരുമാനം assessee-യുടെ കൈകളിൽ എത്തുന്നതിന് മുൻപ് തന്നെ, നിയമപരമായ ഒരു overriding title കാരണം മാറ്റിവെക്കപ്പെട്ടാൽ, അത് assessee-യുടെ വരുമാനമായി കണക്കാക്കില്ല.",
+            "icon": "shield",
+            "highlights": [
+              "overriding title",
+              "never forms part"
+            ]
+          }
+        ],
+        "flow_summary": [
+          {
+            "label": "Gross Inflow",
+            "sub": "Section 4 Scope",
+            "icon": "scales",
+            "t0": 14.17,
+            "t1": 15.35
+          },
+          {
+            "label": "Title Scrutiny",
+            "sub": "Prior Obligation",
+            "icon": "shield",
+            "t0": 15.35,
+            "t1": 16.53
+          },
+          {
+            "label": "Taxability Cut",
+            "sub": "Exclude Diversions",
+            "icon": "check",
+            "t0": 16.53,
+            "t1": 17.71
+          }
+        ]
+      },
+      {
+        "branch_id": "b2_distinction",
+        "branch_title": "Diversion vs Application Distinction",
+        "badge": "§ Statutory Test",
+        "icon": "scales",
+        "t0": 18.11,
+        "t1": 40.38,
+        "points": [
+          {
+            "id": "q1_p2_1",
+            "title": "Diversion by Anterior Obligation",
+            "body": "In diversion, income is intercepted by an anterior legal obligation before reaching the assessee at source.",
+            "spoken": true,
+            "reference": false,
+            "t0": 18.11,
+            "t1": 26.08,
+            "voice_sync_text": "Diversion-ൽ വരുമാനം assessee-യുടെ അടുത്തെത്തുന്നതിന് മുൻപേ, ഒരു anterior legal obligation വഴി തിരിച്ചുവിടപ്പെടുന്നു.",
+            "icon": "shield",
+            "highlights": [
+              "anterior legal obligation",
+              "source"
+            ]
+          },
+          {
+            "id": "q1_p2_2",
+            "title": "Diversion Non-Taxability",
+            "body": "Because income is diverted at source, it is not taxable in the hands of the assessee.",
+            "spoken": true,
+            "reference": false,
+            "t0": 26.08,
+            "t1": 29.77,
+            "voice_sync_text": "അതിനാൽ ഇത് tax ബാധകമല്ല.",
+            "icon": "check",
+            "highlights": [
+              "not taxable"
+            ]
+          },
+          {
+            "id": "q1_p2_3",
+            "title": "Application of Income Concept",
+            "body": "In application, income first reaches and accrues to the assessee, and is subsequently spent or allocated.",
+            "spoken": true,
+            "reference": false,
+            "t0": 29.77,
+            "t1": 33.42,
+            "voice_sync_text": "നേരെമറിച്ച്, Application-ൽ വരുമാനം ആദ്യം assessee-ക്ക് ലഭിക്കുന്നു, അതിനു ശേഷമാണ് അത് ചെലവഴിക്കുന്നത്.",
+            "icon": "user",
+            "highlights": [
+              "accrues to assessee",
+              "subsequently spent"
+            ]
+          },
+          {
+            "id": "q1_p2_4",
+            "title": "Application 100% Taxable",
+            "body": "Application of income is fully taxable in the hands of the assessee under Section 28.",
+            "spoken": true,
+            "reference": false,
+            "t0": 33.42,
+            "t1": 40.38,
+            "voice_sync_text": "അതിനാൽ Application of income പൂർണ്ണമായും taxable ആണ്.",
+            "icon": "percent",
+            "highlights": [
+              "fully taxable",
+              "Section 28"
+            ]
+          },
+          {
+            "id": "q1_p2_ref",
+            "title": "Comparative Statutory Matrix",
+            "body": "Direct comparison between diversion by overriding title and application of income.",
+            "spoken": false,
+            "reference": true,
+            "t0": null,
+            "t1": null,
+            "voice_sync_text": null,
+            "icon": "scales",
+            "table_data": {
+              "headers": [
+                "Feature",
+                "Diversion by Overriding Title",
+                "Application of Income"
+              ],
+              "rows": [
+                [
+                  "Timing of charge",
+                  "Before income reaches assessee",
+                  "After income reaches assessee"
+                ],
+                [
+                  "Nature of obligation",
+                  "Pre-existing anterior legal obligation",
+                  "Voluntary / post-receipt obligation"
+                ],
+                [
+                  "Title to income",
+                  "Assessee never acquires title",
+                  "Assessee acquires beneficial title"
+                ],
+                [
+                  "Tax treatment",
+                  "Excluded from total income",
+                  "100% taxable under Section 28"
+                ]
+              ]
+            }
+          }
+        ],
+        "flow_summary": [
+          {
+            "label": "Income Origin",
+            "sub": "Source Stream",
+            "icon": "scales",
+            "t0": 38.29,
+            "t1": 38.99
+          },
+          {
+            "label": "Anterior Charge",
+            "sub": "Diverts at Source",
+            "icon": "shield",
+            "t0": 38.99,
+            "t1": 39.68
+          },
+          {
+            "label": "Post Receipt",
+            "sub": "Application Taxable",
+            "icon": "percent",
+            "t0": 39.68,
+            "t1": 40.38
+          }
+        ]
+      },
+      {
+        "branch_id": "b3_judicial",
+        "branch_title": "Landmark Judicial Benchmarks",
+        "badge": "§ Supreme Court",
+        "icon": "cap",
+        "t0": 40.78,
+        "t1": 60.53,
+        "points": [
+          {
+            "id": "q1_p3_1",
+            "title": "Sitaldas Tirathdas Judicial Test",
+            "body": "The Supreme Court in CIT v. Sitaldas Tirathdas formulated the definitive test: Does an overriding title divert the income before it reaches the assessee?",
+            "spoken": true,
+            "reference": false,
+            "t0": 40.78,
+            "t1": 52.62,
+            "voice_sync_text": "സുപ്രീം കോടതി landmark കേസ് ആയ Sitaldas Tirathdas-ൽ വ്യക്തമാക്കിയ ടെസ്റ്റ് ഇതാണ്: വരുമാനം assessee-യിൽ എത്തുന്നതിന് മുൻപേ ഒരു overriding title വഴി അത് വേർതിരിക്കപ്പെടുന്നുണ്ടോ?",
+            "icon": "cap",
+            "highlights": [
+              "CIT v. Sitaldas Tirathdas",
+              "overriding title"
+            ]
+          },
+          {
+            "id": "q1_p3_2",
+            "title": "Diversion Characterization",
+            "body": "If an anterior overriding title diverts the source, it is genuine diversion and excluded from total income.",
+            "spoken": true,
+            "reference": false,
+            "t0": 52.62,
+            "t1": 54.87,
+            "voice_sync_text": "ഉണ്ടെങ്കിൽ അത് diversion ആണ്.",
+            "icon": "check",
+            "highlights": [
+              "genuine diversion",
+              "excluded"
+            ]
+          },
+          {
+            "id": "q1_p3_3",
+            "title": "Post-Receipt Obligation Rule",
+            "body": "Any obligation arising after income reaches the assessee is mere application of income.",
+            "spoken": true,
+            "reference": false,
+            "t0": 54.87,
+            "t1": 60.53,
+            "voice_sync_text": "എന്നാൽ ലഭിച്ച ശേഷമുള്ള ഏതൊരു ബാധ്യതയും വെറും application of income മാത്രമാണ്.",
+            "icon": "user",
+            "highlights": [
+              "application of income"
+            ]
+          },
+          {
+            "id": "q1_p3_ref",
+            "title": "Thakar Das Bhargava Precedent",
+            "body": "Advocate agreed to plead case in Supreme Court on condition fees be paid to a charitable trust created by him.",
+            "spoken": false,
+            "reference": true,
+            "t0": null,
+            "t1": null,
+            "voice_sync_text": null,
+            "icon": "cap",
+            "example_calc": {
+              "title": "Precedent Analysis: CIT v. Thakar Das Bhargava (1960) 40 ITR 301 (SC)",
+              "inputs": "Advocate stipulated client must pay professional fee of ₹ 5,00,000 directly to a charitable trust he created.",
+              "steps": [
+                "Step 1: Check origin of obligation — Trust was created by the advocate himself out of professional earnings.",
+                "Step 2: Check client role — The client imposed no prior binding trust obligation on the advocate.",
+                "Step 3: Characterize title — Income accrued as professional fees under Section 28 before being allocated.",
+                "Step 4: Statutory conclusion — Self-imposed obligation constitutes Application of Income, taxable u/s 28."
+              ]
+            }
+          }
+        ],
+        "flow_summary": [
+          {
+            "label": "Apply SC Test",
+            "sub": "Sitaldas Tirathdas",
+            "icon": "cap",
+            "t0": 58.83,
+            "t1": 59.4
+          },
+          {
+            "label": "Examine Trust",
+            "sub": "Advocate Created",
+            "icon": "shield",
+            "t0": 59.4,
+            "t1": 59.96
+          },
+          {
+            "label": "Tax Under Sec 28",
+            "sub": "Application of Income",
+            "icon": "rupee",
+            "t0": 59.96,
+            "t1": 60.53
+          }
+        ]
+      },
+      {
+        "branch_id": "b4_traps",
+        "branch_title": "Crucial Exam Traps & Pitfalls",
+        "badge": "§ ICAI Exam Focus",
+        "icon": "warning",
+        "t0": 60.93,
+        "t1": 80.81,
+        "points": [
+          {
+            "id": "q1_p4_1",
+            "title": "Voluntary Allocation Trap",
+            "body": "An assessee's voluntary allocation of income to a third party or trust never constitutes diversion.",
+            "spoken": true,
+            "reference": false,
+            "t0": 60.93,
+            "t1": 70.06,
+            "voice_sync_text": "പരീക്ഷയിൽ ശ്രദ്ധിക്കേണ്ട പ്രധാന കാര്യം: assessee സ്വന്തം ഇഷ്ടപ്രകാരം voluntary ആയി മാറ്റിവെക്കുന്ന വരുമാനം ഒരിക്കലും diversion ആകില്ല.",
+            "icon": "warning",
+            "highlights": [
+              "voluntary allocation",
+              "never diversion"
+            ]
+          },
+          {
+            "id": "q1_p4_2",
+            "title": "Legal Pre-Requisite for Diversion",
+            "body": "Anterior legal obligation created by statute, court decree, or title deed is mandatory to claim diversion.",
+            "spoken": true,
+            "reference": false,
+            "t0": 70.06,
+            "t1": 80.81,
+            "voice_sync_text": "നിയമപരമായോ കോടതി ഉത്തരവ് വഴിയോ ഉള്ള ഒരു anterior obligation ഉണ്ടെങ്കിൽ മാത്രമേ diversion by overriding title ക്ലെയിം ചെയ്യാൻ സാധിക്കൂ.",
+            "icon": "shield",
+            "highlights": [
+              "Anterior legal obligation",
+              "court decree"
+            ]
+          },
+          {
+            "id": "q1_p4_ref",
+            "title": "Exam Trap: Client Payment to Charity",
+            "body": "Common mistake vs statutory rule regarding direct client remittance to charity.",
+            "spoken": false,
+            "reference": true,
+            "t0": null,
+            "t1": null,
+            "voice_sync_text": null,
+            "icon": "warning",
+            "trap_data": {
+              "mistake": "Treating direct payment by client to charity as diversion merely because money bypassed assessee's bank account.",
+              "statutory_rule": "Payment per assessee's direction remains application under Section 28 unless the client created the overriding legal obligation binding the receipt prior to contract."
+            }
+          }
+        ],
+        "flow_summary": [
+          {
+            "label": "Spot Voluntary Direction",
+            "sub": "Assessee Choice",
+            "icon": "warning",
+            "t0": 77.59,
+            "t1": 78.66
+          },
+          {
+            "label": "Verify Anterior Charge",
+            "sub": "Court Decree / Deed",
+            "icon": "shield",
+            "t0": 78.66,
+            "t1": 79.73
+          },
+          {
+            "label": "Full Chargeability",
+            "sub": "Include in Sec 28",
+            "icon": "check",
+            "t0": 79.73,
+            "t1": 80.81
+          }
+        ]
+      }
+    ]
+  },
+  "q2": {
+    "question_id": "q2",
+    "question_title": "Overriding Charge in Purchase Deed: Diversion vs Application (Jit & Pal X-Rays)",
+    "audio_file": "data/audio/q1.mp3",
+    "total_duration": 80.808,
+    "branches": [
+      {
+        "branch_id": "b1_core",
+        "branch_title": "Total Income & The Overriding Title Rule",
+        "badge": "§ 4 Charging Section",
+        "icon": "scales",
+        "t0": 0.0,
+        "t1": 17.71,
+        "points": [
+          {
+            "id": "q1_p1_1",
+            "title": "Section 4 Statutory Charge",
+            "body": "Income-tax is charged under Section 4 on the Total Income of the previous year accruing or arising to the assessee.",
+            "spoken": true,
+            "reference": false,
+            "t0": 0.0,
+            "t1": 5.9,
+            "voice_sync_text": "Section 4 പ്രകാരം assessee-ക്ക് ലഭിക്കുന്ന Total Income-ന്മേലാണ് നികുതി ചുമത്തുന്നത്.",
+            "icon": "scales",
+            "highlights": [
+              "Section 4",
+              "Total Income"
+            ]
+          },
+          {
+            "id": "q1_p1_2",
+            "title": "Overriding Legal Title Exception",
+            "body": "Income diverted before reaching the assessee's hands by virtue of an overriding title never forms part of taxable income.",
+            "spoken": true,
+            "reference": false,
+            "t0": 5.9,
+            "t1": 17.71,
+            "voice_sync_text": "എന്നാൽ വരുമാനം assessee-യുടെ കൈകളിൽ എത്തുന്നതിന് മുൻപ് തന്നെ, നിയമപരമായ ഒരു overriding title കാരണം മാറ്റിവെക്കപ്പെട്ടാൽ, അത് assessee-യുടെ വരുമാനമായി കണക്കാക്കില്ല.",
+            "icon": "shield",
+            "highlights": [
+              "overriding title",
+              "never forms part"
+            ]
+          }
+        ],
+        "flow_summary": [
+          {
+            "label": "Gross Inflow",
+            "sub": "Section 4 Scope",
+            "icon": "scales",
+            "t0": 14.17,
+            "t1": 15.35
+          },
+          {
+            "label": "Title Scrutiny",
+            "sub": "Prior Obligation",
+            "icon": "shield",
+            "t0": 15.35,
+            "t1": 16.53
+          },
+          {
+            "label": "Taxability Cut",
+            "sub": "Exclude Diversions",
+            "icon": "check",
+            "t0": 16.53,
+            "t1": 17.71
+          }
+        ]
+      },
+      {
+        "branch_id": "b2_distinction",
+        "branch_title": "Diversion vs Application Distinction",
+        "badge": "§ Statutory Test",
+        "icon": "scales",
+        "t0": 18.11,
+        "t1": 40.38,
+        "points": [
+          {
+            "id": "q1_p2_1",
+            "title": "Diversion by Anterior Obligation",
+            "body": "In diversion, income is intercepted by an anterior legal obligation before reaching the assessee at source.",
+            "spoken": true,
+            "reference": false,
+            "t0": 18.11,
+            "t1": 26.08,
+            "voice_sync_text": "Diversion-ൽ വരുമാനം assessee-യുടെ അടുത്തെത്തുന്നതിന് മുൻപേ, ഒരു anterior legal obligation വഴി തിരിച്ചുവിടപ്പെടുന്നു.",
+            "icon": "shield",
+            "highlights": [
+              "anterior legal obligation",
+              "source"
+            ]
+          },
+          {
+            "id": "q1_p2_2",
+            "title": "Diversion Non-Taxability",
+            "body": "Because income is diverted at source, it is not taxable in the hands of the assessee.",
+            "spoken": true,
+            "reference": false,
+            "t0": 26.08,
+            "t1": 29.77,
+            "voice_sync_text": "അതിനാൽ ഇത് tax ബാധകമല്ല.",
+            "icon": "check",
+            "highlights": [
+              "not taxable"
+            ]
+          },
+          {
+            "id": "q1_p2_3",
+            "title": "Application of Income Concept",
+            "body": "In application, income first reaches and accrues to the assessee, and is subsequently spent or allocated.",
+            "spoken": true,
+            "reference": false,
+            "t0": 29.77,
+            "t1": 33.42,
+            "voice_sync_text": "നേരെമറിച്ച്, Application-ൽ വരുമാനം ആദ്യം assessee-ക്ക് ലഭിക്കുന്നു, അതിനു ശേഷമാണ് അത് ചെലവഴിക്കുന്നത്.",
+            "icon": "user",
+            "highlights": [
+              "accrues to assessee",
+              "subsequently spent"
+            ]
+          },
+          {
+            "id": "q1_p2_4",
+            "title": "Application 100% Taxable",
+            "body": "Application of income is fully taxable in the hands of the assessee under Section 28.",
+            "spoken": true,
+            "reference": false,
+            "t0": 33.42,
+            "t1": 40.38,
+            "voice_sync_text": "അതിനാൽ Application of income പൂർണ്ണമായും taxable ആണ്.",
+            "icon": "percent",
+            "highlights": [
+              "fully taxable",
+              "Section 28"
+            ]
+          },
+          {
+            "id": "q1_p2_ref",
+            "title": "Comparative Statutory Matrix",
+            "body": "Direct comparison between diversion by overriding title and application of income.",
+            "spoken": false,
+            "reference": true,
+            "t0": null,
+            "t1": null,
+            "voice_sync_text": null,
+            "icon": "scales",
+            "table_data": {
+              "headers": [
+                "Feature",
+                "Diversion by Overriding Title",
+                "Application of Income"
+              ],
+              "rows": [
+                [
+                  "Timing of charge",
+                  "Before income reaches assessee",
+                  "After income reaches assessee"
+                ],
+                [
+                  "Nature of obligation",
+                  "Pre-existing anterior legal obligation",
+                  "Voluntary / post-receipt obligation"
+                ],
+                [
+                  "Title to income",
+                  "Assessee never acquires title",
+                  "Assessee acquires beneficial title"
+                ],
+                [
+                  "Tax treatment",
+                  "Excluded from total income",
+                  "100% taxable under Section 28"
+                ]
+              ]
+            }
+          }
+        ],
+        "flow_summary": [
+          {
+            "label": "Income Origin",
+            "sub": "Source Stream",
+            "icon": "scales",
+            "t0": 38.29,
+            "t1": 38.99
+          },
+          {
+            "label": "Anterior Charge",
+            "sub": "Diverts at Source",
+            "icon": "shield",
+            "t0": 38.99,
+            "t1": 39.68
+          },
+          {
+            "label": "Post Receipt",
+            "sub": "Application Taxable",
+            "icon": "percent",
+            "t0": 39.68,
+            "t1": 40.38
+          }
+        ]
+      },
+      {
+        "branch_id": "b3_judicial",
+        "branch_title": "Landmark Judicial Benchmarks",
+        "badge": "§ Supreme Court",
+        "icon": "cap",
+        "t0": 40.78,
+        "t1": 60.53,
+        "points": [
+          {
+            "id": "q1_p3_1",
+            "title": "Sitaldas Tirathdas Judicial Test",
+            "body": "The Supreme Court in CIT v. Sitaldas Tirathdas formulated the definitive test: Does an overriding title divert the income before it reaches the assessee?",
+            "spoken": true,
+            "reference": false,
+            "t0": 40.78,
+            "t1": 52.62,
+            "voice_sync_text": "സുപ്രീം കോടതി landmark കേസ് ആയ Sitaldas Tirathdas-ൽ വ്യക്തമാക്കിയ ടെസ്റ്റ് ഇതാണ്: വരുമാനം assessee-യിൽ എത്തുന്നതിന് മുൻപേ ഒരു overriding title വഴി അത് വേർതിരിക്കപ്പെടുന്നുണ്ടോ?",
+            "icon": "cap",
+            "highlights": [
+              "CIT v. Sitaldas Tirathdas",
+              "overriding title"
+            ]
+          },
+          {
+            "id": "q1_p3_2",
+            "title": "Diversion Characterization",
+            "body": "If an anterior overriding title diverts the source, it is genuine diversion and excluded from total income.",
+            "spoken": true,
+            "reference": false,
+            "t0": 52.62,
+            "t1": 54.87,
+            "voice_sync_text": "ഉണ്ടെങ്കിൽ അത് diversion ആണ്.",
+            "icon": "check",
+            "highlights": [
+              "genuine diversion",
+              "excluded"
+            ]
+          },
+          {
+            "id": "q1_p3_3",
+            "title": "Post-Receipt Obligation Rule",
+            "body": "Any obligation arising after income reaches the assessee is mere application of income.",
+            "spoken": true,
+            "reference": false,
+            "t0": 54.87,
+            "t1": 60.53,
+            "voice_sync_text": "എന്നാൽ ലഭിച്ച ശേഷമുള്ള ഏതൊരു ബാധ്യതയും വെറും application of income മാത്രമാണ്.",
+            "icon": "user",
+            "highlights": [
+              "application of income"
+            ]
+          },
+          {
+            "id": "q2_p3_ref",
+            "title": "Jit & Pal X-Rays Landmark Precedent",
+            "body": "Allahabad High Court ruling on overriding charge incorporated directly into a commercial sale deed.",
+            "spoken": false,
+            "reference": true,
+            "t0": null,
+            "t1": null,
+            "voice_sync_text": null,
+            "icon": "cap",
+            "example_calc": {
+              "title": "Precedent Analysis: Jit & Pal X-Rays (P.) Ltd. v. CIT (2004) 267 ITR 370 (All)",
+              "inputs": "XYZ Ltd. purchased running concern via sale deed stipulating ₹ 15,000 p.a. overriding charge on net profits to vendor's wife.",
+              "steps": [
+                "Step 1: Inspect sale deed — Overriding charge of ₹ 15,000 p.a. was an integral condition of purchase of the going concern.",
+                "Step 2: Trace attachment — The obligation attached to the very source of income (the business concern) at transfer.",
+                "Step 3: Characterize title — Assessee never had unencumbered ownership of the profit stream.",
+                "Step 4: Statutory conclusion — Valid Diversion of Income by overriding title; ₹ 15,000 excluded from company's taxable income."
+              ]
+            }
+          }
+        ],
+        "flow_summary": [
+          {
+            "label": "Apply SC Test",
+            "sub": "Sitaldas Tirathdas",
+            "icon": "cap",
+            "t0": 58.83,
+            "t1": 59.4
+          },
+          {
+            "label": "Examine Trust",
+            "sub": "Advocate Created",
+            "icon": "shield",
+            "t0": 59.4,
+            "t1": 59.96
+          },
+          {
+            "label": "Tax Under Sec 28",
+            "sub": "Application of Income",
+            "icon": "rupee",
+            "t0": 59.96,
+            "t1": 60.53
+          }
+        ]
+      },
+      {
+        "branch_id": "b4_traps",
+        "branch_title": "Crucial Exam Traps & Pitfalls",
+        "badge": "§ ICAI Exam Focus",
+        "icon": "warning",
+        "t0": 60.93,
+        "t1": 80.81,
+        "points": [
+          {
+            "id": "q1_p4_1",
+            "title": "Voluntary Allocation Trap",
+            "body": "An assessee's voluntary allocation of income to a third party or trust never constitutes diversion.",
+            "spoken": true,
+            "reference": false,
+            "t0": 60.93,
+            "t1": 70.06,
+            "voice_sync_text": "പരീക്ഷയിൽ ശ്രദ്ധിക്കേണ്ട പ്രധാന കാര്യം: assessee സ്വന്തം ഇഷ്ടപ്രകാരം voluntary ആയി മാറ്റിവെക്കുന്ന വരുമാനം ഒരിക്കലും diversion ആകില്ല.",
+            "icon": "warning",
+            "highlights": [
+              "voluntary allocation",
+              "never diversion"
+            ]
+          },
+          {
+            "id": "q1_p4_2",
+            "title": "Legal Pre-Requisite for Diversion",
+            "body": "Anterior legal obligation created by statute, court decree, or title deed is mandatory to claim diversion.",
+            "spoken": true,
+            "reference": false,
+            "t0": 70.06,
+            "t1": 80.81,
+            "voice_sync_text": "നിയമപരമായോ കോടതി ഉത്തരവ് വഴിയോ ഉള്ള ഒരു anterior obligation ഉണ്ടെങ്കിൽ മാത്രമേ diversion by overriding title ക്ലെയിം ചെയ്യാൻ സാധിക്കൂ.",
+            "icon": "shield",
+            "highlights": [
+              "Anterior legal obligation",
+              "court decree"
+            ]
+          },
+          {
+            "id": "q1_p4_ref",
+            "title": "Exam Trap: Client Payment to Charity",
+            "body": "Common mistake vs statutory rule regarding direct client remittance to charity.",
+            "spoken": false,
+            "reference": true,
+            "t0": null,
+            "t1": null,
+            "voice_sync_text": null,
+            "icon": "warning",
+            "trap_data": {
+              "mistake": "Treating direct payment by client to charity as diversion merely because money bypassed assessee's bank account.",
+              "statutory_rule": "Payment per assessee's direction remains application under Section 28 unless the client created the overriding legal obligation binding the receipt prior to contract."
+            }
+          }
+        ],
+        "flow_summary": [
+          {
+            "label": "Spot Voluntary Direction",
+            "sub": "Assessee Choice",
+            "icon": "warning",
+            "t0": 77.59,
+            "t1": 78.66
+          },
+          {
+            "label": "Verify Anterior Charge",
+            "sub": "Court Decree / Deed",
+            "icon": "shield",
+            "t0": 78.66,
+            "t1": 79.73
+          },
+          {
+            "label": "Full Chargeability",
+            "sub": "Include in Sec 28",
+            "icon": "check",
+            "t0": 79.73,
+            "t1": 80.81
+          }
+        ]
+      }
+    ]
+  },
+  "q3": {
+    "question_id": "q3",
+    "question_title": "Partnership Deed Charge to Widow: Diversion vs Application (Nariman B. Bharucha)",
+    "audio_file": "data/audio/q1.mp3",
+    "total_duration": 80.808,
+    "branches": [
+      {
+        "branch_id": "b1_core",
+        "branch_title": "Total Income & The Overriding Title Rule",
+        "badge": "§ 4 Charging Section",
+        "icon": "scales",
+        "t0": 0.0,
+        "t1": 17.71,
+        "points": [
+          {
+            "id": "q1_p1_1",
+            "title": "Section 4 Statutory Charge",
+            "body": "Income-tax is charged under Section 4 on the Total Income of the previous year accruing or arising to the assessee.",
+            "spoken": true,
+            "reference": false,
+            "t0": 0.0,
+            "t1": 5.9,
+            "voice_sync_text": "Section 4 പ്രകാരം assessee-ക്ക് ലഭിക്കുന്ന Total Income-ന്മേലാണ് നികുതി ചുമത്തുന്നത്.",
+            "icon": "scales",
+            "highlights": [
+              "Section 4",
+              "Total Income"
+            ]
+          },
+          {
+            "id": "q1_p1_2",
+            "title": "Overriding Legal Title Exception",
+            "body": "Income diverted before reaching the assessee's hands by virtue of an overriding title never forms part of taxable income.",
+            "spoken": true,
+            "reference": false,
+            "t0": 5.9,
+            "t1": 17.71,
+            "voice_sync_text": "എന്നാൽ വരുമാനം assessee-യുടെ കൈകളിൽ എത്തുന്നതിന് മുൻപ് തന്നെ, നിയമപരമായ ഒരു overriding title കാരണം മാറ്റിവെക്കപ്പെട്ടാൽ, അത് assessee-യുടെ വരുമാനമായി കണക്കാക്കില്ല.",
+            "icon": "shield",
+            "highlights": [
+              "overriding title",
+              "never forms part"
+            ]
+          }
+        ],
+        "flow_summary": [
+          {
+            "label": "Gross Inflow",
+            "sub": "Section 4 Scope",
+            "icon": "scales",
+            "t0": 14.17,
+            "t1": 15.35
+          },
+          {
+            "label": "Title Scrutiny",
+            "sub": "Prior Obligation",
+            "icon": "shield",
+            "t0": 15.35,
+            "t1": 16.53
+          },
+          {
+            "label": "Taxability Cut",
+            "sub": "Exclude Diversions",
+            "icon": "check",
+            "t0": 16.53,
+            "t1": 17.71
+          }
+        ]
+      },
+      {
+        "branch_id": "b2_distinction",
+        "branch_title": "Diversion vs Application Distinction",
+        "badge": "§ Statutory Test",
+        "icon": "scales",
+        "t0": 18.11,
+        "t1": 40.38,
+        "points": [
+          {
+            "id": "q1_p2_1",
+            "title": "Diversion by Anterior Obligation",
+            "body": "In diversion, income is intercepted by an anterior legal obligation before reaching the assessee at source.",
+            "spoken": true,
+            "reference": false,
+            "t0": 18.11,
+            "t1": 26.08,
+            "voice_sync_text": "Diversion-ൽ വരുമാനം assessee-യുടെ അടുത്തെത്തുന്നതിന് മുൻപേ, ഒരു anterior legal obligation വഴി തിരിച്ചുവിടപ്പെടുന്നു.",
+            "icon": "shield",
+            "highlights": [
+              "anterior legal obligation",
+              "source"
+            ]
+          },
+          {
+            "id": "q1_p2_2",
+            "title": "Diversion Non-Taxability",
+            "body": "Because income is diverted at source, it is not taxable in the hands of the assessee.",
+            "spoken": true,
+            "reference": false,
+            "t0": 26.08,
+            "t1": 29.77,
+            "voice_sync_text": "അതിനാൽ ഇത് tax ബാധകമല്ല.",
+            "icon": "check",
+            "highlights": [
+              "not taxable"
+            ]
+          },
+          {
+            "id": "q1_p2_3",
+            "title": "Application of Income Concept",
+            "body": "In application, income first reaches and accrues to the assessee, and is subsequently spent or allocated.",
+            "spoken": true,
+            "reference": false,
+            "t0": 29.77,
+            "t1": 33.42,
+            "voice_sync_text": "നേരെമറിച്ച്, Application-ൽ വരുമാനം ആദ്യം assessee-ക്ക് ലഭിക്കുന്നു, അതിനു ശേഷമാണ് അത് ചെലവഴിക്കുന്നത്.",
+            "icon": "user",
+            "highlights": [
+              "accrues to assessee",
+              "subsequently spent"
+            ]
+          },
+          {
+            "id": "q1_p2_4",
+            "title": "Application 100% Taxable",
+            "body": "Application of income is fully taxable in the hands of the assessee under Section 28.",
+            "spoken": true,
+            "reference": false,
+            "t0": 33.42,
+            "t1": 40.38,
+            "voice_sync_text": "അതിനാൽ Application of income പൂർണ്ണമായും taxable ആണ്.",
+            "icon": "percent",
+            "highlights": [
+              "fully taxable",
+              "Section 28"
+            ]
+          },
+          {
+            "id": "q1_p2_ref",
+            "title": "Comparative Statutory Matrix",
+            "body": "Direct comparison between diversion by overriding title and application of income.",
+            "spoken": false,
+            "reference": true,
+            "t0": null,
+            "t1": null,
+            "voice_sync_text": null,
+            "icon": "scales",
+            "table_data": {
+              "headers": [
+                "Feature",
+                "Diversion by Overriding Title",
+                "Application of Income"
+              ],
+              "rows": [
+                [
+                  "Timing of charge",
+                  "Before income reaches assessee",
+                  "After income reaches assessee"
+                ],
+                [
+                  "Nature of obligation",
+                  "Pre-existing anterior legal obligation",
+                  "Voluntary / post-receipt obligation"
+                ],
+                [
+                  "Title to income",
+                  "Assessee never acquires title",
+                  "Assessee acquires beneficial title"
+                ],
+                [
+                  "Tax treatment",
+                  "Excluded from total income",
+                  "100% taxable under Section 28"
+                ]
+              ]
+            }
+          }
+        ],
+        "flow_summary": [
+          {
+            "label": "Income Origin",
+            "sub": "Source Stream",
+            "icon": "scales",
+            "t0": 38.29,
+            "t1": 38.99
+          },
+          {
+            "label": "Anterior Charge",
+            "sub": "Diverts at Source",
+            "icon": "shield",
+            "t0": 38.99,
+            "t1": 39.68
+          },
+          {
+            "label": "Post Receipt",
+            "sub": "Application Taxable",
+            "icon": "percent",
+            "t0": 39.68,
+            "t1": 40.38
+          }
+        ]
+      },
+      {
+        "branch_id": "b3_judicial",
+        "branch_title": "Landmark Judicial Benchmarks",
+        "badge": "§ Supreme Court",
+        "icon": "cap",
+        "t0": 40.78,
+        "t1": 60.53,
+        "points": [
+          {
+            "id": "q1_p3_1",
+            "title": "Sitaldas Tirathdas Judicial Test",
+            "body": "The Supreme Court in CIT v. Sitaldas Tirathdas formulated the definitive test: Does an overriding title divert the income before it reaches the assessee?",
+            "spoken": true,
+            "reference": false,
+            "t0": 40.78,
+            "t1": 52.62,
+            "voice_sync_text": "സുപ്രീം കോടതി landmark കേസ് ആയ Sitaldas Tirathdas-ൽ വ്യക്തമാക്കിയ ടെസ്റ്റ് ഇതാണ്: വരുമാനം assessee-യിൽ എത്തുന്നതിന് മുൻപേ ഒരു overriding title വഴി അത് വേർതിരിക്കപ്പെടുന്നുണ്ടോ?",
+            "icon": "cap",
+            "highlights": [
+              "CIT v. Sitaldas Tirathdas",
+              "overriding title"
+            ]
+          },
+          {
+            "id": "q1_p3_2",
+            "title": "Diversion Characterization",
+            "body": "If an anterior overriding title diverts the source, it is genuine diversion and excluded from total income.",
+            "spoken": true,
+            "reference": false,
+            "t0": 52.62,
+            "t1": 54.87,
+            "voice_sync_text": "ഉണ്ടെങ്കിൽ അത് diversion ആണ്.",
+            "icon": "check",
+            "highlights": [
+              "genuine diversion",
+              "excluded"
+            ]
+          },
+          {
+            "id": "q1_p3_3",
+            "title": "Post-Receipt Obligation Rule",
+            "body": "Any obligation arising after income reaches the assessee is mere application of income.",
+            "spoken": true,
+            "reference": false,
+            "t0": 54.87,
+            "t1": 60.53,
+            "voice_sync_text": "എന്നാൽ ലഭിച്ച ശേഷമുള്ള ഏതൊരു ബാധ്യതയും വെറും application of income മാത്രമാണ്.",
+            "icon": "user",
+            "highlights": [
+              "application of income"
+            ]
+          },
+          {
+            "id": "q3_p3_ref",
+            "title": "Nariman B. Bharucha Landmark Precedent",
+            "body": "Bombay High Court ruling on partnership deed provision diverting profits to deceased partner's widow.",
+            "spoken": false,
+            "reference": true,
+            "t0": null,
+            "t1": null,
+            "voice_sync_text": null,
+            "icon": "cap",
+            "example_calc": {
+              "title": "Precedent Analysis: CIT v. Nariman B. Bharucha & Sons (1981) 130 ITR 863 (Bom)",
+              "inputs": "Partnership deed provided that upon father's demise, firm must pay 20% of net profits (₹ 1,00,000) to mother.",
+              "steps": [
+                "Step 1: Inspect partnership deed — Clause creates a pre-existing overriding charge in favor of the mother.",
+                "Step 2: Trace title — 20% profits diverted at source before reaching firm as taxable income.",
+                "Step 3: Evaluate possession — Firm received amount merely for and on behalf of mother who held paramount title.",
+                "Step 4: Statutory conclusion — Valid Diversion by overriding title; ₹ 1,00,000 excluded from partnership firm income."
+              ]
+            }
+          }
+        ],
+        "flow_summary": [
+          {
+            "label": "Apply SC Test",
+            "sub": "Sitaldas Tirathdas",
+            "icon": "cap",
+            "t0": 58.83,
+            "t1": 59.4
+          },
+          {
+            "label": "Examine Trust",
+            "sub": "Advocate Created",
+            "icon": "shield",
+            "t0": 59.4,
+            "t1": 59.96
+          },
+          {
+            "label": "Tax Under Sec 28",
+            "sub": "Application of Income",
+            "icon": "rupee",
+            "t0": 59.96,
+            "t1": 60.53
+          }
+        ]
+      },
+      {
+        "branch_id": "b4_traps",
+        "branch_title": "Crucial Exam Traps & Pitfalls",
+        "badge": "§ ICAI Exam Focus",
+        "icon": "warning",
+        "t0": 60.93,
+        "t1": 80.81,
+        "points": [
+          {
+            "id": "q1_p4_1",
+            "title": "Voluntary Allocation Trap",
+            "body": "An assessee's voluntary allocation of income to a third party or trust never constitutes diversion.",
+            "spoken": true,
+            "reference": false,
+            "t0": 60.93,
+            "t1": 70.06,
+            "voice_sync_text": "പരീക്ഷയിൽ ശ്രദ്ധിക്കേണ്ട പ്രധാന കാര്യം: assessee സ്വന്തം ഇഷ്ടപ്രകാരം voluntary ആയി മാറ്റിവെക്കുന്ന വരുമാനം ഒരിക്കലും diversion ആകില്ല.",
+            "icon": "warning",
+            "highlights": [
+              "voluntary allocation",
+              "never diversion"
+            ]
+          },
+          {
+            "id": "q1_p4_2",
+            "title": "Legal Pre-Requisite for Diversion",
+            "body": "Anterior legal obligation created by statute, court decree, or title deed is mandatory to claim diversion.",
+            "spoken": true,
+            "reference": false,
+            "t0": 70.06,
+            "t1": 80.81,
+            "voice_sync_text": "നിയമപരമായോ കോടതി ഉത്തരവ് വഴിയോ ഉള്ള ഒരു anterior obligation ഉണ്ടെങ്കിൽ മാത്രമേ diversion by overriding title ക്ലെയിം ചെയ്യാൻ സാധിക്കൂ.",
+            "icon": "shield",
+            "highlights": [
+              "Anterior legal obligation",
+              "court decree"
+            ]
+          },
+          {
+            "id": "q1_p4_ref",
+            "title": "Exam Trap: Client Payment to Charity",
+            "body": "Common mistake vs statutory rule regarding direct client remittance to charity.",
+            "spoken": false,
+            "reference": true,
+            "t0": null,
+            "t1": null,
+            "voice_sync_text": null,
+            "icon": "warning",
+            "trap_data": {
+              "mistake": "Treating direct payment by client to charity as diversion merely because money bypassed assessee's bank account.",
+              "statutory_rule": "Payment per assessee's direction remains application under Section 28 unless the client created the overriding legal obligation binding the receipt prior to contract."
+            }
+          }
+        ],
+        "flow_summary": [
+          {
+            "label": "Spot Voluntary Direction",
+            "sub": "Assessee Choice",
+            "icon": "warning",
+            "t0": 77.59,
+            "t1": 78.66
+          },
+          {
+            "label": "Verify Anterior Charge",
+            "sub": "Court Decree / Deed",
+            "icon": "shield",
+            "t0": 78.66,
+            "t1": 79.73
+          },
+          {
+            "label": "Full Chargeability",
+            "sub": "Include in Sec 28",
+            "icon": "check",
+            "t0": 79.73,
+            "t1": 80.81
+          }
+        ]
+      }
+    ]
+  },
+  "q4": {
+    "question_id": "q4",
+    "question_title": "Optional Old Tax Regime: Slab Rates, Age Exemption Limits & Cess",
+    "audio_file": "data/audio/q4.mp3",
+    "total_duration": 91.059,
+    "branches": [
+      {
+        "branch_id": "b1_framework",
+        "branch_title": "Optional Old Tax Regime Framework",
+        "badge": "§ 115BAC(1A) Opt-Out",
+        "icon": "building",
+        "t0": 0.0,
+        "t1": 20.35,
+        "points": [
+          {
+            "id": "q4_p1_1",
+            "title": "Opting Out to Normal Rates",
+            "body": "Assessees opting out of default regime under Section 115BAC(1A) are taxed under progressive normal slab rates.",
+            "spoken": true,
+            "reference": false,
+            "t0": 0.0,
+            "t1": 8.83,
+            "voice_sync_text": "Section 115BAC(6) പ്രകാരം assessee ഓപ്ഷണൽ Old Tax Regime തിരഞ്ഞെടുക്കുകയാണെങ്കിൽ, പരമ്പരാഗത age-based സ്ലാബ് നിരക്കുകളാണ് ബാധകമാകുന്നത്.",
+            "icon": "building",
+            "highlights": [
+              "Section 115BAC(1A)",
+              "normal slab rates"
+            ]
+          },
+          {
+            "id": "q4_p1_2",
+            "title": "Age-Based Progressive Slabs",
+            "body": "The old regime provides progressive slab rates and higher basic exemption thresholds based on age classifications.",
+            "spoken": true,
+            "reference": false,
+            "t0": 8.83,
+            "t1": 20.35,
+            "voice_sync_text": "വ്യക്തികളുടെ പ്രായവും Residential Status-ഉം അനുസരിച്ചാണ് basic exemption limit നിശ്ചയിക്കുന്നത്.",
+            "icon": "scales",
+            "highlights": [
+              "progressive slab rates",
+              "age classifications"
+            ]
+          }
+        ],
+        "flow_summary": [
+          {
+            "label": "Opt-Out Election",
+            "sub": "Sec 115BAC(1A)",
+            "icon": "building",
+            "t0": 16.89,
+            "t1": 18.05
+          },
+          {
+            "label": "Age Verification",
+            "sub": "Determine Category",
+            "icon": "user",
+            "t0": 18.05,
+            "t1": 19.2
+          },
+          {
+            "label": "Select Slabs",
+            "sub": "Apply Normal Rates",
+            "icon": "scales",
+            "t0": 19.2,
+            "t1": 20.35
+          }
+        ]
+      },
+      {
+        "branch_id": "b2_slabs",
+        "branch_title": "Basic Exemption Slabs by Age Bracket",
+        "badge": "§ Finance Act Rates",
+        "icon": "calculator",
+        "t0": 20.75,
+        "t1": 46.6,
+        "points": [
+          {
+            "id": "q4_p2_1",
+            "title": "Three Age Classifications",
+            "body": "The statutory old regime establishes three distinct age tiers for basic tax exemption.",
+            "spoken": true,
+            "reference": false,
+            "t0": 20.75,
+            "t1": 22.61,
+            "voice_sync_text": "ഇവിടെ മൂന്ന് വിഭാഗങ്ങളുണ്ട്.",
+            "icon": "user",
+            "highlights": [
+              "three distinct age tiers"
+            ]
+          },
+          {
+            "id": "q4_p2_2",
+            "title": "Under 60 Exemption Limit",
+            "body": "Individuals below 60 years get basic exemption of ₹ 2,50,000.",
+            "spoken": true,
+            "reference": false,
+            "t0": 22.61,
+            "t1": 28.46,
+            "voice_sync_text": "60 വയസ്സിൽ താഴെയുള്ള വ്യക്തികൾക്ക് 2.5 ലക്ഷം രൂപ വരെ basic exemption ലഭിക്കും.",
+            "icon": "user",
+            "highlights": [
+              "₹ 2,50,000",
+              "below 60 years"
+            ]
+          },
+          {
+            "id": "q4_p2_3",
+            "title": "Senior & Super Senior Limits",
+            "body": "Resident Senior Citizens (60 to <80) receive ₹ 3,00,000 and Super Senior Citizens (80+) receive ₹ 5,00,000 basic exemption.",
+            "spoken": true,
+            "reference": false,
+            "t0": 28.46,
+            "t1": 32.54,
+            "voice_sync_text": "60 മുതൽ 80 വയസ്സ് വരെയുള്ള Resident Senior Citizens-ന് 3 ലക്ഷം രൂപയും, 80 വയസ്സിനു മുകളിലുള്ള Resident Super Senior Citizens-ന് 5 ലക്ഷം രൂപയുമാണ് basic exemption limit.",
+            "icon": "shield",
+            "highlights": [
+              "₹ 3,00,000",
+              "₹ 5,00,000",
+              "Resident"
+            ]
+          },
+          {
+            "id": "q4_p2_4",
+            "title": "Progressive Rate Brackets",
+            "body": "Income exceeding the basic exemption limit is taxed progressively at 5%, 20%, and 30%.",
+            "spoken": true,
+            "reference": false,
+            "t0": 32.54,
+            "t1": 46.6,
+            "voice_sync_text": "അതിനു മുകളിലുള്ള വരുമാനത്തിന് 5%, 20%, 30% ക്രമത്തിൽ നികുതി ഈടാക്കുന്നു.",
+            "icon": "percent",
+            "highlights": [
+              "5%",
+              "20%",
+              "30%"
+            ]
+          },
+          {
+            "id": "q4_p2_ref",
+            "title": "Complete Old Regime Slabs Table",
+            "body": "Full statutory brackets and progressive tax rates for all three taxpayer categories.",
+            "spoken": false,
+            "reference": true,
+            "t0": null,
+            "t1": null,
+            "voice_sync_text": null,
+            "icon": "calculator",
+            "table_data": {
+              "headers": [
+                "Income Bracket",
+                "<60 Years / NR",
+                "Resident 60 to <80",
+                "Resident 80+"
+              ],
+              "rows": [
+                [
+                  "Up to ₹ 2,50,000",
+                  "Nil",
+                  "Nil",
+                  "Nil"
+                ],
+                [
+                  "₹ 2,50,001 - ₹ 3,00,000",
+                  "5%",
+                  "Nil",
+                  "Nil"
+                ],
+                [
+                  "₹ 3,00,001 - ₹ 5,00,000",
+                  "5%",
+                  "5%",
+                  "Nil"
+                ],
+                [
+                  "₹ 5,00,001 - ₹ 10,00,000",
+                  "20%",
+                  "20%",
+                  "20%"
+                ],
+                [
+                  "Above ₹ 10,00,000",
+                  "30%",
+                  "30%",
+                  "30%"
+                ]
+              ]
+            }
+          }
+        ],
+        "flow_summary": [
+          {
+            "label": "Identify Category",
+            "sub": "Age & Status",
+            "icon": "user",
+            "t0": 42.38,
+            "t1": 43.79
+          },
+          {
+            "label": "Deduct Exemption",
+            "sub": "₹ 2.5L / ₹ 3L / ₹ 5L",
+            "icon": "calculator",
+            "t0": 43.79,
+            "t1": 45.19
+          },
+          {
+            "label": "Apply Rates",
+            "sub": "5%, 20%, 30%",
+            "icon": "percent",
+            "t0": 45.19,
+            "t1": 46.6
+          }
+        ]
+      },
+      {
+        "branch_id": "b3_cess_calc",
+        "branch_title": "Tax Computation, Surcharge & 4% Cess",
+        "badge": "§ 4% Health & Education Cess",
+        "icon": "percent",
+        "t0": 47.0,
+        "t1": 66.85,
+        "points": [
+          {
+            "id": "q4_p3_1",
+            "title": "Statutory 4% Cess Addition",
+            "body": "Health and Education Cess is mandatory at 4% on aggregate income-tax and applicable surcharge.",
+            "spoken": true,
+            "reference": false,
+            "t0": 47.0,
+            "t1": 60.24,
+            "voice_sync_text": "കണക്കാക്കിയ നികുതിയിൽ നിന്ന് Resident Individual-ന്റെ Total Income 5 ലക്ഷം രൂപയിൽ കവിയുന്നില്ലെങ്കിൽ, Section 87A പ്രകാരം പരമാവധി 12,500 രൂപ വരെ rebate ലഭിക്കും.",
+            "icon": "percent",
+            "highlights": [
+              "Health and Education Cess",
+              "4%"
+            ]
+          },
+          {
+            "id": "q4_p3_2",
+            "title": "Two-Stage Computation Sequence",
+            "body": "Tax liability must be calculated on slab brackets first, then 4% cess is added to determine final net payable.",
+            "spoken": true,
+            "reference": false,
+            "t0": 60.24,
+            "t1": 66.85,
+            "voice_sync_text": "നികുതി തുകയ്ക്ക് മുകളിൽ 4% Health & Education Cess നിർബന്ധമായും കൂട്ടിച്ചേർക്കണം.",
+            "icon": "calculator",
+            "highlights": [
+              "slab brackets first",
+              "4% cess"
+            ]
+          },
+          {
+            "id": "q4_p3_ref1",
+            "title": "Worked Example: Mr. Arjun (₹ 16,00,000)",
+            "body": "Statutory tax computation across all three age tiers under optional old regime.",
+            "spoken": false,
+            "reference": true,
+            "t0": null,
+            "t1": null,
+            "voice_sync_text": null,
+            "icon": "calculator",
+            "example_calc": {
+              "title": "Question 4: Mr. Arjun Total Income ₹ 16,00,000",
+              "inputs": "Gross Total Income = ₹ 16,00,000. Comparative tax at Age 52, Age 64, and Age 83.",
+              "steps": [
+                "Age 52: Tax on ₹ 16L = ₹ 12,500 (5%) + ₹ 1,00,000 (20%) + ₹ 1,80,000 (30%) = ₹ 2,92,500. Add 4% Cess (₹ 11,700) = ₹ 3,04,200.",
+                "Age 64: Tax on ₹ 16L = ₹ 10,000 (5%) + ₹ 1,00,000 (20%) + ₹ 1,80,000 (30%) = ₹ 2,90,000. Add 4% Cess (₹ 11,600) = ₹ 3,01,600.",
+                "Age 83: Tax on ₹ 16L = Nil (up to ₹ 5L) + ₹ 1,00,000 (20%) + ₹ 1,80,000 (30%) = ₹ 2,80,000. Add 4% Cess (₹ 11,200) = ₹ 2,91,200."
+              ]
+            }
+          },
+          {
+            "id": "q4_p3_ref2",
+            "title": "Individual Surcharge Rates (Old Regime)",
+            "body": "Progressive surcharge rates applicable on income-tax for high-income individuals under old regime.",
+            "spoken": false,
+            "reference": true,
+            "t0": null,
+            "t1": null,
+            "voice_sync_text": null,
+            "icon": "percent",
+            "table_data": {
+              "headers": [
+                "Total Income Bracket",
+                "Surcharge Rate",
+                "Marginal Relief Status"
+              ],
+              "rows": [
+                [
+                  "₹ 50 Lakhs to ₹ 1 Crore",
+                  "10%",
+                  "Available at ₹ 50 Lakhs"
+                ],
+                [
+                  "₹ 1 Crore to ₹ 2 Crores",
+                  "15%",
+                  "Available at ₹ 1 Crore"
+                ],
+                [
+                  "₹ 2 Crores to ₹ 5 Crores",
+                  "25%",
+                  "Available at ₹ 2 Crores"
+                ],
+                [
+                  "Exceeding ₹ 5 Crores",
+                  "37%",
+                  "Available at ₹ 5 Crores"
+                ]
+              ]
+            }
+          }
+        ],
+        "flow_summary": [
+          {
+            "label": "Compute Slab Tax",
+            "sub": "₹ 2.925L / 2.9L / 2.8L",
+            "icon": "calculator",
+            "t0": 64.87,
+            "t1": 65.53
+          },
+          {
+            "label": "Add 4% Cess",
+            "sub": "Health & Education",
+            "icon": "percent",
+            "t0": 65.53,
+            "t1": 66.19
+          },
+          {
+            "label": "Net Tax Payable",
+            "sub": "₹ 3,04,200 / 3,01,600",
+            "icon": "rupee",
+            "t0": 66.19,
+            "t1": 66.85
+          }
+        ]
+      },
+      {
+        "branch_id": "b4_traps",
+        "branch_title": "Exam Traps: Non-Resident & Age Rules",
+        "badge": "§ CBDT Circular 28/2016",
+        "icon": "warning",
+        "t0": 67.25,
+        "t1": 91.06,
+        "points": [
+          {
+            "id": "q4_p4_1",
+            "title": "Non-Resident Age Restriction",
+            "body": "Non-residents cannot claim higher senior or super senior exemption limits regardless of their age.",
+            "spoken": true,
+            "reference": false,
+            "t0": 67.25,
+            "t1": 79.31,
+            "voice_sync_text": "പരീക്ഷയിലെ ഏറ്റവും പ്രധാനപ്പെട്ട trap ഓർക്കുക: Senior Citizen, Super Senior Citizen എന്നിവർക്കുള്ള ഉയർന്ന basic exemption benefits റസിഡന്റുകളായ വ്യക്തികൾക്ക് മാത്രമേ ലഭിക്കൂ.",
+            "icon": "warning",
+            "highlights": [
+              "Non-residents cannot claim",
+              "regardless of age"
+            ]
+          },
+          {
+            "id": "q4_p4_2",
+            "title": "Residency Exclusivity Condition",
+            "body": "The higher basic exemptions of ₹ 3,00,000 and ₹ 5,00,000 are strictly confined to Resident Individuals.",
+            "spoken": true,
+            "reference": false,
+            "t0": 79.31,
+            "t1": 91.06,
+            "voice_sync_text": "ഒരു Non-Resident-ന് 65 വയസ്സോ 85 വയസ്സോ ഉണ്ടെങ്കിലും, 2.5 ലക്ഷം രൂപ മാത്രമാണ് basic exemption ലഭിക്കുക.",
+            "icon": "shield",
+            "highlights": [
+              "₹ 3,00,000",
+              "₹ 5,00,000",
+              "Resident Individuals"
+            ]
+          },
+          {
+            "id": "q4_p4_ref",
+            "title": "1st April Age Attainment Rule",
+            "body": "Statutory clarification regarding taxpayers attaining age 60 or 80 on 1st April.",
+            "spoken": false,
+            "reference": true,
+            "t0": null,
+            "t1": null,
+            "voice_sync_text": null,
+            "icon": "check",
+            "trap_data": {
+              "mistake": "Classifying an individual born on 1st April as not having attained age 60 during the previous year ending 31st March.",
+              "statutory_rule": "CBDT Circular No. 28/2016: An individual born on 1st April attains that age on the preceding day (31st March), and is entitled to the higher exemption limit for that Assessment Year."
+            }
+          }
+        ],
+        "flow_summary": [
+          {
+            "label": "Check Residency",
+            "sub": "Resident vs NR",
+            "icon": "shield",
+            "t0": 87.53,
+            "t1": 88.71
+          },
+          {
+            "label": "1st April Rule",
+            "sub": "CBDT Circular 28/2016",
+            "icon": "check",
+            "t0": 88.71,
+            "t1": 89.89
+          },
+          {
+            "label": "Final Exemption",
+            "sub": "₹ 2.5L / ₹ 3L / ₹ 5L",
+            "icon": "calculator",
+            "t0": 89.89,
+            "t1": 91.06
+          }
+        ]
+      }
+    ]
+  },
+  "q5": {
+    "question_id": "q5",
+    "question_title": "Section 87A Rebate in Optional Old Regime: ₹ 5 Lakhs Threshold & Limits",
+    "audio_file": "data/audio/q5.mp3",
+    "total_duration": 83.347,
+    "branches": [
+      {
+        "branch_id": "b1_core",
+        "branch_title": "Section 87A Statutory Framework (Old Regime)",
+        "badge": "§ 87A Old Regime",
+        "icon": "shield",
+        "t0": 0.0,
+        "t1": 17.71,
+        "points": [
+          {
+            "id": "q5_p1_1",
+            "title": "Low & Middle Income Tax Relief",
+            "body": "Section 87A provides tax rebate to alleviate tax burden for low and middle income resident individuals.",
+            "spoken": true,
+            "reference": false,
+            "t0": 0.0,
+            "t1": 13.36,
+            "voice_sync_text": "Old Tax Regime തിരഞ്ഞെടുക്കുന്ന 60 വയസ്സിൽ താഴെയുള്ള Resident Individual-ന്റെ നികുതി കണക്കാക്കലും, Section 87A പ്രകാരമുള്ള rebate ആനുകൂല്യങ്ങളുമാണ് ഇവിടെ പരിശോധിക്കുന്നത്.",
+            "icon": "shield",
+            "highlights": [
+              "Section 87A",
+              "resident individuals"
+            ]
+          },
+          {
+            "id": "q5_p1_2",
+            "title": "Old Regime Income Ceiling",
+            "body": "Under the optional old tax regime, the rebate applies only when Total Income does not exceed ₹ 5,00,000.",
+            "spoken": true,
+            "reference": false,
+            "t0": 13.36,
+            "t1": 17.71,
+            "voice_sync_text": "ഈ റെജീമിൽ Chapter VI-A ഡിഡക്ഷനുകൾ പൂർണ്ണമായും ക്ലെയിം ചെയ്യാം.",
+            "icon": "scales",
+            "highlights": [
+              "₹ 5,00,000",
+              "Total Income"
+            ]
+          }
+        ],
+        "flow_summary": [
+          {
+            "label": "Verify Regime",
+            "sub": "Old Optional",
+            "icon": "building",
+            "t0": 16.41,
+            "t1": 16.84
+          },
+          {
+            "label": "Income Test",
+            "sub": "TI ≤ ₹ 5,00,000",
+            "icon": "scales",
+            "t0": 16.84,
+            "t1": 17.28
+          },
+          {
+            "label": "Rebate Eligibility",
+            "sub": "Section 87A",
+            "icon": "shield",
+            "t0": 17.28,
+            "t1": 17.71
+          }
+        ]
+      },
+      {
+        "branch_id": "b2_limits",
+        "branch_title": "Rebate Computation & Maximum Cap",
+        "badge": "§ Max ₹ 12,500",
+        "icon": "calculator",
+        "t0": 18.11,
+        "t1": 41.2,
+        "points": [
+          {
+            "id": "q5_p2_1",
+            "title": "Statutory Cap of ₹ 12,500",
+            "body": "Under the old regime, maximum Section 87A rebate is 100% of tax payable or ₹ 12,500, whichever is lower.",
+            "spoken": true,
+            "reference": false,
+            "t0": 18.11,
+            "t1": 22.44,
+            "voice_sync_text": "ആദ്യത്തെ 2.5 ലക്ഷം രൂപ വരെ നികുതി NIL ആണ്.",
+            "icon": "calculator",
+            "highlights": [
+              "₹ 12,500",
+              "whichever is lower"
+            ]
+          },
+          {
+            "id": "q5_p2_2",
+            "title": "Zero Tax up to ₹ 5 Lakhs",
+            "body": "Because tax on ₹ 5,00,000 is exactly ₹ 12,500, eligible assessees pay zero tax.",
+            "spoken": true,
+            "reference": false,
+            "t0": 22.44,
+            "t1": 31.52,
+            "voice_sync_text": "2.5 ലക്ഷം മുതൽ 5 ലക്ഷം വരെയുള്ള തുകയ്ക്ക് 5% നിരക്കിൽ പരമാവധി 12,500 രൂപ നികുതി വരുന്നു.",
+            "icon": "check",
+            "highlights": [
+              "zero tax",
+              "₹ 12,500"
+            ]
+          },
+          {
+            "id": "q5_p2_3",
+            "title": "Cess Calculated After Rebate",
+            "body": "Health and Education Cess at 4% is calculated only on net tax remaining after rebate.",
+            "spoken": true,
+            "reference": false,
+            "t0": 31.52,
+            "t1": 41.2,
+            "voice_sync_text": "5 ലക്ഷം മുതൽ 10 ലക്ഷം വരെ 20 ശതമാനവും, 10 ലക്ഷത്തിന് മുകളിലുള്ള വരുമാനത്തിന് 30 ശതമാനവുമാണ് നികുതി നിരക്ക്.",
+            "icon": "percent",
+            "highlights": [
+              "4%",
+              "after rebate"
+            ]
+          }
+        ],
+        "flow_summary": [
+          {
+            "label": "Calculate Slab Tax",
+            "sub": "5% on > ₹ 2.5L",
+            "icon": "calculator",
+            "t0": 38.3,
+            "t1": 39.26
+          },
+          {
+            "label": "Deduct Rebate",
+            "sub": "Lower of Tax or ₹ 12.5k",
+            "icon": "shield",
+            "t0": 39.26,
+            "t1": 40.23
+          },
+          {
+            "label": "Net Tax Result",
+            "sub": "Nil Tax Payable",
+            "icon": "check",
+            "t0": 40.23,
+            "t1": 41.2
+          }
+        ]
+      },
+      {
+        "branch_id": "b3_worked_example",
+        "branch_title": "Practical Statutory Assessment",
+        "badge": "§ Question 5 Solution",
+        "icon": "calculator",
+        "t0": 41.6,
+        "t1": 60.89,
+        "points": [
+          {
+            "id": "q5_p3_1",
+            "title": "Step-by-Step Calculation",
+            "body": "In the exam problem, compute tax on income exceeding basic exemption and apply full rebate.",
+            "spoken": true,
+            "reference": false,
+            "t0": 41.6,
+            "t1": 55.44,
+            "voice_sync_text": "Section 87A പ്രകാരം, ഒരു Resident Individual-ന്റെ Total Income 5 ലക്ഷം രൂപയിൽ കവിയുന്നില്ലെങ്കിൽ, നികുതി തുകയോ 12,500 രൂപയോ ഏതാണോ കുറവ്, അത് പൂർണ്ണമായും rebate ആയി കുറയ്ക്കാം.",
+            "icon": "calculator",
+            "highlights": [
+              "basic exemption",
+              "full rebate"
+            ]
+          },
+          {
+            "id": "q5_p3_2",
+            "title": "Zero Net Liability Rule",
+            "body": "Subtracting rebate equals zero tax liability, so no 4% cess is charged.",
+            "spoken": true,
+            "reference": false,
+            "t0": 55.44,
+            "t1": 60.89,
+            "voice_sync_text": "അതിനാൽ 5 ലക്ഷം രൂപ വരെ വരുമാനമുള്ളവർക്ക് നികുതി ബാധ്യത പൂജ്യമായിരിക്കും.",
+            "icon": "check",
+            "highlights": [
+              "zero tax liability",
+              "no 4% cess"
+            ]
+          },
+          {
+            "id": "q5_p3_ref",
+            "title": "Worked Example: Mr. Manish (₹ 4,15,000)",
+            "body": "Assessment of tax liability under optional old regime for A.Y. 2026-27.",
+            "spoken": false,
+            "reference": true,
+            "t0": null,
+            "t1": null,
+            "voice_sync_text": null,
+            "icon": "calculator",
+            "example_calc": {
+              "title": "Question 5: Mr. Manish (Age 47, Resident) Total Income ₹ 4,15,000",
+              "inputs": "Gross Total Income = ₹ 4,15,000. Assessee exercises option to opt out of default regime.",
+              "steps": [
+                "Step 1: Compute taxable income exceeding basic exemption = ₹ 4,15,000 - ₹ 2,50,000 = ₹ 1,65,000.",
+                "Step 2: Tax @ 5% on ₹ 1,65,000 = ₹ 8,250.",
+                "Step 3: Less: Rebate u/s 87A = Lower of ₹ 8,250 or ₹ 12,500 = ₹ 8,250.",
+                "Step 4: Net Tax before cess = ₹ 8,250 - ₹ 8,250 = Nil.",
+                "Step 5: Health & Education Cess @ 4% on Nil = Nil. Final Tax Liability = Nil."
+              ]
+            }
+          }
+        ],
+        "flow_summary": [
+          {
+            "label": "Taxable ₹ 1.65L",
+            "sub": "Above ₹ 2.5L Exemption",
+            "icon": "calculator",
+            "t0": 59.26,
+            "t1": 59.8
+          },
+          {
+            "label": "Tax @ 5%",
+            "sub": "₹ 8,250",
+            "icon": "percent",
+            "t0": 59.8,
+            "t1": 60.34
+          },
+          {
+            "label": "Rebate u/s 87A",
+            "sub": "Less ₹ 8,250 = Nil",
+            "icon": "check",
+            "t0": 60.34,
+            "t1": 60.89
+          }
+        ]
+      },
+      {
+        "branch_id": "b4_traps",
+        "branch_title": "Crucial Exam Traps: Threshold & Entity Exclusions",
+        "badge": "§ Statutory Traps",
+        "icon": "warning",
+        "t0": 61.29,
+        "t1": 83.35,
+        "points": [
+          {
+            "id": "q5_p4_1",
+            "title": "Non-Resident Disqualification",
+            "body": "Non-resident individuals are strictly barred from Section 87A rebate, even if total income is below ₹ 5 Lakhs.",
+            "spoken": true,
+            "reference": false,
+            "t0": 61.29,
+            "t1": 74.42,
+            "voice_sync_text": "പരീക്ഷയിൽ ഓർക്കേണ്ട രണ്ട് പ്രധാന നിബന്ധനകൾ: ഒന്നാമതായി, Section 87A rebate Resident Individuals-ന് മാത്രമേ ലഭ്യമാകൂ, Non-Residents-നോ HUF-നോ ലഭിക്കില്ല.",
+            "icon": "warning",
+            "highlights": [
+              "Non-resident",
+              "strictly barred",
+              "below ₹ 5 Lakhs"
+            ]
+          },
+          {
+            "id": "q5_p4_2",
+            "title": "Entity Exclusions & Cliff Edge",
+            "body": "Section 87A is restricted solely to Resident Individuals; HUFs, firms, and companies are completely ineligible.",
+            "spoken": true,
+            "reference": false,
+            "t0": 74.42,
+            "t1": 83.35,
+            "voice_sync_text": "രണ്ടാമതായി, Net Tax Liability-ക്ക് മുകളിലാണ് 4% Health & Education Cess കണക്കാക്കേണ്ടത്.",
+            "icon": "shield",
+            "highlights": [
+              "Resident Individuals",
+              "HUFs, firms, and companies"
+            ]
+          },
+          {
+            "id": "q5_p4_ref",
+            "title": "Exam Trap: Cliff Edge & No Marginal Relief",
+            "body": "Disqualification risks and total loss of rebate exceeding ₹ 5,00,000 in old regime.",
+            "spoken": false,
+            "reference": true,
+            "t0": null,
+            "t1": null,
+            "voice_sync_text": null,
+            "icon": "warning",
+            "trap_data": {
+              "mistake": "Claiming marginal relief under old regime when income slightly exceeds ₹ 5,00,000.",
+              "statutory_rule": "Under old regime, Section 87A has NO marginal relief: if Total Income is ₹ 5,00,010, the assessee loses the entire ₹ 12,500 rebate and pays ₹ 12,502 tax plus cess."
+            }
+          }
+        ],
+        "flow_summary": [
+          {
+            "label": "Resident Individual Only",
+            "sub": "HUF / AOP / Firm Out",
+            "icon": "user",
+            "t0": 80.67,
+            "t1": 81.56
+          },
+          {
+            "label": "Check ₹ 5L Ceiling",
+            "sub": "₹ 5,00,010 Loses All",
+            "icon": "warning",
+            "t0": 81.56,
+            "t1": 82.46
+          },
+          {
+            "label": "Rebate Clamped",
+            "sub": "Max ₹ 12,500",
+            "icon": "check",
+            "t0": 82.46,
+            "t1": 83.35
+          }
+        ]
+      }
+    ]
+  },
+  "q6": {
+    "question_id": "q6",
+    "question_title": "Default Tax Regime u/s 115BAC: Slabs, Rebate & Surcharge (A.Y. 2026-27)",
+    "audio_file": "data/audio/q6.mp3",
+    "total_duration": 89.568,
+    "branches": [
+      {
+        "branch_id": "b1_framework",
+        "branch_title": "Section 115BAC Default Tax Regime Framework",
+        "badge": "§ 115BAC(1A)",
+        "icon": "building",
+        "t0": 0.0,
+        "t1": 19.73,
+        "points": [
+          {
+            "id": "q6_p1_1",
+            "title": "Default Tax Regime Status",
+            "body": "Section 115BAC(1A) is the default tax regime for Individuals, HUFs, AOPs, BOIs, and AJPs for A.Y. 2026-27.",
+            "spoken": true,
+            "reference": false,
+            "t0": 0.0,
+            "t1": 8.26,
+            "voice_sync_text": "Finance Act പ്രകാരം എല്ലാ വ്യക്തികൾക്കും Default Tax Regime ബാധകമാകുന്നത് Section 115BAC(1A) വഴിയാണ്.",
+            "icon": "building",
+            "highlights": [
+              "Section 115BAC(1A)",
+              "default tax regime",
+              "A.Y. 2026-27"
+            ]
+          },
+          {
+            "id": "q6_p1_2",
+            "title": "Concessional Slabs & Deductions",
+            "body": "Offers lower tax rates across streamlined income slabs in exchange for foregoing specified exemptions and deductions.",
+            "spoken": true,
+            "reference": false,
+            "t0": 8.26,
+            "t1": 19.73,
+            "voice_sync_text": "നികുതിദായകൻ പ്രത്യേകം ഫോം സബ്മിറ്റ് ചെയ്ത് opt-out ചെയ്യാത്ത പക്ഷം, ഈ concessional സ്ലാബ് നിരക്കുകളാണ് ബാധകമാകുന്നത്.",
+            "icon": "scales",
+            "highlights": [
+              "lower tax rates",
+              "foregoing specified exemptions"
+            ]
+          }
+        ],
+        "flow_summary": [
+          {
+            "label": "Default Status",
+            "sub": "Sec 115BAC(1A)",
+            "icon": "building",
+            "t0": 16.29,
+            "t1": 17.44
+          },
+          {
+            "label": "Concession Tradeoff",
+            "sub": "No Chap VI-A",
+            "icon": "scales",
+            "t0": 17.44,
+            "t1": 18.58
+          },
+          {
+            "label": "Apply New Slabs",
+            "sub": "A.Y. 2026-27",
+            "icon": "calculator",
+            "t0": 18.58,
+            "t1": 19.73
+          }
+        ]
+      },
+      {
+        "branch_id": "b2_slabs",
+        "branch_title": "Progressive Tax Slabs (A.Y. 2026-27)",
+        "badge": "§ ₹ 4 Lakhs Exemption",
+        "icon": "calculator",
+        "t0": 20.13,
+        "t1": 49.34,
+        "points": [
+          {
+            "id": "q6_p2_1",
+            "title": "Basic Exemption of ₹ 4 Lakhs",
+            "body": "In the default regime, initial income up to ₹ 4,00,000 has Nil tax liability.",
+            "spoken": true,
+            "reference": false,
+            "t0": 20.13,
+            "t1": 24.19,
+            "voice_sync_text": "ഈ റെജീമിൽ ആദ്യത്തെ 4 ലക്ഷം രൂപ വരെ നികുതി NIL ആണ്.",
+            "icon": "calculator",
+            "highlights": [
+              "₹ 4,00,000",
+              "Nil tax"
+            ]
+          },
+          {
+            "id": "q6_p2_2",
+            "title": "Progressive Slab Structure",
+            "body": "Income from 4L to 8L is taxed @ 5%, 8L to 12L @ 10%, 12L to 16L @ 15%, 16L to 20L @ 20%, 20L to 24L @ 25%, and above 24L @ 30%.",
+            "spoken": true,
+            "reference": false,
+            "t0": 24.19,
+            "t1": 49.34,
+            "voice_sync_text": "4 ലക്ഷം മുതൽ 8 ലക്ഷം വരെ 5%, 8 ലക്ഷം മുതൽ 12 ലക്ഷം വരെ 10%, 12 ലക്ഷം മുതൽ 16 ലക്ഷം വരെ 15%, 16 ലക്ഷം മുതൽ 20 ലക്ഷം വരെ 20%, 20 ലക്ഷം മുതൽ 24 ലക്ഷം വരെ 25%, 24 ലക്ഷത്തിന് മുകളിൽ 30% എന്നിങ്ങനെയാണ് നിരക്കുകൾ.",
+            "icon": "percent",
+            "highlights": [
+              "5%",
+              "10%",
+              "15%",
+              "20%",
+              "25%",
+              "30%"
+            ]
+          },
+          {
+            "id": "q6_p2_ref",
+            "title": "Complete Section 115BAC Slabs Table",
+            "body": "Full statutory income brackets and tax rates under default regime for A.Y. 2026-27.",
+            "spoken": false,
+            "reference": true,
+            "t0": null,
+            "t1": null,
+            "voice_sync_text": null,
+            "icon": "calculator",
+            "table_data": {
+              "headers": [
+                "Income Bracket",
+                "Tax Rate",
+                "Cumulative Tax at Top of Bracket"
+              ],
+              "rows": [
+                [
+                  "Up to ₹ 4,00,000",
+                  "Nil",
+                  "₹ 0"
+                ],
+                [
+                  "₹ 4,00,001 - ₹ 8,00,000",
+                  "5%",
+                  "₹ 20,000"
+                ],
+                [
+                  "₹ 8,00,001 - ₹ 12,00,000",
+                  "10%",
+                  "₹ 60,000"
+                ],
+                [
+                  "₹ 12,00,001 - ₹ 16,00,000",
+                  "15%",
+                  "₹ 1,20,000"
+                ],
+                [
+                  "₹ 16,00,001 - ₹ 20,00,000",
+                  "20%",
+                  "₹ 2,00,000"
+                ],
+                [
+                  "₹ 20,00,001 - ₹ 24,00,000",
+                  "25%",
+                  "₹ 3,00,000"
+                ],
+                [
+                  "Above ₹ 24,00,000",
+                  "30%",
+                  "30% on excess"
+                ]
+              ]
+            }
+          }
+        ],
+        "flow_summary": [
+          {
+            "label": "First ₹ 4L",
+            "sub": "Nil Tax",
+            "icon": "calculator",
+            "t0": 41.8,
+            "t1": 44.31
+          },
+          {
+            "label": "Next Brackets",
+            "sub": "5% / 10% / 15%",
+            "icon": "percent",
+            "t0": 44.31,
+            "t1": 46.83
+          },
+          {
+            "label": "Max Slab 30%",
+            "sub": "Above ₹ 24L",
+            "icon": "rupee",
+            "t0": 46.83,
+            "t1": 49.34
+          }
+        ]
+      },
+      {
+        "branch_id": "b3_rebate_surcharge",
+        "branch_title": "Section 87A Rebate & Surcharge Caps",
+        "badge": "§ Rebate up to ₹ 12L",
+        "icon": "shield",
+        "t0": 49.74,
+        "t1": 71.03,
+        "points": [
+          {
+            "id": "q6_p3_1",
+            "title": "Expanded Section 87A Rebate",
+            "body": "In the default regime, Section 87A rebate provides full relief up to ₹ 60,000 for resident individuals with income up to ₹ 12,00,000.",
+            "spoken": true,
+            "reference": false,
+            "t0": 49.74,
+            "t1": 60.66,
+            "voice_sync_text": "Default Regime-ൽ Resident Individual-ന്റെ Total Income നിർദ്ദിഷ്ട പരിധി കവിയുന്നില്ലെങ്കിൽ സെക്ഷൻ 87A പ്രകാരമുള്ള enhanced rebate ലഭിക്കും.",
+            "icon": "shield",
+            "highlights": [
+              "Section 87A",
+              "₹ 60,000",
+              "₹ 12,00,000"
+            ]
+          },
+          {
+            "id": "q6_p3_2",
+            "title": "Capped Surcharge Rate (25%)",
+            "body": "Maximum surcharge under Section 115BAC is capped at 25% (the 37% highest rate under old regime does not apply).",
+            "spoken": true,
+            "reference": false,
+            "t0": 60.66,
+            "t1": 71.03,
+            "voice_sync_text": "കൂടാതെ ഉയർന്ന വരുമാനക്കാർക്ക് ബാധകമായ surcharge നിരക്കുകളിൽ പരമാവധി 25% എന്ന സീലിംഗ് മാത്രമേ ഈ റെജീമിൽ വരുന്നുള്ളൂ.",
+            "icon": "percent",
+            "highlights": [
+              "25%",
+              "37%"
+            ]
+          },
+          {
+            "id": "q6_p3_ref",
+            "title": "Worked Example: Mr. X (₹ 16,00,000)",
+            "body": "Assessment of tax liability under Section 115BAC for A.Y. 2026-27.",
+            "spoken": false,
+            "reference": true,
+            "t0": null,
+            "t1": null,
+            "voice_sync_text": null,
+            "icon": "calculator",
+            "example_calc": {
+              "title": "Question 6: Mr. X Total Income ₹ 16,00,000 (A.Y. 2026-27)",
+              "inputs": "Gross Total Income = ₹ 16,00,000. Assessee assessed under default tax regime u/s 115BAC.",
+              "steps": [
+                "First ₹ 4,00,000: Nil",
+                "Next ₹ 4,00,001 - ₹ 8,00,000 @ 5%: ₹ 20,000",
+                "Next ₹ 8,00,001 - ₹ 12,00,000 @ 10%: ₹ 40,000",
+                "Next ₹ 12,00,001 - ₹ 16,00,000 @ 15%: ₹ 60,000",
+                "Total Tax before cess = ₹ 20,000 + ₹ 40,000 + ₹ 60,000 = ₹ 1,20,000",
+                "Add: Health and Education Cess @ 4% = ₹ 4,800",
+                "Final Tax Liability = ₹ 1,24,800"
+              ]
+            }
+          }
+        ],
+        "flow_summary": [
+          {
+            "label": "Rebate Ceiling",
+            "sub": "TI ≤ ₹ 12L (₹ 60k)",
+            "icon": "shield",
+            "t0": 67.92,
+            "t1": 68.96
+          },
+          {
+            "label": "Surcharge Cap",
+            "sub": "Max 25% (No 37%)",
+            "icon": "percent",
+            "t0": 68.96,
+            "t1": 69.99
+          },
+          {
+            "label": "Add 4% Cess",
+            "sub": "Final Net Liability",
+            "icon": "rupee",
+            "t0": 69.99,
+            "t1": 71.03
+          }
+        ]
+      },
+      {
+        "branch_id": "b4_traps",
+        "branch_title": "Crucial Exam Traps: Foregone Deductions & Universal Slabs",
+        "badge": "§ Deduction Restrictions",
+        "icon": "warning",
+        "t0": 71.43,
+        "t1": 89.57,
+        "points": [
+          {
+            "id": "q6_p4_1",
+            "title": "Loss of Chapter VI-A Deductions",
+            "body": "In Section 115BAC, major deductions like 80C, 80D, and self-occupied housing interest u/s 24(b) are completely disallowed.",
+            "spoken": true,
+            "reference": false,
+            "t0": 71.43,
+            "t1": 83.66,
+            "voice_sync_text": "പരീക്ഷയിൽ ഏറ്റവും കൂടുതൽ ശ്രദ്ധിക്കേണ്ട കാര്യം: Section 115BAC-ൽ Senior Citizens-നോ Super Senior Citizens-നോ പ്രത്യേക basic exemption limit ഇല്ല.",
+            "icon": "warning",
+            "highlights": [
+              "Section 115BAC",
+              "80C, 80D",
+              "24(b) disallowed"
+            ]
+          },
+          {
+            "id": "q6_p4_2",
+            "title": "Universal Exemption Limit",
+            "body": "Basic exemption of ₹ 4 Lakhs applies uniformly to all individuals regardless of senior citizen status.",
+            "spoken": true,
+            "reference": false,
+            "t0": 83.66,
+            "t1": 89.57,
+            "voice_sync_text": "പ്രായഭേദമന്യേ എല്ലാവർക്കും ഒരേ basic exemption സ്ലാബാണ് ബാധകമാകുന്നത്.",
+            "icon": "shield",
+            "highlights": [
+              "₹ 4 Lakhs",
+              "uniformly to all"
+            ]
+          },
+          {
+            "id": "q6_p4_ref",
+            "title": "Exam Trap: Foregone Deductions",
+            "body": "Common mistake vs statutory rule regarding Chapter VI-A under default regime.",
+            "spoken": false,
+            "reference": true,
+            "t0": null,
+            "t1": null,
+            "voice_sync_text": null,
+            "icon": "warning",
+            "trap_data": {
+              "mistake": "Claiming Section 80C, 80D, or Section 24(b) self-occupied interest under default regime Section 115BAC.",
+              "statutory_rule": "Section 115BAC(2) disallows all Chapter VI-A deductions (except 80CCD(2), 80CCH(2), 80JJAA) and Section 24(b) self-occupied loss."
+            }
+          }
+        ],
+        "flow_summary": [
+          {
+            "label": "Deductions Disallowed",
+            "sub": "No 80C, 80D, 24(b)",
+            "icon": "warning",
+            "t0": 87.8,
+            "t1": 88.39
+          },
+          {
+            "label": "Universal Slabs",
+            "sub": "No Age Bias",
+            "icon": "shield",
+            "t0": 88.39,
+            "t1": 88.98
+          },
+          {
+            "label": "Compare Tax Regimes",
+            "sub": "Pick Lowest Tax",
+            "icon": "check",
+            "t0": 88.98,
+            "t1": 89.57
+          }
+        ]
+      }
+    ]
+  },
+  "q7": {
+    "question_id": "q7",
+    "question_title": "Section 87A Rebate under Default Regime: ₹ 12 Lakhs Threshold (A.Y. 2026-27)",
+    "audio_file": "data/audio/q7.mp3",
+    "total_duration": 76.896,
+    "branches": [
+      {
+        "branch_id": "b1_framework",
+        "branch_title": "Default Regime Section 87A Rebate Framework",
+        "badge": "§ 87A Default Regime",
+        "icon": "shield",
+        "t0": 0.0,
+        "t1": 18.67,
+        "points": [
+          {
+            "id": "q7_p1_1",
+            "title": "Middle-Class Tax Relief Scope",
+            "body": "Section 87A rebate provides substantial relief to middle-income earners under the default tax regime.",
+            "spoken": true,
+            "reference": false,
+            "t0": 0.0,
+            "t1": 8.62,
+            "voice_sync_text": "Section 115BAC പ്രകാരമുള്ള Default Tax Regime-ൽ ഇടത്തരം വരുമാനക്കാർക്ക് ആശ്വാസം നൽകുന്ന ഒന്നാണ് Section 87A പ്രകാരമുള്ള enhanced rebate.",
+            "icon": "shield",
+            "highlights": [
+              "Section 87A",
+              "default tax regime"
+            ]
+          },
+          {
+            "id": "q7_p1_2",
+            "title": "Zero Tax up to ₹ 12 Lakhs",
+            "body": "If annual income falls within statutory threshold, the tax payable is reduced to zero.",
+            "spoken": true,
+            "reference": false,
+            "t0": 8.62,
+            "t1": 18.67,
+            "voice_sync_text": "വാർഷിക വരുമാനം നിർദ്ദിഷ്ട പരിധിയിലാണെങ്കിൽ നികുതി പൂജ്യമാക്കാൻ ഇത് സഹായിക്കുന്നു.",
+            "icon": "check",
+            "highlights": [
+              "reduced to zero"
+            ]
+          }
+        ],
+        "flow_summary": [
+          {
+            "label": "Verify Regime",
+            "sub": "Section 115BAC",
+            "icon": "building",
+            "t0": 15.66,
+            "t1": 16.66
+          },
+          {
+            "label": "Income Test",
+            "sub": "TI ≤ ₹ 12,00,000",
+            "icon": "scales",
+            "t0": 16.66,
+            "t1": 17.67
+          },
+          {
+            "label": "Zero Tax Result",
+            "sub": "Rebate Applicable",
+            "icon": "check",
+            "t0": 17.67,
+            "t1": 18.67
+          }
+        ]
+      },
+      {
+        "branch_id": "b2_slabs",
+        "branch_title": "Tax Rates & Slabs up to ₹ 12 Lakhs (A.Y. 2026-27)",
+        "badge": "§ Slabs up to ₹ 12L",
+        "icon": "calculator",
+        "t0": 19.07,
+        "t1": 37.24,
+        "points": [
+          {
+            "id": "q7_p2_1",
+            "title": "A.Y. 2026-27 Slabs",
+            "body": "Examine the tax slabs applicable for Assessment Year 2026-27.",
+            "spoken": true,
+            "reference": false,
+            "t0": 19.07,
+            "t1": 24.73,
+            "voice_sync_text": "Assessment Year 2026-27-ലെ സ്ലാബുകൾ നോക്കുക.",
+            "icon": "calculator",
+            "highlights": [
+              "Assessment Year 2026-27"
+            ]
+          },
+          {
+            "id": "q7_p2_2",
+            "title": "First ₹ 4 Lakhs Exemption",
+            "body": "First ₹ 4,00,000 of total income is taxed at 0%.",
+            "spoken": true,
+            "reference": false,
+            "t0": 24.73,
+            "t1": 28.64,
+            "voice_sync_text": "ആദ്യത്തെ 4 ലക്ഷം രൂപയ്ക്ക് 0% നികുതി.",
+            "icon": "calculator",
+            "highlights": [
+              "₹ 4,00,000",
+              "0%"
+            ]
+          },
+          {
+            "id": "q7_p2_3",
+            "title": "Tax on 4L-8L and 8L-12L",
+            "body": "Income from 4 to 8 Lakhs is taxed at 5% and 8 to 12 Lakhs at 10%.",
+            "spoken": true,
+            "reference": false,
+            "t0": 28.64,
+            "t1": 37.24,
+            "voice_sync_text": "4 മുതൽ 8 ലക്ഷം വരെ 5 ശതമാനവും, 8 മുതൽ 12 ലക്ഷം വരെ 10 ശതമാനവുമാണ് സ്ലാബ് നിരക്കുകൾ.",
+            "icon": "percent",
+            "highlights": [
+              "4 to 8 Lakhs",
+              "5%",
+              "8 to 12 Lakhs",
+              "10%"
+            ]
+          },
+          {
+            "id": "q7_p2_ref",
+            "title": "Rebate Computation Matrix (up to ₹ 12L)",
+            "body": "Progressive tax accumulation and maximum rebate matching under Section 87A.",
+            "spoken": false,
+            "reference": true,
+            "t0": null,
+            "t1": null,
+            "voice_sync_text": null,
+            "icon": "calculator",
+            "table_data": {
+              "headers": [
+                "Income Bracket",
+                "Tax Rate",
+                "Tax Amount",
+                "Cumulative Tax"
+              ],
+              "rows": [
+                [
+                  "Up to ₹ 4,00,000",
+                  "Nil",
+                  "₹ 0",
+                  "₹ 0"
+                ],
+                [
+                  "₹ 4,00,001 - ₹ 8,00,000",
+                  "5%",
+                  "₹ 20,000",
+                  "₹ 20,000"
+                ],
+                [
+                  "₹ 8,00,001 - ₹ 12,00,000",
+                  "10%",
+                  "₹ 40,000",
+                  "₹ 60,000"
+                ],
+                [
+                  "Total Tax on ₹ 12,00,000",
+                  "-",
+                  "-",
+                  "₹ 60,000"
+                ],
+                [
+                  "Less: Rebate u/s 87A",
+                  "-",
+                  "-",
+                  "(-) ₹ 60,000"
+                ],
+                [
+                  "Net Tax Liability",
+                  "-",
+                  "-",
+                  "Nil"
+                ]
+              ]
+            }
+          }
+        ],
+        "flow_summary": [
+          {
+            "label": "0 - 4 Lakhs",
+            "sub": "0% Tax (Nil)",
+            "icon": "calculator",
+            "t0": 34.66,
+            "t1": 35.52
+          },
+          {
+            "label": "4 - 8 Lakhs",
+            "sub": "5% Tax (₹ 20,000)",
+            "icon": "percent",
+            "t0": 35.52,
+            "t1": 36.38
+          },
+          {
+            "label": "8 - 12 Lakhs",
+            "sub": "10% Tax (₹ 40,000)",
+            "icon": "rupee",
+            "t0": 36.38,
+            "t1": 37.24
+          }
+        ]
+      },
+      {
+        "branch_id": "b3_limits",
+        "branch_title": "₹ 60,000 Maximum Rebate & Cess Rule",
+        "badge": "§ Max ₹ 60,000",
+        "icon": "calculator",
+        "t0": 37.64,
+        "t1": 59.05,
+        "points": [
+          {
+            "id": "q7_p3_1",
+            "title": "Resident Individual ₹ 12L Limit",
+            "body": "Resident Individuals with Total Income up to ₹ 12,00,000 are eligible for rebate up to ₹ 60,000.",
+            "spoken": true,
+            "reference": false,
+            "t0": 37.64,
+            "t1": 46.4,
+            "voice_sync_text": "Total Income 12 ലക്ഷം രൂപ വരെയുള്ള Resident Individual-ന് സെക്ഷൻ 87A പ്രകാരം 60,000 രൂപ വരെയുള്ള പൂർണ്ണ നികുതിയും rebate ആയി ലഭിക്കുന്നു.",
+            "icon": "shield",
+            "highlights": [
+              "Total Income",
+              "₹ 12,00,000",
+              "₹ 60,000"
+            ]
+          },
+          {
+            "id": "q7_p3_2",
+            "title": "Zero Tax Liability Result",
+            "body": "Consequently, net tax liability on Total Income up to ₹ 12,00,000 becomes NIL.",
+            "spoken": true,
+            "reference": false,
+            "t0": 46.4,
+            "t1": 53.94,
+            "voice_sync_text": "അതിനാൽ 12 ലക്ഷം രൂപ വരെ നികുതി ബാധ്യത NIL ആയി മാറുന്നു.",
+            "icon": "check",
+            "highlights": [
+              "NIL"
+            ]
+          },
+          {
+            "id": "q7_p3_3",
+            "title": "4% Cess Chargeability Rule",
+            "body": "4% Health & Education Cess applies only if there is a positive tax liability after rebate.",
+            "spoken": true,
+            "reference": false,
+            "t0": 53.94,
+            "t1": 59.05,
+            "voice_sync_text": "ഇതിനു മുകളിൽ വരുന്ന നികുതിക്ക് മാത്രമേ 4% Cess ബാധകമാകൂ.",
+            "icon": "percent",
+            "highlights": [
+              "4% Cess"
+            ]
+          },
+          {
+            "id": "q7_p3_ref",
+            "title": "Worked Example: Mr. Mahesh (₹ 11,00,000)",
+            "body": "Assessment of tax liability under Section 115BAC for A.Y. 2026-27.",
+            "spoken": false,
+            "reference": true,
+            "t0": null,
+            "t1": null,
+            "voice_sync_text": null,
+            "icon": "calculator",
+            "example_calc": {
+              "title": "Question 7: Mr. Mahesh (Age 32, Resident) Total Income ₹ 11,00,000",
+              "inputs": "Gross Total Income = ₹ 11,00,000 under default tax regime u/s 115BAC.",
+              "steps": [
+                "First ₹ 4,00,000: Nil",
+                "Next ₹ 4,00,001 - ₹ 8,00,000 @ 5%: ₹ 20,000",
+                "Balance ₹ 8,00,001 - ₹ 11,00,000 @ 10% on ₹ 3,00,000: ₹ 30,000",
+                "Total Tax before rebate = ₹ 20,000 + ₹ 30,000 = ₹ 50,000",
+                "Less: Rebate u/s 87A = Lower of ₹ 50,000 or ₹ 60,000 = ₹ 50,000",
+                "Net Tax Liability = Nil (No Cess applicable)"
+              ]
+            }
+          }
+        ],
+        "flow_summary": [
+          {
+            "label": "Income ≤ ₹ 12L",
+            "sub": "Total Income Check",
+            "icon": "calculator",
+            "t0": 57.52,
+            "t1": 58.03
+          },
+          {
+            "label": "Max Rebate ₹ 60k",
+            "sub": "Covers Full Slab Tax",
+            "icon": "shield",
+            "t0": 58.03,
+            "t1": 58.54
+          },
+          {
+            "label": "Net Tax Nil",
+            "sub": "Zero Cess Payable",
+            "icon": "check",
+            "t0": 58.54,
+            "t1": 59.05
+          }
+        ]
+      },
+      {
+        "branch_id": "b4_traps",
+        "branch_title": "Exam Traps: Standard Deduction & Age Neutrality",
+        "badge": "§ 16(ia) & Age Neutrality",
+        "icon": "warning",
+        "t0": 59.45,
+        "t1": 76.9,
+        "points": [
+          {
+            "id": "q7_p4_1",
+            "title": "Section 16(ia) Standard Deduction",
+            "body": "Salaried taxpayers are entitled to ₹ 75,000 standard deduction under Section 16(ia) in default regime.",
+            "spoken": true,
+            "reference": false,
+            "t0": 59.45,
+            "t1": 76.9,
+            "voice_sync_text": "പരീക്ഷയിലെ പ്രധാന പോയിന്റ്: ശമ്പള വരുമാനക്കാർക്ക് Section 16(ia) പ്രകാരമുള്ള 75,000 രൂപയുടെ Standard Deduction കുറച്ച ശേഷമുള്ള Net Total Income-ലാണ് ഈ 12 ലക്ഷം രൂപയുടെ പരിധി പരിശോധിക്കേണ്ടത്.",
+            "icon": "building",
+            "highlights": [
+              "₹ 75,000",
+              "Section 16(ia)"
+            ]
+          },
+          {
+            "id": "q7_p4_ref",
+            "title": "Age Neutrality in Default Regime",
+            "body": "Statutory rule confirming identical slab thresholds across all ages under Section 115BAC.",
+            "spoken": false,
+            "reference": true,
+            "t0": null,
+            "t1": null,
+            "voice_sync_text": null,
+            "icon": "shield",
+            "trap_data": {
+              "mistake": "Applying higher senior citizen basic exemptions (₹ 3L / ₹ 5L) under the default tax regime.",
+              "statutory_rule": "Section 115BAC is completely age-neutral: every individual (normal, senior, super senior) receives the same ₹ 4 Lakh basic exemption and ₹ 12 Lakh rebate threshold."
+            }
+          }
+        ],
+        "flow_summary": [
+          {
+            "label": "Gross Salary",
+            "sub": "Salary Income",
+            "icon": "user",
+            "t0": 71.67,
+            "t1": 73.41
+          },
+          {
+            "label": "Less Sec 16(ia)",
+            "sub": "Standard ₹ 75,000",
+            "icon": "calculator",
+            "t0": 73.41,
+            "t1": 75.16
+          },
+          {
+            "label": "Apply Sec 87A",
+            "sub": "Age-Neutral Rebate",
+            "icon": "check",
+            "t0": 75.16,
+            "t1": 76.9
+          }
+        ]
+      }
+    ]
+  },
+  "q8": {
+    "question_id": "q8",
+    "question_title": "Section 87A Proviso Marginal Relief: Income Exceeding ₹ 12 Lakhs",
+    "audio_file": "data/audio/q8.mp3",
+    "total_duration": 69.0,
+    "branches": [
+      {
+        "branch_id": "b1_anomaly",
+        "branch_title": "The Anomaly Above ₹ 12 Lakhs Threshold",
+        "badge": "§ 87A Proviso",
+        "icon": "warning",
+        "t0": 0.0,
+        "t1": 17.93,
+        "points": [
+          {
+            "id": "q8_p1_1",
+            "title": "The Cliff-Edge Hardship",
+            "body": "When total income slightly exceeds Section 87A rebate limit, an assessee risks paying more incremental tax than extra income earned.",
+            "spoken": true,
+            "reference": false,
+            "t0": 0.0,
+            "t1": 11.68,
+            "voice_sync_text": "Section 87A പ്രകാരമുള്ള rebate പരിധിയിൽ നിന്നും വരുമാനം നേരിയ തോതിൽ കൂടുമ്പോൾ ഉണ്ടാകുന്ന അമിത നികുതി ഭാരം ഒഴിവാക്കാനാണ് Marginal Relief നൽകുന്നത്.",
+            "icon": "warning",
+            "highlights": [
+              "Section 87A",
+              "incremental tax"
+            ]
+          },
+          {
+            "id": "q8_p1_2",
+            "title": "Marginal Relief Remedy",
+            "body": "To eliminate hardship where additional tax exceeds excess income, Section 87A proviso introduces statutory marginal relief.",
+            "spoken": true,
+            "reference": false,
+            "t0": 11.68,
+            "t1": 17.93,
+            "voice_sync_text": "അധികമായി ലഭിച്ച വരുമാനത്തേക്കാൾ കൂടുതൽ നികുതി നൽകേണ്ടി വരുന്ന സാഹചര്യം ഇത് തടയുന്നു.",
+            "icon": "shield",
+            "highlights": [
+              "Section 87A proviso",
+              "marginal relief"
+            ]
+          }
+        ],
+        "flow_summary": [
+          {
+            "label": "Income > ₹ 12L",
+            "sub": "Rebate Boundary Cross",
+            "icon": "warning",
+            "t0": 16.05,
+            "t1": 16.68
+          },
+          {
+            "label": "Check Tax Spurt",
+            "sub": "Tax > Excess Income?",
+            "icon": "scales",
+            "t0": 16.68,
+            "t1": 17.3
+          },
+          {
+            "label": "Trigger Relief",
+            "sub": "Sec 87A Proviso",
+            "icon": "shield",
+            "t0": 17.3,
+            "t1": 17.93
+          }
+        ]
+      },
+      {
+        "branch_id": "b2_cliff_edge",
+        "branch_title": "Full Rebate Loss vs Proviso Relief",
+        "badge": "§ ₹ 12L Default Threshold",
+        "icon": "calculator",
+        "t0": 18.33,
+        "t1": 35.15,
+        "points": [
+          {
+            "id": "q8_p2_1",
+            "title": "Full Rebate up to ₹ 12 Lakhs",
+            "body": "In the default regime, tax on income up to ₹ 12 Lakhs is completely covered by Section 87A rebate.",
+            "spoken": true,
+            "reference": false,
+            "t0": 18.33,
+            "t1": 26.15,
+            "voice_sync_text": "ഡിഫോൾട്ട് റെജീമിൽ 12 ലക്ഷം രൂപ വരെയുള്ള നികുതി Section 87A പ്രകാരം പൂർണ്ണമായും ഒഴിവാക്കപ്പെടുന്നു.",
+            "icon": "check",
+            "highlights": [
+              "₹ 12 Lakhs",
+              "Section 87A rebate"
+            ]
+          },
+          {
+            "id": "q8_p2_2",
+            "title": "Proviso Cap on Incremental Tax",
+            "body": "When income exceeds 12 Lakhs, full rebate ceases, but the proviso ensures tax payable does not exceed income over 12 Lakhs.",
+            "spoken": true,
+            "reference": false,
+            "t0": 26.15,
+            "t1": 35.15,
+            "voice_sync_text": "എന്നാൽ വരുമാനം 12 ലക്ഷത്തിൽ കവിയുമ്പോൾ, ഈ പൂർണ്ണ റിബേറ്റ് നഷ്ടപ്പെടുകയും ഉയർന്ന സ്ലാബ് നിരക്കിൽ നികുതി വരികയും ചെയ്യുന്നു.",
+            "icon": "calculator",
+            "highlights": [
+              "12 Lakhs",
+              "proviso ensures"
+            ]
+          },
+          {
+            "id": "q8_p2_ref",
+            "title": "Default Regime Slabs Table (A.Y. 2026-27)",
+            "body": "Applicable progressive rates used for Section 87A marginal relief calculations.",
+            "spoken": false,
+            "reference": true,
+            "t0": null,
+            "t1": null,
+            "voice_sync_text": null,
+            "icon": "calculator",
+            "table_data": {
+              "headers": [
+                "Income Bracket",
+                "Rate",
+                "Tax Amount",
+                "Cumulative Tax"
+              ],
+              "rows": [
+                [
+                  "Up to ₹ 4,00,000",
+                  "Nil",
+                  "₹ 0",
+                  "₹ 0"
+                ],
+                [
+                  "₹ 4,00,001 - ₹ 8,00,000",
+                  "5%",
+                  "₹ 20,000",
+                  "₹ 20,000"
+                ],
+                [
+                  "₹ 8,00,001 - ₹ 12,00,000",
+                  "10%",
+                  "₹ 40,000",
+                  "₹ 60,000"
+                ],
+                [
+                  "₹ 12,00,001 - ₹ 16,00,000",
+                  "15%",
+                  "15% on excess",
+                  "₹ 60,000 + 15%"
+                ]
+              ]
+            }
+          }
+        ],
+        "flow_summary": [
+          {
+            "label": "Rebate at ₹ 12L",
+            "sub": "Tax Covered",
+            "icon": "check",
+            "t0": 32.45,
+            "t1": 33.35
+          },
+          {
+            "label": "Income Crosses",
+            "sub": "Exceeds ₹ 12L",
+            "icon": "calculator",
+            "t0": 33.35,
+            "t1": 34.25
+          },
+          {
+            "label": "Cap at Excess",
+            "sub": "Tax ≤ (TI - 12L)",
+            "icon": "shield",
+            "t0": 34.25,
+            "t1": 35.15
+          }
+        ]
+      },
+      {
+        "branch_id": "b3_formula",
+        "branch_title": "Marginal Relief Statutory Computation Formula",
+        "badge": "§ Tax Capped at Excess",
+        "icon": "calculator",
+        "t0": 35.55,
+        "t1": 53.62,
+        "points": [
+          {
+            "id": "q8_p3_1",
+            "title": "Section 87A Proviso Tax Cap",
+            "body": "Under Section 87A proviso, additional tax payable cannot exceed total income exceeding ₹ 12 Lakhs.",
+            "spoken": true,
+            "reference": false,
+            "t0": 35.55,
+            "t1": 44.62,
+            "voice_sync_text": "സെക്ഷൻ 87A പ്രൊവിസോ പ്രകാരം, നൽകേണ്ട അധിക നികുതി 12 ലക്ഷത്തിന് മുകളിലുള്ള അധിക വരുമാനത്തേക്കാൾ കവിയാൻ പാടില്ല.",
+            "icon": "shield",
+            "highlights": [
+              "Section 87A proviso",
+              "₹ 12 Lakhs"
+            ]
+          },
+          {
+            "id": "q8_p3_2",
+            "title": "Rebate as Difference Amount",
+            "body": "Difference between slab tax and excess income is granted directly as Section 87A rebate.",
+            "spoken": true,
+            "reference": false,
+            "t0": 44.62,
+            "t1": 53.62,
+            "voice_sync_text": "അതായത്, സ്ലാബ് പ്രകാരമുള്ള നികുതിയും അധിക വരുമാനവും തമ്മിലുള്ള വ്യത്യാസം marginal relief ആയി കുറവു ചെയ്യപ്പെടുന്നു.",
+            "icon": "calculator",
+            "highlights": [
+              "slab tax",
+              "excess income",
+              "rebate"
+            ]
+          },
+          {
+            "id": "q8_p3_ref",
+            "title": "Worked Example: Mr. Nitin (₹ 12,50,000)",
+            "body": "Assessment of marginal relief under Section 87A proviso for A.Y. 2026-27.",
+            "spoken": false,
+            "reference": true,
+            "t0": null,
+            "t1": null,
+            "voice_sync_text": null,
+            "icon": "calculator",
+            "example_calc": {
+              "title": "Question 8: Mr. Nitin (Age 35, Resident) Total Income ₹ 12,50,000",
+              "inputs": "Gross Total Income = ₹ 12,50,000 under default tax regime u/s 115BAC.",
+              "steps": [
+                "Step 1: Excess income exceeding ₹ 12,00,000 = ₹ 12,50,000 - ₹ 12,00,000 = ₹ 50,000 (A).",
+                "Step 2: Normal slab tax on ₹ 12,50,000 = ₹ 60,000 (up to 12L) + 15% of ₹ 50,000 (₹ 7,500) = ₹ 67,500 (B).",
+                "Step 3: Since Tax (B) > Excess (A), Rebate u/s 87A proviso = B - A = ₹ 67,500 - ₹ 50,000 = ₹ 17,500.",
+                "Step 4: Tax payable after rebate = ₹ 67,500 - ₹ 17,500 = ₹ 50,000 (exactly equal to excess income).",
+                "Step 5: Add Health & Education Cess @ 4% on ₹ 50,000 = ₹ 2,000.",
+                "Final Tax Liability = ₹ 52,000"
+              ]
+            }
+          }
+        ],
+        "flow_summary": [
+          {
+            "label": "Excess Income (A)",
+            "sub": "₹ 50,000",
+            "icon": "calculator",
+            "t0": 50.92,
+            "t1": 51.82
+          },
+          {
+            "label": "Slab Tax (B)",
+            "sub": "₹ 67,500",
+            "icon": "percent",
+            "t0": 51.82,
+            "t1": 52.72
+          },
+          {
+            "label": "Rebate (B - A)",
+            "sub": "₹ 17,500 Relief",
+            "icon": "shield",
+            "t0": 52.72,
+            "t1": 53.62
+          }
+        ]
+      },
+      {
+        "branch_id": "b4_traps",
+        "branch_title": "Crucial Exam Traps: Cess Ordering & Resident Status",
+        "badge": "§ Relief Before Cess",
+        "icon": "warning",
+        "t0": 54.02,
+        "t1": 69.0,
+        "points": [
+          {
+            "id": "q8_p4_1",
+            "title": "Relief Calculated Before Cess",
+            "body": "Marginal relief is deducted before adding 4% Health & Education Cess.",
+            "spoken": true,
+            "reference": false,
+            "t0": 54.02,
+            "t1": 64.09,
+            "voice_sync_text": "പരീക്ഷയിൽ ഓർക്കുക: Marginal Relief കുറച്ച ശേഷമുള്ള net tax തുകയിൽ മാത്രമേ 4% Health & Education Cess കൂട്ടിച്ചേർക്കാവൂ.",
+            "icon": "warning",
+            "highlights": [
+              "Marginal Relief",
+              "before adding 4% Cess"
+            ]
+          },
+          {
+            "id": "q8_p4_2",
+            "title": "Resident Individual Restriction",
+            "body": "Section 87A marginal relief is exclusively available to Resident Individuals.",
+            "spoken": true,
+            "reference": false,
+            "t0": 64.09,
+            "t1": 69.0,
+            "voice_sync_text": "കൂടാതെ ഈ റിലീഫ് Resident Individuals-ന് മാത്രമേ ലഭ്യമാകൂ.",
+            "icon": "shield",
+            "highlights": [
+              "Resident Individuals"
+            ]
+          },
+          {
+            "id": "q8_p4_ref",
+            "title": "Exam Trap: Non-Resident & Cess Sequencing",
+            "body": "Common mistake vs statutory rule regarding 87A proviso marginal relief.",
+            "spoken": false,
+            "reference": true,
+            "t0": null,
+            "t1": null,
+            "voice_sync_text": null,
+            "icon": "warning",
+            "trap_data": {
+              "mistake": "Adding 4% cess to slab tax before computing marginal relief or granting proviso relief to non-residents.",
+              "statutory_rule": "Section 87A proviso relief reduces income-tax before cess. Cess @ 4% is added strictly onto net reduced tax. Non-residents get zero relief."
+            }
+          }
+        ],
+        "flow_summary": [
+          {
+            "label": "Deduct Relief First",
+            "sub": "Before 4% Cess",
+            "icon": "calculator",
+            "t0": 67.53,
+            "t1": 68.02
+          },
+          {
+            "label": "Check Residency",
+            "sub": "Resident Only",
+            "icon": "shield",
+            "t0": 68.02,
+            "t1": 68.51
+          },
+          {
+            "label": "Add 4% Cess",
+            "sub": "On Capped ₹ 50,000",
+            "icon": "check",
+            "t0": 68.51,
+            "t1": 69.0
+          }
+        ]
+      }
+    ]
+  },
+  "q9": {
+    "question_id": "q9",
+    "question_title": "Domestic Company Marginal Relief: ₹ 1 Crore Threshold (7% Surcharge)",
+    "audio_file": "data/audio/q9.mp3",
+    "total_duration": 74.712,
+    "branches": [
+      {
+        "branch_id": "b1_framework",
+        "branch_title": "Domestic Company Tax & Surcharge Framework",
+        "badge": "§ Finance Act Rates",
+        "icon": "building",
+        "t0": 0.0,
+        "t1": 16.9,
+        "points": [
+          {
+            "id": "q9_p1_1",
+            "title": "Surcharge on Exceeding ₹ 1 Crore",
+            "body": "When a domestic company's total income exceeds ₹ 1 Crore, statutory surcharge becomes chargeable.",
+            "spoken": true,
+            "reference": false,
+            "t0": 0.0,
+            "t1": 11.2,
+            "voice_sync_text": "Domestic Companies-ന്റെ Total Income ഒരു കോടി രൂപ കവിയുമ്പോൾ ബാധകമാകുന്ന surcharge-ഉം, അതിന്മേൽ ലഭിക്കുന്ന Marginal Relief-ഉം ആണ് നമ്മൾ ഇവിടെ പഠിക്കുന്നത്.",
+            "icon": "building",
+            "highlights": [
+              "domestic company",
+              "₹ 1 Crore",
+              "surcharge"
+            ]
+          },
+          {
+            "id": "q9_p1_2",
+            "title": "Turnover-Based Base Tax Rates",
+            "body": "Base income-tax rate depends on the company's previous year turnover (P.Y. 2023-24).",
+            "spoken": true,
+            "reference": false,
+            "t0": 11.2,
+            "t1": 16.9,
+            "voice_sync_text": "മുൻവർഷത്തെ ടേൺഓവർ അടിസ്ഥാനമാക്കിയാണ് അടിസ്ഥാന നികുതി നിരക്ക് നിശ്ചയിക്കുന്നത്.",
+            "icon": "scales",
+            "highlights": [
+              "turnover",
+              "P.Y. 2023-24",
+              "base tax rate"
+            ]
+          }
+        ],
+        "flow_summary": [
+          {
+            "label": "Check P.Y. Turnover",
+            "sub": "P.Y. 2023-24",
+            "icon": "building",
+            "t0": 15.19,
+            "t1": 15.76
+          },
+          {
+            "label": "Income > ₹ 1 Cr",
+            "sub": "Triggers 7% SC",
+            "icon": "percent",
+            "t0": 15.76,
+            "t1": 16.33
+          },
+          {
+            "label": "Need Relief Check",
+            "sub": "Prevent Hardship",
+            "icon": "shield",
+            "t0": 16.33,
+            "t1": 16.9
+          }
+        ]
+      },
+      {
+        "branch_id": "b2_rates",
+        "branch_title": "Base Rates & Surcharge Tier Structure",
+        "badge": "§ Surcharge Tiers",
+        "icon": "percent",
+        "t0": 17.3,
+        "t1": 38.97,
+        "points": [
+          {
+            "id": "q9_p2_1",
+            "title": "Turnover Threshold & Base Rates",
+            "body": "If turnover in P.Y. 2023-24 is up to ₹ 400 Crores, base tax is 25%; otherwise standard rate is 30%.",
+            "spoken": true,
+            "reference": false,
+            "t0": 17.3,
+            "t1": 24.8,
+            "voice_sync_text": "കമ്പനിയുടെ മുൻവർഷത്തെ turnover 400 കോടി രൂപ വരെയാണെങ്കിൽ ബേസ് ടാക്സ് നിരക്ക് 25% ആണ്; അല്ലെങ്കിൽ 30% വരും.",
+            "icon": "percent",
+            "highlights": [
+              "P.Y. 2023-24",
+              "₹ 400 Crores",
+              "25%",
+              "30%"
+            ]
+          },
+          {
+            "id": "q9_p2_2",
+            "title": "No Surcharge up to ₹ 1 Crore",
+            "body": "For Total Income up to ₹ 1 Crore, surcharge is Nil.",
+            "spoken": true,
+            "reference": false,
+            "t0": 24.8,
+            "t1": 34.49,
+            "voice_sync_text": "Total Income ഒരു കോടി രൂപ വരെ surcharge ഇല്ല.",
+            "icon": "calculator",
+            "highlights": [
+              "₹ 1 Crore",
+              "surcharge is Nil"
+            ]
+          },
+          {
+            "id": "q9_p2_3",
+            "title": "7% and 12% Surcharge Tiers",
+            "body": "Surcharge is 7% for income between ₹ 1 Crore and ₹ 10 Crores, and 12% above ₹ 10 Crores.",
+            "spoken": true,
+            "reference": false,
+            "t0": 34.49,
+            "t1": 38.97,
+            "voice_sync_text": "ഒരു കോടി മുതൽ 10 കോടി വരെ 7 ശതമാനവും, 10 കോടിക്ക് മുകളിൽ 12 ശതമാനവുമാണ് സർചാർജ്.",
+            "icon": "percent",
+            "highlights": [
+              "7%",
+              "₹ 1 Crore and ₹ 10 Crores",
+              "12%"
+            ]
+          },
+          {
+            "id": "q9_p2_ref",
+            "title": "Company Tax & Surcharge Matrix",
+            "body": "Statutory rates for domestic vs foreign companies across income tiers.",
+            "spoken": false,
+            "reference": true,
+            "t0": null,
+            "t1": null,
+            "voice_sync_text": null,
+            "icon": "building",
+            "table_data": {
+              "headers": [
+                "Entity Type",
+                "Income Tier",
+                "Surcharge Rate",
+                "Effective Base Rate (30%)"
+              ],
+              "rows": [
+                [
+                  "Domestic Company",
+                  "Up to ₹ 1 Crore",
+                  "Nil",
+                  "30.0%"
+                ],
+                [
+                  "Domestic Company",
+                  "₹ 1 Crore to ₹ 10 Crores",
+                  "7%",
+                  "32.1% (30% + 7% SC)"
+                ],
+                [
+                  "Domestic Company",
+                  "Exceeding ₹ 10 Crores",
+                  "12%",
+                  "33.6% (30% + 12% SC)"
+                ],
+                [
+                  "Foreign Company",
+                  "₹ 1 Crore to ₹ 10 Crores",
+                  "2%",
+                  "40.8% (40% + 2% SC)"
+                ],
+                [
+                  "Foreign Company",
+                  "Exceeding ₹ 10 Crores",
+                  "5%",
+                  "42.0% (40% + 5% SC)"
+                ]
+              ]
+            }
+          }
+        ],
+        "flow_summary": [
+          {
+            "label": "Turnover Criterion",
+            "sub": "≤ ₹ 400Cr: 25% | > 30%",
+            "icon": "building",
+            "t0": 37.63,
+            "t1": 38.07
+          },
+          {
+            "label": "Income > ₹ 1 Cr",
+            "sub": "7% Surcharge",
+            "icon": "percent",
+            "t0": 38.07,
+            "t1": 38.52
+          },
+          {
+            "label": "Total Rate",
+            "sub": "32.1% Before Cess",
+            "icon": "rupee",
+            "t0": 38.52,
+            "t1": 38.97
+          }
+        ]
+      },
+      {
+        "branch_id": "b3_ceiling",
+        "branch_title": "Marginal Relief Ceiling Formula (₹ 1 Crore)",
+        "badge": "§ Ceiling at ₹ 1 Cr",
+        "icon": "calculator",
+        "t0": 39.37,
+        "t1": 57.54,
+        "points": [
+          {
+            "id": "q9_p3_1",
+            "title": "Relief on Marginal Spurt",
+            "body": "When total income slightly exceeds 1 Crore, marginal relief restricts excess tax over income increase.",
+            "spoken": true,
+            "reference": false,
+            "t0": 39.37,
+            "t1": 49.11,
+            "voice_sync_text": "Total Income ഒരു കോടിയിൽ നിന്ന് അല്പം കൂടുമ്പോൾ വരുന്ന അധിക നികുതിയും സർചാർജും, ഒരു കോടിക്ക് മുകളിലുള്ള അധിക വരുമാനത്തേക്കാൾ കൂടുവാൻ പാടില്ല.",
+            "icon": "shield",
+            "highlights": [
+              "marginal relief",
+              "excess tax"
+            ]
+          },
+          {
+            "id": "q9_p3_2",
+            "title": "Statutory Tax Ceiling Formula",
+            "body": "Tax cannot exceed tax payable on ₹ 1 Crore plus 100% of income exceeding ₹ 1 Crore.",
+            "spoken": true,
+            "reference": false,
+            "t0": 49.11,
+            "t1": 57.54,
+            "voice_sync_text": "അതിനാൽ, ടാക്സ് സീലിംഗ് എന്നത് ഒരു കോടി രൂപയ്ക്കുള്ള നികുതിയും അധിക വരുമാനവും ചേർത്ത തുകയായി നിജപ്പെടുത്തുന്നു.",
+            "icon": "calculator",
+            "highlights": [
+              "tax payable on ₹ 1 Crore",
+              "income exceeding ₹ 1 Crore"
+            ]
+          },
+          {
+            "id": "q9_p3_ref",
+            "title": "Worked Example: X Ltd. (₹ 1,01,00,000)",
+            "body": "Computation of marginal relief at ₹ 1 Crore threshold for A.Y. 2026-27.",
+            "spoken": false,
+            "reference": true,
+            "t0": null,
+            "t1": null,
+            "voice_sync_text": null,
+            "icon": "calculator",
+            "example_calc": {
+              "title": "Question 9: X Ltd. (Domestic Company) Total Income ₹ 1,01,00,000",
+              "inputs": "Gross Total Income = ₹ 1,01,00,000 (No capital gains). Base rate = 30%. Surcharge = 7%.",
+              "steps": [
+                "Step 1: Normal tax + 7% SC @ 32.1% = ₹ 1,01,00,000 × 32.1% = ₹ 32,42,100.",
+                "Step 2: Ceiling = Tax on ₹ 1 Crore @ 30% (₹ 30,00,000) + Excess income (₹ 1,00,000) = ₹ 31,00,000.",
+                "Step 3: Marginal Relief = Normal Tax (₹ 32,42,100) - Ceiling (₹ 31,00,000) = ₹ 1,42,100.",
+                "Step 4: Tax payable after marginal relief = ₹ 31,00,000.",
+                "Step 5: Add 4% Cess on ₹ 31,00,000 = ₹ 1,24,000. Final Tax Liability = ₹ 32,24,000."
+              ]
+            }
+          }
+        ],
+        "flow_summary": [
+          {
+            "label": "Tax on ₹ 1 Cr",
+            "sub": "₹ 30,00,000",
+            "icon": "calculator",
+            "t0": 55.01,
+            "t1": 55.85
+          },
+          {
+            "label": "Add Excess",
+            "sub": "+ ₹ 1,00,000 = ₹ 31L",
+            "icon": "rupee",
+            "t0": 55.85,
+            "t1": 56.7
+          },
+          {
+            "label": "Marginal Relief",
+            "sub": "₹ 1,42,100 Deducted",
+            "icon": "shield",
+            "t0": 56.7,
+            "t1": 57.54
+          }
+        ]
+      },
+      {
+        "branch_id": "b4_traps",
+        "branch_title": "Crucial Exam Traps: Surcharge Stage & Cess Sequence",
+        "badge": "§ Sequencing Traps",
+        "icon": "warning",
+        "t0": 57.94,
+        "t1": 74.71,
+        "points": [
+          {
+            "id": "q9_p4_1",
+            "title": "Relief Applied at Surcharge Stage",
+            "body": "Marginal relief is calculated and applied at the surcharge stage before adding cess.",
+            "spoken": true,
+            "reference": false,
+            "t0": 57.94,
+            "t1": 64.27,
+            "voice_sync_text": "പരീക്ഷയിലെ പ്രധാന കാര്യം: Marginal Relief കണക്കാക്കുന്നത് surcharge-ന്മേൽ മാത്രമാണ്.",
+            "icon": "warning",
+            "highlights": [
+              "surcharge stage",
+              "before adding cess"
+            ]
+          },
+          {
+            "id": "q9_p4_2",
+            "title": "4% Cess Added on Reduced Tax",
+            "body": "4% Health and Education Cess is calculated strictly on the tax amount remaining after deducting marginal relief.",
+            "spoken": true,
+            "reference": false,
+            "t0": 64.27,
+            "t1": 74.71,
+            "voice_sync_text": "Marginal Relief കുറച്ച ശേഷം ലഭിക്കുന്ന തുകയ്ക്ക് മുകളിലാണ് 4% Health & Education Cess കണക്കാക്കേണ്ടത്, മുൻപല്ല.",
+            "icon": "percent",
+            "highlights": [
+              "4% Cess",
+              "after deducting marginal relief"
+            ]
+          },
+          {
+            "id": "q9_p4_ref",
+            "title": "Exam Trap: Turnover Benchmark & Cess Order",
+            "body": "Common mistake vs statutory rule regarding company turnover and relief sequence.",
+            "spoken": false,
+            "reference": true,
+            "t0": null,
+            "t1": null,
+            "voice_sync_text": null,
+            "icon": "warning",
+            "trap_data": {
+              "mistake": "Applying 4% cess before computing company marginal relief, or checking P.Y. 2024-25 instead of P.Y. 2023-24 for turnover.",
+              "statutory_rule": "Base rate 25% applies if turnover in P.Y. 2023-24 ≤ ₹ 400 Cr. Marginal relief is deducted at the surcharge stage. 4% cess is charged on the capped ₹ 31,00,000."
+            }
+          }
+        ],
+        "flow_summary": [
+          {
+            "label": "Turnover P.Y. 23-24",
+            "sub": "Benchmark Year",
+            "icon": "building",
+            "t0": 71.58,
+            "t1": 72.62
+          },
+          {
+            "label": "Deduct Relief",
+            "sub": "At Surcharge Stage",
+            "icon": "shield",
+            "t0": 72.62,
+            "t1": 73.67
+          },
+          {
+            "label": "Add 4% Cess",
+            "sub": "On Capped Amount",
+            "icon": "check",
+            "t0": 73.67,
+            "t1": 74.71
+          }
+        ]
+      }
+    ]
+  },
+  "q10": {
+    "question_id": "q10",
+    "question_title": "Domestic Company Marginal Relief: ₹ 10 Crore Threshold (12% Surcharge)",
+    "audio_file": "data/audio/q10.mp3",
+    "total_duration": 61.884,
+    "branches": [
+      {
+        "branch_id": "b1_framework",
+        "branch_title": "12% Surcharge Jump at ₹ 10 Crore Threshold",
+        "badge": "§ 12% Surcharge Tier",
+        "icon": "building",
+        "t0": 0.0,
+        "t1": 14.53,
+        "points": [
+          {
+            "id": "q10_p1_1",
+            "title": "Surcharge Jump from 7% to 12%",
+            "body": "When a domestic company's total income exceeds ₹ 10 Crores, surcharge jumps from 7% to 12%.",
+            "spoken": true,
+            "reference": false,
+            "t0": 0.0,
+            "t1": 9.1,
+            "voice_sync_text": "Domestic Company-യുടെ Total Income 10 കോടി രൂപ കവിയുമ്പോൾ സർചാർജ് നിരക്ക് 7 ശതമാനത്തിൽ നിന്നും പെട്ടെന്ന് 12 ശതമാനമായി ഉയരുന്നു.",
+            "icon": "building",
+            "highlights": [
+              "₹ 10 Crores",
+              "7% to 12%"
+            ]
+          },
+          {
+            "id": "q10_p1_2",
+            "title": "Marginal Relief Protection",
+            "body": "Marginal relief prevents excessive burden caused by this abrupt five-percentage-point surcharge spike.",
+            "spoken": true,
+            "reference": false,
+            "t0": 9.1,
+            "t1": 14.53,
+            "voice_sync_text": "ഈ കുതിച്ചുചാട്ടം മൂലമുണ്ടാകുന്ന അമിത ബാധ്യത ഒഴിവാക്കാനാണ് Marginal Relief നൽകുന്നത്.",
+            "icon": "shield",
+            "highlights": [
+              "Marginal relief",
+              "five-percentage-point surcharge spike"
+            ]
+          }
+        ],
+        "flow_summary": [
+          {
+            "label": "Income > ₹ 10 Cr",
+            "sub": "7% Jumps to 12%",
+            "icon": "building",
+            "t0": 12.9,
+            "t1": 13.44
+          },
+          {
+            "label": "Spike in Tax",
+            "sub": "Higher Rate on All TI",
+            "icon": "percent",
+            "t0": 13.44,
+            "t1": 13.99
+          },
+          {
+            "label": "Trigger Sec Relief",
+            "sub": "Protect Income",
+            "icon": "shield",
+            "t0": 13.99,
+            "t1": 14.53
+          }
+        ]
+      },
+      {
+        "branch_id": "b2_burden",
+        "branch_title": "Surcharge Disparity & Tax Burden Analysis",
+        "badge": "§ 5% Rate Disparity",
+        "icon": "percent",
+        "t0": 14.93,
+        "t1": 28.26,
+        "points": [
+          {
+            "id": "q10_p2_1",
+            "title": "Abrupt Tax Surge on Entire Income",
+            "body": "Whereas 7% surcharge applied up to 10 Crores, the entire total income suddenly becomes subject to 12% surcharge.",
+            "spoken": true,
+            "reference": false,
+            "t0": 14.93,
+            "t1": 25.44,
+            "voice_sync_text": "10 കോടി വരെയുള്ള വരുമാനത്തിന് 7% സർചാർജ് ബാധകമായിരുന്ന സ്ഥാനത്ത്, 10 കോടി കവിയുന്നതോടെ മുഴുവൻ വരുമാനത്തിനും 12% നിരക്കിലാണ് സർചാർജ് ഈടാക്കുന്നത്.",
+            "icon": "percent",
+            "highlights": [
+              "7% surcharge",
+              "10 Crores",
+              "12% surcharge"
+            ]
+          },
+          {
+            "id": "q10_p2_2",
+            "title": "Substantial Corporate Tax Surge",
+            "body": "This surcharge jump significantly multiplies the company's tax burden on marginal income.",
+            "spoken": true,
+            "reference": false,
+            "t0": 25.44,
+            "t1": 28.26,
+            "voice_sync_text": "ഈ ഘട്ടത്തിൽ കമ്പനിക്ക് നികുതി ഭാരം വർദ്ധിക്കുന്നു.",
+            "icon": "calculator",
+            "highlights": [
+              "significantly multiplies",
+              "marginal income"
+            ]
+          },
+          {
+            "id": "q10_p2_ref",
+            "title": "Company Surcharge Comparison Table",
+            "body": "Statutory surcharge tiers across domestic and foreign companies at ₹ 10 Crore mark.",
+            "spoken": false,
+            "reference": true,
+            "t0": null,
+            "t1": null,
+            "voice_sync_text": null,
+            "icon": "building",
+            "table_data": {
+              "headers": [
+                "Entity Category",
+                "Up to ₹ 1 Crore",
+                "₹ 1 Cr to ₹ 10 Cr",
+                "Exceeding ₹ 10 Cr"
+              ],
+              "rows": [
+                [
+                  "Domestic Company",
+                  "Nil",
+                  "7%",
+                  "12%"
+                ],
+                [
+                  "Foreign Company",
+                  "Nil",
+                  "2%",
+                  "5%"
+                ]
+              ]
+            }
+          }
+        ],
+        "flow_summary": [
+          {
+            "label": "Up to ₹ 10 Cr",
+            "sub": "7% Surcharge (32.1%)",
+            "icon": "percent",
+            "t0": 27.41,
+            "t1": 27.7
+          },
+          {
+            "label": "Above ₹ 10 Cr",
+            "sub": "12% Surcharge (33.6%)",
+            "icon": "percent",
+            "t0": 27.7,
+            "t1": 27.98
+          },
+          {
+            "label": "Burden Spike",
+            "sub": "Marginal Relief Active",
+            "icon": "shield",
+            "t0": 27.98,
+            "t1": 28.26
+          }
+        ]
+      },
+      {
+        "branch_id": "b3_formula",
+        "branch_title": "Marginal Relief Ceiling Formula (₹ 10 Crore)",
+        "badge": "§ Ceiling at ₹ 10 Cr",
+        "icon": "calculator",
+        "t0": 28.66,
+        "t1": 45.07,
+        "points": [
+          {
+            "id": "q10_p3_1",
+            "title": "Statutory Ceiling Formula",
+            "body": "Tax cannot exceed tax payable on ₹ 10 Crores with 7% surcharge plus income exceeding ₹ 10 Crores.",
+            "spoken": true,
+            "reference": false,
+            "t0": 28.66,
+            "t1": 42.84,
+            "voice_sync_text": "ഇവിടെ Marginal Relief കണക്കാക്കുന്ന ഫോർമുല: 12% സർചാർജ് ഉൾപ്പെടെയുള്ള ആകെ നികുതി, 10 കോടി രൂപയ്ക്ക് 7% സർചാർജ് പ്രകാരം വരുന്ന നികുതിയും 10 കോടിക്ക് മുകളിലുള്ള അധിക വരുമാനവും ചേർത്ത തുകയേക്കാൾ കവിയരുത്.",
+            "icon": "calculator",
+            "highlights": [
+              "tax payable on ₹ 10 Crores",
+              "7% surcharge",
+              "income exceeding ₹ 10 Crores"
+            ]
+          },
+          {
+            "id": "q10_p3_2",
+            "title": "Excess Amount Granted as Relief",
+            "body": "The amount exceeding this statutory ceiling is deducted as marginal relief.",
+            "spoken": true,
+            "reference": false,
+            "t0": 42.84,
+            "t1": 45.07,
+            "voice_sync_text": "കവിയുന്ന തുക relief ആയി ലഭിക്കും.",
+            "icon": "shield",
+            "highlights": [
+              "marginal relief"
+            ]
+          },
+          {
+            "id": "q10_p3_ref",
+            "title": "Worked Example: Y Ltd. (₹ 10,01,00,000)",
+            "body": "Computation of marginal relief at ₹ 10 Crore threshold for A.Y. 2026-27.",
+            "spoken": false,
+            "reference": true,
+            "t0": null,
+            "t1": null,
+            "voice_sync_text": null,
+            "icon": "calculator",
+            "example_calc": {
+              "title": "Question 10: Y Ltd. (Domestic Company) Total Income ₹ 10,01,00,000",
+              "inputs": "Gross Total Income = ₹ 10,01,00,000. P.Y. 2023-24 turnover = ₹ 410 Crores (> ₹ 400 Cr -> Base 30%).",
+              "steps": [
+                "Step 1: Normal tax + 12% SC @ 33.6% = ₹ 10,01,00,000 × 33.6% = ₹ 3,36,33,600.",
+                "Step 2: Ceiling = Tax on ₹ 10 Crores @ 32.1% (30% + 7% SC = ₹ 3,21,00,000) + Excess income (₹ 1,00,000) = ₹ 3,22,00,000.",
+                "Step 3: Marginal Relief = Normal Tax (₹ 3,36,33,600) - Ceiling (₹ 3,22,00,000) = ₹ 14,33,600.",
+                "Step 4: Tax payable after marginal relief = ₹ 3,22,00,000.",
+                "Step 5: Add 4% Cess on ₹ 3,22,00,000 = ₹ 12,88,000. Final Tax Liability = ₹ 3,34,88,000."
+              ]
+            }
+          }
+        ],
+        "flow_summary": [
+          {
+            "label": "Tax on ₹ 10 Cr (7%)",
+            "sub": "₹ 3,21,00,000",
+            "icon": "calculator",
+            "t0": 44.4,
+            "t1": 44.62
+          },
+          {
+            "label": "Add Excess",
+            "sub": "+ ₹ 1,00,000 = ₹ 3.22 Cr",
+            "icon": "rupee",
+            "t0": 44.62,
+            "t1": 44.85
+          },
+          {
+            "label": "Marginal Relief",
+            "sub": "₹ 14,33,600 Deducted",
+            "icon": "shield",
+            "t0": 44.85,
+            "t1": 45.07
+          }
+        ]
+      },
+      {
+        "branch_id": "b4_traps",
+        "branch_title": "Crucial Exam Traps: Foreign Company Rates & Cess Addition",
+        "badge": "§ Foreign Company Rates",
+        "icon": "warning",
+        "t0": 45.47,
+        "t1": 61.88,
+        "points": [
+          {
+            "id": "q10_p4_1",
+            "title": "Foreign Company 2% & 5% Surcharge",
+            "body": "Surcharge rates for foreign companies are 2% (above ₹ 1 Crore) and 5% (above ₹ 10 Crores).",
+            "spoken": true,
+            "reference": false,
+            "t0": 45.47,
+            "t1": 52.83,
+            "voice_sync_text": "പരീക്ഷയിൽ ഓർക്കുക: ഫോറിൻ കമ്പനികൾക്ക് സർചാർജ് നിരക്ക് 2% ഉം 5% ഉം മാത്രമാണ്.",
+            "icon": "building",
+            "highlights": [
+              "foreign companies",
+              "2%",
+              "5%"
+            ]
+          },
+          {
+            "id": "q10_p4_2",
+            "title": "Domestic Company 7% & 12% Surcharge",
+            "body": "In contrast, surcharge rates for domestic companies are 7% and 12%.",
+            "spoken": true,
+            "reference": false,
+            "t0": 52.83,
+            "t1": 58.03,
+            "voice_sync_text": "എന്നാൽ Domestic Companies-ന് ഇത് 7% ഉം 12% ഉം ആണ്.",
+            "icon": "shield",
+            "highlights": [
+              "domestic companies",
+              "7%",
+              "12%"
+            ]
+          },
+          {
+            "id": "q10_p4_3",
+            "title": "Mandatory 4% Cess Addition",
+            "body": "Finally, remember to add 4% Health and Education Cess to complete tax computation.",
+            "spoken": true,
+            "reference": false,
+            "t0": 58.03,
+            "t1": 61.88,
+            "voice_sync_text": "അവസാനമായി 4% Cess നൽകാൻ മറക്കരുത്.",
+            "icon": "percent",
+            "highlights": [
+              "4% Cess"
+            ]
+          },
+          {
+            "id": "q10_p4_ref",
+            "title": "Exam Trap: Foreign Rate Confusion & Cess Order",
+            "body": "Common mistake vs statutory rule regarding company surcharge and marginal relief.",
+            "spoken": false,
+            "reference": true,
+            "t0": null,
+            "t1": null,
+            "voice_sync_text": null,
+            "icon": "warning",
+            "trap_data": {
+              "mistake": "Applying 7% or 12% surcharge to a foreign company, or adding 4% cess before computing marginal relief.",
+              "statutory_rule": "Foreign companies pay 2% surcharge (1-10 Cr) and 5% surcharge (>10 Cr). Base tax is 40%. Marginal relief is deducted before adding 4% cess."
+            }
+          }
+        ],
+        "flow_summary": [
+          {
+            "label": "Domestic (7% / 12%)",
+            "sub": "Foreign (2% / 5%)",
+            "icon": "building",
+            "t0": 60.73,
+            "t1": 61.11
+          },
+          {
+            "label": "Deduct Relief",
+            "sub": "Capped at ₹ 3.22 Cr",
+            "icon": "shield",
+            "t0": 61.11,
+            "t1": 61.5
+          },
+          {
+            "label": "Add 4% Cess",
+            "sub": "Final Tax Liability",
+            "icon": "check",
+            "t0": 61.5,
+            "t1": 61.88
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,817 @@
+{
+  "q1": {
+    "audio_file": "C:\\Users\\HP\\OneDrive\\Desktop\\VISHNU\\DT and IDT Classes\\data\\audio\\q1.mp3",
+    "total_audio_length": 80.808,
+    "slides": [
+      {
+        "slide_number": 1,
+        "t0": 0.0,
+        "t1": 17.71,
+        "sentence_count": 2,
+        "beats": [
+          {
+            "sentence_idx": 1,
+            "text": "Section 4 പ്രകാരം assessee-ക്ക് ലഭിക്കുന്ന Total Income-ന്മേലാണ് നികുതി ചുമത്തുന്നത്.",
+            "t0": 0.0,
+            "t1": 5.9,
+            "method": "silence_detect"
+          },
+          {
+            "sentence_idx": 2,
+            "text": "എന്നാൽ വരുമാനം assessee-യുടെ കൈകളിൽ എത്തുന്നതിന് മുൻപ് തന്നെ, നിയമപരമായ ഒരു overriding title കാരണം മാറ്റിവെക്കപ്പെട്ടാൽ, അത് assessee-യുടെ വരുമാനമായി കണക്കാക്കില്ല.",
+            "t0": 5.9,
+            "t1": 17.71,
+            "method": "silence_detect"
+          }
+        ]
+      },
+      {
+        "slide_number": 2,
+        "t0": 18.11,
+        "t1": 40.38,
+        "sentence_count": 4,
+        "beats": [
+          {
+            "sentence_idx": 1,
+            "text": "Diversion-ൽ വരുമാനം assessee-യുടെ അടുത്തെത്തുന്നതിന് മുൻപേ, ഒരു anterior legal obligation വഴി തിരിച്ചുവിടപ്പെടുന്നു.",
+            "t0": 18.11,
+            "t1": 26.08,
+            "method": "silence_detect"
+          },
+          {
+            "sentence_idx": 2,
+            "text": "അതിനാൽ ഇത് tax ബാധകമല്ല.",
+            "t0": 26.08,
+            "t1": 29.77,
+            "method": "silence_detect"
+          },
+          {
+            "sentence_idx": 3,
+            "text": "നേരെമറിച്ച്, Application-ൽ വരുമാനം ആദ്യം assessee-ക്ക് ലഭിക്കുന്നു, അതിനു ശേഷമാണ് അത് ചെലവഴിക്കുന്നത്.",
+            "t0": 29.77,
+            "t1": 33.42,
+            "method": "silence_detect"
+          },
+          {
+            "sentence_idx": 4,
+            "text": "അതിനാൽ Application of income പൂർണ്ണമായും taxable ആണ്.",
+            "t0": 33.42,
+            "t1": 40.38,
+            "method": "silence_detect"
+          }
+        ]
+      },
+      {
+        "slide_number": 3,
+        "t0": 40.78,
+        "t1": 60.53,
+        "sentence_count": 3,
+        "beats": [
+          {
+            "sentence_idx": 1,
+            "text": "സുപ്രീം കോടതി landmark കേസ് ആയ Sitaldas Tirathdas-ൽ വ്യക്തമാക്കിയ ടെസ്റ്റ് ഇതാണ്: വരുമാനം assessee-യിൽ എത്തുന്നതിന് മുൻപേ ഒരു overriding title വഴി അത് വേർതിരിക്കപ്പെടുന്നുണ്ടോ?",
+            "t0": 40.78,
+            "t1": 52.62,
+            "method": "silence_detect"
+          },
+          {
+            "sentence_idx": 2,
+            "text": "ഉണ്ടെങ്കിൽ അത് diversion ആണ്.",
+            "t0": 52.62,
+            "t1": 54.87,
+            "method": "silence_detect"
+          },
+          {
+            "sentence_idx": 3,
+            "text": "എന്നാൽ ലഭിച്ച ശേഷമുള്ള ഏതൊരു ബാധ്യതയും വെറും application of income മാത്രമാണ്.",
+            "t0": 54.87,
+            "t1": 60.53,
+            "method": "silence_detect"
+          }
+        ]
+      },
+      {
+        "slide_number": 4,
+        "t0": 60.93,
+        "t1": 80.81,
+        "sentence_count": 2,
+        "beats": [
+          {
+            "sentence_idx": 1,
+            "text": "പരീക്ഷയിൽ ശ്രദ്ധിക്കേണ്ട പ്രധാന കാര്യം: assessee സ്വന്തം ഇഷ്ടപ്രകാരം voluntary ആയി മാറ്റിവെക്കുന്ന വരുമാനം ഒരിക്കലും diversion ആകില്ല.",
+            "t0": 60.93,
+            "t1": 70.06,
+            "method": "silence_detect"
+          },
+          {
+            "sentence_idx": 2,
+            "text": "നിയമപരമായോ കോടതി ഉത്തരവ് വഴിയോ ഉള്ള ഒരു anterior obligation ഉണ്ടെങ്കിൽ മാത്രമേ diversion by overriding title ക്ലെയിം ചെയ്യാൻ സാധിക്കൂ.",
+            "t0": 70.06,
+            "t1": 80.81,
+            "method": "silence_detect"
+          }
+        ]
+      }
+    ]
+  },
+  "q4": {
+    "audio_file": "C:\\Users\\HP\\OneDrive\\Desktop\\VISHNU\\DT and IDT Classes\\data\\audio\\q4.mp3",
+    "total_audio_length": 91.059,
+    "slides": [
+      {
+        "slide_number": 1,
+        "t0": 0.0,
+        "t1": 20.35,
+        "sentence_count": 2,
+        "beats": [
+          {
+            "sentence_idx": 1,
+            "text": "Section 115BAC(6) പ്രകാരം assessee ഓപ്ഷണൽ Old Tax Regime തിരഞ്ഞെടുക്കുകയാണെങ്കിൽ, പരമ്പരാഗത age-based സ്ലാബ് നിരക്കുകളാണ് ബാധകമാകുന്നത്.",
+            "t0": 0.0,
+            "t1": 8.83,
+            "method": "silence_detect"
+          },
+          {
+            "sentence_idx": 2,
+            "text": "വ്യക്തികളുടെ പ്രായവും Residential Status-ഉം അനുസരിച്ചാണ് basic exemption limit നിശ്ചയിക്കുന്നത്.",
+            "t0": 8.83,
+            "t1": 20.35,
+            "method": "silence_detect"
+          }
+        ]
+      },
+      {
+        "slide_number": 2,
+        "t0": 20.75,
+        "t1": 46.6,
+        "sentence_count": 4,
+        "beats": [
+          {
+            "sentence_idx": 1,
+            "text": "ഇവിടെ മൂന്ന് വിഭാഗങ്ങളുണ്ട്.",
+            "t0": 20.75,
+            "t1": 22.61,
+            "method": "silence_detect"
+          },
+          {
+            "sentence_idx": 2,
+            "text": "60 വയസ്സിൽ താഴെയുള്ള വ്യക്തികൾക്ക് 2.5 ലക്ഷം രൂപ വരെ basic exemption ലഭിക്കും.",
+            "t0": 22.61,
+            "t1": 28.46,
+            "method": "silence_detect"
+          },
+          {
+            "sentence_idx": 3,
+            "text": "60 മുതൽ 80 വയസ്സ് വരെയുള്ള Resident Senior Citizens-ന് 3 ലക്ഷം രൂപയും, 80 വയസ്സിനു മുകളിലുള്ള Resident Super Senior Citizens-ന് 5 ലക്ഷം രൂപയുമാണ് basic exemption limit.",
+            "t0": 28.46,
+            "t1": 32.54,
+            "method": "silence_detect"
+          },
+          {
+            "sentence_idx": 4,
+            "text": "അതിനു മുകളിലുള്ള വരുമാനത്തിന് 5%, 20%, 30% ക്രമത്തിൽ നികുതി ഈടാക്കുന്നു.",
+            "t0": 32.54,
+            "t1": 46.6,
+            "method": "silence_detect"
+          }
+        ]
+      },
+      {
+        "slide_number": 3,
+        "t0": 47.0,
+        "t1": 66.85,
+        "sentence_count": 2,
+        "beats": [
+          {
+            "sentence_idx": 1,
+            "text": "കണക്കാക്കിയ നികുതിയിൽ നിന്ന് Resident Individual-ന്റെ Total Income 5 ലക്ഷം രൂപയിൽ കവിയുന്നില്ലെങ്കിൽ, Section 87A പ്രകാരം പരമാവധി 12,500 രൂപ വരെ rebate ലഭിക്കും.",
+            "t0": 47.0,
+            "t1": 60.24,
+            "method": "silence_detect"
+          },
+          {
+            "sentence_idx": 2,
+            "text": "നികുതി തുകയ്ക്ക് മുകളിൽ 4% Health & Education Cess നിർബന്ധമായും കൂട്ടിച്ചേർക്കണം.",
+            "t0": 60.24,
+            "t1": 66.85,
+            "method": "silence_detect"
+          }
+        ]
+      },
+      {
+        "slide_number": 4,
+        "t0": 67.25,
+        "t1": 91.06,
+        "sentence_count": 2,
+        "beats": [
+          {
+            "sentence_idx": 1,
+            "text": "പരീക്ഷയിലെ ഏറ്റവും പ്രധാനപ്പെട്ട trap ഓർക്കുക: Senior Citizen, Super Senior Citizen എന്നിവർക്കുള്ള ഉയർന്ന basic exemption benefits റസിഡന്റുകളായ വ്യക്തികൾക്ക് മാത്രമേ ലഭിക്കൂ.",
+            "t0": 67.25,
+            "t1": 79.31,
+            "method": "silence_detect"
+          },
+          {
+            "sentence_idx": 2,
+            "text": "ഒരു Non-Resident-ന് 65 വയസ്സോ 85 വയസ്സോ ഉണ്ടെങ്കിലും, 2.5 ലക്ഷം രൂപ മാത്രമാണ് basic exemption ലഭിക്കുക.",
+            "t0": 79.31,
+            "t1": 91.06,
+            "method": "silence_detect"
+          }
+        ]
+      }
+    ]
+  },
+  "q5": {
+    "audio_file": "C:\\Users\\HP\\OneDrive\\Desktop\\VISHNU\\DT and IDT Classes\\data\\audio\\q5.mp3",
+    "total_audio_length": 83.347,
+    "slides": [
+      {
+        "slide_number": 1,
+        "t0": 0.0,
+        "t1": 17.71,
+        "sentence_count": 2,
+        "beats": [
+          {
+            "sentence_idx": 1,
+            "text": "Old Tax Regime തിരഞ്ഞെടുക്കുന്ന 60 വയസ്സിൽ താഴെയുള്ള Resident Individual-ന്റെ നികുതി കണക്കാക്കലും, Section 87A പ്രകാരമുള്ള rebate ആനുകൂല്യങ്ങളുമാണ് ഇവിടെ പരിശോധിക്കുന്നത്.",
+            "t0": 0.0,
+            "t1": 13.36,
+            "method": "silence_detect"
+          },
+          {
+            "sentence_idx": 2,
+            "text": "ഈ റെജീമിൽ Chapter VI-A ഡിഡക്ഷനുകൾ പൂർണ്ണമായും ക്ലെയിം ചെയ്യാം.",
+            "t0": 13.36,
+            "t1": 17.71,
+            "method": "silence_detect"
+          }
+        ]
+      },
+      {
+        "slide_number": 2,
+        "t0": 18.11,
+        "t1": 41.2,
+        "sentence_count": 3,
+        "beats": [
+          {
+            "sentence_idx": 1,
+            "text": "ആദ്യത്തെ 2.5 ലക്ഷം രൂപ വരെ നികുതി NIL ആണ്.",
+            "t0": 18.11,
+            "t1": 22.44,
+            "method": "silence_detect"
+          },
+          {
+            "sentence_idx": 2,
+            "text": "2.5 ലക്ഷം മുതൽ 5 ലക്ഷം വരെയുള്ള തുകയ്ക്ക് 5% നിരക്കിൽ പരമാവധി 12,500 രൂപ നികുതി വരുന്നു.",
+            "t0": 22.44,
+            "t1": 31.52,
+            "method": "silence_detect"
+          },
+          {
+            "sentence_idx": 3,
+            "text": "5 ലക്ഷം മുതൽ 10 ലക്ഷം വരെ 20 ശതമാനവും, 10 ലക്ഷത്തിന് മുകളിലുള്ള വരുമാനത്തിന് 30 ശതമാനവുമാണ് നികുതി നിരക്ക്.",
+            "t0": 31.52,
+            "t1": 41.2,
+            "method": "silence_detect"
+          }
+        ]
+      },
+      {
+        "slide_number": 3,
+        "t0": 41.6,
+        "t1": 60.89,
+        "sentence_count": 2,
+        "beats": [
+          {
+            "sentence_idx": 1,
+            "text": "Section 87A പ്രകാരം, ഒരു Resident Individual-ന്റെ Total Income 5 ലക്ഷം രൂപയിൽ കവിയുന്നില്ലെങ്കിൽ, നികുതി തുകയോ 12,500 രൂപയോ ഏതാണോ കുറവ്, അത് പൂർണ്ണമായും rebate ആയി കുറയ്ക്കാം.",
+            "t0": 41.6,
+            "t1": 55.44,
+            "method": "silence_detect"
+          },
+          {
+            "sentence_idx": 2,
+            "text": "അതിനാൽ 5 ലക്ഷം രൂപ വരെ വരുമാനമുള്ളവർക്ക് നികുതി ബാധ്യത പൂജ്യമായിരിക്കും.",
+            "t0": 55.44,
+            "t1": 60.89,
+            "method": "silence_detect"
+          }
+        ]
+      },
+      {
+        "slide_number": 4,
+        "t0": 61.29,
+        "t1": 83.35,
+        "sentence_count": 2,
+        "beats": [
+          {
+            "sentence_idx": 1,
+            "text": "പരീക്ഷയിൽ ഓർക്കേണ്ട രണ്ട് പ്രധാന നിബന്ധനകൾ: ഒന്നാമതായി, Section 87A rebate Resident Individuals-ന് മാത്രമേ ലഭ്യമാകൂ, Non-Residents-നോ HUF-നോ ലഭിക്കില്ല.",
+            "t0": 61.29,
+            "t1": 74.42,
+            "method": "silence_detect"
+          },
+          {
+            "sentence_idx": 2,
+            "text": "രണ്ടാമതായി, Net Tax Liability-ക്ക് മുകളിലാണ് 4% Health & Education Cess കണക്കാക്കേണ്ടത്.",
+            "t0": 74.42,
+            "t1": 83.35,
+            "method": "silence_detect"
+          }
+        ]
+      }
+    ]
+  },
+  "q6": {
+    "audio_file": "C:\\Users\\HP\\OneDrive\\Desktop\\VISHNU\\DT and IDT Classes\\data\\audio\\q6.mp3",
+    "total_audio_length": 89.568,
+    "slides": [
+      {
+        "slide_number": 1,
+        "t0": 0.0,
+        "t1": 19.73,
+        "sentence_count": 2,
+        "beats": [
+          {
+            "sentence_idx": 1,
+            "text": "Finance Act പ്രകാരം എല്ലാ വ്യക്തികൾക്കും Default Tax Regime ബാധകമാകുന്നത് Section 115BAC(1A) വഴിയാണ്.",
+            "t0": 0.0,
+            "t1": 8.26,
+            "method": "silence_detect"
+          },
+          {
+            "sentence_idx": 2,
+            "text": "നികുതിദായകൻ പ്രത്യേകം ഫോം സബ്മിറ്റ് ചെയ്ത് opt-out ചെയ്യാത്ത പക്ഷം, ഈ concessional സ്ലാബ് നിരക്കുകളാണ് ബാധകമാകുന്നത്.",
+            "t0": 8.26,
+            "t1": 19.73,
+            "method": "silence_detect"
+          }
+        ]
+      },
+      {
+        "slide_number": 2,
+        "t0": 20.13,
+        "t1": 49.34,
+        "sentence_count": 2,
+        "beats": [
+          {
+            "sentence_idx": 1,
+            "text": "ഈ റെജീമിൽ ആദ്യത്തെ 4 ലക്ഷം രൂപ വരെ നികുതി NIL ആണ്.",
+            "t0": 20.13,
+            "t1": 24.19,
+            "method": "silence_detect"
+          },
+          {
+            "sentence_idx": 2,
+            "text": "4 ലക്ഷം മുതൽ 8 ലക്ഷം വരെ 5%, 8 ലക്ഷം മുതൽ 12 ലക്ഷം വരെ 10%, 12 ലക്ഷം മുതൽ 16 ലക്ഷം വരെ 15%, 16 ലക്ഷം മുതൽ 20 ലക്ഷം വരെ 20%, 20 ലക്ഷം മുതൽ 24 ലക്ഷം വരെ 25%, 24 ലക്ഷത്തിന് മുകളിൽ 30% എന്നിങ്ങനെയാണ് നിരക്കുകൾ.",
+            "t0": 24.19,
+            "t1": 49.34,
+            "method": "silence_detect"
+          }
+        ]
+      },
+      {
+        "slide_number": 3,
+        "t0": 49.74,
+        "t1": 71.03,
+        "sentence_count": 2,
+        "beats": [
+          {
+            "sentence_idx": 1,
+            "text": "Default Regime-ൽ Resident Individual-ന്റെ Total Income നിർദ്ദിഷ്ട പരിധി കവിയുന്നില്ലെങ്കിൽ സെക്ഷൻ 87A പ്രകാരമുള്ള enhanced rebate ലഭിക്കും.",
+            "t0": 49.74,
+            "t1": 60.66,
+            "method": "silence_detect"
+          },
+          {
+            "sentence_idx": 2,
+            "text": "കൂടാതെ ഉയർന്ന വരുമാനക്കാർക്ക് ബാധകമായ surcharge നിരക്കുകളിൽ പരമാവധി 25% എന്ന സീലിംഗ് മാത്രമേ ഈ റെജീമിൽ വരുന്നുള്ളൂ.",
+            "t0": 60.66,
+            "t1": 71.03,
+            "method": "silence_detect"
+          }
+        ]
+      },
+      {
+        "slide_number": 4,
+        "t0": 71.43,
+        "t1": 89.57,
+        "sentence_count": 2,
+        "beats": [
+          {
+            "sentence_idx": 1,
+            "text": "പരീക്ഷയിൽ ഏറ്റവും കൂടുതൽ ശ്രദ്ധിക്കേണ്ട കാര്യം: Section 115BAC-ൽ Senior Citizens-നോ Super Senior Citizens-നോ പ്രത്യേക basic exemption limit ഇല്ല.",
+            "t0": 71.43,
+            "t1": 83.66,
+            "method": "silence_detect"
+          },
+          {
+            "sentence_idx": 2,
+            "text": "പ്രായഭേദമന്യേ എല്ലാവർക്കും ഒരേ basic exemption സ്ലാബാണ് ബാധകമാകുന്നത്.",
+            "t0": 83.66,
+            "t1": 89.57,
+            "method": "silence_detect"
+          }
+        ]
+      }
+    ]
+  },
+  "q7": {
+    "audio_file": "C:\\Users\\HP\\OneDrive\\Desktop\\VISHNU\\DT and IDT Classes\\data\\audio\\q7.mp3",
+    "total_audio_length": 76.896,
+    "slides": [
+      {
+        "slide_number": 1,
+        "t0": 0.0,
+        "t1": 18.67,
+        "sentence_count": 2,
+        "beats": [
+          {
+            "sentence_idx": 1,
+            "text": "Section 115BAC പ്രകാരമുള്ള Default Tax Regime-ൽ ഇടത്തരം വരുമാനക്കാർക്ക് ആശ്വാസം നൽകുന്ന ഒന്നാണ് Section 87A പ്രകാരമുള്ള enhanced rebate.",
+            "t0": 0.0,
+            "t1": 8.62,
+            "method": "silence_detect"
+          },
+          {
+            "sentence_idx": 2,
+            "text": "വാർഷിക വരുമാനം നിർദ്ദിഷ്ട പരിധിയിലാണെങ്കിൽ നികുതി പൂജ്യമാക്കാൻ ഇത് സഹായിക്കുന്നു.",
+            "t0": 8.62,
+            "t1": 18.67,
+            "method": "silence_detect"
+          }
+        ]
+      },
+      {
+        "slide_number": 2,
+        "t0": 19.07,
+        "t1": 37.24,
+        "sentence_count": 3,
+        "beats": [
+          {
+            "sentence_idx": 1,
+            "text": "Assessment Year 2026-27-ലെ സ്ലാബുകൾ നോക്കുക.",
+            "t0": 19.07,
+            "t1": 24.73,
+            "method": "silence_detect"
+          },
+          {
+            "sentence_idx": 2,
+            "text": "ആദ്യത്തെ 4 ലക്ഷം രൂപയ്ക്ക് 0% നികുതി.",
+            "t0": 24.73,
+            "t1": 28.64,
+            "method": "silence_detect"
+          },
+          {
+            "sentence_idx": 3,
+            "text": "4 മുതൽ 8 ലക്ഷം വരെ 5 ശതമാനവും, 8 മുതൽ 12 ലക്ഷം വരെ 10 ശതമാനവുമാണ് സ്ലാബ് നിരക്കുകൾ.",
+            "t0": 28.64,
+            "t1": 37.24,
+            "method": "silence_detect"
+          }
+        ]
+      },
+      {
+        "slide_number": 3,
+        "t0": 37.64,
+        "t1": 59.05,
+        "sentence_count": 3,
+        "beats": [
+          {
+            "sentence_idx": 1,
+            "text": "Total Income 12 ലക്ഷം രൂപ വരെയുള്ള Resident Individual-ന് സെക്ഷൻ 87A പ്രകാരം 60,000 രൂപ വരെയുള്ള പൂർണ്ണ നികുതിയും rebate ആയി ലഭിക്കുന്നു.",
+            "t0": 37.64,
+            "t1": 46.4,
+            "method": "silence_detect"
+          },
+          {
+            "sentence_idx": 2,
+            "text": "അതിനാൽ 12 ലക്ഷം രൂപ വരെ നികുതി ബാധ്യത NIL ആയി മാറുന്നു.",
+            "t0": 46.4,
+            "t1": 53.94,
+            "method": "silence_detect"
+          },
+          {
+            "sentence_idx": 3,
+            "text": "ഇതിനു മുകളിൽ വരുന്ന നികുതിക്ക് മാത്രമേ 4% Cess ബാധകമാകൂ.",
+            "t0": 53.94,
+            "t1": 59.05,
+            "method": "silence_detect"
+          }
+        ]
+      },
+      {
+        "slide_number": 4,
+        "t0": 59.45,
+        "t1": 76.9,
+        "sentence_count": 1,
+        "beats": [
+          {
+            "sentence_idx": 1,
+            "text": "പരീക്ഷയിലെ പ്രധാന പോയിന്റ്: ശമ്പള വരുമാനക്കാർക്ക് Section 16(ia) പ്രകാരമുള്ള 75,000 രൂപയുടെ Standard Deduction കുറച്ച ശേഷമുള്ള Net Total Income-ലാണ് ഈ 12 ലക്ഷം രൂപയുടെ പരിധി പരിശോധിക്കേണ്ടത്.",
+            "t0": 59.45,
+            "t1": 76.9,
+            "method": "single_sentence"
+          }
+        ]
+      }
+    ]
+  },
+  "q8": {
+    "audio_file": "C:\\Users\\HP\\OneDrive\\Desktop\\VISHNU\\DT and IDT Classes\\data\\audio\\q8.mp3",
+    "total_audio_length": 69.0,
+    "slides": [
+      {
+        "slide_number": 1,
+        "t0": 0.0,
+        "t1": 17.93,
+        "sentence_count": 2,
+        "beats": [
+          {
+            "sentence_idx": 1,
+            "text": "Section 87A പ്രകാരമുള്ള rebate പരിധിയിൽ നിന്നും വരുമാനം നേരിയ തോതിൽ കൂടുമ്പോൾ ഉണ്ടാകുന്ന അമിത നികുതി ഭാരം ഒഴിവാക്കാനാണ് Marginal Relief നൽകുന്നത്.",
+            "t0": 0.0,
+            "t1": 11.68,
+            "method": "silence_detect"
+          },
+          {
+            "sentence_idx": 2,
+            "text": "അധികമായി ലഭിച്ച വരുമാനത്തേക്കാൾ കൂടുതൽ നികുതി നൽകേണ്ടി വരുന്ന സാഹചര്യം ഇത് തടയുന്നു.",
+            "t0": 11.68,
+            "t1": 17.93,
+            "method": "silence_detect"
+          }
+        ]
+      },
+      {
+        "slide_number": 2,
+        "t0": 18.33,
+        "t1": 35.15,
+        "sentence_count": 2,
+        "beats": [
+          {
+            "sentence_idx": 1,
+            "text": "ഡിഫോൾട്ട് റെജീമിൽ 12 ലക്ഷം രൂപ വരെയുള്ള നികുതി Section 87A പ്രകാരം പൂർണ്ണമായും ഒഴിവാക്കപ്പെടുന്നു.",
+            "t0": 18.33,
+            "t1": 26.15,
+            "method": "silence_detect"
+          },
+          {
+            "sentence_idx": 2,
+            "text": "എന്നാൽ വരുമാനം 12 ലക്ഷത്തിൽ കവിയുമ്പോൾ, ഈ പൂർണ്ണ റിബേറ്റ് നഷ്ടപ്പെടുകയും ഉയർന്ന സ്ലാബ് നിരക്കിൽ നികുതി വരികയും ചെയ്യുന്നു.",
+            "t0": 26.15,
+            "t1": 35.15,
+            "method": "silence_detect"
+          }
+        ]
+      },
+      {
+        "slide_number": 3,
+        "t0": 35.55,
+        "t1": 53.62,
+        "sentence_count": 2,
+        "beats": [
+          {
+            "sentence_idx": 1,
+            "text": "സെക്ഷൻ 87A പ്രൊവിസോ പ്രകാരം, നൽകേണ്ട അധിക നികുതി 12 ലക്ഷത്തിന് മുകളിലുള്ള അധിക വരുമാനത്തേക്കാൾ കവിയാൻ പാടില്ല.",
+            "t0": 35.55,
+            "t1": 44.62,
+            "method": "silence_detect"
+          },
+          {
+            "sentence_idx": 2,
+            "text": "അതായത്, സ്ലാബ് പ്രകാരമുള്ള നികുതിയും അധിക വരുമാനവും തമ്മിലുള്ള വ്യത്യാസം marginal relief ആയി കുറവു ചെയ്യപ്പെടുന്നു.",
+            "t0": 44.62,
+            "t1": 53.62,
+            "method": "silence_detect"
+          }
+        ]
+      },
+      {
+        "slide_number": 4,
+        "t0": 54.02,
+        "t1": 69.0,
+        "sentence_count": 2,
+        "beats": [
+          {
+            "sentence_idx": 1,
+            "text": "പരീക്ഷയിൽ ഓർക്കുക: Marginal Relief കുറച്ച ശേഷമുള്ള net tax തുകയിൽ മാത്രമേ 4% Health & Education Cess കൂട്ടിച്ചേർക്കാവൂ.",
+            "t0": 54.02,
+            "t1": 64.09,
+            "method": "silence_detect"
+          },
+          {
+            "sentence_idx": 2,
+            "text": "കൂടാതെ ഈ റിലീഫ് Resident Individuals-ന് മാത്രമേ ലഭ്യമാകൂ.",
+            "t0": 64.09,
+            "t1": 69.0,
+            "method": "silence_detect"
+          }
+        ]
+      }
+    ]
+  },
+  "q9": {
+    "audio_file": "C:\\Users\\HP\\OneDrive\\Desktop\\VISHNU\\DT and IDT Classes\\data\\audio\\q9.mp3",
+    "total_audio_length": 74.712,
+    "slides": [
+      {
+        "slide_number": 1,
+        "t0": 0.0,
+        "t1": 16.9,
+        "sentence_count": 2,
+        "beats": [
+          {
+            "sentence_idx": 1,
+            "text": "Domestic Companies-ന്റെ Total Income ഒരു കോടി രൂപ കവിയുമ്പോൾ ബാധകമാകുന്ന surcharge-ഉം, അതിന്മേൽ ലഭിക്കുന്ന Marginal Relief-ഉം ആണ് നമ്മൾ ഇവിടെ പഠിക്കുന്നത്.",
+            "t0": 0.0,
+            "t1": 11.2,
+            "method": "silence_detect"
+          },
+          {
+            "sentence_idx": 2,
+            "text": "മുൻവർഷത്തെ ടേൺഓവർ അടിസ്ഥാനമാക്കിയാണ് അടിസ്ഥാന നികുതി നിരക്ക് നിശ്ചയിക്കുന്നത്.",
+            "t0": 11.2,
+            "t1": 16.9,
+            "method": "silence_detect"
+          }
+        ]
+      },
+      {
+        "slide_number": 2,
+        "t0": 17.3,
+        "t1": 38.97,
+        "sentence_count": 3,
+        "beats": [
+          {
+            "sentence_idx": 1,
+            "text": "കമ്പനിയുടെ മുൻവർഷത്തെ turnover 400 കോടി രൂപ വരെയാണെങ്കിൽ ബേസ് ടാക്സ് നിരക്ക് 25% ആണ്; അല്ലെങ്കിൽ 30% വരും.",
+            "t0": 17.3,
+            "t1": 24.8,
+            "method": "silence_detect"
+          },
+          {
+            "sentence_idx": 2,
+            "text": "Total Income ഒരു കോടി രൂപ വരെ surcharge ഇല്ല.",
+            "t0": 24.8,
+            "t1": 34.49,
+            "method": "silence_detect"
+          },
+          {
+            "sentence_idx": 3,
+            "text": "ഒരു കോടി മുതൽ 10 കോടി വരെ 7 ശതമാനവും, 10 കോടിക്ക് മുകളിൽ 12 ശതമാനവുമാണ് സർചാർജ്.",
+            "t0": 34.49,
+            "t1": 38.97,
+            "method": "silence_detect"
+          }
+        ]
+      },
+      {
+        "slide_number": 3,
+        "t0": 39.37,
+        "t1": 57.54,
+        "sentence_count": 2,
+        "beats": [
+          {
+            "sentence_idx": 1,
+            "text": "Total Income ഒരു കോടിയിൽ നിന്ന് അല്പം കൂടുമ്പോൾ വരുന്ന അധിക നികുതിയും സർചാർജും, ഒരു കോടിക്ക് മുകളിലുള്ള അധിക വരുമാനത്തേക്കാൾ കൂടുവാൻ പാടില്ല.",
+            "t0": 39.37,
+            "t1": 49.11,
+            "method": "silence_detect"
+          },
+          {
+            "sentence_idx": 2,
+            "text": "അതിനാൽ, ടാക്സ് സീലിംഗ് എന്നത് ഒരു കോടി രൂപയ്ക്കുള്ള നികുതിയും അധിക വരുമാനവും ചേർത്ത തുകയായി നിജപ്പെടുത്തുന്നു.",
+            "t0": 49.11,
+            "t1": 57.54,
+            "method": "silence_detect"
+          }
+        ]
+      },
+      {
+        "slide_number": 4,
+        "t0": 57.94,
+        "t1": 74.71,
+        "sentence_count": 2,
+        "beats": [
+          {
+            "sentence_idx": 1,
+            "text": "പരീക്ഷയിലെ പ്രധാന കാര്യം: Marginal Relief കണക്കാക്കുന്നത് surcharge-ന്മേൽ മാത്രമാണ്.",
+            "t0": 57.94,
+            "t1": 64.27,
+            "method": "silence_detect"
+          },
+          {
+            "sentence_idx": 2,
+            "text": "Marginal Relief കുറച്ച ശേഷം ലഭിക്കുന്ന തുകയ്ക്ക് മുകളിലാണ് 4% Health & Education Cess കണക്കാക്കേണ്ടത്, മുൻപല്ല.",
+            "t0": 64.27,
+            "t1": 74.71,
+            "method": "silence_detect"
+          }
+        ]
+      }
+    ]
+  },
+  "q10": {
+    "audio_file": "C:\\Users\\HP\\OneDrive\\Desktop\\VISHNU\\DT and IDT Classes\\data\\audio\\q10.mp3",
+    "total_audio_length": 61.884,
+    "slides": [
+      {
+        "slide_number": 1,
+        "t0": 0.0,
+        "t1": 14.53,
+        "sentence_count": 2,
+        "beats": [
+          {
+            "sentence_idx": 1,
+            "text": "Domestic Company-യുടെ Total Income 10 കോടി രൂപ കവിയുമ്പോൾ സർചാർജ് നിരക്ക് 7 ശതമാനത്തിൽ നിന്നും പെട്ടെന്ന് 12 ശതമാനമായി ഉയരുന്നു.",
+            "t0": 0.0,
+            "t1": 9.1,
+            "method": "silence_detect"
+          },
+          {
+            "sentence_idx": 2,
+            "text": "ഈ കുതിച്ചുചാട്ടം മൂലമുണ്ടാകുന്ന അമിത ബാധ്യത ഒഴിവാക്കാനാണ് Marginal Relief നൽകുന്നത്.",
+            "t0": 9.1,
+            "t1": 14.53,
+            "method": "silence_detect"
+          }
+        ]
+      },
+      {
+        "slide_number": 2,
+        "t0": 14.93,
+        "t1": 28.26,
+        "sentence_count": 2,
+        "beats": [
+          {
+            "sentence_idx": 1,
+            "text": "10 കോടി വരെയുള്ള വരുമാനത്തിന് 7% സർചാർജ് ബാധകമായിരുന്ന സ്ഥാനത്ത്, 10 കോടി കവിയുന്നതോടെ മുഴുവൻ വരുമാനത്തിനും 12% നിരക്കിലാണ് സർചാർജ് ഈടാക്കുന്നത്.",
+            "t0": 14.93,
+            "t1": 25.44,
+            "method": "silence_detect"
+          },
+          {
+            "sentence_idx": 2,
+            "text": "ഈ ഘട്ടത്തിൽ കമ്പനിക്ക് നികുതി ഭാരം വർദ്ധിക്കുന്നു.",
+            "t0": 25.44,
+            "t1": 28.26,
+            "method": "silence_detect"
+          }
+        ]
+      },
+      {
+        "slide_number": 3,
+        "t0": 28.66,
+        "t1": 45.07,
+        "sentence_count": 2,
+        "beats": [
+          {
+            "sentence_idx": 1,
+            "text": "ഇവിടെ Marginal Relief കണക്കാക്കുന്ന ഫോർമുല: 12% സർചാർജ് ഉൾപ്പെടെയുള്ള ആകെ നികുതി, 10 കോടി രൂപയ്ക്ക് 7% സർചാർജ് പ്രകാരം വരുന്ന നികുതിയും 10 കോടിക്ക് മുകളിലുള്ള അധിക വരുമാനവും ചേർത്ത തുകയേക്കാൾ കവിയരുത്.",
+            "t0": 28.66,
+            "t1": 42.84,
+            "method": "silence_detect"
+          },
+          {
+            "sentence_idx": 2,
+            "text": "കവിയുന്ന തുക relief ആയി ലഭിക്കും.",
+            "t0": 42.84,
+            "t1": 45.07,
+            "method": "silence_detect"
+          }
+        ]
+      },
+      {
+        "slide_number": 4,
+        "t0": 45.47,
+        "t1": 61.88,
+        "sentence_count": 3,
+        "beats": [
+          {
+            "sentence_idx": 1,
+            "text": "പരീക്ഷയിൽ ഓർക്കുക: ഫോറിൻ കമ്പനികൾക്ക് സർചാർജ് നിരക്ക് 2% ഉം 5% ഉം മാത്രമാണ്.",
+            "t0": 45.47,
+            "t1": 52.83,
+            "method": "silence_detect"
+          },
+          {
+            "sentence_idx": 2,
+            "text": "എന്നാൽ Domestic Companies-ന് ഇത് 7% ഉം 12% ഉം ആണ്.",
+            "t0": 52.83,
+            "t1": 58.03,
+            "method": "silence_detect"
+          },
+          {
+            "sentence_idx": 3,
+            "text": "അവസാനമായി 4% Cess നൽകാൻ മറക്കരുത്.",
+            "t0": 58.03,
+            "t1": 61.88,
+            "method": "silence_detect"
+          }
+        ]
+      }
+    ]
+  }
+}

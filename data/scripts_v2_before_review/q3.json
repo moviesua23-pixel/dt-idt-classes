@@ -1,0 +1,230 @@
+[
+  {
+    "id": "L01",
+    "block": 1,
+    "block_name": "Scope/Applicability",
+    "narration_ml": "Section 4 prakaram income assessee-yude kayyil ethunnathinu munpu thanne legal obligation vazhi maati vidunnathine Diversion of Income ennum, shesham upayogikkunnathine Application of Income ennum parayunnu.",
+    "card": {
+      "title": "Scope of Section 4 Doctrine",
+      "type": "rule",
+      "lines": [
+        "Section 4 governs the charge of income tax",
+        "Distinction between Diversion by Overriding Title and Application",
+        "Diversion occurs at source before reaching the assessee",
+        "Application occurs after the income reaches the assessee"
+      ],
+      "highlights": [
+        "Section 4",
+        "Diversion",
+        "Application"
+      ]
+    }
+  },
+  {
+    "id": "L02",
+    "block": 1,
+    "block_name": "Scope/Applicability",
+    "narration_ml": "CIT vs Sitaldas Tirathdas case-il Supreme Court nirdeshicha decisive test, panam assessee-yude swantham income aayi ethunnundo atho overriding obligation vazhi mumbae divert cheyyappedunnundo ennathaanu.",
+    "card": {
+      "title": "Supreme Court Decisive Test",
+      "type": "authority",
+      "lines": [
+        "CIT vs. Sitaldas Tirathdas established the benchmark test",
+        "Test determines if money reaches assessee as own income",
+        "Checks if diversion happens by overriding enforceable obligation",
+        "Obligation must be pre-existing to qualify as diversion"
+      ],
+      "highlights": [
+        "CIT vs. Sitaldas Tirathdas",
+        "Decisive Test",
+        "Overriding Obligation"
+      ]
+    }
+  },
+  {
+    "id": "L03",
+    "block": 2,
+    "block_name": "Rates/Matrix",
+    "narration_ml": "Diversion of Income-um Application of Income-um thammilulla pradhana vyathyasangal Point of Transfer-ilum Nature of Obligation-ilum engane varunnu ennu ee table-il ninnu manassilaakkaam.",
+    "card": {
+      "title": "Distinction Matrix Part I",
+      "type": "table",
+      "lines": [
+        "Comparison based on Point of Transfer and Obligation",
+        "Diversion happens at source before reaching the assessee",
+        "Application happens after income reaches or accrues",
+        "Nature of obligation defines the legal tax treatment"
+      ],
+      "table": {
+        "headers": [
+          "Basis of Distinction",
+          "Diversion by Overriding Title",
+          "Application of Income"
+        ],
+        "rows": [
+          [
+            "Point of Transfer",
+            "Diverted at source before reaching the assessee",
+            "Applied after the income reaches / accrues to the assessee"
+          ],
+          [
+            "Nature of Obligation",
+            "Created by an overriding, pre-existing legal charge or superior title",
+            "Merely an obligation to apply income that has already accrued"
+          ]
+        ]
+      },
+      "highlights": [
+        "Point of Transfer",
+        "Nature of Obligation",
+        "At Source"
+      ]
+    }
+  },
+  {
+    "id": "L04",
+    "block": 2,
+    "block_name": "Rates/Matrix",
+    "narration_ml": "Ownership of Funds-inteyum Tax Treatment-inteyum adisthanathil, Diversion of Income Total Income-il ninnu ozhivakkumpol Application of Income muzhuvanayum tax-inu vidheyamaakkunnu.",
+    "card": {
+      "title": "Distinction Matrix Part II",
+      "type": "table",
+      "lines": [
+        "Comparison based on Ownership and Tax Treatment",
+        "Diverted income is excluded from Total Income",
+        "Applied income is included in Total Income calculation",
+        "No deduction is allowed for application of income"
+      ],
+      "table": {
+        "headers": [
+          "Basis of Distinction",
+          "Diversion by Overriding Title",
+          "Application of Income"
+        ],
+        "rows": [
+          [
+            "Ownership of Funds",
+            "Assessee receives it merely on behalf of the real title-holder",
+            "Assessee receives it as their own real income"
+          ],
+          [
+            "Tax Treatment",
+            "Excluded from Total Income (Not taxable)",
+            "Included in Total Income (No deduction allowed)"
+          ]
+        ]
+      },
+      "highlights": [
+        "Ownership of Funds",
+        "Tax Treatment",
+        "Excluded",
+        "Included"
+      ]
+    }
+  },
+  {
+    "id": "L05",
+    "block": 2,
+    "block_name": "Rates/Matrix",
+    "narration_ml": "Overriding title vazhi ulla diversion-il assessee oru representative mathramaanu, pakshe application-il assessee income-inte real owner aayi thudarunnu ennathu prathyekam dharikkuka.",
+    "card": {
+      "title": "Legal Status of Income",
+      "type": "rule",
+      "lines": [
+        "Assessee receives diverted funds for real title-holder",
+        "Assessee receives applied funds as own real income",
+        "No deduction is allowed for application of income",
+        "Diversion is not taxable in assessee's hands"
+      ],
+      "highlights": [
+        "Real Title-holder",
+        "Real Income",
+        "No Deduction"
+      ]
+    }
+  },
+  {
+    "id": "L06",
+    "block": 3,
+    "block_name": "Computation/Relief",
+    "narration_ml": "Diversion by Overriding Title sambhavikkumpol, aa thoka assessee-yude Total Income-il ulppeduthilla, kaaranam athu assessee-yude income aayi kanoon-il parayunnilla.",
+    "card": {
+      "title": "Computation of Diverted Income",
+      "type": "formula",
+      "lines": [
+        "Diverted income is excluded from Total Income computation",
+        "Requires a pre-existing legal charge for exclusion",
+        "Income never forms part of assessee's taxable stream",
+        "Statutory exclusion applies at the point of accrual"
+      ],
+      "highlights": [
+        "Excluded",
+        "Total Income",
+        "Legal Charge"
+      ]
+    }
+  },
+  {
+    "id": "L07",
+    "block": 3,
+    "block_name": "Computation/Relief",
+    "narration_ml": "Income accrue cheytha shesham ulla ethu reethiyilulla upayogavum Application of Income aayirikkum, ithinu Income Tax Act-il deduction onnum labhyamalla.",
+    "card": {
+      "title": "Treatment of Applied Income",
+      "type": "rule",
+      "lines": [
+        "Income applied after accrual is fully taxable",
+        "No deduction is allowed for such applications",
+        "It is treated as the assessee's own real income",
+        "Application does not reduce the Total Income liability"
+      ],
+      "highlights": [
+        "Accrual",
+        "Fully Taxable",
+        "No Deduction"
+      ]
+    }
+  },
+  {
+    "id": "L08",
+    "block": 4,
+    "block_name": "Exam Cautions",
+    "narration_ml": "Partnership deed-il oru deceased partner-ude widow-inu profits nalkanam ennu condition undenkil, athu business thudarannu pokanulla condition precedent aayaal athu diversion aayi pariganikkum.",
+    "card": {
+      "title": "Partnership Deed Stipulations",
+      "type": "authority",
+      "lines": [
+        "CIT vs. Nariman B. Bharucha & Sons ruling",
+        "Charge on profits for deceased partner's legal heir",
+        "Condition precedent for business continuation creates diversion",
+        "Payment constitutes diversion of income at source"
+      ],
+      "highlights": [
+        "CIT vs. Nariman B. Bharucha & Sons",
+        "Condition Precedent",
+        "Diversion at Source"
+      ]
+    }
+  },
+  {
+    "id": "L09",
+    "block": 4,
+    "block_name": "Exam Cautions",
+    "narration_ml": "Exam-il prathyekam dharikkuka, kevalam oru obligation undennu karuthi athu diversion aavilla, athu income accrue cheyyunnathinu munpulla overriding legal charge aayirikkanam.",
+    "card": {
+      "title": "Critical Exam Cautions",
+      "type": "caution",
+      "lines": [
+        "Distinguish between mere obligation and overriding charge",
+        "Check if obligation is a condition precedent",
+        "Verify if income reaches assessee as their own",
+        "Diversion must happen before income reaches assessee"
+      ],
+      "highlights": [
+        "Overriding Legal Charge",
+        "Condition Precedent",
+        "Accrual"
+      ]
+    }
+  }
+]

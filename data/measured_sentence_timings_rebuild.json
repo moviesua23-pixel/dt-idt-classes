@@ -1,0 +1,820 @@
+{
+  "q1": {
+    "topic": "q1",
+    "audio_file": "q1.mp3",
+    "voice": "Google Text-to-Speech (Malayalam)",
+    "total_duration": 94.462,
+    "beats": [
+      {
+        "card_number": 1,
+        "line_id": "L01",
+        "text": "Section 4 പ്രകാരം income-ന് നികുതി ചുമത്തുമ്പോൾ, overriding title വഴി source-ൽ തന്നെ മാറിയ തുകയും income ലഭിച്ചശേഷം ചെലവാക്കിയ തുകയും വ്യത്യസ്തമായാണ് കാണുന്നത്.",
+        "t0": 0.0,
+        "spoken_t1": 12.648,
+        "card_t1": 12.898,
+        "duration": 12.648
+      },
+      {
+        "card_number": 2,
+        "line_id": "L02",
+        "text": "Enforceable legal obligation വരുമാനത്തിന്റെ source-നോട് ബന്ധിപ്പിക്കപ്പെട്ട്, അത് assessee-ക്ക് ലഭിക്കുന്നതിന് മുമ്പ് മാറ്റിവെച്ചാൽ മാത്രമാണ് overriding title ബാധകമാകുന്നത്.",
+        "t0": 12.898,
+        "spoken_t1": 24.802,
+        "card_t1": 25.052,
+        "duration": 11.904
+      },
+      {
+        "card_number": 3,
+        "line_id": "L03",
+        "text": "Transfer നടക്കുന്ന സമയം, obligation-ന്റെ സ്വഭാവം, ownership, taxability എന്നീ അടിസ്ഥാനങ്ങളിൽ Diversion-ഉം Application-ഉം തമ്മിൽ വ്യത്യാസപ്പെടുന്നു; ഇത് tax treatment നിർണയിക്കുന്നു.",
+        "t0": 25.052,
+        "spoken_t1": 38.78,
+        "card_t1": 39.03,
+        "duration": 13.728
+      },
+      {
+        "card_number": 4,
+        "line_id": "L04",
+        "text": "Diversion-ൽ income-ന്റെ title assessee-ക്ക് ലഭിക്കുന്നില്ല; Application-ൽ income ആദ്യം ലഭിച്ച് ശേഷം ഉപയോഗിക്കുന്നതിനാൽ അത് അദ്ദേഹത്തിന്റെ taxable income ആകുന്നു.",
+        "t0": 39.03,
+        "spoken_t1": 50.286,
+        "card_t1": 50.536,
+        "duration": 11.256
+      },
+      {
+        "card_number": 5,
+        "line_id": "L05",
+        "text": "Overriding title മൂലം source-ൽ തന്നെ മാറ്റിവെച്ച income, assessee-യുടെ Total Income-ൽ ഉൾപ്പെടില്ല; ശേഷിക്കുന്ന income-ന് Section 4 ബാധകമാണ്.",
+        "t0": 50.536,
+        "spoken_t1": 61.456,
+        "card_t1": 61.706,
+        "duration": 10.92
+      },
+      {
+        "card_number": 6,
+        "line_id": "L06",
+        "text": "Application of Income-ൽ തുക ആദ്യം assessee-ക്ക് ലഭിക്കുന്നു; പിന്നീട് ഉപയോഗിച്ചാലും അത് ബന്ധപ്പെട്ട head-ന്റെ കീഴിൽ taxable ആയി തുടരും.",
+        "t0": 61.706,
+        "spoken_t1": 70.85,
+        "card_t1": 71.1,
+        "duration": 9.144
+      },
+      {
+        "card_number": 7,
+        "line_id": "L07",
+        "text": "CIT v. Thakar Das Bhargava കേസിൽ, professional fees charitable trust-ന് സ്വമേധയാ നൽകുന്നത് Application of Income ആണെന്ന് കോടതി വ്യക്തമാക്കി.",
+        "t0": 71.1,
+        "spoken_t1": 83.556,
+        "card_t1": 83.806,
+        "duration": 12.456
+      },
+      {
+        "card_number": 8,
+        "line_id": "L08",
+        "text": "സ്വമേധയാ ഉള്ള കരാറോ self-imposed condition-ഓ മാത്രം diversion അല്ല; source-ൽ പ്രവർത്തിക്കുന്ന enforceable legal obligation ഉണ്ടോ എന്ന് പരിശോധിക്കണം.",
+        "t0": 83.806,
+        "spoken_t1": 94.462,
+        "card_t1": 94.462,
+        "duration": 10.656
+      }
+    ]
+  },
+  "q2": {
+    "topic": "q2",
+    "audio_file": "q2.mp3",
+    "voice": "Google Text-to-Speech (Malayalam)",
+    "total_duration": 93.07,
+    "beats": [
+      {
+        "card_number": 1,
+        "line_id": "L01",
+        "text": "Section 4 പ്രകാരം Income Tax ഈടാക്കുന്നത് Total Income-ന്മേലാണ്, എന്നാൽ Diversion of Income by Overriding Title വഴി ലഭിക്കുന്ന തുക ഈ പരിധിയിൽ ഉൾപ്പെടില്ല.",
+        "t0": 0.0,
+        "spoken_t1": 11.904,
+        "card_t1": 12.154,
+        "duration": 11.904
+      },
+      {
+        "card_number": 2,
+        "line_id": "L02",
+        "text": "ഒരു വരുമാനം Assessee-ലേക്ക് എത്തുന്നതിന് മുൻപ് തന്നെ ഒരു നിയമപരമായ ബാധ്യത വഴി മാറ്റപ്പെടുന്നുണ്ടെങ്കിൽ അതിനെ Diversion of Income by Overriding Title എന്ന് വിളിക്കുന്നു.",
+        "t0": 12.154,
+        "spoken_t1": 23.458,
+        "card_t1": 23.708,
+        "duration": 11.304
+      },
+      {
+        "card_number": 3,
+        "line_id": "L03",
+        "text": "Diversion of Income-ഉം Application of Income-ഉം തമ്മിലുള്ള പ്രധാന വ്യത്യാസങ്ങൾ അവയുടെ Nature of Obligation-ലും Timing of Transfer-ലും അധിഷ്ഠിതമാണ്.",
+        "t0": 23.708,
+        "spoken_t1": 34.988,
+        "card_t1": 35.238,
+        "duration": 11.28
+      },
+      {
+        "card_number": 4,
+        "line_id": "L04",
+        "text": "Taxability-യുടെ കാര്യത്തിൽ Diversion of Income ഒഴിവാക്കപ്പെടുമ്പോൾ, Application of Income പൂർണ്ണമായും Assessee-യുടെ കൈകളിൽ Taxable ആയി മാറുന്നു.",
+        "t0": 35.238,
+        "spoken_t1": 45.534,
+        "card_t1": 45.784,
+        "duration": 10.296
+      },
+      {
+        "card_number": 5,
+        "line_id": "L05",
+        "text": "Diversion of Income വഴി മാറ്റപ്പെടുന്ന തുക Total Income കണക്കാക്കുമ്പോൾ ഉൾപ്പെടുത്താൻ പാടില്ലാത്തതും അത് പൂർണ്ണമായും Excluded ആയതുമായ ഒരു ഇനമാണ്.",
+        "t0": 45.784,
+        "spoken_t1": 56.224,
+        "card_t1": 56.474,
+        "duration": 10.44
+      },
+      {
+        "card_number": 6,
+        "line_id": "L06",
+        "text": "Voluntary ആയി മാറ്റിവെക്കുന്ന വരുമാനം diversion ആയി കണക്കാക്കില്ല; നിയമപരമായ മുൻകൂർ ബാധ്യത income source-നോട് ചേർന്നിരിക്കണം. ഈ വ്യത്യാസമാണ് taxability തീരുമാനിക്കുന്നത്.",
+        "t0": 56.474,
+        "spoken_t1": 69.026,
+        "card_t1": 69.276,
+        "duration": 12.552
+      },
+      {
+        "card_number": 7,
+        "line_id": "L07",
+        "text": "Jit & Pal X-Rays (P.) കേസ് പ്രകാരം ഒരു ബാധ്യത Purchase Deed-ന്റെ ഭാഗമാണെങ്കിൽ അത് Diversion of Income ആയി കണക്കാക്കണം.",
+        "t0": 69.276,
+        "spoken_t1": 79.932,
+        "card_t1": 80.182,
+        "duration": 10.656
+      },
+      {
+        "card_number": 8,
+        "line_id": "L08",
+        "text": "CIT v. Sitaldas Tirathdas കേസ് പ്രകാരം വരുമാനത്തിന്റെ Source-ൽ തന്നെ ബാധ്യത ഉണ്ടോ അതോ ലഭിച്ച ശേഷമാണോ എന്ന് പരിശോധിക്കുന്നത് പരീക്ഷകളിൽ വളരെ പ്രധാനമാണ്.",
+        "t0": 80.182,
+        "spoken_t1": 93.07,
+        "card_t1": 93.07,
+        "duration": 12.888
+      }
+    ]
+  },
+  "q3": {
+    "topic": "q3",
+    "audio_file": "q3.mp3",
+    "voice": "Google Text-to-Speech (Malayalam)",
+    "total_duration": 107.84,
+    "beats": [
+      {
+        "card_number": 1,
+        "line_id": "L01",
+        "text": "Section 4 പ്രകാരം income ലഭിക്കുന്നതിന് മുമ്പ് legal obligation മൂലം മാറ്റിവെച്ച തുക Diversion ആണ്; ലഭിച്ചശേഷം ഉപയോഗിക്കുന്നത് Application of Income ആണ്.",
+        "t0": 0.0,
+        "spoken_t1": 11.64,
+        "card_t1": 11.89,
+        "duration": 11.64
+      },
+      {
+        "card_number": 2,
+        "line_id": "L02",
+        "text": "CIT v. Sitaldas Tirathdas കേസിലെ decisive test ഇതാണ്: പണം assessee-യുടെ സ്വന്തം income ആയി ലഭിച്ചോ, അതോ overriding obligation വഴി മുമ്പേ മാറ്റിയോ?",
+        "t0": 11.89,
+        "spoken_t1": 24.754,
+        "card_t1": 25.004,
+        "duration": 12.864
+      },
+      {
+        "card_number": 3,
+        "line_id": "L03",
+        "text": "Point of Transfer-ഉം obligation-ന്റെ സ്വഭാവവും നോക്കുമ്പോൾ, source-ൽ നടക്കുന്ന Diversion-നെ income ലഭിച്ചശേഷമുള്ള Application-ൽ നിന്ന് വ്യക്തമായി വേർതിരിക്കാം.",
+        "t0": 25.004,
+        "spoken_t1": 36.668,
+        "card_t1": 36.918,
+        "duration": 11.664
+      },
+      {
+        "card_number": 4,
+        "line_id": "L04",
+        "text": "Diversion-ൽ തുക Total Income-ൽ ഉൾപ്പെടില്ല; Application-ൽ അത് assessee-യുടെ income ആയതിനാൽ ഉൾപ്പെടും, പ്രത്യേക deduction അനുവദിക്കില്ല; ഇതാണ് tax treatment.",
+        "t0": 36.918,
+        "spoken_t1": 48.798,
+        "card_t1": 49.048,
+        "duration": 11.88
+      },
+      {
+        "card_number": 5,
+        "line_id": "L05",
+        "text": "Diversion ചെയ്ത പണം assessee യഥാർത്ഥ title-holder-ന് വേണ്ടി കൈപ്പറ്റുന്നു; Application-ൽ സ്വന്തം income സ്വയം വിനിയോഗിക്കുന്നതാണ്; ഇതാണ് ownership വ്യത്യാസം.",
+        "t0": 49.048,
+        "spoken_t1": 60.256,
+        "card_t1": 60.506,
+        "duration": 11.208
+      },
+      {
+        "card_number": 6,
+        "line_id": "L06",
+        "text": "മുൻകൂട്ടിയുള്ള legal charge source-ൽ income-നെ മാറ്റിവെച്ചാൽ, ആ തുക assessee-യുടെ Total Income-ൽ ഉൾപ്പെടില്ല; ഇത് നിയമപരമായ exclusion ആണ്.",
+        "t0": 60.506,
+        "spoken_t1": 70.658,
+        "card_t1": 70.908,
+        "duration": 10.152
+      },
+      {
+        "card_number": 7,
+        "line_id": "L07",
+        "text": "Income accrue ആയ ശേഷം അത് ഏത് ആവശ്യത്തിനായി ചെലവിട്ടാലും Application of Income ആണ്; ഈ ഉപയോഗത്തിന് deduction അനുവദിക്കില്ല.",
+        "t0": 70.908,
+        "spoken_t1": 79.98,
+        "card_t1": 80.23,
+        "duration": 9.072
+      },
+      {
+        "card_number": 8,
+        "line_id": "L08",
+        "text": "CIT v. Nariman B. Bharucha & Sons കേസിൽ, deceased partner-ന്റെ legal heir-ന് profit നൽകുന്നത് business தொடரാനുള്ള condition precedent ആയതിനാൽ source-ൽ Diversion ആയി കണക്കാക്കി.",
+        "t0": 80.23,
+        "spoken_t1": 96.022,
+        "card_t1": 96.272,
+        "duration": 15.792
+      },
+      {
+        "card_number": 9,
+        "line_id": "L09",
+        "text": "Payment obligation മാത്രം മതിയാകില്ല; income accrue ആകുന്നതിന് മുമ്പ് source-നെ നിയന്ത്രിക്കുന്ന overriding legal charge ഉണ്ടായിരിക്കണം; അതാണ് statutory test.",
+        "t0": 96.272,
+        "spoken_t1": 107.84,
+        "card_t1": 107.84,
+        "duration": 11.568
+      }
+    ]
+  },
+  "q4": {
+    "topic": "q4",
+    "audio_file": "q4.mp3",
+    "voice": "Google Text-to-Speech (Malayalam)",
+    "total_duration": 121.006,
+    "beats": [
+      {
+        "card_number": 1,
+        "line_id": "L01",
+        "text": "Section 4 പ്രകാരം ചാർജ് ചെയ്യുന്ന Income Tax, Section 115BAC(6) ഉപയോഗിച്ച് Optional Regime തിരഞ്ഞെടുക്കുന്ന Individual Assessees-ന് Age-Based Progressive Slab Rates അടിസ്ഥാനത്തിലാണ് കണക്കാക്കുന്നത്.",
+        "t0": 0.0,
+        "spoken_t1": 18.24,
+        "card_t1": 18.49,
+        "duration": 18.24
+      },
+      {
+        "card_number": 2,
+        "line_id": "L02",
+        "text": "Resident Individuals-നെ അവരുടെ പ്രായം അനുസരിച്ച് മൂന്നായി തിരിച്ചിരിക്കുന്നു, അതായത് 60 വയസ്സിന് താഴെയുള്ളവർ, Senior Citizens, കൂടാതെ 80 വയസ്സിന് മുകളിലുള്ള Super Senior Citizens.",
+        "t0": 18.49,
+        "spoken_t1": 32.554,
+        "card_t1": 32.804,
+        "duration": 14.064
+      },
+      {
+        "card_number": 3,
+        "line_id": "L03",
+        "text": "Normal Regime-ൽ Basic Exemption Limit എന്നത് General category-ക്ക് ₹ 2,50,000-ഉം, Senior Citizens-ന് ₹ 3,00,000-ഉം, Super Senior Citizens-ന് ₹ 5,00,000-ഉം ആയി നിശ്ചയിച്ചിരിക്കുന്നു.",
+        "t0": 32.804,
+        "spoken_t1": 49.364,
+        "card_t1": 49.614,
+        "duration": 16.56
+      },
+      {
+        "card_number": 4,
+        "line_id": "L04",
+        "text": "Total Income-ന്റെ വിവിധ സ്ലാബുകൾക്ക് 5%, 20%, 30% എന്നിങ്ങനെ വ്യത്യസ്ത നിരക്കുകളാണ് Finance Act പ്രകാരം ഈ Old Regime-ൽ ബാധകമാകുന്നത്.",
+        "t0": 49.614,
+        "spoken_t1": 63.054,
+        "card_t1": 63.304,
+        "duration": 13.44
+      },
+      {
+        "card_number": 5,
+        "line_id": "L05",
+        "text": "Total Income ₹ 5,00,000 വരെ ഉള്ള Resident Individuals-ന് Section 87A പ്രകാരം പരമാവധി ₹ 12,500 വരെ Rebate ലഭിക്കുന്നതാണ്.",
+        "t0": 63.304,
+        "spoken_t1": 74.896,
+        "card_t1": 75.146,
+        "duration": 11.592
+      },
+      {
+        "card_number": 6,
+        "line_id": "L06",
+        "text": "കണക്കാക്കിയ Income Tax-ന്റെയും Surcharge-ന്റെയും മേൽ 4% Health and Education Cess നിർബന്ധമായും നൽകണം, കൂടാതെ Total Income ₹ 50 Lakhs കവിഞ്ഞാൽ Surcharge ബാധകമാകും.",
+        "t0": 75.146,
+        "spoken_t1": 88.73,
+        "card_t1": 88.98,
+        "duration": 13.584
+      },
+      {
+        "card_number": 7,
+        "line_id": "L07",
+        "text": "Senior Citizen, Super Senior Citizen എന്നീ ആനുകൂല്യങ്ങൾ Resident Individuals-ന് മാത്രമാണ് ലഭിക്കുക, Non-Resident Individuals-ന് Basic Exemption Limit എല്ലായ്പ്പോഴും ₹ 2,50,000 മാത്രമായിരിക്കും.",
+        "t0": 88.98,
+        "spoken_t1": 105.684,
+        "card_t1": 105.934,
+        "duration": 16.704
+      },
+      {
+        "card_number": 8,
+        "line_id": "L08",
+        "text": "Section 115BAC(6) പ്രകാരം Default Tax Regime വേണ്ടെന്ന് വെച്ച് Optional Regime തിരഞ്ഞെടുക്കുന്നവർക്ക് മാത്രമേ ഈ Age-Based Slab Rates പ്രകാരം ടാക്സ് അടയ്ക്കാൻ സാധിക്കൂ.",
+        "t0": 105.934,
+        "spoken_t1": 121.006,
+        "card_t1": 121.006,
+        "duration": 15.072
+      }
+    ]
+  },
+  "q5": {
+    "topic": "q5",
+    "audio_file": "q5.mp3",
+    "voice": "Google Text-to-Speech (Malayalam)",
+    "total_duration": 98.998,
+    "beats": [
+      {
+        "card_number": 1,
+        "line_id": "L01",
+        "text": "Old Regime പ്രകാരം 60 വയസ്സിൽ താഴെയുള്ള വ്യക്തികൾക്ക് ബാധകമായ ടാക്സ് സ്ലാബുകളെക്കുറിച്ചും Section 115BAC(6) പ്രകാരമുള്ള ഓപ്ഷനുകളെക്കുറിച്ചും ഈ ഭാഗം വിശദീകരിക്കുന്നു.",
+        "t0": 0.0,
+        "spoken_t1": 15.096,
+        "card_t1": 15.346,
+        "duration": 15.096
+      },
+      {
+        "card_number": 2,
+        "line_id": "L02",
+        "text": "ഈ regime-ൽ എല്ലാ eligible taxpayers-നും ഒരേ tax slab ആണ് ബാധകം; age അനുസരിച്ച് പ്രത്യേക basic exemption ഇവിടെ ലഭ്യമല്ല.",
+        "t0": 15.346,
+        "spoken_t1": 25.306,
+        "card_t1": 25.556,
+        "duration": 9.96
+      },
+      {
+        "card_number": 3,
+        "line_id": "L03",
+        "text": "Total Income-ന്റെ അടിസ്ഥാനത്തിൽ നാല് വ്യത്യസ്ത സ്ലാബുകളിലായാണ് ടാക്സ് നിരക്കുകൾ നിശ്ചയിച്ചിരിക്കുന്നത്, ഇതിൽ 2,50,000 രൂപ വരെയുള്ള വരുമാനത്തിന് ടാക്സ് നൽകേണ്ടതില്ല.",
+        "t0": 25.556,
+        "spoken_t1": 38.3,
+        "card_t1": 38.55,
+        "duration": 12.744
+      },
+      {
+        "card_number": 4,
+        "line_id": "L04",
+        "text": "5,00,000 രൂപയ്ക്ക് മുകളിലുള്ള വരുമാനത്തിന് 20 ശതമാനവും 10,00,000 രൂപയ്ക്ക് മുകളിലുള്ള വരുമാനത്തിന് 30 ശതമാനവുമാണ് നിശ്ചയിച്ചിട്ടുള്ള ടാക്സ് നിരക്കുകൾ.",
+        "t0": 38.55,
+        "spoken_t1": 50.262,
+        "card_t1": 50.512,
+        "duration": 11.712
+      },
+      {
+        "card_number": 5,
+        "line_id": "L05",
+        "text": "Total Income 5,00,000 രൂപയിൽ താഴെയുള്ളവർക്ക് ടാക്സ് തുകയോ അല്ലെങ്കിൽ 12,500 രൂപയോ ഏതാണോ കുറവ് അത് Section 87A പ്രകാരം Rebate ആയി കുറയ്ക്കാം.",
+        "t0": 50.512,
+        "spoken_t1": 62.968,
+        "card_t1": 63.218,
+        "duration": 12.456
+      },
+      {
+        "card_number": 6,
+        "line_id": "L06",
+        "text": "Rebate കുറച്ചതിനുശേഷം വരുന്ന നെറ്റ് ടാക്സ് തുകയുടെ 4 ശതമാനം Health and Education Cess ആയി എല്ലാ സ്ലാബുകളിലും നിർബന്ധമായും കണക്കാക്കേണ്ടതുണ്ട്.",
+        "t0": 63.218,
+        "spoken_t1": 73.97,
+        "card_t1": 74.22,
+        "duration": 10.752
+      },
+      {
+        "card_number": 7,
+        "line_id": "L07",
+        "text": "Total Income 5,00,000 രൂപയ്ക്ക് മുകളിൽ ഒരു രൂപ കൂടിയാൽ പോലും Section 87A പ്രകാരമുള്ള 12,500 രൂപയുടെ Rebate പൂർണ്ണമായും നഷ്ടപ്പെടുമെന്നത് ശ്രദ്ധിക്കുക.",
+        "t0": 74.22,
+        "spoken_t1": 86.82,
+        "card_t1": 87.07,
+        "duration": 12.6
+      },
+      {
+        "card_number": 8,
+        "line_id": "L08",
+        "text": "Non-Resident Individual-കൾക്ക് അവരുടെ വരുമാനം 5,00,000 രൂപയിൽ താഴെയാണെങ്കിൽ പോലും Section 87A പ്രകാരമുള്ള ടാക്സ് Rebate ക്ലെയിം ചെയ്യാൻ സാധിക്കില്ല.",
+        "t0": 87.07,
+        "spoken_t1": 98.998,
+        "card_t1": 98.998,
+        "duration": 11.928
+      }
+    ]
+  },
+  "q6": {
+    "topic": "q6",
+    "audio_file": "q6.mp3",
+    "voice": "Google Text-to-Speech (Malayalam)",
+    "total_duration": 124.054,
+    "beats": [
+      {
+        "card_number": 1,
+        "line_id": "L01",
+        "text": "Assessment Year 2025-26, 2026-27-കളിൽ Section 115BAC(1A) പ്രകാരം Individuals, HUF, AOP, BOI, AJP എന്നിവർക്ക് Default Tax Regime ബാധകമാണ്.",
+        "t0": 0.0,
+        "spoken_t1": 21.312,
+        "card_t1": 21.562,
+        "duration": 21.312
+      },
+      {
+        "card_number": 2,
+        "line_id": "L02",
+        "text": "Section 4 പ്രകാരം Total Income-ൽ നികുതി ചുമത്തുന്നു; Section 115BAC(1A) നിരക്കുകൾ ബാധകമാകുന്നത് eligible assessee default regime-ൽ തുടരുമ്പോഴാണ്.",
+        "t0": 21.562,
+        "spoken_t1": 35.986,
+        "card_t1": 36.236,
+        "duration": 14.424
+      },
+      {
+        "card_number": 3,
+        "line_id": "L03",
+        "text": "ഈ regime-ൽ ആദ്യത്തെ ₹ 4,00,000-ന് Nil rate ആണ്; ₹ 4,00,001 മുതൽ ₹ 12,00,000 വരെയുള്ള തുടർന്നുള്ള slabs-ന് 5%, 10% നിരക്കുകളാണ്.",
+        "t0": 36.236,
+        "spoken_t1": 50.18,
+        "card_t1": 50.43,
+        "duration": 13.944
+      },
+      {
+        "card_number": 4,
+        "line_id": "L04",
+        "text": "₹ 12,00,001-ന് മുകളിലുള്ള വരുമാനത്തിന് ₹ 4,00,000 ഇടവേളകളായി 15%, 20%, 25% നിരക്കുകൾ ബാധകമാണ്; ₹ 24,00,000-ന് മുകളിൽ 30% ആണ്.",
+        "t0": 50.43,
+        "spoken_t1": 67.086,
+        "card_t1": 67.336,
+        "duration": 16.656
+      },
+      {
+        "card_number": 5,
+        "line_id": "L05",
+        "text": "Narration-consistent rule പ്രകാരം Resident Individual-ന്റെ Total Income ₹ 12,00,000 കവിയാത്തപ്പോൾ Section 87A പ്രകാരം പരമാവധി ₹ 60,000 rebate ലഭിക്കും.",
+        "t0": 67.336,
+        "spoken_t1": 81.016,
+        "card_t1": 81.266,
+        "duration": 13.68
+      },
+      {
+        "card_number": 6,
+        "line_id": "L06",
+        "text": "Rebate കിഴിച്ച ശേഷമുള്ള aggregate income-tax-ൽ 4% Health and Education Cess കണക്കാക്കണം; ഈ regime-ിലെ surcharge rate-ന് 25% ceiling ഉണ്ട്.",
+        "t0": 81.266,
+        "spoken_t1": 95.402,
+        "card_t1": 95.652,
+        "duration": 14.136
+      },
+      {
+        "card_number": 7,
+        "line_id": "L07",
+        "text": "Section 115BAC(1A) പ്രകാരമുള്ള basic exemption ₹ 4,00,000 ആണ്; Senior Citizen, Super Senior Citizen വിഭാഗങ്ങൾക്ക് ഉയർന്ന age-based exemption ഈ regime നൽകുന്നില്ല.",
+        "t0": 95.652,
+        "spoken_t1": 112.188,
+        "card_t1": 112.438,
+        "duration": 16.536
+      },
+      {
+        "card_number": 8,
+        "line_id": "L08",
+        "text": "Default Regime-ൽ നിന്ന് മാറാൻ statutory opt-out തിരഞ്ഞെടുക്കണം; തിരഞ്ഞെടുക്കുന്ന regime ഉറപ്പാക്കിയ ശേഷമേ അതിന്റെ tax slabs, rebate rules പ്രയോഗിക്കാവൂ.",
+        "t0": 112.438,
+        "spoken_t1": 124.054,
+        "card_t1": 124.054,
+        "duration": 11.616
+      }
+    ]
+  },
+  "q7": {
+    "topic": "q7",
+    "audio_file": "q7.mp3",
+    "voice": "Google Text-to-Speech (Malayalam)",
+    "total_duration": 94.174,
+    "beats": [
+      {
+        "card_number": 1,
+        "line_id": "L01",
+        "text": "Assessment Year 2026-27 ലേക്ക് Section 115BAC പ്രകാരമുള്ള default tax regime വ്യക്തികൾക്ക് എങ്ങനെ ബാധകമാകുന്നു എന്ന് ഈ സെക്ഷൻ വ്യക്തമാക്കുന്നു.",
+        "t0": 0.0,
+        "spoken_t1": 14.16,
+        "card_t1": 14.41,
+        "duration": 14.16
+      },
+      {
+        "card_number": 2,
+        "line_id": "L02",
+        "text": "ഈ പുതിയ ടാക്സ് റെജിമിന് കീഴിൽ basic exemption limit എല്ലാ വ്യക്തികൾക്കും ഒരേപോലെയാണെന്നും പ്രത്യേക ഇളവുകൾ ഇല്ലെന്നും നിയമം അനുശാസിക്കുന്നു.",
+        "t0": 14.41,
+        "spoken_t1": 24.346,
+        "card_t1": 24.596,
+        "duration": 9.936
+      },
+      {
+        "card_number": 3,
+        "line_id": "L03",
+        "text": "Section 115BAC പ്രകാരം വരുമാനം വർദ്ധിക്കുന്നതിനനുസരിച്ച് അഞ്ച് ശതമാനം മുതൽ മുപ്പത് ശതമാനം വരെയുള്ള വിവിധ ടാക്സ് സ്ലാബുകൾ നിശ്ചയിച്ചിട്ടുണ്ട്.",
+        "t0": 24.596,
+        "spoken_t1": 36.068,
+        "card_t1": 36.318,
+        "duration": 11.472
+      },
+      {
+        "card_number": 4,
+        "line_id": "L04",
+        "text": "നാല് ലക്ഷം രൂപ വരെയുള്ള വരുമാനത്തിന് നികുതിയില്ലെന്നും അതിനു മുകളിലുള്ള തുകയ്ക്ക് നിശ്ചിത നിരക്കുകളിൽ ടാക്സ് ഈടാക്കുമെന്നും ടേബിൾ വ്യക്തമാക്കുന്നു.",
+        "t0": 36.318,
+        "spoken_t1": 46.014,
+        "card_t1": 46.264,
+        "duration": 9.696
+      },
+      {
+        "card_number": 5,
+        "line_id": "L05",
+        "text": "Resident Individual ആയ ഒരാളുടെ Total Income പന്ത്രണ്ട് ലക്ഷം രൂപയിൽ താഴെയാണെങ്കിൽ Section 87A പ്രകാരം അറുപതിനായിരം രൂപ വരെ റിബേറ്റ് ലഭിക്കുന്നതാണ്.",
+        "t0": 46.264,
+        "spoken_t1": 58.144,
+        "card_t1": 58.394,
+        "duration": 11.88
+      },
+      {
+        "card_number": 6,
+        "line_id": "L06",
+        "text": "ടാക്സ് ലയബിലിറ്റിയിൽ നിന്നും Section 87A റിബേറ്റ് കുറച്ചതിനുശേഷം ബാക്കി വരുന്ന തുകയുടെ നാല് ശതമാനം Health and Education Cess ആയി നൽകണം.",
+        "t0": 58.394,
+        "spoken_t1": 69.458,
+        "card_t1": 69.708,
+        "duration": 11.064
+      },
+      {
+        "card_number": 7,
+        "line_id": "L07",
+        "text": "Section 115BAC പ്രകാരം Senior Citizens അല്ലെങ്കിൽ Super Senior Citizens എന്നിവർക്ക് പ്രത്യേകമായി ഉയർന്ന basic exemption limit അനുവദനീയമല്ല എന്നത് ശ്രദ്ധിക്കേണ്ടതാണ്.",
+        "t0": 69.708,
+        "spoken_t1": 83.412,
+        "card_t1": 83.662,
+        "duration": 13.704
+      },
+      {
+        "card_number": 8,
+        "line_id": "L08",
+        "text": "ടാക്സ് കണക്കാക്കുമ്പോൾ സ്ലാബ് നിരക്കുകൾ കൃത്യമായി പാലിക്കണമെന്നും റിബേറ്റ് അർഹത പരിശോധിച്ച ശേഷം മാത്രമേ സെസ്സ് കണക്കാക്കാവൂ എന്നും നിയമം പറയുന്നു.",
+        "t0": 83.662,
+        "spoken_t1": 94.174,
+        "card_t1": 94.174,
+        "duration": 10.512
+      }
+    ]
+  },
+  "q8": {
+    "topic": "q8",
+    "audio_file": "q8.mp3",
+    "voice": "Google Text-to-Speech (Malayalam)",
+    "total_duration": 109.966,
+    "beats": [
+      {
+        "card_number": 1,
+        "line_id": "L01",
+        "text": "Section 115BAC default tax regime-ൽ Resident Individuals-ന്റെ Total Income-നാണ് നിശ്ചിത slab rates പ്രകാരം നികുതി കണക്കാക്കുന്നത്. ഈ ഘടനയാണ് ബാധകമായ regime വ്യക്തമാക്കുന്നത്.",
+        "t0": 0.0,
+        "spoken_t1": 15.6,
+        "card_t1": 15.85,
+        "duration": 15.6
+      },
+      {
+        "card_number": 2,
+        "line_id": "L02",
+        "text": "Section 87A rebate Resident Individuals-ന് മാത്രമാണ്; eligibility Total Income threshold, അതിനുള്ള statutory conditions എന്നിവ അനുസരിച്ചാണ് തീരുമാനിക്കുന്നത്.",
+        "t0": 15.85,
+        "spoken_t1": 28.714,
+        "card_t1": 28.964,
+        "duration": 12.864
+      },
+      {
+        "card_number": 3,
+        "line_id": "L03",
+        "text": "Narration-consistent slab schedule-ൽ ₹ 4,00,000 വരെ Nil ആണ്; ₹ 4,00,001 മുതൽ ₹ 12,00,000 വരെയുള്ള slabs-ൽ 5%, 10% നിരക്കുകൾ ബാധകമാണ്.",
+        "t0": 28.964,
+        "spoken_t1": 43.172,
+        "card_t1": 43.422,
+        "duration": 14.208
+      },
+      {
+        "card_number": 4,
+        "line_id": "L04",
+        "text": "₹ 12,00,000-ന് മുകളിലുള്ള slabs-ൽ ₹ 4,00,000 വീതമുള്ള ഘട്ടങ്ങളായി 15%, 20%, 25% നിരക്കുകളും ₹ 24,00,000-ന് മുകളിൽ 30% നിരക്കും ബാധകമാണ്.",
+        "t0": 43.422,
+        "spoken_t1": 60.342,
+        "card_t1": 60.592,
+        "duration": 16.92
+      },
+      {
+        "card_number": 5,
+        "line_id": "L05",
+        "text": "Narration-consistent rule പ്രകാരം Resident Individual-ന്റെ Total Income ₹ 12,00,000 കവിയാത്താൽ Section 87A പ്രകാരം ₹ 60,000 വരെയുള്ള നികുതി rebate ആയി ലഭിക്കും.",
+        "t0": 60.592,
+        "spoken_t1": 74.632,
+        "card_t1": 74.882,
+        "duration": 14.04
+      },
+      {
+        "card_number": 6,
+        "line_id": "L06",
+        "text": "Income ₹ 12,00,000 കവിയുമ്പോൾ slab tax-ഉം ₹ 12,00,000-ന് മുകളിലുള്ള അധിക വരുമാനവും താരതമ്യം ചെയ്ത് marginal relief കണക്കാക്കണം.",
+        "t0": 74.882,
+        "spoken_t1": 86.162,
+        "card_t1": 86.412,
+        "duration": 11.28
+      },
+      {
+        "card_number": 7,
+        "line_id": "L07",
+        "text": "Marginal relief-ന്റെ ലക്ഷ്യം threshold-നെ അല്പം കവിയുന്ന വരുമാനത്തിന് അധിക വരുമാനത്തേക്കാൾ കൂടുതലായ നികുതി വരുന്നത് തടയുന്നതാണ്. ഇതാണ് relief-ന്റെ പ്രധാന പരിധി.",
+        "t0": 86.412,
+        "spoken_t1": 98.892,
+        "card_t1": 99.142,
+        "duration": 12.48
+      },
+      {
+        "card_number": 8,
+        "line_id": "L08",
+        "text": "Marginal relief കണക്കാക്കിയ ശേഷമുള്ള tax-ൽ മാത്രമേ 4% Health and Education Cess ചേർക്കാവൂ; relief-ന് മുമ്പ് cess കണക്കാക്കരുത്.",
+        "t0": 99.142,
+        "spoken_t1": 109.966,
+        "card_t1": 109.966,
+        "duration": 10.824
+      }
+    ]
+  },
+  "q9": {
+    "topic": "q9",
+    "audio_file": "q9.mp3",
+    "voice": "Google Text-to-Speech (Malayalam)",
+    "total_duration": 105.368,
+    "beats": [
+      {
+        "card_number": 1,
+        "line_id": "L01",
+        "text": "Domestic Companies-ന്റെ base tax rates, Annual Finance Act പ്രകാരം previous-year turnover-ഉം surcharge rates Total Income-ഉം അടിസ്ഥാനമാക്കിയാണ് നിശ്ചയിക്കുന്നത്.",
+        "t0": 0.0,
+        "spoken_t1": 12.768,
+        "card_t1": 13.018,
+        "duration": 12.768
+      },
+      {
+        "card_number": 2,
+        "line_id": "L02",
+        "text": "Section 4 പ്രകാരം Domestic Companies-ന് ബാധകമായ Normal Provisions-ൽ Turnover പരിധി അനുസരിച്ചുള്ള Base Tax Rates-ഉം Surcharge-ഉം ഉൾപ്പെടുന്നു.",
+        "t0": 13.018,
+        "spoken_t1": 24.37,
+        "card_t1": 24.62,
+        "duration": 11.352
+      },
+      {
+        "card_number": 3,
+        "line_id": "L03",
+        "text": "P.Y. 2023-24-ലെ Turnover ₹ 400 Crore-ൽ താഴെയാണെങ്കിൽ 25% ഉം അതിൽ കൂടുതലാണെങ്കിൽ 30% ഉം ആണ് Base Tax Rate.",
+        "t0": 24.62,
+        "spoken_t1": 38.42,
+        "card_t1": 38.67,
+        "duration": 13.8
+      },
+      {
+        "card_number": 4,
+        "line_id": "L04",
+        "text": "Total Income ₹ 1 Crore മുതൽ ₹ 10 Crore വരെയാണെങ്കിൽ 7% ഉം ₹ 10 Crore-ന് മുകളിൽ 12% ഉം Surcharge ഈടാക്കുന്നു.",
+        "t0": 38.67,
+        "spoken_t1": 49.638,
+        "card_t1": 49.888,
+        "duration": 10.968
+      },
+      {
+        "card_number": 5,
+        "line_id": "L05",
+        "text": "Tax, Surcharge എന്നിവയിൽ നിന്നും Marginal Relief കുറച്ച ശേഷമുള്ള തുകയുടെ 4% Health and Education Cess ആയി നൽകണം.",
+        "t0": 49.888,
+        "spoken_t1": 60.184,
+        "card_t1": 60.434,
+        "duration": 10.296
+      },
+      {
+        "card_number": 6,
+        "line_id": "L06",
+        "text": "Total Income ₹ 1 Crore കവിയുമ്പോൾ Tax-ഉം Surcharge-ഉം ചേർന്ന തുക നിശ്ചിത പരിധിയിൽ കൂടാൻ പാടില്ലാത്തതിനാൽ Marginal Relief അനുവദിക്കുന്നു.",
+        "t0": 60.434,
+        "spoken_t1": 70.706,
+        "card_t1": 70.956,
+        "duration": 10.272
+      },
+      {
+        "card_number": 7,
+        "line_id": "L07",
+        "text": "Marginal Relief കണക്കാക്കാൻ Tax plus Surcharge-ൽ നിന്നും Tax on ₹ 1 Crore plus excess income over ₹ 1 Crore കുറയ്ക്കണം.",
+        "t0": 70.956,
+        "spoken_t1": 80.772,
+        "card_t1": 81.022,
+        "duration": 9.816
+      },
+      {
+        "card_number": 8,
+        "line_id": "L08",
+        "text": "Total Income ₹ 1 Crore-ൽ കൂടാത്തപ്പോൾ surcharge ഇല്ല; അതിനാൽ surcharge-നോട് ബന്ധമുള്ള marginal relief ബാധകമാകില്ല, പക്ഷേ turnover-അടിസ്ഥാനത്തിലുള്ള base rate വേറെയായി പരിശോധിക്കണം.",
+        "t0": 81.022,
+        "spoken_t1": 94.558,
+        "card_t1": 94.808,
+        "duration": 13.536
+      },
+      {
+        "card_number": 9,
+        "line_id": "L09",
+        "text": "Marginal Relief കണക്കാക്കിയ ശേഷം മാത്രമേ 4% Health and Education Cess ബാധകമാക്കാവൂ എന്ന് Statutory Provisions വ്യക്തമാക്കുന്നു.",
+        "t0": 94.808,
+        "spoken_t1": 105.368,
+        "card_t1": 105.368,
+        "duration": 10.56
+      }
+    ]
+  },
+  "q10": {
+    "topic": "q10",
+    "audio_file": "q10.mp3",
+    "voice": "Google Text-to-Speech (Malayalam)",
+    "total_duration": 91.006,
+    "beats": [
+      {
+        "card_number": 1,
+        "line_id": "L01",
+        "text": "Domestic Companies-ന്റെ Total Turnover അല്ലെങ്കിൽ Gross Receipts അടിസ്ഥാനമാക്കിയാണ് Finance Act പ്രകാരം Base Tax Rate നിശ്ചയിക്കുന്നത് എന്ന് പ്രത്യേകം ശ്രദ്ധിക്കുക.",
+        "t0": 0.0,
+        "spoken_t1": 11.856,
+        "card_t1": 12.106,
+        "duration": 11.856
+      },
+      {
+        "card_number": 2,
+        "line_id": "L02",
+        "text": "Total Income ഒരു നിശ്ചിത പരിധി കടക്കുമ്പോൾ Domestic Companies-ന് മേൽ Surcharge ബാധകമാകുന്നു, ഇത് Income Slab അനുസരിച്ച് വ്യത്യാസപ്പെടും.",
+        "t0": 12.106,
+        "spoken_t1": 22.306,
+        "card_t1": 22.556,
+        "duration": 10.2
+      },
+      {
+        "card_number": 3,
+        "line_id": "L03",
+        "text": "Previous Year 2023-24-ലെ Total Turnover 400 Crore രൂപയിൽ താഴെയാണെങ്കിൽ 25 ശതമാനവും അതിൽ കൂടുതലാണെങ്കിൽ 30 ശതമാനവുമാണ് Base Tax Rate.",
+        "t0": 22.556,
+        "spoken_t1": 37.196,
+        "card_t1": 37.446,
+        "duration": 14.64
+      },
+      {
+        "card_number": 4,
+        "line_id": "L04",
+        "text": "Total Income 1 Crore മുതൽ 10 Crore വരെയാണെങ്കിൽ 7 ശതമാനവും 10 Crore-ന് മുകളിലാണെങ്കിൽ 12 ശതമാനവുമാണ് Surcharge Rate ബാധകമാകുന്നത്.",
+        "t0": 37.446,
+        "spoken_t1": 48.894,
+        "card_t1": 49.144,
+        "duration": 11.448
+      },
+      {
+        "card_number": 5,
+        "line_id": "L05",
+        "text": "Total Income 10 Crore രൂപ കവിയുമ്പോൾ ഉണ്ടാകുന്ന അധിക നികുതി ഭാരം കുറയ്ക്കുന്നതിനായി Marginal Relief എന്ന ആനുകൂല്യം നിയമം നൽകുന്നുണ്ട്.",
+        "t0": 49.144,
+        "spoken_t1": 58.936,
+        "card_t1": 59.186,
+        "duration": 9.792
+      },
+      {
+        "card_number": 6,
+        "line_id": "L06",
+        "text": "Step 1-ലെ Tax plus Surcharge തുകയിൽ നിന്നും Step 3-ലെ Capped Tax കുറച്ചാൽ ലഭിക്കുന്ന തുകയാണ് Marginal Relief ആയി കണക്കാക്കുന്നത്.",
+        "t0": 59.186,
+        "spoken_t1": 69.794,
+        "card_t1": 70.044,
+        "duration": 10.608
+      },
+      {
+        "card_number": 7,
+        "line_id": "L07",
+        "text": "Marginal Relief കുറച്ചതിന് ശേഷമുള്ള തുകയുടെ മേൽ 4 ശതമാനം Health and Education Cess നിർബന്ധമായും കണക്കാക്കേണ്ടതുണ്ട് എന്ന് ഓർക്കുക.",
+        "t0": 70.044,
+        "spoken_t1": 80.172,
+        "card_t1": 80.422,
+        "duration": 10.128
+      },
+      {
+        "card_number": 8,
+        "line_id": "L08",
+        "text": "Total Income 10 Crore രൂപയ്ക്ക് തൊട്ടുമുകളിൽ വരുമ്പോൾ മാത്രമേ ഈ പ്രത്യേക Marginal Relief computation ആവശ്യമായി വരുന്നുള്ളൂ എന്ന് മനസ്സിലാക്കുക.",
+        "t0": 80.422,
+        "spoken_t1": 91.006,
+        "card_t1": 91.006,
+        "duration": 10.584
+      }
+    ]
+  }
+}

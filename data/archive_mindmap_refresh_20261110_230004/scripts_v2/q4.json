@@ -1,0 +1,143 @@
+[
+  {
+    "id": "INTRO",
+    "number": "1",
+    "block": 0,
+    "block_name": "Provision heading",
+    "narration_ml": "ഇന്ന് old tax regime-ലെ age-based slab വ്യവസ്ഥകൾ മാത്രം നോക്കാം.",
+    "card": {
+      "title": "Old-Regime Tax Slabs by Age",
+      "type": "intro",
+      "lines": [],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L01",
+    "number": "1.1.1",
+    "block": 1,
+    "block_name": "Regime framework",
+    "narration_ml": "Default regime-ൽ നിന്ന് സാധുവായി മാറി തിരഞ്ഞെടുക്കുമ്പോഴാണ് old regime ബാധകമാകുന്നത്. ഇതിലെ deductions-ഉം exemptions-ഉം default regime-ൽ നിന്ന് വ്യത്യസ്തമാണ്.",
+    "card": {
+      "title": "Optional old tax regime",
+      "type": "rule",
+      "lines": [
+        "The old regime applies when a taxpayer validly opts out of the default regime.",
+        "Its deductions and exemptions differ from the default regime."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L02",
+    "number": "1.1.2",
+    "block": 1,
+    "block_name": "Regime framework",
+    "narration_ml": "Resident individual-ന്റെ old-regime basic exemption പ്രായവിഭാഗം അനുസരിച്ച് മാറുന്നു. ശരിയായ age category അനുസരിച്ചുള്ള slab ആണ് തിരഞ്ഞെടുക്കേണ്ടത്.",
+    "card": {
+      "title": "Age categories",
+      "type": "rule",
+      "lines": [
+        "Old-regime basic exemption depends on age for resident individuals.",
+        "The slab structure must be selected for the correct age category."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L03",
+    "number": "1.2.1",
+    "block": 2,
+    "block_name": "Basic exemption",
+    "narration_ml": "60 വയസ്സിൽ താഴെയുള്ളവർക്കുള്ള basic exemption ₹2,50,000 ആണ്. ഈ പരിധിക്ക് മുകളിലുള്ള total income-ലാണ് tax തുടങ്ങുന്നത്.",
+    "card": {
+      "title": "Under 60 years",
+      "type": "rule",
+      "lines": [
+        "Basic exemption: ₹2,50,000.",
+        "Tax starts on total income above this limit."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L04",
+    "number": "1.2.2",
+    "block": 2,
+    "block_name": "Basic exemption",
+    "narration_ml": "60 മുതൽ 80 വയസ്സിന് താഴെ വരെ exemption ₹3,00,000 ആണ്. 80 വയസ്സും അതിലധികവുമുള്ളവർക്ക് അത് ₹5,00,000 ആണ്.",
+    "card": {
+      "title": "Senior and super senior",
+      "type": "rule",
+      "lines": [
+        "Age 60 to under 80: basic exemption ₹3,00,000.",
+        "Age 80 and above: basic exemption ₹5,00,000."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L05",
+    "number": "1.3.1",
+    "block": 3,
+    "block_name": "Progressive slab rates",
+    "narration_ml": "60 വയസ്സിൽ താഴെയുള്ളവർക്ക് രണ്ടര ലക്ഷം വരെ nil; രണ്ടര മുതൽ അഞ്ച് ലക്ഷം വരെ 5%; അഞ്ച് മുതൽ പത്ത് ലക്ഷം വരെ 20%; പത്ത് ലക്ഷത്തിന് മുകളിൽ 30% നിരക്ക്.",
+    "card": {
+      "title": "Rates for individuals under 60",
+      "type": "rule",
+      "lines": [
+        "Up to ₹2.5 lakh: nil; ₹2.5–5 lakh: 5%.",
+        "₹5–10 lakh: 20%; above ₹10 lakh: 30%."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L06",
+    "number": "1.3.2",
+    "block": 3,
+    "block_name": "Progressive slab rates",
+    "narration_ml": "Senior citizens-ന് മൂന്ന് മുതൽ അഞ്ച് ലക്ഷം വരെയുള്ള ഭാഗത്തിന് 5%, തുടർന്ന് പത്ത് ലക്ഷം വരെ 20% ആണ്. Super senior-ന് അഞ്ച് ലക്ഷം വരെ nil; പത്ത് ലക്ഷം വരെ 20%; അതിന് മുകളിൽ 30% ആണ്.",
+    "card": {
+      "title": "Rates for senior groups",
+      "type": "rule",
+      "lines": [
+        "Senior citizens: 5% above ₹3 lakh to ₹5 lakh; then 20% to ₹10 lakh.",
+        "Super seniors: nil to ₹5 lakh; then 20% to ₹10 lakh; above that 30%."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L07",
+    "number": "1.4.1",
+    "block": 4,
+    "block_name": "Reliefs and final levy",
+    "narration_ml": "Old regime-ൽ resident individual-ന്റെ total income അഞ്ച് ലക്ഷം കവിയാത്താൽ Section 87A rebate ലഭിക്കും. Tax payable-ഉം ₹12,500-ഉം തമ്മിലുള്ള കുറഞ്ഞ തുകയാണ് rebate.",
+    "card": {
+      "title": "Section 87A in old regime",
+      "type": "rule",
+      "lines": [
+        "Resident individual; total income not above ₹5,00,000.",
+        "Rebate is the lower of tax payable or ₹12,500."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L08",
+    "number": "1.4.2",
+    "block": 4,
+    "block_name": "Reliefs and final levy",
+    "narration_ml": "ആദ്യം slab tax കണക്കാക്കുക; ബാധകമായ rebate കുറച്ചശേഷം 4% Health and Education Cess ചേർക്കുക. Surcharge ബാധകമാണെങ്കിൽ അതത് Finance Act അനുസരിച്ച് കണക്കാക്കണം.",
+    "card": {
+      "title": "Cess and computation order",
+      "type": "rule",
+      "lines": [
+        "Compute slab tax, apply eligible rebate, then add 4% Health and Education Cess.",
+        "Surcharge, where applicable, is governed by the relevant Finance Act."
+      ],
+      "highlights": []
+    }
+  }
+]

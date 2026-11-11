@@ -1,0 +1,143 @@
+[
+  {
+    "id": "INTRO",
+    "number": "1",
+    "block": 0,
+    "block_name": "Provision heading",
+    "narration_ml": "ഇന്ന് പഴയ tax regime-ൽ Section 87A rebate എങ്ങനെ tax കുറയ്ക്കുന്നു എന്ന് നോക്കാം. ആദ്യം വിഷയം മാത്രം പരിചയപ്പെടാം.",
+    "card": {
+      "title": "Section 87A Rebate: Old Regime",
+      "type": "intro",
+      "lines": [],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L01",
+    "number": "1.1.1",
+    "block": 1,
+    "block_name": "Question setup",
+    "narration_ml": "മനീഷ് 47 വയസ്സുള്ള resident ആണ്. അദ്ദേഹത്തിന്റെ total income നാല് ലക്ഷം പതിനയ്യായിരം രൂപയാണ്; default regime-ൽ നിന്ന് മാറിയിട്ടുണ്ട്.",
+    "card": {
+      "title": "Eligibility facts",
+      "type": "rule",
+      "lines": [
+        "Manish is 47 and resident in India.",
+        "Total income is ₹4,15,000; he opts out of the default regime."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L02",
+    "number": "1.1.2",
+    "block": 1,
+    "block_name": "Old-regime tax",
+    "narration_ml": "പഴയ regime-ൽ basic exemption രണ്ടര ലക്ഷം രൂപയാണ്. ശേഷിക്കുന്ന ഒരു ലക്ഷം അറുപത്തയ്യായിരത്തിന് അഞ്ച് ശതമാനം കണക്കാക്കുമ്പോൾ tax ₹8,250.",
+    "card": {
+      "title": "Compute tax before rebate",
+      "type": "table",
+      "lines": [
+        "Basic exemption: ₹2,50,000.",
+        "Taxable slab amount: ₹4,15,000 − ₹2,50,000 = ₹1,65,000 at 5%."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L03",
+    "number": "1.2.1",
+    "block": 2,
+    "block_name": "Old-regime tax",
+    "narration_ml": "ആദ്യം ₹1,65,000-ന്റെ അഞ്ച് ശതമാനമായ ₹8,250 tax കണക്കാക്കണം. അതിനുശേഷമാണ് Section 87A rebate കുറയ്ക്കുന്നത്.",
+    "card": {
+      "title": "Tax payable before relief",
+      "type": "table",
+      "lines": [
+        "₹1,65,000 × 5% = ₹8,250.",
+        "Calculate tax first, then apply Section 87A rebate."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L04",
+    "number": "1.2.2",
+    "block": 2,
+    "block_name": "Section 87A",
+    "narration_ml": "പഴയ regime-ൽ total income അഞ്ച് ലക്ഷം രൂപ കവിയാത്ത resident individual-ന് Section 87A rebate ലഭിക്കും. മനീഷ് resident ആണ്, income പരിധിക്കുള്ളിലുമാണ്.",
+    "card": {
+      "title": "Who qualifies here?",
+      "type": "rule",
+      "lines": [
+        "Resident individual with total income not exceeding ₹5,00,000.",
+        "Manish meets both conditions."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L05",
+    "number": "1.3.1",
+    "block": 3,
+    "block_name": "Section 87A",
+    "narration_ml": "Rebate എന്നത് tax payable-ഉം ₹12,500-ഉം തമ്മിലുള്ള കുറഞ്ഞ തുകയാണ്. ഇവിടെ കുറഞ്ഞ തുക ₹8,250 ആണ്.",
+    "card": {
+      "title": "Rebate amount",
+      "type": "rule",
+      "lines": [
+        "Rebate is lower of tax payable or ₹12,500.",
+        "Lower amount here: ₹8,250."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L06",
+    "number": "1.3.2",
+    "block": 3,
+    "block_name": "Apply rebate",
+    "narration_ml": "Rebate കുറയ്ക്കുന്നതിന് മുമ്പ് tax ₹8,250 ആണ്. അതിൽ നിന്ന് അതേ തുകയുടെ rebate കുറയ്ക്കുമ്പോൾ tax nil ആകുന്നു.",
+    "card": {
+      "title": "Reduce tax to nil",
+      "type": "rule",
+      "lines": [
+        "Tax before rebate: ₹8,250.",
+        "Less Section 87A rebate: ₹8,250."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L07",
+    "number": "1.4.1",
+    "block": 4,
+    "block_name": "Cess treatment",
+    "narration_ml": "Section 87A rebate കുറച്ച ശേഷമുള്ള tax-ലാണ് cess കണക്കാക്കുന്നത്. ഇവിടെ tax nil ആയതിനാൽ cess-ും nil ആണ്.",
+    "card": {
+      "title": "Cess after rebate",
+      "type": "rule",
+      "lines": [
+        "Health and Education Cess applies to tax after rebate.",
+        "With tax reduced to nil, cess is also nil."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L08",
+    "number": "1.4.2",
+    "block": 4,
+    "block_name": "Conclusion",
+    "narration_ml": "അവസാനമായി Section 87A rebate മുഴുവൻ tax ഇല്ലാതാക്കുന്നു. അതിനാൽ മനീഷിന്റെ final tax liability nil ആണ്.",
+    "card": {
+      "title": "Final liability",
+      "type": "rule",
+      "lines": [
+        "Section 87A rebate fully offsets the tax.",
+        "Final tax liability: Nil."
+      ],
+      "highlights": []
+    }
+  }
+]

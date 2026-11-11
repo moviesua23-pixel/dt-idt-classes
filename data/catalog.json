@@ -1,0 +1,131 @@
+{
+  "subject": "Direct Tax",
+  "total_chapters": 25,
+  "chapters": [
+    {
+      "chapter_number": 1,
+      "title": "Basic Concepts, Tax Rates and Exempt Income",
+      "page_range": "1.1 - 1.18"
+    },
+    {
+      "chapter_number": 2,
+      "title": "Capital Gains",
+      "page_range": "2.1 - 2.39"
+    },
+    {
+      "chapter_number": 3,
+      "title": "Profits and Gains of Business or Profession (PGBP)",
+      "page_range": "3.1 - 3.111"
+    },
+    {
+      "chapter_number": 4,
+      "title": "Income from Other Sources",
+      "page_range": "4.1 - 4.17"
+    },
+    {
+      "chapter_number": 5,
+      "title": "Clubbing of Income",
+      "page_range": "5.1 - 5.8"
+    },
+    {
+      "chapter_number": 6,
+      "title": "Set-off and Carry forward of Losses",
+      "page_range": "6.1 - 6.8"
+    },
+    {
+      "chapter_number": 7,
+      "title": "Deductions under Chapter VI-A and Section 10AA",
+      "page_range": "7.1 - 7.18"
+    },
+    {
+      "chapter_number": 8,
+      "title": "Assessment/Taxation of Various Entities (Cooperative Society, AOP, AMT, MAT, Tonnage Tax, Business Trust, Investment Fund, Securitisation Trust)",
+      "page_range": "8.1 - 8.58"
+    },
+    {
+      "chapter_number": 9,
+      "title": "Charitable Trusts, Political Parties and Electoral Trusts",
+      "page_range": "9.1 - 9.43"
+    },
+    {
+      "chapter_number": 10,
+      "title": "TDS, TCS, Advance Tax, Interest and Refund",
+      "page_range": "10.1 - 10.52"
+    },
+    {
+      "chapter_number": 11,
+      "title": "Income Tax Authorities, Return Filing & Assessment Procedure",
+      "page_range": "11.1 - 11.28"
+    },
+    {
+      "chapter_number": 12,
+      "title": "Appeals and Revision",
+      "page_range": "12.1 - 12.12"
+    },
+    {
+      "chapter_number": 13,
+      "title": "Dispute Resolution",
+      "page_range": "13.1 - 13.2"
+    },
+    {
+      "chapter_number": 14,
+      "title": "Penalties, Offences and Prosecution",
+      "page_range": "14.1 - 14.13"
+    },
+    {
+      "chapter_number": 15,
+      "title": "Miscellaneous Provisions",
+      "page_range": "15.1 - 15.9"
+    },
+    {
+      "chapter_number": 16,
+      "title": "Tax Planning, Tax Evasion & Tax Avoidance (GAAR)",
+      "page_range": "16.1 - 16.11"
+    },
+    {
+      "chapter_number": 17,
+      "title": "Tax Audit and Ethical Compliances",
+      "page_range": "17.1 - 17.10"
+    },
+    {
+      "chapter_number": 18,
+      "title": "The Black Money & Imposition of Tax Law",
+      "page_range": "18.1 - 18.5"
+    },
+    {
+      "chapter_number": 19,
+      "title": "Double Taxation Relief",
+      "page_range": "19.1 - 19.41"
+    },
+    {
+      "chapter_number": 20,
+      "title": "Non Resident Taxation",
+      "page_range": "20.1 - 20.57"
+    },
+    {
+      "chapter_number": 21,
+      "title": "Transfer Pricing",
+      "page_range": "21.1 - 21.42"
+    },
+    {
+      "chapter_number": 22,
+      "title": "Advance Rulings",
+      "page_range": "22.1 - 22.5"
+    },
+    {
+      "chapter_number": 23,
+      "title": "Fundamentals of BEPS",
+      "page_range": "23.1 - 23.8"
+    },
+    {
+      "chapter_number": 24,
+      "title": "Application and Interpretation of Tax Treaties",
+      "page_range": "24.1 - 24.7"
+    },
+    {
+      "chapter_number": 25,
+      "title": "Overview of Model Tax Conventions",
+      "page_range": "25.1 - 25.6"
+    }
+  ]
+}

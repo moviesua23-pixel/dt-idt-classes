@@ -1,0 +1,198 @@
+[
+  {
+    "id": "L01",
+    "block": 1,
+    "block_name": "Scope/Applicability",
+    "narration_ml": "Assessment Year 2026-27 ലേക്ക് Section 115BAC പ്രകാരമുള്ള default tax regime വ്യക്തികൾക്ക് എങ്ങനെ ബാധകമാകുന്നു എന്ന് ഈ സെക്ഷൻ വ്യക്തമാക്കുന്നു.",
+    "card": {
+      "title": "Applicability of Section 115BAC",
+      "type": "authority",
+      "lines": [
+        "Section 115BAC is the default tax regime",
+        "Applicable for Assessment Year 2026-27",
+        "Covers Resident and Non-Resident Individuals"
+      ],
+      "highlights": [
+        "Section 115BAC",
+        "A.Y. 2026-27",
+        "Default Regime"
+      ]
+    }
+  },
+  {
+    "id": "L02",
+    "block": 1,
+    "block_name": "Scope/Applicability",
+    "narration_ml": "ഈ പുതിയ ടാക്സ് റെജിമിന് കീഴിൽ basic exemption limit എല്ലാ വ്യക്തികൾക്കും ഒരേപോലെയാണെന്നും പ്രത്യേക ഇളവുകൾ ഇല്ലെന്നും നിയമം അനുശാസിക്കുന്നു.",
+    "card": {
+      "title": "Basic Exemption Limit Structure",
+      "type": "rule",
+      "lines": [
+        "Uniform basic exemption for all individuals",
+        "Initial income up to ₹ 4,00,000 is Nil",
+        "No age-based differentiation in exemption"
+      ],
+      "highlights": [
+        "₹ 4,00,000",
+        "Basic Exemption",
+        "Uniformity"
+      ]
+    }
+  },
+  {
+    "id": "L03",
+    "block": 2,
+    "block_name": "Rates/Matrix",
+    "narration_ml": "Section 115BAC പ്രകാരം വരുമാനം വർദ്ധിക്കുന്നതിനനുസരിച്ച് അഞ്ച് ശതമാനം മുതൽ മുപ്പത് ശതമാനം വരെയുള്ള വിവിധ ടാക്സ് സ്ലാബുകൾ നിശ്ചയിച്ചിട്ടുണ്ട്.",
+    "card": {
+      "title": "Progressive Tax Slab Overview",
+      "type": "rate",
+      "lines": [
+        "Tax rates increase in 5% increments",
+        "Slabs structured in ₹ 4,00,000 intervals",
+        "Maximum marginal rate is 30%"
+      ],
+      "highlights": [
+        "5% Increments",
+        "₹ 4,00,000 Intervals",
+        "30% Rate"
+      ]
+    }
+  },
+  {
+    "id": "L04",
+    "block": 2,
+    "block_name": "Rates/Matrix",
+    "narration_ml": "നാല് ലക്ഷം രൂപ വരെയുള്ള വരുമാനത്തിന് നികുതിയില്ലെന്നും അതിനു മുകളിലുള്ള തുകയ്ക്ക് നിശ്ചിത നിരക്കുകളിൽ ടാക്സ് ഈടാക്കുമെന്നും ടേബിൾ വ്യക്തമാക്കുന്നു.",
+    "card": {
+      "title": "Statutory Tax Slab Table",
+      "type": "table",
+      "lines": [
+        "Full slab details for A.Y. 2026-27",
+        "Covers income from Nil to 30%",
+        "Applicable under Section 115BAC"
+      ],
+      "table": {
+        "headers": [
+          "Total Income Slab",
+          "Applicable Tax Rate"
+        ],
+        "rows": [
+          [
+            "Upto ₹ 4,00,000",
+            "Nil"
+          ],
+          [
+            "₹ 4,00,001 — ₹ 8,00,000",
+            "5%"
+          ],
+          [
+            "₹ 8,00,001 — ₹ 12,00,000",
+            "10%"
+          ],
+          [
+            "₹ 12,00,001 — ₹ 16,00,000",
+            "15%"
+          ],
+          [
+            "₹ 16,00,001 — ₹ 20,00,000",
+            "20%"
+          ],
+          [
+            "₹ 20,00,001 — ₹ 24,00,000",
+            "25%"
+          ],
+          [
+            "Above ₹ 24,00,000",
+            "30%"
+          ]
+        ]
+      },
+      "highlights": [
+        "Section 115BAC",
+        "Tax Slabs",
+        "A.Y. 2026-27"
+      ]
+    }
+  },
+  {
+    "id": "L05",
+    "block": 3,
+    "block_name": "Computation/Relief",
+    "narration_ml": "Resident Individual ആയ ഒരാളുടെ Total Income പന്ത്രണ്ട് ലക്ഷം രൂപയിൽ താഴെയാണെങ്കിൽ Section 87A പ്രകാരം അറുപതിനായിരം രൂപ വരെ റിബേറ്റ് ലഭിക്കുന്നതാണ്.",
+    "card": {
+      "title": "Section 87A Rebate Eligibility",
+      "type": "rule",
+      "lines": [
+        "Available only to Resident Individuals",
+        "Total Income must not exceed ₹ 12,00,000",
+        "Rebate is specific to Default Regime"
+      ],
+      "highlights": [
+        "Section 87A",
+        "Resident Individual",
+        "₹ 12,00,000"
+      ]
+    }
+  },
+  {
+    "id": "L06",
+    "block": 3,
+    "block_name": "Computation/Relief",
+    "narration_ml": "ടാക്സ് ലയബിലിറ്റിയിൽ നിന്നും Section 87A റിബേറ്റ് കുറച്ചതിനുശേഷം ബാക്കി വരുന്ന തുകയുടെ നാല് ശതമാനം Health and Education Cess ആയി നൽകണം.",
+    "card": {
+      "title": "Quantum of Rebate and Cess",
+      "type": "formula",
+      "lines": [
+        "Rebate: Lower of Tax or ₹ 60,000",
+        "Cess: 4% on Tax after Rebate",
+        "Health and Education Cess is mandatory"
+      ],
+      "highlights": [
+        "₹ 60,000",
+        "4% Cess",
+        "Tax Payable"
+      ]
+    }
+  },
+  {
+    "id": "L07",
+    "block": 4,
+    "block_name": "Exam Cautions",
+    "narration_ml": "Section 115BAC പ്രകാരം Senior Citizens അല്ലെങ്കിൽ Super Senior Citizens എന്നിവർക്ക് പ്രത്യേകമായി ഉയർന്ന basic exemption limit അനുവദനീയമല്ല എന്നത് ശ്രദ്ധിക്കേണ്ടതാണ്.",
+    "card": {
+      "title": "Age Benefit Restrictions",
+      "type": "caution",
+      "lines": [
+        "No separate limit for Senior Citizens",
+        "No separate limit for Super Seniors",
+        "Section 115BAC overrides age-based slabs"
+      ],
+      "highlights": [
+        "Senior Citizens",
+        "Super Senior Citizens",
+        "Section 115BAC"
+      ]
+    }
+  },
+  {
+    "id": "L08",
+    "block": 4,
+    "block_name": "Exam Cautions",
+    "narration_ml": "ടാക്സ് കണക്കാക്കുമ്പോൾ സ്ലാബ് നിരക്കുകൾ കൃത്യമായി പാലിക്കണമെന്നും റിബേറ്റ് അർഹത പരിശോധിച്ച ശേഷം മാത്രമേ സെസ്സ് കണക്കാക്കാവൂ എന്നും നിയമം പറയുന്നു.",
+    "card": {
+      "title": "Computational Sequence and Traps",
+      "type": "caution",
+      "lines": [
+        "Apply slabs sequentially to Total Income",
+        "Deduct Section 87A rebate before Cess",
+        "Ensure income threshold for rebate eligibility"
+      ],
+      "highlights": [
+        "Sequential Slabs",
+        "Section 87A",
+        "Cess Calculation"
+      ]
+    }
+  }
+]

@@ -1,0 +1,212 @@
+[
+  {
+    "id": "L01",
+    "block": 1,
+    "block_name": "Scope/Applicability",
+    "narration_ml": "Assessment Year 2025-26, 2026-27-കളിൽ Section 115BAC(1A) പ്രകാരം Individuals, HUF, AOP, BOI, AJP എന്നിവർക്ക് Default Tax Regime ബാധകമാണ്.",
+    "card": {
+      "title": "Who the Regime Covers",
+      "type": "rule",
+      "lines": [
+        "Applies to Individuals, HUF, AOP, BOI, and AJP.",
+        "The provision identifies Assessment Year 2025-26 and Assessment Year 2026-27.",
+        "Section 115BAC(1A) governs the default tax regime."
+      ],
+      "highlights": [
+        "Section 115BAC(1A)",
+        "A.Y. 2025-26",
+        "A.Y. 2026-27"
+      ],
+      "review_flag": "REVIEW REQUIRED: provisions.json states ₹ 7,00,000 / ₹ 25,000 rebate figures, while the narration states ₹ 12,00,000 / ₹ 60,000. Use narration-consistent values pending confirmation against the question bank PDF."
+    }
+  },
+  {
+    "id": "L02",
+    "block": 1,
+    "block_name": "Scope/Applicability",
+    "narration_ml": "Section 4 പ്രകാരം Total Income-ൽ നികുതി ചുമത്തുന്നു; Section 115BAC(1A) നിരക്കുകൾ ബാധകമാകുന്നത് eligible assessee default regime-ൽ തുടരുമ്പോഴാണ്.",
+    "card": {
+      "title": "Charge and Regime",
+      "type": "rule",
+      "lines": [
+        "Section 4 provides for the charge of income-tax.",
+        "Tax is computed on the Total Income of the relevant previous year.",
+        "Section 115BAC(1A) supplies the default-regime slab rates."
+      ],
+      "highlights": [
+        "Section 4",
+        "Total Income",
+        "Section 115BAC(1A)"
+      ],
+      "review_flag": "REVIEW REQUIRED: provisions.json states ₹ 7,00,000 / ₹ 25,000 rebate figures, while the narration states ₹ 12,00,000 / ₹ 60,000. Use narration-consistent values pending confirmation against the question bank PDF."
+    }
+  },
+  {
+    "id": "L03",
+    "block": 2,
+    "block_name": "Rates/Matrix",
+    "narration_ml": "ഈ regime-ൽ ആദ്യത്തെ ₹ 4,00,000-ന് Nil rate ആണ്; ₹ 4,00,001 മുതൽ ₹ 12,00,000 വരെയുള്ള തുടർന്നുള്ള slabs-ന് 5%, 10% നിരക്കുകളാണ്.",
+    "card": {
+      "title": "Initial Slab Rates",
+      "type": "table",
+      "lines": [
+        "Income up to ₹ 4,00,000 is taxed at Nil rate.",
+        "Income from ₹ 4,00,001 to ₹ 8,00,000 is taxed at 5%.",
+        "Income from ₹ 8,00,001 to ₹ 12,00,000 is taxed at 10%."
+      ],
+      "table": {
+        "headers": [
+          "Total Income Slab",
+          "Rate of Tax"
+        ],
+        "rows": [
+          [
+            "Up to ₹ 4,00,000",
+            "Nil"
+          ],
+          [
+            "₹ 4,00,001 – ₹ 8,00,000",
+            "5%"
+          ],
+          [
+            "₹ 8,00,001 – ₹ 12,00,000",
+            "10%"
+          ]
+        ]
+      },
+      "highlights": [
+        "Nil",
+        "5%",
+        "10%"
+      ],
+      "review_flag": "REVIEW REQUIRED: provisions.json states ₹ 7,00,000 / ₹ 25,000 rebate figures, while the narration states ₹ 12,00,000 / ₹ 60,000. Use narration-consistent values pending confirmation against the question bank PDF."
+    }
+  },
+  {
+    "id": "L04",
+    "block": 2,
+    "block_name": "Rates/Matrix",
+    "narration_ml": "₹ 12,00,001-ന് മുകളിലുള്ള വരുമാനത്തിന് ₹ 4,00,000 ഇടവേളകളായി 15%, 20%, 25% നിരക്കുകൾ ബാധകമാണ്; ₹ 24,00,000-ന് മുകളിൽ 30% ആണ്.",
+    "card": {
+      "title": "Upper Slab Rates",
+      "type": "table",
+      "lines": [
+        "Income from ₹ 12,00,001 to ₹ 16,00,000 is taxed at 15%.",
+        "Income from ₹ 16,00,001 to ₹ 20,00,000 is taxed at 20%, and ₹ 20,00,001 to ₹ 24,00,000 at 25%.",
+        "Income above ₹ 24,00,000 is taxed at 30%."
+      ],
+      "table": {
+        "headers": [
+          "Total Income Slab",
+          "Rate of Tax"
+        ],
+        "rows": [
+          [
+            "₹ 12,00,001 – ₹ 16,00,000",
+            "15%"
+          ],
+          [
+            "₹ 16,00,001 – ₹ 20,00,000",
+            "20%"
+          ],
+          [
+            "₹ 20,00,001 – ₹ 24,00,000",
+            "25%"
+          ],
+          [
+            "Above ₹ 24,00,000",
+            "30%"
+          ]
+        ]
+      },
+      "highlights": [
+        "15%",
+        "20%",
+        "25%",
+        "30%"
+      ],
+      "review_flag": "REVIEW REQUIRED: provisions.json states ₹ 7,00,000 / ₹ 25,000 rebate figures, while the narration states ₹ 12,00,000 / ₹ 60,000. Use narration-consistent values pending confirmation against the question bank PDF."
+    }
+  },
+  {
+    "id": "L05",
+    "block": 3,
+    "block_name": "Computation/Relief",
+    "narration_ml": "Narration-consistent rule പ്രകാരം Resident Individual-ന്റെ Total Income ₹ 12,00,000 കവിയാത്തപ്പോൾ Section 87A പ്രകാരം പരമാവധി ₹ 60,000 rebate ലഭിക്കും.",
+    "card": {
+      "title": "Rebate under Section 87A",
+      "type": "rule",
+      "lines": [
+        "Available to a Resident Individual under the narration-consistent rule.",
+        "The Total Income threshold is ₹ 12,00,000.",
+        "The maximum rebate amount is ₹ 60,000."
+      ],
+      "highlights": [
+        "Section 87A",
+        "₹ 12,00,000",
+        "₹ 60,000"
+      ],
+      "review_flag": "REVIEW REQUIRED: provisions.json states ₹ 7,00,000 / ₹ 25,000 rebate figures, while the narration states ₹ 12,00,000 / ₹ 60,000. Use narration-consistent values pending confirmation against the question bank PDF."
+    }
+  },
+  {
+    "id": "L06",
+    "block": 3,
+    "block_name": "Computation/Relief",
+    "narration_ml": "Rebate കിഴിച്ച ശേഷമുള്ള aggregate income-tax-ൽ 4% Health and Education Cess കണക്കാക്കണം; ഈ regime-ിലെ surcharge rate-ന് 25% ceiling ഉണ്ട്.",
+    "card": {
+      "title": "Cess and Surcharge",
+      "type": "rule",
+      "lines": [
+        "Health and Education Cess is levied at 4% on aggregate income-tax.",
+        "The provision states a 25% ceiling for surcharge rates under this regime.",
+        "Calculate cess after determining the applicable income-tax and surcharge."
+      ],
+      "highlights": [
+        "4% HEC",
+        "25% surcharge ceiling"
+      ],
+      "review_flag": "REVIEW REQUIRED: provisions.json states ₹ 7,00,000 / ₹ 25,000 rebate figures, while the narration states ₹ 12,00,000 / ₹ 60,000. Use narration-consistent values pending confirmation against the question bank PDF."
+    }
+  },
+  {
+    "id": "L07",
+    "block": 4,
+    "block_name": "Exam Cautions",
+    "narration_ml": "Section 115BAC(1A) പ്രകാരമുള്ള basic exemption ₹ 4,00,000 ആണ്; Senior Citizen, Super Senior Citizen വിഭാഗങ്ങൾക്ക് ഉയർന്ന age-based exemption ഈ regime നൽകുന്നില്ല.",
+    "card": {
+      "title": "Uniform Exemption Rule",
+      "type": "caution",
+      "lines": [
+        "The basic exemption limit is ₹ 4,00,000.",
+        "The same basic exemption applies across age categories.",
+        "No higher basic exemption is provided for Senior or Super Senior Citizens under this regime."
+      ],
+      "highlights": [
+        "₹ 4,00,000",
+        "No age-based increase"
+      ],
+      "review_flag": "REVIEW REQUIRED: provisions.json states ₹ 7,00,000 / ₹ 25,000 rebate figures, while the narration states ₹ 12,00,000 / ₹ 60,000. Use narration-consistent values pending confirmation against the question bank PDF."
+    }
+  },
+  {
+    "id": "L08",
+    "block": 4,
+    "block_name": "Exam Cautions",
+    "narration_ml": "Default Regime-ൽ നിന്ന് മാറാൻ statutory opt-out തിരഞ്ഞെടുക്കണം; തിരഞ്ഞെടുക്കുന്ന regime ഉറപ്പാക്കിയ ശേഷമേ അതിന്റെ tax slabs, rebate rules പ്രയോഗിക്കാവൂ.",
+    "card": {
+      "title": "Confirm Regime First",
+      "type": "caution",
+      "lines": [
+        "Section 115BAC(1A) is the default regime described in the provision.",
+        "The assessee must opt out to use the optional old regime.",
+        "Apply the slab and relief rules for the selected regime only."
+      ],
+      "highlights": [
+        "Default regime",
+        "Opt-out election"
+      ],
+      "review_flag": "REVIEW REQUIRED: provisions.json states ₹ 7,00,000 / ₹ 25,000 rebate figures, while the narration states ₹ 12,00,000 / ₹ 60,000. Use narration-consistent values pending confirmation against the question bank PDF."
+    }
+  }
+]

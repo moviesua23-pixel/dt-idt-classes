@@ -1,0 +1,51 @@
+name: DT & IDT AI Cloud Pipeline
+
+on:
+  schedule:
+    # Run daily at 02:00 UTC (07:30 AM IST)
+    - cron: '0 2 * * *'
+  workflow_dispatch:
+    inputs:
+      subject:
+        description: 'Subject to process (DT / IDT / BOTH)'
+        required: true
+        default: 'BOTH'
+
+jobs:
+  run-pipeline:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: 'pip'
+
+      - name: Install FFmpeg
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y ffmpeg
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run Cloud Pipeline & Sync Google Sheets
+        env:
+          GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}
+          GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
+          DRIVE_ROOT_ID: ${{ secrets.DRIVE_ROOT_ID }}
+          SPREADSHEET_ID: ${{ secrets.SPREADSHEET_ID }}
+        run: |
+          python pipeline/sync_all_to_sheets.py
+
+      - name: Commit & Push Updated Data Files (if any)
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action Bot"
+          git add data/
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update: Sync data from cloud pipeline [skip ci]" && git push)

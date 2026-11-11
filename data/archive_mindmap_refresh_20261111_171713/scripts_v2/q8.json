@@ -1,0 +1,143 @@
+[
+  {
+    "id": "INTRO",
+    "number": "1",
+    "block": 0,
+    "block_name": "Provision heading",
+    "narration_ml": "ഇന്ന് Section 87A പ്രകാരമുള്ള marginal rebate വ്യവസ്ഥ മാത്രം പഠിക്കാം.",
+    "card": {
+      "title": "Section 87A Marginal Rebate",
+      "type": "intro",
+      "lines": [],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L01",
+    "number": "1.1.1",
+    "block": 1,
+    "block_name": "Threshold and purpose",
+    "narration_ml": "Section 87A-യുടെ സാധാരണ rebate total income ₹12,00,000 വരെ ലഭ്യമാണ്. അതിന് തൊട്ടുമുകളിലെ income-ൽ പരിമിതമായ marginal rebate ലഭിക്കാം.",
+    "card": {
+      "title": "Threshold rule",
+      "type": "rule",
+      "lines": [
+        "Standard Section 87A rebate is available up to total income of ₹12 lakh.",
+        "A limited marginal rebate can apply when total income is slightly above ₹12 lakh."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L02",
+    "number": "1.1.2",
+    "block": 1,
+    "block_name": "Threshold and purpose",
+    "narration_ml": "₹12,00,000 threshold കടന്നതുകൊണ്ട് tax വർധന, അധിക വരുമാനത്തെക്കാൾ കൂടുതലാകാതിരിക്കാൻ marginal rebate സഹായിക്കുന്നു. ഈ താരതമ്യം cess-നു മുമ്പാണ്.",
+    "card": {
+      "title": "Purpose of marginal rebate",
+      "type": "rule",
+      "lines": [
+        "It prevents the tax increase from exceeding the income increase over ₹12 lakh.",
+        "The comparison is made before cess."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L03",
+    "number": "1.2.1",
+    "block": 2,
+    "block_name": "Compute tax first",
+    "narration_ml": "Total income-ൽ Section 115BAC slabs പ്രയോഗിക്കുക. Section 87A rebate-നും cess-നും മുമ്പുള്ള income tax കണ്ടെത്തുക.",
+    "card": {
+      "title": "Progressive slab calculation",
+      "type": "rule",
+      "lines": [
+        "Apply the Section 115BAC slabs to total income.",
+        "Find income-tax before Section 87A rebate and cess."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L04",
+    "number": "1.2.2",
+    "block": 2,
+    "block_name": "Compute tax first",
+    "narration_ml": "അധിക വരുമാനം = total income − ₹12,00,000. Cess-നു മുമ്പുള്ള tax-ന്റെ പരിധി ഈ അധിക തുകയാണ്.",
+    "card": {
+      "title": "Find excess income",
+      "type": "rule",
+      "lines": [
+        "Excess = total income − ₹12,00,000.",
+        "This excess sets the marginal tax ceiling before cess."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L05",
+    "number": "1.3.1",
+    "block": 3,
+    "block_name": "Marginal rebate formula",
+    "narration_ml": "Rebate-നു മുമ്പുള്ള tax, അധിക വരുമാനത്തെക്കാൾ കൂടുതലാണെങ്കിൽ marginal relief പ്രസക്തമാണ്. നിയമത്തിലെ പരിധിക്ക് വിധേയമായി marginal rebate = tax before rebate − അധിക വരുമാനം.",
+    "card": {
+      "title": "Compare tax with excess",
+      "type": "rule",
+      "lines": [
+        "If tax before rebate exceeds the excess income, marginal relief is relevant.",
+        "Marginal rebate = tax before rebate − excess income, limited by statutory rebate rules."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L06",
+    "number": "1.3.2",
+    "block": 3,
+    "block_name": "Marginal rebate formula",
+    "narration_ml": "Rebate ശേഷമുള്ള tax, ₹12 ലക്ഷത്തിന് മുകളിലുള്ള വരുമാനത്തെ കവിയരുത്. ഈ താരതമ്യത്തിൽ cess ഉൾപ്പെടുത്തരുത്.",
+    "card": {
+      "title": "Cap tax before cess",
+      "type": "rule",
+      "lines": [
+        "Tax after rebate is restricted so it does not exceed income above ₹12 lakh.",
+        "Do not include cess in this comparison."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L07",
+    "number": "1.4.1",
+    "block": 4,
+    "block_name": "Finish computation",
+    "narration_ml": "Rebate കുറച്ചശേഷം 4% Health and Education Cess ചേർക്കുക. Relief ശേഷമുള്ള tax-ലാണ് cess കണക്കാക്കേണ്ടത്.",
+    "card": {
+      "title": "Apply cess afterward",
+      "type": "rule",
+      "lines": [
+        "After rebate, add Health and Education Cess at 4%.",
+        "Cess is calculated on the tax remaining after relief."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L08",
+    "number": "1.4.2",
+    "block": 4,
+    "block_name": "Finish computation",
+    "narration_ml": "Residency, total-income threshold, വരുമാനത്തിന്റെ സ്വഭാവം എന്നിവ ഉറപ്പാക്കണം. Special-rate income-ന് rebate സംബന്ധിച്ച വേറിട്ട നിയന്ത്രണങ്ങൾ ഉണ്ടാകാം.",
+    "card": {
+      "title": "Use the right eligibility rules",
+      "type": "rule",
+      "lines": [
+        "Confirm residency, total-income threshold and nature of income.",
+        "Special-rate income can carry separate rebate restrictions."
+      ],
+      "highlights": []
+    }
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "pre_phase": {
+    "percent": 100,
+    "status": "Indexed 25 chapters."
+  },
+  "phase1": {
+    "percent": 100,
+    "status": "Extracted 10 questions."
+  },
+  "phase2": {
+    "percent": 10,
+    "status": "Generating elegant presentation for Question 2/10..."
+  },
+  "phase3": {
+    "percent": 100,
+    "status": "Completed Gemini Voice generation. 7 unique topic audio files generated with Gemini Voice (Aoede)."
+  }
+}

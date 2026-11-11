@@ -1,0 +1,115 @@
+{
+  "q4": {
+    "topic": "q4",
+    "audio_file": "C:\\Users\\HP\\OneDrive\\Desktop\\VISHNU\\DT and IDT Classes\\data\\audio_v2\\q4.mp3",
+    "total_duration": 88.735,
+    "slides": [
+      {
+        "slide_number": 1,
+        "t0": 0.0,
+        "t1": 19.765,
+        "duration": 19.765
+      },
+      {
+        "slide_number": 2,
+        "t0": 20.015,
+        "t1": 50.182,
+        "duration": 30.167
+      },
+      {
+        "slide_number": 3,
+        "t0": 50.432,
+        "t1": 66.104,
+        "duration": 15.672
+      },
+      {
+        "slide_number": 4,
+        "t0": 66.354,
+        "t1": 88.735,
+        "duration": 22.381
+      }
+    ],
+    "beats": [
+      {
+        "slide_number": 1,
+        "sentence_idx": 1,
+        "text": "Section 115BAC(6) പ്രകാരം assessee ഓപ്ഷണൽ Old Tax Regime തിരഞ്ഞെടുക്കുകയാണെങ്കിൽ, പരമ്പരാഗത age-based സ്ലാബ് നിരക്കുകളാണ് ബാധകമാകുന്നത്.",
+        "t0": 0.0,
+        "t1": 12.651,
+        "duration": 12.651
+      },
+      {
+        "slide_number": 1,
+        "sentence_idx": 2,
+        "text": "വ്യക്തികളുടെ പ്രായവും Residential Status-ഉം അനുസരിച്ചാണ് basic exemption limit നിശ്ചയിക്കുന്നത്.",
+        "t0": 12.901,
+        "t1": 19.765,
+        "duration": 6.864
+      },
+      {
+        "slide_number": 2,
+        "sentence_idx": 1,
+        "text": "ഇവിടെ മൂന്ന് വിഭാഗങ്ങളുണ്ട്.",
+        "t0": 20.015,
+        "t1": 22.306,
+        "duration": 2.291
+      },
+      {
+        "slide_number": 2,
+        "sentence_idx": 2,
+        "text": "60 വയസ്സിൽ താഴെയുള്ള വ്യക്തികൾക്ക് 2.5 ലക്ഷം രൂപ വരെ basic exemption ലഭിക്കും.",
+        "t0": 22.556,
+        "t1": 28.767,
+        "duration": 6.211
+      },
+      {
+        "slide_number": 2,
+        "sentence_idx": 3,
+        "text": "60 മുതൽ 80 വയസ്സ് വരെയുള്ള Resident Senior Citizens-ന് 3 ലക്ഷം രൂപയും, 80 വയസ്സിനു മുകളിലുള്ള Resident Super Senior Citizens-ന് 5 ലക്ഷം രൂപയുമാണ് basic exemption limit.",
+        "t0": 29.017,
+        "t1": 43.681,
+        "duration": 14.664
+      },
+      {
+        "slide_number": 2,
+        "sentence_idx": 4,
+        "text": "അതിനു മുകളിലുള്ള വരുമാനത്തിന് 5%, 20%, 30% ക്രമത്തിൽ നികുതി ഈടാക്കുന്നു.",
+        "t0": 43.931,
+        "t1": 50.182,
+        "duration": 6.251
+      },
+      {
+        "slide_number": 3,
+        "sentence_idx": 1,
+        "text": "കണക്കാക്കിയ നികുതിയിൽ നിന്ന് Resident Individual-ന്റെ Total Income 5 ലക്ഷം രൂപയിൽ കവിയുന്നില്ലെങ്കിൽ, Section 87A പ്രകാരം പരമാവധി 12,500 രൂപ വരെ rebate ലഭിക്കും.",
+        "t0": 50.432,
+        "t1": 60.443,
+        "duration": 10.011
+      },
+      {
+        "slide_number": 3,
+        "sentence_idx": 2,
+        "text": "നികുതി തുകയ്ക്ക് മുകളിൽ 4% Health & Education Cess നിർബന്ധമായും കൂട്ടിച്ചേർക്കണം.",
+        "t0": 60.693,
+        "t1": 66.104,
+        "duration": 5.411
+      },
+      {
+        "slide_number": 4,
+        "sentence_idx": 1,
+        "text": "പരീക്ഷയിലെ ഏറ്റവും പ്രധാനപ്പെട്ട trap ഓർക്കുക: Senior Citizen, Super Senior Citizen എന്നിവർക്കുള്ള ഉയർന്ന basic exemption benefits റസിഡന്റുകളായ വ്യക്തികൾക്ക് മാത്രമേ ലഭിക്കൂ.",
+        "t0": 66.354,
+        "t1": 80.154,
+        "duration": 13.8
+      },
+      {
+        "slide_number": 4,
+        "sentence_idx": 2,
+        "text": "ഒരു Non-Resident-ന് 65 വയസ്സോ 85 വയസ്സോ ഉണ്ടെങ്കിലും, 2.5 ലക്ഷം രൂപ മാത്രമാണ് basic exemption ലഭിക്കുക.",
+        "t0": 80.404,
+        "t1": 88.735,
+        "duration": 8.331
+      }
+    ]
+  }
+}

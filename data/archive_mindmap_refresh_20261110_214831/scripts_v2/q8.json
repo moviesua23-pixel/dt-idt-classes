@@ -1,0 +1,130 @@
+[
+  {
+    "id": "L01",
+    "number": "1.1.1",
+    "block": 1,
+    "block_name": "Question setup",
+    "narration_ml": "നിതിൻ Section 115BAC പ്രകാരമുള്ള resident individual ആണ്. അദ്ദേഹത്തിന്റെ ₹12,50,000 income, ₹12 ലക്ഷം പരിധിയെ ₹50,000 കൊണ്ട് കവിയുന്നു.",
+    "card": {
+      "title": "Income crosses threshold",
+      "type": "rule",
+      "lines": [
+        "Nitin is a resident individual under Section 115BAC.",
+        "Total income ₹12,50,000 exceeds the ₹12,00,000 rebate threshold by ₹50,000."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L02",
+    "number": "1.1.2",
+    "block": 1,
+    "block_name": "Compute tax",
+    "narration_ml": "നാല് മുതൽ എട്ട് ലക്ഷം വരെ tax ₹20,000. എട്ട് മുതൽ പന്ത്രണ്ട് ലക്ഷം വരെ ₹40,000. അതിനാൽ ₹12 ലക്ഷം വരെ tax ₹60,000.",
+    "card": {
+      "title": "Tax up to ₹12 lakh",
+      "type": "table",
+      "lines": [
+        "Tax on ₹4–8 lakh at 5% = ₹20,000.",
+        "Tax on ₹8–12 lakh at 10% = ₹40,000; subtotal ₹60,000."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L03",
+    "number": "1.2.1",
+    "block": 2,
+    "block_name": "Compute tax",
+    "narration_ml": "പന്ത്രണ്ട് ലക്ഷത്തിന് മുകളിലുള്ള അമ്പതിനായിരത്തിന് പതിനഞ്ച് ശതമാനം, അതായത് ₹7,500. ആകെ tax ₹67,500.",
+    "card": {
+      "title": "Tax on excess ₹50,000",
+      "type": "table",
+      "lines": [
+        "₹12–12.5 lakh at 15% = ₹7,500.",
+        "Total tax before rebate = ₹67,500."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L04",
+    "number": "1.2.2",
+    "block": 2,
+    "block_name": "Marginal rebate",
+    "narration_ml": "വരുമാനം പരിധിയെ ₹50,000 മാത്രമാണ് കവിയുന്നത്, എന്നാൽ tax ₹67,500 ആയി. വരുമാനത്തിലെ അധികത്തെക്കാൾ tax വർധിച്ചതിനാൽ marginal rebate വേണം.",
+    "card": {
+      "title": "Compare tax rise with income rise",
+      "type": "rule",
+      "lines": [
+        "Income exceeds ₹12 lakh by ₹50,000.",
+        "Tax ₹67,500 is greater than the ₹50,000 excess; marginal rebate is needed."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L05",
+    "number": "1.3.1",
+    "block": 3,
+    "block_name": "Marginal rebate",
+    "narration_ml": "Marginal rebate ₹67,500-ൽ നിന്ന് ₹50,000 കുറച്ചത്, അതായത് ₹17,500. ഇതോടെ rebate ശേഷമുള്ള tax അധിക വരുമാനമായ ₹50,000-ൽ പരിമിതപ്പെടുന്നു.",
+    "card": {
+      "title": "Calculate rebate",
+      "type": "table",
+      "lines": [
+        "Rebate = ₹67,500 − ₹50,000 = ₹17,500.",
+        "This limits tax after rebate to the income excess of ₹50,000."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L06",
+    "number": "1.3.2",
+    "block": 3,
+    "block_name": "After rebate",
+    "narration_ml": "Rebate കുറച്ചശേഷം ₹67,500-ൽ നിന്ന് ₹17,500 കുറച്ച് ₹50,000 ശേഷിക്കുന്നു. ഇത് cess-നു മുമ്പുള്ള tax ആണ്.",
+    "card": {
+      "title": "Tax before cess",
+      "type": "table",
+      "lines": [
+        "₹67,500 − ₹17,500 = ₹50,000.",
+        "This is the tax amount before cess."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L07",
+    "number": "1.4.1",
+    "block": 4,
+    "block_name": "After rebate",
+    "narration_ml": "₹50,000-ന്റെ നാല് ശതമാനം cess ₹2,000 ആണ്. അത് ചേർത്താൽ tax ₹52,000.",
+    "card": {
+      "title": "Add 4% cess",
+      "type": "table",
+      "lines": [
+        "4% of ₹50,000 = ₹2,000.",
+        "Tax including cess = ₹52,000."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L08",
+    "number": "1.4.2",
+    "block": 4,
+    "block_name": "Conclusion",
+    "narration_ml": "Marginal rebate മൂലം cess-നു മുമ്പുള്ള tax അധിക വരുമാനമായ ₹50,000-ൽ ഒതുങ്ങുന്നു. cess ഉൾപ്പെടെയുള്ള final liability ₹52,000 ആണ്.",
+    "card": {
+      "title": "Final liability",
+      "type": "rule",
+      "lines": [
+        "Marginal rebate prevents tax from rising beyond the threshold excess before cess.",
+        "Final liability including cess: ₹52,000."
+      ],
+      "highlights": []
+    }
+  }
+]

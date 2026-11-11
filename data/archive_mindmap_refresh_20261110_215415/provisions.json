@@ -1,0 +1,171 @@
+[
+  {
+    "question_number": 1,
+    "statutory_sections": [
+      "Section 4",
+      "Section 28"
+    ],
+    "core_principle": "Diversion of Income by Overriding Title vs. Application of Income",
+    "provision_presentation_markdown": "### **Doctrine: Diversion vs. Application of Income**\n\n| Basis of Distinction | Diversion by Overriding Title | Application of Income |\n| :--- | :--- | :--- |\n| **Point of Transfer** | Diverted **at source** before reaching the assessee. | Applied **after** the income reaches or accrues to the assessee. |\n| **Nature of Obligation** | Enforceable legal/statutory obligation overriding assessee's title. | Voluntary obligation or self-imposed condition by the assessee. |\n| **Title to Income** | Assessee never acquires title or ownership over such income. | Assessee acquires full beneficial ownership before applying it. |\n| **Taxability** | **Not taxable** in the hands of the assessee. | **Taxable** in the hands of the assessee under relevant head. |\n\n> **Key Precedent (*CIT v. Thakar Das Bhargava*)**  \n> Where an advocate receives professional fees subject to a self-created desire or voluntary agreement to allocate it to a charitable trust, it is merely an **application of income** and remains fully taxable as professional earnings under **Section 28**.",
+    "malayalam_audio_script": "ഇപ്പോൾ ചോദ്യം ഒന്ന് നോക്കാം. ഭാർഗവയ്ക്ക് ലഭിച്ച അഞ്ച് ലക്ഷം രൂപയുടെ professional fee, അദ്ദേഹം തന്നെ പിന്നീട് trust-ലേക്ക് മാറ്റി. ഇത് diversion ആണോ application ആണോ എന്നതാണ് ചോദ്യം.\n\nക്ലയന്റ് trust സൃഷ്ടിച്ചിട്ടില്ല, പണം നേരിട്ട് trust-ന് നൽകിയതുമില്ല. ഭാർഗവയ്ക്കു മേൽ നിയമപരമായി ബാധകമായ trust obligation ക്ലയന്റ് ഏർപ്പെടുത്തിയിട്ടില്ല.\n\nDiversion ഉണ്ടാകാൻ വരുമാനം ലഭിക്കുന്നതിന് മുമ്പ് source-ൽ തന്നെ ബാധകമായ നിയമബാധ്യത വേണം. ആദ്യം വരുമാനം വ്യക്തിക്ക് ലഭിച്ചാൽ പിന്നീടുള്ള വിനിയോഗം application ആണ്.\n\nഭാർഗവയ്ക്ക് ഫീസിന്റെ ഉടമസ്ഥാവകാശം ആദ്യം ലഭിച്ചോ എന്ന് പരിശോധിക്കാം. ഇവിടെ ഫീസ് ആദ്യം അദ്ദേഹത്തിന്റെ professional income ആയി; അതിനുശേഷമാണ് trust-ലേക്ക് നൽകിയത്.\n\nTrust deed ഭാർഗവ തന്നെയാണ് തയ്യാറാക്കി നടപ്പാക്കിയത്. അതിനാൽ ഇത് വരുമാനത്തിന്റെ source-നെ ബാധിക്കുന്ന പുറംനിയമബാധ്യതയല്ല; അദ്ദേഹത്തിന്റെ സ്വന്തം തീരുമാനമാണ്.\n\nഅഞ്ച് ലക്ഷം രൂപ ഭാർഗവയ്ക്ക് ലഭിക്കുന്നതിന് മുമ്പ് അത് trust-ലേക്ക് മാറ്റിയിട്ടില്ല. മുഴുവൻ ഫീസും ആദ്യം അദ്ദേഹത്തിന് professional income ആയി ലഭിച്ചു.\n\nഅതിനാൽ trust-ലേക്കുള്ള പിന്നീട് നടത്തിയ കൈമാറ്റം application of income ആണ്. charity-ക്കായി ചെലവഴിച്ചതുകൊണ്ട് ഇതിനകം നേടിയ വരുമാനം ഇല്ലാതാകില്ല.\n\nഅവസാനമായി, അഞ്ച് ലക്ഷം രൂപയുടെ fee ഭാർഗവയുടെ professional income-ൽ ഉൾപ്പെടുത്തണം. Section 28 പ്രകാരം Profits and Gains of Business or Profession എന്ന തലക്കെട്ടിൽ ഇത് taxable ആണ്.",
+    "topic_id": "presentation_q1",
+    "topic_title": "Bhargava: Fee to Self-Created Trust",
+    "audio_file": "q1_mindmap.mp3",
+    "dur": 93.504,
+    "duration_seconds": 93.504,
+    "voice_engine": "Google Text-to-Speech (Malayalam)",
+    "voice": "Google Text-to-Speech (Malayalam)"
+  },
+  {
+    "question_number": 2,
+    "statutory_sections": [
+      "Section 4"
+    ],
+    "core_principle": "Diversion of Income by Overriding Title vs. Application of Income",
+    "provision_presentation_markdown": "### Doctrine: Diversion vs. Application of Income\n\n| Basis of Distinction | Diversion of Income by Overriding Title | Application of Income |\n| :--- | :--- | :--- |\n| **Nature of Obligation** | Obligation is attached to the **source** itself. | Obligation arises **after** the income reaches the assessee. |\n| **Timing of Transfer** | Income is diverted **before** it reaches or accrues to the assessee. | Income is spent/discharged **after** it has accrued or been received. |\n| **Taxability** | **Not taxable** in the hands of the assessee (excluded from Total Income). | **Fully taxable** in the hands of the assessee (no deduction allowed). |\n| **Legal Benchmark** | Landmark Ruling: *CIT v. Sitaldas Tirathdas (SC)*. | General principle of utilization of earned profits. |\n\n> **Key Test (Jit & Pal X-Rays (P.) Ltd.):**\n> Where an obligation to pay an overriding charge is an **integral condition of the purchase deed** and attached directly to the source of income (the business undertaking), it is a **Diversion of Income by Overriding Title** and not an application of profit.",
+    "malayalam_audio_script": "ഇപ്പോൾ XYZ Limited-ന്റെ business takeover നോക്കാം. ഒരു running business sale deed വഴി വാങ്ങുമ്പോൾ, മുൻ ഉടമയുടെ ഭാര്യയ്ക്ക് വർഷം പതിനയ്യായിരം രൂപ നൽകാമെന്ന് കമ്പനി സമ്മതിച്ചു.\n\nഈ payment business വാങ്ങുന്നതിനുള്ള sale deed-ിലെ നിബന്ധനയാണ്. തുക കമ്പനിയുടെ net profits-ൽ charge ചെയ്തിട്ടുണ്ടെന്നും deed വ്യക്തമാക്കുന്നു.\n\nഇവിടെ പരിശോധിക്കേണ്ടത് obligation വരുമാനത്തിന്റെ source-നോടാണോ ബന്ധിപ്പിച്ചിരിക്കുന്നത്, അല്ലെങ്കിൽ വരുമാനം ലഭിച്ച ശേഷം ചെലവാക്കുന്നതാണോ എന്നതാണ്.\n\nJit and Pal X-Rays കേസിലെ പരിശോധന പ്രയോഗിക്കാം: charge purchase deed-ിന്റെ അവിഭാജ്യ നിബന്ധനയാണോ? ആണ്. വാങ്ങിയ business എന്ന source-നോട് നേരിട്ട് ബന്ധമുണ്ടോ? ഉണ്ട്.\n\nപ്രവർത്തിക്കുന്ന business വാങ്ങാൻ XYZ ഈ ബാധ്യത സ്വീകരിച്ചു. XYZ-യുടെ ഉടമസ്ഥതയിൽ profits ഉണ്ടാകുന്നതിന് മുമ്പേ obligation നിലവിലുണ്ടായിരുന്നു.\n\nനേടിയ profits കമ്പനി പിന്നീട് സ്വമേധയാ മറ്റൊരാൾക്ക് നൽകുന്നതല്ല ഇത്. deed തന്നെ source-ൽ കമ്പനിയുടെ അവകാശത്തെ ബാധിക്കുന്നു.\n\nഅതിനാൽ deed പ്രകാരമുള്ള പതിനയ്യായിരം രൂപ source-ൽ നിന്നുള്ള diversion ആണ്. ഇത് XYZ-യുടെ profits ലഭിച്ചശേഷമുള്ള സാധാരണ application അല്ല.\n\nJit and Pal X-Rays വിധി, purchase deed വഴി source-നോട് ബന്ധിപ്പിച്ച charge diversion ആണെന്ന് പിന്തുണയ്ക്കുന്നു. അതിനാൽ ഇത് overriding charge മുഖേനയുള്ള diversion ആണ്.",
+    "topic_id": "presentation_q2",
+    "topic_title": "XYZ Ltd: Purchase-Deed Charge",
+    "audio_file": "q2_mindmap.mp3",
+    "dur": 92.424,
+    "duration_seconds": 92.424,
+    "voice_engine": "Google Text-to-Speech (Malayalam)",
+    "voice": "Google Text-to-Speech (Malayalam)"
+  },
+  {
+    "question_number": 3,
+    "statutory_sections": [
+      "Section 4"
+    ],
+    "core_principle": "Diversion of Income by Overriding Title vs. Application of Income",
+    "provision_presentation_markdown": "### ⚖️ Diversion of Income vs. Application of Income\n\n| Basis of Distinction | Diversion by Overriding Title | Application of Income |\n| :--- | :--- | :--- |\n| **Point of Transfer** | Diverted **at source** before reaching the assessee | Applied **after** the income reaches / accrues to the assessee |\n| **Nature of Obligation** | Created by an overriding, pre-existing legal charge or superior title | Merely an obligation to apply income that has already accrued |\n| **Ownership of Funds** | Assessee receives it merely on behalf of the real title-holder | Assessee receives it as their own real income |\n| **Tax Treatment** | **Excluded** from Total Income (Not taxable) | **Included** in Total Income (No deduction allowed) |\n\n---\n\n#### 📌 The Supreme Court Benchmark *(CIT vs. Sitaldas Tirathdas)*\n* **The Decisive Test:** *Does the money reach the assessee as his own income before being applied, or is it diverted before it ever reaches him by virtue of an overriding enforceable obligation?*\n* **Partnership Stipulation:** Where a partnership deed creates a charge on profits in favour of a deceased partner’s legal heir (e.g., widow) as a condition precedent for business continuation, the payment constitutes **diversion of income at source** *(CIT vs. Nariman B. Bharucha & Sons)*.",
+    "malayalam_audio_script": "MKG Agency-യിൽ അച്ഛനും മൂന്ന് മക്കളുമാണ് പങ്കാളികൾ. അച്ഛന്റെ മരണശേഷം profits-ന്റെ ഇരുപത് ശതമാനം അമ്മയ്ക്ക് നൽകണമെന്ന് partnership deed പറയുന്നു.\n\nഅച്ഛൻ 2025 മാർച്ചിൽ മരിച്ചു; മക്കൾ business തുടർന്നു. 2025–26 previous year-ൽ profits-ന്റെ ഇരുപത് ശതമാനമായ ഒരു ലക്ഷം രൂപ firm അമ്മയ്ക്ക് നൽകി.\n\nPayment obligation partnership deed-ിൽ തന്നെയുണ്ട്. അച്ഛന്റെ മരണശേഷം profits ഉണ്ടാകുമ്പോൾ തന്നെ ആ നിബന്ധന പ്രവർത്തിക്കുന്നു.\n\nനിശ്ചയിച്ച ഇരുപത് ശതമാനത്തിൽ അമ്മയ്ക്കാണ് overriding right. ആ ഭാഗം firm-ന്റെ സ്വന്തം ഉപയോഗത്തിനുള്ള വരുമാനമായി ലഭിക്കുന്നതല്ല.\n\nDeed-ിലെ charge profits എന്ന source-നോട് ചേർന്നിരിക്കുന്നു. അമ്മയുടെ മെച്ചപ്പെട്ട അവകാശപ്രകാരം firm ആ തുക കൈകാര്യം ചെയ്യുന്നതാണ്.\n\nഒരു ലക്ഷം രൂപയെ firm-ന്റെ വരുമാനത്തിൽ നിന്ന് ഒഴിവാക്കുന്നതാണ് ശരിയായ സമീപനം. ഇത് വരുമാനം ലഭിച്ച ശേഷമുള്ള expense deduction അല്ല; source-ൽ diversion ആണ്.\n\nചോദ്യത്തിന്റെ മാതൃകാ ഉത്തരത്തിൽ CIT v. Nariman B. Bharucha and Sons എന്ന വിധിയാണ് ആശ്രയിക്കുന്നത്. deed മുഖേനയുള്ള overriding title diversion ആകാമെന്ന തത്വം അത് പിന്തുണയ്ക്കുന്നു.\n\nഅതിനാൽ firm-ന്റെ വാദം തത്വത്തിൽ ശരിയാണ്; ഒരു ലക്ഷം രൂപ വരുമാനത്തിൽ നിന്ന് ഒഴിവാക്കണം. അത് അമ്മയിലേക്കുള്ള diversion ആണ്, firm-ന്റെ സ്വന്തം income അല്ല.",
+    "topic_id": "presentation_q3",
+    "topic_title": "MKG Agency: Profit Share to Mother",
+    "audio_file": "q3_mindmap.mp3",
+    "dur": 92.592,
+    "duration_seconds": 92.592,
+    "voice_engine": "Google Text-to-Speech (Malayalam)",
+    "voice": "Google Text-to-Speech (Malayalam)"
+  },
+  {
+    "question_number": 4,
+    "statutory_sections": [
+      "Section 4",
+      "Section 115BAC(6)",
+      "Annual Finance Act (First Schedule, Part I)"
+    ],
+    "core_principle": "Age-Based Progressive Slab Rates under the Optional (Old) Tax Regime",
+    "provision_presentation_markdown": "### Tax Rates under Optional / Normal Regime (Old Regime)\n\n| Total Income Slab | Resident < 60 Years | Senior Citizen (60 to < 80 Years) | Super Senior Citizen (80+ Years) |\n| :--- | :---: | :---: | :---: |\n| **Up to ₹ 2,50,000** | **Nil** | **Nil** | **Nil** |\n| **₹ 2,50,001 – ₹ 3,00,000** | 5% | **Nil** *(Exempt up to ₹ 3L)* | **Nil** *(Exempt up to ₹ 5L)* |\n| **₹ 3,00,001 – ₹ 5,00,000** | 5% | 5% | **Nil** |\n| **₹ 5,00,001 – ₹ 10,00,000** | 20% | 20% | 20% |\n| **Above ₹ 10,00,000** | 30% | 30% | 30% |\n\n#### Additional Statutory Levies & Relief\n* **Health and Education Cess (HEC):** Mandatory **4%** on aggregate income-tax (plus surcharge, if any).\n* **Rebate u/s 87A:** Available up to **₹ 12,500** for resident individuals having Total Income up to **₹ 5,00,000**.\n* **Surcharge:** Applicable only if Total Income exceeds **₹ 50 Lakhs**.",
+    "malayalam_audio_script": "അർജുന്റെ മൊത്തവരുമാനം പതിനാറ് ലക്ഷം രൂപയാണ്; house property-യും FD interest-ഉം ഉൾപ്പെടുന്നു. Default regime-ൽ നിന്ന് മാറി പഴയ regime തിരഞ്ഞെടുക്കുന്നു. മൂന്ന് പ്രായങ്ങൾക്കുള്ള tax താരതമ്യം ചെയ്യാം.\n\nപ്രായം അനുസരിച്ച് basic exemption മാറുന്നു: 52 വയസ്സിൽ രണ്ടര ലക്ഷം, 64 വയസ്സിൽ മൂന്ന് ലക്ഷം, 83 വയസ്സിൽ അഞ്ച് ലക്ഷം രൂപ വരെ നികുതിയില്ല.\n\nകണക്കിൽ അഞ്ച് ലക്ഷം രൂപവരെ ബാധകമായ ഭാഗത്തിന് അഞ്ച് ശതമാനം, അഞ്ച് മുതൽ പത്ത് ലക്ഷം വരെ ഇരുപത് ശതമാനം, പത്ത് ലക്ഷത്തിന് മുകളിലെ തുകയ്ക്ക് മുപ്പത് ശതമാനം നിരക്കാണ്.\n\n52 വയസ്സിൽ cess-നു മുമ്പുള്ള tax രണ്ട് ലക്ഷം തൊണ്ണൂറ്റിരണ്ടായിരത്തി അഞ്ഞൂറ്. 4% cess പതിനൊന്നായിരത്തി എഴുനൂറ് ചേർത്താൽ final tax ₹3,04,200.\n\n64 വയസ്സിൽ tax രണ്ട് ലക്ഷം തൊണ്ണൂറായിരം. അതിന്റെ 4% cess പതിനൊന്നായിരത്തി അറുനൂറ്; ആകെ tax ₹3,01,600.\n\n83 വയസ്സിൽ അഞ്ച് ലക്ഷം വരെ exemption ഉള്ളതിനാൽ tax രണ്ട് ലക്ഷം എൺപതിനായിരം. cess പതിനൊന്നായിരത്തി ഇരുനൂറ് ചേർത്ത് tax ₹2,91,200.\n\nപ്രായം കൂടുമ്പോൾ exemption limit ഉയരുന്നു. എന്നാൽ പത്ത് ലക്ഷത്തിന് മുകളിലുള്ള ആറു ലക്ഷം രൂപയ്ക്കുള്ള മുപ്പത് ശതമാനം tax മൂന്നുപേർക്കും ഒരുപോലെയാണ്.\n\nചുരുക്കത്തിൽ, 52 വയസ്സിൽ ₹3,04,200; 64 വയസ്സിൽ ₹3,01,600; 83 വയസ്സിൽ ₹2,91,200 ആണ് final tax liability. ഈ തുകകളിൽ 4% cess ഉൾപ്പെടുന്നു.",
+    "topic_id": "presentation_q4",
+    "topic_title": "Old-Regime Tax: Age-Based Slabs",
+    "audio_file": "q4_mindmap.mp3",
+    "dur": 107.904,
+    "duration_seconds": 107.904,
+    "voice_engine": "Google Text-to-Speech (Malayalam)",
+    "voice": "Google Text-to-Speech (Malayalam)"
+  },
+  {
+    "question_number": 5,
+    "statutory_sections": [
+      "Section 87A",
+      "Section 115BAC(6)"
+    ],
+    "core_principle": "Tax Slabs & Section 87A Rebate under Normal Tax Provisions (Old Regime)",
+    "provision_presentation_markdown": "### Tax Rates for Individuals (< 60 Years) — Old Regime\n\n| Total Income Slab | Applicable Tax Rate |\n| :--- | :--- |\n| **Up to ₹ 2,50,000** | **Nil** (Basic Exemption Limit) |\n| **₹ 2,50,001 – ₹ 5,00,000** | **5%** of amount exceeding ₹ 2,50,000 |\n| **₹ 5,00,001 – ₹ 10,00,000** | ₹ 12,500 + **20%** of amount exceeding ₹ 5,00,000 |\n| **Above ₹ 10,00,000** | ₹ 1,12,500 + **30%** of amount exceeding ₹ 10,00,000 |\n\n---\n\n### Rebate under Section 87A (Old Regime)\n\n* **Eligibility:** Resident Individual only.\n* **Income Threshold:** Total Income **≤ ₹ 5,00,000**.\n* **Rebate Quantum:** Lower of **100% of income-tax payable** or **₹ 12,500**.\n* **Health & Education Cess:** 4% applicable on tax payable after deducting Section 87A rebate.",
+    "malayalam_audio_script": "മനീഷ് 47 വയസ്സുള്ള resident ആണ്. അദ്ദേഹത്തിന്റെ total income നാല് ലക്ഷം പതിനയ്യായിരം രൂപയാണ്; default regime-ൽ നിന്ന് മാറിയിട്ടുണ്ട്.\n\nപഴയ regime-ൽ basic exemption രണ്ടര ലക്ഷം രൂപയാണ്. ശേഷിക്കുന്ന ഒരു ലക്ഷം അറുപത്തയ്യായിരത്തിന് അഞ്ച് ശതമാനം കണക്കാക്കുമ്പോൾ tax ₹8,250.\n\nആദ്യം ₹1,65,000-ന്റെ അഞ്ച് ശതമാനമായ ₹8,250 tax കണക്കാക്കണം. അതിനുശേഷമാണ് Section 87A rebate കുറയ്ക്കുന്നത്.\n\nപഴയ regime-ൽ total income അഞ്ച് ലക്ഷം രൂപ കവിയാത്ത resident individual-ന് Section 87A rebate ലഭിക്കും. മനീഷ് resident ആണ്, income പരിധിക്കുള്ളിലുമാണ്.\n\nRebate എന്നത് tax payable-ഉം ₹12,500-ഉം തമ്മിലുള്ള കുറഞ്ഞ തുകയാണ്. ഇവിടെ കുറഞ്ഞ തുക ₹8,250 ആണ്.\n\nRebate കുറയ്ക്കുന്നതിന് മുമ്പ് tax ₹8,250 ആണ്. അതിൽ നിന്ന് അതേ തുകയുടെ rebate കുറയ്ക്കുമ്പോൾ tax nil ആകുന്നു.\n\nSection 87A rebate കുറച്ച ശേഷമുള്ള tax-ലാണ് cess കണക്കാക്കുന്നത്. ഇവിടെ tax nil ആയതിനാൽ cess-ും nil ആണ്.\n\nഅവസാനമായി Section 87A rebate മുഴുവൻ tax ഇല്ലാതാക്കുന്നു. അതിനാൽ മനീഷിന്റെ final tax liability nil ആണ്.",
+    "topic_id": "presentation_q5",
+    "topic_title": "Section 87A Rebate: Old Regime",
+    "audio_file": "q5_mindmap.mp3",
+    "dur": 89.496,
+    "duration_seconds": 89.496,
+    "voice_engine": "Google Text-to-Speech (Malayalam)",
+    "voice": "Google Text-to-Speech (Malayalam)"
+  },
+  {
+    "question_number": 6,
+    "statutory_sections": [
+      "Section 4",
+      "Section 115BAC(1A)"
+    ],
+    "core_principle": "Default Tax Regime Slab Rates for Individuals u/s 115BAC(1A)",
+    "provision_presentation_markdown": "### **Tax Slabs u/s 115BAC(1A) (Default Tax Regime)**\n*Applicable for Individuals, HUF, AOP, BOI & AJP (A.Y. 2026-27)*\n\n| Total Income Slab (₹) | Rate of Tax |\n| :--- | :---: |\n| **Up to ₹ 4,00,000** | **Nil** |\n| **₹ 4,00,001 – ₹ 8,00,000** | **5%** |\n| **₹ 8,00,001 – ₹ 12,00,000** | **10%** |\n| **₹ 12,00,001 – ₹ 16,00,000** | **15%** |\n| **₹ 16,00,001 – ₹ 20,00,000** | **20%** |\n| **₹ 20,00,001 – ₹ 24,00,000** | **25%** |\n| **Above ₹ 24,00,000** | **30%** |\n\n---\n\n#### **Key Statutory Highlights**\n* **Uniform Basic Exemption:** ₹ 4,00,000 applies universally across all age categories (no enhanced limit for Senior or Super Senior citizens).\n* **Health & Education Cess:** 4% levied on aggregate income-tax.\n* **Rebate u/s 87A:** Available up to ₹ 60,000 if Total Income does not exceed ₹ 12,00,000. The rebate is limited to income-tax payable.",
+    "malayalam_audio_script": "മിസ്റ്റർ X-ന്റെ total income പതിനാറ് ലക്ഷം രൂപയാണ്. Assessment Year 2026–27-ൽ Section 115BAC default regime പ്രകാരമാണ് കണക്കാക്കേണ്ടത്.\n\nആദ്യത്തെ നാല് ലക്ഷം രൂപയ്ക്ക് tax ഇല്ല. അടുത്ത നാല് ലക്ഷം രൂപയ്ക്ക് അഞ്ച് ശതമാനം; അതായത് ₹20,000.\n\nഎട്ട് മുതൽ പന്ത്രണ്ട് ലക്ഷം വരെ പത്ത് ശതമാനം, അതായത് ₹40,000. പന്ത്രണ്ട് മുതൽ പതിനാറ് ലക്ഷം വരെ പതിനഞ്ച് ശതമാനം, അതായത് ₹60,000.\n\nSlab tax കൂട്ടിയാൽ ഇരുപതിനായിരം, നാൽപ്പതിനായിരം, അറുപതിനായിരം ചേർന്ന് ₹1,20,000. ഇത് cess-നു മുമ്പുള്ള income tax ആണ്.\n\nഇപ്പോൾ ₹1,20,000-ന്റെ നാല് ശതമാനം cess കണക്കാക്കാം. അത് ₹4,800 ആണ്.\n\nTotal income ₹16 ലക്ഷം ആയതിനാൽ ₹12 ലക്ഷം rebate പരിധി കവിയുന്നു. അതിനാൽ ഈ കണക്കിൽ Section 87A rebate ലഭ്യമല്ല.\n\nCess-നു മുമ്പുള്ള tax ₹1,20,000; cess ₹4,800. ആകെ final tax liability ₹1,24,800 ആണ്.\n\nഓരോ slab-ലും വരുന്ന തുകയ്ക്ക് അതിന്റെ നിരക്ക് വേർതിരിച്ച് പ്രയോഗിക്കുക. Tax-ും ലഭിക്കേണ്ട rebate-ും നിശ്ചയിച്ച ശേഷം മാത്രമാണ് 4% cess ചേർക്കേണ്ടത്.",
+    "topic_id": "presentation_q6",
+    "topic_title": "Section 115BAC: Default-Regime Tax",
+    "audio_file": "q6_mindmap.mp3",
+    "dur": 93.384,
+    "duration_seconds": 93.384,
+    "voice_engine": "Google Text-to-Speech (Malayalam)",
+    "voice": "Google Text-to-Speech (Malayalam)"
+  },
+  {
+    "question_number": 7,
+    "statutory_sections": [
+      "Section 115BAC",
+      "Section 87A"
+    ],
+    "core_principle": "Default Tax Regime Slabs & Enhanced Rebate u/s 87A",
+    "provision_presentation_markdown": "### **Tax Slabs u/s 115BAC (A.Y. 2026-27)**\n\n| Total Income Slab | Applicable Tax Rate |\n| :--- | :--- |\n| **Upto ₹ 4,00,000** | **Nil** |\n| **₹ 4,00,001 — ₹ 8,00,000** | **5%** |\n| **₹ 8,00,001 — ₹ 12,00,000** | **10%** |\n| **₹ 12,00,001 — ₹ 16,00,000** | **15%** |\n| **₹ 16,00,001 — ₹ 20,00,000** | **20%** |\n| **₹ 20,00,001 — ₹ 24,00,000** | **25%** |\n| **Above ₹ 24,00,000** | **30%** |\n\n---\n\n### **Rebate & Surcharge Highlights**\n* 🔹 **Section 87A Rebate (Default Regime):**\n  * **Eligibility:** Resident Individual with Total Income $\\le$ **₹ 12,00,000**.\n  * **Quantum:** Lower of **Tax Payable** or **₹ 60,000**.\n* 🔹 **Health & Education Cess:** **4%** on tax liability (after rebate u/s 87A).\n* 🔹 **Age Benefit:** No separate basic exemption for Senior/Super Senior citizens under Section 115BAC.",
+    "malayalam_audio_script": "മഹേഷ് 32 വയസ്സുള്ള resident individual ആണ്. Section 115BAC default regime-ൽ അദ്ദേഹത്തിന്റെ total income പതിനൊന്ന് ലക്ഷം രൂപയാണ്.\n\nആദ്യത്തെ നാല് ലക്ഷം രൂപയ്ക്ക് tax ഇല്ല. നാല് മുതൽ എട്ട് ലക്ഷം വരെയുള്ള നാല് ലക്ഷത്തിന് അഞ്ച് ശതമാനം, അതായത് ₹20,000.\n\nഎട്ട് മുതൽ പതിനൊന്ന് ലക്ഷം വരെയുള്ള മൂന്ന് ലക്ഷത്തിന് പത്ത് ശതമാനം, ₹30,000. അതിനാൽ rebate-നു മുമ്പുള്ള tax ആകെ ₹50,000.\n\n2026–27 assessment year-ൽ നിബന്ധനകൾ പാലിക്കുന്ന resident individual-ന് total income ₹12 ലക്ഷം പരിധിക്കുള്ളിലാണെങ്കിൽ rebate ലഭിക്കും. മഹേഷിന്റെ വരുമാനം ആ പരിധിക്കുള്ളിലാണ്.\n\nRebate tax payable-ഉം ₹60,000-ഉം തമ്മിലുള്ള കുറഞ്ഞ തുകയാണ്. ഇവിടെ tax ₹50,000 മാത്രമായതിനാൽ rebate ₹50,000.\n\n₹50,000 tax-ൽ നിന്ന് അതേ തുകയുടെ rebate കുറച്ചാൽ balance tax nil ആണ്.\n\nRebate കുറച്ചശേഷം ശേഷിക്കുന്ന tax-ലാണ് cess കണക്കാക്കുന്നത്. Tax ഒന്നും ശേഷിക്കാത്തതിനാൽ cess nil ആണ്.\n\nഅതിനാൽ Section 87A rebate tax മുഴുവനായി ഇല്ലാതാക്കുന്നു. മഹേഷിന്റെ final tax liability nil ആണ്.",
+    "topic_id": "presentation_q7",
+    "topic_title": "Section 87A: Rebate in Default Regime",
+    "audio_file": "q7_mindmap.mp3",
+    "dur": 82.392,
+    "duration_seconds": 82.392,
+    "voice_engine": "Google Text-to-Speech (Malayalam)",
+    "voice": "Google Text-to-Speech (Malayalam)"
+  },
+  {
+    "question_number": 8,
+    "statutory_sections": [
+      "Section 115BAC",
+      "Section 87A"
+    ],
+    "core_principle": "Marginal Relief under Section 87A in Default Tax Regime",
+    "provision_presentation_markdown": "### Default regime slabs and Section 87A relief\n\n**A.Y. 2026–27 · Resident individuals**\n\n| Total income | Tax rate |\n|:--|--:|\n| Up to ₹4,00,000 | Nil |\n| ₹4,00,001–₹8,00,000 | 5% |\n| ₹8,00,001–₹12,00,000 | 10% |\n| ₹12,00,001–₹16,00,000 | 15% |\n| ₹16,00,001–₹20,00,000 | 20% |\n| ₹20,00,001–₹24,00,000 | 25% |\n| Above ₹24,00,000 | 30% |\n\n**Section 87A:** For an eligible resident individual, rebate is limited to tax payable or ₹60,000, whichever is lower, where total income does not exceed ₹12,00,000.\n\n**Marginal relief:** When total income is just above ₹12,00,000, tax before cess is limited to the amount by which total income exceeds ₹12,00,000. Add 4% health and education cess after relief.\n",
+    "malayalam_audio_script": "നിതിൻ Section 115BAC പ്രകാരമുള്ള resident individual ആണ്. അദ്ദേഹത്തിന്റെ ₹12,50,000 income, ₹12 ലക്ഷം പരിധിയെ ₹50,000 കൊണ്ട് കവിയുന്നു.\n\nനാല് മുതൽ എട്ട് ലക്ഷം വരെ tax ₹20,000. എട്ട് മുതൽ പന്ത്രണ്ട് ലക്ഷം വരെ ₹40,000. അതിനാൽ ₹12 ലക്ഷം വരെ tax ₹60,000.\n\nപന്ത്രണ്ട് ലക്ഷത്തിന് മുകളിലുള്ള അമ്പതിനായിരത്തിന് പതിനഞ്ച് ശതമാനം, അതായത് ₹7,500. ആകെ tax ₹67,500.\n\nവരുമാനം പരിധിയെ ₹50,000 മാത്രമാണ് കവിയുന്നത്, എന്നാൽ tax ₹67,500 ആയി. വരുമാനത്തിലെ അധികത്തെക്കാൾ tax വർധിച്ചതിനാൽ marginal rebate വേണം.\n\nMarginal rebate ₹67,500-ൽ നിന്ന് ₹50,000 കുറച്ചത്, അതായത് ₹17,500. ഇതോടെ rebate ശേഷമുള്ള tax അധിക വരുമാനമായ ₹50,000-ൽ പരിമിതപ്പെടുന്നു.\n\nRebate കുറച്ചശേഷം ₹67,500-ൽ നിന്ന് ₹17,500 കുറച്ച് ₹50,000 ശേഷിക്കുന്നു. ഇത് cess-നു മുമ്പുള്ള tax ആണ്.\n\n₹50,000-ന്റെ നാല് ശതമാനം cess ₹2,000 ആണ്. അത് ചേർത്താൽ tax ₹52,000.\n\nMarginal rebate മൂലം cess-നു മുമ്പുള്ള tax അധിക വരുമാനമായ ₹50,000-ൽ ഒതുങ്ങുന്നു. cess ഉൾപ്പെടെയുള്ള final liability ₹52,000 ആണ്.",
+    "topic_id": "presentation_q8",
+    "topic_title": "Section 87A: Marginal Rebate at ₹12.5 Lakh",
+    "audio_file": "q8_mindmap.mp3",
+    "dur": 97.08,
+    "duration_seconds": 97.08,
+    "voice_engine": "Google Text-to-Speech (Malayalam)",
+    "voice": "Google Text-to-Speech (Malayalam)"
+  },
+  {
+    "question_number": 9,
+    "statutory_sections": [
+      "Section 4",
+      "Annual Finance Act"
+    ],
+    "core_principle": "Marginal Relief on Surcharge for Domestic Companies Exceeding ₹1 Crore Threshold",
+    "provision_presentation_markdown": "### Tax Rates & Surcharge for Domestic Companies (Normal Provisions)\n\n| Turnover in P.Y. 2023-24 | Base Tax Rate |\n| :--- | :--- |\n| **≤ ₹ 400 Crore** | **25%** |\n| **> ₹ 400 Crore** | **30%** |\n\n---\n\n### Surcharge Slabs for Domestic Companies\n\n| Total Income Slab | Surcharge Rate |\n| :--- | :--- |\n| **Up to ₹ 1 Crore** | **Nil** |\n| **> ₹ 1 Crore up to ₹ 10 Crore** | **7%** |\n| **> ₹ 10 Crore** | **12%** |\n\n> **Note:** Health and Education Cess is leviable @ **4%** on (Tax + Surcharge - Marginal Relief).\n\n---\n\n### Marginal Relief Formula (Income > ₹ 1 Crore up to ₹ 10 Crore)\n\nWhere total income exceeds ₹ 1 crore, the total amount payable as tax and surcharge shall not exceed:\n\n$$\\text{Tax on ₹ 1 Crore} + (\\text{Total Income} - ₹ 1\\text{ Crore})$$\n\n$$\\text{Marginal Relief} = (\\text{Tax} + \\text{Surcharge}) - [\\text{Tax on ₹ 1 Crore} + (\\text{Total Income} - ₹ 1,00,00,000)]$$",
+    "malayalam_audio_script": "X Limited ഒരു domestic company ആണ്; total income ₹1 കോടി 1 ലക്ഷം. 2026–27 assessment year-ൽ capital gains ഇല്ല, Section 115BAA അല്ലെങ്കിൽ 115BAB തിരഞ്ഞെടുക്കിയിട്ടില്ല.\n\n2023–24 previous year-ലെ gross receipts ₹402 കോടി, അതായത് ₹400 കോടിക്ക് മുകളിൽ. ചോദ്യത്തിലെ കണക്കിൽ 30% company base rate ഉപയോഗിക്കുന്നു.\n\nവരുമാനം ഒരു കോടിക്ക് മുകളിലും പത്ത് കോടിക്കുള്ളിലുമാണ്. ചോദ്യത്തിലെ കണക്കുപ്രകാരം surcharge 7%; ചേർന്നുള്ള നിരക്ക് 32.1% ആണ്.\n\n₹1,01,00,000-ന്റെ 32.1% ₹32,42,100 ആണ്. ഇത് threshold-ലെ tax-ും അധിക വരുമാനവും ചേർത്ത പരിധിയെക്കാൾ കൂടുതലാണ്.\n\nഒരു കോടി രൂപയിലെ 30% tax-ും 7% surcharge-ും ചേർന്ന് ₹30,00,000. അതിന് മുകളിലുള്ള വരുമാനം ₹1,00,000 ചേർത്താൽ capped amount ₹31,00,000.\n\nRelief-നു മുമ്പുള്ള tax ₹32,42,100. അതിൽ നിന്ന് cap ആയ ₹31,00,000 കുറച്ചാൽ marginal relief ₹1,42,100.\n\nചോദ്യബാങ്കിന്റെ ഉത്തരത്തിൽ relief-നുശേഷമുള്ള tax ₹31,00,000 ആയി പരിമിതപ്പെടുത്തുന്നു. ആ ഉത്തരത്തിൽ cess പ്രത്യേകം ചേർത്തിട്ടില്ല.\n\nപരീക്ഷാ ഉത്തരമായി, marginal relief ₹1,42,100. നൽകിയിരിക്കുന്ന ഉത്തരപ്രകാരം relief ശേഷമുള്ള tax ₹31,00,000 ആണ്.",
+    "topic_id": "presentation_q9",
+    "topic_title": "X Ltd: Marginal Relief above ₹1 Crore",
+    "audio_file": "q9_mindmap.mp3",
+    "dur": 118.704,
+    "duration_seconds": 118.704,
+    "voice_engine": "Google Text-to-Speech (Malayalam)",
+    "voice": "Google Text-to-Speech (Malayalam)"
+  },
+  {
+    "question_number": 10,
+    "statutory_sections": [
+      "Section 4",
+      "Finance Act"
+    ],
+    "core_principle": "Marginal Relief on Surcharge for Domestic Companies exceeding ₹ 10 Crore",
+    "provision_presentation_markdown": "### **1. Tax Rates for Domestic Companies (Regular Regime)**\n\n| Total Turnover / Gross Receipts (P.Y. 2023-24) | Base Tax Rate |\n| :--- | :---: |\n| $\\le$ ₹ 400 Crore | **25%** |\n| Exceeding ₹ 400 Crore | **30%** |\n\n---\n\n### **2. Surcharge Rates for Domestic Companies**\n\n| Total Income Slab | Surcharge Rate |\n| :--- | :---: |\n| **Up to ₹ 1 Crore** | Nil |\n| **> ₹ 1 Crore but $\\le$ ₹ 10 Crore** | **7%** |\n| **> ₹ 10 Crore** | **12%** |\n\n* **Health & Education Cess:** 4% applicable on (Tax + Surcharge - Marginal Relief).\n\n---\n\n### **3. Marginal Relief Computation Steps (> ₹ 10 Crore)**\n\n1. **Step 1:** Compute Tax + Surcharge @ 12% on Total Income.\n2. **Step 2:** Compute Tax + Surcharge @ 7% on threshold limit of ₹ 10 Crore.\n3. **Step 3:** Calculate Maximum Tax Payable:\n   $$\\text{Capped Tax} = (\\text{Tax on ₹ 10 Cr}) + (\\text{Total Income} - ₹ 10\\text{ Cr})$$\n4. **Step 4:** **Marginal Relief** = $\\text{Step 1 Tax} - \\text{Step 3 Capped Tax}$.",
+    "malayalam_audio_script": "Y Limited domestic company ആണ്; total income ₹10 കോടി 1 ലക്ഷം. 2026–27 assessment year-ൽ capital gains ഇല്ല, 115BAA അല്ലെങ്കിൽ 115BAB option എടുത്തിട്ടില്ല.\n\n2023–24-ലെ gross receipts ₹410 കോടി, ₹400 കോടിക്ക് മുകളിൽ. അതിനാൽ ചോദ്യത്തിലെ കണക്കിൽ 30% base rate ആണ്.\n\nവരുമാനം പത്ത് കോടി കവിയുന്നതിനാൽ ചോദ്യത്തിൽ 12% surcharge പ്രയോഗിക്കുന്നു. ഉത്തരത്തിൽ ഉപയോഗിച്ച combined rate 33.6% ആണ്.\n\n₹10,01,00,000-ന്റെ 33.6% ₹3,36,33,600 ആണ്. ഇത് പത്ത് കോടി threshold-ലെ tax-ും അധികമായ ഒരു ലക്ഷവും ചേർന്ന പരിധിയുമായി താരതമ്യം ചെയ്യണം.\n\nപത്ത് കോടി രൂപയിലെ 32.1% tax ₹3,21,00,000. അധിക വരുമാനമായ ഒരു ലക്ഷം ചേർത്താൽ cap ₹3,22,00,000.\n\nRelief-നു മുമ്പുള്ള tax ₹3,36,33,600. അതിൽ നിന്ന് cap ആയ ₹3,22,00,000 കുറച്ചാൽ marginal relief ₹14,33,600.\n\nMarginal relief പ്രയോഗിച്ചതിനു ശേഷം tax ₹3,22,00,000-ൽ പരിമിതപ്പെടുന്നു. നൽകിയ ഉത്തരത്തിൽ cess പ്രത്യേകം ചേർക്കുന്നില്ല.\n\nചോദ്യത്തിന്റെ അന്തിമ ഉത്തരം: marginal relief ₹14,33,600. നൽകിയിരിക്കുന്ന ഉത്തരപ്രകാരം relief ശേഷമുള്ള tax ₹3,22,00,000 ആണ്.",
+    "topic_id": "presentation_q10",
+    "topic_title": "Y Ltd: Marginal Relief above ₹10 Crore",
+    "audio_file": "q10_mindmap.mp3",
+    "dur": 117.408,
+    "duration_seconds": 117.408,
+    "voice_engine": "Google Text-to-Speech (Malayalam)",
+    "voice": "Google Text-to-Speech (Malayalam)"
+  }
+]

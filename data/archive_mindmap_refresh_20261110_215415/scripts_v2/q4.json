@@ -1,0 +1,143 @@
+[
+  {
+    "id": "INTRO",
+    "number": "1",
+    "block": 0,
+    "block_name": "Provision heading",
+    "narration_ml": "ഇന്ന് പഴയ tax regime-ൽ പ്രായം അനുസരിച്ചുള്ള tax calculation നോക്കാം. ആദ്യം വിഷയം മാത്രം പരിചയപ്പെടാം.",
+    "card": {
+      "title": "Old-Regime Tax: Age-Based Slabs",
+      "type": "intro",
+      "lines": [],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L01",
+    "number": "1.1.1",
+    "block": 1,
+    "block_name": "Question setup",
+    "narration_ml": "അർജുന്റെ മൊത്തവരുമാനം പതിനാറ് ലക്ഷം രൂപയാണ്; house property-യും FD interest-ഉം ഉൾപ്പെടുന്നു. Default regime-ൽ നിന്ന് മാറി പഴയ regime തിരഞ്ഞെടുക്കുന്നു. മൂന്ന് പ്രായങ്ങൾക്കുള്ള tax താരതമ്യം ചെയ്യാം.",
+    "card": {
+      "title": "Income and regime choice",
+      "type": "rule",
+      "lines": [
+        "Total income: ₹16,00,000 from house property and FD interest.",
+        "Arjun opts out of the default regime; compare ages 52, 64 and 83."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L02",
+    "number": "1.1.2",
+    "block": 1,
+    "block_name": "Applicable slabs",
+    "narration_ml": "പ്രായം അനുസരിച്ച് basic exemption മാറുന്നു: 52 വയസ്സിൽ രണ്ടര ലക്ഷം, 64 വയസ്സിൽ മൂന്ന് ലക്ഷം, 83 വയസ്സിൽ അഞ്ച് ലക്ഷം രൂപ വരെ നികുതിയില്ല.",
+    "card": {
+      "title": "Basic exemption by age",
+      "type": "rule",
+      "lines": [
+        "Age 52: first ₹2,50,000 is nil.",
+        "Age 64: first ₹3,00,000 is nil; age 83: first ₹5,00,000 is nil."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L03",
+    "number": "1.2.1",
+    "block": 2,
+    "block_name": "Applicable slabs",
+    "narration_ml": "കണക്കിൽ അഞ്ച് ലക്ഷം രൂപവരെ ബാധകമായ ഭാഗത്തിന് അഞ്ച് ശതമാനം, അഞ്ച് മുതൽ പത്ത് ലക്ഷം വരെ ഇരുപത് ശതമാനം, പത്ത് ലക്ഷത്തിന് മുകളിലെ തുകയ്ക്ക് മുപ്പത് ശതമാനം നിരക്കാണ്.",
+    "card": {
+      "title": "Old-regime rates used",
+      "type": "rule",
+      "lines": [
+        "5% applies to the next slab up to ₹5 lakh, subject to age exemption.",
+        "20% applies from ₹5–10 lakh; 30% applies above ₹10 lakh."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L04",
+    "number": "1.2.2",
+    "block": 2,
+    "block_name": "Compute tax",
+    "narration_ml": "52 വയസ്സിൽ cess-നു മുമ്പുള്ള tax രണ്ട് ലക്ഷം തൊണ്ണൂറ്റിരണ്ടായിരത്തി അഞ്ഞൂറ്. 4% cess പതിനൊന്നായിരത്തി എഴുനൂറ് ചേർത്താൽ final tax ₹3,04,200.",
+    "card": {
+      "title": "Age 52 calculation",
+      "type": "table",
+      "lines": [
+        "Tax before cess: ₹12,500 + ₹1,00,000 + ₹1,80,000 = ₹2,92,500.",
+        "4% cess: ₹11,700; final tax: ₹3,04,200."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L05",
+    "number": "1.3.1",
+    "block": 3,
+    "block_name": "Compute tax",
+    "narration_ml": "64 വയസ്സിൽ tax രണ്ട് ലക്ഷം തൊണ്ണൂറായിരം. അതിന്റെ 4% cess പതിനൊന്നായിരത്തി അറുനൂറ്; ആകെ tax ₹3,01,600.",
+    "card": {
+      "title": "Age 64 calculation",
+      "type": "table",
+      "lines": [
+        "Tax before cess: ₹10,000 + ₹1,00,000 + ₹1,80,000 = ₹2,90,000.",
+        "4% cess: ₹11,600; final tax: ₹3,01,600."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L06",
+    "number": "1.3.2",
+    "block": 3,
+    "block_name": "Compute tax",
+    "narration_ml": "83 വയസ്സിൽ അഞ്ച് ലക്ഷം വരെ exemption ഉള്ളതിനാൽ tax രണ്ട് ലക്ഷം എൺപതിനായിരം. cess പതിനൊന്നായിരത്തി ഇരുനൂറ് ചേർത്ത് tax ₹2,91,200.",
+    "card": {
+      "title": "Age 83 calculation",
+      "type": "table",
+      "lines": [
+        "Tax before cess: ₹1,00,000 + ₹1,80,000 = ₹2,80,000.",
+        "4% cess: ₹11,200; final tax: ₹2,91,200."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L07",
+    "number": "1.4.1",
+    "block": 4,
+    "block_name": "Compare results",
+    "narration_ml": "പ്രായം കൂടുമ്പോൾ exemption limit ഉയരുന്നു. എന്നാൽ പത്ത് ലക്ഷത്തിന് മുകളിലുള്ള ആറു ലക്ഷം രൂപയ്ക്കുള്ള മുപ്പത് ശതമാനം tax മൂന്നുപേർക്കും ഒരുപോലെയാണ്.",
+    "card": {
+      "title": "Age changes exemption",
+      "type": "rule",
+      "lines": [
+        "Higher age raises the basic exemption limit.",
+        "The 30% tax on income above ₹10 lakh is common to all three calculations."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L08",
+    "number": "1.4.2",
+    "block": 4,
+    "block_name": "Conclusion",
+    "narration_ml": "ചുരുക്കത്തിൽ, 52 വയസ്സിൽ ₹3,04,200; 64 വയസ്സിൽ ₹3,01,600; 83 വയസ്സിൽ ₹2,91,200 ആണ് final tax liability. ഈ തുകകളിൽ 4% cess ഉൾപ്പെടുന്നു.",
+    "card": {
+      "title": "Final liability summary",
+      "type": "rule",
+      "lines": [
+        "Age 52: ₹3,04,200; age 64: ₹3,01,600.",
+        "Age 83: ₹2,91,200, including 4% cess."
+      ],
+      "highlights": []
+    }
+  }
+]

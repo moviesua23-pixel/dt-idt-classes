@@ -1,0 +1,214 @@
+[
+  {
+    "id": "L01",
+    "block": 1,
+    "block_name": "Scope/Applicability",
+    "narration_ml": "Section 115BAC(1A) prakaram Individuals, HUF, AOP, BOI, matrum AJP ennivarkku Assessment Year 2025-26 muthal default tax regime slab rates aanu apply aakunnath.",
+    "card": {
+      "title": "Applicability of Default Tax Regime",
+      "type": "rule",
+      "lines": [
+        "Applicable to Individuals, HUF, AOP, BOI, and AJP.",
+        "Effective for Assessment Year 2025-26 and 2026-27.",
+        "Governed by Section 115BAC(1A) of the Income-tax Act.",
+        "Operates as the default tax regime for all eligible assessees."
+      ],
+      "highlights": [
+        "Section 115BAC(1A)",
+        "A.Y. 2025-26",
+        "Default Tax Regime"
+      ]
+    }
+  },
+  {
+    "id": "L02",
+    "block": 1,
+    "block_name": "Scope/Applicability",
+    "narration_ml": "Section 4 charge of tax nirdheshikkunnu, athu vazhi Section 115BAC(1A) nalkunna slab rates Total Income-il calculate cheyyanam ennu vyakthamakkunnu.",
+    "card": {
+      "title": "Statutory Authority for Tax Charge",
+      "type": "authority",
+      "lines": [
+        "Section 4 provides the charge of income-tax.",
+        "Tax is levied on the Total Income of the previous year.",
+        "Rates are prescribed under Section 115BAC(1A).",
+        "Applicable for the relevant Assessment Years."
+      ],
+      "highlights": [
+        "Section 4",
+        "Total Income",
+        "Statutory Charge"
+      ]
+    }
+  },
+  {
+    "id": "L03",
+    "block": 2,
+    "block_name": "Rates/Matrix",
+    "narration_ml": "Section 115BAC(1A) prakaram Total Income naalu laksham roopa vare Nil rate aayirikkum ennum athinu mukalil progressive rates apply aakum ennum nirdheshikkunnu.",
+    "card": {
+      "title": "Tax Slab Rates Part 1",
+      "type": "table",
+      "lines": [
+        "Progressive tax rates apply based on income slabs.",
+        "The first slab up to ₹ 4,00,000 is exempt.",
+        "Rates increase by 5% for every ₹ 4,00,000 increment.",
+        "Covers income up to ₹ 12,00,000 in this card."
+      ],
+      "table": {
+        "headers": [
+          "Total Income Slab (₹)",
+          "Rate of Tax"
+        ],
+        "rows": [
+          [
+            "Up to ₹ 4,00,000",
+            "Nil"
+          ],
+          [
+            "₹ 4,00,001 – ₹ 8,00,000",
+            "5%"
+          ],
+          [
+            "₹ 8,00,001 – ₹ 12,00,000",
+            "10%"
+          ]
+        ]
+      },
+      "highlights": [
+        "Nil Rate",
+        "5%",
+        "10%"
+      ]
+    }
+  },
+  {
+    "id": "L04",
+    "block": 2,
+    "block_name": "Rates/Matrix",
+    "narration_ml": "Naalu laksham roopakku mukalil ulla Total Income-inu anju percent muthal muppathu percent vare ulla progressive tax rates aanu Section 115BAC(1A) nalkunnath.",
+    "card": {
+      "title": "Tax Slab Rates Part 2",
+      "type": "table",
+      "lines": [
+        "Higher income slabs attract rates from 15% to 30%.",
+        "The maximum marginal rate of 30% applies above ₹ 24,00,000.",
+        "Slabs are structured in ₹ 4,00,000 intervals.",
+        "Applicable for A.Y. 2025-26 and A.Y. 2026-27."
+      ],
+      "table": {
+        "headers": [
+          "Total Income Slab (₹)",
+          "Rate of Tax"
+        ],
+        "rows": [
+          [
+            "₹ 12,00,001 – ₹ 16,00,000",
+            "15%"
+          ],
+          [
+            "₹ 16,00,001 – ₹ 20,00,000",
+            "20%"
+          ],
+          [
+            "₹ 20,00,001 – ₹ 24,00,000",
+            "25%"
+          ],
+          [
+            "Above ₹ 24,00,000",
+            "30%"
+          ]
+        ]
+      },
+      "highlights": [
+        "15% to 30%",
+        "Above ₹ 24,00,000",
+        "30% Rate"
+      ]
+    }
+  },
+  {
+    "id": "L05",
+    "block": 3,
+    "block_name": "Computation/Relief",
+    "narration_ml": "Total Income ezhu laksham roopa vare aanenkil Section 87A prakaram irupathi-anju ayiram roopa vare ulla Rebate labhikkuvan eligible aanu.",
+    "card": {
+      "title": "Rebate Under Section 87A",
+      "type": "rule",
+      "lines": [
+        "Rebate is available for resident individuals.",
+        "Total Income must not exceed ₹ 7,00,000.",
+        "Maximum rebate amount is ₹ 25,000.",
+        "Calculated before adding Health and Education Cess."
+      ],
+      "highlights": [
+        "Section 87A",
+        "₹ 7,00,000",
+        "₹ 25,000"
+      ]
+    }
+  },
+  {
+    "id": "L06",
+    "block": 3,
+    "block_name": "Computation/Relief",
+    "narration_ml": "Aggregate Income Tax-inte mel naalu percent Health and Education Cess nirbandhamayum levy cheyyanam ennu statutory provision nirdheshikkunnu.",
+    "card": {
+      "title": "Health and Education Cess",
+      "type": "rate",
+      "lines": [
+        "Levied at a rate of 4% on aggregate income-tax.",
+        "Calculated after allowing Rebate u/s 87A.",
+        "Mandatory for all categories of assessees.",
+        "Added to the tax liability to arrive at final tax payable."
+      ],
+      "highlights": [
+        "4% Cess",
+        "Aggregate Income-tax",
+        "Mandatory Levy"
+      ]
+    }
+  },
+  {
+    "id": "L07",
+    "block": 4,
+    "block_name": "Exam Cautions",
+    "narration_ml": "Senior Citizens-inu prathyeka Basic Exemption Limit ee regime-il illennathum, ella age categories-inum naalu laksham roopa uniform aayirikkum ennathum shradhikkenam.",
+    "card": {
+      "title": "Uniform Basic Exemption Limit",
+      "type": "caution",
+      "lines": [
+        "Basic Exemption Limit is fixed at ₹ 4,00,000.",
+        "Applies universally across all age categories.",
+        "No higher exemption for Senior or Super Senior citizens.",
+        "Age-based benefits are not available under Section 115BAC(1A)."
+      ],
+      "highlights": [
+        "₹ 4,00,000",
+        "Uniform Exemption",
+        "No Age Benefit"
+      ]
+    }
+  },
+  {
+    "id": "L08",
+    "block": 4,
+    "block_name": "Exam Cautions",
+    "narration_ml": "Section 115BAC(1A) oru default regime aanennathum, ithu opt-out cheyyathidatholam ella Individuals-inum ee slab rates mathrame apply aaku ennu manassilaakkanam.",
+    "card": {
+      "title": "Default Regime Conditions",
+      "type": "caution",
+      "lines": [
+        "Section 115BAC(1A) is the default tax regime.",
+        "Assessees must specifically opt-out to choose the old regime.",
+        "Slab rates are specific to the default regime only.",
+        "Ensure correct Assessment Year application (2025-26 onwards)."
+      ],
+      "highlights": [
+        "Default Regime",
+        "Opt-out",
+        "A.Y. 2025-26"
+      ]
+    }
+  }
+]

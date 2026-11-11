@@ -1,0 +1,143 @@
+[
+  {
+    "id": "INTRO",
+    "number": "1",
+    "block": 0,
+    "block_name": "Provision heading",
+    "narration_ml": "ഇന്ന് Section 87A-യുടെ old-regime rebate വ്യവസ്ഥ മാത്രം പഠിക്കാം.",
+    "card": {
+      "title": "Section 87A Rebate: Old Regime",
+      "type": "intro",
+      "lines": [],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L01",
+    "number": "1.1.1",
+    "block": 1,
+    "block_name": "Section 87A scope",
+    "narration_ml": "Section 87A rebate resident individual-നാണ്. ഇത് വരുമാനത്തിൽ നിന്നുള്ള deduction അല്ല; അടയ്ക്കേണ്ട income tax കുറയ്ക്കുന്ന rebate ആണ്.",
+    "card": {
+      "title": "Who may claim",
+      "type": "rule",
+      "lines": [
+        "The rebate is for a resident individual.",
+        "It is not a deduction from income; it reduces income-tax payable."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L02",
+    "number": "1.1.2",
+    "block": 1,
+    "block_name": "Section 87A scope",
+    "narration_ml": "Old regime-ൽ total income ₹5,00,000 കവിയരുത്. നിയമപ്രകാരം total income കണക്കാക്കിയ ശേഷമാണ് ഈ പരിധി പരിശോധിക്കേണ്ടത്.",
+    "card": {
+      "title": "Old-regime income condition",
+      "type": "rule",
+      "lines": [
+        "Total income must not exceed ₹5,00,000.",
+        "Check this threshold after computing total income under the Act."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L03",
+    "number": "1.2.1",
+    "block": 2,
+    "block_name": "Rebate amount",
+    "narration_ml": "Income tax-ന്റെ 100% വരെ rebate ലഭിക്കാം; പരമാവധി പരിധി ₹12,500 ആണ്. Rebate, അടയ്ക്കേണ്ട tax-നെ കവിയില്ല.",
+    "card": {
+      "title": "Maximum rebate",
+      "type": "rule",
+      "lines": [
+        "Rebate is 100% of income-tax payable, subject to a ₹12,500 cap.",
+        "The rebate cannot exceed the tax payable."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L04",
+    "number": "1.2.2",
+    "block": 2,
+    "block_name": "Rebate amount",
+    "narration_ml": "Rebate കണക്കാക്കാനുള്ള ലളിതമായ രീതി: income tax payable-ഉം ₹12,500-ഉം തമ്മിലുള്ള കുറഞ്ഞ തുക. Rebate കുറച്ച ശേഷമാണ് cess കണക്കാക്കുന്നത്.",
+    "card": {
+      "title": "Practical formula",
+      "type": "rule",
+      "lines": [
+        "Rebate = lower of income-tax payable or ₹12,500.",
+        "Cess is computed after reducing the rebate."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L05",
+    "number": "1.3.1",
+    "block": 3,
+    "block_name": "Relationship to slab tax",
+    "narration_ml": "ആദ്യം total income-ൽ old-regime slab rates പ്രയോഗിച്ച് tax കണക്കാക്കുക. Rebate-നെ slab ആയോ income exemption ആയോ കാണരുത്.",
+    "card": {
+      "title": "Compute tax first",
+      "type": "rule",
+      "lines": [
+        "Apply the old-regime slab rates to total income.",
+        "Do not treat the rebate as a slab or income exemption."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L06",
+    "number": "1.3.2",
+    "block": 3,
+    "block_name": "Relationship to slab tax",
+    "narration_ml": "ശേഷം അർഹമായ rebate income tax-ൽ നിന്ന് കുറയ്ക്കുക. Rebate tax-നോട് തുല്യമാണെങ്കിൽ ശേഷിക്കുന്ന income tax nil ആകും.",
+    "card": {
+      "title": "Apply rebate next",
+      "type": "rule",
+      "lines": [
+        "Deduct the eligible rebate from income-tax payable.",
+        "If rebate equals the tax, balance income-tax becomes nil."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L07",
+    "number": "1.4.1",
+    "block": 4,
+    "block_name": "Limits and sequence",
+    "narration_ml": "അഞ്ച് ലക്ഷം രൂപയുടെ പരിശോധന total income-നെ അടിസ്ഥാനമാക്കിയാണ്. Total income അതിൽ കൂടുതലായാൽ old-regime rebate ലഭ്യമല്ല.",
+    "card": {
+      "title": "Eligibility boundary",
+      "type": "rule",
+      "lines": [
+        "The ₹5 lakh test is a total-income threshold.",
+        "If total income exceeds it, the old-regime rebate is unavailable."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L08",
+    "number": "1.4.2",
+    "block": 4,
+    "block_name": "Limits and sequence",
+    "narration_ml": "Tax കണക്കാക്കുന്ന ക്രമം: slab tax, Section 87A rebate, ബാധകമായ surcharge, തുടർന്ന് 4% cess. ബന്ധപ്പെട്ട assessment year-ലെ നിയമവും rounding-ഉം പാലിക്കണം.",
+    "card": {
+      "title": "Final tax sequence",
+      "type": "rule",
+      "lines": [
+        "Slab tax → Section 87A rebate → surcharge, if applicable → 4% cess.",
+        "Follow the assessment-year rules and rounding requirements."
+      ],
+      "highlights": []
+    }
+  }
+]

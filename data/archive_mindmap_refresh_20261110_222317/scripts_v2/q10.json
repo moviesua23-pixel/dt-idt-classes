@@ -1,0 +1,143 @@
+[
+  {
+    "id": "INTRO",
+    "number": "1",
+    "block": 0,
+    "block_name": "Provision heading",
+    "narration_ml": "ഇന്ന് domestic company-കൾക്ക് പത്ത് കോടി രൂപ threshold-ൽ ബാധകമായ surcharge relief മാത്രം പഠിക്കാം.",
+    "card": {
+      "title": "Company Surcharge Relief above ₹10 Crore",
+      "type": "intro",
+      "lines": [],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L01",
+    "number": "1.1.1",
+    "block": 1,
+    "block_name": "Company tax framework",
+    "narration_ml": "Domestic company-കൾക്ക് അതത് Finance Act നിശ്ചയിക്കുന്ന നിരക്കാണ് ബാധകം. സാധാരണ നിരക്ക് 30%; നിശ്ചിത turnover വ്യവസ്ഥ പാലിച്ചാൽ 25% നിരക്ക് ലഭിക്കാം.",
+    "card": {
+      "title": "Normal domestic-company rate",
+      "type": "rule",
+      "lines": [
+        "Domestic companies use the rate prescribed by the relevant Finance Act.",
+        "The regular rate is generally 30%; specified turnover-based eligibility can provide 25%."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L02",
+    "number": "1.1.2",
+    "block": 1,
+    "block_name": "Company tax framework",
+    "narration_ml": "Sections 115BA, 115BAA, 115BAB എന്നിവ വേറിട്ട tax options നൽകുന്നു. Option അനുസരിച്ച് അർഹത, നിബന്ധന, surcharge, deduction നിയന്ത്രണം എന്നിവ മാറും.",
+    "card": {
+      "title": "Concessional regimes",
+      "type": "rule",
+      "lines": [
+        "Sections 115BA, 115BAA and 115BAB provide separate tax options.",
+        "Eligibility, conditions, surcharge and deduction restrictions differ by option."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L03",
+    "number": "1.2.1",
+    "block": 2,
+    "block_name": "Surcharge",
+    "narration_ml": "സാധാരണ domestic company-ക്ക് income ഒരു കോടി കവിയുകയും പത്ത് കോടി വരെ ആയിരിക്കുകയും ചെയ്താൽ 7% surcharge. പത്ത് കോടി കവിയുമ്പോൾ 12%; surcharge income tax-ലാണ് കണക്കാക്കുന്നത്.",
+    "card": {
+      "title": "Surcharge thresholds",
+      "type": "rule",
+      "lines": [
+        "For a regular domestic company: 7% where income exceeds ₹1 crore up to ₹10 crore.",
+        "12% applies where income exceeds ₹10 crore; surcharge is on income-tax."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L04",
+    "number": "1.2.2",
+    "block": 2,
+    "block_name": "Surcharge",
+    "narration_ml": "Income tax-ും surcharge-ും ചേർന്ന തുകയ്ക്ക് 4% Health and Education Cess ബാധകമാണ്. Marginal relief ഉണ്ടെങ്കിൽ അത് കണക്കാക്കിയ ശേഷമാണ് cess ചേർക്കുന്നത്.",
+    "card": {
+      "title": "Cess",
+      "type": "rule",
+      "lines": [
+        "Health and Education Cess is 4% of income-tax plus surcharge.",
+        "Add cess after determining any applicable marginal relief."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L05",
+    "number": "1.3.1",
+    "block": 3,
+    "block_name": "Marginal relief above ₹1 crore",
+    "narration_ml": "ഒരു കോടി രൂപയുടെ threshold കടക്കുമ്പോൾ surcharge മൂലം വരുന്ന അധികഭാരം കുറയ്ക്കാനാണ് marginal relief. Tax plus surcharge-നെ threshold tax-ും ഒരു കോടിക്ക് മുകളിലെ അധിക വരുമാനവും ചേർന്ന തുകയുമായി താരതമ്യം ചെയ്യുക.",
+    "card": {
+      "title": "When it applies",
+      "type": "rule",
+      "lines": [
+        "Relief addresses the surcharge increase at the ₹1 crore threshold.",
+        "Compare tax plus surcharge with threshold tax plus income exceeding ₹1 crore."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L06",
+    "number": "1.3.2",
+    "block": 3,
+    "block_name": "Marginal relief above ₹1 crore",
+    "narration_ml": "പരമാവധി പരിധി = ഒരു കോടി രൂപയിലെ tax-ും surcharge-ും + (total income − ഒരു കോടി). Relief = relief-നു മുമ്പുള്ള tax plus surcharge − ഈ പരിധി; വ്യത്യാസം positive ആണെങ്കിൽ.",
+    "card": {
+      "title": "Formula",
+      "type": "rule",
+      "lines": [
+        "Ceiling = tax and surcharge on ₹1 crore + (total income − ₹1 crore).",
+        "Relief = tax and surcharge before relief − ceiling, where positive."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L07",
+    "number": "1.4.1",
+    "block": 4,
+    "block_name": "Marginal relief above ₹10 crore",
+    "narration_ml": "പത്ത് കോടി കവിയുന്ന income-ൽ സാധാരണ company surcharge 12% ആണ്. പത്ത് കോടിയുടെ threshold-ൽ ഉണ്ടാകുന്ന tax jump marginal relief നിയന്ത്രിക്കുന്നു.",
+    "card": {
+      "title": "Higher surcharge threshold",
+      "type": "rule",
+      "lines": [
+        "At income above ₹10 crore, the regular-company surcharge rate is 12%.",
+        "Marginal relief limits the threshold jump at ₹10 crore."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L08",
+    "number": "1.4.2",
+    "block": 4,
+    "block_name": "Marginal relief above ₹10 crore",
+    "narration_ml": "പരമാവധി പരിധി = പത്ത് കോടി രൂപയിലെ tax plus surcharge + അതിന് മുകളിലെ വരുമാനം. Relief കുറച്ചശേഷം ശേഷിക്കുന്ന tax plus surcharge-ൽ 4% cess ചേർക്കുക.",
+    "card": {
+      "title": "Formula and order",
+      "type": "rule",
+      "lines": [
+        "Ceiling = tax plus surcharge on ₹10 crore + income exceeding ₹10 crore.",
+        "Deduct relief, then add 4% cess to tax plus surcharge."
+      ],
+      "highlights": []
+    }
+  }
+]

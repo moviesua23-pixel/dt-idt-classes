@@ -1,0 +1,200 @@
+[
+  {
+    "id": "L01",
+    "block": 1,
+    "block_name": "Scope/Applicability",
+    "narration_ml": "Section 4 പ്രകാരം income-ന് നികുതി ചുമത്തുമ്പോൾ, overriding title വഴി source-ൽ തന്നെ മാറിയ തുകയും income ലഭിച്ചശേഷം ചെലവാക്കിയ തുകയും വ്യത്യസ്തമായാണ് കാണുന്നത്.",
+    "card": {
+      "title": "Scope of Income Diversion Doctrine",
+      "type": "rule",
+      "lines": [
+        "Section 4 governs the chargeability of income based on its accrual or receipt.",
+        "Diversion occurs when income is redirected by a legal obligation before reaching the assessee.",
+        "Application refers to the use of income after it has accrued to the assessee.",
+        "The distinction determines whether an amount is excluded from Total Income."
+      ],
+      "highlights": [
+        "Section 4",
+        "Diversion of Income",
+        "Application of Income",
+        "Total Income"
+      ]
+    }
+  },
+  {
+    "id": "L02",
+    "block": 1,
+    "block_name": "Scope/Applicability",
+    "narration_ml": "Enforceable legal obligation വരുമാനത്തിന്റെ source-നോട് ബന്ധിപ്പിക്കപ്പെട്ട്, അത് assessee-ക്ക് ലഭിക്കുന്നതിന് മുമ്പ് മാറ്റിവെച്ചാൽ മാത്രമാണ് overriding title ബാധകമാകുന്നത്.",
+    "card": {
+      "title": "Criteria for Overriding Title",
+      "type": "rule",
+      "lines": [
+        "Requires an enforceable legal or statutory obligation.",
+        "The obligation must override the assessee's title to the income.",
+        "The income must be diverted at source before accrual.",
+        "Self-imposed conditions do not constitute an overriding title."
+      ],
+      "highlights": [
+        "Legal Obligation",
+        "Overriding Title",
+        "Diverted at Source"
+      ]
+    }
+  },
+  {
+    "id": "L03",
+    "block": 2,
+    "block_name": "Rates/Matrix",
+    "narration_ml": "Transfer നടക്കുന്ന സമയം, obligation-ന്റെ സ്വഭാവം, ownership, taxability എന്നീ അടിസ്ഥാനങ്ങളിൽ Diversion-ഉം Application-ഉം തമ്മിൽ വ്യത്യാസപ്പെടുന്നു; ഇത് tax treatment നിർണയിക്കുന്നു.",
+    "card": {
+      "title": "Statutory Distinction Matrix",
+      "type": "table",
+      "lines": [
+        "Comparative analysis of Diversion vs. Application.",
+        "Based on statutory principles and judicial interpretations.",
+        "Determines the ultimate tax liability under Section 4."
+      ],
+      "table": {
+        "headers": [
+          "Basis of Distinction",
+          "Diversion by Overriding Title",
+          "Application of Income"
+        ],
+        "rows": [
+          [
+            "Point of Transfer",
+            "Diverted at source before reaching the assessee.",
+            "Applied after the income reaches or accrues to the assessee."
+          ],
+          [
+            "Nature of Obligation",
+            "Enforceable legal/statutory obligation overriding assessee's title.",
+            "Voluntary obligation or self-imposed condition by the assessee."
+          ],
+          [
+            "Title to Income",
+            "Assessee never acquires title or ownership over such income.",
+            "Assessee acquires full beneficial ownership before applying it."
+          ],
+          [
+            "Taxability",
+            "Not taxable in the hands of the assessee.",
+            "Taxable in the hands of the assessee under relevant head."
+          ]
+        ]
+      },
+      "highlights": [
+        "Point of Transfer",
+        "Nature of Obligation",
+        "Title to Income",
+        "Taxability"
+      ]
+    }
+  },
+  {
+    "id": "L04",
+    "block": 2,
+    "block_name": "Rates/Matrix",
+    "narration_ml": "Diversion-ൽ income-ന്റെ title assessee-ക്ക് ലഭിക്കുന്നില്ല; Application-ൽ income ആദ്യം ലഭിച്ച് ശേഷം ഉപയോഗിക്കുന്നതിനാൽ അത് അദ്ദേഹത്തിന്റെ taxable income ആകുന്നു.",
+    "card": {
+      "title": "Ownership and Taxability Matrix",
+      "type": "rule",
+      "lines": [
+        "Diversion means the assessee does not acquire title to the diverted income.",
+        "Application means the assessee first obtains beneficial ownership and then uses the income.",
+        "Genuine diversion is excluded from Total Income; applied income remains taxable."
+      ],
+      "highlights": [
+        "Beneficial Ownership",
+        "Not Taxable",
+        "Taxable"
+      ]
+    }
+  },
+  {
+    "id": "L05",
+    "block": 3,
+    "block_name": "Computation/Relief",
+    "narration_ml": "Overriding title മൂലം source-ൽ തന്നെ മാറ്റിവെച്ച income, assessee-യുടെ Total Income-ൽ ഉൾപ്പെടില്ല; ശേഷിക്കുന്ന income-ന് Section 4 ബാധകമാണ്.",
+    "card": {
+      "title": "Computation of Diverted Income",
+      "type": "formula",
+      "lines": [
+        "Identify income subject to enforceable legal obligation.",
+        "Exclude such diverted amounts at the source of accrual.",
+        "Net income after diversion is subject to Section 4 charge.",
+        "Diverted income is not included in the assessee's tax base."
+      ],
+      "highlights": [
+        "Exclude",
+        "Source of Accrual",
+        "Tax Base"
+      ]
+    }
+  },
+  {
+    "id": "L06",
+    "block": 3,
+    "block_name": "Computation/Relief",
+    "narration_ml": "Application of Income-ൽ തുക ആദ്യം assessee-ക്ക് ലഭിക്കുന്നു; പിന്നീട് ഉപയോഗിച്ചാലും അത് ബന്ധപ്പെട്ട head-ന്റെ കീഴിൽ taxable ആയി തുടരും.",
+    "card": {
+      "title": "Taxability of Applied Income",
+      "type": "rule",
+      "lines": [
+        "Income reaches or accrues to the assessee first.",
+        "Subsequent disposal or application does not reduce tax liability.",
+        "Taxable under relevant head (e.g., Section 28 for business).",
+        "Full amount is included in Total Income computation."
+      ],
+      "highlights": [
+        "Accrues First",
+        "Section 28",
+        "Total Income"
+      ]
+    }
+  },
+  {
+    "id": "L07",
+    "block": 4,
+    "block_name": "Exam Cautions",
+    "narration_ml": "CIT v. Thakar Das Bhargava കേസിൽ, professional fees charitable trust-ന് സ്വമേധയാ നൽകുന്നത് Application of Income ആണെന്ന് കോടതി വ്യക്തമാക്കി.",
+    "card": {
+      "title": "Precedent: CIT v. Thakar Das Bhargava",
+      "type": "authority",
+      "lines": [
+        "Professional fees received are taxable under Section 28.",
+        "Voluntary allocation to charity is mere application of income.",
+        "Self-created desires do not constitute an overriding title.",
+        "The obligation must be external and legally enforceable."
+      ],
+      "highlights": [
+        "CIT v. Thakar Das Bhargava",
+        "Section 28",
+        "Voluntary Allocation"
+      ]
+    }
+  },
+  {
+    "id": "L08",
+    "block": 4,
+    "block_name": "Exam Cautions",
+    "narration_ml": "സ്വമേധയാ ഉള്ള കരാറോ self-imposed condition-ഓ മാത്രം diversion അല്ല; source-ൽ പ്രവർത്തിക്കുന്ന enforceable legal obligation ഉണ്ടോ എന്ന് പരിശോധിക്കണം.",
+    "card": {
+      "title": "Common Statutory Traps",
+      "type": "caution",
+      "lines": [
+        "Distinguish between 'at source' and 'after accrual'.",
+        "Check if the obligation is voluntary or legally mandated.",
+        "Section 28 professional earnings are often targets for this trap.",
+        "Diversion requires the assessee to never acquire title."
+      ],
+      "highlights": [
+        "Voluntary",
+        "Legally Mandated",
+        "Section 28",
+        "Title"
+      ]
+    }
+  }
+]

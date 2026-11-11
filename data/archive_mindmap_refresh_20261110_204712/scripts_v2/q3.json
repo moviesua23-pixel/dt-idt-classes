@@ -1,0 +1,230 @@
+[
+  {
+    "id": "L01",
+    "block": 1,
+    "block_name": "Scope/Applicability",
+    "narration_ml": "Section 4 പ്രകാരം income ലഭിക്കുന്നതിന് മുമ്പ് legal obligation മൂലം മാറ്റിവെച്ച തുക Diversion ആണ്; ലഭിച്ചശേഷം ഉപയോഗിക്കുന്നത് Application of Income ആണ്.",
+    "card": {
+      "title": "Scope of Section 4 Doctrine",
+      "type": "rule",
+      "lines": [
+        "Section 4 governs the charge of income tax",
+        "Distinction between Diversion by Overriding Title and Application",
+        "Diversion occurs at source before reaching the assessee",
+        "Application occurs after the income reaches the assessee"
+      ],
+      "highlights": [
+        "Section 4",
+        "Diversion",
+        "Application"
+      ]
+    }
+  },
+  {
+    "id": "L02",
+    "block": 1,
+    "block_name": "Scope/Applicability",
+    "narration_ml": "CIT v. Sitaldas Tirathdas കേസിലെ decisive test ഇതാണ്: പണം assessee-യുടെ സ്വന്തം income ആയി ലഭിച്ചോ, അതോ overriding obligation വഴി മുമ്പേ മാറ്റിയോ?",
+    "card": {
+      "title": "Supreme Court Decisive Test",
+      "type": "authority",
+      "lines": [
+        "CIT vs. Sitaldas Tirathdas established the benchmark test",
+        "Test determines if money reaches assessee as own income",
+        "Checks if diversion happens by overriding enforceable obligation",
+        "Obligation must be pre-existing to qualify as diversion"
+      ],
+      "highlights": [
+        "CIT vs. Sitaldas Tirathdas",
+        "Decisive Test",
+        "Overriding Obligation"
+      ]
+    }
+  },
+  {
+    "id": "L03",
+    "block": 2,
+    "block_name": "Rates/Matrix",
+    "narration_ml": "Point of Transfer-ഉം obligation-ന്റെ സ്വഭാവവും നോക്കുമ്പോൾ, source-ൽ നടക്കുന്ന Diversion-നെ income ലഭിച്ചശേഷമുള്ള Application-ൽ നിന്ന് വ്യക്തമായി വേർതിരിക്കാം.",
+    "card": {
+      "title": "Distinction Matrix Part I",
+      "type": "table",
+      "lines": [
+        "Comparison based on Point of Transfer and Obligation",
+        "Diversion happens at source before reaching the assessee",
+        "Application happens after income reaches or accrues",
+        "Nature of obligation defines the legal tax treatment"
+      ],
+      "table": {
+        "headers": [
+          "Basis of Distinction",
+          "Diversion by Overriding Title",
+          "Application of Income"
+        ],
+        "rows": [
+          [
+            "Point of Transfer",
+            "Diverted at source before reaching the assessee",
+            "Applied after the income reaches / accrues to the assessee"
+          ],
+          [
+            "Nature of Obligation",
+            "Created by an overriding, pre-existing legal charge or superior title",
+            "Merely an obligation to apply income that has already accrued"
+          ]
+        ]
+      },
+      "highlights": [
+        "Point of Transfer",
+        "Nature of Obligation",
+        "At Source"
+      ]
+    }
+  },
+  {
+    "id": "L04",
+    "block": 2,
+    "block_name": "Rates/Matrix",
+    "narration_ml": "Diversion-ൽ തുക Total Income-ൽ ഉൾപ്പെടില്ല; Application-ൽ അത് assessee-യുടെ income ആയതിനാൽ ഉൾപ്പെടും, പ്രത്യേക deduction അനുവദിക്കില്ല; ഇതാണ് tax treatment.",
+    "card": {
+      "title": "Distinction Matrix Part II",
+      "type": "table",
+      "lines": [
+        "Comparison based on Ownership and Tax Treatment",
+        "Diverted income is excluded from Total Income",
+        "Applied income is included in Total Income calculation",
+        "No deduction is allowed for application of income"
+      ],
+      "table": {
+        "headers": [
+          "Basis of Distinction",
+          "Diversion by Overriding Title",
+          "Application of Income"
+        ],
+        "rows": [
+          [
+            "Ownership of Funds",
+            "Assessee receives it merely on behalf of the real title-holder",
+            "Assessee receives it as their own real income"
+          ],
+          [
+            "Tax Treatment",
+            "Excluded from Total Income (Not taxable)",
+            "Included in Total Income (No deduction allowed)"
+          ]
+        ]
+      },
+      "highlights": [
+        "Ownership of Funds",
+        "Tax Treatment",
+        "Excluded",
+        "Included"
+      ]
+    }
+  },
+  {
+    "id": "L05",
+    "block": 2,
+    "block_name": "Rates/Matrix",
+    "narration_ml": "Diversion ചെയ്ത പണം assessee യഥാർത്ഥ title-holder-ന് വേണ്ടി കൈപ്പറ്റുന്നു; Application-ൽ സ്വന്തം income സ്വയം വിനിയോഗിക്കുന്നതാണ്; ഇതാണ് ownership വ്യത്യാസം.",
+    "card": {
+      "title": "Legal Status of Income",
+      "type": "rule",
+      "lines": [
+        "Assessee receives diverted funds for real title-holder",
+        "Assessee receives applied funds as own real income",
+        "No deduction is allowed for application of income",
+        "Diversion is not taxable in assessee's hands"
+      ],
+      "highlights": [
+        "Real Title-holder",
+        "Real Income",
+        "No Deduction"
+      ]
+    }
+  },
+  {
+    "id": "L06",
+    "block": 3,
+    "block_name": "Computation/Relief",
+    "narration_ml": "മുൻകൂട്ടിയുള്ള legal charge source-ൽ income-നെ മാറ്റിവെച്ചാൽ, ആ തുക assessee-യുടെ Total Income-ൽ ഉൾപ്പെടില്ല; ഇത് നിയമപരമായ exclusion ആണ്.",
+    "card": {
+      "title": "Computation of Diverted Income",
+      "type": "formula",
+      "lines": [
+        "Diverted income is excluded from Total Income computation",
+        "Requires a pre-existing legal charge for exclusion",
+        "Income never forms part of assessee's taxable stream",
+        "Statutory exclusion applies at the point of accrual"
+      ],
+      "highlights": [
+        "Excluded",
+        "Total Income",
+        "Legal Charge"
+      ]
+    }
+  },
+  {
+    "id": "L07",
+    "block": 3,
+    "block_name": "Computation/Relief",
+    "narration_ml": "Income accrue ആയ ശേഷം അത് ഏത് ആവശ്യത്തിനായി ചെലവിട്ടാലും Application of Income ആണ്; ഈ ഉപയോഗത്തിന് deduction അനുവദിക്കില്ല.",
+    "card": {
+      "title": "Treatment of Applied Income",
+      "type": "rule",
+      "lines": [
+        "Income applied after accrual is fully taxable",
+        "No deduction is allowed for such applications",
+        "It is treated as the assessee's own real income",
+        "Application does not reduce the Total Income liability"
+      ],
+      "highlights": [
+        "Accrual",
+        "Fully Taxable",
+        "No Deduction"
+      ]
+    }
+  },
+  {
+    "id": "L08",
+    "block": 4,
+    "block_name": "Exam Cautions",
+    "narration_ml": "CIT v. Nariman B. Bharucha & Sons കേസിൽ, deceased partner-ന്റെ legal heir-ന് profit നൽകുന്നത് business தொடரാനുള്ള condition precedent ആയതിനാൽ source-ൽ Diversion ആയി കണക്കാക്കി.",
+    "card": {
+      "title": "Partnership Deed Stipulations",
+      "type": "authority",
+      "lines": [
+        "CIT vs. Nariman B. Bharucha & Sons ruling",
+        "Charge on profits for deceased partner's legal heir",
+        "Condition precedent for business continuation creates diversion",
+        "Payment constitutes diversion of income at source"
+      ],
+      "highlights": [
+        "CIT vs. Nariman B. Bharucha & Sons",
+        "Condition Precedent",
+        "Diversion at Source"
+      ]
+    }
+  },
+  {
+    "id": "L09",
+    "block": 4,
+    "block_name": "Exam Cautions",
+    "narration_ml": "Payment obligation മാത്രം മതിയാകില്ല; income accrue ആകുന്നതിന് മുമ്പ് source-നെ നിയന്ത്രിക്കുന്ന overriding legal charge ഉണ്ടായിരിക്കണം; അതാണ് statutory test.",
+    "card": {
+      "title": "Critical Exam Cautions",
+      "type": "caution",
+      "lines": [
+        "Distinguish between mere obligation and overriding charge",
+        "Check if obligation is a condition precedent",
+        "Verify if income reaches assessee as their own",
+        "Diversion must happen before income reaches assessee"
+      ],
+      "highlights": [
+        "Overriding Legal Charge",
+        "Condition Precedent",
+        "Accrual"
+      ]
+    }
+  }
+]

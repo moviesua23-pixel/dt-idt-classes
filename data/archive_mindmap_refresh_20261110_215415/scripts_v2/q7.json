@@ -1,0 +1,143 @@
+[
+  {
+    "id": "INTRO",
+    "number": "1",
+    "block": 0,
+    "block_name": "Provision heading",
+    "narration_ml": "ഇന്ന് default regime-ൽ Section 87A rebate ഉപയോഗിച്ച് tax എങ്ങനെ കുറയുന്നു എന്ന് നോക്കാം. ആദ്യം വിഷയം മാത്രം പരിചയപ്പെടാം.",
+    "card": {
+      "title": "Section 87A: Rebate in Default Regime",
+      "type": "intro",
+      "lines": [],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L01",
+    "number": "1.1.1",
+    "block": 1,
+    "block_name": "Question setup",
+    "narration_ml": "മഹേഷ് 32 വയസ്സുള്ള resident individual ആണ്. Section 115BAC default regime-ൽ അദ്ദേഹത്തിന്റെ total income പതിനൊന്ന് ലക്ഷം രൂപയാണ്.",
+    "card": {
+      "title": "Eligibility facts",
+      "type": "rule",
+      "lines": [
+        "Mahesh is a resident individual, age 32.",
+        "Total income: ₹11,00,000 under Section 115BAC default regime."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L02",
+    "number": "1.1.2",
+    "block": 1,
+    "block_name": "Slab tax",
+    "narration_ml": "ആദ്യത്തെ നാല് ലക്ഷം രൂപയ്ക്ക് tax ഇല്ല. നാല് മുതൽ എട്ട് ലക്ഷം വരെയുള്ള നാല് ലക്ഷത്തിന് അഞ്ച് ശതമാനം, അതായത് ₹20,000.",
+    "card": {
+      "title": "First slabs",
+      "type": "table",
+      "lines": [
+        "First ₹4 lakh: nil.",
+        "₹4–8 lakh at 5% = ₹20,000."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L03",
+    "number": "1.2.1",
+    "block": 2,
+    "block_name": "Slab tax",
+    "narration_ml": "എട്ട് മുതൽ പതിനൊന്ന് ലക്ഷം വരെയുള്ള മൂന്ന് ലക്ഷത്തിന് പത്ത് ശതമാനം, ₹30,000. അതിനാൽ rebate-നു മുമ്പുള്ള tax ആകെ ₹50,000.",
+    "card": {
+      "title": "Remaining income",
+      "type": "table",
+      "lines": [
+        "₹8–11 lakh = ₹3 lakh at 10% = ₹30,000.",
+        "Total income-tax before rebate = ₹50,000."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L04",
+    "number": "1.2.2",
+    "block": 2,
+    "block_name": "Section 87A",
+    "narration_ml": "2026–27 assessment year-ൽ നിബന്ധനകൾ പാലിക്കുന്ന resident individual-ന് total income ₹12 ലക്ഷം പരിധിക്കുള്ളിലാണെങ്കിൽ rebate ലഭിക്കും. മഹേഷിന്റെ വരുമാനം ആ പരിധിക്കുള്ളിലാണ്.",
+    "card": {
+      "title": "Current threshold",
+      "type": "rule",
+      "lines": [
+        "For A.Y. 2026–27, eligible resident individuals may get rebate when total income is within ₹12 lakh.",
+        "Mahesh’s ₹11 lakh income is within the limit."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L05",
+    "number": "1.3.1",
+    "block": 3,
+    "block_name": "Section 87A",
+    "narration_ml": "Rebate tax payable-ഉം ₹60,000-ഉം തമ്മിലുള്ള കുറഞ്ഞ തുകയാണ്. ഇവിടെ tax ₹50,000 മാത്രമായതിനാൽ rebate ₹50,000.",
+    "card": {
+      "title": "Rebate limit",
+      "type": "rule",
+      "lines": [
+        "Rebate is lower of tax payable or ₹60,000.",
+        "Here lower amount is ₹50,000."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L06",
+    "number": "1.3.2",
+    "block": 3,
+    "block_name": "Apply rebate",
+    "narration_ml": "₹50,000 tax-ൽ നിന്ന് അതേ തുകയുടെ rebate കുറച്ചാൽ balance tax nil ആണ്.",
+    "card": {
+      "title": "Tax becomes nil",
+      "type": "rule",
+      "lines": [
+        "Tax before rebate: ₹50,000.",
+        "Less rebate: ₹50,000; balance tax is nil."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L07",
+    "number": "1.4.1",
+    "block": 4,
+    "block_name": "Cess treatment",
+    "narration_ml": "Rebate കുറച്ചശേഷം ശേഷിക്കുന്ന tax-ലാണ് cess കണക്കാക്കുന്നത്. Tax ഒന്നും ശേഷിക്കാത്തതിനാൽ cess nil ആണ്.",
+    "card": {
+      "title": "Cess after rebate",
+      "type": "rule",
+      "lines": [
+        "Cess is calculated on tax remaining after rebate.",
+        "No tax remains, so cess is nil."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L08",
+    "number": "1.4.2",
+    "block": 4,
+    "block_name": "Conclusion",
+    "narration_ml": "അതിനാൽ Section 87A rebate tax മുഴുവനായി ഇല്ലാതാക്കുന്നു. മഹേഷിന്റെ final tax liability nil ആണ്.",
+    "card": {
+      "title": "Final result",
+      "type": "rule",
+      "lines": [
+        "Section 87A rebate fully covers the tax.",
+        "Final tax liability: Nil."
+      ],
+      "highlights": []
+    }
+  }
+]

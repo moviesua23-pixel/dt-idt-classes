@@ -1,0 +1,221 @@
+[
+  {
+    "id": "L01",
+    "block": 1,
+    "block_name": "Scope/Applicability",
+    "narration_ml": "Domestic Companies-ന്റെ base tax rates, Annual Finance Act പ്രകാരം previous-year turnover-ഉം surcharge rates Total Income-ഉം അടിസ്ഥാനമാക്കിയാണ് നിശ്ചയിക്കുന്നത്.",
+    "card": {
+      "title": "Domestic Company Tax Scope",
+      "type": "rule",
+      "lines": [
+        "Applicability to all Domestic Companies",
+        "Tax rates determined by Turnover in P.Y. 2023-24",
+        "Surcharge slabs based on Total Income thresholds",
+        "Governed by Section 4 of the Annual Finance Act"
+      ],
+      "highlights": [
+        "Domestic Companies",
+        "Annual Finance Act",
+        "P.Y. 2023-24"
+      ]
+    }
+  },
+  {
+    "id": "L02",
+    "block": 1,
+    "block_name": "Scope/Applicability",
+    "narration_ml": "Section 4 പ്രകാരം Domestic Companies-ന് ബാധകമായ Normal Provisions-ൽ Turnover പരിധി അനുസരിച്ചുള്ള Base Tax Rates-ഉം Surcharge-ഉം ഉൾപ്പെടുന്നു.",
+    "card": {
+      "title": "Statutory Authority and Framework",
+      "type": "authority",
+      "lines": [
+        "Section 4 of the Annual Finance Act",
+        "Normal Provisions for Domestic Companies",
+        "Threshold based Surcharge application",
+        "Mandatory Health and Education Cess"
+      ],
+      "highlights": [
+        "Section 4",
+        "Normal Provisions",
+        "Surcharge"
+      ]
+    }
+  },
+  {
+    "id": "L03",
+    "block": 2,
+    "block_name": "Rates/Matrix",
+    "narration_ml": "P.Y. 2023-24-ലെ Turnover ₹ 400 Crore-ൽ താഴെയാണെങ്കിൽ 25% ഉം അതിൽ കൂടുതലാണെങ്കിൽ 30% ഉം ആണ് Base Tax Rate.",
+    "card": {
+      "title": "Domestic Company Tax Rates",
+      "type": "table",
+      "lines": [
+        "Base Tax Rate depends on P.Y. 2023-24 Turnover",
+        "Lower rate of 25% for smaller companies",
+        "Standard rate of 30% for others"
+      ],
+      "table": {
+        "headers": [
+          "Turnover in P.Y. 2023-24",
+          "Base Tax Rate"
+        ],
+        "rows": [
+          [
+            "≤ ₹ 400 Crore",
+            "25%"
+          ],
+          [
+            "> ₹ 400 Crore",
+            "30%"
+          ]
+        ]
+      },
+      "highlights": [
+        "₹ 400 Crore",
+        "25%",
+        "30%"
+      ]
+    }
+  },
+  {
+    "id": "L04",
+    "block": 2,
+    "block_name": "Rates/Matrix",
+    "narration_ml": "Total Income ₹ 1 Crore മുതൽ ₹ 10 Crore വരെയാണെങ്കിൽ 7% ഉം ₹ 10 Crore-ന് മുകളിൽ 12% ഉം Surcharge ഈടാക്കുന്നു.",
+    "card": {
+      "title": "Surcharge Slabs Matrix",
+      "type": "table",
+      "lines": [
+        "Surcharge is Nil up to ₹ 1 Crore",
+        "Progressive Surcharge rates for higher income",
+        "Maximum Surcharge rate is 12%"
+      ],
+      "table": {
+        "headers": [
+          "Total Income Slab",
+          "Surcharge Rate"
+        ],
+        "rows": [
+          [
+            "Up to ₹ 1 Crore",
+            "Nil"
+          ],
+          [
+            "> ₹ 1 Crore up to ₹ 10 Crore",
+            "7%"
+          ],
+          [
+            "> ₹ 10 Crore",
+            "12%"
+          ]
+        ]
+      },
+      "highlights": [
+        "₹ 1 Crore",
+        "7%",
+        "12%"
+      ]
+    }
+  },
+  {
+    "id": "L05",
+    "block": 2,
+    "block_name": "Rates/Matrix",
+    "narration_ml": "Tax, Surcharge എന്നിവയിൽ നിന്നും Marginal Relief കുറച്ച ശേഷമുള്ള തുകയുടെ 4% Health and Education Cess ആയി നൽകണം.",
+    "card": {
+      "title": "Health and Education Cess",
+      "type": "rate",
+      "lines": [
+        "Leviable at a flat rate of 4%",
+        "Calculated on (Tax + Surcharge - Marginal Relief)",
+        "Final component of the total tax liability"
+      ],
+      "highlights": [
+        "4%",
+        "Health and Education Cess",
+        "Marginal Relief"
+      ]
+    }
+  },
+  {
+    "id": "L06",
+    "block": 3,
+    "block_name": "Computation/Relief",
+    "narration_ml": "Total Income ₹ 1 Crore കവിയുമ്പോൾ Tax-ഉം Surcharge-ഉം ചേർന്ന തുക നിശ്ചിത പരിധിയിൽ കൂടാൻ പാടില്ലാത്തതിനാൽ Marginal Relief അനുവദിക്കുന്നു.",
+    "card": {
+      "title": "Marginal Relief Doctrine",
+      "type": "rule",
+      "lines": [
+        "Applicable when Total Income exceeds ₹ 1 Crore",
+        "Restricts tax increase to the increase in income",
+        "Ensures equitable taxation at threshold points"
+      ],
+      "highlights": [
+        "Total Income",
+        "₹ 1 Crore",
+        "Marginal Relief"
+      ]
+    }
+  },
+  {
+    "id": "L07",
+    "block": 3,
+    "block_name": "Computation/Relief",
+    "narration_ml": "Marginal Relief കണക്കാക്കാൻ Tax plus Surcharge-ൽ നിന്നും Tax on ₹ 1 Crore plus excess income over ₹ 1 Crore കുറയ്ക്കണം.",
+    "card": {
+      "title": "Marginal Relief Formula",
+      "type": "formula",
+      "lines": [
+        "Limit: Tax on ₹ 1 Crore + (Total Income - ₹ 1 Crore)",
+        "Relief = (Tax + Surcharge) - Limit",
+        "Applied before adding Health and Education Cess"
+      ],
+      "highlights": [
+        "Tax on ₹ 1 Crore",
+        "Total Income",
+        "₹ 1,00,00,000"
+      ]
+    }
+  },
+  {
+    "id": "L08",
+    "block": 4,
+    "block_name": "Exam Cautions",
+    "narration_ml": "Total Income ₹ 1 Crore-ൽ കൂടാത്തപ്പോൾ surcharge ഇല്ല; അതിനാൽ surcharge-നോട് ബന്ധമുള്ള marginal relief ബാധകമാകില്ല, പക്ഷേ turnover-അടിസ്ഥാനത്തിലുള്ള base rate വേറെയായി പരിശോധിക്കണം.",
+    "card": {
+      "title": "Surcharge Threshold Caution",
+      "type": "caution",
+      "lines": [
+        "No Surcharge if Total Income ≤ ₹ 1 Crore",
+        "Marginal Relief only triggers above ₹ 1 Crore",
+        "Verify Turnover of P.Y. 2023-24 for correct Base Rate"
+      ],
+      "highlights": [
+        "Nil Surcharge",
+        "₹ 1 Crore",
+        "P.Y. 2023-24"
+      ]
+    }
+  },
+  {
+    "id": "L09",
+    "block": 4,
+    "block_name": "Exam Cautions",
+    "narration_ml": "Marginal Relief കണക്കാക്കിയ ശേഷം മാത്രമേ 4% Health and Education Cess ബാധകമാക്കാവൂ എന്ന് Statutory Provisions വ്യക്തമാക്കുന്നു.",
+    "card": {
+      "title": "Computation Sequence Trap",
+      "type": "caution",
+      "lines": [
+        "Calculate Base Tax",
+        "Add applicable Surcharge",
+        "Deduct Marginal Relief",
+        "Apply 4% Cess to the balance"
+      ],
+      "highlights": [
+        "4% Cess",
+        "Marginal Relief",
+        "Sequence"
+      ]
+    }
+  }
+]

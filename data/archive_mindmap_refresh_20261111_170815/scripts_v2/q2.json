@@ -1,0 +1,143 @@
+[
+  {
+    "id": "INTRO",
+    "number": "1",
+    "block": 0,
+    "block_name": "Provision heading",
+    "narration_ml": "ഇന്ന് overriding title വഴി income diversion ആകുന്നതിന്റെ നിയമതത്വം മാത്രം നോക്കാം.",
+    "card": {
+      "title": "Diversion by Overriding Title",
+      "type": "intro",
+      "lines": [],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L01",
+    "number": "1.1.1",
+    "block": 1,
+    "block_name": "Core distinction",
+    "narration_ml": "വരുമാനത്തിന്റെ വിനിയോഗത്തിൽ രണ്ട് നിയമസ്ഥിതികളുണ്ട്. Source-ൽ തന്നെ മേലധികാരമുള്ള നിയമബാധ്യത വരുമാനം മാറ്റിയാൽ diversion; ആദ്യം വരുമാനം ലഭിച്ച് പിന്നീട് ഉപയോഗിച്ചാൽ application.",
+    "card": {
+      "title": "Two ways income may be transferred",
+      "type": "rule",
+      "lines": [
+        "Diversion: a superior legal obligation diverts income at its source.",
+        "Application: the assessee first earns or receives income, then uses it."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L02",
+    "number": "1.1.2",
+    "block": 1,
+    "block_name": "Core distinction",
+    "narration_ml": "പ്രധാന പരിശോധന obligation എപ്പോൾ പ്രവർത്തിക്കുന്നു എന്നതാണ്. വരുമാനം assessee-യുടെ സ്വന്തം വരുമാനമായി ആദ്യം ലഭിക്കുന്നുണ്ടോ എന്ന് കണ്ടെത്തണം.",
+    "card": {
+      "title": "Why timing matters",
+      "type": "rule",
+      "lines": [
+        "The decisive question is when the obligation operates.",
+        "Trace whether income reaches the assessee as their own income first."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L03",
+    "number": "1.2.1",
+    "block": 2,
+    "block_name": "Overriding title",
+    "narration_ml": "മുൻകൂട്ടിയുള്ള enforceable obligation വരുമാനം സൃഷ്ടിക്കുന്ന source-നോട് ബന്ധിപ്പിച്ചിരിക്കണം. വരുമാനം സ്വന്തം വരുമാനമായി ലഭിക്കുന്നതിന് മുമ്പ് assessee-യുടെ title മറികടക്കണം.",
+    "card": {
+      "title": "Obligation attached to source",
+      "type": "rule",
+      "lines": [
+        "A pre-existing enforceable obligation must bind the income-producing source.",
+        "The assessee’s title is overridden before the income accrues as their own."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L04",
+    "number": "1.2.2",
+    "block": 2,
+    "block_name": "Overriding title",
+    "narration_ml": "ഒരു payment-നെ “charge” എന്ന് വിളിച്ചതുകൊണ്ട് മാത്രം diversion ആവില്ല. ബന്ധപ്പെട്ട നിയമരേഖ, ബാധ്യത enforce ചെയ്യാമോ, source-നോടുള്ള ബന്ധം എന്നിവ പരിശോധിക്കണം.",
+    "card": {
+      "title": "Legal character, not label",
+      "type": "rule",
+      "lines": [
+        "Calling a payment a “charge” is not enough by itself.",
+        "Examine the legal instrument, enforceability, and link to the source."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L05",
+    "number": "1.3.1",
+    "block": 3,
+    "block_name": "Application of income",
+    "narration_ml": "വരുമാനം ആദ്യം assessee-ക്ക് ലഭിക്കാനുള്ള അവകാശമോ നിയന്ത്രണമോ ഉണ്ടാകുന്നു. പിന്നീട് ആ വരുമാനത്തിൽ നിന്ന് payment നടത്തുന്നത് ഇതിനകം നേടിയ വരുമാനത്തിലെ ബാധ്യത തീർക്കലാണ്.",
+    "card": {
+      "title": "Income accrues first",
+      "type": "rule",
+      "lines": [
+        "The assessee obtains the right to receive or control the income.",
+        "A later payment discharges an obligation from income already earned."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L06",
+    "number": "1.3.2",
+    "block": 3,
+    "block_name": "Application of income",
+    "narration_ml": "പിന്നീട് നൽകുന്ന gift, കുടുംബ payment, അല്ലെങ്കിൽ സ്വമേധയാ മാറ്റിവെക്കൽ സാധാരണയായി application ആണ്. പ്രത്യേക statutory deduction അല്ലെങ്കിൽ exemption ഉണ്ടെങ്കിൽ മാത്രമേ tax treatment മാറൂ.",
+    "card": {
+      "title": "Use does not erase income",
+      "type": "rule",
+      "lines": [
+        "A later gift, family payment, or voluntary allocation is ordinarily application.",
+        "Tax treatment changes only where a specific statutory deduction or exemption applies."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L07",
+    "number": "1.4.1",
+    "block": 4,
+    "block_name": "Tax consequence and test",
+    "narration_ml": "യഥാർത്ഥ diversion ആണെങ്കിൽ മാറ്റിയ തുക assessee-ക്ക് accrue ചെയ്ത വരുമാനമല്ല. Application ആണെങ്കിൽ വരുമാനം taxable ആയി തുടരും; പിന്നീട് ചെലവാക്കിയത് മാത്രം deduction ആവില്ല.",
+    "card": {
+      "title": "Different tax treatment",
+      "type": "rule",
+      "lines": [
+        "Genuine diversion: the diverted amount is not income accruing to the assessee.",
+        "Application: the income remains taxable; later spending is not itself a deduction."
+      ],
+      "highlights": []
+    }
+  },
+  {
+    "id": "L08",
+    "number": "1.4.2",
+    "block": 4,
+    "block_name": "Tax consequence and test",
+    "narration_ml": "അവസാനമായി ചോദിക്കുക: assessee-ക്ക് വരുമാനം ലഭിക്കുന്നതിന് മുമ്പ് obligation അത് source-ൽ നിന്ന് മാറ്റിയോ? ആദ്യം assessee-ക്കാണ് ലഭിച്ചതെങ്കിൽ സാധാരണയായി അത് application ആണ്.",
+    "card": {
+      "title": "Apply the source test",
+      "type": "rule",
+      "lines": [
+        "Ask: did the obligation take income away before the assessee acquired it?",
+        "If the assessee acquired it first, the payment is application in the ordinary case."
+      ],
+      "highlights": []
+    }
+  }
+]

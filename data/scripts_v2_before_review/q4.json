@@ -1,0 +1,202 @@
+[
+  {
+    "id": "L01",
+    "block": 1,
+    "block_name": "Scope/Applicability",
+    "narration_ml": "Section 4 പ്രകാരം ചാർജ് ചെയ്യുന്ന Income Tax, Section 115BAC(6) ഉപയോഗിച്ച് Optional Regime തിരഞ്ഞെടുക്കുന്ന Individual Assessees-ന് Age-Based Progressive Slab Rates അടിസ്ഥാനത്തിലാണ് കണക്കാക്കുന്നത്.",
+    "card": {
+      "title": "Statutory Basis of Old Regime",
+      "type": "authority",
+      "lines": [
+        "Section 4 mandates the charge of income-tax at rates prescribed by the Annual Finance Act.",
+        "Section 115BAC(6) allows individuals to opt out of the default regime to use these rates.",
+        "The First Schedule, Part I of the Finance Act defines these progressive slabs."
+      ],
+      "highlights": [
+        "Section 4",
+        "Section 115BAC(6)",
+        "Optional Regime"
+      ]
+    }
+  },
+  {
+    "id": "L02",
+    "block": 1,
+    "block_name": "Scope/Applicability",
+    "narration_ml": "Resident Individuals-നെ അവരുടെ പ്രായം അനുസരിച്ച് മൂന്നായി തിരിച്ചിരിക്കുന്നു, അതായത് 60 വയസ്സിന് താഴെയുള്ളവർ, Senior Citizens, കൂടാതെ 80 വയസ്സിന് മുകളിലുള്ള Super Senior Citizens.",
+    "card": {
+      "title": "Classification of Individual Assessees",
+      "type": "rule",
+      "lines": [
+        "Category 1: Resident individuals below the age of 60 years.",
+        "Category 2: Resident Senior Citizens aged 60 years or more but less than 80 years.",
+        "Category 3: Resident Super Senior Citizens aged 80 years or more."
+      ],
+      "highlights": [
+        "Resident Individuals",
+        "Senior Citizen",
+        "Super Senior Citizen"
+      ]
+    }
+  },
+  {
+    "id": "L03",
+    "block": 2,
+    "block_name": "Rates/Matrix",
+    "narration_ml": "Normal Regime-ൽ Basic Exemption Limit എന്നത് General category-ക്ക് ₹ 2,50,000-ഉം, Senior Citizens-ന് ₹ 3,00,000-ഉം, Super Senior Citizens-ന് ₹ 5,00,000-ഉം ആയി നിശ്ചയിച്ചിരിക്കുന്നു.",
+    "card": {
+      "title": "Basic Exemption Thresholds",
+      "type": "rate",
+      "lines": [
+        "General Exemption Limit: ₹ 2,50,000 for residents < 60 years.",
+        "Senior Citizen Exemption Limit: ₹ 3,00,000 for residents 60 to < 80 years.",
+        "Super Senior Citizen Exemption Limit: ₹ 5,00,000 for residents 80+ years."
+      ],
+      "highlights": [
+        "₹ 2,50,000",
+        "₹ 3,00,000",
+        "₹ 5,00,000"
+      ]
+    }
+  },
+  {
+    "id": "L04",
+    "block": 2,
+    "block_name": "Rates/Matrix",
+    "narration_ml": "Total Income-ന്റെ വിവിധ സ്ലാബുകൾക്ക് 5%, 20%, 30% എന്നിങ്ങനെ വ്യത്യസ്ത നിരക്കുകളാണ് Finance Act പ്രകാരം ഈ Old Regime-ൽ ബാധകമാകുന്നത്.",
+    "card": {
+      "title": "Age-Based Progressive Slab Rates",
+      "type": "table",
+      "lines": [
+        "Tax rates increase progressively from 5% to 30% based on income slabs.",
+        "Higher exemption limits apply to Senior and Super Senior citizens in the initial slabs."
+      ],
+      "table": {
+        "headers": [
+          "Total Income Slab",
+          "Resident < 60 Years",
+          "Senior Citizen (60-80)",
+          "Super Senior (80+)"
+        ],
+        "rows": [
+          [
+            "Up to ₹ 2,50,000",
+            "Nil",
+            "Nil",
+            "Nil"
+          ],
+          [
+            "₹ 2,50,001 – ₹ 3,00,000",
+            "5%",
+            "Nil (Exempt up to ₹ 3L)",
+            "Nil (Exempt up to ₹ 5L)"
+          ],
+          [
+            "₹ 3,00,001 – ₹ 5,00,000",
+            "5%",
+            "5%",
+            "Nil"
+          ],
+          [
+            "₹ 5,00,001 – ₹ 10,00,000",
+            "20%",
+            "20%",
+            "20%"
+          ],
+          [
+            "Above ₹ 10,00,000",
+            "30%",
+            "30%",
+            "30%"
+          ]
+        ]
+      },
+      "highlights": [
+        "5%",
+        "20%",
+        "30%",
+        "Slab Rates"
+      ]
+    }
+  },
+  {
+    "id": "L05",
+    "block": 3,
+    "block_name": "Computation/Relief",
+    "narration_ml": "Total Income ₹ 5,00,000 വരെ ഉള്ള Resident Individuals-ന് Section 87A പ്രകാരം പരമാവധി ₹ 12,500 വരെ Rebate ലഭിക്കുന്നതാണ്.",
+    "card": {
+      "title": "Tax Rebate under Section 87A",
+      "type": "formula",
+      "lines": [
+        "Applicability: Resident Individuals only.",
+        "Condition: Total Income must not exceed ₹ 5,00,000.",
+        "Quantum: 100% of income-tax or ₹ 12,500, whichever is lower."
+      ],
+      "highlights": [
+        "Section 87A",
+        "₹ 5,00,000",
+        "₹ 12,500 Rebate"
+      ]
+    }
+  },
+  {
+    "id": "L06",
+    "block": 3,
+    "block_name": "Computation/Relief",
+    "narration_ml": "കണക്കാക്കിയ Income Tax-ന്റെയും Surcharge-ന്റെയും മേൽ 4% Health and Education Cess നിർബന്ധമായും നൽകണം, കൂടാതെ Total Income ₹ 50 Lakhs കവിഞ്ഞാൽ Surcharge ബാധകമാകും.",
+    "card": {
+      "title": "Additional Levies and Surcharge",
+      "type": "rate",
+      "lines": [
+        "Health and Education Cess (HEC): Mandatory 4% on tax plus surcharge.",
+        "Surcharge: Applicable only if Total Income exceeds ₹ 50 Lakhs.",
+        "HEC is the final step in the tax computation process."
+      ],
+      "highlights": [
+        "4% HEC",
+        "Surcharge",
+        "₹ 50 Lakhs"
+      ]
+    }
+  },
+  {
+    "id": "L07",
+    "block": 4,
+    "block_name": "Exam Cautions",
+    "narration_ml": "Senior Citizen, Super Senior Citizen എന്നീ ആനുകൂല്യങ്ങൾ Resident Individuals-ന് മാത്രമാണ് ലഭിക്കുക, Non-Resident Individuals-ന് Basic Exemption Limit എല്ലായ്പ്പോഴും ₹ 2,50,000 മാത്രമായിരിക്കും.",
+    "card": {
+      "title": "Non-Resident Status Restrictions",
+      "type": "caution",
+      "lines": [
+        "Age-based higher exemption limits (₹ 3L/₹ 5L) are NOT available to Non-Residents.",
+        "Non-Residents are restricted to a ₹ 2,50,000 exemption limit regardless of age.",
+        "Residential status must be verified before applying Senior Citizen slabs."
+      ],
+      "highlights": [
+        "Non-Resident",
+        "₹ 2,50,000 Limit",
+        "Status Verification"
+      ]
+    }
+  },
+  {
+    "id": "L08",
+    "block": 4,
+    "block_name": "Exam Cautions",
+    "narration_ml": "Section 115BAC(6) പ്രകാരം Default Tax Regime വേണ്ടെന്ന് വെച്ച് Optional Regime തിരഞ്ഞെടുക്കുന്നവർക്ക് മാത്രമേ ഈ Age-Based Slab Rates പ്രകാരം ടാക്സ് അടയ്ക്കാൻ സാധിക്കൂ.",
+    "card": {
+      "title": "Regime Selection Requirement",
+      "type": "caution",
+      "lines": [
+        "The Old Regime is optional under Section 115BAC(6).",
+        "Assessees must specifically opt out of the default regime to use these rates.",
+        "Failure to opt out results in taxation under the default regime rules."
+      ],
+      "highlights": [
+        "Section 115BAC(6)",
+        "Opt-out Option",
+        "Default Regime"
+      ]
+    }
+  }
+]
