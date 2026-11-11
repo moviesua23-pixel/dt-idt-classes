@@ -362,11 +362,20 @@
         const file = input.files[0];
         const label = document.getElementById(subject === 'DT' ? 'txt-dt' : 'txt-idt');
         const btn = document.getElementById(subject === 'DT' ? 'btn-upload-dt' : 'btn-upload-idt');
-        const sizeMb = (file.size / (1024*1024)).toFixed(1);
-        label.innerHTML = `<b>${file.name}</b> (${sizeMb} MB)`;
-        label.style.color = '#0F172A';
-        btn.innerHTML = `<span>⬆️</span> Upload <b>${file.name}</b> to Google Drive (${subject}/)`;
-        showToast(`Selected "${file.name}" for ${subject}. Click the Upload button to send to Google Drive!`);
+        const sizeMb = file.size / (1024*1024);
+        
+        if (sizeMb > 25) {
+          label.innerHTML = `<b>${file.name}</b> (${sizeMb.toFixed(1)} MB - <span style="color:#D97706">Large File</span>)`;
+          label.style.color = '#0F172A';
+          btn.innerHTML = `<span>📂</span> Open ${subject}/ in Google Drive to Drop File (Fastest for ${sizeMb.toFixed(0)}MB)`;
+          btn.style.background = '#2563EB';
+          showToast(`💡 Notice: "${file.name}" is ${sizeMb.toFixed(1)} MB. For large files over 25MB, dropping directly into Google Drive is the fastest method!`);
+        } else {
+          label.innerHTML = `<b>${file.name}</b> (${sizeMb.toFixed(1)} MB)`;
+          label.style.color = '#0F172A';
+          btn.innerHTML = `<span>⬆️</span> Upload <b>${file.name}</b> to Google Drive (${subject}/)`;
+          showToast(`Selected "${file.name}" for ${subject}. Click to upload!`);
+        }
       }
     }
 
@@ -448,14 +457,26 @@
       }
 
       const file = input.files[0];
+      const sizeMb = file.size / (1024*1024);
+
+      // For files > 25MB: Google Apps Script has a 25MB payload limit.
+      // Redirect to Google Drive high-speed uploader directly!
+      if (sizeMb > 25) {
+        showToast(`🚀 Opening Google Drive ${subject}/ folder... Drag & drop "${file.name}" there for instant high-speed upload!`);
+        setTimeout(() => {
+          window.open(targetFolderUrl, '_blank');
+        }, 500);
+        return;
+      }
+
       const webhookUrl = getWebhookUrl();
 
-      // If Webhook Connected: Perform Direct In-Portal Upload!
+      // If Webhook Connected: Perform Direct In-Portal Upload for files <= 25MB
       if (webhookUrl) {
         btn.disabled = true;
         const origText = btn.innerHTML;
         btn.innerHTML = `<span>⏳</span> Uploading "${file.name}" to Google Drive...`;
-        showToast(`🚀 Uploading "${file.name}" (${(file.size/(1024*1024)).toFixed(1)} MB) directly to Google Drive...`);
+        showToast(`🚀 Uploading "${file.name}" (${sizeMb.toFixed(1)} MB) directly to Google Drive...`);
 
         try {
           const reader = new FileReader();
@@ -505,6 +526,7 @@
         }
         return;
       }
+
 
 
       // If No Webhook: Explain clearly & open folder tab for Drag & Drop
