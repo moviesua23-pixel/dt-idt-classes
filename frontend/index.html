@@ -3465,13 +3465,19 @@ function makePlayer(p, q){
  window.SYNC_LEAD_SEC = (typeof window.SYNC_LEAD_SEC === "number") ? window.SYNC_LEAD_SEC : 0.6;
  const mm = getMindMapForQuestion(q, p);
  const speeds=[0.5,0.75,1,1.25,1.5,2];let si=2,playing=false,vraf=0,mmRaf=0,dead=false;
- const audioFile = p.file || "q1.mp3";
- // Support both the served app (/audio/...) and opening frontend/index.html directly.
- // In file mode, audio assets live beside the frontend in ../data/audio/.
- const audioBase = window.location.protocol === "file:"
-  ? new URL("../data/audio/" + encodeURIComponent(audioFile.split('/').pop()), window.location.href).href
-  : (audioFile.startsWith('/') ? audioFile : "/audio/" + audioFile);
- const audioUrl = audioBase + "?v=card_clean_20261110_" + Math.round(p.dur || 1);
+ const audioFile = p.file || p.audio_file || "q1.mp3";
+ // Support streaming directly from Google Drive as well as local fallback
+ let audioUrl;
+ if (p.drive_file_id) {
+  audioUrl = "https://drive.google.com/uc?export=download&id=" + p.drive_file_id;
+ } else if (p.audio_url && p.audio_url.startsWith("http")) {
+  audioUrl = p.audio_url;
+ } else {
+  const audioBase = window.location.protocol === "file:"
+   ? new URL("../data/audio/" + encodeURIComponent(audioFile.split('/').pop()), window.location.href).href
+   : (audioFile.startsWith('/') ? audioFile : "/audio/" + audioFile);
+  audioUrl = audioBase + "?v=card_clean_20261110_" + Math.round(p.dur || 1);
+ }
  
  const audio = new Audio();
  audio.preload = "auto";
