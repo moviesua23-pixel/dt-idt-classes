@@ -1,4 +1,5 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+﻿﻿<!doctype html><html><head><meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <title>Tax Study Studio</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -1456,7 +1457,7 @@ tbody tr:nth-child(2){--r:1}tbody tr:nth-child(3){--r:2}tbody tr:nth-child(4){--
   transition:transform .56s cubic-bezier(.65,0,.35,1);
   will-change:transform;
 }
-/* Tree columns mirror the nested demo: provision â†’ sibling rule â†’ detail. */
+/* Tree columns mirror the nested demo: provision → sibling rule → detail. */
 .mm-canvas-container .mm-root-card{position:absolute;left:48px;width:280px;max-width:none;margin:0;}
 .mm-canvas-container .mm-infographic-block{position:absolute;left:430px;width:330px;display:block;overflow:visible;}
 .mm-canvas-container .mm-infographic-block.status-hidden{display:block;visibility:hidden;opacity:0;pointer-events:none;}
@@ -2473,7 +2474,7 @@ tbody tr:nth-child(2){--r:1}tbody tr:nth-child(3){--r:2}tbody tr:nth-child(4){--
 </style>
 <div id="ambient" aria-hidden="true"><div class="orb o1"></div><div class="orb o2"></div></div>
 <header class="bar" id="bar"><div class="bar-in">
-  <a class="brand" href="#" aria-label="Tax Study Studio home" style="color:inherit;text-decoration:none"><i>Â§</i><span>Tax Studio</span></a>
+  <a class="brand" href="#" aria-label="Tax Study Studio home" style="color:inherit;text-decoration:none"><i>§</i><span>Tax Studio</span></a>
   <nav class="crumbs" id="crumbs" aria-label="Breadcrumb"></nav>
   <div class="spacer"></div>
   <a href="dev_portal.html" class="nav-btn" style="margin-right:6px;font-size:.8rem;padding:7px 12px;text-decoration:none">
@@ -2720,13 +2721,13 @@ const subj=k=>D.catalog[k];
 const qs=(sub,ch)=>D.qna.filter(q=>q.sub===sub&&q.ch===ch).sort((a,b)=>a.n-b.n);
 const chapters=sub=>(subj(sub)?.chapters||[]).map(([n,title,f,t])=>({n,title,f,t,count:qs(sub,n).length}));
 const isOriginal=(q,list)=>list.find(x=>x.topic===q.topic)===q;
-const preview=q=>{const t=q.q[0]||"";return t.length>150?t.slice(0,147).replace(/\s+\S*$/,"")+"â€¦":t};
+const preview=q=>{const t=q.q[0]||"";return t.length>150?t.slice(0,147).replace(/\s+\S*$/,"")+"”¦":t};
 const secTags=q=>(q.secs||[]).map(s=>`<span class="sec">${esc(s)}</span>`).join("");
 const hl=(text,term)=>{const e=esc(text);if(!term)return e;const r=new RegExp("("+term.replace(/[.*+?^${}()|[\]\\]/g,"\\$&").replace(/&/g,"&amp;")+")","ig");return e.replace(r,"<mark>$1</mark>")};
 
 /* ---------- ambient symbols ---------- */
 (function(){const host=$("#ambient");if(REDUCED)return;
- const t=["Â§ 115BAC","Sec 4","â‚¹","87A","Sec 10(10)","GST","Â§ 3","Rule 8","4%","CGST Â§ 8","15/26","Sec 2(24)","AY 2026-27","Â§ 2(30)"];
+ const t=["§ 115BAC","Sec 4","₹","87A","Sec 10(10)","GST","§ 3","Rule 8","4%","CGST § 8","15/26","Sec 2(24)","AY 2026-27","§ 2(30)"];
  t.forEach((s,i)=>{const e=document.createElement("span");e.className="sym";e.textContent=s;
   e.style.cssText=`left:${(i*37+8)%94}%;top:${100+((i*23)%40)}vh;font-size:${14+(i%4)*6}px;animation-duration:${60+(i%5)*14}s;animation-delay:-${(i*9)%60}s`;host.appendChild(e)})})();
 
@@ -2820,7 +2821,7 @@ function vHome(r){
    <div class="stats"><div><b>0</b><span>chapters</span></div><div><b>0</b><span>questions</span></div><div><span class="pill idle" style="margin-top:6px"><i class="dot"></i>Upload Pending</span></div></div>
    <span class="go" aria-hidden="true">${I.arrow}</span></button>`;
 
- mount(`<section class="hero"><div class="eyebrow rise">ICAI CA Final Â· Spoken Malayalam Audio Coaching</div>
+ mount(`<section class="hero"><div class="eyebrow rise">ICAI CA Final · Spoken Malayalam Audio Coaching</div>
   <h1 class="split" aria-label="Learn the section before you solve the question.">${splitWords("Learn the section before you solve the question.")}</h1>
   <p class="rise" style="--i:2">Direct Tax questions and statutory doctrines extracted directly from the question bank. Spoken Malayalam audio explains each doctrine once and is shared across case studies.</p></section>
   <div class="doors">${doorDt}${doorIdt}</div>
@@ -2837,7 +2838,7 @@ function vChapters(r){
 
  if(!list.length){
   mount(`<button class="back-btn rise" data-go="">${I.back}All subjects</button>
-   <div class="head"><div class="eyebrow rise" style="--i:1">Indirect Tax Â· Phase 2 Pipeline</div>
+   <div class="head"><div class="eyebrow rise" style="--i:1">Indirect Tax · Phase 2 Pipeline</div>
    <h1 class="rise" style="--i:2"><span>${s.name}</span> Syllabus</h1></div>
    <div class="empty rise" style="padding:48px 24px;max-width:580px;margin:32px auto;background:var(--surface);border:1px dashed var(--line);border-radius:20px;text-align:center">
      <div style="font-size:2.8rem;margin-bottom:14px">ðŸ“‚</div>
@@ -2852,7 +2853,7 @@ function vChapters(r){
  }
 
  mount(`<button class="back-btn rise" data-go="">${I.back}All subjects</button>
-  <div class="head"><div class="eyebrow rise" style="--i:1">${s.code} syllabus Â· ${list.length} chapters Â· ${ready} with questions</div>
+  <div class="head"><div class="eyebrow rise" style="--i:1">${s.code} syllabus · ${list.length} chapters · ${ready} with questions</div>
   <h1 class="rise" style="--i:2"><span>${s.name}</span> chapters</h1></div>
   <div class="tools rise" style="--i:3"><label class="search" for="chsearch">${I.search}<input id="chsearch" type="search" placeholder="Filter chapters by number or keyword" autocomplete="off"></label>
    <div class="chips" role="group" aria-label="Filter by readiness"><button class="chip" data-f="all" aria-pressed="true">All</button><button class="chip" data-f="ready" aria-pressed="false">Questions ready</button><button class="chip" data-f="soon" aria-pressed="false">Coming soon</button></div></div>
@@ -2874,7 +2875,7 @@ function vQuestions(r){
  if(!c){go(r.sub);return}
  const mode=store.get("tsMode")==="topic"?"topic":"seq";
  mount(`<button class="back-btn rise" data-go="${r.sub}">${I.back}Chapters</button>
-  <div class="chmeta"><div><div class="eyebrow rise" style="--i:1">${s.name} Â· <b>Chapter ${c.n}</b> Â· pp. ${c.f} to ${c.t}</div><h1 class="rise" style="--i:2;margin-top:10px">${esc(c.title)}</h1></div>
+  <div class="chmeta"><div><div class="eyebrow rise" style="--i:1">${s.name} · <b>Chapter ${c.n}</b> · pp. ${c.f} to ${c.t}</div><h1 class="rise" style="--i:2;margin-top:10px">${esc(c.title)}</h1></div>
   ${c.count?`<div class="seg rise" style="--i:3" id="seg" data-mode="${mode}"><span class="thumb"></span><button data-mode="seq" aria-pressed="${mode==="seq"}">Sort by Question</button><button data-mode="topic" aria-pressed="${mode==="topic"}">Group by Topic</button></div>`:""}</div>
   <div id="qlist"></div>`,r);
  drawQuestions(r,mode)}
@@ -2890,7 +2891,7 @@ function drawQuestions(r,mode){
  host.innerHTML=topics.map((tp,i)=>{const p=D.prov[tp]||{doctrine:tp,secs:[],dur:60},items=list.filter(q=>q.topic===tp);
   return `<section class="cluster rise" style="--i:${i}"><header><div><div class="kicker">Cluster ${i+1}</div><h2>${esc(p.doctrine)}</h2>
    <div style="display:flex;flex-wrap:wrap;gap:8px">${(p.secs||[]).map(x=>`<span class="sec">${esc(x)}</span>`).join("")}</div></div>
-   <span class="audio-tag orig">${I.eq}Shared canonical audio Â· ${fmt(p.dur||60)}</span></header>
+   <span class="audio-tag orig">${I.eq}Shared canonical audio · ${fmt(p.dur||60)}</span></header>
    <div class="sub">${items.map((q,j)=>qRow(q,r,list,false,j)).join("")}</div></section>`}).join("")}
 app.addEventListener("click",e=>{const b=e.target.closest("#seg button");if(!b)return;
  const mode=b.dataset.mode;store.set("tsMode",mode);const seg=$("#seg");seg.dataset.mode=mode;
@@ -2994,19 +2995,19 @@ function renderFlowchartHtml(q, p){
       <div class="flow-grid" style="grid-template-columns:1fr 1fr;gap:18px">
         <div class="flow-node" data-t0="0" data-t1="7.5" id="fn-q9-1">
           <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
-            <span class="flow-badge blue">Step 1 Â· Base Tax Rate</span>
+            <span class="flow-badge blue">Step 1 · Base Tax Rate</span>
             <span class="flow-active-badge">â— EXPLAINING NOW</span>
           </div>
-          <div class="flow-title">Domestic Co. Turnover â‰¤ â‚¹ 400 Cr</div>
-          <div class="flow-desc">Tax rate is <b>25%</b> if turnover in previous year â‰¤ â‚¹ 400 Cr. Otherwise standard rate of <b>30%</b> applies.</div>
+          <div class="flow-title">Domestic Co. Turnover â‰¤ ₹ 400 Cr</div>
+          <div class="flow-desc">Tax rate is <b>25%</b> if turnover in previous year â‰¤ ₹ 400 Cr. Otherwise standard rate of <b>30%</b> applies.</div>
         </div>
         <div class="flow-node" data-t0="7.5" data-t1="16.0" id="fn-q9-2">
           <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:6px">
-            <span class="flow-badge gold">Step 2 Â· Surcharge Slabs</span>
+            <span class="flow-badge gold">Step 2 · Surcharge Slabs</span>
             <span class="flow-active-badge">â— EXPLAINING NOW</span>
           </div>
-          <div class="flow-title">Total Income > â‚¹ 1 Cr vs > â‚¹ 10 Cr</div>
-          <div class="flow-desc">Surcharge is <b>7%</b> if TI > â‚¹ 1 Cr up to â‚¹ 10 Cr. Surcharge increases to <b>12%</b> if Total Income exceeds â‚¹ 10 Crores.</div>
+          <div class="flow-title">Total Income > ₹ 1 Cr vs > ₹ 10 Cr</div>
+          <div class="flow-desc">Surcharge is <b>7%</b> if TI > ₹ 1 Cr up to ₹ 10 Cr. Surcharge increases to <b>12%</b> if Total Income exceeds ₹ 10 Crores.</div>
         </div>
       </div>
     </div>`;
@@ -3078,7 +3079,7 @@ function buildQuestionMindMap(q, p){
   const branches = Array.from(groups.values());
   return {
     doctrine:p.doctrine || q.title || `Question ${qn}`,
-    root:{ id:'root', title:p.doctrine || q.title || `Question ${qn}`, badge:(p.secs || []).join(' Â· ') || 'Â§ LAW', t1:slides[0].t1 || 5 },
+    root:{ id:'root', title:p.doctrine || q.title || `Question ${qn}`, badge:(p.secs || []).join(' · ') || '§ LAW', t1:slides[0].t1 || 5 },
     total_duration:Number(sb.total_duration || p.dur || 0), branches
   };
 }
@@ -3108,14 +3109,14 @@ function highlightKeywords(text, hl){
   if(!text) return "";
   let clean = esc(String(text));
 
-  // 1. Amounts: â‚¹ 2,50,000, â‚¹ 1 Crore, etc.
-  clean = clean.replace(/(â‚¹\s*[\d,]+(?:\.\d+)?(?:\s*(?:Lakhs?|Crores?|L|Cr|lacs?))?)/gi, '<span class="chip-amt">$1</span>');
+  // 1. Amounts: ₹ 2,50,000, ₹ 1 Crore, etc.
+  clean = clean.replace(/(₹\s*[\d,]+(?:\.\d+)?(?:\s*(?:Lakhs?|Crores?|L|Cr|lacs?))?)/gi, '<span class="chip-amt">$1</span>');
   
   // 2. Percentages: 5%, 20%, 30%, 32.1%, etc.
   clean = clean.replace(/(\b\d+(?:\.\d+)?%)/g, '<span class="chip-rate">$1</span>');
   
-  // 3. Statutory Sections: Section 115BAC, u/s 87A, Â§ 4, etc.
-  clean = clean.replace(/((?:Section|u\/s|Â§)\s*[0-9A-Za-z()]+(?:\([0-9A-Za-z]+\))?)/gi, '<span class="chip-sec">$1</span>');
+  // 3. Statutory Sections: Section 115BAC, u/s 87A, § 4, etc.
+  clean = clean.replace(/((?:Section|u\/s|§)\s*[0-9A-Za-z()]+(?:\([0-9A-Za-z]+\))?)/gi, '<span class="chip-sec">$1</span>');
 
   return clean;
 }
@@ -3198,7 +3199,7 @@ function renderMindMapCanvasHtml(mm, q, p){
     `;
   }
 
-  const root = mm.root || { id: "root", title: p.doctrine, badge: "Â§ LAW" };
+  const root = mm.root || { id: "root", title: p.doctrine, badge: "§ LAW" };
 
   return `
     <div class="mm-scroll-stage" id="mm-scroll-stage">
@@ -3229,7 +3230,7 @@ function renderMindMapCanvasHtml(mm, q, p){
         <!-- Minimalist Root Card: Section Code Badge + Doctrine in One Line -->
         <div class="mm-root-card" id="mm-node-root" data-node-id="root" data-t0="0" data-t1="${root.t1 || 5.0}" tabindex="0" role="button" aria-label="Jump to start: ${esc(root.title)}">
           <div class="mm-root-top-row">
-            <span class="mm-root-badge">${esc(root.badge || 'Â§ LAW')}</span>
+            <span class="mm-root-badge">${esc(root.badge || '§ LAW')}</span>
           </div>
           <div class="mm-root-title">${esc(root.title)}</div>
         </div>
@@ -3324,20 +3325,20 @@ function renderTheaterModalHtml(q, p){
   const sb = (D.storyboards && (D.storyboards[sbKey] || D.storyboards[p.file ? p.file.replace('.mp3', '') : ''])) || { slides: [] };
   const hasSlides = sb && sb.slides && sb.slides.length > 0;
   const mm = getMindMapForQuestion(q, p);
-  const badgeTitle = mm && mm.root ? `${mm.root.badge} Â· ${mm.doctrine}` : p.doctrine;
+  const badgeTitle = mm && mm.root ? `${mm.root.badge} · ${mm.doctrine}` : p.doctrine;
 
   return `
   <div class="vtheater" id="vtheater" role="dialog" aria-modal="true" aria-label="Statutory Presentation">
     <!-- Top Navigation Bar -->
     <div class="vtheater-topbar">
       <div class="vtb-left">
-        <span class="vtb-badge">Â§ DIRECT TAX CONCEPT TREE</span>
+        <span class="vtb-badge">§ DIRECT TAX CONCEPT TREE</span>
         <span class="vtb-title" title="${esc(badgeTitle)}">${esc(badgeTitle)}</span>
       </div>
 
       <!-- Center: Presentation label -->
       <div class="vtb-center">
-        <span class="vtb-badge">NESTED MIND MAP Â· SYNCED TO VOICE</span>
+        <span class="vtb-badge">NESTED MIND MAP · SYNCED TO VOICE</span>
       </div>
 
       <!-- Right: Direct Close Button -->
@@ -3406,7 +3407,7 @@ function vStudio(r){
    <section class="stage rise" style="--i:2" id="st1" data-s="1">${stageHead(1,"Statutory Provision & Rules Matrix")}
     <div class="prov-banner">
       <div class="prov-banner-meta">
-        <span class="prov-tag">Â§ Statutory Doctrine</span>
+        <span class="prov-tag">§ Statutory Doctrine</span>
         <div class="prov-secs">${(p.secs||[]).map(x=>`<span class="sec">${esc(x)}</span>`).join("")}</div>
       </div>
       <h3 class="prov-title">${esc(p.doctrine)}</h3>
@@ -3425,9 +3426,9 @@ function vStudio(r){
 
     <!-- Launch Card for Fullscreen Presentation -->
     <div class="theater-launch-card" id="vtog" role="button" tabindex="0" title="Click to launch interactive fullscreen explainer">
-      <div class="tlc-badge">âœ¨ FULLSCREEN MIND-MAP PRESENTATION</div>
+      <div class="tlc-badge">✨ FULLSCREEN MIND-MAP PRESENTATION</div>
       <div class="tlc-inner">
-        <div class="tlc-icon">ðŸŽ¬</div>
+        <div class="tlc-icon">🎬</div>
         <div class="tlc-text">
           <h4>Voice-Synced Provision Mind Map</h4>
           <p>Follow each branch and its detailed points as they are explained.</p>
@@ -4334,7 +4335,7 @@ function makePlayer(p, q){
   const liveText = $("#mm-live-text");
   if(liveText){
     if(st.activePoint && cur < Number(st.activePoint.t0 || 0)){
-      liveText.textContent = "à´…à´Ÿàµà´¤àµà´¤ à´ªàµ‹à´¯à´¿à´¨àµà´±à´¿à´²àµ‡à´•àµà´•àµ à´®à´¾à´±àµà´¨àµà´¨àµâ€¦";
+      liveText.textContent = "à´…à´Ÿàµà´¤àµà´¤ à´ªàµ‹à´¯à´¿à´¨àµà´±à´¿à´²àµ‡à´•àµà´•àµ à´®à´¾à´±àµà´¨àµà´¨àµ”¦";
     } else if(st.activePoint && st.activePoint.voice_sync_text){
       liveText.textContent = st.activePoint.voice_sync_text;
     } else if(st.activeFlowStep && st.activeFlowStep.step){
@@ -4344,7 +4345,7 @@ function makePlayer(p, q){
     } else if(st.allMastered){
       liveText.textContent = "âœ“ Complete Concept Tree Mastered!";
     } else {
-      liveText.textContent = `Â§ ${esc(mm.doctrine || '')} Â· Spoken Malayalam Teacher Audio`;
+      liveText.textContent = `§ ${esc(mm.doctrine || '')} · Spoken Malayalam Teacher Audio`;
     }
   }
 
@@ -4352,17 +4353,17 @@ function makePlayer(p, q){
   const vtdLabel = $("#vtd-label");
   if(vtdLabel){
     if(st.activePoint && cur < Number(st.activePoint.t0 || 0)){
-      vtdLabel.textContent = `${st.activeBranch ? st.activeBranch.branch_title + ' Â· ' : ''}Next: ${st.activePoint.title}`;
+      vtdLabel.textContent = `${st.activeBranch ? st.activeBranch.branch_title + ' · ' : ''}Next: ${st.activePoint.title}`;
     } else if(st.activePoint){
-      vtdLabel.textContent = `${st.activeBranch ? st.activeBranch.branch_title + ' Â· ' : ''}${st.activePoint.title}`;
+      vtdLabel.textContent = `${st.activeBranch ? st.activeBranch.branch_title + ' · ' : ''}${st.activePoint.title}`;
     } else if(st.activeFlowStep && st.activeFlowStep.step){
-      vtdLabel.textContent = `${st.activeBranch ? st.activeBranch.branch_title + ' Â· ' : ''}Step: ${st.activeFlowStep.step.label}`;
+      vtdLabel.textContent = `${st.activeBranch ? st.activeBranch.branch_title + ' · ' : ''}Step: ${st.activeFlowStep.step.label}`;
     } else if(st.activeBranch){
       vtdLabel.textContent = st.activeBranch.branch_title;
     } else if(st.allMastered){
       vtdLabel.textContent = "âœ“ Concept Tree Complete";
     } else {
-      vtdLabel.textContent = `Â§ ${mm.root?.badge || "Direct Tax"}`;
+      vtdLabel.textContent = `§ ${mm.root?.badge || "Direct Tax"}`;
     }
   }
  }
@@ -4559,7 +4560,7 @@ function makePlayer(p, q){
    root.classList.add("playing");
    playB.innerHTML = I.pause;
    playB.setAttribute("aria-label", "Pause audio");
-   note.textContent = "Playing Malayalam explainer: " + (p.doctrine || "Statutory Rule") + " Â· " + (p.voice || "Gemini Voice (Aoede)");
+   note.textContent = "Playing Malayalam explainer: " + (p.doctrine || "Statutory Rule") + " · " + (p.voice || "Gemini Voice (Aoede)");
    if(vtheater){
     vtheater.style.removeProperty("display");
     vtheater.classList.add("open");
