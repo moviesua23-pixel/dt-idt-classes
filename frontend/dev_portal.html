@@ -371,8 +371,10 @@
     }
 
     // Apps Script Webhook Helpers
+    const DEFAULT_WEBHOOK_URL = 'https://script.google.com/macros/s/AKfycbzGZ4dcDYAGR_wr8h5IaUVinNdavEN3seXqyFNmnEth4fWj0b84_0JCb6VxZSZNh0Mx0Q/exec';
+
     function getWebhookUrl() {
-      return localStorage.getItem('gdrive_webhook_url') || '';
+      return localStorage.getItem('gdrive_webhook_url') || DEFAULT_WEBHOOK_URL;
     }
 
     function saveWebhookUrl(val) {
@@ -384,8 +386,8 @@
         showToast('✓ Google Apps Script Cloud Bridge connected!');
       } else {
         localStorage.removeItem('gdrive_webhook_url');
-        document.getElementById('webhook-status').textContent = 'Not Connected (Using Drive Direct Link)';
-        document.getElementById('webhook-status').style.color = '#64748B';
+        document.getElementById('webhook-status').textContent = '● Connected (Default Cloud Bridge Active)';
+        document.getElementById('webhook-status').style.color = '#10B981';
       }
     }
 
@@ -424,15 +426,13 @@
 
     // Initialize Webhook UI on load
     window.addEventListener('DOMContentLoaded', () => {
-      const saved = getWebhookUrl();
-      if (saved) {
-        const input = document.getElementById('webhook-input');
-        if (input) input.value = saved;
-        const status = document.getElementById('webhook-status');
-        if (status) {
-          status.textContent = '● Connected (Direct 1-Click Upload Active)';
-          status.style.color = '#10B981';
-        }
+      const activeUrl = getWebhookUrl();
+      const input = document.getElementById('webhook-input');
+      if (input) input.value = activeUrl;
+      const status = document.getElementById('webhook-status');
+      if (status) {
+        status.textContent = '● Connected (Direct 1-Click Upload Active)';
+        status.style.color = '#10B981';
       }
     });
 
@@ -455,7 +455,7 @@
         btn.disabled = true;
         const origText = btn.innerHTML;
         btn.innerHTML = `<span>⏳</span> Uploading "${file.name}" to Google Drive...`;
-        showToast(`Uploading "${file.name}" (${(file.size/(1024*1024)).toFixed(1)} MB) directly to Google Drive...`);
+        showToast(`🚀 Uploading "${file.name}" (${(file.size/(1024*1024)).toFixed(1)} MB) directly to Google Drive...`);
 
         try {
           const reader = new FileReader();
@@ -470,10 +470,11 @@
                 base64: base64
               };
 
-              const res = await fetch(webhookUrl, {
+              // Use text/plain to prevent CORS preflight OPTIONS rejection
+              await fetch(webhookUrl, {
                 method: 'POST',
-                mode: 'no-cors', // Apps script redirects
-                headers: { 'Content-Type': 'application/json' },
+                mode: 'no-cors',
+                headers: { 'Content-Type': 'text/plain;charset=utf-8' },
                 body: JSON.stringify(payload)
               });
 
@@ -483,6 +484,7 @@
               setTimeout(() => {
                 btn.disabled = false;
                 btn.innerHTML = origText;
+                btn.style.background = subject === 'DT' ? 'var(--primary)' : '#0D9488';
               }, 4000);
             } catch (err) {
               console.error(err);
@@ -503,6 +505,7 @@
         }
         return;
       }
+
 
       // If No Webhook: Explain clearly & open folder tab for Drag & Drop
       showToast(`📂 Opening Google Drive ${subject}/ folder... Drag & drop "${file.name}" there to complete upload!`);
