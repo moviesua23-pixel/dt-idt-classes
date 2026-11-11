@@ -2586,8 +2586,85 @@ async function fetchPipelineUpdate() {
     }
   } catch(e) {}
 }
-// Direct file:// launches use the embedded snapshot; /api/data is available only
-// when the app is served by its backend.
+
+const GOOGLE_SHEET_CSV_URL = "https://docs.google.com/spreadsheets/d/14O9I8ZAjnIp8i4SFtM0xZX-y62f5BNtdh25ibSC7ChE/gviz/tq?tqx=out:json";
+
+async function fetchGoogleSheetsLive() {
+  try {
+    const res = await fetch(GOOGLE_SHEET_CSV_URL);
+    if (!res.ok) return;
+    const txt = await res.text();
+    const s = txt.indexOf('{');
+    const e = txt.lastIndexOf('}') + 1;
+    if (s === -1 || e === 0) return;
+    const json = JSON.parse(txt.substring(s, e));
+    const rows = json.table && json.table.rows;
+    if (!rows || rows.length <= 1) return;
+
+    const liveQuestions = [];
+    const liveProvisions = [];
+    const liveMindmaps = {};
+
+    for (let i = 1; i < rows.length; i++) {
+      const c = rows[i].c;
+      if (!c) continue;
+      const val = (idx) => (c[idx] && c[idx].v !== null && c[idx].v !== undefined) ? String(c[idx].v) : "";
+      const subject = val(0) || "DT";
+      const chapter = val(1) || "Basic Concepts";
+      const qNoStr = val(2) || ("Q" + i);
+      const qText = val(3) || "";
+      const ansText = val(4) || "";
+      const provMd = val(5) || "";
+      const provSummary = val(6) || "";
+      const timingsStr = val(7) || "";
+
+      const qNum = parseInt(qNoStr.replace(/\D/g, "")) || i;
+
+      liveQuestions.push({
+        chapter_number: 1,
+        chapter_title: chapter,
+        question_number: qNum,
+        question_title: `Question ${qNum}`,
+        question_text: qText,
+        answer_text: ansText
+      });
+
+      let mmObj = null;
+      try {
+        if (provSummary && provSummary.startsWith("{")) {
+          mmObj = JSON.parse(provSummary);
+          liveMindmaps["q" + qNum] = mmObj;
+        }
+      } catch(err) {}
+
+      liveProvisions.push({
+        question_number: qNum,
+        statutory_sections: ["Section 4"],
+        core_principle: `Topic ${qNum}`,
+        provision_presentation_markdown: provMd,
+        voice: "Gemini Voice (Aoede)",
+        audio_file: "q" + qNum + ".mp3",
+        dur: mmObj ? (mmObj.total_duration || 75) : 75
+      });
+    }
+
+    if (liveQuestions.length > 0 && window.D) {
+      console.log("☁️ Successfully loaded", liveQuestions.length, "questions from Google Sheet!");
+      const updatedPipeline = {
+        catalog: window.D.catalog || { chapters: [] },
+        questions: liveQuestions,
+        provisions: liveProvisions,
+        mindmaps: Object.assign({}, window.D.mindmaps, liveMindmaps)
+      };
+      window.D = buildModelFromPipeline(updatedPipeline);
+      if (typeof render === "function") render();
+    }
+  } catch(err) {
+    console.info("Google Sheet live notice (using embedded offline snapshot):", err);
+  }
+}
+
+fetchGoogleSheetsLive();
 if (window.location.protocol !== "file:") fetchPipelineUpdate();
 /* ---------- helpers ---------- */
 const $=(s,r=document)=>r.querySelector(s), $$=(s,r=document)=>[...r.querySelectorAll(s)];
