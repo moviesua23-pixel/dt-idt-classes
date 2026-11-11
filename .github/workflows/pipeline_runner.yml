@@ -40,8 +40,7 @@ jobs:
           GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
           DRIVE_ROOT_ID: ${{ secrets.DRIVE_ROOT_ID }}
           SPREADSHEET_ID: ${{ secrets.SPREADSHEET_ID }}
-        run: |
-          python pipeline/sync_all_to_sheets.py
+          python pipeline/cloud_pipeline_runner.py
 
       - name: Commit & Push Updated Data Files (if any)
         run: |
