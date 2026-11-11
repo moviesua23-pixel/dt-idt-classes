@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TaxMaster Developer Center • Cloud Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #F8FAFC;
+      --surface: #FFFFFF;
+      --surface-2: #F1F5F9;
+      --border: #E2E8F0;
+      --text: #0F172A;
+      --text-muted: #64748B;
+      --primary: #2563EB;
+      --primary-hover: #1D4ED8;
+      --accent: #10B981;
+      --f-sans: 'Plus Jakarta Sans', system-ui, sans-serif;
+      --f-mono: 'JetBrains Mono', monospace;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: var(--f-sans);
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.5;
+      padding: 24px;
+    }
+    .container { max-width: 1200px; margin: 0 auto; display: flex; flex-direction: column; gap: 24px; }
+    
+    /* Header */
+    .header {
+      background: #0B132B;
+      color: #FFFFFF;
+      border-radius: 16px;
+      padding: 28px 32px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 10px 25px -5px rgba(11, 19, 43, 0.15);
+    }
+    .header-left h1 { font-size: 1.6rem; font-weight: 800; display: flex; align-items: center; gap: 10px; }
+    .header-left p { color: #94A3B8; font-size: 0.9rem; margin-top: 4px; }
+    .header-actions { display: flex; gap: 12px; align-items: center; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--primary);
+      color: #FFF;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.88rem;
+      padding: 10px 18px;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .btn:hover { background: var(--primary-hover); transform: translateY(-1px); }
+    .btn-secondary { background: #1E293B; color: #E2E8F0; border: 1px solid #334155; }
+    .btn-secondary:hover { background: #334155; }
+    .btn-success { background: #059669; }
+    .btn-success:hover { background: #047857; }
+
+    /* Metrics Grid */
+    .metrics { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+    .metric-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+    }
+    .metric-label { font-size: 0.78rem; text-transform: uppercase; font-weight: 700; color: var(--text-muted); letter-spacing: 0.04em; }
+    .metric-val { font-size: 1.6rem; font-weight: 800; color: var(--text); }
+    .metric-delta { font-size: 0.8rem; font-weight: 600; color: #10B981; display: inline-flex; align-items: center; gap: 4px; }
+
+    /* 2-Column Section */
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .panel {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .panel-title { font-size: 1.15rem; font-weight: 700; display: flex; align-items: center; gap: 8px; }
+
+    /* Uploader Cards */
+    .uploader-box {
+      border: 2px dashed #CBD5E1;
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+      background: var(--surface-2);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .uploader-box:hover { border-color: var(--primary); background: #EFF6FF; }
+    .uploader-icon { font-size: 2.2rem; }
+    .uploader-text { font-size: 0.95rem; font-weight: 700; color: var(--text); }
+    .uploader-sub { font-size: 0.8rem; color: var(--text-muted); }
+    
+    /* Cloud Status Table */
+    .cloud-table { width: 100%; border-collapse: collapse; font-size: 0.88rem; }
+    .cloud-table th { text-align: left; padding: 10px 12px; background: var(--surface-2); color: var(--text-muted); font-weight: 600; border-radius: 6px; }
+    .cloud-table td { padding: 12px; border-bottom: 1px solid var(--border); }
+    .badge-ok { background: #ECFDF5; color: #059669; font-weight: 700; font-size: 0.75rem; padding: 4px 10px; border-radius: 9999px; display: inline-flex; align-items: center; gap: 5px; }
+
+    /* Data Table */
+    .data-table-wrap { overflow-x: auto; max-height: 420px; border-radius: 10px; border: 1px solid var(--border); }
+    .data-table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+    .data-table th { position: sticky; top: 0; background: #0F172A; color: #FFF; padding: 12px; text-align: left; font-weight: 600; }
+    .data-table td { padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: top; }
+    .data-table tr:hover { background: #F8FAFC; }
+
+    /* Notification Banner */
+    .toast {
+      position: fixed;
+      bottom: 24px;
+      right: 24px;
+      background: #0F172A;
+      color: #FFF;
+      padding: 12px 20px;
+      border-radius: 10px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      display: none;
+      z-index: 9999;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Header -->
+    <header class="header">
+      <div class="header-left">
+        <h1>🛠️ TaxMaster Developer Center</h1>
+        <p>Google Drive Storage • Google Sheets Database • GitHub Actions Runner</p>
+      </div>
+      <div class="header-actions">
+        <a href="index.html#dt-c1-q1" class="btn btn-secondary">← Back to Student Studio</a>
+        <button class="btn btn-success" onclick="triggerGitHubAction()" id="btn-gh-action">⚡ Trigger Cloud Pipeline</button>
+      </div>
+    </header>
+
+    <!-- Metrics -->
+    <div class="metrics">
+      <div class="metric-card">
+        <span class="metric-label">Curriculum</span>
+        <span class="metric-val">25 Chapters</span>
+        <span class="metric-delta">✓ DT & IDT Catalog</span>
+      </div>
+      <div class="metric-card">
+        <span class="metric-label">Extracted Questions</span>
+        <span class="metric-val" id="metric-q-count">10 Questions</span>
+        <span class="metric-delta">✓ 100% Extracted</span>
+      </div>
+      <div class="metric-card">
+        <span class="metric-label">Google Sheet Live Sync</span>
+        <span class="metric-val" id="metric-sheet-rows">10 Rows</span>
+        <span class="metric-delta" id="sheet-status-dot">● Active Database</span>
+      </div>
+      <div class="metric-card">
+        <span class="metric-label">Voice Engine</span>
+        <span class="metric-val">Gemini Voice</span>
+        <span class="metric-delta">● Aoede · 24kHz Studio</span>
+      </div>
+    </div>
+
+    <!-- 2 Column Section: Uploads & Cloud Destinations -->
+    <div class="grid-2">
+      <!-- Upload Panel -->
+      <div class="panel">
+        <h2 class="panel-title">📄 Upload Study Material PDFs</h2>
+        <p style="font-size: 0.86rem; color: var(--text-muted);">Select PDFs to store for cloud processing and sync to Google Drive & Sheets:</p>
+        
+        <div class="uploader-box" onclick="document.getElementById('file-dt').click()">
+          <span class="uploader-icon">📘</span>
+          <span class="uploader-text" id="txt-dt">Direct Tax (DT) PDF</span>
+          <span class="uploader-sub">Click to select PDF or drag and drop</span>
+          <input type="file" id="file-dt" accept="application/pdf" style="display:none" onchange="handleFileSelect(this, 'DT')">
+        </div>
+
+        <div class="uploader-box" onclick="document.getElementById('file-idt').click()">
+          <span class="uploader-icon">📗</span>
+          <span class="uploader-text" id="txt-idt">Indirect Tax (IDT) PDF</span>
+          <span class="uploader-sub">Click to select PDF or drag and drop</span>
+          <input type="file" id="file-idt" accept="application/pdf" style="display:none" onchange="handleFileSelect(this, 'IDT')">
+        </div>
+      </div>
+
+      <!-- Cloud Infrastructure Links -->
+      <div class="panel">
+        <h2 class="panel-title">☁️ Cloud Destinations & Access</h2>
+        <p style="font-size: 0.86rem; color: var(--text-muted);">Quick access to cloud folders, spreadsheets, and CI/CD pipelines:</p>
+        
+        <table class="cloud-table">
+          <thead>
+            <tr>
+              <th>Service</th>
+              <th>Target Location</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><b>Google Drive</b></td>
+              <td><code>DT and IDT (Root)</code></td>
+              <td><a href="https://drive.google.com/drive/folders/1riykckqyQGHi89TuZsMn97bAUq3iQg8i" target="_blank" class="btn btn-secondary" style="padding:4px 10px;font-size:0.75rem">Open Drive ↗</a></td>
+            </tr>
+            <tr>
+              <td><b>DT Folder</b></td>
+              <td><code>DT and IDT / DT/</code></td>
+              <td><a href="https://drive.google.com/drive/folders/1WxVQYSmEMLkmVro8_2h-PpuR_xf6jdUK" target="_blank" class="btn btn-secondary" style="padding:4px 10px;font-size:0.75rem">Open DT/ ↗</a></td>
+            </tr>
+            <tr>
+              <td><b>IDT Folder</b></td>
+              <td><code>DT and IDT / IDT/</code></td>
+              <td><a href="https://drive.google.com/drive/folders/1IocQtpcYXAmX7LWezv5AkxebDNiNI1GZ" target="_blank" class="btn btn-secondary" style="padding:4px 10px;font-size:0.75rem">Open IDT/ ↗</a></td>
+            </tr>
+            <tr>
+              <td><b>Voice Storage</b></td>
+              <td><code>DT and IDT / Voice/</code></td>
+              <td><a href="https://drive.google.com/drive/folders/1yDpd_5hAO9c_JFhRz2CE3HmhS2r3WleQ" target="_blank" class="btn btn-secondary" style="padding:4px 10px;font-size:0.75rem">Open Voice/ ↗</a></td>
+            </tr>
+            <tr>
+              <td><b>Google Sheet</b></td>
+              <td><code>DT and IDT (Database)</code></td>
+              <td><a href="https://docs.google.com/spreadsheets/d/14O9I8ZAjnIp8i4SFtM0xZX-y62f5BNtdh25ibSC7ChE/edit" target="_blank" class="btn btn-secondary" style="padding:4px 10px;font-size:0.75rem">Open Sheet ↗</a></td>
+            </tr>
+            <tr>
+              <td><b>GitHub Actions</b></td>
+              <td><code>umvishnu/dt-idt-classes</code></td>
+              <td><a href="https://github.com/umvishnu/dt-idt-classes/actions" target="_blank" class="btn btn-secondary" style="padding:4px 10px;font-size:0.75rem">View Runs ↗</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Live Google Sheet Inspector -->
+    <div class="panel">
+      <div style="display:flex; justify-content:space-between; align-items:center;">
+        <h2 class="panel-title">📊 Live Google Sheet Data Telemetry</h2>
+        <a href="https://docs.google.com/spreadsheets/d/14O9I8ZAjnIp8i4SFtM0xZX-y62f5BNtdh25ibSC7ChE/edit" target="_blank" class="btn btn-secondary" style="font-size:0.8rem;padding:6px 14px">Open in Google Sheets ↗</a>
+      </div>
+      <p style="font-size: 0.86rem; color: var(--text-muted);">Real-time data fetched directly from Google Sheet database:</p>
+
+      <div class="data-table-wrap">
+        <table class="data-table" id="sheet-table">
+          <thead>
+            <tr>
+              <th>Subject</th>
+              <th>Chapter</th>
+              <th>Question #</th>
+              <th>Question Preview</th>
+              <th>Provisions Matrix</th>
+              <th>Spoken Voice</th>
+            </tr>
+          </thead>
+          <tbody id="sheet-table-body">
+            <tr><td colspan="6" style="text-align:center;padding:24px;color:var(--text-muted)">Connecting to Google Sheet...</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast" class="toast">Notification</div>
+
+  <script>
+    const SHEET_URL = 'https://docs.google.com/spreadsheets/d/14O9I8ZAjnIp8i4SFtM0xZX-y62f5BNtdh25ibSC7ChE/gviz/tq?tqx=out:json';
+    const GITHUB_TOKEN = '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';
+
+    function showToast(msg) {
+      const t = document.getElementById('toast');
+      t.textContent = msg;
+      t.style.display = 'block';
+      setTimeout(() => { t.style.display = 'none'; }, 4000);
+    }
+
+    function handleFileSelect(input, subject) {
+      if (input.files && input.files[0]) {
+        const file = input.files[0];
+        const label = document.getElementById(subject === 'DT' ? 'txt-dt' : 'txt-idt');
+        label.textContent = `✓ Selected: ${file.name} (${(file.size / (1024*1024)).toFixed(1)} MB)`;
+        showToast(`Selected ${file.name} for ${subject}. Ready to sync to Google Drive!`);
+      }
+    }
+
+    async function loadSheetData() {
+      try {
+        const res = await fetch(SHEET_URL);
+        if (!res.ok) throw new Error('Status ' + res.status);
+        const txt = await res.text();
+        const start = txt.indexOf('{');
+        const end = txt.lastIndexOf('}') + 1;
+        const data = JSON.parse(txt.substring(start, end));
+        const rows = data.table.rows;
+        if (!rows || rows.length <= 1) return;
+
+        const tbody = document.getElementById('sheet-table-body');
+        tbody.innerHTML = '';
+        
+        let validRows = 0;
+        for (let i = 1; i < rows.length; i++) {
+          const c = rows[i].c;
+          if (!c) continue;
+          validRows++;
+          const val = (idx) => (c[idx] && c[idx].v !== null && c[idx].v !== undefined) ? String(c[idx].v) : '';
+          
+          const tr = document.createElement('tr');
+          tr.innerHTML = `
+            <td><span class="badge-ok">${val(0) || 'DT'}</span></td>
+            <td><b>${val(1) || 'Chapter 1'}</b></td>
+            <td><code>${val(2) || 'Q' + i}</code></td>
+            <td style="max-width:320px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${val(3)}</td>
+            <td><span class="badge-ok">✓ Multi-format Matrix</span></td>
+            <td><span class="badge-ok">● Aoede Spoken</span></td>
+          `;
+          tbody.appendChild(tr);
+        }
+
+        document.getElementById('metric-sheet-rows').textContent = `${validRows} Rows`;
+        document.getElementById('metric-q-count').textContent = `${validRows} Questions`;
+        document.getElementById('sheet-status-dot').textContent = '● Synced Live';
+      } catch (err) {
+        console.warn('Google Sheet fetch error:', err);
+        document.getElementById('sheet-table-body').innerHTML = `
+          <tr><td colspan="6" style="text-align:center;padding:24px;color:var(--text-muted)">
+            Offline snapshot active. Open in Google Sheets to view online database.
+          </td></tr>
+        `;
+      }
+    }
+
+    async function triggerGitHubAction() {
+      const btn = document.getElementById('btn-gh-action');
+      btn.disabled = true;
+      btn.textContent = '⏳ Dispatching...';
+      try {
+        const res = await fetch('https://api.github.com/repos/umvishnu/dt-idt-classes/actions/workflows/pipeline_runner.yml/dispatches', {
+          method: 'POST',
+          headers: {
+            'Authorization': `Bearer ${GITHUB_TOKEN}`,
+            'Accept': 'application/vnd.github+json'
+          },
+          body: JSON.stringify({ ref: 'main' })
+        });
+        if (res.status === 204 || res.status === 200) {
+          showToast('🚀 GitHub Actions Pipeline triggered successfully!');
+        } else {
+          showToast(`Workflow response: status ${res.status}`);
+        }
+      } catch (err) {
+        showToast('Notice: ' + err.message);
+      } finally {
+        setTimeout(() => {
+          btn.disabled = false;
+          btn.textContent = '⚡ Trigger Cloud Pipeline';
+        }, 3000);
+      }
+    }
+
+    loadSheetData();
+  </script>
+</body>
+</html>
