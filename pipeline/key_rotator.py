@@ -1,4 +1,4 @@
-﻿import os
+import os
 import sys
 
 # Ensure project root is in sys.path
@@ -9,6 +9,14 @@ if PROJECT_ROOT not in sys.path:
 from google import genai
 from google.genai import types
 import itertools
+
+class AllKeysQuotaExhaustedError(Exception):
+    """Raised when all available Gemini API keys have exhausted their quota / rate limits (429)."""
+    pass
+
+def is_quota_error(e: Exception) -> bool:
+    msg = str(e).lower()
+    return "429" in msg or "resource_exhausted" in msg or "quota" in msg or "too many requests" in msg or "rate limit" in msg
 
 class KeyRotator:
     def __init__(self):
@@ -26,9 +34,12 @@ class KeyRotator:
             if single:
                 self.keys = [single]
         self._pool = itertools.cycle(self.keys)
-        print(f"KeyRotator initialized with {len(self.keys)} active keys.")
+        self.total_keys = len(self.keys)
+        print(f"KeyRotator initialized with {self.total_keys} active keys.")
 
     def get_client(self, timeout_ms=None):
+        if not self.keys:
+            raise RuntimeError("No Gemini API keys configured.")
         next_key = next(self._pool)
         if timeout_ms:
             return genai.Client(
@@ -39,5 +50,36 @@ class KeyRotator:
                 )
             )
         return genai.Client(api_key=next_key)
+
+    def execute_with_retry(self, api_func, *args, **kwargs):
+        """
+        Executes a callable api_func(client, *args, **kwargs).
+        If a 429 quota/rate limit error occurs, rotates through all available keys.
+        If all keys in the pool are exhausted, raises AllKeysQuotaExhaustedError.
+        """
+        if not self.keys:
+            raise RuntimeError("No Gemini API keys configured.")
+
+        quota_failures = 0
+        last_error = None
+
+        for attempt in range(self.total_keys):
+            client = self.get_client()
+            try:
+                return api_func(client, *args, **kwargs)
+            except Exception as e:
+                last_error = e
+                if is_quota_error(e):
+                    quota_failures += 1
+                    print(f"  [KEY ROTATION] Key {attempt + 1}/{self.total_keys} hit quota limit (429/ResourceExhausted). Rotating to next key...")
+                else:
+                    # Non-quota error, re-raise or continue
+                    raise e
+
+        if quota_failures >= self.total_keys:
+            raise AllKeysQuotaExhaustedError(
+                f"All {self.total_keys} Gemini API keys have exhausted their quota: {last_error}"
+            )
+        raise last_error
 
 rotator = KeyRotator()

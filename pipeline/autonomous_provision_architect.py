@@ -23,7 +23,7 @@ try:
 except Exception:
     pass
 
-from pipeline.key_rotator import rotator
+from pipeline.key_rotator import rotator, AllKeysQuotaExhaustedError, is_quota_error
 
 AUTONOMOUS_PROMPT_TEMPLATE = """You are a distinguished Senior CA Final Tax Professor and Expert Visual Learning Architect for Indian Direct Tax and Indirect Tax.
 
@@ -112,14 +112,16 @@ def extract_autonomous_provision(question_number: int, question_text: str, answe
         "gemini-3.8-flash"
     ]
 
+    def _call_gemini(client, model_name):
+        return client.models.generate_content(
+            model=model_name,
+            contents=prompt
+        )
+
     for attempt in range(max_retries):
         for model in models_to_try:
             try:
-                client = rotator.get_client()
-                response = client.models.generate_content(
-                    model=model,
-                    contents=prompt
-                )
+                response = rotator.execute_with_retry(_call_gemini, model)
                 
                 raw = response.text.strip()
                 if "```" in raw:
@@ -131,6 +133,8 @@ def extract_autonomous_provision(question_number: int, question_text: str, answe
                 if "canonical_topic" in data and "provision_presentation_markdown" in data and "mindmap" in data:
                     print(f"  [SUCCESS] Autonomously synthesized structure for Q{question_number}: '{data['canonical_topic']}' using {model}")
                     return data
+            except AllKeysQuotaExhaustedError:
+                raise
             except Exception as e:
                 print(f"  [DEBUG] Model {model} attempt error: {e}")
                 time.sleep(1)

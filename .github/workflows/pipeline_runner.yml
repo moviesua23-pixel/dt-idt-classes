@@ -10,10 +10,6 @@ on:
         description: 'Subject to process (DT / IDT / BOTH)'
         required: true
         default: 'BOTH'
-      limit:
-        description: 'Number of questions to process (e.g. 1, 2, or leave empty for ALL)'
-        required: false
-        default: '1'
 
 permissions:
   contents: write
@@ -48,7 +44,6 @@ jobs:
       - name: Run Cloud Pipeline & Sync Google Sheets
         env:
           PYTHONUNBUFFERED: "1"
-          LIMIT_QUESTIONS: ${{ github.event.inputs.limit }}
           GEMINI_API_KEYS: ${{ secrets.GEMINI_API_KEYS }}
           GCP_SA_KEY: ${{ secrets.GCP_SA_KEY }}
           DRIVE_ROOT_ID: ${{ secrets.DRIVE_ROOT_ID }}

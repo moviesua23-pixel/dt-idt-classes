@@ -24,8 +24,14 @@ try:
 except Exception:
     pass
 
+from pipeline.key_rotator import rotator, AllKeysQuotaExhaustedError, is_quota_error
 from pipeline.autonomous_provision_architect import extract_autonomous_provision, assign_estimated_timings
-from pipeline.synthesize_discrete_points import generate_discrete_voice_for_mindmap
+from pipeline.synthesize_discrete_points import (
+    generate_discrete_voice_for_mindmap,
+    is_audio_ready,
+    count_total_points,
+    count_ready_points
+)
 
 # Configuration
 SERVICE_ACCOUNT_FILE = os.path.join(PROJECT_ROOT, 'credentials.json')
@@ -105,7 +111,52 @@ def upsert_row_to_sheets(row_values):
     except Exception as e:
         print(f"  [SHEETS ERROR] Failed to upsert row ({subject} Ch{chapter_no} Q{q_num}): {e}")
 
-def run_pipeline(limit=None):
+def fetch_existing_sheet_database():
+    """
+    Fetches all existing rows from Google Sheets to enable smart resume.
+    Returns: dict mapping (Subject, Chapter_No_Str, Question_No_Str) -> dict of row fields.
+    """
+    if not sheets_service:
+        return {}
+    try:
+        res = sheets_service.spreadsheets().values().get(
+            spreadsheetId=SPREADSHEET_ID,
+            range='Sheet1!A:J'
+        ).execute()
+        rows = res.get('values', [])
+        db = {}
+        for idx, r in enumerate(rows, start=1):
+            if idx == 1:
+                continue
+            if len(r) >= 3:
+                s = str(r[0]).strip().upper()
+                if s == 'SUBJECT':
+                    continue
+                c = str(r[1]).strip()
+                q = str(r[2]).strip()
+                topic = r[3] if len(r) > 3 else ""
+                q_text = r[4] if len(r) > 4 else ""
+                ans_text = r[5] if len(r) > 5 else ""
+                prov_md = r[6] if len(r) > 6 else ""
+                summary_json_str = r[7] if len(r) > 7 else ""
+                drive_id = r[8] if len(r) > 8 else ""
+                status_str = r[9] if len(r) > 9 else ""
+                db[(s, c, q)] = {
+                    'row_idx': idx,
+                    'topic': topic,
+                    'q_text': q_text,
+                    'ans_text': ans_text,
+                    'prov_md': prov_md,
+                    'summary_json': summary_json_str,
+                    'drive_id': drive_id,
+                    'status': status_str
+                }
+        return db
+    except Exception as e:
+        print(f"  [WARN] Failed to fetch existing sheets database: {e}")
+        return {}
+
+def run_pipeline():
     print("="*75)
     print("STARTING POINT-BY-POINT CLOUD PIPELINE: Drive -> Gemini -> Discrete Voice -> Sheets")
     print("="*75)
@@ -114,15 +165,16 @@ def run_pipeline(limit=None):
     with open(qna_file, 'r', encoding='utf-8') as f:
         qna_list = json.load(f)
 
-    # Cache for already generated topics: { canonical_topic: { 'folder_id': id, 'summary_json': str, 'prov_md': str } }
+    # Cache for already generated topics: { topic_cache_key: { 'folder_id': id, 'summary_json': str, 'prov_md': str } }
     generated_topics_cache = {}
 
     total_questions = len(qna_list)
-    if limit:
-        qna_list = qna_list[:limit]
-        total_questions = len(qna_list)
-        
     print(f"Total questions queued for processing: {total_questions}")
+
+    # 1. Fetch current progress from Google Sheets for Smart Resumption
+    print("\n---> Fetching existing progress from Google Sheets database...")
+    sheet_db = fetch_existing_sheet_database()
+    print(f"Loaded {len(sheet_db)} existing question record(s) from Google Sheets.")
 
     for q_idx, q in enumerate(qna_list):
         # Determine Subject (DT / IDT) and Chapter No
@@ -141,37 +193,70 @@ def run_pipeline(limit=None):
         q_text = q.get('question_text', '')
         ans_text = q.get('answer_text', '')
 
-        print(f"\n---> [{subject} Ch{chapter_no} Q{q_num} ({q_idx+1}/{total_questions})] Analyzing provision autonomously with Gemini...")
+        key = (subject, str(chapter_no), str(q_num))
+        existing = sheet_db.get(key)
 
-        # 1. Call Autonomous Gemini Provision Architect
-        auto_res = extract_autonomous_provision(q_num, q_text, ans_text)
-        
-        if auto_res:
-            canonical_topic = auto_res.get('canonical_topic', f'Statutory Topic Q{q_num}')
-            formatted_provision_matrix = auto_res.get('provision_presentation_markdown', '')
-            mm_data = assign_estimated_timings(auto_res.get('mindmap', {}))
-        else:
-            canonical_topic = f"Statutory Topic Q{q_num}"
-            formatted_provision_matrix = f"### {canonical_topic}\n\nStatutory income tax provision."
-            mm_data = {"doctrine": canonical_topic, "root": {}, "branches": []}
-
-        print(f"  Canonical Doctrine: '{canonical_topic}'")
-
-        # 2. CHECK TOPIC DEDUPLICATION & REUSE:
-        topic_cache_key = f"{subject}_{chapter_no}_{canonical_topic}"
-        if topic_cache_key in generated_topics_cache:
-            # REUSE EXISTING TOPIC DISCRETE AUDIO AND PRESENTATION!
-            cached = generated_topics_cache[topic_cache_key]
-            drive_folder_id = cached['folder_id']
-            summary_json_str = cached['summary_json']
-            formatted_provision_matrix = cached['prov_md']
-            print(f"  [REUSED TOPIC] '{canonical_topic}' already generated! Skipping duplicate TTS. Reusing Drive Folder: {drive_folder_id}")
-        else:
-            # NEW TOPIC: Generate discrete point audio clips and upload to Google Drive
-            print(f"  [NEW TOPIC] Creating Point-by-Point Discrete Voice for '{canonical_topic}' ({subject} Ch{chapter_no})...")
-            
-            discrete_out_dir = os.path.join(PROJECT_ROOT, 'data', 'audio', subject.lower(), f'ch{chapter_no}', f'q{q_num}')
+        # 2. Check if this question is ALREADY 100% COMPLETE:
+        existing_mm = None
+        if existing and existing.get('summary_json'):
             try:
+                parsed_mm = json.loads(existing['summary_json'])
+                ready_pts = count_ready_points(parsed_mm)
+                total_pts = count_total_points(parsed_mm)
+                is_partial = parsed_mm.get('is_partially_complete', False)
+                status_low = existing.get('status', '').lower()
+                
+                if total_pts > 0 and ready_pts >= total_pts and not is_partial and 'paused' not in status_low:
+                    print(f"\n---> [{subject} Ch{chapter_no} Q{q_num} ({q_idx+1}/{total_questions})] Already 100% complete ({ready_pts}/{total_pts} discrete audio points). Skipping!")
+                    continue
+                else:
+                    existing_mm = parsed_mm
+                    print(f"\n---> [{subject} Ch{chapter_no} Q{q_num} ({q_idx+1}/{total_questions})] Found partial progress ({ready_pts}/{total_pts} points). Resuming...")
+            except Exception:
+                existing_mm = None
+
+        # State tracking for safe checkpointing on quota exhaustion
+        current_mm_data = existing_mm
+        current_topic = existing.get('topic') if existing else None
+        current_prov_md = existing.get('prov_md') if existing else None
+
+        try:
+            # 3. Legal Provision Architecture
+            if existing_mm and current_topic and current_prov_md:
+                canonical_topic = current_topic
+                formatted_provision_matrix = current_prov_md
+                mm_data = existing_mm
+                print(f"  Reusing existing legal provision framework: '{canonical_topic}'")
+            else:
+                print(f"\n---> [{subject} Ch{chapter_no} Q{q_num} ({q_idx+1}/{total_questions})] Analyzing provision autonomously with Gemini...")
+                auto_res = extract_autonomous_provision(q_num, q_text, ans_text)
+                
+                if auto_res:
+                    canonical_topic = auto_res.get('canonical_topic', f'Statutory Topic Q{q_num}')
+                    formatted_provision_matrix = auto_res.get('provision_presentation_markdown', '')
+                    mm_data = assign_estimated_timings(auto_res.get('mindmap', {}))
+                else:
+                    canonical_topic = f"Statutory Topic Q{q_num}"
+                    formatted_provision_matrix = f"### {canonical_topic}\n\nStatutory income tax provision."
+                    mm_data = {"doctrine": canonical_topic, "root": {}, "branches": []}
+
+                current_mm_data = mm_data
+                current_topic = canonical_topic
+                current_prov_md = formatted_provision_matrix
+                print(f"  Canonical Doctrine: '{canonical_topic}'")
+
+            # 4. Check Topic Deduplication & Reuse:
+            topic_cache_key = f"{subject}_{chapter_no}_{canonical_topic}"
+            if topic_cache_key in generated_topics_cache and not existing_mm:
+                cached = generated_topics_cache[topic_cache_key]
+                drive_folder_id = cached['folder_id']
+                summary_json_str = cached['summary_json']
+                formatted_provision_matrix = cached['prov_md']
+                print(f"  [REUSED TOPIC] '{canonical_topic}' already generated! Skipping duplicate TTS. Reusing Drive Folder: {drive_folder_id}")
+            else:
+                print(f"  [SYNTHESIZING AUDIO] Generating/Resuming Discrete Points for '{canonical_topic}' ({subject} Ch{chapter_no})...")
+                discrete_out_dir = os.path.join(PROJECT_ROOT, 'data', 'audio', subject.lower(), f'ch{chapter_no}', f'q{q_num}')
+                
                 mm_data = generate_discrete_voice_for_mindmap(
                     q_num=q_num,
                     mindmap=mm_data,
@@ -180,51 +265,71 @@ def run_pipeline(limit=None):
                     subject=subject,
                     chapter_no=chapter_no
                 )
-                drive_folder_id = mm_data.get('drive_folder_id', '')
-            except Exception as synth_err:
-                print(f"    Notice on discrete voice synthesis: {synth_err}")
-                drive_folder_id = "DRIVE_FOLDER_READY"
+                current_mm_data = mm_data
+                drive_folder_id = mm_data.get('drive_folder_id', 'DRIVE_FOLDER_READY')
+                summary_json_str = json.dumps(mm_data, ensure_ascii=False)
 
-            summary_json_str = json.dumps(mm_data, ensure_ascii=False)
+                generated_topics_cache[topic_cache_key] = {
+                    'folder_id': drive_folder_id,
+                    'summary_json': summary_json_str,
+                    'prov_md': formatted_provision_matrix
+                }
 
-            # Cache this canonical topic so all subsequent questions under it share the exact voice clips & tree
-            generated_topics_cache[topic_cache_key] = {
-                'folder_id': drive_folder_id,
-                'summary_json': summary_json_str,
-                'prov_md': formatted_provision_matrix
-            }
+            ready_count = count_ready_points(mm_data)
+            total_count = count_total_points(mm_data)
 
-        # 3. Build Row for Google Sheet:
-        row = [
-            subject,                      # Subject (DT / IDT)
-            chapter_no,                   # Chapter No
-            q_num,                        # Question No
-            canonical_topic,              # Canonical Topic (for dynamic grouping)
-            q_text,                       # Question
-            ans_text,                     # Answer
-            formatted_provision_matrix,   # Provisions (Autonomous Markdown Matrix)
-            summary_json_str,             # Provision Summary (Dynamic Mindmap with embedded point audio IDs)
-            drive_folder_id,              # Drive Audio File/Folder ID
-            f"{mm_data.get('total_points_count', len(mm_data.get('branches', [])))} Discrete Audio Points" # Timings/Status
-        ]
+            # 5. Build Row for Google Sheet:
+            row = [
+                subject,                      # Subject (DT / IDT)
+                chapter_no,                   # Chapter No
+                q_num,                        # Question No
+                canonical_topic,              # Canonical Topic (for dynamic grouping)
+                q_text,                       # Question
+                ans_text,                     # Answer
+                formatted_provision_matrix,   # Provisions (Autonomous Markdown Matrix)
+                summary_json_str,             # Provision Summary (Dynamic Mindmap with embedded point audio IDs)
+                drive_folder_id,              # Drive Audio File/Folder ID
+                f"{ready_count}/{total_count} Discrete Audio Points Complete" # Timings/Status
+            ]
 
-        # 4. Upsert (Update existing row in-place or append new row)
-        try:
+            # 6. Upsert to Google Sheet:
             upsert_row_to_sheets(row)
-        except Exception as sheet_err:
-            print(f"  [SHEETS ERROR] Q{q_num}: {sheet_err}")
+
+        except AllKeysQuotaExhaustedError:
+            print("\n" + "="*75)
+            print("[QUOTA PAUSE] Gemini API quota limit reached across all 3 keys.")
+            print("Saving checkpoint and exiting gracefully without errors (exit code 0).")
+            print("="*75)
+            
+            # Save partial state so next run resumes seamlessly
+            if current_mm_data and current_topic and current_prov_md:
+                ready_count = count_ready_points(current_mm_data)
+                total_count = count_total_points(current_mm_data)
+                partial_json_str = json.dumps(current_mm_data, ensure_ascii=False)
+                drive_folder_id = current_mm_data.get('drive_folder_id', 'DRIVE_FOLDER_READY')
+                status_str = f"{ready_count}/{total_count} Discrete Audio Points (Quota Paused)"
+                
+                partial_row = [
+                    subject,
+                    chapter_no,
+                    q_num,
+                    current_topic,
+                    q_text,
+                    ans_text,
+                    current_prov_md,
+                    partial_json_str,
+                    drive_folder_id,
+                    status_str
+                ]
+                upsert_row_to_sheets(partial_row)
+                print(f"  [CHECKPOINT RECORDED] Saved {subject} Ch{chapter_no} Q{q_num} with {ready_count}/{total_count} points to Google Sheets.")
+
+            print("\nPartial batch saved successfully. The next run will resume from this exact point.")
+            sys.exit(0)
 
     print("\n" + "="*75)
     print("DISCRETE POINT AUDIO PIPELINE COMPLETE! All cards paired with individual voice clips.")
     print("="*75)
 
 if __name__ == '__main__':
-    limit_val = None
-    env_limit = os.environ.get('LIMIT_QUESTIONS', '').strip()
-    if env_limit and env_limit.isdigit():
-        limit_val = int(env_limit)
-        print(f"Limiting execution to {limit_val} question(s) via LIMIT_QUESTIONS.")
-    elif len(sys.argv) > 1 and sys.argv[1].isdigit():
-        limit_val = int(sys.argv[1])
-        print(f"Limiting execution to {limit_val} question(s) via CLI argument.")
-    run_pipeline(limit=limit_val)
+    run_pipeline()
