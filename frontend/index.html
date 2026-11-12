@@ -1483,8 +1483,9 @@ tbody tr:nth-child(2){--r:1}tbody tr:nth-child(3){--r:2}tbody tr:nth-child(4){--
 .mm-canvas-container .mm-infographic-block.status-active,
 .mm-canvas-container .mm-infographic-block.status-mastered{display:block;}
 .mm-canvas-container .mm-block-pill{width:330px;max-width:none;justify-content:flex-start;}
-.mm-canvas-container .mm-cards-row{position:absolute;left:370px;top:0;width:430px;display:block;margin:0;}
-.mm-canvas-container .mm-infographic-card{position:absolute;left:0;width:410px;max-width:none;}
+.mm-canvas-container .mm-cards-row{position:absolute;left:370px;top:0;width:450px;display:block;margin:0;}
+.mm-canvas-container .mm-infographic-card{position:absolute;left:0;width:426px;max-width:none;}
+.mm-canvas-container .mm-infographic-card.card-fullwidth{width:446px;}
 .mm-canvas-container .mm-infographic-card.status-hidden{display:flex!important;visibility:visible!important;opacity:0.65!important;filter:grayscale(0.25)!important;pointer-events:auto!important;cursor:pointer!important;}
 .mm-canvas-container .mm-infographic-card.status-drawing,
 .mm-canvas-container .mm-infographic-card.status-active,
@@ -2086,38 +2087,66 @@ tbody tr:nth-child(2){--r:1}tbody tr:nth-child(3){--r:2}tbody tr:nth-child(4){--
 .mm-table-panel{
   margin-top:8px;
   width:100%;
-  overflow-x:auto;
+  max-width:100%;
+  overflow-x:hidden;
   background:#FFFFFF;
   border:1px solid #CBD5E1;
   border-radius:10px;
-  padding:10px 14px;
+  padding:8px 10px;
   box-sizing:border-box;
 }
 .mm-table-title{
-  font-size:.88rem;
+  font-size:.84rem;
   font-weight:700;
   color:#1E293B;
-  margin-bottom:8px;
+  margin-bottom:6px;
 }
 .mm-stat-table{
-  width:100%;
+  width:100% !important;
+  min-width:0 !important;
   border-collapse:collapse;
-  font-size:.88rem;
+  font-size:.82rem;
+  table-layout:fixed;
 }
 .mm-stat-table th{
   font-weight:700;
   color:#334155;
   border-bottom:2px solid #CBD5E1;
-  padding:8px 10px;
+  padding:6px 6px;
   font-family:var(--f-display);
+  font-size:.78rem;
+  letter-spacing:0.02em;
 }
 .mm-stat-table td{
-  padding:8px 10px;
+  padding:6px 6px;
   border-bottom:1px solid #F1F5F9;
   color:#1E293B;
+  vertical-align:middle;
+}
+.mm-stat-table th:first-child,
+.mm-stat-table td:first-child{
+  width:72%;
+  text-align:left;
+}
+.mm-stat-table th:last-child,
+.mm-stat-table td:last-child{
+  width:28%;
+  text-align:right;
+  white-space:nowrap;
 }
 .mm-stat-table tr:nth-child(even){
   background:rgba(241,245,249,0.55);
+}
+.mm-stat-table .chip-amt{
+  padding:1px 5px;
+  font-size:.84em;
+  white-space:nowrap;
+  margin:1px 2px;
+}
+.mm-stat-table .chip-rate{
+  padding:1px 6px;
+  font-size:.84em;
+  white-space:nowrap;
 }
 .cell-mono{
   font-family:var(--f-mono);
@@ -4460,13 +4489,15 @@ function makePlayer(p, q){
   else stage.dataset.focusedPoint = "";
   if(target){
     const targetPoint = pointInMindMapCanvas(target, canvas);
-    const availableW = Math.max(220, stage.clientWidth - 104);
     const topBarH = 64, bottomDockH = 114;
-    const availableH = Math.max(180, stage.clientHeight - topBarH - bottomDockH - 20);
+    const availableW = Math.max(220, stage.clientWidth - 120);
+    const availableH = Math.max(180, stage.clientHeight - topBarH - bottomDockH - 36);
     let focusPoint = targetPoint;
-    let focusScale = Math.min(1.28, Math.max(1.15, Math.min(availableW / (targetPoint.width + 60), availableH / (targetPoint.height + 40))));
+    const fitW = availableW / (targetPoint.width + 50);
+    const fitH = availableH / (targetPoint.height + 30);
+    let focusScale = Math.min(1.15, Math.max(0.68, Math.min(fitW, fitH)));
     if(target.id === "mm-node-root"){
-      focusScale = Math.min(1.22, Math.max(1.10, availableW / (targetPoint.width + 120)));
+      focusScale = Math.min(1.12, Math.max(0.75, Math.min(availableW / (targetPoint.width + 100), availableH / (targetPoint.height + 30))));
     }
     const pan = cameraPanToPoint(stage, canvas, focusPoint, focusScale);
     stage.style.setProperty("--mm-focus-scale", focusScale.toFixed(3));
