@@ -3707,18 +3707,30 @@ function makePlayer(p, q){
  function getDiscreteAudioUrls(item){
   if (!item) return [];
   const urls = [];
-  // 1. Google Drive direct stream (Primary: freshly synthesized Gemini Expressive Voice)
-  if (item.drive_id && !item.drive_id.startsWith("DRIVE_PT_")) {
-   urls.push("https://drive.google.com/uc?export=download&id=" + item.drive_id);
-   urls.push("https://docs.google.com/uc?export=open&id=" + item.drive_id);
-  }
-  // 2. Direct local file URL or relative path fallback
+  const isLocal = (window.location.protocol === "file:");
+  
+  let localUrl = null;
   if (item.audio_file) {
    const fn = item.audio_file.replace(/\\/g, '/');
-   const localUrl = window.location.protocol === "file:"
+   localUrl = isLocal
     ? new URL("../data/audio/" + fn, window.location.href).href
     : (fn.startsWith('/') ? fn : "/data/audio/" + fn);
-   urls.push(localUrl);
+  }
+
+  const driveUrls = [];
+  if (item.drive_id && !item.drive_id.startsWith("DRIVE_PT_")) {
+   driveUrls.push("https://drive.google.com/uc?export=download&id=" + item.drive_id);
+   driveUrls.push("https://docs.google.com/uc?export=open&id=" + item.drive_id);
+  }
+
+  // On file:/// protocol (local testing), local files have zero CORS overhead, try local first.
+  // On http/https web deployment, prioritize fresh Google Drive cloud streams.
+  if (isLocal) {
+   if (localUrl) urls.push(localUrl);
+   urls.push(...driveUrls);
+  } else {
+   urls.push(...driveUrls);
+   if (localUrl) urls.push(localUrl);
   }
   return urls;
  }
@@ -3929,6 +3941,9 @@ function makePlayer(p, q){
   window.clearTimeout(window.__mmAudioPlayTimer);
   highlightDiscretePoint(item, isNewBranch);
   updateDiscreteUI();
+  if (note && note.innerHTML.includes("Audio unavailable")) {
+   note.textContent = "Playing point: " + item.title;
+  }
 
   let uIdx = 0;
   function attemptPlayback(){
@@ -3970,6 +3985,13 @@ function makePlayer(p, q){
       const curVtdPlay = $("#vtd-play");
       if (curVtdPlay) curVtdPlay.innerHTML = I.pause;
       vizOn();
+      if (note && note.innerHTML.includes("Audio unavailable")) {
+       note.textContent = "Playing point: " + item.title;
+      }
+      const vtdLabel = $("#vtd-label");
+      if (vtdLabel && vtdLabel.innerHTML.includes("Audio unavailable")) {
+       vtdLabel.textContent = item.title;
+      }
      }).catch(err => {
       console.warn("Audio play failed on source:", nextSrc, err);
       attemptPlayback();
@@ -5387,6 +5409,10 @@ function makePlayer(p, q){
  if(document.fonts) document.fonts.ready.then(refreshMindMapLayout);
 
  audio.ontimeupdate = () => {
+  if (note && note.innerHTML.includes("Audio unavailable") && audio.currentTime > 0) {
+   const item = isDiscreteMode ? discretePlaylist[currentPtIdx] : null;
+   note.textContent = item ? ("Playing point: " + item.title) : "";
+  }
   if (isDiscreteMode) {
    updateDiscreteUI();
   } else {
@@ -5395,7 +5421,19 @@ function makePlayer(p, q){
  };
  audio.onseeking = ui;
  audio.onseeked = ui;
- audio.onplay = () => { ui(); startMindMapDrawLoop(); };
+ audio.onplay = () => {
+  if (note && note.innerHTML.includes("Audio unavailable")) {
+   const item = isDiscreteMode ? discretePlaylist[currentPtIdx] : null;
+   note.textContent = item ? ("Playing point: " + item.title) : "";
+  }
+  const vtdLabel = $("#vtd-label");
+  if (vtdLabel && vtdLabel.innerHTML.includes("Audio unavailable")) {
+   const item = isDiscreteMode ? discretePlaylist[currentPtIdx] : null;
+   if (item) vtdLabel.textContent = item.title;
+  }
+  ui();
+  startMindMapDrawLoop();
+ };
  audio.onpause = () => { ui(); stopMindMapDrawLoop(); };
  audio.onratechange = ui;
  audio.onended = () => {
@@ -5410,17 +5448,22 @@ function makePlayer(p, q){
   }
  };
  audio.onerror = () => {
+  // If audio is actively playing or has already played past t=0, ignore aborted switch events
+  if (audio.currentTime > 0 && !audio.paused) return;
   if (isDiscreteMode) {
    const item = discretePlaylist[currentPtIdx];
    console.warn("Audio error on point:", item);
-   if (note) note.innerHTML = `⚠️ Audio unavailable for "${esc(item ? item.title : 'this point')}". Review the card points, or tap <b>Skip ⏭</b> to continue.`;
-   const vtdLabel = $("#vtd-label");
-   if (vtdLabel) {
-    vtdLabel.innerHTML = `<span>⚠️ Audio unavailable</span> <button id="vtd-skip-btn" style="margin-left:8px;background:var(--accent);color:#fff;border:none;border-radius:12px;padding:3px 10px;cursor:pointer;font-size:0.8rem">Skip ⏭</button> <button id="vtd-retry-btn" style="margin-left:4px;background:rgba(255,255,255,0.15);color:inherit;border:1px solid rgba(255,255,255,0.3);border-radius:12px;padding:3px 8px;cursor:pointer;font-size:0.8rem">Retry ↺</button>`;
-    const skipBtn = $("#vtd-skip-btn");
-    if (skipBtn) skipBtn.onclick = (e) => { e.stopPropagation(); playPoint(currentPtIdx + 1, true); };
-    const retryBtn = $("#vtd-retry-btn");
-    if (retryBtn) retryBtn.onclick = (e) => { e.stopPropagation(); playPoint(currentPtIdx, true); };
+   // Only show warning if audio is genuinely not playing
+   if (audio.paused && (!audio.currentTime || audio.currentTime === 0)) {
+    if (note) note.innerHTML = `⚠️ Audio unavailable for "${esc(item ? item.title : 'this point')}". Review the card points, or tap <b>Skip ⏭</b> to continue.`;
+    const vtdLabel = $("#vtd-label");
+    if (vtdLabel) {
+     vtdLabel.innerHTML = `<span>⚠️ Audio unavailable</span> <button id="vtd-skip-btn" style="margin-left:8px;background:var(--accent);color:#fff;border:none;border-radius:12px;padding:3px 10px;cursor:pointer;font-size:0.8rem">Skip ⏭</button> <button id="vtd-retry-btn" style="margin-left:4px;background:rgba(255,255,255,0.15);color:inherit;border:1px solid rgba(255,255,255,0.3);border-radius:12px;padding:3px 8px;cursor:pointer;font-size:0.8rem">Retry ↺</button>`;
+     const skipBtn = $("#vtd-skip-btn");
+     if (skipBtn) skipBtn.onclick = (e) => { e.stopPropagation(); playPoint(currentPtIdx + 1, true); };
+     const retryBtn = $("#vtd-retry-btn");
+     if (retryBtn) retryBtn.onclick = (e) => { e.stopPropagation(); playPoint(currentPtIdx, true); };
+    }
    }
   } else {
    console.warn("Audio error for", audioUrl);
