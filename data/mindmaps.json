@@ -1,202 +1,110 @@
 {
   "q1": {
-    "doctrine": "Section 4: Diversion vs Application of Income",
+    "doctrine": "Diversion vs. Application of Income",
     "root": {
       "id": "root",
       "number": "1",
-      "title": "Section 4: Diversion vs Application of Income",
-      "badge": "Section 4 · Section 28",
-      "t1": 13.25,
-      "voice_sync_text": "ഇന്ന് Section 4-ലെ diversion of income, application of income എന്നീ നിയമസങ്കൽപ്പങ്ങൾ മാത്രം പഠിക്കാം.",
-      "t0": 0.0
+      "title": "Diversion vs. Application of Income",
+      "badge": "Section 4",
+      "voice_sync_text": "Innu nammal padikunnath Income Tax-ile mikacha oru legal doctrine-ine kurichaanu. Diversion of Income versus Application of Income. Income tax charge cheyyunnathinu munp ee vyathyaasam manassilaakkal valare pradhaanamannu.",
+      "pt_idx": 0,
+      "audio_file": "q1/pt_0.mp3",
+      "drive_audio_id": "1uWDUm8hptjbpQfWtozIvBeRUeAaaJvE2"
     },
-    "total_duration": 133.86,
     "branches": [
       {
-        "branch_id": "q1-branch-1",
-        "branch_title": "Core distinction",
-        "number": "1.1",
-        "badge": "Core distinction",
-        "icon": "scales",
-        "t0": 14.75,
-        "t1": 43.89,
+        "branch_id": "branch-1",
+        "branch_title": "Diversion by Overriding Title",
+        "badge": "Non-Taxable",
+        "icon": "shield",
         "points": [
           {
-            "id": "q1-beat-1-0",
-            "title": "Two ways income may be transferred",
+            "id": "beat-1-1",
+            "title": "Legal Overriding Title",
             "number": "1.1.1",
-            "badge": "Rule",
+            "badge": "Doctrine",
             "body": [
-              "Diversion: a superior legal obligation diverts income at its source.",
-              "Application: the assessee first earns or receives income, then uses it."
+              "Obligation is created by a superior title or law.",
+              "The income never effectively reaches the assessee.",
+              "Example: Statutory charge on profit for a specific purpose."
             ],
             "table_data": null,
-            "spoken": true,
-            "t0": 14.75,
-            "t1": 29.66,
-            "voice_sync_text": "വരുമാനത്തിന്റെ വിനിയോഗത്തിൽ രണ്ട് നിയമസ്ഥിതികളുണ്ട്. Source-ൽ തന്നെ മേലധികാരമുള്ള നിയമബാധ്യത വരുമാനം മാറ്റിയാൽ diversion; ആദ്യം വരുമാനം ലഭിച്ച് പിന്നീട് ഉപയോഗിച്ചാൽ application.",
-            "icon": "check",
-            "highlights": []
-          },
-          {
-            "id": "q1-beat-2-0",
-            "title": "Why timing matters",
-            "number": "1.1.2",
-            "badge": "Rule",
-            "body": [
-              "The decisive question is when the obligation operates.",
-              "Trace whether income reaches the assessee as their own income first."
-            ],
-            "table_data": null,
-            "spoken": true,
-            "t0": 30.46,
-            "t1": 43.89,
-            "voice_sync_text": "പ്രധാന പരിശോധന obligation എപ്പോൾ പ്രവർത്തിക്കുന്നു എന്നതാണ്. വരുമാനം assessee-യുടെ സ്വന്തം വരുമാനമായി ആദ്യം ലഭിക്കുന്നുണ്ടോ എന്ന് കണ്ടെത്തണം.",
-            "icon": "check",
-            "highlights": []
+            "voice_sync_text": "Diversion ennu parayunnath, income assessee-yude kayyil ethunnathinu munne thanne oru 'overriding title' vazhi vere oridathekku pokunnathaanu. Ithine income aayi kanakakkilla, athu kondu thanne tax kodukkandiyum varilla.",
+            "pt_idx": 1,
+            "audio_file": "q1/pt_1.mp3",
+            "drive_audio_id": "1vnNJLeEnRaN35SDlI2pwQrDwfGfOATrD"
           }
         ],
         "flow_summary": []
       },
       {
-        "branch_id": "q1-branch-2",
-        "branch_title": "Overriding title",
-        "number": "1.2",
-        "badge": "Overriding title",
-        "icon": "scales",
-        "t0": 45.38,
-        "t1": 73.31,
+        "branch_id": "branch-2",
+        "branch_title": "Application of Income",
+        "badge": "Taxable",
+        "icon": "rupee",
         "points": [
           {
-            "id": "q1-beat-3-0",
-            "title": "Obligation attached to source",
-            "number": "1.2.1",
+            "id": "beat-2-1",
+            "title": "Post-Accrual Disposal",
+            "number": "2.1.1",
             "badge": "Rule",
             "body": [
-              "A pre-existing enforceable obligation must bind the income-producing source.",
-              "The assessee’s title is overridden before the income accrues as their own."
+              "Income first accrues to the assessee.",
+              "Assessee then decides to spend or transfer it.",
+              "The destination is chosen by the assessee's will."
             ],
             "table_data": null,
-            "spoken": true,
-            "t0": 45.38,
-            "t1": 60.23,
-            "voice_sync_text": "മുൻകൂട്ടിയുള്ള enforceable obligation വരുമാനം സൃഷ്ടിക്കുന്ന source-നോട് ബന്ധിപ്പിച്ചിരിക്കണം. വരുമാനം സ്വന്തം വരുമാനമായി ലഭിക്കുന്നതിന് മുമ്പ് assessee-യുടെ title മറികടക്കണം.",
-            "icon": "check",
-            "highlights": []
-          },
-          {
-            "id": "q1-beat-4-0",
-            "title": "Legal character, not label",
-            "number": "1.2.2",
-            "badge": "Rule",
-            "body": [
-              "Calling a payment a “charge” is not enough by itself.",
-              "Examine the legal instrument, enforceability, and link to the source."
-            ],
-            "table_data": null,
-            "spoken": true,
-            "t0": 61.04,
-            "t1": 73.31,
-            "voice_sync_text": "ഒരു payment-നെ “charge” എന്ന് വിളിച്ചതുകൊണ്ട് മാത്രം diversion ആവില്ല. ബന്ധപ്പെട്ട നിയമരേഖ, ബാധ്യത enforce ചെയ്യാമോ, source-നോടുള്ള ബന്ധം എന്നിവ പരിശോധിക്കണം.",
-            "icon": "check",
-            "highlights": []
+            "voice_sync_text": "Application of income ennal, income aadhyam assessee-kku labhikunnu, athinu shesham ayaal athu swantham ishtaprakaaram upayogikkunnu. Ithu fully taxable aanu.",
+            "pt_idx": 2,
+            "audio_file": "q1/pt_2.mp3",
+            "drive_audio_id": "1atG5Bk0Ub5pEzah0wCUU_qor_z74c7kp"
           }
         ],
         "flow_summary": []
       },
       {
-        "branch_id": "q1-branch-3",
-        "branch_title": "Application of income",
-        "number": "1.3",
-        "badge": "Application of income",
+        "branch_id": "branch-3",
+        "branch_title": "Judicial Benchmarks",
+        "badge": "Tests",
         "icon": "scales",
-        "t0": 74.81,
-        "t1": 104.4,
         "points": [
           {
-            "id": "q1-beat-5-0",
-            "title": "Income accrues first",
-            "number": "1.3.1",
-            "badge": "Rule",
+            "id": "beat-3-1",
+            "title": "Determining Factors",
+            "number": "3.1.1",
+            "badge": "Checklist",
             "body": [
-              "The assessee obtains the right to receive or control the income.",
-              "A later payment discharges an obligation from income already earned."
+              "Who created the obligation? (Client vs Assessee)",
+              "When was the charge created?",
+              "Nature of the binding contract."
             ],
-            "table_data": null,
-            "spoken": true,
-            "t0": 74.81,
-            "t1": 90.8,
-            "voice_sync_text": "വരുമാനം ആദ്യം assessee-ക്ക് ലഭിക്കാനുള്ള അവകാശമോ നിയന്ത്രണമോ ഉണ്ടാകുന്നു. പിന്നീട് ആ വരുമാനത്തിൽ നിന്ന് payment നടത്തുന്നത് ഇതിനകം നേടിയ വരുമാനത്തിലെ ബാധ്യത തീർക്കലാണ്.",
-            "icon": "check",
-            "highlights": []
-          },
-          {
-            "id": "q1-beat-6-0",
-            "title": "Use does not erase income",
-            "number": "1.3.2",
-            "badge": "Rule",
-            "body": [
-              "A later gift, family payment, or voluntary allocation is ordinarily application.",
-              "Tax treatment changes only where a specific statutory deduction or exemption applies."
-            ],
-            "table_data": null,
-            "spoken": true,
-            "t0": 91.59,
-            "t1": 104.4,
-            "voice_sync_text": "പിന്നീട് നൽകുന്ന gift, കുടുംബ payment, അല്ലെങ്കിൽ സ്വമേധയാ മാറ്റിവെക്കൽ സാധാരണയായി application ആണ്. പ്രത്യേക statutory deduction അല്ലെങ്കിൽ exemption ഉണ്ടെങ്കിൽ മാത്രമേ tax treatment മാറൂ.",
-            "icon": "check",
-            "highlights": []
-          }
-        ],
-        "flow_summary": []
-      },
-      {
-        "branch_id": "q1-branch-4",
-        "branch_title": "Tax consequence and test",
-        "number": "1.4",
-        "badge": "Tax consequence and test",
-        "icon": "scales",
-        "t0": 105.9,
-        "t1": 132.86,
-        "points": [
-          {
-            "id": "q1-beat-7-0",
-            "title": "Different tax treatment",
-            "number": "1.4.1",
-            "badge": "Rule",
-            "body": [
-              "Genuine diversion: the diverted amount is not income accruing to the assessee.",
-              "Application: the income remains taxable; later spending is not itself a deduction."
-            ],
-            "table_data": null,
-            "spoken": true,
-            "t0": 105.9,
-            "t1": 117.66,
-            "voice_sync_text": "യഥാർത്ഥ diversion ആണെങ്കിൽ മാറ്റിയ തുക assessee-ക്ക് accrue ചെയ്ത വരുമാനമല്ല. Application ആണെങ്കിൽ വരുമാനം taxable ആയി തുടരും; പിന്നീട് ചെലവാക്കിയത് മാത്രം deduction ആവില്ല.",
-            "icon": "check",
-            "highlights": []
-          },
-          {
-            "id": "q1-beat-8-0",
-            "title": "Apply the source test",
-            "number": "1.4.2",
-            "badge": "Rule",
-            "body": [
-              "Ask: did the obligation take income away before the assessee acquired it?",
-              "If the assessee acquired it first, the payment is application in the ordinary case."
-            ],
-            "table_data": null,
-            "spoken": true,
-            "t0": 118.46,
-            "t1": 132.86,
-            "voice_sync_text": "അവസാനമായി ചോദിക്കുക: assessee-ക്ക് വരുമാനം ലഭിക്കുന്നതിന് മുമ്പ് obligation അത് source-ൽ നിന്ന് മാറ്റിയോ? ആദ്യം assessee-ക്കാണ് ലഭിച്ചതെങ്കിൽ സാധാരണയായി അത് application ആണ്.",
-            "icon": "check",
-            "highlights": []
+            "table_data": {
+              "headers": [
+                "Scenario",
+                "Classification"
+              ],
+              "rows": [
+                [
+                  "Partner gives share to wife per Decree",
+                  "Diversion"
+                ],
+                [
+                  "Assessee creates trust from fees",
+                  "Application"
+                ]
+              ]
+            },
+            "voice_sync_text": "Oru thuka 'Diversion' aano 'Application' aano ennu thirichariyaan chil karyangal nireekshikkanam. Obligation create cheythath client aano atho assessee thanneyaano? Ee difference-il aanu taxability nilakollunnath.",
+            "pt_idx": 3,
+            "audio_file": "q1/pt_3.mp3",
+            "drive_audio_id": "1sxpLRAeBWSMhgOQ1-qE_IatrPKa9EoyC"
           }
         ],
         "flow_summary": []
       }
-    ]
+    ],
+    "total_points_count": 4,
+    "drive_folder_id": "1gIAoMsQdG8YVUy6HcNsZdvRYvlGxxU6e"
   },
   "q2": {
     "doctrine": "Diversion by Overriding Title",
