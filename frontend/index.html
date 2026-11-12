@@ -3427,7 +3427,14 @@ function renderScriptDrawerContent(q, p){
 
 function vStudio(r){
  const list=qs(r.sub,r.ch),i=list.findIndex(q=>q.n===r.n),q=list[i];
- if(!q){go(`${r.sub}-c${r.ch}`);return}
+ if(!q){
+  if(D.qna.length === 0){
+   mount(`<div class="studio-nav rise"><button class="nav-btn" data-go="${r.sub}-c${r.ch}">${I.back}Questions</button></div><div class="studio" style="padding:80px 20px;text-align:center"><p style="color:var(--muted);font-size:1.1rem">Loading Question ${r.n} presentation & audio...</p></div>`,r);
+   return;
+  }
+  go(`${r.sub}-c${r.ch}`);
+  return;
+ }
  const p=D.prov[q.topic]||{doctrine:q.title,principle:"",secs:q.secs||[],dur:60,file:`q${q.n}.mp3`,ml:""};
  const prev=list[i-1],next=list[i+1],base=`${r.sub}-c${r.ch}`;
  mount(`<div class="studio-nav rise"><button class="nav-btn" data-go="${base}">${I.back}Questions</button>
@@ -3573,18 +3580,27 @@ function makePlayer(p, q){
  const isDiscreteMode = (discretePlaylist.length > 1 && discretePlaylist.some(item => item.drive_id || item.audio_file));
  let currentPtIdx = 0;
 
- function getDiscreteAudioUrl(item){
-  if (!item) return null;
-  if (item.drive_id && !item.drive_id.startsWith("DRIVE_PT_")) {
-   return "https://drive.google.com/uc?export=download&id=" + item.drive_id;
-  }
+ function getDiscreteAudioUrls(item){
+  if (!item) return [];
+  const urls = [];
+  // 1. Direct local file URL or relative path (fast, zero CORS/CORP issues)
   if (item.audio_file) {
    const fn = item.audio_file.replace(/\\/g, '/');
-   return window.location.protocol === "file:"
+   const localUrl = window.location.protocol === "file:"
     ? new URL("../data/audio/" + fn, window.location.href).href
-    : "/data/audio/" + fn;
+    : (fn.startsWith('/') ? fn : "/data/audio/" + fn);
+   urls.push(localUrl);
   }
-  return null;
+  // 2. Google Drive streaming link
+  if (item.drive_id && !item.drive_id.startsWith("DRIVE_PT_")) {
+   urls.push("https://drive.google.com/uc?export=download&id=" + item.drive_id);
+  }
+  return urls;
+ }
+
+ function getDiscreteAudioUrl(item){
+  const urls = getDiscreteAudioUrls(item);
+  return urls.length > 0 ? urls[0] : null;
  }
 
  function highlightDiscretePoint(item){
@@ -3670,41 +3686,59 @@ function makePlayer(p, q){
   }
   currentPtIdx = targetIdx;
   const item = discretePlaylist[currentPtIdx];
-  const nextSrc = getDiscreteAudioUrl(item);
+  const candidateUrls = getDiscreteAudioUrls(item);
 
   audio.pause();
-  if (nextSrc && audio.src !== nextSrc) {
-   audio.src = nextSrc;
-   audio.currentTime = 0;
-  }
-
   highlightDiscretePoint(item);
   updateDiscreteUI();
 
-  if (startPlaying) {
-   audio.play().then(() => {
-    playing = true;
-    root.classList.add("playing");
-    playB.innerHTML = I.pause;
-    playB.setAttribute("aria-label", "Pause audio");
-    const curVtdPlay = $("#vtd-play");
-    if (curVtdPlay) curVtdPlay.innerHTML = I.pause;
-    vizOn();
-   }).catch(err => {
-    console.warn("Discrete audio playback notice:", err);
+  let uIdx = 0;
+  function attemptPlayback(){
+   if (uIdx >= candidateUrls.length) {
+    console.warn("All candidate audio sources exhausted for point:", item);
     playing = false;
     root.classList.remove("playing");
     playB.innerHTML = I.play;
     const curVtdPlay = $("#vtd-play");
     if (curVtdPlay) curVtdPlay.innerHTML = I.play;
-   });
-  } else {
-   playing = false;
-   root.classList.remove("playing");
-   playB.innerHTML = I.play;
-   const curVtdPlay = $("#vtd-play");
-   if (curVtdPlay) curVtdPlay.innerHTML = I.play;
+    return;
+   }
+   const nextSrc = candidateUrls[uIdx++];
+   if (audio.src !== nextSrc) {
+    audio.src = nextSrc;
+    audio.currentTime = 0;
+   }
+   if (startPlaying) {
+    audio.play().then(() => {
+     playing = true;
+     root.classList.add("playing");
+     playB.innerHTML = I.pause;
+     playB.setAttribute("aria-label", "Pause audio");
+     const curVtdPlay = $("#vtd-play");
+     if (curVtdPlay) curVtdPlay.innerHTML = I.pause;
+     vizOn();
+    }).catch(err => {
+     console.warn("Audio play failed on source:", nextSrc, err);
+     if (uIdx < candidateUrls.length) {
+      attemptPlayback();
+     } else {
+      playing = false;
+      root.classList.remove("playing");
+      playB.innerHTML = I.play;
+      const curVtdPlay = $("#vtd-play");
+      if (curVtdPlay) curVtdPlay.innerHTML = I.play;
+     }
+    });
+   } else {
+    playing = false;
+    root.classList.remove("playing");
+    playB.innerHTML = I.play;
+    const curVtdPlay = $("#vtd-play");
+    if (curVtdPlay) curVtdPlay.innerHTML = I.play;
+   }
   }
+
+  attemptPlayback();
  }
 
  const audio = new Audio();
