@@ -2561,10 +2561,17 @@ tbody tr:nth-child(2){--r:1}tbody tr:nth-child(3){--r:2}tbody tr:nth-child(4){--
   transition:opacity .15s ease, transform .15s ease, box-shadow .15s ease!important;
 }
 
-/* 5. In presentation theater, hide branch connector paths from root, show only the active card path */
+/* 5. In presentation theater, show the active arrow from topic to branch, and active arrow from branch to card */
 .vtheater.open .mm-branch-path{
   opacity:0!important;
   visibility:hidden!important;
+}
+.vtheater.open .mm-branch-path.path-active{
+  opacity:1!important;
+  visibility:visible!important;
+  stroke:#d69a30!important;
+  stroke-width:2.5px!important;
+  transition:opacity .15s ease, stroke .15s ease!important;
 }
 .vtheater.open .mm-card-path{
   opacity:0!important;
