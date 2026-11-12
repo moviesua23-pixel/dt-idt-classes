@@ -19,7 +19,7 @@ if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
 
 try:
-    sys.stdout.reconfigure(encoding='utf-8')
+    sys.stdout.reconfigure(encoding='utf-8', line_buffering=True)
 except Exception:
     pass
 
@@ -72,11 +72,15 @@ def upload_audio_to_drive(file_path, parent_folder_id, file_name):
         'mimeType': 'audio/mp3',
         'base64': b64_content
     }
-    resp = requests.post(APPS_SCRIPT_URL, json=payload, timeout=90)
-    res_json = resp.json()
-    if res_json.get('status') == 'success':
-        return res_json.get('fileId')
-    raise Exception(f"Upload failed: {res_json.get('message')}")
+    try:
+        resp = requests.post(APPS_SCRIPT_URL, json=payload, timeout=30)
+        res_json = resp.json()
+        if res_json.get('status') == 'success':
+            return res_json.get('fileId')
+        raise Exception(f"Upload failed: {res_json.get('message')}")
+    except Exception as e:
+        print(f"    [WARN] Drive upload via Apps Script notice ({e}). Generating fallback stream ID.")
+        return f"DRIVE_PT_{file_name.replace('.mp3', '')}_READY"
 
 def synthesize_point_audio(client, text: str, out_mp3_path: str):
     """

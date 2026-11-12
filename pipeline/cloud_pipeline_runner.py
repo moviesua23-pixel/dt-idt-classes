@@ -20,7 +20,7 @@ if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
 
 try:
-    sys.stdout.reconfigure(encoding='utf-8')
+    sys.stdout.reconfigure(encoding='utf-8', line_buffering=True)
 except Exception:
     pass
 
@@ -162,4 +162,12 @@ def run_pipeline(limit=None):
     print("="*75)
 
 if __name__ == '__main__':
-    run_pipeline()
+    limit_val = None
+    env_limit = os.environ.get('LIMIT_QUESTIONS', '').strip()
+    if env_limit and env_limit.isdigit():
+        limit_val = int(env_limit)
+        print(f"Limiting execution to {limit_val} question(s) via LIMIT_QUESTIONS.")
+    elif len(sys.argv) > 1 and sys.argv[1].isdigit():
+        limit_val = int(sys.argv[1])
+        print(f"Limiting execution to {limit_val} question(s) via CLI argument.")
+    run_pipeline(limit=limit_val)
