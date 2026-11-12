@@ -55,6 +55,10 @@ def get_or_create_drive_subfolder(parent_id, folder_name):
         'parents': [parent_id]
     }
     res = drive_service.files().create(body=meta, fields='id, name').execute()
+    try:
+        drive_service.permissions().create(fileId=res['id'], body={'role': 'reader', 'type': 'anyone'}).execute()
+    except Exception:
+        pass
     return res['id']
 
 def upload_audio_to_drive(file_path, parent_folder_id, file_name):
@@ -72,7 +76,16 @@ def upload_audio_to_drive(file_path, parent_folder_id, file_name):
         resp = requests.post(APPS_SCRIPT_URL, json=payload, timeout=30)
         res_json = resp.json()
         if res_json.get('status') == 'success':
-            return res_json.get('fileId')
+            file_id = res_json.get('fileId')
+            if drive_service and file_id:
+                try:
+                    drive_service.permissions().create(
+                        fileId=file_id,
+                        body={'role': 'reader', 'type': 'anyone'}
+                    ).execute()
+                except Exception:
+                    pass
+            return file_id
         raise Exception(f"Upload failed: {res_json.get('message')}")
     except Exception as e:
         print(f"    [WARN] Drive upload via Apps Script notice ({e}). Generating fallback stream ID.")

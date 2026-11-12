@@ -3707,17 +3707,18 @@ function makePlayer(p, q){
  function getDiscreteAudioUrls(item){
   if (!item) return [];
   const urls = [];
-  // 1. Direct local file URL or relative path (fast, zero CORS/CORP issues)
+  // 1. Google Drive direct stream (Primary: freshly synthesized Gemini Expressive Voice)
+  if (item.drive_id && !item.drive_id.startsWith("DRIVE_PT_")) {
+   urls.push("https://drive.google.com/uc?export=download&id=" + item.drive_id);
+   urls.push("https://docs.google.com/uc?export=open&id=" + item.drive_id);
+  }
+  // 2. Direct local file URL or relative path fallback
   if (item.audio_file) {
    const fn = item.audio_file.replace(/\\/g, '/');
    const localUrl = window.location.protocol === "file:"
     ? new URL("../data/audio/" + fn, window.location.href).href
     : (fn.startsWith('/') ? fn : "/data/audio/" + fn);
    urls.push(localUrl);
-  }
-  // 2. Google Drive streaming link
-  if (item.drive_id && !item.drive_id.startsWith("DRIVE_PT_")) {
-   urls.push("https://drive.google.com/uc?export=download&id=" + item.drive_id);
   }
   return urls;
  }
