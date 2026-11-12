@@ -5,7 +5,10 @@ import wave
 import time
 import base64
 import requests
-import gtts
+try:
+    import gtts
+except ImportError:
+    gtts = None
 from pydub import AudioSegment
 from google.oauth2 import service_account
 from googleapiclient.discovery import build
@@ -112,10 +115,13 @@ def synthesize_point_audio(client, text: str, out_mp3_path: str):
         except Exception:
             pass
 
-    # 2. Foolproof Google Malayalam Neural TTS
-    tts = gtts.gTTS(text, lang='ml')
-    tts.save(out_mp3_path)
-    return 'gtts_neural'
+    # 2. Google Malayalam Neural TTS fallback
+    if gtts is not None:
+        tts = gtts.gTTS(text, lang='ml')
+        tts.save(out_mp3_path)
+        return 'gtts_neural'
+    print(f"  [WARN] Neither Gemini TTS succeeded nor is gTTS available to synthesize point.")
+    return 'none'
 
 def generate_discrete_voice_for_mindmap(q_num: int, mindmap: dict, output_dir: str, upload_to_drive: bool = True):
     """
