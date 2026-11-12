@@ -47,10 +47,10 @@ def generate_gemini_audio(script, output_mp3_path, voice_name=None):
         voice_name = DEFAULT_VOICE
         
     models_to_try = [
-        'gemini-2.5-flash-preview-tts',
         'gemini-3.1-flash-tts-preview',
         'gemini-3.8-flash-tts',
-        'gemini-3.8-flash-lite-tts'
+        'gemini-3.8-flash-lite-tts',
+        'gemini-2.5-flash-preview-tts'
     ]
 
     def _call_tts(client):

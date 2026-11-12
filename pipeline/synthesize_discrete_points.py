@@ -114,10 +114,10 @@ def synthesize_point_audio(text: str, out_mp3_path: str):
     If all keys hit quota limits (429), raises AllKeysQuotaExhaustedError to pause pipeline gracefully.
     """
     tts_models = [
-        'gemini-2.5-flash-preview-tts',
         'gemini-3.1-flash-tts-preview',
         'gemini-3.8-flash-tts',
-        'gemini-3.8-flash-lite-tts'
+        'gemini-3.8-flash-lite-tts',
+        'gemini-2.5-flash-preview-tts'
     ]
 
     def _gemini_tts_call(client):

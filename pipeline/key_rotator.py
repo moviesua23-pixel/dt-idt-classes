@@ -49,11 +49,15 @@ class KeyRotator:
             return genai.Client(
                 api_key=next_key,
                 http_options=types.HttpOptions(
+                    api_version='v1beta',
                     timeout=timeout_ms,
                     retry_options=types.HttpRetryOptions(attempts=1)
                 )
             )
-        return genai.Client(api_key=next_key)
+        return genai.Client(
+            api_key=next_key,
+            http_options=types.HttpOptions(api_version='v1beta')
+        )
 
     def execute_with_retry(self, api_func, *args, **kwargs):
         """
