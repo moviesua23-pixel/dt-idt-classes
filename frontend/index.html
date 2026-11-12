@@ -2499,6 +2499,59 @@ tbody tr:nth-child(2){--r:1}tbody tr:nth-child(3){--r:2}tbody tr:nth-child(4){--
 .mm-canvas-container .mm-infographic-card.status-done{transform:none!important;}
 .mm-canvas-container .mm-block-pill:hover{transform:none!important;}
 .mm-canvas-container .mm-root-card:hover{transform:none!important;}
+
+/* Presentation Theater: Strict Sequential Reveal */
+.vtheater.open .mm-canvas-container .mm-infographic-block.status-hidden{
+  opacity:0!important;
+  visibility:hidden!important;
+  pointer-events:none!important;
+  transform:scale(0.95)!important;
+  transition:opacity .35s ease, transform .35s ease!important;
+}
+.vtheater.open .mm-canvas-container .mm-infographic-card.status-hidden{
+  opacity:0!important;
+  visibility:hidden!important;
+  pointer-events:none!important;
+  transform:scale(0.95)!important;
+  transition:opacity .35s ease, transform .35s ease!important;
+}
+.vtheater.open .mm-canvas-container .mm-infographic-block.status-active,
+.vtheater.open .mm-canvas-container .mm-infographic-block.status-mastered{
+  opacity:1!important;
+  visibility:visible!important;
+  pointer-events:auto!important;
+  transform:none!important;
+  transition:opacity .35s ease, transform .35s ease!important;
+}
+.vtheater.open .mm-canvas-container .mm-infographic-card.status-active{
+  opacity:1!important;
+  visibility:visible!important;
+  pointer-events:auto!important;
+  border-color:#d69a30!important;
+  box-shadow:0 0 0 3px #d69a30, 0 10px 25px rgba(214,154,48,0.22)!important;
+  transform:scale(1.02)!important;
+  transition:opacity .35s ease, transform .35s ease, box-shadow .35s ease!important;
+}
+.vtheater.open .mm-canvas-container .mm-infographic-card.status-done{
+  opacity:0.92!important;
+  visibility:visible!important;
+  pointer-events:auto!important;
+  border-color:#55a498!important;
+  transform:none!important;
+  transition:opacity .35s ease!important;
+}
+.vtheater.open .mm-branch-path.path-hidden,
+.vtheater.open .mm-card-path.path-hidden{
+  opacity:0!important;
+  visibility:hidden!important;
+}
+.vtheater.open .mm-branch-path.path-active,
+.vtheater.open .mm-card-path.path-active{
+  opacity:1!important;
+  visibility:visible!important;
+  stroke:#d69a30!important;
+  stroke-width:2.5px!important;
+}
 </style>
 <div id="ambient" aria-hidden="true"><div class="orb o1"></div><div class="orb o2"></div></div>
 <header class="bar" id="bar"><div class="bar-in">
@@ -3605,13 +3658,38 @@ function makePlayer(p, q){
 
  function highlightDiscretePoint(item){
   if (!item) return;
-  if (item.branchId) {
-   const bBlock = document.getElementById("mm-block-" + item.branchId);
-   if (bBlock) {
-    bBlock.classList.remove("status-hidden");
-    bBlock.classList.add("status-active");
+
+  const rootNode = document.getElementById("mm-node-root");
+
+  if (item.id === "root") {
+   if (rootNode) {
+    rootNode.classList.remove("status-done", "status-hidden");
+    rootNode.classList.add("status-active");
    }
+   (mm?.branches || []).forEach(b => {
+    const bBlock = document.getElementById("mm-block-" + b.branch_id);
+    if (bBlock) bBlock.className = "mm-infographic-block status-hidden";
+   });
+  } else {
+   if (rootNode) {
+    rootNode.classList.remove("status-active");
+    rootNode.classList.add("status-done");
+   }
+   (mm?.branches || []).forEach(b => {
+    const bBlock = document.getElementById("mm-block-" + b.branch_id);
+    if (!bBlock) return;
+    const bIdx = (mm.branches || []).findIndex(x => x.branch_id === b.branch_id);
+    const curBIdx = (mm.branches || []).findIndex(x => x.branch_id === item.branchId);
+    if (curBIdx !== -1 && bIdx < curBIdx) {
+     bBlock.className = "mm-infographic-block status-mastered";
+    } else if (b.branch_id === item.branchId) {
+     bBlock.className = "mm-infographic-block status-active";
+    } else {
+     bBlock.className = "mm-infographic-block status-hidden";
+    }
+   });
   }
+
   discretePlaylist.forEach((ptItem, idx) => {
    const el = document.getElementById(ptItem.elId);
    const tag = document.getElementById("tag-pt-" + ptItem.id);
@@ -3627,10 +3705,9 @@ function makePlayer(p, q){
     el.classList.remove("status-hidden", "status-done");
     el.classList.add("status-active");
     if (tag) {
-     tag.textContent = "NOW PLAYING";
+     tag.textContent = "● EXPLAINING NOW";
      tag.className = "mm-card-live-strip tag-active";
     }
-    scrollToCard(el, true);
    } else {
     el.classList.remove("status-active", "status-done");
     el.classList.add("status-hidden");
@@ -3640,6 +3717,42 @@ function makePlayer(p, q){
     }
    }
   });
+
+  // Focus and zoom camera to the active point
+  if (item.id === "root") {
+   zoomToMapTarget(null, null, "root");
+  } else {
+   zoomToMapTarget(item.id, null, item.branchId);
+  }
+
+  // Update SVG connectors for progressive reveal
+  if (typeof updateConnectorPaths === "function" && mm) {
+   const dState = {
+    branchStates: {},
+    pointStates: {},
+    cardConnectors: {},
+    convergeStates: {},
+    flowStates: {}
+   };
+   (mm.branches || []).forEach(b => {
+    let bStatus = "hidden";
+    const bIdx = (mm.branches || []).findIndex(x => x.branch_id === b.branch_id);
+    const curBIdx = (mm.branches || []).findIndex(x => x.branch_id === item.branchId);
+    if (b.branch_id === item.branchId) bStatus = "active";
+    else if (curBIdx !== -1 && bIdx < curBIdx) bStatus = "mastered";
+    dState.branchStates[b.branch_id] = { status: bStatus, progress: bStatus === "hidden" ? 0 : 1 };
+
+    (b.points || []).forEach(pt => {
+     const ptIdxInList = discretePlaylist.findIndex(x => x.id === pt.id);
+     let pStatus = "hidden";
+     if (ptIdxInList !== -1 && ptIdxInList < currentPtIdx) pStatus = "done";
+     else if (ptIdxInList === currentPtIdx) pStatus = "active";
+     dState.pointStates[pt.id] = pStatus;
+     dState.cardConnectors[pt.id] = { status: pStatus === "hidden" ? "hidden" : "active", progress: pStatus === "hidden" ? 0 : 1 };
+    });
+   });
+   try { updateConnectorPaths(dState); } catch(e){}
+  }
 
   // Display clean title on controls dock (NEVER display raw identification number)
   const vtdLabel = $("#vtd-label");
@@ -3665,6 +3778,12 @@ function makePlayer(p, q){
 
  function finishDiscrete(){
   stop();
+  const rootNode = document.getElementById("mm-node-root");
+  if (rootNode) rootNode.className = "mm-root-card status-mastered";
+  (mm?.branches || []).forEach(b => {
+   const bBlock = document.getElementById("mm-block-" + b.branch_id);
+   if (bBlock) bBlock.className = "mm-infographic-block status-mastered";
+  });
   discretePlaylist.forEach(ptItem => {
    const el = document.getElementById(ptItem.elId);
    if (el) {
@@ -3675,6 +3794,7 @@ function makePlayer(p, q){
   if (note) note.textContent = "Presentation completed. All statutory points covered!";
   const vtdLabel = $("#vtd-label");
   if (vtdLabel) vtdLabel.textContent = "Presentation Completed";
+  zoomToMapTarget(null, null, "root");
  }
 
  function playPoint(targetIdx, startPlaying = true){
@@ -3683,6 +3803,13 @@ function makePlayer(p, q){
   if (targetIdx >= discretePlaylist.length) {
    finishDiscrete();
    return;
+  }
+  if (startPlaying && vtheater && !vtheater.classList.contains("open")) {
+   vtheater.style.removeProperty("display");
+   vtheater.classList.add("open");
+   vtheater.classList.remove("controls-hidden");
+   document.body.style.overflow = "hidden";
+   initializeTheaterMindMap();
   }
   currentPtIdx = targetIdx;
   const item = discretePlaylist[currentPtIdx];
@@ -4850,7 +4977,13 @@ function makePlayer(p, q){
   }
   if (isDiscreteMode) {
    if (playing) stop();
-   else playPoint(currentPtIdx, true);
+   else {
+    if (vtheater && !vtheater.classList.contains("open")) {
+     openTheater();
+    } else {
+     playPoint(currentPtIdx, true);
+    }
+   }
    return;
   }
   if (playing) stop();
