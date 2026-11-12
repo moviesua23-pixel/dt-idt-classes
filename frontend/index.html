@@ -3818,6 +3818,13 @@ function makePlayer(p, q){
      tag.textContent = "Done";
      tag.className = "mm-card-live-strip tag-done";
     }
+   } else if (idx === currentPtIdx && !isNewBranch) {
+    el.classList.remove("status-hidden", "status-done");
+    el.classList.add("status-active");
+    if (tag) {
+     tag.textContent = "● EXPLAINING NOW";
+     tag.className = "mm-card-live-strip tag-active";
+    }
    } else {
     // Current point and future points start hidden at t=0 so Phase 1 zooms out cleanly
     el.classList.remove("status-active", "status-done");
@@ -3872,7 +3879,12 @@ function makePlayer(p, q){
   if (item.id === "root") {
    updateDiscreteConnectors(false);
    zoomToMapTarget(null, null, "root");
+  } else if (!isNewBranch) {
+   // Under same topic heading: smoothly scroll/pan directly to the next content card without zooming out
+   updateDiscreteConnectors(true);
+   zoomToMapTarget(item.id, null, item.branchId);
   } else {
+   // Switching to a NEW topic heading: 3-phase cinematic zoom out -> connect -> zoom in
    // Phase 1 (t = 0ms): ZOOM OUT to branch context framing Root Heading Card and Topic Heading Pill
    // Arrow connects from Root to the Topic Heading Pill
    updateDiscreteConnectors(false);
