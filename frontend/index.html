@@ -3772,14 +3772,8 @@ function makePlayer(p, q){
      tag.textContent = "Done";
      tag.className = "mm-card-live-strip tag-done";
     }
-   } else if (idx === currentPtIdx) {
-    el.classList.remove("status-hidden", "status-done");
-    el.classList.add("status-active");
-    if (tag) {
-     tag.textContent = "● EXPLAINING NOW";
-     tag.className = "mm-card-live-strip tag-active";
-    }
    } else {
+    // Current point and future points start hidden at t=0 so Phase 1 zooms out cleanly
     el.classList.remove("status-active", "status-done");
     el.classList.add("status-hidden");
     if (tag) {
@@ -3790,35 +3784,37 @@ function makePlayer(p, q){
   });
 
   // Update SVG connectors for progressive reveal
-  if (typeof updateConnectorPaths === "function" && mm) {
-   const dState = {
-    branchStates: {},
-    pointStates: {},
-    cardConnectors: {},
-    convergeStates: {},
-    flowStates: {}
-   };
-   (mm.branches || []).forEach(b => {
-    let bStatus = "hidden";
-    const bIdx = (mm.branches || []).findIndex(x => x.branch_id === b.branch_id);
-    const curBIdx = (mm.branches || []).findIndex(x => x.branch_id === item.branchId);
-    if (b.branch_id === item.branchId) bStatus = "active";
-    else if (curBIdx !== -1 && bIdx < curBIdx) bStatus = "mastered";
-    dState.branchStates[b.branch_id] = { status: bStatus, progress: bStatus === "hidden" ? 0 : 1 };
+  function updateDiscreteConnectors(revealCardConnector = false){
+   if (typeof updateConnectorPaths === "function" && mm) {
+    const dState = {
+     branchStates: {},
+     pointStates: {},
+     cardConnectors: {},
+     convergeStates: {},
+     flowStates: {}
+    };
+    (mm.branches || []).forEach(b => {
+     let bStatus = "hidden";
+     const bIdx = (mm.branches || []).findIndex(x => x.branch_id === b.branch_id);
+     const curBIdx = (mm.branches || []).findIndex(x => x.branch_id === item.branchId);
+     if (b.branch_id === item.branchId) bStatus = "active";
+     else if (curBIdx !== -1 && bIdx < curBIdx) bStatus = "mastered";
+     dState.branchStates[b.branch_id] = { status: bStatus, progress: bStatus === "hidden" ? 0 : 1 };
 
-    (b.points || []).forEach(pt => {
-     const ptIdxInList = discretePlaylist.findIndex(x => x.id === pt.id);
-     let pStatus = "hidden";
-     if (ptIdxInList !== -1 && ptIdxInList < currentPtIdx) pStatus = "done";
-     else if (ptIdxInList === currentPtIdx) pStatus = "active";
-     dState.pointStates[pt.id] = pStatus;
-     dState.cardConnectors[pt.id] = {
-      status: pStatus === "active" ? "active" : (pStatus === "done" ? "mastered" : "hidden"),
-      progress: (pStatus === "active" || pStatus === "done") ? 1 : 0
-     };
+     (b.points || []).forEach(pt => {
+      const ptIdxInList = discretePlaylist.findIndex(x => x.id === pt.id);
+      let pStatus = "hidden";
+      if (ptIdxInList !== -1 && ptIdxInList < currentPtIdx) pStatus = "done";
+      else if (ptIdxInList === currentPtIdx) pStatus = revealCardConnector ? "active" : "hidden";
+      dState.pointStates[pt.id] = pStatus;
+      dState.cardConnectors[pt.id] = {
+       status: pStatus === "active" ? "active" : (pStatus === "done" ? "mastered" : "hidden"),
+       progress: (pStatus === "active" || pStatus === "done") ? 1 : 0
+      };
+     });
     });
-   });
-   try { updateConnectorPaths(dState); } catch(e){}
+    try { updateConnectorPaths(dState); } catch(e){}
+   }
   }
 
   // Choreographed Camera & Arrow Sequence (Matching scratch/complex_provision_mindmap_demo.html)
@@ -3828,33 +3824,38 @@ function makePlayer(p, q){
    window.clearTimeout(stage.__mmDiscreteCamTimer2);
   }
   if (item.id === "root") {
+   updateDiscreteConnectors(false);
    zoomToMapTarget(null, null, "root");
-  } else if (isNewBranch) {
-   // 1. Zoom out to branch context (framing Root heading card and Branch heading pill)
+  } else {
+   // Phase 1 (t = 0ms): ZOOM OUT to branch context framing Root Heading Card and Topic Heading Pill
+   // Arrow connects from Root to the Topic Heading Pill
+   updateDiscreteConnectors(false);
    showBranchContext(item.branchId);
    if (stage) {
-    // 2. Move camera to card context (framing Branch heading pill and Topic card)
+    // Phase 2 (t = 650ms): Camera moves to card context framing Topic Heading and Content Card
+    // Arrow extends from Topic Heading to Topic Content Card, card appears
     stage.__mmDiscreteCamTimer1 = setTimeout(() => {
      if (currentPtIdx === discretePlaylist.findIndex(x => x.id === item.id)) {
+      const cardEl = document.getElementById(item.elId);
+      if (cardEl) {
+       cardEl.classList.remove("status-hidden");
+       cardEl.classList.add("status-active");
+       const cTag = document.getElementById("tag-pt-" + item.id);
+       if (cTag) {
+        cTag.textContent = "● EXPLAINING NOW";
+        cTag.className = "mm-card-live-strip tag-active";
+       }
+      }
+      updateDiscreteConnectors(true);
       showMapContext(item.id, item.branchId);
      }
-    }, 420);
-    // 3. Zoom in to focus view on active topic card
+    }, 650);
+    // Phase 3 (t = 1300ms): ZOOM IN directly onto the active Topic Content Card (focus scale ~1.25)
     stage.__mmDiscreteCamTimer2 = setTimeout(() => {
      if (currentPtIdx === discretePlaylist.findIndex(x => x.id === item.id)) {
       zoomToMapTarget(item.id, null, item.branchId);
      }
-    }, 850);
-   }
-  } else {
-   // In same branch: zoom out to card context, then zoom into active card
-   showMapContext(item.id, item.branchId);
-   if (stage) {
-    stage.__mmDiscreteCamTimer1 = setTimeout(() => {
-     if (currentPtIdx === discretePlaylist.findIndex(x => x.id === item.id)) {
-      zoomToMapTarget(item.id, null, item.branchId);
-     }
-    }, 420);
+    }, 1300);
    }
   }
 
@@ -3958,7 +3959,7 @@ function makePlayer(p, q){
     audio.currentTime = 0;
    }
    if (startPlaying) {
-    const playDelay = (item.id === "root") ? 50 : (isNewBranch ? 650 : 350);
+    const playDelay = (item.id === "root") ? 50 : 1400;
     window.__mmAudioPlayTimer = setTimeout(() => {
      audio.play().then(() => {
       playing = true;
@@ -4314,188 +4315,142 @@ function makePlayer(p, q){
  function nowAudioTime(){ return Number(audio.currentTime || 0); }
 
  function pointInMindMapCanvas(el, canvas){
-  let left=0,top=0,node=el;
-  while(node && node!==canvas){
-    left+=node.offsetLeft||0;
-    top+=node.offsetTop||0;
-    node=node.offsetParent;
+  let left = 0, top = 0, node = el;
+  while(node && node !== canvas){
+    left += node.offsetLeft || 0;
+    top += node.offsetTop || 0;
+    node = node.offsetParent;
   }
-  if(node!==canvas){
-    const rect=el.getBoundingClientRect(),canvasRect=canvas.getBoundingClientRect();
-    const transform=new DOMMatrix(getComputedStyle(canvas).transform);
-    const scale=transform.a||1;
-    const baseLeft=canvasRect.left-transform.e;
-    const baseTop=canvasRect.top-transform.f;
-    left=(rect.left+rect.width/2-baseLeft)/scale;
-    top=(rect.top+rect.height/2-baseTop)/scale;
-    return {x:left,y:top,width:rect.width/scale,height:rect.height/scale};
-  }
-  return {x:left+el.offsetWidth/2,y:top+el.offsetHeight/2,width:el.offsetWidth,height:el.offsetHeight};
+  const w = el.offsetWidth || 0;
+  const h = el.offsetHeight || 0;
+  return {
+    x: left + w / 2,
+    y: top + h / 2,
+    width: w,
+    height: h
+  };
  }
 
  function layoutRectInContainer(el, container){
-  let left=0,top=0,node=el;
-  while(node && node!==container){
-    left+=node.offsetLeft||0;
-    top+=node.offsetTop||0;
-    node=node.offsetParent;
+  let left = 0, top = 0, node = el;
+  while(node && node !== container){
+    left += node.offsetLeft || 0;
+    top += node.offsetTop || 0;
+    node = node.offsetParent;
   }
-  if(node!==container){
-    const rect=el.getBoundingClientRect();
-    const parentRect=container.getBoundingClientRect();
-    const transform=new DOMMatrix(getComputedStyle(container).transform);
-    const scale=transform.a||1;
-    const baseLeft=parentRect.left-transform.e;
-    const baseTop=parentRect.top-transform.f;
-    left=(rect.left-baseLeft)/scale;
-    top=(rect.top-baseTop)/scale;
-  }
-  const width=el.offsetWidth||0,height=el.offsetHeight||0;
-  return {left,top,width,height,right:left+width,bottom:top+height,centerX:left+width/2,centerY:top+height/2};
+  const width = el.offsetWidth || 0, height = el.offsetHeight || 0;
+  return { left, top, width, height, right: left + width, bottom: top + height, centerX: left + width / 2, centerY: top + height / 2 };
  }
 
  function mindMapCanvasBase(stage, canvas){
-  const rect=canvas.getBoundingClientRect();
-  const transform=new DOMMatrix(getComputedStyle(canvas).transform);
-  const scale=transform.a||1;
+  const stageRect = stage.getBoundingClientRect();
   return {
-    left:rect.left-transform.e,
-    top:rect.top-transform.f
+    left: stageRect.left - stage.scrollLeft,
+    top: stageRect.top - stage.scrollTop
   };
  }
 
  function cameraPanToPoint(stage, canvas, point, scale){
-  const stageRect=stage.getBoundingClientRect();
-  const base=mindMapCanvasBase(stage,canvas);
-  const centerX=stageRect.left+stage.clientWidth/2;
-  const centerY=stageRect.top+stage.clientHeight/2;
+  const stageRect = stage.getBoundingClientRect();
+  const topBarH = 64;
+  const bottomDockH = 114;
+  const visibleH = Math.max(200, stage.clientHeight - topBarH - bottomDockH);
+  const centerX = stageRect.left + stage.clientWidth / 2;
+  const centerY = stageRect.top + topBarH + visibleH / 2;
+  const base = mindMapCanvasBase(stage, canvas);
   return {
-    x:centerX-(base.left+point.x*scale),
-    y:centerY-(base.top+point.y*scale)
+    x: centerX - (base.left + point.x * scale),
+    y: centerY - (base.top + point.y * scale)
   };
  }
 
  function showBranchContext(branchId){
-  const stage=document.getElementById("mm-scroll-stage");
-  const canvas=document.getElementById("mm-canvas-container");
-  const root=document.getElementById("mm-node-root");
-  const branch=document.getElementById("mm-block-"+branchId);
-  const target=document.getElementById("mm-bpill-"+branchId);
+  const stage = document.getElementById("mm-scroll-stage");
+  const canvas = document.getElementById("mm-canvas-container");
+  const root = document.getElementById("mm-node-root");
+  const branch = document.getElementById("mm-block-" + branchId);
+  const target = document.getElementById("mm-bpill-" + branchId);
   if(!stage || !canvas || !root || !branch || !target) return;
   layoutMindMapTree(true);
-  const oldBranchClass=branch.className;
-  branch.className="mm-infographic-block status-drawing";
-  const rootPoint=pointInMindMapCanvas(root,canvas);
-  const branchPoint=pointInMindMapCanvas(target,canvas);
-  branch.className=oldBranchClass;
-  const left=Math.min(rootPoint.x-rootPoint.width/2,branchPoint.x-branchPoint.width/2);
-  const right=Math.max(rootPoint.x+rootPoint.width/2,branchPoint.x+branchPoint.width/2);
-  const top=Math.min(rootPoint.y-rootPoint.height/2,branchPoint.y-branchPoint.height/2);
-  const bottom=Math.max(rootPoint.y+rootPoint.height/2,branchPoint.y+branchPoint.height/2);
-  const width=Math.max(1,right-left+56);
-  const height=Math.max(1,bottom-top+72);
-  const scale=Math.min(1.05,(stage.clientWidth*.72)/width,(stage.clientHeight*.62)/height);
-  const pan=cameraPanToPoint(stage,canvas,{x:(left+right)/2,y:(top+bottom)/2},scale);
-  stage.classList.remove("mm-point-focused","mm-camera-overview","mm-branch-transition");
+  const rootPoint = pointInMindMapCanvas(root, canvas);
+  const branchPoint = pointInMindMapCanvas(target, canvas);
+  const left = Math.min(rootPoint.x - rootPoint.width / 2, branchPoint.x - branchPoint.width / 2);
+  const right = Math.max(rootPoint.x + rootPoint.width / 2, branchPoint.x + branchPoint.width / 2);
+  const top = Math.min(rootPoint.y - rootPoint.height / 2, branchPoint.y - branchPoint.height / 2);
+  const bottom = Math.max(rootPoint.y + rootPoint.height / 2, branchPoint.y + branchPoint.height / 2);
+  const width = Math.max(1, right - left + 80);
+  const height = Math.max(1, bottom - top + 80);
+  const topBarH = 64, bottomDockH = 114;
+  const availableH = Math.max(200, stage.clientHeight - topBarH - bottomDockH - 24);
+  const scale = Math.min(0.85, (stage.clientWidth * 0.72) / width, availableH / height);
+  const pan = cameraPanToPoint(stage, canvas, { x: (left + right) / 2, y: (top + bottom) / 2 }, scale);
+  stage.classList.remove("mm-point-focused", "mm-camera-overview", "mm-branch-transition");
   stage.classList.add("mm-camera-context");
-  stage.style.setProperty("--mm-context-scale",scale.toFixed(3));
-  canvas.style.setProperty("--mm-pan-x",`${pan.x}px`);
-  canvas.style.setProperty("--mm-pan-y",`${pan.y}px`);
+  stage.style.setProperty("--mm-context-scale", scale.toFixed(3));
+  canvas.style.setProperty("--mm-pan-x", `${pan.x}px`);
+  canvas.style.setProperty("--mm-pan-y", `${pan.y}px`);
  }
 
  function showMapContext(pointId, branchId){
-  const stage=document.getElementById("mm-scroll-stage");
-  const canvas=document.getElementById("mm-canvas-container");
+  const stage = document.getElementById("mm-scroll-stage");
+  const canvas = document.getElementById("mm-canvas-container");
   if(!stage || !canvas) return;
   layoutMindMapTree(true);
-  const branch=document.getElementById("mm-block-"+branchId);
-  const target=document.getElementById("mm-card-"+pointId);
-  const parent=target?.dataset.treeParentPoint
-    ? document.getElementById("mm-card-"+target.dataset.treeParentPoint)
-    : document.getElementById("mm-bpill-"+branchId);
+  const branch = document.getElementById("mm-block-" + branchId);
+  const target = document.getElementById("mm-card-" + pointId);
+  const parent = target?.dataset.treeParentPoint
+    ? document.getElementById("mm-card-" + target.dataset.treeParentPoint)
+    : document.getElementById("mm-bpill-" + branchId);
   if(!branch || !parent || !target) return;
 
-  const oldBranchClass=branch.className;
-  const oldTargetClass=target.className;
-  branch.className="mm-infographic-block status-drawing";
-  target.className=oldTargetClass.replace(/\bstatus-hidden\b/,"status-drawing");
-  const parentPoint=pointInMindMapCanvas(parent,canvas);
-  const targetPoint=pointInMindMapCanvas(target,canvas);
-  branch.className=oldBranchClass;
-  target.className=oldTargetClass;
+  const parentPoint = pointInMindMapCanvas(parent, canvas);
+  const targetPoint = pointInMindMapCanvas(target, canvas);
 
-  const root=document.getElementById("mm-node-root");
-  const rootPoint=root ? pointInMindMapCanvas(root,canvas) : null;
-  const left=rootPoint
-    ? Math.min(rootPoint.x-rootPoint.width/2, parentPoint.x-parentPoint.width/2, targetPoint.x-targetPoint.width/2)
-    : Math.min(parentPoint.x-parentPoint.width/2,targetPoint.x-targetPoint.width/2);
-  const right=Math.max(parentPoint.x+parentPoint.width/2,targetPoint.x+targetPoint.width/2);
-  const top=rootPoint
-    ? Math.min(rootPoint.y-rootPoint.height/2, parentPoint.y-parentPoint.height/2, targetPoint.y-targetPoint.height/2)
-    : Math.min(parentPoint.y-parentPoint.height/2,targetPoint.y-targetPoint.height/2);
-  const bottom=rootPoint
-    ? Math.max(rootPoint.y+rootPoint.height/2, parentPoint.y+parentPoint.height/2, targetPoint.y+targetPoint.height/2)
-    : Math.max(parentPoint.y+parentPoint.height/2,targetPoint.y+targetPoint.height/2);
-  const contextWidth=Math.max(1,right-left+64);
-  const contextHeight=Math.max(1,bottom-top+72);
-  const contextScale=Math.min(1.05,(stage.clientWidth*.88)/contextWidth,(stage.clientHeight*.72)/contextHeight);
-  const contextCenter={x:(left+right)/2,y:(top+bottom)/2};
-  const pan=cameraPanToPoint(stage,canvas,contextCenter,contextScale);
-  stage.classList.remove("mm-point-focused","mm-camera-overview","mm-branch-transition");
+  const left = Math.min(parentPoint.x - parentPoint.width / 2, targetPoint.x - targetPoint.width / 2);
+  const right = Math.max(parentPoint.x + parentPoint.width / 2, targetPoint.x + targetPoint.width / 2);
+  const top = Math.min(parentPoint.y - parentPoint.height / 2, targetPoint.y - targetPoint.height / 2);
+  const bottom = Math.max(parentPoint.y + parentPoint.height / 2, targetPoint.y + targetPoint.height / 2);
+  const contextWidth = Math.max(1, right - left + 80);
+  const contextHeight = Math.max(1, bottom - top + 80);
+  const topBarH = 64, bottomDockH = 114;
+  const availableH = Math.max(200, stage.clientHeight - topBarH - bottomDockH - 24);
+  const contextScale = Math.min(0.92, (stage.clientWidth * 0.78) / contextWidth, availableH / contextHeight);
+  const contextCenter = { x: (left + right) / 2, y: (top + bottom) / 2 };
+  const pan = cameraPanToPoint(stage, canvas, contextCenter, contextScale);
+  stage.classList.remove("mm-point-focused", "mm-camera-overview", "mm-branch-transition");
   stage.classList.add("mm-camera-context");
-  stage.style.setProperty("--mm-context-scale",contextScale.toFixed(3));
-  canvas.style.setProperty("--mm-pan-x",`${pan.x}px`);
-  canvas.style.setProperty("--mm-pan-y",`${pan.y}px`);
+  stage.style.setProperty("--mm-context-scale", contextScale.toFixed(3));
+  canvas.style.setProperty("--mm-pan-x", `${pan.x}px`);
+  canvas.style.setProperty("--mm-pan-y", `${pan.y}px`);
  }
 
  function zoomToMapTarget(pointId, flowKey, branchId, targetOverride=null){
-  const stage=document.getElementById("mm-scroll-stage");
-  const canvas=document.getElementById("mm-canvas-container");
+  const stage = document.getElementById("mm-scroll-stage");
+  const canvas = document.getElementById("mm-canvas-container");
   if(!stage || !canvas) return;
   layoutMindMapTree(true);
-  const target=targetOverride || (pointId
-    ? document.getElementById("mm-card-"+pointId)
-    : (flowKey ? document.getElementById("mm-fstep-"+flowKey)
-      : (branchId==="root" ? document.getElementById("mm-node-root") : document.getElementById("mm-block-"+branchId))));
-  if(pointId) stage.dataset.focusedPoint=pointId;
-  else stage.dataset.focusedPoint="";
+  const target = targetOverride || (pointId
+    ? document.getElementById("mm-card-" + pointId)
+    : (flowKey ? document.getElementById("mm-fstep-" + flowKey)
+      : (branchId === "root" ? document.getElementById("mm-node-root") : document.getElementById("mm-block-" + branchId))));
+  if(pointId) stage.dataset.focusedPoint = pointId;
+  else stage.dataset.focusedPoint = "";
   if(target){
-    const targetPoint=pointInMindMapCanvas(target,canvas);
-    const availableW=Math.max(220,stage.clientWidth-104);
-    const availableH=Math.max(180,stage.clientHeight-148);
-    let focusPoint=targetPoint;
-    let focusScale=Math.min(1.35,availableW/Math.max(1,targetPoint.width),availableH/Math.max(1,targetPoint.height));
-    if(pointId){
-      const parentId=target.dataset.treeParentPoint;
-      const parent=parentId
-        ? document.getElementById("mm-card-"+parentId)
-        : document.getElementById("mm-bpill-"+branchId);
-      const root=document.getElementById("mm-node-root");
-      const rootPoint=root ? pointInMindMapCanvas(root,canvas) : null;
-      if(parent){
-        const parentPoint=pointInMindMapCanvas(parent,canvas);
-        const left=rootPoint
-          ? Math.min(rootPoint.x-rootPoint.width/2, parentPoint.x-parentPoint.width/2, targetPoint.x-targetPoint.width/2)
-          : Math.min(targetPoint.x-targetPoint.width/2,parentPoint.x-parentPoint.width/2);
-        const right=Math.max(targetPoint.x+targetPoint.width/2,parentPoint.x+parentPoint.width/2);
-        const top=rootPoint
-          ? Math.min(rootPoint.y-rootPoint.height/2, targetPoint.y-targetPoint.height/2, parentPoint.y-parentPoint.height/2)
-          : Math.min(targetPoint.y-targetPoint.height/2,parentPoint.y-parentPoint.height/2);
-        const bottom=rootPoint
-          ? Math.max(rootPoint.y+rootPoint.height/2, targetPoint.y+targetPoint.height/2, parentPoint.y+parentPoint.height/2)
-          : Math.max(targetPoint.y+targetPoint.height/2,parentPoint.y+parentPoint.height/2);
-        const pairWidth=right-left+68;
-        const pairHeight=bottom-top+64;
-        focusPoint={x:(left+right)/2,y:(top+bottom)/2};
-        focusScale=Math.min(1.12,availableW/pairWidth,availableH/pairHeight);
-      }
+    const targetPoint = pointInMindMapCanvas(target, canvas);
+    const availableW = Math.max(220, stage.clientWidth - 104);
+    const topBarH = 64, bottomDockH = 114;
+    const availableH = Math.max(180, stage.clientHeight - topBarH - bottomDockH - 20);
+    let focusPoint = targetPoint;
+    let focusScale = Math.min(1.28, Math.max(1.15, Math.min(availableW / (targetPoint.width + 60), availableH / (targetPoint.height + 40))));
+    if(target.id === "mm-node-root"){
+      focusScale = Math.min(1.22, Math.max(1.10, availableW / (targetPoint.width + 120)));
     }
-    const pan=cameraPanToPoint(stage,canvas,focusPoint,focusScale);
-    stage.style.setProperty("--mm-focus-scale",focusScale.toFixed(3));
-    canvas.style.setProperty("--mm-pan-x",`${pan.x}px`);
-    canvas.style.setProperty("--mm-pan-y",`${pan.y}px`);
+    const pan = cameraPanToPoint(stage, canvas, focusPoint, focusScale);
+    stage.style.setProperty("--mm-focus-scale", focusScale.toFixed(3));
+    canvas.style.setProperty("--mm-pan-x", `${pan.x}px`);
+    canvas.style.setProperty("--mm-pan-y", `${pan.y}px`);
   }
-  stage.classList.remove("mm-camera-overview","mm-camera-context");
+  stage.classList.remove("mm-camera-overview", "mm-camera-context");
   stage.classList.add("mm-point-focused");
  }
 
