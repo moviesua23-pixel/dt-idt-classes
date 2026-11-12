@@ -194,11 +194,12 @@ mark{background:var(--brass-soft);color:inherit;border-radius:4px;padding:0 2px}
 .stage-h .no{font-family:var(--f-mono);font-size:.74rem;padding:4px 10px;border-radius:999px;background:var(--accent-soft);color:var(--accent);font-weight:500}
 .stage-h h2{font-size:1.35rem;font-weight:700}
 /* Provision Banner & Table Matrix */
-.prov-banner{background:linear-gradient(135deg,color-mix(in srgb,var(--accent) 8%,var(--surface)) 0%,var(--surface) 100%);border:1px solid color-mix(in srgb,var(--accent) 25%,var(--line));border-left:4px solid var(--accent);border-radius:16px;padding:18px 22px;margin:16px 0 22px;box-shadow:0 2px 10px rgba(18,28,47,.04)}
-.prov-banner-meta{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;margin-bottom:10px}
-.prov-tag{display:inline-flex;align-items:center;gap:6px;font-family:var(--f-mono);font-size:.74rem;font-weight:700;letter-spacing:.07em;text-transform:uppercase;color:var(--accent);background:var(--accent-soft);padding:4px 10px;border-radius:6px}
-.prov-secs{display:flex;flex-wrap:wrap;gap:6px}
-.prov-title{font-family:var(--f-display);font-size:1.38rem;font-weight:700;color:var(--ink);line-height:1.25;margin:0;letter-spacing:-.015em}
+.prov-banner{background:linear-gradient(135deg,color-mix(in srgb,var(--accent) 7%,var(--surface)) 0%,var(--surface) 100%);border:1.5px solid color-mix(in srgb,var(--accent) 22%,var(--line));border-left:5px solid var(--accent);border-radius:18px;padding:22px 26px;margin:16px 0 24px;box-shadow:0 3px 14px rgba(18,28,47,.05)}
+.prov-banner-meta{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px;margin-bottom:12px}
+.prov-tag{display:inline-flex;align-items:center;gap:6px;font-family:var(--f-mono);font-size:.76rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);background:var(--accent-soft);border:1px solid color-mix(in srgb,var(--accent) 25%,transparent);padding:4px 12px;border-radius:999px}
+.prov-secs{display:flex;flex-wrap:wrap;gap:8px}
+.sec{font-family:var(--f-mono);font-size:.76rem;font-weight:700;padding:4px 12px;border-radius:999px;background:#FEF3C7;color:#92400E;border:1px solid #FDE68A;white-space:nowrap}
+.prov-title{font-family:var(--f-display);font-size:1.45rem;font-weight:800;color:var(--ink);line-height:1.25;margin:0;letter-spacing:-.015em}
 
 /* Table Matrix with Crisp Clean Borders */
 .tbl-wrap{overflow-x:auto;margin:18px 0;border:1px solid var(--line);border-radius:14px;box-shadow:0 1px 4px rgba(18,28,47,.04);background:var(--surface)}
@@ -214,21 +215,160 @@ tbody tr:hover{background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
 tr.total td{font-weight:700;background:var(--accent-soft);color:var(--accent)}
 td.n,th.n{text-align:right}
 
-/* Markdown Support Styling */
-.md-content table{border-collapse:collapse;width:100%;min-width:520px;font-size:.92rem;background:var(--surface)}
-.md-content th{text-align:left;font-family:var(--f-mono);font-size:.76rem;letter-spacing:.05em;text-transform:uppercase;font-weight:600;color:var(--ink);background:var(--surface-2);padding:13px 18px;border-bottom:2px solid color-mix(in srgb,var(--accent) 30%,var(--line));border-right:1px solid var(--line)}
-.md-content th:last-child{border-right:none}
-.md-content td{padding:13px 18px;border-bottom:1px solid var(--line);border-right:1px solid var(--line);vertical-align:top;font-variant-numeric:tabular-nums;line-height:1.55}
-.md-content td:last-child{border-right:none}
-.md-content tr:last-child td{border-bottom:0}
-.md-content tbody tr:nth-child(even){background:color-mix(in srgb,var(--surface-2) 60%,var(--surface))}
-.md-content tbody tr:hover{background:color-mix(in srgb,var(--accent) 5%,var(--surface))}
-.md-content td strong, .md-content td b{color:var(--accent);font-weight:600}
-.md-content blockquote{border:1px solid color-mix(in srgb,var(--brass) 30%,var(--line));border-left:4px solid var(--brass);background:color-mix(in srgb,var(--brass-soft) 40%,var(--surface));padding:14px 18px;border-radius:12px;margin:18px 0;color:var(--ink);line-height:1.6}
-.md-content blockquote p{margin:0 0 8px}
-.md-content blockquote p:last-child{margin:0}
-.md-content blockquote strong{color:var(--brass)}
-.md-content p{margin-bottom:12px}
+/* Markdown & Provision Matrix Styling */
+.md-content{
+  color:var(--ink);
+  line-height:1.72;
+  font-size:1.02rem;
+}
+.md-content p{
+  margin:0 0 16px;
+  color:color-mix(in srgb, var(--ink) 90%, transparent);
+}
+.md-content h1, .md-content h2, .md-content h3{
+  font-family:var(--f-display);
+  font-size:1.22rem;
+  font-weight:800;
+  color:var(--ink);
+  margin:28px 0 14px 0;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  letter-spacing:-.015em;
+  padding-bottom:8px;
+  border-bottom:2px solid var(--line);
+}
+.md-content h1::before, .md-content h2::before, .md-content h3::before{
+  content:"";
+  display:inline-block;
+  width:5px;
+  height:20px;
+  background:var(--accent);
+  border-radius:999px;
+  flex-shrink:0;
+}
+.md-content table{
+  border-collapse:collapse;
+  width:100%;
+  min-width:580px;
+  font-size:.92rem;
+  background:var(--surface);
+}
+.md-content th{
+  text-align:left;
+  font-family:var(--f-display);
+  font-size:.78rem;
+  letter-spacing:.05em;
+  text-transform:uppercase;
+  font-weight:700;
+  color:var(--ink);
+  background:color-mix(in srgb, var(--accent) 8%, var(--surface-2));
+  padding:14px 18px;
+  border-bottom:2px solid color-mix(in srgb, var(--accent) 30%, var(--line));
+  border-right:1px solid var(--line);
+}
+.md-content th:last-child{border-right:none;}
+.md-content td{
+  padding:13px 18px;
+  border-bottom:1px solid var(--line);
+  border-right:1px solid var(--line);
+  vertical-align:middle;
+  line-height:1.6;
+}
+.md-content td:last-child{border-right:none;}
+.md-content tr:last-child td{border-bottom:0;}
+.md-content tbody tr:nth-child(even){background:color-mix(in srgb, var(--surface-2) 65%, var(--surface));}
+.md-content tbody tr:hover{background:color-mix(in srgb, var(--accent) 6%, var(--surface));}
+.md-content td strong, .md-content td b{color:var(--ink);font-weight:700;}
+
+/* Step Badges inside Tables */
+.step-badge{
+  display:inline-flex;
+  align-items:center;
+  padding:3px 10px;
+  border-radius:999px;
+  background:color-mix(in srgb, var(--accent) 12%, var(--surface));
+  border:1px solid color-mix(in srgb, var(--accent) 30%, transparent);
+  color:var(--accent);
+  font-family:var(--f-mono);
+  font-size:.78rem;
+  font-weight:700;
+  letter-spacing:.03em;
+  white-space:nowrap;
+}
+
+/* Modern Publication Callout Alerts */
+.callout-alert{
+  border-radius:14px;
+  padding:16px 20px;
+  margin:20px 0;
+  border:1.5px solid transparent;
+  box-shadow:0 3px 12px rgba(18,28,47,.04);
+  line-height:1.6;
+}
+.callout-head{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-weight:800;
+  font-size:.95rem;
+  margin-bottom:8px;
+  letter-spacing:-.01em;
+}
+.callout-icon{
+  font-size:1.2rem;
+  line-height:1;
+}
+.callout-body{
+  font-size:.94rem;
+  color:var(--ink);
+}
+.callout-body p{margin:0 0 6px;}
+.callout-body p:last-child{margin:0;}
+
+.alert-important{
+  background:#FAF5FF;
+  border-color:#DDD6FE;
+  border-left:5px solid #8B5CF6;
+}
+.alert-important .callout-head{color:#6D28D9;}
+
+.alert-warning{
+  background:#FFFBEB;
+  border-color:#FDE68A;
+  border-left:5px solid #D97706;
+}
+.alert-warning .callout-head{color:#B45309;}
+
+.alert-note{
+  background:#F0F9FF;
+  border-color:#BAE6FD;
+  border-left:5px solid #0284C7;
+}
+.alert-note .callout-head{color:#0369A1;}
+
+.alert-tip{
+  background:#ECFDF5;
+  border-color:#A7F3D0;
+  border-left:5px solid #059669;
+}
+.alert-tip .callout-head{color:#047857;}
+
+.alert-caution{
+  background:#FEF2F2;
+  border-color:#FECACA;
+  border-left:5px solid #DC2626;
+}
+.alert-caution .callout-head{color:#B91C1C;}
+
+.math-plain, .math-fallback{
+  font-family:var(--f-mono);
+  font-weight:600;
+  color:var(--ink);
+  background:color-mix(in srgb, var(--accent) 8%, var(--surface-2));
+  padding:2px 6px;
+  border-radius:4px;
+}
 
 .player{display:grid;gap:16px;padding:18px;border-radius:18px;background:var(--surface-2);border:1px solid var(--line)}
 .wave{display:flex;align-items:center;gap:3px;height:56px}
@@ -2803,6 +2943,14 @@ window.handleGoogleSheetData = function(json) {
       const driveAudioId = val(8) || "";
       const timingsStr = val(9) || "";
 
+      // Dynamically extract statutory sections from topic and markdown
+      let qSecs = [];
+      const secMatches = (canonicalTopic + " " + provMd).match(/Section\s+[0-9]+[A-Z]*(?:\([0-9a-zA-Z]+\))?/gi);
+      if (secMatches) {
+        qSecs = [...new Set(secMatches.map(s => s.trim()))].slice(0, 3);
+      }
+      if (!qSecs.length) qSecs = ["Income Tax Act"];
+
       liveQuestions.push({
         chapter_number: chNum,
         chapter_title: "Basic Concepts, Tax Rates and Exempt Income",
@@ -2810,7 +2958,8 @@ window.handleGoogleSheetData = function(json) {
         question_title: canonicalTopic,
         question_text: qText,
         answer_text: ansText,
-        topic_id: topicSlug
+        topic_id: topicSlug,
+        secs: qSecs
       });
 
       let mmObj = null;
@@ -2828,7 +2977,7 @@ window.handleGoogleSheetData = function(json) {
           question_number: qNum,
           topic_id: topicSlug,
           topic_title: canonicalTopic,
-          statutory_sections: ["Section 4"],
+          statutory_sections: qSecs,
           core_principle: canonicalTopic,
           provision_presentation_markdown: provMd,
           voice: "Gemini Voice (Aoede)",
@@ -2841,7 +2990,7 @@ window.handleGoogleSheetData = function(json) {
           question_number: qNum,
           topic_id: topicSlug,
           topic_title: canonicalTopic,
-          statutory_sections: ["Section 4"],
+          statutory_sections: qSecs,
           core_principle: canonicalTopic,
           provision_presentation_markdown: provMd,
           voice: "Gemini Voice (Aoede)",
@@ -3085,6 +3234,79 @@ function tbl(t){if(!t)return"";const num=c=>t.r.every(r=>!r[c]||/^[\d,]+(\.\d+)?
  return `<div class="tbl-wrap"><table><thead><tr>${t.h.map((h,c)=>`<th class="${num(c)?"n":""}">${esc(h)}</th>`).join("")}</tr></thead><tbody>${t.r.map((r,i)=>`<tr class="${t.tot&&i===t.r.length-1?"total":""}">${r.map((x,c)=>`<td class="${num(c)?"n":""}">${esc(x)}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`}
 const stageHead = (n, t) => `<div class="stage-h"><span class="no">STAGE ${n} OF 4</span><h2>${t}</h2></div>`;
 
+function safeKatexRender(tex, displayMode = false){
+  if(!window.katex) return tex;
+  let safe = tex.trim().replace(/\\text\{([^}]+)\}/g, (m, inner) => `\\text{${inner.replace(/&/g, '\\&').replace(/%/g, '\\%')}}`);
+  safe = safe.replace(/(?<!\\)%/g, '\\%');
+  try {
+    const res = katex.renderToString(safe, { displayMode, throwOnError: false });
+    if(res.includes("katex-error")){
+      const plain = tex.replace(/\\text\{([^}]+)\}/g, '$1')
+                       .replace(/\\le/g, '≤').replace(/\\ge/g, '≥')
+                       .replace(/\\times/g, '×').replace(/\\pm/g, '±')
+                       .replace(/[\$\\]/g, '');
+      return `<span class="math-plain">${plain}</span>`;
+    }
+    return res;
+  } catch(e) {
+    const plain = tex.replace(/\\text\{([^}]+)\}/g, '$1')
+                     .replace(/\\le/g, '≤').replace(/\\ge/g, '≥')
+                     .replace(/\\times/g, '×').replace(/\\pm/g, '±')
+                     .replace(/[\$\\]/g, '');
+    return `<span class="math-plain">${plain}</span>`;
+  }
+}
+
+function processMarkdownCallouts(md){
+  if(!md) return "";
+  // 1. Process GitHub alert callouts: > [!NOTE], > [!TIP], > [!IMPORTANT], > [!WARNING], > [!CAUTION]
+  let out = md.replace(/(?:^|\n)(?:>\s*)?\[!(NOTE|TIP|IMPORTANT|WARNING|CAUTION)\](?:\s*:\s*|\s+)?([^\n]+(?:\n(?:>\s*)?[^\n]+)*)/gim, (m, type, body) => {
+    type = type.toUpperCase();
+    const icons = {
+      NOTE: 'ℹ️',
+      TIP: '💡',
+      IMPORTANT: '📌',
+      WARNING: '⚠️',
+      CAUTION: '🛑'
+    };
+    const labels = {
+      NOTE: 'Statutory Note',
+      TIP: 'Key Exam Takeaway',
+      IMPORTANT: 'Important Statutory Requirement',
+      WARNING: 'Crucial Sequence & Compliance Warning',
+      CAUTION: 'Caution & Disallowance Risk'
+    };
+    const icon = icons[type] || 'ℹ️';
+    const label = labels[type] || type;
+    let text = body.split('\n').map(l => l.replace(/^>\s?/, '').trim()).filter(Boolean).join(' ');
+    let subtitle = '';
+    const subMatch = text.match(/^([^:]+):\s*(.*)$/);
+    if (subMatch && subMatch[1].length < 45) {
+      subtitle = subMatch[1].trim();
+      text = subMatch[2].trim();
+    }
+    return `\n\n<div class="callout-alert alert-${type.toLowerCase()}">
+      <div class="callout-head">
+        <span class="callout-icon">${icon}</span>
+        <span class="callout-title">${label}${subtitle ? `: <b>${subtitle}</b>` : ''}</span>
+      </div>
+      <div class="callout-body"><p>${text}</p></div>
+    </div>\n\n`;
+  });
+
+  // 2. Preprocess Math before marked
+  if(window.katex){
+    out = out.replace(/\$\$([\s\S]+?)\$\$/g, (m, tex) => safeKatexRender(tex, true));
+    out = out.replace(/\$([^\$\n]+?)\$/g, (m, tex) => safeKatexRender(tex, false));
+  }
+
+  // 3. Clean up any unwrapped LaTeX like \text{Net Tax} + \text{Health & Education Cess @ 4%}
+  out = out.replace(/\\text\{([^}]+)\}/g, (m, inner) => `<strong>${inner.replace(/\\&/g, '&')}</strong>`);
+  out = out.replace(/\\le\b/g, '≤').replace(/\\ge\b/g, '≥');
+
+  return out;
+}
+
 function renderProvMarkdown(rawMd, doctrine){
  if(!rawMd) return "";
  let cleaned = rawMd.trim();
@@ -3094,31 +3316,20 @@ function renderProvMarkdown(rawMd, doctrine){
   while(lines.length && !lines[0].trim()) lines.shift();
   cleaned = lines.join("\n");
  }
- if(window.katex){
-  cleaned = cleaned.replace(/\$\$([\s\S]+?)\$\$/g, (m, tex) => {
-   try { return katex.renderToString(tex.trim(), { displayMode: true, throwOnError: false }); } catch(e) { return m; }
-  });
-  cleaned = cleaned.replace(/\$([^\$\n]+?)\$/g, (m, tex) => {
-   try { return katex.renderToString(tex.trim(), { displayMode: false, throwOnError: false }); } catch(e) { return m; }
-  });
- }
- const html = marked.parse(cleaned);
- return html.replace(/<table>/g, '<div class="tbl-wrap"><table>').replace(/<\/table>/g, '</table></div>');
+ cleaned = processMarkdownCallouts(cleaned);
+ let html = marked.parse(cleaned);
+ html = html.replace(/<table>/g, '<div class="tbl-wrap"><table>').replace(/<\/table>/g, '</table></div>');
+ html = html.replace(/<td>(Step\s*\d+)<\/td>/gi, '<td><span class="step-badge">$1</span></td>');
+ return html;
 }
 
 function renderAnswerMarkdown(rawAnswer){
  if(!rawAnswer) return "";
- let cleaned = rawAnswer.trim();
- if(window.katex){
-  cleaned = cleaned.replace(/\$\$([\s\S]+?)\$\$/g, (m, tex) => {
-   try { return katex.renderToString(tex.trim(), { displayMode: true, throwOnError: false }); } catch(e) { return m; }
-  });
-  cleaned = cleaned.replace(/\$([^\$\n]+?)\$/g, (m, tex) => {
-   try { return katex.renderToString(tex.trim(), { displayMode: false, throwOnError: false }); } catch(e) { return m; }
-  });
- }
- const html = marked.parse(cleaned);
- return html.replace(/<table>/g, '<div class="tbl-wrap"><table>').replace(/<\/table>/g, '</table></div>');
+ let cleaned = processMarkdownCallouts(rawAnswer.trim());
+ let html = marked.parse(cleaned);
+ html = html.replace(/<table>/g, '<div class="tbl-wrap"><table>').replace(/<\/table>/g, '</table></div>');
+ html = html.replace(/<td>(Step\s*\d+)<\/td>/gi, '<td><span class="step-badge">$1</span></td>');
+ return html;
 }
 function renderFlowchartHtml(q, p){
   const qn = q.n;
