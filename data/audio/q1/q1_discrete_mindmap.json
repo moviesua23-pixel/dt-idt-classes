@@ -1,0 +1,107 @@
+{
+  "doctrine": "Diversion vs. Application of Income",
+  "root": {
+    "id": "root",
+    "number": "1",
+    "title": "Diversion vs. Application of Income",
+    "badge": "Section 4",
+    "voice_sync_text": "Innu nammal padikunnath Income Tax-ile mikacha oru legal doctrine-ine kurichaanu. Diversion of Income versus Application of Income. Income tax charge cheyyunnathinu munp ee vyathyaasam manassilaakkal valare pradhaanamannu.",
+    "pt_idx": 0,
+    "audio_file": "q1/pt_0.mp3",
+    "drive_audio_id": "1RpqIcwrNj01Xn6lOBUezRSxq5C69o85y"
+  },
+  "branches": [
+    {
+      "branch_id": "branch-1",
+      "branch_title": "Diversion by Overriding Title",
+      "badge": "Non-Taxable",
+      "icon": "shield",
+      "points": [
+        {
+          "id": "beat-1-1",
+          "title": "Legal Overriding Title",
+          "number": "1.1.1",
+          "badge": "Doctrine",
+          "body": [
+            "Obligation is created by a superior title or law.",
+            "The income never effectively reaches the assessee.",
+            "Example: Statutory charge on profit for a specific purpose."
+          ],
+          "table_data": null,
+          "voice_sync_text": "Diversion ennu parayunnath, income assessee-yude kayyil ethunnathinu munne thanne oru 'overriding title' vazhi vere oridathekku pokunnathaanu. Ithine income aayi kanakakkilla, athu kondu thanne tax kodukkandiyum varilla.",
+          "pt_idx": 1,
+          "audio_file": "q1/pt_1.mp3",
+          "drive_audio_id": "1MBK-9wuip0zfrcYt0y5VkrMl-Yq8tLXv"
+        }
+      ],
+      "flow_summary": []
+    },
+    {
+      "branch_id": "branch-2",
+      "branch_title": "Application of Income",
+      "badge": "Taxable",
+      "icon": "rupee",
+      "points": [
+        {
+          "id": "beat-2-1",
+          "title": "Post-Accrual Disposal",
+          "number": "2.1.1",
+          "badge": "Rule",
+          "body": [
+            "Income first accrues to the assessee.",
+            "Assessee then decides to spend or transfer it.",
+            "The destination is chosen by the assessee's will."
+          ],
+          "table_data": null,
+          "voice_sync_text": "Application of income ennal, income aadhyam assessee-kku labhikunnu, athinu shesham ayaal athu swantham ishtaprakaaram upayogikkunnu. Ithu fully taxable aanu.",
+          "pt_idx": 2,
+          "audio_file": "q1/pt_2.mp3",
+          "drive_audio_id": "1_ZdVaTLp1HpNYpN0OzU4CfzYCRZluxZU"
+        }
+      ],
+      "flow_summary": []
+    },
+    {
+      "branch_id": "branch-3",
+      "branch_title": "Judicial Benchmarks",
+      "badge": "Tests",
+      "icon": "scales",
+      "points": [
+        {
+          "id": "beat-3-1",
+          "title": "Determining Factors",
+          "number": "3.1.1",
+          "badge": "Checklist",
+          "body": [
+            "Who created the obligation? (Client vs Assessee)",
+            "When was the charge created?",
+            "Nature of the binding contract."
+          ],
+          "table_data": {
+            "headers": [
+              "Scenario",
+              "Classification"
+            ],
+            "rows": [
+              [
+                "Partner gives share to wife per Decree",
+                "Diversion"
+              ],
+              [
+                "Assessee creates trust from fees",
+                "Application"
+              ]
+            ]
+          },
+          "voice_sync_text": "Oru thuka 'Diversion' aano 'Application' aano ennu thirichariyaan chil karyangal nireekshikkanam. Obligation create cheythath client aano atho assessee thanneyaano? Ee difference-il aanu taxability nilakollunnath.",
+          "pt_idx": 3,
+          "audio_file": "q1/pt_3.mp3",
+          "drive_audio_id": "1GDaZKWfrOk6HsB28E0-Mb309P_roa4B9"
+        }
+      ],
+      "flow_summary": []
+    }
+  ],
+  "total_points_count": 4,
+  "drive_folder_id": "1OJE3VX5UcvnBEZSbBYcoiixVB8ag_AAX"
+}

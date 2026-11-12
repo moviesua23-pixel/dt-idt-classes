@@ -1,4 +1,4 @@
-﻿﻿﻿<!doctype html><html><head><meta charset="UTF-8">
+<!doctype html><html><head><meta charset="UTF-8">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
 <title>Tax Study Studio</title>
 <meta name="claude:viewport-fit-sides" content="cover">
@@ -1237,6 +1237,24 @@ tbody tr:nth-child(2){--r:1}tbody tr:nth-child(3){--r:2}tbody tr:nth-child(4){--
   transform:scale(1.08);
   background:#1D4ED8;
 }
+.vtd-nav-btn{
+  width:36px;
+  height:36px;
+  border-radius:50%;
+  background:rgba(255,255,255,0.12);
+  border:1px solid rgba(255,255,255,0.2);
+  color:#FFFFFF;
+  display:grid;
+  place-items:center;
+  cursor:pointer;
+  font-size:13px;
+  flex-shrink:0;
+  transition:all .2s ease;
+}
+.vtd-nav-btn:hover{
+  background:rgba(255,255,255,0.25);
+  transform:scale(1.08);
+}
 .vtd-info{
   display:flex;
   flex-direction:column;
@@ -1460,14 +1478,14 @@ tbody tr:nth-child(2){--r:1}tbody tr:nth-child(3){--r:2}tbody tr:nth-child(4){--
 /* Tree columns mirror the nested demo: provision → sibling rule → detail. */
 .mm-canvas-container .mm-root-card{position:absolute;left:48px;width:280px;max-width:none;margin:0;}
 .mm-canvas-container .mm-infographic-block{position:absolute;left:430px;width:330px;display:block;overflow:visible;}
-.mm-canvas-container .mm-infographic-block.status-hidden{display:block;visibility:hidden;opacity:0;pointer-events:none;}
+.mm-canvas-container .mm-infographic-block.status-hidden{display:flex!important;visibility:visible!important;opacity:0.95!important;pointer-events:auto!important;}
 .mm-canvas-container .mm-infographic-block.status-drawing,
 .mm-canvas-container .mm-infographic-block.status-active,
 .mm-canvas-container .mm-infographic-block.status-mastered{display:block;}
 .mm-canvas-container .mm-block-pill{width:330px;max-width:none;justify-content:flex-start;}
 .mm-canvas-container .mm-cards-row{position:absolute;left:370px;top:0;width:430px;display:block;margin:0;}
 .mm-canvas-container .mm-infographic-card{position:absolute;left:0;width:410px;max-width:none;}
-.mm-canvas-container .mm-infographic-card.status-hidden{display:flex!important;visibility:hidden;opacity:0;pointer-events:none;}
+.mm-canvas-container .mm-infographic-card.status-hidden{display:flex!important;visibility:visible!important;opacity:0.65!important;filter:grayscale(0.25)!important;pointer-events:auto!important;cursor:pointer!important;}
 .mm-canvas-container .mm-infographic-card.status-drawing,
 .mm-canvas-container .mm-infographic-card.status-active,
 .mm-canvas-container .mm-infographic-card.status-done,
@@ -1635,7 +1653,8 @@ tbody tr:nth-child(2){--r:1}tbody tr:nth-child(3){--r:2}tbody tr:nth-child(4){--
   box-sizing:border-box;
 }
 .mm-infographic-block.status-hidden{
-  display:none;
+  display:flex !important;
+  opacity:0.95 !important;
 }
 .mm-infographic-block.status-drawing,
 .mm-infographic-block.status-active,
@@ -1958,7 +1977,16 @@ tbody tr:nth-child(2){--r:1}tbody tr:nth-child(3){--r:2}tbody tr:nth-child(4){--
 
 /* Card Reveal & State Rules */
 .mm-infographic-card.status-hidden{
-  display:none !important;
+  display:flex !important;
+  visibility:visible !important;
+  opacity:0.65 !important;
+  filter:grayscale(0.25) !important;
+  pointer-events:auto !important;
+  cursor:pointer !important;
+}
+.mm-infographic-card.status-hidden:hover{
+  opacity:1 !important;
+  filter:none !important;
 }
 .mm-infographic-card.status-drawing{
   display:flex !important;
@@ -2598,10 +2626,11 @@ window.handleGoogleSheetData = function(json) {
     const liveMindmaps = {};
     const seenTopics = {};
 
-    for (let i = 1; i < rows.length; i++) {
+    for (let i = 0; i < rows.length; i++) {
       const c = rows[i].c;
       if (!c) continue;
       const val = (idx) => (c[idx] && c[idx].v !== null && c[idx].v !== undefined) ? String(c[idx].v) : "";
+      if (val(0).trim().toLowerCase() === "subject" || val(2).trim().toLowerCase().includes("question")) continue;
       
       const subject = val(0) || "DT";
       const chapterStr = val(1) || "1";
@@ -3228,7 +3257,7 @@ function renderMindMapCanvasHtml(mm, q, p){
         </svg>
 
         <!-- Minimalist Root Card: Section Code Badge + Doctrine in One Line -->
-        <div class="mm-root-card" id="mm-node-root" data-node-id="root" data-t0="0" data-t1="${root.t1 || 5.0}" tabindex="0" role="button" aria-label="Jump to start: ${esc(root.title)}">
+        <div class="mm-root-card" id="mm-node-root" data-node-id="root" data-pt-idx="${root.pt_idx !== undefined ? root.pt_idx : 0}" data-drive-id="${root.drive_audio_id || ''}" data-audio-file="${root.audio_file || ''}" data-t0="0" data-t1="${root.t1 || 5.0}" tabindex="0" role="button" aria-label="Jump to start: ${esc(root.title)}">
           <div class="mm-root-top-row">
             <span class="mm-root-badge">${esc(root.badge || '§ LAW')}</span>
           </div>
@@ -3260,7 +3289,7 @@ function renderMindMapCanvasHtml(mm, q, p){
                 }
                 const isSpk = pt.spoken === true;
                 return `
-                  <div class="mm-infographic-card ${theme} ${isFull ? 'card-fullwidth' : ''} status-hidden" id="mm-card-${pt.id}" data-node-id="${pt.id}" data-point-id="${pt.id}" data-branch-id="${b.branch_id}" data-t0="${pt.t0 != null ? pt.t0 : ''}" data-t1="${pt.t1 != null ? pt.t1 : ''}" data-spoken="${isSpk}" tabindex="0" role="button" aria-label="${esc(pt.title)}">
+                  <div class="mm-infographic-card ${theme} ${isFull ? 'card-fullwidth' : ''} status-hidden" id="mm-card-${pt.id}" data-node-id="${pt.id}" data-point-id="${pt.id}" data-branch-id="${b.branch_id}" data-pt-idx="${pt.pt_idx !== undefined ? pt.pt_idx : ''}" data-drive-id="${pt.drive_audio_id || ''}" data-audio-file="${pt.audio_file || ''}" data-t0="${pt.t0 != null ? pt.t0 : ''}" data-t1="${pt.t1 != null ? pt.t1 : ''}" data-spoken="${isSpk}" tabindex="0" role="button" aria-label="${esc(pt.title)}">
                     <!-- 56px Circular White Icon Badge overlapping top-left corner -->
                     <div class="mm-card-icon-badge">
                       ${getIconSvg(pt.icon || 'check', 24)}
@@ -3358,7 +3387,9 @@ function renderTheaterModalHtml(q, p){
 
     <!-- Synchronized Floating Bottom Dock -->
     <div class="vtheater-dock" id="vtheater-dock">
+      <button class="vtd-nav-btn" id="vtd-prev" aria-label="Previous point" title="Previous Point">⏮</button>
       <button class="vtd-play" id="vtd-play" aria-label="Play/Pause">${I.play}</button>
+      <button class="vtd-nav-btn" id="vtd-next" aria-label="Next point" title="Next Point">⏭</button>
       <div class="vtd-info">
         <span id="vtd-time" class="vtd-time">0:00 / ${fmt(p.dur)}</span>
         <span id="vtd-label" class="vtd-label">Step 1: Core Statutory Doctrine</span>
@@ -3487,7 +3518,7 @@ function makePlayer(p, q){
  const vtheater=$("#vtheater"),vtog=$("#vtog"),vclose=$("#vclose");
  const vtdClose=$("#vtd-close"),vtdPlay=$("#vtd-play"),vtdSeek=$("#vtd-seek"),vtdSpeed=$("#vtd-speed");
  const vtogBtn=$("#vtog-btn");
- const prevBtn=$("#ppt-prev-btn"),nextBtn=$("#ppt-next-btn");
+ const prevBtn=$("#vtd-prev") || $("#ppt-prev-btn"),nextBtn=$("#vtd-next") || $("#ppt-next-btn");
  const btnViewMindmap=$("#btn-view-mindmap"),btnViewSlides=$("#btn-view-slides");
  const pptMindmapView=$("#ppt-mindmap-view"),pptSlidesWrapper=$("#ppt-slides-wrapper"),pptNavRail=$("#ppt-nav-rail");
 
@@ -3508,9 +3539,177 @@ function makePlayer(p, q){
   audioUrl = audioBase + "?v=card_clean_20261110_" + Math.round(p.dur || 1);
  }
  
+ // Discrete Point-by-Point Voice Engine
+ const discretePlaylist = [];
+ if (mm && mm.root && (mm.root.drive_audio_id || mm.root.audio_file || mm.root.pt_idx !== undefined)) {
+  discretePlaylist.push({
+   pt_idx: mm.root.pt_idx !== undefined ? mm.root.pt_idx : 0,
+   id: "root",
+   elId: "mm-node-root",
+   title: mm.root.title || p.doctrine || "Overview",
+   badge: mm.root.badge || "Intro",
+   drive_id: mm.root.drive_audio_id,
+   audio_file: mm.root.audio_file,
+   text: mm.root.voice_sync_text || ""
+  });
+ }
+ if (mm && Array.isArray(mm.branches)) {
+  mm.branches.forEach((b) => {
+   (b.points || []).forEach((pt) => {
+    discretePlaylist.push({
+     pt_idx: pt.pt_idx !== undefined ? pt.pt_idx : discretePlaylist.length,
+     id: pt.id,
+     elId: "mm-card-" + pt.id,
+     branchId: b.branch_id,
+     title: pt.title,
+     badge: pt.badge || b.branch_title,
+     drive_id: pt.drive_audio_id,
+     audio_file: pt.audio_file,
+     text: pt.voice_sync_text || ""
+    });
+   });
+  });
+ }
+ const isDiscreteMode = (discretePlaylist.length > 1 && discretePlaylist.some(item => item.drive_id || item.audio_file));
+ let currentPtIdx = 0;
+
+ function getDiscreteAudioUrl(item){
+  if (!item) return null;
+  if (item.drive_id && !item.drive_id.startsWith("DRIVE_PT_")) {
+   return "https://drive.google.com/uc?export=download&id=" + item.drive_id;
+  }
+  if (item.audio_file) {
+   const fn = item.audio_file.replace(/\\/g, '/');
+   return window.location.protocol === "file:"
+    ? new URL("../data/audio/" + fn, window.location.href).href
+    : "/data/audio/" + fn;
+  }
+  return null;
+ }
+
+ function highlightDiscretePoint(item){
+  if (!item) return;
+  if (item.branchId) {
+   const bBlock = document.getElementById("mm-block-" + item.branchId);
+   if (bBlock) {
+    bBlock.classList.remove("status-hidden");
+    bBlock.classList.add("status-active");
+   }
+  }
+  discretePlaylist.forEach((ptItem, idx) => {
+   const el = document.getElementById(ptItem.elId);
+   const tag = document.getElementById("tag-pt-" + ptItem.id);
+   if (!el) return;
+   if (idx < currentPtIdx) {
+    el.classList.remove("status-hidden", "status-active");
+    el.classList.add("status-done");
+    if (tag) {
+     tag.textContent = "Done";
+     tag.className = "mm-card-live-strip tag-done";
+    }
+   } else if (idx === currentPtIdx) {
+    el.classList.remove("status-hidden", "status-done");
+    el.classList.add("status-active");
+    if (tag) {
+     tag.textContent = "NOW PLAYING";
+     tag.className = "mm-card-live-strip tag-active";
+    }
+    scrollToCard(el, true);
+   } else {
+    el.classList.remove("status-active", "status-done");
+    el.classList.add("status-hidden");
+    if (tag) {
+     tag.textContent = "";
+     tag.className = "mm-card-live-strip";
+    }
+   }
+  });
+
+  // Display clean title on controls dock (NEVER display raw identification number)
+  const vtdLabel = $("#vtd-label");
+  if (vtdLabel) vtdLabel.textContent = item.title;
+  if (note) note.textContent = "Playing point: " + item.title;
+ }
+
+ function updateDiscreteUI(){
+  if (!isDiscreteMode || !discretePlaylist.length) return;
+  const totalPts = discretePlaylist.length;
+  const frac = currentPtIdx / Math.max(1, totalPts - 1);
+  seek.value = Math.round(frac * 1000);
+  seek.style.setProperty("--p", frac);
+  const vtdSeek = $("#vtd-seek");
+  if (vtdSeek) vtdSeek.value = Math.round(frac * 1000);
+
+  const curTime = audio.currentTime || 0;
+  const dTime = (isFinite(audio.duration) && audio.duration > 0) ? audio.duration : 0;
+  time.textContent = fmt(curTime) + " / " + fmt(dTime);
+  const vtdTime = $("#vtd-time");
+  if (vtdTime) vtdTime.textContent = fmt(curTime) + " / " + fmt(dTime);
+ }
+
+ function finishDiscrete(){
+  stop();
+  discretePlaylist.forEach(ptItem => {
+   const el = document.getElementById(ptItem.elId);
+   if (el) {
+    el.classList.remove("status-hidden", "status-active");
+    el.classList.add("status-done");
+   }
+  });
+  if (note) note.textContent = "Presentation completed. All statutory points covered!";
+  const vtdLabel = $("#vtd-label");
+  if (vtdLabel) vtdLabel.textContent = "Presentation Completed";
+ }
+
+ function playPoint(targetIdx, startPlaying = true){
+  if (!isDiscreteMode || !discretePlaylist.length) return;
+  if (targetIdx < 0) targetIdx = 0;
+  if (targetIdx >= discretePlaylist.length) {
+   finishDiscrete();
+   return;
+  }
+  currentPtIdx = targetIdx;
+  const item = discretePlaylist[currentPtIdx];
+  const nextSrc = getDiscreteAudioUrl(item);
+
+  audio.pause();
+  if (nextSrc && audio.src !== nextSrc) {
+   audio.src = nextSrc;
+   audio.currentTime = 0;
+  }
+
+  highlightDiscretePoint(item);
+  updateDiscreteUI();
+
+  if (startPlaying) {
+   audio.play().then(() => {
+    playing = true;
+    root.classList.add("playing");
+    playB.innerHTML = I.pause;
+    playB.setAttribute("aria-label", "Pause audio");
+    const curVtdPlay = $("#vtd-play");
+    if (curVtdPlay) curVtdPlay.innerHTML = I.pause;
+    vizOn();
+   }).catch(err => {
+    console.warn("Discrete audio playback notice:", err);
+    playing = false;
+    root.classList.remove("playing");
+    playB.innerHTML = I.play;
+    const curVtdPlay = $("#vtd-play");
+    if (curVtdPlay) curVtdPlay.innerHTML = I.play;
+   });
+  } else {
+   playing = false;
+   root.classList.remove("playing");
+   playB.innerHTML = I.play;
+   const curVtdPlay = $("#vtd-play");
+   if (curVtdPlay) curVtdPlay.innerHTML = I.play;
+  }
+ }
+
  const audio = new Audio();
  audio.preload = "auto";
- audio.src = audioUrl;
+ audio.src = isDiscreteMode ? (getDiscreteAudioUrl(discretePlaylist[0]) || audioUrl) : audioUrl;
  window.__currAudio = audio;
  window.__ui = ui;
 
@@ -4240,6 +4439,7 @@ function makePlayer(p, q){
  }
 
  function syncMindMap(cur){
+  if (isDiscreteMode) return;
   if(!mm) return;
   const cameraStage=document.getElementById("mm-scroll-stage");
   if(cameraStage?.dataset.preparedPoint || cameraStage?.dataset.preparedBranch){
@@ -4443,7 +4643,11 @@ function makePlayer(p, q){
   document.body.style.overflow = "hidden";
   resetControlsTimer();
   initializeTheaterMindMap();
-  if(!playing) start();
+  if(isDiscreteMode){
+   playPoint(currentPtIdx, true);
+  } else {
+   if(!playing) start();
+  }
  }
 
  function closeTheater(){
@@ -4550,6 +4754,11 @@ function makePlayer(p, q){
  }
 
  async function start(){
+  if(dead) return;
+  if(isDiscreteMode){
+   playPoint(currentPtIdx, true);
+   return;
+  }
   try {
    if(audio.ended || (audio.currentTime >= total() - 0.2)){
     audio.currentTime = 0;
@@ -4604,6 +4813,11 @@ function makePlayer(p, q){
   if (e) {
    e.preventDefault();
    e.stopPropagation();
+  }
+  if (isDiscreteMode) {
+   if (playing) stop();
+   else playPoint(currentPtIdx, true);
+   return;
   }
   if (playing) stop();
   else start();
@@ -4708,10 +4922,14 @@ function makePlayer(p, q){
  if(rootNode){
   rootNode.onclick = (e) => {
    e.stopPropagation();
-   audio.currentTime = 0;
-   if(!playing) start();
-   ui();
-   handleAutoScroll("root", true);
+   if(isDiscreteMode){
+    playPoint(0, true);
+   } else {
+    audio.currentTime = 0;
+    if(!playing) start();
+    ui();
+    handleAutoScroll("root", true);
+   }
   };
  }
 
@@ -4731,13 +4949,21 @@ function makePlayer(p, q){
  $$(".mm-infographic-card").forEach(el => {
   el.onclick = (e) => {
    e.stopPropagation();
-   const rawT0 = el.dataset.t0;
-   if(rawT0 !== "" && !isNaN(parseFloat(rawT0))){
-    const t0 = parseFloat(rawT0);
-    audio.currentTime = t0 + 0.05;
-    if(!playing) start();
-    ui();
-    handleAutoScroll(el.dataset.branchId, true, el.dataset.pointId);
+   if(isDiscreteMode){
+    const ptId = el.dataset.pointId;
+    const targetIdx = discretePlaylist.findIndex(it => it.id === ptId || it.elId === el.id);
+    if(targetIdx !== -1){
+     playPoint(targetIdx, true);
+    }
+   } else {
+    const rawT0 = el.dataset.t0;
+    if(rawT0 !== "" && !isNaN(parseFloat(rawT0))){
+     const t0 = parseFloat(rawT0);
+     audio.currentTime = t0 + 0.05;
+     if(!playing) start();
+     ui();
+     handleAutoScroll(el.dataset.branchId, true, el.dataset.pointId);
+    }
    }
   };
   el.onkeydown = (e) => {
@@ -4784,6 +5010,10 @@ function makePlayer(p, q){
  if(prevBtn){
   prevBtn.onclick = (e) => {
    e.stopPropagation();
+   if(isDiscreteMode){
+    playPoint(currentPtIdx - 1, true);
+    return;
+   }
    const slides = $$(".ppt-slide");
    if(!slides.length) return;
    let curIdx = 0;
@@ -4799,6 +5029,10 @@ function makePlayer(p, q){
  if(nextBtn){
   nextBtn.onclick = (e) => {
    e.stopPropagation();
+   if(isDiscreteMode){
+    playPoint(currentPtIdx + 1, true);
+    return;
+   }
    const slides = $$(".ppt-slide");
    if(!slides.length) return;
    let curIdx = 0;
@@ -4875,13 +5109,29 @@ function makePlayer(p, q){
  window.addEventListener("orientationchange", resizeHandler);
  if(document.fonts) document.fonts.ready.then(refreshMindMapLayout);
 
- audio.ontimeupdate = ui;
+ audio.ontimeupdate = () => {
+  if (isDiscreteMode) {
+   updateDiscreteUI();
+  } else {
+   ui();
+  }
+ };
  audio.onseeking = ui;
  audio.onseeked = ui;
  audio.onplay = () => { ui(); startMindMapDrawLoop(); };
  audio.onpause = () => { ui(); stopMindMapDrawLoop(); };
  audio.onratechange = ui;
- audio.onended = finish;
+ audio.onended = () => {
+  if (isDiscreteMode) {
+   if (currentPtIdx + 1 < discretePlaylist.length) {
+    playPoint(currentPtIdx + 1, true);
+   } else {
+    finishDiscrete();
+   }
+  } else {
+   finish();
+  }
+ };
  audio.onerror = () => {
   console.warn("Audio error for", audioUrl);
   note.textContent = "Audio unavailable (" + audioUrl + "). Review provision text below.";

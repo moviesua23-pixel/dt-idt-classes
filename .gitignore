@@ -10,3 +10,6 @@ data/audio_temp/
 *.zip
 data/audio_temp_rebuild/
 scratch/
+
+credentials.json
+test_pt.mp3
