@@ -18,6 +18,10 @@ def is_quota_error(e: Exception) -> bool:
     msg = str(e).lower()
     return "429" in msg or "resource_exhausted" in msg or "quota" in msg or "too many requests" in msg or "rate limit" in msg
 
+def is_transient_error(e: Exception) -> bool:
+    msg = str(e).lower()
+    return "503" in msg or "unavailable" in msg or "500" in msg or "high demand" in msg or "temporary" in msg or "timeout" in msg
+
 class KeyRotator:
     def __init__(self):
         env_file = os.path.join(PROJECT_ROOT, '.env')
@@ -56,12 +60,14 @@ class KeyRotator:
         Executes a callable api_func(client, *args, **kwargs).
         If a 429 quota/rate limit error occurs, rotates through all available keys.
         If all keys in the pool are exhausted, raises AllKeysQuotaExhaustedError.
+        Also retries across keys on transient 503/server spike errors.
         """
         if not self.keys:
             raise RuntimeError("No Gemini API keys configured.")
 
         quota_failures = 0
         last_error = None
+        import time
 
         for attempt in range(self.total_keys):
             client = self.get_client()
@@ -72,9 +78,13 @@ class KeyRotator:
                 if is_quota_error(e):
                     quota_failures += 1
                     print(f"  [KEY ROTATION] Key {attempt + 1}/{self.total_keys} hit quota limit (429/ResourceExhausted). Rotating to next key...")
+                elif is_transient_error(e):
+                    print(f"  [KEY ROTATION] Key {attempt + 1}/{self.total_keys} hit transient error (503/high demand). Waiting 2s and rotating to next key...")
+                    time.sleep(2)
                 else:
-                    # Non-quota error, re-raise or continue
-                    raise e
+                    # Non-quota/non-transient error, re-raise or continue to try another key
+                    print(f"  [KEY ROTATION] Key {attempt + 1}/{self.total_keys} hit error ({e}). Rotating...")
+                    time.sleep(1)
 
         if quota_failures >= self.total_keys:
             raise AllKeysQuotaExhaustedError(

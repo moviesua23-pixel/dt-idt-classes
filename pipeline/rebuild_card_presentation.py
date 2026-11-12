@@ -121,10 +121,10 @@ def main():
                 narration = line.get("narration_ml", "").strip()
                 if not narration:
                     raise RuntimeError(f"Q{qn} card {idx} has no narration")
-                from gtts import gTTS
+                from pipeline.synthesize_discrete_points import synthesize_point_audio
                 clip_mp3 = STAGE_TEMP / f"q{qn}_card_{idx:02d}.mp3"
                 clip_raw = STAGE_TEMP / f"q{qn}_card_{idx:02d}.raw"
-                gTTS(text=narration, lang="ml", slow=False).save(str(clip_mp3))
+                synthesize_point_audio(narration, str(clip_mp3))
                 subprocess.run([
                     "ffmpeg", "-y", "-i", str(clip_mp3), "-ar", str(SAMPLE_RATE),
                     "-ac", "1", "-f", "s16le", str(clip_raw)

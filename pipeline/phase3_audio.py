@@ -4,10 +4,6 @@ import re
 import json
 import wave
 import subprocess
-try:
-    from gtts import gTTS
-except ImportError:
-    gTTS = None
 
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 if PROJECT_ROOT not in sys.path:
@@ -44,18 +40,21 @@ def generate_gemini_audio(script, output_mp3_path, voice_name=None):
     """
     Generates studio-grade spoken audio using Gemini Voice TTS (24kHz 16-bit PCM)
     and converts to standard MP3 with FFmpeg.
-    Falls back to gTTS if Gemini generation fails.
+    Strictly uses Gemini Expressive Voice with KeyRotator. Zero robotic fallback.
     Returns (duration_seconds, engine_name).
     """
     if not voice_name:
         voice_name = DEFAULT_VOICE
         
-    models_to_try = ['gemini-3.8-flash-tts', 'gemini-2.5-flash-preview-tts', 'gemini-3.1-flash-tts-preview']
-    pcm_data = None
-    last_err = None
+    models_to_try = [
+        'gemini-2.5-flash-preview-tts',
+        'gemini-3.1-flash-tts-preview',
+        'gemini-3.8-flash-tts',
+        'gemini-3.8-flash-lite-tts'
+    ]
 
-    try:
-        client = rotator.get_client()
+    def _call_tts(client):
+        last_e = None
         for model in models_to_try:
             try:
                 resp = client.models.generate_content(
@@ -74,52 +73,43 @@ def generate_gemini_audio(script, output_mp3_path, voice_name=None):
                 )
                 for part in resp.candidates[0].content.parts:
                     if part.inline_data and part.inline_data.data:
-                        pcm_data = part.inline_data.data
-                        break
-                if pcm_data:
-                    break
+                        return part.inline_data.data, model
             except Exception as e:
-                last_err = e
+                last_e = e
                 continue
-    except Exception as e:
-        last_err = e
+        raise RuntimeError(f"All Gemini TTS models failed: {last_e}")
 
-    if pcm_data:
-        # Write temporary WAV file
-        temp_wav = output_mp3_path + ".temp.wav"
-        with wave.open(temp_wav, 'wb') as wf:
-            wf.setnchannels(1)
-            wf.setsampwidth(2)
-            wf.setframerate(24000)
-            wf.writeframes(pcm_data)
-        
-        frames = len(pcm_data) / 2
-        duration = round(frames / 24000.0, 1)
+    pcm_data, used_model = rotator.execute_with_retry(_call_tts)
 
-        # Convert to MP3
-        try:
-            subprocess.run(
-                ['ffmpeg', '-y', '-i', temp_wav, '-b:a', '128k', output_mp3_path],
-                check=True,
-                stdout=subprocess.PIPE,
-                stderr=subprocess.PIPE
-            )
-            if os.path.exists(temp_wav):
-                os.remove(temp_wav)
-        except Exception as fe:
-            print(f"FFmpeg conversion warning: {fe}. Keeping WAV format.")
-            if os.path.exists(temp_wav):
-                if os.path.exists(output_mp3_path):
-                    os.remove(output_mp3_path)
-                os.rename(temp_wav, output_mp3_path)
-                
-        return duration, f"Gemini Voice ({voice_name})"
+    # Write temporary WAV file
+    temp_wav = output_mp3_path + ".temp.wav"
+    with wave.open(temp_wav, 'wb') as wf:
+        wf.setnchannels(1)
+        wf.setsampwidth(2)
+        wf.setframerate(24000)
+        wf.writeframes(pcm_data)
+    
+    frames = len(pcm_data) / 2
+    duration = round(frames / 24000.0, 1)
 
-    # Fallback to gTTS if Gemini TTS encounters an issue
-    print(f"Gemini Voice fallback due to: {last_err}. Using gTTS.")
-    tts = gTTS(text=script, lang='ml', slow=False)
-    tts.save(output_mp3_path)
-    return 60.0, "Google Translate TTS (Fallback)"
+    # Convert to MP3
+    try:
+        subprocess.run(
+            ['ffmpeg', '-y', '-i', temp_wav, '-b:a', '128k', output_mp3_path],
+            check=True,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE
+        )
+        if os.path.exists(temp_wav):
+            os.remove(temp_wav)
+    except Exception as fe:
+        print(f"FFmpeg conversion warning: {fe}. Keeping WAV format.")
+        if os.path.exists(temp_wav):
+            if os.path.exists(output_mp3_path):
+                os.remove(output_mp3_path)
+            os.rename(temp_wav, output_mp3_path)
+            
+    return duration, f"Gemini Expressive Voice ({voice_name} via {used_model})"
 
 def run_phase3(force=False, voice_name=None):
     provisions_file = os.path.join(PROJECT_ROOT, 'data', 'provisions.json')

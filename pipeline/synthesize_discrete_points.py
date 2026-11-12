@@ -5,10 +5,6 @@ import wave
 import time
 import base64
 import requests
-try:
-    import gtts
-except ImportError:
-    gtts = None
 from pydub import AudioSegment
 from google.oauth2 import service_account
 from googleapiclient.discovery import build
@@ -112,11 +108,21 @@ def count_ready_points(mindmap: dict) -> int:
 
 def synthesize_point_audio(text: str, out_mp3_path: str):
     """
-    Synthesizes a single point audio using Gemini TTS, rotating through all active keys.
+    Synthesizes a single point audio STRICTLY using Gemini Expressive Neural TTS (Aoede),
+    rotating through all active keys.
+    Zero robotic fallback (gTTS is completely disabled).
     If all keys hit quota limits (429), raises AllKeysQuotaExhaustedError to pause pipeline gracefully.
     """
+    tts_models = [
+        'gemini-2.5-flash-preview-tts',
+        'gemini-3.1-flash-tts-preview',
+        'gemini-3.8-flash-tts',
+        'gemini-3.8-flash-lite-tts'
+    ]
+
     def _gemini_tts_call(client):
-        for tts_model in ['gemini-3.1-flash-tts-preview', 'gemini-2.5-flash-preview-tts']:
+        last_model_err = None
+        for tts_model in tts_models:
             try:
                 resp = client.models.generate_content(
                     model=tts_model,
@@ -143,26 +149,22 @@ def synthesize_point_audio(text: str, out_mp3_path: str):
                     seg.export(out_mp3_path, format='mp3')
                     if os.path.exists(temp_wav):
                         os.remove(temp_wav)
-                    return f'gemini_tts_{tts_model}'
+                    return f'gemini_expressive_{tts_model}'
             except Exception as e:
+                last_model_err = e
                 if is_quota_error(e):
+                    # Raise quota error immediately so rotator rotates the key
                     raise e
+                time.sleep(0.5)
                 continue
-        raise RuntimeError("Gemini TTS models failed to produce audio.")
+        raise RuntimeError(f"Gemini Expressive TTS models failed to produce audio: {last_model_err}")
 
     try:
         return rotator.execute_with_retry(_gemini_tts_call)
     except AllKeysQuotaExhaustedError:
         raise
     except Exception as err:
-        # Non-quota fallback if gTTS available
-        if gtts is not None:
-            try:
-                tts = gtts.gTTS(text, lang='ml')
-                tts.save(out_mp3_path)
-                return 'gtts_neural'
-            except Exception:
-                pass
+        print(f"  [ERROR] Gemini Expressive Voice generation failed: {err}")
         raise err
 
 def generate_discrete_voice_for_mindmap(q_num: int, mindmap: dict, output_dir: str, upload_to_drive: bool = True, subject: str = 'DT', chapter_no: int = 1):
