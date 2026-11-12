@@ -2500,31 +2500,55 @@ tbody tr:nth-child(2){--r:1}tbody tr:nth-child(3){--r:2}tbody tr:nth-child(4){--
 .mm-canvas-container .mm-block-pill:hover{transform:none!important;}
 .mm-canvas-container .mm-root-card:hover{transform:none!important;}
 
-/* Presentation Theater: Balanced Sequential Focus */
-.vtheater.open .mm-canvas-container .mm-infographic-block.status-hidden{
-  opacity:0.65!important;
-  visibility:visible!important;
-  pointer-events:none!important;
-  filter:grayscale(0.15)!important;
-  transform:none!important;
-  transition:opacity .35s ease, filter .35s ease!important;
+/* Presentation Theater: Clean Single-Focus Presentation Slides */
+
+/* 1. Hide badge text that collides with or hides behind arrows */
+.mm-bp-badge,
+.vtheater.open .mm-bp-badge{
+  display:none!important;
 }
-.vtheater.open .mm-canvas-container .mm-infographic-card.status-hidden{
-  opacity:0.65!important;
-  visibility:visible!important;
+
+/* 2. In presentation theater, when a point is active, hide the root card so it doesn't bleed into the corner */
+.vtheater.open .mm-root-card.status-done,
+.vtheater.open .mm-root-card.status-hidden{
+  opacity:0!important;
+  visibility:hidden!important;
   pointer-events:none!important;
-  filter:grayscale(0.15)!important;
-  transform:none!important;
-  transition:opacity .35s ease, filter .35s ease!important;
+  transition:opacity .15s ease!important;
 }
-.vtheater.open .mm-canvas-container .mm-infographic-block.status-active,
+.vtheater.open .mm-root-card.status-active{
+  opacity:1!important;
+  visibility:visible!important;
+  pointer-events:auto!important;
+  transition:opacity .15s ease!important;
+}
+
+/* 3. In presentation theater, only the currently active branch block is visible */
+.vtheater.open .mm-canvas-container .mm-infographic-block.status-hidden,
 .vtheater.open .mm-canvas-container .mm-infographic-block.status-mastered{
+  opacity:0!important;
+  visibility:hidden!important;
+  pointer-events:none!important;
+  transform:none!important;
+  transition:opacity .15s ease!important;
+}
+.vtheater.open .mm-canvas-container .mm-infographic-block.status-active{
   opacity:1!important;
   visibility:visible!important;
   pointer-events:auto!important;
   filter:none!important;
   transform:none!important;
-  transition:opacity .35s ease, filter .35s ease!important;
+  transition:opacity .15s ease!important;
+}
+
+/* 4. In presentation theater, within the active branch, only the active card is visible */
+.vtheater.open .mm-canvas-container .mm-infographic-card.status-hidden,
+.vtheater.open .mm-canvas-container .mm-infographic-card.status-done{
+  opacity:0!important;
+  visibility:hidden!important;
+  pointer-events:none!important;
+  transform:none!important;
+  transition:opacity .15s ease!important;
 }
 .vtheater.open .mm-canvas-container .mm-infographic-card.status-active{
   opacity:1!important;
@@ -2534,36 +2558,24 @@ tbody tr:nth-child(2){--r:1}tbody tr:nth-child(3){--r:2}tbody tr:nth-child(4){--
   border-color:#d69a30!important;
   box-shadow:0 0 0 3px #d69a30, 0 10px 25px rgba(214,154,48,0.22)!important;
   transform:scale(1.02)!important;
-  transition:opacity .35s ease, transform .35s ease, box-shadow .35s ease!important;
+  transition:opacity .15s ease, transform .15s ease, box-shadow .15s ease!important;
 }
-.vtheater.open .mm-canvas-container .mm-infographic-card.status-done{
-  opacity:0.92!important;
-  visibility:visible!important;
-  pointer-events:auto!important;
-  filter:none!important;
-  border-color:#55a498!important;
-  transform:none!important;
-  transition:opacity .35s ease!important;
+
+/* 5. In presentation theater, hide branch connector paths from root, show only the active card path */
+.vtheater.open .mm-branch-path{
+  opacity:0!important;
+  visibility:hidden!important;
 }
-.vtheater.open .mm-branch-path,
 .vtheater.open .mm-card-path{
-  stroke:#9db9c1!important;
-  opacity:0.6!important;
-  transition:stroke .35s ease, opacity .35s ease, stroke-width .35s ease!important;
+  opacity:0!important;
+  visibility:hidden!important;
 }
-.vtheater.open .mm-branch-path.path-active,
 .vtheater.open .mm-card-path.path-active{
   opacity:1!important;
   visibility:visible!important;
   stroke:#d69a30!important;
   stroke-width:2.5px!important;
-}
-.vtheater.open .mm-branch-path.path-mastered,
-.vtheater.open .mm-card-path.path-mastered{
-  opacity:0.9!important;
-  visibility:visible!important;
-  stroke:#55a498!important;
-  stroke-width:2px!important;
+  transition:opacity .15s ease, stroke .15s ease!important;
 }
 </style>
 <div id="ambient" aria-hidden="true"><div class="orb o1"></div><div class="orb o2"></div></div>
@@ -3761,7 +3773,7 @@ function makePlayer(p, q){
      if (ptIdxInList !== -1 && ptIdxInList < currentPtIdx) pStatus = "done";
      else if (ptIdxInList === currentPtIdx) pStatus = "active";
      dState.pointStates[pt.id] = pStatus;
-     dState.cardConnectors[pt.id] = { status: pStatus === "hidden" ? "hidden" : "active", progress: pStatus === "hidden" ? 0 : 1 };
+     dState.cardConnectors[pt.id] = { status: pStatus === "active" ? "active" : "hidden", progress: pStatus === "active" ? 1 : 0 };
     });
    });
    try { updateConnectorPaths(dState); } catch(e){}
