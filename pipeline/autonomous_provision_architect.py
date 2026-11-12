@@ -92,7 +92,13 @@ CRITICAL RULES:
 2. Icons can be: scales, shield, calculator, percent, cap, warning, gear, check, user, building, rupee.
 3. Every point must include a high-quality, professional 'voice_sync_text' in natural Malayalam explaining that card's legal concept.
 4. If a point naturally contains numerical tables or thresholds, populate 'table_data' with {{ "headers": [...], "rows": [[...], [...]] }}, otherwise set to null.
-5. Return ONLY the raw JSON object, without backticks or markdown fences.
+5. In 'provision_presentation_markdown':
+   - Use clean, standard Markdown tables and bulleted lists (`- ...`).
+   - NEVER use ASCII pseudo-diagrams, pipes, or arrows (e.g. DO NOT write '|------', '|-->', '-->'). Use clean nested bullet lists or tables instead.
+   - All markdown bold/italics syntax MUST be properly paired and closed on the same line (e.g. `**Bold Text**`). Never leave unclosed `**` at the end or beginning of headings or callout titles.
+   - For callout titles, write: `> [!IMPORTANT] Title Name: Description` (clean plain title, no unclosed markdown asterisks).
+   - Any mathematical or tax formula must either be in standard plain text (e.g. `Total Income - ₹ 12,00,000`) or standard closed LaTeX `$formula$` without raw unescaped `&` or `%`.
+6. Return ONLY the raw JSON object, without backticks or markdown fences.
 """
 
 def extract_autonomous_provision(question_number: int, question_text: str, answer_text: str, max_retries: int = 3) -> Optional[Dict[str, Any]]:

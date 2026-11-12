@@ -3259,8 +3259,11 @@ function safeKatexRender(tex, displayMode = false){
 
 function processMarkdownCallouts(md){
   if(!md) return "";
-  // 1. Process GitHub alert callouts: > [!NOTE], > [!TIP], > [!IMPORTANT], > [!WARNING], > [!CAUTION]
-  let out = md.replace(/(?:^|\n)(?:>\s*)?\[!(NOTE|TIP|IMPORTANT|WARNING|CAUTION)\](?:\s*:\s*|\s+)?([^\n]+(?:\n(?:>\s*)?[^\n]+)*)/gim, (m, type, body) => {
+  // 1. Globally convert ASCII pseudo-diagrams (|------, |--->, ---->) into clean markdown bullet items
+  let cleanMd = md.replace(/\s*\|[-—>]{2,}\s*/g, '\n- ');
+
+  // 2. Process GitHub alert callouts: > [!NOTE], > [!TIP], > [!IMPORTANT], > [!WARNING], > [!CAUTION]
+  let out = cleanMd.replace(/(?:^|\n)(?:>\s*)?\[!(NOTE|TIP|IMPORTANT|WARNING|CAUTION)\](?:\s*:\s*|\s+)?([^\n]+(?:\n(?:>\s*)?[^\n]+)*)/gim, (m, type, body) => {
     type = type.toUpperCase();
     const icons = {
       NOTE: 'ℹ️',
@@ -3278,29 +3281,48 @@ function processMarkdownCallouts(md){
     };
     const icon = icons[type] || 'ℹ️';
     const label = labels[type] || type;
-    let text = body.split('\n').map(l => l.replace(/^>\s?/, '').trim()).filter(Boolean).join(' ');
+
+    // Split lines, remove leading '>' and ASCII pipes
+    let lines = body.split('\n').map(l => l.replace(/^>\s?/, '').replace(/\s*\|[-—>]{2,}\s*/g, '\n- ').trim()).filter(Boolean);
+    let fullText = lines.join('\n');
+
+    // Extract clean subtitle if present (e.g. "**Difference in Section 87A between Regimes**" or "Status Requirement: ...")
     let subtitle = '';
-    const subMatch = text.match(/^([^:]+):\s*(.*)$/);
-    if (subMatch && subMatch[1].length < 45) {
-      subtitle = subMatch[1].trim();
-      text = subMatch[2].trim();
+    const firstLine = lines[0] || '';
+    if (firstLine.includes(':') && firstLine.indexOf(':') < 55) {
+      const cIdx = firstLine.indexOf(':');
+      subtitle = firstLine.substring(0, cIdx).replace(/[\*\_]+/g, '').trim();
+      lines[0] = firstLine.substring(cIdx + 1).trim();
+      fullText = lines.filter(Boolean).join('\n');
+    } else if (firstLine.length < 65 && lines.length > 1 && !firstLine.startsWith('-') && !firstLine.startsWith('*')) {
+      subtitle = firstLine.replace(/[\*\_]+/g, '').trim();
+      fullText = lines.slice(1).join('\n');
     }
+
+    // Clean stray unclosed asterisks in subtitle and fullText
+    subtitle = subtitle.replace(/[\*\_]+/g, '').trim();
+    fullText = fullText.replace(/^\s*\*\*\s*-\s*/gm, '- ');
+    fullText = fullText.replace(/(^|\n)\s*\*\*\s*([A-Za-z])/g, '$1$2');
+
+    // Parse the inner body using marked so bold, lists, and numbers render with 100% fidelity!
+    let parsedBody = marked.parse(fullText.trim());
+
     return `\n\n<div class="callout-alert alert-${type.toLowerCase()}">
       <div class="callout-head">
         <span class="callout-icon">${icon}</span>
         <span class="callout-title">${label}${subtitle ? `: <b>${subtitle}</b>` : ''}</span>
       </div>
-      <div class="callout-body"><p>${text}</p></div>
+      <div class="callout-body">${parsedBody}</div>
     </div>\n\n`;
   });
 
-  // 2. Preprocess Math before marked
+  // 3. Preprocess Math before marked
   if(window.katex){
     out = out.replace(/\$\$([\s\S]+?)\$\$/g, (m, tex) => safeKatexRender(tex, true));
     out = out.replace(/\$([^\$\n]+?)\$/g, (m, tex) => safeKatexRender(tex, false));
   }
 
-  // 3. Clean up any unwrapped LaTeX like \text{Net Tax} + \text{Health & Education Cess @ 4%}
+  // 4. Clean up any unwrapped LaTeX like \text{Net Tax} + \text{Health & Education Cess @ 4%}
   out = out.replace(/\\text\{([^}]+)\}/g, (m, inner) => `<strong>${inner.replace(/\\&/g, '&')}</strong>`);
   out = out.replace(/\\le\b/g, '≤').replace(/\\ge\b/g, '≥');
 
