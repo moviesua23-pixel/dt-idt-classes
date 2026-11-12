@@ -89,35 +89,36 @@ def synthesize_point_audio(client, text: str, out_mp3_path: str):
     """
     # 1. Try Gemini TTS
     if client:
-        try:
-            resp = client.models.generate_content(
-                model='gemini-2.5-flash-preview-tts',
-                contents=[text],
-                config=types.GenerateContentConfig(
-                    response_modalities=['AUDIO'],
-                    speech_config=types.SpeechConfig(
-                        voice_config=types.VoiceConfig(
-                            prebuilt_voice_config=types.PrebuiltVoiceConfig(voice_name='Aoede')
+        for tts_model in ['gemini-3.1-flash-tts-preview', 'gemini-2.5-flash-preview-tts']:
+            try:
+                resp = client.models.generate_content(
+                    model=tts_model,
+                    contents=[text],
+                    config=types.GenerateContentConfig(
+                        response_modalities=['AUDIO'],
+                        speech_config=types.SpeechConfig(
+                            voice_config=types.VoiceConfig(
+                                prebuilt_voice_config=types.PrebuiltVoiceConfig(voice_name='Aoede')
+                            )
                         )
                     )
                 )
-            )
-            if resp.candidates and resp.candidates[0].content and resp.candidates[0].content.parts:
-                pcm_data = resp.candidates[0].content.parts[0].inline_data.data
-                temp_wav = out_mp3_path.replace('.mp3', '.wav')
-                with wave.open(temp_wav, 'wb') as wf:
-                    wf.setnchannels(1)
-                    wf.setsampwidth(2)
-                    wf.setframerate(24000)
-                    wf.writeframes(pcm_data)
-                    
-                seg = AudioSegment.from_wav(temp_wav)
-                seg.export(out_mp3_path, format='mp3')
-                if os.path.exists(temp_wav):
-                    os.remove(temp_wav)
-                return 'gemini_tts'
-        except Exception:
-            pass
+                if resp.candidates and resp.candidates[0].content and resp.candidates[0].content.parts:
+                    pcm_data = resp.candidates[0].content.parts[0].inline_data.data
+                    temp_wav = out_mp3_path.replace('.mp3', '.wav')
+                    with wave.open(temp_wav, 'wb') as wf:
+                        wf.setnchannels(1)
+                        wf.setsampwidth(2)
+                        wf.setframerate(24000)
+                        wf.writeframes(pcm_data)
+                        
+                    seg = AudioSegment.from_wav(temp_wav)
+                    seg.export(out_mp3_path, format='mp3')
+                    if os.path.exists(temp_wav):
+                        os.remove(temp_wav)
+                    return f'gemini_tts_{tts_model}'
+            except Exception:
+                continue
 
     # 2. Google Malayalam Neural TTS fallback
     if gtts is not None:
