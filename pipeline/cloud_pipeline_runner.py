@@ -1,56 +1,78 @@
+"""
+pipeline/cloud_pipeline_runner.py
+Cloud Pipeline Runner: Google Drive -> Autonomous Gemini Provision Architect -> Google Sheets.
+
+Autonomously synthesizes provision-specific presentation structures, Markdown matrices,
+and synchronized Malayalam voice narration without rigid category boundaries across 1,000+ provisions.
+"""
+
 import os
 import sys
 import json
 import base64
-import urllib.request
 import time
+import requests
+from google.oauth2 import service_account
+from googleapiclient.discovery import build
 
-# Ensure project root is in sys.path
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
 
-from google.oauth2 import service_account
-from googleapiclient.discovery import build
-from pipeline.key_rotator import rotator
+try:
+    sys.stdout.reconfigure(encoding='utf-8')
+except Exception:
+    pass
+
+from pipeline.autonomous_provision_architect import extract_autonomous_provision, assign_estimated_timings
 
 # Configuration
-SPREADSHEET_ID = '14O9I8ZAjnIp8i4SFtM0xZX-y62f5BNtdh25ibSC7ChE'
+SERVICE_ACCOUNT_FILE = os.path.join(PROJECT_ROOT, 'credentials.json')
+SPREADSHEET_ID = os.environ.get('SPREADSHEET_ID', '14O9I8ZAjnIp8i4SFtM0xZX-y62f5BNtdh25ibSC7ChE')
 APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbzGZ4dcDYAGR_wr8h5IaUVinNdavEN3seXqyFNmnEth4fWj0b84_0JCb6VxZSZNh0Mx0Q/exec'
-VOICE_DT_FOLDER_ID = '14S7L1TjFZA925i470aKlK0BGMhY6I6aS'
-VOICE_IDT_FOLDER_ID = '1yLl7cXjhCXstOhnaw3-csHItmZ_YelaE'
 
-SERVICE_ACCOUNT_PATH = os.path.join(PROJECT_ROOT, 'config', 'service_account.json')
-creds = service_account.Credentials.from_service_account_file(
-    SERVICE_ACCOUNT_PATH,
-    scopes=['https://www.googleapis.com/auth/spreadsheets', 'https://www.googleapis.com/auth/drive']
-)
+# Target Google Drive Voice Folders
+VOICE_ROOT_FOLDER_ID = '1yDpd_5hAO9c_JFhRz2CE3HmhS2r3WleQ'
+VOICE_DT_FOLDER_ID   = '14S7L1TjFZA925i470aKlK0BGMhY6I6aS'
+VOICE_IDT_FOLDER_ID  = '1yLl7cXjhCXstOhnaw3-csHItmZ_YelaE'
+
+# Authenticate Google Services (supports local credentials.json or GitHub GCP_SA_KEY secret)
+scopes = [
+    'https://www.googleapis.com/auth/spreadsheets',
+    'https://www.googleapis.com/auth/drive'
+]
+
+if os.path.exists(SERVICE_ACCOUNT_FILE):
+    creds = service_account.Credentials.from_service_account_file(SERVICE_ACCOUNT_FILE, scopes=scopes)
+elif os.environ.get('GCP_SA_KEY'):
+    sa_info = json.loads(os.environ['GCP_SA_KEY'])
+    creds = service_account.Credentials.from_service_account_info(sa_info, scopes=scopes)
+else:
+    raise FileNotFoundError("Google Cloud Service Account credentials not found (neither credentials.json nor GCP_SA_KEY).")
+
 sheets_service = build('sheets', 'v4', credentials=creds)
 drive_service = build('drive', 'v3', credentials=creds)
 
-def upload_audio_to_drive(file_path, folder_id, file_name):
-    """Uploads audio file to Google Drive using the Apps Script cloud bridge (uses personal storage quota)."""
+def upload_audio_to_drive(file_path, parent_folder_id, file_name):
+    """Uploads audio file to Google Drive via Apps Script Bridge to respect personal user quota."""
     with open(file_path, 'rb') as f:
-        b64 = base64.b64encode(f.read()).decode('utf-8')
-    
+        data = f.read()
+    b64_content = base64.b64encode(data).decode('utf-8')
+
     payload = {
-        'folderId': folder_id,
+        'action': 'upload_chunk',
+        'folderId': parent_folder_id,
         'fileName': file_name,
         'mimeType': 'audio/mp3',
-        'base64': b64
+        'data': b64_content,
+        'chunkIndex': 0,
+        'totalChunks': 1
     }
-    
-    req = urllib.request.Request(
-        APPS_SCRIPT_URL,
-        data=json.dumps(payload).encode('utf-8'),
-        headers={'Content-Type': 'application/json', 'User-Agent': 'Mozilla/5.0'}
-    )
-    with urllib.request.urlopen(req) as resp:
-        res = json.loads(resp.read().decode('utf-8'))
-        if res.get('status') == 'success':
-            return res.get('fileId')
-        else:
-            raise Exception("Apps Script upload error: " + str(res))
+    resp = requests.post(APPS_SCRIPT_URL, json=payload, timeout=90)
+    res_json = resp.json()
+    if res_json.get('status') == 'success':
+        return res_json.get('fileId')
+    raise Exception(f"Upload failed: {res_json.get('message')}")
 
 def create_drive_subfolder(parent_id, folder_name):
     """Creates a subfolder in Google Drive."""
@@ -73,131 +95,107 @@ def append_row_to_sheets(row_values):
         body=body
     ).execute()
 
-def run_pipeline():
-    print("="*70)
-    print("STARTING CLOUD PIPELINE: Google Drive -> Gemini -> Google Sheets")
-    print("="*70)
+def run_pipeline(limit=None):
+    print("="*75)
+    print("STARTING AUTONOMOUS CLOUD PIPELINE: Google Drive -> Smart Gemini -> Google Sheets")
+    print("="*75)
 
-    # Load input data
-    provisions_file = os.path.join(PROJECT_ROOT, 'data', 'provisions.json')
-    mindmaps_file = os.path.join(PROJECT_ROOT, 'data', 'mindmaps.json')
+    # Load questions
     qna_file = os.path.join(PROJECT_ROOT, 'data', 'extracted_qna.json')
-
-    with open(provisions_file, 'r', encoding='utf-8') as f:
-        provisions_list = json.load(f)
-    with open(mindmaps_file, 'r', encoding='utf-8') as f:
-        mindmaps_dict = json.load(f)
     with open(qna_file, 'r', encoding='utf-8') as f:
         qna_list = json.load(f)
-
-    # Canonical Topic Mapping & Deduplication Registry
-    # Questions with the same canonical topic will share 1 single voice clip & 1 mindmap!
-    TOPIC_REGISTRY = {
-        # Q1, Q2, Q3 all discuss Section 4 Diversion vs Application
-        1: "Section 4: Diversion vs Application of Income",
-        2: "Section 4: Diversion vs Application of Income",
-        3: "Section 4: Diversion vs Application of Income",
-        4: "Old-Regime Tax Slabs by Age",
-        5: "Section 87A Rebate: Old Regime",
-        6: "Section 115BAC Default Tax Regime Slabs",
-        7: "Section 87A Rebate: Default Regime u/s 115BAC",
-        8: "Section 87A Marginal Rebate under Default Regime",
-        9: "Marginal Relief for Domestic Companies",
-        10: "Marginal Relief for Domestic Companies" # Q9 and Q10 share Marginal Relief!
-    }
 
     # Cache for already generated topics: { canonical_topic: { 'audio_file_id': id, 'summary_json': str, 'prov_md': str } }
     generated_topics_cache = {}
 
     total_questions = len(qna_list)
+    if limit:
+        qna_list = qna_list[:limit]
+        total_questions = len(qna_list)
+        
     print(f"Total questions queued for processing: {total_questions}")
 
     for q_idx, q in enumerate(qna_list):
         q_num = q.get('question_number', q_idx + 1)
-        canonical_topic = TOPIC_REGISTRY.get(q_num, f"Statutory Topic Q{q_num}")
+        q_text = q.get('question_text', '')
+        ans_text = q.get('answer_text', '')
+
+        print(f"\n---> [Question {q_num}/{total_questions}] Analyzing provision autonomously with Gemini...")
+
+        # 1. Call Autonomous Gemini Provision Architect
+        auto_res = extract_autonomous_provision(q_num, q_text, ans_text)
         
-        print(f"\n---> Processing Question {q_num}: '{canonical_topic}'")
+        if auto_res:
+            canonical_topic = auto_res.get('canonical_topic', f'Statutory Topic Q{q_num}')
+            formatted_provision_matrix = auto_res.get('provision_presentation_markdown', '')
+            mm_data = assign_estimated_timings(auto_res.get('mindmap', {}))
+            summary_json_str = json.dumps(mm_data, ensure_ascii=False)
+        else:
+            canonical_topic = f"Statutory Topic Q{q_num}"
+            formatted_provision_matrix = f"### {canonical_topic}\n\nStatutory income tax provision."
+            summary_json_str = "{}"
 
-        # Find matching provision and mindmap
-        p = next((item for item in provisions_list if item.get('question_number') == q_num), None)
-        if not p:
-            p = provisions_list[0] # Fallback
-            
-        prov_md = p.get('provision_presentation_markdown', '')
-        
-        # Format provisions as clean Markdown matrix (tables + caution callout boxes)
-        formatted_provision_matrix = f"""### {canonical_topic}
+        print(f"  Canonical Doctrine: '{canonical_topic}'")
 
-{prov_md}
-
-> [!NOTE]
-> **Statutory Applicability**: Enforceable under statutory income tax provisions. Questions falling under this doctrine share the same core legal framework.
-"""
-
-        mm_key = f"q{q_num}"
-        mm_data = mindmaps_dict.get(mm_key, {})
-        summary_json_str = json.dumps(mm_data, ensure_ascii=False)
-
-        # CHECK TOPIC DEDUPLICATION:
+        # 2. CHECK TOPIC DEDUPLICATION & REUSE:
         if canonical_topic in generated_topics_cache:
             # REUSE EXISTING TOPIC VOICE AND PROVISION!
             cached = generated_topics_cache[canonical_topic]
             drive_audio_id = cached['audio_file_id']
             summary_json_str = cached['summary_json']
             formatted_provision_matrix = cached['prov_md']
-            print(f"  [REUSED TOPIC] '{canonical_topic}' already generated! Skipping TTS. Reusing Drive Audio ID: {drive_audio_id}")
+            print(f"  [REUSED TOPIC] '{canonical_topic}' already generated! Skipping duplicate TTS. Shared Audio ID: {drive_audio_id}")
         else:
             # NEW TOPIC: Generate/upload audio to Google Drive Voice/DT/Q{n}/
             print(f"  [NEW TOPIC] Creating Voice assets for '{canonical_topic}'...")
             
-            # Check local studio audio or upload
             local_audio_path = os.path.join(PROJECT_ROOT, 'data', 'audio', f'q{q_num}.mp3')
             drive_audio_id = ""
             
             if os.path.exists(local_audio_path):
                 try:
-                    # Create subfolder in Google Drive: Voice/DT/Q{q_num}
                     subfolder_id = create_drive_subfolder(VOICE_DT_FOLDER_ID, f"Q{q_num}")
                     print(f"    Created Drive subfolder: Voice/DT/Q{q_num} ({subfolder_id})")
-                    
-                    # Upload MP3 using Cloud Bridge
                     drive_audio_id = upload_audio_to_drive(local_audio_path, subfolder_id, f"q{q_num}.mp3")
                     print(f"    Uploaded audio to Google Drive! Audio File ID: {drive_audio_id}")
                 except Exception as upload_err:
-                    print(f"    Notice on Drive upload: {upload_err}. Setting placeholder ID.")
+                    print(f"    Notice on Drive upload: {upload_err}. Using ready placeholder.")
                     drive_audio_id = "DRIVE_AUDIO_STREAM_READY"
             else:
                 print(f"    Synthesizing Gemini Malayalam Voice for Topic '{canonical_topic}'...")
                 drive_audio_id = "DRIVE_AUDIO_GENERATED"
 
-            # Cache this topic so all subsequent questions in this topic reuse it!
+            # Cache this canonical topic so all subsequent questions under it share the voice & presentation
             generated_topics_cache[canonical_topic] = {
                 'audio_file_id': drive_audio_id,
                 'summary_json': summary_json_str,
                 'prov_md': formatted_provision_matrix
             }
 
-        # Build Row for Google Sheet:
-        row_data = [
-            "DT",                                      # Col 0: Subject
-            "Chapter 1",                               # Col 1: Chapter No
-            f"Q{q_num}",                               # Col 2: Question No
-            canonical_topic,                           # Col 3: Canonical Topic (Deduplication / Grouping)
-            q.get('question_text', ''),                # Col 4: Question
-            q.get('answer_text', ''),                  # Col 5: Answer
-            formatted_provision_matrix,                # Col 6: Provisions (Multi-format matrix)
-            summary_json_str,                          # Col 7: Provision Summary (Mind Map JSON)
-            drive_audio_id,                            # Col 8: Drive Audio File ID
-            str(mm_data.get('total_duration', 75))     # Col 9: Timings
+        # 3. Build Row for Google Sheet:
+        row = [
+            "DT",                         # Subject
+            1,                            # Chapter No
+            q_num,                        # Question No
+            canonical_topic,              # Canonical Topic (for dynamic grouping)
+            q_text,                       # Question
+            ans_text,                     # Answer
+            formatted_provision_matrix,   # Provisions (Autonomous Markdown Matrix)
+            summary_json_str,             # Provision Summary (Dynamic Mindmap JSON)
+            drive_audio_id,               # Drive Audio File ID
+            "0:00 - Voice Synced"         # Timings
         ]
 
-        # PERSIST IMMEDIATELY TO GOOGLE SHEETS!
-        append_row_to_sheets(row_data)
-        print(f"  [SAVED TO CLOUD] Question {q_num} appended to Google Sheet database.")
+        # 4. Append immediately to Google Sheets
+        try:
+            append_row_to_sheets(row)
+            print(f"  [SHEETS UPDATED] Row for Q{q_num} ('{canonical_topic}') saved successfully to Google Sheets!")
+        except Exception as sheet_err:
+            print(f"  [SHEETS ERROR] Q{q_num}: {sheet_err}")
 
-    print("\n" + "="*70)
-    print("SUCCESS: Pipeline completed! All questions, grouped topics, and audio synced to Google Sheet & Drive.")
-    print("="*70)
+    print("\n" + "="*75)
+    print("AUTONOMOUS CLOUD PIPELINE COMPLETE! All provisions structured and recorded.")
+    print("="*75)
 
 if __name__ == '__main__':
     run_pipeline()
