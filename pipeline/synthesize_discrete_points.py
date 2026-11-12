@@ -39,9 +39,17 @@ else:
 
 drive_service = build('drive', 'v3', credentials=creds) if creds else None
 
-def create_drive_subfolder(parent_id, folder_name):
+def get_or_create_drive_subfolder(parent_id, folder_name):
     if not drive_service:
         return "FOLDER_ID_PLACEHOLDER"
+    try:
+        q = f"'{parent_id}' in parents and name='{folder_name}' and mimeType='application/vnd.google-apps.folder' and trashed=false"
+        res = drive_service.files().list(q=q, fields='files(id, name)').execute()
+        files = res.get('files', [])
+        if files:
+            return files[0]['id']
+    except Exception:
+        pass
     meta = {
         'name': folder_name,
         'mimeType': 'application/vnd.google-apps.folder',
@@ -123,8 +131,8 @@ def generate_discrete_voice_for_mindmap(q_num: int, mindmap: dict, output_dir: s
     subfolder_id = None
     if upload_to_drive and drive_service:
         try:
-            subfolder_id = create_drive_subfolder(VOICE_DT_FOLDER_ID, f"Q{q_num}")
-            print(f"Created Google Drive Subfolder: Voice/DT/Q{q_num} (ID: {subfolder_id})")
+            subfolder_id = get_or_create_drive_subfolder(VOICE_DT_FOLDER_ID, f"Q{q_num}")
+            print(f"Using Google Drive Subfolder: Voice/DT/Q{q_num} (ID: {subfolder_id})")
         except Exception as e:
             print(f"Drive subfolder notice: {e}")
 
