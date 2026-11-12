@@ -94,7 +94,7 @@ CRITICAL RULES:
 4. If a point naturally contains numerical tables or thresholds, populate 'table_data' with {{ "headers": [...], "rows": [[...], [...]] }}, otherwise set to null.
 5. In 'provision_presentation_markdown':
    - Use clean, standard Markdown tables and bulleted lists (`- ...`).
-   - NEVER use ASCII pseudo-diagrams, pipes, or arrows (e.g. DO NOT write '|------', '|-->', '-->'). Use clean nested bullet lists or tables instead.
+   - NEVER use Unicode box-drawing characters (├──, └──, │, ─) or ASCII pseudo-diagrams, pipes, or arrows (e.g. DO NOT write '├──', '└──', '|------', '|-->', '-->'). Use clean nested bullet lists or tables instead.
    - All markdown bold/italics syntax MUST be properly paired and closed on the same line (e.g. `**Bold Text**`). Never leave unclosed `**` at the end or beginning of headings or callout titles.
    - For callout titles, write: `> [!IMPORTANT] Title Name: Description` (clean plain title, no unclosed markdown asterisks).
    - Any mathematical or tax formula must either be in standard plain text (e.g. `Total Income - ₹ 12,00,000`) or standard closed LaTeX `$formula$` without raw unescaped `&` or `%`.

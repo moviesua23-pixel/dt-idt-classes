@@ -3259,8 +3259,10 @@ function safeKatexRender(tex, displayMode = false){
 
 function processMarkdownCallouts(md){
   if(!md) return "";
-  // 1. Globally convert ASCII pseudo-diagrams (|------, |--->, ---->) into clean markdown bullet items
-  let cleanMd = md.replace(/\s*\|[-—>]{2,}\s*/g, '\n- ');
+  // 1. Globally convert Unicode box-drawing tree characters (├──, └──, │) and ASCII pseudo-diagrams (|------, |--->) into clean markdown bullet items
+  let cleanMd = md.replace(/[ \t]*[\u2500-\u257F]+[ \t\u2500-\u257F\-—>]*/g, '\n- ')
+                  .replace(/[ \t]*\|[-—>]{2,}[ \t]*/g, '\n- ')
+                  .replace(/^- ([A-Za-z0-9\s]{2,30})\s*:\s*/gm, '- **$1:** ');
 
   // 2. Process GitHub alert callouts: > [!NOTE], > [!TIP], > [!IMPORTANT], > [!WARNING], > [!CAUTION]
   let out = cleanMd.replace(/(?:^|\n)(?:>\s*)?\[!(NOTE|TIP|IMPORTANT|WARNING|CAUTION)\](?:\s*:\s*|\s+)?([^\n]+(?:\n(?:>\s*)?[^\n]+)*)/gim, (m, type, body) => {
@@ -3282,9 +3284,9 @@ function processMarkdownCallouts(md){
     const icon = icons[type] || 'ℹ️';
     const label = labels[type] || type;
 
-    // Split lines, remove leading '>' and ASCII pipes
-    let lines = body.split('\n').map(l => l.replace(/^>\s?/, '').replace(/\s*\|[-—>]{2,}\s*/g, '\n- ').trim()).filter(Boolean);
-    let fullText = lines.join('\n');
+    // Split lines, remove leading '>' and ASCII / Unicode box drawing characters
+    let lines = body.split('\n').map(l => l.replace(/^>\s?/, '').replace(/[ \t]*[\u2500-\u257F]+[ \t\u2500-\u257F\-—>]*/g, '\n- ').replace(/[ \t]*\|[-—>]{2,}[ \t]*/g, '\n- ').trim()).filter(Boolean);
+    let fullText = lines.join('\n').replace(/^- ([A-Za-z0-9\s]{2,30})\s*:\s*/gm, '- **$1:** ');
 
     // Extract clean subtitle if present (e.g. "**Difference in Section 87A between Regimes**" or "Status Requirement: ...")
     let subtitle = '';
