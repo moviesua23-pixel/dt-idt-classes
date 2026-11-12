@@ -128,10 +128,11 @@ def synthesize_point_audio(client, text: str, out_mp3_path: str):
     print(f"  [WARN] Neither Gemini TTS succeeded nor is gTTS available to synthesize point.")
     return 'none'
 
-def generate_discrete_voice_for_mindmap(q_num: int, mindmap: dict, output_dir: str, upload_to_drive: bool = True):
+def generate_discrete_voice_for_mindmap(q_num: int, mindmap: dict, output_dir: str, upload_to_drive: bool = True, subject: str = 'DT', chapter_no: int = 1):
     """
     Assigns sequential identification numbers (pt_0, pt_1, ...) to every presentation element,
     synthesizes each point's voice clip, and uploads each to Google Drive.
+    Supports DT / IDT subjects and multi-chapter organization.
     """
     os.makedirs(output_dir, exist_ok=True)
     try:
@@ -142,8 +143,10 @@ def generate_discrete_voice_for_mindmap(q_num: int, mindmap: dict, output_dir: s
     subfolder_id = None
     if upload_to_drive and drive_service:
         try:
-            subfolder_id = get_or_create_drive_subfolder(VOICE_DT_FOLDER_ID, f"Q{q_num}")
-            print(f"Using Google Drive Subfolder: Voice/DT/Q{q_num} (ID: {subfolder_id})")
+            root_folder = VOICE_IDT_FOLDER_ID if str(subject).strip().upper() == 'IDT' else VOICE_DT_FOLDER_ID
+            folder_name = f"Q{q_num}" if chapter_no == 1 else f"Ch{chapter_no}_Q{q_num}"
+            subfolder_id = get_or_create_drive_subfolder(root_folder, folder_name)
+            print(f"Using Google Drive Subfolder: Voice/{subject}/{folder_name} (ID: {subfolder_id})")
         except Exception as e:
             print(f"Drive subfolder notice: {e}")
 

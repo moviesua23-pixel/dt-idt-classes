@@ -48,19 +48,62 @@ else:
 sheets_service = build('sheets', 'v4', credentials=creds) if creds else None
 drive_service = build('drive', 'v3', credentials=creds) if creds else None
 
-def append_row_to_sheets(row_values):
-    """Appends a single question row immediately to Google Sheets database."""
+def upsert_row_to_sheets(row_values):
+    """
+    Upserts a question row into Google Sheets using the composite primary key:
+    (Subject, Chapter No, Question No).
+    If a row matching (Subject, Chapter No, Question No) exists, updates it in place.
+    Otherwise, appends a new row at the bottom.
+    """
     if not sheets_service:
-        print("  [WARN] Sheets service not configured. Skipping append.")
+        print("  [WARN] Sheets service not configured. Skipping save.")
         return
-    body = {'values': [row_values]}
-    sheets_service.spreadsheets().values().append(
-        spreadsheetId=SPREADSHEET_ID,
-        range='Sheet1!A1',
-        valueInputOption='RAW',
-        insertDataOption='INSERT_ROWS',
-        body=body
-    ).execute()
+
+    subject = str(row_values[0]).strip().upper()
+    chapter_no = str(row_values[1]).strip()
+    q_num = str(row_values[2]).strip()
+
+    try:
+        # Fetch columns A to C to identify existing (Subject, Chapter, Question)
+        res = sheets_service.spreadsheets().values().get(
+            spreadsheetId=SPREADSHEET_ID,
+            range='Sheet1!A:C'
+        ).execute()
+        existing_rows = res.get('values', [])
+        
+        target_row_idx = None
+        for idx, r in enumerate(existing_rows, start=1):
+            if len(r) >= 3:
+                r_subj = str(r[0]).strip().upper()
+                r_chap = str(r[1]).strip()
+                r_q = str(r[2]).strip()
+                if r_subj == subject and r_chap == chapter_no and r_q == q_num:
+                    target_row_idx = idx
+                    break
+
+        body = {'values': [row_values]}
+        if target_row_idx:
+            # In-place update of existing row
+            range_to_update = f'Sheet1!A{target_row_idx}:J{target_row_idx}'
+            sheets_service.spreadsheets().values().update(
+                spreadsheetId=SPREADSHEET_ID,
+                range=range_to_update,
+                valueInputOption='RAW',
+                body=body
+            ).execute()
+            print(f"  [SHEETS UPDATED] Row {target_row_idx} updated in-place for {subject} Ch{chapter_no} Q{q_num}!")
+        else:
+            # Append new row
+            sheets_service.spreadsheets().values().append(
+                spreadsheetId=SPREADSHEET_ID,
+                range='Sheet1!A1',
+                valueInputOption='RAW',
+                insertDataOption='INSERT_ROWS',
+                body=body
+            ).execute()
+            print(f"  [SHEETS APPENDED] New row added for {subject} Ch{chapter_no} Q{q_num}!")
+    except Exception as e:
+        print(f"  [SHEETS ERROR] Failed to upsert row ({subject} Ch{chapter_no} Q{q_num}): {e}")
 
 def run_pipeline(limit=None):
     print("="*75)
@@ -82,11 +125,23 @@ def run_pipeline(limit=None):
     print(f"Total questions queued for processing: {total_questions}")
 
     for q_idx, q in enumerate(qna_list):
+        # Determine Subject (DT / IDT) and Chapter No
+        subject = q.get('subject') or os.environ.get('SUBJECT') or 'DT'
+        subject = str(subject).strip().upper()
+        if subject not in ['DT', 'IDT']:
+            subject = 'DT'
+            
+        chapter_no = q.get('chapter_number') or q.get('chapter_no', 1)
+        try:
+            chapter_no = int(chapter_no)
+        except Exception:
+            chapter_no = 1
+
         q_num = q.get('question_number', q_idx + 1)
         q_text = q.get('question_text', '')
         ans_text = q.get('answer_text', '')
 
-        print(f"\n---> [Question {q_num}/{total_questions}] Analyzing provision autonomously with Gemini...")
+        print(f"\n---> [{subject} Ch{chapter_no} Q{q_num} ({q_idx+1}/{total_questions})] Analyzing provision autonomously with Gemini...")
 
         # 1. Call Autonomous Gemini Provision Architect
         auto_res = extract_autonomous_provision(q_num, q_text, ans_text)
@@ -103,24 +158,27 @@ def run_pipeline(limit=None):
         print(f"  Canonical Doctrine: '{canonical_topic}'")
 
         # 2. CHECK TOPIC DEDUPLICATION & REUSE:
-        if canonical_topic in generated_topics_cache:
+        topic_cache_key = f"{subject}_{chapter_no}_{canonical_topic}"
+        if topic_cache_key in generated_topics_cache:
             # REUSE EXISTING TOPIC DISCRETE AUDIO AND PRESENTATION!
-            cached = generated_topics_cache[canonical_topic]
+            cached = generated_topics_cache[topic_cache_key]
             drive_folder_id = cached['folder_id']
             summary_json_str = cached['summary_json']
             formatted_provision_matrix = cached['prov_md']
             print(f"  [REUSED TOPIC] '{canonical_topic}' already generated! Skipping duplicate TTS. Reusing Drive Folder: {drive_folder_id}")
         else:
-            # NEW TOPIC: Generate discrete point audio clips and upload to Google Drive Voice/DT/Q{n}/
-            print(f"  [NEW TOPIC] Creating Point-by-Point Discrete Voice for '{canonical_topic}'...")
+            # NEW TOPIC: Generate discrete point audio clips and upload to Google Drive
+            print(f"  [NEW TOPIC] Creating Point-by-Point Discrete Voice for '{canonical_topic}' ({subject} Ch{chapter_no})...")
             
-            discrete_out_dir = os.path.join(PROJECT_ROOT, 'data', 'audio', f'q{q_num}')
+            discrete_out_dir = os.path.join(PROJECT_ROOT, 'data', 'audio', subject.lower(), f'ch{chapter_no}', f'q{q_num}')
             try:
                 mm_data = generate_discrete_voice_for_mindmap(
                     q_num=q_num,
                     mindmap=mm_data,
                     output_dir=discrete_out_dir,
-                    upload_to_drive=True
+                    upload_to_drive=True,
+                    subject=subject,
+                    chapter_no=chapter_no
                 )
                 drive_folder_id = mm_data.get('drive_folder_id', '')
             except Exception as synth_err:
@@ -130,7 +188,7 @@ def run_pipeline(limit=None):
             summary_json_str = json.dumps(mm_data, ensure_ascii=False)
 
             # Cache this canonical topic so all subsequent questions under it share the exact voice clips & tree
-            generated_topics_cache[canonical_topic] = {
+            generated_topics_cache[topic_cache_key] = {
                 'folder_id': drive_folder_id,
                 'summary_json': summary_json_str,
                 'prov_md': formatted_provision_matrix
@@ -138,8 +196,8 @@ def run_pipeline(limit=None):
 
         # 3. Build Row for Google Sheet:
         row = [
-            "DT",                         # Subject
-            1,                            # Chapter No
+            subject,                      # Subject (DT / IDT)
+            chapter_no,                   # Chapter No
             q_num,                        # Question No
             canonical_topic,              # Canonical Topic (for dynamic grouping)
             q_text,                       # Question
@@ -150,10 +208,9 @@ def run_pipeline(limit=None):
             f"{mm_data.get('total_points_count', len(mm_data.get('branches', [])))} Discrete Audio Points" # Timings/Status
         ]
 
-        # 4. Append immediately to Google Sheets
+        # 4. Upsert (Update existing row in-place or append new row)
         try:
-            append_row_to_sheets(row)
-            print(f"  [SHEETS UPDATED] Row for Q{q_num} ('{canonical_topic}') saved with discrete audio points!")
+            upsert_row_to_sheets(row)
         except Exception as sheet_err:
             print(f"  [SHEETS ERROR] Q{q_num}: {sheet_err}")
 
