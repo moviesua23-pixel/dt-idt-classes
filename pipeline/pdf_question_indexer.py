@@ -157,14 +157,149 @@ def get_question_raw_text(subject, chapter_no, question_no):
     raw_text = "\n".join(chunks).strip()
     return raw_text
 
+def sanitize_and_format_text(text: str, is_question: bool = False) -> str:
+    """
+    Sanitizes raw extracted text from the PDF:
+    - Strips 'Question X' from the beginning of the question.
+    - Strips 'Answer / Solution' header from the beginning of the answer.
+    - Cleans page breaks and running headers.
+    - Fixes font glyph corruptions: replaces %, ¢, =, t, ~, z with ₹ before numbers.
+    - Fixes common OCR errors (e.g. '55(P) Ltd.' -> 'SS(P) Ltd.').
+    - Formats sub-questions ((i), (ii), etc.) into distinct markdown list items.
+    - Converts tabular computations into clean Markdown tables.
+    - Preserves clean paragraph breaks (\n\n).
+    """
+    if not text:
+        return ''
+
+    # 1. Strip Question X prefix from question, or Answer/Solution header from answer
+    if is_question:
+        text = re.sub(r'^\s*Question\s+\d+[:\.\s\-]*\n?', '', text, flags=re.IGNORECASE).strip()
+    else:
+        text = re.sub(r'^\s*(?:Answer|Solution|SOLUTION|ANSWER)\s*[:\-\n]*', '', text, flags=re.IGNORECASE).strip()
+
+    # 2. Strip running book headers and footers
+    header_patterns = [
+        r'CA Final Notes & Updates',
+        r'BY CA ATUL AGARWAL\s*(?:\(AIR-1\))?',
+        r'AIR1CA Career Institute\s*(?:\(ACI\))?',
+        r'Page\s+\d+\.\d+',
+        r'Capital Gains\s*\n',
+        r'SST\s*\n',
+        r'ear a\s*\n\s*a\s*\n\s*ee\s*\n'
+    ]
+    for hp in header_patterns:
+        text = re.sub(hp, '', text, flags=re.IGNORECASE)
+
+    # 3. Currency and corrupted glyph corrections
+    text = re.sub(r'\b55\s*\(P\)\s*Ltd\.', 'SS(P) Ltd.', text)
+    text = re.sub(r'(?:[%¢=t~]|[\uFFFD\u00A2\u20AC])\s*(?=\d)', '₹ ', text)
+    text = re.sub(r'\b8\s+(?=\d{1,3}(?:,\d{2,3})+)', '₹ ', text)
+    text = re.sub(r'[\uFFFD\u201C\u201D\u2018\u2019]', '"', text)
+
+    # 4. Clean up inline whitespace per line
+    raw_lines = text.splitlines()
+    lines = [re.sub(r'[ \t]+', ' ', l).strip() for l in raw_lines]
+
+    # 5. Format computation tables if 'Particulars' is detected
+    formatted_lines = []
+    i = 0
+    n = len(lines)
+    while i < n:
+        line = lines[i]
+        if line.lower() == 'particulars':
+            curr_header = '₹'
+            i += 1
+            if i < n and lines[i].lower() in ['z', 'x', '4', '`', '₹', 'rs.', 'rs']:
+                i += 1
+
+            table_rows = []
+            while i < n:
+                l = lines[i]
+                if not l or l.startswith('(') or l.lower().startswith('note') or l.lower().startswith('question'):
+                    break
+                if i + 1 < n and re.match(r'^[₹\s]*[\d,]+(?:\.\d+)?$', lines[i+1]):
+                    amt = lines[i+1].replace('₹', '').strip()
+                    table_rows.append((l, amt))
+                    i += 2
+                elif re.search(r'[\d,]{4,}', l):
+                    m = re.search(r'^(.*?)\s+([₹\s]*[\d,]+(?:\.\d+)?)$', l)
+                    if m:
+                        table_rows.append((m.group(1).strip(), m.group(2).replace('₹', '').strip()))
+                    else:
+                        table_rows.append((l, ''))
+                    i += 1
+                else:
+                    table_rows.append((l, ''))
+                    i += 1
+
+            if table_rows:
+                formatted_lines.append(f'\n| Particulars | {curr_header} |')
+                formatted_lines.append('| :--- | :---: |')
+                for p_col, a_col in table_rows:
+                    formatted_lines.append(f'| {p_col} | {a_col} |')
+                formatted_lines.append('\n')
+            continue
+
+        # 6. Format sub-questions / list items
+        subq_m = re.match(r'^\(([ivxIVX]+|\d+|[a-zA-Z])\)\s*(.*)$', line)
+        if subq_m:
+            sub_id = subq_m.group(1)
+            sub_text = subq_m.group(2).strip()
+            if not sub_text and i + 1 < n and not lines[i+1].startswith('(') and lines[i+1].lower() != 'particulars':
+                sub_text = lines[i+1].strip()
+                i += 1
+            formatted_lines.append(f'\n\n- **({sub_id})** {sub_text}')
+            i += 1
+            continue
+
+        # Detect paragraph transitions
+        if re.match(r'^(?:One\s+Mr\.|Mr\.|Mrs\.|In\s+this\s+background|You\s+are\s+required|Compute\b|Determine\b|Examine\b)', line):
+            formatted_lines.append(f'\n\n{line}')
+            i += 1
+            continue
+
+        formatted_lines.append(line)
+        i += 1
+
+    # 7. Reconstruct natural paragraph flow
+    res = []
+    current_para = []
+    for l in formatted_lines:
+        l_str = l.strip()
+        if not l_str:
+            if current_para:
+                res.append(' '.join(current_para))
+                current_para = []
+        elif l_str.startswith('|'):
+            if current_para:
+                res.append(' '.join(current_para))
+                current_para = []
+            res.append(l_str)
+        elif l_str.startswith('- **('):
+            if current_para:
+                res.append(' '.join(current_para))
+                current_para = []
+            current_para.append(l_str)
+        else:
+            current_para.append(l_str)
+    if current_para:
+        res.append(' '.join(current_para))
+
+    final_text = '\n\n'.join(res)
+    final_text = re.sub(r'\n{3,}', '\n\n', final_text).strip()
+    return final_text
+
 def split_question_and_answer(raw_text):
     """
-    Splits sliced text into Question and Answer parts using common book headers.
+    Splits sliced text into Question and Answer parts using common book headers,
+    and returns sanitized, formatted Markdown for both parts.
     """
     cleaned_lines = []
     for line in raw_text.splitlines():
         l_str = line.strip()
         if not l_str:
+            cleaned_lines.append('')
             continue
         if re.search(r'(CA Final Notes & Updates|BY CA ATUL AGARWAL|AIR1CA Career Institute|Page\s+\d+\.\d+)', l_str, re.IGNORECASE):
             continue
@@ -185,15 +320,17 @@ def split_question_and_answer(raw_text):
             break
 
     if split_idx != -1:
-        q_part = cleaned_text[:split_idx].strip()
-        ans_part = cleaned_text[split_idx:].strip()
+        q_raw = cleaned_text[:split_idx].strip()
+        ans_raw = cleaned_text[split_idx:].strip()
     else:
-        lines = cleaned_text.splitlines()
+        lines = [l for l in cleaned_text.splitlines() if l.strip()]
         pivot = max(1, len(lines) // 3)
-        q_part = "\n".join(lines[:pivot]).strip()
-        ans_part = "\n".join(lines[pivot:]).strip()
+        q_raw = "\n".join(lines[:pivot]).strip()
+        ans_raw = "\n".join(lines[pivot:]).strip()
 
-    return q_part, ans_part
+    q_formatted = sanitize_and_format_text(q_raw, is_question=True)
+    ans_formatted = sanitize_and_format_text(ans_raw, is_question=False)
+    return q_formatted, ans_formatted
 
 if __name__ == '__main__':
     idx = build_pdf_index(force=True)
