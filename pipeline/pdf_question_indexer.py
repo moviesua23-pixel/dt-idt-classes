@@ -275,7 +275,10 @@ def sanitize_and_format_text(text: str, is_question: bool = False) -> str:
             if current_para:
                 res.append(' '.join(current_para))
                 current_para = []
-            res.append(l_str)
+            if res and res[-1].startswith('|'):
+                res[-1] += '\n' + l_str
+            else:
+                res.append(l_str)
         elif l_str.startswith('- **('):
             if current_para:
                 res.append(' '.join(current_para))
@@ -287,6 +290,9 @@ def sanitize_and_format_text(text: str, is_question: bool = False) -> str:
         res.append(' '.join(current_para))
 
     final_text = '\n\n'.join(res)
+    # Ensure any table rows separated by multiple newlines are tightly collapsed into valid markdown tables
+    while re.search(r'(\|[^\n]+\|)\s*\n\s*\n\s*(?=\|[^\n]+\|)', final_text):
+        final_text = re.sub(r'(\|[^\n]+\|)\s*\n\s*\n\s*(?=\|[^\n]+\|)', r'\1\n', final_text)
     final_text = re.sub(r'\n{3,}', '\n\n', final_text).strip()
     return final_text
 

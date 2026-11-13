@@ -3416,7 +3416,11 @@ function renderQuestionMarkdown(rawQuestion){
  text = text.replace(/[\uFFFD\u201C\u201D\u2018\u2019]/g, '"');
  // 3. Format sub-questions (i), (ii), etc.
  text = text.replace(/(?:^|\n)\s*\(([ivxIVX]+|\d+|[a-zA-Z])\)\s*/g, "\n\n- **($1)** ");
- // 4. Parse markdown
+ // 4. Collapse any blank lines between table rows so markdown renders valid table
+ while (/(\|[^\n]+\|)\s*\n\s*\n\s*(?=\|[^\n]+\|)/.test(text)) {
+  text = text.replace(/(\|[^\n]+\|)\s*\n\s*\n\s*(?=\|[^\n]+\|)/g, "$1\n");
+ }
+ // 5. Parse markdown
  let html = marked.parse(text);
  html = html.replace(/<table>/g, '<div class="tbl-wrap"><table>').replace(/<\/table>/g, '</table></div>');
  return html;
@@ -3425,6 +3429,10 @@ function renderQuestionMarkdown(rawQuestion){
 function renderAnswerMarkdown(rawAnswer){
  if(!rawAnswer) return "";
  let cleaned = processMarkdownCallouts(rawAnswer.trim());
+ // Collapse any blank lines between table rows so markdown renders valid table
+ while (/(\|[^\n]+\|)\s*\n\s*\n\s*(?=\|[^\n]+\|)/.test(cleaned)) {
+  cleaned = cleaned.replace(/(\|[^\n]+\|)\s*\n\s*\n\s*(?=\|[^\n]+\|)/g, "$1\n");
+ }
  let html = marked.parse(cleaned);
  html = html.replace(/<table>/g, '<div class="tbl-wrap"><table>').replace(/<\/table>/g, '</table></div>');
  html = html.replace(/<td>(Step\s*\d+)<\/td>/gi, '<td><span class="step-badge">$1</span></td>');
