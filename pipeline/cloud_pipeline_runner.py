@@ -33,7 +33,12 @@ from pipeline.synthesize_discrete_points import (
     count_total_points,
     count_ready_points
 )
-from pipeline.pdf_question_indexer import build_pdf_index, get_question_raw_text, split_question_and_answer
+from pipeline.pdf_question_indexer import (
+    build_pdf_index,
+    get_question_raw_text,
+    split_question_and_answer,
+    extract_question_with_vision
+)
 
 # Configuration
 SERVICE_ACCOUNT_FILE = os.path.join(PROJECT_ROOT, 'credentials.json')
@@ -240,31 +245,42 @@ def run_pipeline(limit=None, target_chapter=None, target_question=None, target_s
             except Exception:
                 existing_mm = None
 
-        # Fetch or auto-slice question text and answer text
+        # Fetch or auto-extract question text and answer text with 100% vision fidelity
         map_key = (subject, chapter_no, q_num)
-        if map_key in extracted_map:
+        if map_key in extracted_map and not force and extracted_map[map_key].get('vision_verified'):
             q_rec = extracted_map[map_key]
             q_text = q_rec.get('question_text', '')
             ans_text = q_rec.get('answer_text', '')
             q_title = q_rec.get('question_title', f"Ch{chapter_no} Question {q_num}")
         else:
-            print(f"\n---> [{subject} Ch{chapter_no} Q{q_num} ({q_idx+1}/{total_questions})] Slicing text from PDF (pages {item.get('start_page')}-{item.get('end_page')})...")
-            raw_text = get_question_raw_text(subject, chapter_no, q_num)
-            if not raw_text:
+            print(f"\n---> [{subject} Ch{chapter_no} Q{q_num} ({q_idx+1}/{total_questions})] Extracting visually from PDF (pages {item.get('start_page')}-{item.get('end_page')})...")
+            vis_data = extract_question_with_vision(subject, chapter_no, q_num)
+            if not vis_data:
                 print(f"  [ERROR] Could not extract text for {subject} Ch{chapter_no} Q{q_num}. Skipping.")
                 continue
-            q_text, ans_text = split_question_and_answer(raw_text)
-            q_title = f"Ch{chapter_no} Question {q_num}"
+            q_text = vis_data.get('question_text', '')
+            ans_text = vis_data.get('answer_text', '')
+            q_title = vis_data.get('question_title', f"Ch{chapter_no} Question {q_num}")
             new_rec = {
                 "subject": subject,
                 "chapter_number": chapter_no,
                 "question_number": q_num,
                 "question_title": q_title,
                 "question_text": q_text,
-                "answer_text": ans_text
+                "answer_text": ans_text,
+                "vision_verified": True
             }
-            qna_list.append(new_rec)
             extracted_map[map_key] = new_rec
+            found = False
+            for idx_q, q_item in enumerate(qna_list):
+                if (str(q_item.get('subject') or 'DT').upper() == subject and 
+                    int(q_item.get('chapter_number') or q_item.get('chapter_no') or 1) == chapter_no and 
+                    int(q_item.get('question_number') or 0) == q_num):
+                    qna_list[idx_q] = new_rec
+                    found = True
+                    break
+            if not found:
+                qna_list.append(new_rec)
             try:
                 with open(qna_file, 'w', encoding='utf-8') as f:
                     json.dump(qna_list, f, indent=2, ensure_ascii=False)
