@@ -5,6 +5,7 @@ import wave
 import time
 import base64
 import requests
+import re
 from pydub import AudioSegment
 from google.oauth2 import service_account
 from googleapiclient.discovery import build
@@ -119,6 +120,44 @@ def count_ready_points(mindmap: dict) -> int:
                 ready += 1
     return ready
 
+def normalize_script_for_tts(text: str) -> str:
+    """
+    Normalizes dates, section abbreviations, and statutory terms so that
+    Gemini Expressive Neural TTS (Aoede) pronounces them in standard English
+    with zero distortion or mangled phonetics.
+    """
+    if not text:
+        return text
+    # Strip accidental markdown formatting
+    text = re.sub(r'[*_`#]', '', text)
+    # Expand Section abbreviations: u/s, sec. -> Section
+    text = re.sub(r'\b[uU]/[sS]\.?\s*', 'Section ', text)
+    text = re.sub(r'\b[sS]ec\.\s*', 'Section ', text)
+    text = re.sub(r'സെക്ഷൻ\s*', 'Section ', text)
+    # Expand numeric dates (D/M/YYYY or DD-MM-YYYY) into clear spoken English: e.g. 1st April 2001
+    def _date_repl(m):
+        day = int(m.group(1))
+        month_num = int(m.group(2))
+        year = m.group(3)
+        months = ['', 'January', 'February', 'March', 'April', 'May', 'June', 
+                  'July', 'August', 'September', 'October', 'November', 'December']
+        if 1 <= month_num <= 12:
+            suffix = 'th'
+            if day in (1, 21, 31): suffix = 'st'
+            elif day in (2, 22): suffix = 'nd'
+            elif day in (3, 23): suffix = 'rd'
+            return f'{day}{suffix} {months[month_num]} {year}'
+        return m.group(0)
+
+    text = re.sub(r'\b(0?[1-9]|[12][0-9]|3[01])[-/.](0?[1-9]|1[0-2])[-/.]((?:19|20)\d{2})\b', _date_repl, text)
+    # Expand Assessment Year / Financial Year abbreviations
+    text = re.sub(r'\bAY\s*(\d{4}[-–]\d{2,4})\b', r'Assessment Year \1', text, flags=re.IGNORECASE)
+    text = re.sub(r'\bFY\s*(\d{4}[-–]\d{2,4})\b', r'Financial Year \1', text, flags=re.IGNORECASE)
+    text = re.sub(r'\bPY\s*(\d{4}[-–]\d{2,4})\b', r'Previous Year \1', text, flags=re.IGNORECASE)
+    # Clean whitespace
+    text = re.sub(r'\s+', ' ', text).strip()
+    return text
+
 def synthesize_point_audio(text: str, out_mp3_path: str):
     """
     Synthesizes a single point audio STRICTLY using Gemini Expressive Neural TTS (Aoede),
@@ -126,6 +165,7 @@ def synthesize_point_audio(text: str, out_mp3_path: str):
     Zero robotic fallback (gTTS is completely disabled).
     If all keys hit quota limits (429), raises AllKeysQuotaExhaustedError to pause pipeline gracefully.
     """
+    text = normalize_script_for_tts(text)
     tts_models = [
         'gemini-3.1-flash-tts-preview',
         'gemini-3.8-flash-tts',

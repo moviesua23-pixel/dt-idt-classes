@@ -60,7 +60,26 @@ Students need a high-yield, structured, scannable statutory summary:
 2. POINT CHECKLISTS: Use short 1-2 line bullet points for statutory tests (max 2-3 bullets per section).
 3. LENGTH TARGET: Keep 'provision_presentation_markdown' compact and dense (~1,000 to 1,600 characters total).
 
+========================================================================================
+ABSOLUTE CORE MANDATE 4: VOICE PRONUNCIATION & LANGUAGE STANDARDS (UNIVERSAL ENGLISH)
+========================================================================================
+All voice scripts ('voice_sync_text') MUST strictly follow the Kerala CA Education teaching standard:
+1. SECTIONS & SUB-SECTIONS IN ENGLISH:
+   - Always write in standard English Latin script: 'Section 49(1)', 'Section 2(42A)', 'Section 55(2)(aa)', 'Section 112A', 'Rule 8'.
+   - NEVER transliterate sections into Malayalam script (e.g. NEVER write 'സെക്ഷൻ 49(1)' or 'സെക്ഷൻ നാൽപ്പത്തിയൊമ്പത്'). Write purely: 'Section 49(1)'.
+2. DATES & YEARS IN ENGLISH:
+   - Always write dates, financial years, and assessment years in English: '1st April 2001', '31st March 2024', 'Assessment Year 2024-25', 'Financial Year 2023-24'.
+   - NEVER translate dates into Malayalam words (NEVER write 'ഒന്നാം തിയ്യതി ഏപ്രിൽ മാസം' or 'വർഷം 2001-ൽ').
+3. UNIVERSAL DOMAIN RULE FOR ALL TAX, STATUTORY, LEGAL & FINANCIAL TERMS:
+   - Do NOT limit this to a fixed list. ANY and EVERY word or concept related to tax, law, statutory provisions, finance, accounting, or computation MUST remain in standard English.
+   - Examples across all topics: 'Tax', 'Income Tax', 'Capital Gains', 'Capital Asset', 'Cost of Acquisition', 'Fair Market Value', 'Indexed Cost of Acquisition', 'Stamp Duty Value', 'Full Value of Consideration', 'Assessee', 'Previous Owner', 'Transfer', 'Exemption', 'Deduction', 'Set-off', 'Carry Forward', 'Clubbing', 'PGBP', 'Depreciation', 'Written Down Value', 'Slump Sale', 'Deemed Dividend', 'TDS', 'TCS', 'Advance Tax', 'Tax Audit', 'Reassessment', 'Appeal', 'Penalty'.
+   - NEVER coin artificial Malayalam equivalents (do NOT write 'മൂലധന നേട്ടം', 'നികുതി', 'വാങ്ങിയ വില').
+4. SPOKEN SENTENCE STYLE:
+   - Use friendly, spoken Malayalam for sentence framing, connecting words, and explanations ('ഇവിടെ നമ്മൾ ശ്രദ്ധിക്കേണ്ടത്...', 'ഇതിന്റെ legal rule എന്താണെന്ന് നോക്കാം...').
+   - Embed all technical statutory terms, sections, and dates cleanly in English.
+
 Analyze the statutory provisions behind this problem and solution:
+
 ---
 QUESTION {question_number}:
 {question_text}
@@ -131,7 +150,7 @@ You must output a STRICT, VALID JSON object with the following schema:
 CRITICAL FORMATTING RULES:
 1. For multi-provision questions, create up to 5 or 6 branches so NO provision from the question/answer is left out.
 2. Icons can be: scales, shield, calculator, percent, cap, warning, gear, check, user, building, rupee.
-3. Every point must include a high-quality, punchy 'voice_sync_text' in natural Malayalam explaining that card's legal concept in 20-30 seconds.
+3. Every point must include a high-quality, punchy 'voice_sync_text' in natural spoken Malayalam scaffolding, with ALL sections, dates, and legal/tax/financial terms strictly in English Latin script (Mandate 4).
 4. If a point naturally contains numerical tables or thresholds, populate 'table_data' with {{ "headers": [...], "rows": [[...], [...]] }}, otherwise set to null.
 5. In 'provision_presentation_markdown':
    - Table-first and bullet-checklist format. Keep it concise, high-yield, and scannable.
