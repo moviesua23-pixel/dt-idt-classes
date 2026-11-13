@@ -11,7 +11,19 @@ PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
 
-PDF_PATH = os.path.join(PROJECT_ROOT, 'AIR1 DT Question Bank.pdf')
+def get_pdf_path(subject="DT"):
+    if str(subject).upper() == 'IDT':
+        candidates = [
+            os.path.join(PROJECT_ROOT, 'AIR1 IDT Question Bank.pdf'),
+            os.path.join(PROJECT_ROOT, 'IDT Question Bank.pdf'),
+            os.path.join(PROJECT_ROOT, 'pdfs', 'AIR1 IDT Question Bank.pdf'),
+        ]
+        for c in candidates:
+            if os.path.exists(c):
+                return c
+    return os.path.join(PROJECT_ROOT, 'AIR1 DT Question Bank.pdf')
+
+PDF_PATH = get_pdf_path('DT')
 INDEX_FILE = os.path.join(PROJECT_ROOT, 'data', 'question_index.json')
 
 def build_pdf_index(force=False):
@@ -380,7 +392,8 @@ def extract_question_with_vision(subject: str, chapter_no: int, question_no: int
             q_entry = item
             break
 
-    if not q_entry or pymupdf is None or not os.path.exists(PDF_PATH):
+    pdf_file = get_pdf_path(subject)
+    if not q_entry or pymupdf is None or not os.path.exists(pdf_file):
         raw_text = get_question_raw_text(subject, chapter_no, question_no)
         if raw_text:
             q_f, a_f = split_question_and_answer(raw_text)
@@ -391,7 +404,7 @@ def extract_question_with_vision(subject: str, chapter_no: int, question_no: int
         from google.genai import types
         from pipeline.key_rotator import rotator
 
-        doc = pymupdf.open(PDF_PATH)
+        doc = pymupdf.open(pdf_file)
         start_p = q_entry["start_page"] - 1 # 0-indexed
         end_p = q_entry["end_page"] - 1
 
