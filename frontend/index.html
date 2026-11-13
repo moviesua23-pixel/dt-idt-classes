@@ -4045,29 +4045,24 @@ function makePlayer(p, q){
   const urls = [];
   const isLocal = (window.location.protocol === "file:");
   
-  let localUrl = null;
   if (item.audio_file) {
-   const fn = item.audio_file.replace(/\\/g, '/');
-   localUrl = isLocal
-    ? new URL("../data/audio/" + fn, window.location.href).href
-    : (fn.startsWith('/') ? fn : "/data/audio/" + fn);
+   const fn = item.audio_file.replace(/\\/g, '/').replace(/^\/+/, '');
+   if (isLocal) {
+    urls.push(new URL("../data/audio/" + fn, window.location.href).href);
+    urls.push(new URL("data/audio/" + fn, window.location.href).href);
+   } else {
+    urls.push("data/audio/" + fn);
+    urls.push("/data/audio/" + fn);
+    urls.push("../data/audio/" + fn);
+   }
   }
 
-  const driveUrls = [];
   if (item.drive_id && !item.drive_id.startsWith("DRIVE_PT_")) {
-   driveUrls.push("https://drive.google.com/uc?export=download&id=" + item.drive_id);
-   driveUrls.push("https://docs.google.com/uc?export=open&id=" + item.drive_id);
+   urls.push("https://drive.google.com/uc?export=download&id=" + item.drive_id);
+   urls.push("https://docs.google.com/uc?export=open&id=" + item.drive_id);
+   urls.push("https://drive.usercontent.google.com/download?id=" + item.drive_id + "&export=download");
   }
 
-  // On file:/// protocol (local testing), local files have zero CORS overhead, try local first.
-  // On http/https web deployment, prioritize fresh Google Drive cloud streams.
-  if (isLocal) {
-   if (localUrl) urls.push(localUrl);
-   urls.push(...driveUrls);
-  } else {
-   urls.push(...driveUrls);
-   if (localUrl) urls.push(localUrl);
-  }
   return urls;
  }
 
@@ -4295,7 +4290,9 @@ function makePlayer(p, q){
 
   let uIdx = 0;
   function attemptPlayback(){
+   window.clearTimeout(window.__mmAudioPlayTimer);
    if (uIdx >= candidateUrls.length) {
+    audio.__onFallback = null;
     console.warn("All candidate audio sources exhausted for point:", item);
     playing = false;
     root.classList.remove("playing");
@@ -4318,6 +4315,7 @@ function makePlayer(p, q){
     return;
    }
    const nextSrc = candidateUrls[uIdx++];
+   audio.__onFallback = attemptPlayback;
    if (audio.src !== nextSrc) {
     audio.src = nextSrc;
     audio.currentTime = 0;
@@ -4326,6 +4324,7 @@ function makePlayer(p, q){
     const playDelay = (item.id === "root") ? 50 : 1400;
     window.__mmAudioPlayTimer = setTimeout(() => {
      audio.play().then(() => {
+      audio.__onFallback = null;
       playing = true;
       root.classList.add("playing");
       playB.innerHTML = I.pause;
@@ -4346,6 +4345,7 @@ function makePlayer(p, q){
      });
     }, playDelay);
    } else {
+    audio.__onFallback = null;
     playing = false;
     root.classList.remove("playing");
     playB.innerHTML = I.play;
@@ -5806,8 +5806,14 @@ function makePlayer(p, q){
   if (audio.currentTime > 0 && !audio.paused) return;
   if (isDiscreteMode) {
    const item = discretePlaylist[currentPtIdx];
-   console.warn("Audio error on point:", item);
-   // Only show warning if audio is genuinely not playing
+   console.warn("Audio error on point:", item, "src:", audio.src);
+   if (typeof audio.__onFallback === "function") {
+    const fallbackFn = audio.__onFallback;
+    audio.__onFallback = null;
+    fallbackFn();
+    return;
+   }
+   // Only show warning if all candidate sources failed and audio is genuinely not playing
    if (audio.paused && (!audio.currentTime || audio.currentTime === 0)) {
     if (note) note.innerHTML = `⚠️ Audio unavailable for "${esc(item ? item.title : 'this point')}". Review the card points, or tap <b>Skip ⏭</b> to continue.`;
     const vtdLabel = $("#vtd-label");
