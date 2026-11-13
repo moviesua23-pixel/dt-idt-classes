@@ -28,7 +28,7 @@ from pipeline.key_rotator import rotator, AllKeysQuotaExhaustedError, is_quota_e
 AUTONOMOUS_PROMPT_TEMPLATE = """You are a distinguished Senior CA Final Tax Professor and Expert Visual Learning Architect for Indian Direct Tax and Indirect Tax.
 
 ========================================================================================
-ABSOLUTE CORE MANDATE: PURE STATUTORY PROVISION PRESENTATION (ZERO EXAM FACTS)
+ABSOLUTE CORE MANDATE 1: PURE STATUTORY LAW ONLY (ZERO EXAM FACTS)
 ========================================================================================
 You are creating a timeless, standalone visual lecture on the STATUTORY LAW / DOCTRINE itself.
 The question and answer below are provided SOLELY for you to identify WHICH statutory sections, rules, and judicial doctrines are involved.
@@ -44,9 +44,23 @@ DO NOT SOLVE OR EXPLAIN THE EXAM QUESTION!
    - The statutory section rules, conditions, and thresholds.
    - Judicial benchmarks and precedents (e.g. Supreme Court / High Court tests).
    - Universal tax treatments, rates, and exemptions.
-========================================================================================
 
-Analyze the underlying statutory law behind this problem and solution:
+========================================================================================
+ABSOLUTE CORE MANDATE 2: 100% STATUTORY COVERAGE (ZERO PROVISIONS AVOIDED)
+========================================================================================
+Identify EVERY SINGLE statutory provision, section, sub-section, rule, proviso, explanation, threshold, and judicial precedent contained in or relied upon by the question and solution.
+DO NOT omit or drop any provision! Even if a question touches 4, 5, or 6 distinct provisions across different heads of income (e.g. PGBP + Capital Gains + TDS + Set-off + Chapter VI-A), EVERY ONE of them must be captured in your summary.
+
+========================================================================================
+ABSOLUTE CORE MANDATE 3: CONCISE EXECUTIVE SUMMARY (NO ESSAY BLOAT)
+========================================================================================
+Do NOT explain provisions in long narrative essays or theoretical paragraphs.
+Students need a high-yield, structured, scannable statutory summary:
+1. TABLE FIRST: Use concise Markdown tables to map provisions, conditions, and tax treatments.
+2. POINT CHECKLISTS: Use short 1-2 line bullet points for statutory tests (max 2-3 bullets per section).
+3. LENGTH TARGET: Keep 'provision_presentation_markdown' compact and dense (~1,000 to 1,600 characters total).
+
+Analyze the statutory provisions behind this problem and solution:
 ---
 QUESTION {question_number}:
 {question_text}
@@ -55,49 +69,57 @@ SOLUTION / STATUTORY BASIS:
 {answer_text}
 ---
 
-Your mission is to autonomously design a bespoke, highly effective visual learning presentation and mindmap specifically tailored to this statutory provision.
+STRUCTURAL DESIGN RULES BASED ON QUESTION TYPE:
+A. IF MULTI-PROVISION / MULTI-TOPIC (contains 2 to 6 provisions from different areas/heads):
+   - In 'provision_presentation_markdown':
+     1. Create a Master "Statutory Summary Matrix" table at the top:
+        | Area / Head | Statutory Section / Rule | Operative Threshold / Condition | Tax Treatment / Legal Consequence |
+     2. Follow with compact micro-checklists (strictly 2 bullets per section) stating key exceptions or traps.
+     3. If provisions integrate into a computation, provide a clean 3-4 line mathematical sequence.
+   - In 'mindmap':
+     Create a dedicated branch for EACH distinct provision (e.g. Branch 1: § 43B, Branch 2: § 40(a)(ia), Branch 3: § 50C, Branch 4: § 71, Branch 5: § 80JJAA). This ensures every provision gets its own visual card and independent audio point!
 
-DO NOT restrict yourself to any fixed template, category, or predetermined structure. Tax law contains thousands of diverse provisions:
-- If this law involves progressive slabs/rates -> structure it with tiered visual slab matrices.
-- If it is a comparative legal doctrine -> structure it with side-by-side distinction criteria and judicial benchmarks.
-- If it is a multi-step computation -> structure it with a sequential mathematical ladder and verification thresholds.
-- If it is an exemption/qualification rule -> structure it with statutory eligibility gates, disqualifications, and monetary caps.
-- If it involves procedural timelines or reassessments -> structure it with chronological milestones and jurisdictional time limits.
-- If it is an adjustment mechanism (like MAT u/s 115JB) -> structure it with positive and negative adjustment matrices.
+B. IF SINGLE-PROVISION / SINGLE-TOPIC:
+   - In 'provision_presentation_markdown':
+     1. Create a clean classification table, rate matrix, or comparison grid.
+     2. Provide a 2-3 bullet checklist of core statutory conditions.
+     3. Add a callout box (> [!WARNING] or > [!IMPORTANT]) for statutory traps or judicial benchmarks.
+   - In 'mindmap':
+     Create 3 to 4 branches covering the organic aspects of that provision (e.g. Scope, Eligibility Criteria, Disqualifications, Tax Impact).
 
 You must output a STRICT, VALID JSON object with the following schema:
 {{
-  "canonical_topic": "The definitive, standardized name of this statutory doctrine (e.g. 'Section 4: Diversion vs Application of Income', 'Section 115BAC Default Tax Regime Slabs', 'Marginal Relief for Domestic Companies'). Multiple questions testing the same doctrine MUST share this exact canonical name.",
-  "statutory_sections": ["Section ...", "Rule ..."],
-  "core_principle": "A concise 1-sentence statement of the core statutory rule.",
-  "provision_presentation_markdown": "A comprehensive, elegant GitHub Flavored Markdown visual presentation of the statutory provision. Freely use clean Markdown tables, bulleted lists, and GitHub callout boxes (> [!NOTE], > [!IMPORTANT], > [!WARNING]) to highlight rules and common traps. DO NOT mention 'in this question' - explain the statutory law itself.",
+  "canonical_topic": "Definitive, standardized name of this statutory doctrine (e.g. 'Section 4: Diversion vs Application of Income' or 'Integrated Multi-Provision Assessment: PGBP, Capital Gains & Set-off'). Multiple questions on the exact same doctrine must share this name.",
+  "statutory_sections": ["Section ...", "Section ...", "Rule ..."],
+  "core_principle": "A concise 1-sentence executive summary of the statutory rule or multi-provision framework.",
+  "provision_presentation_markdown": "A high-yield, structured GitHub Flavored Markdown summary. Table-first, followed by crisp bullets and clean callout boxes (> [!NOTE], > [!IMPORTANT], > [!WARNING]). Strictly NO essay paragraphs and NO exam question facts.",
   "mindmap": {{
-    "doctrine": "Name of the statutory doctrine",
+    "doctrine": "Name of the statutory doctrine or multi-provision framework",
     "root": {{
       "id": "root",
       "number": "1",
       "title": "Title of the doctrine",
-      "badge": "Statutory citation (e.g. Section 4 · Section 28)",
-      "voice_sync_text": "Spoken Malayalam introduction by the teacher introducing this specific statutory provision (e.g. 'ഇന്ന് നമ്മൾ പഠിക്കുന്നത്...')."
+      "badge": "Key statutory citations (e.g. Sec 49(1) · Sec 48 or Sec 43B · Sec 50C · Sec 40(a)(ia))",
+      "voice_sync_text": "Spoken Malayalam introduction by the professor introducing the statutory provisions to be learned (approx. 10-15 seconds). Pure law only."
     }},
     "branches": [
       {{
         "branch_id": "branch-1",
-        "branch_title": "First organic aspect of this provision",
-        "badge": "Short badge",
+        "branch_title": "Name of provision or aspect (e.g. Section 43B Statutory Dues or Section 49(1) Previous Owner Cost)",
+        "badge": "Section badge",
         "icon": "scales",
         "points": [
           {{
             "id": "beat-1-1",
-            "title": "Clear sub-point title",
+            "title": "Operative Rule Title",
             "number": "1.1.1",
             "badge": "Rule",
             "body": [
-              "Key statutory rule bullet 1",
-              "Key statutory rule bullet 2"
+              "Exact statutory condition bullet 1",
+              "Exact legal consequence or formula bullet 2"
             ],
             "table_data": null,
-            "voice_sync_text": "Spoken Malayalam teacher explanation of the legal rule in this point (clear, conversational, professional CA teaching style with phonetic English statutory terms). ABSOLUTELY NEVER mention question-specific facts, question numbers, company names, or individual names."
+            "voice_sync_text": "Punchy 2-3 sentence Malayalam teacher explanation of this specific card's legal rule (approx. 20-30 seconds). Clear, professional CA teaching style with standard English tax terms. ABSOLUTELY NEVER mention question-specific facts, question numbers, company names, or individual names."
           }}
         ],
         "flow_summary": []
@@ -106,23 +128,18 @@ You must output a STRICT, VALID JSON object with the following schema:
   }}
 }}
 
-CRITICAL RULES:
-1. Autonomously choose the number of branches (typically 3 to 5) and points that best reflect the legal anatomy of this specific provision.
+CRITICAL FORMATTING RULES:
+1. For multi-provision questions, create up to 5 or 6 branches so NO provision from the question/answer is left out.
 2. Icons can be: scales, shield, calculator, percent, cap, warning, gear, check, user, building, rupee.
-3. Every point must include a high-quality, professional 'voice_sync_text' in natural Malayalam explaining that card's legal concept.
+3. Every point must include a high-quality, punchy 'voice_sync_text' in natural Malayalam explaining that card's legal concept in 20-30 seconds.
 4. If a point naturally contains numerical tables or thresholds, populate 'table_data' with {{ "headers": [...], "rows": [[...], [...]] }}, otherwise set to null.
 5. In 'provision_presentation_markdown':
-   - Use clean, standard Markdown tables and bulleted lists (`- ...`).
-   - NEVER use Unicode box-drawing characters (├──, └──, │, ─) or ASCII pseudo-diagrams, pipes, or arrows (e.g. DO NOT write '├──', '└──', '|------', '|-->', '-->'). Use clean nested bullet lists or tables instead.
-   - All markdown bold/italics syntax MUST be properly paired and closed on the same line (e.g. `**Bold Text**`). Never leave unclosed `**` at the end or beginning of headings or callout titles.
+   - Table-first and bullet-checklist format. Keep it concise, high-yield, and scannable.
+   - NEVER use Unicode box-drawing characters (├──, └──, │, ─) or ASCII pseudo-diagrams, pipes, or arrows.
+   - All markdown bold/italics syntax MUST be properly paired and closed on the same line (e.g. `**Bold Text**`).
    - For callout titles, write: `> [!IMPORTANT] Title Name: Description` (clean plain title, no unclosed markdown asterisks).
-   - Any mathematical or tax formula must either be in standard plain text (e.g. `Total Income - ₹ 12,00,000`) or standard closed LaTeX `$formula$` without raw unescaped `&` or `%`.
-6. PURE STATUTORY PROVISION ONLY (STRICT NEGATIVE CONSTRAINT):
-   - You are creating a reusable concept lecture on the STATUTORY LAW itself.
-   - You must NEVER explain the question facts, solve the question, or mention person/company names from the problem (e.g. NEVER mention 'Mr. Ankur', 'Yahoo Movies Limited', '₹ 5,00,000', 'Mr. Mahesh', 'XYZ Ltd', etc.).
-   - NEVER say "In this question", "According to the problem", or "Therefore the assessee has to pay".
-   - The mindmap cards, body bullet points, and Malayalam voice scripts must explain EXCLUSIVELY the statutory section rules, conditions, exceptions, legal tests, and judicial precedents in general doctrine terms.
-7. Return ONLY the raw JSON object, without backticks or markdown fences.
+   - Mathematical or tax formulas must either be in standard plain text (e.g. `Total Income - ₹ 12,00,000`) or standard closed LaTeX `$formula$` without raw unescaped `&` or `%`.
+6. Return ONLY the raw JSON object, without backticks or markdown fences.
 """
 
 def extract_autonomous_provision(question_number: int, question_text: str, answer_text: str, max_retries: int = 3) -> Optional[Dict[str, Any]]:
