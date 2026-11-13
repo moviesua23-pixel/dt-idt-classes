@@ -364,6 +364,98 @@ def split_question_and_answer(raw_text):
     ans_formatted = sanitize_and_format_text(ans_raw, is_question=False)
     return q_formatted, ans_formatted
 
+def extract_question_with_vision(subject: str, chapter_no: int, question_no: int):
+    """
+    3-Stage Visual Pipeline:
+    1. Look up start_page and end_page from PDF index.
+    2. Render high-resolution JPEG images of the page range using PyMuPDF.
+    3. Pass images to Gemini 3.5 Flash with strict structural instructions to extract
+       tables, subheadings, aligned NIL amounts, and separate paragraphs with 100% fidelity.
+    Falls back gracefully to text slicing if offline or on error.
+    """
+    index = build_pdf_index()
+    q_entry = None
+    for item in index:
+        if item["subject"] == subject and item["chapter_no"] == chapter_no and item["question_no"] == question_no:
+            q_entry = item
+            break
+
+    if not q_entry or pymupdf is None or not os.path.exists(PDF_PATH):
+        raw_text = get_question_raw_text(subject, chapter_no, question_no)
+        if raw_text:
+            q_f, a_f = split_question_and_answer(raw_text)
+            return {"question_text": q_f, "answer_text": a_f}
+        return None
+
+    try:
+        from google.genai import types
+        from pipeline.key_rotator import rotator
+
+        doc = pymupdf.open(PDF_PATH)
+        start_p = q_entry["start_page"] - 1 # 0-indexed
+        end_p = q_entry["end_page"] - 1
+
+        parts = []
+        for p in range(start_p, end_p + 1):
+            page = doc[p]
+            pix = page.get_pixmap(dpi=150)
+            img_bytes = pix.tobytes('jpeg')
+            parts.append(types.Part.from_bytes(data=img_bytes, mime_type='image/jpeg'))
+
+        prompt = f"""You are an expert CA Final Direct Tax examiner and parser.
+Look at the attached page images covering Question {question_no}.
+
+Your task is to extract Question {question_no} and its complete Answer / Solution with 100% fidelity to the visual layout.
+
+MANDATORY RULES:
+1. QUESTION TEXT:
+   - Extract the complete question narrative.
+   - Do NOT prepend "Question {question_no}:" or "Q{question_no}:" to the text.
+2. COMPUTATION TABLES:
+   - Format all computation tables as GitHub Flavored Markdown tables.
+   - Table headers must be | Particulars | ₹ |
+   - CRITICAL: Look closely at amounts and columns in the image. Every line item must pair with its exact amount.
+   - If an item has 'NIL' as its cost/amount (e.g. Less: Cost of acquisition [Note 2]), put 'NIL' in the amount column (| Less: Cost of acquisition [Note 2] | NIL |), NEVER as an orphan row!
+   - Table section subheadings must be bold (e.g. | **1000 Original shares** | | or | **200 Right shares** | |).
+   - Multiplication signs must be "×" (e.g. 1000 × ₹ 300, 200 × ₹ 30), NOT "=" or "*".
+   - Subtotals and Grand totals must be bold (e.g. | **Capital Gains (A+B+C)** | **2,59,000** |).
+   - If there is a second computation table, format it cleanly as a separate table with header above it.
+3. NOTES & PARAGRAPHS:
+   - Every Note (e.g. Note 1:, Note 2:, Note:) MUST be formatted in its own distinct paragraph separated by blank lines (\\n\\n).
+   - Section headers like "Computation of capital gains in the hands of Mr. Q" must be on their own line with blank lines around them.
+4. JSON OUTPUT:
+   Output ONLY a valid JSON object with no markdown fences, no surrounding commentary:
+{{
+  "chapter_number": {chapter_no},
+  "question_number": {question_no},
+  "question_title": "Concise concept title",
+  "question_text": "...",
+  "answer_text": "..."
+}}
+"""
+
+        def _call(client):
+            return client.models.generate_content(
+                model='gemini-3.5-flash',
+                contents=parts + [prompt],
+                config=types.GenerateContentConfig(
+                    response_mime_type='application/json',
+                    temperature=0.1
+                )
+            )
+
+        resp = rotator.execute_with_retry(_call)
+        raw = resp.text.strip()
+        parsed = json.loads(raw)
+        return parsed
+    except Exception as e:
+        print(f"[VISION EXTRACTOR] Gemini vision call encountered: {e}. Falling back to text slicing...")
+        raw_text = get_question_raw_text(subject, chapter_no, question_no)
+        if raw_text:
+            q_f, a_f = split_question_and_answer(raw_text)
+            return {"question_text": q_f, "answer_text": a_f}
+        return None
+
 if __name__ == '__main__':
     idx = build_pdf_index(force=True)
     q11_text = get_question_raw_text('DT', 1, 11)
