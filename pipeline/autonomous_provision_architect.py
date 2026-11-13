@@ -27,7 +27,26 @@ from pipeline.key_rotator import rotator, AllKeysQuotaExhaustedError, is_quota_e
 
 AUTONOMOUS_PROMPT_TEMPLATE = """You are a distinguished Senior CA Final Tax Professor and Expert Visual Learning Architect for Indian Direct Tax and Indirect Tax.
 
-Analyze this statutory problem, answer, and underlying legal provisions:
+========================================================================================
+ABSOLUTE CORE MANDATE: PURE STATUTORY PROVISION PRESENTATION (ZERO EXAM FACTS)
+========================================================================================
+You are creating a timeless, standalone visual lecture on the STATUTORY LAW / DOCTRINE itself.
+The question and answer below are provided SOLELY for you to identify WHICH statutory sections, rules, and judicial doctrines are involved.
+
+DO NOT SOLVE OR EXPLAIN THE EXAM QUESTION!
+1. NEVER mention the assessee's name or company name (e.g. NEVER mention 'Mr. Ankur', 'Yahoo Movies Limited', 'Mr. Mahesh', 'ABC Ltd', 'Mr. X', etc.).
+2. NEVER mention problem-specific transaction figures (e.g. '₹ 5,00,000', '₹ 11,00,000', etc.).
+3. NEVER write or speak phrases like:
+   - 'In this question...' / 'According to the given question...'
+   - 'ഈ ചോദ്യത്തിൽ...' / 'ചോദ്യത്തിൽ പറഞ്ഞിരിക്കുന്ന...'
+   - 'അതുകൊണ്ട് അങ്കുറിന്...' / 'അസ്സസ്സീക്ക് ലഭിച്ച തുക...'
+4. Every single card, markdown table, and Malayalam voice script must explain EXCLUSIVELY:
+   - The statutory section rules, conditions, and thresholds.
+   - Judicial benchmarks and precedents (e.g. Supreme Court / High Court tests).
+   - Universal tax treatments, rates, and exemptions.
+========================================================================================
+
+Analyze the underlying statutory law behind this problem and solution:
 ---
 QUESTION {question_number}:
 {question_text}

@@ -1,4 +1,4 @@
-﻿import sys
+import sys
 import os
 
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -43,6 +43,16 @@ def run_phase2():
         print(f"[{idx}/{total}] Generating elegant table for Question {q_num}...")
         
         prompt = f"""You are a senior Direct Tax professor and expert UI designer for CA Final educational platforms.
+
+========================================================================================
+ABSOLUTE CORE MANDATE: PURE STATUTORY PROVISION PRESENTATION (ZERO EXAM FACTS)
+========================================================================================
+Explain EXCLUSIVELY the statutory law, sections, rules, and judicial doctrines.
+DO NOT SOLVE OR EXPLAIN THE EXAM QUESTION!
+NEVER mention the assessee's name, company name, or transaction figures.
+NEVER say 'in this question' or 'ഈ ചോദ്യത്തിൽ'.
+========================================================================================
+
 Analyze this tax problem and solution:
 Question: {q.get('question_text')}
 Answer: {q.get('answer_text')[:1500]}
@@ -55,7 +65,7 @@ Generate:
    - For Comparative Doctrines (e.g. Diversion vs Application of Income, Default vs Old Regime): Output a COMPARISON TABLE with columns: (Basis of Distinction | Concept A | Concept B).
    - For Multi-step conditions or computations: Output concise numbered steps or key-value cards.
    - AVOID dense, long paragraphs of text. Make it easy for a student to grasp in 5 seconds.
-4. "malayalam_audio_script": Spoken Malayalam explaining ONLY the statutory provision directly (no mention of "ഈ ചോദ്യം").
+4. "malayalam_audio_script": Spoken Malayalam explaining ONLY the statutory provision directly (no mention of "ഈ ചോദ്യം" or person names).
 
 Return STRICTLY a JSON object:
 {{
