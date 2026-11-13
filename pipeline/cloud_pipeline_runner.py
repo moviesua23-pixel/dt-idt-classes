@@ -158,7 +158,7 @@ def fetch_existing_sheet_database():
         print(f"  [WARN] Failed to fetch existing sheets database: {e}")
         return {}
 
-def run_pipeline(limit=None, target_chapter=None, target_question=None, target_subject=None):
+def run_pipeline(limit=None, target_chapter=None, target_question=None, target_subject=None, force=False):
     print("="*75)
     print("STARTING POINT-BY-POINT CLOUD PIPELINE: Drive -> Gemini -> Discrete Voice -> Sheets")
     print("="*75)
@@ -228,12 +228,15 @@ def run_pipeline(limit=None, target_chapter=None, target_question=None, target_s
                 is_partial = parsed_mm.get('is_partially_complete', False)
                 status_low = existing.get('status', '').lower()
 
-                if total_pts > 0 and ready_pts >= total_pts and not is_partial and 'paused' not in status_low:
+                if not force and total_pts > 0 and ready_pts >= total_pts and not is_partial and 'paused' not in status_low:
                     print(f"\n---> [{subject} Ch{chapter_no} Q{q_num} ({q_idx+1}/{total_questions})] Already 100% complete ({ready_pts}/{total_pts} discrete audio points). Skipping!")
                     continue
-                else:
+                elif not force:
                     existing_mm = parsed_mm
                     print(f"\n---> [{subject} Ch{chapter_no} Q{q_num} ({q_idx+1}/{total_questions})] Found partial progress ({ready_pts}/{total_pts} points). Resuming...")
+                else:
+                    existing_mm = None
+                    print(f"\n---> [{subject} Ch{chapter_no} Q{q_num} ({q_idx+1}/{total_questions})] --force specified: Re-generating provision from scratch...")
             except Exception:
                 existing_mm = None
 
@@ -395,11 +398,13 @@ if __name__ == '__main__':
     parser.add_argument('--chapter', type=int, default=None, help="Process specific chapter number")
     parser.add_argument('--question', type=int, default=None, help="Process specific question number")
     parser.add_argument('--subject', type=str, default=None, help="Process specific subject (DT / IDT)")
+    parser.add_argument('--force', action='store_true', help="Force re-generation of provision even if already in Sheets")
     args = parser.parse_args()
 
     run_pipeline(
         limit=args.limit,
         target_chapter=args.chapter,
         target_question=args.question,
-        target_subject=args.subject
+        target_subject=args.subject,
+        force=args.force
     )

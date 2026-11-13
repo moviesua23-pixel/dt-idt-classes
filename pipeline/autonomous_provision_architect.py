@@ -78,7 +78,7 @@ You must output a STRICT, VALID JSON object with the following schema:
               "Key statutory rule bullet 2"
             ],
             "table_data": null,
-            "voice_sync_text": "Spoken Malayalam teacher explanation of this point (clear, conversational, professional CA teaching style with phonetic English statutory terms)."
+            "voice_sync_text": "Spoken Malayalam teacher explanation of the legal rule in this point (clear, conversational, professional CA teaching style with phonetic English statutory terms). ABSOLUTELY NEVER mention question-specific facts, question numbers, company names, or individual names."
           }}
         ],
         "flow_summary": []
@@ -98,7 +98,12 @@ CRITICAL RULES:
    - All markdown bold/italics syntax MUST be properly paired and closed on the same line (e.g. `**Bold Text**`). Never leave unclosed `**` at the end or beginning of headings or callout titles.
    - For callout titles, write: `> [!IMPORTANT] Title Name: Description` (clean plain title, no unclosed markdown asterisks).
    - Any mathematical or tax formula must either be in standard plain text (e.g. `Total Income - ₹ 12,00,000`) or standard closed LaTeX `$formula$` without raw unescaped `&` or `%`.
-6. Return ONLY the raw JSON object, without backticks or markdown fences.
+6. PURE STATUTORY PROVISION ONLY (STRICT NEGATIVE CONSTRAINT):
+   - You are creating a reusable concept lecture on the STATUTORY LAW itself.
+   - You must NEVER explain the question facts, solve the question, or mention person/company names from the problem (e.g. NEVER mention 'Mr. Ankur', 'Yahoo Movies Limited', '₹ 5,00,000', 'Mr. Mahesh', 'XYZ Ltd', etc.).
+   - NEVER say "In this question", "According to the problem", or "Therefore the assessee has to pay".
+   - The mindmap cards, body bullet points, and Malayalam voice scripts must explain EXCLUSIVELY the statutory section rules, conditions, exceptions, legal tests, and judicial precedents in general doctrine terms.
+7. Return ONLY the raw JSON object, without backticks or markdown fences.
 """
 
 def extract_autonomous_provision(question_number: int, question_text: str, answer_text: str, max_retries: int = 3) -> Optional[Dict[str, Any]]:

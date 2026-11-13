@@ -15,7 +15,7 @@ if PROJECT_ROOT not in sys.path:
 
 from pipeline.cloud_pipeline_runner import fetch_existing_sheet_database
 
-def sync_audio_from_drive():
+def sync_audio_from_drive(force=False):
     print("=" * 70)
     print("SYNCHRONIZING GOOGLE DRIVE AUDIO FILES TO LOCAL DISK")
     print("=" * 70)
@@ -48,7 +48,7 @@ def sync_audio_from_drive():
                 continue
 
             local_path = os.path.join(PROJECT_ROOT, 'data', 'audio', rel_path.replace('/', os.sep))
-            if os.path.exists(local_path) and os.path.getsize(local_path) > 1000:
+            if not force and os.path.exists(local_path) and os.path.getsize(local_path) > 1000:
                 total_already_local += 1
                 continue
 
@@ -71,4 +71,5 @@ def sync_audio_from_drive():
     print("=" * 70)
 
 if __name__ == '__main__':
-    sync_audio_from_drive()
+    force_sync = '--force' in sys.argv
+    sync_audio_from_drive(force=force_sync)
