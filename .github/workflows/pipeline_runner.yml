@@ -10,6 +10,14 @@ on:
         description: 'Subject to process (DT / IDT / BOTH)'
         required: true
         default: 'BOTH'
+      chapter:
+        description: 'Specific Chapter number to process (leave blank for sequential)'
+        required: false
+        default: ''
+      limit:
+        description: 'Max new questions to process in this run (leave blank for unlimited)'
+        required: false
+        default: ''
 
 permissions:
   contents: write
@@ -49,7 +57,14 @@ jobs:
           DRIVE_ROOT_ID: ${{ secrets.DRIVE_ROOT_ID }}
           SPREADSHEET_ID: ${{ secrets.SPREADSHEET_ID }}
         run: |
-          python -u pipeline/cloud_pipeline_runner.py
+          CLI_ARGS=""
+          if [ -n "${{ github.event.inputs.chapter }}" ]; then
+            CLI_ARGS="$CLI_ARGS --chapter ${{ github.event.inputs.chapter }}"
+          fi
+          if [ -n "${{ github.event.inputs.limit }}" ]; then
+            CLI_ARGS="$CLI_ARGS --limit ${{ github.event.inputs.limit }}"
+          fi
+          python -u pipeline/cloud_pipeline_runner.py $CLI_ARGS
 
       - name: Commit & Push Updated Data Files (if any)
         run: |

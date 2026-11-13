@@ -24,6 +24,7 @@ try:
 except Exception:
     pass
 
+import argparse
 from pipeline.key_rotator import rotator, AllKeysQuotaExhaustedError, is_quota_error
 from pipeline.autonomous_provision_architect import extract_autonomous_provision, assign_estimated_timings
 from pipeline.synthesize_discrete_points import (
@@ -32,6 +33,7 @@ from pipeline.synthesize_discrete_points import (
     count_total_points,
     count_ready_points
 )
+from pipeline.pdf_question_indexer import build_pdf_index, get_question_raw_text, split_question_and_answer
 
 # Configuration
 SERVICE_ACCOUNT_FILE = os.path.join(PROJECT_ROOT, 'credentials.json')
@@ -156,47 +158,67 @@ def fetch_existing_sheet_database():
         print(f"  [WARN] Failed to fetch existing sheets database: {e}")
         return {}
 
-def run_pipeline():
+def run_pipeline(limit=None, target_chapter=None, target_question=None, target_subject=None):
     print("="*75)
     print("STARTING POINT-BY-POINT CLOUD PIPELINE: Drive -> Gemini -> Discrete Voice -> Sheets")
     print("="*75)
 
+    # 1. Load existing extracted Q&A
     qna_file = os.path.join(PROJECT_ROOT, 'data', 'extracted_qna.json')
-    with open(qna_file, 'r', encoding='utf-8') as f:
-        qna_list = json.load(f)
+    qna_list = []
+    if os.path.exists(qna_file):
+        try:
+            with open(qna_file, 'r', encoding='utf-8') as f:
+                qna_list = json.load(f)
+        except Exception:
+            qna_list = []
 
-    # Cache for already generated topics: { topic_cache_key: { 'folder_id': id, 'summary_json': str, 'prov_md': str } }
-    generated_topics_cache = {}
+    # Map of already extracted questions: {(subject, chapter_no, q_num): q}
+    extracted_map = {}
+    for q in qna_list:
+        sub = str(q.get('subject') or 'DT').strip().upper()
+        ch = int(q.get('chapter_number') or q.get('chapter_no') or 1)
+        qn = int(q.get('question_number') or 0)
+        extracted_map[(sub, ch, qn)] = q
 
-    total_questions = len(qna_list)
-    print(f"Total questions queued for processing: {total_questions}")
+    # 2. Load entire question index (all 580 questions across 25 chapters)
+    full_index = build_pdf_index()
 
-    # 1. Fetch current progress from Google Sheets for Smart Resumption
+    # Filter by user CLI preferences if specified
+    queue = []
+    for item in full_index:
+        s = item['subject']
+        c = item['chapter_no']
+        q = item['question_no']
+
+        if target_subject and s != target_subject.upper():
+            continue
+        if target_chapter and c != target_chapter:
+            continue
+        if target_question and q != target_question:
+            continue
+        queue.append(item)
+
+    total_questions = len(queue)
+    print(f"Total questions queued in question bank: {total_questions}")
+
+    # 3. Fetch current progress from Google Sheets for Smart Resumption
     print("\n---> Fetching existing progress from Google Sheets database...")
     sheet_db = fetch_existing_sheet_database()
     print(f"Loaded {len(sheet_db)} existing question record(s) from Google Sheets.")
 
-    for q_idx, q in enumerate(qna_list):
-        # Determine Subject (DT / IDT) and Chapter No
-        subject = q.get('subject') or os.environ.get('SUBJECT') or 'DT'
-        subject = str(subject).strip().upper()
-        if subject not in ['DT', 'IDT']:
-            subject = 'DT'
-            
-        chapter_no = q.get('chapter_number') or q.get('chapter_no', 1)
-        try:
-            chapter_no = int(chapter_no)
-        except Exception:
-            chapter_no = 1
+    generated_topics_cache = {}
+    completed_in_run = 0
 
-        q_num = q.get('question_number', q_idx + 1)
-        q_text = q.get('question_text', '')
-        ans_text = q.get('answer_text', '')
+    for q_idx, item in enumerate(queue):
+        subject = item['subject']
+        chapter_no = item['chapter_no']
+        q_num = item['question_no']
 
         key = (subject, str(chapter_no), str(q_num))
         existing = sheet_db.get(key)
 
-        # 2. Check if this question is ALREADY 100% COMPLETE:
+        # Check if already 100% complete in Sheets
         existing_mm = None
         if existing and existing.get('summary_json'):
             try:
@@ -205,7 +227,7 @@ def run_pipeline():
                 total_pts = count_total_points(parsed_mm)
                 is_partial = parsed_mm.get('is_partially_complete', False)
                 status_low = existing.get('status', '').lower()
-                
+
                 if total_pts > 0 and ready_pts >= total_pts and not is_partial and 'paused' not in status_low:
                     print(f"\n---> [{subject} Ch{chapter_no} Q{q_num} ({q_idx+1}/{total_questions})] Already 100% complete ({ready_pts}/{total_pts} discrete audio points). Skipping!")
                     continue
@@ -215,13 +237,44 @@ def run_pipeline():
             except Exception:
                 existing_mm = None
 
+        # Fetch or auto-slice question text and answer text
+        map_key = (subject, chapter_no, q_num)
+        if map_key in extracted_map:
+            q_rec = extracted_map[map_key]
+            q_text = q_rec.get('question_text', '')
+            ans_text = q_rec.get('answer_text', '')
+            q_title = q_rec.get('question_title', f"Ch{chapter_no} Question {q_num}")
+        else:
+            print(f"\n---> [{subject} Ch{chapter_no} Q{q_num} ({q_idx+1}/{total_questions})] Slicing text from PDF (pages {item.get('start_page')}-{item.get('end_page')})...")
+            raw_text = get_question_raw_text(subject, chapter_no, q_num)
+            if not raw_text:
+                print(f"  [ERROR] Could not extract text for {subject} Ch{chapter_no} Q{q_num}. Skipping.")
+                continue
+            q_text, ans_text = split_question_and_answer(raw_text)
+            q_title = f"Ch{chapter_no} Question {q_num}"
+            new_rec = {
+                "subject": subject,
+                "chapter_number": chapter_no,
+                "question_number": q_num,
+                "question_title": q_title,
+                "question_text": q_text,
+                "answer_text": ans_text
+            }
+            qna_list.append(new_rec)
+            extracted_map[map_key] = new_rec
+            try:
+                with open(qna_file, 'w', encoding='utf-8') as f:
+                    json.dump(qna_list, f, indent=2, ensure_ascii=False)
+            except Exception as e:
+                print(f"  [WARN] Failed to write extracted_qna.json: {e}")
+
         # State tracking for safe checkpointing on quota exhaustion
         current_mm_data = existing_mm
         current_topic = existing.get('topic') if existing else None
         current_prov_md = existing.get('prov_md') if existing else None
 
         try:
-            # 3. Legal Provision Architecture
+            # Legal Provision Architecture
             if existing_mm and current_topic and current_prov_md:
                 canonical_topic = current_topic
                 formatted_provision_matrix = current_prov_md
@@ -230,7 +283,7 @@ def run_pipeline():
             else:
                 print(f"\n---> [{subject} Ch{chapter_no} Q{q_num} ({q_idx+1}/{total_questions})] Analyzing provision autonomously with Gemini...")
                 auto_res = extract_autonomous_provision(q_num, q_text, ans_text)
-                
+
                 if auto_res:
                     canonical_topic = auto_res.get('canonical_topic', f'Statutory Topic Q{q_num}')
                     formatted_provision_matrix = auto_res.get('provision_presentation_markdown', '')
@@ -245,7 +298,7 @@ def run_pipeline():
                 current_prov_md = formatted_provision_matrix
                 print(f"  Canonical Doctrine: '{canonical_topic}'")
 
-            # 4. Check Topic Deduplication & Reuse:
+            # Check Topic Deduplication & Reuse
             topic_cache_key = f"{subject}_{chapter_no}_{canonical_topic}"
             if topic_cache_key in generated_topics_cache and not existing_mm:
                 cached = generated_topics_cache[topic_cache_key]
@@ -256,7 +309,7 @@ def run_pipeline():
             else:
                 print(f"  [SYNTHESIZING AUDIO] Generating/Resuming Discrete Points for '{canonical_topic}' ({subject} Ch{chapter_no})...")
                 discrete_out_dir = os.path.join(PROJECT_ROOT, 'data', 'audio', subject.lower(), f'ch{chapter_no}', f'q{q_num}')
-                
+
                 mm_data = generate_discrete_voice_for_mindmap(
                     q_num=q_num,
                     mindmap=mm_data,
@@ -278,37 +331,42 @@ def run_pipeline():
             ready_count = count_ready_points(mm_data)
             total_count = count_total_points(mm_data)
 
-            # 5. Build Row for Google Sheet:
+            # Build Row for Google Sheet
             row = [
-                subject,                      # Subject (DT / IDT)
-                chapter_no,                   # Chapter No
-                q_num,                        # Question No
-                canonical_topic,              # Canonical Topic (for dynamic grouping)
-                q_text,                       # Question
-                ans_text,                     # Answer
-                formatted_provision_matrix,   # Provisions (Autonomous Markdown Matrix)
-                summary_json_str,             # Provision Summary (Dynamic Mindmap with embedded point audio IDs)
-                drive_folder_id,              # Drive Audio File/Folder ID
-                f"{ready_count}/{total_count} Discrete Audio Points Complete" # Timings/Status
+                subject,
+                chapter_no,
+                q_num,
+                canonical_topic,
+                q_text,
+                ans_text,
+                formatted_provision_matrix,
+                summary_json_str,
+                drive_folder_id,
+                f"{ready_count}/{total_count} Discrete Audio Points Complete"
             ]
 
-            # 6. Upsert to Google Sheet:
+            # Upsert to Google Sheet
             upsert_row_to_sheets(row)
+            completed_in_run += 1
+            print(f"  [DONE] Successfully saved {subject} Ch{chapter_no} Q{q_num} ({ready_count}/{total_count} points complete) to Google Sheets.")
+
+            if limit and completed_in_run >= limit:
+                print(f"\n[LIMIT REACHED] Processed {completed_in_run} question(s) as requested. Exiting cleanly.")
+                sys.exit(0)
 
         except AllKeysQuotaExhaustedError:
             print("\n" + "="*75)
             print("[QUOTA PAUSE] Gemini API quota limit reached across all 3 keys.")
             print("Saving checkpoint and exiting gracefully without errors (exit code 0).")
             print("="*75)
-            
-            # Save partial state so next run resumes seamlessly
+
             if current_mm_data and current_topic and current_prov_md:
                 ready_count = count_ready_points(current_mm_data)
                 total_count = count_total_points(current_mm_data)
                 partial_json_str = json.dumps(current_mm_data, ensure_ascii=False)
                 drive_folder_id = current_mm_data.get('drive_folder_id', 'DRIVE_FOLDER_READY')
                 status_str = f"{ready_count}/{total_count} Discrete Audio Points (Quota Paused)"
-                
+
                 partial_row = [
                     subject,
                     chapter_no,
@@ -328,8 +386,20 @@ def run_pipeline():
             sys.exit(0)
 
     print("\n" + "="*75)
-    print("DISCRETE POINT AUDIO PIPELINE COMPLETE! All cards paired with individual voice clips.")
+    print("DISCRETE POINT AUDIO PIPELINE COMPLETE! All queued questions are 100% synthesized.")
     print("="*75)
 
 if __name__ == '__main__':
-    run_pipeline()
+    parser = argparse.ArgumentParser(description="DT & IDT Continuous Cloud Pipeline Runner")
+    parser.add_argument('--limit', type=int, default=None, help="Max number of new questions to process in this run")
+    parser.add_argument('--chapter', type=int, default=None, help="Process specific chapter number")
+    parser.add_argument('--question', type=int, default=None, help="Process specific question number")
+    parser.add_argument('--subject', type=str, default=None, help="Process specific subject (DT / IDT)")
+    args = parser.parse_args()
+
+    run_pipeline(
+        limit=args.limit,
+        target_chapter=args.chapter,
+        target_question=args.question,
+        target_subject=args.subject
+    )
