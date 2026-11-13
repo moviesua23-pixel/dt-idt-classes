@@ -2,7 +2,10 @@ import os
 import sys
 import json
 import re
-import pymupdf
+try:
+    import pymupdf
+except ImportError:
+    pymupdf = None
 
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 if PROJECT_ROOT not in sys.path:
@@ -131,7 +134,7 @@ def get_question_raw_text(subject, chapter_no, question_no):
             q_entry = item
             break
 
-    if not q_entry:
+    if not q_entry or pymupdf is None or not os.path.exists(PDF_PATH):
         return None
 
     doc = pymupdf.open(PDF_PATH)
