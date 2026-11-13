@@ -178,7 +178,7 @@ def sanitize_and_format_text(text: str, is_question: bool = False) -> str:
     else:
         text = re.sub(r'^\s*(?:Answer|Solution|SOLUTION|ANSWER)\s*[:\-\n]*', '', text, flags=re.IGNORECASE).strip()
 
-    # 2. Strip running book headers and footers
+    # 2. Strip running book headers, footers and OCR boundary noise
     header_patterns = [
         r'CA Final Notes & Updates',
         r'BY CA ATUL AGARWAL\s*(?:\(AIR-1\))?',
@@ -186,7 +186,10 @@ def sanitize_and_format_text(text: str, is_question: bool = False) -> str:
         r'Page\s+\d+\.\d+',
         r'Capital Gains\s*\n',
         r'SST\s*\n',
-        r'ear a\s*\n\s*a\s*\n\s*ee\s*\n'
+        r'ESSE\s*\n',
+        r'ear a\s*\n\s*a\s*\n\s*ee\s*\n',
+        r'\bTTT\b.*',
+        r'__—=d_,'
     ]
     for hp in header_patterns:
         text = re.sub(hp, '', text, flags=re.IGNORECASE)
@@ -196,12 +199,16 @@ def sanitize_and_format_text(text: str, is_question: bool = False) -> str:
     text = re.sub(r'(?:[%¢=t~]|[\uFFFD\u00A2\u20AC])\s*(?=\d)', '₹ ', text)
     text = re.sub(r'\b8\s+(?=\d{1,3}(?:,\d{2,3})+)', '₹ ', text)
     text = re.sub(r'[\uFFFD\u201C\u201D\u2018\u2019]', '"', text)
+    text = re.sub(r'(\d+)\s*=\s*(₹)', r'\1 x \2', text)
 
-    # 4. Clean up inline whitespace per line
+    # 4. Pre-split inline transitions after punctuation so Notes and Computations start as new paragraphs
+    text = re.sub(r'(?<=[.!?])\s+(Note\s*\d*:|Note:|Computation of\b|Taxability\b|Particulars\b)', r'\n\n\1', text)
+
+    # 5. Clean up inline whitespace per line
     raw_lines = text.splitlines()
     lines = [re.sub(r'[ \t]+', ' ', l).strip() for l in raw_lines]
 
-    # 5. Format computation tables if 'Particulars' is detected
+    # 6. Format computation tables if 'Particulars' is detected
     formatted_lines = []
     i = 0
     n = len(lines)
@@ -218,6 +225,10 @@ def sanitize_and_format_text(text: str, is_question: bool = False) -> str:
                 l = lines[i]
                 if not l or l.startswith('(') or l.lower().startswith('note') or l.lower().startswith('question'):
                     break
+                # Skip OCR noise rows
+                if l.lower() in ['ttt', '__—=d_,'] or re.match(r'^[_\—=\-d,\s]+$', l):
+                    i += 1
+                    continue
                 if i + 1 < n and re.match(r'^[₹\s]*[\d,]+(?:\.\d+)?$', lines[i+1]):
                     amt = lines[i+1].replace('₹', '').strip()
                     table_rows.append((l, amt))
@@ -237,7 +248,8 @@ def sanitize_and_format_text(text: str, is_question: bool = False) -> str:
                 formatted_lines.append(f'\n| Particulars | {curr_header} |')
                 formatted_lines.append('| :--- | :---: |')
                 for p_col, a_col in table_rows:
-                    formatted_lines.append(f'| {p_col} | {a_col} |')
+                    if p_col.strip():
+                        formatted_lines.append(f'| {p_col} | {a_col} |')
                 formatted_lines.append('\n')
             continue
 
@@ -272,6 +284,15 @@ def sanitize_and_format_text(text: str, is_question: bool = False) -> str:
                 res.append(' '.join(current_para))
                 current_para = []
         elif l_str.startswith('|'):
+            # Filter out empty or noise table rows like '| TTT | |' or '| | |' or '| __—=d_, | |'
+            if re.search(r'\bTTT\b', l_str, re.IGNORECASE) or re.search(r'__—=d_,', l_str):
+                continue
+            cells = [c.strip() for c in l_str.split('|') if c.strip()]
+            if not cells:
+                continue
+            if not all(re.match(r'^:?-+:?$', c) for c in cells) and all(not re.search(r'[a-zA-Z0-9]', c) for c in cells):
+                continue
+
             if current_para:
                 res.append(' '.join(current_para))
                 current_para = []
@@ -280,6 +301,11 @@ def sanitize_and_format_text(text: str, is_question: bool = False) -> str:
             else:
                 res.append(l_str)
         elif l_str.startswith('- **('):
+            if current_para:
+                res.append(' '.join(current_para))
+                current_para = []
+            current_para.append(l_str)
+        elif re.match(r'^(?:Note\s*\d*:|Note:|Computation of\b|Taxability\b|One\s+Mr\.|Mr\.|Mrs\.|In\s+this\s+background|You\s+are\s+required|Compute\b|Determine\b|Examine\b)', l_str, re.IGNORECASE):
             if current_para:
                 res.append(' '.join(current_para))
                 current_para = []
