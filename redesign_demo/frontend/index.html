@@ -4777,12 +4777,14 @@ function makePlayer(p, q){
   if (item.audio_file) {
    const fn = item.audio_file.replace(/\\/g, '/').replace(/^\/+/, '');
    if (isLocal) {
+    urls.push(new URL("../../data/audio/" + fn, window.location.href).href);
     urls.push(new URL("../data/audio/" + fn, window.location.href).href);
     urls.push(new URL("data/audio/" + fn, window.location.href).href);
    } else {
-    urls.push("data/audio/" + fn);
     urls.push("/data/audio/" + fn);
+    urls.push("data/audio/" + fn);
     urls.push("../data/audio/" + fn);
+    urls.push("../../data/audio/" + fn);
    }
   }
 
