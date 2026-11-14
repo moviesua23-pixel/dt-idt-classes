@@ -164,5 +164,27 @@
     "duration_seconds": 91.006,
     "voice_engine": "Gemini Voice (Aoede)",
     "voice": "Gemini Voice (Aoede)"
+  },
+  {
+    "chapter_number": 2,
+    "question_number": 10,
+    "statutory_sections": [
+      "Section 47(vib)",
+      "Section 47(vid)",
+      "Section 49(2C)",
+      "Section 49(2D)",
+      "Section 2(42A)(g)",
+      "Section 54F"
+    ],
+    "core_principle": "Demerger Taxation Framework",
+    "provision_presentation_markdown": "## Statutory Matrix: Demerger Taxation Framework\n\n| Transaction / Event | Governing Section | Statutory Condition | Legal Consequence & Tax Treatment |\n| :--- | :--- | :--- | :--- |\n| **Transfer of Assets by Demerged Co.** | **Section 47(vib)** | Resulting company must be an **Indian company**. | **Exempt Transfer**: No capital gains tax liability arises for the demerged company. |\n| **Issue of Shares to Shareholders** | **Section 47(vid)** | Issue made in consideration of demerger to existing shareholders. | **Not a Transfer**: Receipt of shares creates no tax liability in the hands of shareholders. |\n| **Cost of Resulting Co. Shares** | **Section 49(2C)** | Apportionment based on net book value of assets transferred. | $\\text{Cost} = \\text{Original Cost} \\times \\frac{\\text{Net Book Value of Assets Transferred}}{\\text{Pre-demerger Net Worth}}$. |\n| **Revised Cost of Demerged Co. Shares** | **Section 49(2D)** | Original shares retained in the demerged company. | $\\text{Revised Cost} = \\text{Original Cost} - \\text{Cost Allocated u/s 49(2C)}$. |\n| **Period of Holding of Resulting Co. Shares** | **Section 2(42A)(g)** | Resulting company shares acquired pursuant to demerger. | **Tacking-on Applicable**: Includes the period for which original shares were held in demerged company. |\n| **Subsequent Share Sale by Shareholders** | **General Law** | No lock-in period prescribed under Section 47(vib) or 47(vid). | Corporate exemption remains unaffected; shareholders taxed under normal capital gains rules. |\n| **Reinvestment Exemption on Share Sale** | **Section 54F** | Long-term capital asset (other than residential house) transferred; net consideration invested in 1 residential house in India. | **Proportionate LTCG Exemption**: $\\text{Exemption} = \\text{LTCG} \\times \\frac{\\text{Cost of New House}}{\\text{Net Consideration}}$. |\n\n---\n\n### Core Statutory Rules & Legal Principles\n\n#### 1. Corporate & Shareholder Tax Neutrality\n- **Section 47(vib)** provides complete tax exemption on the transfer of capital assets from the demerged company to the resulting company, provided the resulting entity is an Indian company.\n- **Section 47(vid)** clarifies that the allotment of shares by the resulting company to the shareholders of the demerged company does not constitute a \"transfer\". Shareholders face no capital gains liability at the time of allotment.\n\n#### 2. Statutory Cost Allocation Formulae\n- **Cost of Shares in Resulting Company [Section 49(2C)]**:\n  $$\\text{Cost of Resulting Co. Shares} = \\text{Original Cost in Demerged Co.} \\times \\left( \\frac{\\text{Net Book Value of Transferred Assets}}{\\text{Pre-demerger Net Worth}} \\right)$$\n  *(Net worth = Paid-up share capital + General reserves immediately before demerger).*\n- **Revised Cost of Shares in Demerged Company [Section 49(2D)]**:\n  $$\\text{Revised Cost of Demerged Co. Shares} = \\text{Original Cost of Acquisition} - \\text{Cost Allocated u/s 49(2C)}$$\n\n#### 3. Period of Holding (Tacking-on Principle)\n- Under **Section 2(42A)(g)**, the period of holding of the resulting company's shares is calculated by tacking on (including) the period during which the shareholder held the original shares in the demerged company.\n- If the aggregate holding period exceeds 24 months (for unlisted shares) or 12 months (for listed equity), the shares qualify as a **Long-Term Capital Asset (LTCA)**.\n\n> [!NOTE]\n> **No Statutory Lock-in Period**: Unlike Section 47(iv)/(v) group transfers which mandate an 8-year holding condition u/s 47A, neither Section 47(vib) nor Section 47(vid) imposes any lock-in period. Subsequent transfer of shares by shareholders does NOT revoke the demerger tax exemptions granted to the companies.\n\n> [!IMPORTANT]\n> **Section 54F Exemption on Share Sale**:\n> Where the resulting company shares are sold as a Long-Term Capital Asset, deduction under Section 54F is available if the net sale consideration is invested in purchase (within 1 year before or 2 years after) or construction (within 3 years) of **one residential house in India**, subject to the taxpayer owning not more than one house on the date of transfer.",
+    "malayalam_audio_script": "Demerger tax provisions-ൽ demerged company, resulting company, shareholders എന്നിവർക്കുള്ള statutory rules വ്യക്തമായി പഠിക്കാം.",
+    "topic_id": "T_CH2_Q10",
+    "topic_title": "Demerger Taxation Framework",
+    "audio_file": "ch2_q10.mp3",
+    "dur": 120,
+    "duration_seconds": 120,
+    "voice_engine": "Gemini Voice (Aoede)",
+    "voice": "Gemini Voice (Aoede)"
   }
 ]
