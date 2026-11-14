@@ -38,7 +38,8 @@ from pipeline.pdf_question_indexer import (
     get_question_raw_text,
     split_question_and_answer,
     extract_question_with_vision,
-    get_pdf_path
+    get_pdf_path,
+    sanitize_and_format_text
 )
 
 # Configuration
@@ -72,6 +73,13 @@ def upsert_row_to_sheets(row_values):
     if not sheets_service:
         print("  [WARN] Sheets service not configured. Skipping save.")
         return
+
+    # Permanent guardrail: Ensure Question text (Col E / idx 4) and Answer text (Col F / idx 5)
+    # are always formatted with clean paragraphs, markdown tables, and no OCR noise.
+    if len(row_values) > 4 and row_values[4]:
+        row_values[4] = sanitize_and_format_text(str(row_values[4]), is_question=True)
+    if len(row_values) > 5 and row_values[5]:
+        row_values[5] = sanitize_and_format_text(str(row_values[5]), is_question=False)
 
     subject = str(row_values[0]).strip().upper()
     chapter_no = str(row_values[1]).strip()
@@ -311,6 +319,10 @@ def run_pipeline(limit=None, target_chapter=None, target_question=None, target_s
         else:
             print(f"  [ERROR] Could not extract text for {subject} Ch{chapter_no} Q{q_num}. Neither local PDF nor cached Q&A available. Skipping.")
             continue
+
+        # Permanent formatting for question and answer text
+        q_text = sanitize_and_format_text(q_text, is_question=True)
+        ans_text = sanitize_and_format_text(ans_text, is_question=False)
 
         # State tracking for safe checkpointing on quota exhaustion
         current_mm_data = existing_mm

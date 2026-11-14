@@ -180,6 +180,9 @@ CRITICAL FORMATTING RULES:
 4. If a point naturally contains numerical tables or thresholds, populate 'table_data' with {{ "headers": [...], "rows": [[...], [...]] }}, otherwise set to null.
 5. In 'provision_presentation_markdown':
    - Table-first and bullet-checklist format. Keep it concise, high-yield, and scannable.
+   - ALWAYS format statutory conditions with distinct markdown paragraph breaks (\\n\\n) and bold bullet checklists.
+   - NEVER lump or concatenate multiple statutory provisions, sub-sections, or provisos into one continuous wall of text.
+   - Separate every markdown table, callout box, and section heading with blank lines (\\n\\n).
    - NEVER use Unicode box-drawing characters (├──, └──, │, ─) or ASCII pseudo-diagrams, pipes, or arrows.
    - All markdown bold/italics syntax MUST be properly paired and closed on the same line (e.g. `**Bold Text**`).
    - For callout titles, write: `> [!IMPORTANT] Title Name: Description` (clean plain title, no unclosed markdown asterisks).

@@ -21,7 +21,7 @@ try:
 except Exception:
     pass
 
-from pipeline.pdf_question_indexer import build_pdf_index, extract_question_with_vision
+from pipeline.pdf_question_indexer import build_pdf_index, extract_question_with_vision, sanitize_and_format_text
 from pipeline.cloud_client import CloudClient, SPREADSHEET_ID
 
 def run_batch_vision(subject="DT", chapter=None, question=None, force=False):
@@ -106,8 +106,8 @@ def run_batch_vision(subject="DT", chapter=None, question=None, force=False):
             "chapter_number": c,
             "question_number": q,
             "question_title": vis_data.get('question_title', f"Ch{c} Question {q}"),
-            "question_text": vis_data.get('question_text', ''),
-            "answer_text": vis_data.get('answer_text', ''),
+            "question_text": sanitize_and_format_text(vis_data.get('question_text', ''), is_question=True),
+            "answer_text": sanitize_and_format_text(vis_data.get('answer_text', ''), is_question=False),
             "vision_verified": True
         }
 

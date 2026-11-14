@@ -224,15 +224,27 @@ def sanitize_and_format_text(text: str, is_question: bool = False) -> str:
         r'As per section\b',
         r'Under section\b',
         r'In accordance with section\b',
+        r'In accordance with\b',
+        r'According to section\b',
+        r'According to the\b',
         r'For the purpose of\b',
+        r'For the purposes of\b',
+        r'In terms of\b',
         r'Since the asset\b',
         r'Since the\b',
         r'In the given case\b',
         r'In the instant case\b',
         r'In this case\b',
+        r'In view of the above\b',
         r'Therefore\b',
         r'Accordingly\b',
         r'Consequently\b',
+        r'Hence,\b',
+        r'However,\b',
+        r'Further,\b',
+        r'Where any\b',
+        r'With effect from\b',
+        r'It may be noted\b',
         r'The provisions of\b',
         r'The computation of\b',
         r'Computation of\b',
@@ -240,9 +252,16 @@ def sanitize_and_format_text(text: str, is_question: bool = False) -> str:
         r'Particulars\b',
         r'Note\s*\d*:',
         r'Note:',
+        r'Explanation\s*\d*:',
+        r'Proviso:',
+        r'Conclusion:\b',
         r'You are required to\b',
-        r'Discuss the issues\b',
-        r'Examine the tax\b'
+        r'Discuss the\b',
+        r'Advise\b',
+        r'State whether\b',
+        r'Briefly explain\b',
+        r'Assuming that\b',
+        r'Examine the\b'
     ]
     pattern = r'(?<=[.!?])\s+(?=' + '|'.join(transitions) + ')'
     text = re.sub(pattern, r'\n\n', text, flags=re.IGNORECASE)
@@ -508,6 +527,11 @@ MANDATORY RULES:
         resp = rotator.execute_with_retry(_call)
         raw = resp.text.strip()
         parsed = json.loads(raw)
+        if isinstance(parsed, dict):
+            if "question_text" in parsed:
+                parsed["question_text"] = sanitize_and_format_text(parsed["question_text"], is_question=True)
+            if "answer_text" in parsed:
+                parsed["answer_text"] = sanitize_and_format_text(parsed["answer_text"], is_question=False)
         return parsed
     except Exception as e:
         print(f"[VISION EXTRACTOR] Gemini vision call encountered: {e}. Falling back to text slicing...")

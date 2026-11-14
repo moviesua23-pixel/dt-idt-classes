@@ -4099,13 +4099,17 @@ function formatQnAParagraphs(rawText, isAnswer = false) {
 
   // 4. Natural Statutory Paragraph Transitions (after sentence punctuation)
   const transitions = [
-    "As per section\\b", "Under section\\b", "In accordance with section\\b",
-    "For the purpose of\\b", "Since the asset\\b", "Since the\\b", "Since in the\\b",
-    "In the given case\\b", "In the instant case\\b", "In this case\\b",
-    "Therefore\\b", "Accordingly\\b", "Consequently\\b",
-    "The provisions of\\b", "The computation of\\b", "Computation of\\b",
-    "Note\\s*\\d*:", "Note:", "You are required to\\b", "Discuss the issues\\b",
-    "Examine the tax\\b", "Examine whether\\b", "State with reasons\\b"
+    "As per section\\b", "Under section\\b", "In accordance with section\\b", "In accordance with\\b",
+    "According to section\\b", "According to the\\b", "For the purpose of\\b", "For the purposes of\\b",
+    "In terms of\\b", "Since the asset\\b", "Since the\\b", "Since in the\\b",
+    "In the given case\\b", "In the instant case\\b", "In this case\\b", "In view of the above\\b",
+    "Therefore\\b", "Accordingly\\b", "Consequently\\b", "Hence,\\b", "However,\\b", "Further,\\b",
+    "Where any\\b", "With effect from\\b", "It may be noted\\b", "The provisions of\\b",
+    "The computation of\\b", "Computation of\\b", "Taxability\\b", "Particulars\\b",
+    "Note\\s*\\d*:", "Note:", "Explanation\\s*\\d*:", "Proviso:", "Conclusion:\\b",
+    "You are required to\\b", "Discuss the\\b", "Advise\\b", "State whether\\b",
+    "State with reasons\\b", "Briefly explain\\b", "Assuming that\\b", "Examine the tax\\b",
+    "Examine whether\\b", "Examine the\\b"
   ];
   const transRegex = new RegExp("(?<=[.!?])\\s+(?=" + transitions.join("|") + ")", "gi");
   text = text.replace(transRegex, "\n\n");
