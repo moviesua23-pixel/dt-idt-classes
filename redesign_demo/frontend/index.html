@@ -3613,13 +3613,44 @@ window.handleGoogleSheetData = function(json) {
       const chNum = parseNum(val(1), 1);
       const qNum = parseNum(val(2), i + 1);
       
-      const qText = val(3) || "";
-      const ansText = val(4) || "";
-      const provStatutes = val(5) || "";
-      const provSummary = val(6) || "";
-      const mlAudioScript = val(7) || "";
-      const driveAudioId = val(8) || "";
-      const timingsStr = val(9) || "";
+      let canonicalTopicFromSheet = "";
+      let qText = "";
+      let ansText = "";
+      let provStatutes = "";
+      let provSummary = "";
+      let driveAudioId = "";
+      let timingsStr = "";
+
+      // Smart auto-detection of Google Sheets schema:
+      // In 10-column schema:
+      // Col 0: Subject | Col 1: Chapter No | Col 2: Question No | Col 3: Topic Title | Col 4: Question Text | Col 5: Answer Text | Col 6: Provisions Markdown | Col 7: Mindmap JSON | Col 8: Drive ID | Col 9: Status
+      if (val(7).trim().startsWith("{") || val(7).includes('"doctrine"') || val(7).includes('"branches"')) {
+        canonicalTopicFromSheet = val(3);
+        qText = val(4);
+        ansText = val(5);
+        provStatutes = val(6);
+        provSummary = val(7);
+        driveAudioId = val(8);
+        timingsStr = val(9);
+      } else if (val(6).trim().startsWith("{") || val(6).includes('"doctrine"') || val(6).includes('"branches"')) {
+        // Legacy 8-column schema: Col 3: Q | Col 4: Ans | Col 5: Prov MD | Col 6: Mindmap JSON
+        canonicalTopicFromSheet = "";
+        qText = val(3);
+        ansText = val(4);
+        provStatutes = val(5);
+        provSummary = val(6);
+        driveAudioId = val(7);
+        timingsStr = val(8);
+      } else {
+        // Fallback: 10-column default
+        canonicalTopicFromSheet = val(3);
+        qText = val(4);
+        ansText = val(5);
+        provStatutes = val(6);
+        provSummary = val(7);
+        driveAudioId = val(8);
+        timingsStr = val(9);
+      }
 
       let mmObj = null;
       try {
@@ -3632,7 +3663,7 @@ window.handleGoogleSheetData = function(json) {
         console.warn("Failed to parse provision summary for ch", chNum, "q", qNum, err);
       }
 
-      const canonicalTopic = (mmObj && (mmObj.doctrine || mmObj.title || mmObj.root?.title)) || 
+      const canonicalTopic = canonicalTopicFromSheet || (mmObj && (mmObj.doctrine || mmObj.title || mmObj.root?.title)) || 
         (qText ? qText.split('\n')[0].replace(/^#+\s*|\*+/g, '').slice(0, 80) : ("Chapter " + chNum + " Question " + qNum));
       const topicSlug = "T_CH" + chNum + "_Q" + qNum;
       if (mmObj) liveMindmaps[topicSlug] = mmObj;
