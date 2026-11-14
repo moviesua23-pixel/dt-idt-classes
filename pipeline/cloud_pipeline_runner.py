@@ -206,6 +206,26 @@ def export_sheets_to_local_cache():
             with open(p, 'w', encoding='utf-8') as f:
                 json.dump(export_data, f, ensure_ascii=False, indent=2)
         print("  [CACHE EXPORTED] Saved latest pipeline questions to local cache JSON.")
+
+        # Embed latest snapshot into HTML files so offline file:/// browsing always has latest questions
+        html_files = [
+            os.path.join(PROJECT_ROOT, 'redesign_demo', 'frontend', 'index.html'),
+            os.path.join(PROJECT_ROOT, 'redesign_demo', 'frontend', 'index_with_concept_video.html')
+        ]
+        pattern = r'(<script type="application/json" id="pipeline-data">)[\s\S]*?(</script>)'
+        json_str = json.dumps(export_data, ensure_ascii=False)
+        for hf in html_files:
+            if os.path.exists(hf):
+                try:
+                    with open(hf, 'r', encoding='utf-8') as f:
+                        html_text = f.read()
+                    m = re.search(pattern, html_text)
+                    if m:
+                        new_html = html_text[:m.start(1)] + m.group(1) + json_str + m.group(2) + html_text[m.end(2):]
+                        with open(hf, 'w', encoding='utf-8') as f:
+                            f.write(new_html)
+                except Exception as ex:
+                    print(f"  [WARN] Failed to embed cache into {hf}: {ex}")
     except Exception as e:
         print(f"  [WARN] Failed to export local cache: {e}")
 
