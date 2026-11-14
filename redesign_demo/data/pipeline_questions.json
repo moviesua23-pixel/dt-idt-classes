@@ -309,6 +309,15 @@
       "question_text": "PQR Limited has two units - one engaged in manufacture of computer hardware and the other involved in developing software. As a restructuring drive, the company has decided to sell its software unit as a going concern by way of slump sale for ₹ 385 lacs to a new company called S Limited, in which it holds 74% equity shares. The balance sheet of PQR limited as on 31st March 2026, being the date on which software unit has been transferred, is given hereunder - Balance Sheet as on 31.3.2026 Liabilities % (in lacs) | Assets % (in lacs) Paid up Share Capital 300 | Fixed Assets General Reserve 150 | Hardware uni₹ 170 Share Premium 50 | Software uni₹ 200 Revaluation Reserve 120 | Debtors Current Liabilities (Ascertained Hardware uni₹ 140 liabilities) Hardware uni₹ 40 | Software uni₹ 110 Software uni₹ 90 | In ie Hardware uni₹ 95 Software uni₹ 35 750 750 Following additional information are furnished by the management:\n\n- **(i)** The Software unit is in existence since May, 2015.\n\n- **(ii)** Fixed assets of Software unit includes land which was purchased a₹ 2 40 lacs in the year 2016 and revalued at ₹ 60 lacs as on March 31, 2026. The stamp duty value on 31.3.2026 is ₹ 55 lakhs.\n\n- **(iii)** Fixed assets of Software unit mirrored at ₹ 140 lacs (₹ 200 lacs minus land value & 60 lacs) is written down value of depreciable assets (Furniture and Plant & machinery) as per books of account. However, the written down value of these assets under section 43(6) of the Income- tax Act, 1961 is ₹ 90 lacs.\n\n- **(a)** Ascertain the tax liability, which would arise from slump sale to POR Limited, assuming it does not opt for section 115BAA.\n\n- **(b)** What would be your advice as a tax-consultant to make the restructuring plan of the company more tax-savvy, without changing the amount of sale consideration?",
       "answer_text": "- **(a)** As per section 50B, any profits and gains arising from the slump sale effected in the previous year shall be chargeable to income-tax as capital gains arising from the transfer of capital assets and shall be deemed to be the income of the previous year in which the transfer took place. Ascertainment of tax liability of PQR Limited from slump sale of Software unit Nn\n\n| Particulars | ₹ |\n| :--- | :---: |\n| % (in lacs) | |\n| Full value of consideration for slump sale of Software Unit | |\n| Less: Cost of acquisition, being the net worth of Software Unit | |\n| Long term capital gains arising on slump sale | |\n| Tax | |\n| liabili | |\n| LTCG | |\n| Under section 112 @12.5% on ₹ 200 lacs | |\n| Add: Surcharge@ 7% | |\n| Add: Health and Education cess@4₹ 385 | 185 |\n| 200 | 25.00 |\n| 1.75 | 26.75 |\n| 1.07 | 27.82 |\n| Working Note: | |\n| Computation of Full value of consideration | |\n| % (in lacs) | |\n| Fair market value of the capital assets transferred by way of slump sale | |\n| Land, being an immovable property [stamp duty value on the date of slump | |\n| sale] [A] | |\n| Other Fixed assets (Furniture and Plant & machinery) [Book value as | |\n| appearing in the books of accounts] [₹ 200 lakhs - 60 lakhs] [B] | |\n| Debtors [Book value as appearing in the books of accounts] [C] | |\n| Inventories [Book value as appearing in the books of accounts] [D] | |\n| Less: Liabilities of Software Unit [2 750 - 3 40] [L] | |\n| Excluding | 710 |\n| 300 | 150 |\n\n- **(iii)** Share Premium 50 120 620 Fair market value of the capital assets transferred by way of slump sale [A+B+C+D- L] [FMV1] Fair market value of consideration received or accruing as a result of transfer by way of slump sale [value of the monetary consideration received] [FMV2] Full value of consideration [Higher of FMV1 or FMV2]\n\n- **(i)** Paid up share capital\n\n- **(ii)** General Reserve\n\n- **(iv)** Revaluation reserve 55 140 110 35 340 90 250 385 385 Computation of net worth of Software Unit < (in lacs)\n\n- **(1)** Book value of non-depreciable assets\n\n- **(i)** Land (Revaluation not to be considered)\n\n- **(ii)** Debtors\n\n- **(iii)** Inventories\n\n- **(2)** Written down value of depreciable assets under section 43(6) (See Note below) 40 110 35 90 ee Aggregate value of total assets 275 Less: Current liabilities of Software uni₹ 90 Net worth of software uni₹ 185 Note: For computing net worth, the aggregate value of total assets in the case of depreciable assets shall be the written down value of the block of assets as per section 43(6).\n\n- **(b)** Taxadvice\n\n- **(i)** Transfer of any capital asset by a holding company to its 100% Indian subsidiary company is exempt from capital gains under section 47(iv). Hence, PQR Limited should try to acquire the remaining 26% equity shares in § Limited then make the slump sale in the above said manner, in which case the slump sale shall be exempt from tax. For this exemption, POR Limited will have to keep such 100% holding in 5 Limited for a period of 8 years from the date of slump sale, otherwise the amount exempt would be deemed to be income chargeable under the head \"Capital Gains\" of the previous year in which such transfer took place.\n\n- **(ii)** Alternatively, if acquisition of 26% share is not feasible, PQR Limited may think about demerger plan of Software unit to get benefit of section 47(vib) of Income-tax Act, 1961. Reconstitution/Dissolution of Firm [Section 45(4) & 9B]",
       "topic_id": "T_CH2_Q20"
+    },
+    {
+      "subject": "dt",
+      "chapter_number": 2,
+      "question_number": 21,
+      "question_title": "Sections 9B & 45(4): Tax Treatment on Reconstitution/Dissolution of Firm and Rule 8AB Attribution",
+      "question_text": "Mr. Prem is a partner in two firms X & Co., Mumbai and Y & Co., Delhi. X & Co. has four partners, including Prem, who share profits and losses equally. Mr. Prem resigned from X & Co. on 31.1.2026. On the said date, capital balance of each of the partners stood at ₹ 32 lakhs. In order to settle the dues of Mr. Prem, the firm revalue its land for the first time since purchase; valuer also valued self- generated goodwill at ₹ 70 lakhs. The firm has following capital assets, whose details are as follows.\n\nParticulars of Assets Date of | Costofacquisition | Value as on 31,.1.2026 as per purchase (book value) Valuation Report (Rule 11U) 1. | Land at Pune 21.1.2013 ₹ 15 lakhs ₹ 50 lakhs 2. | Land at Nagpur 18.4.2015 ₹ 25.4 lakhs ₹ 45 lakhs 3. | Land at Mumbai 14.5.2013 ₹ 88 lakhs ₹ 250 lakhs 4. | Self-generated goodwill ₹ 70 lakhs In March, 2026, X & Co. gave Land at Nagpur and 7 15 lakh money to Mr. Prem to settle his capital balance. The firm Y & Co. dissolved on 1.3.2026 and distributed its land at Chandigarh, Mohali and Gurgaon on the same date to its three partners, Prem, Akshay and Aarav, respectively, who were sharing profits and losses equally. The particulars of these lands are given hereunder - Particulars of Assets Date of Cost of Value as per Valuation purchase acquisition Report as on 1.3.2026 1. | Land at Chandigarh (givento Prem) | 3.7.2011 ₹ 18.4 lakhs ₹ 62 lakhs SS SY 2. | Land at Mohali (given to Akshay) 15.9.2015 | ₹ 15.24 lakhs ₹ 59 lakhs 3. | Land at Gurgaon (given to Aarav) 27.2.2011 ₹ 16.7 lakhs ₹ 70 lakhs In addition, Prem and Akshay were given money of & 8 lakhs and ₹ 11 lakhs, respectively on 1th March, 2026. From the above information answer the following questions.\n\n- **(i)** Discuss the tax treatment in the hands of X & Co.\n\nunder section 9B and section 45(4) from above transactions.\n\n- **(ii)** Suppose X & Co. sold self-generated goodwill for ₹ 80 lakhs in the P.Y.2026-27, Compute the capital gains on such sale for the A.Y.2027-28.\n\n- **(iii)** Discuss the tax treatment in the hands of Y & Co.\n\nunder section 9B and section 45(4) from above transactions.",
+      "answer_text": "- **(i)** As per section 9B, since capital asset (Land at Nagpur) given to Mr. Prem on reconstitution of Firm, so it is treated as deemed to be transfer in hands of Firm and capital gain applicable in the year in which asset received by Mr. Prem.\n\nComputation of Capital Gains u/s 9B for A.Y. 2026-27\n\n| Particulars | ₹ |\n| :--- | :---: |\n| Full value of consideration (FMV on the date of transfer) | 45,00,000 |\n| Less: Cost of acquisition | 25,40,000 |\n| Long-term Capital Gain as per section 9B | 19,60,000 |\n| Calculation of Tax Liability | |\n| on above LT | 4 |\n| Tax @ 12.5% on LTCG u/s 112 (19,60,000 x 12.5%) | 2,45,000 |\n| Add: Health and Education cess @4₹ | 9,800 |\n| Net Tax payable | 2,54,800 |\n| The CBDT guidelines also specify accounting treatments in the books of Firm on the transfer of | |\n| assets to partner. As per accounts, profit before tax on transfer of capital asset shall be ₹ 19,60,000 i.e. (FMV of asset ₹ 45,00,000 minus Book Value <₹ 25,40,000) | |\n| Profit after tax as per books of account is ₹ 17,05,200 (₹ 19,60,000 minus ₹ 2,54,800) | |\n| Mr. Prem share in profit (₹ 17,05,200/4) = | 4,26,300 |\n| Mr. Prem capital after adjusting profit [₹ 32,00,000 + ₹ 4,26,300] = | 36,26,300 |\n| Applicability of section 45(4) in case of X & Co. | |\n| Since in the present case Mr. Prem retired from Firm, it is treated as reconstitution of Firm, so | |\n| section 45(4) also applies in addition to section 9B. | |\n| Computation of Capital Gains u/s 45(4) for A.Y. 2026-27 | |\n| Particulars | |\n| x | |\n| Full value of consideration | |\n\n- **(i)** Money 15,00,000\n\n- **(ii)** FMV of Capital asset (Nagpur Land) 45,00,000 60,00,000 Less: Capital A/c balance of Prem (after accounting treatment of section 9B) 36,26,300 Capital Gain as per section 45(4) 23,73,700 Attribution of Capital Gain u/s 45(4) to remaining capital assets of Firm as per Rule 8AB Assets Cost Revalue Increase Attribution (Book Value) (FMV) 4 x x zt Land at Pune 15,00,000 50,00,000 35,00,000 3,11,159 (23,73,700 x 35L/267L) Land a₹ 88,00,000 2,50,00,000 | 1,62,00,000 14,40,223 Mumbai (23,73,700 x 162L/267L) Self-Generated Nil 70,00,000 70,00,000 6,22,318 Goodwill (23,73,700 x 70L/267L) Total 2,67,00,000 23,73,700 e Capital gain of * 17,51,382 attributed towards Land at Pune and Mumbai is treated as LTCG as such lands are long term capital asset at the time of taxation u/s 45(4). e Capital gain of ₹ 6,22,318 attributed towards self-generated goodwill is treated as STCG. ancs OFA oe Db. On sale o alf-cenerated roodwi Computation of Capital Gains for A.Y. 2027-28\n\n| Particulars | ₹ |\n| :--- | :---: |\n| Full value of consideration | 80,00,000 |\n| Less: Attribution of capital gain towards self-generated goodwill | 6,22,318 |\n| 73,77,682 | |\n| Less: Cost of acquisition | |\n| Nil | |\n| Short-term | 73,77,682 |\n\n- **(ii)**\n\n- **(iii)** ay freaimenr nine hangs o a ' naer section YR ang Se@cuon 45 As per section 9B in case of dissolution of Firm, if any capital asset or stock in trade is transfer to partner then capital gain or PGBP or both applicable in hands of Firm. In case of dissolution of Firm, section 45(4) is not applicable.\n\nComputation of Capital Gain u/s 9B for A.Y. 2026-27\n\n| Particulars | ₹ |\n| :--- | :---: |\n| Land at | |\n| Land at | |\n| Land at | |\n| Chandigarh (%)} | |\n| Mohali(%) | Gurgaon (%) | |\n| Sale consideration (FMV on date of transfer} | 62,000,000 |\n| 59,060,000 | 70,00,000 |\n| ESSE | |\n| ———————EEE | |\n| Se | |\n| Less: Cost of acquisition | |\n| Chandigarh Land | 18,40,000 |\n| Mohali Land | 15,24,000 |\n| Gurgaon Land | 16,70,000 |\n| Long-term Capital Gain as per section 9B | 43,60,000 |\n| 43,76,000 | 53,30,000 |\n| Total LTCG | 1,40,66,000 |",
+      "topic_id": "T_CH2_Q21"
     }
   ],
   "provisions": [
@@ -617,6 +626,15 @@
       "topic_title": "Section 50B: Slump Sale Computation, Rule 11UAE Valuation & Section 47(iv) Holding-Subsidiary Exemption",
       "provision_presentation_markdown": "### Statutory Summary Matrix: Slump Sale Mechanics & Group Restructuring Exemption\n\n| Section / Rule | Statutory Scope & Condition | Valuation & Computational Rule | Legal & Tax Consequence |\n| :--- | :--- | :--- | :--- |\n| **Section 50B** | Slump sale of an undertaking for a lump sum consideration without itemized values. | Capital Gains = Deemed Full Value of Consideration − Net Worth of Undertaking. | Taxed in the year of transfer. **No indexation benefit** under Section 48. |\n| **Rule 11UAE** | Determination of Full Value of Consideration for Section 50B slump sale. | **Higher of FMV1 or FMV2** (FMV1 = Assets at SDV/Book Value minus Liabilities). | Deemed Full Value of Consideration for Capital Gains computation. |\n| **Section 43(6)** | Valuation of depreciable assets for computing Net Worth under Section 50B. | Aggregate asset value includes depreciable assets at **WDV as per Section 43(6)**. | Revaluation of assets strictly ignored; Section 35AD assets taken at **Nil**. |\n| **Section 47(iv)** | Transfer of capital asset by Holding Co. to its **100% Indian Subsidiary**. | Entire capital asset transfer in corporate restructuring. | **Not a Transfer**: Complete exemption from Capital Gains tax. |\n| **Section 47A** | Holding status drops below 100% or conversion into stock-in-trade within **8 years**. | Withdrawal of exemption previously granted under Section 47(iv). | Exempt Capital Gains become taxable in the year of contravention. |\n\n### Statutory Checklists & Operational Rules\n\n- **Net Worth Computation Rules (Section 50B Explanation 1 & 2)**:\n  - **Depreciable Assets**: Take Written Down Value (WDV) of the block of assets under Section 43(6).\n  - **Non-Depreciable Assets**: Take book value (strictly **ignore Revaluation Reserve / Revaluation impact**).\n  - **Section 35AD Assets**: Value at **Nil** if 100% deduction was claimed.\n  - **CA Audit Report**: Assessee must obtain and submit **Form 3CEA** electronically one month before the tax return due date.\n\n- **Rule 11UAE Valuation Framework (FMV1 vs FMV2)**:\n  - **FMV1**: Stamp Duty Value for Immovable Property + Book Value for Other Assets − Book Value of Liabilities.\n  - **FMV2**: Value of monetary and non-monetary consideration received/accruing on transfer.\n\n- **Tax Planning via Group Restructuring (Section 47(iv) & 47A)**:\n  - Acquire **100% equity shareholding** prior to the date of transfer to make the restructuring **100% tax-free**.\n  - **8-Year Lock-in**: Maintain 100% shareholding for at least **8 years** to avoid withdrawal of exemption under Section 47A.\n\n> [!IMPORTANT]\n> **Holding Period Threshold**: An undertaking held for **more than 36 months** qualifies as a Long-Term Capital Asset. However, indexation benefit under the second proviso to Section 48 is expressly denied under Section 50B(2).",
       "drive_folder_id": "129hOqZoL8c6zNrIp3IclX1Y9osR55eVs"
+    },
+    {
+      "subject": "dt",
+      "chapter_number": 2,
+      "question_number": 21,
+      "topic_id": "T_CH2_Q21",
+      "topic_title": "Sections 9B & 45(4): Tax Treatment on Reconstitution/Dissolution of Firm and Rule 8AB Attribution",
+      "provision_presentation_markdown": "### Statutory Summary Matrix: Sections 9B, 45(4) & Rule 8AB Framework\n\n| Provision / Rule | Triggering Event | Consideration / Formula | Tax Head & Rate | Attribution / Relief |\n| :--- | :--- | :--- | :--- | :--- |\n| **Section 9B** | Dissolution or Reconstitution (Partner receives capital asset or stock-in-trade) | **Full Value of Consideration** = Fair Market Value (FMV) on date of receipt | Capital Gains or PGBP depending on nature of asset transferred | Net profit after tax credited to partner's capital account |\n| **Section 45(4)** | Reconstitution of Firm (Partner receives money, capital asset, or both) | **Capital Gain (A)** = Money Received + FMV of Capital Asset - Adjusted Capital Account Balance | Charged in the hands of the specified entity as STCG / LTCG | Taxable gain attributed to remaining assets u/s 48(iii) read with Rule 8AB |\n| **Rule 8AB / Section 48(iii)** | Capital gain charged u/s 45(4) on reconstitution | **Attribution Share** = Sec 45(4) Gain × (Asset Revaluation / Total Net Revaluation) | Deduction while computing Capital Gains on subsequent transfer | Reduces taxable capital gain on eventual sale of remaining assets |\n\n\n### Core Statutory Checklist\n\n- **Section 9B Mechanics:**\n  - Taxable in the Assessment Year relevant to the Previous Year in which the asset is received by the specified person.\n  - Cost of acquisition for computing gain u/s 9B is the actual cost or book value as per Income Tax provisions.\n\n- **Section 45(4) Computation & Capital Account Adjustment:**\n  - Capital account balance of the partner must be computed **after** giving effect to the profit/loss resulting from Section 9B deemed transfer.\n  - Revaluation of assets or goodwill generation directly in books without tax realization is excluded while computing adjusted capital balance.\n\n- **Rule 8AB Attribution & Subsequent Asset Sale:**\n  - Capital gain u/s 45(4) attributed to depreciable or short-term assets is treated as Short-Term Capital Gain (STCG).\n  - On subsequent sale of remaining assets, the attributed amount u/s 48(iii) is deducted from Full Value of Consideration.\n\n\n> [!IMPORTANT] Interplay Between Section 9B and Section 45(4)\n> Section 9B operates first as a deemed transfer of the specific asset handed over. The resulting net tax profit increases the retiring partner's capital balance. Section 45(4) then taxes any excess value (money + asset FMV) received beyond that updated capital balance.\n\n\n> [!WARNING] Self-Generated Goodwill Taxability\n> Under Section 55(2)(a), cost of acquisition of self-generated goodwill is **Nil**. However, if capital gain u/s 45(4) was previously attributed to goodwill under Rule 8AB, such attributed amount is deductible under Section 48(iii) upon its eventual sale.",
+      "drive_folder_id": "1WJrFbesIRcfHPngILj6zx-F-7ZkkRzuu"
     }
   ],
   "mindmaps": {
@@ -7984,7 +8002,7 @@
       "total_duration": 94.88,
       "drive_folder_id": "1L8JTUuz-EKO0WaZapKATOUnYEZqRe6p8",
       "total_points_count": 5,
-      "completed_points_count": 5,
+      "completed_points_count": 10,
       "is_partially_complete": false,
       "concept_simulation": {
         "version": "1.0",
@@ -7999,9 +8017,10 @@
               "metric": "Cost: ₹10 Lakhs",
               "description": "Rahul purchased land as a personal Capital Asset."
             },
-            "image_file": "data/images/demo_q14/beat1_land.jpg",
-            "audio_file": "data/audio/demo_simulation_q14/step1.mp3",
-            "duration_seconds": 8
+            "image_file": "dt/ch2/q14/sim_img_1.jpg",
+            "audio_file": "dt/ch2/q14/sim_1.mp3",
+            "duration_seconds": 2.72,
+            "drive_audio_id": "1qvxCTKsSIQMpWMsryXcLWG5VAusKWnP3"
           },
           {
             "step_number": 2,
@@ -8011,9 +8030,10 @@
               "metric": "FMV on Conversion: ₹50 Lakhs",
               "description": "Converted to real estate stock. Transfer occurs, but tax is legally deferred!"
             },
-            "image_file": "data/images/demo_q14/beat2_conversion.jpg",
-            "audio_file": "data/audio/demo_simulation_q14/step2.mp3",
-            "duration_seconds": 22
+            "image_file": "dt/ch2/q14/sim_img_2.jpg",
+            "audio_file": "dt/ch2/q14/sim_2.mp3",
+            "duration_seconds": 2.76,
+            "drive_audio_id": "1yf_5xkuJY14CvaSyNFKHv0hyuMnGLXUx"
           },
           {
             "step_number": 3,
@@ -8023,9 +8043,10 @@
               "metric": "Sale Proceeds: ₹70 Lakhs",
               "description": "Actual sale in P.Y. 2025-26 triggers tax liability for both heads simultaneously."
             },
-            "image_file": "data/images/demo_q14/beat3_villas.jpg",
-            "audio_file": "data/audio/demo_simulation_q14/step3.mp3",
-            "duration_seconds": 11
+            "image_file": "dt/ch2/q14/sim_img_3.jpg",
+            "audio_file": "dt/ch2/q14/sim_3.mp3",
+            "duration_seconds": 3.12,
+            "drive_audio_id": "1MpQdvRJBIeTibg5RpShkDaiZ_CNFpHCr"
           },
           {
             "step_number": 4,
@@ -8035,11 +8056,15 @@
               "metric": "CG: ₹40L | PGBP: ₹20L",
               "description": "Capital Gain = FMV (₹50L) - Cost (₹10L). Business Income = Sale (₹70L) - FMV (₹50L)."
             },
-            "image_file": "data/images/demo_q14/beat4_scale.jpg",
-            "audio_file": "data/audio/demo_simulation_q14/step4.mp3",
-            "duration_seconds": 24
+            "image_file": "dt/ch2/q14/sim_img_4.jpg",
+            "audio_file": "dt/ch2/q14/sim_4.mp3",
+            "duration_seconds": 2.96,
+            "drive_audio_id": "1NFdBwhQH6nqul3J5i4kJjNsQKCelwsNk"
           }
-        ]
+        ],
+        "intro_audio_file": "dt/ch2/q14/sim_intro.mp3",
+        "intro_dur": 3.76,
+        "intro_drive_audio_id": "1_CfGP3FtNPN-efyVM9tGLFFj_ePoC7zB"
       }
     },
     "ch2_q15": {
@@ -9415,11 +9440,11 @@
               "highlights": [
                 {
                   "phrase": "Written Down Value under Section 43(6)",
-                  "time_sec": 3.0
+                  "time_sec": 3.2
                 },
                 {
                   "phrase": "taken at Nil",
-                  "time_sec": 7.0
+                  "time_sec": 7.4
                 }
               ],
               "table_data": null,
@@ -9427,7 +9452,11 @@
               "spoken": true,
               "t0": 85.39,
               "t1": 102.32,
-              "pt_idx": 5
+              "pt_idx": 5,
+              "audio_file": "dt/ch2/q20/pt_5.mp3",
+              "dur": 18.0,
+              "duration_seconds": 18.0,
+              "drive_audio_id": "1GOWsL95D-qbRy4RJ-qwnqbb5mMR1ZdEd"
             },
             {
               "id": "beat-3-2",
@@ -9441,18 +9470,23 @@
               "highlights": [
                 {
                   "phrase": "completely ignored in Net Worth",
-                  "time_sec": 2.5
+                  "time_sec": 2.3
                 },
                 {
                   "phrase": "aggregate asset values minus total liabilities",
-                  "time_sec": 6.5
+                  "time_sec": 5.9
                 }
               ],
               "table_data": null,
               "voice_sync_text": "Net Worth കണക്കാക്കുമ്പോൾ asset revaluation പൂർണ്ണമായും ഒഴിവാക്കണം. Revaluation reserve നൽകിയിട്ടുണ്ടെങ്കിൽ അത് എടുത്തുമാറ്റി, aggregate total assets-ൽ നിന്ന് total liabilities കുറച്ചാണ് Net Worth കണ്ടെത്തുന്നത്.",
               "spoken": true,
               "t0": 103.12,
-              "t1": 118.26
+              "t1": 118.26,
+              "pt_idx": 6,
+              "audio_file": "dt/ch2/q20/pt_6.mp3",
+              "dur": 13.64,
+              "duration_seconds": 13.64,
+              "drive_audio_id": "1lz927w36qObkBoQdRzvGs_q9ji6-l6rk"
             }
           ],
           "flow_summary": [],
@@ -9488,7 +9522,12 @@
               "voice_sync_text": "ഒരു Holding Company സ്വന്തം 100% Indian Subsidiary Company-ലേക്ക് Capital Asset transfer ചെയ്യുകയാണെങ്കിൽ, Section 47(iv) പ്രകാരം അതിന് Exemption ലഭിക്കും. ഇതിന് Capital Gains tax നൽകേണ്ടതില്ല.",
               "spoken": true,
               "t0": 120.26,
-              "t1": 134.05
+              "t1": 134.05,
+              "pt_idx": 7,
+              "audio_file": "dt/ch2/q20/pt_7.mp3",
+              "dur": 14.68,
+              "duration_seconds": 14.68,
+              "drive_audio_id": "1eVo1G0qmy3g8GLHIKvZ7WBL2WIAJrlUg"
             },
             {
               "id": "beat-4-2",
@@ -9502,18 +9541,23 @@
               "highlights": [
                 {
                   "phrase": "minimum period of 8 years",
-                  "time_sec": 3.0
+                  "time_sec": 3.5
                 },
                 {
                   "phrase": "Exemption is revoked and taxed",
-                  "time_sec": 7.0
+                  "time_sec": 8.2
                 }
               ],
               "table_data": null,
               "voice_sync_text": "ഈ Section 47(iv) exemption ലഭിക്കണമെങ്കിൽ, Holding Company ആ Subsidiary-യിൽ 100% shareholding കുറഞ്ഞത് 8 years തുടർച്ചയായി നിലനിർത്തണം. 8 years തീരുന്നതിന് മുൻപ് shareholding കുറഞ്ഞാൽ Section 47A പ്രകാരം exemption revoke ചെയ്യപ്പെട്ട് tax ഈടാക്കുന്നതാണ്.",
               "spoken": true,
               "t0": 134.85,
-              "t1": 152.99
+              "t1": 152.99,
+              "pt_idx": 8,
+              "audio_file": "dt/ch2/q20/pt_8.mp3",
+              "dur": 21.36,
+              "duration_seconds": 21.36,
+              "drive_audio_id": "1AmrgBvY-82GwCeaSvakI8bo2K6njV2jZ"
             }
           ],
           "flow_summary": [],
@@ -9524,7 +9568,272 @@
       "total_duration": 154.99,
       "drive_folder_id": "129hOqZoL8c6zNrIp3IclX1Y9osR55eVs",
       "total_points_count": 9,
-      "completed_points_count": 5,
+      "completed_points_count": 9,
+      "is_partially_complete": false
+    },
+    "ch2_q21": {
+      "doctrine": "Taxation on Dissolution & Reconstitution of Firm (Sec 9B, 45(4) & Rule 8AB)",
+      "root": {
+        "id": "root",
+        "number": "1",
+        "title": "Firm Reconstitution & Dissolution Taxation",
+        "badge": "Sec 9B · Sec 45(4) · Rule 8AB",
+        "voice_sync_text": "Firm-ന്റെ Dissolution അല്ലെങ്കിൽ Reconstitution സമയത്ത് Section 9B, Section 45(4), പിന്നെ Rule 8AB എന്നിവയുടെ Statutory Rules എങ്ങനെയെന്ന് നോക്കാം.",
+        "t0": 0.0,
+        "t1": 9.8,
+        "pt_idx": 0
+      },
+      "branches": [
+        {
+          "branch_id": "branch-1",
+          "branch_title": "Section 9B: Deemed Transfer of Assets",
+          "badge": "Section 9B",
+          "icon": "scales",
+          "points": [
+            {
+              "id": "beat-1-1",
+              "title": "Scope & Year of Taxability",
+              "number": "1.1.1",
+              "badge": "Deemed Transfer",
+              "body": [
+                "Receipt of capital asset or stock-in-trade by partner on dissolution or reconstitution is deemed transfer",
+                "Taxable in the hands of entity in the Previous Year of asset receipt based on Fair Market Value"
+              ],
+              "highlights": [
+                {
+                  "phrase": "Fair Market Value",
+                  "time_sec": 7.0
+                },
+                {
+                  "phrase": "deemed transfer",
+                  "time_sec": 10.4
+                }
+              ],
+              "table_data": null,
+              "voice_sync_text": "Section 9B പ്രകാരം dissolution അല്ലെങ്കിൽ reconstitution സമയത്ത് ഒരു partner-ന് capital asset അല്ലെങ്കിൽ stock-in-trade നൽകിയാൽ അത് firm-ന്റെ കൈകളിൽ deemed transfer ആയി കണക്കാക്കും. Asset ലഭിച്ച Previous Year-ൽ FMV പൂർണ്ണമായ consideration ആയി എടുത്ത് Tax നൽകണം.",
+              "spoken": true,
+              "t0": 10.8,
+              "t1": 29.44
+            },
+            {
+              "id": "beat-1-2",
+              "title": "Capital Account Impact",
+              "number": "1.1.2",
+              "badge": "Accounting Adjustment",
+              "body": [
+                "Profit or loss after tax from Section 9B transfer must be allocated to partner capital accounts",
+                "Adjusted capital balance forms base for computing Section 45(4) liability"
+              ],
+              "highlights": [
+                {
+                  "phrase": "allocated to partner capital accounts",
+                  "time_sec": 3.0
+                },
+                {
+                  "phrase": "base for computing Section 45(4)",
+                  "time_sec": 7.5
+                }
+              ],
+              "table_data": null,
+              "voice_sync_text": "Section 9B വഴി ഉണ്ടാകുന്ന Capital Gain-ന്റെ Net Profit after Tax പങ്കാളികളുടെ Capital Account-ലേക്ക് credit ചെയ്യണം. ഈ adjusted balance ആണ് അടുത്തതായി Section 45(4) കണക്കാക്കാൻ ഉപയോഗിക്കുന്നത്.",
+              "spoken": true,
+              "t0": 30.24,
+              "t1": 44.03
+            }
+          ],
+          "flow_summary": [],
+          "t0": 10.8,
+          "t1": 44.03
+        },
+        {
+          "branch_id": "branch-2",
+          "branch_title": "Section 45(4): Reconstitution Capital Gains",
+          "badge": "Section 45(4)",
+          "icon": "calculator",
+          "points": [
+            {
+              "id": "beat-2-1",
+              "title": "Computation Benchmark",
+              "number": "1.2.1",
+              "badge": "Formula",
+              "body": [
+                "Capital Gain = Money Received + FMV of Capital Asset Received - Adjusted Capital Balance",
+                "Self-generated goodwill or asset revaluation in books without tax payment is ignored"
+              ],
+              "highlights": [
+                {
+                  "phrase": "Money Received + FMV of Capital Asset Received",
+                  "time_sec": 2.0
+                },
+                {
+                  "phrase": "ignored",
+                  "time_sec": 8.0
+                }
+              ],
+              "table_data": null,
+              "voice_sync_text": "Section 45(4) പ്രകാരം Reconstitution സമയത്ത് retiring partner-ന് നൽകുന്ന Money plus FMV of Capital Assets-ൽ നിന്ന് അങ്കിയുടെ Adjusted Capital Balance കുറച്ചാൽ Capital Gain ലഭിക്കും. വെറുതെ books-ൽ നടത്തുന്ന Revaluation ഇവിടുത്തെ balance-ൽ കൂട്ടാൻ പാടില്ല.",
+              "spoken": true,
+              "t0": 46.03,
+              "t1": 64.24
+            }
+          ],
+          "flow_summary": [],
+          "t0": 46.03,
+          "t1": 64.24
+        },
+        {
+          "branch_id": "branch-3",
+          "branch_title": "Rule 8AB & Section 48(iii): Attribution Rule",
+          "badge": "Rule 8AB",
+          "icon": "percent",
+          "points": [
+            {
+              "id": "beat-3-1",
+              "title": "Attribution to Remaining Assets",
+              "number": "1.3.1",
+              "badge": "Proportions",
+              "body": [
+                "Section 45(4) capital gain is allocated to remaining capital assets in ratio of net revaluation",
+                "Attribution to self-generated goodwill or short-term assets is categorized as STCG"
+              ],
+              "highlights": [
+                {
+                  "phrase": "allocated to remaining capital assets",
+                  "time_sec": 2.5
+                },
+                {
+                  "phrase": "categorized as STCG",
+                  "time_sec": 7.8
+                }
+              ],
+              "table_data": null,
+              "voice_sync_text": "Section 45(4)-ൽ വന്നെത്തിയ Capital Gain, Firm-ൽ ബാക്കിയുള്ള capital assets-ന്റെ net revaluation ratio-യിൽ allocate ചെയ്യണം എന്ന് Rule 8AB വ്യക്തമാക്കുന്നു. Self-generated goodwill-ലേക്ക് അലോക്കേറ്റ് ചെയ്യുന്ന തുക STCG ആയിട്ടാണ് കണക്കാക്കുന്നത്.",
+              "spoken": true,
+              "t0": 66.24,
+              "t1": 83.67
+            }
+          ],
+          "flow_summary": [],
+          "t0": 66.24,
+          "t1": 83.67
+        },
+        {
+          "branch_id": "branch-4",
+          "branch_title": "Subsequent Sale & Section 48(iii) Deduction",
+          "badge": "Section 48(iii)",
+          "icon": "shield",
+          "points": [
+            {
+              "id": "beat-4-1",
+              "title": "Deduction on Asset Transfer",
+              "number": "1.4.1",
+              "badge": "Tax Relief",
+              "body": [
+                "Attributed amount under Rule 8AB is deductible under Section 48(iii) on subsequent transfer",
+                "Prevents double taxation when revalued assets or goodwill are sold later"
+              ],
+              "highlights": [
+                {
+                  "phrase": "deductible under Section 48(iii)",
+                  "time_sec": 3.0
+                },
+                {
+                  "phrase": "Prevents double taxation",
+                  "time_sec": 7.5
+                }
+              ],
+              "table_data": null,
+              "voice_sync_text": "ഭാവിയിൽ ഈ remaining assets വിൽക്കുമ്പോൾ, Rule 8AB പ്രകാരം attribute ചെയ്ത തുക Section 48(iii) പ്രകാരം deduction ആയി അനുവദിക്കും. ഇത് ഡബിൾ ടാക്സേഷൻ പൂർണ്ണമായും ഒഴിവാക്കുന്നു.",
+              "spoken": true,
+              "t0": 85.67,
+              "t1": 98.03
+            }
+          ],
+          "flow_summary": [],
+          "t0": 85.67,
+          "t1": 98.03
+        }
+      ],
+      "concept_simulation": {
+        "schema_version": "1.0",
+        "illustrative_only": true,
+        "doctrine_topic": "Firm Reconstitution Taxation under Sec 9B, Sec 45(4) & Rule 8AB Attribution",
+        "relevant_tax_year": "P.Y. 2025-26 to P.Y. 2026-27",
+        "statutory_assumptions": [
+          "Illustrative Partnership Firm with retiring partner receiving money and capital asset",
+          "Firm owns remaining land and self-generated goodwill with zero book cost"
+        ],
+        "intro_voice": "ഇനി ഈ പ്രൊവിഷനുകൾ എങ്ങനെയാണ് പ്രാക്ടിക്കലായി വർക്ക് ചെയ്യുന്നതെന്ന് ഒരു സിമ്പിൾ എക്സാമ്പിൾ വഴി കാണാം.",
+        "steps": [
+          {
+            "step_id": "step_1",
+            "step_order": 1,
+            "title": "Section 9B: Deemed Transfer of Asset to Retiring Partner",
+            "metric_label": "Deemed LTCG u/s 9B",
+            "metric_value": "₹ 20,00,000",
+            "voice_sync_text": "ആദ്യ പടിയായി, retiring partner-ന് നൽകുന്ന land-ന്റെ FMV ₹ 50 Lakhs ആയിരിക്കുകയും Cost ₹ 30 Lakhs ആയിരിക്കുകയും ചെയ്താൽ, Section 9B പ്രകാരം ₹ 20 Lakhs deemed Capital Gains ആകുന്നു.",
+            "image_prompt": "A modern corporate office scene in 2.5D isometric view. A partner signing retirement deeds while a land title deed valued at FMV is handed over, clean financial chart overlay showing Section 9B calculation.",
+            "calculation_data": null
+          },
+          {
+            "step_id": "step_2",
+            "step_order": 2,
+            "title": "Capital Account Adjustment & Section 45(4) Excess Distribution",
+            "metric_label": "Taxable Capital Gain u/s 45(4)",
+            "metric_value": "₹ 24,00,000",
+            "voice_sync_text": "Section 9B-യിലെ tax നൽകിയ ശേഷമുള്ള net profit partner-ന്റെ capital account-ൽ add ചെയ്യുന്നു. partner-ന് ലഭിച്ച money plus asset value, ഈ updated capital balance-നേക്കാൾ ₹ 24 Lakhs കൂടുതലായതിനാൽ Section 45(4) പ്രകാരം taxable ആകുന്നു.",
+            "image_prompt": "An isometric 2.5D visual of financial ledger sheets updating partner capital account balances automatically, with glowing green arrow showing Sec 45(4) excess profit calculation.",
+            "calculation_data": null
+          },
+          {
+            "step_id": "step_3",
+            "step_order": 3,
+            "title": "Rule 8AB: Attribution to Remaining Assets & Goodwill",
+            "metric_label": "Attributed to Goodwill",
+            "metric_value": "₹ 6,00,000",
+            "voice_sync_text": "Section 45(4)-ൽ വന്ന ₹ 24 Lakhs capital gain, ബാക്കിയുള്ള land-ലേക്കും self-generated goodwill-ലേക്കും revaluation ratio-യിൽ allocate ചെയ്യുന്നു. goodwill-ലേക്ക് ₹ 6 Lakhs attribute ചെയ്യപ്പെടുന്നു.",
+            "image_prompt": "Isometric 2.5D view showing a glowing pie chart splitting ₹ 24 Lakhs into proportions across a plot of commercial land and a glowing virtual Goodwill icon.",
+            "calculation_data": null
+          },
+          {
+            "step_id": "step_4",
+            "step_order": 4,
+            "title": "Subsequent Sale of Goodwill with Section 48(iii) Deduction",
+            "metric_label": "Net STCG on Sale",
+            "metric_value": "₹ 74,00,000",
+            "voice_sync_text": "അടുത്ത വർഷം ഈ self-generated goodwill ₹ 80 Lakhs-ന് വിൽക്കുമ്പോൾ, Cost of acquisition nil ആണെങ്കിലും, Section 48(iii) പ്രകാരം മുൻപ് attribute ചെയ്ത ₹ 6 Lakhs കുറച്ച് net ₹ 74 Lakhs മാത്രം taxable STCG ആകുന്നു.",
+            "image_prompt": "Cinematic 2.5D isometric illustration of a successful business deal transaction with ₹ 80 Lakhs consideration banner, showing ₹ 6 Lakhs Rule 8AB deduction subtraction.",
+            "calculation_data": {
+              "headers": [
+                "Particulars",
+                "Amount (₹)"
+              ],
+              "rows": [
+                [
+                  "Full Value of Consideration (Goodwill Sale)",
+                  "80,00,000"
+                ],
+                [
+                  "Less: Deduction u/s 48(iii) [Rule 8AB Attribution]",
+                  "(6,00,000)"
+                ],
+                [
+                  "Less: Cost of Acquisition u/s 55(2)(a)",
+                  "Nil"
+                ],
+                [
+                  "Net Taxable Short-Term Capital Gain (STCG)",
+                  "74,00,000"
+                ]
+              ]
+            }
+          }
+        ]
+      },
+      "total_duration": 100.03,
+      "drive_folder_id": "1WJrFbesIRcfHPngILj6zx-F-7ZkkRzuu",
+      "total_points_count": 11,
+      "completed_points_count": 0,
       "is_partially_complete": true
     }
   }
