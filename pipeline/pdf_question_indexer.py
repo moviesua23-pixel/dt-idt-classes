@@ -189,6 +189,8 @@ def sanitize_and_format_text(text: str, is_question: bool = False) -> str:
         text = re.sub(r'^\s*Question\s+\d+[:\.\s\-]*\n?', '', text, flags=re.IGNORECASE).strip()
     else:
         text = re.sub(r'^\s*(?:Answer|Solution|SOLUTION|ANSWER)\s*[:\-\n]*', '', text, flags=re.IGNORECASE).strip()
+        text = re.sub(r'^[a-z]{1,3}\s+(?=[A-Z])', '', text.strip())
+        text = re.sub(r'\s+(?:Conversion of Capital Asset into Stock in Trade|Question\s+\d+.*)$', '', text, flags=re.IGNORECASE)
 
     # 2. Strip running book headers, footers and OCR boundary noise
     header_patterns = [
@@ -212,11 +214,57 @@ def sanitize_and_format_text(text: str, is_question: bool = False) -> str:
     text = re.sub(r'\b8\s+(?=\d{1,3}(?:,\d{2,3})+)', '₹ ', text)
     text = re.sub(r'[\uFFFD\u201C\u201D\u2018\u2019]', '"', text)
     text = re.sub(r'(\d+)\s*=\s*(₹)', r'\1 x \2', text)
+    text = re.sub(r'(\d+)\s*%\s*(January|February|March|April|May|June|July|August|September|October|November|December)', r'\1th \2', text, flags=re.IGNORECASE)
 
-    # 4. Pre-split inline transitions after punctuation so Notes and Computations start as new paragraphs
-    text = re.sub(r'(?<=[.!?])\s+(Note\s*\d*:|Note:|Computation of\b|Taxability\b|Particulars\b)', r'\n\n\1', text)
+    # 4. Format sub-questions: (i), (ii), (a), (b), etc.
+    text = re.sub(r'(?:^|\n|\.\s+)\(([ivxIVX]+|\d+|[a-zA-Z])\)\s*', r'\n\n- **(\1)** ', text)
 
-    # 5. Clean up inline whitespace per line
+    # 5. Natural Statutory Paragraph Transitions after sentence punctuation
+    transitions = [
+        r'As per section\b',
+        r'Under section\b',
+        r'In accordance with section\b',
+        r'For the purpose of\b',
+        r'Since the asset\b',
+        r'Since the\b',
+        r'In the given case\b',
+        r'In the instant case\b',
+        r'In this case\b',
+        r'Therefore\b',
+        r'Accordingly\b',
+        r'Consequently\b',
+        r'The provisions of\b',
+        r'The computation of\b',
+        r'Computation of\b',
+        r'Taxability\b',
+        r'Particulars\b',
+        r'Note\s*\d*:',
+        r'Note:',
+        r'You are required to\b',
+        r'Discuss the issues\b',
+        r'Examine the tax\b'
+    ]
+    pattern = r'(?<=[.!?])\s+(?=' + '|'.join(transitions) + ')'
+    text = re.sub(pattern, r'\n\n', text, flags=re.IGNORECASE)
+
+    # 6. Auto-detect and format inline computation tables into clean Markdown tables
+    table_trigger = re.search(r'((?:is given below|is as follows|computed as follows|computation[^:]*?is as under)[:\s]*)(Full value of (?:the )?consideration[\s\S]*?Short[\s-]*term[\s\S]*?₹?\s*[\d,]+)', text, re.IGNORECASE)
+    if table_trigger:
+        header_prefix = table_trigger.group(1).strip()
+        calc_block = table_trigger.group(2).strip()
+        matches = re.findall(r'(Full value of (?:the )?consideration|Less\s*:\s*Written down value[^\d₹]*\d*(?:st|nd|rd|th)?,\s*\d{4}|Less\s*:\s*[A-Za-z\s]+|Short[\s-]*term(?:\s*capital gains?)?)[^\d₹]*₹?\s*([\d,]{3,}(?:\.\d+)?)', calc_block, re.IGNORECASE)
+        if len(matches) >= 2:
+            table_md = f'\n\n{header_prefix}\n\n| Particulars | ₹ |\n| :--- | :---: |\n'
+            for lbl, amt in matches:
+                lbl = lbl.strip(' :-\t')
+                if 'short' in lbl.lower():
+                    lbl = '**Short-term Capital Gain**'
+                elif 'less' in lbl.lower() and 'written down' in lbl.lower():
+                    lbl = 'Less: Written down value as on 01.04.2025'
+                table_md += f'| {lbl} | {amt} |\n'
+            text = text.replace(table_trigger.group(0), table_md)
+
+    # 7. Clean up inline whitespace per line
     raw_lines = text.splitlines()
     lines = [re.sub(r'[ \t]+', ' ', l).strip() for l in raw_lines]
 

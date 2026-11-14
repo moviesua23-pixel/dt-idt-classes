@@ -4074,24 +4074,73 @@ function renderProvMarkdown(rawMd, doctrine){
  return html;
 }
 
+function formatQnAParagraphs(rawText, isAnswer = false) {
+  if (!rawText) return "";
+  let text = String(rawText).trim();
+
+  // 1. Strip OCR prefixes and leaked headers
+  if (isAnswer) {
+    text = text.replace(/^\s*(?:Answer|Solution|SOLUTION|ANSWER)\s*[:\-\n]*/i, "");
+    text = text.replace(/^[a-z]{1,3}\s+(?=[A-Z])/i, "");
+    text = text.replace(/\s+(?:Conversion of Capital Asset into Stock in Trade|Question\s+\d+.*)$/i, "");
+  } else {
+    text = text.replace(/^\s*Question\s+\d+[:\.\s\-]*\n?/i, "");
+  }
+
+  // 2. Fix OCR glyph corruptions & dates
+  text = text.replace(/\b55\s*\(P\)\s*Ltd\./g, "SS(P) Ltd.");
+  text = text.replace(/(?:[%¢=t~]|[\uFFFD\u00A2\u20AC])\s*(?=\d)/g, "₹ ");
+  text = text.replace(/\b8\s+(?=\d{1,3}(?:,\d{2,3})+)/g, "₹ ");
+  text = text.replace(/[\uFFFD\u201C\u201D\u2018\u2019]/g, '"');
+  text = text.replace(/(\d+)\s*%\s*(January|February|March|April|May|June|July|August|September|October|November|December)/gi, "$1th $2");
+
+  // 3. Format sub-points: (i), (ii), (a), (b), etc.
+  text = text.replace(/(?:^|\n|\.\s+)\(([ivxIVX]+|\d+|[a-zA-Z])\)\s*/g, "\n\n- **($1)** ");
+
+  // 4. Natural Statutory Paragraph Transitions (after sentence punctuation)
+  const transitions = [
+    "As per section\\b", "Under section\\b", "In accordance with section\\b",
+    "For the purpose of\\b", "Since the asset\\b", "Since the\\b", "Since in the\\b",
+    "In the given case\\b", "In the instant case\\b", "In this case\\b",
+    "Therefore\\b", "Accordingly\\b", "Consequently\\b",
+    "The provisions of\\b", "The computation of\\b", "Computation of\\b",
+    "Note\\s*\\d*:", "Note:", "You are required to\\b", "Discuss the issues\\b",
+    "Examine the tax\\b", "Examine whether\\b", "State with reasons\\b"
+  ];
+  const transRegex = new RegExp("(?<=[.!?])\\s+(?=" + transitions.join("|") + ")", "gi");
+  text = text.replace(transRegex, "\n\n");
+
+  // 5. Auto-detect and format inline computation tables into clean Markdown tables
+  const tableTrigger = text.match(/((?:is given below|is as follows|computed as follows|computation[^:]*?is as under)[:\s]*)(Full value of (?:the )?consideration[\s\S]*?Short[\s-]*term[\s\S]*?₹?\s*[\d,]+)/i);
+  if (tableTrigger) {
+    const headerPrefix = tableTrigger[1].trim();
+    const calcBlock = tableTrigger[2].trim();
+    const matches = [...calcBlock.matchAll(/(Full value of (?:the )?consideration|Less\s*:\s*Written down value[^\d₹]*\d*(?:st|nd|rd|th)?,\s*\d{4}|Less\s*:\s*[A-Za-z\s]+|Short[\s-]*term(?:\s*capital gains?)?)[^\d₹]*₹?\s*([\d,]{3,}(?:\.\d+)?)/gi)];
+    if (matches.length >= 2) {
+      let tableMd = `\n\n${headerPrefix}\n\n| Particulars | ₹ |\n| :--- | :---: |\n`;
+      matches.forEach(m => {
+        let lbl = m[1].trim().replace(/^[:\-\s]+|[:\-\s]+$/g, "");
+        if (/short/i.test(lbl)) lbl = "**Short-term Capital Gain**";
+        else if (/less.*written down/i.test(lbl)) lbl = "Less: Written down value as on 01.04.2025";
+        tableMd += `| ${lbl} | ${m[2]} |\n`;
+      });
+      text = text.replace(tableTrigger[0], tableMd);
+    }
+  }
+
+  // 6. Collapse extra spaces around line breaks & ensure clean markdown tables
+  text = text.replace(/[ \t]+\n/g, "\n").replace(/\n{3,}/g, "\n\n");
+  while (/(\|[^\n]+\|)\s*\n\s*\n\s*(?=\|[^\n]+\|)/.test(text)) {
+    text = text.replace(/(\|[^\n]+\|)\s*\n\s*\n\s*(?=\|[^\n]+\|)/g, "$1\n");
+  }
+
+  return text;
+}
+
 function renderQuestionMarkdown(rawQuestion){
  if(!rawQuestion) return "";
  if (Array.isArray(rawQuestion)) rawQuestion = rawQuestion.join("\n\n");
- let text = rawQuestion.trim();
- // 1. Strip Question X prefix
- text = text.replace(/^\s*Question\s+\d+[:\.\s\-]*\n?/i, "").trim();
- // 2. Clean font glyph corruptions
- text = text.replace(/\b55\s*\(P\)\s*Ltd\./g, "SS(P) Ltd.");
- text = text.replace(/(?:[%¢=t~]|[\uFFFD\u00A2\u20AC])\s*(?=\d)/g, "₹ ");
- text = text.replace(/\b8\s+(?=\d{1,3}(?:,\d{2,3})+)/g, "₹ ");
- text = text.replace(/[\uFFFD\u201C\u201D\u2018\u2019]/g, '"');
- // 3. Format sub-questions (i), (ii), etc.
- text = text.replace(/(?:^|\n)\s*\(([ivxIVX]+|\d+|[a-zA-Z])\)\s*/g, "\n\n- **($1)** ");
- // 4. Collapse any blank lines between table rows so markdown renders valid table
- while (/(\|[^\n]+\|)\s*\n\s*\n\s*(?=\|[^\n]+\|)/.test(text)) {
-  text = text.replace(/(\|[^\n]+\|)\s*\n\s*\n\s*(?=\|[^\n]+\|)/g, "$1\n");
- }
- // 5. Parse markdown
+ const text = formatQnAParagraphs(rawQuestion, false);
  let html = marked.parse(text);
  html = html.replace(/<table>/g, '<div class="tbl-wrap"><table>').replace(/<\/table>/g, '</table></div>');
  return html;
@@ -4099,8 +4148,8 @@ function renderQuestionMarkdown(rawQuestion){
 
 function renderAnswerMarkdown(rawAnswer){
  if(!rawAnswer) return "";
- let cleaned = processMarkdownCallouts(rawAnswer.trim());
- // Collapse any blank lines between table rows so markdown renders valid table
+ const formatted = formatQnAParagraphs(rawAnswer, true);
+ let cleaned = processMarkdownCallouts(formatted);
  while (/(\|[^\n]+\|)\s*\n\s*\n\s*(?=\|[^\n]+\|)/.test(cleaned)) {
   cleaned = cleaned.replace(/(\|[^\n]+\|)\s*\n\s*\n\s*(?=\|[^\n]+\|)/g, "$1\n");
  }
