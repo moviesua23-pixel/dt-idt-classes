@@ -1904,5 +1904,987 @@
     "8": "q8",
     "9": "q9",
     "10": "q10"
+  },
+  "ch1_q10": {
+    "doctrine": "Company Surcharge Relief above ₹10 Crore",
+    "root": {
+      "id": "root",
+      "number": "1",
+      "title": "Company Surcharge Relief above ₹10 Crore",
+      "badge": "Finance Act · Domestic Company Rates",
+      "t1": 7.776,
+      "voice_sync_text": "ഇന്ന് domestic company-കൾക്ക് പത്ത് കോടി രൂപ threshold-ൽ ബാധകമായ surcharge relief മാത്രം പഠിക്കാം."
+    },
+    "total_duration": 143.472,
+    "branches": [
+      {
+        "branch_id": "q10-branch-1",
+        "branch_title": "Company tax framework",
+        "number": "1.1",
+        "badge": "Company tax framework",
+        "icon": "scales",
+        "t0": 9.276,
+        "t1": 41.712,
+        "points": [
+          {
+            "id": "q10-beat-1-0",
+            "title": "Normal domestic-company rate",
+            "number": "1.1.1",
+            "badge": "Rule",
+            "body": [
+              "Domestic companies use the rate prescribed by the relevant Finance Act.",
+              "The regular rate is generally 30%; specified turnover-based eligibility can provide 25%."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 9.276,
+            "t1": 22.668,
+            "voice_sync_text": "Domestic company-കൾക്ക് അതത് Finance Act നിശ്ചയിക്കുന്ന നിരക്കാണ് ബാധകം. സാധാരണ നിരക്ക് 30%; നിശ്ചിത turnover വ്യവസ്ഥ പാലിച്ചാൽ 25% നിരക്ക് ലഭിക്കാം.",
+            "icon": "check",
+            "highlights": []
+          },
+          {
+            "id": "q10-beat-2-0",
+            "title": "Concessional regimes",
+            "number": "1.1.2",
+            "badge": "Rule",
+            "body": [
+              "Sections 115BA, 115BAA and 115BAB provide separate tax options.",
+              "Eligibility, conditions, surcharge and deduction restrictions differ by option."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 24.168,
+            "t1": 41.712,
+            "voice_sync_text": "Sections 115BA, 115BAA, 115BAB എന്നിവ വേറിട്ട tax options നൽകുന്നു. Option അനുസരിച്ച് അർഹത, നിബന്ധന, surcharge, deduction നിയന്ത്രണം എന്നിവ മാറും.",
+            "icon": "check",
+            "highlights": []
+          }
+        ],
+        "flow_summary": []
+      },
+      {
+        "branch_id": "q10-branch-2",
+        "branch_title": "Surcharge",
+        "number": "1.2",
+        "badge": "Surcharge",
+        "icon": "scales",
+        "t0": 43.212,
+        "t1": 76.632,
+        "points": [
+          {
+            "id": "q10-beat-3-0",
+            "title": "Surcharge thresholds",
+            "number": "1.2.1",
+            "badge": "Rule",
+            "body": [
+              "For a regular domestic company: 7% where income exceeds ₹1 crore up to ₹10 crore.",
+              "12% applies where income exceeds ₹10 crore; surcharge is on income-tax."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 43.212,
+            "t1": 59.052,
+            "voice_sync_text": "സാധാരണ domestic company-ക്ക് income ഒരു കോടി കവിയുകയും പത്ത് കോടി വരെ ആയിരിക്കുകയും ചെയ്താൽ 7% surcharge. പത്ത് കോടി കവിയുമ്പോൾ 12%; surcharge income tax-ലാണ് കണക്കാക്കുന്നത്.",
+            "icon": "check",
+            "highlights": []
+          },
+          {
+            "id": "q10-beat-4-0",
+            "title": "Cess",
+            "number": "1.2.2",
+            "badge": "Rule",
+            "body": [
+              "Health and Education Cess is 4% of income-tax plus surcharge.",
+              "Add cess after determining any applicable marginal relief."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 60.552,
+            "t1": 76.632,
+            "voice_sync_text": "Income tax-ും surcharge-ും ചേർന്ന തുകയ്ക്ക് 4% Health and Education Cess ബാധകമാണ്. Marginal relief ഉണ്ടെങ്കിൽ അത് കണക്കാക്കിയ ശേഷമാണ് cess ചേർക്കുന്നത്.",
+            "icon": "check",
+            "highlights": []
+          }
+        ],
+        "flow_summary": []
+      },
+      {
+        "branch_id": "q10-branch-3",
+        "branch_title": "Marginal relief above ₹1 crore",
+        "number": "1.3",
+        "badge": "Marginal relief above ₹1 crore",
+        "icon": "scales",
+        "t0": 78.132,
+        "t1": 116.184,
+        "points": [
+          {
+            "id": "q10-beat-5-0",
+            "title": "When it applies",
+            "number": "1.3.1",
+            "badge": "Rule",
+            "body": [
+              "Relief addresses the surcharge increase at the ₹1 crore threshold.",
+              "Compare tax plus surcharge with threshold tax plus income exceeding ₹1 crore."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 78.132,
+            "t1": 96.516,
+            "voice_sync_text": "ഒരു കോടി രൂപയുടെ threshold കടക്കുമ്പോൾ surcharge മൂലം വരുന്ന അധികഭാരം കുറയ്ക്കാനാണ് marginal relief. Tax plus surcharge-നെ threshold tax-ും ഒരു കോടിക്ക് മുകളിലെ അധിക വരുമാനവും ചേർന്ന തുകയുമായി താരതമ്യം ചെയ്യുക.",
+            "icon": "check",
+            "highlights": []
+          },
+          {
+            "id": "q10-beat-6-0",
+            "title": "Formula",
+            "number": "1.3.2",
+            "badge": "Rule",
+            "body": [
+              "Ceiling = tax and surcharge on ₹1 crore + (total income − ₹1 crore).",
+              "Relief = tax and surcharge before relief − ceiling, where positive."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 98.016,
+            "t1": 116.184,
+            "voice_sync_text": "പരമാവധി പരിധി = ഒരു കോടി രൂപയിലെ tax-ും surcharge-ും + (total income − ഒരു കോടി). Relief = relief-നു മുമ്പുള്ള tax plus surcharge − ഈ പരിധി; വ്യത്യാസം positive ആണെങ്കിൽ.",
+            "icon": "check",
+            "highlights": []
+          }
+        ],
+        "flow_summary": []
+      },
+      {
+        "branch_id": "q10-branch-4",
+        "branch_title": "Marginal relief above ₹10 crore",
+        "number": "1.4",
+        "badge": "Marginal relief above ₹10 crore",
+        "icon": "scales",
+        "t0": 117.684,
+        "t1": 143.472,
+        "points": [
+          {
+            "id": "q10-beat-7-0",
+            "title": "Higher surcharge threshold",
+            "number": "1.4.1",
+            "badge": "Rule",
+            "body": [
+              "At income above ₹10 crore, the regular-company surcharge rate is 12%.",
+              "Marginal relief limits the threshold jump at ₹10 crore."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 117.684,
+            "t1": 128.964,
+            "voice_sync_text": "പത്ത് കോടി കവിയുന്ന income-ൽ സാധാരണ company surcharge 12% ആണ്. പത്ത് കോടിയുടെ threshold-ൽ ഉണ്ടാകുന്ന tax jump marginal relief നിയന്ത്രിക്കുന്നു.",
+            "icon": "check",
+            "highlights": []
+          },
+          {
+            "id": "q10-beat-8-0",
+            "title": "Formula and order",
+            "number": "1.4.2",
+            "badge": "Rule",
+            "body": [
+              "Ceiling = tax plus surcharge on ₹10 crore + income exceeding ₹10 crore.",
+              "Deduct relief, then add 4% cess to tax plus surcharge."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 130.464,
+            "t1": 143.472,
+            "voice_sync_text": "പരമാവധി പരിധി = പത്ത് കോടി രൂപയിലെ tax plus surcharge + അതിന് മുകളിലെ വരുമാനം. Relief കുറച്ചശേഷം ശേഷിക്കുന്ന tax plus surcharge-ൽ 4% cess ചേർക്കുക.",
+            "icon": "check",
+            "highlights": []
+          }
+        ],
+        "flow_summary": []
+      }
+    ]
+  },
+  "T_CH1_Q10": {
+    "doctrine": "Company Surcharge Relief above ₹10 Crore",
+    "root": {
+      "id": "root",
+      "number": "1",
+      "title": "Company Surcharge Relief above ₹10 Crore",
+      "badge": "Finance Act · Domestic Company Rates",
+      "t1": 7.776,
+      "voice_sync_text": "ഇന്ന് domestic company-കൾക്ക് പത്ത് കോടി രൂപ threshold-ൽ ബാധകമായ surcharge relief മാത്രം പഠിക്കാം."
+    },
+    "total_duration": 143.472,
+    "branches": [
+      {
+        "branch_id": "q10-branch-1",
+        "branch_title": "Company tax framework",
+        "number": "1.1",
+        "badge": "Company tax framework",
+        "icon": "scales",
+        "t0": 9.276,
+        "t1": 41.712,
+        "points": [
+          {
+            "id": "q10-beat-1-0",
+            "title": "Normal domestic-company rate",
+            "number": "1.1.1",
+            "badge": "Rule",
+            "body": [
+              "Domestic companies use the rate prescribed by the relevant Finance Act.",
+              "The regular rate is generally 30%; specified turnover-based eligibility can provide 25%."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 9.276,
+            "t1": 22.668,
+            "voice_sync_text": "Domestic company-കൾക്ക് അതത് Finance Act നിശ്ചയിക്കുന്ന നിരക്കാണ് ബാധകം. സാധാരണ നിരക്ക് 30%; നിശ്ചിത turnover വ്യവസ്ഥ പാലിച്ചാൽ 25% നിരക്ക് ലഭിക്കാം.",
+            "icon": "check",
+            "highlights": []
+          },
+          {
+            "id": "q10-beat-2-0",
+            "title": "Concessional regimes",
+            "number": "1.1.2",
+            "badge": "Rule",
+            "body": [
+              "Sections 115BA, 115BAA and 115BAB provide separate tax options.",
+              "Eligibility, conditions, surcharge and deduction restrictions differ by option."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 24.168,
+            "t1": 41.712,
+            "voice_sync_text": "Sections 115BA, 115BAA, 115BAB എന്നിവ വേറിട്ട tax options നൽകുന്നു. Option അനുസരിച്ച് അർഹത, നിബന്ധന, surcharge, deduction നിയന്ത്രണം എന്നിവ മാറും.",
+            "icon": "check",
+            "highlights": []
+          }
+        ],
+        "flow_summary": []
+      },
+      {
+        "branch_id": "q10-branch-2",
+        "branch_title": "Surcharge",
+        "number": "1.2",
+        "badge": "Surcharge",
+        "icon": "scales",
+        "t0": 43.212,
+        "t1": 76.632,
+        "points": [
+          {
+            "id": "q10-beat-3-0",
+            "title": "Surcharge thresholds",
+            "number": "1.2.1",
+            "badge": "Rule",
+            "body": [
+              "For a regular domestic company: 7% where income exceeds ₹1 crore up to ₹10 crore.",
+              "12% applies where income exceeds ₹10 crore; surcharge is on income-tax."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 43.212,
+            "t1": 59.052,
+            "voice_sync_text": "സാധാരണ domestic company-ക്ക് income ഒരു കോടി കവിയുകയും പത്ത് കോടി വരെ ആയിരിക്കുകയും ചെയ്താൽ 7% surcharge. പത്ത് കോടി കവിയുമ്പോൾ 12%; surcharge income tax-ലാണ് കണക്കാക്കുന്നത്.",
+            "icon": "check",
+            "highlights": []
+          },
+          {
+            "id": "q10-beat-4-0",
+            "title": "Cess",
+            "number": "1.2.2",
+            "badge": "Rule",
+            "body": [
+              "Health and Education Cess is 4% of income-tax plus surcharge.",
+              "Add cess after determining any applicable marginal relief."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 60.552,
+            "t1": 76.632,
+            "voice_sync_text": "Income tax-ും surcharge-ും ചേർന്ന തുകയ്ക്ക് 4% Health and Education Cess ബാധകമാണ്. Marginal relief ഉണ്ടെങ്കിൽ അത് കണക്കാക്കിയ ശേഷമാണ് cess ചേർക്കുന്നത്.",
+            "icon": "check",
+            "highlights": []
+          }
+        ],
+        "flow_summary": []
+      },
+      {
+        "branch_id": "q10-branch-3",
+        "branch_title": "Marginal relief above ₹1 crore",
+        "number": "1.3",
+        "badge": "Marginal relief above ₹1 crore",
+        "icon": "scales",
+        "t0": 78.132,
+        "t1": 116.184,
+        "points": [
+          {
+            "id": "q10-beat-5-0",
+            "title": "When it applies",
+            "number": "1.3.1",
+            "badge": "Rule",
+            "body": [
+              "Relief addresses the surcharge increase at the ₹1 crore threshold.",
+              "Compare tax plus surcharge with threshold tax plus income exceeding ₹1 crore."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 78.132,
+            "t1": 96.516,
+            "voice_sync_text": "ഒരു കോടി രൂപയുടെ threshold കടക്കുമ്പോൾ surcharge മൂലം വരുന്ന അധികഭാരം കുറയ്ക്കാനാണ് marginal relief. Tax plus surcharge-നെ threshold tax-ും ഒരു കോടിക്ക് മുകളിലെ അധിക വരുമാനവും ചേർന്ന തുകയുമായി താരതമ്യം ചെയ്യുക.",
+            "icon": "check",
+            "highlights": []
+          },
+          {
+            "id": "q10-beat-6-0",
+            "title": "Formula",
+            "number": "1.3.2",
+            "badge": "Rule",
+            "body": [
+              "Ceiling = tax and surcharge on ₹1 crore + (total income − ₹1 crore).",
+              "Relief = tax and surcharge before relief − ceiling, where positive."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 98.016,
+            "t1": 116.184,
+            "voice_sync_text": "പരമാവധി പരിധി = ഒരു കോടി രൂപയിലെ tax-ും surcharge-ും + (total income − ഒരു കോടി). Relief = relief-നു മുമ്പുള്ള tax plus surcharge − ഈ പരിധി; വ്യത്യാസം positive ആണെങ്കിൽ.",
+            "icon": "check",
+            "highlights": []
+          }
+        ],
+        "flow_summary": []
+      },
+      {
+        "branch_id": "q10-branch-4",
+        "branch_title": "Marginal relief above ₹10 crore",
+        "number": "1.4",
+        "badge": "Marginal relief above ₹10 crore",
+        "icon": "scales",
+        "t0": 117.684,
+        "t1": 143.472,
+        "points": [
+          {
+            "id": "q10-beat-7-0",
+            "title": "Higher surcharge threshold",
+            "number": "1.4.1",
+            "badge": "Rule",
+            "body": [
+              "At income above ₹10 crore, the regular-company surcharge rate is 12%.",
+              "Marginal relief limits the threshold jump at ₹10 crore."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 117.684,
+            "t1": 128.964,
+            "voice_sync_text": "പത്ത് കോടി കവിയുന്ന income-ൽ സാധാരണ company surcharge 12% ആണ്. പത്ത് കോടിയുടെ threshold-ൽ ഉണ്ടാകുന്ന tax jump marginal relief നിയന്ത്രിക്കുന്നു.",
+            "icon": "check",
+            "highlights": []
+          },
+          {
+            "id": "q10-beat-8-0",
+            "title": "Formula and order",
+            "number": "1.4.2",
+            "badge": "Rule",
+            "body": [
+              "Ceiling = tax plus surcharge on ₹10 crore + income exceeding ₹10 crore.",
+              "Deduct relief, then add 4% cess to tax plus surcharge."
+            ],
+            "table_data": null,
+            "spoken": true,
+            "t0": 130.464,
+            "t1": 143.472,
+            "voice_sync_text": "പരമാവധി പരിധി = പത്ത് കോടി രൂപയിലെ tax plus surcharge + അതിന് മുകളിലെ വരുമാനം. Relief കുറച്ചശേഷം ശേഷിക്കുന്ന tax plus surcharge-ൽ 4% cess ചേർക്കുക.",
+            "icon": "check",
+            "highlights": []
+          }
+        ],
+        "flow_summary": []
+      }
+    ]
+  },
+  "ch2_q10": {
+    "doctrine": "Demerger Taxation Framework",
+    "root": {
+      "id": "root",
+      "number": "1",
+      "title": "Demerger Tax Regime",
+      "badge": "Sec 47(vib) · Sec 47(vid) · Sec 49(2C) · Sec 2(42A)(g)",
+      "voice_sync_text": "ഡീമെർജറുമായി ബന്ധപ്പെട്ട ആദായനികുതി വ്യവസ്ഥകളും കമ്പനികൾക്കും ഓഹരി ഉടമകൾക്കുമുള്ള ടാക്സ് ട്രീറ്റ്മെന്റും നമുക്ക് വിശദമായി പരിശോധിക്കാം.",
+      "t0": 0.0,
+      "t1": 9.0,
+      "pt_idx": 0,
+      "audio_file": "dt/ch2/q10/pt_0.mp3",
+      "drive_audio_id": "1MrRMuwQGayyOWoiXwg2dligmyJKt8ZuQ"
+    },
+    "branches": [
+      {
+        "branch_id": "branch-1",
+        "branch_title": "Corporate & Shareholder Neutrality",
+        "badge": "Sec 47(vib) & 47(vid)",
+        "icon": "shield",
+        "points": [
+          {
+            "id": "beat-1-1",
+            "title": "Transfer of Assets by Demerged Company",
+            "number": "1.1.1",
+            "badge": "Sec 47(vib)",
+            "body": [
+              "Any transfer of capital asset in a demerger by demerged company to resulting company is exempt.",
+              "Mandatory Statutory Condition: Resulting company must be an Indian company."
+            ],
+            "table_data": null,
+            "voice_sync_text": "സെക്ഷൻ 47(vib) പ്രകാരം ഡീമെർജർ നടക്കുമ്പോൾ ഡീമെർജ്ഡ് കമ്പനിയിൽ നിന്ന് റിസൾട്ടിംഗ് കമ്പനിയിലേക്ക് ക്യാപിറ്റൽ അസറ്റുകൾ കൈമാറുന്നത് ക്യാപിറ്റൽ ഗെയിൻസായി കണക്കാക്കില്ല. എന്നാൽ റിസൾട്ടിംഗ് കമ്പനി ഒരു ഇന്ത്യൻ കമ്പനിയായിരിക്കണം എന്നത് നിർബന്ധമാണ്.",
+            "spoken": true,
+            "t0": 10.0,
+            "t1": 27.14,
+            "pt_idx": 1,
+            "audio_file": "dt/ch2/q10/pt_1.mp3",
+            "drive_audio_id": "1g7HLR4gSpdPsvVuGWI_SKFg5PM-3GapQ",
+            "highlights": [
+              {
+                "phrase": "exempt",
+                "time_sec": 2.5
+              },
+              {
+                "phrase": "Indian company",
+                "time_sec": 6.8
+              }
+            ]
+          },
+          {
+            "id": "beat-1-2",
+            "title": "Issue of Shares to Shareholders",
+            "number": "1.1.2",
+            "badge": "Sec 47(vid)",
+            "body": [
+              "Issue of shares by resulting company to shareholders of demerged company is not a transfer.",
+              "No capital gains tax liability arises in the hands of shareholders upon receipt of shares."
+            ],
+            "table_data": null,
+            "voice_sync_text": "അതുപോലെ സെക്ഷൻ 47(vid) പ്രകാരം റിസൾട്ടിംഗ് കമ്പനി ഡീമെർജറിന്റെ ഭാഗമായി ഡീമെർജ്ഡ് കമ്പനിയിലെ ഷെയർഹോൾഡർമാർക്ക് പുതിയ ഷെയറുകൾ അലോട്ട് ചെയ്യുമ്പോൾ ഷെയർഹോൾഡർമാരുടെ കൈകളിൽ ക്യാപിറ്റൽ ഗെയിൻസ് ടാക്സ് ബാധ്യത വരിയില്ല.",
+            "spoken": true,
+            "t0": 27.94,
+            "t1": 42.8,
+            "pt_idx": 2,
+            "audio_file": "dt/ch2/q10/pt_2.mp3",
+            "drive_audio_id": "1eZTmveszCIcCxtVrzx3wvFouHFVSsEwC",
+            "highlights": [
+              {
+                "phrase": "resulting company",
+                "time_sec": 1.2
+              },
+              {
+                "phrase": "not a transfer",
+                "time_sec": 3.0
+              },
+              {
+                "phrase": "No capital gains tax liability",
+                "time_sec": 6.5
+              }
+            ]
+          }
+        ],
+        "flow_summary": [],
+        "t0": 10.0,
+        "t1": 42.8
+      },
+      {
+        "branch_id": "branch-2",
+        "branch_title": "Allocation of Cost of Acquisition",
+        "badge": "Sec 49(2C) & 49(2D)",
+        "icon": "calculator",
+        "points": [
+          {
+            "id": "beat-2-1",
+            "title": "Cost Allocation Ratio for Resulting Co. Shares",
+            "number": "1.2.1",
+            "badge": "Sec 49(2C)",
+            "body": [
+              "Cost of resulting company shares = Original cost in demerged company × (Net Book Value of assets transferred ÷ Pre-demerger Net Worth).",
+              "Net worth means total paid-up share capital and general reserves."
+            ],
+            "table_data": {
+              "headers": [
+                "Component",
+                "Formula Factor"
+              ],
+              "rows": [
+                [
+                  "Numerator",
+                  "Net Book Value of assets transferred"
+                ],
+                [
+                  "Denominator",
+                  "Net Worth of demerged company immediately before demerger"
+                ]
+              ]
+            },
+            "voice_sync_text": "സെക്ഷൻ 49(2C) പ്രകാരം റിസൾട്ടിംഗ് കമ്പനിയിൽ ലഭിക്കുന്ന പുതിയ ഷെയറുകളുടെ കോസ്റ്റ് ഓഫ് അക്വിസിഷൻ കണ്ടെത്താൻ ഒറിജിനൽ കോസ്റ്റിനെ, ട്രാൻസ്ഫർ ചെയ്ത അസറ്റുകളുടെ നെറ്റ് ബുക്ക് വാല്യൂ ബൈ കമ്പനിയുടെ നെറ്റ് വർത്ത് എന്ന അനുപാതത്തിൽ ഗുണിക്കണം.",
+            "spoken": true,
+            "t0": 44.8,
+            "t1": 61.23,
+            "pt_idx": 3,
+            "highlights": [
+              {
+                "phrase": "Net Book Value of assets transferred",
+                "time_sec": 3.0
+              },
+              {
+                "phrase": "Pre-demerger Net Worth",
+                "time_sec": 6.5
+              }
+            ]
+          },
+          {
+            "id": "beat-2-2",
+            "title": "Revised Cost of Demerged Co. Shares",
+            "number": "1.2.2",
+            "badge": "Sec 49(2D)",
+            "body": [
+              "Original cost of acquisition in demerged company is reduced by cost allocated under Section 49(2C).",
+              "Balance constitutes the revised cost of acquisition of original shares."
+            ],
+            "table_data": null,
+            "voice_sync_text": "സെക്ഷൻ 49(2D) പ്രകാരം ഒറിജിനൽ ഡീമെർജ്ഡ് കമ്പനി ഷെയറുകളുടെ പുതിയ കോസ്റ്റ് എന്നത്, ആദ്യമുണ്ടായിരുന്ന കോസ്റ്റിൽ നിന്ന് റിസൾട്ടിംഗ് കമ്പനിക്ക് മാറ്റി വെച്ച കോസ്റ്റ് കുറച്ചുള്ള തുകയാണ്.",
+            "spoken": true,
+            "t0": 62.03,
+            "t1": 74.89,
+            "highlights": [
+              {
+                "phrase": "reduced by cost allocated",
+                "time_sec": 2.8
+              },
+              {
+                "phrase": "revised cost of acquisition",
+                "time_sec": 6.2
+              }
+            ]
+          }
+        ],
+        "flow_summary": [],
+        "t0": 44.8,
+        "t1": 74.89
+      },
+      {
+        "branch_id": "branch-3",
+        "branch_title": "Period of Holding & Nature of Asset",
+        "badge": "Sec 2(42A)(g)",
+        "icon": "scales",
+        "points": [
+          {
+            "id": "beat-3-1",
+            "title": "Tacking-on Principle for Holding Period",
+            "number": "1.3.1",
+            "badge": "Sec 2(42A)(g)",
+            "body": [
+              "Period of holding of resulting company shares includes period for which original shares were held.",
+              "If total combined period exceeds 24/36 months (as applicable), asset is Long-Term Capital Asset."
+            ],
+            "table_data": null,
+            "voice_sync_text": "സെക്ഷൻ 2(42A)(g) പ്രകാരം റിസൾട്ടിംഗ് കമ്പനിയുടെ ഷെയറുകൾ വിൽക്കുമ്പോൾ പിരീഡ് ഓഫ് ഹോൾഡിംഗ് കണക്കാക്കാൻ ഡീമെർജ്ഡ് കമ്പനിയിൽ ആ ഷെയറുകൾ കൈവശം വെച്ചിരുന്ന കാലയളവ് കൂടി കൂട്ടിപ്പകർക്കേണ്ടതാണ്.",
+            "spoken": true,
+            "t0": 76.89,
+            "t1": 90.1,
+            "highlights": [
+              {
+                "phrase": "includes period for which original shares were held",
+                "time_sec": 3.2
+              },
+              {
+                "phrase": "Long-Term Capital Asset",
+                "time_sec": 7.0
+              }
+            ]
+          }
+        ],
+        "flow_summary": [],
+        "t0": 76.89,
+        "t1": 90.1
+      },
+      {
+        "branch_id": "branch-4",
+        "branch_title": "Continuity of Corporate Exemption",
+        "badge": "Statutory Interpretation",
+        "icon": "building",
+        "points": [
+          {
+            "id": "beat-4-1",
+            "title": "Post-Demerger Share Sale by Shareholders",
+            "number": "1.4.1",
+            "badge": "No Lock-in Rule",
+            "body": [
+              "Subsequent transfer of shares by shareholders does not impact corporate tax exemptions.",
+              "No statutory lock-in period is prescribed under Section 47(vib) or 47(vid)."
+            ],
+            "table_data": null,
+            "voice_sync_text": "ഡീമെർജറിന് ശേഷം ഒരു ഷെയർഹോൾഡർ തന്റെ ഷെയറുകൾ വിൽക്കുകയാണെങ്കിൽ പോലും അത് കമ്പനികൾക്ക് ലഭിച്ച സെക്ഷൻ 47 ആനുകൂല്യങ്ങളെ ബാധിക്കില്ല. ആനുകൂല്യം ലഭിക്കാൻ ഷെയറുകൾ നിശ്ചിത കാലയളവ് കൈവശം വെക്കണമെന്ന് നിയമത്തിൽ വ്യവസ്ഥയില്ല.",
+            "spoken": true,
+            "t0": 92.1,
+            "t1": 107.39,
+            "highlights": [
+              {
+                "phrase": "does not impact corporate tax exemptions",
+                "time_sec": 3.0
+              },
+              {
+                "phrase": "No statutory lock-in period",
+                "time_sec": 6.8
+              }
+            ]
+          }
+        ],
+        "flow_summary": [],
+        "t0": 92.1,
+        "t1": 107.39
+      },
+      {
+        "branch_id": "branch-5",
+        "branch_title": "Reinvestment Exemption on Share Sale",
+        "badge": "Sec 54F",
+        "icon": "rupee",
+        "points": [
+          {
+            "id": "beat-5-1",
+            "title": "Exemption Criteria under Section 54F",
+            "number": "1.5.1",
+            "badge": "Sec 54F",
+            "body": [
+              "Available on LTCG from transfer of any long-term capital asset (other than residential house).",
+              "Requires investment of net sales consideration in 1 residential house in India within specified time limits."
+            ],
+            "table_data": {
+              "headers": [
+                "Mode of Acquisition",
+                "Statutory Timeline"
+              ],
+              "rows": [
+                [
+                  "Purchase",
+                  "1 year before or 2 years after transfer date"
+                ],
+                [
+                  "Construction",
+                  "Within 3 years after transfer date"
+                ]
+              ]
+            },
+            "voice_sync_text": "ഡീമെർജറിലൂടെ ലഭിച്ച ലോങ് ടേം ഷെയറുകൾ വിൽക്കുമ്പോൾ ഉണ്ടാകുന്ന ആദായത്തിന് സെക്ഷൻ 54F പ്രകാരം ടാക്സ് എക്സംപ്ഷൻ നേടാം. ഇതിനായി വിൽപന നടന്ന് ഒരു വർഷം മുമ്പോ രണ്ട് വർഷത്തിനകത്തോ പുതിയ വീട് വാങ്ങുകയോ 3 വർഷത്തിനകം നിർമ്മിക്കുകയോ വേണം.",
+            "spoken": true,
+            "t0": 109.39,
+            "t1": 125.53,
+            "highlights": [
+              {
+                "phrase": "other than residential house",
+                "time_sec": 3.2
+              },
+              {
+                "phrase": "1 residential house in India",
+                "time_sec": 7.0
+              }
+            ]
+          }
+        ],
+        "flow_summary": [],
+        "t0": 109.39,
+        "t1": 125.53
+      }
+    ],
+    "total_duration": 127.53,
+    "drive_folder_id": "1l3nkxY2AEQfOmwV-OthJ0g70_jqjBn8t",
+    "total_points_count": 8,
+    "completed_points_count": 3,
+    "is_partially_complete": true
+  },
+  "T_CH2_Q10": {
+    "doctrine": "Demerger Taxation Framework",
+    "root": {
+      "id": "root",
+      "number": "1",
+      "title": "Demerger Tax Regime",
+      "badge": "Sec 47(vib) · Sec 47(vid) · Sec 49(2C) · Sec 2(42A)(g)",
+      "voice_sync_text": "ഡീമെർജറുമായി ബന്ധപ്പെട്ട ആദായനികുതി വ്യവസ്ഥകളും കമ്പനികൾക്കും ഓഹരി ഉടമകൾക്കുമുള്ള ടാക്സ് ട്രീറ്റ്മെന്റും നമുക്ക് വിശദമായി പരിശോധിക്കാം.",
+      "t0": 0.0,
+      "t1": 9.0,
+      "pt_idx": 0,
+      "audio_file": "dt/ch2/q10/pt_0.mp3",
+      "drive_audio_id": "1MrRMuwQGayyOWoiXwg2dligmyJKt8ZuQ"
+    },
+    "branches": [
+      {
+        "branch_id": "branch-1",
+        "branch_title": "Corporate & Shareholder Neutrality",
+        "badge": "Sec 47(vib) & 47(vid)",
+        "icon": "shield",
+        "points": [
+          {
+            "id": "beat-1-1",
+            "title": "Transfer of Assets by Demerged Company",
+            "number": "1.1.1",
+            "badge": "Sec 47(vib)",
+            "body": [
+              "Any transfer of capital asset in a demerger by demerged company to resulting company is exempt.",
+              "Mandatory Statutory Condition: Resulting company must be an Indian company."
+            ],
+            "table_data": null,
+            "voice_sync_text": "സെക്ഷൻ 47(vib) പ്രകാരം ഡീമെർജർ നടക്കുമ്പോൾ ഡീമെർജ്ഡ് കമ്പനിയിൽ നിന്ന് റിസൾട്ടിംഗ് കമ്പനിയിലേക്ക് ക്യാപിറ്റൽ അസറ്റുകൾ കൈമാറുന്നത് ക്യാപിറ്റൽ ഗെയിൻസായി കണക്കാക്കില്ല. എന്നാൽ റിസൾട്ടിംഗ് കമ്പനി ഒരു ഇന്ത്യൻ കമ്പനിയായിരിക്കണം എന്നത് നിർബന്ധമാണ്.",
+            "spoken": true,
+            "t0": 10.0,
+            "t1": 27.14,
+            "pt_idx": 1,
+            "audio_file": "dt/ch2/q10/pt_1.mp3",
+            "drive_audio_id": "1g7HLR4gSpdPsvVuGWI_SKFg5PM-3GapQ",
+            "highlights": [
+              {
+                "phrase": "exempt",
+                "time_sec": 2.5
+              },
+              {
+                "phrase": "Indian company",
+                "time_sec": 6.8
+              }
+            ]
+          },
+          {
+            "id": "beat-1-2",
+            "title": "Issue of Shares to Shareholders",
+            "number": "1.1.2",
+            "badge": "Sec 47(vid)",
+            "body": [
+              "Issue of shares by resulting company to shareholders of demerged company is not a transfer.",
+              "No capital gains tax liability arises in the hands of shareholders upon receipt of shares."
+            ],
+            "table_data": null,
+            "voice_sync_text": "അതുപോലെ സെക്ഷൻ 47(vid) പ്രകാരം റിസൾട്ടിംഗ് കമ്പനി ഡീമെർജറിന്റെ ഭാഗമായി ഡീമെർജ്ഡ് കമ്പനിയിലെ ഷെയർഹോൾഡർമാർക്ക് പുതിയ ഷെയറുകൾ അലോട്ട് ചെയ്യുമ്പോൾ ഷെയർഹോൾഡർമാരുടെ കൈകളിൽ ക്യാപിറ്റൽ ഗെയിൻസ് ടാക്സ് ബാധ്യത വരിയില്ല.",
+            "spoken": true,
+            "t0": 27.94,
+            "t1": 42.8,
+            "pt_idx": 2,
+            "audio_file": "dt/ch2/q10/pt_2.mp3",
+            "drive_audio_id": "1eZTmveszCIcCxtVrzx3wvFouHFVSsEwC",
+            "highlights": [
+              {
+                "phrase": "resulting company",
+                "time_sec": 1.2
+              },
+              {
+                "phrase": "not a transfer",
+                "time_sec": 3.0
+              },
+              {
+                "phrase": "No capital gains tax liability",
+                "time_sec": 6.5
+              }
+            ]
+          }
+        ],
+        "flow_summary": [],
+        "t0": 10.0,
+        "t1": 42.8
+      },
+      {
+        "branch_id": "branch-2",
+        "branch_title": "Allocation of Cost of Acquisition",
+        "badge": "Sec 49(2C) & 49(2D)",
+        "icon": "calculator",
+        "points": [
+          {
+            "id": "beat-2-1",
+            "title": "Cost Allocation Ratio for Resulting Co. Shares",
+            "number": "1.2.1",
+            "badge": "Sec 49(2C)",
+            "body": [
+              "Cost of resulting company shares = Original cost in demerged company × (Net Book Value of assets transferred ÷ Pre-demerger Net Worth).",
+              "Net worth means total paid-up share capital and general reserves."
+            ],
+            "table_data": {
+              "headers": [
+                "Component",
+                "Formula Factor"
+              ],
+              "rows": [
+                [
+                  "Numerator",
+                  "Net Book Value of assets transferred"
+                ],
+                [
+                  "Denominator",
+                  "Net Worth of demerged company immediately before demerger"
+                ]
+              ]
+            },
+            "voice_sync_text": "സെക്ഷൻ 49(2C) പ്രകാരം റിസൾട്ടിംഗ് കമ്പനിയിൽ ലഭിക്കുന്ന പുതിയ ഷെയറുകളുടെ കോസ്റ്റ് ഓഫ് അക്വിസിഷൻ കണ്ടെത്താൻ ഒറിജിനൽ കോസ്റ്റിനെ, ട്രാൻസ്ഫർ ചെയ്ത അസറ്റുകളുടെ നെറ്റ് ബുക്ക് വാല്യൂ ബൈ കമ്പനിയുടെ നെറ്റ് വർത്ത് എന്ന അനുപാതത്തിൽ ഗുണിക്കണം.",
+            "spoken": true,
+            "t0": 44.8,
+            "t1": 61.23,
+            "pt_idx": 3,
+            "highlights": [
+              {
+                "phrase": "Net Book Value of assets transferred",
+                "time_sec": 3.0
+              },
+              {
+                "phrase": "Pre-demerger Net Worth",
+                "time_sec": 6.5
+              }
+            ]
+          },
+          {
+            "id": "beat-2-2",
+            "title": "Revised Cost of Demerged Co. Shares",
+            "number": "1.2.2",
+            "badge": "Sec 49(2D)",
+            "body": [
+              "Original cost of acquisition in demerged company is reduced by cost allocated under Section 49(2C).",
+              "Balance constitutes the revised cost of acquisition of original shares."
+            ],
+            "table_data": null,
+            "voice_sync_text": "സെക്ഷൻ 49(2D) പ്രകാരം ഒറിജിനൽ ഡീമെർജ്ഡ് കമ്പനി ഷെയറുകളുടെ പുതിയ കോസ്റ്റ് എന്നത്, ആദ്യമുണ്ടായിരുന്ന കോസ്റ്റിൽ നിന്ന് റിസൾട്ടിംഗ് കമ്പനിക്ക് മാറ്റി വെച്ച കോസ്റ്റ് കുറച്ചുള്ള തുകയാണ്.",
+            "spoken": true,
+            "t0": 62.03,
+            "t1": 74.89,
+            "highlights": [
+              {
+                "phrase": "reduced by cost allocated",
+                "time_sec": 2.8
+              },
+              {
+                "phrase": "revised cost of acquisition",
+                "time_sec": 6.2
+              }
+            ]
+          }
+        ],
+        "flow_summary": [],
+        "t0": 44.8,
+        "t1": 74.89
+      },
+      {
+        "branch_id": "branch-3",
+        "branch_title": "Period of Holding & Nature of Asset",
+        "badge": "Sec 2(42A)(g)",
+        "icon": "scales",
+        "points": [
+          {
+            "id": "beat-3-1",
+            "title": "Tacking-on Principle for Holding Period",
+            "number": "1.3.1",
+            "badge": "Sec 2(42A)(g)",
+            "body": [
+              "Period of holding of resulting company shares includes period for which original shares were held.",
+              "If total combined period exceeds 24/36 months (as applicable), asset is Long-Term Capital Asset."
+            ],
+            "table_data": null,
+            "voice_sync_text": "സെക്ഷൻ 2(42A)(g) പ്രകാരം റിസൾട്ടിംഗ് കമ്പനിയുടെ ഷെയറുകൾ വിൽക്കുമ്പോൾ പിരീഡ് ഓഫ് ഹോൾഡിംഗ് കണക്കാക്കാൻ ഡീമെർജ്ഡ് കമ്പനിയിൽ ആ ഷെയറുകൾ കൈവശം വെച്ചിരുന്ന കാലയളവ് കൂടി കൂട്ടിപ്പകർക്കേണ്ടതാണ്.",
+            "spoken": true,
+            "t0": 76.89,
+            "t1": 90.1,
+            "highlights": [
+              {
+                "phrase": "includes period for which original shares were held",
+                "time_sec": 3.2
+              },
+              {
+                "phrase": "Long-Term Capital Asset",
+                "time_sec": 7.0
+              }
+            ]
+          }
+        ],
+        "flow_summary": [],
+        "t0": 76.89,
+        "t1": 90.1
+      },
+      {
+        "branch_id": "branch-4",
+        "branch_title": "Continuity of Corporate Exemption",
+        "badge": "Statutory Interpretation",
+        "icon": "building",
+        "points": [
+          {
+            "id": "beat-4-1",
+            "title": "Post-Demerger Share Sale by Shareholders",
+            "number": "1.4.1",
+            "badge": "No Lock-in Rule",
+            "body": [
+              "Subsequent transfer of shares by shareholders does not impact corporate tax exemptions.",
+              "No statutory lock-in period is prescribed under Section 47(vib) or 47(vid)."
+            ],
+            "table_data": null,
+            "voice_sync_text": "ഡീമെർജറിന് ശേഷം ഒരു ഷെയർഹോൾഡർ തന്റെ ഷെയറുകൾ വിൽക്കുകയാണെങ്കിൽ പോലും അത് കമ്പനികൾക്ക് ലഭിച്ച സെക്ഷൻ 47 ആനുകൂല്യങ്ങളെ ബാധിക്കില്ല. ആനുകൂല്യം ലഭിക്കാൻ ഷെയറുകൾ നിശ്ചിത കാലയളവ് കൈവശം വെക്കണമെന്ന് നിയമത്തിൽ വ്യവസ്ഥയില്ല.",
+            "spoken": true,
+            "t0": 92.1,
+            "t1": 107.39,
+            "highlights": [
+              {
+                "phrase": "does not impact corporate tax exemptions",
+                "time_sec": 3.0
+              },
+              {
+                "phrase": "No statutory lock-in period",
+                "time_sec": 6.8
+              }
+            ]
+          }
+        ],
+        "flow_summary": [],
+        "t0": 92.1,
+        "t1": 107.39
+      },
+      {
+        "branch_id": "branch-5",
+        "branch_title": "Reinvestment Exemption on Share Sale",
+        "badge": "Sec 54F",
+        "icon": "rupee",
+        "points": [
+          {
+            "id": "beat-5-1",
+            "title": "Exemption Criteria under Section 54F",
+            "number": "1.5.1",
+            "badge": "Sec 54F",
+            "body": [
+              "Available on LTCG from transfer of any long-term capital asset (other than residential house).",
+              "Requires investment of net sales consideration in 1 residential house in India within specified time limits."
+            ],
+            "table_data": {
+              "headers": [
+                "Mode of Acquisition",
+                "Statutory Timeline"
+              ],
+              "rows": [
+                [
+                  "Purchase",
+                  "1 year before or 2 years after transfer date"
+                ],
+                [
+                  "Construction",
+                  "Within 3 years after transfer date"
+                ]
+              ]
+            },
+            "voice_sync_text": "ഡീമെർജറിലൂടെ ലഭിച്ച ലോങ് ടേം ഷെയറുകൾ വിൽക്കുമ്പോൾ ഉണ്ടാകുന്ന ആദായത്തിന് സെക്ഷൻ 54F പ്രകാരം ടാക്സ് എക്സംപ്ഷൻ നേടാം. ഇതിനായി വിൽപന നടന്ന് ഒരു വർഷം മുമ്പോ രണ്ട് വർഷത്തിനകത്തോ പുതിയ വീട് വാങ്ങുകയോ 3 വർഷത്തിനകം നിർമ്മിക്കുകയോ വേണം.",
+            "spoken": true,
+            "t0": 109.39,
+            "t1": 125.53,
+            "highlights": [
+              {
+                "phrase": "other than residential house",
+                "time_sec": 3.2
+              },
+              {
+                "phrase": "1 residential house in India",
+                "time_sec": 7.0
+              }
+            ]
+          }
+        ],
+        "flow_summary": [],
+        "t0": 109.39,
+        "t1": 125.53
+      }
+    ],
+    "total_duration": 127.53,
+    "drive_folder_id": "1l3nkxY2AEQfOmwV-OthJ0g70_jqjBn8t",
+    "total_points_count": 8,
+    "completed_points_count": 3,
+    "is_partially_complete": true
   }
 }
