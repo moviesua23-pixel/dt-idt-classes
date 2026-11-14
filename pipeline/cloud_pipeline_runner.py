@@ -127,6 +127,88 @@ def upsert_row_to_sheets(row_values):
     except Exception as e:
         print(f"  [SHEETS ERROR] Failed to upsert row ({subject} Ch{chapter_no} Q{q_num}): {e}")
 
+def export_sheets_to_local_cache():
+    """
+    Exports current Google Sheets rows to redesign_demo/data/pipeline_questions.json
+    and data/pipeline_questions.json so the frontend can load questions with full
+    mindmaps and concept simulation metadata.
+    """
+    if not sheets_service:
+        return
+    try:
+        res = sheets_service.spreadsheets().values().get(
+            spreadsheetId=SPREADSHEET_ID,
+            range='Sheet1!A:J'
+        ).execute()
+        rows = res.get('values', [])
+        if not rows or len(rows) <= 1:
+            return
+
+        export_data = {
+            "catalog": {"subject": "Direct Tax", "total_chapters": 25},
+            "questions": [],
+            "provisions": [],
+            "mindmaps": {}
+        }
+        for r in rows[1:]:
+            if len(r) < 3:
+                continue
+            subj = str(r[0]).strip().upper()
+            try:
+                ch = int(r[1])
+            except ValueError:
+                ch = 1
+            try:
+                qn = int(r[2])
+            except ValueError:
+                qn = 1
+            topic = str(r[3]).strip() if len(r) > 3 else f"Ch{ch}_Q{qn}"
+            q_text = str(r[4]) if len(r) > 4 else ""
+            ans_text = str(r[5]) if len(r) > 5 else ""
+            prov_md = str(r[6]) if len(r) > 6 else ""
+            mm_json_str = str(r[7]) if len(r) > 7 else ""
+            drive_folder = str(r[8]) if len(r) > 8 else ""
+
+            if mm_json_str and (mm_json_str.startswith('{') or '"branches"' in mm_json_str):
+                try:
+                    mm_obj = json.loads(mm_json_str)
+                    export_data['mindmaps'][f"ch{ch}_q{qn}"] = mm_obj
+                    if ch == 1:
+                        export_data['mindmaps'][f"q{qn}"] = mm_obj
+                except Exception:
+                    pass
+
+            export_data['questions'].append({
+                "subject": subj.lower(),
+                "chapter_number": ch,
+                "question_number": qn,
+                "question_title": topic,
+                "question_text": q_text,
+                "answer_text": ans_text,
+                "topic_id": f"T_CH{ch}_Q{qn}"
+            })
+            export_data['provisions'].append({
+                "subject": subj.lower(),
+                "chapter_number": ch,
+                "question_number": qn,
+                "topic_id": f"T_CH{ch}_Q{qn}",
+                "topic_title": topic,
+                "provision_presentation_markdown": prov_md,
+                "drive_folder_id": drive_folder
+            })
+
+        paths = [
+            os.path.join(PROJECT_ROOT, 'data', 'pipeline_questions.json'),
+            os.path.join(PROJECT_ROOT, 'redesign_demo', 'data', 'pipeline_questions.json')
+        ]
+        for p in paths:
+            os.makedirs(os.path.dirname(p), exist_ok=True)
+            with open(p, 'w', encoding='utf-8') as f:
+                json.dump(export_data, f, ensure_ascii=False, indent=2)
+        print("  [CACHE EXPORTED] Saved latest pipeline questions to local cache JSON.")
+    except Exception as e:
+        print(f"  [WARN] Failed to export local cache: {e}")
+
 def fetch_existing_sheet_database():
     """
     Fetches all existing rows from Google Sheets to enable smart resume.
@@ -405,6 +487,7 @@ def run_pipeline(limit=None, target_chapter=None, target_question=None, target_s
             upsert_row_to_sheets(row)
             completed_in_run += 1
             print(f"  [DONE] Successfully saved {subject} Ch{chapter_no} Q{q_num} ({ready_count}/{total_count} points complete) to Google Sheets.")
+            export_sheets_to_local_cache()
 
             if limit and completed_in_run >= limit:
                 print(f"\n[LIMIT REACHED] Processed {completed_in_run} question(s) as requested. Exiting cleanly.")
@@ -439,8 +522,10 @@ def run_pipeline(limit=None, target_chapter=None, target_question=None, target_s
                 print(f"  [CHECKPOINT RECORDED] Saved {subject} Ch{chapter_no} Q{q_num} with {ready_count}/{total_count} points to Google Sheets.")
 
             print("\nPartial batch saved successfully. The next run will resume from this exact point.")
+            export_sheets_to_local_cache()
             sys.exit(0)
 
+    export_sheets_to_local_cache()
     print("\n" + "="*75)
     print("DISCRETE POINT AUDIO PIPELINE COMPLETE! All queued questions are 100% synthesized.")
     print("="*75)

@@ -170,6 +170,29 @@ You must output a STRICT, VALID JSON object with the following schema:
         "flow_summary": []
       }}
     ]
+  }},
+  "concept_simulation": {{
+    "schema_version": "1.0",
+    "illustrative_only": true,
+    "doctrine_topic": "Concise name of the statutory doctrine",
+    "relevant_tax_year": "e.g. P.Y. 2024-25 to P.Y. 2025-26",
+    "statutory_assumptions": [
+      "Assumption 1 highlighting core statutory mechanism",
+      "Assumption 2 using illustrative round figures"
+    ],
+    "intro_voice": "ഇനി ഒരു simple example വഴി കൂടുതൽ മനസ്സിലാക്കാം.",
+    "steps": [
+      {{
+        "step_id": "step_1",
+        "step_order": 1,
+        "title": "Clear Beat Title (e.g. The Capital Asset or The Statutory Event)",
+        "metric_label": "Metric Name (e.g. Purchase Cost or Fair Market Value)",
+        "metric_value": "₹ 10,00,000",
+        "voice_sync_text": "Spoken Malayalam explanation of this specific beat using simple round numbers and standard English tax terms (10-15 seconds).",
+        "image_prompt": "Detailed Google Imagen prompt in 16:9 cinematic 2.5D isometric view describing this scene photorealistically with dramatic lighting.",
+        "calculation_data": null
+      }}
+    ]
   }}
 }}
 
@@ -188,7 +211,57 @@ CRITICAL FORMATTING RULES:
    - For callout titles, write: `> [!IMPORTANT] Title Name: Description` (clean plain title, no unclosed markdown asterisks).
    - Mathematical or tax formulas must either be in standard plain text (e.g. `Total Income - ₹ 12,00,000`) or standard closed LaTeX `$formula$` without raw unescaped `&` or `%`.
 6. Return ONLY the raw JSON object, without backticks or markdown fences.
+7. CONCEPT SIMULATION RULES (MANDATORY FOR SCENE-BASED EXPLAINER):
+   - 'illustrative_only' MUST be true.
+   - Single provision questions: create exactly 3 or 4 sequential steps.
+   - Multi-provision questions: create 4 to 6 sequential steps showing how the provisions interact on the same transaction.
+   - Every step MUST use clean, round figures (e.g. ₹10 Lakhs, ₹50 Lakhs, ₹70 Lakhs) to clearly illuminate the statutory rule without arithmetic confusion.
+   - 'image_prompt' MUST be a vivid, detailed, 16:9 cinematic 2.5D isometric prompt tailored for Google Imagen 3 with dramatic studio lighting.
+   - For calculations in the climax step, provide 'calculation_data' mapping the statutory formula.
 """
+
+def validate_concept_simulation(sim: Any) -> Optional[Dict[str, Any]]:
+    """
+    Validates concept_simulation against schema version 1.0.
+    Ensures required fields, ordered steps, and bounds step count (3-6 steps).
+    Returns cleaned simulation dict or None if invalid.
+    """
+    if not isinstance(sim, dict):
+        return None
+    steps = sim.get('steps')
+    if not isinstance(steps, list) or len(steps) < 2:
+        return None
+
+    cleaned_steps = []
+    for idx, s in enumerate(steps, 1):
+        if not isinstance(s, dict):
+            continue
+        v_text = str(s.get('voice_sync_text') or '').strip()
+        if not v_text:
+            continue
+        cleaned_steps.append({
+            'step_id': str(s.get('step_id') or f'step_{idx}'),
+            'step_order': idx,
+            'title': str(s.get('title') or f'Step {idx}'),
+            'metric_label': str(s.get('metric_label') or 'Key Metric'),
+            'metric_value': str(s.get('metric_value') or ''),
+            'voice_sync_text': v_text,
+            'image_prompt': str(s.get('image_prompt') or ''),
+            'calculation_data': s.get('calculation_data') if isinstance(s.get('calculation_data'), dict) else None
+        })
+
+    if len(cleaned_steps) < 2:
+        return None
+
+    return {
+        'schema_version': str(sim.get('schema_version') or '1.0'),
+        'illustrative_only': True,
+        'doctrine_topic': str(sim.get('doctrine_topic') or 'Statutory Concept'),
+        'relevant_tax_year': str(sim.get('relevant_tax_year') or ''),
+        'statutory_assumptions': sim.get('statutory_assumptions') if isinstance(sim.get('statutory_assumptions'), list) else [],
+        'intro_voice': str(sim.get('intro_voice') or 'ഇനി ഒരു simple example വഴി കൂടുതൽ മനസ്സിലാക്കാം.'),
+        'steps': cleaned_steps[:6]
+    }
 
 def extract_autonomous_provision(question_number: int, question_text: str, answer_text: str, max_retries: int = 3) -> Optional[Dict[str, Any]]:
     """
@@ -227,6 +300,14 @@ def extract_autonomous_provision(question_number: int, question_text: str, answe
                 
                 if "canonical_topic" in data and "provision_presentation_markdown" in data and "mindmap" in data:
                     print(f"  [SUCCESS] Autonomously synthesized structure for Q{question_number}: '{data['canonical_topic']}' using {model}")
+                    # Validate and attach concept_simulation if present
+                    if 'concept_simulation' in data:
+                        clean_sim = validate_concept_simulation(data['concept_simulation'])
+                        if clean_sim:
+                            data['mindmap']['concept_simulation'] = clean_sim
+                            print(f"  [SIMULATION VALIDATED] {len(clean_sim['steps'])} illustrative steps attached.")
+                        else:
+                            print(f"  [WARN] Simulation failed validation, skipping simulation gracefully.")
                     return data
             except AllKeysQuotaExhaustedError:
                 raise

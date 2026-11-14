@@ -103,10 +103,13 @@ def is_audio_ready(drive_id: str) -> bool:
     return True
 
 def count_total_points(mindmap: dict) -> int:
-    """Counts total discrete points (Root + all branch points)."""
+    """Counts total discrete points (Root + all branch points + simulation points)."""
     total = 1
     for b in mindmap.get('branches', []):
         total += len(b.get('points', []))
+    sim = mindmap.get('concept_simulation')
+    if sim and isinstance(sim, dict) and 'steps' in sim:
+        total += 1 + len(sim['steps'])  # sim_intro + each sim scene
     return total
 
 def count_ready_points(mindmap: dict) -> int:
@@ -117,6 +120,13 @@ def count_ready_points(mindmap: dict) -> int:
     for b in mindmap.get('branches', []):
         for p in b.get('points', []):
             if is_audio_ready(p.get('drive_audio_id')):
+                ready += 1
+    sim = mindmap.get('concept_simulation')
+    if sim and isinstance(sim, dict) and 'steps' in sim:
+        if is_audio_ready(sim.get('intro_drive_audio_id')):
+            ready += 1
+        for s in sim['steps']:
+            if is_audio_ready(s.get('drive_audio_id')):
                 ready += 1
     return ready
 
@@ -220,6 +230,58 @@ def synthesize_point_audio(text: str, out_mp3_path: str):
         print(f"  [ERROR] Gemini Expressive Voice generation failed: {err}")
         raise err
 
+def generate_stylized_simulation_backdrop(scene_title: str, badge: str, metric: str, out_jpg_path: str):
+    """
+    Creates an elegant, dark cinematic 16:9 backdrop (1280x720) with studio gradient,
+    subtle isometric grid perspective, and clean typography as a resilient baseline image.
+    Saved as JPEG at 85% quality (~150-200 KB).
+    """
+    try:
+        from PIL import Image, ImageDraw
+        w, h = 1280, 720
+        img = Image.new('RGB', (w, h), color=(10, 14, 26))
+        draw = ImageDraw.Draw(img)
+
+        # Draw deep radial/linear gradient
+        for y in range(h):
+            ratio = y / float(h)
+            r = int(10 + ratio * 18)
+            g = int(14 + ratio * 24)
+            b = int(26 + ratio * 50)
+            draw.line([(0, y), (w, y)], fill=(r, g, b))
+
+        # Perspective grid lines
+        grid_color = (25, 35, 60)
+        for x in range(0, w, 64):
+            draw.line([(x, 0), (x, h)], fill=grid_color, width=1)
+        for y in range(0, h, 48):
+            draw.line([(0, y), (w, y)], fill=grid_color, width=1)
+
+        # Subtle gold/blue glow circles in the center
+        glow_center = (w // 2, h // 2 - 30)
+        for rad in range(240, 40, -25):
+            alpha_color = (20 + (240 - rad) // 8, 30 + (240 - rad) // 7, 75 + (240 - rad) // 3)
+            draw.ellipse([glow_center[0] - rad, glow_center[1] - rad, glow_center[0] + rad, glow_center[1] + rad], outline=alpha_color, width=1)
+
+        # Top badge border
+        draw.rectangle([80, 65, 450, 105], fill=(30, 58, 138), outline=(96, 165, 250), width=2)
+        draw.text((95, 76), badge or "STATUTORY CONCEPT SIMULATION", fill=(224, 242, 254))
+
+        # Scene Title
+        clean_title = (scene_title or "Concept Demonstration")[:55]
+        draw.text((80, 130), clean_title, fill=(255, 255, 255))
+
+        # Metric
+        if metric:
+            draw.text((80, 175), str(metric)[:45], fill=(245, 158, 11))
+
+        os.makedirs(os.path.dirname(out_jpg_path), exist_ok=True)
+        img.save(out_jpg_path, 'JPEG', quality=85)
+        return True
+    except Exception as e:
+        print(f"    [WARN] Could not generate stylized backdrop image: {e}")
+        return False
+
 def generate_discrete_voice_for_mindmap(q_num: int, mindmap: dict, output_dir: str, upload_to_drive: bool = True, subject: str = 'DT', chapter_no: int = 1):
     """
     Assigns sequential identification numbers (pt_0, pt_1, ...) to every presentation element,
@@ -315,6 +377,90 @@ def generate_discrete_voice_for_mindmap(q_num: int, mindmap: dict, output_dir: s
 
                 current_idx += 1
                 time.sleep(0.3)
+
+        # 3. Concept Simulation Media Synthesis (if present)
+        sim = mindmap.get('concept_simulation')
+        if sim and isinstance(sim, dict) and 'steps' in sim and isinstance(sim['steps'], list) and len(sim['steps']) > 0:
+            print(f"\n---> [Concept Simulation Video] Synthesizing media for {len(sim['steps'])} simulation step(s)...")
+            
+            # 3a. Intro Audio: "ഇനി ഒരു simple example വഴി കൂടുതൽ മനസ്സിലാക്കാം."
+            intro_text = sim.get('intro_voice_text', "ഇനി ഒരു simple example വഴി കൂടുതൽ മനസ്സിലാക്കാം.")
+            intro_mp3 = os.path.join(output_dir, "sim_intro.mp3")
+            if is_audio_ready(sim.get('intro_drive_audio_id')):
+                print(f"  [Sim Intro] Already uploaded to Drive! ID: {sim['intro_drive_audio_id']}")
+            else:
+                print(f"  [Sim Intro] Synthesizing intro transition audio with Gemini TTS...")
+                engine = synthesize_point_audio(intro_text, intro_mp3)
+                sim['intro_audio_file'] = f"{subject.lower()}/ch{chapter_no}/q{q_num}/sim_intro.mp3"
+                if os.path.exists(intro_mp3):
+                    try:
+                        seg = AudioSegment.from_file(intro_mp3)
+                        sim['intro_dur'] = round(len(seg) / 1000.0, 2)
+                    except Exception:
+                        sim['intro_dur'] = 3.5
+                    
+                    if subfolder_id and not subfolder_id.startswith('DRIVE'):
+                        try:
+                            sim_intro_drive_id = upload_audio_to_drive(intro_mp3, subfolder_id, "sim_intro.mp3")
+                            sim['intro_drive_audio_id'] = sim_intro_drive_id
+                            print(f"    -> Uploaded sim_intro.mp3 to Drive! ID: {sim_intro_drive_id}")
+                        except Exception as e:
+                            print(f"    -> Drive upload error for sim_intro: {e}")
+                            sim['intro_drive_audio_id'] = "DRIVE_SIM_INTRO_STREAM"
+                    else:
+                        sim['intro_drive_audio_id'] = "DRIVE_SIM_INTRO_STREAM"
+
+            # 3b. Step-by-step Audio & Image Synthesis
+            for s_idx, step in enumerate(sim['steps'], start=1):
+                step['step_number'] = s_idx
+                step_mp3 = os.path.join(output_dir, f"sim_{s_idx}.mp3")
+                
+                # Voice Audio
+                if is_audio_ready(step.get('drive_audio_id')):
+                    print(f"  [Sim Step {s_idx}] Audio already uploaded to Drive! ID: {step['drive_audio_id']}")
+                else:
+                    step_text = step.get('voice_sync_text', step.get('scene_title', ''))
+                    print(f"  [Sim Step {s_idx}] Synthesizing voice clip: '{step.get('scene_title')}'...")
+                    engine = synthesize_point_audio(step_text, step_mp3)
+                    step['audio_file'] = f"{subject.lower()}/ch{chapter_no}/q{q_num}/sim_{s_idx}.mp3"
+                    
+                    if os.path.exists(step_mp3):
+                        try:
+                            seg = AudioSegment.from_file(step_mp3)
+                            actual_dur = round(len(seg) / 1000.0, 2)
+                            step['duration_seconds'] = actual_dur
+                        except Exception as e_dur:
+                            print(f"    [WARN] Could not measure sim audio duration: {e_dur}")
+                            step['duration_seconds'] = 14.0
+                        
+                        if subfolder_id and not subfolder_id.startswith('DRIVE'):
+                            try:
+                                s_drive_id = upload_audio_to_drive(step_mp3, subfolder_id, f"sim_{s_idx}.mp3")
+                                step['drive_audio_id'] = s_drive_id
+                                print(f"    -> Uploaded sim_{s_idx}.mp3 to Drive! ID: {s_drive_id}")
+                            except Exception as e:
+                                print(f"    -> Drive upload error for sim_{s_idx}: {e}")
+                                step['drive_audio_id'] = f"DRIVE_SIM_{s_idx}_STREAM"
+                        else:
+                            step['drive_audio_id'] = f"DRIVE_SIM_{s_idx}_STREAM"
+                
+                # Image Backdrop
+                step_img = os.path.join(output_dir, f"sim_img_{s_idx}.jpg")
+                step['image_file'] = f"{subject.lower()}/ch{chapter_no}/q{q_num}/sim_img_{s_idx}.jpg"
+                reuse_step_num = step.get('reuse_image_from_step')
+                
+                if reuse_step_num and int(reuse_step_num) < s_idx:
+                    prev_img = os.path.join(output_dir, f"sim_img_{reuse_step_num}.jpg")
+                    if os.path.exists(prev_img) and not os.path.exists(step_img):
+                        import shutil
+                        shutil.copyfile(prev_img, step_img)
+                        print(f"  [Sim Step {s_idx}] Reused background image from Step {reuse_step_num}")
+                elif not os.path.exists(step_img):
+                    badge_txt = step.get('statutory_badge', '')
+                    title_txt = step.get('scene_title', '')
+                    metric_txt = step.get('hud_card', {}).get('metric', '')
+                    generate_stylized_simulation_backdrop(title_txt, badge_txt, metric_txt, step_img)
+                    print(f"  [Sim Step {s_idx}] Created visual backdrop: sim_img_{s_idx}.jpg")
 
         ready_count = count_ready_points(mindmap)
         mindmap['total_points_count'] = current_idx
