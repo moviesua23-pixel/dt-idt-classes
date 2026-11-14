@@ -77,12 +77,21 @@ All voice scripts ('voice_sync_text') MUST strictly follow the Kerala CA Educati
 4. SPOKEN SENTENCE STYLE:
    - Use friendly, spoken Malayalam for sentence framing, connecting words, and explanations ('ഇവിടെ നമ്മൾ ശ്രദ്ധിക്കേണ്ടത്...', 'ഇതിന്റെ legal rule എന്താണെന്ന് നോക്കാം...').
 ========================================================================================
-ABSOLUTE CORE MANDATE 5: KEYWORD HIGHLIGHTS & TIME FRAMES FOR PRESENTATION CARDS
+ABSOLUTE CORE MANDATE 5: OPERATIVE KEYWORD HIGHLIGHTS & NARRATIVE TIMING
 ========================================================================================
-For EVERY point card in 'mindmap.branches[].points', you MUST generate a 'highlights' array containing 2 to 4 of the MOST CRITICAL operative phrases/keywords from the 'body' bullet points.
-Each highlight object MUST include:
-- "phrase": The EXACT substring appearing in the 'body' bullet point (case-preserving). E.g. "not a transfer", "resulting company", "No capital gains tax liability".
-- "time_sec": The estimated moment in seconds (e.g. 1.2, 3.5, 7.0) relative to the start of this card's audio when the teacher voice introduces or emphasizes this operative phrase.
+For EVERY point card in 'mindmap.branches[].points', you MUST select 2 to 3 of the MOST CRITICAL operative phrases/keywords directly from the 'body' bullet points.
+
+CRITICAL SELECTION & TIMING CRITERIA:
+1. ZERO HALLUCINATION / VERBATIM MATCHING:
+   - "phrase" MUST be an EXACT, VERBATIM substring copied directly from that card's 'body' text.
+   - Do NOT paraphrase, summarize, reword, or change singular/plural.
+   - Choose high-impact operative legal terms: specific conditions, statutory consequences, exemptions, formulas, or thresholds (e.g. "resulting company", "not a transfer", "No capital gains tax liability", "exempt", "Indian company").
+2. NARRATIVE TIMING ALIGNMENT ("time_sec"):
+   - "time_sec" MUST represent the estimated second when the teacher's spoken explanation ('voice_sync_text') introduces or stresses that specific operative phrase.
+   - Sequence highlights in strictly ascending order matching the flow of the explanation:
+     * 1st operative term (premise/subject): typically at 1.5s - 3.5s
+     * 2nd operative term (core rule/condition): typically at 4.0s - 7.5s
+     * 3rd operative term (legal tax consequence): typically at 8.0s - 12.0s
 This enables the presentation player to illuminate these words dynamically as the student listens, creating a high-impact visual focus.
 
 Analyze the statutory provisions behind this problem and solution:
@@ -259,23 +268,61 @@ def assign_estimated_timings(mindmap: Dict[str, Any], wpm: int = 120) -> Dict[st
             highlights = pt.get("highlights", [])
             body_list = pt.get("body", [])
             body_text = " ".join(body_list) if isinstance(body_list, list) else str(body_list)
+            voice_text = pt.get("voice_sync_text", "")
+
+            valid_hl = []
             if highlights and isinstance(highlights, list):
-                valid_hl = []
-                num_hl = len(highlights)
                 for h_idx, h in enumerate(highlights):
                     if isinstance(h, str):
                         phrase = h.strip()
-                        t_sec = round(1.0 + (h_idx * (pt_dur - 2.0) / max(1, num_hl)), 1)
+                        t_sec = 0.0
                     elif isinstance(h, dict):
                         phrase = (h.get("phrase") or h.get("word") or "").strip()
                         t_sec = float(h.get("time_sec") or h.get("time") or 0.0)
-                        if t_sec <= 0.0 or t_sec > pt_dur:
-                            t_sec = round(1.0 + (h_idx * (pt_dur - 2.0) / max(1, num_hl)), 1)
                     else:
                         continue
+
                     if phrase and phrase.lower() in body_text.lower():
-                        valid_hl.append({"phrase": phrase, "time_sec": round(t_sec, 1)})
-                pt["highlights"] = valid_hl
+                        # Extract exact verbatim substring directly from body_text to guarantee 100% case-match
+                        idx = body_text.lower().find(phrase.lower())
+                        exact_phrase = body_text[idx:idx + len(phrase)]
+
+                        # Estimate timing based on keyword position in voice_sync_text narrative if present
+                        if voice_text and exact_phrase.lower() in voice_text.lower():
+                            v_idx = voice_text.lower().find(exact_phrase.lower())
+                            v_ratio = v_idx / max(1, len(voice_text))
+                            t_sec = round(1.2 + (v_ratio * (pt_dur - 2.5)), 1)
+                        elif t_sec <= 0.0 or t_sec > pt_dur:
+                            t_sec = round(1.5 + (h_idx * (pt_dur - 3.0) / max(1, len(highlights))), 1)
+
+                        valid_hl.append({"phrase": exact_phrase, "time_sec": round(t_sec, 1)})
+
+            # Smart fallback extractor if LLM produced no valid highlights
+            if not valid_hl and body_text:
+                fallback_phrases = []
+                # 1. Statutory Sections
+                sec_matches = re.findall(r'(?:Section|u/s|Rule)\s+[0-9A-Za-z()]+(?:\([0-9A-Za-z]+\))?', body_text, re.IGNORECASE)
+                fallback_phrases.extend(sec_matches)
+                # 2. Key legal terms
+                for term in ["not a transfer", "exempt", "Indian company", "capital asset", "Long-Term Capital Asset", 
+                             "Short-Term Capital Asset", "cost of acquisition", "period of holding", "marginal relief",
+                             "total income", "surcharge", "rebate", "residential house"]:
+                    if term.lower() in body_text.lower():
+                        idx = body_text.lower().find(term.lower())
+                        fallback_phrases.append(body_text[idx:idx + len(term)])
+                
+                clean_fb = list(dict.fromkeys(fallback_phrases))[:3]
+                for fb_idx, fb_p in enumerate(clean_fb):
+                    fb_t = round(1.5 + (fb_idx * (pt_dur - 3.0) / max(1, len(clean_fb))), 1)
+                    valid_hl.append({"phrase": fb_p, "time_sec": fb_t})
+
+            # Ensure strictly ascending, well-spaced timestamps
+            valid_hl.sort(key=lambda x: x["time_sec"])
+            for i in range(1, len(valid_hl)):
+                if valid_hl[i]["time_sec"] <= valid_hl[i-1]["time_sec"]:
+                    valid_hl[i]["time_sec"] = round(valid_hl[i-1]["time_sec"] + 1.8, 1)
+
+            pt["highlights"] = valid_hl
             
         b["t0"] = round(b_t0, 2)
         b["t1"] = round(current_time - 0.8, 2)

@@ -283,6 +283,24 @@ def generate_discrete_voice_for_mindmap(q_num: int, mindmap: dict, output_dir: s
                     engine = synthesize_point_audio(p_text, p_mp3)
                     p['audio_file'] = f"{subject.lower()}/ch{chapter_no}/q{q_num}/pt_{current_idx}.mp3"
                     print(f"    -> Synthesized pt_{current_idx}.mp3 via {engine} ({os.path.getsize(p_mp3)} bytes)")
+
+                    if os.path.exists(p_mp3):
+                        try:
+                            seg = AudioSegment.from_file(p_mp3)
+                            actual_dur = round(len(seg) / 1000.0, 2)
+                            p['dur'] = actual_dur
+                            p['duration_seconds'] = actual_dur
+                            # Calibrate highlight timings against the exact synthesized audio duration
+                            highlights = p.get('highlights', [])
+                            if highlights and isinstance(highlights, list) and actual_dur > 0:
+                                old_dur = float(p.get('t1', actual_dur) - p.get('t0', 0.0))
+                                scale = (actual_dur / old_dur) if (old_dur > 0 and abs(actual_dur - old_dur) > 1.0) else 1.0
+                                for hl in highlights:
+                                    if isinstance(hl, dict) and 'time_sec' in hl:
+                                        raw_t = float(hl['time_sec']) * scale
+                                        hl['time_sec'] = round(min(actual_dur - 0.8, max(0.8, raw_t)), 1)
+                        except Exception as e_dur:
+                            print(f"    [WARN] Could not measure audio duration: {e_dur}")
                     
                     if subfolder_id and not subfolder_id.startswith('DRIVE') and os.path.exists(p_mp3):
                         try:
