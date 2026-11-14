@@ -1,4 +1,4 @@
-﻿import os
+import os
 import sys
 import json
 import io
@@ -161,11 +161,12 @@ class CloudClient:
         rows = result.get('values', [])
 
         subject = row_data.get("Subject", "DT")
+        ch_no = str(row_data.get("Chapter No", ""))
         q_no = str(row_data.get("Question No", ""))
 
         target_row_idx = None
         for idx, r in enumerate(rows[1:], start=2): # 1-indexed, starting after header
-            if len(r) >= 3 and r[0] == subject and str(r[2]) == q_no:
+            if len(r) >= 3 and r[0] == subject and str(r[1]) == ch_no and str(r[2]) == q_no:
                 target_row_idx = idx
                 break
 

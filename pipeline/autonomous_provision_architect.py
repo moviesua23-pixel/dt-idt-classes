@@ -76,7 +76,14 @@ All voice scripts ('voice_sync_text') MUST strictly follow the Kerala CA Educati
    - NEVER coin artificial Malayalam equivalents (do NOT write 'മൂലധന നേട്ടം', 'നികുതി', 'വാങ്ങിയ വില').
 4. SPOKEN SENTENCE STYLE:
    - Use friendly, spoken Malayalam for sentence framing, connecting words, and explanations ('ഇവിടെ നമ്മൾ ശ്രദ്ധിക്കേണ്ടത്...', 'ഇതിന്റെ legal rule എന്താണെന്ന് നോക്കാം...').
-   - Embed all technical statutory terms, sections, and dates cleanly in English.
+========================================================================================
+ABSOLUTE CORE MANDATE 5: KEYWORD HIGHLIGHTS & TIME FRAMES FOR PRESENTATION CARDS
+========================================================================================
+For EVERY point card in 'mindmap.branches[].points', you MUST generate a 'highlights' array containing 2 to 4 of the MOST CRITICAL operative phrases/keywords from the 'body' bullet points.
+Each highlight object MUST include:
+- "phrase": The EXACT substring appearing in the 'body' bullet point (case-preserving). E.g. "not a transfer", "resulting company", "No capital gains tax liability".
+- "time_sec": The estimated moment in seconds (e.g. 1.2, 3.5, 7.0) relative to the start of this card's audio when the teacher voice introduces or emphasizes this operative phrase.
+This enables the presentation player to illuminate these words dynamically as the student listens, creating a high-impact visual focus.
 
 Analyze the statutory provisions behind this problem and solution:
 
@@ -136,6 +143,16 @@ You must output a STRICT, VALID JSON object with the following schema:
             "body": [
               "Exact statutory condition bullet 1",
               "Exact legal consequence or formula bullet 2"
+            ],
+            "highlights": [
+              {{
+                "phrase": "exact operative phrase in bullet 1",
+                "time_sec": 2.5
+              }},
+              {{
+                "phrase": "exact operative phrase in bullet 2",
+                "time_sec": 6.8
+              }}
             ],
             "table_data": null,
             "voice_sync_text": "Punchy 2-3 sentence Malayalam teacher explanation of this specific card's legal rule (approx. 20-30 seconds). Clear, professional CA teaching style with standard English tax terms. ABSOLUTELY NEVER mention question-specific facts, question numbers, company names, or individual names."
@@ -237,6 +254,28 @@ def assign_estimated_timings(mindmap: Dict[str, Any], wpm: int = 120) -> Dict[st
             pt["t0"] = round(current_time, 2)
             pt["t1"] = round(current_time + pt_dur, 2)
             current_time = pt["t1"] + 0.8
+
+            # Validate and sanitize time_sec for keywords
+            highlights = pt.get("highlights", [])
+            body_list = pt.get("body", [])
+            body_text = " ".join(body_list) if isinstance(body_list, list) else str(body_list)
+            if highlights and isinstance(highlights, list):
+                valid_hl = []
+                num_hl = len(highlights)
+                for h_idx, h in enumerate(highlights):
+                    if isinstance(h, str):
+                        phrase = h.strip()
+                        t_sec = round(1.0 + (h_idx * (pt_dur - 2.0) / max(1, num_hl)), 1)
+                    elif isinstance(h, dict):
+                        phrase = (h.get("phrase") or h.get("word") or "").strip()
+                        t_sec = float(h.get("time_sec") or h.get("time") or 0.0)
+                        if t_sec <= 0.0 or t_sec > pt_dur:
+                            t_sec = round(1.0 + (h_idx * (pt_dur - 2.0) / max(1, num_hl)), 1)
+                    else:
+                        continue
+                    if phrase and phrase.lower() in body_text.lower():
+                        valid_hl.append({"phrase": phrase, "time_sec": round(t_sec, 1)})
+                pt["highlights"] = valid_hl
             
         b["t0"] = round(b_t0, 2)
         b["t1"] = round(current_time - 0.8, 2)
