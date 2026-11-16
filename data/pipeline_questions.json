@@ -408,6 +408,24 @@
       "question_text": "Mr. Sanjay is a resident in India aged 55 years. He had an impressive investment portfolio in various mutual funds. He redeemed his entire mutual fund investment portfolio and bought a villa in Lonavala for ₹ 2.00 crores to spend rest of his life there. The details of mutual funds are as under: S.N.| Type of mutual Date of Date of Amount invested |Amount redeemed fund investment | redemption (in 7 lakhs) (in % lakhs) 1 BLR growth fund 03.04.2021 05.01.2026 120 140 2 | ABC Strategic fund | 04.05.2023 02.02.2026 46 50 3 ABD Midcap fund | 20.03.2025 10.02.2026 115 118 4 SBA Growth fund | 08.11.2022 12.03.2026 110 120 The funds stated a₹ 1 and 2 have invested 70% of their proceeds in debt instruments and funds stated a₹ 3 and 4 have invested 70% of their proceeds in equity shares of domestic companies. The investment pattern of funds remained unchanged over all the years. STT is paid at the time of acquisition and redemption of mutual fund, wherever applicable.\n\nYou are required to compute the capital gains chargeable to tax in the hands of Mr. Sanjay for A.Y. 2026-27. Capital Gains",
       "answer_text": "Computation of capital gains of Mr. Sanjay\n\n| Particulars | ₹ |\n| :--- | :---: |\n| x | |\n| Redemption of BLR growth fund | |\n| Full value of consideration [Redemption value] | 1,40,00,000 |\n| Less: Cost of acquisition | 1,20,00,000 |\n| Long term capital gains [Since it is debt fund (as more than 65% of the | 20,00,000 |\n| proceeds are invested in debt instruments) and it was held by Mr. Sanjay | |\n| for more than 24 months immediately preceding the date of its transfer] | |\n| Redemption of ABC Strategic fund | |\n| Full value of consideration [Redemption value] | 50,00,000 |\n| Less: Cost of acquisition | 46,00,000 |\n| Short term capital gains [Since it is a specified mutual fund (as more | 4,00,000 |\n| than 65% of its proceeds are invested in debt instruments) which is | |\n| acquired on or after 1.4.2023, this fund would be considered as short- | |\n| term capital asset as per section 50AA irrespective of period of holding] | |\n| Redemption of ABD Midcap fund | |\n| Full value of consideration [Redemption value] | 1,18,00,000 |\n| Less: Cost of acquisition | |\n| 1.15,00,000 | |\n| Short term capital gains [Since it is equity-oriented fund (as more than | 3,00,000 |\n| 65% of its proceeds are invested in equity shares of domestic | |\n| companies) and it was held by Mr. Sanjay for not more than 12 months | |\n| immediately preceding the date of its transfer] | |\n| Redemption of SBA Growth fund | |\n| Full value of consideration [Redemption value] | 1,20,00,000 |\n| Less: Cost of acquisition | |\n| 1.10,00,000 | |\n| Long term capital gains [Since it is equity-oriented fund (as more than | 10,00,000 |\n| 65% of its proceeds are invested in equity shares of domestic | |\n| companies) and it was held by Mr. Sanjay for more than 12 months | |\n| immediately preceding the date of its transfer] | 37,00,000 |\n| Less: Exemption under section 54F | |\n| Capital gain arising on transfer of a long-term capital asset other than a | |\n| residential house shall not be chargeable to tax to the extent such capital | |\n| gain is invested in purchase of one residential house in India within one | |\n| year before or two years after date of transfer of original asset. | |\n| Therefore, in the present case, the exemption would be available only in | |\n| respect of long-term capital gains from redemption of BLR growth fund | |\n| and SBA Growth fund. | |\n| Exemption from long term capital gains from redemption of BLR shor₹ | 20,00,000 |\n| term fund [20,00,000 x 1,40,00,000/1,40,00,000] | |\n| a | |\n| Exemption from long term capital gains from redemption of SBA Growth | 5,00,000 |\n| fund [10,00,000 x 60,00,000 (2 crores - 1.40 crores) /1,20,00,000] | |\n| Capital gains chargeable to tax | 12,00,000 |",
       "topic_id": "T_CH2_Q31"
+    },
+    {
+      "subject": "dt",
+      "chapter_number": 2,
+      "question_number": 32,
+      "question_title": "Section 54G: Capital Gains Exemption on Shifting Industrial Undertaking from Urban to Non-Urban Area",
+      "question_text": "Gama Ltd, located within the corporation limits decided in December, 2025 decided to shift its industrial undertaking to non-urban area. The company sold some of the assets and acquired new assets in the process of shifting. The relevant details are as follows: (% in lacs)\n\n| Particulars | ₹ |\n| :--- | :---: |\n| Land | |\n| Building| Plant & | Furniture | |\n\n(Long Term) Machinery\n\n- **(i)** | Sale proceeds (sale effected in March, 2026) 8 18 16 3\n\n- **(ii)** | Cost of acquisition 4 10 12 2\n\n- **(iii)** | WDV in terms of section 50 -- 4 5 2\n\n- **(iv)** | Cost of new assets purchased in July, 2026 for the purpose of business in the new place 4 7 17 2 Compute the capital gains of Gama Ltd for the assessment year 2026-27.",
+      "answer_text": "Section 54G deals with deduction in respect of any capital gain that may arise from the transfer of an industrial undertaking situated in an urban area in the course of or in consequence of shifting to a non-urban area. If the assessee purchases new machinery or plant or acquires a building or land or constructs a new building or shifts the original asset and transfers the establishment to the new area, within 1 year before or 3 years after the date on which the transfer takes place, then, instead of the capital gain being charged to tax, it shall be dealt with as under: 1. If the capital gain is greater than the cost of the new asset, the difference between the capital gain and the cost of the new asset shall be chargeable as income \"under section 45\". 2. Ifthe capital gain is equal to or less than the cost of the new asset, section 45 is not to be applied. The capital assets referred to in section 54G are machinery or plant or land or building or any rights in building or land. Capital gain arising on transfer of furniture does not qualify for exemption under section 54G. No exemption is therefore available under section 54G in respect of investment of ₹ 2 lacs in acquiring furniture. The first step therefore is to determine the capital gain arising out of the transfer and thereafter apply the provisions of section 54G.\n\n- **(a)** | Land - Sale proceeds (Non-depreciable asset) 8,00,000 Less: Cost of acquisition 4,00,000 Long term capital gain 4,00,000 Less: Cost of new assets purchased within three year after the date of transfer (under section 54G) (See Note below) 3,00,000 Taxable Long term capital gain 1,00,000\n\n- **(b)** | Building - sale proceeds (depreciable assets) 18,00,000 Less: W.D.V. is deemed as cost of acquisition under section 50 4,00,000 Short term capital gain 14,00,000\n\n- **(c)** | Plant & machinery- sale proceeds (depreciable asset) 16,00,000 Less: WDV is deemed cost under section 50 5,00,000 Short term capital gain 11,00,000\n\n- **(d)** | Furniture - sale proceeds (depreciable asset) 3,00,000 Less: WDV is deemed cost under section 50 2,00,000 Short term capital gain (A) 1,00,000 Summary q Short term capital gain: Building 14,00,000 Short term capital gain; Plant & machinery 11,00,000 25,00,000 Less: Section 54G [New assets purchased] (See Note below) 25,00,000 Net short term capital gain (B) Nil Total short term capital gain (A)+(B) = ₹ 1 lac Note - Total exemption available under section 54G is ₹ 28 lacs (₹ 4 lacs + ₹ 7 lacs + 7 17 lacs). The exemption should first be exhausted against short term capital gain as the incidence of tax in case of short-term capital gain is more than in case of long term capital gain.\n\nTherefore, ₹ 25 lacs is exhausted against short term capital gain and the balance of 3 lacs against long term capital gain. The taxable capital gains would be: Long term ₹ 1,00,000 (taxable @12.5% under section 112) Short term capital gains (furniture) 3₹ 1,00,000 (taxable at applicable tax rates) 22,00,000 Tax on Capital Gain (Section 112A & 112)",
+      "topic_id": "T_CH2_Q32"
+    },
+    {
+      "subject": "dt",
+      "chapter_number": 2,
+      "question_number": 33,
+      "question_title": "Section 112A: Tax on Long-Term Capital Gains & Grandfathering Mechanism",
+      "question_text": "Determine the capital gains/loss on transfer of listed equity shares (STT paid both at the time of acquisition and transfer of shares) and units of equity oriented mutual fund (STT paid at the time of transfer of units) for the A.Y.2026-27 and tax, if any, payable thereon, in the following cases, assuming that these are the only transactions covered under section 112A during the P.Y.2025-26 in respect of these assessees:\n\n- **(i)** Mr. Prasun purchased 300 shares in A Ltd. on 20.5.2017 at a cost of ₹ 400 per share. He sold all the shares of A Ltd. on 31.8.2025 for ₹ 1200. The price at which these shares were traded in National Stock Exchange on 31.1.2018 is as follows: ———————————— EEE EE ——————————\n\n- **(ii)**\n\n| Particulars | ₹ |\n| :--- | :---: |\n| Amount in % | |\n| Highest Trading Price | 700 |\n| Average Trading Price | 680 |\n| Lowest Trading Price | 660 |\n| Mr. Raj purchased 200 units each of equity oriented funds, Fund A and Fund B on 1.2.2017 ata | |\n| cost of 550 per unit. The units were not listed at the time of purchase. Subsequently, units of | |\n| Fund A were listed on 1.1.2018 and units of Fund B were listed on 1.2.2018 on the National | |\n| Stock Exchange. Mr. Raj sold all the units on 3.8.2025 for ₹ 900 each. The details relating to | |\n| quoted price on National Stock Exchange and net asset value of the units are given hereunder: | |\n| Particulars | |\n| Fund A | |\n| Fund B | |\n| Amount in ft | |\n| Amount in = | |\n| Highest Trading Price | |\n| 750 (on 31.1.2018) | |\n| 800 (on 1.2.2018) | |\n| Average Trading Price | |\n| 700 (on 31.1.2018) | |\n| 750 (on 1.2.2018) | |\n| Lowest Trading Price | |\n| 650 (on 31.1.2018) | |\n| 700 (on 1.2.2018) | |\n| Net Asset Value on 31.1.2018 | 800 |\n| 950 | |",
+      "answer_text": "- **(i)**\n\n- **(ii)** For the purpose of computation of long-term capital gains chargeable to tax under section 112A, the cost of acquisition in relation to the long-term capital asset, being an equity share in a company or a unit of an equity oriented fund or a unit of a business trust acquired before 15 February, 2018 shall be the higher of\n\n- **(a)** cost of acquisition of such asset, i-e., actual cost; and\n\n- **(b)** lower of\n\n- **(i)** the fair market value of such asset as on 31.1.2018; and\n\n- **(ii)** the full value of consideration received or accruing from transfer of capital asset. The fair market value of listed equity shares as on 31.1.2018 is the highest price quoted on the recognized stock exchange as on that date.\n\nAccordingly, long-term capital gain on transfer of STT paid listed equity shares by Mr. Prasun would be determined as follows: The FMV of shares of A Ltd. would be ₹ 700, being the highest price quoted on National Stock Exchange on 31.1.2018. The cost of acquisition of each equity share in A Ltd. would be ₹ 700, being higher of actual cost i.e. ? 400 and ₹ 700 [being the lower of FMV of ₹ 700 as on 31.1.2018 (i.e., the highest trading price) and actual sale consideration of ₹ 1,200]. Thus, the long-term capital gain would be ? 1,50,000 i.e., (₹ 1,200 - ₹ 700) x 300 shares. The long- term capital gain of 25,000 (i.e., the amount in excess of ₹ 1,25,000) would be subject to tax@12.5% under section 112A (plus cess@4%). In the case of units listed on recognised stock exchange on the date of transfer, the FMV as on 31.1.2018 would be the highest trading price on recognised stock exchange as on 31.1.2018 (if shares are listed on that date), else, it would be the net asset value as on 31.1.2018 (where shares are unlisted on that date). ee et Accordingly, the FMV of units of Fund A as on 31.1.2018 would be ₹ 750 (being the highest trading price on 31,1.2018, since the units of Fund A are listed on that date) and the FMV of units of Fund B as on 31.1.2018 would be ₹ 950 (being the net asset value as on 31.1.2018, since the units of Fund B are unlisted on that date). The cost of acquisition of a unit of Fund A would be & 750, being higher of actual cost i.e., ₹ 550 and ₹ 750 (being the lower of FMV of ₹ 750 as on 31.1.2018 and actual sale consideration of ₹ 900). Thus, the long-term capital gains on sale of units of Fund A would be ₹ 30,000 (₹ 900 - ₹ 750) x 200 units. The cost of acquisition of a unit of Fund B would be ₹ 900, being higher of actual cost i.e., ₹ 550 and ₹ 900 (being the lower of FMV of ₹ 950 as on 31.1.2018 (net asset value) and actual sale consideration of ₹ 900). Thus, the long-term capital gains on sale of units of Fund B would be Nil (₹ 900 - ₹ 900) x 200 units.\n\nSince the long-term capital gains on sale of units is ₹ 30,000, which is less than ₹ 1,25,000, the said sum is not chargeable to tax under section 112A.",
+      "topic_id": "T_CH2_Q33"
     }
   ],
   "provisions": [
@@ -815,6 +833,24 @@
       "topic_title": "Taxation of Mutual Funds Capital Gains & Section 54F Exemption Framework",
       "provision_presentation_markdown": "### Statutory Summary Matrix: Mutual Funds & Section 54F\n\n| Category | Fund Criteria | Acquisition Date | Holding Threshold | Asset & Tax Nature |\n| :--- | :--- | :--- | :--- | :--- |\n| **Equity Oriented Fund** | Equity Exposure ≥ 65% | Any Date | > 12 Months | **LTCG** u/s 112A |\n| **Equity Oriented Fund** | Equity Exposure ≥ 65% | Any Date | ≤ 12 Months | **STCG** u/s 111A |\n| **Specified Mutual Fund** | Equity Exposure ≤ 35% | On/After 1st April 2023 | Irrelevant | **Deemed STCA** u/s 50AA |\n| **Debt Mutual Fund** | Equity Exposure < 65% | Before 1st April 2023 | > 36 Months / 24 Months | **LTCG** u/s 112 |\n\n\n### Core Statutory Conditions\n\n* **Section 50AA Deemed Short-Term Treatment**: Specified Mutual Funds (where investment in domestic equity shares is not more than 35%) acquired on or after 1st April 2023 are deemed to be Short-Term Capital Assets irrespective of period of holding.\n\n* **Section 54F Scope & Requisite Criteria**: Exemption is available **ONLY** against Long-Term Capital Gains arising from transfer of any long-term capital asset other than a residential house, provided investment is made in one residential house in India within 1 year before or 2 years after transfer.\n\n\n### Proportional Exemption Formula u/s 54F\n\n$$\\text{Exemption Amount} = \\text{Long-Term Capital Gain} \\times \\left( \\frac{\\text{Cost of New Residential House}}{\\text{Net Sale Consideration}} \\right)$$\n\n\n> [!WARNING] Section 54F Allocation Trap: Short-Term Capital Gains (including Section 50AA deemed STCG) are completely ineligible for Section 54F exemption. When multiple LTCG assets are sold, the new house investment is allocated sequentially up to the net consideration of each LTCG asset.",
       "drive_folder_id": "1rdalCKdcjlcPmFdLsxTGraNij31WzUqa"
+    },
+    {
+      "subject": "dt",
+      "chapter_number": 2,
+      "question_number": 32,
+      "topic_id": "T_CH2_Q32",
+      "topic_title": "Section 54G: Capital Gains Exemption on Shifting Industrial Undertaking from Urban to Non-Urban Area",
+      "provision_presentation_markdown": "### Statutory Summary Matrix: Shifting of Industrial Undertaking (Section 54G)\n\n| Provision / Section | Statutory Condition / Scope | Eligible Assets / Period | Tax Treatment & Set-off Priority |\n| :--- | :--- | :--- | :--- |\n| **Section 54G** | Shifting industrial undertaking from **Urban Area** to **Non-Urban Area** | Plant, Machinery, Land, Building (Acquired 1 yr before or 3 yrs after) | Exemption = Lower of **Capital Gain** or **Cost of New Assets** |\n| **Section 50** | Transfer of depreciable assets forming part of Block of Assets | Depreciable Plant, Machinery & Building | Capital Gains deemed as **Short-Term Capital Gains (STCG)** |\n| **Ineligible Assets** | Transfer or investment in non-specified assets | **Furniture**, Office Appliances, Vehicles | **No Section 54G Exemption** available |\n\n\n### Core Statutory Rules & Operational Guidelines\n\n- **Eligible Assets & Shifting Window**: Capital gain must arise from transfer of machinery, plant, land, or building used for the industrial undertaking. Reinvestment must occur within **1 year prior to** or **3 years after** the transfer date.\n- **Tax Optimization Set-off Hierarchy**: Section 54G does not mandate pro-rata allocation between LTCG and STCG. Assessees can legally exhaust Section 54G exemption **first against STCG** (taxable at normal rates) and the balance against **LTCG** (taxable at concessional rate u/s 112).\n\n\n> [!IMPORTANT]\n> **Statutory Exclusion Trap**: Furniture and fittings are strictly excluded from Section 54G exemption. Capital gains on furniture cannot be exempted, and reinvestment in furniture does not qualify as an eligible cost of new assets.",
+      "drive_folder_id": "1cJUtqvArhMmP_9hXWLxROVNdKdX7m8L2"
+    },
+    {
+      "subject": "dt",
+      "chapter_number": 2,
+      "question_number": 33,
+      "topic_id": "T_CH2_Q33",
+      "topic_title": "Section 112A: Tax on Long-Term Capital Gains & Grandfathering Mechanism",
+      "provision_presentation_markdown": "| Asset Type | STT Condition | FMV as on 31st January 2018 | Tax Rate u/s 112A | Annual Threshold |\n| :--- | :--- | :--- | :--- | :--- |\n| **Listed Equity Shares** | Paid on both Acquisition & Transfer | Highest trading price on recognized stock exchange on 31.01.2018 | 12.5% + Cess | First ₹ 1,25,000 Exempt |\n| **Equity Oriented Fund Units** | Paid on Transfer | Highest trading price (if listed on 31.01.2018) OR Net Asset Value (if unlisted on 31.01.2018) | 12.5% + Cess | First ₹ 1,25,000 Exempt |\n\n**Statutory Grandfathering Cost Formula (Assets Acquired Before 01.02.2018):**\n- **Cost of Acquisition** = **Higher of (A) and (B)**\n  - **(A)** Actual Cost of Acquisition\n  - **(B)** **Lower of**:\n    - Fair Market Value (FMV) as on 31st January 2018\n    - Full Value of Consideration (Actual Sale Consideration)\n\n> [!IMPORTANT] Pre-2018 Gain Protection: The grandfathering mechanism ensures that any capital gains accrued prior to 1st February 2018 are completely grandfathered and shielded from Direct Tax.\n\n> [!WARNING] Unlisted Asset Benchmark Trap: If a unit or share was unlisted as on 31st January 2018, its FMV MUST be taken as the Net Asset Value (NAV) on 31st January 2018, even if it gets listed on a stock exchange prior to the date of transfer.",
+      "drive_folder_id": "1Gl-uihKAHXjtFqly7ROCTOYYUx-lXgR7"
     }
   ],
   "mindmaps": {
@@ -13087,7 +13123,11 @@
             "voice_sync_text": "ഒരു assessee 1st April 2023-ന് ശേഷം acquire ചെയ്ത debt fund redeem ചെയ്യുമ്പോൾ, Section 50AA പ്രകാരം അത് deemed Short-Term Capital Gain ആയി മാറുന്നു.",
             "image_prompt": "A clean 2.5D isometric representation of a digital financial document labeled Section 50AA, showing a red tag for Short-Term Capital Gain on debt investments, soft studio lighting, high resolution 16:9 frame.",
             "calculation_data": null,
-            "step_number": 1
+            "step_number": 1,
+            "audio_file": "dt/ch2/q31/sim_1.mp3",
+            "duration_seconds": 11.24,
+            "drive_audio_id": "1MeuJtgVls9m6TIfX6TmO-0DlJi3picbl",
+            "image_file": "dt/ch2/q31/sim_img_1.jpg"
           },
           {
             "step_id": "step_2",
@@ -13097,7 +13137,12 @@
             "metric_value": "₹ 30,00,000",
             "voice_sync_text": "മറ്റു രണ്ട് funds 1st April 2023-ന് മുമ്പ് വാങ്ങി long term hold ചെയ്തതുകൊണ്ട്, അവയിൽ നിന്ന് ₹ 30 Lakhs Long-Term Capital Gains ഉണ്ടാകുന്നു.",
             "image_prompt": "An isometric visual showing two financial fund cards converting into green Long-Term Capital Gain tags on a sleek modern glass surface, illuminated financial dashboard context.",
-            "calculation_data": null
+            "calculation_data": null,
+            "step_number": 2,
+            "audio_file": "dt/ch2/q31/sim_2.mp3",
+            "duration_seconds": 10.56,
+            "drive_audio_id": "1XJYANplUZyWJVavqZq8Rx-BY-VMp29Gx",
+            "image_file": "dt/ch2/q31/sim_img_2.jpg"
           },
           {
             "step_id": "step_3",
@@ -13107,7 +13152,12 @@
             "metric_value": "₹ 2,00,000",
             "voice_sync_text": "ഈ net consideration തുക ഉപയോഗിച്ച് ഒരു residential house വാങ്ങുമ്പോൾ, Section 54F പ്രകാരം exemption claim ചെയ്യാം.",
             "image_prompt": "Architectural rendering of a modern luxury residential villa in isometric view, wrapped with glowing blue statutory checkmarks representing Section 54F compliance.",
-            "calculation_data": null
+            "calculation_data": null,
+            "step_number": 3,
+            "audio_file": "dt/ch2/q31/sim_3.mp3",
+            "duration_seconds": 8.64,
+            "drive_audio_id": "1TYf0jGxYZI-AYLWznP7GzwJr7oNsWxUc",
+            "image_file": "dt/ch2/q31/sim_img_3.jpg"
           },
           {
             "step_id": "step_4",
@@ -13148,7 +13198,12 @@
                   "₹ 4,00,000 (STCG)"
                 ]
               ]
-            }
+            },
+            "step_number": 4,
+            "audio_file": "dt/ch2/q31/sim_4.mp3",
+            "duration_seconds": 10.8,
+            "drive_audio_id": "1q_iA9u7iWZ7mbjnGyLPrQXbmwTtLoWaj",
+            "image_file": "dt/ch2/q31/sim_img_4.jpg"
           }
         ],
         "intro_audio_file": "dt/ch2/q31/sim_intro.mp3",
@@ -13311,8 +13366,818 @@
       },
       "total_duration": 81.66,
       "drive_folder_id": "1rdalCKdcjlcPmFdLsxTGraNij31WzUqa",
-      "total_points_count": 10,
-      "completed_points_count": 6,
+      "total_points_count": 5,
+      "completed_points_count": 10,
+      "is_partially_complete": false
+    },
+    "ch2_q32": {
+      "doctrine": "Section 54G Shifting of Industrial Undertaking",
+      "root": {
+        "id": "root",
+        "number": "1",
+        "title": "Section 54G Exemption Framework",
+        "badge": "Sec 54G · Sec 50 · Sec 112",
+        "voice_sync_text": "Welcome students! Today we are discussing Section 54G, which deals with Capital Gains exemption on shifting an Industrial Undertaking from an Urban Area to a Non-Urban Area.",
+        "t0": 0.0,
+        "t1": 11.53,
+        "pt_idx": 0,
+        "audio_file": "dt/ch2/q32/pt_0.mp3",
+        "drive_audio_id": "1yIqgenEoZhDpAz-5LDg1eHkKbk1LtU1d"
+      },
+      "branches": [
+        {
+          "branch_id": "branch-1",
+          "branch_title": "Eligible Assets & Inclusions",
+          "badge": "Section 54G(1)",
+          "icon": "building",
+          "points": [
+            {
+              "id": "beat-1-1",
+              "title": "Specified Eligible Capital Assets",
+              "number": "1.1.1",
+              "badge": "Qualifying Assets",
+              "body": [
+                "Capital gain must arise from the transfer of plant, machinery, land, or building used for the undertaking.",
+                "Assets must be transferred in connection with shifting the Industrial Undertaking to a Non-Urban Area."
+              ],
+              "highlights": [
+                {
+                  "phrase": "plant, machinery, land, or building",
+                  "time_sec": 2.1
+                },
+                {
+                  "phrase": "shifting the Industrial Undertaking to a Non-Urban Area",
+                  "time_sec": 6.1
+                }
+              ],
+              "table_data": null,
+              "voice_sync_text": "Section 54G അനുസരിച്ച് exemption ലഭിക്കണമെങ്കിൽ capital asset പ്ലാന്റ്, മെഷിനറി, ലാന്റ് അല്ലെങ്കിൽ ബിൽഡിംഗ് ആയിരിക്കണം. Urban Area യിൽ നിന്ന് Non-Urban Area യിലേക്ക് Industrial Undertaking ഷിഫ്റ്റ് ചെയ്യുമ്പോൾ ആയിരിക്കണം Transfer ನಡೆಯേണ്ടത്.",
+              "spoken": true,
+              "t0": 12.53,
+              "t1": 29.74,
+              "pt_idx": 1,
+              "audio_file": "dt/ch2/q32/pt_1.mp3",
+              "dur": 16.04,
+              "duration_seconds": 16.04,
+              "drive_audio_id": "1dFLzfX0j4rgs9bDSX3L8fqmxoxABV2MU"
+            },
+            {
+              "id": "beat-1-2",
+              "title": "Ineligible Asset Statutory Trap",
+              "number": "1.1.2",
+              "badge": "Statutory Exclusion",
+              "body": [
+                "Capital gain arising on transfer of Furniture does not qualify for Section 54G exemption.",
+                "Reinvestment in acquiring Furniture is strictly non-exempt and non-qualifying under Section 54G."
+              ],
+              "highlights": [
+                {
+                  "phrase": "transfer of Furniture does not qualify",
+                  "time_sec": 3.0
+                },
+                {
+                  "phrase": "Reinvestment in acquiring Furniture is strictly non-exempt",
+                  "time_sec": 7.5
+                }
+              ],
+              "table_data": null,
+              "voice_sync_text": "ഇവിടെ ഏറ്റവും പ്രധാനപ്പെട്ട ഒരുകാര്യമുണ്ട്. Furniture എപ്പോഴും Section 54G യിൽ നിന്ന് excluded ആണ്. Furniture transfer ചെയ്യുമ്പോൾ ഉണ്ടാകുന്ന Capital Gain നും, പുതിയ Furniture വാങ്ങാൻ നടത്തുന്ന Reinvestment നും Section 54G exemption ലഭിക്കില്ല.",
+              "spoken": true,
+              "t0": 30.54,
+              "t1": 47.97,
+              "pt_idx": 2,
+              "audio_file": "dt/ch2/q32/pt_2.mp3",
+              "dur": 16.64,
+              "duration_seconds": 16.64,
+              "drive_audio_id": "1GZxDMsGVUFMhg7XZ3qlVWbAr-jMg9ZP9"
+            }
+          ],
+          "flow_summary": [],
+          "t0": 12.53,
+          "t1": 47.97
+        },
+        {
+          "branch_id": "branch-2",
+          "branch_title": "Time Limit & Eligible Investment",
+          "badge": "Statutory Timeline",
+          "icon": "gear",
+          "points": [
+            {
+              "id": "beat-2-1",
+              "title": "Permissible Reinvestment Window",
+              "number": "1.2.1",
+              "badge": "1 Year Prior / 3 Years After",
+              "body": [
+                "New plant, machinery, land, or building must be acquired or constructed within 1 year before or 3 years after the transfer.",
+                "Expenses incurred on shifting the original assets and establishment to the new area are also eligible."
+              ],
+              "highlights": [
+                {
+                  "phrase": "1 year before or 3 years after the transfer",
+                  "time_sec": 3.1
+                },
+                {
+                  "phrase": "Expenses incurred on shifting",
+                  "time_sec": 7.8
+                }
+              ],
+              "table_data": null,
+              "voice_sync_text": "Reinvestment നടത്തേണ്ട Statutory Time Limit എന്നത് transfer നടക്കുന്ന തീയതിക്ക് 1 year before അല്ലെങ്കിൽ 3 years after ആണ്. കൂടാതെ പഴയ assets പുതിയ സ്ഥലത്തേക്ക് shifting നടത്താൻ ആകുന്ന Expenses നും exemption ലഭിക്കും.",
+              "spoken": true,
+              "t0": 49.97,
+              "t1": 65.47,
+              "pt_idx": 3,
+              "audio_file": "dt/ch2/q32/pt_3.mp3",
+              "dur": 16.48,
+              "duration_seconds": 16.48,
+              "drive_audio_id": "1sYVDbFT2iAJ3hKCrb3LRZ_Um2x8xo7Og"
+            }
+          ],
+          "flow_summary": [],
+          "t0": 49.97,
+          "t1": 65.47
+        },
+        {
+          "branch_id": "branch-3",
+          "branch_title": "Computation & Section 50 Interaction",
+          "badge": "Section 50 STCG",
+          "icon": "calculator",
+          "points": [
+            {
+              "id": "beat-3-1",
+              "title": "Depreciable Assets & Section 50 Mechanism",
+              "number": "1.3.1",
+              "badge": "Deemed STCG",
+              "body": [
+                "Transfer of depreciable building, plant, and machinery results in Short-Term Capital Gains under Section 50.",
+                "Transfer of non-depreciable land held long-term yields Long-Term Capital Gains under Section 45."
+              ],
+              "highlights": [
+                {
+                  "phrase": "Short-Term Capital Gains under Section 50",
+                  "time_sec": 3.2
+                },
+                {
+                  "phrase": "Long-Term Capital Gains under Section 45",
+                  "time_sec": 8.0
+                }
+              ],
+              "table_data": null,
+              "voice_sync_text": "Depreciable assets ആയ Building, Plant and Machinery എന്നിവയുടെ Capital Gains, Section 50 പ്രകാരം Short-Term Capital Gains ആയിട്ടാണ് കണക്കാക്കുന്നത്. എന്നാൽ Land ന്റെ കാര്യം Long-Term Capital Gains ആയി മാറും.",
+              "spoken": true,
+              "t0": 67.47,
+              "t1": 82.26,
+              "pt_idx": 4,
+              "audio_file": "dt/ch2/q32/pt_4.mp3",
+              "dur": 14.84,
+              "duration_seconds": 14.84,
+              "drive_audio_id": "1x7dmuphINVjX5F9JAfdcd9Y9DkszG4eY"
+            }
+          ],
+          "flow_summary": [],
+          "t0": 67.47,
+          "t1": 82.26
+        },
+        {
+          "branch_id": "branch-4",
+          "branch_title": "Priority Set-off & Tax Optimization",
+          "badge": "Tax Planning",
+          "icon": "scales",
+          "points": [
+            {
+              "id": "beat-4-1",
+              "title": "Optimal Order of Exemption Set-off",
+              "number": "1.4.1",
+              "badge": "STCG First Principle",
+              "body": [
+                "Assessee is legally permitted to set off Section 54G exemption against Short-Term Capital Gains first.",
+                "Remaining unexhausted Section 54G exemption is then set off against Long-Term Capital Gains to minimize total tax."
+              ],
+              "highlights": [
+                {
+                  "phrase": "set off Section 54G exemption against Short-Term Capital Gains first",
+                  "time_sec": 3.5
+                },
+                {
+                  "phrase": "minimize total tax",
+                  "time_sec": 8.5
+                }
+              ],
+              "table_data": null,
+              "voice_sync_text": "ഒരു അസ്സസ്സീക്ക് Section 54G exemption തുക ആദ്യം Short-Term Capital Gains ന് എതിരെ set off ചെയ്യാം. കാരണം STCG ക്ക് higher tax rates ഉള്ളതുകൊണ്ട്, അവിടെ ആദ്യം exempt ചെയ്യുന്നത് വഴി assessee യുടെ Total Tax Liability ഗണ്യമായി കുറയ്ക്കാൻ സാധിക്കും.",
+              "spoken": true,
+              "t0": 84.26,
+              "t1": 101.83,
+              "pt_idx": 5,
+              "audio_file": "dt/ch2/q32/pt_5.mp3",
+              "dur": 17.16,
+              "duration_seconds": 17.16,
+              "drive_audio_id": "1nOndXWy0WRSfeOKj3wibueS-Y_VQ3iYd"
+            }
+          ],
+          "flow_summary": [],
+          "t0": 84.26,
+          "t1": 101.83
+        }
+      ],
+      "concept_simulation": {
+        "schema_version": "1.0",
+        "illustrative_only": true,
+        "doctrine_topic": "Section 54G Shifting Exemption & Set-off Priority Strategy",
+        "relevant_tax_year": "P.Y. 2024-25 / A.Y. 2025-26",
+        "statutory_assumptions": [
+          "Assessee transfers urban industrial assets: Depreciable Plant & Machinery and Long-term Land.",
+          "Assessee invests ₹ 20 Lakhs in new Plant & Machinery in Non-Urban Area within statutory period.",
+          "Exemption priority: Exhaust against Short-Term Capital Gain first, then Long-Term Capital Gain."
+        ],
+        "intro_voice": "ഇനി ഈ പ്രൊവിഷൻ എളുപ്പത്തിൽ മനസ്സിലാക്കാൻ ഒരു സിംപിൾ ഉദാഹരണം നോക്കാം.",
+        "steps": [
+          {
+            "step_id": "step_1",
+            "step_order": 1,
+            "title": "Computation of Capital Gains on Shifting Assets",
+            "metric_label": "Total Gross Capital Gains",
+            "metric_value": "₹ 25,00,000",
+            "voice_sync_text": "നമ്മുടെ അസ്സസ്സീക്ക് Plant and Machinery മാറ്റി സ്ഥാപിച്ചപ്പോൾ Section 50 പ്രകാരം Short Term Capital Gain 15 Lakhs ഉം, Land വിറ്റപ്പോൾ Long Term Capital Gain 10 Lakhs ഉം ലഭിച്ചു എന്ന് കരുതുക.",
+            "image_prompt": "A modern industrial factory in an urban landscape being decommissioned with trucks carrying heavy machinery away, 2.5D isometric view, cinematic lighting.",
+            "calculation_data": null,
+            "step_number": 1,
+            "audio_file": "dt/ch2/q32/sim_1.mp3",
+            "duration_seconds": 14.24,
+            "drive_audio_id": "1WPjpA9uSFtyaYHSZsmcn_pcXhH28He6G",
+            "image_file": "dt/ch2/q32/sim_img_1.jpg"
+          },
+          {
+            "step_id": "step_2",
+            "step_order": 2,
+            "title": "Reinvestment in Non-Urban Area",
+            "metric_label": "Eligible Cost u/s 54G",
+            "metric_value": "₹ 20,00,000",
+            "voice_sync_text": "അസ്സസ്സി പുതിയ Non-Urban Area യിൽ പുതിയ Plant and Machinery വാങ്ങാൻ 20 Lakhs രൂപ ഇൻവെസ്റ്റ് ചെയ്തു. ഇത് Section 54G പ്രകാരം എലിജിബിൾ ഇൻവെസ്റ്റ്മെന്റ് ആണ്.",
+            "image_prompt": "A brand new eco-friendly factory building under construction in a serene green rural environment with new machinery being installed, high contrast 2.5D isometric render.",
+            "calculation_data": null,
+            "step_number": 2,
+            "audio_file": "dt/ch2/q32/sim_2.mp3",
+            "duration_seconds": 10.8,
+            "drive_audio_id": "10s69EChVSXn6PM6io-hcdrATd2CbG7Q0",
+            "image_file": "dt/ch2/q32/sim_img_2.jpg"
+          },
+          {
+            "step_id": "step_3",
+            "step_order": 3,
+            "title": "Priority Set-off against Short-Term Capital Gains",
+            "metric_label": "Taxable STCG",
+            "metric_value": "₹ 0",
+            "voice_sync_text": "ഇവിടെ 20 Lakhs രൂപയുടെ Exemption ആദ്യം 15 Lakhs രൂപയുള്ള Short Term Capital Gain-ൽ പൂർണ്ണമായും set off ചെയ്യുന്നു. തന്മൂലം Taxable STCG സീറോ ಆಗുന്നു.",
+            "image_prompt": "A digital financial dashboard displaying tax computation bars, where the red STCG bar drops to zero after green Section 54G exemption shield applies.",
+            "calculation_data": {
+              "formula": "STCG (₹ 15L) - Sec 54G Exemption (₹ 15L)",
+              "result": "₹ 0 (STCG Taxable)"
+            },
+            "step_number": 3,
+            "audio_file": "dt/ch2/q32/sim_3.mp3",
+            "duration_seconds": 13.28,
+            "drive_audio_id": "1mTUNdQQQIqzQdA1_RNQBqgAO31IvNqP1",
+            "image_file": "dt/ch2/q32/sim_img_3.jpg"
+          },
+          {
+            "step_id": "step_4",
+            "step_order": 4,
+            "title": "Remaining Exemption Set-off against LTCG",
+            "metric_label": "Final Taxable Capital Gain",
+            "metric_value": "₹ 5,00,000 (LTCG)",
+            "voice_sync_text": "ബാക്കി നിൽക്കുന്ന 5 Lakhs രൂപ Exemption, Long Term Capital Gain 10 Lakhs ൽ നിന്ന് കുറയ്ക്കുന്നു. ഫലത്തിൽ 5 Lakhs രൂപ മാത്രം Section 112 പ്രകാരം low tax rate-ൽ taxable ആകുന്നു.",
+            "image_prompt": "A clear legal tax settlement certificate with green stamp showing optimized tax computation, glowing 3D graphical elements.",
+            "calculation_data": {
+              "formula": "LTCG (₹ 10L) - Balance Sec 54G Exemption (₹ 5L)",
+              "result": "₹ 5,00,000 (LTCG Taxable u/s 112)"
+            },
+            "step_number": 4,
+            "audio_file": "dt/ch2/q32/sim_4.mp3",
+            "duration_seconds": 13.68,
+            "drive_audio_id": "1_cop7mKXLbdd1ktvo61vZK12uYvnto_k",
+            "image_file": "dt/ch2/q32/sim_img_4.jpg"
+          }
+        ],
+        "intro_audio_file": "dt/ch2/q32/sim_intro.mp3",
+        "intro_dur": 4.12,
+        "intro_drive_audio_id": "1wjJXf7sMN_C8QZOexZyU8WPqCQx0wrIh"
+      },
+      "explainer_presentation": {
+        "title": "Section 54G: Industrial Shifting Exemption Framework",
+        "badge": "§ Statutory Rules",
+        "doctrine": "Shifting of Urban Industrial Undertaking to Non-Urban Area",
+        "slides": [
+          {
+            "slide_order": 1,
+            "title": "Scope & Eligible Capital Assets",
+            "subtitle": "Section 54G Scope & Exclusion Thresholds",
+            "layout": "statutory_rule",
+            "image_required": false,
+            "image_prompt": null,
+            "voice_sync_text": "Section 54G 적용 ആകണമെങ്കിൽ transfer ചെയ്യുന്നതും പുതിയതായി വാങ്ങുന്നതുമായ അസ്സറ്റുകൾ Land, Building, Plant and Machinery ആയിരിക്കണം. Furniture പോലെയുള്ള മറ്റ് അസ്സറ്റുകൾ ഇതിൽ പെടില്ല.",
+            "cards": [
+              {
+                "heading": "Qualifying Assets u/s 54G",
+                "badge": "ELIGIBLE",
+                "points": [
+                  "Plant and Machinery used in the industrial undertaking.",
+                  "Land or Building (or any right in land/building) used for business."
+                ]
+              },
+              {
+                "heading": "Express Statutory Exclusion",
+                "badge": "INELIGIBLE",
+                "points": [
+                  "Furniture, fixtures, office appliances, and motor vehicles.",
+                  "Reinvestment in furniture gives ZERO exemption benefit under Section 54G."
+                ]
+              }
+            ],
+            "calculation_data": null,
+            "trap_data": null
+          },
+          {
+            "slide_order": 2,
+            "title": "Section 50 & Tax Priority Optimization",
+            "subtitle": "Inter-head Set-off Priority Rules",
+            "layout": "statutory_rule",
+            "image_required": false,
+            "image_prompt": null,
+            "voice_sync_text": "Section 50 പ്രകാരം depreciable assets ൽ വരുന്ന ലാഭം STCG ആണ്. Tax liability പരമാവധി കുറയ്ക്കാനായി Section 54G exemption ആദ്യം STCG ക്ക് എതിരെ ഉപയോഗിക്കുന്നതാണ് ഉചിതം.",
+            "cards": [
+              {
+                "heading": "Short-Term Capital Gain (Section 50)",
+                "badge": "HIGH TAX RATE",
+                "points": [
+                  "Depreciable plant, machinery, and building generate STCG under Section 50.",
+                  "Taxable at normal applicable tax rates of the assessee."
+                ]
+              },
+              {
+                "heading": "Priority Allocation Rule",
+                "badge": "TAX OPTIMIZATION",
+                "points": [
+                  "Assessee can exhaust Section 54G exemption against STCG prior to LTCG.",
+                  "Unadjusted balance exemption is thereafter offset against LTCG."
+                ]
+              }
+            ],
+            "calculation_data": null,
+            "trap_data": null
+          }
+        ]
+      },
+      "screenplay": {
+        "doctrine": "Section 54G Statutory Shifting Mechanism",
+        "beats": [
+          {
+            "beat_order": 1,
+            "t_start": 0.0,
+            "t_end": 4.5,
+            "beat_type": "kinetic_headline",
+            "headline": "Section 54G: Urban to Non-Urban Shifting",
+            "badge": "§ Section 54G",
+            "subtext": "Exemption on Transfer of Industrial Undertaking Assets",
+            "metric_chip": null,
+            "voice_sync_text": "ഇന്ന് നമ്മൾ പഠിക്കുന്നത് Section 54G പ്രകാരമുള്ള Capital Gains Exemption നിയമങ്ങളാണ്.",
+            "image_required": false,
+            "image_prompt": null,
+            "highlights": [
+              {
+                "phrase": "Section 54G",
+                "time_sec": 1.2
+              },
+              {
+                "phrase": "Capital Gains Exemption",
+                "time_sec": 3.0
+              }
+            ]
+          },
+          {
+            "beat_order": 2,
+            "t_start": 4.5,
+            "t_end": 9.5,
+            "beat_type": "statutory_trigger",
+            "headline": "Eligible Assets: Land, Building, Plant & Machinery",
+            "badge": "Qualifying Assets",
+            "subtext": "Furniture is strictly EXCLUDED from Section 54G",
+            "metric_chip": null,
+            "voice_sync_text": "Plant, Machinery, Land, Building എന്നിവക്ക് മാത്രമേ ഈ ഇളവ് ലഭിക്കൂ. Furniture ഇതിൽ പെടില്ല.",
+            "image_required": false,
+            "image_prompt": null,
+            "highlights": [
+              {
+                "phrase": "Plant, Machinery, Land, Building",
+                "time_sec": 5.2
+              },
+              {
+                "phrase": "Furniture",
+                "time_sec": 7.8
+              }
+            ]
+          },
+          {
+            "beat_order": 3,
+            "t_start": 9.5,
+            "t_end": 15.0,
+            "beat_type": "statutory_trap",
+            "headline": "Tax Priority Principle: Exhaust STCG First",
+            "badge": "Tax Planning Strategy",
+            "subtext": "Set off Section 54G exemption against Section 50 STCG to minimize tax incidence",
+            "metric_chip": null,
+            "voice_sync_text": "Section 54G Exemption തുക ആദ്യം Short Term Capital Gains ൽ കുറയ്ക്കുന്നതാണ് tax സാമ്പത്തികമായി ഏറ്റവും ലാഭകരം.",
+            "image_required": false,
+            "image_prompt": null,
+            "highlights": [
+              {
+                "phrase": "Section 54G Exemption",
+                "time_sec": 10.2
+              },
+              {
+                "phrase": "Short Term Capital Gains",
+                "time_sec": 12.5
+              }
+            ]
+          }
+        ]
+      },
+      "total_duration": 103.83,
+      "drive_folder_id": "1cJUtqvArhMmP_9hXWLxROVNdKdX7m8L2",
+      "total_points_count": 6,
+      "completed_points_count": 11,
+      "is_partially_complete": false
+    },
+    "ch2_q33": {
+      "doctrine": "Section 112A Capital Gains & Grandfathering Mechanism",
+      "root": {
+        "id": "root",
+        "number": "1",
+        "title": "Section 112A & Grandfathering Valuation",
+        "badge": "Sec 112A · Sec 55(2)(aa)",
+        "voice_sync_text": "Section 112A പ്രകാരം Long Term Capital Asset-കളുടെ Transfer-ൽ വരുന്ന Capital Gains Tax Rules-ഉം, 1st February 2018-ന് മുമ്പ് വാങ്ങിയ Assets-ന്റെ Grandfathering Cost of Acquisition-ഉം നമുക്ക് വിശദമായി പഠിക്കാം.",
+        "t0": 0.0,
+        "t1": 13.93,
+        "pt_idx": 0,
+        "audio_file": "dt/ch2/q33/pt_0.mp3",
+        "drive_audio_id": "1BOgcUfkRE3JeXiI4hvW4XVFL7M6--3As"
+      },
+      "branches": [
+        {
+          "branch_id": "branch-1",
+          "branch_title": "Section 112A Tax Scope & Exemption",
+          "badge": "Section 112A",
+          "icon": "percent",
+          "points": [
+            {
+              "id": "beat-1-1",
+              "title": "Tax Rate and Threshold",
+              "number": "1.1.1",
+              "badge": "12.5% Rate",
+              "body": [
+                "Taxable at 12.5% on Long Term Capital Gains exceeding ₹ 1,25,000 in a Financial Year.",
+                "Applicable to listed equity shares and units of equity-oriented funds subject to STT payment conditions."
+              ],
+              "highlights": [
+                {
+                  "phrase": "12.5% on Long Term Capital Gains exceeding ₹ 1,25,000",
+                  "time_sec": 4.3
+                },
+                {
+                  "phrase": "units of equity-oriented funds subject to STT payment conditions",
+                  "time_sec": 10.4
+                }
+              ],
+              "table_data": null,
+              "voice_sync_text": "Section 112A അനുസരിച്ച്, ഒരു Financial Year-ൽ ₹ 1,25,000-ന് മുകളിലുള്ള Long Term Capital Gains-ന് 12.5% ആണ് Tax Rate. Equity shares-നും Equity Oriented Fund units-നും STT payment conditions ബാധകമാണ്.",
+              "spoken": true,
+              "t0": 14.93,
+              "t1": 29.14,
+              "pt_idx": 1,
+              "audio_file": "dt/ch2/q33/pt_1.mp3",
+              "dur": 18.88,
+              "duration_seconds": 18.88,
+              "drive_audio_id": "10a5utEZDShiaxwWOyjwdN6XNPNwFjS3k"
+            }
+          ],
+          "flow_summary": [],
+          "t0": 14.93,
+          "t1": 29.14
+        },
+        {
+          "branch_id": "branch-2",
+          "branch_title": "Grandfathering Cost Formula",
+          "badge": "Section 55(2)(aa)",
+          "icon": "calculator",
+          "points": [
+            {
+              "id": "beat-2-1",
+              "title": "Cost of Acquisition Computation",
+              "number": "1.2.1",
+              "badge": "Pre-01.02.2018",
+              "body": [
+                "Cost of Acquisition is Higher of Actual Cost OR Lower of FMV on 31st January 2018 and Full Value of Consideration.",
+                "This grandfathering formula protects capital gains accrued prior to 1st February 2018 from tax."
+              ],
+              "highlights": [
+                {
+                  "phrase": "Higher of Actual Cost OR Lower of FMV on 31st January 2018 and Full Value of Consideration",
+                  "time_sec": 4.1
+                },
+                {
+                  "phrase": "protects capital gains accrued prior to 1st February 2018",
+                  "time_sec": 9.5
+                }
+              ],
+              "table_data": null,
+              "voice_sync_text": "1st February 2018-ന് മുമ്പ് അക്വയർ ചെയ്ത Assets-ന്റെ Cost of Acquisition കണ്ടുപിടിക്കാൻ Grandfathering Formula ഉപയോഗിക്കുന്നു. Actual Cost അല്ലെങ്കിൽ FMV on 31st January 2018 and Sale Consideration-ലെ Lower Amount - ഇവയിൽ ഏതാണോ Higher, അതാണ് Cost of Acquisition.",
+              "spoken": true,
+              "t0": 31.14,
+              "t1": 49.85,
+              "pt_idx": 2,
+              "audio_file": "dt/ch2/q33/pt_2.mp3",
+              "dur": 18.6,
+              "duration_seconds": 18.6,
+              "drive_audio_id": "1y03_1BwZ9fhNkPuQM08Sbwg5XLBa_XDP"
+            }
+          ],
+          "flow_summary": [],
+          "t0": 31.14,
+          "t1": 49.85
+        },
+        {
+          "branch_id": "branch-3",
+          "branch_title": "FMV Determination Rules",
+          "badge": "Rule 112A Benchmarks",
+          "icon": "scales",
+          "points": [
+            {
+              "id": "beat-3-1",
+              "title": "Listed vs Unlisted Asset FMV",
+              "number": "1.3.1",
+              "badge": "31st Jan 2018 FMV",
+              "body": [
+                "For assets listed on 31st January 2018, FMV is the highest trading price quoted on a recognized stock exchange on that date.",
+                "For unlisted units or assets not listed on 31st January 2018, FMV is the Net Asset Value (NAV) as on 31st January 2018."
+              ],
+              "highlights": [
+                {
+                  "phrase": "highest trading price quoted on a recognized stock exchange",
+                  "time_sec": 3.8
+                },
+                {
+                  "phrase": "Net Asset Value (NAV) as on 31st January 2018",
+                  "time_sec": 8.6
+                }
+              ],
+              "table_data": null,
+              "voice_sync_text": "31st January 2018-ൽ Listed ആയ Assets-ന് stock exchange-ലെ Highest Trading Price ആണ് FMV. എന്നാൽ 31st January 2018-ൽ Unlisted ആയ Units-ന് 31st January 2018-ലെ Net Asset Value അതായത് NAV ആണ് FMV ആയി എടുക്കേണ്ടത്.",
+              "spoken": true,
+              "t0": 51.85,
+              "t1": 66.85,
+              "pt_idx": 3
+            }
+          ],
+          "flow_summary": [],
+          "t0": 51.85,
+          "t1": 66.85
+        }
+      ],
+      "concept_simulation": {
+        "schema_version": "1.0",
+        "illustrative_only": true,
+        "doctrine_topic": "Grandfathering Mechanism under Section 112A",
+        "relevant_tax_year": "P.Y. 2025-26 (A.Y. 2026-27)",
+        "statutory_assumptions": [
+          "Asset acquired prior to 1st February 2018",
+          "STT paid at time of transfer as per Section 112A requirements",
+          "Exemption threshold of ₹ 1,25,000 applies to total LTCG"
+        ],
+        "intro_voice": "ഇനി ഒരു simple numerical illustration വഴി Grandfathering mechanism വ്യക്തമായി മനസ്സിലാക്കാം.",
+        "steps": [
+          {
+            "step_id": "step_1",
+            "step_order": 1,
+            "title": "Initial Acquisition (Pre-2018)",
+            "metric_label": "Actual Cost of Acquisition",
+            "metric_value": "₹ 1,00,000",
+            "voice_sync_text": "1st February 2018-ന് മുമ്പ് ₹ 1,00,000 രൂപയ്ക്ക് Asset വാങ്ങിയെന്ന് കരുതുക. ഇത് നമ്മുടെ Actual Cost ആണ്.",
+            "image_prompt": "A modern clean corporate financial office setting showing an investor stock purchase confirmation slip dated in 2017 with clear text overlay 'Actual Cost: ₹ 1,00,000', 2.5D isometric view, cinematic lighting.",
+            "calculation_data": null
+          },
+          {
+            "step_id": "step_2",
+            "step_order": 2,
+            "title": "Fair Market Value Benchmark",
+            "metric_label": "FMV on 31st January 2018",
+            "metric_value": "₹ 2,50,000",
+            "voice_sync_text": "31st January 2018-ൽ ഈ Asset-ന്റെ Stock Exchange Highest Price അല്ലെങ്കിൽ Net Asset Value ₹ 2,50,000 ആയിരുന്നു.",
+            "image_prompt": "Stock exchange trading terminal monitor glowing with market charts dated 31st January 2018 displaying highest trading benchmark 'FMV: ₹ 2,50,000', photorealistic 2.5D isometric view.",
+            "calculation_data": null
+          },
+          {
+            "step_id": "step_3",
+            "step_order": 3,
+            "title": "Transfer & Consideration",
+            "metric_label": "Full Value of Consideration",
+            "metric_value": "₹ 3,00,000",
+            "voice_sync_text": "പിന്നീട് ഈ Asset ₹ 3,00,000 രൂപയ്ക്ക് Transfer ചെയ്യുന്നു. ഇതാണ് Full Value of Consideration.",
+            "image_prompt": "Digital stock transaction authorization screen showing full sale consideration received of '₹ 3,00,000', modern financial UI, 2.5D isometric perspective.",
+            "calculation_data": null
+          },
+          {
+            "step_id": "step_4",
+            "step_order": 4,
+            "title": "Cost & Taxable Gain Computation",
+            "metric_label": "Taxable LTCG u/s 112A",
+            "metric_value": "₹ Nil (Gain ₹ 50,000 < ₹ 1,25,000)",
+            "voice_sync_text": "ഇവിടെ Grandfathering Formula അനുസരിച്ച് Cost of Acquisition ₹ 2,50,000 ആയി മാറും. അതുകൊണ്ട് LTCG ₹ 50,000 മാത്രമാണ്. ഇത് ₹ 1,25,000 Exemption limit-ന് ഉള്ളിൽ ആയതിനാൽ Tax Payable Nil ആണ്.",
+            "image_prompt": "Tax calculation summary statement report showing LTCG calculation, deduction of basic threshold exemption ₹ 1,25,000, and final Tax Payable zero, elegant 2.5D isometric visual.",
+            "calculation_data": {
+              "formula": "LTCG = Consideration (₹ 3,00,000) - Deemed Cost (₹ 2,50,000) = ₹ 50,000",
+              "result": "Taxable LTCG = ₹ Nil (since ₹ 50,000 <= Exemption Limit ₹ 1,25,000)"
+            }
+          }
+        ]
+      },
+      "explainer_presentation": {
+        "title": "Section 112A: LTCG Taxability & Grandfathering Rules",
+        "badge": "§ Section 112A",
+        "doctrine": "Capital Gains Grandfathering Architecture",
+        "slides": [
+          {
+            "slide_order": 1,
+            "title": "Core Tax Framework u/s 112A",
+            "subtitle": "Scope, Rate, and Exemption Threshold",
+            "layout": "statutory_rule",
+            "image_required": false,
+            "image_prompt": null,
+            "voice_sync_text": "Section 112A പ്രകാരം Specified Financial Assets-ന്റെ Long Term Capital Gains-ന് 12.5% Tax Rate ആണ് ബാധകം. ആകെ LTCG-യിൽ ആദ്യത്തെ ₹ 1,25,000 രൂപ തികച്ചും Exempted ആണ്.",
+            "cards": [
+              {
+                "heading": "Applicable Tax Rate",
+                "badge": "12.5% TAX",
+                "points": [
+                  "Taxed at concessional rate of 12.5% plus applicable Health and Education Cess.",
+                  "No indexation benefit allowed under the proviso to Section 48."
+                ]
+              },
+              {
+                "heading": "Exemption Threshold",
+                "badge": "₹ 1,25,000 LIMIT",
+                "points": [
+                  "Aggregate LTCG under Section 112A up to ₹ 1,25,000 per financial year is exempt.",
+                  "Tax is payable exclusively on the amount exceeding ₹ 1,25,000."
+                ]
+              }
+            ],
+            "calculation_data": null,
+            "trap_data": null
+          },
+          {
+            "slide_order": 2,
+            "title": "Grandfathering Cost Determination",
+            "subtitle": "Assets Acquired Prior to 1st February 2018",
+            "layout": "statutory_rule",
+            "image_required": false,
+            "image_prompt": null,
+            "voice_sync_text": "1st February 2018-ന് മുമ്പ് വാങ്ങിയ Assets-ന്റെ Cost of Acquisition കണ്ടുപിടിക്കുന്ന രീതി ഇവിടെ കാണാം. Actual Cost-ഉം, FMV and Sale Price-ലെ Lower Value-ഉം തമ്മിൽ Compare ചെയ്ത് Higher Value സ്വീകരിക്കുന്നു.",
+            "cards": [
+              {
+                "heading": "Step 1: Lower Comparison",
+                "badge": "STEP 1",
+                "points": [
+                  "Determine Lower of: (i) Fair Market Value as on 31st January 2018, and (ii) Full Value of Consideration."
+                ]
+              },
+              {
+                "heading": "Step 2: Final Cost Selection",
+                "badge": "STEP 2",
+                "points": [
+                  "Cost of Acquisition = Higher of: (i) Actual Cost of Acquisition, and (ii) Step 1 Result."
+                ]
+              }
+            ],
+            "calculation_data": null,
+            "trap_data": null
+          },
+          {
+            "slide_order": 3,
+            "title": "FMV Determination Benchmark Rules",
+            "subtitle": "Listed vs Unlisted Assets as on 31st January 2018",
+            "layout": "statutory_rule",
+            "image_required": false,
+            "image_prompt": null,
+            "voice_sync_text": "31st January 2018-ലെ Listing status ആണ് FMV തീരുമാനിക്കുന്നത്. Listed ആണെങ്കിൽ Highest Trading Price-ഉം, Unlisted ആണെങ്കിൽ Net Asset Value-ഉം ആണ് Benchmark.",
+            "cards": [
+              {
+                "heading": "Listed on 31.01.2018",
+                "badge": "LISTED ASSET",
+                "points": [
+                  "FMV = Highest price quoted on a recognized stock exchange on 31st January 2018."
+                ]
+              },
+              {
+                "heading": "Unlisted on 31.01.2018",
+                "badge": "UNLISTED ASSET",
+                "points": [
+                  "FMV = Net Asset Value (NAV) of the unit/share as on 31st January 2018."
+                ]
+              }
+            ],
+            "calculation_data": null,
+            "trap_data": {
+              "trap_title": "Listing Date Confusion Trap",
+              "trap_description": "If units were unlisted on 31st January 2018 but listed later, DO NOT use the trading price on the subsequent listing date. You must strictly use the NAV as on 31st January 2018."
+            }
+          }
+        ]
+      },
+      "screenplay": {
+        "doctrine": "Section 112A Grandfathering Principles",
+        "beats": [
+          {
+            "beat_order": 1,
+            "t_start": 0.0,
+            "t_end": 4.5,
+            "beat_type": "kinetic_headline",
+            "headline": "Section 112A: LTCG & Grandfathering Mechanism",
+            "badge": "§ Direct Tax Statutory Doctrine",
+            "subtext": "Taxation of Specified Capital Assets & Pre-2018 Gain Protection",
+            "metric_chip": null,
+            "voice_sync_text": "Section 112A പ്രകാരമുള്ള Long Term Capital Gains Tax Rules-ഉം Grandfathering provisions-ഉം മനസ്സിലാക്കാം.",
+            "image_required": false,
+            "image_prompt": null,
+            "highlights": [
+              {
+                "phrase": "Long Term Capital Gains Tax Rules",
+                "time_sec": 1.5
+              }
+            ]
+          },
+          {
+            "beat_order": 2,
+            "t_start": 4.5,
+            "t_end": 9.0,
+            "beat_type": "statutory_trigger",
+            "headline": "Tax Rate 12.5% Beyond ₹ 1,25,000",
+            "badge": "Section 112A Threshold",
+            "subtext": "First ₹ 1,25,000 of LTCG is completely exempt from tax",
+            "metric_chip": "Exemption: ₹ 1,25,000",
+            "voice_sync_text": "Financial Year-ലെ ആദ്യത്തെ ₹ 1,25,000 രൂപ LTCG എക്സെംപ്റ്റാണ്. അതിനുമുകളിലുള്ള തുകയ്ക്ക് 12.5% Tax ബാധകമാണ്.",
+            "image_required": false,
+            "image_prompt": null,
+            "highlights": [
+              {
+                "phrase": "12.5% Tax ബാധകമാണ്",
+                "time_sec": 3.2
+              }
+            ]
+          },
+          {
+            "beat_order": 3,
+            "t_start": 9.0,
+            "t_end": 14.0,
+            "beat_type": "visual_scene",
+            "headline": "Pre-1st February 2018 Grandfathering Shield",
+            "badge": "Section 55(2)(aa)",
+            "subtext": "Protecting historical gains accrued prior to tax re-introduction",
+            "metric_chip": "Cut-off: 01.02.2018",
+            "voice_sync_text": "1st February 2018-ന് മുമ്പ് അക്വയർ ചെയ്ത Assets-ന് Grandfathering formula വഴി മുൻകാല ലാഭങ്ങളെ Tax-ൽ നിന്ന് സംരക്ഷിക്കുന്നു.",
+            "image_required": true,
+            "image_prompt": "A conceptual legal shield labeled 'Section 112A Protection' blocking tax liabilities on historic stock growth curves up to January 31 2018, 2.5D isometric 16:9 visual.",
+            "highlights": [
+              {
+                "phrase": "Grandfathering formula",
+                "time_sec": 2.1
+              }
+            ]
+          },
+          {
+            "beat_order": 4,
+            "t_start": 14.0,
+            "t_end": 18.5,
+            "beat_type": "statutory_trap",
+            "headline": "FMV Benchmark Trap: Unlisted vs Listed Status",
+            "badge": "Rule 112A Benchmark Trap",
+            "subtext": "31st January 2018 status is final; ignore post-2018 listing dates",
+            "metric_chip": "Benchmark Date: 31.01.2018",
+            "voice_sync_text": "31st January 2018-ൽ Unlisted ആയിരുന്ന Asset പിന്നീട് List ചെയ്താൽ പോലും 31st January 2018-ലെ NAV മാത്രമാണ് FMV ആയി എടുക്കേണ്ടത്.",
+            "image_required": false,
+            "image_prompt": null,
+            "highlights": [
+              {
+                "phrase": "NAV മാത്രമാണ് FMV ആയി എടുക്കേണ്ടത്",
+                "time_sec": 3.1
+              }
+            ]
+          }
+        ]
+      },
+      "total_duration": 68.85,
+      "drive_folder_id": "1Gl-uihKAHXjtFqly7ROCTOYYUx-lXgR7",
+      "total_points_count": 9,
+      "completed_points_count": 3,
       "is_partially_complete": true
     }
   },
