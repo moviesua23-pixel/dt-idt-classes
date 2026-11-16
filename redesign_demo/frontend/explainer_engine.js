@@ -202,17 +202,23 @@ const TEMPLATES = {
     if (b.subtitle) words(ctx, h("sub", el), b.subtitle.text, b.subtitle.at);
   },
   takeaway(el, b, ctx) {
-    if (b.title) words(ctx, h("headline", el), b.title.text, b.title.at);
-    if (b.subtitle) words(ctx, h("sub", el), b.subtitle.text, b.subtitle.at);
-    if (b.points && Array.isArray(b.points)) {
+    if (b.title) words(ctx, h("headline", el), b.title.text || b.title, b.title.at || (b.start + 0.3));
+    if (b.subtitle) words(ctx, h("sub", el), b.subtitle.text || b.subtitle, b.subtitle.at || (b.start + 0.8));
+    const pointsList = b.points || (b.rules || []).map((r, i) => ({
+      num: r.num || (r.step || (i + 1)),
+      text: r.text || r.rule || r,
+      at: r.at || (b.start + 0.8 + i * 0.5)
+    }));
+
+    if (pointsList.length > 0) {
       const wrap = h("takeaway-list", el);
-      b.points.forEach((pt, idx) => {
+      pointsList.forEach((pt, idx) => {
         const item = h("takeaway-item", wrap);
         item.innerHTML = `
           <div class="takeaway-num">${pt.num || (idx + 1)}</div>
           <div class="takeaway-text">${pt.text}</div>
         `;
-        fade(ctx, item, pt.at, 10, 0.4);
+        fade(ctx, item, pt.at || (b.start + 0.8 + idx * 0.5), 10, 0.4);
       });
     }
   },
@@ -339,14 +345,16 @@ const TEMPLATES = {
       });
     }
 
-    const divBox = h("fork-divider", forkWrap);
-    divBox.textContent = b.divider.text;
-    fade(ctx, divBox, b.divider.at, 0, 0.4);
+    if (b.divider) {
+      const divBox = h("fork-divider", forkWrap);
+      divBox.textContent = b.divider.text || b.divider || "";
+      fade(ctx, divBox, b.divider.at || (b.start + 1.0), 0, 0.4);
+    }
 
     const branchesRow = h("fork-branches", forkWrap);
     (b.branches || []).forEach(br => {
       const col = h("fork-branch " + br.side, branchesRow);
-      const branchAt = br.at !== undefined ? br.at : (b.divider.at + 0.1);
+      const branchAt = br.at !== undefined ? br.at : ((b.divider && b.divider.at) ? b.divider.at + 0.1 : (b.start + 1.2));
       fade(ctx, col, branchAt, 8, 0.4);
 
       const lbl = h("branch-label", col);
@@ -399,8 +407,17 @@ const TEMPLATES = {
   },
 
   meter(el, b, ctx) {
-    if (b.title) words(ctx, h("h2", el), b.title.text, b.title.at);
+    if (b.title) words(ctx, h("h2", el), b.title.text || b.title, b.title.at || (b.start + 0.3));
     const meterWrap = h("meter-wrap", el);
+
+    // Support both b.meter_display and b.limit / b.reading
+    const md = b.meter_display || {};
+    const limitVal = b.limit ? b.limit.value : (md.threshold || md.max_val || 2500000);
+    const limitText = b.limit ? b.limit.text : (md.labels?.threshold_label || "Statutory Ceiling / Threshold");
+    const readingValNum = b.reading ? b.reading.value : (md.current_val || 0);
+    const readingText = b.reading ? b.reading.text : (md.labels?.current_label || "Eligible Reinvestment");
+    const limitAt = b.limit?.at || (b.start + 0.8);
+    const readingAt = b.reading?.at || (b.start + 1.4);
 
     const gaugeBox = h("meter-gauge", meterWrap);
     const track = h("meter-track", gaugeBox);
@@ -408,24 +425,24 @@ const TEMPLATES = {
 
     const limitLine = h("meter-limit-line", track);
     const limitLbl = h("meter-limit-label", gaugeBox);
-    limitLbl.textContent = b.limit.text + ": " + inr(b.limit.value);
-    fade(ctx, limitLine, b.limit.at, 0, 0.3);
-    fade(ctx, limitLbl, b.limit.at, 0, 0.3);
+    limitLbl.textContent = limitText + ": " + inr(limitVal);
+    fade(ctx, limitLine, limitAt, 0, 0.3);
+    fade(ctx, limitLbl, limitAt, 0, 0.3);
 
-    const ratio = Math.min(1.0, Math.max(0.05, b.reading.value / b.limit.value));
-    ctx.push({ el: bar, kind: "fill", start: b.reading.at, dur: 1.8, to: ratio });
+    const ratio = Math.min(1.0, Math.max(0.05, readingValNum / Math.max(1, limitVal)));
+    ctx.push({ el: bar, kind: "fill", start: readingAt, dur: 1.8, to: ratio });
 
     const readingBox = h("meter-reading", meterWrap);
     const readingLbl = h("reading-label", readingBox);
-    readingLbl.textContent = b.reading.text;
+    readingLbl.textContent = readingText;
     const readingVal = h("reading-val num", readingBox);
-    fade(ctx, readingBox, b.reading.at, 12, 0.5);
-    ctx.push({ el: readingVal, kind: "count", start: b.reading.at, dur: 1.8, target: b.reading.value, fmt: b.reading.fmt || "inr" });
+    fade(ctx, readingBox, readingAt, 12, 0.5);
+    ctx.push({ el: readingVal, kind: "count", start: readingAt, dur: 1.8, target: readingValNum, fmt: b.reading?.fmt || "inr" });
 
     if (b.outcome) {
       const outPill = h("meter-outcome " + (b.outcome.tone || "ok"), meterWrap);
-      outPill.textContent = b.outcome.text;
-      fade(ctx, outPill, b.outcome.at, 14, 0.6);
+      outPill.textContent = b.outcome.text || b.outcome;
+      fade(ctx, outPill, b.outcome.at || (readingAt + 1.0), 14, 0.6);
     }
 
     if (b.padlock) {
@@ -441,9 +458,27 @@ const TEMPLATES = {
             <path d="M 48 64 L 46 76 L 54 76 L 52 64 Z" fill="#fff"/>
           </svg>
         </div>
-        <div class="padlock-label">${b.padlock.text || "Option to Buy 2 Residential Houses Unlocked!"}</div>
+        <div class="padlock-label">${b.padlock.text || "Threshold Condition Fulfilled!"}</div>
       `;
-      fade(ctx, padBox, b.padlock.at || (b.outcome ? b.outcome.at : b.reading.at + 1.0), 10, 0.5);
+      fade(ctx, padBox, b.padlock.at || (b.outcome ? b.outcome.at : readingAt + 1.0), 10, 0.5);
+    }
+
+    if (b.breakdown && Array.isArray(b.breakdown)) {
+      const bdGrid = h("meter-breakdown-grid", meterWrap);
+      bdGrid.style.cssText = "display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin-top:14px;width:100%;";
+      b.breakdown.forEach((it, idx) => {
+        const isOk = !it.status?.toLowerCase().includes("ineligible") && !it.status?.toLowerCase().includes("exclude");
+        const card = h("meter-bd-card", bdGrid);
+        card.style.cssText = `background:var(--matte);border:1px solid ${isOk ? 'var(--ok)' : 'var(--warn)'};border-radius:10px;padding:8px 12px;display:flex;justify-content:space-between;align-items:center;`;
+        card.innerHTML = `
+          <div>
+            <div style="font-size:0.85rem;font-weight:600;color:var(--ink)">${it.label}</div>
+            <div style="font-size:0.75rem;color:${isOk ? 'var(--ok)' : 'var(--warn)'};font-weight:700">${it.status || ''}</div>
+          </div>
+          <div class="num" style="font-size:0.95rem;font-weight:800;color:var(--ink)">${inr(it.val || 0)}</div>
+        `;
+        fade(ctx, card, b.start + 1.0 + idx * 0.4, 8, 0.4);
+      });
     }
 
     if (b.example) {
@@ -462,21 +497,30 @@ const TEMPLATES = {
             </svg>
           </div>
           <div>
-            <div class="ex-name">${b.example.name || "Mr. Hari"}</div>
+            <div class="ex-name">${b.example.name || "Assessee"}</div>
             <div class="ex-role">${b.example.role || "Threshold Qualified"}</div>
           </div>
         </div>
-        <div class="ex-bubble">${b.example.text}</div>
+        <div class="ex-bubble">${b.example.text || b.example}</div>
       `;
-      fade(ctx, exBox, b.example.at || (b.outcome ? b.outcome.at + 0.3 : b.reading.at + 1.5), 12, 0.5);
+      fade(ctx, exBox, b.example.at || (b.outcome ? b.outcome.at + 0.3 : readingAt + 1.5), 12, 0.5);
     }
   },
 
   ledger(el, b, ctx) {
-    if (b.title) words(ctx, h("h2", el), b.title.text, b.title.at);
+    if (b.title) words(ctx, h("h2", el), b.title.text || b.title, b.title.at || (b.start + 0.3));
     const ledgerTable = h("ledger-table", el);
 
-    (b.rows || []).forEach(r => {
+    // Support both b.rows and b.ledger_rows
+    const rowsList = b.rows || (b.ledger_rows || []).map((r, i) => ({
+      sign: r.sign || (r.type === "deduction" ? "minus" : "plus"),
+      label: r.label || r.particulars || r.text,
+      value: r.value !== undefined ? r.value : (r.amount || 0),
+      at: r.at || (b.start + 0.6 + i * 0.4),
+      fmt: r.fmt || "inr"
+    }));
+
+    rowsList.forEach((r, idx) => {
       const row = h("ledger-row " + (r.sign || "plus"), ledgerTable);
       const signCol = h("ledger-sign", row);
       signCol.textContent = r.sign === "minus" ? "−" : (r.sign === "total" ? "=" : "+");
@@ -485,32 +529,38 @@ const TEMPLATES = {
       const valCol = h("ledger-val num", row);
       valCol.textContent = inr(0);
 
-      ctx.push({ el: row, kind: "slide", start: r.at, dur: 0.5, dx: -15, dy: 0 });
-      ctx.push({ el: valCol, kind: "count", start: r.at + 0.1, dur: 1.2, target: r.value, fmt: r.fmt || "inr" });
+      const rAt = r.at || (b.start + 0.6 + idx * 0.4);
+      ctx.push({ el: row, kind: "slide", start: rAt, dur: 0.5, dx: -15, dy: 0 });
+      ctx.push({ el: valCol, kind: "count", start: rAt + 0.1, dur: 1.2, target: r.value, fmt: r.fmt || "inr" });
     });
 
-    if (b.total) {
+    const totObj = b.total || b.net_total;
+    if (totObj) {
+      const totValNum = totObj.value !== undefined ? totObj.value : (totObj.amount !== undefined ? totObj.amount : (totObj.taxable_amount || 0));
+      const totLblText = totObj.label || totObj.particulars || "Taxable Capital Gain";
+      const totAt = totObj.at || (b.start + 0.6 + rowsList.length * 0.4 + 0.5);
+
       const rule = h("ledger-rule", ledgerTable);
-      ctx.push({ el: rule, kind: "strike", start: b.total.at - 0.2, dur: 0.4 });
+      ctx.push({ el: rule, kind: "strike", start: totAt - 0.2, dur: 0.4 });
 
       const totRow = h("ledger-row total-row", ledgerTable);
       const totSign = h("ledger-sign", totRow);
       totSign.textContent = "=";
       const totLbl = h("ledger-lbl", totRow);
-      totLbl.textContent = b.total.label;
+      totLbl.textContent = totLblText;
       const totVal = h("ledger-val num", totRow);
 
-      ctx.push({ el: totRow, kind: "slide", start: b.total.at, dur: 0.6, dx: 0, dy: 10 });
-      ctx.push({ el: totVal, kind: "count", start: b.total.at + 0.1, dur: 1.5, target: b.total.value, fmt: b.total.fmt || "inr" });
+      ctx.push({ el: totRow, kind: "slide", start: totAt, dur: 0.6, dx: 0, dy: 10 });
+      ctx.push({ el: totVal, kind: "count", start: totAt + 0.1, dur: 1.5, target: totValNum, fmt: totObj.fmt || "inr" });
     }
 
     if (b.callout) {
       const calloutBox = h("ledger-callout-box", el);
       calloutBox.innerHTML = `
         <div class="callout-pill">${b.callout.badge || "Tax Alert"}</div>
-        <div class="callout-text">${b.callout.text}</div>
+        <div class="callout-text">${b.callout.text || b.callout}</div>
       `;
-      fade(ctx, calloutBox, b.callout.at, 12, 0.5);
+      fade(ctx, calloutBox, b.callout.at || (b.start + 2.5), 12, 0.5);
     }
   },
 
@@ -614,7 +664,7 @@ const TEMPLATES = {
   },
 
   statute_quote(el, b, ctx) {
-    if (b.title) words(ctx, h("h2", el), b.title.text, b.title.at);
+    if (b.title) words(ctx, h("h2", el), b.title.text || b.title, b.title.at || (b.start + 0.3));
     const quoteWrap = h("statute-quote-wrap", el);
 
     if (b.sale_card) {
@@ -623,21 +673,36 @@ const TEMPLATES = {
         <div class="sale-card-grid">
           <div class="sale-item">
             <div class="sale-lbl">${b.sale_card.sale_lbl || "Full Consideration (June 2025)"}</div>
-            <div class="sale-val num">${inr(b.sale_card.sale_val)}</div>
+            <div class="sale-val num">${inr(b.sale_card.sale_val || 0)}</div>
           </div>
           <div class="sale-sign">−</div>
           <div class="sale-item">
             <div class="sale-lbl">${b.sale_card.cost_lbl || "Adjusted Cost u/s 51"}</div>
-            <div class="sale-val num">${inr(b.sale_card.cost_val)}</div>
+            <div class="sale-val num">${inr(b.sale_card.cost_val || 0)}</div>
           </div>
           <div class="sale-sign">=</div>
           <div class="sale-item gain">
             <div class="sale-lbl">${b.sale_card.gain_lbl || "Gross LTCG"}</div>
-            <div class="sale-val num">${inr(b.sale_card.gain_val)}</div>
+            <div class="sale-val num">${inr(b.sale_card.gain_val || 0)}</div>
           </div>
         </div>
       `;
-      fade(ctx, sc, b.sale_card.at, 10, 0.4);
+      fade(ctx, sc, b.sale_card.at || (b.start + 0.5), 10, 0.4);
+    }
+
+    if (b.context_bubble) {
+      const cbBox = h("beat-example-card", quoteWrap);
+      cbBox.innerHTML = `
+        <div class="ex-character">
+          <div class="ex-avatar" style="font-size:1.8rem;line-height:1;display:flex;align-items:center;justify-content:center;">§</div>
+          <div>
+            <div class="ex-name">${b.context_bubble.speaker || "Statutory Intent"}</div>
+            <div class="ex-role">${b.context_bubble.theme || "Core Provision"}</div>
+          </div>
+        </div>
+        <div class="ex-bubble">${b.context_bubble.text || b.context_bubble}</div>
+      `;
+      fade(ctx, cbBox, b.context_bubble.at || (b.start + 0.6), 12, 0.5);
     }
 
     if (b.example) {
@@ -655,18 +720,27 @@ const TEMPLATES = {
             </svg>
           </div>
           <div>
-            <div class="ex-name">${b.example.name || "Mr. Hari"}</div>
-            <div class="ex-role">${b.example.role || "Assessee Question"}</div>
+            <div class="ex-name">${b.example.name || "Assessee Question"}</div>
+            <div class="ex-role">${b.example.role || "Practical Issue"}</div>
           </div>
         </div>
-        <div class="ex-bubble">${b.example.text}</div>
+        <div class="ex-bubble">${b.example.text || b.example}</div>
       `;
-      fade(ctx, exBox, b.example.at, 12, 0.5);
+      fade(ctx, exBox, b.example.at || (b.start + 0.8), 12, 0.5);
     }
 
-    const quoteBox = h("statute-quote-box", quoteWrap);
-    fade(ctx, quoteBox, b.quote.at, 10, 0.4);
-    words(ctx, quoteBox, b.quote.text, b.quote.at, 0.04);
+    if (b.quote) {
+      const quoteBox = h("statute-quote-box", quoteWrap);
+      const qText = typeof b.quote === "string" ? b.quote : (b.quote.text || "");
+      const qAt = (b.quote && b.quote.at) ? b.quote.at : (b.start + 1.0);
+      fade(ctx, quoteBox, qAt, 10, 0.4);
+      words(ctx, quoteBox, qText, qAt, 0.04);
+      if (b.quote.citation) {
+        const cit = h("quote-citation", quoteBox);
+        cit.style.cssText = "font-size:0.85rem;color:var(--ink-soft);margin-top:8px;font-style:italic;display:block;";
+        cit.textContent = "— " + b.quote.citation;
+      }
+    }
   },
 
   hub_branches(el, b, ctx) {
@@ -830,21 +904,66 @@ class Explainer {
   }
 
   toggle() {
-    if (this.audio.paused) {
-      this.audio.play().catch(() => {});
+    if (this.isPlaying || (this.audio && !this.audio.paused)) {
+      this.pause();
     } else {
-      this.audio.pause();
+      this.play();
     }
+  }
+
+  play() {
+    if (this.audio && this.audio.src) {
+      const p = this.audio.play();
+      if (p && typeof p.catch === "function") {
+        p.then(() => {
+          this.isPlaying = true;
+          this.updatePlayIcon(true);
+          if (typeof this.onPlay === "function") this.onPlay();
+          this.loop();
+        }).catch(err => {
+          console.warn("Audio autoplay blocked by browser, awaiting user gesture:", err);
+          this.isPlaying = false;
+          this.updatePlayIcon(false);
+          if (typeof this.onPause === "function") this.onPause();
+        });
+        return;
+      }
+    }
+    this.isPlaying = true;
+    this.updatePlayIcon(true);
+    if (typeof this.onPlay === "function") this.onPlay();
+    this.startVirtualClock();
+    this.loop();
+  }
+
+  pause() {
+    this.isPlaying = false;
+    this.updatePlayIcon(false);
+    if (typeof this.onPause === "function") this.onPause();
+    if (this.audio) this.audio.pause();
+    this.stopVirtualClock();
+    cancelAnimationFrame(this.raf);
+  }
+
+  startVirtualClock() {
+    this._lastClockTick = performance.now();
+    this._virtualClockActive = true;
+  }
+
+  stopVirtualClock() {
+    this._virtualClockActive = false;
   }
 
   async load(qid, inlineSp = null) {
     let sp = inlineSp;
     const normKey = qid ? qid.replace(/-/g, "_") : "";
+    const chKey = qid ? qid.replace(/^dt-/, "").replace(/-/g, "_") : "";
+
     if (!sp && typeof FIXTURES !== "undefined") {
-      sp = FIXTURES[qid] || FIXTURES[normKey];
+      sp = FIXTURES[qid] || FIXTURES[normKey] || FIXTURES[chKey];
     }
     if (!sp && window.EXPLAINER_SCREENPLAYS) {
-      sp = window.EXPLAINER_SCREENPLAYS[qid] || window.EXPLAINER_SCREENPLAYS[normKey];
+      sp = window.EXPLAINER_SCREENPLAYS[qid] || window.EXPLAINER_SCREENPLAYS[normKey] || window.EXPLAINER_SCREENPLAYS[chKey];
     }
 
     if (!sp && window.location.protocol !== "file:") {
@@ -861,17 +980,56 @@ class Explainer {
       } catch (e) {}
     }
 
+    // Check window.D for live screenplay
+    if (!sp && window.D && window.D.qna) {
+      const qObj = window.D.qna.find(item => item.id === qid || ("dt-c" + item.ch + "-q" + item.n) === qid);
+      if (qObj) {
+        const prov = window.D.prov?.[qObj.topic];
+        if (prov && prov.screenplay) {
+          sp = prov.screenplay;
+        }
+      }
+    }
+
     if (!sp && window.EXPLAINER_SCREENPLAYS) {
-      sp = window.EXPLAINER_SCREENPLAYS[qid] || window.EXPLAINER_SCREENPLAYS[normKey] || window.EXPLAINER_SCREENPLAYS["dt-c2-q14"];
+      sp = window.EXPLAINER_SCREENPLAYS[qid] || window.EXPLAINER_SCREENPLAYS[normKey] || window.EXPLAINER_SCREENPLAYS["dt-c2-q25"] || window.EXPLAINER_SCREENPLAYS["dt-c2-q14"];
     }
 
     if (!sp) {
-      console.error("Could not load screenplay for", qid);
-      return;
+      console.warn("Could not find screenplay for", qid, "generating fallback structure...");
+      sp = {
+        question_id: qid,
+        context_pill: "Statutory Pedagogical Explainer",
+        duration_sec: 45.0,
+        beats: [
+          {
+            id: "b1",
+            layout: "headline",
+            start: 0,
+            end: 15,
+            voice_sync_text: "Statutory overview and core legal doctrine.",
+            title: { text: "Statutory Provision Analysis", at: 0.5 },
+            subtitle: { text: "Master the statutory principle before solving the exam case.", at: 2.0 }
+          },
+          {
+            id: "b2",
+            layout: "takeaway",
+            start: 15,
+            end: 45,
+            voice_sync_text: "Golden takeaways for CA Final / Inter exams.",
+            title: { text: "Key Statutory Takeaways", at: 15.5 },
+            points: [
+              { num: "1", text: "Verify statutory eligibility conditions under relevant section.", at: 18.0 },
+              { num: "2", text: "Compute capital gains and appropriate exemptions accurately.", at: 25.0 }
+            ]
+          }
+        ]
+      };
     }
 
     this.sp = sp;
     this.offset = sp.sync_offset_sec || 0;
+    this._virtualTime = 0;
     if (this.pill && sp.context_pill) {
       this.pill.textContent = sp.context_pill;
     }
@@ -915,12 +1073,35 @@ class Explainer {
       return t;
     }
     if (this._mockTime !== undefined && this._mockTime !== null) return this._mockTime;
-    return Math.max(0, this.audio.currentTime - this.offset);
+    if (this.audio && this.audio.src && !this.audio.error && !isNaN(this.audio.currentTime) && this.audio.currentTime > 0) {
+      return Math.max(0, this.audio.currentTime - this.offset);
+    }
+    return Math.max(0, (this._virtualTime || 0) - this.offset);
   }
 
   loop() {
+    if (this._virtualClockActive) {
+      const now = performance.now();
+      const dt = (now - (this._lastClockTick || now)) / 1000 * (this.audio?.playbackRate || 1.0);
+      this._lastClockTick = now;
+      this._virtualTime = (this._virtualTime || 0) + dt;
+      const maxDur = this.sp?.duration_sec || 46.2;
+      if (this.scrub) {
+        this.scrub.value = this._virtualTime;
+      }
+      if (this.timeText) {
+        const cur = this._virtualTime, dur = maxDur;
+        this.timeText.textContent = Math.floor(cur / 60) + ":" + (Math.floor(cur % 60) < 10 ? "0" : "") + Math.floor(cur % 60) + " / " + Math.floor(dur / 60) + ":" + (Math.floor(dur % 60) < 10 ? "0" : "") + Math.floor(dur % 60);
+      }
+      if (this._virtualTime >= maxDur) {
+        this._virtualTime = maxDur;
+        this.render();
+        this.pause();
+        return;
+      }
+    }
     this.render();
-    if (!this.audio.paused) {
+    if (this.isPlaying || (this.audio && !this.audio.paused)) {
       this.raf = requestAnimationFrame(() => this.loop());
     }
   }
@@ -1987,6 +2168,257 @@ FIXTURES["ch2_q25"] = FIXTURES["dt-c2-q25"];
 window.EXPLAINER_SCREENPLAYS["dt-c2-q25"] = FIXTURES["dt-c2-q25"];
 window.EXPLAINER_SCREENPLAYS["dt_c2_q25"] = FIXTURES["dt-c2-q25"];
 window.EXPLAINER_SCREENPLAYS["ch2_q25"] = FIXTURES["dt-c2-q25"];
+
+FIXTURES["dt-c2-q32"] = {
+  "question_id": "dt-c2-q32",
+  "audio_url": "data/audio/dt-c2-q32.mp3",
+  "duration_sec": 125.8,
+  "sync_offset_sec": 0.0,
+  "context_pill": "Section 54G | Shifting of Industrial Undertaking",
+  "fallback": false,
+  "beats": [
+    {
+      "id": "b1",
+      "layout": "fork",
+      "voice_sync_text": "Makkale, Gama Ltd avarude industrial undertaking urban corporation limitsil ninnu non-urban areayilekk shift cheyyukayanu. Shifting processil avaru Land, Building, Plant & Machinery, pinne Furniture vare vilkkukayum puthiyath vangukayum cheythu. Pakshe Section 54G il oru valiya trap undu. Athu manassilakkiyillel examil marks pokum!",
+      "title": {
+        "text": "Asset Eligibility Filter under Section 54G",
+        "at": 0.5
+      },
+      "story_steps": [
+        {
+          "badge": "Shift Decision",
+          "title": "Urban to Non-Urban Shifting",
+          "sub": "Gama Ltd transfers industrial undertaking assets",
+          "val": 4500000,
+          "at": 2.0
+        }
+      ],
+      "divider": {
+        "text": "Scope of Section 54G: Specified Assets Only",
+        "at": 5.0
+      },
+      "branches": [
+        {
+          "side": "left",
+          "label": "Eligible Specified Assets",
+          "facts": [
+            {
+              "text": "Plant & Machinery, Land, or Building",
+              "at": 7.0
+            },
+            {
+              "text": "Both transfer & reinvestment qualify u/s 54G",
+              "at": 9.5
+            }
+          ],
+          "outcome": {
+            "text": "Eligible for Section 54G Exemption",
+            "at": 12.0
+          }
+        },
+        {
+          "side": "right",
+          "label": "Ineligible Non-Specified Assets",
+          "facts": [
+            {
+              "text": "Furniture & Fixtures, Office Appliances",
+              "at": 7.0
+            },
+            {
+              "text": "Neither sale nor new purchase qualifies",
+              "at": 9.5
+            }
+          ],
+          "outcome": {
+            "text": "No Exemption! Full STCG Taxable",
+            "at": 12.0
+          }
+        }
+      ],
+      "result_card": {
+        "badge": "Key Exclusion",
+        "title": "Furniture STCG Isolated",
+        "val": 100000,
+        "at": 15.0
+      },
+      "start": 0.0,
+      "end": 23.4
+    },
+    {
+      "id": "b2",
+      "layout": "statute_quote",
+      "voice_sync_text": "Section 54G clear aayi parayunnu: Capital Gain arose from transfer of machinery, plant, building, or land used for the purpose of an industrial undertaking situated in an urban area. Assessee 1 year before or 3 years after the date of transfer eligible assets purchase cheythal, deduction kittum.",
+      "title": {
+        "text": "Statutory Mandate: Section 54G(1)",
+        "at": 0.5
+      },
+      "quote": {
+        "text": "Where the capital gain arises from the transfer of a capital asset, being plant, machinery, land or building or any rights in building or land, used for the purpose of an industrial undertaking situated in an urban area... and the assessee has within a period of one year before or three years after the date on which the transfer took place purchased new machinery or plant or acquired building or land...",
+        "citation": "Section 54G(1) of the Income-tax Act, 1961",
+        "emphasis": "plant, machinery, land or building... 1 year before or 3 years after"
+      },
+      "context_bubble": {
+        "badge": "Time Horizon",
+        "note": "Reinvestment Window: July 2026 acquisition satisfies the 'within 3 years after March 2026' requirement.",
+        "at": 6.0
+      },
+      "start": 23.75,
+      "end": 46.91
+    },
+    {
+      "id": "b3",
+      "layout": "meter",
+      "voice_sync_text": "Nammude total eligible investment pool ethrayanu? Land Rs 4 Lakh, Building Rs 7 Lakh, Plant & Machinery Rs 17 Lakh. Total Rs 28 Lakhs! Note cheyyuka, Furniture-nte Rs 2 Lakh ivide add cheyyan padilla. Ee Rs 28 Lakhs namukk STCG-kkum LTCG-kkum ethirayi set-off cheyyam.",
+      "title": {
+        "text": "Section 54G Eligible Investment Reinvestment Pool",
+        "at": 0.5
+      },
+      "meter_display": {
+        "min_val": 0,
+        "max_val": 3000000,
+        "current_val": 2800000,
+        "unit": "₹",
+        "threshold": 2500000,
+        "labels": {
+          "start": "₹ 0",
+          "threshold_label": "STCG Threshold: ₹ 25L",
+          "current_label": "Eligible Reinvestment: ₹ 28L"
+        }
+      },
+      "breakdown": [
+        {
+          "label": "New Land Acquired",
+          "val": 400000,
+          "status": "Qualifies"
+        },
+        {
+          "label": "New Building Acquired",
+          "val": 700000,
+          "status": "Qualifies"
+        },
+        {
+          "label": "New Plant & Machinery",
+          "val": 1700000,
+          "status": "Qualifies"
+        },
+        {
+          "label": "New Furniture Purchased",
+          "val": 200000,
+          "status": "Ineligible (Excluded)"
+        }
+      ],
+      "start": 47.26,
+      "end": 70.3
+    },
+    {
+      "id": "b4",
+      "layout": "ledger",
+      "voice_sync_text": "Tax optimizationte golden trick ivideyanu! Act-il pro-rata set-off niyamam illa. Assessee-kk beneficial aaya reethiyil exemption exhaust cheyyam. Athukondu higher tax bracket ulla Short-term Capital Gain first wipe out cheyyanam. Building & Plant STCG total Rs 25 Lakhs poornnamayum Section 54G vechu Nil aakki. Balance Rs 3 Lakhs Land-nte Long-term Capital Gain-il ninnu kurachu. So, final taxable amount just Rs 2 Lakhs mathram!",
+      "title": {
+        "text": "Computation of Taxable Capital Gains for AY 2026-27",
+        "at": 0.5
+      },
+      "ledger_rows": [
+        {
+          "label": "Building STCG u/s 50 (₹18L - WDV ₹4L)",
+          "amount": 1400000,
+          "type": "income",
+          "note": "Depreciable Asset u/s 50"
+        },
+        {
+          "label": "Plant & Machinery STCG u/s 50 (₹16L - WDV ₹5L)",
+          "amount": 1100000,
+          "type": "income",
+          "note": "Depreciable Asset u/s 50"
+        },
+        {
+          "label": "Total Deemed STCG Eligible for Section 54G",
+          "amount": 2500000,
+          "type": "subtotal",
+          "note": "Taxable at normal corporate tax rates"
+        },
+        {
+          "label": "Less: Section 54G Exemption (Priority 1: Against STCG)",
+          "amount": -2500000,
+          "type": "deduction",
+          "note": "Exhausted against high-tax STCG first"
+        },
+        {
+          "label": "Net STCG on Industrial Assets",
+          "amount": 0,
+          "type": "subtotal",
+          "note": "Fully Exempt"
+        },
+        {
+          "label": "Land LTCG (Sale ₹8L - Cost ₹4L)",
+          "amount": 400000,
+          "type": "income",
+          "note": "Non-depreciable Long-term asset"
+        },
+        {
+          "label": "Less: Balance Section 54G Exemption (₹28L - ₹25L)",
+          "amount": -300000,
+          "type": "deduction",
+          "note": "Remaining balance set off against LTCG"
+        },
+        {
+          "label": "Taxable LTCG on Land (Taxable @ 12.5% u/s 112)",
+          "amount": 100000,
+          "type": "taxable",
+          "note": "Concessional tax rate"
+        },
+        {
+          "label": "Furniture STCG (Sale ₹3L - WDV ₹2L)",
+          "amount": 100000,
+          "type": "taxable",
+          "note": "No 54G Exemption allowed for Furniture"
+        }
+      ],
+      "net_total": {
+        "label": "Total Taxable Capital Gains",
+        "val": 200000,
+        "detail": "₹1,00,000 LTCG @ 12.5% + ₹1,00,000 STCG @ Normal Rates"
+      },
+      "start": 70.65,
+      "end": 99.69
+    },
+    {
+      "id": "b5",
+      "layout": "takeaway",
+      "voice_sync_text": "Exam hall-il orthu vekkenda 3 Golden Rules: Onnamathathu, Furniture-nu Section 54G il sthanamilla. Randamathathu, Section 50 prakaram ulla STCG-kkum Section 54G exemption valid aanu. Moonnamathathu, tax liability minimize cheyyan Section 54G deduction aadyam STCG-kk ethireyum, balance LTCG-kk ethireyum set-off cheyyam!",
+      "title": {
+        "text": "3 Golden Rules for Section 54G Mastery",
+        "at": 0.5
+      },
+      "rules": [
+        {
+          "num": "01",
+          "heading": "Strict Asset Basket (Furniture Excluded)",
+          "body": "Section 54G applies strictly to Plant, Machinery, Land, and Building. Capital gains on Furniture cannot be exempted, and reinvestment in Furniture does not count towards the eligible investment."
+        },
+        {
+          "num": "02",
+          "heading": "Section 50 Deemed STCG is Eligible",
+          "body": "Even though Section 50 deems depreciable assets as Short-Term Capital Gains, Section 54G exemption is fully applicable against such deemed STCG (established in landmark jurisprudence and CBDT circulars)."
+        },
+        {
+          "num": "03",
+          "heading": "Most Beneficial Set-Off Ordering",
+          "body": "The statute does not compel pro-rata apportionment. Always exhaust Section 54G exemption against Short-Term Capital Gains first (normal tax rate) before offsetting Long-Term Capital Gains (concessional 12.5% rate u/s 112)."
+        }
+      ],
+      "start": 100.04,
+      "end": 125.8
+    }
+  ]
+};
+FIXTURES["dt_c2_q32"] = FIXTURES["dt-c2-q32"];
+FIXTURES["ch2_q32"] = FIXTURES["dt-c2-q32"];
+window.EXPLAINER_SCREENPLAYS["dt-c2-q32"] = FIXTURES["dt-c2-q32"];
+window.EXPLAINER_SCREENPLAYS["dt_c2_q32"] = FIXTURES["dt-c2-q32"];
+window.EXPLAINER_SCREENPLAYS["ch2_q32"] = FIXTURES["dt-c2-q32"];
+
 
 
 })();

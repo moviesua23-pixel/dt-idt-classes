@@ -1,7 +1,7 @@
 {
   "question_id": "dt-c2-q32",
   "audio_url": "data/audio/dt-c2-q32.mp3",
-  "duration_sec": 108.06,
+  "duration_sec": 125.8,
   "sync_offset_sec": 0.0,
   "context_pill": "Section 54G | Shifting of Industrial Undertaking",
   "fallback": false,
@@ -72,7 +72,7 @@
         "at": 15.0
       },
       "start": 0.0,
-      "end": 19.09
+      "end": 23.4
     },
     {
       "id": "b2",
@@ -92,8 +92,8 @@
         "note": "Reinvestment Window: July 2026 acquisition satisfies the 'within 3 years after March 2026' requirement.",
         "at": 6.0
       },
-      "start": 19.34,
-      "end": 40.7
+      "start": 23.75,
+      "end": 46.91
     },
     {
       "id": "b3",
@@ -137,8 +137,8 @@
           "status": "Ineligible (Excluded)"
         }
       ],
-      "start": 40.95,
-      "end": 60.95
+      "start": 47.26,
+      "end": 70.3
     },
     {
       "id": "b4",
@@ -209,8 +209,8 @@
         "val": 200000,
         "detail": "₹1,00,000 LTCG @ 12.5% + ₹1,00,000 STCG @ Normal Rates"
       },
-      "start": 61.2,
-      "end": 89.38
+      "start": 70.65,
+      "end": 99.69
     },
     {
       "id": "b5",
@@ -237,8 +237,8 @@
           "body": "The statute does not compel pro-rata apportionment. Always exhaust Section 54G exemption against Short-Term Capital Gains first (normal tax rate) before offsetting Long-Term Capital Gains (concessional 12.5% rate u/s 112)."
         }
       ],
-      "start": 89.63,
-      "end": 107.81
+      "start": 100.04,
+      "end": 125.8
     }
   ]
 }

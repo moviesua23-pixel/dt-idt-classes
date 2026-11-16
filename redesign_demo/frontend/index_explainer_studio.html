@@ -1219,6 +1219,56 @@ body {
   flex-direction: column !important;
 }
 
+/* Center Play Overlay & Trigger */
+.stage-center-play-overlay {
+  position: absolute !important;
+  inset: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: rgba(15, 23, 42, 0.42) !important;
+  backdrop-filter: blur(5px) !important;
+  -webkit-backdrop-filter: blur(5px) !important;
+  z-index: 50 !important;
+  cursor: pointer !important;
+  border: none !important;
+  outline: none !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  transition: opacity 0.28s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.28s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.stage-center-play-overlay.hidden {
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+
+.cpo-bubble {
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 14px !important;
+  background: linear-gradient(135deg, #4f46e5 0%, #3730a3 100%) !important;
+  color: #ffffff !important;
+  padding: 16px 32px !important;
+  border-radius: 9999px !important;
+  font-family: inherit !important;
+  font-size: clamp(0.95rem, 1.8cqw, 1.25rem) !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.01em !important;
+  box-shadow: 0 16px 36px -6px rgba(79, 70, 229, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.15) inset !important;
+  transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s ease !important;
+}
+
+.stage-center-play-overlay:hover .cpo-bubble {
+  transform: scale(1.06) translateY(-2px) !important;
+  box-shadow: 0 20px 42px -6px rgba(79, 70, 229, 0.75), 0 0 0 1px rgba(255, 255, 255, 0.25) inset !important;
+}
+
+.stage-center-play-overlay:active .cpo-bubble {
+  transform: scale(0.98) !important;
+}
+
 /* Top Strip */
 .stage-top-strip {
   position: absolute !important;
@@ -5913,6 +5963,21 @@ window.handleGoogleSheetData = function(json) {
         secs: qSecs
       });
 
+      let spObj = null;
+      const screenplayStr = val(10);
+      if (screenplayStr && screenplayStr.trim().startsWith("{")) {
+        try {
+          spObj = JSON.parse(screenplayStr);
+          if (!window.EXPLAINER_SCREENPLAYS) window.EXPLAINER_SCREENPLAYS = {};
+          window.EXPLAINER_SCREENPLAYS["dt-c" + chNum + "-q" + qNum] = spObj;
+          window.EXPLAINER_SCREENPLAYS["dt_c" + chNum + "_q" + qNum] = spObj;
+          window.EXPLAINER_SCREENPLAYS["ch" + chNum + "_q" + qNum] = spObj;
+          window.EXPLAINER_SCREENPLAYS["q" + qNum] = spObj;
+        } catch(e) {
+          console.warn("Failed to parse Col 10 screenplay for ch", chNum, "q", qNum, e);
+        }
+      }
+
       const provItem = {
         subject: subject.toLowerCase(),
         chapter_number: chNum,
@@ -5925,13 +5990,15 @@ window.handleGoogleSheetData = function(json) {
         voice: "Gemini Voice (Aoede)",
         audio_file: chNum > 1 ? `ch${chNum}_q${qNum}.mp3` : `q${qNum}.mp3`,
         drive_file_id: driveAudioId || (mmObj && mmObj.drive_folder_id) || null,
-        dur: mmObj ? (mmObj.total_duration || 75) : 75
+        dur: (spObj && spObj.duration_sec) ? spObj.duration_sec : (mmObj ? (mmObj.total_duration || 75) : 75),
+        screenplay: spObj
       };
 
       liveProvisions.push(provItem);
     }
 
     if (liveQuestions.length > 0) {
+      window.__sheetsLoaded = true;
       console.log("☁️ Successfully loaded", liveQuestions.length, "questions from Google Sheet live!");
       
       const updatedPipeline = {
@@ -7822,6 +7889,14 @@ function renderTheaterModalHtml(q, p){
         <!-- Beats are mounted here and evaluated via render(t) -->
       </div>
 
+      <!-- Centered Play/Pause Canvas Overlay Trigger -->
+      <button class="stage-center-play-overlay" id="expCenterPlayBtn" aria-label="Start presentation" title="Click anywhere to play">
+        <div class="cpo-bubble">
+          <svg width="36" height="36" viewBox="0 0 24 24" fill="currentColor"><polygon points="6 3 20 12 6 21 6 3"></polygon></svg>
+          <span>Click to Play Presentation</span>
+        </div>
+      </button>
+
       <!-- Optional Captions (Off by default) -->
       <div class="caption" id="expCaption"></div>
 
@@ -7882,8 +7957,8 @@ function renderScriptDrawerContent(q, p){
 function vStudio(r){
  const list=qs(r.sub,r.ch),i=list.findIndex(q=>q.n===r.n),q=list[i];
  if(!q){
-  if(D.qna.length === 0){
-   mount(`<div class="studio-nav rise"><button class="nav-btn" data-go="${r.sub}-c${r.ch}">${I.back}Questions</button></div><div class="studio" style="padding:80px 20px;text-align:center"><p style="color:var(--muted);font-size:1.1rem">Loading Question ${r.n} presentation & audio...</p></div>`,r);
+  if(!window.__sheetsLoaded){
+   mount(`<div class="studio-nav rise"><button class="nav-btn" data-go="${r.sub}-c${r.ch}">${I.back}Questions</button></div><div class="studio" style="padding:80px 20px;text-align:center"><div class="skeleton" style="height:36px;width:320px;margin:0 auto 18px;border-radius:12px;background:var(--line);"></div><p style="color:var(--muted);font-size:1.15rem;font-weight:600">Loading Question ${r.n} presentation & audio from cloud...</p><p style="color:var(--ink-soft);font-size:0.9rem;margin-top:8px">Synchronizing live statutory matrix and cinematic explainer screenplay...</p></div>`,r);
    return;
   }
   go(`${r.sub}-c${r.ch}`);
@@ -8019,13 +8094,43 @@ function makePlayer(p, q){
     }
   });
 
-  function toggleStudioPlay(){
-    explainer.toggle();
+  const centerPlayBtn = document.getElementById("expCenterPlayBtn");
+  if (centerPlayBtn) {
+    centerPlayBtn.onclick = (e) => {
+      e.stopPropagation();
+      explainer.toggle();
+    };
+  }
+
+  // Click anywhere on stage to toggle playback
+  if (stage) {
+    stage.onclick = (e) => {
+      if (e.target.closest("button") || e.target.closest("input") || e.target.closest("select")) return;
+      explainer.toggle();
+    };
+  }
+
+  function updatePlayIcons(isPlaying){
+    if (centerPlayBtn) {
+      if (isPlaying) centerPlayBtn.classList.add("hidden");
+      else centerPlayBtn.classList.remove("hidden");
+    }
     if (playB) {
       const playSvg = `<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"></polygon></svg>`;
       const pauseSvg = `<svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><rect x="6" y="4" width="4" height="16"></rect><rect x="14" y="4" width="4" height="16"></rect></svg>`;
-      playB.innerHTML = audio.paused ? I.play : pauseSvg;
+      playB.innerHTML = isPlaying ? pauseSvg : playSvg;
     }
+  }
+
+  explainer.onPlay = () => updatePlayIcons(true);
+  explainer.onPause = () => updatePlayIcons(false);
+
+  audio.addEventListener("play", () => updatePlayIcons(true));
+  audio.addEventListener("pause", () => updatePlayIcons(false));
+  audio.addEventListener("ended", () => updatePlayIcons(false));
+
+  function toggleStudioPlay(){
+    explainer.toggle();
   }
 
   function openExplainer(){
@@ -8033,15 +8138,20 @@ function makePlayer(p, q){
       vtheater.style.removeProperty("display");
       vtheater.classList.add("open");
       document.body.style.overflow = "hidden";
-      audio.play().catch(() => {});
+      explainer.play();
     }
   }
+
+  // Auto-open explainer theater when navigating directly to a question studio URL
+  setTimeout(() => {
+    openExplainer();
+  }, 100);
 
   function closeExplainer(){
     if (vtheater) {
       vtheater.classList.remove("open");
       document.body.style.overflow = "";
-      audio.pause();
+      explainer.pause();
     }
   }
 
