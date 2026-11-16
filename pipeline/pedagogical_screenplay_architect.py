@@ -101,14 +101,16 @@ CRITICAL PEDAGOGICAL RULE 5: AUTHENTIC, WARM MALAYALAM TEACHER DIALOGUE (NATURAL
 - The voice MUST sound like a REAL, ENERGETIC, PASSIONATE KERALA CA FACULTY teaching in a live CA Final classroom!
 - DO NOT generate robotic, awkward, or machine-translated Malayalam sentences.
 - NEVER use clumsy translated words like 'tanted', 'athinukku', 'conditions fill cheyyan', or 'decide cheythu'.
-- USE NATURAL, IDIOMATIC SPOKEN CLASSROOM MALAYALAM PHRASING:
-  * "Students, welcome back! Namukku Section 54G Capital Gains Exemption nannayi padikkaam..."
-  * "Concept crystal clear aavaan namukk Apex Engineering Ltd-inte oru practical case study nokkaam..."
-  * "Kando, ivide company 4 assets aanu transfer cheythath..."
-  * "First asset: Land, sale consideration Rs 20 Lakhs, cost of acquisition Rs 15 Lakhs, so Long-term Capital Gain Rs 5 Lakhs..."
-  * "Second asset: Factory Building, sale proceeds Rs 25 Lakhs, Written Down Value Rs 9 Lakhs, so Section 50 prakaram Deemed Short-term Capital Gain Rs 16 Lakhs..."
-  * "Ennaal Furniture non-specified asset aayathukond athinu Section 54G exemption oru kaaranavashaalum labhikkilla!"
-  * "Transfer date-inu shesham verum 4 months-il reinvestment nadannathinaal ithu 3-year statutory window-kkullil perfect aayi qualify cheyyunnu!"
+- AVOID typos: use 'athayath' (NOT 'ithathayath'), 'ormavekkoo' (NOT 'ormathoykkoo'), 'taxable aanu' (NOT 'taxable aane'), 'vaangiya' / 'purchase cheytha' (NOT 'purchase chethya').
+- USE NATURAL, IDIOMATIC SPOKEN CLASSROOM MALAYALAM WITH SEQUENTIAL ASSET CUES:
+  * "Students, welcome back! Namukku Section 54G Capital Gains Exemption crystal clear aayi padikkaam. Oru practical case study nokkoo: Apex Engineering Limited urban corporation limit-il ninnum non-urban rural area-yilekku factory shift cheyyan theerumaanikkunnu."
+  * "Shifting-inte bhaagamaayi March 2026-il company 4 assets sell cheythu. Kando:
+     Onnamathathu, Land: sale consideration Rs 20 Lakhs, cost of acquisition Rs 15 Lakhs, appol Long-term Capital Gain Rs 5 Lakhs!
+     Randamathathu, Factory Building: sale proceeds Rs 25 Lakhs, WDV Rs 9 Lakhs, Section 50 prakaram Deemed Short-term Capital Gain Rs 16 Lakhs!
+     Moonnamathathu, Plant & Machinery: sale value Rs 18 Lakhs, WDV Rs 9 Lakhs, ithil Deemed Short-term Capital Gain Rs 9 Lakhs!
+     Naalaamathathu, Office Furniture: sale Rs 3 Lakhs, WDV Rs 2 Lakhs, Short-term Capital Gain Rs 1 Lakh!"
+  * "Ippo asset classification filter sreddhikkoo: Land, Building, Plant and Machinery maathrame Section 54G Eligible Specified Assets aayi qualify cheyyoo! Ennaal Furniture non-specified asset aayathinaal athinu exemption labhikkilla!"
+  * "Transfer date-inu shesham verum 4 months-il new assets purchase cheythathinaal ithu 3-year statutory window-kkullil perfect aayi qualify cheyyunnu!"
   * "Income-tax Act-il pro-rata set-off niyamam illathathinaal 30% slab rate ulla Short-term Capital Gain aadyam wipe out cheythu tax liability minimize cheyyaam!"
 - Keep EVERY statutory term, section, sub-section, asset name, and amount in English Latin script.
 - The delivery must be warm, enthusiastic, engaging, and pedagogically crystal clear.
@@ -139,7 +141,7 @@ Return STRICT VALID JSON matching this exact structure:
     {{
       "id": "b1",
       "layout": "fork",
-      "voice_sync_text": "Students, welcome back! Namukku Section 54G Capital Gains Exemption nannayi padikkaam. Concept crystal clear aavaan namukk Apex Engineering Ltd-inte oru practical case study nokkaam. Kando, Apex Engineering Ltd urban corporation limit-il ulla thangalude factory oru non-urban rural area-yilekku shift cheyyan theerumaanichu. Shifting-inte bhaagamaayi March 2026-il company 4 assets aanu sell cheythath: First, Land, sale consideration Rs 20 Lakhs, cost of acquisition Rs 15 Lakhs, so Long-term Capital Gain Rs 5 Lakhs. Second, Factory Building, sale proceeds Rs 25 Lakhs, Written Down Value Rs 9 Lakhs, so Section 50 prakaram Deemed Short-term Capital Gain Rs 16 Lakhs. Third, Plant & Machinery, sale value Rs 18 Lakhs, Written Down Value Rs 9 Lakhs, so Short-term Capital Gain Rs 9 Lakhs. Fourth, Furniture, sale Rs 3 Lakhs, Written Down Value Rs 2 Lakhs, so Short-term Capital Gain Rs 1 Lakh. Ippo asset classification filter nokkoo: Section 54G prakaram Land, Building, and Plant & Machinery maathrame Eligible Specified Assets aayi qualify cheyyoo! Ennaal Furniture non-specified asset aayathukond athinu Section 54G exemption oru kaaranavashaalum labhikkilla!",
+      "voice_sync_text": "Students, welcome back! Namukku Section 54G Capital Gains Exemption crystal clear aayi padikkaam. Oru practical case study nokkoo: Apex Engineering Limited urban corporation limit-il ulla thangalude factory oru non-urban rural area-yilekku shift cheyyaan theerumaanikkunnu. Shifting-inte bhaagamaayi March 2026-il company 4 assets sell cheythu. Kando: Onnamathathu, Land, sale consideration Rs 20 Lakhs, cost of acquisition Rs 15 Lakhs, so Long-term Capital Gain Rs 5 Lakhs. Randamathathu, Factory Building, sale proceeds Rs 25 Lakhs, Written Down Value Rs 9 Lakhs, so Section 50 prakaram Deemed Short-term Capital Gain Rs 16 Lakhs. Moonnamathathu, Plant & Machinery, sale value Rs 18 Lakhs, Written Down Value Rs 9 Lakhs, so Short-term Capital Gain Rs 9 Lakhs. Naalaamathathu, Furniture, sale Rs 3 Lakhs, Written Down Value Rs 2 Lakhs, so Short-term Capital Gain Rs 1 Lakh. Ippo asset classification filter nokkoo: Section 54G prakaram Land, Building, and Plant & Machinery maathrame Eligible Specified Assets aayi qualify cheyyoo! Ennaal Furniture non-specified asset aayathukond athinu Section 54G exemption oru kaaranavashaalum labhikkilla!",
       "title": {{"text": "Asset Eligibility Filter under Section 54G"}},
       "story_steps": [
         {{"badge": "Asset 1: Land", "title": "Sale: Rs 20L | Cost: Rs 15L", "sub": "Long-term Capital Gain: Rs 5 Lakhs", "val": 500000}},
