@@ -473,36 +473,6 @@ def run_pipeline(limit=None, target_chapter=None, target_question=None, target_s
                 current_prov_md = formatted_provision_matrix
                 print(f"  Canonical Doctrine: '{canonical_topic}'")
 
-            # Check Topic Deduplication & Reuse
-            topic_cache_key = f"{subject}_{chapter_no}_{canonical_topic}"
-            if topic_cache_key in generated_topics_cache and not existing_mm:
-                cached = generated_topics_cache[topic_cache_key]
-                drive_folder_id = cached['folder_id']
-                summary_json_str = cached['summary_json']
-                formatted_provision_matrix = cached['prov_md']
-                print(f"  [REUSED TOPIC] '{canonical_topic}' already generated! Skipping duplicate TTS. Reusing Drive Folder: {drive_folder_id}")
-            else:
-                print(f"  [SYNTHESIZING AUDIO] Generating/Resuming Discrete Points for '{canonical_topic}' ({subject} Ch{chapter_no})...")
-                discrete_out_dir = os.path.join(PROJECT_ROOT, 'data', 'audio', subject.lower(), f'ch{chapter_no}', f'q{q_num}')
-
-                mm_data = generate_discrete_voice_for_mindmap(
-                    q_num=q_num,
-                    mindmap=mm_data,
-                    output_dir=discrete_out_dir,
-                    upload_to_drive=True,
-                    subject=subject,
-                    chapter_no=chapter_no
-                )
-                current_mm_data = mm_data
-                drive_folder_id = mm_data.get('drive_folder_id', 'DRIVE_FOLDER_READY')
-                summary_json_str = json.dumps(mm_data, ensure_ascii=False)
-
-                generated_topics_cache[topic_cache_key] = {
-                    'folder_id': drive_folder_id,
-                    'summary_json': summary_json_str,
-                    'prov_md': formatted_provision_matrix
-                }
-
             # Pedagogical Screenplay Architecture (Column K, Narration Column H, Timing Column J)
             screenplay_obj = None
             screenplay_json_str = ""
@@ -536,6 +506,36 @@ def run_pipeline(limit=None, target_chapter=None, target_question=None, target_s
                         print(f"  [SCREENPLAY & AUDIO READY] {subject} Ch{chapter_no} Q{q_num} synthesized and voice-aligned!")
                 except Exception as ex_sp:
                     print(f"  [WARN] Screenplay generation/alignment error: {ex_sp}")
+
+            # Check Topic Deduplication & Reuse
+            topic_cache_key = f"{subject}_{chapter_no}_{canonical_topic}"
+            if topic_cache_key in generated_topics_cache and not existing_mm:
+                cached = generated_topics_cache[topic_cache_key]
+                drive_folder_id = cached['folder_id']
+                summary_json_str = cached['summary_json']
+                formatted_provision_matrix = cached['prov_md']
+                print(f"  [REUSED TOPIC] '{canonical_topic}' already generated! Skipping duplicate TTS. Reusing Drive Folder: {drive_folder_id}")
+            else:
+                print(f"  [SYNTHESIZING AUDIO] Generating/Resuming Discrete Points for '{canonical_topic}' ({subject} Ch{chapter_no})...")
+                discrete_out_dir = os.path.join(PROJECT_ROOT, 'data', 'audio', subject.lower(), f'ch{chapter_no}', f'q{q_num}')
+
+                mm_data = generate_discrete_voice_for_mindmap(
+                    q_num=q_num,
+                    mindmap=mm_data,
+                    output_dir=discrete_out_dir,
+                    upload_to_drive=True,
+                    subject=subject,
+                    chapter_no=chapter_no
+                )
+                current_mm_data = mm_data
+                drive_folder_id = mm_data.get('drive_folder_id', 'DRIVE_FOLDER_READY')
+                summary_json_str = json.dumps(mm_data, ensure_ascii=False)
+
+                generated_topics_cache[topic_cache_key] = {
+                    'folder_id': drive_folder_id,
+                    'summary_json': summary_json_str,
+                    'prov_md': formatted_provision_matrix
+                }
 
             if not timing_status:
                 ready_count = count_ready_points(mm_data)
