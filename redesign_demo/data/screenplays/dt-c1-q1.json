@@ -1,0 +1,206 @@
+{
+  "question_id": "dt-c1-q1",
+  "audio_url": "data/audio/dt-c1-q1.mp3",
+  "duration_sec": 95.78,
+  "sync_offset_sec": 0.0,
+  "context_pill": "Section 4 & 28: Diversion vs Application of Income",
+  "fallback": false,
+  "beats": [
+    {
+      "id": "b1",
+      "layout": "statute_quote",
+      "voice_sync_text": "Nammude assessee Mr. Bhargava, Supreme Court-il oru company-kku vendi appear cheyyan ₹ 5,00,000 fee negotiate cheythu. Pakshe condition: ee amount ayal create cheyyunna oru public charitable trust-ilekku povanam. Section 4 charging principles prakaram ithu Diversion of Income aano atho mere Application of Income aano?",
+      "title": {
+        "text": "The Advocate's Charitable Condition",
+        "at": 0.5
+      },
+      "quote_box": {
+        "statute": "Section 4 vs Section 28(i) of Income-tax Act, 1961",
+        "text": "Whether professional fees received subject to a self-imposed obligation to transfer the funds to a charitable trust constitutes Diversion by Overriding Title or taxable Application of Professional Income?",
+        "highlight": "Diversion by Overriding Title or taxable Application of Professional Income",
+        "at": 2.0
+      },
+      "result_card": {
+        "badge": "Legal Question",
+        "title": "Taxability of Professional Receipt",
+        "val": 500000,
+        "at": 6.0
+      },
+      "start": 0.0,
+      "end": 20.0
+    },
+    {
+      "id": "b2",
+      "layout": "fork",
+      "voice_sync_text": "Ivide legal characterization check cheyyan Income Tax-il randu paths und. Superior legal title vazhi income assessee-kku kittunnathinu mumbey divert aayal ath Diversion of Income aanu, non-taxable. Ennal income assess-kku reach cheytha sesham, assessee-yude voluntary act vazhi mathram transfer cheythal ath Application of Income aayi maarum.",
+      "title": {
+        "text": "Two Paths of Income Flow",
+        "at": 0.5
+      },
+      "story_steps": [
+        {
+          "badge": "Brief Accepted",
+          "title": "Professional Engagement",
+          "sub": "SC Defense for Company",
+          "val": 500000,
+          "at": 2.0
+        }
+      ],
+      "divider": {
+        "text": "Test of Stage of Interception",
+        "at": 4.0
+      },
+      "branches": [
+        {
+          "side": "left",
+          "label": "Diversion by Overriding Title",
+          "facts": [
+            {
+              "text": "Intercepted before reaching assessee",
+              "at": 6.0
+            },
+            {
+              "text": "Created by superior legal obligation",
+              "at": 8.0
+            }
+          ],
+          "outcome": {
+            "text": "NOT Taxable in Assessee's Hands",
+            "at": 10.0
+          }
+        },
+        {
+          "side": "right",
+          "label": "Application of Income",
+          "facts": [
+            {
+              "text": "Reaches assessee / Accrues first",
+              "at": 7.0
+            },
+            {
+              "text": "Voluntary obligation by assessee",
+              "at": 9.0
+            }
+          ],
+          "outcome": {
+            "text": "FULLY TAXABLE under PGBP",
+            "at": 11.0
+          }
+        }
+      ],
+      "result_card": {
+        "badge": "Applicable Path",
+        "title": "Application of Income",
+        "val": 500000,
+        "at": 13.0
+      },
+      "start": 20.25,
+      "end": 40.7
+    },
+    {
+      "id": "b3",
+      "layout": "case_card",
+      "voice_sync_text": "Landmark precedent Supreme Court-inte CIT v. Sitaldas Tirathdas aanu. Ee judgment-il Supreme Court theerth paranju: Income source-il ninnum assessee-yude adukkal ethunnathinu mumbey legal title vazhi divert cheythal mathrame exclusion kittu. Bhargava-yude case-il, client alla trust create cheythathu, client-inu obligation onnum illayirunnu. Obligation create cheythathu Mr. Bhargava thanneyanu.",
+      "title": {
+        "text": "The Landmark Judicial Compass",
+        "at": 0.5
+      },
+      "case_details": {
+        "court": "Supreme Court of India",
+        "citation": "CIT v. Sitaldas Tirathdas (1961) 41 ITR 367 (SC)",
+        "bench": "Cardinal True Legal Test",
+        "at": 2.0
+      },
+      "ratio_box": {
+        "principle": "Stage of Interception Test",
+        "verdict": "Does the amount reach the assessee first as his own income and then applied? If yes, it is an Application of Income. A self-imposed obligation by the recipient does NOT create an overriding title.",
+        "at": 5.0
+      },
+      "result_card": {
+        "badge": "Precedent Impact",
+        "title": "Overriding Title Rejected",
+        "val": 500000,
+        "at": 8.0
+      },
+      "start": 40.95,
+      "end": 62.31
+    },
+    {
+      "id": "b4",
+      "layout": "ledger",
+      "voice_sync_text": "Ini namukk Mr. Bhargava-yude Assessment Year computation nokkam. Company nalkiya ₹ 5,00,000 ayalude Professional Receipts aanu. Ayal trust execute cheythu transfer cheythathu mere post-receipt application mathramayanu. So full ₹ 5,00,000 PGBP head-il assessable aakum.",
+      "title": {
+        "text": "Computation of Professional Income",
+        "at": 0.5
+      },
+      "ledger_rows": [
+        {
+          "desc": "Professional Fees received from Company",
+          "amount": 500000,
+          "flow": "plus",
+          "tag": "Section 28(i)",
+          "at": 2.0
+        },
+        {
+          "desc": "Less: Claim of Diversion by Overriding Title",
+          "amount": 0,
+          "flow": "neutral",
+          "tag": "Disallowed (No Superior Title)",
+          "at": 4.5
+        },
+        {
+          "desc": "Less: Transfer to Self-Created Trust",
+          "amount": 0,
+          "flow": "neutral",
+          "tag": "Application of Income",
+          "at": 7.0
+        }
+      ],
+      "result_card": {
+        "badge": "Taxable Income",
+        "title": "Total Income under PGBP",
+        "val": 500000,
+        "at": 10.0
+      },
+      "start": 62.56,
+      "end": 78.01
+    },
+    {
+      "id": "b5",
+      "layout": "takeaway",
+      "voice_sync_text": "CA Final exam point of view-il ee 3 Golden Rules eppozhum orkuka. Rule 1: Source of obligation check cheyyuka. Rule 2: Stage of interception examine cheyyuka. Rule 3: Self-imposed trusts are always Application of Income, taxable under PGBP.",
+      "title": {
+        "text": "Exam Takeaways: Diversion Doctrine",
+        "at": 0.5
+      },
+      "rules": [
+        {
+          "num": "01",
+          "rule": "Origin of Legal Obligation",
+          "exp": "Overriding title exists only if an external superior law, court decree, or payer creates the obligation before income reaches the assessee.",
+          "at": 2.0
+        },
+        {
+          "num": "02",
+          "rule": "Interception vs Destination",
+          "exp": "Diversion occurs at the source (interception). Applying funds after earning title or receipt is mere destination (application).",
+          "at": 5.0
+        },
+        {
+          "num": "03",
+          "rule": "Professional Fee Trap",
+          "exp": "A professional directing clients to pay fees into their own trust is fully taxable under Section 28 as PGBP; Chapter VI-A (Section 80G) can only be explored separately.",
+          "at": 8.0
+        }
+      ],
+      "result_card": {
+        "badge": "Final Verdict",
+        "title": "Assessable in Hands of Bhargava",
+        "val": 500000,
+        "at": 11.0
+      },
+      "start": 78.26,
+      "end": 95.53
+    }
+  ]
+}

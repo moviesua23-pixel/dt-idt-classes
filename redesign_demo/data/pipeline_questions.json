@@ -854,292 +854,6 @@
     }
   ],
   "mindmaps": {
-    "ch1_q1": {
-      "doctrine": "Diversion of Income vs Application of Income",
-      "root": {
-        "id": "root",
-        "number": "1",
-        "title": "Diversion vs Application of Income",
-        "badge": "Section 4 · Direct Tax Legal Doctrine",
-        "voice_sync_text": "ഇന്ന് നമ്മൾ പഠിക്കുന്നത് Direct Tax-ലെ ഏറ്റവും പ്രധാനപ്പെട്ട ഒരു Legal Doctrine ആണ് - Diversion of Income by Overriding Title versus Application of Income. ഒരു തുക അസ്സസ്സീയുടെ കയ്യിൽ Taxable ആണോ അല്ലയോ എന്ന് തീരുമാനിക്കുന്നത് ഈ തത്ത്വമാണ്.",
-        "t0": 0.0,
-        "t1": 16.0,
-        "pt_idx": 0,
-        "audio_file": "q1/pt_0.mp3",
-        "drive_audio_id": "1_Tc9qmIKOMzTChd-znEtsAfI5RuYh1bQ"
-      },
-      "branches": [
-        {
-          "branch_id": "branch-1",
-          "branch_title": "Judicial Benchmark & Core Test",
-          "badge": "SC Landmark",
-          "icon": "scales",
-          "points": [
-            {
-              "id": "beat-1-1",
-              "title": "CIT v. Sitaldas Tirathdas Standard",
-              "number": "1.1.1",
-              "badge": "Supreme Court",
-              "body": [
-                "Landmark ruling establishing the operational distinction.",
-                "Test: Did the income get diverted BEFORE reaching the assessee through an overriding title?",
-                "Or did the income reach the assessee FIRST and was then applied to fulfill an obligation?"
-              ],
-              "table_data": null,
-              "voice_sync_text": "Supreme Court-ന്റെ CIT v. Sitaldas Tirathdas കേസ് ആണ് ഇതിന്റെ പ്രധാന benchmark. വരുമാനം Assessee-യുടെ കയ്യിൽ എത്തുന്നതിന് മുമ്പ് ഒരു Overriding Title കാരണം തിരിച്ചുവിടപ്പെട്ടതാണോ, അതോ വരുമാനം ആദ്യം കിട്ടിയ ശേഷം അസ്സസ്സീ സ്വയം ഉണ്ടാക്കിയ ബാധ്യത തീർക്കാൻ ചിലവാക്കിയതാണോ എന്നതാണ് ഇവിടെ പരിശോധിക്കുന്നത്.",
-              "spoken": true,
-              "t0": 17.0,
-              "t1": 38.43,
-              "pt_idx": 1,
-              "audio_file": "q1/pt_1.mp3",
-              "drive_audio_id": "1D8CnZWiYoJTGK3NzNT3kfC3X-YNL-nIv"
-            }
-          ],
-          "flow_summary": [],
-          "t0": 17.0,
-          "t1": 38.43
-        },
-        {
-          "branch_id": "branch-2",
-          "branch_title": "Diversion of Income (Non-Taxable)",
-          "badge": "Excludable",
-          "icon": "shield",
-          "points": [
-            {
-              "id": "beat-2-1",
-              "title": "Characteristics of Diversion",
-              "number": "2.1.1",
-              "badge": "Legal Title",
-              "body": [
-                "Income is intercepted at source before accrual/receipt.",
-                "Obligation is created by paramount title, statute, or court decree.",
-                "Assessee acts merely as a collector or conduit for that diverted portion.",
-                "Result: Excluded from Total Income under Section 4."
-              ],
-              "table_data": null,
-              "voice_sync_text": "Diversion of Income എന്ന് പറയുമ്പോൾ, വരുമാനം അസ്സസ്സീക്ക് accrual ആകുന്നതിന് മുമ്പ് തന്നെ source-ൽ വെച്ച് മറ്റൊരു നിയമപരമായ അവകാശം വഴി മുകളിലേക്ക് മാറ്റപ്പെടുന്നു. ഇവിടെ Assessee ഒരു conduit മാത്രമാണ്. അതിനാൽ ഇത് Total Income-ൽ വരാറില്ല, Non-taxable ആണ്.",
-              "spoken": true,
-              "t0": 40.43,
-              "t1": 58.57,
-              "pt_idx": 2,
-              "audio_file": "q1/pt_2.mp3",
-              "drive_audio_id": "1xlFRphZdynlrV_VKkEm5cVyl4h_qSQ8e"
-            }
-          ],
-          "flow_summary": [],
-          "t0": 40.43,
-          "t1": 58.57
-        },
-        {
-          "branch_id": "branch-3",
-          "branch_title": "Application of Income (Taxable)",
-          "badge": "Section 28 / Sec 4",
-          "icon": "rupee",
-          "points": [
-            {
-              "id": "beat-3-1",
-              "title": "Characteristics of Application",
-              "number": "3.1.1",
-              "badge": "Taxable Charge",
-              "body": [
-                "Income accrues or is received by the assessee first.",
-                "Obligation to pay/transfer is created by the assessee's voluntary deed/action.",
-                "Subsequent utilization or allocation does not alter taxability.",
-                "Result: Chargeable to tax under respective head (e.g., PGBP Section 28)."
-              ],
-              "table_data": null,
-              "voice_sync_text": "Application of Income എന്നതിൽ വരുമാനം ആദ്യം അസ്സസ്സീക്ക് സ്വന്തമായി ലഭിക്കുകയോ accrual ആവുകയോ ചെയ്യുന്നു. അതിനുശേഷമാണ് അസ്സസ്സീ സ്വന്തം ഇഷ്ടപ്രകാരം ഉണ്ടാക്കിയ കരാറോ ട്രസ്റ്റോ വഴി ആ തുക മാറ്റി വെക്കുന്നത്. ഇത് കൃത്യമായും Taxable Income തന്നെയാണ്.",
-              "spoken": true,
-              "t0": 60.57,
-              "t1": 78.07,
-              "pt_idx": 3,
-              "audio_file": "q1/pt_3.mp3",
-              "drive_audio_id": "192DdYB0mgDen8l921w09AqfE5_hUhFUz"
-            }
-          ],
-          "flow_summary": [],
-          "t0": 60.57,
-          "t1": 78.07
-        },
-        {
-          "branch_id": "branch-4",
-          "branch_title": "Advocate Case Analysis",
-          "badge": "Practical Application",
-          "icon": "user",
-          "points": [
-            {
-              "id": "beat-4-1",
-              "title": "Mr. Bhargava's Fee Trust Structure",
-              "number": "4.1.1",
-              "badge": "PGBP Taxable",
-              "body": [
-                "Condition imposed by Advocate himself, not by the client or statute.",
-                "Client did not create the trust prior to engagement.",
-                "Creation of trust deed by Advocate is application of professional earning.",
-                "Held: Entire fee of ₹5 Lakhs is assessable under PGBP (Section 28)."
-              ],
-              "table_data": null,
-              "voice_sync_text": "മിസ്റ്റർ ഭാർഗ്ഗവയുടെ കേസ് പരിശോധിച്ചാൽ, ട്രസ്റ്റ് ഉണ്ടാക്കിയത് ഭാർഗ്ഗവ തന്നെയാണ്, ക്ലയന്റല്ല. ക്ലയന്റ് ഭാർഗ്ഗവക്ക് ഫീസ് കൊടുത്തു, ഭാർഗ്ഗവ അത് ട്രസ്റ്റിലേക്ക് മാറ്റി. ഇത് തനിയെ വരുമാനം വാങ്ങി അപ്ലൈ ചെയ്യുന്ന Application of Income ആണ്. അതിനാൽ 5 ലക്ഷം രൂപയും PGBP തലക്കെട്ടിൽ Taxable ആകും.",
-              "spoken": true,
-              "t0": 80.07,
-              "t1": 100.5,
-              "pt_idx": 4,
-              "audio_file": "q1/pt_4.mp3",
-              "drive_audio_id": "1z0aaFQXaRRzMe1odXKEek6V3Fc8t9Hx9"
-            }
-          ],
-          "flow_summary": [],
-          "t0": 80.07,
-          "t1": 100.5
-        }
-      ],
-      "total_duration": 102.5,
-      "total_points_count": 5,
-      "drive_folder_id": "1OJE3VX5UcvnBEZSbBYcoiixVB8ag_AAX"
-    },
-    "q1": {
-      "doctrine": "Diversion of Income vs Application of Income",
-      "root": {
-        "id": "root",
-        "number": "1",
-        "title": "Diversion vs Application of Income",
-        "badge": "Section 4 · Direct Tax Legal Doctrine",
-        "voice_sync_text": "ഇന്ന് നമ്മൾ പഠിക്കുന്നത് Direct Tax-ലെ ഏറ്റവും പ്രധാനപ്പെട്ട ഒരു Legal Doctrine ആണ് - Diversion of Income by Overriding Title versus Application of Income. ഒരു തുക അസ്സസ്സീയുടെ കയ്യിൽ Taxable ആണോ അല്ലയോ എന്ന് തീരുമാനിക്കുന്നത് ഈ തത്ത്വമാണ്.",
-        "t0": 0.0,
-        "t1": 16.0,
-        "pt_idx": 0,
-        "audio_file": "q1/pt_0.mp3",
-        "drive_audio_id": "1_Tc9qmIKOMzTChd-znEtsAfI5RuYh1bQ"
-      },
-      "branches": [
-        {
-          "branch_id": "branch-1",
-          "branch_title": "Judicial Benchmark & Core Test",
-          "badge": "SC Landmark",
-          "icon": "scales",
-          "points": [
-            {
-              "id": "beat-1-1",
-              "title": "CIT v. Sitaldas Tirathdas Standard",
-              "number": "1.1.1",
-              "badge": "Supreme Court",
-              "body": [
-                "Landmark ruling establishing the operational distinction.",
-                "Test: Did the income get diverted BEFORE reaching the assessee through an overriding title?",
-                "Or did the income reach the assessee FIRST and was then applied to fulfill an obligation?"
-              ],
-              "table_data": null,
-              "voice_sync_text": "Supreme Court-ന്റെ CIT v. Sitaldas Tirathdas കേസ് ആണ് ഇതിന്റെ പ്രധാന benchmark. വരുമാനം Assessee-യുടെ കയ്യിൽ എത്തുന്നതിന് മുമ്പ് ഒരു Overriding Title കാരണം തിരിച്ചുവിടപ്പെട്ടതാണോ, അതോ വരുമാനം ആദ്യം കിട്ടിയ ശേഷം അസ്സസ്സീ സ്വയം ഉണ്ടാക്കിയ ബാധ്യത തീർക്കാൻ ചിലവാക്കിയതാണോ എന്നതാണ് ഇവിടെ പരിശോധിക്കുന്നത്.",
-              "spoken": true,
-              "t0": 17.0,
-              "t1": 38.43,
-              "pt_idx": 1,
-              "audio_file": "q1/pt_1.mp3",
-              "drive_audio_id": "1D8CnZWiYoJTGK3NzNT3kfC3X-YNL-nIv"
-            }
-          ],
-          "flow_summary": [],
-          "t0": 17.0,
-          "t1": 38.43
-        },
-        {
-          "branch_id": "branch-2",
-          "branch_title": "Diversion of Income (Non-Taxable)",
-          "badge": "Excludable",
-          "icon": "shield",
-          "points": [
-            {
-              "id": "beat-2-1",
-              "title": "Characteristics of Diversion",
-              "number": "2.1.1",
-              "badge": "Legal Title",
-              "body": [
-                "Income is intercepted at source before accrual/receipt.",
-                "Obligation is created by paramount title, statute, or court decree.",
-                "Assessee acts merely as a collector or conduit for that diverted portion.",
-                "Result: Excluded from Total Income under Section 4."
-              ],
-              "table_data": null,
-              "voice_sync_text": "Diversion of Income എന്ന് പറയുമ്പോൾ, വരുമാനം അസ്സസ്സീക്ക് accrual ആകുന്നതിന് മുമ്പ് തന്നെ source-ൽ വെച്ച് മറ്റൊരു നിയമപരമായ അവകാശം വഴി മുകളിലേക്ക് മാറ്റപ്പെടുന്നു. ഇവിടെ Assessee ഒരു conduit മാത്രമാണ്. അതിനാൽ ഇത് Total Income-ൽ വരാറില്ല, Non-taxable ആണ്.",
-              "spoken": true,
-              "t0": 40.43,
-              "t1": 58.57,
-              "pt_idx": 2,
-              "audio_file": "q1/pt_2.mp3",
-              "drive_audio_id": "1xlFRphZdynlrV_VKkEm5cVyl4h_qSQ8e"
-            }
-          ],
-          "flow_summary": [],
-          "t0": 40.43,
-          "t1": 58.57
-        },
-        {
-          "branch_id": "branch-3",
-          "branch_title": "Application of Income (Taxable)",
-          "badge": "Section 28 / Sec 4",
-          "icon": "rupee",
-          "points": [
-            {
-              "id": "beat-3-1",
-              "title": "Characteristics of Application",
-              "number": "3.1.1",
-              "badge": "Taxable Charge",
-              "body": [
-                "Income accrues or is received by the assessee first.",
-                "Obligation to pay/transfer is created by the assessee's voluntary deed/action.",
-                "Subsequent utilization or allocation does not alter taxability.",
-                "Result: Chargeable to tax under respective head (e.g., PGBP Section 28)."
-              ],
-              "table_data": null,
-              "voice_sync_text": "Application of Income എന്നതിൽ വരുമാനം ആദ്യം അസ്സസ്സീക്ക് സ്വന്തമായി ലഭിക്കുകയോ accrual ആവുകയോ ചെയ്യുന്നു. അതിനുശേഷമാണ് അസ്സസ്സീ സ്വന്തം ഇഷ്ടപ്രകാരം ഉണ്ടാക്കിയ കരാറോ ട്രസ്റ്റോ വഴി ആ തുക മാറ്റി വെക്കുന്നത്. ഇത് കൃത്യമായും Taxable Income തന്നെയാണ്.",
-              "spoken": true,
-              "t0": 60.57,
-              "t1": 78.07,
-              "pt_idx": 3,
-              "audio_file": "q1/pt_3.mp3",
-              "drive_audio_id": "192DdYB0mgDen8l921w09AqfE5_hUhFUz"
-            }
-          ],
-          "flow_summary": [],
-          "t0": 60.57,
-          "t1": 78.07
-        },
-        {
-          "branch_id": "branch-4",
-          "branch_title": "Advocate Case Analysis",
-          "badge": "Practical Application",
-          "icon": "user",
-          "points": [
-            {
-              "id": "beat-4-1",
-              "title": "Mr. Bhargava's Fee Trust Structure",
-              "number": "4.1.1",
-              "badge": "PGBP Taxable",
-              "body": [
-                "Condition imposed by Advocate himself, not by the client or statute.",
-                "Client did not create the trust prior to engagement.",
-                "Creation of trust deed by Advocate is application of professional earning.",
-                "Held: Entire fee of ₹5 Lakhs is assessable under PGBP (Section 28)."
-              ],
-              "table_data": null,
-              "voice_sync_text": "മിസ്റ്റർ ഭാർഗ്ഗവയുടെ കേസ് പരിശോധിച്ചാൽ, ട്രസ്റ്റ് ഉണ്ടാക്കിയത് ഭാർഗ്ഗവ തന്നെയാണ്, ക്ലയന്റല്ല. ക്ലയന്റ് ഭാർഗ്ഗവക്ക് ഫീസ് കൊടുത്തു, ഭാർഗ്ഗവ അത് ട്രസ്റ്റിലേക്ക് മാറ്റി. ഇത് തനിയെ വരുമാനം വാങ്ങി അപ്ലൈ ചെയ്യുന്ന Application of Income ആണ്. അതിനാൽ 5 ലക്ഷം രൂപയും PGBP തലക്കെട്ടിൽ Taxable ആകും.",
-              "spoken": true,
-              "t0": 80.07,
-              "t1": 100.5,
-              "pt_idx": 4,
-              "audio_file": "q1/pt_4.mp3",
-              "drive_audio_id": "1z0aaFQXaRRzMe1odXKEek6V3Fc8t9Hx9"
-            }
-          ],
-          "flow_summary": [],
-          "t0": 80.07,
-          "t1": 100.5
-        }
-      ],
-      "total_duration": 102.5,
-      "total_points_count": 5,
-      "drive_folder_id": "1OJE3VX5UcvnBEZSbBYcoiixVB8ag_AAX"
-    },
     "ch1_q2": {
       "doctrine": "Diversion of Income by Overriding Title vs. Application of Income",
       "root": {
@@ -14182,6 +13896,212 @@
     }
   },
   "screenplays": {
+    "dt-c1-q1": {
+      "question_id": "dt-c1-q1",
+      "audio_url": "data/audio/dt-c1-q1.mp3",
+      "duration_sec": 95.78,
+      "sync_offset_sec": 0.0,
+      "context_pill": "Section 4 & 28: Diversion vs Application of Income",
+      "fallback": false,
+      "beats": [
+        {
+          "id": "b1",
+          "layout": "statute_quote",
+          "voice_sync_text": "Nammude assessee Mr. Bhargava, Supreme Court-il oru company-kku vendi appear cheyyan ₹ 5,00,000 fee negotiate cheythu. Pakshe condition: ee amount ayal create cheyyunna oru public charitable trust-ilekku povanam. Section 4 charging principles prakaram ithu Diversion of Income aano atho mere Application of Income aano?",
+          "title": {
+            "text": "The Advocate's Charitable Condition",
+            "at": 0.5
+          },
+          "quote_box": {
+            "statute": "Section 4 vs Section 28(i) of Income-tax Act, 1961",
+            "text": "Whether professional fees received subject to a self-imposed obligation to transfer the funds to a charitable trust constitutes Diversion by Overriding Title or taxable Application of Professional Income?",
+            "highlight": "Diversion by Overriding Title or taxable Application of Professional Income",
+            "at": 2.0
+          },
+          "result_card": {
+            "badge": "Legal Question",
+            "title": "Taxability of Professional Receipt",
+            "val": 500000,
+            "at": 6.0
+          },
+          "start": 0.0,
+          "end": 20.0
+        },
+        {
+          "id": "b2",
+          "layout": "fork",
+          "voice_sync_text": "Ivide legal characterization check cheyyan Income Tax-il randu paths und. Superior legal title vazhi income assessee-kku kittunnathinu mumbey divert aayal ath Diversion of Income aanu, non-taxable. Ennal income assess-kku reach cheytha sesham, assessee-yude voluntary act vazhi mathram transfer cheythal ath Application of Income aayi maarum.",
+          "title": {
+            "text": "Two Paths of Income Flow",
+            "at": 0.5
+          },
+          "story_steps": [
+            {
+              "badge": "Brief Accepted",
+              "title": "Professional Engagement",
+              "sub": "SC Defense for Company",
+              "val": 500000,
+              "at": 2.0
+            }
+          ],
+          "divider": {
+            "text": "Test of Stage of Interception",
+            "at": 4.0
+          },
+          "branches": [
+            {
+              "side": "left",
+              "label": "Diversion by Overriding Title",
+              "facts": [
+                {
+                  "text": "Intercepted before reaching assessee",
+                  "at": 6.0
+                },
+                {
+                  "text": "Created by superior legal obligation",
+                  "at": 8.0
+                }
+              ],
+              "outcome": {
+                "text": "NOT Taxable in Assessee's Hands",
+                "at": 10.0
+              }
+            },
+            {
+              "side": "right",
+              "label": "Application of Income",
+              "facts": [
+                {
+                  "text": "Reaches assessee / Accrues first",
+                  "at": 7.0
+                },
+                {
+                  "text": "Voluntary obligation by assessee",
+                  "at": 9.0
+                }
+              ],
+              "outcome": {
+                "text": "FULLY TAXABLE under PGBP",
+                "at": 11.0
+              }
+            }
+          ],
+          "result_card": {
+            "badge": "Applicable Path",
+            "title": "Application of Income",
+            "val": 500000,
+            "at": 13.0
+          },
+          "start": 20.25,
+          "end": 40.7
+        },
+        {
+          "id": "b3",
+          "layout": "case_card",
+          "voice_sync_text": "Landmark precedent Supreme Court-inte CIT v. Sitaldas Tirathdas aanu. Ee judgment-il Supreme Court theerth paranju: Income source-il ninnum assessee-yude adukkal ethunnathinu mumbey legal title vazhi divert cheythal mathrame exclusion kittu. Bhargava-yude case-il, client alla trust create cheythathu, client-inu obligation onnum illayirunnu. Obligation create cheythathu Mr. Bhargava thanneyanu.",
+          "title": {
+            "text": "The Landmark Judicial Compass",
+            "at": 0.5
+          },
+          "case_details": {
+            "court": "Supreme Court of India",
+            "citation": "CIT v. Sitaldas Tirathdas (1961) 41 ITR 367 (SC)",
+            "bench": "Cardinal True Legal Test",
+            "at": 2.0
+          },
+          "ratio_box": {
+            "principle": "Stage of Interception Test",
+            "verdict": "Does the amount reach the assessee first as his own income and then applied? If yes, it is an Application of Income. A self-imposed obligation by the recipient does NOT create an overriding title.",
+            "at": 5.0
+          },
+          "result_card": {
+            "badge": "Precedent Impact",
+            "title": "Overriding Title Rejected",
+            "val": 500000,
+            "at": 8.0
+          },
+          "start": 40.95,
+          "end": 62.31
+        },
+        {
+          "id": "b4",
+          "layout": "ledger",
+          "voice_sync_text": "Ini namukk Mr. Bhargava-yude Assessment Year computation nokkam. Company nalkiya ₹ 5,00,000 ayalude Professional Receipts aanu. Ayal trust execute cheythu transfer cheythathu mere post-receipt application mathramayanu. So full ₹ 5,00,000 PGBP head-il assessable aakum.",
+          "title": {
+            "text": "Computation of Professional Income",
+            "at": 0.5
+          },
+          "ledger_rows": [
+            {
+              "desc": "Professional Fees received from Company",
+              "amount": 500000,
+              "flow": "plus",
+              "tag": "Section 28(i)",
+              "at": 2.0
+            },
+            {
+              "desc": "Less: Claim of Diversion by Overriding Title",
+              "amount": 0,
+              "flow": "neutral",
+              "tag": "Disallowed (No Superior Title)",
+              "at": 4.5
+            },
+            {
+              "desc": "Less: Transfer to Self-Created Trust",
+              "amount": 0,
+              "flow": "neutral",
+              "tag": "Application of Income",
+              "at": 7.0
+            }
+          ],
+          "result_card": {
+            "badge": "Taxable Income",
+            "title": "Total Income under PGBP",
+            "val": 500000,
+            "at": 10.0
+          },
+          "start": 62.56,
+          "end": 78.01
+        },
+        {
+          "id": "b5",
+          "layout": "takeaway",
+          "voice_sync_text": "CA Final exam point of view-il ee 3 Golden Rules eppozhum orkuka. Rule 1: Source of obligation check cheyyuka. Rule 2: Stage of interception examine cheyyuka. Rule 3: Self-imposed trusts are always Application of Income, taxable under PGBP.",
+          "title": {
+            "text": "Exam Takeaways: Diversion Doctrine",
+            "at": 0.5
+          },
+          "rules": [
+            {
+              "num": "01",
+              "rule": "Origin of Legal Obligation",
+              "exp": "Overriding title exists only if an external superior law, court decree, or payer creates the obligation before income reaches the assessee.",
+              "at": 2.0
+            },
+            {
+              "num": "02",
+              "rule": "Interception vs Destination",
+              "exp": "Diversion occurs at the source (interception). Applying funds after earning title or receipt is mere destination (application).",
+              "at": 5.0
+            },
+            {
+              "num": "03",
+              "rule": "Professional Fee Trap",
+              "exp": "A professional directing clients to pay fees into their own trust is fully taxable under Section 28 as PGBP; Chapter VI-A (Section 80G) can only be explored separately.",
+              "at": 8.0
+            }
+          ],
+          "result_card": {
+            "badge": "Final Verdict",
+            "title": "Assessable in Hands of Bhargava",
+            "val": 500000,
+            "at": 11.0
+          },
+          "start": 78.26,
+          "end": 95.53
+        }
+      ]
+    },
     "dt-c2-q25": {
       "question_id": "dt-c2-q25",
       "audio_url": "data/audio/dt-c2-q25.mp3",
@@ -14528,6 +14448,250 @@
             "f3",
             "f4"
           ]
+        }
+      ]
+    },
+    "dt-c2-q32": {
+      "question_id": "dt-c2-q32",
+      "audio_url": "data/audio/dt-c2-q32.mp3",
+      "duration_sec": 108.06,
+      "sync_offset_sec": 0.0,
+      "context_pill": "Section 54G | Shifting of Industrial Undertaking",
+      "fallback": false,
+      "beats": [
+        {
+          "id": "b1",
+          "layout": "fork",
+          "voice_sync_text": "Makkale, Gama Ltd avarude industrial undertaking urban corporation limitsil ninnu non-urban areayilekk shift cheyyukayanu. Shifting processil avaru Land, Building, Plant & Machinery, pinne Furniture vare vilkkukayum puthiyath vangukayum cheythu. Pakshe Section 54G il oru valiya trap undu. Athu manassilakkiyillel examil marks pokum!",
+          "title": {
+            "text": "Asset Eligibility Filter under Section 54G",
+            "at": 0.5
+          },
+          "story_steps": [
+            {
+              "badge": "Shift Decision",
+              "title": "Urban to Non-Urban Shifting",
+              "sub": "Gama Ltd transfers industrial undertaking assets",
+              "val": 4500000,
+              "at": 2.0
+            }
+          ],
+          "divider": {
+            "text": "Scope of Section 54G: Specified Assets Only",
+            "at": 5.0
+          },
+          "branches": [
+            {
+              "side": "left",
+              "label": "Eligible Specified Assets",
+              "facts": [
+                {
+                  "text": "Plant & Machinery, Land, or Building",
+                  "at": 7.0
+                },
+                {
+                  "text": "Both transfer & reinvestment qualify u/s 54G",
+                  "at": 9.5
+                }
+              ],
+              "outcome": {
+                "text": "Eligible for Section 54G Exemption",
+                "at": 12.0
+              }
+            },
+            {
+              "side": "right",
+              "label": "Ineligible Non-Specified Assets",
+              "facts": [
+                {
+                  "text": "Furniture & Fixtures, Office Appliances",
+                  "at": 7.0
+                },
+                {
+                  "text": "Neither sale nor new purchase qualifies",
+                  "at": 9.5
+                }
+              ],
+              "outcome": {
+                "text": "No Exemption! Full STCG Taxable",
+                "at": 12.0
+              }
+            }
+          ],
+          "result_card": {
+            "badge": "Key Exclusion",
+            "title": "Furniture STCG Isolated",
+            "val": 100000,
+            "at": 15.0
+          },
+          "start": 0.0,
+          "end": 19.09
+        },
+        {
+          "id": "b2",
+          "layout": "statute_quote",
+          "voice_sync_text": "Section 54G clear aayi parayunnu: Capital Gain arose from transfer of machinery, plant, building, or land used for the purpose of an industrial undertaking situated in an urban area. Assessee 1 year before or 3 years after the date of transfer eligible assets purchase cheythal, deduction kittum.",
+          "title": {
+            "text": "Statutory Mandate: Section 54G(1)",
+            "at": 0.5
+          },
+          "quote": {
+            "text": "Where the capital gain arises from the transfer of a capital asset, being plant, machinery, land or building or any rights in building or land, used for the purpose of an industrial undertaking situated in an urban area... and the assessee has within a period of one year before or three years after the date on which the transfer took place purchased new machinery or plant or acquired building or land...",
+            "citation": "Section 54G(1) of the Income-tax Act, 1961",
+            "emphasis": "plant, machinery, land or building... 1 year before or 3 years after"
+          },
+          "context_bubble": {
+            "badge": "Time Horizon",
+            "note": "Reinvestment Window: July 2026 acquisition satisfies the 'within 3 years after March 2026' requirement.",
+            "at": 6.0
+          },
+          "start": 19.34,
+          "end": 40.7
+        },
+        {
+          "id": "b3",
+          "layout": "meter",
+          "voice_sync_text": "Nammude total eligible investment pool ethrayanu? Land Rs 4 Lakh, Building Rs 7 Lakh, Plant & Machinery Rs 17 Lakh. Total Rs 28 Lakhs! Note cheyyuka, Furniture-nte Rs 2 Lakh ivide add cheyyan padilla. Ee Rs 28 Lakhs namukk STCG-kkum LTCG-kkum ethirayi set-off cheyyam.",
+          "title": {
+            "text": "Section 54G Eligible Investment Reinvestment Pool",
+            "at": 0.5
+          },
+          "meter_display": {
+            "min_val": 0,
+            "max_val": 3000000,
+            "current_val": 2800000,
+            "unit": "₹",
+            "threshold": 2500000,
+            "labels": {
+              "start": "₹ 0",
+              "threshold_label": "STCG Threshold: ₹ 25L",
+              "current_label": "Eligible Reinvestment: ₹ 28L"
+            }
+          },
+          "breakdown": [
+            {
+              "label": "New Land Acquired",
+              "val": 400000,
+              "status": "Qualifies"
+            },
+            {
+              "label": "New Building Acquired",
+              "val": 700000,
+              "status": "Qualifies"
+            },
+            {
+              "label": "New Plant & Machinery",
+              "val": 1700000,
+              "status": "Qualifies"
+            },
+            {
+              "label": "New Furniture Purchased",
+              "val": 200000,
+              "status": "Ineligible (Excluded)"
+            }
+          ],
+          "start": 40.95,
+          "end": 60.95
+        },
+        {
+          "id": "b4",
+          "layout": "ledger",
+          "voice_sync_text": "Tax optimizationte golden trick ivideyanu! Act-il pro-rata set-off niyamam illa. Assessee-kk beneficial aaya reethiyil exemption exhaust cheyyam. Athukondu higher tax bracket ulla Short-term Capital Gain first wipe out cheyyanam. Building & Plant STCG total Rs 25 Lakhs poornnamayum Section 54G vechu Nil aakki. Balance Rs 3 Lakhs Land-nte Long-term Capital Gain-il ninnu kurachu. So, final taxable amount just Rs 2 Lakhs mathram!",
+          "title": {
+            "text": "Computation of Taxable Capital Gains for AY 2026-27",
+            "at": 0.5
+          },
+          "ledger_rows": [
+            {
+              "label": "Building STCG u/s 50 (₹18L - WDV ₹4L)",
+              "amount": 1400000,
+              "type": "income",
+              "note": "Depreciable Asset u/s 50"
+            },
+            {
+              "label": "Plant & Machinery STCG u/s 50 (₹16L - WDV ₹5L)",
+              "amount": 1100000,
+              "type": "income",
+              "note": "Depreciable Asset u/s 50"
+            },
+            {
+              "label": "Total Deemed STCG Eligible for Section 54G",
+              "amount": 2500000,
+              "type": "subtotal",
+              "note": "Taxable at normal corporate tax rates"
+            },
+            {
+              "label": "Less: Section 54G Exemption (Priority 1: Against STCG)",
+              "amount": -2500000,
+              "type": "deduction",
+              "note": "Exhausted against high-tax STCG first"
+            },
+            {
+              "label": "Net STCG on Industrial Assets",
+              "amount": 0,
+              "type": "subtotal",
+              "note": "Fully Exempt"
+            },
+            {
+              "label": "Land LTCG (Sale ₹8L - Cost ₹4L)",
+              "amount": 400000,
+              "type": "income",
+              "note": "Non-depreciable Long-term asset"
+            },
+            {
+              "label": "Less: Balance Section 54G Exemption (₹28L - ₹25L)",
+              "amount": -300000,
+              "type": "deduction",
+              "note": "Remaining balance set off against LTCG"
+            },
+            {
+              "label": "Taxable LTCG on Land (Taxable @ 12.5% u/s 112)",
+              "amount": 100000,
+              "type": "taxable",
+              "note": "Concessional tax rate"
+            },
+            {
+              "label": "Furniture STCG (Sale ₹3L - WDV ₹2L)",
+              "amount": 100000,
+              "type": "taxable",
+              "note": "No 54G Exemption allowed for Furniture"
+            }
+          ],
+          "net_total": {
+            "label": "Total Taxable Capital Gains",
+            "val": 200000,
+            "detail": "₹1,00,000 LTCG @ 12.5% + ₹1,00,000 STCG @ Normal Rates"
+          },
+          "start": 61.2,
+          "end": 89.38
+        },
+        {
+          "id": "b5",
+          "layout": "takeaway",
+          "voice_sync_text": "Exam hall-il orthu vekkenda 3 Golden Rules: Onnamathathu, Furniture-nu Section 54G il sthanamilla. Randamathathu, Section 50 prakaram ulla STCG-kkum Section 54G exemption valid aanu. Moonnamathathu, tax liability minimize cheyyan Section 54G deduction aadyam STCG-kk ethireyum, balance LTCG-kk ethireyum set-off cheyyam!",
+          "title": {
+            "text": "3 Golden Rules for Section 54G Mastery",
+            "at": 0.5
+          },
+          "rules": [
+            {
+              "num": "01",
+              "heading": "Strict Asset Basket (Furniture Excluded)",
+              "body": "Section 54G applies strictly to Plant, Machinery, Land, and Building. Capital gains on Furniture cannot be exempted, and reinvestment in Furniture does not count towards the eligible investment."
+            },
+            {
+              "num": "02",
+              "heading": "Section 50 Deemed STCG is Eligible",
+              "body": "Even though Section 50 deems depreciable assets as Short-Term Capital Gains, Section 54G exemption is fully applicable against such deemed STCG (established in landmark jurisprudence and CBDT circulars)."
+            },
+            {
+              "num": "03",
+              "heading": "Most Beneficial Set-Off Ordering",
+              "body": "The statute does not compel pro-rata apportionment. Always exhaust Section 54G exemption against Short-Term Capital Gains first (normal tax rate) before offsetting Long-Term Capital Gains (concessional 12.5% rate u/s 112)."
+            }
+          ],
+          "start": 89.63,
+          "end": 107.81
         }
       ]
     }
