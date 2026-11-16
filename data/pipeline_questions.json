@@ -413,7 +413,7 @@
       "subject": "dt",
       "chapter_number": 2,
       "question_number": 32,
-      "question_title": "Section 54G & Section 50: Capital Gains Exemption on Shifting Industrial Undertaking from Urban to Non-Urban Area",
+      "question_title": "Section 54G: Capital Gain Exemption on Shifting Industrial Undertaking from Urban to Non-Urban Area",
       "question_text": "Gama Ltd, located within the corporation limits decided in December, 2025 decided to shift its industrial undertaking to non-urban area. The company sold some of the assets and acquired new assets in the process of shifting. The relevant details are as follows: (% in lacs)\n\n| Particulars | ₹ |\n| :--- | :---: |\n| Land | |\n| Building| Plant & | Furniture | |\n\n(Long Term) Machinery\n\n- **(i)** | Sale proceeds (sale effected in March, 2026) 8 18 16 3\n\n- **(ii)** | Cost of acquisition 4 10 12 2\n\n- **(iii)** | WDV in terms of section 50 -- 4 5 2\n\n- **(iv)** | Cost of new assets purchased in July, 2026 for the purpose of business in the new place 4 7 17 2 Compute the capital gains of Gama Ltd for the assessment year 2026-27.",
       "answer_text": "Section 54G deals with deduction in respect of any capital gain that may arise from the transfer of an industrial undertaking situated in an urban area in the course of or in consequence of shifting to a non-urban area. If the assessee purchases new machinery or plant or acquires a building or land or constructs a new building or shifts the original asset and transfers the establishment to the new area, within 1 year before or 3 years after the date on which the transfer takes place, then, instead of the capital gain being charged to tax, it shall be dealt with as under: 1. If the capital gain is greater than the cost of the new asset, the difference between the capital gain and the cost of the new asset shall be chargeable as income \"under section 45\". 2. Ifthe capital gain is equal to or less than the cost of the new asset, section 45 is not to be applied. The capital assets referred to in section 54G are machinery or plant or land or building or any rights in building or land. Capital gain arising on transfer of furniture does not qualify for exemption under section 54G. No exemption is therefore available under section 54G in respect of investment of ₹ 2 lacs in acquiring furniture. The first step therefore is to determine the capital gain arising out of the transfer and thereafter apply the provisions of section 54G.\n\n- **(a)** | Land - Sale proceeds (Non-depreciable asset) 8,00,000 Less: Cost of acquisition 4,00,000 Long term capital gain 4,00,000 Less: Cost of new assets purchased within three year after the date of transfer (under section 54G) (See Note below) 3,00,000 Taxable Long term capital gain 1,00,000\n\n- **(b)** | Building - sale proceeds (depreciable assets) 18,00,000 Less: W.D.V. is deemed as cost of acquisition under section 50 4,00,000 Short term capital gain 14,00,000\n\n- **(c)** | Plant & machinery- sale proceeds (depreciable asset) 16,00,000 Less: WDV is deemed cost under section 50 5,00,000 Short term capital gain 11,00,000\n\n- **(d)** | Furniture - sale proceeds (depreciable asset) 3,00,000 Less: WDV is deemed cost under section 50 2,00,000 Short term capital gain (A) 1,00,000 Summary q Short term capital gain: Building 14,00,000 Short term capital gain; Plant & machinery 11,00,000 25,00,000 Less: Section 54G [New assets purchased] (See Note below) 25,00,000 Net short term capital gain (B) Nil Total short term capital gain (A)+(B) = ₹ 1 lac Note - Total exemption available under section 54G is ₹ 28 lacs (₹ 4 lacs + ₹ 7 lacs + 7 17 lacs). The exemption should first be exhausted against short term capital gain as the incidence of tax in case of short-term capital gain is more than in case of long term capital gain.\n\nTherefore, ₹ 25 lacs is exhausted against short term capital gain and the balance of 3 lacs against long term capital gain. The taxable capital gains would be: Long term ₹ 1,00,000 (taxable @12.5% under section 112) Short term capital gains (furniture) 3₹ 1,00,000 (taxable at applicable tax rates) 22,00,000 Tax on Capital Gain (Section 112A & 112)",
       "topic_id": "T_CH2_Q32"
@@ -839,8 +839,8 @@
       "chapter_number": 2,
       "question_number": 32,
       "topic_id": "T_CH2_Q32",
-      "topic_title": "Section 54G & Section 50: Capital Gains Exemption on Shifting Industrial Undertaking from Urban to Non-Urban Area",
-      "provision_presentation_markdown": "| Asset Category | Applicable Section | Nature of Capital Gain | Section 54G Eligibility |\n| :--- | :--- | :--- | :--- |\n| **Plant & Machinery / Building** | Section 50 | Short-Term Capital Gain (STCG) | Eligible |\n| **Land (Non-depreciable)** | Section 45 / Section 48 | Long-Term / Short-Term Capital Gain | Eligible |\n| **Furniture & Fixtures** | Section 50 | Short-Term Capital Gain (STCG) | **Not Eligible** |\n\n### Core Statutory Conditions Checklist\n\n* **Reinvestment Time Limit**: New plant, machinery, land, or building must be purchased or constructed within **1 year before** or **3 years after** the date of transfer.\n\n* **Set-Off Priority & Tax Optimization**: Exemption under Section 54G is fungible across eligible capital assets. To minimize overall tax liability, the exemption must be set off **first against Short-Term Capital Gains** (taxable at normal rates) and the balance against **Long-Term Capital Gains** (taxable at lower rate under Section 112).\n\n> [!WARNING] Ineligible Asset Trap: Capital gain arising on the transfer of furniture does NOT qualify for exemption under Section 54G, nor does reinvestment in new furniture qualify as an eligible acquisition.",
+      "topic_title": "Section 54G: Capital Gain Exemption on Shifting Industrial Undertaking from Urban to Non-Urban Area",
+      "provision_presentation_markdown": "### Statutory Matrix: Section 54G & Section 50 Integration\n\n| Statutory Section | Asset Type Transferred | Qualifying Reinvestment Assets | Statutory Time Limit | Tax Treatment & Set-off Priority |\n| :--- | :--- | :--- | :--- | :--- |\n| **Section 54G** | Machinery, Plant, Land, Building (Urban Industrial Undertaking) | New Plant, Machinery, Land, Building in Non-Urban Area / Shifting Expenses | 1 Year Before or 3 Years After Transfer Date | Exemption equal to lower of Total Capital Gain or Cost of New Assets |\n| **Section 50** | Depreciable Assets (Building, Plant & Machinery) | Subject to Section 54G reinvestment | Applicable under Section 54G timeline | Gain treated as Short-Term Capital Gain (STCG); Priority 1 for Section 54G exemption |\n| **Section 45 / 112** | Non-Depreciable Assets (Land) | Subject to Section 54G reinvestment | Applicable under Section 54G timeline | Gain treated as Long-Term Capital Gain (LTCG) if held > 24 months; Priority 2 for Section 54G exemption |\n\n\n#### Key Statutory Conditions & Non-Eligible Assets Checklist\n\n- **Eligible Assets**: Machinery, plant, land, building, or any right in land or building used for the business of the urban industrial undertaking.\n\n- **Statutory Trap (Furniture Excluded)**: Capital gains arising from the transfer of **furniture and fixtures** do NOT qualify for exemption under Section 54G. Investment in new furniture is also ineligible for Section 54G deduction.\n\n- **Exemption Quantum**: If Capital Gain > Cost of New Assets, the unabsorbed balance is chargeable under Section 45. If Capital Gain $\\le$ Cost of New Assets, net chargeable gain is Nil.\n\n\n> [!IMPORTANT] Tax Optimization Benchmark (Priority of Set-off)\n> Where an assessee derives both Short-Term Capital Gain under Section 50 (depreciable assets) and Long-Term Capital Gain (non-depreciable land) from shifting an undertaking, the statutory exemption under Section 54G **must first be exhausted against Short-Term Capital Gains** to minimize tax liability, since STCG carries a higher tax incidence than LTCG taxable under Section 112.",
       "drive_folder_id": "1cJUtqvArhMmP_9hXWLxROVNdKdX7m8L2"
     },
     {
@@ -13085,292 +13085,324 @@
       "is_partially_complete": false
     },
     "ch2_q32": {
-      "doctrine": "Section 54G & Section 50 Industrial Undertaking Relocation Framework",
+      "doctrine": "Section 54G Shifting of Industrial Undertaking & Depreciable Asset Taxation",
       "root": {
         "id": "root",
         "number": "1",
-        "title": "Capital Gains Exemption on Shifting Industrial Undertaking",
+        "title": "Section 54G: Shifting Industrial Undertaking from Urban Area",
         "badge": "Sec 54G · Sec 50 · Sec 112",
-        "voice_sync_text": "Urban area-ൽ പ്രവർത്തിക്കുന്ന industrial undertaking non-urban area-ലേക്ക് shift ചെയ്യുമ്പോൾ ലഭിക്കുന്ന Section 54G exemption, Section 50 depreciable asset rules, matching priority set-off principles എന്നിവ നമുക്ക് പഠിക്കാം.",
+        "voice_sync_text": "Section 54G explain ചെയ്യുന്ന tax statutory framework നമുക്ക് നോക്കാം. Urban area-യിൽ നിന്നുമുള്ള industrial undertaking non-urban area-യിലേക്ക് shift ചെയ്യുമ്പോൾ ഉണ്ടാകുന്ന Capital Gain എങ്ങനെ exempt ചെയ്യാം എന്ന് പരിശോധിക്കാം.",
         "t0": 0.0,
-        "t1": 14.93,
+        "t1": 15.2,
         "pt_idx": 0,
         "audio_file": "dt/ch2/q32/pt_0.mp3",
-        "drive_audio_id": "1Tg609-Xm1NiwoMCXR_-6rMzfpGPO0gCo"
+        "drive_audio_id": "1LKY43nvtj8PERz5hOrk1yZs9a6suKPHH"
       },
       "branches": [
         {
           "branch_id": "branch-1",
-          "branch_title": "Section 54G Eligible vs Ineligible Assets",
-          "badge": "Section 54G Scope",
+          "branch_title": "Section 54G Eligible Assets & Scope",
+          "badge": "Section 54G",
           "icon": "building",
           "points": [
             {
               "id": "beat-1-1",
-              "title": "Eligible Capital Assets for Exemption",
+              "title": "Eligible Undertaking Assets",
               "number": "1.1.1",
-              "badge": "Eligible Assets",
+              "badge": "Scope",
               "body": [
-                "Exemption applies on transfer of plant, machinery, land, building, or rights in land/building.",
-                "Furniture and personal assets are not eligible assets for Section 54G exemption."
+                "Capital gain arising from transfer of plant, machinery, land, or building of an industrial undertaking in an urban area is exempt upon shifting to a non-urban area.",
+                "The transfer must occur in connection with shifting the undertaking to any area other than an urban area."
               ],
               "highlights": [
                 {
-                  "phrase": "plant, machinery, land, building",
-                  "time_sec": 5.9
+                  "phrase": "plant, machinery, land, or building",
+                  "time_sec": 2.2
                 },
                 {
-                  "phrase": "not eligible assets",
-                  "time_sec": 7.5
+                  "phrase": "non-urban area",
+                  "time_sec": 11.5
                 }
               ],
               "table_data": null,
-              "voice_sync_text": "Section 54G പ്രകാരം industrial undertaking shift ചെയ്യുമ്പോൾ transfer ചെയ്യുന്ന plant, machinery, land, building എന്നിവയ്ക്ക് Exemption ലഭിക്കും. എന്നാൽ Furniture ഈ exemption-ന് eligible അല്ല.",
+              "voice_sync_text": "Section 54G അനുസരിച്ച് Urban area-യിലുള്ള industrial undertaking-ന്റെ plant, machinery, land, അല്ലെങ്കിൽ building transfer ചെയ്യുമ്പോൾ ഉണ്ടാകുന്ന Capital Gain exempt ആകും, non-urban area-യിലേക്ക് shift ചെയ്യുമ്പോൾ.",
               "spoken": true,
-              "t0": 15.93,
-              "t1": 29.64,
+              "t0": 16.2,
+              "t1": 31.49,
               "pt_idx": 1,
               "audio_file": "dt/ch2/q32/pt_1.mp3",
-              "dur": 13.92,
-              "duration_seconds": 13.92,
-              "drive_audio_id": "1rCXVYwB3PtvPcV3-NvD6dCHzVXP_7gWL"
+              "dur": 15.72,
+              "duration_seconds": 15.72,
+              "drive_audio_id": "18Rds8aCICeiG0M1K3EBVsG8RJAdzyQLH"
             }
           ],
           "flow_summary": [],
-          "t0": 15.93,
-          "t1": 29.64
+          "t0": 16.2,
+          "t1": 31.49
         },
         {
           "branch_id": "branch-2",
-          "branch_title": "Section 54G Reinvestment Timelines & Quantum",
-          "badge": "Statutory Timelines",
-          "icon": "shield",
+          "branch_title": "Excluded Assets & Ineligibility Trap",
+          "badge": "Statutory Trap",
+          "icon": "warning",
           "points": [
             {
               "id": "beat-2-1",
-              "title": "Time Limit for Acquiring New Assets",
+              "title": "Furniture & Non-Qualifying Assets",
               "number": "2.1.1",
-              "badge": "Timelines",
+              "badge": "Restriction",
               "body": [
-                "Reinvestment must occur within 1 year before or 3 years after the date of transfer.",
-                "Exemption equals actual investment in eligible new assets or total capital gain, whichever is lower."
+                "Capital assets such as furniture and fixtures do not qualify for exemption under Section 54G.",
+                "Capital gain on non-eligible assets is fully taxable without any Section 54G set-off."
               ],
               "highlights": [
                 {
-                  "phrase": "1 year before or 3 years after",
-                  "time_sec": 3.0
+                  "phrase": "furniture and fixtures do not qualify",
+                  "time_sec": 3.1
                 },
                 {
-                  "phrase": "whichever is lower",
-                  "time_sec": 8.7
+                  "phrase": "fully taxable",
+                  "time_sec": 11.9
                 }
               ],
               "table_data": null,
-              "voice_sync_text": "New plant, machinery, land അല്ലെങ്കിൽ building എന്നിവ transfer തീയതിക്ക് 1 year before അല്ലെങ്കിൽ 3 years after വാങ്ങിയിരിക്കണം. Capital gain അല്ലെങ്കിൽ New Asset Cost, ഇതിൽ കുറവുള്ള തുക Exemption ലഭിക്കും.",
+              "voice_sync_text": "ഇവിടെ ഓർക്കേണ്ട statutory trap, Furniture and fixtures എന്നിവ Section 54G-ൽ ഉൾപ്പെടില്ല. അതിനാൽ furniture transfer ചെയ്യുമ്പോൾ ഉണ്ടാകുന്ന Capital Gain-ന് Exemption ലഭിക്കില്ല, അത് fully taxable ആയിരിക്കും.",
               "spoken": true,
-              "t0": 31.64,
-              "t1": 46.35,
+              "t0": 33.49,
+              "t1": 48.13,
               "pt_idx": 2,
               "audio_file": "dt/ch2/q32/pt_2.mp3",
-              "dur": 15.84,
-              "duration_seconds": 15.84,
-              "drive_audio_id": "1to_z2vpe8rgnTNmlhB4oHMDGfKkuORFJ"
+              "dur": 14.2,
+              "duration_seconds": 14.2,
+              "drive_audio_id": "1djY2OoZnD9tYI9NrWHm_ARPho5BeCuJG"
             }
           ],
           "flow_summary": [],
-          "t0": 31.64,
-          "t1": 46.35
+          "t0": 33.49,
+          "t1": 48.13
         },
         {
           "branch_id": "branch-3",
-          "branch_title": "Section 50 Depreciable Assets Tax Treatment",
-          "badge": "Section 50 STCG",
+          "branch_title": "Section 50 Depreciable Asset Treatment",
+          "badge": "Section 50",
           "icon": "calculator",
           "points": [
             {
               "id": "beat-3-1",
-              "title": "Short Term Capital Gain on Block of Assets",
+              "title": "Deemed Short-Term Capital Gain",
               "number": "3.1.1",
-              "badge": "Depreciable Assets",
+              "badge": "STCG Rule",
               "body": [
-                "Transfer of depreciable assets results in Short Term Capital Gain under Section 50.",
-                "Written Down Value is deemed as the Cost of Acquisition for block of assets."
+                "Transfer of depreciable assets where consideration exceeds WDV yields Short-Term Capital Gain under Section 50.",
+                "Section 50 STCG retains short-term status regardless of the holding period of the depreciable block."
               ],
               "highlights": [
                 {
-                  "phrase": "Short Term Capital Gain under Section 50",
-                  "time_sec": 3.5
+                  "phrase": "Short-Term Capital Gain under Section 50",
+                  "time_sec": 3.8
                 },
                 {
-                  "phrase": "Written Down Value",
-                  "time_sec": 6.6
+                  "phrase": "regardless of the holding period",
+                  "time_sec": 8.0
                 }
               ],
               "table_data": null,
-              "voice_sync_text": "Depreciable assets transfer ചെയ്യുമ്പോൾ Section 50 പ്രകാരം Short Term Capital Gain ആണ് ഉണ്ടാകുക. Written Down Value ആണ് Cost of Acquisition ആയി കണക്കാക്കുന്നത്.",
+              "voice_sync_text": "Depreciable assets ആയ Building, Plant and Machinery transfer ചെയ്യുമ്പോൾ Written Down Value-ന് മുകളിൽ വരുന്ന തുക Section 50 പ്രകാരം Short-Term Capital Gain ആയി കണക്കാക്കും.",
               "spoken": true,
-              "t0": 48.35,
-              "t1": 59.78,
+              "t0": 50.13,
+              "t1": 62.42,
               "pt_idx": 3,
               "audio_file": "dt/ch2/q32/pt_3.mp3",
-              "dur": 10.84,
-              "duration_seconds": 10.84,
-              "drive_audio_id": "1jhlH03fRXg61BdIiEYlOj8vWn4K5I6li"
+              "dur": 11.36,
+              "duration_seconds": 11.36,
+              "drive_audio_id": "1gRE8XNTxruL8SPBkS0r-IMMh_u7SdUze"
             }
           ],
           "flow_summary": [],
-          "t0": 48.35,
-          "t1": 59.78
+          "t0": 50.13,
+          "t1": 62.42
         },
         {
           "branch_id": "branch-4",
-          "branch_title": "Tax Optimization & Priority of Set-Off",
-          "badge": "Set-Off Order",
-          "icon": "percent",
+          "branch_title": "Timeline & Exemption Quantum",
+          "badge": "Section 54G Criteria",
+          "icon": "gear",
           "points": [
             {
               "id": "beat-4-1",
-              "title": "Priority Set-off Strategy",
+              "title": "Reinvestment Window & Computation",
               "number": "4.1.1",
-              "badge": "Tax Optimization",
+              "badge": "Timeline",
               "body": [
-                "Exemption under Section 54G should be set off first against Short Term Capital Gain.",
-                "Remaining balance of Section 54G exemption is then set off against Long Term Capital Gain."
+                "New qualifying assets must be acquired or constructed within 1 year before or 3 years after the transfer date.",
+                "Exemption equals the actual cost of new assets or the total capital gains, whichever is lower."
               ],
               "highlights": [
                 {
-                  "phrase": "first against Short Term Capital Gain",
-                  "time_sec": 3.2
+                  "phrase": "1 year before or 3 years after",
+                  "time_sec": 4.0
                 },
                 {
-                  "phrase": "against Long Term Capital Gain",
-                  "time_sec": 7.8
+                  "phrase": "whichever is lower",
+                  "time_sec": 8.5
                 }
               ],
               "table_data": null,
-              "voice_sync_text": "Assessee-ക്ക് tax liability പരമാവധി കുറയ്ക്കാൻ Section 54G exemption ആദ്യം normal rate-ൽ tax ചെയ്യപ്പെടുന്ന Short Term Capital Gain-ൽ നിന്നാണ് set off ചെയ്യേണ്ടത്. ബാക്കി തുക മാത്രം Long Term Capital Gain-ൽ set off ചെയ്യുക.",
+              "voice_sync_text": " statutory time limit എന്നാൽ transfer നടന്ന തീയതിക്ക് 1 year before അല്ലെങ്കിൽ 3 years after ആയിരിക്കണം പുതിയ assets വാങ്ങേണ്ടത്. new assets-ന്റെ cost അല്ലെങ്കിൽ capital gain, ഇതിൽ കുറഞ്ഞ തുക exempt ആകും.",
               "spoken": true,
-              "t0": 61.78,
-              "t1": 77.71,
+              "t0": 64.42,
+              "t1": 78.99,
               "pt_idx": 4,
               "audio_file": "dt/ch2/q32/pt_4.mp3",
-              "dur": 15.32,
-              "duration_seconds": 15.32,
-              "drive_audio_id": "1XdraTBzOoTI_2D_TyAK_CNQPAxwjhivW"
+              "dur": 15.24,
+              "duration_seconds": 15.24,
+              "drive_audio_id": "1mNAaV2QzktrkEt1f-A5cd5k0oDl0iKgP"
             }
           ],
           "flow_summary": [],
-          "t0": 61.78,
-          "t1": 77.71
+          "t0": 64.42,
+          "t1": 78.99
+        },
+        {
+          "branch_id": "branch-5",
+          "branch_title": "Priority of Exemption Set-Off Benchmark",
+          "badge": "Tax Planning Strategy",
+          "icon": "scales",
+          "points": [
+            {
+              "id": "beat-5-1",
+              "title": "STCG vs LTCG Set-off Order",
+              "number": "5.1.1",
+              "badge": "Set-off Rule",
+              "body": [
+                "Exemption under Section 54G should first be set off against Short-Term Capital Gains under Section 50.",
+                "Balance available exemption is then applied against Long-Term Capital Gains taxable under Section 112."
+              ],
+              "highlights": [
+                {
+                  "phrase": "first be set off against Short-Term Capital Gains",
+                  "time_sec": 3.1
+                },
+                {
+                  "phrase": "applied against Long-Term Capital Gains",
+                  "time_sec": 6.8
+                }
+              ],
+              "table_data": null,
+              "voice_sync_text": "നമുക്ക് Short-Term Capital Gain-ഉം Long-Term Capital Gain-ഉം ഉണ്ടാകുമ്പോൾ, Section 54G exemption ആദ്യം higher tax rate ഉള്ള Short-Term Capital Gain-ന് എതിരെയാണ് set off ചെയ്യേണ്ടത്. ബാക്കി വരുന്നത് മാത്രം Long-Term Capital Gain-ന് എതിരെ set off ചെയ്യാം.",
+              "spoken": true,
+              "t0": 80.99,
+              "t1": 99.06,
+              "pt_idx": 5,
+              "audio_file": "dt/ch2/q32/pt_5.mp3",
+              "dur": 15.8,
+              "duration_seconds": 15.8,
+              "drive_audio_id": "1hoSsVkZwMP16CjvvVtcGzSr2bNYc-ftr"
+            }
+          ],
+          "flow_summary": [],
+          "t0": 80.99,
+          "t1": 99.06
         }
       ],
       "concept_simulation": {
         "schema_version": "1.0",
         "illustrative_only": true,
-        "doctrine_topic": "Section 54G Industrial Shifting Exemption & Set-off Priority",
+        "doctrine_topic": "Section 54G Shifting of Industrial Undertaking Mechanics",
         "relevant_tax_year": "P.Y. 2025-26",
         "statutory_assumptions": [
-          "Assessee shifts industrial undertaking from urban area to non-urban area.",
-          "Reinvestment is made in eligible plant, machinery, land, and building within statutory 3-year period."
+          "Assessee shifts industrial undertaking from urban corporation limits to a non-urban location.",
+          "Assessee transfers non-depreciable Land (LTCG) and depreciable Plant & Machinery (STCG u/s 50).",
+          "Reinvestment made in eligible new plant and building within 3 years."
         ],
-        "intro_voice": "ഒരു simple numerical example ഉപയോഗിച്ച് Section 54G shifting exemption പ്രവർത്തിക്കുന്നത് എങ്ങനെയെന്ന് പരിശോധിക്കാം.",
+        "intro_voice": "ഒരു industrial undertaking urban area-യിൽ നിന്ന് non-urban area-യിലേക്ക് shift ചെയ്യുമ്പോൾ Section 54G exemption എങ്ങനെ apply ചെയ്യുന്നു എന്ന് ഈ illustration-ലൂടെ കാണാം.",
         "steps": [
           {
             "step_id": "step_1",
             "step_order": 1,
-            "title": "Transfer of Assets on Shifting",
-            "metric_label": "Total Gross Capital Gains",
-            "metric_value": "₹ 30,00,000",
-            "voice_sync_text": "നമ്മുടെ assessee urban area-യിലെ undertaking shift ചെയ്യുമ്പോൾ depreciable assets-ൽ ₹25 Lakhs Short Term Capital Gain-ഉം land-ൽ ₹5 Lakhs Long Term Capital Gain-ഉം ലഭിക്കുന്നു.",
-            "image_prompt": "A modern industrial factory building located in a crowded city zone with industrial cranes and machinery being packed onto logistics trucks, clear bright day, 2.5D visual graphic style.",
+            "title": "Transfer of Urban Industrial Land (Non-Depreciable)",
+            "metric_label": "Long-Term Capital Gain (Land)",
+            "metric_value": "₹ 10,00,000",
+            "voice_sync_text": "ആദ്യമായി, urban area-യിലെ non-depreciable land transfer ചെയ്യുമ്പോൾ Long-Term Capital Gain ലഭിക്കുന്നു.",
+            "image_prompt": "A modern 2.5D isometric view of an old urban factory plot being marked for transfer, high contrast studio lighting, 16:9 aspect ratio.",
             "calculation_data": null,
-            "step_number": 1,
-            "audio_file": "dt/ch2/q32/sim_1.mp3",
-            "duration_seconds": 11.68,
-            "drive_audio_id": "1aT4c_UGBLJ0Hs4vcVEwnBcdxZcv7iAve",
-            "image_file": "dt/ch2/q32/sim_img_1.jpg"
+            "step_number": 1
           },
           {
             "step_id": "step_2",
             "step_order": 2,
-            "title": "Reinvestment in Non-Urban Area",
-            "metric_label": "Eligible Section 54G Reinvestment",
-            "metric_value": "₹ 27,00,000",
-            "voice_sync_text": "Non-urban area-യിൽ പുതിയ plant, machinery, building എന്നിവ വാങ്ങാൻ ₹27 Lakhs നിക്ഷേപിക്കുന്നു. ഇത് 3 years time limit-ൽ വരുന്നതിനാൽ Section 54G exemption ലഭിക്കും.",
-            "image_prompt": "A pristine high-tech industrial eco-park setup in a lush non-urban landscape with solar panels and modern factory architecture, cinematic lighting, 2.5D visual style.",
-            "calculation_data": null,
-            "step_number": 2,
-            "audio_file": "dt/ch2/q32/sim_2.mp3",
-            "duration_seconds": 12.2,
-            "drive_audio_id": "1_wCwKUs7wXK4tqepZ_rxUnfyqxcUX8st",
-            "image_file": "dt/ch2/q32/sim_img_2.jpg"
+            "title": "Transfer of Depreciable Plant & Machinery",
+            "metric_label": "Section 50 Deemed STCG",
+            "metric_value": "₹ 20,00,000",
+            "voice_sync_text": "അടുത്തതായി, depreciable plant and machinery transfer ചെയ്യുമ്പോൾ Section 50 പ്രകാരം Short-Term Capital Gain ഉണ്ടാകുന്നു.",
+            "image_prompt": "An isometric depiction of industrial heavy machinery being decommissioned and loaded onto transport trucks, crisp 3D vector style, 16:9 aspect ratio.",
+            "calculation_data": null
           },
           {
             "step_id": "step_3",
             "step_order": 3,
-            "title": "Tax Optimization Priority Set-Off",
-            "metric_label": "STCG Absorbed First",
+            "title": "Acquisition of Qualifying Assets in Non-Urban Area",
+            "metric_label": "Total New Asset Investment",
             "metric_value": "₹ 25,00,000",
-            "voice_sync_text": "Tax optimization തത്വം അനുസരിച്ച് ഈ ₹27 Lakhs exemption-ൽ നിന്ന് ₹25 Lakhs ആദ്യം Short Term Capital Gain-ൽ set off ചെയ്ത് STCG പൂജ്യമാക്കുന്നു.",
-            "image_prompt": "A sleek digital taxation ledger screen showing green allocation arrows deducting STCG liability first to zero, minimalist 2.5D isometric view.",
-            "calculation_data": null,
-            "step_number": 3,
-            "audio_file": "dt/ch2/q32/sim_3.mp3",
-            "duration_seconds": 11.72,
-            "drive_audio_id": "1xjRYOxOlQIdCR-UilDmqXMSEIpmsexza",
-            "image_file": "dt/ch2/q32/sim_img_3.jpg"
+            "voice_sync_text": "Non-urban area-യിൽ പുതിയ industrial plant and building വാങ്ങാൻ തുക ഉപയോഗിക്കുന്നു. ഇത് Section 54G qualifying asset ആണ്.",
+            "image_prompt": "An isometric view of a clean green modern factory under construction in a spacious non-urban countryside, photorealistic rendering, 16:9 aspect ratio.",
+            "calculation_data": null
           },
           {
             "step_id": "step_4",
             "step_order": 4,
-            "title": "Final Taxable Capital Gain Determination",
+            "title": "Tax-Optimal Exemption Allocation & Net Taxable Income",
             "metric_label": "Net Taxable LTCG",
-            "metric_value": "₹ 3,00,000",
-            "voice_sync_text": "ബാക്കിയുള്ള ₹2 Lakhs exemption, ₹5 Lakhs LTCG-ൽ set off ചെയ്യുന്നു. ബാക്കി ₹3 Lakhs Long Term Capital Gain 12.5% നിരക്കിൽ taxable ആകും.",
-            "image_prompt": "A final statutory computation dashboard highlighting net taxable LTCG under Section 112 with standard government tax seal graphics, photorealistic 2.5D visual.",
+            "metric_value": "₹ 5,00,000",
+            "voice_sync_text": "Section 54G exemption തുകയിൽ നിന്ന് ആദ്യം ₹20 Lakhs Short-Term Capital Gain എതിരെ മുഴുവനായി set off ചെയ്യുന്നു. ബാക്കി ₹5 Lakhs Long-Term Capital Gain-ൽ set off ചെയ്യുമ്പോൾ net taxable LTCG ₹5 Lakhs ആയി കുറയുന്നു.",
+            "image_prompt": "An analytical mathematical balance scale showing optimal allocation of exemption between STCG and LTCG, illuminated clean visual design, 16:9 aspect ratio.",
             "calculation_data": {
-              "formula": "Taxable LTCG = Total LTCG (₹ 5,00,000) - Unutilized Exemption (₹ 2,00,000)",
-              "result": "₹ 3,00,000 Taxable under Section 112"
-            },
-            "step_number": 4,
-            "audio_file": "dt/ch2/q32/sim_4.mp3",
-            "duration_seconds": 12.8,
-            "drive_audio_id": "1ZrCUCtZqnwmDPZhFrb0RKJal0HcktEWK",
-            "image_file": "dt/ch2/q32/sim_img_4.jpg"
+              "formula": "Net Chargeable Gain = (STCG + LTCG) - Section 54G Exemption",
+              "variables": {
+                "STCG_u_s_50": "₹ 20,00,000",
+                "LTCG_Land": "₹ 10,00,000",
+                "Total_Gain": "₹ 30,00,000",
+                "Sec_54G_Exemption": "₹ 25,00,000",
+                "STCG_Exempted": "₹ 20,00,000",
+                "LTCG_Exempted": "₹ 5,00,000",
+                "Taxable_STCG": "Nil",
+                "Taxable_LTCG_u_s_112": "₹ 5,00,000"
+              }
+            }
           }
         ],
         "intro_audio_file": "dt/ch2/q32/sim_intro.mp3",
-        "intro_dur": 3.84,
-        "intro_drive_audio_id": "1_2soN80kr1keJU4F_yTwPLauZpV1f9R4"
+        "intro_dur": 3.88,
+        "intro_drive_audio_id": "1BbQKdH2lq_vKy5pyy-3FKLO0wvrEv8Ka"
       },
       "explainer_presentation": {
-        "title": "Statutory Framework of Section 54G Exemption",
-        "badge": "§ 54G · Industrial Undertaking",
-        "doctrine": "Shifting of Industrial Undertaking from Urban to Non-Urban Area",
+        "title": "Section 54G Exemption & Depreciable Asset Dynamics",
+        "badge": "§ 54G · Sec 50 · Sec 112",
+        "doctrine": "Industrial Undertaking Shifting Tax Exemptions",
         "slides": [
           {
             "slide_order": 1,
-            "title": "Eligible vs Ineligible Assets",
-            "subtitle": "Scope of Section 54G Exemption",
+            "title": "Scope & Qualifying Prerequisites of Section 54G",
+            "subtitle": "Statutory relief for industrial relocation to non-urban areas",
             "layout": "statutory_rule",
             "image_required": false,
             "image_prompt": null,
-            "voice_sync_text": "Section 54G അനുസരിച്ച് urban area-യിൽ നിന്ന് shift ചെയ്യുമ്പോൾ eligible assets transfer ചെയ്ത് പുതിയ eligible assets-ൽ reinvest ചെയ്താൽ മാത്രമേ exemption ലഭിക്കൂ.",
+            "voice_sync_text": "Urban area-യിൽ നിന്ന് non-urban area-യിലേക്ക് industrial undertaking shift ചെയ്യുമ്പോൾ Section 54G പ്രകാരം ലഭിക്കുന്ന exemption-ന്റെ അടിസ്ഥാന തത്വങ്ങൾ നോക്കാം.",
             "cards": [
               {
-                "heading": "Eligible Capital Assets",
-                "badge": "ALLOWED",
+                "heading": "Qualifying Transfers",
+                "badge": "ELIGIBLE",
                 "points": [
-                  "Plant and Machinery used in the industrial undertaking.",
-                  "Land or Building or any right in land or building."
+                  "Transfer of plant, machinery, land, or building used for urban industrial undertaking.",
+                  "Shifting must be from an urban area to a non-urban area."
                 ]
               },
               {
-                "heading": "Ineligible Capital Assets",
-                "badge": "DISALLOWED",
+                "heading": "Reinvestment Window",
+                "badge": "TIMELINE",
                 "points": [
-                  "Furniture and Fixtures transferred or acquired.",
-                  "Vehicles and non-industrial general administrative assets."
+                  "Acquisition or construction within 1 year before or 3 years after transfer date.",
+                  "Covers new plant, machinery, land, building, and shifting costs."
                 ]
               }
             ],
@@ -13379,153 +13411,165 @@
           },
           {
             "slide_order": 2,
-            "title": "Statutory Time Limit & Reinvestment Criteria",
-            "subtitle": "Section 54G(1) Conditions",
+            "title": "Statutory Traps & Non-Qualifying Assets",
+            "subtitle": "Critical exceptions under Section 54G",
             "layout": "statutory_rule",
             "image_required": false,
             "image_prompt": null,
-            "voice_sync_text": "Reinvestment തുക original asset transfer ചെയ്യുന്നതിന് 1 year before അല്ലെങ്കിൽ 3 years after വാങ്ങുന്ന new assets-ൽ നിക്ഷേപിച്ചിരിക്കണം.",
+            "voice_sync_text": "Section 54G-ൽ Furniture and fixtures യോഗ്യമല്ല എന്ന് മനസ്സിലാക്കുക. ഇത് പരീക്ഷയിൽ സാധാരണ ചോദിക്കുന്ന ഒരു പ്രധാന trap ആണ്.",
             "cards": [
               {
-                "heading": "Time Window for Acquisition",
-                "badge": "TIMELINE",
+                "heading": "Furniture & Fixtures Exclusion",
+                "badge": "TRAP",
                 "points": [
-                  "Acquired/Purchased within 1 year before transfer date.",
-                  "Purchased or Constructed within 3 years after transfer date."
+                  "Transfer of furniture does NOT qualify for exemption under Section 54G.",
+                  "Investment in new furniture cannot be claimed as exempt cost."
                 ]
               },
               {
-                "heading": "Quantum of Exemption",
-                "badge": "LIMIT",
+                "heading": "Depreciable Block Treatment",
+                "badge": "SEC 50",
                 "points": [
-                  "Actual Cost of New Assets acquired.",
-                  "Or Capital Gains generated, whichever is lower."
-                ]
-              }
-            ],
-            "calculation_data": null,
-            "trap_data": null
-          },
-          {
-            "slide_order": 3,
-            "title": "Optimum Set-off Strategy for Tax Minimization",
-            "subtitle": "Integrating Section 50 STCG & Section 112 LTCG",
-            "layout": "statutory_rule",
-            "image_required": false,
-            "image_prompt": null,
-            "voice_sync_text": "Section 54G exemption പൊതുവായ തുകയായതിനാൽ, അത് ആദ്യം higher rate-ൽ tax ചെയ്യപ്പെടുന്ന Short Term Capital Gain-ൽ set off ചെയ്യുന്നതാണ് legal & tax optimal.",
-            "cards": [
-              {
-                "heading": "Priority 1: Short-Term Capital Gains",
-                "badge": "STEP 1",
-                "points": [
-                  "Depreciable assets transfer leads to STCG under Section 50.",
-                  "Exhaust Section 54G exemption first against STCG."
-                ]
-              },
-              {
-                "heading": "Priority 2: Long-Term Capital Gains",
-                "badge": "STEP 2",
-                "points": [
-                  "Non-depreciable assets like land yield LTCG.",
-                  "Apply residual balance of Section 54G exemption against LTCG."
+                  "Depreciable assets transfer yields Short-Term Capital Gain under Section 50.",
+                  "Retains STCG character regardless of holding period length."
                 ]
               }
             ],
             "calculation_data": null,
             "trap_data": {
-              "trap_title": "Sub-optimal Set-Off Mistake",
-              "trap_description": "Setting off Section 54G exemption first against LTCG leaves STCG exposed to higher tax rates, leading to excessive tax liability."
+              "trap_title": "Furniture Ineligibility Trap",
+              "correct_rule": "Furniture is excluded from Section 54G scope. Capital gain on furniture remains fully taxable."
             }
+          },
+          {
+            "slide_order": 3,
+            "title": "Optimal Priority of Exemption Set-Off",
+            "subtitle": "Maximizing tax efficiency under statutory provisions",
+            "layout": "statutory_rule",
+            "image_required": false,
+            "image_prompt": null,
+            "voice_sync_text": "Exemption തുക എപ്പോഴും higher tax rate ഉള്ള Short-Term Capital Gain-ന് എതിരെ ആദ്യം exhaust ചെയ്യണം. ബാക്കി തുക മാത്രം Long-Term Capital Gain-ന് എതിരെ set off ചെയ്യുക.",
+            "cards": [
+              {
+                "heading": "Priority 1: Short-Term Capital Gain",
+                "badge": "STEP 1",
+                "points": [
+                  "Apply Section 54G exemption first against Section 50 STCG.",
+                  "Stops taxation at standard applicable tax rates."
+                ]
+              },
+              {
+                "heading": "Priority 2: Long-Term Capital Gain",
+                "badge": "STEP 2",
+                "points": [
+                  "Apply balance unabsorbed Section 54G exemption against LTCG.",
+                  "Taxable balance LTCG is taxed at concessional rate under Section 112."
+                ]
+              }
+            ],
+            "calculation_data": null,
+            "trap_data": null
           }
         ]
       },
       "screenplay": {
-        "doctrine": "Section 54G Statutory Mechanism",
+        "doctrine": "Section 54G Capital Gain Exemption Framework",
         "beats": [
           {
             "beat_order": 1,
             "t_start": 0.0,
             "t_end": 4.5,
             "beat_type": "kinetic_headline",
-            "headline": "Section 54G: Industrial Undertaking Shifting Exemption",
-            "badge": "§ 54G Statutory Rule",
-            "subtext": "Exemption on shifting from urban to non-urban area",
+            "headline": "Section 54G: Industrial Undertaking Shifting",
+            "badge": "§ 54G Exemption",
+            "subtext": "Exemption on shifting from Urban to Non-Urban Area",
             "metric_chip": null,
-            "voice_sync_text": "Urban area-യിൽ നിന്നുള്ള industrial undertaking shifting-ലെ Capital Gains tax rules നമുക്ക് നോക്കാം.",
+            "voice_sync_text": "Section 54G പ്രകാരം industrial undertaking urban area-യിൽ നിന്ന് non-urban area-യിലേക്ക് shift ചെയ്യുമ്പോൾ capital gain exemption ലഭിക്കുന്നു.",
             "image_required": false,
             "image_prompt": null,
             "highlights": [
               {
-                "phrase": "industrial undertaking shifting",
+                "phrase": "urban area",
                 "time_sec": 1.5
+              },
+              {
+                "phrase": "non-urban area",
+                "time_sec": 2.8
               }
             ]
           },
           {
             "beat_order": 2,
             "t_start": 4.5,
-            "t_end": 9.0,
+            "t_end": 9.5,
             "beat_type": "statutory_trigger",
-            "headline": "Eligible vs Ineligible Assets Checklist",
-            "badge": "Asset Classification",
-            "subtext": "Plant, machinery, land & building are eligible; furniture is excluded",
+            "headline": "Eligible Assets vs Excluded Assets",
+            "badge": "Scope",
+            "subtext": "Plant, Machinery, Land & Building covered | Furniture EXCLUDED",
             "metric_chip": null,
-            "voice_sync_text": "Plant, machinery, land, building എന്നിവ qualify ചെയ്യുമ്പോൾ furniture-ന് Section 54G exemption ലഭിക്കില്ല.",
+            "voice_sync_text": "Plant, machinery, land, building എന്നിവ യോഗ്യമാണ്, എന്നാൽ Furniture transfers Section 54G-ൽ ഉൾപ്പെടില്ല.",
             "image_required": false,
             "image_prompt": null,
             "highlights": [
               {
-                "phrase": "furniture-ന് Section 54G exemption ലഭിക്കില്ല",
-                "time_sec": 6.0
+                "phrase": "Plant, machinery, land, building",
+                "time_sec": 0.8
+              },
+              {
+                "phrase": "Furniture transfers",
+                "time_sec": 3.2
               }
             ]
           },
           {
             "beat_order": 3,
-            "t_start": 9.0,
-            "t_end": 14.0,
+            "t_start": 9.5,
+            "t_end": 14.5,
             "beat_type": "visual_scene",
             "headline": "Reinvestment Window: 1 Year Before or 3 Years After",
-            "badge": "Statutory Timeline",
-            "subtext": "Acquisition or construction timing requirement",
+            "badge": "Timeline Rule",
+            "subtext": "Investment in new land, plant, building in non-urban area",
             "metric_chip": null,
-            "voice_sync_text": "Transfer-ന് 1 year before അല്ലെങ്കിൽ 3 years after new assets purchase ചെയ്തിരിക്കണം.",
+            "voice_sync_text": "Transfer നടന്ന തീയതിക്ക് 1 year before അല്ലെങ്കിൽ 3 years after ആയിരിക്കണം പുതിയ non-urban asset വാങ്ങേണ്ടത്.",
             "image_required": true,
-            "image_prompt": "An architectural calendar graphic overlay showing a 3-year timeline arrow connecting an urban factory building to a newly constructed rural green factory, 2.5D visual graphic.",
+            "image_prompt": "A modern non-urban eco-friendly industrial park being constructed with new green buildings, cinematic lighting, 16:9 aspect ratio.",
             "highlights": [
               {
-                "phrase": "1 year before അല്ലെങ്കിൽ 3 years after",
-                "time_sec": 10.8
+                "phrase": "1 year before",
+                "time_sec": 1.2
+              },
+              {
+                "phrase": "3 years after",
+                "time_sec": 2.6
               }
             ]
           },
           {
             "beat_order": 4,
-            "t_start": 14.0,
+            "t_start": 14.5,
             "t_end": 19.5,
             "beat_type": "statutory_trap",
-            "headline": "Tax Optimization: STCG vs LTCG Set-off Priority",
-            "badge": "Set-Off Order",
-            "subtext": "Absorb Section 50 STCG before Section 112 LTCG",
+            "headline": "Priority of Exemption Set-Off",
+            "badge": "Tax Optimization Benchmark",
+            "subtext": "Set off against STCG (Sec 50) first, then LTCG (Sec 112)",
             "metric_chip": null,
-            "voice_sync_text": "Section 54G exemption ആദ്യം Section 50 STCG-യിൽ set off ചെയ്യുന്നതാണ് tax minimization-ന് നല്ലത്.",
+            "voice_sync_text": "നികുതി ലാഭിക്കുന്നതിനായി Section 54G exemption ആദ്യം higher tax rate ഉള്ള Section 50 Short-Term Capital Gain-ന് എതിരെയാണ് set off ചെയ്യേണ്ടത്.",
             "image_required": false,
             "image_prompt": null,
             "highlights": [
               {
-                "phrase": "Section 50 STCG-യിൽ set off",
-                "time_sec": 16.5
+                "phrase": "Short-Term Capital Gain",
+                "time_sec": 3.1
               }
             ]
           }
         ]
       },
-      "total_duration": 79.71,
+      "total_duration": 101.06,
       "drive_folder_id": "1cJUtqvArhMmP_9hXWLxROVNdKdX7m8L2",
-      "total_points_count": 5,
-      "completed_points_count": 10,
-      "is_partially_complete": false
+      "total_points_count": 11,
+      "completed_points_count": 7,
+      "is_partially_complete": true
     },
     "ch2_q33": {
       "doctrine": "Section 112A Capital Gains & Grandfathering Mechanism",
