@@ -204,7 +204,7 @@ def align_screenplay_to_measured_audio(
                 tot_obj["at"] = round(b_start + tot_off, 2)
 
             if "callout" in b and isinstance(b["callout"], dict):
-                b["callout"]["at"] = round(b_start + dur * 0.5, 2)
+                b["callout"]["at"] = round(b_start + 1.2, 2)
 
         # 5. TAKEAWAY LAYOUT ALIGNMENT
         elif layout == "takeaway":
@@ -238,3 +238,96 @@ def generate_alignment_log_summary(screenplay: Dict[str, Any]) -> str:
         en = b.get("end", 0.0)
         lines.append(f"{bid}[{layout}]: {st:.1f}s-{en:.1f}s (d{(en-st):.1f}s)")
     return "\n".join(lines)
+
+def update_engine_fixture(qid: str, screenplay: Dict[str, Any]):
+    engine_path = os.path.join(PROJECT_ROOT, "redesign_demo", "frontend", "explainer_engine.js")
+    if not os.path.exists(engine_path):
+        return
+    with open(engine_path, "r", encoding="utf-8") as f:
+        code = f.read()
+
+    fixture_str = f'FIXTURES["{qid}"] = {json.dumps(screenplay, indent=2, ensure_ascii=False)};'
+    pattern = rf'FIXTURES\["{qid}"\]\s*=\s*\{{[\s\S]*?\n\s*\}};'
+    if re.search(pattern, code):
+        code = re.sub(pattern, fixture_str, code, count=1)
+    else:
+        anchor = 'FIXTURES["ch2_q14"] = FIXTURES["dt-c2-q14"];'
+        if anchor in code:
+            code = code.replace(anchor, f'{anchor}\n{fixture_str}')
+        else:
+            code += f"\n{fixture_str}\n"
+
+    with open(engine_path, "w", encoding="utf-8") as f:
+        f.write(code)
+
+def synthesize_and_align_screenplay_audio(
+    screenplay_obj: Dict[str, Any],
+    subject: str,
+    chapter_no: int,
+    q_num: int,
+    force_tts: bool = False
+) -> tuple:
+    """
+    1. Synthesizes studio-grade audio for each beat via Gemini Aoede TTS.
+    2. Stitches full audio into redesign_demo/data/audio/{qid}.mp3.
+    3. Runs Whisper acoustic transcription to extract exact word timestamps.
+    4. Aligns all screenplay elements to the measured audio.
+    5. Saves local screenplay JSON and updates engine fixtures.
+    Returns (aligned_screenplay, timing_summary_str).
+    """
+    from pipeline.phase3_audio import generate_gemini_audio
+    from pydub import AudioSegment
+
+    qid = f"{subject.lower()}-c{chapter_no}-q{q_num}"
+    cache_dir = os.path.join(PROJECT_ROOT, "redesign_demo", "build", qid, "cache", "gemini_clips")
+    os.makedirs(cache_dir, exist_ok=True)
+    beats = screenplay_obj.get("beats", [])
+
+    print(f"  [SCREENPLAY AUDIO] Synthesizing and aligning {len(beats)} beats for {qid}...")
+    clips = []
+    beat_transcripts = {}
+
+    for b in beats:
+        bid = b.get("id", "b1")
+        clip_path = os.path.join(cache_dir, f"{bid}.mp3")
+        txt = b.get("voice_sync_text", "")
+
+        if not force_tts and os.path.exists(clip_path) and os.path.getsize(clip_path) > 5000:
+            print(f"    [AUDIO CACHE] Reusing {bid}.mp3...")
+        else:
+            print(f"    [SYNTHESIZING AOEDE] Beat {bid}...")
+            generate_gemini_audio(txt, clip_path, voice_name="Aoede")
+
+        seg = AudioSegment.from_file(clip_path)
+        clips.append(seg)
+
+        # Transcribe with Whisper
+        transcript = transcribe_beat_clip(clip_path)
+        beat_transcripts[bid] = transcript
+
+    # Stitch audio
+    silence = AudioSegment.silent(duration=350)
+    full_audio = AudioSegment.empty()
+    for i, c in enumerate(clips):
+        full_audio += c
+        if i < len(clips) - 1:
+            full_audio += silence
+
+    out_audio_path = os.path.join(PROJECT_ROOT, "redesign_demo", "data", "audio", f"{qid}.mp3")
+    os.makedirs(os.path.dirname(out_audio_path), exist_ok=True)
+    full_audio.export(out_audio_path, format="mp3", bitrate="192k")
+    print(f"    [STITCHED AUDIO] Saved {out_audio_path} ({len(full_audio)/1000:.1f}s)")
+
+    # Align screenplay
+    aligned_sp = align_screenplay_to_measured_audio(screenplay_obj, beat_transcripts, sync_gap=0.35)
+    aligned_sp["audio_url"] = f"data/audio/{qid}.mp3"
+
+    # Save local screenplay JSON
+    sp_path = os.path.join(PROJECT_ROOT, "redesign_demo", "data", "screenplays", f"{qid}.json")
+    os.makedirs(os.path.dirname(sp_path), exist_ok=True)
+    with open(sp_path, "w", encoding="utf-8") as f:
+        json.dump(aligned_sp, f, indent=2, ensure_ascii=False)
+
+    update_engine_fixture(qid, aligned_sp)
+    timing_summary = generate_alignment_log_summary(aligned_sp)
+    return aligned_sp, timing_summary

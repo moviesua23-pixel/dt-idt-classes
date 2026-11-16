@@ -14,6 +14,14 @@ on:
         description: 'Specific Chapter number to process (leave blank for sequential)'
         required: false
         default: ''
+      question:
+        description: 'Specific Question number to process (e.g. 32)'
+        required: false
+        default: ''
+      force:
+        description: 'Force re-generation even if already exists (true/false)'
+        required: false
+        default: 'false'
       limit:
         description: 'Max new questions to process in this run (leave blank for unlimited)'
         required: false
@@ -58,8 +66,17 @@ jobs:
           SPREADSHEET_ID: ${{ secrets.SPREADSHEET_ID }}
         run: |
           CLI_ARGS=""
+          if [ -n "${{ github.event.inputs.subject }}" ] && [ "${{ github.event.inputs.subject }}" != "BOTH" ]; then
+            CLI_ARGS="$CLI_ARGS --subject ${{ github.event.inputs.subject }}"
+          fi
           if [ -n "${{ github.event.inputs.chapter }}" ]; then
             CLI_ARGS="$CLI_ARGS --chapter ${{ github.event.inputs.chapter }}"
+          fi
+          if [ -n "${{ github.event.inputs.question }}" ]; then
+            CLI_ARGS="$CLI_ARGS --question ${{ github.event.inputs.question }}"
+          fi
+          if [ "${{ github.event.inputs.force }}" = "true" ]; then
+            CLI_ARGS="$CLI_ARGS --force"
           fi
           if [ -n "${{ github.event.inputs.limit }}" ]; then
             CLI_ARGS="$CLI_ARGS --limit ${{ github.event.inputs.limit }}"
@@ -70,6 +87,7 @@ jobs:
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action Bot"
+          # Guardrail: Preserve redesign_demo/frontend/index.html 100% untouched
+          git checkout -- redesign_demo/frontend/index.html 2>/dev/null || true
           git add data/ redesign_demo/
           git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update: Sync data from cloud pipeline [skip ci]" && git push)
-
