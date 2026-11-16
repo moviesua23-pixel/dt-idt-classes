@@ -34,6 +34,7 @@ from pipeline.synthesize_discrete_points import (
     count_total_points,
     count_ready_points
 )
+from pipeline.pedagogical_screenplay_architect import build_full_screenplay_for_question
 from pipeline.pdf_question_indexer import (
     build_pdf_index,
     get_question_raw_text,
@@ -498,10 +499,42 @@ def run_pipeline(limit=None, target_chapter=None, target_question=None, target_s
                     'prov_md': formatted_provision_matrix
                 }
 
+            # Pedagogical Screenplay Architecture (Column K & Pedagogical Narration)
+            screenplay_obj = None
+            screenplay_json_str = ""
+            existing_sp_str = existing.get('screenplay', '') if existing else ''
+
+            if existing_sp_str and existing_sp_str.startswith('{'):
+                screenplay_json_str = existing_sp_str
+            else:
+                try:
+                    screenplay_obj = build_full_screenplay_for_question(
+                        subject=subject,
+                        ch_no=chapter_no,
+                        q_num=q_num,
+                        q_text=q_text,
+                        ans_text=ans_text,
+                        prov_matrix=formatted_provision_matrix
+                    )
+                    if screenplay_obj:
+                        screenplay_json_str = json.dumps(screenplay_obj, ensure_ascii=False)
+                        # Save local screenplay JSON
+                        sp_dir = os.path.join(PROJECT_ROOT, 'redesign_demo', 'data', 'screenplays')
+                        os.makedirs(sp_dir, exist_ok=True)
+                        sp_file = os.path.join(sp_dir, f"{subject.lower()}-c{chapter_no}-q{q_num}.json")
+                        with open(sp_file, 'w', encoding='utf-8') as spf:
+                            json.dump(screenplay_obj, spf, indent=2, ensure_ascii=False)
+                        print(f"  [SCREENPLAY SAVED] {sp_file}")
+                except Exception as ex_sp:
+                    print(f"  [WARN] Screenplay generation deferred: {ex_sp}")
+
             ready_count = count_ready_points(mm_data)
             total_count = count_total_points(mm_data)
+            timing_status = f"{ready_count}/{total_count} Audio Points Complete"
+            if screenplay_obj:
+                timing_status = f"{len(screenplay_obj.get('beats', []))} Beats Screenplay ({screenplay_obj.get('duration_sec', 0)}s) Complete"
 
-            # Build Row for Google Sheet
+            # Build 11-column Row for Google Sheet (Cols A to K)
             row = [
                 subject,
                 chapter_no,
@@ -512,13 +545,14 @@ def run_pipeline(limit=None, target_chapter=None, target_question=None, target_s
                 formatted_provision_matrix,
                 summary_json_str,
                 drive_folder_id,
-                f"{ready_count}/{total_count} Discrete Audio Points Complete"
+                timing_status,
+                screenplay_json_str
             ]
 
             # Upsert to Google Sheet
             upsert_row_to_sheets(row)
             completed_in_run += 1
-            print(f"  [DONE] Successfully saved {subject} Ch{chapter_no} Q{q_num} ({ready_count}/{total_count} points complete) to Google Sheets.")
+            print(f"  [DONE] Successfully saved {subject} Ch{chapter_no} Q{q_num} (11 columns with Screenplay) to Google Sheets.")
             export_sheets_to_local_cache()
 
             if limit and completed_in_run >= limit:
