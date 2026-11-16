@@ -357,9 +357,13 @@ def run_pipeline(limit=None, target_chapter=None, target_question=None, target_s
                 is_partial = parsed_mm.get('is_partially_complete', False)
                 status_low = existing.get('status', '').lower()
 
-                if not force and total_pts > 0 and ready_pts >= total_pts and not is_partial and 'paused' not in status_low:
-                    print(f"\n---> [{subject} Ch{chapter_no} Q{q_num} ({q_idx+1}/{total_questions})] Already 100% complete ({ready_pts}/{total_pts} discrete audio points). Skipping!")
+                has_screenplay = bool(existing.get('screenplay') and str(existing.get('screenplay')).strip().startswith('{'))
+                if not force and total_pts > 0 and ready_pts >= total_pts and not is_partial and 'paused' not in status_low and has_screenplay:
+                    print(f"\n---> [{subject} Ch{chapter_no} Q{q_num} ({q_idx+1}/{total_questions})] Already 100% complete with Screenplay. Skipping!")
                     continue
+                elif not force and total_pts > 0 and ready_pts >= total_pts and not has_screenplay:
+                    existing_mm = parsed_mm
+                    print(f"\n---> [{subject} Ch{chapter_no} Q{q_num} ({q_idx+1}/{total_questions})] Audio complete but missing Screenplay in Col K. Generating Screenplay...")
                 elif not force:
                     existing_mm = parsed_mm
                     print(f"\n---> [{subject} Ch{chapter_no} Q{q_num} ({q_idx+1}/{total_questions})] Found partial progress ({ready_pts}/{total_pts} points). Resuming...")
@@ -534,6 +538,20 @@ def run_pipeline(limit=None, target_chapter=None, target_question=None, target_s
             if screenplay_obj:
                 timing_status = f"{len(screenplay_obj.get('beats', []))} Beats Screenplay ({screenplay_obj.get('duration_sec', 0)}s) Complete"
 
+            col_h_narration_str = summary_json_str
+            if screenplay_obj and screenplay_obj.get('beats'):
+                narration_beats = []
+                for b in screenplay_obj.get('beats', []):
+                    narration_beats.append({
+                        'id': b.get('id'),
+                        'layout': b.get('layout'),
+                        'title': (b.get('title') or {}).get('text') or b.get('id'),
+                        'start': b.get('start', 0),
+                        'end': b.get('end', 0),
+                        'voice_sync_text': b.get('voice_sync_text', '')
+                    })
+                col_h_narration_str = json.dumps(narration_beats, ensure_ascii=False)
+
             # Build 11-column Row for Google Sheet (Cols A to K)
             row = [
                 subject,
@@ -543,7 +561,7 @@ def run_pipeline(limit=None, target_chapter=None, target_question=None, target_s
                 q_text,
                 ans_text,
                 formatted_provision_matrix,
-                summary_json_str,
+                col_h_narration_str,
                 drive_folder_id,
                 timing_status,
                 screenplay_json_str
@@ -552,7 +570,7 @@ def run_pipeline(limit=None, target_chapter=None, target_question=None, target_s
             # Upsert to Google Sheet
             upsert_row_to_sheets(row)
             completed_in_run += 1
-            print(f"  [DONE] Successfully saved {subject} Ch{chapter_no} Q{q_num} (11 columns with Screenplay) to Google Sheets.")
+            print(f"  [DONE] Successfully saved {subject} Ch{chapter_no} Q{q_num} (11 columns with Screenplay & Pedagogical Narration) to Google Sheets.")
             export_sheets_to_local_cache()
 
             if limit and completed_in_run >= limit:
