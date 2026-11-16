@@ -211,7 +211,13 @@ def generate_pedagogical_screenplay_plan(q_num: int, q_text: str, ans_text: str,
         provision_matrix=prov_matrix[:3000]
     )
 
-    models_to_try = ['gemini-2.5-flash', 'gemini-flash-latest', 'gemini-2.5-pro']
+    models_to_try = [
+        'gemini-3.5-flash',
+        'gemini-3.8-flash',
+        'gemini-3.5-flash-lite',
+        'gemini-3.1-flash-lite',
+        'gemini-3.1-pro-preview'
+    ]
     for model_name in models_to_try:
         def _call(client, m=model_name):
             resp = client.models.generate_content(
