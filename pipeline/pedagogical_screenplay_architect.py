@@ -211,22 +211,30 @@ def generate_pedagogical_screenplay_plan(q_num: int, q_text: str, ans_text: str,
         provision_matrix=prov_matrix[:3000]
     )
 
-    def _call(client):
-        resp = client.models.generate_content(
-            model='gemini-flash-latest',
-            contents=prompt,
-            config=types.GenerateContentConfig(
-                response_mime_type="application/json",
-                temperature=0.3
+    models_to_try = ['gemini-2.5-flash', 'gemini-flash-latest', 'gemini-2.5-pro']
+    for model_name in models_to_try:
+        def _call(client, m=model_name):
+            resp = client.models.generate_content(
+                model=m,
+                contents=prompt,
+                config=types.GenerateContentConfig(
+                    response_mime_type="application/json",
+                    temperature=0.3
+                )
             )
-        )
-        return json.loads(resp.text.strip())
+            return json.loads(resp.text.strip())
 
-    try:
-        return rotator.execute_with_retry(_call)
-    except Exception as e:
-        print(f"  [SCREENPLAY ARCHITECT ERROR] {e}")
-        return None
+        try:
+            res = rotator.execute_with_retry(_call)
+            if res and res.get('beats'):
+                print(f"  [SCREENPLAY ARCHITECT] Successfully generated screenplay using {model_name}")
+                return res
+        except Exception as e:
+            print(f"  [SCREENPLAY ARCHITECT] Model {model_name} failed: {e}. Trying fallback model...")
+            continue
+
+    print("  [SCREENPLAY ARCHITECT ERROR] All candidate models failed to generate screenplay plan.")
+    return None
 
 def build_full_screenplay_for_question(subject: str, ch_no: int, q_num: int, q_text: str, ans_text: str, prov_matrix: str) -> Optional[Dict[str, Any]]:
     qid = f"{subject.lower()}-c{ch_no}-q{q_num}"
