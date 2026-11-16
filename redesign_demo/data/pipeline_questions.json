@@ -399,6 +399,15 @@
       "question_text": "Following are the details of income provided by Mr. Singh, for financial year ended 315t March, 2026:\n\n- **(i)** | Rental income from property at Bangalore - ₹ 3 lakhs, Standard Rent - ₹ 2,50,000, Fair Rent - ₹ 2,80,080.\n\n- **(ii)** Municipal and water tax paid during the year: Current year ₹ 35,000, Arrears - ₹ 1,50,000.\n\n- **(iii)** Interest on loan borrowed towards major repairs to the property: < 1,50,000.\n\n- **(iv)** Arrears of rent of ₹ 30,000 received during year, which was not charged to tax in earlier years. Further, assessee furnished following additional information regarding sale of property at Chennai: ———— a a a\n\n- **(i)** Mr. Singh's father acquired a residential house in April 2006 for ₹ 1,25,000 and thereafter gifted this property to the assessee, Mr. Singh on 1* March, 2007.\n\n- **(ii)** The property, so gifted, was sold by Mr. Singh on 10% Augus₹ 2025. The consideration received was & 25,00,000.\n\n- **(iii)** Stamp duty charges paid by the purchaser at the time of registration @ 13% (as per statutory guidelines) was 7 3,90,000.\n\n- **(iv)** Out of the sale consideration received: fa) On 02.01.2026, the assessee had purchased two adjacent flats, in the same building, and made suitable modification to make it as one unit. The investment was made by separate sale deeds, amount being ₹ 8,00,000 and ₹ 7,00,000, respectively.\n\n- **(b)** On 10.10.2025, ₹ 10 lakhs was invested in bonds issued by National Highways Authority of India, but the allotment of the bonds was made on 1.2.2026. Compute Mr. Singh's taxable income for A.Y. 2026-27 assuming that he has exercised the option to shift out of the default tax regime under section 115BAC.",
       "answer_text": "Computation of taxable income of Mr. Singh\n\n| Particulars | ₹ |\n| :--- | :---: |\n| z | |\n| Income from house property | |\n| Gross Annual Value [Higher of Expected Rent & Actual Rent] | 3,00,000 |\n| Expected Rent [lower of Fair Rent and Standard Rent] | 2,90,000 |\n| Actual Ren₹ | 3,00,000 |\n| Less: Municipal taxes paid by Mr. Singh during the year (including | |\n| arrears) [₹ 35,000 + ₹ 1,50,000] | 1,85,000 |\n| Net Annual Value (NAV) | 1,15,000 |\n| Less: Deductions under section 24 | |\n\n- **(a)** 30% of NAV 34,500\n\n- **(b)** Interest on loan borrowed for major repairs 1,50,000 1,84,500 (69,500) Arrears of rent taxable under section 25A 30,000 Less: Deduction@30₹ 9,000 21,000 (48,500) Full value of consideration As per section 50C, the full value of consideration would be higher of - Actual Consideration 25,00,000 Stamp Duty Value [₹ 3,90,000/13%] 30,00,000 Since stamp duty value > 110% of actual consideration Less: Cost of acquisition Te 30,00,000 As per section 49(1), cost of acquisition of the residential house gifted by Mr. Singh\"s father to Mr. Singh would be the cost for which Mr. Singh\"s father acquired the asse₹ 1,25,000 28,75,000 Less: Exemption under section 54 (₹ 8,00,000 + ₹ 7,00,000) Purchase of residential house within stipulated time (within one year before or two years after the date of sale) [Where the flats are situated side by side & builder had effected necessary modification to make it as one house, assessee would be entitled to exemption under section 54 in respect of investment in both the flats, despite the fact that they were purchased by separate sale deeds] [CIT v. Ananda Basappa (2009) 331 ITR 211 (Kar.)] 15,00,000 Note: Since two adjacent flats are treated as one residential house, Mr. Singh can defer availing exemption under section 54 in respect of two residential houses (where capital gains does not exceed 7 2 crores) to a later assessment year. Exemption under section 54EC Investment in bonds of NHAI within six months from the date of transfer. Where the payment for bonds has been made within six month period, exemption under section 54EC would be available even if allotment of bonds was made after expiry of six months [Hindustan Unilever Ltd. v. DCIT (2010) 325 ITR 102 (Bom.)] 10,00,000 | 25,00,000 Long-term 3,75,000 Total Income (3,75,000 - 48,500) 3,26,500",
       "topic_id": "T_CH2_Q30"
+    },
+    {
+      "subject": "dt",
+      "chapter_number": 2,
+      "question_number": 31,
+      "question_title": "Taxation of Mutual Funds Capital Gains & Section 54F Exemption Framework",
+      "question_text": "Mr. Sanjay is a resident in India aged 55 years. He had an impressive investment portfolio in various mutual funds. He redeemed his entire mutual fund investment portfolio and bought a villa in Lonavala for ₹ 2.00 crores to spend rest of his life there. The details of mutual funds are as under: S.N.| Type of mutual Date of Date of Amount invested |Amount redeemed fund investment | redemption (in 7 lakhs) (in % lakhs) 1 BLR growth fund 03.04.2021 05.01.2026 120 140 2 | ABC Strategic fund | 04.05.2023 02.02.2026 46 50 3 ABD Midcap fund | 20.03.2025 10.02.2026 115 118 4 SBA Growth fund | 08.11.2022 12.03.2026 110 120 The funds stated a₹ 1 and 2 have invested 70% of their proceeds in debt instruments and funds stated a₹ 3 and 4 have invested 70% of their proceeds in equity shares of domestic companies. The investment pattern of funds remained unchanged over all the years. STT is paid at the time of acquisition and redemption of mutual fund, wherever applicable.\n\nYou are required to compute the capital gains chargeable to tax in the hands of Mr. Sanjay for A.Y. 2026-27. Capital Gains",
+      "answer_text": "Computation of capital gains of Mr. Sanjay\n\n| Particulars | ₹ |\n| :--- | :---: |\n| x | |\n| Redemption of BLR growth fund | |\n| Full value of consideration [Redemption value] | 1,40,00,000 |\n| Less: Cost of acquisition | 1,20,00,000 |\n| Long term capital gains [Since it is debt fund (as more than 65% of the | 20,00,000 |\n| proceeds are invested in debt instruments) and it was held by Mr. Sanjay | |\n| for more than 24 months immediately preceding the date of its transfer] | |\n| Redemption of ABC Strategic fund | |\n| Full value of consideration [Redemption value] | 50,00,000 |\n| Less: Cost of acquisition | 46,00,000 |\n| Short term capital gains [Since it is a specified mutual fund (as more | 4,00,000 |\n| than 65% of its proceeds are invested in debt instruments) which is | |\n| acquired on or after 1.4.2023, this fund would be considered as short- | |\n| term capital asset as per section 50AA irrespective of period of holding] | |\n| Redemption of ABD Midcap fund | |\n| Full value of consideration [Redemption value] | 1,18,00,000 |\n| Less: Cost of acquisition | |\n| 1.15,00,000 | |\n| Short term capital gains [Since it is equity-oriented fund (as more than | 3,00,000 |\n| 65% of its proceeds are invested in equity shares of domestic | |\n| companies) and it was held by Mr. Sanjay for not more than 12 months | |\n| immediately preceding the date of its transfer] | |\n| Redemption of SBA Growth fund | |\n| Full value of consideration [Redemption value] | 1,20,00,000 |\n| Less: Cost of acquisition | |\n| 1.10,00,000 | |\n| Long term capital gains [Since it is equity-oriented fund (as more than | 10,00,000 |\n| 65% of its proceeds are invested in equity shares of domestic | |\n| companies) and it was held by Mr. Sanjay for more than 12 months | |\n| immediately preceding the date of its transfer] | 37,00,000 |\n| Less: Exemption under section 54F | |\n| Capital gain arising on transfer of a long-term capital asset other than a | |\n| residential house shall not be chargeable to tax to the extent such capital | |\n| gain is invested in purchase of one residential house in India within one | |\n| year before or two years after date of transfer of original asset. | |\n| Therefore, in the present case, the exemption would be available only in | |\n| respect of long-term capital gains from redemption of BLR growth fund | |\n| and SBA Growth fund. | |\n| Exemption from long term capital gains from redemption of BLR shor₹ | 20,00,000 |\n| term fund [20,00,000 x 1,40,00,000/1,40,00,000] | |\n| a | |\n| Exemption from long term capital gains from redemption of SBA Growth | 5,00,000 |\n| fund [10,00,000 x 60,00,000 (2 crores - 1.40 crores) /1,20,00,000] | |\n| Capital gains chargeable to tax | 12,00,000 |",
+      "topic_id": "T_CH2_Q31"
     }
   ],
   "provisions": [
@@ -797,6 +806,15 @@
       "topic_title": "Integrated Tax Computation: House Property Provisions, Deemed Consideration & Capital Gains Exemptions",
       "provision_presentation_markdown": "### Statutory Summary Matrix: House Property & Capital Gains Framework\n\n| Head / Area | Statutory Provision | Operative Threshold / Statutory Condition | Tax Treatment / Legal Consequence |\n| :--- | :--- | :--- | :--- |\n| **House Property** | **Section 23 & 24** | Higher of Expected Rent & Actual Rent; Municipal taxes deducted on actual payment basis. | Net Annual Value (NAV) less 30% Standard Deduction under Section 24(a) and actual interest under Section 24(b). |\n| **Arrears of Rent** | **Section 25A** | Taxable in the year of receipt/realization, irrespective of property ownership. | Statutory deduction of 30% allowed; balance 70% taxable. |\n| **Cost of Gifted Asset** | **Section 49(1)** | Asset acquired by gift, deed, or inheritance. | Cost of acquisition is deemed to be the cost to the **previous owner**. |\n| **Deemed Consideration** | **Section 50C** | Stamp Duty Value (SDV) exceeds 110% of actual consideration. | **SDV is adopted** as the Full Value of Consideration. |\n| **Reinvestment Exemption** | **Section 54** | Investment in residential house within 1 yr prior or 2 yrs post transfer. | Full exemption up to capital gains; **adjacent flats modified into one unit** qualify (*CIT v. Ananda Basappa*). |\n| **Bonds Exemption** | **Section 54EC** | Investment in specified infrastructure bonds within 6 months (Max ₹ 50 Lakhs). | Exempt; **payment date governs eligibility** even if allotment occurs post 6 months (*Hindustan Unilever Ltd.*). |\n\n\n### Micro-Checklist of Statutory Rules & Judicial Benchmarks\n\n- **Municipal Taxes Deduction:** Deductible strictly on **actual payment basis** during the previous year, including payment of past arrears.\n- **Adjacent Units under Section 54:** Two adjacent residential flats purchased under separate sale deeds and combined into a single residential unit qualify as **one residential house** (*CIT v. Ananda Basappa*).\n- **Payment vs Allotment under Section 54EC:** Subscribing and making full payment within 6 months satisfies the statutory requirement, irrespective of delayed bond allotment (*Hindustan Unilever Ltd. v. DCIT*).\n\n> [!IMPORTANT]\n> **Section 50C Safe Harbour Rule:** If the Stamp Duty Value does not exceed **110% of the actual consideration**, the actual consideration received is taken as the Full Value of Consideration.",
       "drive_folder_id": "1x-piSWYrTv7a8FOhWuRm1Fezo00ARBxr"
+    },
+    {
+      "subject": "dt",
+      "chapter_number": 2,
+      "question_number": 31,
+      "topic_id": "T_CH2_Q31",
+      "topic_title": "Taxation of Mutual Funds Capital Gains & Section 54F Exemption Framework",
+      "provision_presentation_markdown": "### Statutory Summary Matrix: Mutual Funds & Section 54F\n\n| Category | Fund Criteria | Acquisition Date | Holding Threshold | Asset & Tax Nature |\n| :--- | :--- | :--- | :--- | :--- |\n| **Equity Oriented Fund** | Equity Exposure ≥ 65% | Any Date | > 12 Months | **LTCG** u/s 112A |\n| **Equity Oriented Fund** | Equity Exposure ≥ 65% | Any Date | ≤ 12 Months | **STCG** u/s 111A |\n| **Specified Mutual Fund** | Equity Exposure ≤ 35% | On/After 1st April 2023 | Irrelevant | **Deemed STCA** u/s 50AA |\n| **Debt Mutual Fund** | Equity Exposure < 65% | Before 1st April 2023 | > 36 Months / 24 Months | **LTCG** u/s 112 |\n\n\n### Core Statutory Conditions\n\n* **Section 50AA Deemed Short-Term Treatment**: Specified Mutual Funds (where investment in domestic equity shares is not more than 35%) acquired on or after 1st April 2023 are deemed to be Short-Term Capital Assets irrespective of period of holding.\n\n* **Section 54F Scope & Requisite Criteria**: Exemption is available **ONLY** against Long-Term Capital Gains arising from transfer of any long-term capital asset other than a residential house, provided investment is made in one residential house in India within 1 year before or 2 years after transfer.\n\n\n### Proportional Exemption Formula u/s 54F\n\n$$\\text{Exemption Amount} = \\text{Long-Term Capital Gain} \\times \\left( \\frac{\\text{Cost of New Residential House}}{\\text{Net Sale Consideration}} \\right)$$\n\n\n> [!WARNING] Section 54F Allocation Trap: Short-Term Capital Gains (including Section 50AA deemed STCG) are completely ineligible for Section 54F exemption. When multiple LTCG assets are sold, the new house investment is allocated sequentially up to the net consideration of each LTCG asset.",
+      "drive_folder_id": "1rdalCKdcjlcPmFdLsxTGraNij31WzUqa"
     }
   ],
   "mindmaps": {
@@ -12788,7 +12806,11 @@
               },
               "result": 3000000
             },
-            "step_number": 2
+            "step_number": 2,
+            "audio_file": "dt/ch2/q30/sim_2.mp3",
+            "duration_seconds": 18.88,
+            "drive_audio_id": "1JHGz2llZ1Zvp_98oOKnCmIKqe7LhPbUi",
+            "image_file": "dt/ch2/q30/sim_img_2.jpg"
           },
           {
             "step_id": "step_3",
@@ -12805,7 +12827,12 @@
                 "NHAI Bonds Payment": 1000000
               },
               "result": 2500000
-            }
+            },
+            "step_number": 3,
+            "audio_file": "dt/ch2/q30/sim_3.mp3",
+            "duration_seconds": 21.32,
+            "drive_audio_id": "1oAyEVriGN3MiG-qERCNqCeV1MKw6HdS5",
+            "image_file": "dt/ch2/q30/sim_img_3.jpg"
           },
           {
             "step_id": "step_4",
@@ -12826,7 +12853,12 @@
                 "Net Capital Gain": 400000
               },
               "result": 500000
-            }
+            },
+            "step_number": 4,
+            "audio_file": "dt/ch2/q30/sim_4.mp3",
+            "duration_seconds": 17.84,
+            "drive_audio_id": "1H6cELzCImERQj7kz0qIou0cIPLRfiewA",
+            "image_file": "dt/ch2/q30/sim_img_4.jpg"
           }
         ],
         "intro_audio_file": "dt/ch2/q30/sim_intro.mp3",
@@ -12835,8 +12867,448 @@
       },
       "total_duration": 126.36,
       "drive_folder_id": "1x-piSWYrTv7a8FOhWuRm1Fezo00ARBxr",
-      "total_points_count": 13,
-      "completed_points_count": 10,
+      "total_points_count": 8,
+      "completed_points_count": 13,
+      "is_partially_complete": false
+    },
+    "ch2_q31": {
+      "doctrine": "Taxation of Mutual Funds Capital Gains & Section 54F Exemption Framework",
+      "root": {
+        "id": "root",
+        "number": "1",
+        "title": "Mutual Funds Taxation & Section 54F",
+        "badge": "Sec 2(42A) · Sec 50AA · Sec 54F",
+        "voice_sync_text": "Mutual fund redemptions-ൽ Capital Gains tax apply ആകുന്നത് fund-ന്റെ nature, holding period, കൂടാതെ Section 50AA, Section 54F എന്നിവയുടെ statutory provisions അടിസ്ഥാനമാക്കിയാണ്.",
+        "t0": 0.0,
+        "t1": 11.8,
+        "pt_idx": 0,
+        "audio_file": "dt/ch2/q31/pt_0.mp3",
+        "drive_audio_id": "13rjbVLzVJ9JRIanBs6VT5oPDSmUHBquh"
+      },
+      "branches": [
+        {
+          "branch_id": "branch-1",
+          "branch_title": "Equity-Oriented Mutual Funds",
+          "badge": "Sec 2(42A) / Sec 112A",
+          "icon": "percent",
+          "points": [
+            {
+              "id": "beat-1-1",
+              "title": "Holding Period & Taxability",
+              "number": "1.1.1",
+              "badge": "12 Month Test",
+              "body": [
+                "Equity oriented funds invest at least 65 percent in equity shares of domestic companies.",
+                "If held for more than 12 months, it is a Long-Term Capital Asset taxable under Section 112A."
+              ],
+              "highlights": [
+                {
+                  "phrase": "at least 65 percent",
+                  "time_sec": 3.6
+                },
+                {
+                  "phrase": "more than 12 months",
+                  "time_sec": 6.5
+                },
+                {
+                  "phrase": "Long-Term Capital Asset",
+                  "time_sec": 11.1
+                }
+              ],
+              "table_data": null,
+              "voice_sync_text": "Domestic companies-ന്റെ equity shares-ൽ at least 65 percent invest ചെയ്യുന്ന funds-നെയാണ് Equity Oriented Funds എന്ന് വിളിക്കുന്നത്. ഇവ 12 months-ൽ കൂടുതൽ hold ചെയ്താൽ Long-Term Capital Asset ആയി മാറും.",
+              "spoken": true,
+              "t0": 12.8,
+              "t1": 27.23,
+              "pt_idx": 1,
+              "audio_file": "dt/ch2/q31/pt_1.mp3",
+              "dur": 13.96,
+              "duration_seconds": 13.96,
+              "drive_audio_id": "1okAWLDFdYQjpSoRtNoUmrisyW9xOjKFF"
+            }
+          ],
+          "flow_summary": [],
+          "t0": 12.8,
+          "t1": 27.23
+        },
+        {
+          "branch_id": "branch-2",
+          "branch_title": "Specified Mutual Funds u/s 50AA",
+          "badge": "Sec 50AA",
+          "icon": "shield",
+          "points": [
+            {
+              "id": "beat-2-1",
+              "title": "Deemed Short-Term Treatment",
+              "number": "2.1.1",
+              "badge": "Post 01.04.2023",
+              "body": [
+                "Specified mutual funds invest not more than 35 percent in domestic equity shares.",
+                "If acquired on or after 1st April 2023, gains are treated as deemed short-term capital gains."
+              ],
+              "highlights": [
+                {
+                  "phrase": "not more than 35 percent",
+                  "time_sec": 2.5
+                },
+                {
+                  "phrase": "on or after 1st April 2023",
+                  "time_sec": 6.8
+                },
+                {
+                  "phrase": "deemed short-term capital gains",
+                  "time_sec": 12.7
+                }
+              ],
+              "table_data": null,
+              "voice_sync_text": "Domestic equity shares-ൽ 35 percent-ൽ കൂടുതൽ investment ഇല്ലാത്ത Specified Mutual Funds 1st April 2023-ന് ശേഷമാണ് acquire ചെയ്തതെങ്കിൽ, holding period എന്തുതന്നെയായാലും Section 50AA പ്രകാരം deemed short-term capital gains ആയിരിക്കും.",
+              "spoken": true,
+              "t0": 29.23,
+              "t1": 45.87,
+              "pt_idx": 2,
+              "audio_file": "dt/ch2/q31/pt_2.mp3",
+              "dur": 16.6,
+              "duration_seconds": 16.6,
+              "drive_audio_id": "1uxR4e7FTGj07dzpZYXFdAqszLv-bKtNK"
+            }
+          ],
+          "flow_summary": [],
+          "t0": 29.23,
+          "t1": 45.87
+        },
+        {
+          "branch_id": "branch-3",
+          "branch_title": "Legacy Debt Mutual Funds",
+          "badge": "Pre 01.04.2023",
+          "icon": "scales",
+          "points": [
+            {
+              "id": "beat-3-1",
+              "title": "Grandfathered Debt Funds",
+              "number": "3.1.1",
+              "badge": "Legacy Rule",
+              "body": [
+                "Debt funds acquired before 1st April 2023 are excluded from Section 50AA.",
+                "Holding period exceeding threshold classifies the gain as long-term capital gain."
+              ],
+              "highlights": [
+                {
+                  "phrase": "before 1st April 2023",
+                  "time_sec": 2.0
+                },
+                {
+                  "phrase": "excluded from Section 50AA",
+                  "time_sec": 5.5
+                },
+                {
+                  "phrase": "long-term capital gain",
+                  "time_sec": 9.9
+                }
+              ],
+              "table_data": null,
+              "voice_sync_text": "1st April 2023-ന് മുമ്പ് acquired ചെയ്ത Debt Mutual Funds-ന് Section 50AA ബാധകമല്ല. അതിനാൽ, ആവശ്യമായ holding period പൂർത്തിയാക്കിയിട്ടുണ്ടെങ്കിൽ അവ Long-Term Capital Gains ആയി തന്നെ കണക്കാക്കും.",
+              "spoken": true,
+              "t0": 47.87,
+              "t1": 61.73,
+              "pt_idx": 3,
+              "audio_file": "dt/ch2/q31/pt_3.mp3",
+              "dur": 13.96,
+              "duration_seconds": 13.96,
+              "drive_audio_id": "10kswwawO5wxcTVQyx5aytaeHaoal4mxT"
+            }
+          ],
+          "flow_summary": [],
+          "t0": 47.87,
+          "t1": 61.73
+        },
+        {
+          "branch_id": "branch-4",
+          "branch_title": "Exemption under Section 54F",
+          "badge": "Sec 54F",
+          "icon": "calculator",
+          "points": [
+            {
+              "id": "beat-4-1",
+              "title": "Proportional Exemption Mechanism",
+              "number": "4.1.1",
+              "badge": "Proportional",
+              "body": [
+                "Exemption under Section 54F is available exclusively against long-term capital gains.",
+                "Calculated proportionately using formula cost of new house divided by net consideration."
+              ],
+              "highlights": [
+                {
+                  "phrase": "exclusively against long-term capital gains",
+                  "time_sec": 2.2
+                },
+                {
+                  "phrase": "Calculated proportionately",
+                  "time_sec": 6.5
+                },
+                {
+                  "phrase": "cost of new house divided by net consideration",
+                  "time_sec": 9.1
+                }
+              ],
+              "table_data": null,
+              "voice_sync_text": "Section 54F exemption ലഭിക്കുന്നത് Long-Term Capital Gains-ന് മാത്രമാണ്. Short-Term Capital Gains-ന് ഇത് ലഭിക്കില്ല. Exemption തുക, Cost of New House divided by Net Consideration എന്ന proportion-ൽ ആണ് calculate ചെയ്യുന്നത്.",
+              "spoken": true,
+              "t0": 63.73,
+              "t1": 79.66,
+              "pt_idx": 4,
+              "audio_file": "dt/ch2/q31/pt_4.mp3",
+              "dur": 15.64,
+              "duration_seconds": 15.64,
+              "drive_audio_id": "1Qspk7_lJHLGzuNkrq90E-iwsxrija3ST"
+            }
+          ],
+          "flow_summary": [],
+          "t0": 63.73,
+          "t1": 79.66
+        }
+      ],
+      "concept_simulation": {
+        "schema_version": "1.0",
+        "illustrative_only": true,
+        "doctrine_topic": "Mutual Fund Capital Gains & Section 54F Allocation",
+        "relevant_tax_year": "P.Y. 2025-26 / A.Y. 2026-27",
+        "statutory_assumptions": [
+          "Assessee redeems multiple mutual fund units and invests in a residential house.",
+          "Illustrative figures demonstrate Section 50AA applicability and Section 54F proportional exemption."
+        ],
+        "intro_voice": "ഇനി ഈ statutory principles ഒരു simple example വഴി മനസ്സിലാക്കാം.",
+        "steps": [
+          {
+            "step_id": "step_1",
+            "step_order": 1,
+            "title": "Specified Debt Fund Acquired Post 01.04.2023",
+            "metric_label": "Capital Gain Nature",
+            "metric_value": "Short-Term u/s 50AA",
+            "voice_sync_text": "ഒരു assessee 1st April 2023-ന് ശേഷം acquire ചെയ്ത debt fund redeem ചെയ്യുമ്പോൾ, Section 50AA പ്രകാരം അത് deemed Short-Term Capital Gain ആയി മാറുന്നു.",
+            "image_prompt": "A clean 2.5D isometric representation of a digital financial document labeled Section 50AA, showing a red tag for Short-Term Capital Gain on debt investments, soft studio lighting, high resolution 16:9 frame.",
+            "calculation_data": null
+          },
+          {
+            "step_id": "step_2",
+            "step_order": 2,
+            "title": "Legacy Debt Fund & Equity Fund Redemption",
+            "metric_label": "Total LTCG Arising",
+            "metric_value": "₹ 30,00,000",
+            "voice_sync_text": "മറ്റു രണ്ട് funds 1st April 2023-ന് മുമ്പ് വാങ്ങി long term hold ചെയ്തതുകൊണ്ട്, അവയിൽ നിന്ന് ₹ 30 Lakhs Long-Term Capital Gains ഉണ്ടാകുന്നു.",
+            "image_prompt": "An isometric visual showing two financial fund cards converting into green Long-Term Capital Gain tags on a sleek modern glass surface, illuminated financial dashboard context.",
+            "calculation_data": null
+          },
+          {
+            "step_id": "step_3",
+            "step_order": 3,
+            "title": "Investment in New Residential House u/s 54F",
+            "metric_label": "Investment Amount",
+            "metric_value": "₹ 2,00,000",
+            "voice_sync_text": "ഈ net consideration തുക ഉപയോഗിച്ച് ഒരു residential house വാങ്ങുമ്പോൾ, Section 54F പ്രകാരം exemption claim ചെയ്യാം.",
+            "image_prompt": "Architectural rendering of a modern luxury residential villa in isometric view, wrapped with glowing blue statutory checkmarks representing Section 54F compliance.",
+            "calculation_data": null
+          },
+          {
+            "step_id": "step_4",
+            "step_order": 4,
+            "title": "Proportional Exemption Computation",
+            "metric_label": "Taxable LTCG",
+            "metric_value": "₹ 5,00,000",
+            "voice_sync_text": "Section 54F proportional formula apply ചെയ്യുമ്പോൾ, eligible LTCG യിൽ നിന്ന് exemption കുറച്ച് ബാക്കി തുക മാത്രം taxable LTCG ആയി മാറുന്നു.",
+            "image_prompt": "An isometric taxation calculation screen displaying mathematical steps showing Section 54F deduction formula with final taxable capital gains output.",
+            "calculation_data": {
+              "headers": [
+                "Asset Type",
+                "Consideration",
+                "LTCG Amount",
+                "Sec 54F Exemption",
+                "Taxable Gain"
+              ],
+              "rows": [
+                [
+                  "Debt Fund (Pre-2023)",
+                  "₹ 1,40,00,000",
+                  "₹ 20,00,000",
+                  "₹ 20,00,000",
+                  "NIL"
+                ],
+                [
+                  "Equity Growth Fund",
+                  "₹ 1,20,00,000",
+                  "₹ 10,00,000",
+                  "₹ 5,00,000",
+                  "₹ 5,00,000"
+                ],
+                [
+                  "Specified Debt Fund",
+                  "₹ 50,00,000",
+                  "₹ 4,00,000 (STCG)",
+                  "NOT ELIGIBLE",
+                  "₹ 4,00,000 (STCG)"
+                ]
+              ]
+            }
+          }
+        ]
+      },
+      "explainer_presentation": {
+        "title": "Mutual Funds Tax Treatment & Section 54F Framework",
+        "badge": "§ 2(42A) · § 50AA · § 54F",
+        "doctrine": "Capital Gains on Mutual Fund Redemptions & Section 54F Interplay",
+        "slides": [
+          {
+            "slide_order": 1,
+            "title": "Classification Matrix of Mutual Funds",
+            "subtitle": "Equity vs Debt Exposure Rules",
+            "layout": "statutory_rule",
+            "image_required": false,
+            "image_prompt": null,
+            "voice_sync_text": "Mutual Funds-ന്റെ capital gain tax treatment പ്രധാനമായും fund-ന്റെ equity percentage-നെയും holding period-നെയും ആശ്രയിച്ചിരിക്കുന്നു.",
+            "cards": [
+              {
+                "heading": "Equity Oriented Mutual Funds",
+                "badge": "Equity ≥ 65%",
+                "points": [
+                  "Holding period > 12 months is classified as Long-Term Capital Asset.",
+                  "Holding period ≤ 12 months is classified as Short-Term Capital Asset."
+                ]
+              },
+              {
+                "heading": "Debt Oriented Mutual Funds",
+                "badge": "Equity < 65%",
+                "points": [
+                  "Acquired before 1st April 2023: Follows standard period of holding tests.",
+                  "Acquired on/after 1st April 2023: Governed by Section 50AA."
+                ]
+              }
+            ],
+            "calculation_data": null,
+            "trap_data": null
+          },
+          {
+            "slide_order": 2,
+            "title": "Section 50AA: Specified Mutual Funds Rule",
+            "subtitle": "Mandatory Deemed Short-Term Treatment",
+            "layout": "statutory_rule",
+            "image_required": false,
+            "image_prompt": null,
+            "voice_sync_text": "1st April 2023-ന് ശേഷം acquire ചെയ്ത 35 percent-ൽ താഴെ equity ഉള്ള Specified Mutual Funds എപ്പോഴും deemed short-term assets ആണ്.",
+            "cards": [
+              {
+                "heading": "Statutory Triggers u/s 50AA",
+                "badge": "Sec 50AA",
+                "points": [
+                  "Investment in equity shares of domestic companies is NOT more than 35 percent.",
+                  "Acquisition must be on or after 1st April 2023.",
+                  "Gains are deemed to be Short-Term Capital Gains irrespective of holding duration."
+                ]
+              }
+            ],
+            "calculation_data": null,
+            "trap_data": null
+          },
+          {
+            "slide_order": 3,
+            "title": "Section 54F Proportional Exemption Mechanics",
+            "subtitle": "Investment in Residential Property",
+            "layout": "statutory_rule",
+            "image_required": false,
+            "image_prompt": null,
+            "voice_sync_text": "Section 54F exemption ലഭിക്കുന്നത് Long-Term Capital Gains-ന് മാത്രമാണ്. Exemption proportional formula വഴിയാണ് determine ചെയ്യുന്നത്.",
+            "cards": [
+              {
+                "heading": "Eligibility & Formula",
+                "badge": "Sec 54F",
+                "points": [
+                  "Applies only to Long-Term Capital Assets other than a residential house.",
+                  "Must invest in 1 residential house in India within statutory timeframe.",
+                  "Exemption Formula: LTCG × (Cost of New House / Net Sale Consideration)."
+                ]
+              }
+            ],
+            "calculation_data": null,
+            "trap_data": null
+          }
+        ]
+      },
+      "screenplay": {
+        "doctrine": "Mutual Funds Tax Framework & Section 54F Exemption",
+        "beats": [
+          {
+            "beat_order": 1,
+            "t_start": 0.0,
+            "t_end": 4.5,
+            "beat_type": "kinetic_headline",
+            "headline": "Mutual Funds Taxation & Section 54F Exemption",
+            "badge": "§ 2(42A) · § 50AA · § 54F",
+            "subtext": "Equity Exposure, Acquisition Date & Capital Gains Allocation",
+            "metric_chip": null,
+            "voice_sync_text": "Mutual fund redemptions-ലെ Capital Gains calculation-ഉം Section 54F exemption-ഉം എങ്ങനെ പ്രവർത്തിക്കുന്നു എന്ന് നോക്കാം.",
+            "image_required": false,
+            "image_prompt": null,
+            "highlights": [
+              {
+                "phrase": "Mutual fund redemptions",
+                "time_sec": 0.8
+              },
+              {
+                "phrase": "Section 54F exemption",
+                "time_sec": 3.0
+              }
+            ]
+          },
+          {
+            "beat_order": 2,
+            "t_start": 4.5,
+            "t_end": 9.5,
+            "beat_type": "statutory_trigger",
+            "headline": "Section 50AA: Deemed Short-Term Treatment",
+            "badge": "Sec 50AA",
+            "subtext": "Equity exposure ≤ 35% acquired on/after 1st April 2023",
+            "metric_chip": "Deemed STCG",
+            "voice_sync_text": "1st April 2023-ന് ശേഷം acquire ചെയ്ത 35 percent-ൽ താഴെ equity ഉള്ള funds Section 50AA പ്രകാരം deemed short-term capital assets ആണ്.",
+            "image_required": false,
+            "image_prompt": null,
+            "highlights": [
+              {
+                "phrase": "35 percent-ൽ താഴെ equity",
+                "time_sec": 2.0
+              },
+              {
+                "phrase": "deemed short-term capital assets",
+                "time_sec": 4.2
+              }
+            ]
+          },
+          {
+            "beat_order": 3,
+            "t_start": 9.5,
+            "t_end": 14.5,
+            "beat_type": "statutory_trap",
+            "headline": "Section 54F Exemption Restriction",
+            "badge": "Sec 54F Trap",
+            "subtext": "STCG & Sec 50AA gains are EXCLUDED from exemption",
+            "metric_chip": null,
+            "voice_sync_text": "ശ്രദ്ധിക്കുക! Section 54F exemption Long-Term Capital Gains-ന് മാത്രമേ ലഭിക്കൂ. Short-Term Capital Gains-ന് ഇതിന്റെ benefit ലഭിക്കില്ല.",
+            "image_required": false,
+            "image_prompt": null,
+            "highlights": [
+              {
+                "phrase": "Long-Term Capital Gains-ന് മാത്രമേ ലഭിക്കൂ",
+                "time_sec": 1.8
+              },
+              {
+                "phrase": "benefit ലഭിക്കില്ല",
+                "time_sec": 4.0
+              }
+            ]
+          }
+        ]
+      },
+      "total_duration": 81.66,
+      "drive_folder_id": "1rdalCKdcjlcPmFdLsxTGraNij31WzUqa",
+      "total_points_count": 10,
+      "completed_points_count": 5,
       "is_partially_complete": true
     }
   },
