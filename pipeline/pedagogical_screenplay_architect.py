@@ -86,24 +86,23 @@ def generate_pedagogical_screenplay_plan(q_num: int, q_text: str, ans_text: str,
         answer_text=ans_text[:3000],
         provision_matrix=prov_matrix[:3000]
     )
-    for _ in range(len(rotator.keys)):
-        client = rotator.get_active_client()
-        try:
-            resp = client.models.generate_content(
-                model='gemini-flash-latest',
-                contents=prompt,
-                config=types.GenerateContentConfig(
-                    response_mime_type="application/json",
-                    temperature=0.3
-                )
+
+    def _call(client):
+        resp = client.models.generate_content(
+            model='gemini-flash-latest',
+            contents=prompt,
+            config=types.GenerateContentConfig(
+                response_mime_type="application/json",
+                temperature=0.3
             )
-            return json.loads(resp.text.strip())
-        except Exception as e:
-            if "429" in str(e) or "RESOURCE_EXHAUSTED" in str(e):
-                rotator.mark_active_exhausted()
-                continue
-            return None
-    return None
+        )
+        return json.loads(resp.text.strip())
+
+    try:
+        return rotator.execute_with_retry(_call)
+    except Exception as e:
+        print(f"  [SCREENPLAY ARCHITECT ERROR] {e}")
+        return None
 
 def build_full_screenplay_for_question(subject: str, ch_no: int, q_num: int, q_text: str, ans_text: str, prov_matrix: str) -> Optional[Dict[str, Any]]:
     qid = f"{subject.lower()}-c{ch_no}-q{q_num}"
