@@ -13086,7 +13086,8 @@
             "metric_value": "Short-Term u/s 50AA",
             "voice_sync_text": "ഒരു assessee 1st April 2023-ന് ശേഷം acquire ചെയ്ത debt fund redeem ചെയ്യുമ്പോൾ, Section 50AA പ്രകാരം അത് deemed Short-Term Capital Gain ആയി മാറുന്നു.",
             "image_prompt": "A clean 2.5D isometric representation of a digital financial document labeled Section 50AA, showing a red tag for Short-Term Capital Gain on debt investments, soft studio lighting, high resolution 16:9 frame.",
-            "calculation_data": null
+            "calculation_data": null,
+            "step_number": 1
           },
           {
             "step_id": "step_2",
@@ -13149,7 +13150,10 @@
               ]
             }
           }
-        ]
+        ],
+        "intro_audio_file": "dt/ch2/q31/sim_intro.mp3",
+        "intro_dur": 3.92,
+        "intro_drive_audio_id": "1zWovIa01XGnqXVxeQWNt_bIWekU9sodt"
       },
       "explainer_presentation": {
         "title": "Mutual Funds Tax Treatment & Section 54F Framework",
@@ -13308,7 +13312,7 @@
       "total_duration": 81.66,
       "drive_folder_id": "1rdalCKdcjlcPmFdLsxTGraNij31WzUqa",
       "total_points_count": 10,
-      "completed_points_count": 5,
+      "completed_points_count": 6,
       "is_partially_complete": true
     }
   },
