@@ -206,7 +206,7 @@ const TEMPLATES = {
     if (b.subtitle) words(ctx, h("sub", el), b.subtitle.text || b.subtitle, b.subtitle.at || (b.start + 0.8));
     const pointsList = b.points || (b.rules || []).map((r, i) => ({
       num: r.num || (r.step || (i + 1)),
-      text: r.text || r.rule || r,
+      text: r.text || r.rule || (r.heading ? `<strong>${r.heading}</strong>: ${r.body || ''}` : r),
       at: r.at || (b.start + 0.8 + i * 0.5)
     }));
 
@@ -416,8 +416,8 @@ const TEMPLATES = {
     const limitText = b.limit ? b.limit.text : (md.labels?.threshold_label || "Statutory Ceiling / Threshold");
     const readingValNum = b.reading ? b.reading.value : (md.current_val || 0);
     const readingText = b.reading ? b.reading.text : (md.labels?.current_label || "Eligible Reinvestment");
-    const limitAt = b.limit?.at || (b.start + 0.8);
-    const readingAt = b.reading?.at || (b.start + 1.4);
+    const limitAt = b.limit?.at || (md.at || (b.start + 0.8));
+    const readingAt = b.reading?.at || (md.at ? md.at + 0.5 : (b.start + 1.4));
 
     const gaugeBox = h("meter-gauge", meterWrap);
     const track = h("meter-track", gaugeBox);
@@ -477,7 +477,7 @@ const TEMPLATES = {
           </div>
           <div class="num" style="font-size:0.95rem;font-weight:800;color:var(--ink)">${inr(it.val || 0)}</div>
         `;
-        fade(ctx, card, b.start + 1.0 + idx * 0.4, 8, 0.4);
+        fade(ctx, card, (it.at !== undefined ? it.at : (b.start + 1.0 + idx * 0.4)), 8, 0.4);
       });
     }
 
@@ -536,7 +536,7 @@ const TEMPLATES = {
 
     const totObj = b.total || b.net_total;
     if (totObj) {
-      const totValNum = totObj.value !== undefined ? totObj.value : (totObj.amount !== undefined ? totObj.amount : (totObj.taxable_amount || 0));
+      const totValNum = totObj.value !== undefined ? totObj.value : (totObj.val !== undefined ? totObj.val : (totObj.amount !== undefined ? totObj.amount : (totObj.taxable_amount || 0)));
       const totLblText = totObj.label || totObj.particulars || "Taxable Capital Gain";
       const totAt = totObj.at || (b.start + 0.6 + rowsList.length * 0.4 + 0.5);
 
@@ -943,6 +943,17 @@ class Explainer {
     if (this.audio) this.audio.pause();
     this.stopVirtualClock();
     cancelAnimationFrame(this.raf);
+  }
+
+  seek(t) {
+    const target = Math.max(0, Math.min(this.sp?.duration_sec || 1000, Number(t) || 0));
+    if (this.audio) {
+      try { this.audio.currentTime = target; } catch(e) {}
+    }
+    this._virtualTime = target;
+    this._mockTime = target;
+    if (this.scrub) this.scrub.value = target;
+    this.render();
   }
 
   startVirtualClock() {
@@ -2172,7 +2183,7 @@ window.EXPLAINER_SCREENPLAYS["ch2_q25"] = FIXTURES["dt-c2-q25"];
 FIXTURES["dt-c2-q32"] = {
   "question_id": "dt-c2-q32",
   "audio_url": "data/audio/dt-c2-q32.mp3",
-  "duration_sec": 125.8,
+  "duration_sec": 125.4,
   "sync_offset_sec": 0.0,
   "context_pill": "Section 54G | Shifting of Industrial Undertaking",
   "fallback": false,
@@ -2183,7 +2194,7 @@ FIXTURES["dt-c2-q32"] = {
       "voice_sync_text": "Makkale, Gama Ltd avarude industrial undertaking urban corporation limitsil ninnu non-urban areayilekk shift cheyyukayanu. Shifting processil avaru Land, Building, Plant & Machinery, pinne Furniture vare vilkkukayum puthiyath vangukayum cheythu. Pakshe Section 54G il oru valiya trap undu. Athu manassilakkiyillel examil marks pokum!",
       "title": {
         "text": "Asset Eligibility Filter under Section 54G",
-        "at": 0.5
+        "at": 0.3
       },
       "story_steps": [
         {
@@ -2191,12 +2202,12 @@ FIXTURES["dt-c2-q32"] = {
           "title": "Urban to Non-Urban Shifting",
           "sub": "Gama Ltd transfers industrial undertaking assets",
           "val": 4500000,
-          "at": 2.0
+          "at": 1.32
         }
       ],
       "divider": {
         "text": "Scope of Section 54G: Specified Assets Only",
-        "at": 5.0
+        "at": 7.52
       },
       "branches": [
         {
@@ -2205,17 +2216,18 @@ FIXTURES["dt-c2-q32"] = {
           "facts": [
             {
               "text": "Plant & Machinery, Land, or Building",
-              "at": 7.0
+              "at": 9.94
             },
             {
               "text": "Both transfer & reinvestment qualify u/s 54G",
-              "at": 9.5
+              "at": 11.92
             }
           ],
           "outcome": {
             "text": "Eligible for Section 54G Exemption",
-            "at": 12.0
-          }
+            "at": 12.8
+          },
+          "at": 9.5
         },
         {
           "side": "right",
@@ -2223,24 +2235,25 @@ FIXTURES["dt-c2-q32"] = {
           "facts": [
             {
               "text": "Furniture & Fixtures, Office Appliances",
-              "at": 7.0
+              "at": 13.32
             },
             {
               "text": "Neither sale nor new purchase qualifies",
-              "at": 9.5
+              "at": 14.5
             }
           ],
           "outcome": {
             "text": "No Exemption! Full STCG Taxable",
-            "at": 12.0
-          }
+            "at": 15.5
+          },
+          "at": 13.0
         }
       ],
       "result_card": {
         "badge": "Key Exclusion",
         "title": "Furniture STCG Isolated",
         "val": 100000,
-        "at": 15.0
+        "at": 16.12
       },
       "start": 0.0,
       "end": 23.4
@@ -2251,20 +2264,21 @@ FIXTURES["dt-c2-q32"] = {
       "voice_sync_text": "Section 54G clear aayi parayunnu: Capital Gain arose from transfer of machinery, plant, building, or land used for the purpose of an industrial undertaking situated in an urban area. Assessee 1 year before or 3 years after the date of transfer eligible assets purchase cheythal, deduction kittum.",
       "title": {
         "text": "Statutory Mandate: Section 54G(1)",
-        "at": 0.5
+        "at": 23.95
       },
       "quote": {
         "text": "Where the capital gain arises from the transfer of a capital asset, being plant, machinery, land or building or any rights in building or land, used for the purpose of an industrial undertaking situated in an urban area... and the assessee has within a period of one year before or three years after the date on which the transfer took place purchased new machinery or plant or acquired building or land...",
         "citation": "Section 54G(1) of the Income-tax Act, 1961",
-        "emphasis": "plant, machinery, land or building... 1 year before or 3 years after"
+        "emphasis": "plant, machinery, land or building... 1 year before or 3 years after",
+        "at": 24.25
       },
       "context_bubble": {
         "badge": "Time Horizon",
         "note": "Reinvestment Window: July 2026 acquisition satisfies the 'within 3 years after March 2026' requirement.",
-        "at": 6.0
+        "at": 38.71
       },
-      "start": 23.75,
-      "end": 46.91
+      "start": 23.65,
+      "end": 46.81
     },
     {
       "id": "b3",
@@ -2272,7 +2286,7 @@ FIXTURES["dt-c2-q32"] = {
       "voice_sync_text": "Nammude total eligible investment pool ethrayanu? Land Rs 4 Lakh, Building Rs 7 Lakh, Plant & Machinery Rs 17 Lakh. Total Rs 28 Lakhs! Note cheyyuka, Furniture-nte Rs 2 Lakh ivide add cheyyan padilla. Ee Rs 28 Lakhs namukk STCG-kkum LTCG-kkum ethirayi set-off cheyyam.",
       "title": {
         "text": "Section 54G Eligible Investment Reinvestment Pool",
-        "at": 0.5
+        "at": 47.36
       },
       "meter_display": {
         "min_val": 0,
@@ -2284,32 +2298,42 @@ FIXTURES["dt-c2-q32"] = {
           "start": "₹ 0",
           "threshold_label": "STCG Threshold: ₹ 25L",
           "current_label": "Eligible Reinvestment: ₹ 28L"
-        }
+        },
+        "at": 57.4
       },
       "breakdown": [
         {
           "label": "New Land Acquired",
           "val": 400000,
-          "status": "Qualifies"
+          "status": "Qualifies",
+          "at": 50.96
         },
         {
           "label": "New Building Acquired",
           "val": 700000,
-          "status": "Qualifies"
+          "status": "Qualifies",
+          "at": 53.08
         },
         {
           "label": "New Plant & Machinery",
           "val": 1700000,
-          "status": "Qualifies"
+          "status": "Qualifies",
+          "at": 54.94
         },
         {
           "label": "New Furniture Purchased",
           "val": 200000,
-          "status": "Ineligible (Excluded)"
+          "status": "Ineligible (Excluded)",
+          "at": 59.72
         }
       ],
-      "start": 47.26,
-      "end": 70.3
+      "start": 47.06,
+      "end": 70.1,
+      "outcome": {
+        "text": "Eligible for Set-off against STCG & LTCG",
+        "at": 64.12,
+        "tone": "ok"
+      }
     },
     {
       "id": "b4",
@@ -2317,71 +2341,81 @@ FIXTURES["dt-c2-q32"] = {
       "voice_sync_text": "Tax optimizationte golden trick ivideyanu! Act-il pro-rata set-off niyamam illa. Assessee-kk beneficial aaya reethiyil exemption exhaust cheyyam. Athukondu higher tax bracket ulla Short-term Capital Gain first wipe out cheyyanam. Building & Plant STCG total Rs 25 Lakhs poornnamayum Section 54G vechu Nil aakki. Balance Rs 3 Lakhs Land-nte Long-term Capital Gain-il ninnu kurachu. So, final taxable amount just Rs 2 Lakhs mathram!",
       "title": {
         "text": "Computation of Taxable Capital Gains for AY 2026-27",
-        "at": 0.5
+        "at": 70.65
       },
       "ledger_rows": [
         {
           "label": "Building STCG u/s 50 (₹18L - WDV ₹4L)",
           "amount": 1400000,
           "type": "income",
-          "note": "Depreciable Asset u/s 50"
+          "note": "Depreciable Asset u/s 50",
+          "at": 85.41
         },
         {
           "label": "Plant & Machinery STCG u/s 50 (₹16L - WDV ₹5L)",
           "amount": 1100000,
           "type": "income",
-          "note": "Depreciable Asset u/s 50"
+          "note": "Depreciable Asset u/s 50",
+          "at": 86.43
         },
         {
           "label": "Total Deemed STCG Eligible for Section 54G",
           "amount": 2500000,
           "type": "subtotal",
-          "note": "Taxable at normal corporate tax rates"
+          "note": "Taxable at normal corporate tax rates",
+          "at": 87.51
         },
         {
           "label": "Less: Section 54G Exemption (Priority 1: Against STCG)",
           "amount": -2500000,
           "type": "deduction",
-          "note": "Exhausted against high-tax STCG first"
+          "note": "Exhausted against high-tax STCG first",
+          "at": 89.43
         },
         {
           "label": "Net STCG on Industrial Assets",
           "amount": 0,
           "type": "subtotal",
-          "note": "Fully Exempt"
+          "note": "Fully Exempt",
+          "at": 91.07
         },
         {
           "label": "Land LTCG (Sale ₹8L - Cost ₹4L)",
           "amount": 400000,
           "type": "income",
-          "note": "Non-depreciable Long-term asset"
+          "note": "Non-depreciable Long-term asset",
+          "at": 91.97
         },
         {
           "label": "Less: Balance Section 54G Exemption (₹28L - ₹25L)",
           "amount": -300000,
           "type": "deduction",
-          "note": "Remaining balance set off against LTCG"
+          "note": "Remaining balance set off against LTCG",
+          "at": 93.95
         },
         {
           "label": "Taxable LTCG on Land (Taxable @ 12.5% u/s 112)",
           "amount": 100000,
           "type": "taxable",
-          "note": "Concessional tax rate"
+          "note": "Concessional tax rate",
+          "at": 95.19
         },
         {
           "label": "Furniture STCG (Sale ₹3L - WDV ₹2L)",
           "amount": 100000,
           "type": "taxable",
-          "note": "No 54G Exemption allowed for Furniture"
+          "note": "No 54G Exemption allowed for Furniture",
+          "at": 95.8
         }
       ],
       "net_total": {
         "label": "Total Taxable Capital Gains",
         "val": 200000,
-        "detail": "₹1,00,000 LTCG @ 12.5% + ₹1,00,000 STCG @ Normal Rates"
+        "detail": "₹1,00,000 LTCG @ 12.5% + ₹1,00,000 STCG @ Normal Rates",
+        "at": 97.91
       },
-      "start": 70.65,
-      "end": 99.69
+      "start": 70.35,
+      "end": 99.39
     },
     {
       "id": "b5",
@@ -2389,27 +2423,30 @@ FIXTURES["dt-c2-q32"] = {
       "voice_sync_text": "Exam hall-il orthu vekkenda 3 Golden Rules: Onnamathathu, Furniture-nu Section 54G il sthanamilla. Randamathathu, Section 50 prakaram ulla STCG-kkum Section 54G exemption valid aanu. Moonnamathathu, tax liability minimize cheyyan Section 54G deduction aadyam STCG-kk ethireyum, balance LTCG-kk ethireyum set-off cheyyam!",
       "title": {
         "text": "3 Golden Rules for Section 54G Mastery",
-        "at": 0.5
+        "at": 99.94
       },
       "rules": [
         {
           "num": "01",
           "heading": "Strict Asset Basket (Furniture Excluded)",
-          "body": "Section 54G applies strictly to Plant, Machinery, Land, and Building. Capital gains on Furniture cannot be exempted, and reinvestment in Furniture does not count towards the eligible investment."
+          "body": "Section 54G applies strictly to Plant, Machinery, Land, and Building. Capital gains on Furniture cannot be exempted, and reinvestment in Furniture does not count towards the eligible investment.",
+          "at": 103.48
         },
         {
           "num": "02",
           "heading": "Section 50 Deemed STCG is Eligible",
-          "body": "Even though Section 50 deems depreciable assets as Short-Term Capital Gains, Section 54G exemption is fully applicable against such deemed STCG (established in landmark jurisprudence and CBDT circulars)."
+          "body": "Even though Section 50 deems depreciable assets as Short-Term Capital Gains, Section 54G exemption is fully applicable against such deemed STCG (established in landmark jurisprudence and CBDT circulars).",
+          "at": 107.82
         },
         {
           "num": "03",
           "heading": "Most Beneficial Set-Off Ordering",
-          "body": "The statute does not compel pro-rata apportionment. Always exhaust Section 54G exemption against Short-Term Capital Gains first (normal tax rate) before offsetting Long-Term Capital Gains (concessional 12.5% rate u/s 112)."
+          "body": "The statute does not compel pro-rata apportionment. Always exhaust Section 54G exemption against Short-Term Capital Gains first (normal tax rate) before offsetting Long-Term Capital Gains (concessional 12.5% rate u/s 112).",
+          "at": 114.82
         }
       ],
-      "start": 100.04,
-      "end": 125.8
+      "start": 99.64,
+      "end": 125.4
     }
   ]
 };

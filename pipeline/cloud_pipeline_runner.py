@@ -218,9 +218,8 @@ def export_sheets_to_local_cache():
                 json.dump(export_data, f, ensure_ascii=False, indent=2)
         print("  [CACHE EXPORTED] Saved latest pipeline questions to local cache JSON.")
 
-        # Embed latest snapshot into HTML files so offline file:/// browsing always has latest questions
+        # Embed latest snapshot into HTML files (strictly excluding untouched index.html)
         html_files = [
-            os.path.join(PROJECT_ROOT, 'redesign_demo', 'frontend', 'index.html'),
             os.path.join(PROJECT_ROOT, 'redesign_demo', 'frontend', 'index_with_concept_video.html')
         ]
         pattern = r'(<script type="application/json" id="pipeline-data">)[\s\S]*?(</script>)'
