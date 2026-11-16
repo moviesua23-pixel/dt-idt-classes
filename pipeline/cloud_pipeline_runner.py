@@ -107,7 +107,7 @@ def upsert_row_to_sheets(row_values):
         body = {'values': [row_values]}
         if target_row_idx:
             # In-place update of existing row
-            range_to_update = f'Sheet1!A{target_row_idx}:J{target_row_idx}'
+            range_to_update = f'Sheet1!A{target_row_idx}:K{target_row_idx}'
             sheets_service.spreadsheets().values().update(
                 spreadsheetId=SPREADSHEET_ID,
                 range=range_to_update,
@@ -139,7 +139,7 @@ def export_sheets_to_local_cache():
     try:
         res = sheets_service.spreadsheets().values().get(
             spreadsheetId=SPREADSHEET_ID,
-            range='Sheet1!A:J'
+            range='Sheet1!A:K'
         ).execute()
         rows = res.get('values', [])
         if not rows or len(rows) <= 1:
@@ -149,7 +149,8 @@ def export_sheets_to_local_cache():
             "catalog": {"subject": "Direct Tax", "total_chapters": 25},
             "questions": [],
             "provisions": [],
-            "mindmaps": {}
+            "mindmaps": {},
+            "screenplays": {}
         }
         for r in rows[1:]:
             if len(r) < 3:
@@ -169,6 +170,7 @@ def export_sheets_to_local_cache():
             prov_md = str(r[6]) if len(r) > 6 else ""
             mm_json_str = str(r[7]) if len(r) > 7 else ""
             drive_folder = str(r[8]) if len(r) > 8 else ""
+            screenplay_str = str(r[10]) if len(r) > 10 else ""
 
             if mm_json_str and (mm_json_str.startswith('{') or '"branches"' in mm_json_str):
                 try:
@@ -176,6 +178,13 @@ def export_sheets_to_local_cache():
                     export_data['mindmaps'][f"ch{ch}_q{qn}"] = mm_obj
                     if ch == 1:
                         export_data['mindmaps'][f"q{qn}"] = mm_obj
+                except Exception:
+                    pass
+
+            if screenplay_str and screenplay_str.startswith('{'):
+                try:
+                    sp_obj = json.loads(screenplay_str)
+                    export_data['screenplays'][f"{subj.lower()}-c{ch}-q{qn}"] = sp_obj
                 except Exception:
                     pass
 
@@ -240,7 +249,7 @@ def fetch_existing_sheet_database():
     try:
         res = sheets_service.spreadsheets().values().get(
             spreadsheetId=SPREADSHEET_ID,
-            range='Sheet1!A:J'
+            range='Sheet1!A:K'
         ).execute()
         rows = res.get('values', [])
         db = {}
@@ -260,6 +269,7 @@ def fetch_existing_sheet_database():
                 summary_json_str = r[7] if len(r) > 7 else ""
                 drive_id = r[8] if len(r) > 8 else ""
                 status_str = r[9] if len(r) > 9 else ""
+                screenplay_str = r[10] if len(r) > 10 else ""
                 db[(s, c, q)] = {
                     'row_idx': idx,
                     'topic': topic,
@@ -268,7 +278,8 @@ def fetch_existing_sheet_database():
                     'prov_md': prov_md,
                     'summary_json': summary_json_str,
                     'drive_id': drive_id,
-                    'status': status_str
+                    'status': status_str,
+                    'screenplay': screenplay_str
                 }
         return db
     except Exception as e:

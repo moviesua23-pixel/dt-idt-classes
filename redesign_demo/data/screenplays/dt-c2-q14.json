@@ -1,0 +1,201 @@
+{
+  "question_id": "dt-c2-q14",
+  "audio_url": "data/audio/dt-c2-q14.mp3",
+  "duration_sec": 46.2,
+  "sync_offset_sec": 0.0,
+  "context_pill": "\u00a7 45(2) \u00b7 Conversion into Stock-in-Trade",
+  "beats": [
+    {
+      "id": "b1",
+      "layout": "headline",
+      "start": 0.0,
+      "end": 6.0,
+      "voice_sync_text": "Section 45(2) \u0d2a\u0d4d\u0d30\u0d15\u0d3e\u0d30\u0d02 \u0d12\u0d30\u0d41 Capital Asset, Stock-in-trade \u0d06\u0d2f\u0d3f convert \u0d1a\u0d46\u0d2f\u0d4d\u0d2f\u0d41\u0d2e\u0d4d\u0d2a\u0d4b\u0d7e transfer \u0d28\u0d1f\u0d15\u0d4d\u0d15\u0d41\u0d28\u0d4d\u0d28\u0d41.",
+      "title": {
+        "text": "[[Section 45(2)]]",
+        "at": 0.4
+      },
+      "subtitle": {
+        "text": "Capital asset becomes stock-in-trade, and the tax is [[deferred]] until sale.",
+        "at": 1.6
+      },
+      "serves": [
+        "p1",
+        "c1"
+      ]
+    },
+    {
+      "id": "b2",
+      "layout": "timeline",
+      "start": 6.0,
+      "end": 16.0,
+      "voice_sync_text": "\u0d2a\u0d15\u0d4d\u0d37\u0d46 tax levy \u0d1a\u0d46\u0d2f\u0d4d\u0d2f\u0d41\u0d28\u0d4d\u0d28\u0d24\u0d4d conversion \u0d28\u0d1f\u0d15\u0d4d\u0d15\u0d41\u0d28\u0d4d\u0d28 \u0d35\u0d7c\u0d37\u0d2e\u0d32\u0d4d\u0d32, \u0d2e\u0d31\u0d3f\u0d1a\u0d4d\u0d1a\u0d4d \u0d06 stock \u0d2f\u0d25\u0d3e\u0d7c\u0d24\u0d4d\u0d25\u0d24\u0d4d\u0d24\u0d3f\u0d7d \u0d35\u0d3f\u0d7d\u0d15\u0d4d\u0d15\u0d41\u0d28\u0d4d\u0d28 \u0d2e\u0d41\u0d7b\u0d35\u0d7c\u0d37\u0d24\u0d4d\u0d24\u0d3f\u0d32\u0d3e\u0d23\u0d4d.",
+      "axis_at": 6.3,
+      "arrow_at": 9.4,
+      "nodes": [
+        {
+          "side": "left",
+          "at": 6.8,
+          "title": "Conversion Year",
+          "sub": "(2024-25)",
+          "tone": "accent",
+          "chips": [
+            {
+              "text": "Deemed Transfer",
+              "at": 7.8
+            },
+            {
+              "text": "Tax Parked \u00b7 \u20b9 0 Tax",
+              "at": 8.6
+            }
+          ]
+        },
+        {
+          "side": "right",
+          "at": 11.0,
+          "title": "Actual Sale Year",
+          "sub": "(2025-26)",
+          "tone": "ok",
+          "chips": [
+            {
+              "text": "Stock Sold",
+              "at": 12.0
+            },
+            {
+              "text": "Tax Crystallized!",
+              "at": 13.0,
+              "emphasis": true
+            }
+          ]
+        }
+      ],
+      "serves": [
+        "p1",
+        "c2",
+        "d1",
+        "d2"
+      ]
+    },
+    {
+      "id": "b3",
+      "layout": "scene",
+      "start": 16.0,
+      "end": 24.0,
+      "voice_sync_text": "\u0d12\u0d30\u0d41 practical example \u0d28\u0d4b\u0d15\u0d4d\u0d15\u0d3e\u0d02. Rahul 2010-\u0d7d \u20b9 10 Lakhs-\u0d28\u0d4d \u0d35\u0d3e\u0d19\u0d4d\u0d19\u0d3f\u0d2f prime land, P.Y. 2024-25-\u0d7d convert \u0d1a\u0d46\u0d2f\u0d4d\u0d2f\u0d41\u0d28\u0d4d\u0d28\u0d41.",
+      "image_url": "data/img/dt-c2-q14-b3.svg",
+      "zoom": [
+        1.0,
+        1.06
+      ],
+      "tags": [
+        {
+          "label": "Cost of land",
+          "value": 1000000,
+          "at": 17.6,
+          "tone": "accent",
+          "pos": "top-left"
+        },
+        {
+          "label": "Fair market value on conversion",
+          "value": 4500000,
+          "at": 19.6,
+          "tone": "ok",
+          "pos": "mid-right"
+        }
+      ],
+      "serves": [
+        "f1",
+        "f2",
+        "n1",
+        "n2"
+      ]
+    },
+    {
+      "id": "b4",
+      "layout": "split",
+      "start": 24.0,
+      "end": 32.0,
+      "voice_sync_text": "Stock \u20b9 65 Lakhs-\u0d28\u0d4d \u0d35\u0d3f\u0d7d\u0d15\u0d4d\u0d15\u0d41\u0d2e\u0d4d\u0d2a\u0d4b\u0d7e dual taxation split \u0d35\u0d30\u0d41\u0d28\u0d4d\u0d28\u0d41: Capital Gain \u20b9 26.5L, Business Profit \u20b9 20L.",
+      "title": {
+        "text": "Two heads of income, [[one year of sale]]",
+        "at": 24.3
+      },
+      "cards": [
+        {
+          "kicker": "Capital gains",
+          "title": "u/s 45(2)",
+          "value": 2650000,
+          "note": "FMV on conversion \u2212 indexed cost",
+          "at": 25.6,
+          "tone": "accent"
+        },
+        {
+          "kicker": "Business income",
+          "title": "u/s 28",
+          "value": 2000000,
+          "note": "Sale price \u2212 FMV on conversion",
+          "at": 27.4,
+          "tone": "ok"
+        }
+      ],
+      "serves": [
+        "p2",
+        "c3",
+        "n3",
+        "n4",
+        "n7",
+        "n8"
+      ]
+    },
+    {
+      "id": "b5",
+      "layout": "trap",
+      "start": 32.0,
+      "end": 40.0,
+      "voice_sync_text": "Section 54EC exemption-\u0d7d 6 months count \u0d1a\u0d46\u0d2f\u0d4d\u0d2f\u0d47\u0d23\u0d4d\u0d1f\u0d24\u0d4d conversion \u0d2e\u0d41\u0d24\u0d32\u0d32\u0d4d\u0d32, stock \u0d35\u0d3f\u0d7d\u0d15\u0d4d\u0d15\u0d41\u0d28\u0d4d\u0d28 \u0d24\u0d40\u0d2f\u0d24\u0d3f \u0d2e\u0d41\u0d24\u0d32\u0d3e\u0d23\u0d46\u0d28\u0d4d\u0d28\u0d4d Circular 791 \u0d35\u0d4d\u0d2f\u0d15\u0d4d\u0d24\u0d2e\u0d3e\u0d15\u0d4d\u0d15\u0d41\u0d28\u0d4d\u0d28\u0d41.",
+      "title": {
+        "text": "Exam trap: gain is [[not taxed]] at conversion",
+        "at": 32.3
+      },
+      "cards": [
+        {
+          "tone": "bad",
+          "kicker": "Common mistake",
+          "text": "Taxing the gain in the year of conversion",
+          "at": 34.0
+        },
+        {
+          "tone": "good",
+          "kicker": "Correct rule",
+          "text": "Capital gain is charged in the year the stock is sold",
+          "at": 36.4
+        }
+      ],
+      "serves": [
+        "p3",
+        "c4",
+        "c5",
+        "n5",
+        "t1",
+        "t2"
+      ]
+    },
+    {
+      "id": "b6",
+      "layout": "takeaway",
+      "start": 40.0,
+      "end": 46.2,
+      "voice_sync_text": "\u0d05\u0d24\u0d41\u0d15\u0d4a\u0d23\u0d4d\u0d1f\u0d4d \u0d13\u0d7c\u0d15\u0d4d\u0d15\u0d41\u0d15: Section 45(2) \u0d2a\u0d4d\u0d30\u0d15\u0d3e\u0d30\u0d02 Tax is deferred, not avoided.",
+      "title": {
+        "text": "Tax is [[deferred]], not avoided.",
+        "at": 40.4
+      },
+      "serves": [
+        "f3",
+        "f4",
+        "n6",
+        "n9"
+      ]
+    }
+  ]
+}

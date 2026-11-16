@@ -1,0 +1,349 @@
+{
+  "question_id": "dt-c2-q25",
+  "audio_url": "data/audio/dt-c2-q25.mp3",
+  "duration_sec": 203.28,
+  "sync_offset_sec": 0.0,
+  "context_pill": "§ 54 · Two Residential Houses & § 51 Advance Forfeiture",
+  "fallback": false,
+  "beats": [
+    {
+      "id": "b1",
+      "layout": "fork",
+      "start": 0.0,
+      "end": 40.73,
+      "voice_sync_text": "സെക്ഷൻ 51-ന്റെ പ്രൊവിഷൻ മനസ്സിലാക്കാൻ നമുക്ക് ഹരിയുടെ ഒരു സിമ്പിൾ എക്സാമ്പിൾ നോക്കാം. ഹരി 2002-ൽ 9 ലക്ഷം രൂപയ്ക്ക് ഡൽഹിയിൽ ഒരു റെസിഡൻഷ്യൽ ഹൗസ് വാങ്ങി. 2005 മെയ് മാസത്തിൽ പരി എന്ന ബയറുമായി നെഗോഷ്യേഷൻ നടത്തുമ്പോൾ 25,000 രൂപ അഡ്വാൻസ് മണി വാങ്ങി. പക്ഷെ പിന്നീട് ആ ഡീൽ കാൻസലാവുകയും ഹരി ആ അഡ്വാൻസ് ഫോർഫീറ്റ് ചെയ്യുകയും ചെയ്തു. ഇവിടെ ഒരു കട്ട്-ഓഫ് ഡേറ്റ് ഓർക്കുക: ഒന്നാം തീയതി ഏപ്രിൽ 2014-ന് മുൻപാണ് ഫോർഫീച്ചർ എങ്കിൽ, സെക്ഷൻ 51 പ്രകാരം അത് കോസ്റ്റ് ഓഫ് അക്വിസിഷനിൽ നിന്ന് കുറയ്ക്കണം! അതുകൊണ്ട് ഹരിയുടെ അഡ്ജസ്റ്റഡ് കോസ്റ്റ് 9 ലക്ഷത്തിൽ നിന്ന് 25,000 കുറച്ച് 8 ലക്ഷത്തി 75,000 രൂപയായി മാറുന്നു!",
+      "title": {
+        "text": "Section 51 · Advance Money Forfeiture Cut-off",
+        "at": 0.3
+      },
+      "story_steps": [
+        {
+          "badge": "Year 2002",
+          "title": "Delhi House Acquisition",
+          "sub": "Hari purchased residential house in Delhi",
+          "val": 900000,
+          "at": 4.8
+        },
+        {
+          "badge": "May 2005",
+          "title": "Negotiation with Pari",
+          "sub": "Agreement to sell & advance money received",
+          "val": 25000,
+          "at": 10.5
+        },
+        {
+          "badge": "Deal Cancelled",
+          "title": "Advance Forfeited by Hari",
+          "sub": "Kept advance upon buyer default u/s 51",
+          "val": 25000,
+          "at": 18.0
+        }
+      ],
+      "divider": {
+        "text": "Forfeiture Cut-off Date: 01-04-2014",
+        "at": 22.8
+      },
+      "branches": [
+        {
+          "side": "left",
+          "label": "Before 01-04-2014 (Hari's Case: May 2005)",
+          "facts": [
+            {
+              "text": "Deduct from Cost of Acquisition u/s 51",
+              "at": 29.8
+            }
+          ],
+          "outcome": {
+            "text": "Reduces Cost of Acquisition",
+            "at": 31.5
+          }
+        },
+        {
+          "side": "right",
+          "label": "On/After 01-04-2014",
+          "facts": [
+            {
+              "text": "Taxable under IFOS u/s 56(2)(ix)",
+              "at": 27.0
+            }
+          ],
+          "outcome": {
+            "text": "Income from Other Sources (No Cost Reduction)",
+            "at": 28.5
+          }
+        }
+      ],
+      "active": {
+        "side": "left",
+        "at": 29.8
+      },
+      "example": {
+        "name": "Mr. Hari",
+        "role": "Adjusted Cost Result",
+        "text": "Section 51 Computation: Cost ₹ 9,00,000 − Advance Forfeited ₹ 25,000 = Adjusted Cost ₹ 8,75,000!",
+        "at": 33.5
+      },
+      "style": "zoom_in.color_shift.calm",
+      "serves": [
+        "p1",
+        "p2",
+        "c1",
+        "c2",
+        "f2",
+        "d1",
+        "n3",
+        "t1"
+      ]
+    },
+    {
+      "id": "b2",
+      "layout": "statute_quote",
+      "start": 40.98,
+      "end": 78.51,
+      "voice_sync_text": "ഇനി 2025 ജൂൺ മാസത്തിൽ ഹരി ഈ വീട് 43 ലക്ഷം രൂപയ്ക്ക് വിൽക്കുന്നു. അപ്പോൾ ഹരിയുടെ ലോങ്-ടേം ക്യാപിറ്റൽ ഗെയിൻ വരുന്നത് 43 ലക്ഷം മൈനസ് 8 ലക്ഷത്തി 75,000, അതായത് 34 ലക്ഷത്തി 25,000 രൂപ! ഇവിടെ ഹരി ചോദിക്കുന്നു: 'എനിക്ക് സെക്ഷൻ 54 പ്രകാരം ഒരു വീടിന് പകരം രണ്ട് റെസിഡൻഷ്യൽ വീടുകൾ വാങ്ങി എക്സംപ്ഷൻ ക്ലെയിം ചെയ്യാൻ പറ്റുമോ?' സെക്ഷൻ 54 സബ് സെക്ഷൻ ഒന്നിന്റെ ഫസ്റ്റ് പ്രൊവൈസോ പറയുന്നത് നോക്കൂ: ക്യാപിറ്റൽ ഗെയിൻ രണ്ട് കോടി രൂപയിൽ കവിയുന്നില്ലെങ്കിൽ, അസ്സസ്സീക്ക് ഇന്ത്യയിൽ രണ്ട് റെസിഡൻഷ്യൽ വീടുകൾ വാങ്ങാനുള്ള സ്റ്റാറ്റ്യൂട്ടറി ഓപ്ഷൻ ലഭിക്കും!",
+      "title": {
+        "text": "Section 54(1) · First Proviso: Two Residential Houses",
+        "at": 41.2
+      },
+      "sale_card": {
+        "sale_lbl": "Full Value of Consideration (June 2025)",
+        "sale_val": 4300000,
+        "cost_lbl": "Less: Adjusted Cost u/s 51",
+        "cost_val": 875000,
+        "gain_lbl": "Gross LTCG Generated",
+        "gain_val": 3425000,
+        "at": 42.5
+      },
+      "example": {
+        "name": "Mr. Hari",
+        "role": "Assessee Question",
+        "text": "Can I purchase TWO residential houses in India and claim Section 54 exemption?",
+        "at": 58.6
+      },
+      "quote": {
+        "text": "Where Capital Gain ≤ [[₹ 2.00 Crore]], Assessee may purchase or construct [[two residential houses in India]] (Once-in-a-lifetime option).",
+        "at": 67.5
+      },
+      "style": "fade.pulse.snappy",
+      "serves": [
+        "p3",
+        "c3",
+        "n6",
+        "t3"
+      ]
+    },
+    {
+      "id": "b3",
+      "layout": "meter",
+      "start": 78.76,
+      "end": 100.41,
+      "voice_sync_text": "ഇവിടെ നമ്മുടെ ത്രെഷോൾഡ് മീറ്റർ നോക്കൂ! സ്റ്റാറ്റ്യൂട്ടറി ലിമിറ്റ് രണ്ട് കോടി രൂപയാണ്. ഹരിയുടെ ക്യാപിറ്റൽ ഗെയിൻ എത്രയാണ്? വെറും 34 ലക്ഷത്തി 25,000 രൂപ മാത്രം! ഇത് രണ്ട് കോടി രൂപയേക്കാൾ വളരെ താഴെയാണ്. അതുകൊണ്ട് ദാ, നമ്മുടെ പാഡ്‌ലോക്ക് ഓപ്പൺ ആയി! ഹരിക്ക് ജീവിതത്തിൽ ഒരിക്കൽ മാത്രം ലഭിക്കുന്ന ടു റെസിഡൻഷ്യൽ ഹൗസസ് ഓപ്ഷൻ ഇവിടെ അൺലോക്ക് ആയിരിക്കുന്നു!",
+      "title": {
+        "text": "Section 54 Statutory Threshold Gauge",
+        "at": 79.0
+      },
+      "limit": {
+        "text": "Statutory Ceiling Limit",
+        "value": 20000000,
+        "at": 81.0
+      },
+      "reading": {
+        "text": "Hari's Long-Term Capital Gain",
+        "value": 3425000,
+        "at": 84.5,
+        "fmt": "inr"
+      },
+      "outcome": {
+        "text": "₹ 34.25 Lakhs ≤ ₹ 2.00 Crore · THRESHOLD SATISFIED",
+        "tone": "ok",
+        "at": 90.0
+      },
+      "padlock": {
+        "text": "Capital Gain ₹ 34.25L ≤ ₹ 2.00 Crore: TWO HOUSES OPTION UNLOCKED!",
+        "at": 92.5
+      },
+      "example": {
+        "name": "Mr. Hari",
+        "role": "Threshold Qualified",
+        "text": "Once-in-a-lifetime option unlocked! Entitled to claim exemption for 2 residential houses in India.",
+        "at": 95.5
+      },
+      "style": "slide_down.glow.snappy",
+      "serves": [
+        "c3",
+        "n5",
+        "n6"
+      ]
+    },
+    {
+      "id": "b4",
+      "layout": "case_card",
+      "start": 100.66,
+      "end": 140.83,
+      "voice_sync_text": "ഹരി രണ്ട് വീടുകൾ വാങ്ങി. ഒന്ന് ചെന്നൈയിൽ 5 ലക്ഷം രൂപയ്ക്ക്, മറ്റൊന്ന് ഡൽഹിയിൽ 7 ലക്ഷം രൂപയ്ക്ക്. പക്ഷെ ഇവിടെ ഒരു വലിയ പ്രശ്നം വന്നു! ഡൽഹിയിലെ വീടിന്റെ മുഴുവൻ തുകയും നൽകി ഹരി കൈവശം വെച്ചെങ്കിലും, അതിന്റെ സെയിൽ ഡീഡ് രജിസ്റ്റർ ചെയ്തിട്ടില്ല! അസ്സസ്സിങ് ഓഫീസർ ചോദിക്കുന്നു: 'രജിസ്ട്രേഷൻ ഇല്ലാത്ത വീടിന് എങ്ങനെ സെക്ഷൻ 54 കൊടുക്കും?' ഇവിടെയാണ് ഡൽഹി ഹൈക്കോടതിയുടെ ലാൻഡ്മാർക്ക് കേസായ ബൽരാജ് വേഴ്സസ് സി.ഐ.ടി. വരുന്നത്! കോടതി വ്യക്തമാക്കി: സെക്ഷൻ 53A പ്രകാരം പൊസഷനും മുഴുവൻ പെയ്മെന്റും ഉണ്ടെങ്കിൽ സബ്സ്റ്റാൻഷ്യൽ ഓണർഷിപ്പ് ആയി. അതിനാൽ രജിസ്റ്റേർഡ് ഡീഡ് ഇല്ലെങ്കിലും ഡൽഹി വീടിന് സെക്ഷൻ 54 എക്സംപ്ഷൻ പൂർണ്ണമായും ലഭിക്കും!",
+      "title": {
+        "text": "Judicial Precedent · Section 54 Legal Title",
+        "at": 101.0
+      },
+      "houses": [
+        {
+          "location": "Chennai House",
+          "status": "House 1 · Registered Sale Deed",
+          "cost": 500000,
+          "at": 102.5
+        },
+        {
+          "location": "Delhi House",
+          "status": "House 2 · Possession Taken, Full Payment Paid",
+          "cost": 700000,
+          "at": 105.0
+        },
+        {
+          "location": "Total Section 54 Exemption",
+          "status": "Exemption Allowed for Both Houses",
+          "cost": 1200000,
+          "isTotal": true,
+          "at": 134.0
+        }
+      ],
+      "gap": {
+        "text": "AO Objection: Delhi house deed was unregistered on 31-03-2026. Can Section 54 exemption be disallowed?",
+        "at": 108.5
+      },
+      "case": {
+        "text": "Balraj v. CIT (2002) 254 ITR 22",
+        "at": 118.5
+      },
+      "court": {
+        "text": "Delhi High Court Benchmark",
+        "at": 119.5
+      },
+      "principle": {
+        "text": "Section 53A TPA possession and full consideration constitute substantial ownership for Section 54 without registered deed.",
+        "at": 122.5
+      },
+      "effect": {
+        "text": "Exemption ALLOWED for Delhi House (₹ 7,00,000) despite lack of registered conveyance.",
+        "at": 128.5
+      },
+      "style": "whip_left.shake.calm",
+      "serves": [
+        "c4",
+        "f4",
+        "cl1",
+        "cl2",
+        "t2"
+      ]
+    },
+    {
+      "id": "b5",
+      "layout": "ledger",
+      "start": 141.08,
+      "end": 180.05,
+      "voice_sync_text": "ഇനി ഫൈനൽ ക്യാപിറ്റൽ ഗെയിൻസ് ലെഡ്ജർ നോക്കാം. ഫുൾ വാല്യൂ ഓഫ് കൺസിഡറേഷൻ 43 ലക്ഷം രൂപ. ലെസ്സ്: അഡ്ജസ്റ്റഡ് കോസ്റ്റ് ഓഫ് അക്വിസിഷൻ 8 ലക്ഷത്തി 75,000 രൂപ. ഗ്രോസ് ലോങ്-ടേം ക്യാപിറ്റൽ ഗെയിൻ 34 ലക്ഷത്തി 25,000 രൂപ. ഇനി ഇതിൽ നിന്ന് രണ്ട് വീടുകളുടെയും എക്സംപ്ഷൻ കുറയ്ക്കാം: ഡൽഹി വീടിന് 7 ലക്ഷം, ചെന്നൈ വീടിന് 5 ലക്ഷം. ആകെ എക്സംപ്ഷൻ 12 ലക്ഷം രൂപ! ബാക്കി വരുന്ന തുക നോക്കൂ: 34 ലക്ഷത്തി 25,000-ൽ നിന്ന് 12 ലക്ഷം കുറച്ചാൽ കൃത്യം 22 ലക്ഷത്തി 25,000 രൂപ! സ്റ്റുഡന്റ്സ് ഓർക്കുക, ഈ 22 ലക്ഷത്തി 25,000 രൂപ ടാക്സബിൾ ലോങ്-ടേം ക്യാപിറ്റൽ ഗെയിൻ ആണ്!",
+      "title": {
+        "text": "Statutory Capital Gains Ledger",
+        "at": 141.4
+      },
+      "rows": [
+        {
+          "sign": "plus",
+          "label": "Full Value of Consideration (Sold June 2025)",
+          "value": 4300000,
+          "at": 144.0,
+          "fmt": "inr"
+        },
+        {
+          "sign": "minus",
+          "label": "Less: Adjusted Cost u/s 51 (₹ 9,00,000 − ₹ 25,000)",
+          "value": 875000,
+          "at": 148.2,
+          "fmt": "inr"
+        },
+        {
+          "sign": "plus",
+          "label": "Gross Long-Term Capital Gain",
+          "value": 3425000,
+          "at": 152.2,
+          "fmt": "inr"
+        },
+        {
+          "sign": "minus",
+          "label": "Less: Delhi House Exemption (Balraj v. CIT)",
+          "value": 700000,
+          "at": 158.8,
+          "fmt": "inr"
+        },
+        {
+          "sign": "minus",
+          "label": "Less: Chennai House Exemption (Second House)",
+          "value": 500000,
+          "at": 161.2,
+          "fmt": "inr"
+        }
+      ],
+      "total": {
+        "label": "Taxable Long-Term Capital Gain",
+        "value": 2225000,
+        "at": 168.0,
+        "fmt": "inr"
+      },
+      "callout": {
+        "badge": "Taxable Remainder",
+        "text": "Remaining ₹ 22,25,000 is fully taxable LTCG! Exemption is capped to ₹ 12,00,000 actual investment.",
+        "at": 174.8
+      },
+      "style": "slide_up.shimmer.calm",
+      "serves": [
+        "c1",
+        "c2",
+        "c3",
+        "c4",
+        "f1",
+        "f2",
+        "f3",
+        "f4"
+      ]
+    },
+    {
+      "id": "b6",
+      "layout": "takeaway",
+      "start": 180.3,
+      "end": 203.27,
+      "voice_sync_text": "അതുകൊണ്ട് എക്സാമിനായി മൂന്ന് ഗോൾഡൻ റൂൾസ് എപ്പോഴും ഓർക്കുക: ഒന്ന്, 2014-ന് മുൻപുള്ള അഡ്വാൻസ് ഫോർഫീച്ചർ കോസ്റ്റ് കുറയ്ക്കുന്നു. രണ്ട്, ക്യാപിറ്റൽ ഗെയിൻ രണ്ട് കോടിയിൽ താഴെയാണെങ്കിൽ രണ്ട് വീടുകൾക്ക് എക്സംപ്ഷൻ ക്ലെയിം ചെയ്യാം. മൂന്ന്, രജിസ്ട്രേഷൻ പൂർത്തിയായില്ലെങ്കിലും സബ്സ്റ്റാൻഷ്യൽ ഓണർഷിപ്പ് ഉണ്ടെങ്കിൽ സെക്ഷൻ 54 ലഭിക്കും. ബാക്കി വരുന്ന ഗെയിൻ കൃത്യമായി ടാക്സ് ചെയ്യപ്പെടും!",
+      "title": {
+        "text": "Exam Summary · 3 Golden Takeaways",
+        "at": 180.6
+      },
+      "points": [
+        {
+          "num": "1",
+          "text": "Advance forfeited before 01-04-2014 reduces Cost of Acquisition u/s 51.",
+          "at": 184.5
+        },
+        {
+          "num": "2",
+          "text": "Capital Gains ≤ ₹ 2 Crore unlocks exemption for TWO residential houses u/s 54.",
+          "at": 189.2
+        },
+        {
+          "num": "3",
+          "text": "Possession + full payment qualifies u/s 53A TPA without deed registration (Balraj v. CIT).",
+          "at": 195.0
+        },
+        {
+          "num": "★",
+          "text": "Taxable Remainder: Remaining ₹ 22.25L is fully taxable LTCG.",
+          "at": 200.8
+        }
+      ],
+      "style": "zoom_in.none.calm",
+      "serves": [
+        "f1",
+        "f2",
+        "f3",
+        "f4"
+      ]
+    }
+  ]
+}

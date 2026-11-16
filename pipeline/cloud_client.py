@@ -24,7 +24,10 @@ SHEET_HEADERS = [
     "Answer",
     "Provisions",
     "Provision Summary",
-    "Malayalam Narration & Timings"
+    "Malayalam Narration & Timings",
+    "Drive Audio File ID",
+    "Timings",
+    "Screenplay JSON"
 ]
 
 class CloudClient:
@@ -138,13 +141,13 @@ class CloudClient:
         # Check current headers
         result = self.sheets.spreadsheets().values().get(
             spreadsheetId=SPREADSHEET_ID,
-            range=f"{tab_name}!A1:H1"
+            range=f"{tab_name}!A1:K1"
         ).execute()
         rows = result.get('values', [])
         if not rows or rows[0] != SHEET_HEADERS:
             self.sheets.spreadsheets().values().update(
                 spreadsheetId=SPREADSHEET_ID,
-                range=f"{tab_name}!A1:H1",
+                range=f"{tab_name}!A1:K1",
                 valueInputOption='RAW',
                 body={'values': [SHEET_HEADERS]}
             ).execute()
@@ -156,7 +159,7 @@ class CloudClient:
         # Read all rows to find if question already exists
         result = self.sheets.spreadsheets().values().get(
             spreadsheetId=SPREADSHEET_ID,
-            range=f"{tab_name}!A:H"
+            range=f"{tab_name}!A:K"
         ).execute()
         rows = result.get('values', [])
 
@@ -178,12 +181,15 @@ class CloudClient:
             row_data.get("Answer", ""),
             row_data.get("Provisions", ""),
             row_data.get("Provision Summary", ""),
-            row_data.get("Malayalam Narration & Timings", "")
+            row_data.get("Malayalam Narration & Timings", ""),
+            row_data.get("Drive Audio File ID", ""),
+            row_data.get("Timings", ""),
+            row_data.get("Screenplay JSON", "")
         ]
 
         if target_row_idx:
             # Update existing row
-            range_to_update = f"{tab_name}!A{target_row_idx}:H{target_row_idx}"
+            range_to_update = f"{tab_name}!A{target_row_idx}:K{target_row_idx}"
             self.sheets.spreadsheets().values().update(
                 spreadsheetId=SPREADSHEET_ID,
                 range=range_to_update,
@@ -195,7 +201,7 @@ class CloudClient:
             # Append new row
             self.sheets.spreadsheets().values().append(
                 spreadsheetId=SPREADSHEET_ID,
-                range=f"{tab_name}!A:H",
+                range=f"{tab_name}!A:K",
                 valueInputOption='USER_ENTERED',
                 body={'values': [row_values]}
             ).execute()
@@ -204,7 +210,7 @@ class CloudClient:
     def get_all_sheet_rows(self, tab_name="Sheet1"):
         result = self.sheets.spreadsheets().values().get(
             spreadsheetId=SPREADSHEET_ID,
-            range=f"{tab_name}!A:H"
+            range=f"{tab_name}!A:K"
         ).execute()
         rows = result.get('values', [])
         if not rows:

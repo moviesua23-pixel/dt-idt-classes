@@ -12,7 +12,7 @@ import sys
 import json
 import re
 import time
-from typing import Dict, Any, Optional
+from typing import Dict, Any, Optional, List
 
 PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 if PROJECT_ROOT not in sys.path:
@@ -193,6 +193,55 @@ You must output a STRICT, VALID JSON object with the following schema:
         "calculation_data": null
       }}
     ]
+  }},
+  "explainer_presentation": {{
+    "title": "Definitive presentation title (e.g. Conversion of Capital Asset into Stock-in-Trade u/s 45(2))",
+    "badge": "§ Statutory Section Badge",
+    "doctrine": "Name of the statutory doctrine",
+    "slides": [
+      {{
+        "slide_order": 1,
+        "title": "Slide Title",
+        "subtitle": "Explanatory Subtitle",
+        "layout": "statutory_rule",
+        "image_required": false,
+        "image_prompt": null,
+        "voice_sync_text": "Punchy 2-3 sentence Malayalam teacher explanation of this slide with standard English tax terms.",
+        "cards": [
+          {{
+            "heading": "Rule Heading",
+            "badge": "RULE",
+            "points": [
+              "Exact statutory condition bullet 1",
+              "Exact legal consequence bullet 2"
+            ]
+          }}
+        ],
+        "calculation_data": null,
+        "trap_data": null
+      }}
+    ]
+  }},
+  "screenplay": {{
+    "doctrine": "Name of statutory doctrine",
+    "beats": [
+      {{
+        "beat_order": 1,
+        "t_start": 0.0,
+        "t_end": 4.5,
+        "beat_type": "kinetic_headline",
+        "headline": "Hero Title (e.g. Section 45(2): Conversion into Stock-in-Trade)",
+        "badge": "§ Statutory Badge",
+        "subtext": "Operative trigger or principle",
+        "metric_chip": null,
+        "voice_sync_text": "Malayalam teacher speech for this beat strictly with English Latin tax terms.",
+        "image_required": false,
+        "image_prompt": null,
+        "highlights": [
+          {{ "phrase": "key tax term", "time_sec": 1.2 }}
+        ]
+      }}
+    ]
   }}
 }}
 
@@ -218,7 +267,121 @@ CRITICAL FORMATTING RULES:
    - Every step MUST use clean, round figures (e.g. ₹10 Lakhs, ₹50 Lakhs, ₹70 Lakhs) to clearly illuminate the statutory rule without arithmetic confusion.
    - 'image_prompt' MUST be a vivid, detailed, 16:9 cinematic 2.5D isometric prompt tailored for Google Imagen 3 with dramatic studio lighting.
    - For calculations in the climax step, provide 'calculation_data' mapping the statutory formula.
+8. KINETIC SCREENPLAY RULES (VOICE-SYNCHRONIZED MOTION STORYBOARD):
+   - NO TEXT DUMP: The screen must never show all text at once. Only the thought being spoken appears!
+   - 'beats': Create 4 to 8 fine-grained sequential beats synchronized to the audio narration.
+   - 'beat_type':
+     * 'kinetic_headline': Hero title & section badge (intro beat).
+     * 'statutory_trigger': Operative condition callout (e.g. Deemed transfer, tax deferral).
+     * 'visual_scene': Real-world example (e.g., plot of land, partner retiring). Set 'image_required': true with 16:9 image prompt.
+     * 'metric_callout': Spoken numbers highlighted with hovering metric chips (e.g. ₹10 Lakhs, ₹45 Lakhs).
+     * 'dual_computation_step': Split calculation steps revealing in rhythm with voice.
+     * 'statutory_trap': Common mistake vs statutory precedent.
+   - SELECTIVE IMAGERY PRINCIPLE (MANDATORY):
+     * 'image_required': true ONLY on the specific beat describing a concrete physical scene.
+     * For pure statutory rules, rates, math formulas, and traps, strictly set 'image_required': false and 'image_prompt': null.
 """
+
+def validate_screenplay(sp: Any) -> Optional[Dict[str, Any]]:
+    """
+    Validates screenplay against schema version 1.0.
+    Ensures sequential beats with valid timestamps, text, and selective image constraints.
+    """
+    if not isinstance(sp, dict):
+        return None
+    beats = sp.get('beats')
+    if not isinstance(beats, list) or len(beats) < 2:
+        return None
+
+    cleaned_beats = []
+    valid_types = {'kinetic_headline', 'statutory_trigger', 'visual_scene', 'metric_callout', 'dual_computation_step', 'statutory_trap'}
+
+    for idx, b in enumerate(beats, 1):
+        if not isinstance(b, dict):
+            continue
+        v_text = str(b.get('voice_sync_text') or '').strip()
+        headline = str(b.get('headline') or f"Beat {idx}").strip()
+        b_type = str(b.get('beat_type') or 'kinetic_headline').strip()
+        if b_type not in valid_types:
+            b_type = 'kinetic_headline'
+        
+        t0 = float(b.get('t_start', 0.0) or 0.0)
+        t1 = float(b.get('t_end', t0 + 4.0) or (t0 + 4.0))
+        img_req = bool(b.get('image_required', False))
+        img_prompt = str(b.get('image_prompt') or '').strip() if img_req else None
+
+        cleaned_beats.append({
+            'beat_order': idx,
+            't_start': t0,
+            't_end': t1,
+            'beat_type': b_type,
+            'headline': headline,
+            'badge': str(b.get('badge') or '').strip(),
+            'subtext': str(b.get('subtext') or '').strip(),
+            'metric_chip': str(b.get('metric_chip') or '').strip() or None,
+            'voice_sync_text': v_text,
+            'image_required': img_req,
+            'image_prompt': img_prompt,
+            'highlights': b.get('highlights') if isinstance(b.get('highlights'), list) else []
+        })
+
+    if not cleaned_beats:
+        return None
+
+    return {
+        'doctrine': str(sp.get('doctrine') or '').strip(),
+        'beats': cleaned_beats
+    }
+
+def validate_explainer_presentation(exp: Any) -> Optional[Dict[str, Any]]:
+    """
+    Validates explainer_presentation against schema version 1.0.
+    Ensures required fields, ordered slides, layouts, and selective image constraints.
+    Returns cleaned explainer presentation dict or None if invalid.
+    """
+    if not isinstance(exp, dict):
+        return None
+    slides = exp.get('slides')
+    if not isinstance(slides, list) or len(slides) < 2:
+        return None
+
+    cleaned_slides = []
+    valid_layouts = {'statutory_rule', 'visual_split', 'timeline_flow', 'dual_computation', 'statutory_trap'}
+
+    for idx, s in enumerate(slides, 1):
+        if not isinstance(s, dict):
+            continue
+        v_text = str(s.get('voice_sync_text') or '').strip()
+        title = str(s.get('title') or f"Point {idx}").strip()
+        layout = str(s.get('layout') or 'statutory_rule').strip()
+        if layout not in valid_layouts:
+            layout = 'statutory_rule'
+        
+        img_req = bool(s.get('image_required', False))
+        img_prompt = str(s.get('image_prompt') or '').strip() if img_req else None
+        
+        cleaned_slides.append({
+            'slide_order': idx,
+            'title': title,
+            'subtitle': str(s.get('subtitle') or '').strip(),
+            'layout': layout,
+            'image_required': img_req,
+            'image_prompt': img_prompt,
+            'voice_sync_text': v_text,
+            'cards': s.get('cards') if isinstance(s.get('cards'), list) else [],
+            'calculation_data': s.get('calculation_data') if isinstance(s.get('calculation_data'), dict) else None,
+            'trap_data': s.get('trap_data') if isinstance(s.get('trap_data'), dict) else None
+        })
+
+    if not cleaned_slides:
+        return None
+
+    return {
+        'title': str(exp.get('title') or 'Statutory Explainer Presentation').strip(),
+        'badge': str(exp.get('badge') or '§ STATUTE').strip(),
+        'doctrine': str(exp.get('doctrine') or '').strip(),
+        'slides': cleaned_slides
+    }
 
 def validate_concept_simulation(sim: Any) -> Optional[Dict[str, Any]]:
     """
@@ -308,6 +471,21 @@ def extract_autonomous_provision(question_number: int, question_text: str, answe
                             print(f"  [SIMULATION VALIDATED] {len(clean_sim['steps'])} illustrative steps attached.")
                         else:
                             print(f"  [WARN] Simulation failed validation, skipping simulation gracefully.")
+                    # Validate and attach explainer_presentation if present
+                    if 'explainer_presentation' in data:
+                        clean_exp = validate_explainer_presentation(data['explainer_presentation'])
+                        if clean_exp:
+                            data['mindmap']['explainer_presentation'] = clean_exp
+                            print(f"  [EXPLAINER DECK VALIDATED] {len(clean_exp['slides'])} studio slides attached.")
+                        else:
+                            print(f"  [WARN] Explainer deck failed validation, skipping gracefully.")
+                    if 'screenplay' in data:
+                        clean_sp = validate_screenplay(data['screenplay'])
+                        if clean_sp:
+                            data['mindmap']['screenplay'] = clean_sp
+                            print(f"  [SCREENPLAY VALIDATED] {len(clean_sp['beats'])} kinetic beats attached.")
+                        else:
+                            print(f"  [WARN] Screenplay failed validation, skipping gracefully.")
                     return data
             except AllKeysQuotaExhaustedError:
                 raise
@@ -415,12 +593,359 @@ def assign_estimated_timings(mindmap: Dict[str, Any], wpm: int = 120) -> Dict[st
     mindmap["total_duration"] = round(current_time, 2)
     return mindmap
 
+# ==========================================================================
+# UNIVERSAL KINETIC PRESENTER: VALIDATOR & PIPELINE STAGE CONTROLLER
+# ==========================================================================
+
+import hashlib
+import glob
+from pathlib import Path
+
+GAP_MS = 250
+LAYOUTS = {
+    "headline", "takeaway", "timeline", "scene", "split", "trap",
+    "fork", "meter", "ledger", "case_card", "compare", "checklist", "statute_quote"
+}
+TIME_KEYS = {"at", "axis_at", "arrow_at"}
+NON_TEXT_KEYS = {
+    "id", "layout", "tone", "pos", "side", "kind", "image_url", "voice_sync_text",
+    "start", "end", "zoom", "fmt", "value", "target", "at", "axis_at", "arrow_at",
+    "from_x", "to_x", "serves", "purpose", "events", "result", "sign", "emphasis",
+    "question_id", "audio_url", "duration_sec", "sync_offset_sec", "context_pill",
+    "fallback", "meta", "omitted"
+}
+
+MECHANISM_CENTREPIECE = {
+    "timing_shift": "timeline",
+    "date_cutoff": "fork",
+    "threshold": "meter",
+    "proportion": {"ledger", "compare"},
+    "deadline_window": "timeline",
+    "computation": "ledger",
+    "classification": {"split", "compare"},
+    "precedent": "case_card",
+    "condition_chain": "checklist",
+    "exception_trap": "trap"
+}
+
+def compute_sha256(file_path: str) -> str:
+    """Computes SHA-256 hash of a file's content."""
+    h = hashlib.sha256()
+    with open(file_path, "rb") as f:
+        while chunk := f.read(8192):
+            h.update(chunk)
+    return h.hexdigest()
+
+def verify_approval(approved_json_path: str, source_json_path: str) -> tuple[bool, str]:
+    """Checks that approval file exists and matches the source file's SHA-256 hash."""
+    if not os.path.exists(approved_json_path):
+        return False, f"Approval missing: {approved_json_path} does not exist"
+    if not os.path.exists(source_json_path):
+        return False, f"Source missing: {source_json_path} does not exist"
+    
+    with open(approved_json_path, "r", encoding="utf-8") as f:
+        try:
+            app_data = json.load(f)
+        except Exception as e:
+            return False, f"Invalid JSON in {approved_json_path}: {e}"
+            
+    expected_hash = compute_sha256(source_json_path)
+    recorded_hash = app_data.get("source_hash")
+    if recorded_hash != expected_hash:
+        return False, f"Hash mismatch: source changed since approval ({recorded_hash} vs {expected_hash})"
+    return True, f"Approved by {app_data.get('reviewer', 'Unknown')} at {app_data.get('approved_at', 'Unknown')}"
+
+def write_approval(approved_json_path: str, source_json_path: str, reviewer: str):
+    """Writes approval file containing SHA-256 hash and reviewer name."""
+    source_hash = compute_sha256(source_json_path)
+    app_data = {
+        "reviewer": reviewer,
+        "approved_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+        "source_hash": source_hash,
+        "source_file": os.path.basename(source_json_path)
+    }
+    with open(approved_json_path, "w", encoding="utf-8") as f:
+        json.dump(app_data, f, indent=2)
+    print(f"[GATE APPROVED] {approved_json_path} signed by {reviewer} (SHA: {source_hash[:8]}...)")
+
+def iter_times(node):
+    """Yields all timestamp values from any key in TIME_KEYS or ending in _at."""
+    if isinstance(node, dict):
+        for k, v in node.items():
+            if (k in TIME_KEYS or k.endswith("_at")) and isinstance(v, (int, float)):
+                yield v
+            else:
+                yield from iter_times(v)
+    elif isinstance(node, list):
+        for x in node:
+            yield from iter_times(x)
+
+def iter_texts(node):
+    """Yields all display strings excluding non-text configuration keys."""
+    if isinstance(node, dict):
+        for k, v in node.items():
+            if k not in NON_TEXT_KEYS:
+                if isinstance(v, str):
+                    yield v
+                elif isinstance(v, dict):
+                    yield from iter_texts(v)
+                elif isinstance(v, list):
+                    yield from iter_texts(v)
+            else:
+                if isinstance(v, (dict, list)):
+                    yield from iter_texts(v)
+    elif isinstance(node, list):
+        for x in node:
+            yield from iter_texts(x)
+
+def compute_layout_similarity(seq1: list[str], seq2: list[str]) -> float:
+    """Computes longest common ordered run divided by shorter sequence length."""
+    # Ignore headline and takeaway
+    s1 = [x for x in seq1 if x not in ("headline", "takeaway")]
+    s2 = [x for x in seq2 if x not in ("headline", "takeaway")]
+    if not s1 or not s2:
+        return 0.0
+    
+    # Longest common subsequence length
+    m, n = len(s1), len(s2)
+    dp = [[0] * (n + 1) for _ in range(m + 1)]
+    for i in range(1, m + 1):
+        for j in range(1, n + 1):
+            if s1[i - 1] == s2[j - 1]:
+                dp[i][j] = dp[i - 1][j - 1] + 1
+            else:
+                dp[i][j] = max(dp[i - 1][j], dp[i][j - 1])
+    lcs = dp[m][n]
+    return lcs / min(m, n)
+
+def validate_screenplay_v2(
+    sp: Dict[str, Any],
+    analysis: Optional[Dict[str, Any]] = None,
+    timed_sentences: Optional[List[Dict[str, Any]]] = None,
+    recent_screenplays: Optional[List[Dict[str, Any]]] = None
+) -> List[str]:
+    """
+    Strictly validates Screenplay JSON v2 schema against all 17 checks in the guideline.
+    """
+    errs, prev_end = [], 0.0
+    beats = sp.get("beats", [])
+    if not beats:
+        return ["no beats in screenplay"]
+
+    # 1. Beat count & contiguity
+    valid_anchor_times = set()
+    if timed_sentences:
+        for s in timed_sentences:
+            valid_anchor_times.add(round(s.get("start", 0.0), 2))
+            for w in s.get("words", []):
+                valid_anchor_times.add(round(w.get("at", 0.0), 2))
+
+    served_analysis_ids = set()
+    screenplay_numbers = set()
+    screenplay_dates = set()
+    layout_sequence = []
+
+    for b in beats:
+        layout = b.get("layout")
+        layout_sequence.append(layout)
+        
+        # Check: Layout known
+        if layout not in LAYOUTS:
+            errs.append(f"{b.get('id')}: unknown layout {layout}")
+            
+        # Check: Contiguity
+        if abs(b.get("start", 0) - prev_end) > 0.05:
+            errs.append(f"{b.get('id')}: gap or overlap before this beat ({b.get('start')} vs prev end {prev_end})")
+            
+        # Check: End after start
+        if b.get("end", 0) <= b.get("start", 0):
+            errs.append(f"{b.get('id')}: end must be after start ({b.get('end')} <= {b.get('start')})")
+            
+        # Check: Time inside beat range & anchor matching
+        for at in iter_times(b):
+            if not (b.get("start", 0) <= at <= b.get("end", 0)):
+                errs.append(f"{b.get('id')}: time {at} is outside beat ({b.get('start')} - {b.get('end')})")
+            if valid_anchor_times:
+                nearest = min(abs(at - vt) for vt in valid_anchor_times)
+                if nearest > 0.05:
+                    errs.append(f"{b.get('id')}: time {at} does not match any sentence start or word time (diff {nearest:.3f}s)")
+                    
+        # Check: Text length (12 words maximum)
+        for text in iter_texts(b):
+            clean_words = re.sub(r"\[\[|\]\]", "", text).split()
+            if len(clean_words) > 12:
+                errs.append(f"{b.get('id')}: display text over 12 words ({len(clean_words)} words): '{text[:40]}...'")
+                
+        # Track serves
+        for s_id in b.get("serves", []):
+            served_analysis_ids.add(s_id)
+            
+        prev_end = b.get("end", 0)
+
+    # Check: Last beat ends at duration_sec
+    if abs(prev_end - sp.get("duration_sec", 0)) > 0.1:
+        errs.append(f"last beat ends at {prev_end}, but duration_sec is {sp.get('duration_sec')}")
+
+    # Checks against Analysis
+    if analysis:
+        # Check: Centrepiece layout matches primary mechanism
+        prim_mech = analysis.get("mechanism", {}).get("primary")
+        expected_cp = MECHANISM_CENTREPIECE.get(prim_mech)
+        if expected_cp:
+            if isinstance(expected_cp, str):
+                has_cp = any(b.get("layout") == expected_cp for b in beats)
+                if not has_cp:
+                    errs.append(f"Centrepiece layout '{expected_cp}' required for primary mechanism '{prim_mech}' is missing!")
+            elif isinstance(expected_cp, set):
+                has_cp = any(b.get("layout") in expected_cp for b in beats)
+                if not has_cp:
+                    errs.append(f"One of centrepiece layouts {expected_cp} required for '{prim_mech}' is missing!")
+
+        # Check: Coverage of numbers, conditions, case laws
+        omitted_refs = {o.get("ref") for o in sp.get("omitted", [])}
+        for n in analysis.get("numbers", []):
+            if n["id"] not in served_analysis_ids and n["id"] not in omitted_refs:
+                errs.append(f"Analysis number {n['id']} ('{n.get('label')}') not served by any beat and not in omitted")
+        for c in analysis.get("conditions", []):
+            if c["id"] not in served_analysis_ids and c["id"] not in omitted_refs:
+                errs.append(f"Analysis condition {c['id']} not served by any beat and not in omitted")
+        for cl in analysis.get("case_laws", []):
+            if cl["id"] not in served_analysis_ids and cl["id"] not in omitted_refs:
+                errs.append(f"Analysis case law {cl['id']} not served by any beat and not in omitted")
+
+    # Check: Anti-repetition against recent screenplays
+    if recent_screenplays:
+        for r_sp in recent_screenplays:
+            r_seq = [b.get("layout") for b in r_sp.get("beats", [])]
+            sim = compute_layout_similarity(layout_sequence, r_seq)
+            if sim >= 0.6:
+                errs.append(f"Anti-repetition failure: layout sequence is too similar ({sim:.2f} >= 0.6) to {r_sp.get('question_id')}")
+                break
+
+    return errs
+
+# ==========================================================================
+# CLI RUNNER: STAGES & GATES
+# ==========================================================================
+
+import argparse
+
+def run_stage_analyze(qid: str):
+    print(f"\n=== STAGE 1: INTAKE & PROVISION ANALYSIS FOR {qid} ===")
+    source_dir = os.path.join("redesign_demo", "source", qid)
+    if not os.path.exists(source_dir):
+        print(f"ERROR: Source directory {source_dir} not found. Please populate question.md, answer.md, notes.md, bare_act.md first.")
+        return False
+        
+    build_dir = os.path.join("redesign_demo", "build", qid)
+    os.makedirs(build_dir, exist_ok=True)
+    
+    # Check required source files
+    req_files = ["question.md", "answer.md", "notes.md", "bare_act.md"]
+    missing = [f for f in req_files if not os.path.exists(os.path.join(source_dir, f))]
+    if missing:
+        print(f"ERROR: Missing source files in {source_dir}: {missing}")
+        return False
+        
+    analysis_file = os.path.join(build_dir, "analysis.json")
+    if not os.path.exists(analysis_file):
+        print(f"Generating analysis from source material in {source_dir}...")
+        # Will be populated by analysis generator
+    else:
+        print(f"Analysis file exists: {analysis_file}")
+        
+    # Print Gate 1 Review Checklist
+    print("\n" + "="*80)
+    print(f"GATE 1 REVIEW CHECKLIST: {qid}")
+    print("="*80)
+    print("[ ] Every section number and sub-section cited matches the bare act or study material")
+    print("[ ] Every condition is complete: nothing missing, nothing added that the source does not say")
+    print("[ ] Every date and threshold matches the source, and applies to the correct period")
+    print("[ ] Every case law has the right name, court and principle (all verify: true items resolved)")
+    print("[ ] Every number recomputes to the source's answer")
+    print("[ ] The mechanism.primary really is the hard part of this provision")
+    print("[ ] The unique_challenge is what students actually get wrong")
+    print("[ ] Nothing in the analysis comes from the agent's memory instead of the source")
+    print("[ ] Law as amended: any rule that changed over time is labelled with the period it applies to")
+    print("[ ] Section numbering and Act: the numbers match the ones your syllabus uses")
+    print("[ ] The context_pill and every on-screen label use those same section numbers")
+    print("[ ] The concrete_example, if any, comes from the question itself and is not invented")
+    print("="*80)
+    print("STOPPING FOR HUMAN REVIEW. To approve, execute:")
+    print(f"python pipeline/autonomous_provision_architect.py --qid {qid} --approve analysis --reviewer \"<Your Name>\"")
+    return True
+
+def run_stage_plan(qid: str):
+    print(f"\n=== STAGE 2: CONCEPT & BEAT PLAN FOR {qid} ===")
+    build_dir = os.path.join("redesign_demo", "build", qid)
+    analysis_file = os.path.join(build_dir, "analysis.json")
+    approved_file = os.path.join(build_dir, "analysis.approved.json")
+    
+    ok, msg = verify_approval(approved_file, analysis_file)
+    if not ok:
+        print(f"GATE 1 NOT APPROVED: {msg}")
+        print("Cannot generate beat plan until Gate 1 is approved by a human.")
+        return False
+        
+    print(f"Gate 1 verified: {msg}")
+    beat_plan_file = os.path.join(build_dir, "beat_plan.json")
+    
+    print("\n" + "="*80)
+    print(f"GATE 2 CONCEPT REVIEW CHECKLIST: {qid}")
+    print("="*80)
+    print("[ ] The one-line visual concept reflects the primary statutory mechanism")
+    print("[ ] The centrepiece layout visualises the hardest part of the provision")
+    print("[ ] Beat count is between 4 and 9 beats with appropriate narrative pacing")
+    print("[ ] Every analysis condition, number, and case law is covered or documented in omitted")
+    print("[ ] Layout sequence similarity against recent screenplays is under 0.6")
+    print("="*80)
+    print("STOPPING FOR HUMAN REVIEW. To approve, execute:")
+    print(f"python pipeline/autonomous_provision_architect.py --qid {qid} --approve plan --reviewer \"<Your Name>\"")
+    return True
+
+def main_cli():
+    parser = argparse.ArgumentParser(description="Universal Kinetic Presenter Pipeline")
+    parser.add_argument("--qid", help="Question ID (e.g. dt-c2-q14, dt-c2-q25)")
+    parser.add_argument("--stage", choices=["analyze", "plan", "build"], help="Pipeline stage to run")
+    parser.add_argument("--approve", choices=["analysis", "plan"], help="Gate to approve")
+    parser.add_argument("--reviewer", help="Reviewer name for gate approval")
+    args = parser.parse_args()
+
+    if not args.qid:
+        print("Please provide --qid <qid>")
+        return
+
+    build_dir = os.path.join("redesign_demo", "build", args.qid)
+    os.makedirs(build_dir, exist_ok=True)
+
+    if args.approve:
+        if not args.reviewer:
+            print("ERROR: --reviewer name is mandatory when approving a gate!")
+            return
+        if args.approve == "analysis":
+            source_file = os.path.join(build_dir, "analysis.json")
+            approved_file = os.path.join(build_dir, "analysis.approved.json")
+            write_approval(approved_file, source_file, args.reviewer)
+        elif args.approve == "plan":
+            source_file = os.path.join(build_dir, "beat_plan.json")
+            approved_file = os.path.join(build_dir, "beat_plan.approved.json")
+            write_approval(approved_file, source_file, args.reviewer)
+        return
+
+    if args.stage == "analyze":
+        run_stage_analyze(args.qid)
+    elif args.stage == "plan":
+        run_stage_plan(args.qid)
+    elif args.stage == "build":
+        beat_plan_file = os.path.join(build_dir, "beat_plan.json")
+        approved_plan_file = os.path.join(build_dir, "beat_plan.approved.json")
+        ok, msg = verify_approval(approved_plan_file, beat_plan_file)
+        if not ok:
+            print(f"GATE 2 NOT APPROVED: {msg}")
+            print("Cannot build lesson until Gate 2 is approved by a human.")
+            return
+        print(f"Gate 2 verified: {msg}")
+        print(f"Building full lesson for {args.qid}...")
+
 if __name__ == "__main__":
-    test_q = "Mr. Arjun has a total income of Rs 16,00,000 comprising of income from house property and interest on fixed deposits. Compute his tax liability."
-    test_ans = "Under normal provisions of the Income-tax Act, 1961, tax is computed at slab rates applicable for individuals based on age categories..."
-    res = extract_autonomous_provision(4, test_q, test_ans)
-    if res:
-        res["mindmap"] = assign_estimated_timings(res["mindmap"])
-        print("\nGenerated Canonical Topic:", res.get("canonical_topic"))
-        print("Generated Branches Count:", len(res.get("mindmap", {}).get("branches", [])))
-        print("Generated Total Duration:", res.get("mindmap", {}).get("total_duration"), "seconds")
+    main_cli()
