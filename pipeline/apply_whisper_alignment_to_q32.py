@@ -127,6 +127,8 @@ b4 = aligned_sp["beats"][3]
 b4["start"] = 70.35
 b4["end"] = 99.39
 b4["title"]["at"] = 70.65
+if "callout" in b4 and isinstance(b4["callout"], dict):
+    b4["callout"]["at"] = 71.50                    # "Tax optimizationte golden trick ivideyanu!"
 # Building & Plant STCG total 25 lakhs (70.35 + 15.06s = 85.41s)
 b4["ledger_rows"][0]["at"] = 85.41            # Building STCG ₹14L
 b4["ledger_rows"][1]["at"] = 86.43            # Plant & Machinery STCG ₹11L
