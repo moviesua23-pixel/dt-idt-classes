@@ -95,13 +95,39 @@ CRITICAL PEDAGOGICAL RULE 4: STRICT 1:1 VOICE-TO-SCREEN CORRESPONDENCE
 - Provide a callout banner or note during verbal explanations so the screen is never dead or unaligned.
 
 ========================================================================================
-CRITICAL PEDAGOGICAL RULE 5: MANGLISH TEACHER NARRATION (STRICT DOMAIN PRINCIPLE)
 ========================================================================================
-- ALL Sections, Sub-sections, Rules, and Acts MUST be in English Latin script (e.g. 'Section 54G', 'Section 50', 'Section 112').
-- ALL Dates and Years MUST be in English Latin script (e.g. 'March 2026', 'July 2026', 'Assessment Year 2026-27').
-- ALL Financial figures and amounts MUST be in English Latin numbers (e.g. 'Rs 10 Lakhs', 'Rs 20 Lakhs', 'Rs 2 Lakhs').
-- ALL Tax and Statutory Terms MUST be in English Latin (e.g. 'Short-term Capital Gain', 'Long-term Capital Gain', 'Written Down Value', 'Cost of Acquisition', 'Industrial Undertaking').
-- Malayalam is used naturally for conversational teacher scaffolding, connectives, and narrative explanations.
+CRITICAL PEDAGOGICAL RULE 5: AUTHENTIC, WARM MALAYALAM TEACHER DIALOGUE (NATURAL MANGLISH)
+========================================================================================
+- The voice MUST sound like a REAL, ENERGETIC, PASSIONATE KERALA CA FACULTY teaching in a live CA Final classroom!
+- DO NOT generate robotic, awkward, or machine-translated Malayalam sentences.
+- NEVER use clumsy translated words like 'tanted', 'athinukku', 'conditions fill cheyyan', or 'decide cheythu'.
+- USE NATURAL, IDIOMATIC SPOKEN CLASSROOM MALAYALAM PHRASING:
+  * "Students, welcome back! Namukku Section 54G Capital Gains Exemption nannayi padikkaam..."
+  * "Concept crystal clear aavaan namukk Apex Engineering Ltd-inte oru practical case study nokkaam..."
+  * "Kando, ivide company 4 assets aanu transfer cheythath..."
+  * "First asset: Land, sale consideration Rs 20 Lakhs, cost of acquisition Rs 15 Lakhs, so Long-term Capital Gain Rs 5 Lakhs..."
+  * "Second asset: Factory Building, sale proceeds Rs 25 Lakhs, Written Down Value Rs 9 Lakhs, so Section 50 prakaram Deemed Short-term Capital Gain Rs 16 Lakhs..."
+  * "Ennaal Furniture non-specified asset aayathukond athinu Section 54G exemption oru kaaranavashaalum labhikkilla!"
+  * "Transfer date-inu shesham verum 4 months-il reinvestment nadannathinaal ithu 3-year statutory window-kkullil perfect aayi qualify cheyyunnu!"
+  * "Income-tax Act-il pro-rata set-off niyamam illathathinaal 30% slab rate ulla Short-term Capital Gain aadyam wipe out cheythu tax liability minimize cheyyaam!"
+- Keep EVERY statutory term, section, sub-section, asset name, and amount in English Latin script.
+- The delivery must be warm, enthusiastic, engaging, and pedagogically crystal clear.
+
+========================================================================================
+CRITICAL PEDAGOGICAL RULE 6: VISUAL REPRESENTATION OF EVERY SPOKEN ASSET & AMOUNT
+========================================================================================
+- IN BEAT 1 ("fork"): story_steps MUST CONTAIN 4 CARDS SHOWING EVERY ASSET SOLD WITH ITS NUMBERS!
+  * Card 1: Land: Sale, Cost, LTCG
+  * Card 2: Building: Sale, WDV, Deemed STCG
+  * Card 3: Plant & Machinery: Sale, WDV, Deemed STCG
+  * Card 4: Furniture: Sale, WDV, STCG (Flagged as Non-Specified / Ineligible)
+  * Divider: "Asset Classification & Eligibility Filter under Section 54G"
+  * Left Branch: Eligible Specified Assets (Land, Building, Plant & Machinery)
+  * Right Branch: Ineligible Non-Specified Asset (Furniture & Fixtures)
+  * Result Card: Exam Trap Alert (Furniture strictly excluded from Section 54G basket!)
+- IN BEAT 3 ("meter"): breakdown MUST show each new asset acquired with its exact figure!
+- IN BEAT 4 ("ledger"): ledger_rows MUST show the step-by-step math and the Golden Optimization Trick callout!
+- IN BEAT 5 ("takeaway"): rules MUST show the 3 Golden Rules!
 
 ========================================================================================
 OUTPUT FORMAT: PURE JSON
@@ -113,17 +139,20 @@ Return STRICT VALID JSON matching this exact structure:
     {{
       "id": "b1",
       "layout": "fork",
-      "voice_sync_text": "Malayalam teacher narration text for beat 1 introducing the complete example situation, all assets sold and new assets purchased...",
+      "voice_sync_text": "Students, welcome back! Namukku Section 54G Capital Gains Exemption nannayi padikkaam. Concept crystal clear aavaan namukk Apex Engineering Ltd-inte oru practical case study nokkaam. Kando, Apex Engineering Ltd urban corporation limit-il ulla thangalude factory oru non-urban rural area-yilekku shift cheyyan theerumaanichu. Shifting-inte bhaagamaayi March 2026-il company 4 assets aanu sell cheythath: First, Land, sale consideration Rs 20 Lakhs, cost of acquisition Rs 15 Lakhs, so Long-term Capital Gain Rs 5 Lakhs. Second, Factory Building, sale proceeds Rs 25 Lakhs, Written Down Value Rs 9 Lakhs, so Section 50 prakaram Deemed Short-term Capital Gain Rs 16 Lakhs. Third, Plant & Machinery, sale value Rs 18 Lakhs, Written Down Value Rs 9 Lakhs, so Short-term Capital Gain Rs 9 Lakhs. Fourth, Furniture, sale Rs 3 Lakhs, Written Down Value Rs 2 Lakhs, so Short-term Capital Gain Rs 1 Lakh. Ippo asset classification filter nokkoo: Section 54G prakaram Land, Building, and Plant & Machinery maathrame Eligible Specified Assets aayi qualify cheyyoo! Ennaal Furniture non-specified asset aayathukond athinu Section 54G exemption oru kaaranavashaalum labhikkilla!",
       "title": {{"text": "Asset Eligibility Filter under Section 54G"}},
       "story_steps": [
-        {{"badge": "Shift Decision", "title": "Apex Engineering Ltd Shifting Process", "sub": "Transfer of industrial undertaking from urban corporation to rural zone"}}
+        {{"badge": "Asset 1: Land", "title": "Sale: Rs 20L | Cost: Rs 15L", "sub": "Long-term Capital Gain: Rs 5 Lakhs", "val": 500000}},
+        {{"badge": "Asset 2: Building", "title": "Sale: Rs 25L | WDV: Rs 9L", "sub": "Deemed STCG u/s 50: Rs 16 Lakhs", "val": 1600000}},
+        {{"badge": "Asset 3: Plant & Mach.", "title": "Sale: Rs 18L | WDV: Rs 9L", "sub": "Deemed STCG u/s 50: Rs 9 Lakhs", "val": 900000}},
+        {{"badge": "Asset 4: Furniture", "title": "Sale: Rs 3L | WDV: Rs 2L", "sub": "STCG: Rs 1 Lakh (Non-Specified)", "val": 100000}}
       ],
-      "divider": {{"text": "Assets in Shifting: Land, Building, Plant & Furniture"}},
+      "divider": {{"text": "Asset Classification & Eligibility Filter under Section 54G"}},
       "branches": [
-        {{"side": "left", "label": "Eligible Specified Assets", "facts": [{{"text": "Land, Building, Plant & Machinery"}}, {{"text": "Qualifies for Section 54G Deduction"}}], "outcome": {{"text": "Eligible for Section 54G Exemption"}}}},
-        {{"side": "right", "label": "Ineligible Non-Specified Asset", "facts": [{{"text": "Furniture & Fixtures"}}, {{"text": "Strictly Excluded from Section 54G"}}], "outcome": {{"text": "No Exemption! Full STCG Taxable"}}}}
+        {{"side": "left", "label": "Eligible Specified Assets", "facts": [{{"text": "Land, Building, Plant & Machinery"}}, {{"text": "Total Qualifying Gains: Rs 30 Lakhs"}}, {{"text": "Qualifies for Section 54G Exemption"}}], "outcome": {{"text": "Eligible for Section 54G Exemption"}}}},
+        {{"side": "right", "label": "Ineligible Non-Specified Asset", "facts": [{{"text": "Office Furniture & Fixtures"}}, {{"text": "Excluded from Section 54G Definition"}}, {{"text": "Neither transfer nor reinvestment qualifies"}}], "outcome": {{"text": "No Exemption! Full STCG Taxable"}}}}
       ],
-      "result_card": {{"badge": "Exam Trap Alert", "title": "Furniture Strictly Excluded", "sub": "Furniture is excluded from Section 54G exemption basket!"}}
+      "result_card": {{"badge": "Exam Trap Alert", "title": "Furniture Strictly Excluded", "sub": "Furniture is strictly excluded from Section 54G exemption basket!"}}
     }},
     {{
       "id": "b2",
