@@ -90,7 +90,7 @@ def generate_pedagogical_screenplay_plan(q_num: int, q_text: str, ans_text: str,
         client = rotator.get_active_client()
         try:
             resp = client.models.generate_content(
-                model='gemini-2.5-flash',
+                model='gemini-flash-latest',
                 contents=prompt,
                 config=types.GenerateContentConfig(
                     response_mime_type="application/json",
