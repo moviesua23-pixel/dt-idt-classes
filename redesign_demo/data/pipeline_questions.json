@@ -350,7 +350,7 @@
       "subject": "dt",
       "chapter_number": 2,
       "question_number": 25,
-      "question_title": "Section 51 & Section 54: Forfeited Advance, Dual House Exemption, and Beneficial Ownership",
+      "question_title": "Section 54 & Section 51: Capital Gains Exemption & Forfeiture of Advance Money",
       "question_text": "Hari has acquired a residential house property in Delhi on 15th April, 2002 for ₹ 9,00,000 and decided to sell the same on 3 May, 2005 to Ms. Pari and an advance of ₹ 25,000 was taken from her. The balance money was not paid by Ms. Pari and Hari has forfeited the entire advance sum. On 34 June, 2025, he has sold this house to Mr. Suri for ₹ 43,00,000. On 4th April, 2025, he had purchased a residential house in Delhi for ₹ 7,00,000, where he was staying with his family on rent for the las₹ 5 years and paid the full amount as per the purchase agreement. However, Hari does not possess any legal title till 31* March, 2026, as such transfer was not registered with the registration authority. Hari has purchased another old house in Chennai on 14th October, 2025 from Mr. X, an Indian resident, by paying ₹ 5,00,000 and the purchase was registered with the appropriate authority. Determine taxable capital gain arising from above transactions in the hands of Hari for A.Y. 2026-27.",
       "answer_text": "Computation of taxable capital gain of Mr. Hari\n\n| Particulars | ₹ |\n| :--- | :---: |\n| Sale proceeds | 43,00,000 |\n| Less: Cost of acquisition [See Note (i)] | 8,75,000 |\n| Long Term Capital Gain | 34,25,000 |\n| Less: Exemption u/s 54 in respect of investment in hause at Delhi [See Note (ii}] | 7,00,000 |\n| Exemption u/s 54 in respect of investment in house at Chennai [See Note [(iii)] | 5,00,000 |\n| Taxable long-term capital gain | 22,25,000 |\n\nNotes:\n\n- **(i)** Computation of cost of acquisition\n\n| Particulars | ₹ |\n| :--- | :---: |\n| Cost of acquisition | 9,00,000 |\n| Less: Advance taken and forfeited before 1.4.2014 | 25,000 |\n| Cost of acquisition | 8,75,000 |\n\n- **(ii)** In order to avail exemption of capital gains under section 54, residential house should be purchased within 1 year before or 2 years after the date of transfer or constructed within a 9 Le ee a period of 3 years after the date of transfer.\n\nIn this case, Hari has purchased the residential house in Delhi within one year before the date of transfer and paid the full amount as per the purchase agreement, though he doés not possess any legal title till 31.3.2026 since the transfer was not registered with the registration authority. However, for the purpose of claiming exemption under section 54, holding of legal title is not necessary. If the taxpayer pays the full consideration in terms of the purchase agreement within the stipulated period, the exemption under section 54 would be available. It was so held in Balraj v. CIT (2002) 254 ITR 22 (Del.) and CIT v, Shahzada Begum (1988) 173 ITR 397 (AP.).\n\n- **(iii)** As per section 54, since amount of capital gain does not exceed ₹ 2 crore, Mr. Hari can claim exemption in respect of investment made in two residential houses situated in India. Exe i rom Capit ins",
       "topic_id": "T_CH2_Q25"
@@ -749,8 +749,8 @@
       "chapter_number": 2,
       "question_number": 25,
       "topic_id": "T_CH2_Q25",
-      "topic_title": "Section 51 & Section 54: Forfeited Advance, Dual House Exemption, and Beneficial Ownership",
-      "provision_presentation_markdown": "### Statutory Summary Matrix\n\n| Provision / Judicial Test | Statutory Requirement | Tax Impact / Benchmark |\n| :--- | :--- | :--- |\n| **Section 51 vs 56(2)(ix)** | Advance forfeited **prior to 01-04-2014** | Deducted from **Cost of Acquisition** |\n| **Section 56(2)(ix)** | Advance forfeited **on or after 01-04-2014** | Taxed under **Income from Other Sources** (Cost unreduced) |\n| **Section 54 (Timelines)** | Purchase or Construction of Residential House | Purchase: 1 Year before / 2 Years after transfer<br>Construction: 3 Years after transfer |\n| **Section 54 (Dual House Option)** | Capital Gains **$\\\\le$ ₹ 2 Crore** | Exemption allowed for investment in **Two Residential Houses** in India (Once in a lifetime) |\n| **Judicial Benchmark** | Legal Title vs Possession (*Balraj v. CIT*) | Formal registration not required if **full consideration paid & possession obtained** |\n\n\n### Key Statutory Conditions & Rules\n\n- **Forfeited Advance Money Distinction:**\n  - Forfeiture prior to 1st April 2014 directly reduces the Cost of Acquisition for calculating Capital Gains on eventual transfer.\n  - Forfeiture on or after 1st April 2014 is fully taxable under Section 56(2)(ix) and does not adjust the Cost of Acquisition.\n\n- **Section 54 Dual House Exemption Threshold:**\n  - Default rule allows exemption for investment in one residential house in India.\n  - Proviso to Section 54(1) grants an option to invest in **two residential house properties** in India, provided the Long-Term Capital Gain does not exceed **₹ 2 Crore**.\n\n> [!IMPORTANT] Judicial Precedent on Deemed Ownership u/s 54\n> Registration of a formal sale deed is not an absolute prerequisite for claiming exemption u/s 54. Where an assessee has paid full consideration under a valid purchase agreement and taken possession within the statutory time frame, the benefit of Section 54 cannot be denied (*Balraj v. CIT* & *CIT v. Shahzada Begum*).",
+      "topic_title": "Section 54 & Section 51: Capital Gains Exemption & Forfeiture of Advance Money",
+      "provision_presentation_markdown": "### Statutory Summary Matrix: Section 51 & Section 54 Integrated Rules\n\n| Provision / Section | Statutory Trigger / Condition | Tax Treatment / Formula | Judicial Benchmark / Landmark Rule |\n| :--- | :--- | :--- | :--- |\n| **Section 51** | Advance money forfeited prior to 01/04/2014 | Reduced from Cost of Acquisition | Reduces base cost before applying indexation |\n| **Section 56(2)(ix)** | Advance money forfeited on or after 01/04/2014 | Taxed under *Income from Other Sources* | Does NOT reduce Cost of Acquisition |\n| **Section 54** | Purchase/construction of residential house | Exempt = Lower of Capital Gain or Cost of New Asset | Purchase: 1 yr before or 2 yrs after transfer; Construction: 3 yrs after |\n| **Section 54 Proviso** | Capital Gain ≤ ₹ 2 Crore (Once-in-a-lifetime) | Exemption available for **Two** residential houses in India | Aggregate investment across both houses is eligible |\n\n### Core Statutory Checklist & Conditions\n\n* **Forfeiture of Advance Money (Section 51 vs 56(2)(ix)):**\n  * Any advance received and forfeited before 1st April 2014 must be deducted from the cost of acquisition of the capital asset.\n  * Any advance forfeited on or after 1st April 2014 is treated as revenue income and charged under Section 56(2)(ix).\n\n* **Ownership & Legal Title Requirement (Section 54):**\n  * Execution of a registered sale deed is **not mandatory** to claim Section 54 exemption.\n  * If the assessee pays full consideration and obtains possession under an agreement to sell, beneficial ownership is established (*Balraj v. CIT*).\n\n> [!IMPORTANT] Dual House Property Exemption Threshold\n> The option to claim Section 54 exemption for **two residential houses** is strictly restricted to cases where the long-term capital gain does not exceed **₹ 2 Crore**. This option can be exercised by an assessee only once in their lifetime.",
       "drive_folder_id": "1vNlcjJ9GqToDvv91UDIuzdO-sKbOh1P2"
     },
     {
@@ -10942,285 +10942,453 @@
       "is_partially_complete": false
     },
     "ch2_q25": {
-      "doctrine": "Section 51 & Section 54 Statutory Framework",
+      "doctrine": "Section 54 Exemption & Section 51 Advance Money Forfeiture Framework",
       "root": {
         "id": "root",
         "number": "1",
-        "title": "Section 51 & Section 54 Framework",
-        "badge": "Sec 51 · Sec 54 · Sec 56(2)(ix)",
-        "voice_sync_text": "Welcome back, students. Today we are exploring the integrated provisions of Section 51, Section 56(2)(ix), and Section 54 dealing with forfeited advance money, dual house exemptions, and beneficial ownership.",
+        "title": "Capital Gains Exemption & Forfeiture Rules",
+        "badge": "Sec 51 · Sec 56(2)(ix) · Sec 54",
+        "voice_sync_text": "Welcome! ഇൻകം ടാക്സ് ആക്ടിലെ Section 51 പ്രകാരമുള്ള Advance Money Forfeiture, Section 54 Capital Gains Exemption എന്നിവയുടെ Statutory Provisions നമുക്ക് പരിശോധിക്കാം.",
         "t0": 0.0,
-        "t1": 13.87,
+        "t1": 11.07,
         "pt_idx": 0,
         "audio_file": "dt/ch2/q25/pt_0.mp3",
-        "drive_audio_id": "1ED1NHmIXB1IJJGHgoqy-sSZXg-3Kl5gk"
+        "drive_audio_id": "1UKNkC3OC5mvcplFX8-W4N9_Mo9RhKghh"
       },
       "branches": [
         {
           "branch_id": "branch-1",
-          "branch_title": "Section 51 & 56(2)(ix): Forfeited Advance",
-          "badge": "Advance Money",
+          "branch_title": "Advance Money Forfeited Rules",
+          "badge": "Section 51 & 56(2)(ix)",
           "icon": "scales",
           "points": [
             {
               "id": "beat-1-1",
-              "title": "Cut-off Date Rule for Forfeiture",
+              "title": "Pre-2014 vs Post-2014 Forfeiture Mechanism",
               "number": "1.1.1",
-              "badge": "Sec 51 / Sec 56(2)(ix)",
+              "badge": "Statutory Rule",
               "body": [
-                "Advance money forfeited prior to 1st April 2014 must be deducted from the Cost of Acquisition.",
-                "Advance forfeited on or after 1st April 2014 is taxable under Section 56(2)(ix) as Income from Other Sources."
+                "Advance money received and forfeited prior to 1st April 2014 is deducted from the Cost of Acquisition.",
+                "Advance money forfeited on or after 1st April 2014 is taxed under Income from Other Sources u/s 56(2)(ix)."
               ],
               "highlights": [
                 {
-                  "phrase": "deducted from the Cost of Acquisition",
-                  "time_sec": 3.7
+                  "phrase": "prior to 1st April 2014 is deducted from the Cost of Acquisition",
+                  "time_sec": 2.4
                 },
                 {
-                  "phrase": "taxable under Section 56(2)(ix)",
-                  "time_sec": 8.9
+                  "phrase": "Income from Other Sources u/s 56(2)(ix)",
+                  "time_sec": 8.3
                 }
               ],
-              "table_data": null,
-              "voice_sync_text": " Section 51 പ്രകാരം 1st April 2014-ന് മുൻപ് forfeit ചെയ്ത advance money, asset-ന്റെ Cost of Acquisition-ൽ നിന്ന് deduct ചെയ്യണം. എന്നാൽ 1st April 2014-ന് ശേഷമാണ് advance forfeit ചെയ്യുന്നതെങ്കിൽ, അത് Section 56(2)(ix) പ്രകാരം Income from Other Sources ആയി taxable ആകും.",
+              "table_data": {
+                "headers": [
+                  "Period of Forfeiture",
+                  "Statutory Section",
+                  "Tax Treatment"
+                ],
+                "rows": [
+                  [
+                    "Before 1st April 2014",
+                    "Section 51",
+                    "Deducted from Cost of Acquisition"
+                  ],
+                  [
+                    "On/After 1st April 2014",
+                    "Section 56(2)(ix)",
+                    "Taxable as Income from Other Sources"
+                  ]
+                ]
+              },
+              "voice_sync_text": "ഇവിടെ Capital Asset വിൽക്കാൻ കരാറിലേർപ്പെട്ട് Advance തുക Forfeit ചെയ്താൽ രണ്ട് തരം tax treatment ആണുള്ളത്. 1st April 2014-ന് മുൻപാണ് Advance Money Forfeit ചെയ്തതെങ്കിൽ, Section 51 പ്രകാരം Cost of Acquisition-ൽ നിന്ന് ആ തുക deduct ചെയ്യണം. എന്നാൽ 1st April 2014-ന് ശേഷമാണ് Forfeiture എങ്കിൽ Section 56(2)(ix) പ്രകാരം Income from Other Sources ആയി ടാക്സ് ചെയ്യപ്പെടും.",
               "spoken": true,
-              "t0": 14.87,
-              "t1": 34.08,
+              "t0": 12.07,
+              "t1": 38.28,
               "pt_idx": 1,
               "audio_file": "dt/ch2/q25/pt_1.mp3",
-              "dur": 22.0,
-              "duration_seconds": 22.0,
-              "drive_audio_id": "1ecenzWcbyPDPiyx-Oeb5SsjegsSpKpSK"
+              "dur": 29.08,
+              "duration_seconds": 29.08,
+              "drive_audio_id": "1IFhMkZkB9U-U0oH4Mbb4WNvdfhbiQFnh"
             }
           ],
           "flow_summary": [],
-          "t0": 14.87,
-          "t1": 34.08
+          "t0": 12.07,
+          "t1": 38.28
         },
         {
           "branch_id": "branch-2",
-          "branch_title": "Section 54: Investment Timelines",
-          "badge": "Time Limits",
-          "icon": "gear",
+          "branch_title": "Section 54 Basic Conditions & Time Limits",
+          "badge": "Section 54",
+          "icon": "shield",
           "points": [
             {
               "id": "beat-2-1",
-              "title": "Statutory Period for Purchase & Construction",
+              "title": "Eligible Timelines for Reinvestment",
               "number": "2.1.1",
-              "badge": "Sec 54",
+              "badge": "Time Limits",
               "body": [
-                "New residential house must be purchased within 1 year before or 2 years after transfer.",
-                "If constructed, the construction must be completed within 3 years after the transfer date."
+                "Purchase of new residential house must be within 1 year before or 2 years after the date of transfer.",
+                "Construction of residential house property must be completed within 3 years after the date of transfer."
               ],
               "highlights": [
                 {
-                  "phrase": "purchased within 1 year before or 2 years after",
-                  "time_sec": 3.0
+                  "phrase": "1 year before or 2 years after",
+                  "time_sec": 2.9
                 },
                 {
-                  "phrase": "completed within 3 years",
+                  "phrase": "within 3 years after the date of transfer",
                   "time_sec": 7.5
                 }
               ],
               "table_data": null,
-              "voice_sync_text": " Section 54 exemption ലഭിക്കാൻ new residential house property, transfer date-ന് 1 year before അല്ലെങ്കിൽ 2 years after എന്ന time limit-ൽ purchase ചെയ്തിരിക്കണം. Construction ആണെങ്കിൽ transfer date-ന് ശേഷം 3 years-നുള്ളിൽ completion പൂർത്തിയാക്കിയിരിക്കണം.",
+              "voice_sync_text": "Section 54 Exemption ലഭിക്കണമെങ്കിൽ, transfer ഡേറ്റിന് 1 year before അല്ലെങ്കിൽ 2 years after ഉള്ളിൽ പുതിയ residential house purchase ചെയ്തിരിക്കണം. അല്ലെങ്കിൽ transfer കഴിഞ്ഞ് 3 years-നുള്ളിൽ പുതിയ വീടിന്റെ construction പൂർത്തിയാക്കേണ്ടതുണ്ട്.",
               "spoken": true,
-              "t0": 36.08,
-              "t1": 54.29,
+              "t0": 40.28,
+              "t1": 57.71,
               "pt_idx": 2,
               "audio_file": "dt/ch2/q25/pt_2.mp3",
-              "dur": 18.08,
-              "duration_seconds": 18.08,
-              "drive_audio_id": "1RPi_IYnk7p0LIM3Mt1wGglLenArIDlEo"
+              "dur": 16.4,
+              "duration_seconds": 16.4,
+              "drive_audio_id": "1q4GpdrwjMF1uC1SfJvKJw3UNdCgSft_p"
             }
           ],
           "flow_summary": [],
-          "t0": 36.08,
-          "t1": 54.29
+          "t0": 40.28,
+          "t1": 57.71
         },
         {
           "branch_id": "branch-3",
-          "branch_title": "Section 54: Dual House Exemption Option",
-          "badge": "₹ 2 Crore Threshold",
-          "icon": "building",
+          "branch_title": "Legal Title vs Beneficial Ownership",
+          "badge": "Judicial Benchmark",
+          "icon": "cap",
           "points": [
             {
               "id": "beat-3-1",
-              "title": "Two Residential Houses Option & Ceiling",
+              "title": "Doctrine of Beneficial Ownership",
               "number": "3.1.1",
-              "badge": "Sec 54 Proviso",
+              "badge": "High Court Precedent",
               "body": [
-                "Where Long Term Capital Gain does not exceed ₹ 2 Crore, assessee can invest in two residential houses.",
-                "This dual house exemption under Section 54 can be claimed only once in a lifetime."
+                "Registration of legal title is not mandatory to claim Section 54 exemption if full consideration is paid.",
+                "Taking possession under an agreement to sell satisfies the criteria of purchasing residential property."
               ],
               "highlights": [
                 {
-                  "phrase": "does not exceed ₹ 2 Crore",
+                  "phrase": "Registration of legal title is not mandatory",
                   "time_sec": 2.8
                 },
                 {
-                  "phrase": "invest in two residential houses",
-                  "time_sec": 6.0
-                },
-                {
-                  "phrase": "once in a lifetime",
-                  "time_sec": 9.2
+                  "phrase": "purchasing residential property",
+                  "time_sec": 7.2
                 }
               ],
               "table_data": null,
-              "voice_sync_text": " Section 54-ന്റെ special proviso അനുസരിച്ച്, Long Term Capital Gain, ₹ 2 Crore exceed ചെയ്യുന്നില്ല എങ്കിൽ, assessee-ക്ക് India-യിലുള്ള two residential house properties-ൽ invest ചെയ്ത് exemption എടുകാം. ഈ option lifetime-ൽ ഒരൊറ്റ തവണ മാത്രമേ exercise ചെയ്യാൻ സാധിക്കൂ.",
+              "voice_sync_text": "Section 54 Exemption അവകാശപ്പെടാൻ Assessee-ക്ക് legal title registration അനിവാര്യമാണോ? അല്ല! Balraj v. CIT കേസിൽ Apex Bench വ്യക്തമാക്കുന്നത്, full consideration നൽകുകയും Possession ഏറ്റെടുക്കുകയും ചെയ്തിട്ടുണ്ടെങ്കിൽ, formal conveyance deed registered അല്ലെങ്കിലും Section 54 Exemption അനുവദനീയമാണ്.",
               "spoken": true,
-              "t0": 56.29,
-              "t1": 75.43,
+              "t0": 59.71,
+              "t1": 81.14,
               "pt_idx": 3,
               "audio_file": "dt/ch2/q25/pt_3.mp3",
-              "dur": 18.4,
-              "duration_seconds": 18.4,
-              "drive_audio_id": "1zY9ncE2g46XZ0ugxaEnsoyI7HEGwIMHK"
+              "dur": 21.8,
+              "duration_seconds": 21.8,
+              "drive_audio_id": "1KbcJH3dXFHp0JzRqnQLOHnTsergYWBoB"
             }
           ],
           "flow_summary": [],
-          "t0": 56.29,
-          "t1": 75.43
+          "t0": 59.71,
+          "t1": 81.14
         },
         {
           "branch_id": "branch-4",
-          "branch_title": "Section 54: Judicial Precedents on Title",
-          "badge": "Deemed Ownership",
-          "icon": "shield",
+          "branch_title": "Dual House Property Exemption Proviso",
+          "badge": "Section 54 Proviso",
+          "icon": "building",
           "points": [
             {
               "id": "beat-4-1",
-              "title": "Possession & Consideration vs Legal Registration",
+              "title": "Two Houses Exemption Threshold Rule",
               "number": "4.1.1",
-              "badge": "Case Law Benchmark",
+              "badge": "Statutory Cap",
               "body": [
-                "Claiming exemption under Section 54 does not require a registered legal title deed.",
-                "Payment of full consideration and taking possession within time limit satisfies Section 54 conditions."
+                "If Long-Term Capital Gains do not exceed ₹ 2 Crore, exemption is allowed for two residential houses in India.",
+                "This statutory concession for two house properties can be claimed once in a lifetime by the assessee."
               ],
               "highlights": [
                 {
-                  "phrase": "does not require a registered legal title deed",
-                  "time_sec": 3.5
+                  "phrase": "do not exceed ₹ 2 Crore",
+                  "time_sec": 3.0
                 },
                 {
-                  "phrase": "Payment of full consideration and taking possession",
+                  "phrase": "claimed once in a lifetime",
                   "time_sec": 7.8
                 }
               ],
               "table_data": null,
-              "voice_sync_text": " high court precedents അനുസരിച്ച്, Section 54 exemption ലഭിക്കാൻ formal legal title registration നിർബന്ധമില്ല. Agreement per full consideration pay ചെയ്യുകയും statutory period-ൽ possession ലഭിക്കുകയും ചെയ്താൽ Section 54 deduction claim ചെയ്യാം.",
+              "voice_sync_text": "Section 54 പ്രകാരം പൊതുവേ ഒരു Residential House-ൽ മാത്രമേ Exemption ലഭിക്കൂ. എന്നാൽ Assessee-യുടെ Long-Term Capital Gain തുക ₹ 2 Crore കവിയുന്നില്ലെങ്കിൽ, ഇന്ത്യയിലുള്ള TWO residential houses-ൽ നടത്തുന്ന Investment-ന് Exemption അവകാശപ്പെടാം. ഈ ആനുകൂല്യം ജീവിതത്തിൽ ഒരിക്കൽ മാത്രമേ നേടാൻ സാധിക്കൂ.",
               "spoken": true,
-              "t0": 77.43,
-              "t1": 94.86,
+              "t0": 83.14,
+              "t1": 104.28,
               "pt_idx": 4,
               "audio_file": "dt/ch2/q25/pt_4.mp3",
-              "dur": 17.4,
-              "duration_seconds": 17.4,
-              "drive_audio_id": "1EwVH8Yr60lePsb_RUDk9RxbtYbdOrj_X"
+              "dur": 20.32,
+              "duration_seconds": 20.32,
+              "drive_audio_id": "10cxBSOIN0E3HYQ8b-bk9vfQfOZYNCO3x"
             }
           ],
           "flow_summary": [],
-          "t0": 77.43,
-          "t1": 94.86
+          "t0": 83.14,
+          "t1": 104.28
         }
       ],
       "concept_simulation": {
         "schema_version": "1.0",
         "illustrative_only": true,
-        "doctrine_topic": "Section 51 & Section 54 Capital Gain Computation Mechanics",
+        "doctrine_topic": "Section 51 Cost Adjustment & Section 54 Dual House Exemption",
         "relevant_tax_year": "P.Y. 2025-26 (A.Y. 2026-27)",
         "statutory_assumptions": [
-          "Illustrative acquisition cost: ₹ 10 Lakhs; Advance forfeited pre-2014: ₹ 1 Lakh.",
-          "Transfer proceeds: ₹ 50 Lakhs; Reinvestment in House A: ₹ 25 Lakhs, House B: ₹ 15 Lakhs."
+          "Illustrative Purchase Cost: ₹ 10,00,000 in 2003 with ₹ 1,00,000 advance forfeited prior to 1st April 2014.",
+          "Illustrative Sale Consideration: ₹ 50,00,000 resulting in LTCG ≤ ₹ 2 Crore eligible for dual house exemption."
         ],
-        "intro_voice": "ഇനി നമുക്ക് ഈ statutory provisions എങ്ങിനെയാണ് ഒന്നിച്ച് ഒരു computation-ൽ apply ചെയ്യുന്നതെന്ന് ഒരു simple visual numerical simulation വഴി നോക്കാം.",
+        "intro_voice": "ഇനി ഈ പ്രൊവിഷനുകൾ ഒരു റിയൽ-ലൈഫ് ഇല്ലസ്ട്രേറ്റീവ് എക്സാമ്പിളിലൂടെ കണ്ടു മനസ്സിലാക്കാം.",
         "steps": [
           {
             "step_id": "step_1",
             "step_order": 1,
-            "title": "Cost Adjustment for Pre-2014 Forfeited Advance",
+            "title": "Pre-2014 Advance Forfeiture & Net Cost Determination",
             "metric_label": "Adjusted Cost of Acquisition",
             "metric_value": "₹ 9,00,000",
-            "voice_sync_text": "ആദ്യമായി, 1st April 2014-ന് മുൻപ് forfeit ചെയ്ത advance amount ആയ ₹ 1 Lakh, original acquisition cost ആയ ₹ 10 Lakhs-ൽ നിന്ന് deduct ചെയ്ത് adjusted cost ₹ 9 Lakhs ആയി കണക്കാക്കുന്നു.",
-            "image_prompt": "A modern 2.5D isometric tax office dashboard showing a document labeled Cost of Acquisition ₹ 10 Lakhs with a minus deduction badge of ₹ 1 Lakh pre-2014 advance, leaving a net balance of ₹ 9 Lakhs, cinematic lighting.",
+            "voice_sync_text": "ഒരു Capital Asset 2003-ൽ ₹ 10 Lakhs-ന് വാങ്ങുകയും, 2008-ൽ ₹ 1 Lakh Advance വാങ്ങിയ ശേഷം 계약 മുടങ്ങിയപ്പോൾ Forfeit ചെയ്യുകയും ചെയ്തു. Section 51 അനുസരിച്ച്, Pre-2014 Forfeiture ആയതിനാൽ Purchase Cost-ൽ നിന്ന് ₹ 1 Lakh കുറച്ച് Net Cost ₹ 9 Lakhs ആയി ക്രമീകരിക്കുന്നു.",
+            "image_prompt": "A modern 2.5D isometric illustration showing a legal property contract on a desk, with green money icons being deducted from a valuation ledger sheet, sharp realistic studio lighting, clean office backdrop.",
             "calculation_data": null,
             "step_number": 1,
             "audio_file": "dt/ch2/q25/sim_1.mp3",
-            "duration_seconds": 15.32,
-            "drive_audio_id": "1qjw5w3q2FOCxtlyeri5XLoZ-nSq9elri",
+            "duration_seconds": 21.28,
+            "drive_audio_id": "1q1mT3vHntHUha3edJyecdBTftI18KpHq",
             "image_file": "dt/ch2/q25/sim_img_1.jpg"
           },
           {
             "step_id": "step_2",
             "step_order": 2,
-            "title": "Computation of Unadjusted Long-Term Capital Gain",
-            "metric_label": "Gross Long-Term Capital Gain",
+            "title": "Transfer of Asset & LTCG Computation",
+            "metric_label": "Net Long-Term Capital Gain",
             "metric_value": "₹ 41,00,000",
-            "voice_sync_text": "അടുത്തതായി, Total Sale Consideration ആയ ₹ 50 Lakhs-ൽ നിന്ന് adjusted cost ₹ 9 Lakhs subtract ചെയ്യുമ്പോൾ Gross Long Term Capital Gain ₹ 41 Lakhs എന്ന് ലഭിക്കുന്നു.",
-            "image_prompt": "An isometric 2.5D visual ledger showing Sale Proceeds of ₹ 50 Lakhs minus Adjusted Cost of ₹ 9 Lakhs resulting in Gross Capital Gain of ₹ 41 Lakhs displayed on an illuminated digital screen.",
+            "voice_sync_text": "ഈ Property ₹ 50 Lakhs-ന് വിൽക്കുമ്പോൾ Adjusted Cost ആയ ₹ 9 Lakhs കഴിച്ചുള്ള തുക Long-Term Capital Gain ആയി വരുന്നു. Gain ₹ 2 Crore-ൽ കുറവായതിനാൽ Section 54 Proviso അപ്ലൈ ചെയ്യാം.",
+            "image_prompt": "A 2.5D isometric view of a residential bungalow with a sold sign in front, glowing digital calculator showing net capital gains breakdown floating beside it, photorealistic cinematic lighting.",
             "calculation_data": null,
             "step_number": 2,
             "audio_file": "dt/ch2/q25/sim_2.mp3",
-            "duration_seconds": 12.4,
-            "drive_audio_id": "1PCdHkJCP4fYoB8WIF5eFzzLfXxL1fw2i",
+            "duration_seconds": 12.96,
+            "drive_audio_id": "1mR4MGU1cJgcrQKN0UIJPVEC3JECCIbd-",
             "image_file": "dt/ch2/q25/sim_img_2.jpg"
           },
           {
             "step_id": "step_3",
             "step_order": 3,
-            "title": "Section 54 Dual House Exemption Claim",
+            "title": "Investment in Two Residential Houses",
             "metric_label": "Total Section 54 Exemption",
-            "metric_value": "₹ 40,00,000",
-            "voice_sync_text": "Capital Gain ₹ 2 Crore-ൽ താഴെയായതിനാൽ, assessee two residential properties-ൽ നടത്തിയ investments (₹ 25 Lakhs + ₹ 15 Lakhs) ചേർത്ത് total ₹ 40 Lakhs Section 54 exemption claim ചെയ്യുന്നു.",
-            "image_prompt": "An isometric 2.5D visual of two modern suburban residential houses labeled House 1 (₹ 25L) and House 2 (₹ 15L) combining into a tax exemption shield of ₹ 40 Lakhs under Section 54.",
-            "calculation_data": null,
-            "step_number": 3,
-            "audio_file": "dt/ch2/q25/sim_3.mp3",
-            "duration_seconds": 14.4,
-            "drive_audio_id": "1ETN3NJCa-KFN72SK2wSMm2VjCgdZFwt7",
-            "image_file": "dt/ch2/q25/sim_img_3.jpg"
-          },
-          {
-            "step_id": "step_4",
-            "step_order": 4,
-            "title": "Net Taxable Long-Term Capital Gain",
-            "metric_label": "Net Taxable LTCG",
-            "metric_value": "₹ 1,00,000",
-            "voice_sync_text": "Gross LTCG ₹ 41 Lakhs-ൽ നിന്ന് Total Section 54 exemption ₹ 40 Lakhs subtract ചെയ്യുമ്പോൾ, final Net Taxable Long-Term Capital Gain ₹ 1 Lakh മാത്രം ആയി മാറുന്നു.",
-            "image_prompt": "A clean final tax breakdown chart in isometric view showing Gross Capital Gain ₹ 41 Lakhs minus Section 54 Deduction ₹ 40 Lakhs leaving Net Taxable Capital Gain of ₹ 1 Lakh in green numbers.",
+            "metric_value": "₹ 20,00,000",
+            "voice_sync_text": "LTCG ₹ 2 Crore-ൽ താഴെയായതിനാൽ, വിറ്റ തുക ഉപയോഗിച്ച് ₹ 12 Lakhs-ന് ഒരു വീടും ₹ 8 Lakhs-ന് മറ്റൊരു വീടും വാങ്ങുന്നു. രണ്ടിനും കൂട്ടി ₹ 20 Lakhs Exemption സെക്ഷൻ 54 പ്രകാരം അനുവദനീയമാണ്.",
+            "image_prompt": "A 2.5D architectural visualization displaying two distinct elegant residential villas side by side with glowing green checkmarks above them, blueprint background, golden cinematic glow.",
             "calculation_data": {
-              "formula": "Gross LTCG - Section 54 Exemption",
-              "breakdown": [
-                {
-                  "label": "Gross Long-Term Capital Gain",
-                  "amount": "₹ 41,00,000"
-                },
-                {
-                  "label": "Less: Section 54 Exemption (House 1 + House 2)",
-                  "amount": "(₹ 40,00,000)"
-                },
-                {
-                  "label": "Net Taxable Long-Term Capital Gain",
-                  "amount": "₹ 1,00,000"
-                }
+              "headers": [
+                "Particulars",
+                "Amount (₹)"
+              ],
+              "rows": [
+                [
+                  "Gross Long-Term Capital Gain",
+                  "41,00,000"
+                ],
+                [
+                  "Less: Sec 54 Exemption (House 1)",
+                  "12,00,000"
+                ],
+                [
+                  "Less: Sec 54 Exemption (House 2)",
+                  "8,00,000"
+                ],
+                [
+                  "Taxable Long-Term Capital Gain",
+                  "21,00,000"
+                ]
               ]
             },
-            "step_number": 4,
-            "audio_file": "dt/ch2/q25/sim_4.mp3",
-            "duration_seconds": 12.2,
-            "drive_audio_id": "12mkxBndiC87FnzM1AWStsK48huPIixsh",
-            "image_file": "dt/ch2/q25/sim_img_4.jpg"
+            "step_number": 3,
+            "audio_file": "dt/ch2/q25/sim_3.mp3",
+            "duration_seconds": 14.76,
+            "drive_audio_id": "1h-ZUodmYwQSJ9zgdwhYU1DWT6fpF73Dp",
+            "image_file": "dt/ch2/q25/sim_img_3.jpg"
           }
         ],
         "intro_audio_file": "dt/ch2/q25/sim_intro.mp3",
-        "intro_dur": 3.52,
-        "intro_drive_audio_id": "1EsvCqOFDBH7sxiZj3PkcMPOR1ZrQdJ6M"
+        "intro_dur": 3.96,
+        "intro_drive_audio_id": "1nFlfPrTLR_b8Bl-yS0XyU3CUz-WHzeEf"
       },
-      "total_duration": 96.86,
+      "explainer_presentation": {
+        "title": "Section 54 Exemption & Section 51 Forfeiture Rules",
+        "badge": "Direct Tax Statutory Law",
+        "doctrine": "Capital Gains & Statutory Exemptions",
+        "slides": [
+          {
+            "slide_order": 1,
+            "title": "Forfeiture of Advance Money: Sec 51 vs Sec 56(2)(ix)",
+            "subtitle": "Cut-off Date: 1st April 2014",
+            "layout": "statutory_rule",
+            "image_required": false,
+            "image_prompt": null,
+            "voice_sync_text": "Forfeited Advance Money-യുടെ Tax treatment തീരുമാനിക്കുന്നത് ആ തുക എപ്പോഴാണ് Forfeit ചെയ്തത് എന്നതിന്റെ അടിസ്ഥാനത്തിലാണ്.",
+            "cards": [
+              {
+                "heading": "Forfeited Before 01-04-2014 (Sec 51)",
+                "badge": "COST REDUCTION",
+                "points": [
+                  "Deducted directly from the Cost of Acquisition of the capital asset.",
+                  "Reduces the base cost before applying indexation."
+                ]
+              },
+              {
+                "heading": "Forfeited On or After 01-04-2014 (Sec 56(2)(ix))",
+                "badge": "OTHER SOURCES",
+                "points": [
+                  "Taxed as revenue income under Income from Other Sources.",
+                  "No reduction made to the Cost of Acquisition."
+                ]
+              }
+            ],
+            "calculation_data": null,
+            "trap_data": null
+          },
+          {
+            "slide_order": 2,
+            "title": "Section 54: Title Ownership & Two Houses Exception",
+            "subtitle": "Judicial Precedents & Proviso Thresholds",
+            "layout": "statutory_rule",
+            "image_required": false,
+            "image_prompt": null,
+            "voice_sync_text": "legal title registration ഇല്ലെങ്കിലും full payment ചെയ്താൽ Section 54 ലഭിക്കും. കൂടാതെ capital gain 2 Crore രൂപയ്ക്ക് താഴെയാണെങ്കിൽ 2 വീടുകൾക്ക് വരെ exemption ലഭിക്കും.",
+            "cards": [
+              {
+                "heading": "Beneficial Ownership Standard",
+                "badge": "JUDICIAL RULE",
+                "points": [
+                  "Full consideration paid and possession taken under agreement is sufficient.",
+                  "Execution of registered sale deed is NOT mandatory (*Balraj v. CIT*)."
+                ]
+              },
+              {
+                "heading": "Two Residential Houses Option",
+                "badge": "STATUTORY PROVISO",
+                "points": [
+                  "Applicable only if aggregate LTCG does not exceed ₹ 2 Crore.",
+                  "Can be exercised by an assessee only ONCE in a lifetime."
+                ]
+              }
+            ],
+            "calculation_data": null,
+            "trap_data": null
+          }
+        ]
+      },
+      "screenplay": {
+        "doctrine": "Section 54 & Section 51 Statutory Mechanics",
+        "beats": [
+          {
+            "beat_order": 1,
+            "t_start": 0.0,
+            "t_end": 4.5,
+            "beat_type": "kinetic_headline",
+            "headline": "Advance Forfeiture & Sec 54 Exemption",
+            "badge": "§ 51 · § 54 Statutory Rules",
+            "subtext": "Tax treatment of forfeited advance and dual house property exemption",
+            "metric_chip": null,
+            "voice_sync_text": "Section 51 പ്രകാരമുള്ള Advance Forfeiture rules-ഉം Section 54 Exemption-ന്റെ പ്രധാന വ്യവസ്ഥകളും മനസ്സിലാക്കാം.",
+            "image_required": false,
+            "image_prompt": null,
+            "highlights": [
+              {
+                "phrase": "Advance Forfeiture rules",
+                "time_sec": 1.5
+              },
+              {
+                "phrase": "Section 54 Exemption",
+                "time_sec": 3.2
+              }
+            ]
+          },
+          {
+            "beat_order": 2,
+            "t_start": 4.5,
+            "t_end": 9.5,
+            "beat_type": "statutory_trigger",
+            "headline": "Pre-2014 Forfeiture Reduces Cost of Acquisition",
+            "badge": "Section 51",
+            "subtext": "Advance received and forfeited prior to 1st April 2014",
+            "metric_chip": "Deduct from Cost",
+            "voice_sync_text": "1st April 2014-ന് മുൻപ് Forfeit ചെയ്ത Advance Money, Asset-ന്റെ Cost of Acquisition-ൽ നിന്ന് കുറയ്ക്കുന്നു.",
+            "image_required": false,
+            "image_prompt": null,
+            "highlights": [
+              {
+                "phrase": "1st April 2014-ന് മുൻപ്",
+                "time_sec": 5.0
+              },
+              {
+                "phrase": "Cost of Acquisition-ൽ നിന്ന് കുറയ്ക്കുന്നു",
+                "time_sec": 7.5
+              }
+            ]
+          },
+          {
+            "beat_order": 3,
+            "t_start": 9.5,
+            "t_end": 15.0,
+            "beat_type": "statutory_trap",
+            "headline": "Legal Title Registration Not Mandatory",
+            "badge": "Balraj v. CIT Judicial Principle",
+            "subtext": "Payment of full consideration & possession satisfies Sec 54",
+            "metric_chip": "Deemed Owner Eligible",
+            "voice_sync_text": "Section 54-ൽ Exemption നേടാൻ registered legal deed നിർബന്ധമില്ല. full consideration നൽകി possession ലഭിച്ചാൽ അത് പൂർണ്ണമായും അർഹമാണ്.",
+            "image_required": false,
+            "image_prompt": null,
+            "highlights": [
+              {
+                "phrase": "registered legal deed നിർബന്ധമില്ല",
+                "time_sec": 11.2
+              },
+              {
+                "phrase": "full consideration നൽകി possession",
+                "time_sec": 13.5
+              }
+            ]
+          },
+          {
+            "beat_order": 4,
+            "t_start": 15.0,
+            "t_end": 20.0,
+            "beat_type": "metric_callout",
+            "headline": "Exemption for Two Residential Houses",
+            "badge": "LTCG ≤ ₹ 2 Crore Threshold",
+            "subtext": "",
+            "metric_chip": "Limit: ₹ 2 Crore",
+            "voice_sync_text": "Long-Term Capital Gain ₹ 2 Crore കവിയുന്നില്ലെങ്കിൽ, ഇന്ത്യയിലുള്ള 2 Residential Houses-ൽ നടത്തുന്ന investment-നും Section 54 Exemption ലഭ്യമാണ്.",
+            "image_required": false,
+            "image_prompt": null,
+            "highlights": [
+              {
+                "phrase": "₹ 2 Crore കവിയുന്നില്ലെങ്കിൽ",
+                "time_sec": 16.5
+              },
+              {
+                "phrase": "2 Residential Houses",
+                "time_sec": 18.2
+              }
+            ]
+          }
+        ]
+      },
+      "total_duration": 106.28,
       "drive_folder_id": "1vNlcjJ9GqToDvv91UDIuzdO-sKbOh1P2",
       "total_points_count": 5,
-      "completed_points_count": 10,
+      "completed_points_count": 9,
       "is_partially_complete": false
     },
     "ch2_q26": {
@@ -12670,6 +12838,357 @@
       "total_points_count": 13,
       "completed_points_count": 10,
       "is_partially_complete": true
+    }
+  },
+  "screenplays": {
+    "dt-c2-q25": {
+      "question_id": "dt-c2-q25",
+      "audio_url": "data/audio/dt-c2-q25.mp3",
+      "duration_sec": 203.28,
+      "sync_offset_sec": 0.0,
+      "context_pill": "§ 54 · Two Residential Houses & § 51 Advance Forfeiture",
+      "fallback": false,
+      "beats": [
+        {
+          "id": "b1",
+          "layout": "fork",
+          "start": 0.0,
+          "end": 40.73,
+          "voice_sync_text": "സെക്ഷൻ 51-ന്റെ പ്രൊവിഷൻ മനസ്സിലാക്കാൻ നമുക്ക് ഹരിയുടെ ഒരു സിമ്പിൾ എക്സാമ്പിൾ നോക്കാം. ഹരി 2002-ൽ 9 ലക്ഷം രൂപയ്ക്ക് ഡൽഹിയിൽ ഒരു റെസിഡൻഷ്യൽ ഹൗസ് വാങ്ങി. 2005 മെയ് മാസത്തിൽ പരി എന്ന ബയറുമായി നെഗോഷ്യേഷൻ നടത്തുമ്പോൾ 25,000 രൂപ അഡ്വാൻസ് മണി വാങ്ങി. പക്ഷെ പിന്നീട് ആ ഡീൽ കാൻസലാവുകയും ഹരി ആ അഡ്വാൻസ് ഫോർഫീറ്റ് ചെയ്യുകയും ചെയ്തു. ഇവിടെ ഒരു കട്ട്-ഓഫ് ഡേറ്റ് ഓർക്കുക: ഒന്നാം തീയതി ഏപ്രിൽ 2014-ന് മുൻപാണ് ഫോർഫീച്ചർ എങ്കിൽ, സെക്ഷൻ 51 പ്രകാരം അത് കോസ്റ്റ് ഓഫ് അക്വിസിഷനിൽ നിന്ന് കുറയ്ക്കണം! അതുകൊണ്ട് ഹരിയുടെ അഡ്ജസ്റ്റഡ് കോസ്റ്റ് 9 ലക്ഷത്തിൽ നിന്ന് 25,000 കുറച്ച് 8 ലക്ഷത്തി 75,000 രൂപയായി മാറുന്നു!",
+          "title": {
+            "text": "Section 51 · Advance Money Forfeiture Cut-off",
+            "at": 0.3
+          },
+          "story_steps": [
+            {
+              "badge": "Year 2002",
+              "title": "Delhi House Acquisition",
+              "sub": "Hari purchased residential house in Delhi",
+              "val": 900000,
+              "at": 4.8
+            },
+            {
+              "badge": "May 2005",
+              "title": "Negotiation with Pari",
+              "sub": "Agreement to sell & advance money received",
+              "val": 25000,
+              "at": 10.5
+            },
+            {
+              "badge": "Deal Cancelled",
+              "title": "Advance Forfeited by Hari",
+              "sub": "Kept advance upon buyer default u/s 51",
+              "val": 25000,
+              "at": 18.0
+            }
+          ],
+          "divider": {
+            "text": "Forfeiture Cut-off Date: 01-04-2014",
+            "at": 22.8
+          },
+          "branches": [
+            {
+              "side": "left",
+              "label": "Before 01-04-2014 (Hari's Case: May 2005)",
+              "facts": [
+                {
+                  "text": "Deduct from Cost of Acquisition u/s 51",
+                  "at": 29.8
+                }
+              ],
+              "outcome": {
+                "text": "Reduces Cost of Acquisition",
+                "at": 31.5
+              }
+            },
+            {
+              "side": "right",
+              "label": "On/After 01-04-2014",
+              "facts": [
+                {
+                  "text": "Taxable under IFOS u/s 56(2)(ix)",
+                  "at": 27.0
+                }
+              ],
+              "outcome": {
+                "text": "Income from Other Sources (No Cost Reduction)",
+                "at": 28.5
+              }
+            }
+          ],
+          "active": {
+            "side": "left",
+            "at": 29.8
+          },
+          "example": {
+            "name": "Mr. Hari",
+            "role": "Adjusted Cost Result",
+            "text": "Section 51 Computation: Cost ₹ 9,00,000 − Advance Forfeited ₹ 25,000 = Adjusted Cost ₹ 8,75,000!",
+            "at": 33.5
+          },
+          "style": "zoom_in.color_shift.calm",
+          "serves": [
+            "p1",
+            "p2",
+            "c1",
+            "c2",
+            "f2",
+            "d1",
+            "n3",
+            "t1"
+          ]
+        },
+        {
+          "id": "b2",
+          "layout": "statute_quote",
+          "start": 40.98,
+          "end": 78.51,
+          "voice_sync_text": "ഇനി 2025 ജൂൺ മാസത്തിൽ ഹരി ഈ വീട് 43 ലക്ഷം രൂപയ്ക്ക് വിൽക്കുന്നു. അപ്പോൾ ഹരിയുടെ ലോങ്-ടേം ക്യാപിറ്റൽ ഗെയിൻ വരുന്നത് 43 ലക്ഷം മൈനസ് 8 ലക്ഷത്തി 75,000, അതായത് 34 ലക്ഷത്തി 25,000 രൂപ! ഇവിടെ ഹരി ചോദിക്കുന്നു: 'എനിക്ക് സെക്ഷൻ 54 പ്രകാരം ഒരു വീടിന് പകരം രണ്ട് റെസിഡൻഷ്യൽ വീടുകൾ വാങ്ങി എക്സംപ്ഷൻ ക്ലെയിം ചെയ്യാൻ പറ്റുമോ?' സെക്ഷൻ 54 സബ് സെക്ഷൻ ഒന്നിന്റെ ഫസ്റ്റ് പ്രൊവൈസോ പറയുന്നത് നോക്കൂ: ക്യാപിറ്റൽ ഗെയിൻ രണ്ട് കോടി രൂപയിൽ കവിയുന്നില്ലെങ്കിൽ, അസ്സസ്സീക്ക് ഇന്ത്യയിൽ രണ്ട് റെസിഡൻഷ്യൽ വീടുകൾ വാങ്ങാനുള്ള സ്റ്റാറ്റ്യൂട്ടറി ഓപ്ഷൻ ലഭിക്കും!",
+          "title": {
+            "text": "Section 54(1) · First Proviso: Two Residential Houses",
+            "at": 41.2
+          },
+          "sale_card": {
+            "sale_lbl": "Full Value of Consideration (June 2025)",
+            "sale_val": 4300000,
+            "cost_lbl": "Less: Adjusted Cost u/s 51",
+            "cost_val": 875000,
+            "gain_lbl": "Gross LTCG Generated",
+            "gain_val": 3425000,
+            "at": 42.5
+          },
+          "example": {
+            "name": "Mr. Hari",
+            "role": "Assessee Question",
+            "text": "Can I purchase TWO residential houses in India and claim Section 54 exemption?",
+            "at": 58.6
+          },
+          "quote": {
+            "text": "Where Capital Gain ≤ [[₹ 2.00 Crore]], Assessee may purchase or construct [[two residential houses in India]] (Once-in-a-lifetime option).",
+            "at": 67.5
+          },
+          "style": "fade.pulse.snappy",
+          "serves": [
+            "p3",
+            "c3",
+            "n6",
+            "t3"
+          ]
+        },
+        {
+          "id": "b3",
+          "layout": "meter",
+          "start": 78.76,
+          "end": 100.41,
+          "voice_sync_text": "ഇവിടെ നമ്മുടെ ത്രെഷോൾഡ് മീറ്റർ നോക്കൂ! സ്റ്റാറ്റ്യൂട്ടറി ലിമിറ്റ് രണ്ട് കോടി രൂപയാണ്. ഹരിയുടെ ക്യാപിറ്റൽ ഗെയിൻ എത്രയാണ്? വെറും 34 ലക്ഷത്തി 25,000 രൂപ മാത്രം! ഇത് രണ്ട് കോടി രൂപയേക്കാൾ വളരെ താഴെയാണ്. അതുകൊണ്ട് ദാ, നമ്മുടെ പാഡ്‌ലോക്ക് ഓപ്പൺ ആയി! ഹരിക്ക് ജീവിതത്തിൽ ഒരിക്കൽ മാത്രം ലഭിക്കുന്ന ടു റെസിഡൻഷ്യൽ ഹൗസസ് ഓപ്ഷൻ ഇവിടെ അൺലോക്ക് ആയിരിക്കുന്നു!",
+          "title": {
+            "text": "Section 54 Statutory Threshold Gauge",
+            "at": 79.0
+          },
+          "limit": {
+            "text": "Statutory Ceiling Limit",
+            "value": 20000000,
+            "at": 81.0
+          },
+          "reading": {
+            "text": "Hari's Long-Term Capital Gain",
+            "value": 3425000,
+            "at": 84.5,
+            "fmt": "inr"
+          },
+          "outcome": {
+            "text": "₹ 34.25 Lakhs ≤ ₹ 2.00 Crore · THRESHOLD SATISFIED",
+            "tone": "ok",
+            "at": 90.0
+          },
+          "padlock": {
+            "text": "Capital Gain ₹ 34.25L ≤ ₹ 2.00 Crore: TWO HOUSES OPTION UNLOCKED!",
+            "at": 92.5
+          },
+          "example": {
+            "name": "Mr. Hari",
+            "role": "Threshold Qualified",
+            "text": "Once-in-a-lifetime option unlocked! Entitled to claim exemption for 2 residential houses in India.",
+            "at": 95.5
+          },
+          "style": "slide_down.glow.snappy",
+          "serves": [
+            "c3",
+            "n5",
+            "n6"
+          ]
+        },
+        {
+          "id": "b4",
+          "layout": "case_card",
+          "start": 100.66,
+          "end": 140.83,
+          "voice_sync_text": "ഹരി രണ്ട് വീടുകൾ വാങ്ങി. ഒന്ന് ചെന്നൈയിൽ 5 ലക്ഷം രൂപയ്ക്ക്, മറ്റൊന്ന് ഡൽഹിയിൽ 7 ലക്ഷം രൂപയ്ക്ക്. പക്ഷെ ഇവിടെ ഒരു വലിയ പ്രശ്നം വന്നു! ഡൽഹിയിലെ വീടിന്റെ മുഴുവൻ തുകയും നൽകി ഹരി കൈവശം വെച്ചെങ്കിലും, അതിന്റെ സെയിൽ ഡീഡ് രജിസ്റ്റർ ചെയ്തിട്ടില്ല! അസ്സസ്സിങ് ഓഫീസർ ചോദിക്കുന്നു: 'രജിസ്ട്രേഷൻ ഇല്ലാത്ത വീടിന് എങ്ങനെ സെക്ഷൻ 54 കൊടുക്കും?' ഇവിടെയാണ് ഡൽഹി ഹൈക്കോടതിയുടെ ലാൻഡ്മാർക്ക് കേസായ ബൽരാജ് വേഴ്സസ് സി.ഐ.ടി. വരുന്നത്! കോടതി വ്യക്തമാക്കി: സെക്ഷൻ 53A പ്രകാരം പൊസഷനും മുഴുവൻ പെയ്മെന്റും ഉണ്ടെങ്കിൽ സബ്സ്റ്റാൻഷ്യൽ ഓണർഷിപ്പ് ആയി. അതിനാൽ രജിസ്റ്റേർഡ് ഡീഡ് ഇല്ലെങ്കിലും ഡൽഹി വീടിന് സെക്ഷൻ 54 എക്സംപ്ഷൻ പൂർണ്ണമായും ലഭിക്കും!",
+          "title": {
+            "text": "Judicial Precedent · Section 54 Legal Title",
+            "at": 101.0
+          },
+          "houses": [
+            {
+              "location": "Chennai House",
+              "status": "House 1 · Registered Sale Deed",
+              "cost": 500000,
+              "at": 102.5
+            },
+            {
+              "location": "Delhi House",
+              "status": "House 2 · Possession Taken, Full Payment Paid",
+              "cost": 700000,
+              "at": 105.0
+            },
+            {
+              "location": "Total Section 54 Exemption",
+              "status": "Exemption Allowed for Both Houses",
+              "cost": 1200000,
+              "isTotal": true,
+              "at": 134.0
+            }
+          ],
+          "gap": {
+            "text": "AO Objection: Delhi house deed was unregistered on 31-03-2026. Can Section 54 exemption be disallowed?",
+            "at": 108.5
+          },
+          "case": {
+            "text": "Balraj v. CIT (2002) 254 ITR 22",
+            "at": 118.5
+          },
+          "court": {
+            "text": "Delhi High Court Benchmark",
+            "at": 119.5
+          },
+          "principle": {
+            "text": "Section 53A TPA possession and full consideration constitute substantial ownership for Section 54 without registered deed.",
+            "at": 122.5
+          },
+          "effect": {
+            "text": "Exemption ALLOWED for Delhi House (₹ 7,00,000) despite lack of registered conveyance.",
+            "at": 128.5
+          },
+          "style": "whip_left.shake.calm",
+          "serves": [
+            "c4",
+            "f4",
+            "cl1",
+            "cl2",
+            "t2"
+          ]
+        },
+        {
+          "id": "b5",
+          "layout": "ledger",
+          "start": 141.08,
+          "end": 180.05,
+          "voice_sync_text": "ഇനി ഫൈനൽ ക്യാപിറ്റൽ ഗെയിൻസ് ലെഡ്ജർ നോക്കാം. ഫുൾ വാല്യൂ ഓഫ് കൺസിഡറേഷൻ 43 ലക്ഷം രൂപ. ലെസ്സ്: അഡ്ജസ്റ്റഡ് കോസ്റ്റ് ഓഫ് അക്വിസിഷൻ 8 ലക്ഷത്തി 75,000 രൂപ. ഗ്രോസ് ലോങ്-ടേം ക്യാപിറ്റൽ ഗെയിൻ 34 ലക്ഷത്തി 25,000 രൂപ. ഇനി ഇതിൽ നിന്ന് രണ്ട് വീടുകളുടെയും എക്സംപ്ഷൻ കുറയ്ക്കാം: ഡൽഹി വീടിന് 7 ലക്ഷം, ചെന്നൈ വീടിന് 5 ലക്ഷം. ആകെ എക്സംപ്ഷൻ 12 ലക്ഷം രൂപ! ബാക്കി വരുന്ന തുക നോക്കൂ: 34 ലക്ഷത്തി 25,000-ൽ നിന്ന് 12 ലക്ഷം കുറച്ചാൽ കൃത്യം 22 ലക്ഷത്തി 25,000 രൂപ! സ്റ്റുഡന്റ്സ് ഓർക്കുക, ഈ 22 ലക്ഷത്തി 25,000 രൂപ ടാക്സബിൾ ലോങ്-ടേം ക്യാപിറ്റൽ ഗെയിൻ ആണ്!",
+          "title": {
+            "text": "Statutory Capital Gains Ledger",
+            "at": 141.4
+          },
+          "rows": [
+            {
+              "sign": "plus",
+              "label": "Full Value of Consideration (Sold June 2025)",
+              "value": 4300000,
+              "at": 144.0,
+              "fmt": "inr"
+            },
+            {
+              "sign": "minus",
+              "label": "Less: Adjusted Cost u/s 51 (₹ 9,00,000 − ₹ 25,000)",
+              "value": 875000,
+              "at": 148.2,
+              "fmt": "inr"
+            },
+            {
+              "sign": "plus",
+              "label": "Gross Long-Term Capital Gain",
+              "value": 3425000,
+              "at": 152.2,
+              "fmt": "inr"
+            },
+            {
+              "sign": "minus",
+              "label": "Less: Delhi House Exemption (Balraj v. CIT)",
+              "value": 700000,
+              "at": 158.8,
+              "fmt": "inr"
+            },
+            {
+              "sign": "minus",
+              "label": "Less: Chennai House Exemption (Second House)",
+              "value": 500000,
+              "at": 161.2,
+              "fmt": "inr"
+            }
+          ],
+          "total": {
+            "label": "Taxable Long-Term Capital Gain",
+            "value": 2225000,
+            "at": 168.0,
+            "fmt": "inr"
+          },
+          "callout": {
+            "badge": "Taxable Remainder",
+            "text": "Remaining ₹ 22,25,000 is fully taxable LTCG! Exemption is capped to ₹ 12,00,000 actual investment.",
+            "at": 174.8
+          },
+          "style": "slide_up.shimmer.calm",
+          "serves": [
+            "c1",
+            "c2",
+            "c3",
+            "c4",
+            "f1",
+            "f2",
+            "f3",
+            "f4"
+          ]
+        },
+        {
+          "id": "b6",
+          "layout": "takeaway",
+          "start": 180.3,
+          "end": 203.27,
+          "voice_sync_text": "അതുകൊണ്ട് എക്സാമിനായി മൂന്ന് ഗോൾഡൻ റൂൾസ് എപ്പോഴും ഓർക്കുക: ഒന്ന്, 2014-ന് മുൻപുള്ള അഡ്വാൻസ് ഫോർഫീച്ചർ കോസ്റ്റ് കുറയ്ക്കുന്നു. രണ്ട്, ക്യാപിറ്റൽ ഗെയിൻ രണ്ട് കോടിയിൽ താഴെയാണെങ്കിൽ രണ്ട് വീടുകൾക്ക് എക്സംപ്ഷൻ ക്ലെയിം ചെയ്യാം. മൂന്ന്, രജിസ്ട്രേഷൻ പൂർത്തിയായില്ലെങ്കിലും സബ്സ്റ്റാൻഷ്യൽ ഓണർഷിപ്പ് ഉണ്ടെങ്കിൽ സെക്ഷൻ 54 ലഭിക്കും. ബാക്കി വരുന്ന ഗെയിൻ കൃത്യമായി ടാക്സ് ചെയ്യപ്പെടും!",
+          "title": {
+            "text": "Exam Summary · 3 Golden Takeaways",
+            "at": 180.6
+          },
+          "points": [
+            {
+              "num": "1",
+              "text": "Advance forfeited before 01-04-2014 reduces Cost of Acquisition u/s 51.",
+              "at": 184.5
+            },
+            {
+              "num": "2",
+              "text": "Capital Gains ≤ ₹ 2 Crore unlocks exemption for TWO residential houses u/s 54.",
+              "at": 189.2
+            },
+            {
+              "num": "3",
+              "text": "Possession + full payment qualifies u/s 53A TPA without deed registration (Balraj v. CIT).",
+              "at": 195.0
+            },
+            {
+              "num": "★",
+              "text": "Taxable Remainder: Remaining ₹ 22.25L is fully taxable LTCG.",
+              "at": 200.8
+            }
+          ],
+          "style": "zoom_in.none.calm",
+          "serves": [
+            "f1",
+            "f2",
+            "f3",
+            "f4"
+          ]
+        }
+      ]
     }
   }
 }
