@@ -313,7 +313,7 @@ def fetch_existing_sheet_database():
         print(f"  [WARN] Failed to fetch existing sheets database: {e}")
         return {}
 
-def run_pipeline(limit=None, target_chapter=None, target_question=None, target_subject=None, force=False):
+def run_pipeline(limit=None, target_chapter=None, target_question=None, target_subject=None, force=False, only_new=False):
     print("="*75)
     print("STARTING POINT-BY-POINT CLOUD PIPELINE: Drive -> Gemini -> Discrete Voice -> Sheets")
     print("="*75)
@@ -373,31 +373,43 @@ def run_pipeline(limit=None, target_chapter=None, target_question=None, target_s
         key = (subject, str(chapter_no), str(q_num))
         existing = sheet_db.get(key)
 
-        # Check if already 100% complete in Sheets
+        # Check if already present in Sheets database
         existing_mm = None
-        if existing and existing.get('summary_json'):
-            try:
-                parsed_mm = json.loads(existing['summary_json'])
-                ready_pts = count_ready_points(parsed_mm)
-                total_pts = count_total_points(parsed_mm)
-                is_partial = parsed_mm.get('is_partially_complete', False)
-                status_low = existing.get('status', '').lower()
+        if existing:
+            topic = existing.get('topic', '')
+            status_low = existing.get('status', '').lower()
+            drive_id = existing.get('drive_id', '')
 
-                has_screenplay = is_modern_studio_screenplay(existing.get('screenplay'))
-                if not force and total_pts > 0 and ready_pts >= total_pts and not is_partial and 'paused' not in status_low and has_screenplay:
-                    print(f"\n---> [{subject} Ch{chapter_no} Q{q_num} ({q_idx+1}/{total_questions})] Already 100% complete with Screenplay. Skipping!")
-                    continue
-                elif not force and total_pts > 0 and ready_pts >= total_pts and not has_screenplay:
-                    existing_mm = parsed_mm
-                    print(f"\n---> [{subject} Ch{chapter_no} Q{q_num} ({q_idx+1}/{total_questions})] Audio complete but missing modern Screenplay in Col K. Generating Screenplay...")
-                elif not force:
-                    existing_mm = parsed_mm
-                    print(f"\n---> [{subject} Ch{chapter_no} Q{q_num} ({q_idx+1}/{total_questions})] Found partial progress ({ready_pts}/{total_pts} points). Resuming...")
-                else:
+            # If user requested only new questions, or batch running across question bank without target_question
+            if only_new or (not force and not target_question and topic):
+                print(f"  [SKIP EXISTING] {subject} Ch{chapter_no} Q{q_num} already in Sheets database ('{topic}'). Skipping to brand new questions.")
+                continue
+
+            # If targeting a specific question without --force and it already has modern studio screenplay & audio complete
+            has_screenplay = is_modern_studio_screenplay(existing.get('screenplay'))
+            if not force and topic and ('complete' in status_low or is_audio_ready(drive_id)) and 'paused' not in status_low and has_screenplay:
+                print(f"\n---> [{subject} Ch{chapter_no} Q{q_num} ({q_idx+1}/{total_questions})] Already 100% complete with modern Screenplay. Skipping!")
+                continue
+
+            if existing.get('summary_json'):
+                try:
+                    parsed_mm = json.loads(existing['summary_json'])
+                    if isinstance(parsed_mm, dict):
+                        ready_pts = count_ready_points(parsed_mm)
+                        total_pts = count_total_points(parsed_mm)
+                        is_partial = parsed_mm.get('is_partially_complete', False)
+                        if not force and total_pts > 0 and ready_pts >= total_pts and not is_partial and 'paused' not in status_low:
+                            if has_screenplay:
+                                print(f"\n---> [{subject} Ch{chapter_no} Q{q_num} ({q_idx+1}/{total_questions})] Already 100% complete with Screenplay. Skipping!")
+                                continue
+                            else:
+                                existing_mm = parsed_mm
+                                print(f"\n---> [{subject} Ch{chapter_no} Q{q_num} ({q_idx+1}/{total_questions})] Audio complete but missing modern Screenplay in Col K. Generating Screenplay...")
+                        elif not force and is_partial:
+                            existing_mm = parsed_mm
+                            print(f"\n---> [{subject} Ch{chapter_no} Q{q_num} ({q_idx+1}/{total_questions})] Found partial progress ({ready_pts}/{total_pts} points). Resuming...")
+                except Exception:
                     existing_mm = None
-                    print(f"\n---> [{subject} Ch{chapter_no} Q{q_num} ({q_idx+1}/{total_questions})] --force specified: Re-generating provision from scratch...")
-            except Exception:
-                existing_mm = None
 
         # Fetch or auto-extract question text and answer text with 100% fidelity
         map_key = (subject, chapter_no, q_num)
@@ -651,6 +663,7 @@ if __name__ == '__main__':
     parser.add_argument('--question', type=int, default=None, help="Process specific question number")
     parser.add_argument('--subject', type=str, default=None, help="Process specific subject (DT / IDT)")
     parser.add_argument('--force', action='store_true', help="Force re-generation of provision even if already in Sheets")
+    parser.add_argument('--only-new', action='store_true', help="Process strictly brand new questions that are not yet in Google Sheets")
     args = parser.parse_args()
 
     run_pipeline(
@@ -658,5 +671,6 @@ if __name__ == '__main__':
         target_chapter=args.chapter,
         target_question=args.question,
         target_subject=args.subject,
-        force=args.force
+        force=args.force,
+        only_new=args.only_new
     )
