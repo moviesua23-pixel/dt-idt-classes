@@ -1,0 +1,1295 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Statutory Explainer Studio · Dynamic Presentation Lab</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Manrope:wght@500;600;700;800&family=Noto+Sans+Malayalam:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <style>
+    :root {
+      --bg: #F8FAFC;
+      --surface: #FFFFFF;
+      --ink: #0F172A;
+      --ink-soft: #64748B;
+      --line: #E2E8F0;
+      --accent: #4F46E5;
+      --accent-soft: #EEF2FF;
+      --ok: #059669;
+      --ok-soft: #ECFDF5;
+      --warn: #DC2626;
+      --warn-soft: #FEF2F2;
+      --brass: #CA8A04;
+      --brass-soft: #FEF08A;
+      --radius: 14px;
+      --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.05);
+      --shadow-md: 0 4px 14px rgba(15, 23, 42, 0.08);
+      --shadow-lg: 0 12px 30px rgba(15, 23, 42, 0.12);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.5;
+      padding-bottom: 60px;
+    }
+
+    /* Top Navigation Bar */
+    .lab-topbar {
+      background: var(--surface);
+      border-bottom: 1px solid var(--line);
+      height: 60px;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      box-shadow: var(--shadow-sm);
+    }
+    .brand-wrap {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .brand-badge {
+      background: var(--ink);
+      color: #fff;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 5px 9px;
+      border-radius: 6px;
+    }
+    .brand-title {
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+    .brand-sub {
+      color: var(--ink-soft);
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .config-controls {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .api-key-box {
+      display: flex;
+      align-items: center;
+      background: #F1F5F9;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 2px 8px;
+      gap: 6px;
+    }
+    .api-key-box input {
+      border: none;
+      background: transparent;
+      font-size: 12px;
+      width: 170px;
+      outline: none;
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--ink);
+    }
+    .api-key-box button {
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      font-size: 11px;
+      color: var(--ink-soft);
+      font-weight: 600;
+      padding: 4px;
+    }
+    .model-select {
+      background: #F1F5F9;
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 6px 10px;
+      font-size: 12px;
+      font-weight: 600;
+      color: var(--ink);
+      outline: none;
+      cursor: pointer;
+    }
+
+    /* Main Container Grid */
+    .lab-container {
+      max-width: 1320px;
+      margin: 24px auto;
+      padding: 0 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    /* Section 1: Input & Presets Console */
+    .console-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 20px 24px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .console-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .console-title-group h2 {
+      font-size: 16px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .console-title-group p {
+      font-size: 12px;
+      color: var(--ink-soft);
+      margin-top: 2px;
+    }
+
+    /* Presets Strip */
+    .presets-label {
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--ink-soft);
+    }
+    .presets-strip {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .preset-chip {
+      background: #F8FAFC;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 6px 14px;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--ink);
+      cursor: pointer;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .preset-chip:hover {
+      background: var(--accent-soft);
+      border-color: #C7D2FE;
+      color: var(--accent);
+      transform: translateY(-1px);
+    }
+    .preset-chip.active {
+      background: var(--ink);
+      border-color: var(--ink);
+      color: #fff;
+    }
+    .preset-chip span.badge {
+      font-size: 10px;
+      padding: 2px 6px;
+      border-radius: 4px;
+      background: #E2E8F0;
+      color: var(--ink);
+    }
+    .preset-chip.active span.badge {
+      background: rgba(255, 255, 255, 0.2);
+      color: #fff;
+    }
+
+    /* Textarea & Action */
+    .input-row {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+    .input-box {
+      flex: 1;
+      position: relative;
+    }
+    .input-box textarea {
+      width: 100%;
+      height: 110px;
+      background: #F8FAFC;
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 12px 14px;
+      font-size: 13px;
+      font-family: inherit;
+      color: var(--ink);
+      resize: vertical;
+      outline: none;
+      transition: border-color 0.2s;
+      line-height: 1.5;
+    }
+    .input-box textarea:focus {
+      border-color: var(--accent);
+      background: #fff;
+    }
+    .action-col {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: 240px;
+    }
+    .btn-generate {
+      background: var(--accent);
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      padding: 14px 18px;
+      font-size: 13.5px;
+      font-weight: 800;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: all 0.2s ease;
+      box-shadow: 0 4px 12px rgba(79, 70, 229, 0.25);
+    }
+    .btn-generate:hover:not(:disabled) {
+      background: #4338CA;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 16px rgba(79, 70, 229, 0.35);
+    }
+    .btn-generate:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+    .btn-secondary {
+      background: #F1F5F9;
+      color: var(--ink);
+      border: 1px solid var(--line);
+      border-radius: 10px;
+      padding: 10px 14px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      text-align: center;
+      transition: all 0.15s;
+    }
+    .btn-secondary:hover {
+      background: #E2E8F0;
+    }
+
+    .status-toast {
+      font-size: 12px;
+      font-weight: 600;
+      padding: 8px 12px;
+      border-radius: 8px;
+      display: none;
+    }
+    .status-toast.info { display: block; background: var(--accent-soft); color: var(--accent); }
+    .status-toast.ok { display: block; background: var(--ok-soft); color: var(--ok); }
+    .status-toast.warn { display: block; background: var(--warn-soft); color: var(--warn); }
+
+    /* Section 2: Explainer Studio Canvas Container */
+    .studio-stage-wrap {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      padding: 20px 24px 24px;
+      box-shadow: var(--shadow-md);
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+    .stage-top-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .context-pill-badge {
+      background: var(--accent-soft);
+      color: var(--accent);
+      border: 1px solid #C7D2FE;
+      font-size: 11.5px;
+      font-weight: 800;
+      padding: 4px 12px;
+      border-radius: 20px;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .beat-nav-pills {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      overflow-x: auto;
+      max-width: 600px;
+      padding: 2px 0;
+    }
+    .beat-pill-btn {
+      background: #F1F5F9;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 4px 12px;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--ink-soft);
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.15s;
+    }
+    .beat-pill-btn:hover {
+      background: #E2E8F0;
+      color: var(--ink);
+    }
+    .beat-pill-btn.active {
+      background: var(--ink);
+      color: #fff;
+      border-color: var(--ink);
+    }
+
+    /* Authentic 16:9 Stage Container */
+    .stage-viewport-box {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      background: #FFFFFF;
+      border: 1.5px solid var(--line);
+      border-radius: 14px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: inset 0 2px 6px rgba(15, 23, 42, 0.02);
+    }
+
+    #expStage {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+    }
+    #expFocal {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      inset: 0;
+    }
+    #expCaption {
+      position: absolute;
+      bottom: 16px;
+      left: 20px;
+      right: 20px;
+      background: rgba(15, 23, 42, 0.88);
+      backdrop-filter: blur(8px);
+      color: #FFFFFF;
+      padding: 10px 16px;
+      border-radius: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      text-align: center;
+      z-index: 40;
+      opacity: 0;
+      transition: opacity 0.25s ease;
+      pointer-events: none;
+    }
+    #expCaption.active { opacity: 1; }
+
+    .exp-center-play {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(6px);
+      color: #fff;
+      border: 2px solid rgba(255, 255, 255, 0.3);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 50;
+      transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+    }
+    .exp-center-play:hover {
+      transform: translate(-50%, -50%) scale(1.08);
+      background: var(--accent);
+    }
+    .exp-center-play.hidden { display: none !important; }
+    .exp-center-play svg { width: 28px; height: 28px; margin-left: 3px; }
+
+    /* Player HUD Control Bar */
+    .player-hud-bar {
+      background: #F8FAFC;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 10px 16px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .hud-play-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--ink);
+      color: #fff;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      transition: background 0.15s;
+    }
+    .hud-play-btn:hover { background: var(--accent); }
+    .hud-play-btn svg { width: 14px; height: 14px; }
+
+    .hud-time {
+      font-size: 12px;
+      font-weight: 700;
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--ink);
+      min-width: 90px;
+    }
+
+    .hud-scrubber-wrap {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      position: relative;
+    }
+    .hud-scrubber {
+      width: 100%;
+      -webkit-appearance: none;
+      appearance: none;
+      height: 6px;
+      border-radius: 3px;
+      background: #CBD5E1;
+      outline: none;
+      cursor: pointer;
+    }
+    .hud-scrubber::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      background: var(--accent);
+      cursor: pointer;
+      border: 2px solid #fff;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    }
+
+    .hud-speed {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 4px 8px;
+      font-size: 11.5px;
+      font-weight: 700;
+      color: var(--ink);
+      cursor: pointer;
+      outline: none;
+    }
+
+    /* Section 3: Screenplay JSON Inspector */
+    .inspector-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm);
+      overflow: hidden;
+    }
+    .inspector-header {
+      padding: 14px 20px;
+      background: #F8FAFC;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .inspector-title {
+      font-size: 13.5px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .inspector-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .btn-apply-json {
+      background: var(--ok);
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 6px 14px;
+      font-size: 12px;
+      font-weight: 800;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: background 0.15s;
+    }
+    .btn-apply-json:hover { background: #047857; }
+    
+    .json-editor-area {
+      width: 100%;
+      height: 320px;
+      border: none;
+      background: #0F172A;
+      color: #E2E8F0;
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 12px;
+      line-height: 1.5;
+      padding: 16px 20px;
+      resize: vertical;
+      outline: none;
+    }
+
+    /* Beat Template CSS Overrides (From engine) */
+    .beat {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      display: none;
+    }
+    .beat.active {
+      display: flex !important;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+    .beat.headline, .beat.takeaway {
+      padding: 40px;
+      text-align: center;
+    }
+    headline, .takeaway headline {
+      font-size: 2.2cqw;
+      font-weight: 800;
+      color: var(--ink);
+      letter-spacing: -0.02em;
+      line-height: 1.25;
+      display: block;
+    }
+    sub, .takeaway sub {
+      font-size: 1.1cqw;
+      font-weight: 600;
+      color: var(--ink-soft);
+      margin-top: 12px;
+      display: block;
+      line-height: 1.4;
+    }
+    .takeaway-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 24px;
+      width: 100%;
+      max-width: 720px;
+    }
+    .takeaway-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: #FFFFFF;
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 10px 16px;
+      text-align: left;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.02);
+    }
+    .takeaway-num {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      background: var(--accent);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .takeaway-text {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--ink);
+    }
+
+    /* Word marks */
+    .w { display: inline-block; opacity: 0; transform: translateY(8px); transition: none; }
+    .w.in { opacity: 1; transform: translateY(0); }
+    .mk { background: #FEF08A; padding: 2px 4px; border-radius: 4px; border-bottom: 2px solid #CA8A04; }
+  </style>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <header class="lab-topbar">
+    <div class="brand-wrap">
+      <span class="brand-badge">LAB SANDBOX</span>
+      <div>
+        <h1 class="brand-title">Dynamic Presentation Studio</h1>
+        <p class="brand-sub">Real-Time Gemini Screenplay Architect &amp; Interactive Vector Canvas</p>
+      </div>
+    </div>
+
+    <div class="config-controls">
+      <div class="api-key-box" title="API Key stored safely in browser localStorage">
+        <span>🔑</span>
+        <input type="password" id="geminiApiKey" placeholder="Enter Gemini API Key..." />
+        <button id="btnToggleKey" type="button">Show</button>
+      </div>
+      <select id="geminiModelSelect" class="model-select">
+        <option value="gemini-2.5-flash">Gemini 2.5 Flash (Fastest)</option>
+        <option value="gemini-1.5-flash">Gemini 1.5 Flash</option>
+        <option value="gemini-1.5-pro">Gemini 1.5 Pro (Deepest)</option>
+      </select>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="lab-container">
+
+    <!-- Section 1: Provision Input & Presets -->
+    <section class="console-card">
+      <div class="console-header">
+        <div class="console-title-group">
+          <h2><span>📝</span> Input Provision / Exam Problem</h2>
+          <p>Paste any tax law section, exam problem, or case study to generate a fully animated 16:9 presentation.</p>
+        </div>
+
+        <div class="presets-strip">
+          <span class="presets-label">Instant Presets:</span>
+          <button class="preset-chip active" data-preset="property_50c">
+            <span class="badge">DT § 50C</span> Property Transfer &amp; SDV
+          </button>
+          <button class="preset-chip" data-preset="flats_54">
+            <span class="badge">DT § 54</span> 2 Adjacent Flats Merged
+          </button>
+          <button class="preset-chip" data-preset="factory_54g">
+            <span class="badge">DT § 54G</span> Factory Urban Relocation
+          </button>
+          <button class="preset-chip" data-preset="tds_194c">
+            <span class="badge">DT § 194C</span> TDS Contract Threshold
+          </button>
+          <button class="preset-chip" data-preset="gst_blocked_17_5">
+            <span class="badge">IDT § 17(5)</span> Blocked ITC Vehicles
+          </button>
+        </div>
+      </div>
+
+      <div class="input-row">
+        <div class="input-box">
+          <textarea id="provisionInput" placeholder="Paste statutory provision text, problem scenario, or case facts here..."></textarea>
+        </div>
+        <div class="action-col">
+          <button id="btnGenerate" class="btn-generate">
+            <span id="genBtnIcon">⚡</span>
+            <span id="genBtnText">Generate Presentation</span>
+          </button>
+          <button id="btnLoadPreset" class="btn-secondary">Load Selected Preset</button>
+          <div id="statusToast" class="status-toast"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 2: Explainer Studio Canvas -->
+    <section class="studio-stage-wrap">
+      <div class="stage-top-meta">
+        <div class="context-pill-badge" id="expPillBadge">
+          <span>§</span>
+          <span id="expPillText">Section 50C &amp; 51 · Property Transfer Benchmark</span>
+        </div>
+        <div class="beat-nav-pills" id="beatPillsNav">
+          <!-- Dynamic Beat Pills -->
+        </div>
+      </div>
+
+      <!-- 16:9 Stage -->
+      <div class="stage-viewport-box">
+        <div id="expStage">
+          <div id="expFocal"></div>
+          <div id="expCaption"></div>
+          <button id="expCenterPlayBtn" class="exp-center-play" title="Play / Pause">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="6 3 20 12 6 21 6 3" fill="currentColor"/></svg>
+          </button>
+        </div>
+      </div>
+
+      <!-- HUD Control Bar -->
+      <div class="player-hud-bar">
+        <button id="expPlayBtn" class="hud-play-btn" title="Toggle Play / Pause (Spacebar)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="6 3 20 12 6 21 6 3" fill="currentColor"/></svg>
+        </button>
+
+        <span id="expTime" class="hud-time">0:00 / 0:00</span>
+
+        <div class="hud-scrubber-wrap">
+          <input type="range" id="expScrub" min="0" max="68" step="0.05" value="0" class="hud-scrubber" />
+        </div>
+
+        <select id="expSpeed" class="hud-speed" title="Playback Speed">
+          <option value="1">1.0x</option>
+          <option value="1.25">1.25x</option>
+          <option value="1.5">1.5x</option>
+          <option value="2">2.0x</option>
+        </select>
+      </div>
+    </section>
+
+    <!-- Section 3: Live Screenplay JSON Inspector -->
+    <section class="inspector-card">
+      <div class="inspector-header">
+        <div class="inspector-title">
+          <span>🛠️</span> Screenplay Architecture JSON Inspector
+        </div>
+        <div class="inspector-actions">
+          <button id="btnCopyJson" class="btn-secondary" style="padding:4px 10px;font-size:11.5px;">Copy JSON</button>
+          <button id="btnApplyJson" class="btn-apply-json">
+            <span>✓</span> Live Re-Render Stage
+          </button>
+        </div>
+      </div>
+      <textarea id="jsonEditor" class="json-editor-area" spellcheck="false"></textarea>
+    </section>
+
+  </main>
+
+  <!-- Load Presets and Explainer Engine -->
+  <script src="presets.js"></script>
+  <script src="explainer_engine.js"></script>
+
+  <!-- Sandbox Controller Logic -->
+  <script>
+    // PRESET LIBRARY
+    const PRESETS = {
+      property_50c: {
+        text: `Mr. Vijay acquired a residential house in July 1982 for ₹ 5,00,000. FMV as on 01.04.2001 was ₹ 15,00,000 and Stamp Duty Value was ₹ 14,00,000. Advance of ₹ 1.5 Lakhs forfeited in June 2009, and ₹ 2.0 Lakhs in July 2016. In Sep 2015, first floor constructed for ₹ 5,08,000. In FY 2025-26, house sold for ₹ 40,00,000 with ₹ 2,00,000 advance received by A/c payee cheque on agreement date. Agreement date SDV was ₹ 52,00,000.`,
+        screenplay: {
+          "question_id": "lab-property-50c",
+          "context_pill": "Section 50C & 51 · Real Estate Transfer & SDV Benchmark",
+          "duration_sec": 68.84,
+          "sync_offset_sec": 0.0,
+          "beats": [
+            {
+              "id": "b1",
+              "layout": "story_scene",
+              "scene_type": "property_transfer_sdv",
+              "kicker": "FACTUAL NARRATIVE & STATUTORY BENCHMARK",
+              "badge": "Property Transfer Case",
+              "title": { "text": "Property Transfer: Stamp Duty Benchmark vs Actual Agreement", "at": 0.4 },
+              "voice_sync_text": "Mr. Vijay 1982-il 5 lakh roopaykk aanu residential house vaangiyath. 1st April 2001-le Fair Market Value 15 lakh-um Stamp Duty Value 14 lakh-um aanu. Athukond Cost of Acquisition aayitt 14 lakh edukkum. June 2009-il 1.5 lakh advance forfeiture nadannu, ath Cost-il ninnu kuraykkum. July 2016-il 2 lakh forfeit cheythu, ath IFOS-il tax cheyyum. Pinne September 2015-il 5 lakh 8 aayiram roopa mudakki first floor pani kazhinju. Ippo FY 2025-26-il ee house 40 lakh-inu vilkaan agreement vechu, advance 2 lakh cheque vazhi vaangi. Agreement date-ile SDV 52 lakh aanu. Ath 110 percentinekaal kooduthal aaya kond deemed consideration aayi maarunnu.",
+              "elements": {
+                "vijay": { "label": "Mr. Vijay (Assessee Seller)", "at": 3.58 },
+                "house_1982": { "label": "Residential House Ground Floor", "at": 7.78 },
+                "cost_5l": { "label": "Purchased 1982 · ₹ 5,00,000", "at": 11.36 },
+                "benchmark_2001": { "label": "01.04.2001 Statutory Base Comparison", "at": 13.86 },
+                "fmv_15l": { "label": "FMV: ₹ 15,00,000", "at": 17.08 },
+                "sdv_14l": { "label": "SDV: ₹ 14,00,000", "at": 20.90 },
+                "base_coa": { "label": "Base COA = Lower of FMV/SDV = ₹ 14,00,000", "at": 22.50 },
+                "forfeit_2009": { "label": "Forfeited June 2009: ₹ 1.5L (Deducted u/s 51)", "at": 28.22 },
+                "forfeit_2016": { "label": "Forfeited July 2016: ₹ 2.0L (Taxed u/s 56(2)(ix))", "at": 33.14 },
+                "floor_construction": { "label": "First Floor Built (Sep 2015): ₹ 5,08,000", "at": 38.84 },
+                "buyer": { "label": "The Buyer (FY 2025-26 Agreement)", "at": 45.00 },
+                "agreement_sale": { "label": "Agreement Consideration: ₹ 40,00,000", "at": 48.88 },
+                "cheque_advance": { "label": "Advance ₹ 2,00,000 (Account Payee Cheque)", "at": 53.36 },
+                "sdv_agreement": { "label": "Agreement Date SDV: ₹ 52,00,000", "at": 57.80 },
+                "safe_harbor_breach": { "label": "110% Safe Harbor Limit: ₹ 44,00,000 (Breached)", "at": 59.18 },
+                "deemed_consideration": { "label": "Deemed Full Value of Consideration = ₹ 52,00,000", "at": 61.46 },
+                "statutory_pills": { "label": "Statutory Pillars: Sec 50C, 51, 112", "at": 63.08 }
+              },
+              "start": 0.0,
+              "end": 68.84
+            },
+            {
+              "id": "b2",
+              "layout": "statute_quote",
+              "voice_sync_text": "Section 50C Proviso: Agreement date SDV applies if advance is received by account payee cheque on or before agreement date.",
+              "title": { "text": "Statutory Mandate: Section 50C Proviso", "at": 69.4 },
+              "quote": {
+                "text": "Where the date of agreement fixing the consideration and date of registration are different, the SDV on the date of agreement may be taken if advance consideration is received via account payee cheque/ECS.",
+                "citation": "Proviso to Section 50C(1) Income-tax Act, 1961",
+                "emphasis": "account payee cheque on or before the date of agreement"
+              },
+              "start": 69.0,
+              "end": 105.0
+            },
+            {
+              "id": "b3",
+              "layout": "ledger",
+              "voice_sync_text": "Capital Gains computation: Deemed Full Value ₹ 52L, less brokerage, less indexed cost results in beneficial nil tax.",
+              "title": { "text": "Capital Gains Computation u/s 112 Parity", "at": 105.5 },
+              "ledger_rows": [
+                { "label": "Deemed Full Value u/s 50C", "amount": 5200000, "type": "income", "at": 106.0 },
+                { "label": "Less: Brokerage (1%)", "amount": -40000, "type": "deduction", "at": 108.0 },
+                { "label": "Net Consideration", "amount": 5160000, "type": "subtotal", "at": 110.0 },
+                { "label": "Indexed COA & COI Deduction", "amount": -5452000, "type": "deduction", "at": 112.0 }
+              ],
+              "net_total": {
+                "label": "Final Tax Liability Payable u/s 112",
+                "val": 0,
+                "detail": "Nil Tax (Loss under indexation regime)",
+                "at": 115.0
+              },
+              "start": 105.0,
+              "end": 135.0
+            },
+            {
+              "id": "b4",
+              "layout": "takeaway",
+              "voice_sync_text": "Three golden rules for exam mastery: Section 50C banking channels, Section 51 cut-off 2014, and Section 112 loss parity.",
+              "title": { "text": "3 Golden Rules for Exam Mastery", "at": 135.5 },
+              "rules": [
+                { "num": "01", "heading": "Section 50C Banking Proviso", "body": "SDV on agreement date is valid only if advance was received via account payee cheque/ECS on or before agreement date." },
+                { "num": "02", "heading": "Forfeited Advance Dual Mechanism", "body": "Advance forfeited before 01.04.2014 reduces Cost u/s 51. Forfeited on or after 01.04.2014 is taxed under IFOS u/s 56(2)(ix)." },
+                { "num": "03", "heading": "Section 112 Transitional Loss Parity", "body": "If indexed computation yields capital loss, taxable liability under Section 112 is restricted to Nil." }
+              ],
+              "start": 135.0,
+              "end": 165.0
+            }
+          ]
+        }
+      },
+
+      flats_54: {
+        text: `Mr. Rajesh sold a residential property in Chennai for ₹ 25,00,000. To claim Section 54 exemption, he purchased two adjacent flats (Flat 101 for ₹ 8L and Flat 102 for ₹ 7L) under separate sale deeds. He removed the internal dividing wall and combined them into a single habitable residential unit. Held eligible for Section 54 under Karnataka High Court ruling CIT v. Ananda Basappa.`,
+        screenplay: {
+          "question_id": "lab-flats-54",
+          "context_pill": "Section 54 · Two Adjacent Flats Combined as Single Unit",
+          "duration_sec": 55.0,
+          "beats": [
+            {
+              "id": "b1",
+              "layout": "story_scene",
+              "scene_type": "adjacent_flats_merge",
+              "kicker": "EXEMPTION REINVESTMENT",
+              "badge": "CIT v. Ananda Basappa",
+              "title": { "text": "Section 54 Relief: Two Adjacent Flats Combined as Single Unit", "at": 0.4 },
+              "voice_sync_text": "Rajesh Bangalore-il randu adjacent flats, Flat 101 8 Lakhs-inum Flat 102 7 Lakhs-inum purchase cheythu. Randu separate sale deeds aanenkilum internal wall remove cheythu single habitable residential unit aayi modify cheythu. Karnataka High Court-inte landmark CIT versus Ananda Basappa ruling prakaaram total investment 15 Lakhs Section 54 exemption aayi allow cheyyappedum.",
+              "elements": {
+                "flat_101": { "label": "Flat 101 8 Lakhs purchase", "at": 4.0 },
+                "flat_102": { "label": "Flat 102 7 Lakhs purchase", "at": 8.0 },
+                "divider_wall": { "label": "internal wall remove", "at": 14.0 },
+                "merge_pill": { "label": "single habitable residential unit modify", "at": 18.0 },
+                "court_ruling": { "label": "CIT versus Ananda Basappa ruling", "at": 24.0 },
+                "sec54_pill": { "label": "Section 54 exemption 15 Lakh", "at": 30.0 }
+              },
+              "start": 0.0,
+              "end": 55.0
+            }
+          ]
+        }
+      },
+
+      factory_54g: {
+        text: `Apex Engineering Ltd owns an industrial undertaking located in an urban municipal corporation area. Due to statutory zoning regulations, it transferred its land, building, and plant & machinery and relocated its factory to a non-urban rural area. It reinvested ₹ 25 Lakhs in purchasing new rural land, building, and machinery within 1 year before and 3 years after the transfer to claim Section 54G exemption. Furniture is excluded.`,
+        screenplay: {
+          "question_id": "lab-factory-54g",
+          "context_pill": "Section 54G · Industrial Shifting from Urban to Rural Area",
+          "duration_sec": 60.0,
+          "beats": [
+            {
+              "id": "b1",
+              "layout": "story_scene",
+              "scene_type": "factory_shift",
+              "kicker": "FACTUAL NARRATIVE & STATUTORY CONTEXT",
+              "badge": "Case Overview",
+              "title": { "text": "Industrial Undertaking Shifting: Urban to Rural Area", "at": 0.4 },
+              "voice_sync_text": "Apex Engineering Urban Corporation Limit-il ninnu Rural Area-lekku factory shift cheyyunnu. Transferred assets Land, Building, Plant & Machinery eligible reinvestment pool-il varum, ennaal Furniture exclude cheyyum.",
+              "elements": {
+                "divider": { "at": 1.0 },
+                "urban_reg": { "at": 3.0 },
+                "urban_factory": { "at": 6.0 },
+                "assets_box": { "at": 12.0 },
+                "shift_arrow": { "at": 18.0 },
+                "shift_pill": { "at": 20.0 },
+                "rural_reg": { "at": 24.0 },
+                "rural_factory": { "at": 28.0 },
+                "pool_box": { "at": 35.0 }
+              },
+              "start": 0.0,
+              "end": 60.0
+            }
+          ]
+        }
+      },
+
+      tds_194c: {
+        text: `Section 194C requires any person responsible for paying any sum to a resident contractor for carrying out any work to deduct TDS at 1% for Individual/HUF contractors and 2% for other contractors. Threshold limit: No deduction if single contract value does not exceed ₹ 30,000 and aggregate payments in FY do not exceed ₹ 1,00,000. Non-deduction triggers 30% disallowance u/s 40(a)(ia).`,
+        screenplay: {
+          "question_id": "lab-tds-194c",
+          "context_pill": "Section 194C · TDS on Payments to Contractors",
+          "duration_sec": 50.0,
+          "beats": [
+            {
+              "id": "b1",
+              "layout": "meter",
+              "title": { "text": "Section 194C Statutory Deduction Thresholds", "at": 0.5 },
+              "meter_display": {
+                "min_val": 0,
+                "max_val": 150000,
+                "current_val": 120000,
+                "unit": "₹",
+                "threshold": 100000,
+                "labels": { "start": "₹ 0", "threshold_label": "Annual Aggregate Cap: ₹ 1,00,000", "current_label": "Total Payments: ₹ 1,20,000" }
+              },
+              "breakdown": [
+                { "label": "Single Contract Threshold", "val": 30000, "status": "Exempt if <= ₹ 30,000" },
+                { "label": "Annual Aggregate Threshold", "val": 100000, "status": "TDS Triggered above ₹ 1,00,000" }
+              ],
+              "outcome": { "text": "Threshold Breached · TDS Mandatorily Applicable", "tone": "bad", "at": 8.0 },
+              "start": 0.0,
+              "end": 25.0
+            },
+            {
+              "id": "b2",
+              "layout": "split",
+              "title": { "text": "TDS Rates: Individual/HUF (1%) vs Others (2%)", "at": 25.5 },
+              "col1": { "title": "Individual / HUF Contractor", "chips": ["TDS Rate: 1%", "No Surcharge / Cess", "Applicable on Invoice Amount"] },
+              "col2": { "title": "Company / Firm / Others", "chips": ["TDS Rate: 2%", "No Surcharge / Cess", "Non-PAN Rate: 20% u/s 206AA"] },
+              "start": 25.0,
+              "end": 50.0
+            }
+          ]
+        }
+      },
+
+      gst_blocked_17_5: {
+        text: `Under Section 17(5)(a) of the CGST Act, Input Tax Credit (ITC) is blocked on motor vehicles for transportation of persons having approved seating capacity of not more than 13 persons (including driver). Exceptions where ITC is allowed: further supply of such vehicles, transportation of passengers, or imparting training on driving such vehicles.`,
+        screenplay: {
+          "question_id": "lab-gst-17-5",
+          "context_pill": "GST Section 17(5)(a) · Ineligible Blocked ITC on Motor Vehicles",
+          "duration_sec": 48.0,
+          "beats": [
+            {
+              "id": "b1",
+              "layout": "fork",
+              "title": { "text": "Motor Vehicles Seating Capacity Test u/s 17(5)(a)", "at": 0.5 },
+              "branches": [
+                { "title": "Seating Capacity <= 13 Persons", "status": "ITC BLOCKED", "tone": "bad", "at": 2.0 },
+                { "title": "Seating Capacity > 13 Persons (Buses / Vans)", "status": "ITC FULLY ELIGIBLE", "tone": "ok", "at": 8.0 }
+              ],
+              "start": 0.0,
+              "end": 24.0
+            },
+            {
+              "id": "b2",
+              "layout": "takeaway",
+              "title": { "text": "3 Exceptions Where ITC on Motor Vehicles is Allowed", "at": 24.5 },
+              "rules": [
+                { "num": "01", "heading": "Further Supply of Motor Vehicles", "body": "Car dealerships buying vehicles for re-sale are fully eligible to claim ITC." },
+                { "num": "02", "heading": "Transportation of Passengers", "body": "Taxi operators and commercial passenger transport services can claim full ITC." },
+                { "num": "03", "heading": "Driving School Training", "body": "Entities providing training on driving motor vehicles are allowed full ITC." }
+              ],
+              "start": 24.0,
+              "end": 48.0
+            }
+          ]
+        }
+      }
+    };
+
+    // SYSTEM PROMPT FOR LIVE GEMINI CALLS
+    const LAB_SYSTEM_PROMPT = `You are a senior, beloved CA Final Tax Professor and Visual Explainer Architect for Indian Direct Tax and Indirect Tax.
+Analyze the statutory provision or exam problem provided by the student and architect a complete pedagogical screenplay JSON for an interactive 16:9 explainer studio.
+
+CRITICAL RULES:
+1. COMPLETE PEDAGOGICAL STORY: Create a memorable case scenario with realistic figures, distinct personas (e.g. Apex Engineering, Mr. Vijay, Zenith Textiles), and mathematically coherent numbers.
+2. OVERVIEW UPFRONT (BEAT 1): Beat 1 must provide the complete overview of the story. Use layout "story_scene" with an appropriate scene_type ("property_transfer_sdv", "adjacent_flats_merge", "factory_shift", "rental_and_gift", "sdv_comparison", or dynamic grid).
+3. FULL ENTITY DECOMPOSITION: Decompose every character, asset, past milestone, counterparty, cheque flow, and statutory benchmark into distinct keys in "elements".
+4. VOICE SCALING: Provide voice_sync_text in friendly Malayalam teacher explanation with standard English legal terms (Manglish).
+5. LAYOUT VARIETY: Use appropriate layouts across beats: "story_scene", "statute_quote", "meter", "ledger", "takeaway", "fork", "split".
+6. RETURN STRICT VALID JSON matching this schema:
+{
+  "question_id": "custom-scenario",
+  "context_pill": "Section Name | Topic Title",
+  "duration_sec": 60.0,
+  "sync_offset_sec": 0.0,
+  "beats": [
+    {
+      "id": "b1",
+      "layout": "story_scene",
+      "scene_type": "property_transfer_sdv",
+      "title": {"text": "Title text", "at": 0.5},
+      "voice_sync_text": "Teacher explanation...",
+      "elements": { ... },
+      "start": 0.0,
+      "end": 60.0
+    }
+  ]
+}`;
+
+    // DOM Elements
+    const apiKeyInput = document.getElementById("geminiApiKey");
+    const btnToggleKey = document.getElementById("btnToggleKey");
+    const modelSelect = document.getElementById("geminiModelSelect");
+    const provisionInput = document.getElementById("provisionInput");
+    const btnGenerate = document.getElementById("btnGenerate");
+    const genBtnIcon = document.getElementById("genBtnIcon");
+    const genBtnText = document.getElementById("genBtnText");
+    const btnLoadPreset = document.getElementById("btnLoadPreset");
+    const statusToast = document.getElementById("statusToast");
+    const jsonEditor = document.getElementById("jsonEditor");
+    const btnApplyJson = document.getElementById("btnApplyJson");
+    const btnCopyJson = document.getElementById("btnCopyJson");
+    const expPillText = document.getElementById("expPillText");
+    const beatPillsNav = document.getElementById("beatPillsNav");
+
+    // Stage HUD Elements
+    const stage = document.getElementById("expStage");
+    const focal = document.getElementById("expFocal");
+    const caption = document.getElementById("expCaption");
+    const centerPlayBtn = document.getElementById("expCenterPlayBtn");
+    const playBtn = document.getElementById("expPlayBtn");
+    const timeText = document.getElementById("expTime");
+    const scrub = document.getElementById("expScrub");
+    const speed = document.getElementById("expSpeed");
+
+    // Initialize Explainer Engine
+    const dummyAudio = new Audio();
+    let currentExplainer = new Explainer({
+      stage,
+      focal,
+      audio: dummyAudio,
+      caption,
+      bar: null,
+      pill: expPillText,
+      scrub,
+      speed,
+      playBtn,
+      timeText
+    });
+    window.__explainer = currentExplainer;
+
+    // Persist API Key in LocalStorage
+    const SAVED_KEY = localStorage.getItem("gemini_lab_api_key");
+    if (SAVED_KEY) apiKeyInput.value = SAVED_KEY;
+    apiKeyInput.addEventListener("input", () => {
+      localStorage.setItem("gemini_lab_api_key", apiKeyInput.value.trim());
+    });
+    btnToggleKey.addEventListener("click", () => {
+      if (apiKeyInput.type === "password") {
+        apiKeyInput.type = "text";
+        btnToggleKey.textContent = "Hide";
+      } else {
+        apiKeyInput.type = "password";
+        btnToggleKey.textContent = "Show";
+      }
+    });
+
+    // Toast helper
+    function showToast(msg, type = "info") {
+      statusToast.className = "status-toast " + type;
+      statusToast.textContent = msg;
+      statusToast.style.display = "block";
+    }
+
+    // Load Screenplay into Stage and Editor
+    function loadScreenplay(sp) {
+      if (!sp || !Array.isArray(sp.beats)) {
+        showToast("Invalid screenplay JSON structure", "warn");
+        return;
+      }
+      currentExplainer.load(null, sp);
+      jsonEditor.value = JSON.stringify(sp, null, 2);
+      if (sp.context_pill) expPillText.textContent = sp.context_pill;
+
+      // Render Beat Navigation Pills
+      beatPillsNav.innerHTML = "";
+      sp.beats.forEach((b, idx) => {
+        const btn = document.createElement("button");
+        btn.className = "beat-pill-btn" + (idx === 0 ? " active" : "");
+        btn.textContent = `Beat ${idx + 1}: ${b.layout || 'Scene'}`;
+        btn.onclick = () => {
+          document.querySelectorAll(".beat-pill-btn").forEach(p => p.classList.remove("active"));
+          btn.classList.add("active");
+          currentExplainer.time(b.start + 0.1);
+        };
+        beatPillsNav.appendChild(btn);
+      });
+
+      // Reset play icon
+      centerPlayBtn.classList.remove("hidden");
+      showToast(`Loaded ${sp.beats.length}-beat screenplay successfully!`, "ok");
+    }
+
+    // Preset Selection
+    let activePresetKey = "property_50c";
+    document.querySelectorAll(".preset-chip").forEach(chip => {
+      chip.addEventListener("click", () => {
+        document.querySelectorAll(".preset-chip").forEach(c => c.classList.remove("active"));
+        chip.classList.add("active");
+        activePresetKey = chip.dataset.preset;
+        const p = PRESETS[activePresetKey];
+        if (p) {
+          provisionInput.value = p.text;
+          loadScreenplay(p.screenplay);
+        }
+      });
+    });
+
+    btnLoadPreset.addEventListener("click", () => {
+      const p = PRESETS[activePresetKey];
+      if (p) {
+        provisionInput.value = p.text;
+        loadScreenplay(p.screenplay);
+      }
+    });
+
+    // Center Play Button & Stage Clicks
+    if (centerPlayBtn) {
+      centerPlayBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        currentExplainer.toggle();
+        centerPlayBtn.classList.add("hidden");
+      });
+    }
+    if (stage) {
+      stage.addEventListener("click", (e) => {
+        if (e.target.closest("button") || e.target.closest("input") || e.target.closest("select")) return;
+        currentExplainer.toggle();
+        if (dummyAudio.paused && !currentExplainer.raf) {
+          centerPlayBtn.classList.remove("hidden");
+        } else {
+          centerPlayBtn.classList.add("hidden");
+        }
+      });
+    }
+
+    // Apply JSON Edits Live
+    btnApplyJson.addEventListener("click", () => {
+      try {
+        const edited = JSON.parse(jsonEditor.value);
+        loadScreenplay(edited);
+        showToast("Screenplay re-rendered from editor!", "ok");
+      } catch (e) {
+        showToast("JSON Syntax Error: " + e.message, "warn");
+      }
+    });
+
+    // Copy JSON
+    btnCopyJson.addEventListener("click", () => {
+      navigator.clipboard.writeText(jsonEditor.value);
+      showToast("Screenplay JSON copied to clipboard!", "ok");
+    });
+
+    // LIVE GEMINI GENERATION
+    btnGenerate.addEventListener("click", async () => {
+      const provText = provisionInput.value.trim();
+      if (!provText) {
+        showToast("Please enter a statutory provision or scenario text first.", "warn");
+        return;
+      }
+
+      const apiKey = apiKeyInput.value.trim();
+      const model = modelSelect.value || "gemini-2.5-flash";
+
+      btnGenerate.disabled = true;
+      genBtnIcon.textContent = "⏳";
+      genBtnText.textContent = "Architecting with Gemini...";
+      showToast("Calling Gemini API to synthesize pedagogical screenplay...", "info");
+
+      try {
+        let screenplayData = null;
+
+        // Route A: Direct Client-Side Gemini Call
+        if (apiKey) {
+          const url = `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent?key=${apiKey}`;
+          const payload = {
+            contents: [
+              {
+                role: "user",
+                parts: [
+                  { text: LAB_SYSTEM_PROMPT + "\n\nSTUDENT'S PROVISION / EXAM PROBLEM:\n" + provText }
+                ]
+              }
+            ],
+            generationConfig: {
+              temperature: 0.2,
+              responseMimeType: "application/json"
+            }
+          };
+
+          const resp = await fetch(url, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(payload)
+          });
+
+          if (!resp.ok) {
+            const errJson = await resp.json();
+            throw new Error(errJson.error?.message || "Gemini API HTTP " + resp.status);
+          }
+
+          const resData = await resp.json();
+          const rawText = resData.candidates?.[0]?.content?.parts?.[0]?.text;
+          if (!rawText) throw new Error("No text response from Gemini");
+
+          screenplayData = JSON.parse(rawText);
+        } 
+        // Route B: Local Server API Endpoint Fallback
+        else {
+          const localUrl = `/api/generate-screenplay`;
+          const localResp = await fetch(localUrl, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ provision_text: provText })
+          });
+
+          if (!localResp.ok) {
+            throw new Error("No API key entered and local server /api/generate-screenplay is unreachable. Enter your Gemini API key in the top bar to generate directly!");
+          }
+
+          screenplayData = await localResp.json();
+        }
+
+        if (screenplayData) {
+          loadScreenplay(screenplayData);
+          showToast("New dynamic presentation generated & rendered!", "ok");
+        }
+
+      } catch (err) {
+        console.error("Generation Error:", err);
+        showToast("Generation failed: " + err.message, "warn");
+      } finally {
+        btnGenerate.disabled = false;
+        genBtnIcon.textContent = "⚡";
+        genBtnText.textContent = "Generate Presentation";
+      }
+    });
+
+    // Auto-load default initial preset on launch
+    window.addEventListener("DOMContentLoaded", () => {
+      const p = PRESETS.property_50c;
+      provisionInput.value = p.text;
+      loadScreenplay(p.screenplay);
+    });
+  </script>
+</body>
+</html>
