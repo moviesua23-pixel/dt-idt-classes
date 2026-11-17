@@ -205,8 +205,19 @@ def align_screenplay_to_measured_audio(
 
         cursor = 0.5
 
+        # 0. STORY_SCENE LAYOUT ALIGNMENT
+        if layout == "story_scene":
+            elems = b.get("elements", {})
+            if isinstance(elems, dict):
+                for e_key, e_val in elems.items():
+                    if isinstance(e_val, dict):
+                        kw = extract_element_keywords(e_val)
+                        off = find_first_word_offset(words, kw, min_time=cursor, default_offset=dur * 0.5)
+                        e_val["at"] = round(b_start + off, 2)
+                        cursor = max(cursor + 0.4, off + 0.3)
+
         # 1. FORK LAYOUT ALIGNMENT
-        if layout == "fork":
+        elif layout == "fork":
             if "intro_cards" in b and isinstance(b["intro_cards"], list):
                 for i, ic in enumerate(b["intro_cards"]):
                     kw = extract_element_keywords(ic, index=i)

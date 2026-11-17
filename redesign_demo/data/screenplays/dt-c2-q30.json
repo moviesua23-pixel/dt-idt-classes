@@ -1,0 +1,342 @@
+{
+  "question_id": "dt-c2-q30",
+  "context_pill": "Section 50C · Section 54 · Section 54EC · Section 71 | Multiple Property & Inter-Head Set-off",
+  "fallback": false,
+  "beats": [
+    {
+      "id": "b1",
+      "layout": "story_scene",
+      "scene_type": "rental_and_gift",
+      "kicker": "FACTUAL NARRATIVE & STATUTORY CONTEXT",
+      "badge": "Double Property Case",
+      "title": {
+        "text": "Dual Property Scenario: Bangalore Rental & Chennai Gifted House",
+        "at": 0.3
+      },
+      "voice_sync_text": "Students, namukku Question 30-le double property scenario crystal clear aayi analyze cheyyaam. Assessee Mr. Rajesh-inu randu properties aanu ullathu. First property, Bangalore-il ulla let out residential house. Ithu tenant Mr. Kumar-inu vadakakku koduthu, annual rent 3 Lakhs receive cheyyunnu. Assessee ee varsham municipal taxes arrears sahidham 1 Lakh 85 Thousand rupees paid cheythu. Second property, Chennai-il ulla house. Ithu 1st March 2007-il father gift aayi nalkiyathaam. Father-nte cost of acquisition 1 Lakh 25 Thousand rupees maathramaayirunnu. Ee Chennai house August 2025-il 25 Lakhs rupees-inu assessee sell cheythu. Ee randu transactions-um Income Tax Act-il engane deal cheyyunnu ennu nokkaam.",
+      "elements": {
+        "divider": {
+          "label": "Scenario division",
+          "at": 3.78
+        },
+        "bangalore_reg": {
+          "label": "Property 1 Bangalore",
+          "at": 10.82
+        },
+        "bangalore_house": {
+          "label": "Bangalore residential house",
+          "at": 11.84
+        },
+        "tenant": {
+          "label": "tenant Kumar let out",
+          "at": 15.5
+        },
+        "rent_arc": {
+          "label": "rent 3 Lakhs receive",
+          "at": 18.32
+        },
+        "rent_pill": {
+          "label": "annual rent 3 Lakhs",
+          "at": 18.94
+        },
+        "municipal_tax": {
+          "label": "municipal taxes arrears 185000 paid",
+          "at": 22.0
+        },
+        "chennai_reg": {
+          "label": "Property 2 Chennai",
+          "at": 27.5
+        },
+        "father": {
+          "label": "father gift",
+          "at": 32.22
+        },
+        "son": {
+          "label": "Rajesh assessee",
+          "at": 33.12
+        },
+        "chennai_house": {
+          "label": "Chennai house sell",
+          "at": 39.44
+        },
+        "gift_deed": {
+          "label": "Gift Deed 1st March 2007",
+          "at": 40.34
+        },
+        "previous_cost": {
+          "label": "cost acquisition 125000 sell 25 Lakhs",
+          "at": 42.34
+        }
+      },
+      "start": 0.0,
+      "end": 49.84
+    },
+    {
+      "id": "b2",
+      "layout": "story_scene",
+      "scene_type": "rental_computation",
+      "kicker": "HOUSE PROPERTY DETERMINATION",
+      "badge": "Section 23 · 24 · 25A",
+      "title": {
+        "text": "Computation of Income from Bangalore House Property",
+        "at": 50.49
+      },
+      "voice_sync_text": "Aadyamaayi namukku Bangalore let-out house property-ude net income compute cheyyaam. Gross Annual Value, actual rent aaya 3 Lakh rupees edukkaam. Section 23 prakaaram, assessee actually paid cheytha municipal taxes current plus arrears serthu 1 Lakh 85 Thousand rupees subtract cheyyuka. Appol Net Annual Value 1 Lakh 15 Thousand rupees aayi maari. Section 24(a) standard deduction 30 percent subtract cheythaal 34 Thousand 500 rupees. Next, property major repair-nu edutha loan interest Section 24(b) prakaaram full 1 Lakh 50 Thousand rupees deduct cheyyaam. Pinne, Section 25A prakaaram receive cheytha rent arrears 30 Thousand rupees-il ninnu 30 percent deduction kazhinju taxable 21 Thousand add cheythaal, Net Loss from House Property 48 Thousand 500 rupees aayi maari.",
+      "elements": {
+        "step_gav": {
+          "label": "Gross Annual Value actual rent 3 Lakh",
+          "at": 55.61
+        },
+        "step_mun_tax": {
+          "label": "municipal taxes 185000 subtract",
+          "at": 62.99
+        },
+        "step_nav": {
+          "label": "Net Annual Value 115000",
+          "at": 70.59
+        },
+        "step_std_ded": {
+          "label": "Section 24(a) standard deduction 30 percent 34500",
+          "at": 73.97
+        },
+        "step_interest": {
+          "label": "Section 24(b) interest loan repair 150000",
+          "at": 85.43
+        },
+        "step_arrears": {
+          "label": "Section 25A rent arrears 21000",
+          "at": 91.53
+        },
+        "net_loss": {
+          "label": "Net Loss House Property 48500",
+          "at": 102.67
+        }
+      },
+      "start": 50.19,
+      "end": 106.51
+    },
+    {
+      "id": "b3",
+      "layout": "story_scene",
+      "scene_type": "sdv_comparison",
+      "kicker": "STATUTORY DEEMED BENCHMARK",
+      "badge": "Section 50C Override",
+      "title": {
+        "text": "Chennai House Transfer & Section 50C Stamp Duty Benchmark",
+        "at": 107.16
+      },
+      "voice_sync_text": "Next, Chennai property transfer-il Capital Gains compute cheyyaam. Evide crucial statutory provision Section 50C aanu. Actual sale consideration 25 Lakh rupees aanu. Ithinte 110 percent safe harbor threshold 27 Lakh 50 Thousand rupees aanu. Ennaal registration authority-ude Stamp Duty Value 30 Lakh rupees aayi nischayichirikkunnu. Stamp Duty Value safe harbor limit-inekaal higher aaya kaaranathaal, Section 50C trigger aavukayum, deemed Full Value of Consideration 30 Lakh rupees aayi enforce cheyyukayum cheyyunnu. Gift aayathinaal Section 49(1) prakaaram father-nte cost of acquisition aaya 1 Lakh 25 Thousand rupees subtract cheythaal, Gross Long Term Capital Gain 28 Lakh 75 Thousand rupees varunnu.",
+      "elements": {
+        "actual_bar": {
+          "label": "actual consideration 25 Lakh",
+          "at": 115.8
+        },
+        "safe_harbor": {
+          "label": "110 percent safe harbor 2750000",
+          "at": 119.8
+        },
+        "sdv_bar": {
+          "label": "Stamp Duty Value 30 Lakh",
+          "at": 127.78
+        },
+        "stamp_50c": {
+          "label": "Section 50C trigger deemed Full Value",
+          "at": 135.3
+        },
+        "gross_ltcg": {
+          "label": "Gross Long Term Capital Gain 2875000",
+          "at": 136.2
+        }
+      },
+      "start": 106.86,
+      "end": 156.98
+    },
+    {
+      "id": "b4",
+      "layout": "story_scene",
+      "scene_type": "adjacent_flats_merge",
+      "kicker": "EXEMPTION REINVESTMENT",
+      "badge": "CIT v. Ananda Basappa",
+      "title": {
+        "text": "Section 54 Relief: Two Adjacent Flats Combined as Single Unit",
+        "at": 157.63
+      },
+      "voice_sync_text": "Rajesh ee sale proceeds upayogichu reinvestment cheyyukayaanu. Section 54 exemption claim cheyyaan Bangalore-il randu adjacent flats, Flat 101 8 Lakhs-inum Flat 102 7 Lakhs-inum purchase cheythu. Randu separate sale deeds aanenkilum, internal wall remove cheythu oru single habitable residential unit aayi modify cheythu. Karnataka High Court-inte landmark CIT versus Ananda Basappa ruling prakaaram, adjacent flats combine cheythu single residential unit aakkiyaal Section 54-le 'a residential house' condition fully satisfy aakum. Athinaal total investment aaya 15 Lakh rupees-um Section 54 exemption aayi allow cheyyappedum.",
+      "elements": {
+        "flat_101": {
+          "label": "Flat 101 8 Lakhs purchase",
+          "at": 166.23
+        },
+        "flat_102": {
+          "label": "Flat 102 7 Lakhs purchase",
+          "at": 167.03
+        },
+        "divider_wall": {
+          "label": "internal wall remove",
+          "at": 174.49
+        },
+        "merge_pill": {
+          "label": "single habitable residential unit modify",
+          "at": 176.13
+        },
+        "court_ruling": {
+          "label": "CIT versus Ananda Basappa ruling",
+          "at": 183.29
+        },
+        "sec54_pill": {
+          "label": "Section 54 exemption 15 Lakh",
+          "at": 189.73
+        }
+      },
+      "start": 157.33,
+      "end": 200.73
+    },
+    {
+      "id": "b5",
+      "layout": "story_scene",
+      "scene_type": "bond_investment",
+      "kicker": "STATUTORY TIMELINE & ALLOTMENT",
+      "badge": "Hindustan Unilever Rule",
+      "title": {
+        "text": "Section 54EC Bond Subscription: Date of Payment Benchmark",
+        "at": 201.38
+      },
+      "voice_sync_text": "Bhakki capital gain Rajesh Section 54EC eligible NHAI bonds-il invest cheyyaan theerumaanichu. Sale date 10th August 2025 aanu. Rajesh 10th October 2025-il, athayathu within 2 months cheque payment 10 Lakh rupees complete cheythu. Ennaal NHAI bonds allot cheythathu 1st February 2026-il aanu. Evide Bombay High Court-inte Hindustan Unilever Limited ruling protect cheyyunnu. Assessee 6 months statutory period-naullil payment complete cheythaal, allotment delay aanaalum Section 54EC exemption deny cheyyaan paadilla. So Rajesh-inu 10 Lakh rupees Section 54EC exemption fully eligible aanu.",
+      "elements": {
+        "timeline_line": {
+          "label": "timeline transfer",
+          "at": 221.44
+        },
+        "node_sale": {
+          "label": "Sale 10th August 2025",
+          "at": 222.34
+        },
+        "node_payment": {
+          "label": "10th October 2025 payment 10 Lakh",
+          "at": 230.5
+        },
+        "paid_bracket": {
+          "label": "within 2 months",
+          "at": 231.4
+        },
+        "node_allotment": {
+          "label": "allot 1st February 2026",
+          "at": 231.98
+        },
+        "node_deadline": {
+          "label": "6 months statutory period",
+          "at": 232.88
+        },
+        "court_ruling": {
+          "label": "Hindustan Unilever Limited ruling",
+          "at": 233.78
+        },
+        "sec54ec_pill": {
+          "label": "Section 54EC exemption 10 Lakh",
+          "at": 238.74
+        }
+      },
+      "start": 201.08,
+      "end": 241.8
+    },
+    {
+      "id": "b6",
+      "layout": "ledger",
+      "kicker": "FINAL TAXABLE INCOME INTEGRATION",
+      "badge": "Section 71 Inter-Head Set-off",
+      "title": {
+        "text": "Computation of Total Taxable Income with Section 71 Set-Off",
+        "at": 242.45
+      },
+      "voice_sync_text": "Ippo final total income synthesis nokkoo. Gross Long Term Capital Gain 28 Lakh 75 Thousand rupees. Section 54 residential flats exemption 15 Lakh rupees, pinne Section 54EC NHAI bonds exemption 10 Lakh rupees, total 25 Lakh rupees exemption subtract cheythaal Net Long Term Capital Gain 3 Lakh 75 Thousand rupees aayi maari. Ividayaanu master stroke: Section 71 inter-head set off prakaaram, Bangalore property-ude Net Loss from House Property aaya 48 Thousand 500 rupees Capital Gains-il ninnu set off cheyyaam. So Rajesh-inte Net Taxable Total Income 3 Lakh 26 Thousand 500 rupees aayi maari!",
+      "ledger_rows": [
+        {
+          "label": "Deemed Full Value of Consideration u/s 50C",
+          "val": "₹ 30,00,000",
+          "sign": "+",
+          "at": 246.64
+        },
+        {
+          "label": "Less: Cost of Acquisition to Previous Owner u/s 49(1)",
+          "val": "₹ 1,25,000",
+          "sign": "−",
+          "at": 251.13
+        },
+        {
+          "label": "Gross Long-Term Capital Gains (LTCG)",
+          "val": "₹ 28,75,000",
+          "sign": "=",
+          "at": 260.83
+        },
+        {
+          "label": "Less: Exemption u/s 54 (Adjacent Flats CIT v. Ananda Basappa)",
+          "val": "₹ 15,00,000",
+          "sign": "−",
+          "at": 261.73
+        },
+        {
+          "label": "Less: Exemption u/s 54EC (NHAI Bonds Hindustan Unilever Ltd.)",
+          "val": "₹ 10,00,000",
+          "sign": "−",
+          "at": 264.59
+        },
+        {
+          "label": "Net Long-Term Capital Gains",
+          "val": "₹ 3,75,000",
+          "sign": "=",
+          "at": 274.39
+        },
+        {
+          "label": "Less: Section 71 Set-off of House Property Loss",
+          "val": "₹ 48,500",
+          "sign": "−",
+          "at": 275.29
+        }
+      ],
+      "net_total": {
+        "label": "Net Taxable Total Income",
+        "val": "₹ 3,26,500",
+        "at": 277.99
+      },
+      "callout": {
+        "badge": "Inter-Head Set-off Master Stroke",
+        "text": "Under Section 71(1), loss under 'Income from house property' up to ₹ 2,00,000 can be set off against any other head of income, including Long-Term Capital Gains!",
+        "at": 243.35
+      },
+      "start": 242.15,
+      "end": 282.55
+    },
+    {
+      "id": "b7",
+      "layout": "takeaway",
+      "kicker": "EXAM MASTER PRINCIPLES",
+      "badge": "3 Golden Rules",
+      "title": {
+        "text": "Core Statutory Takeaways for Section 50C, 54 & 54EC",
+        "at": 283.2
+      },
+      "voice_sync_text": "Eethoru complex problem-il ninnu CA exam-il orkkenda moorthu golden rules: First, Section 50C-il Stamp Duty Value actual consideration-te 110 percent-inekaal kooduthalaayal SDV deemed full value aakum. Second, Section 54-il adjacent flats modify cheythu single habitable unit aakkiyaal Ananda Basappa precedent prakaaram exemption valid aanu. Third, Section 54EC-il payment date within 6 months aayal Hindustan Unilever precedent prakaaram bond allotment late aanaalum exemption claim cheyyaam. Brilliant work students!",
+      "rules": [
+        {
+          "title": "Section 50C 110% Safe Harbor Benchmark",
+          "text": "If Stamp Duty Value exceeds 110% of Actual Consideration, SDV becomes Deemed Full Value. Always compute 110% before applying Section 50C.",
+          "at": 289.74
+        },
+        {
+          "title": "Section 54 Adjacent Flats Unit Doctrine (CIT v. Ananda Basappa)",
+          "text": "Two adjacent flats modified into a single residential unit qualify as 'a residential house' even if acquired under separate sale deeds.",
+          "at": 300.76
+        },
+        {
+          "title": "Section 54EC Payment Date Landmark (Hindustan Unilever Ltd.)",
+          "text": "Payment made within 6 months of transfer satisfies Section 54EC timeline. Subsequent delay in bond allotment does not jeopardize exemption.",
+          "at": 310.68
+        }
+      ],
+      "start": 282.9,
+      "end": 322.42
+    }
+  ],
+  "duration_sec": 322.77,
+  "audio_url": "data/audio/dt-c2-q30.mp3"
+}

@@ -104,6 +104,356 @@ const FIXTURES = {
   }
 };
 FIXTURES["ch2_q14"] = FIXTURES["dt-c2-q14"];
+FIXTURES["dt-c2-q30"] = {
+  "question_id": "dt-c2-q30",
+  "context_pill": "Section 50C · Section 54 · Section 54EC · Section 71 | Multiple Property & Inter-Head Set-off",
+  "fallback": false,
+  "beats": [
+    {
+      "id": "b1",
+      "layout": "story_scene",
+      "scene_type": "rental_and_gift",
+      "kicker": "FACTUAL NARRATIVE & STATUTORY CONTEXT",
+      "badge": "Double Property Case",
+      "title": {
+        "text": "Dual Property Scenario: Bangalore Rental & Chennai Gifted House",
+        "at": 0.3
+      },
+      "voice_sync_text": "Students, namukku Question 30-le double property scenario crystal clear aayi analyze cheyyaam. Assessee Mr. Rajesh-inu randu properties aanu ullathu. First property, Bangalore-il ulla let out residential house. Ithu tenant Mr. Kumar-inu vadakakku koduthu, annual rent 3 Lakhs receive cheyyunnu. Assessee ee varsham municipal taxes arrears sahidham 1 Lakh 85 Thousand rupees paid cheythu. Second property, Chennai-il ulla house. Ithu 1st March 2007-il father gift aayi nalkiyathaam. Father-nte cost of acquisition 1 Lakh 25 Thousand rupees maathramaayirunnu. Ee Chennai house August 2025-il 25 Lakhs rupees-inu assessee sell cheythu. Ee randu transactions-um Income Tax Act-il engane deal cheyyunnu ennu nokkaam.",
+      "elements": {
+        "divider": {
+          "label": "Scenario division",
+          "at": 3.78
+        },
+        "bangalore_reg": {
+          "label": "Property 1 Bangalore",
+          "at": 10.82
+        },
+        "bangalore_house": {
+          "label": "Bangalore residential house",
+          "at": 11.84
+        },
+        "tenant": {
+          "label": "tenant Kumar let out",
+          "at": 15.5
+        },
+        "rent_arc": {
+          "label": "rent 3 Lakhs receive",
+          "at": 18.32
+        },
+        "rent_pill": {
+          "label": "annual rent 3 Lakhs",
+          "at": 18.94
+        },
+        "municipal_tax": {
+          "label": "municipal taxes arrears 185000 paid",
+          "at": 22.0
+        },
+        "chennai_reg": {
+          "label": "Property 2 Chennai",
+          "at": 27.5
+        },
+        "father": {
+          "label": "father gift",
+          "at": 32.22
+        },
+        "son": {
+          "label": "Rajesh assessee",
+          "at": 33.12
+        },
+        "chennai_house": {
+          "label": "Chennai house sell",
+          "at": 39.44
+        },
+        "gift_deed": {
+          "label": "Gift Deed 1st March 2007",
+          "at": 40.34
+        },
+        "previous_cost": {
+          "label": "cost acquisition 125000 sell 25 Lakhs",
+          "at": 42.34
+        }
+      },
+      "start": 0.0,
+      "end": 49.84
+    },
+    {
+      "id": "b2",
+      "layout": "story_scene",
+      "scene_type": "rental_computation",
+      "kicker": "HOUSE PROPERTY DETERMINATION",
+      "badge": "Section 23 · 24 · 25A",
+      "title": {
+        "text": "Computation of Income from Bangalore House Property",
+        "at": 50.49
+      },
+      "voice_sync_text": "Aadyamaayi namukku Bangalore let-out house property-ude net income compute cheyyaam. Gross Annual Value, actual rent aaya 3 Lakh rupees edukkaam. Section 23 prakaaram, assessee actually paid cheytha municipal taxes current plus arrears serthu 1 Lakh 85 Thousand rupees subtract cheyyuka. Appol Net Annual Value 1 Lakh 15 Thousand rupees aayi maari. Section 24(a) standard deduction 30 percent subtract cheythaal 34 Thousand 500 rupees. Next, property major repair-nu edutha loan interest Section 24(b) prakaaram full 1 Lakh 50 Thousand rupees deduct cheyyaam. Pinne, Section 25A prakaaram receive cheytha rent arrears 30 Thousand rupees-il ninnu 30 percent deduction kazhinju taxable 21 Thousand add cheythaal, Net Loss from House Property 48 Thousand 500 rupees aayi maari.",
+      "elements": {
+        "step_gav": {
+          "label": "Gross Annual Value actual rent 3 Lakh",
+          "at": 55.61
+        },
+        "step_mun_tax": {
+          "label": "municipal taxes 185000 subtract",
+          "at": 62.99
+        },
+        "step_nav": {
+          "label": "Net Annual Value 115000",
+          "at": 70.59
+        },
+        "step_std_ded": {
+          "label": "Section 24(a) standard deduction 30 percent 34500",
+          "at": 73.97
+        },
+        "step_interest": {
+          "label": "Section 24(b) interest loan repair 150000",
+          "at": 85.43
+        },
+        "step_arrears": {
+          "label": "Section 25A rent arrears 21000",
+          "at": 91.53
+        },
+        "net_loss": {
+          "label": "Net Loss House Property 48500",
+          "at": 102.67
+        }
+      },
+      "start": 50.19,
+      "end": 106.51
+    },
+    {
+      "id": "b3",
+      "layout": "story_scene",
+      "scene_type": "sdv_comparison",
+      "kicker": "STATUTORY DEEMED BENCHMARK",
+      "badge": "Section 50C Override",
+      "title": {
+        "text": "Chennai House Transfer & Section 50C Stamp Duty Benchmark",
+        "at": 107.16
+      },
+      "voice_sync_text": "Next, Chennai property transfer-il Capital Gains compute cheyyaam. Evide crucial statutory provision Section 50C aanu. Actual sale consideration 25 Lakh rupees aanu. Ithinte 110 percent safe harbor threshold 27 Lakh 50 Thousand rupees aanu. Ennaal registration authority-ude Stamp Duty Value 30 Lakh rupees aayi nischayichirikkunnu. Stamp Duty Value safe harbor limit-inekaal higher aaya kaaranathaal, Section 50C trigger aavukayum, deemed Full Value of Consideration 30 Lakh rupees aayi enforce cheyyukayum cheyyunnu. Gift aayathinaal Section 49(1) prakaaram father-nte cost of acquisition aaya 1 Lakh 25 Thousand rupees subtract cheythaal, Gross Long Term Capital Gain 28 Lakh 75 Thousand rupees varunnu.",
+      "elements": {
+        "actual_bar": {
+          "label": "actual consideration 25 Lakh",
+          "at": 115.8
+        },
+        "safe_harbor": {
+          "label": "110 percent safe harbor 2750000",
+          "at": 119.8
+        },
+        "sdv_bar": {
+          "label": "Stamp Duty Value 30 Lakh",
+          "at": 127.78
+        },
+        "stamp_50c": {
+          "label": "Section 50C trigger deemed Full Value",
+          "at": 135.3
+        },
+        "gross_ltcg": {
+          "label": "Gross Long Term Capital Gain 2875000",
+          "at": 136.2
+        }
+      },
+      "start": 106.86,
+      "end": 156.98
+    },
+    {
+      "id": "b4",
+      "layout": "story_scene",
+      "scene_type": "adjacent_flats_merge",
+      "kicker": "EXEMPTION REINVESTMENT",
+      "badge": "CIT v. Ananda Basappa",
+      "title": {
+        "text": "Section 54 Relief: Two Adjacent Flats Combined as Single Unit",
+        "at": 157.63
+      },
+      "voice_sync_text": "Rajesh ee sale proceeds upayogichu reinvestment cheyyukayaanu. Section 54 exemption claim cheyyaan Bangalore-il randu adjacent flats, Flat 101 8 Lakhs-inum Flat 102 7 Lakhs-inum purchase cheythu. Randu separate sale deeds aanenkilum, internal wall remove cheythu oru single habitable residential unit aayi modify cheythu. Karnataka High Court-inte landmark CIT versus Ananda Basappa ruling prakaaram, adjacent flats combine cheythu single residential unit aakkiyaal Section 54-le 'a residential house' condition fully satisfy aakum. Athinaal total investment aaya 15 Lakh rupees-um Section 54 exemption aayi allow cheyyappedum.",
+      "elements": {
+        "flat_101": {
+          "label": "Flat 101 8 Lakhs purchase",
+          "at": 166.23
+        },
+        "flat_102": {
+          "label": "Flat 102 7 Lakhs purchase",
+          "at": 167.03
+        },
+        "divider_wall": {
+          "label": "internal wall remove",
+          "at": 174.49
+        },
+        "merge_pill": {
+          "label": "single habitable residential unit modify",
+          "at": 176.13
+        },
+        "court_ruling": {
+          "label": "CIT versus Ananda Basappa ruling",
+          "at": 183.29
+        },
+        "sec54_pill": {
+          "label": "Section 54 exemption 15 Lakh",
+          "at": 189.73
+        }
+      },
+      "start": 157.33,
+      "end": 200.73
+    },
+    {
+      "id": "b5",
+      "layout": "story_scene",
+      "scene_type": "bond_investment",
+      "kicker": "STATUTORY TIMELINE & ALLOTMENT",
+      "badge": "Hindustan Unilever Rule",
+      "title": {
+        "text": "Section 54EC Bond Subscription: Date of Payment Benchmark",
+        "at": 201.38
+      },
+      "voice_sync_text": "Bhakki capital gain Rajesh Section 54EC eligible NHAI bonds-il invest cheyyaan theerumaanichu. Sale date 10th August 2025 aanu. Rajesh 10th October 2025-il, athayathu within 2 months cheque payment 10 Lakh rupees complete cheythu. Ennaal NHAI bonds allot cheythathu 1st February 2026-il aanu. Evide Bombay High Court-inte Hindustan Unilever Limited ruling protect cheyyunnu. Assessee 6 months statutory period-naullil payment complete cheythaal, allotment delay aanaalum Section 54EC exemption deny cheyyaan paadilla. So Rajesh-inu 10 Lakh rupees Section 54EC exemption fully eligible aanu.",
+      "elements": {
+        "timeline_line": {
+          "label": "timeline transfer",
+          "at": 221.44
+        },
+        "node_sale": {
+          "label": "Sale 10th August 2025",
+          "at": 222.34
+        },
+        "node_payment": {
+          "label": "10th October 2025 payment 10 Lakh",
+          "at": 230.5
+        },
+        "paid_bracket": {
+          "label": "within 2 months",
+          "at": 231.4
+        },
+        "node_allotment": {
+          "label": "allot 1st February 2026",
+          "at": 231.98
+        },
+        "node_deadline": {
+          "label": "6 months statutory period",
+          "at": 232.88
+        },
+        "court_ruling": {
+          "label": "Hindustan Unilever Limited ruling",
+          "at": 233.78
+        },
+        "sec54ec_pill": {
+          "label": "Section 54EC exemption 10 Lakh",
+          "at": 238.74
+        }
+      },
+      "start": 201.08,
+      "end": 241.8
+    },
+    {
+      "id": "b6",
+      "layout": "ledger",
+      "kicker": "FINAL TAXABLE INCOME INTEGRATION",
+      "badge": "Section 71 Inter-Head Set-off",
+      "title": {
+        "text": "Computation of Total Taxable Income with Section 71 Set-Off",
+        "at": 242.45
+      },
+      "voice_sync_text": "Ippo final total income synthesis nokkoo. Gross Long Term Capital Gain 28 Lakh 75 Thousand rupees. Section 54 residential flats exemption 15 Lakh rupees, pinne Section 54EC NHAI bonds exemption 10 Lakh rupees, total 25 Lakh rupees exemption subtract cheythaal Net Long Term Capital Gain 3 Lakh 75 Thousand rupees aayi maari. Ividayaanu master stroke: Section 71 inter-head set off prakaaram, Bangalore property-ude Net Loss from House Property aaya 48 Thousand 500 rupees Capital Gains-il ninnu set off cheyyaam. So Rajesh-inte Net Taxable Total Income 3 Lakh 26 Thousand 500 rupees aayi maari!",
+      "ledger_rows": [
+        {
+          "label": "Deemed Full Value of Consideration u/s 50C",
+          "val": "₹ 30,00,000",
+          "sign": "+",
+          "at": 246.64
+        },
+        {
+          "label": "Less: Cost of Acquisition to Previous Owner u/s 49(1)",
+          "val": "₹ 1,25,000",
+          "sign": "−",
+          "at": 251.13
+        },
+        {
+          "label": "Gross Long-Term Capital Gains (LTCG)",
+          "val": "₹ 28,75,000",
+          "sign": "=",
+          "at": 260.83
+        },
+        {
+          "label": "Less: Exemption u/s 54 (Adjacent Flats CIT v. Ananda Basappa)",
+          "val": "₹ 15,00,000",
+          "sign": "−",
+          "at": 261.73
+        },
+        {
+          "label": "Less: Exemption u/s 54EC (NHAI Bonds Hindustan Unilever Ltd.)",
+          "val": "₹ 10,00,000",
+          "sign": "−",
+          "at": 264.59
+        },
+        {
+          "label": "Net Long-Term Capital Gains",
+          "val": "₹ 3,75,000",
+          "sign": "=",
+          "at": 274.39
+        },
+        {
+          "label": "Less: Section 71 Set-off of House Property Loss",
+          "val": "₹ 48,500",
+          "sign": "−",
+          "at": 275.29
+        }
+      ],
+      "net_total": {
+        "label": "Net Taxable Total Income",
+        "val": "₹ 3,26,500",
+        "at": 277.99
+      },
+      "callout": {
+        "badge": "Inter-Head Set-off Master Stroke",
+        "text": "Under Section 71(1), loss under 'Income from house property' up to ₹ 2,00,000 can be set off against any other head of income, including Long-Term Capital Gains!",
+        "at": 243.35
+      },
+      "start": 242.15,
+      "end": 282.55
+    },
+    {
+      "id": "b7",
+      "layout": "takeaway",
+      "kicker": "EXAM MASTER PRINCIPLES",
+      "badge": "3 Golden Rules",
+      "title": {
+        "text": "Core Statutory Takeaways for Section 50C, 54 & 54EC",
+        "at": 283.2
+      },
+      "voice_sync_text": "Eethoru complex problem-il ninnu CA exam-il orkkenda moorthu golden rules: First, Section 50C-il Stamp Duty Value actual consideration-te 110 percent-inekaal kooduthalaayal SDV deemed full value aakum. Second, Section 54-il adjacent flats modify cheythu single habitable unit aakkiyaal Ananda Basappa precedent prakaaram exemption valid aanu. Third, Section 54EC-il payment date within 6 months aayal Hindustan Unilever precedent prakaaram bond allotment late aanaalum exemption claim cheyyaam. Brilliant work students!",
+      "rules": [
+        {
+          "title": "Section 50C 110% Safe Harbor Benchmark",
+          "text": "If Stamp Duty Value exceeds 110% of Actual Consideration, SDV becomes Deemed Full Value. Always compute 110% before applying Section 50C.",
+          "at": 289.74
+        },
+        {
+          "title": "Section 54 Adjacent Flats Unit Doctrine (CIT v. Ananda Basappa)",
+          "text": "Two adjacent flats modified into a single residential unit qualify as 'a residential house' even if acquired under separate sale deeds.",
+          "at": 300.76
+        },
+        {
+          "title": "Section 54EC Payment Date Landmark (Hindustan Unilever Ltd.)",
+          "text": "Payment made within 6 months of transfer satisfies Section 54EC timeline. Subsequent delay in bond allotment does not jeopardize exemption.",
+          "at": 310.68
+        }
+      ],
+      "start": 282.9,
+      "end": 322.42
+    }
+  ],
+  "duration_sec": 322.77,
+  "audio_url": "data/audio/dt-c2-q30.mp3"
+};
+FIXTURES["dt_c2_q30"] = FIXTURES["dt-c2-q30"];
+FIXTURES["ch2_q30"] = FIXTURES["dt-c2-q30"];
+if (typeof window !== "undefined") {
+  window.EXPLAINER_SCREENPLAYS = window.EXPLAINER_SCREENPLAYS || {};
+  window.EXPLAINER_SCREENPLAYS["dt-c2-q30"] = FIXTURES["dt-c2-q30"];
+  window.EXPLAINER_SCREENPLAYS["dt_c2_q30"] = FIXTURES["dt-c2-q30"];
+  window.EXPLAINER_SCREENPLAYS["ch2_q30"] = FIXTURES["dt-c2-q30"];
+}
 
 function bezier(mX1, mY1, mX2, mY2) {
   function A(aA1, aA2) { return 1.0 - 3.0 * aA2 + 3.0 * aA1; }
@@ -533,14 +883,26 @@ const TEMPLATES = {
     if (b.title) words(ctx, h("h2", el), b.title.text || b.title, b.title.at || (b.start + 0.3));
     const ledgerTable = h("ledger-table", el);
 
+    const parseVal = v => {
+      if (typeof v === "number") return v;
+      if (!v) return 0;
+      const str = String(v).replace(/,/g, "").replace(/₹/g, "").trim();
+      const n = parseFloat(str);
+      return isNaN(n) ? 0 : n;
+    };
+
     // Support both b.rows and b.ledger_rows
-    const rowsList = b.rows || (b.ledger_rows || []).map((r, i) => ({
-      sign: r.sign || (r.type === "deduction" ? "minus" : "plus"),
-      label: r.label || r.particulars || r.text,
-      value: r.value !== undefined ? r.value : (r.amount || 0),
-      at: r.at || (b.start + 0.6 + i * 0.4),
-      fmt: r.fmt || "inr"
-    }));
+    const rowsList = b.rows || (b.ledger_rows || []).map((r, i) => {
+      const s = r.sign || (r.type === "deduction" ? "minus" : "plus");
+      const normSign = (s === "-" || s === "−" || s === "minus") ? "minus" : ((s === "=" || s === "total") ? "total" : "plus");
+      return {
+        sign: normSign,
+        label: r.label || r.particulars || r.text,
+        value: parseVal(r.value !== undefined ? r.value : (r.val !== undefined ? r.val : (r.amount || 0))),
+        at: r.at || (b.start + 0.6 + i * 0.4),
+        fmt: r.fmt || "inr"
+      };
+    });
 
     rowsList.forEach((r, idx) => {
       const row = h("ledger-row " + (r.sign || "plus"), ledgerTable);
@@ -558,7 +920,7 @@ const TEMPLATES = {
 
     const totObj = b.total || b.net_total;
     if (totObj) {
-      const totValNum = totObj.value !== undefined ? totObj.value : (totObj.val !== undefined ? totObj.val : (totObj.amount !== undefined ? totObj.amount : (totObj.taxable_amount || 0)));
+      const totValNum = parseVal(totObj.value !== undefined ? totObj.value : (totObj.val !== undefined ? totObj.val : (totObj.amount !== undefined ? totObj.amount : (totObj.taxable_amount || 0))));
       const totLblText = totObj.label || totObj.particulars || "Taxable Capital Gain";
       const totAt = totObj.at || (b.start + 0.6 + rowsList.length * 0.4 + 0.5);
 
@@ -854,6 +1216,444 @@ const TEMPLATES = {
         fade(ctx, branchEls[i], br.at, 12, 0.5);
       }
     });
+  },
+
+  story_scene(el, b, ctx) {
+    el.style.cssText = "position:absolute;inset:0;width:100%;height:100%;overflow:hidden;display:flex;flex-direction:column;align-items:center;";
+
+    // Header
+    const hdr = h("story-scene-hdr", el);
+    hdr.style.cssText = "position:absolute;top:2.2cqw;left:0;right:0;display:flex;flex-direction:column;align-items:center;z-index:5;text-align:center;";
+    if (b.kicker) {
+      const kick = h("kick", hdr);
+      kick.style.cssText = "font-size:0.85cqw;font-weight:800;letter-spacing:0.14em;color:var(--accent,#4F46E5);text-transform:uppercase;";
+      kick.textContent = b.kicker;
+      fade(ctx, kick, (b.title && b.title.at) ? b.title.at - 0.2 : b.start + 0.1, 8, 0.4);
+    }
+    if (b.title) {
+      const tit = h("h1", hdr);
+      tit.style.cssText = "font-size:1.8cqw;font-weight:800;color:var(--ink,#111827);margin-top:0.2cqw;letter-spacing:-0.01em;";
+      words(ctx, tit, b.title.text || b.title, (b.title && b.title.at) ? b.title.at : b.start + 0.3);
+    }
+    if (b.badge) {
+      const bd = h("chip", hdr);
+      bd.style.cssText = "position:absolute;top:0;right:3cqw;background:var(--tint,#E0E7FF);color:var(--accent,#4F46E5);font-size:0.75cqw;font-weight:800;padding:0.3cqw 0.8cqw;border-radius:999px;border:1px solid #C7D2FE;";
+      bd.textContent = b.badge;
+      fade(ctx, bd, b.start + 0.4, 0, 0.4);
+    }
+
+    const svg = sv("svg", { viewBox: "0 0 1000 562", preserveAspectRatio: "xMidYMid meet" }, el);
+    svg.style.cssText = "position:absolute;inset:0;width:100%;height:100%;overflow:visible;";
+
+    const S_EL = (tag, attrs, parent) => {
+      const e = document.createElementNS(NS, tag);
+      for (const k in attrs) e.setAttribute(k, attrs[k]);
+      if (parent) parent.appendChild(e);
+      return e;
+    };
+    const G_EL = (parent, attrs) => S_EL("g", attrs || {}, parent);
+    const R_EL = (parent, x, y, w, h, fill, o = {}) => {
+      const e = S_EL("rect", { x, y, width: w, height: h, rx: o.rx !== undefined ? o.rx : 8, fill, stroke: o.stroke || "none", "stroke-width": o.sw || 0 }, parent);
+      if (o.dash) e.setAttribute("stroke-dasharray", o.dash);
+      return e;
+    };
+    const T_EL = (parent, x, y, str, o = {}) => {
+      const e = S_EL("text", { x, y, "text-anchor": o.anchor || "start", "font-size": o.size || 18, "font-weight": o.weight || 600, fill: o.fill || "#111827" }, parent);
+      e.textContent = str;
+      return e;
+    };
+    const P_EL = (parent, d, stroke, sw = 3, o = {}) => {
+      const e = S_EL("path", { d, stroke, "stroke-width": sw, fill: o.fill || "none", "stroke-linecap": "round", "stroke-linejoin": "round", pathLength: 1 }, parent);
+      if (o.dash) e.setAttribute("stroke-dasharray", o.dash);
+      return e;
+    };
+
+    // Shared SVG draw components
+    const makeHouse = (parent, x, y, col, label, sub) => {
+      const g = G_EL(parent);
+      P_EL(g, `M ${x - 45} ${y + 5} L ${x} ${y - 35} L ${x + 45} ${y + 5} Z`, col, 3.5, { fill: "#EEF2FF" });
+      R_EL(g, x + 20, y - 30, 10, 18, "#C7D2FE", { stroke: col, sw: 2, rx: 1 });
+      R_EL(g, x - 38, y + 5, 76, 65, "#FFFFFF", { stroke: col, sw: 3.5, rx: 4 });
+      R_EL(g, x - 12, y + 32, 24, 38, col, { rx: 3 });
+      R_EL(g, x - 30, y + 16, 14, 14, "#FEF08A", { stroke: col, sw: 2, rx: 2 });
+      R_EL(g, x + 16, y + 16, 14, 14, "#FEF08A", { stroke: col, sw: 2, rx: 2 });
+      if (label) T_EL(g, x, y + 92, label, { size: 16, weight: 800, anchor: "middle", fill: "#0F172A" });
+      if (sub) T_EL(g, x, y + 112, sub, { size: 13, weight: 600, anchor: "middle", fill: "#64748B" });
+      return g;
+    };
+
+    const makePerson = (parent, x, y, col, name, role) => {
+      const g = G_EL(parent);
+      S_EL("circle", { cx: x, cy: y - 20, r: 16, fill: "#FFFFFF", stroke: col, "stroke-width": 3 }, g);
+      S_EL("circle", { cx: x - 5, cy: y - 22, r: 2, fill: col }, g);
+      S_EL("circle", { cx: x + 5, cy: y - 22, r: 2, fill: col }, g);
+      P_EL(g, `M ${x - 5} ${y - 14} Q ${x} ${y - 10} ${x + 5} ${y - 14}`, col, 2);
+      P_EL(g, `M ${x - 22} ${y + 35} C ${x - 22} ${y + 2} ${x - 12} ${y - 2} ${x} ${y - 2} C ${x + 12} ${y - 2} ${x + 22} ${y + 2} ${x + 22} ${y + 35} Z`, col, 3, { fill: "#EEF2FF" });
+      if (name) T_EL(g, x, y + 54, name, { size: 14, weight: 800, anchor: "middle", fill: "#0F172A" });
+      if (role) T_EL(g, x, y + 70, role, { size: 12, weight: 600, anchor: "middle", fill: col });
+      return g;
+    };
+
+    const makeFactory = (parent, x, y, col, label, sub) => {
+      const g = G_EL(parent);
+      R_EL(g, x + 24, y - 36, 12, 32, "#94A3B8", { stroke: col, sw: 2, rx: 1 });
+      S_EL("circle", { cx: x + 30, cy: y - 44, r: 5, fill: "#CBD5E1" }, g);
+      S_EL("circle", { cx: x + 36, cy: y - 52, r: 7, fill: "#E2E8F0" }, g);
+      P_EL(g, `M ${x - 45} ${y} L ${x - 20} ${y - 25} L ${x - 20} ${y} L ${x + 8} ${y - 25} L ${x + 8} ${y} L ${x + 36} ${y - 25} L ${x + 36} ${y} Z`, col, 2.5, { fill: "#EEF2FF" });
+      R_EL(g, x - 45, y, 90, 65, "#FFFFFF", { stroke: col, sw: 3.5, rx: 4 });
+      R_EL(g, x - 15, y + 25, 30, 40, col, { rx: 2 });
+      for (let dy = 32; dy <= 58; dy += 7) {
+        P_EL(g, `M ${x - 13} ${y + dy} L ${x + 13} ${y + dy}`, "#FFFFFF", 1.5);
+      }
+      R_EL(g, x - 38, y + 12, 16, 16, "#FEF08A", { stroke: col, sw: 2, rx: 2 });
+      R_EL(g, x + 22, y + 12, 16, 16, "#FEF08A", { stroke: col, sw: 2, rx: 2 });
+      if (label) T_EL(g, x, y + 88, label, { size: 15, weight: 800, anchor: "middle", fill: "#0F172A" });
+      if (sub) T_EL(g, x, y + 106, sub, { size: 12, weight: 600, anchor: "middle", fill: "#64748B" });
+      return g;
+    };
+
+    const makeGavel = (parent, x, y, courtText, ruleText, w = 390, h = 76) => {
+      const g = G_EL(parent);
+      const halfW = w / 2;
+      const halfH = h / 2;
+      R_EL(g, x - halfW, y - halfH, w, h, "#FFFFFF", { stroke: "#4F46E5", sw: 2.5, rx: 12 });
+      
+      const leftPad = x - halfW + 24;
+      const gav = G_EL(g);
+      P_EL(gav, `M ${leftPad} ${y - 5} L ${leftPad + 15} ${y - 20} L ${leftPad + 25} ${y - 10} L ${leftPad + 10} ${y + 5} Z`, "#4F46E5", 2, { fill: "#4F46E5" });
+      P_EL(gav, `M ${leftPad + 18} ${y - 8} L ${leftPad + 40} ${y + 14}`, "#4F46E5", 4);
+      
+      const textX = leftPad + 50;
+      T_EL(g, textX, y - 12, courtText || "Landmark Judicial Ruling", { size: 13.5, weight: 800, fill: "#4F46E5" });
+      
+      if (ruleText && ruleText.length > 38) {
+        const words = ruleText.split(" ");
+        let l1 = "", l2 = "";
+        for (const word of words) {
+          if (!l2 && (l1 + " " + word).trim().length <= 42) {
+            l1 = (l1 ? l1 + " " + word : word);
+          } else {
+            l2 = (l2 ? l2 + " " + word : word);
+          }
+        }
+        T_EL(g, textX, y + 8, l1, { size: 11.5, weight: 600, fill: "#374151" });
+        T_EL(g, textX, y + 24, l2, { size: 11.5, weight: 600, fill: "#374151" });
+      } else {
+        T_EL(g, textX, y + 14, ruleText || "Statutory Principle Confirmed", { size: 12, weight: 600, fill: "#374151" });
+      }
+      return g;
+    };
+
+    const at = (key, fallback) => {
+      if (b.elements && b.elements[key] && typeof b.elements[key].at === "number") {
+        return b.elements[key].at;
+      }
+      if (b.timings && typeof b.timings[key] === "number") {
+        return b.timings[key];
+      }
+      return b.start + fallback;
+    };
+
+    // 1. SCENE: rental_and_gift
+    if (b.scene_type === "rental_and_gift") {
+      const sep = P_EL(svg, "M 500 120 L 500 480", "#CBD5E1", 2, { dash: "6 6" });
+      fade(ctx, sep, at("divider", 0.3), 0, 0.4);
+
+      // LEFT REGION: Bangalore House & Rental Flow
+      const regL = G_EL(svg);
+      R_EL(regL, 50, 130, 410, 360, "#F8FAFC", { stroke: "#E2E8F0", sw: 1.5, rx: 16 });
+      T_EL(regL, 255, 160, "PROPERTY 1 · BANGALORE", { size: 13, weight: 800, fill: "#4F46E5", anchor: "middle", ls: "0.1em" });
+      fade(ctx, regL, at("bangalore_reg", 0.4), 10, 0.4);
+
+      const bHouse = makeHouse(svg, 160, 260, "#4F46E5", "Bangalore House", "Let Out to Tenant");
+      fade(ctx, bHouse, at("bangalore_house", 0.8), 12, 0.5);
+
+      const tenant = makePerson(svg, 370, 260, "#059669", "Mr. Kumar", "Tenant");
+      fade(ctx, tenant, at("tenant", 1.2), 12, 0.5);
+
+      const rentArc = P_EL(svg, "M 340 280 C 290 230 230 230 180 280", "#059669", 3, { dash: "6 4" });
+      fade(ctx, rentArc, at("rent_arc", 1.8), 0, 0.4);
+      ctx.push({ el: rentArc, kind: "draw", start: at("rent_arc", 1.8), dur: 0.8 });
+
+      const rentPill = G_EL(svg);
+      R_EL(rentPill, 205, 205, 110, 32, "#ECFDF5", { stroke: "#059669", sw: 1.5, rx: 16 });
+      T_EL(rentPill, 260, 226, "₹ 3,00,000 / yr", { size: 12, weight: 800, fill: "#059669", anchor: "middle" });
+      fade(ctx, rentPill, at("rent_pill", 2.2), 8, 0.4);
+
+      const munBox = G_EL(svg);
+      R_EL(munBox, 90, 400, 330, 60, "#FFFFFF", { stroke: "#DC2626", sw: 1.5, rx: 10 });
+      T_EL(munBox, 105, 425, "Municipal Taxes Paid: ₹ 1,85,000", { size: 13, weight: 800, fill: "#DC2626" });
+      T_EL(munBox, 105, 445, "Current ₹ 35k + Arrears ₹ 1.50L (Deductible u/s 23)", { size: 11, weight: 600, fill: "#64748B" });
+      fade(ctx, munBox, at("municipal_tax", 2.8), 10, 0.4);
+
+      // RIGHT REGION: Chennai House & Gift Transfer
+      const regR = G_EL(svg);
+      R_EL(regR, 540, 130, 410, 360, "#F8FAFC", { stroke: "#E2E8F0", sw: 1.5, rx: 16 });
+      T_EL(regR, 745, 160, "PROPERTY 2 · CHENNAI (GIFTED)", { size: 13, weight: 800, fill: "#4F46E5", anchor: "middle", ls: "0.1em" });
+      fade(ctx, regR, at("chennai_reg", 3.4), 10, 0.4);
+
+      const father = makePerson(svg, 620, 260, "#6B7280", "Father", "Acquired Apr 2006");
+      fade(ctx, father, at("father", 3.8), 12, 0.5);
+
+      const son = makePerson(svg, 860, 260, "#4F46E5", "Mr. Rajesh", "Donee / Assessee");
+      fade(ctx, son, at("son", 4.2), 12, 0.5);
+
+      const cHouse = makeHouse(svg, 740, 260, "#059669", "Chennai House", "Sold Aug 2025");
+      fade(ctx, cHouse, at("chennai_house", 4.6), 12, 0.5);
+
+      const deedBox = G_EL(svg);
+      R_EL(deedBox, 675, 205, 130, 32, "#FEF08A", { stroke: "#CA8A04", sw: 1.5, rx: 16 });
+      T_EL(deedBox, 740, 226, "Gift Deed · 01.03.2007", { size: 11, weight: 800, fill: "#854D0E", anchor: "middle" });
+      fade(ctx, deedBox, at("gift_deed", 5.0), 8, 0.4);
+
+      const costBox = G_EL(svg);
+      R_EL(costBox, 580, 400, 330, 60, "#FFFFFF", { stroke: "#4F46E5", sw: 1.5, rx: 10 });
+      T_EL(costBox, 595, 425, "Cost to Previous Owner u/s 49(1): ₹ 1,25,000", { size: 13, weight: 800, fill: "#4F46E5" });
+      T_EL(costBox, 595, 445, "Sold Aug 2025: Sale Consideration ₹ 25,00,000", { size: 11, weight: 600, fill: "#64748B" });
+      fade(ctx, costBox, at("previous_cost", 5.6), 10, 0.4);
+    }
+
+    // 2. SCENE: rental_computation
+    else if (b.scene_type === "rental_computation") {
+      const steps = [
+        { key: "step_gav", label: "Gross Annual Value (Actual Rent ₹ 3 Lakhs)", val: "+ ₹ 3,00,000", col: "#059669", tint: "#ECFDF5", sign: "+" },
+        { key: "step_mun_tax", label: "Less: Municipal Taxes Paid (Current ₹ 35k + Arrears ₹ 1.5L)", val: "− ₹ 1,85,000", col: "#DC2626", tint: "#FEF2F2", sign: "−" },
+        { key: "step_nav", label: "Net Annual Value (NAV)", val: "= ₹ 1,15,000", col: "#4F46E5", tint: "#EEF2FF", sign: "=" },
+        { key: "step_std_ded", label: "Less: Section 24(a) Standard Deduction @ 30%", val: "− ₹ 34,500", col: "#DC2626", tint: "#FEF2F2", sign: "−" },
+        { key: "step_interest", label: "Less: Section 24(b) Interest on Loan for Major Repairs", val: "− ₹ 1,50,000", col: "#DC2626", tint: "#FEF2F2", sign: "−" },
+        { key: "step_arrears", label: "Add: Section 25A Arrears of Rent Received (₹ 30k less 30%)", val: "+ ₹ 21,000", col: "#059669", tint: "#ECFDF5", sign: "+" }
+      ];
+
+      const startY = 135, stepH = 46;
+      steps.forEach((st, idx) => {
+        const row = G_EL(svg);
+        const y = startY + idx * (stepH + 8);
+        R_EL(row, 150, y, 700, stepH, st.tint, { stroke: st.col, sw: 1.5, rx: 10 });
+        T_EL(row, 175, y + 28, st.label, { size: 14, weight: 700, fill: "#0F172A" });
+        T_EL(row, 825, y + 28, st.val, { size: 16, weight: 800, fill: st.col, anchor: "end" });
+        fade(ctx, row, at(st.key, 0.6 + idx * 0.8), 10, 0.4);
+      });
+
+      const resG = G_EL(svg);
+      R_EL(resG, 250, startY + 6 * (stepH + 8) + 6, 500, 56, "#FEF2F2", { stroke: "#DC2626", sw: 2.5, rx: 28 });
+      T_EL(resG, 500, startY + 6 * (stepH + 8) + 40, "Net Loss from House Property: (₹ 48,500)", { size: 18, weight: 800, fill: "#DC2626", anchor: "middle" });
+      fade(ctx, resG, at("net_loss", 5.6), 12, 0.5);
+    }
+
+    // 3. SCENE: sdv_comparison
+    else if (b.scene_type === "sdv_comparison") {
+      const baseY = 420;
+      const bar1 = G_EL(svg);
+      R_EL(bar1, 180, baseY - 180, 160, 180, "#EEF2FF", { stroke: "#4F46E5", sw: 3, rx: 12 });
+      T_EL(bar1, 260, baseY - 200, "Actual Consideration", { size: 14, weight: 700, fill: "#64748B", anchor: "middle" });
+      T_EL(bar1, 260, baseY - 80, "₹ 25 Lakhs", { size: 24, weight: 800, fill: "#4F46E5", anchor: "middle" });
+      fade(ctx, bar1, at("actual_bar", 0.6), 15, 0.5);
+
+      const thLine = G_EL(svg);
+      P_EL(thLine, "M 130 220 L 590 220", "#CA8A04", 2.5, { dash: "8 6" });
+      R_EL(thLine, 210, 172, 185, 32, "#FEF08A", { stroke: "#CA8A04", sw: 1.5, rx: 16 });
+      T_EL(thLine, 302, 193, "110% Safe Harbor: ₹ 27.5L", { size: 12, weight: 800, fill: "#854D0E", anchor: "middle" });
+      fade(ctx, thLine, at("safe_harbor", 1.6), 0, 0.4);
+
+      const bar2 = G_EL(svg);
+      R_EL(bar2, 420, baseY - 225, 160, 225, "#FEF2F2", { stroke: "#DC2626", sw: 3.5, rx: 12 });
+      T_EL(bar2, 500, baseY - 245, "Stamp Duty Value (SDV)", { size: 14, weight: 800, fill: "#DC2626", anchor: "middle" });
+      T_EL(bar2, 500, baseY - 100, "₹ 30 Lakhs", { size: 26, weight: 800, fill: "#DC2626", anchor: "middle" });
+      T_EL(bar2, 500, baseY - 65, "₹ 3.90L / 13%", { size: 13, weight: 700, fill: "#64748B", anchor: "middle" });
+      fade(ctx, bar2, at("sdv_bar", 2.4), 18, 0.5);
+
+      const stamp = G_EL(svg);
+      R_EL(stamp, 640, 160, 280, 140, "#FFFFFF", { stroke: "#DC2626", sw: 3, rx: 14 });
+      R_EL(stamp, 640, 160, 280, 36, "#DC2626", { rx: 14 });
+      R_EL(stamp, 640, 180, 280, 16, "#DC2626", { rx: 0 });
+      T_EL(stamp, 780, 184, "SECTION 50C TRIGGERED", { size: 13, weight: 800, fill: "#FFFFFF", anchor: "middle", ls: "0.08em" });
+      T_EL(stamp, 780, 220, "SDV (₹ 30L) > 110% (₹ 27.5L)", { size: 13, weight: 700, fill: "#111827", anchor: "middle" });
+      T_EL(stamp, 780, 245, "Deemed Full Value: ₹ 30,00,000", { size: 15, weight: 800, fill: "#DC2626", anchor: "middle" });
+      T_EL(stamp, 780, 275, "Less Cost u/s 49(1): ₹ 1,25,000", { size: 12, weight: 600, fill: "#64748B", anchor: "middle" });
+      fade(ctx, stamp, at("stamp_50c", 3.6), 12, 0.5);
+
+      const ltcgPill = G_EL(svg);
+      R_EL(ltcgPill, 640, 325, 280, 56, "#EEF2FF", { stroke: "#4F46E5", sw: 2.5, rx: 12 });
+      T_EL(ltcgPill, 780, 350, "Gross LTCG: ₹ 28,75,000", { size: 17, weight: 800, fill: "#4F46E5", anchor: "middle" });
+      T_EL(ltcgPill, 780, 370, "₹ 30,00,000 − ₹ 1,25,000", { size: 11, weight: 600, fill: "#64748B", anchor: "middle" });
+      fade(ctx, ltcgPill, at("gross_ltcg", 4.6), 10, 0.4);
+    }
+
+    // 4. SCENE: adjacent_flats_merge
+    else if (b.scene_type === "adjacent_flats_merge") {
+      const fWrap = G_EL(svg);
+      R_EL(fWrap, 80, 140, 480, 220, "#FFFFFF", { stroke: "#111827", sw: 4, rx: 12 });
+
+      const f1 = G_EL(fWrap);
+      R_EL(f1, 95, 155, 215, 190, "#EEF2FF", { stroke: "#4F46E5", sw: 2, rx: 8 });
+      T_EL(f1, 202, 230, "Flat 101", { size: 22, weight: 800, fill: "#4F46E5", anchor: "middle" });
+      T_EL(f1, 202, 260, "Cost: ₹ 8,00,000", { size: 16, weight: 700, fill: "#0F172A", anchor: "middle" });
+      T_EL(f1, 202, 285, "Sale Deed 1 · 02.01.2026", { size: 12, weight: 600, fill: "#64748B", anchor: "middle" });
+      fade(ctx, f1, at("flat_101", 0.6), 10, 0.4);
+
+      const f2 = G_EL(fWrap);
+      R_EL(f2, 330, 155, 215, 190, "#ECFDF5", { stroke: "#059669", sw: 2, rx: 8 });
+      T_EL(f2, 437, 230, "Flat 102", { size: 22, weight: 800, fill: "#059669", anchor: "middle" });
+      T_EL(f2, 437, 260, "Cost: ₹ 7,00,000", { size: 16, weight: 700, fill: "#0F172A", anchor: "middle" });
+      T_EL(f2, 437, 285, "Sale Deed 2 · 02.01.2026", { size: 12, weight: 600, fill: "#64748B", anchor: "middle" });
+      fade(ctx, f2, at("flat_102", 1.2), 10, 0.4);
+
+      const dividerWall = P_EL(fWrap, "M 320 155 L 320 345", "#DC2626", 5, { dash: "6 4" });
+      fade(ctx, dividerWall, at("divider_wall", 1.8), 0, 0.4, at("merge_pill", 3.2), 0.4);
+
+      const mergePill = G_EL(svg);
+      R_EL(mergePill, 140, 385, 360, 50, "#FEF08A", { stroke: "#CA8A04", sw: 2, rx: 25 });
+      T_EL(mergePill, 320, 416, "MODIFIED AS ONE HABITABLE UNIT", { size: 14, weight: 800, fill: "#854D0E", anchor: "middle", ls: "0.06em" });
+      fade(ctx, mergePill, at("merge_pill", 3.2), 10, 0.5);
+
+      const courtCard = makeGavel(svg, 780, 210, "CIT v. Ananda Basappa (Kar HC)", "Two adjacent flats modified as one unit qualify u/s 54");
+      fade(ctx, courtCard, at("court_ruling", 3.8), 12, 0.5);
+
+      const exCard = G_EL(svg);
+      R_EL(exCard, 670, 305, 220, 110, "#ECFDF5", { stroke: "#059669", sw: 2.5, rx: 12 });
+      T_EL(exCard, 780, 340, "Section 54 Exemption", { size: 14, weight: 800, fill: "#059669", anchor: "middle" });
+      T_EL(exCard, 780, 380, "₹ 15,00,000", { size: 28, weight: 800, fill: "#059669", anchor: "middle" });
+      T_EL(exCard, 780, 403, "₹ 8L + ₹ 7L Fully Qualified", { size: 12, weight: 600, fill: "#64748B", anchor: "middle" });
+      fade(ctx, exCard, at("sec54_pill", 4.8), 12, 0.5);
+    }
+
+    // 5. SCENE: bond_investment
+    else if (b.scene_type === "bond_investment") {
+      const tl = G_EL(svg);
+      P_EL(tl, "M 100 230 L 900 230", "#CBD5E1", 4);
+      fade(ctx, tl, at("timeline_line", 0.4), 0, 0.4);
+
+      const nodes = [
+        { key: "node_sale", x: 160, date: "10.08.2025", title: "Chennai Sale", sub: "Date of Transfer", col: "#4F46E5" },
+        { key: "node_payment", x: 380, date: "10.10.2025", title: "Payment Made", sub: "Invested ₹ 10 Lakhs", col: "#059669" },
+        { key: "node_allotment", x: 620, date: "01.02.2026", title: "Bonds Allotted", sub: "NHAI Allotment Date", col: "#CA8A04" },
+        { key: "node_deadline", x: 840, date: "10.02.2026", title: "6-Month Deadline", sub: "Statutory Window End", col: "#DC2626" }
+      ];
+
+      nodes.forEach((nd, i) => {
+        const ng = G_EL(svg);
+        S_EL("circle", { cx: nd.x, cy: 230, r: 12, fill: "#FFFFFF", stroke: nd.col, "stroke-width": 4 }, ng);
+        T_EL(ng, nd.x, 205, nd.date, { size: 13, weight: 800, fill: nd.col, anchor: "middle" });
+        T_EL(ng, nd.x, 265, nd.title, { size: 14, weight: 800, fill: "#0F172A", anchor: "middle" });
+        T_EL(ng, nd.x, 285, nd.sub, { size: 11, weight: 600, fill: "#64748B", anchor: "middle" });
+        fade(ctx, ng, at(nd.key, 0.6 + i * 0.7), 8, 0.4);
+      });
+
+      const brac = P_EL(svg, "M 160 160 L 380 160", "#059669", 3, { dash: "6 4" });
+      fade(ctx, brac, at("paid_bracket", 2.2), 0, 0.4);
+      const bracLbl = T_EL(svg, 270, 145, "Paid within 2 Months!", { size: 13, weight: 800, fill: "#059669", anchor: "middle" });
+      fade(ctx, bracLbl, at("paid_bracket", 2.4), 6, 0.4);
+
+      const courtCard = makeGavel(svg, 360, 405, "Hindustan Unilever Ltd. v. DCIT (Bom HC)", "Payment within 6 months satisfies section 54EC even if allotment is later", 430, 80);
+      fade(ctx, courtCard, at("court_ruling", 3.2), 12, 0.5);
+
+      const exPill = G_EL(svg);
+      R_EL(exPill, 660, 360, 240, 100, "#ECFDF5", { stroke: "#059669", sw: 2.5, rx: 12 });
+      T_EL(exPill, 780, 395, "Section 54EC Exemption", { size: 14, weight: 800, fill: "#059669", anchor: "middle" });
+      T_EL(exPill, 780, 435, "₹ 10,00,000", { size: 28, weight: 800, fill: "#059669", anchor: "middle" });
+      fade(ctx, exPill, at("sec54ec_pill", 4.2), 12, 0.5);
+    }
+
+    // 6. SCENE: factory_shift / factory_relocation
+    else if (b.scene_type === "factory_shift" || b.scene_type === "factory_relocation") {
+      const sep = P_EL(svg, "M 500 120 L 500 480", "#CBD5E1", 2, { dash: "6 6" });
+      fade(ctx, sep, at("divider", 0.3), 0, 0.4);
+
+      // LEFT REGION: Urban Limit & Old Factory
+      const regL = G_EL(svg);
+      R_EL(regL, 50, 130, 410, 360, "#F8FAFC", { stroke: "#E2E8F0", sw: 1.5, rx: 16 });
+      T_EL(regL, 255, 160, "URBAN CORPORATION LIMIT (ORIGINAL SITE)", { size: 12.5, weight: 800, fill: "#DC2626", anchor: "middle", ls: "0.08em" });
+      fade(ctx, regL, at("urban_reg", 0.4), 10, 0.4);
+
+      const uFactory = makeFactory(svg, 255, 240, "#DC2626", b.assessee || "Apex Engineering Ltd", "Urban Industrial Unit (Relocating)");
+      fade(ctx, uFactory, at("urban_factory", 0.8), 12, 0.5);
+
+      // Transferred Assets Box
+      const assetsBox = G_EL(svg);
+      R_EL(assetsBox, 75, 365, 360, 105, "#FFFFFF", { stroke: "#DC2626", sw: 1.5, rx: 12 });
+      T_EL(assetsBox, 90, 390, "Transferred Assets in Urban Area:", { size: 12, weight: 800, fill: "#DC2626" });
+      T_EL(assetsBox, 90, 412, "• Land (LTCG ₹ 5L)  • Building (STCG ₹ 12L)", { size: 11.5, weight: 600, fill: "#374151" });
+      T_EL(assetsBox, 90, 432, "• Plant & Machinery (STCG ₹ 11L)", { size: 11.5, weight: 600, fill: "#374151" });
+      T_EL(assetsBox, 90, 452, "• Furniture (STCG ₹ 2L · Ineligible u/s 54G)", { size: 11.5, weight: 700, fill: "#B91C1C" });
+      fade(ctx, assetsBox, at("assets_box", 1.8), 10, 0.4);
+
+      // CENTER RELOCATION ARROW
+      const shiftArrow = P_EL(svg, "M 440 280 C 470 240 530 240 560 280", "#4F46E5", 4, { dash: "8 4" });
+      fade(ctx, shiftArrow, at("shift_arrow", 2.4), 0, 0.4);
+      ctx.push({ el: shiftArrow, kind: "draw", start: at("shift_arrow", 2.4), dur: 0.8 });
+
+      const shiftPill = G_EL(svg);
+      R_EL(shiftPill, 435, 205, 130, 32, "#EEF2FF", { stroke: "#4F46E5", sw: 1.5, rx: 16 });
+      T_EL(shiftPill, 500, 226, "SHIFTING RELOCATION", { size: 10.5, weight: 800, fill: "#4F46E5", anchor: "middle" });
+      fade(ctx, shiftPill, at("shift_pill", 2.8), 8, 0.4);
+
+      // RIGHT REGION: Rural Non-Urban Zone & New Factory
+      const regR = G_EL(svg);
+      R_EL(regR, 540, 130, 410, 360, "#F8FAFC", { stroke: "#E2E8F0", sw: 1.5, rx: 16 });
+      T_EL(regR, 745, 160, "NON-URBAN RURAL AREA (NEW SITE)", { size: 12.5, weight: 800, fill: "#059669", anchor: "middle", ls: "0.08em" });
+      fade(ctx, regR, at("rural_reg", 3.2), 10, 0.4);
+
+      const rFactory = makeFactory(svg, 745, 240, "#059669", "New Rural Undertaking", "Acquired within 1 yr before / 3 yrs after");
+      fade(ctx, rFactory, at("rural_factory", 3.6), 12, 0.5);
+
+      // New Reinvestment Pool Box
+      const poolBox = G_EL(svg);
+      R_EL(poolBox, 565, 365, 360, 105, "#FFFFFF", { stroke: "#059669", sw: 1.5, rx: 12 });
+      T_EL(poolBox, 580, 390, "Eligible Reinvestment Pool u/s 54G:", { size: 12, weight: 800, fill: "#059669" });
+      T_EL(poolBox, 580, 412, "• Land: ₹ 4L  • Building: ₹ 6L  • P&M: ₹ 15L", { size: 11.5, weight: 600, fill: "#374151" });
+      T_EL(poolBox, 580, 432, "Total Qualifying Pool: ₹ 25,00,000", { size: 13, weight: 800, fill: "#059669" });
+      T_EL(poolBox, 580, 452, "Furniture (₹ 2L) Excluded from 54G Exemption", { size: 11, weight: 700, fill: "#DC2626" });
+      fade(ctx, poolBox, at("pool_box", 4.2), 10, 0.4);
+    }
+
+    // 7. UNIVERSAL DYNAMIC FALLBACK FOR ANY OTHER SITUATIONAL STORY SCENE
+    else {
+      const elems = b.elements || {};
+      const keys = Object.keys(elems);
+      if (keys.length > 0) {
+        const gridCols = Math.min(keys.length, 3);
+        const colW = Math.floor(860 / gridCols);
+        keys.forEach((k, idx) => {
+          const item = elems[k];
+          if (!item || typeof item !== "object") return;
+          const colIdx = idx % gridCols;
+          const rowIdx = Math.floor(idx / gridCols);
+          const x = item.x !== undefined ? item.x : (100 + colIdx * colW + colW / 2);
+          const y = item.y !== undefined ? item.y : (200 + rowIdx * 140);
+          const col = item.col || (item.tone === "ok" ? "#059669" : (item.tone === "bad" ? "#DC2626" : "#4F46E5"));
+
+          let g;
+          if (item.type === "person") {
+            g = makePerson(svg, x, y, col, item.name || item.label, item.role || item.sub);
+          } else if (item.type === "house") {
+            g = makeHouse(svg, x, y, col, item.name || item.label, item.role || item.sub);
+          } else if (item.type === "factory") {
+            g = makeFactory(svg, x, y, col, item.name || item.label, item.role || item.sub);
+          } else if (item.type === "gavel") {
+            g = makeGavel(svg, x, y, item.title || item.name, item.rule || item.sub, item.w || 380, item.h || 76);
+          } else {
+            g = G_EL(svg);
+            const w = item.w || Math.min(colW - 20, 260);
+            const h = item.h || 90;
+            R_EL(g, x - w / 2, y - h / 2, w, h, "#FFFFFF", { stroke: col, sw: 2, rx: 12 });
+            if (item.badge) {
+              R_EL(g, x - w / 2 + 14, y - h / 2 + 12, item.badge.length * 7 + 16, 20, "#EEF2FF", { rx: 10 });
+              T_EL(g, x - w / 2 + 22, y - h / 2 + 26, item.badge, { size: 10, weight: 800, fill: "#4F46E5" });
+            }
+            if (item.title || item.label) {
+              T_EL(g, x - w / 2 + 14, y - h / 2 + 50, item.title || item.label, { size: 14, weight: 800, fill: "#0F172A" });
+            }
+            if (item.sub || item.text) {
+              T_EL(g, x - w / 2 + 14, y - h / 2 + 70, item.sub || item.text, { size: 11.5, weight: 600, fill: "#64748B" });
+            }
+            if (item.val) {
+              T_EL(g, x + w / 2 - 14, y - h / 2 + 50, inr(item.val), { size: 14, weight: 800, fill: col, anchor: "end" });
+            }
+          }
+          fade(ctx, g, item.at !== undefined ? item.at : (b.start + 0.5 + idx * 0.4), 10, 0.4);
+        });
+      }
+    }
   }
 };
 

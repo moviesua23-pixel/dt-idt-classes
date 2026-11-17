@@ -54,33 +54,35 @@ CRITICAL PEDAGOGICAL RULE 2: FIRST JOB OF PRESENTATION IS A COMPLETE OVERVIEW UP
 - The student must see the full financial and factual chessboard before diving into statutory analysis!
 
 ========================================================================================
-CRITICAL PEDAGOGICAL RULE 3: TEACH THE STATUTORY PROVISION STEP-BY-STEP USING THE EXAMPLE
+CRITICAL PEDAGOGICAL RULE 3: SITUATIONAL VISUAL MODELING & ELASTIC BEATS (UNIVERSAL ARCHITECTURE)
 ========================================================================================
-Organize the lecture into 4 to 6 logical sequential beats matching the statutory architecture:
-- Beat 1 ("fork"): COMPLETE FACT OVERVIEW & ASSET / TRANSACTION FILTER
-  Lay out the complete story scenario and separate the qualifying elements from the non-qualifying elements.
-  Must include `intro_cards` for the opening narrative, followed by sequential `story_steps` for each transaction/asset, and classification `branches`.
-- Beat 2 ("statute_quote" or "checklist" or "case_card"): STATUTORY MANDATE & CONDITIONS GATE
-  Show the governing statutory section, sub-section, or legal conditions/time limits (e.g. reinvestment window, holding period, condition tests).
-- Beat 3 ("meter" or "compare"): ELIGIBILITY CEILING / STATUTORY THRESHOLD / QUALIFYING POOL
-  If there is a numerical limit, cap, threshold, or qualifying investment pool, visualize the gauge/bar with breakdown items.
-- Beat 4 ("ledger"): STEP-BY-STEP MATHEMATICAL COMPUTATION & TAX OPTIMIZATION INSIGHT
-  Show the step-by-step arithmetic computation of taxable amounts/deductions/exemptions with row-by-row breakdown and a total row. Include a callout banner highlighting the golden exam optimization trick or key legal interpretation.
-- Beat 5 ("takeaway"): 3 GOLDEN EXAM RULES / DOCTRINES
-  Summarize the 3 non-negotiable statutory principles or exam traps the student must remember for CA Final/Inter exams.
+- ELASTIC BEAT ARCHITECTURE (4 TO 8 BEATS AS REQUIRED):
+  * DO NOT artificially constrain or restrict the screenplay to exactly 5 beats!
+  * If a tax case or statutory provision involves multiple assets, properties, or legal disputes
+    (e.g., Section 50C deemed full value + Section 54 residential flats + Section 54EC bond investments + Section 71 inter-head set-off, or multi-asset industrial shifting with qualifying vs non-qualifying assets),
+    use 6, 7, or 8 focused beats so every provision and computation has dedicated visual space.
+  * For single-point statutory questions (e.g., simple transfer or forfeiture rule), 4 or 5 beats are appropriate.
+
+- SITUATIONAL VISUAL STORYTELLING (NOT JUST PLAIN TEXT CARDS):
+  * When explaining the example, the visual scene MUST depict the concrete physical or legal reality:
+    1. Factory / Industrial Shifting: Layout "story_scene" with scene_type "factory_shift". Shows Urban limit on left with factory and transferred assets, relocation motion arrow in center, and Non-Urban Rural zone on right with new factory and qualifying reinvestment pool.
+    2. Landlord & Tenant / Rental Income: Layout "story_scene" with scene_type "rental_and_gift" or "rental_computation". Shows property, tenant paying rent with money flow arrow, municipal tax deduction, NAV, standard deduction 24(a), and interest 24(b).
+    3. Stamp Duty Benchmark & Deemed Consideration: Layout "story_scene" with scene_type "sdv_comparison". Shows actual consideration vs Stamp Duty Value (SDV) vertical comparison bars, 110% safe harbor threshold test, Section 50C deemed full value stamp, and gross LTCG pill.
+    4. Adjoining Flats / Single Habitable Unit: Layout "story_scene" with scene_type "adjacent_flats_merge". Shows dual flat blueprints, divider wall fading out, merging as one habitable unit, CIT v. Ananda Basappa judicial ruling gavel, and Section 54 exemption pill.
+    5. Statutory Reinvestment Timeline: Layout "story_scene" with scene_type "bond_investment" or layout "timeline". Shows horizontal chronological milestone nodes (Transfer date, Payment date, Allotment date, 6-Month statutory deadline), milestone brackets, Hindustan Unilever Bom HC landmark gavel card, and Section 54EC exemption pill.
+    6. Factual Overview & Asset Filtering: Layout "fork". Uses intro_cards for opening setup, sequential story_steps for each asset/item, divider line, and classification branches (Qualifying vs Ineligible).
+    7. Statutory Threshold / Reinvestment Pool: Layout "meter". Visualizes statutory ceiling gauge bar with breakdown cards and padlock/outcome pill.
+    8. Mathematical Computation: Layout "ledger". Step-by-step arithmetic computation of taxable amounts with signs (+, −, =), count animation, and tax optimization alert callout.
+    9. Golden Takeaways: Layout "takeaway". 3 non-negotiable statutory rules or exam traps.
 
 ========================================================================================
 CRITICAL PEDAGOGICAL RULE 4: STRICT 1:1 VOICE-TO-SCREEN CORRESPONDENCE (UNIVERSAL LAW)
 ========================================================================================
 - WHATEVER IS SPOKEN IN voice_sync_text MUST BE SHOWN ON SCREEN IN DIRECT 1:1 CORRESPONDENCE!
 - When the teacher mentions an asset, an amount, a condition, a date, or a rule, that element MUST appear visually on screen.
+- In "story_scene" beats, include an "elements" dictionary where each visual sub-element has semantic keywords and descriptive label (e.g. "urban_factory", "assets_box", "shift_arrow", "rural_factory", "pool_box") so the Whisper acoustic aligner syncs them down to the exact second!
 - NEVER mention numbers, facts, or entities in voice that are missing from the visual layout!
 - NEVER speak for more than 5 seconds without an animated visual element popping up!
-- In Beat 1 ("fork"), include 2 to 3 "intro_cards" that pop up sequentially when the teacher speaks the opening setup sentences:
-  * Card 1: Statutory Focus / Core Provision (e.g. Section and subject)
-  * Card 2: Assessee Persona / Enterprise Setup (e.g. Assessee name and business context)
-  * Card 3: Transaction / Event Trigger (e.g. Event date, nature of sale/transfer/deal)
-  Set "out_at" to exit right before the specific asset cards in story_steps begin!
 
 ========================================================================================
 CRITICAL PEDAGOGICAL RULE 5: AUTHENTIC, WARM MALAYALAM TEACHER DIALOGUE (NATURAL MANGLISH)
@@ -88,8 +90,8 @@ CRITICAL PEDAGOGICAL RULE 5: AUTHENTIC, WARM MALAYALAM TEACHER DIALOGUE (NATURAL
 - Sound like a REAL, ENERGETIC, PASSIONATE KERALA CA FACULTY teaching in a live CA Final classroom!
 - Natural Manglish code-switching: Friendly Malayalam teacher scaffolding with standard English legal/tax terminology.
 - MANDATORY LANGUAGE RULES:
-  * SECTIONS & PROVISIONS: In English ('Section 54G', 'Section 50', 'Section 45(2)'). Never transliterate into Malayalam script.
-  * DATES & YEARS: In English ('1st April 2001', 'Assessment Year 2026-27', 'Financial Year 2025-26', 'March 2026'). Never translate dates into Malayalam words.
+  * SECTIONS & PROVISIONS: In English ('Section 54G', 'Section 50', 'Section 45(2)', 'Section 50C', 'Section 54EC'). Never transliterate into Malayalam script.
+  * DATES & YEARS: In English ('1st April 2001', 'Assessment Year 2026-27', 'Financial Year 2025-26', 'March 2026', '10th August 2025'). Never translate dates into Malayalam words.
   * TAX & FINANCIAL TERMS: In English ('Capital Gains', 'Short-term Capital Gain', 'Long-term Capital Gain', 'Written Down Value', 'Sale Consideration', 'Cost of Acquisition', 'Exemption', 'Deduction', 'Turnover').
   * SEQUENTIAL ORDINAL CUES: Use natural Malayalam ordinal markers to cleanly introduce each asset or step:
     'Onnamathathu...', 'Randamathathu...', 'Moonnamathathu...', 'Naalaamathathu...', or 'Aadyam...', 'Aduthathayi...', 'Avasanam...'
@@ -98,35 +100,33 @@ CRITICAL PEDAGOGICAL RULE 5: AUTHENTIC, WARM MALAYALAM TEACHER DIALOGUE (NATURAL
 ========================================================================================
 OUTPUT FORMAT: PURE JSON
 ========================================================================================
-Return STRICT VALID JSON matching this exact structure:
+Return STRICT VALID JSON matching this structure (elastic 4 to 8 beats as required by the topic):
 {{
   "context_pill": "Section Name | Topic Name",
   "beats": [
     {{
       "id": "b1",
-      "layout": "fork",
-      "voice_sync_text": "Malayalam teacher narration text introducing the section, the example assessee, each asset/transaction sequentially with ordinal cues, and the classification filter...",
-      "title": {{"text": "Complete Scenario Overview & Eligibility Filter"}},
-      "intro_cards": [
-        {{"badge": "Statutory Focus", "title": "Section Name", "sub": "Core Legal Provision", "at": 2.5, "out_at": 25.0}},
-        {{"badge": "Case Study Setup", "title": "Assessee Name", "sub": "Business / Scenario Context", "at": 8.0, "out_at": 25.0}},
-        {{"badge": "Transfer / Trigger Event", "title": "Event Details", "sub": "Transaction Summary & Assets Involved", "at": 18.0, "out_at": 25.0}}
-      ],
-      "story_steps": [
-        {{"badge": "Step 1: Item Name", "title": "Sale: Rs X | Cost/WDV: Rs Y", "sub": "Gain / Legal Status: Rs Z", "val": 100000}},
-        {{"badge": "Step 2: Item Name", "title": "Sale: Rs X | Cost/WDV: Rs Y", "sub": "Gain / Legal Status: Rs Z", "val": 200000}}
-      ],
-      "divider": {{"text": "Eligibility Classification / Legal Division"}},
-      "branches": [
-        {{"side": "left", "label": "Qualifying / Eligible Branch", "facts": [{{"text": "Qualifying items/conditions"}}, {{"text": "Qualifying totals"}}], "outcome": {{"text": "Eligible for Benefit / Exemption"}}}},
-        {{"side": "right", "label": "Ineligible / Excluded Branch", "facts": [{{"text": "Ineligible items"}}, {{"text": "Statutory exclusion rule"}}], "outcome": {{"text": "Ineligible / Taxable"}}}}
-      ],
-      "result_card": {{"badge": "Exam Trap Alert", "title": "Critical Exclusion / Rule", "sub": "Why the excluded item fails statutory test"}}
+      "layout": "story_scene",
+      "scene_type": "factory_shift",
+      "kicker": "FACTUAL NARRATIVE & STATUTORY CONTEXT",
+      "badge": "Case Overview",
+      "title": {{"text": "Industrial Undertaking Shifting: Urban to Rural Area"}},
+      "voice_sync_text": "Malayalam teacher narration setting up the scenario, assessee enterprise, and urban to rural shifting...",
+      "elements": {{
+        "divider": {{"label": "Scenario division boundary"}},
+        "urban_reg": {{"label": "Urban corporation limit original site"}},
+        "urban_factory": {{"label": "Urban industrial factory"}},
+        "assets_box": {{"label": "Land Building Plant Machinery Furniture sale proceeds"}},
+        "shift_arrow": {{"label": "Shifting relocation across boundary"}},
+        "rural_reg": {{"label": "Non-urban rural area new site"}},
+        "rural_factory": {{"label": "New rural undertaking factory"}},
+        "pool_box": {{"label": "Eligible reinvestment pool Section 54G"}}
+      }}
     }},
     {{
       "id": "b2",
       "layout": "statute_quote",
-      "voice_sync_text": "Malayalam teacher narration explaining the statutory text, conditions, and time horizon...",
+      "voice_sync_text": "Malayalam teacher narration explaining the statutory text, conditions, and reinvestment time horizon...",
       "title": {{"text": "Statutory Mandate & Conditions u/s ..."}},
       "quote": {{
         "text": "Exact statutory wording or core legal provision...",
