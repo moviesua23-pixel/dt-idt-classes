@@ -1712,36 +1712,36 @@ const TEMPLATES = {
       const gfRoof = P_EL(houseG, "M 305 340 L 395 285 L 485 340 Z", "#4F46E5", 3.5, { fill: "#EEF2FF" });
       fade(ctx, gfRoof, at("house_1982", 7.5), 10, 0.4, at("floor_construction", 38.5), 0.4);
 
-      // 1982 Purchase Pill
+      // 1982 Purchase Pill (fades out when statutory pillars appear at 63s)
       const p1982 = G_EL(houseG);
       R_EL(p1982, 305, 490, 180, 32, "#EEF2FF", { stroke: "#4F46E5", sw: 1.5, rx: 16 });
       T_EL(p1982, 395, 511, "Purchased 1982 · ₹ 5,00,000", { size: 11.5, weight: 800, fill: "#4F46E5", anchor: "middle" });
-      fade(ctx, p1982, at("cost_5l", 11.3), 8, 0.4);
+      fade(ctx, p1982, at("cost_5l", 11.3), 8, 0.4, at("statutory_pills", 63.0), 0.3);
       fade(ctx, houseG, at("house_1982", 7.5), 12, 0.5);
 
       // 3. 1st April 2001 Statutory Base Comparison Card
       const bmCard = G_EL(svg);
-      R_EL(bmCard, 245, 120, 300, 68, "#FFFFFF", { stroke: "#6366F1", sw: 2, rx: 10 });
-      R_EL(bmCard, 245, 120, 300, 22, "#6366F1", { rx: 10 });
-      R_EL(bmCard, 245, 132, 300, 10, "#6366F1", { rx: 0 });
-      T_EL(bmCard, 395, 136, "01.04.2001 STATUTORY BASE u/s 55(2)(b)", { size: 10.5, weight: 800, fill: "#FFFFFF", anchor: "middle", ls: "0.06em" });
-      T_EL(bmCard, 260, 162, "FMV: ₹ 15,00,000", { size: 12.5, weight: 700, fill: "#64748B" });
-      T_EL(bmCard, 385, 162, "SDV: ₹ 14,00,000", { size: 12.5, weight: 700, fill: "#DC2626" });
-      T_EL(bmCard, 260, 180, "Base COA = Lower of FMV/SDV = ₹ 14,00,000", { size: 11.5, weight: 800, fill: "#059669" });
+      R_EL(bmCard, 255, 120, 295, 68, "#FFFFFF", { stroke: "#6366F1", sw: 2, rx: 10 });
+      R_EL(bmCard, 255, 120, 295, 22, "#6366F1", { rx: 10 });
+      R_EL(bmCard, 255, 132, 295, 10, "#6366F1", { rx: 0 });
+      T_EL(bmCard, 402, 136, "01.04.2001 STATUTORY BASE u/s 55(2)(b)", { size: 10.5, weight: 800, fill: "#FFFFFF", anchor: "middle", ls: "0.06em" });
+      T_EL(bmCard, 270, 162, "FMV: ₹ 15,00,000", { size: 12.5, weight: 700, fill: "#64748B" });
+      T_EL(bmCard, 395, 162, "SDV: ₹ 14,00,000", { size: 12.5, weight: 700, fill: "#DC2626" });
+      T_EL(bmCard, 270, 180, "Base COA = Lower of FMV/SDV = ₹ 14,00,000", { size: 11.5, weight: 800, fill: "#059669" });
       fade(ctx, bmCard, at("benchmark_2001", 13.8), 10, 0.5);
 
       // 4. June 2009 Advance Forfeited (Pre-2014: Deducted from Cost)
       const forf2009 = G_EL(svg);
-      R_EL(forf2009, 80, 200, 200, 46, "#FEF2F2", { stroke: "#DC2626", sw: 1.5, rx: 8 });
-      T_EL(forf2009, 180, 220, "Forfeited June 2009: ₹ 1.5L", { size: 11.5, weight: 800, fill: "#DC2626", anchor: "middle" });
-      T_EL(forf2009, 180, 237, "Deducted from Cost u/s 51", { size: 10, weight: 700, fill: "#059669", anchor: "middle" });
+      R_EL(forf2009, 50, 200, 185, 46, "#FEF2F2", { stroke: "#DC2626", sw: 1.5, rx: 8 });
+      T_EL(forf2009, 142, 220, "Forfeited June 2009: ₹ 1.5L", { size: 11, weight: 800, fill: "#DC2626", anchor: "middle" });
+      T_EL(forf2009, 142, 237, "Deducted from Cost u/s 51", { size: 9.5, weight: 700, fill: "#059669", anchor: "middle" });
       fade(ctx, forf2009, at("forfeit_2009", 28.2), 10, 0.4);
 
       // 5. July 2016 Advance Forfeited (Post-2014: Taxed under IFOS)
       const forf2016 = G_EL(svg);
-      R_EL(forf2016, 80, 145, 200, 46, "#FEF08A", { stroke: "#CA8A04", sw: 1.5, rx: 8 });
-      T_EL(forf2016, 180, 165, "Forfeited July 2016: ₹ 2.0L", { size: 11.5, weight: 800, fill: "#854D0E", anchor: "middle" });
-      T_EL(forf2016, 180, 182, "Taxed u/s 56(2)(ix) (Cost unaffected)", { size: 10, weight: 700, fill: "#854D0E", anchor: "middle" });
+      R_EL(forf2016, 50, 145, 185, 46, "#FEF08A", { stroke: "#CA8A04", sw: 1.5, rx: 8 });
+      T_EL(forf2016, 142, 165, "Forfeited July 2016: ₹ 2.0L", { size: 11, weight: 800, fill: "#854D0E", anchor: "middle" });
+      T_EL(forf2016, 142, 182, "Taxed u/s 56(2)(ix) · No Cost Impact", { size: 9.5, weight: 700, fill: "#854D0E", anchor: "middle" });
       fade(ctx, forf2016, at("forfeit_2016", 33.1), 10, 0.4);
 
       // 6. September 2015 First Floor Construction
@@ -1796,9 +1796,9 @@ const TEMPLATES = {
       secs.forEach((sc, i) => {
         const pG = G_EL(secRow);
         const px = 250 + i * 180;
-        R_EL(pG, px, 490, 160, 48, sc.tint, { stroke: sc.col, sw: 1.5, rx: 10 });
-        T_EL(pG, px + 80, 510, sc.label, { size: 12, weight: 800, fill: sc.col, anchor: "middle" });
-        T_EL(pG, px + 80, 526, sc.sub, { size: 10, weight: 600, fill: "#374151", anchor: "middle" });
+        R_EL(pG, px, 492, 160, 48, sc.tint, { stroke: sc.col, sw: 1.5, rx: 10 });
+        T_EL(pG, px + 80, 512, sc.label, { size: 12, weight: 800, fill: sc.col, anchor: "middle" });
+        T_EL(pG, px + 80, 528, sc.sub, { size: 10, weight: 600, fill: "#374151", anchor: "middle" });
       });
       fade(ctx, secRow, at("statutory_pills", 63.0), 10, 0.4);
     }
