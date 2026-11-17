@@ -8,7 +8,7 @@
       "subject": "dt",
       "chapter_number": 1,
       "question_number": 1,
-      "question_title": "Section 4: Diversion of Income vs Application of Income",
+      "question_title": "Section 4: Diversion of Income by Overriding Title vs Application of Income",
       "question_text": "Mr. Bhargava, a leading advocate on corporate law, decided to reduce his practice and to accept briefs only for paying his taxes and making charities with fees received on such briefs. In a particular case, he agreed to appear to defend one company in Supreme Court on the condition that he would be provided with ₹ 5 lacs for a public charitable trust that he would create. He defended the company and was paid the sum by company. He created a trust of that sum by executing a trust deed. Decide whether the amount received by Mr. Bhargava is assessable in his hands as income from profession.",
       "answer_text": "In the instant case, the trust was created by Mr. Bhargava himself out of his professional income. The client did not create the trust. The client did not impose any obligation in the nature of a trust binding on Mr. Bhargava. Thus, there is no diversion of the money to the trust before it became professional income in the hands of Mr. Bhargava. This case is one of application of professional income and not of diversion of income by overriding title.\n\nTherefore, the amount received by Mr. Bhargava is chargeable to tax under the head \"Profits and gains of business or profession\".",
       "topic_id": "T_CH1_Q1"
@@ -434,8 +434,8 @@
       "chapter_number": 1,
       "question_number": 1,
       "topic_id": "T_CH1_Q1",
-      "topic_title": "Section 4: Diversion of Income vs Application of Income",
-      "provision_presentation_markdown": "# Section 4: Diversion of Income vs. Application of Income\n\nUnder the Income-tax Act, 1961, tax is levied on the **total income** of an assessee. Understanding whether a sum represents **Diversion of Income by Overriding Title** or **Application of Income** is crucial for determining tax liability.\n\n---\n\n## ⚖️ Judicial Foundation: CIT v. Sitaldas Tirathdas (1961) 41 ITR 367 (SC)\n\nThe Supreme Court established the cardinal legal test to differentiate between the two concepts:\n\n> [!IMPORTANT]\n> **The True Legal Test**\n> * **Diversion of Income:** Is the amount diverted *before* it reaches the assessee by an obligation created by an overriding legal title?\n> * **Application of Income:** Does the amount reach the assessee first as income, and is then applied to discharge an obligation created by the assessee's own voluntary act or subsequent agreement?\n\n---\n\n## 📊 Comparative Analysis Matrix\n\n| Feature / Benchmark | Diversion of Income by Overriding Title | Application of Income |\n| :--- | :--- | :--- |\n| **Stage of Interception** | Intercepted **before** reaching the assessee (at source). | Reaches the assessee first or accrues to them. |\n| **Nature of Obligation** | Legal obligation created by superior title or statute. | Voluntary obligation or self-imposed obligation. |\n| **Taxability** | **NOT Taxable** in the hands of the recipient/assessee. | **FULLY TAXABLE** in the hands of the assessee. |\n| **Title to Income** | Assessee never gets a title to the income. | Assessee gets clear legal title to the income first. |\n| **Example** | Sub-partnership sharing profit by statutory deed; Court decree charging property revenue for alimony. | Paying alimony out of general salary; setting aside fees for voluntary trust created by advocate. |\n\n---\n\n> [!WARNING]\n> **Common Professional Exam Trap**\n> An advocate/professional agreeing to accept fees only on condition that the client pays it into a trust *created by the advocate himself* is **NOT** a case of diversion by overriding title. The client did not create the charge or obligation prior to the fee structure; the obligation was created by the professional's own voluntary act.",
+      "topic_title": "Section 4: Diversion of Income by Overriding Title vs Application of Income",
+      "provision_presentation_markdown": "### Statutory Summary Matrix: Diversion vs Application\n\n| Doctrine Aspect | Legal Rule & Judicial Benchmark | Statutory Treatment u/s 4 & 5 | Tax Consequence |\n| :--- | :--- | :--- | :--- |\n| **Diversion by Overriding Title** | Obligation attached to the source of income before it reaches the assessee. | Excluded from the total income of the recipient. | **No Tax Liability** in the hands of the primary earner. |\n| **Application of Income** | Income reaches the assessee first; subsequently utilized for a charitable or personal purpose. | Included in total income under relevant head. | **Fully Taxable** under PGBP or other applicable heads. |\n\n\n> [!IMPORTANT]\n> Voluntary Trust Creation: When an assessee creates a charitable trust out of professional fees received, it represents post-receipt utilization, constituting a clear **application of income**.\n\n\n> [!WARNING]\n> Source Test: To qualify as diversion, the overriding title must exist at the very inception of the income stream, before the taxpayer acquires any legal right to receive the funds.",
       "drive_folder_id": "1OJE3VX5UcvnBEZSbBYcoiixVB8ag_AAX"
     },
     {
@@ -854,6 +854,476 @@
     }
   ],
   "mindmaps": {
+    "ch1_q1": {
+      "doctrine": "Diversion of Income by Overriding Title vs Application of Income",
+      "root": {
+        "id": "root",
+        "number": "1",
+        "title": "Diversion vs Application of Income",
+        "badge": "Section 4 & Section 5",
+        "voice_sync_text": "ഇവിടെ നമ്മൾ സെക്ഷൻ 4 ഉം Section 5 ഉം പ്രകാരം Diversion of Income ഉം Application of Income ഉം തമ്മിലുള്ള വ്യത്യാസമാണ് പഠിക്കുന്നത്.",
+        "t0": 0.0,
+        "t1": 8.67,
+        "pt_idx": 0,
+        "audio_file": "dt/ch1/q1/pt_0.mp3",
+        "drive_audio_id": "1ThREsa2Bd5myxAwFTRUAdq9-CFtJgpxB"
+      },
+      "branches": [
+        {
+          "branch_id": "branch-1",
+          "branch_title": "Diversion of Income by Overriding Title",
+          "badge": "Section 4",
+          "icon": "scales",
+          "points": [
+            {
+              "id": "beat-1-1",
+              "title": "Creation of Overriding Title",
+              "number": "1.1.1",
+              "badge": "Statutory Rule",
+              "body": [
+                "Income is diverted at the very source by an overriding legal obligation.",
+                "The recipient never gets legal ownership or right to receive the funds for themselves."
+              ],
+              "highlights": [
+                {
+                  "phrase": "diverted at the very source",
+                  "time_sec": 2.5
+                },
+                {
+                  "phrase": "overriding legal obligation",
+                  "time_sec": 6.8
+                }
+              ],
+              "table_data": null,
+              "voice_sync_text": "ആദ്യം തന്നെ ഓർക്കേണ്ടത്, income-ന്റെ source-ൽ വെച്ച് തന്നെ വേറൊരാൾക്ക് legal right ഉണ്ടാകുകയാണെങ്കിൽ അതിനെ diversion എന്ന് വിളിക്കാം.",
+              "spoken": true,
+              "t0": 9.67,
+              "t1": 19.17,
+              "pt_idx": 1,
+              "audio_file": "dt/ch1/q1/pt_1.mp3",
+              "dur": 9.52,
+              "duration_seconds": 9.52,
+              "drive_audio_id": "13vBDcGkTpJnZmaGrcwWhY7p7kK6iS3jc"
+            }
+          ],
+          "flow_summary": [],
+          "t0": 9.67,
+          "t1": 19.17
+        },
+        {
+          "branch_id": "branch-2",
+          "branch_title": "Application of Professional Income",
+          "badge": "Section 28",
+          "icon": "shield",
+          "points": [
+            {
+              "id": "beat-2-1",
+              "title": "Post-Receipt Utilization",
+              "number": "1.2.1",
+              "badge": "Tax Rule",
+              "body": [
+                "Professional fees received fully first accrue and vest in the hands of the professional.",
+                "Subsequent creation of a trust or charity amounts merely to an application of income."
+              ],
+              "highlights": [
+                {
+                  "phrase": "fully first accrue and vest",
+                  "time_sec": 2.1
+                },
+                {
+                  "phrase": "application of income",
+                  "time_sec": 6.0
+                }
+              ],
+              "table_data": null,
+              "voice_sync_text": "Professional income കൈപ്പറ്റിയ ശേഷം ആ തുക ചാരിറ്റിക്കോ ട്രസ്റ്റിനോ വേണ്ടി ഉപയോഗിച്ചാൽ അത് application മാത്രമാണ്.",
+              "spoken": true,
+              "t0": 21.17,
+              "t1": 29.17,
+              "pt_idx": 2,
+              "audio_file": "dt/ch1/q1/pt_2.mp3",
+              "dur": 7.96,
+              "duration_seconds": 7.96,
+              "drive_audio_id": "1ydfMD1v2w4s1sahp5UrJd7e5ZAxtiue4"
+            }
+          ],
+          "flow_summary": [],
+          "t0": 21.17,
+          "t1": 29.17
+        }
+      ],
+      "concept_simulation": {
+        "schema_version": "1.0",
+        "illustrative_only": true,
+        "doctrine_topic": "Diversion vs Application of Income",
+        "relevant_tax_year": "Assessment Year 2024-25",
+        "statutory_assumptions": [
+          "Professional fees received directly from client for legal services rendered.",
+          "Portion of received fee subsequently transferred to a self-created charitable trust."
+        ],
+        "intro_voice": "ഇനി ഒരു simple example വഴി ഈ concept എങ്ങനെ വർക്ക് ചെയ്യുന്നു എന്ന് നോക്കാം.",
+        "steps": [
+          {
+            "step_id": "step_1",
+            "step_order": 1,
+            "title": "Receipt of Professional Fee",
+            "metric_label": "Gross Professional Fee",
+            "metric_value": "₹ 5,00,000",
+            "voice_sync_text": "Professional സേവനങ്ങൾക്ക് ലഭിക്കുന്ന തുക പൂർണ്ണമായും ആദ്യം professional-ന്റെ കൈകളിൽ തന്നെ income ആയി accrue ചെയ്യുന്നു.",
+            "image_prompt": "Cinematic 2.5D isometric view of a corporate law office desk with professional files and currency notes under warm soft lighting.",
+            "calculation_data": null,
+            "step_number": 1,
+            "audio_file": "dt/ch1/q1/sim_1.mp3",
+            "duration_seconds": 7.6,
+            "drive_audio_id": "14kL75RTCd7tid2zIkPzHkpivPk98C1pa",
+            "image_file": "dt/ch1/q1/sim_img_1.jpg"
+          },
+          {
+            "step_id": "step_2",
+            "step_order": 2,
+            "title": "Subsequent Trust Creation",
+            "metric_label": "Charitable Trust Contribution",
+            "metric_value": "₹ 5,00,000",
+            "voice_sync_text": "പിന്നീട് ആ തുക ഉപയോഗിച്ച് സ്വന്തമായി trust ഉണ്ടാക്കിയാൽ അത് diversion അല്ല, മറിച്ച് application of income ആണ്.",
+            "image_prompt": "Cinematic 2.5D isometric view of a legal trust deed document being signed with a fountain pen.",
+            "calculation_data": null,
+            "step_number": 2,
+            "audio_file": "dt/ch1/q1/sim_2.mp3",
+            "duration_seconds": 8.28,
+            "drive_audio_id": "1X0L-YwVLLYjjrE8IhuUhOiqvM-aJ5tR6",
+            "image_file": "dt/ch1/q1/sim_img_2.jpg"
+          },
+          {
+            "step_id": "step_3",
+            "step_order": 3,
+            "title": "Tax Chargeability u/s 28",
+            "metric_label": "Taxable PGBP Income",
+            "metric_value": "₹ 5,00,000",
+            "voice_sync_text": "അതുകൊണ്ട് ഈ മുഴുവൻ തുകയും Profits and Gains of Business or Profession എന്ന തലത്തിൽ tax ചെയ്യപ്പെടും.",
+            "image_prompt": "Cinematic 2.5D isometric view of an income tax computation sheet showing total taxable professional receipts.",
+            "calculation_data": {
+              "headers": [
+                "Particulars",
+                "Amount (INR)"
+              ],
+              "rows": [
+                [
+                  "Gross Professional Receipt",
+                  "5,00,000"
+                ],
+                [
+                  "Less: Diversion by Overriding Title",
+                  "0"
+                ],
+                [
+                  "Taxable PGBP Income",
+                  "5,00,000"
+                ]
+              ]
+            },
+            "step_number": 3,
+            "audio_file": "dt/ch1/q1/sim_3.mp3",
+            "duration_seconds": 7.32,
+            "drive_audio_id": "1HcKI-evOiJUPGYVRwe_Cmy_FooYtxQSh",
+            "image_file": "dt/ch1/q1/sim_img_3.jpg"
+          }
+        ],
+        "intro_audio_file": "dt/ch1/q1/sim_intro.mp3",
+        "intro_dur": 3.76,
+        "intro_drive_audio_id": "1BIfLv1JkmYh4WQr_eXojWYxgoLgkexQ3"
+      },
+      "screenplay": {
+        "doctrine": "Diversion of Income by Overriding Title",
+        "beats": [
+          {
+            "beat_order": 1,
+            "t_start": 0.0,
+            "t_end": 4.5,
+            "beat_type": "kinetic_headline",
+            "headline": "Section 4: Diversion vs Application",
+            "badge": "Section 4 & 5",
+            "subtext": "Mastering the legal distinction in professional receipts",
+            "metric_chip": null,
+            "voice_sync_text": "ഇന്ന് നമ്മൾ ചർച്ച ചെയ്യുന്നത് Diversion of Income ഉം Application of Income ഉം തമ്മിലുള്ള വ്യത്യാസമാണ്.",
+            "image_required": false,
+            "image_prompt": null,
+            "highlights": [
+              {
+                "phrase": "Diversion of Income",
+                "time_sec": 1.5
+              },
+              {
+                "phrase": "Application of Income",
+                "time_sec": 3.0
+              }
+            ]
+          },
+          {
+            "beat_order": 2,
+            "t_start": 4.6,
+            "t_end": 10.0,
+            "beat_type": "statutory_trigger",
+            "headline": "Professional Income & Trust Creation",
+            "badge": "Section 28",
+            "subtext": "Self-created trusts out of professional receipts",
+            "metric_chip": null,
+            "voice_sync_text": "Client നൽകുന്ന പണം കൊണ്ട് professional സ്വന്തമായി trust ഉണ്ടാക്കിയാൽ അവിടെ diversion നടക്കില്ല.",
+            "image_required": true,
+            "image_prompt": "Cinematic 2.5D isometric view of a Supreme Court advocate desk with legal briefs and a charitable trust ledger under studio lighting.",
+            "highlights": [
+              {
+                "phrase": "professional receipts",
+                "time_sec": 5.5
+              },
+              {
+                "phrase": "application of income",
+                "time_sec": 8.5
+              }
+            ]
+          }
+        ]
+      },
+      "total_duration": 31.17,
+      "drive_folder_id": "1OJE3VX5UcvnBEZSbBYcoiixVB8ag_AAX",
+      "total_points_count": 3,
+      "completed_points_count": 7,
+      "is_partially_complete": false
+    },
+    "q1": {
+      "doctrine": "Diversion of Income by Overriding Title vs Application of Income",
+      "root": {
+        "id": "root",
+        "number": "1",
+        "title": "Diversion vs Application of Income",
+        "badge": "Section 4 & Section 5",
+        "voice_sync_text": "ഇവിടെ നമ്മൾ സെക്ഷൻ 4 ഉം Section 5 ഉം പ്രകാരം Diversion of Income ഉം Application of Income ഉം തമ്മിലുള്ള വ്യത്യാസമാണ് പഠിക്കുന്നത്.",
+        "t0": 0.0,
+        "t1": 8.67,
+        "pt_idx": 0,
+        "audio_file": "dt/ch1/q1/pt_0.mp3",
+        "drive_audio_id": "1ThREsa2Bd5myxAwFTRUAdq9-CFtJgpxB"
+      },
+      "branches": [
+        {
+          "branch_id": "branch-1",
+          "branch_title": "Diversion of Income by Overriding Title",
+          "badge": "Section 4",
+          "icon": "scales",
+          "points": [
+            {
+              "id": "beat-1-1",
+              "title": "Creation of Overriding Title",
+              "number": "1.1.1",
+              "badge": "Statutory Rule",
+              "body": [
+                "Income is diverted at the very source by an overriding legal obligation.",
+                "The recipient never gets legal ownership or right to receive the funds for themselves."
+              ],
+              "highlights": [
+                {
+                  "phrase": "diverted at the very source",
+                  "time_sec": 2.5
+                },
+                {
+                  "phrase": "overriding legal obligation",
+                  "time_sec": 6.8
+                }
+              ],
+              "table_data": null,
+              "voice_sync_text": "ആദ്യം തന്നെ ഓർക്കേണ്ടത്, income-ന്റെ source-ൽ വെച്ച് തന്നെ വേറൊരാൾക്ക് legal right ഉണ്ടാകുകയാണെങ്കിൽ അതിനെ diversion എന്ന് വിളിക്കാം.",
+              "spoken": true,
+              "t0": 9.67,
+              "t1": 19.17,
+              "pt_idx": 1,
+              "audio_file": "dt/ch1/q1/pt_1.mp3",
+              "dur": 9.52,
+              "duration_seconds": 9.52,
+              "drive_audio_id": "13vBDcGkTpJnZmaGrcwWhY7p7kK6iS3jc"
+            }
+          ],
+          "flow_summary": [],
+          "t0": 9.67,
+          "t1": 19.17
+        },
+        {
+          "branch_id": "branch-2",
+          "branch_title": "Application of Professional Income",
+          "badge": "Section 28",
+          "icon": "shield",
+          "points": [
+            {
+              "id": "beat-2-1",
+              "title": "Post-Receipt Utilization",
+              "number": "1.2.1",
+              "badge": "Tax Rule",
+              "body": [
+                "Professional fees received fully first accrue and vest in the hands of the professional.",
+                "Subsequent creation of a trust or charity amounts merely to an application of income."
+              ],
+              "highlights": [
+                {
+                  "phrase": "fully first accrue and vest",
+                  "time_sec": 2.1
+                },
+                {
+                  "phrase": "application of income",
+                  "time_sec": 6.0
+                }
+              ],
+              "table_data": null,
+              "voice_sync_text": "Professional income കൈപ്പറ്റിയ ശേഷം ആ തുക ചാരിറ്റിക്കോ ട്രസ്റ്റിനോ വേണ്ടി ഉപയോഗിച്ചാൽ അത് application മാത്രമാണ്.",
+              "spoken": true,
+              "t0": 21.17,
+              "t1": 29.17,
+              "pt_idx": 2,
+              "audio_file": "dt/ch1/q1/pt_2.mp3",
+              "dur": 7.96,
+              "duration_seconds": 7.96,
+              "drive_audio_id": "1ydfMD1v2w4s1sahp5UrJd7e5ZAxtiue4"
+            }
+          ],
+          "flow_summary": [],
+          "t0": 21.17,
+          "t1": 29.17
+        }
+      ],
+      "concept_simulation": {
+        "schema_version": "1.0",
+        "illustrative_only": true,
+        "doctrine_topic": "Diversion vs Application of Income",
+        "relevant_tax_year": "Assessment Year 2024-25",
+        "statutory_assumptions": [
+          "Professional fees received directly from client for legal services rendered.",
+          "Portion of received fee subsequently transferred to a self-created charitable trust."
+        ],
+        "intro_voice": "ഇനി ഒരു simple example വഴി ഈ concept എങ്ങനെ വർക്ക് ചെയ്യുന്നു എന്ന് നോക്കാം.",
+        "steps": [
+          {
+            "step_id": "step_1",
+            "step_order": 1,
+            "title": "Receipt of Professional Fee",
+            "metric_label": "Gross Professional Fee",
+            "metric_value": "₹ 5,00,000",
+            "voice_sync_text": "Professional സേവനങ്ങൾക്ക് ലഭിക്കുന്ന തുക പൂർണ്ണമായും ആദ്യം professional-ന്റെ കൈകളിൽ തന്നെ income ആയി accrue ചെയ്യുന്നു.",
+            "image_prompt": "Cinematic 2.5D isometric view of a corporate law office desk with professional files and currency notes under warm soft lighting.",
+            "calculation_data": null,
+            "step_number": 1,
+            "audio_file": "dt/ch1/q1/sim_1.mp3",
+            "duration_seconds": 7.6,
+            "drive_audio_id": "14kL75RTCd7tid2zIkPzHkpivPk98C1pa",
+            "image_file": "dt/ch1/q1/sim_img_1.jpg"
+          },
+          {
+            "step_id": "step_2",
+            "step_order": 2,
+            "title": "Subsequent Trust Creation",
+            "metric_label": "Charitable Trust Contribution",
+            "metric_value": "₹ 5,00,000",
+            "voice_sync_text": "പിന്നീട് ആ തുക ഉപയോഗിച്ച് സ്വന്തമായി trust ഉണ്ടാക്കിയാൽ അത് diversion അല്ല, മറിച്ച് application of income ആണ്.",
+            "image_prompt": "Cinematic 2.5D isometric view of a legal trust deed document being signed with a fountain pen.",
+            "calculation_data": null,
+            "step_number": 2,
+            "audio_file": "dt/ch1/q1/sim_2.mp3",
+            "duration_seconds": 8.28,
+            "drive_audio_id": "1X0L-YwVLLYjjrE8IhuUhOiqvM-aJ5tR6",
+            "image_file": "dt/ch1/q1/sim_img_2.jpg"
+          },
+          {
+            "step_id": "step_3",
+            "step_order": 3,
+            "title": "Tax Chargeability u/s 28",
+            "metric_label": "Taxable PGBP Income",
+            "metric_value": "₹ 5,00,000",
+            "voice_sync_text": "അതുകൊണ്ട് ഈ മുഴുവൻ തുകയും Profits and Gains of Business or Profession എന്ന തലത്തിൽ tax ചെയ്യപ്പെടും.",
+            "image_prompt": "Cinematic 2.5D isometric view of an income tax computation sheet showing total taxable professional receipts.",
+            "calculation_data": {
+              "headers": [
+                "Particulars",
+                "Amount (INR)"
+              ],
+              "rows": [
+                [
+                  "Gross Professional Receipt",
+                  "5,00,000"
+                ],
+                [
+                  "Less: Diversion by Overriding Title",
+                  "0"
+                ],
+                [
+                  "Taxable PGBP Income",
+                  "5,00,000"
+                ]
+              ]
+            },
+            "step_number": 3,
+            "audio_file": "dt/ch1/q1/sim_3.mp3",
+            "duration_seconds": 7.32,
+            "drive_audio_id": "1HcKI-evOiJUPGYVRwe_Cmy_FooYtxQSh",
+            "image_file": "dt/ch1/q1/sim_img_3.jpg"
+          }
+        ],
+        "intro_audio_file": "dt/ch1/q1/sim_intro.mp3",
+        "intro_dur": 3.76,
+        "intro_drive_audio_id": "1BIfLv1JkmYh4WQr_eXojWYxgoLgkexQ3"
+      },
+      "screenplay": {
+        "doctrine": "Diversion of Income by Overriding Title",
+        "beats": [
+          {
+            "beat_order": 1,
+            "t_start": 0.0,
+            "t_end": 4.5,
+            "beat_type": "kinetic_headline",
+            "headline": "Section 4: Diversion vs Application",
+            "badge": "Section 4 & 5",
+            "subtext": "Mastering the legal distinction in professional receipts",
+            "metric_chip": null,
+            "voice_sync_text": "ഇന്ന് നമ്മൾ ചർച്ച ചെയ്യുന്നത് Diversion of Income ഉം Application of Income ഉം തമ്മിലുള്ള വ്യത്യാസമാണ്.",
+            "image_required": false,
+            "image_prompt": null,
+            "highlights": [
+              {
+                "phrase": "Diversion of Income",
+                "time_sec": 1.5
+              },
+              {
+                "phrase": "Application of Income",
+                "time_sec": 3.0
+              }
+            ]
+          },
+          {
+            "beat_order": 2,
+            "t_start": 4.6,
+            "t_end": 10.0,
+            "beat_type": "statutory_trigger",
+            "headline": "Professional Income & Trust Creation",
+            "badge": "Section 28",
+            "subtext": "Self-created trusts out of professional receipts",
+            "metric_chip": null,
+            "voice_sync_text": "Client നൽകുന്ന പണം കൊണ്ട് professional സ്വന്തമായി trust ഉണ്ടാക്കിയാൽ അവിടെ diversion നടക്കില്ല.",
+            "image_required": true,
+            "image_prompt": "Cinematic 2.5D isometric view of a Supreme Court advocate desk with legal briefs and a charitable trust ledger under studio lighting.",
+            "highlights": [
+              {
+                "phrase": "professional receipts",
+                "time_sec": 5.5
+              },
+              {
+                "phrase": "application of income",
+                "time_sec": 8.5
+              }
+            ]
+          }
+        ]
+      },
+      "total_duration": 31.17,
+      "drive_folder_id": "1OJE3VX5UcvnBEZSbBYcoiixVB8ag_AAX",
+      "total_points_count": 3,
+      "completed_points_count": 7,
+      "is_partially_complete": false
+    },
     "ch1_q2": {
       "doctrine": "Diversion of Income by Overriding Title vs. Application of Income",
       "root": {
