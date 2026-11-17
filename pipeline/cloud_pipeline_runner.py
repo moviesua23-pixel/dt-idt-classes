@@ -13,6 +13,7 @@ import re
 import base64
 import time
 import requests
+from typing import Dict, Any, List, Optional
 from google.oauth2 import service_account
 from googleapiclient.discovery import build
 
@@ -44,6 +45,31 @@ from pipeline.pdf_question_indexer import (
     get_pdf_path,
     sanitize_and_format_text
 )
+
+def is_modern_studio_screenplay(sp_data: Any) -> bool:
+    """
+    Checks if screenplay is in modern situational studio format
+    (contains context_pill and layout-driven beats like story_scene, fork, meter, ledger, etc.)
+    rather than legacy 2024 kinetic_headline schema.
+    """
+    if not sp_data:
+        return False
+    if isinstance(sp_data, str):
+        if not sp_data.strip().startswith('{'):
+            return False
+        try:
+            sp_data = json.loads(sp_data)
+        except Exception:
+            return False
+    if not isinstance(sp_data, dict):
+        return False
+    beats = sp_data.get('beats', [])
+    if not beats or not isinstance(beats, list) or len(beats) < 3:
+        return False
+    modern_layouts = {'story_scene', 'fork', 'meter', 'ledger', 'takeaway', 'statute_quote', 'timeline', 'split', 'compare', 'case_card'}
+    has_modern_beat = any(isinstance(b, dict) and b.get('layout') in modern_layouts for b in beats)
+    is_legacy = any(isinstance(b, dict) and 'beat_type' in b and b.get('layout') is None for b in beats)
+    return has_modern_beat and not is_legacy
 
 # Configuration
 SERVICE_ACCOUNT_FILE = os.path.join(PROJECT_ROOT, 'credentials.json')
@@ -357,13 +383,13 @@ def run_pipeline(limit=None, target_chapter=None, target_question=None, target_s
                 is_partial = parsed_mm.get('is_partially_complete', False)
                 status_low = existing.get('status', '').lower()
 
-                has_screenplay = bool(existing.get('screenplay') and str(existing.get('screenplay')).strip().startswith('{'))
+                has_screenplay = is_modern_studio_screenplay(existing.get('screenplay'))
                 if not force and total_pts > 0 and ready_pts >= total_pts and not is_partial and 'paused' not in status_low and has_screenplay:
                     print(f"\n---> [{subject} Ch{chapter_no} Q{q_num} ({q_idx+1}/{total_questions})] Already 100% complete with Screenplay. Skipping!")
                     continue
                 elif not force and total_pts > 0 and ready_pts >= total_pts and not has_screenplay:
                     existing_mm = parsed_mm
-                    print(f"\n---> [{subject} Ch{chapter_no} Q{q_num} ({q_idx+1}/{total_questions})] Audio complete but missing Screenplay in Col K. Generating Screenplay...")
+                    print(f"\n---> [{subject} Ch{chapter_no} Q{q_num} ({q_idx+1}/{total_questions})] Audio complete but missing modern Screenplay in Col K. Generating Screenplay...")
                 elif not force:
                     existing_mm = parsed_mm
                     print(f"\n---> [{subject} Ch{chapter_no} Q{q_num} ({q_idx+1}/{total_questions})] Found partial progress ({ready_pts}/{total_pts} points). Resuming...")
@@ -479,7 +505,7 @@ def run_pipeline(limit=None, target_chapter=None, target_question=None, target_s
             timing_status = ""
             existing_sp_str = existing.get('screenplay', '') if existing else ''
 
-            if not force and existing_sp_str and existing_sp_str.startswith('{'):
+            if not force and is_modern_studio_screenplay(existing_sp_str):
                 screenplay_json_str = existing_sp_str
                 timing_status = existing.get('status', 'Screenplay Cached')
             else:

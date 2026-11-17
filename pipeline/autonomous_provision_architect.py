@@ -221,27 +221,6 @@ You must output a STRICT, VALID JSON object with the following schema:
         "trap_data": null
       }}
     ]
-  }},
-  "screenplay": {{
-    "doctrine": "Name of statutory doctrine",
-    "beats": [
-      {{
-        "beat_order": 1,
-        "t_start": 0.0,
-        "t_end": 4.5,
-        "beat_type": "kinetic_headline",
-        "headline": "Hero Title (e.g. Section 45(2): Conversion into Stock-in-Trade)",
-        "badge": "§ Statutory Badge",
-        "subtext": "Operative trigger or principle",
-        "metric_chip": null,
-        "voice_sync_text": "Malayalam teacher speech for this beat strictly with English Latin tax terms.",
-        "image_required": false,
-        "image_prompt": null,
-        "highlights": [
-          {{ "phrase": "key tax term", "time_sec": 1.2 }}
-        ]
-      }}
-    ]
   }}
 }}
 
@@ -267,19 +246,6 @@ CRITICAL FORMATTING RULES:
    - Every step MUST use clean, round figures (e.g. ₹10 Lakhs, ₹50 Lakhs, ₹70 Lakhs) to clearly illuminate the statutory rule without arithmetic confusion.
    - 'image_prompt' MUST be a vivid, detailed, 16:9 cinematic 2.5D isometric prompt tailored for Google Imagen 3 with dramatic studio lighting.
    - For calculations in the climax step, provide 'calculation_data' mapping the statutory formula.
-8. KINETIC SCREENPLAY RULES (VOICE-SYNCHRONIZED MOTION STORYBOARD):
-   - NO TEXT DUMP: The screen must never show all text at once. Only the thought being spoken appears!
-   - 'beats': Create 4 to 8 fine-grained sequential beats synchronized to the audio narration.
-   - 'beat_type':
-     * 'kinetic_headline': Hero title & section badge (intro beat).
-     * 'statutory_trigger': Operative condition callout (e.g. Deemed transfer, tax deferral).
-     * 'visual_scene': Real-world example (e.g., plot of land, partner retiring). Set 'image_required': true with 16:9 image prompt.
-     * 'metric_callout': Spoken numbers highlighted with hovering metric chips (e.g. ₹10 Lakhs, ₹45 Lakhs).
-     * 'dual_computation_step': Split calculation steps revealing in rhythm with voice.
-     * 'statutory_trap': Common mistake vs statutory precedent.
-   - SELECTIVE IMAGERY PRINCIPLE (MANDATORY):
-     * 'image_required': true ONLY on the specific beat describing a concrete physical scene.
-     * For pure statutory rules, rates, math formulas, and traps, strictly set 'image_required': false and 'image_prompt': null.
 """
 
 def validate_screenplay(sp: Any) -> Optional[Dict[str, Any]]:
@@ -479,13 +445,6 @@ def extract_autonomous_provision(question_number: int, question_text: str, answe
                             print(f"  [EXPLAINER DECK VALIDATED] {len(clean_exp['slides'])} studio slides attached.")
                         else:
                             print(f"  [WARN] Explainer deck failed validation, skipping gracefully.")
-                    if 'screenplay' in data:
-                        clean_sp = validate_screenplay(data['screenplay'])
-                        if clean_sp:
-                            data['mindmap']['screenplay'] = clean_sp
-                            print(f"  [SCREENPLAY VALIDATED] {len(clean_sp['beats'])} kinetic beats attached.")
-                        else:
-                            print(f"  [WARN] Screenplay failed validation, skipping gracefully.")
                     return data
             except AllKeysQuotaExhaustedError:
                 raise
