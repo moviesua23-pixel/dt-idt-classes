@@ -1,320 +1,324 @@
 {
   "question_id": "dt-c2-q32",
   "audio_url": "data/audio/dt-c2-q32.mp3",
-  "duration_sec": 223.23,
+  "duration_sec": 199.31,
   "sync_offset_sec": 0.0,
-  "context_pill": "Section 54G | Shifting of Industrial Undertaking",
+  "context_pill": "Section 54G | Shifting Industrial Undertaking from Urban to Non-Urban Area",
   "fallback": false,
   "beats": [
     {
       "id": "b1",
       "layout": "fork",
-      "voice_sync_text": "Students, welcome back! Namukku Section 54G Capital Gains Exemption nannayi padikkaam. Concept crystal clear aavaan namukk Apex Engineering Ltd-inte oru practical case study nokkaam. Kando, Apex Engineering Ltd urban corporation limit-il ulla thangalude factory oru non-urban rural area-yilekku shift cheyyan theerumaanichu. Shifting-inte bhaagamaayi March 2026-il company 4 assets aanu sell cheythath: First, Land, sale consideration Rs 20 Lakhs, cost of acquisition Rs 15 Lakhs, so Long-term Capital Gain Rs 5 Lakhs. Second, Factory Building, sale proceeds Rs 25 Lakhs, Written Down Value Rs 9 Lakhs, so Section 50 prakaram Deemed Short-term Capital Gain Rs 16 Lakhs. Third, Plant & Machinery, sale value Rs 18 Lakhs, Written Down Value Rs 9 Lakhs, so Short-term Capital Gain Rs 9 Lakhs. Fourth, Furniture, sale Rs 3 Lakhs, Written Down Value Rs 2 Lakhs, so Short-term Capital Gain Rs 1 Lakh. Ippo asset classification filter nokkoo: Section 54G prakaram Land, Building, and Plant & Machinery maathrame Eligible Specified Assets aayi qualify cheyyoo! Ennaal Furniture non-specified asset aayathukond athinu Section 54G exemption oru kaaranavashaalum labhikkilla!",
+      "voice_sync_text": "Makkale, ശ്രദ്ധichu kekkoo! Namukku Section 54G padikkam. Nammude case studyil, Apex Engineering Ltd enna company oru urban corporation limitil ulla industrial undertaking non-urban area-kku December 2025-il shift cheythu. Financial Year 2025-26 (Assessment Year 2026-27)-il avar pala assets transfer cheythu. Onnamathathu, Land transfer cheythu, sale proceeds ₹ 9 lakhs, cost of acquisition ₹ 4 lakhs, long-term capital asset aanu. Randamathathu, Building transfer cheythu, sale proceeds ₹ 17 lakhs, WDV under Section 50 ₹ 5 lakhs, depreciable asset aayathu kondu short-term capital gain aanu. Moonnamathathu, Plant & Machinery transfer cheythu, sale proceeds ₹ 15 lakhs, WDV under Section 50 ₹ 4 lakhs, short-term capital gain aanu. Naalaamathathu, Furniture transfer cheythu, sale proceeds ₹ 4 lakhs, WDV under Section 50 ₹ 2 lakhs. Athayath, ee four assets transfer cheythu, pakshe naye assets purchase cheythappol oru cheriya twist undu! Avar July 2026-il naye assets vaangiyavarku land-in ₹ 4 lakhs, building-in ₹ 6 lakhs, plant & machinery-in ₹ 15 lakhs, pinne furniture-in ₹ 2 lakhs invest cheythu. Ividuthe most important point enthannu vechaal, Section 54G-il furniture oru eligible capital asset alla! Let's classify them clearly!",
       "title": {
-        "text": "Asset Eligibility Filter under Section 54G",
+        "text": "Complete Scenario Overview & Eligibility Filter u/s 54G",
         "at": 0.3
       },
-      "story_steps": [
-        {
-          "badge": "Asset 1: Land",
-          "title": "Sale: Rs 20L | Cost: Rs 15L",
-          "sub": "Long-term Capital Gain: Rs 5 Lakhs",
-          "val": 500000,
-          "at": 28.56
-        },
-        {
-          "badge": "Asset 2: Building",
-          "title": "Sale: Rs 25L | WDV: Rs 9L",
-          "sub": "Deemed STCG u/s 50: Rs 16 Lakhs",
-          "val": 1600000,
-          "at": 37.98
-        },
-        {
-          "badge": "Asset 3: Plant & Mach.",
-          "title": "Sale: Rs 18L | WDV: Rs 9L",
-          "sub": "Deemed STCG u/s 50: Rs 9 Lakhs",
-          "val": 900000,
-          "at": 49.7
-        },
-        {
-          "badge": "Asset 4: Furniture",
-          "title": "Sale: Rs 3L | WDV: Rs 2L",
-          "sub": "STCG: Rs 1 Lakh (Non-Specified)",
-          "val": 100000,
-          "at": 58.16
-        }
-      ],
-      "divider": {
-        "text": "Asset Classification & Eligibility Filter under Section 54G",
-        "at": 65.86
-      },
-      "branches": [
-        {
-          "side": "left",
-          "label": "Eligible Specified Assets",
-          "facts": [
-            {
-              "text": "Land, Building, Plant & Machinery",
-              "at": 73.26
-            },
-            {
-              "text": "Total Qualifying Gains: Rs 30 Lakhs",
-              "at": 74.26
-            },
-            {
-              "text": "Qualifies for Section 54G Exemption",
-              "at": 75.26
-            }
-          ],
-          "outcome": {
-            "text": "Eligible for Section 54G Exemption",
-            "at": 75.76
-          },
-          "at": 72.86
-        },
-        {
-          "side": "right",
-          "label": "Ineligible Non-Specified Asset",
-          "facts": [
-            {
-              "text": "Office Furniture & Fixtures",
-              "at": 74.96
-            },
-            {
-              "text": "Excluded from Section 54G Definition",
-              "at": 75.96
-            },
-            {
-              "text": "Neither transfer nor reinvestment qualifies",
-              "at": 76.96
-            }
-          ],
-          "outcome": {
-            "text": "No Exemption! Full STCG Taxable",
-            "at": 77.46
-          },
-          "at": 74.56
-        }
-      ],
-      "result_card": {
-        "badge": "Exam Trap Alert",
-        "title": "Furniture Strictly Excluded",
-        "sub": "Furniture is strictly excluded from Section 54G exemption basket!",
-        "at": 76.21
-      },
-      "start": 0.0,
-      "end": 82.84,
       "intro_cards": [
         {
           "badge": "Statutory Focus",
-          "title": "Section 54G Exemption",
-          "sub": "Capital Gains on Shifting of Industrial Undertaking from Urban Area",
-          "at": 6.6,
-          "out_at": 28.16
+          "title": "Section 54G",
+          "sub": "Capital Gains on Shifting Industrial Undertaking from Urban to Non-Urban Area",
+          "at": 3.16,
+          "out_at": 32.08
         },
         {
           "badge": "Case Study Setup",
           "title": "Apex Engineering Ltd",
-          "sub": "Relocating Factory: Urban Corporation Limits ➔ Non-Urban Rural Area",
-          "at": 12.1,
-          "out_at": 28.16
+          "sub": "Industrial Undertaking Shifted from Urban to Non-Urban Area in Dec 2025",
+          "at": 6.18,
+          "out_at": 32.08
         },
         {
-          "badge": "Relocation Transfer",
-          "title": "4 Assets Transferred",
-          "sub": "March 2026: Land, Building, Plant & Machinery, and Office Furniture Sold",
-          "at": 25.94,
-          "out_at": 28.16
+          "badge": "Transfer / Trigger Event",
+          "title": "Sale in March 2026 & New Purchase in July 2026",
+          "sub": "Assets Transferred: Land, Building, Plant & Machinery, Furniture",
+          "at": 23.02,
+          "out_at": 32.08
         }
-      ]
+      ],
+      "story_steps": [
+        {
+          "badge": "Asset 1: Land",
+          "title": "Sale: ₹ 9,00,000 | Cost: ₹ 4,00,000",
+          "sub": "Long-Term Capital Gain: ₹ 5,00,000",
+          "val": 500000,
+          "at": 32.48
+        },
+        {
+          "badge": "Asset 2: Building",
+          "title": "Sale: ₹ 17,00,000 | WDV u/s 50: ₹ 5,00,000",
+          "sub": "Short-Term Capital Gain: ₹ 12,00,000",
+          "val": 1200000,
+          "at": 41.5
+        },
+        {
+          "badge": "Asset 3: Plant & Machinery",
+          "title": "Sale: ₹ 15,00,000 | WDV u/s 50: ₹ 4,00,000",
+          "sub": "Short-Term Capital Gain: ₹ 11,00,000",
+          "val": 1100000,
+          "at": 61.6
+        },
+        {
+          "badge": "Asset 4: Furniture",
+          "title": "Sale: ₹ 4,00,000 | WDV u/s 50: ₹ 2,00,000",
+          "sub": "Short-Term Capital Gain: ₹ 2,00,000",
+          "val": 200000,
+          "at": 63.42
+        }
+      ],
+      "divider": {
+        "text": "Eligibility Classification u/s 54G",
+        "at": 80.1
+      },
+      "branches": [
+        {
+          "side": "left",
+          "label": "Qualifying Assets u/s 54G",
+          "facts": [
+            {
+              "text": "Land (New investment: ₹ 4,00,000)",
+              "at": 82.1
+            },
+            {
+              "text": "Building (New investment: ₹ 6,00,000)",
+              "at": 83.0
+            },
+            {
+              "text": "Plant & Machinery (New investment: ₹ 15,00,000)",
+              "at": 83.9
+            },
+            {
+              "text": "Total Qualifying New Investment Pool = ₹ 25,00,000",
+              "at": 84.8
+            }
+          ],
+          "outcome": {
+            "text": "Eligible for Section 54G Exemption Deduction",
+            "at": 85.7
+          },
+          "at": 81.1
+        },
+        {
+          "side": "right",
+          "label": "Ineligible Asset u/s 54G",
+          "facts": [
+            {
+              "text": "Furniture (New investment: ₹ 2,00,000)",
+              "at": 87.6
+            },
+            {
+              "text": "Statutory Exclusion: Furniture is excluded from Section 54G scope",
+              "at": 88.5
+            },
+            {
+              "text": "Result: No exemption available for furniture investment",
+              "at": 89.4
+            }
+          ],
+          "outcome": {
+            "text": "Ineligible / Fully Taxable Short-Term Capital Gain",
+            "at": 90.3
+          },
+          "at": 86.6
+        }
+      ],
+      "result_card": {
+        "badge": "Exam Trap Alert",
+        "title": "Furniture Exclusion u/s 54G",
+        "sub": "Capital gains on transfer of furniture or new investment in furniture never qualifies for Section 54G exemption!",
+        "at": 91.2
+      },
+      "start": 0.0,
+      "end": 85.8
     },
     {
       "id": "b2",
       "layout": "statute_quote",
-      "voice_sync_text": "Ini Section 54G sub-section 1-ile statutory conditions and time horizon gate nokkaam. Industrial undertaking urban area-yil ninnum shift cheyyumpol, transfer date-inu 1 year before allengil 3 years after-il new plant, machinery, land, allengil building acquire cheythirikkenam. Apex Engineering Ltd March 2026-il transfer nadathiyathinu shesham, July 2026-il, ithathayath verum 4 months-il new assets purchase cheythu. Athukond ithu 3-year statutory window-kkullil perfect aayi qualify cheyyunnu!",
+      "voice_sync_text": "Makkale, ormavekkoo! Section 54G condition enna vechaal, oru industrial undertaking urban area-il ninnu non-urban area-kku shift cheyyumpol, transfer nadakkunnathinu 1 year munpulla or 3 years-nu akathalam new machinery, plant, building, or land acquire cheyyanam. Appol capital gain tax exemption kittum!",
       "title": {
-        "text": "Statutory Mandate & Reinvestment Window u/s 54G(1)",
-        "at": 83.49
+        "text": "Statutory Mandate & Conditions u/s 54G",
+        "at": 86.45
       },
       "quote": {
-        "text": "Where the capital gain arises from the transfer of a capital asset, being plant, machinery, land or building or any rights in building or land, used for the purpose of an industrial undertaking situated in an urban area... and the assessee has within a period of one year before or three years after the date on which the transfer took place purchased new machinery or plant or acquired building or land...",
-        "citation": "Section 54G(1) of the Income-tax Act, 1961",
-        "emphasis": "plant, machinery, land or building... 1 year before or 3 years after",
-        "at": 83.69
+        "text": "Where the capital gain arises from the transfer of a capital asset, being machinery or plant or land or building or any rights in building or land used for the purposes of an industrial undertaking... and the assessee has purchased new machinery or plant or acquired building or land within 1 year before or 3 years after the date of transfer, the capital gain shall be dealt with under section 54G.",
+        "citation": "Section 54G of the Income-tax Act, 1961",
+        "emphasis": "within 1 year before or 3 years after the date of transfer",
+        "at": 86.65
       },
       "context_bubble": {
-        "badge": "Statutory Reinvestment Window",
-        "speaker": "Section 54G(1)",
-        "theme": "Time Horizon Condition",
-        "text": "Reinvestment Window: 1 Year Before or 3 Years After Transfer Date",
-        "at": 93.43
+        "badge": "Statutory Condition",
+        "speaker": "Section 54G",
+        "theme": "Reinvestment Time Horizon",
+        "text": "New assets must be purchased within 1 year before or 3 years after the transfer date. Furniture is strictly excluded from eligible assets.",
+        "at": 99.29
       },
-      "start": 83.19,
-      "end": 114.71
+      "start": 86.15,
+      "end": 109.55
     },
     {
       "id": "b3",
       "layout": "meter",
-      "voice_sync_text": "Ippo Apex Engineering Ltd non-urban area-yil nadathiya investment pool compute cheyyaam. Company new Land Rs 5 Lakhs, new Building Rs 8 Lakhs, and new Plant & Machinery Rs 16 Lakhs-inu purchase cheythu. So total eligible reinvestment pool Rs 29 Lakhs aanu. Ennaal company Rs 3 Lakhs-inu purchase chethya new Furniture-ine Section 54G pool-il ninnum strictly exclude cheyyanam!",
+      "voice_sync_text": "Aaduthathayittu, nalkiya new assets investment-inte total pool evide nokku. Land-il ₹ 4 lakhs, Building-il ₹ 6 lakhs, Plant & Machinery-il ₹ 15 lakhs vaangiya total qualifying investment ₹ 25 lakhs aane! Furniture-il vaangiya ₹ 2 lakhs ivide exclude cheyyanam. So total qualifying exemption pool is ₹ 25 lakhs!",
       "title": {
-        "text": "Section 54G Eligible Reinvestment Pool",
-        "at": 115.36
+        "text": "Qualifying Reinvestment Pool u/s 54G",
+        "at": 110.2
       },
       "meter_display": {
         "min_val": 0,
-        "max_val": 3500000,
-        "current_val": 2900000,
+        "max_val": 3000000,
+        "current_val": 2500000,
         "unit": "₹",
-        "threshold": 2500000,
+        "threshold": 2300000,
         "labels": {
           "start": "₹ 0",
-          "threshold_label": "STCG Threshold: ₹ 25L",
-          "current_label": "Total Eligible Investment: ₹ 29L"
+          "threshold_label": "Max Gain Pool: ₹ 23,00,000",
+          "current_label": "Qualifying New Investment: ₹ 25,00,000"
         },
-        "at": 136.06
+        "at": 130.0
       },
       "breakdown": [
         {
-          "label": "New Land Acquired",
-          "val": 500000,
+          "label": "New Land Investment",
+          "val": 400000,
           "status": "Qualifies u/s 54G",
-          "at": 122.34
+          "at": 115.54
         },
         {
-          "label": "New Building Acquired",
-          "val": 800000,
+          "label": "New Building Investment",
+          "val": 600000,
           "status": "Qualifies u/s 54G",
-          "at": 124.46
+          "at": 117.9
         },
         {
-          "label": "New Plant & Machinery",
-          "val": 1600000,
+          "label": "New Plant & Machinery Investment",
+          "val": 1500000,
           "status": "Qualifies u/s 54G",
-          "at": 126.86
+          "at": 119.92
         },
         {
-          "label": "New Furniture Purchased",
-          "val": 300000,
-          "status": "Ineligible (Excluded from 54G)",
-          "at": 133.33
+          "label": "New Furniture Investment",
+          "val": 200000,
+          "status": "Ineligible / Excluded u/s 54G",
+          "at": 126.3
         }
       ],
       "outcome": {
-        "text": "Eligible Reinvestment Pool = ₹ 29 Lakhs",
+        "text": "Total Qualifying Reinvestment = ₹ 25,00,000 (Exceeds total capital gains, so full gains can be absorbed)",
         "tone": "ok",
-        "at": 136.98
+        "at": 130.42
       },
-      "start": 115.06,
-      "end": 142.46
+      "start": 109.9,
+      "end": 133.98
     },
     {
       "id": "b4",
       "layout": "ledger",
-      "voice_sync_text": "Now comes the most important part: Capital gains computation and the Golden Optimization Trick! Section 50 prakaram Building STCG Rs 16 Lakhs and Plant STCG Rs 9 Lakhs kootiyaal total STCG Rs 25 Lakhs und. Income-tax Act-il pro-rata set-off niyamam illathathinaal, maximum tax benefit-nu vendi total Section 54G exemption aayirikkunna Rs 29 Lakhs-il ninnum Rs 25 Lakhs aadyam 30% slab rate ulla STCG-kk ethire set off cheyyanam. Athode STCG zero aakum! Balance Rs 4 Lakhs exemption 12.5% rate ulla Land LTCG Rs 5 Lakhs-il ninnum minus cheyyanam. Athukond taxable LTCG verum Rs 1 Lakh maathram! Furniture STCG Rs 1 Lakh completely taxable aane. So total taxable capital gain is Rs 2 Lakhs!",
+      "voice_sync_text": "Ippol nammal step-by-step computation cheyyunnu! Short-term capital gain building-um plant & machinery-um koodi total ₹ 23 lakhs aane. Ee ₹ 25 lakhs exemption aadyam short-term capital gains-l adjust cheyyanam. Because short-term capital gain-inte tax incidence high aanu! Appol short-term capital gain completely nil aayi maarum. Pine baakki ulla exemption long-term capital gain-aaya land-inte ₹ 5 lakhs-il ninnu adjust cheythu baakki taxable long-term capital gain ₹ 2 lakhs aayi varum. Pinne furniture-inte ₹ 2 lakhs short-term capital gain fully taxable aanu!",
       "title": {
-        "text": "Computation of Taxable Capital Gains for AY 2026-27",
-        "at": 143.11
+        "text": "Computation of Taxable Capital Gains for Assessment Year 2026-27",
+        "at": 134.63
       },
       "callout": {
         "badge": "Golden Optimization Trick",
-        "text": "Act-il pro-rata set-off niyamam illa: Higher tax bracket Short-term Capital Gain first wipe out cheyyanam!",
-        "at": 144.01
+        "text": "Always exhaust Section 54G exemption against Short-Term Capital Gains first, since short-term tax rates are higher than long-term tax rates!",
+        "at": 135.53
       },
       "ledger_rows": [
         {
-          "label": "Building STCG u/s 50 (Sale − WDV)",
-          "amount": 1600000,
+          "label": "1. Short-Term Capital Gain: Building",
+          "amount": 1200000,
           "type": "income",
-          "at": 151.75
+          "at": 137.55
         },
         {
-          "label": "Plant & Machinery STCG u/s 50 (Sale − WDV)",
-          "amount": 900000,
+          "label": "2. Short-Term Capital Gain: Plant & Machinery",
+          "amount": 1100000,
           "type": "income",
-          "at": 154.55
+          "at": 164.29
         },
         {
-          "label": "Total Deemed STCG Eligible for Section 54G",
-          "amount": 2500000,
+          "label": "Subtotal Short-Term Capital Gain (Building + P&M)",
+          "amount": 2300000,
           "type": "subtotal",
-          "at": 157.66
+          "at": 166.05
         },
         {
-          "label": "Less: Section 54G Exemption (Priority 1: Against 30% STCG)",
-          "amount": -2500000,
+          "label": "Less: Section 54G Exemption set off against STCG",
+          "amount": -2300000,
           "type": "deduction",
-          "at": 172.09
+          "at": 166.95
         },
         {
-          "label": "Net STCG on Industrial Assets",
+          "label": "Net Short-Term Capital Gain (Building & P&M)",
           "amount": 0,
           "type": "subtotal",
-          "at": 173.43
+          "at": 167.75
         },
         {
-          "label": "Land LTCG (Sale − Cost)",
+          "label": "3. Short-Term Capital Gain: Furniture (Ineligible)",
+          "amount": 200000,
+          "type": "taxable",
+          "at": 168.21
+        },
+        {
+          "label": "4. Long-Term Capital Gain: Land",
           "amount": 500000,
           "type": "income",
-          "at": 181.87
+          "at": 169.11
         },
         {
-          "label": "Less: Balance Section 54G Exemption (Priority 2)",
-          "amount": -400000,
+          "label": "Less: Balance Section 54G Exemption set off against LTCG",
+          "amount": -200000,
           "type": "deduction",
-          "at": 182.77
+          "at": 170.01
         },
         {
-          "label": "Taxable LTCG on Land (Taxable @ 12.5% u/s 112)",
-          "amount": 100000,
+          "label": "Taxable Long-Term Capital Gain (Land)",
+          "amount": 300000,
           "type": "taxable",
-          "at": 186.85
-        },
-        {
-          "label": "Furniture STCG (Sale − WDV) [No 54G Exemption]",
-          "amount": 100000,
-          "type": "taxable",
-          "at": 189.97
+          "at": 170.91
         }
       ],
       "net_total": {
         "label": "Total Taxable Capital Gains",
-        "val": 200000,
-        "detail": "Taxable Remainder",
-        "at": 194.09
+        "val": 500000,
+        "detail": "Short-Term ₹ 2,00,000 + Long-Term ₹ 3,00,000 = ₹ 5,00,000",
+        "at": 171.81
       },
-      "start": 142.81,
-      "end": 197.25
+      "start": 134.33,
+      "end": 169.93
     },
     {
       "id": "b5",
       "layout": "takeaway",
-      "voice_sync_text": "Exam-il full marks vaangaan ee 3 Golden Rules eppozhum ormathoykkoo: First, Furniture is strictly excluded from Section 54G. Second, Section 50 Deemed STCG is fully eligible for exemption. Third, eppozhum 30% STCG aadyam wipe out cheythu 12.5% LTCG ethire balance deduction edukkuka!",
+      "voice_sync_text": "Avasanam, makkale ee 3 Golden Rules exam-il ormakkuvuka! Onnamathathu, Furniture is never an eligible asset under Section 54G. Randamathathu, always exhaust exemption against Short-Term Capital Gains first for maximum tax saving. Moonnamathathu, depreciable assets-inte WDV is deemed cost under Section 50. Superb, eppol makkalkku Section 54G clear aayille!",
       "title": {
-        "text": "3 Golden Rules for Section 54G Exam Mastery",
-        "at": 197.9
+        "text": "3 Golden Rules for CA Final Exam Mastery u/s 54G",
+        "at": 170.58
       },
       "rules": [
         {
           "num": "01",
-          "heading": "Strict Asset Basket (Furniture Excluded)",
-          "body": "Furniture-nu Section 54G-il sthanamilla. Neither transfer nor reinvestment in Furniture qualifies.",
-          "at": 203.06
+          "heading": "Furniture Exclusion Rule",
+          "body": "Capital gains on transfer of furniture or investment in new furniture never qualifies for exemption under Section 54G.",
+          "at": 176.38
         },
         {
           "num": "02",
-          "heading": "Section 50 Deemed STCG is Fully Eligible",
-          "body": "Section 50 prakaram depreciable assets STCG aayal polum, Section 54G exemption valid aanu.",
-          "at": 208.42
+          "heading": "Set-off Priority Optimization",
+          "body": "Always exhaust Section 54G exemption first against Short-Term Capital Gains before Long-Term Capital Gains to minimize tax liability.",
+          "at": 182.14
         },
         {
           "num": "03",
-          "heading": "Most Beneficial Set-Off Priority",
-          "body": "Tax liability minimize cheyyan deduction aadyam 30% STCG-kk ethireyum, balance 12.5% LTCG-kk ethireyum set-off cheyyam!",
-          "at": 214.02
+          "heading": "Depreciable Assets & Section 50",
+          "body": "For depreciable assets forming part of a block, capital gains are computed under Section 50 where WDV is treated as the cost of acquisition.",
+          "at": 190.06
         }
       ],
-      "start": 197.6,
-      "end": 222.88
+      "start": 170.28,
+      "end": 198.96
     }
   ]
 }

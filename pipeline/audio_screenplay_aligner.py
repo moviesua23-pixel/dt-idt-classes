@@ -77,6 +77,79 @@ def transcribe_beat_clip(audio_path: str) -> Dict[str, Any]:
         "words": extracted_words
     }
 
+COMMON_STOPWORDS = {
+    # English common words
+    "the", "and", "for", "with", "from", "that", "this", "into", "under", "will", 
+    "have", "been", "also", "what", "where", "when", "which", "upon", "each", "unit", 
+    "case", "step", "date", "period", "about", "their", "them", "then", "there", "some",
+    "any", "such", "than", "other", "after", "before", "over", "only", "both", "more",
+    # Malayalam common scaffolding words
+    "oru", "ulla", "aayi", "aanu", "aayal", "athayath", "ennaal", "ithil", "ithu", 
+    "ivide", "athinu", "nammal", "namukku", "kando", "nokkoo", "sreddhikkoo", "paranjaal",
+    "pinne", "angane", "engil", "athukond", "appol", "ini", "cheytha", "cheythu"
+}
+
+ORDINAL_CUES = [
+    ["1", "first", "one", "aadyam", "onnamathathu", "onnamathe"],
+    ["2", "second", "two", "randamathathu", "randamathe", "aduthathayi"],
+    ["3", "third", "three", "moonnamathathu", "moonnamathe"],
+    ["4", "fourth", "four", "naalaamathathu", "naalaamathe"],
+    ["5", "fifth", "five", "anjaamathathu", "anjaamathe"],
+    ["6", "sixth", "six", "aaraamathathu", "aaraamathe"]
+]
+
+def extract_element_keywords(element: Any, index: Optional[int] = None) -> List[str]:
+    """
+    Universally extracts acoustic search keywords directly from any visual element
+    (card, row, step, rule, etc.).
+    Collects text fields, converts numbers into spoken currency tokens (e.g. 1600000 -> 16, 16l, lakhs),
+    filters stopwords, and appends ordinal cues if index is given.
+    """
+    tokens = []
+    if isinstance(element, dict):
+        text_fields = ["badge", "title", "label", "particulars", "sub", "text", "heading", "body", "status", "speaker", "name", "role", "kicker"]
+        for k in text_fields:
+            val = element.get(k)
+            if val and isinstance(val, str):
+                tokens.extend(re.sub(r'[^a-zA-Z0-9 ]', ' ', val).split())
+
+        for num_key in ["amount", "val", "value", "cost", "sale_val", "gain_val"]:
+            v = element.get(num_key)
+            if v is not None and isinstance(v, (int, float)) and v != 0:
+                abs_v = abs(int(v))
+                tokens.append(str(abs_v))
+                if abs_v >= 100000 and abs_v % 100000 == 0:
+                    lakhs = abs_v // 100000
+                    tokens.append(f"{lakhs}")
+                    tokens.append(f"{lakhs}l")
+                    tokens.append("lakhs")
+                    tokens.append("lakh")
+                elif abs_v >= 1000 and abs_v % 1000 == 0:
+                    k_val = abs_v // 1000
+                    tokens.append(f"{k_val}k")
+                    tokens.append(f"{k_val}")
+    elif isinstance(element, str):
+        tokens.extend(re.sub(r'[^a-zA-Z0-9 ]', ' ', element).split())
+
+    keywords = []
+    for t in tokens:
+        w = t.lower().strip()
+        if not w or w in COMMON_STOPWORDS:
+            continue
+        if len(w) >= 4 or w.isdigit() or w in ["54", "54g", "50", "45", "54f", "54ec", "112", "111a", "stcg", "ltcg", "wdv", "cost", "sale", "gain", "land", "tax", "ay", "fy", "pgbp", "ifos"]:
+            keywords.append(w)
+
+    if index is not None and 0 <= index < len(ORDINAL_CUES):
+        keywords.extend(ORDINAL_CUES[index])
+
+    seen = set()
+    result = []
+    for kw in keywords:
+        if kw not in seen:
+            seen.add(kw)
+            result.append(kw)
+    return result
+
 def find_first_word_offset(words: List[Dict[str, Any]], keywords: List[str], min_time: float = 0.0, default_offset: float = 1.0) -> float:
     """
     Finds the start timestamp of the first word matching any keyword occurring at or after min_time.
@@ -104,6 +177,7 @@ def align_screenplay_to_measured_audio(
     Takes a screenplay structure and measured Whisper transcripts for each beat,
     re-anchors all beat start/end times and layout-specific visual elements to
     exact acoustic seconds sequentially, and returns the voice-synchronized screenplay.
+    Uses dynamic keyword extraction from whatever visual elements Gemini created.
     """
     beats = screenplay.get("beats", [])
     current_time = 0.0
@@ -129,13 +203,13 @@ def align_screenplay_to_measured_audio(
         if "title" in b and isinstance(b["title"], dict):
             b["title"]["at"] = round(b_start + 0.3, 2)
 
+        cursor = 0.5
+
         # 1. FORK LAYOUT ALIGNMENT
         if layout == "fork":
-            cursor = 0.5
             if "intro_cards" in b and isinstance(b["intro_cards"], list):
                 for i, ic in enumerate(b["intro_cards"]):
-                    combined = f"{ic.get('badge', '')} {ic.get('title', '')} {ic.get('sub', '')}".lower()
-                    kw = [w for w in re.sub(r'[^a-zA-Z0-9 ]', '', combined).split() if len(w) > 3 and w not in ["with", "from", "that", "this", "also", "unit"]]
+                    kw = extract_element_keywords(ic, index=i)
                     off = find_first_word_offset(words, kw, min_time=cursor, default_offset=1.5 + i * 4.5)
                     ic["at"] = round(b_start + off, 2)
                     cursor = max(cursor + 0.5, off + 0.4)
@@ -143,12 +217,8 @@ def align_screenplay_to_measured_audio(
             first_step_time = None
             if "story_steps" in b and isinstance(b["story_steps"], list):
                 for i, st in enumerate(b["story_steps"]):
-                    combined = f"{st.get('badge', '')} {st.get('title', '')} {st.get('sub', '')}".lower()
-                    specific_kw = []
-                    for specific in ["land", "building", "plant", "machinery", "furniture", "first", "second", "third", "fourth"]:
-                        if specific in combined:
-                            specific_kw.append(specific)
-                    off = find_first_word_offset(words, specific_kw, min_time=cursor, default_offset=dur * (i + 1) / (len(b["story_steps"]) + 1))
+                    kw = extract_element_keywords(st, index=i)
+                    off = find_first_word_offset(words, kw, min_time=cursor, default_offset=dur * (i + 1) / (len(b["story_steps"]) + 1))
                     st["at"] = round(b_start + off, 2)
                     if first_step_time is None:
                         first_step_time = st["at"]
@@ -159,27 +229,38 @@ def align_screenplay_to_measured_audio(
                     ic["out_at"] = round(first_step_time - 0.4, 2)
 
             if "divider" in b and isinstance(b["divider"], dict):
-                div_kw = ["classification", "filter", "scope", "specified", "eligible"]
+                div_kw = extract_element_keywords(b["divider"]) + ["classification", "filter", "scope", "division", "category", "specified", "eligible"]
                 off = find_first_word_offset(words, div_kw, min_time=cursor, default_offset=dur * 0.75)
                 b["divider"]["at"] = round(b_start + off, 2)
                 cursor = max(cursor + 0.5, off + 0.4)
 
             if "branches" in b and isinstance(b["branches"], list):
-                for br in b["branches"]:
-                    br_side = br.get("side", "")
-                    base_kw = ["eligible", "qualify", "specified", "land", "building"] if br_side == "left" else ["furniture", "ineligible", "nonspecified", "fixtures", "office"]
-                    br_off = find_first_word_offset(words, base_kw, min_time=cursor, default_offset=dur * 0.85 if br_side == "left" else dur * 0.90)
+                for i, br in enumerate(b["branches"]):
+                    br_kw = extract_element_keywords(br, index=i)
+                    br_off = find_first_word_offset(words, br_kw, min_time=cursor, default_offset=dur * 0.82 + i * 1.5)
                     br["at"] = round(b_start + br_off, 2)
                     cursor = max(cursor + 0.5, br_off + 0.4)
                     for j, f in enumerate(br.get("facts", [])):
-                        f["at"] = round(b_start + br_off + 0.4 + j * 1.0, 2)
+                        f_kw = extract_element_keywords(f)
+                        f_off = find_first_word_offset(words, f_kw, min_time=cursor, default_offset=br_off + 0.4 + j * 1.0)
+                        f["at"] = round(b_start + f_off, 2)
+                        cursor = max(cursor + 0.4, f_off + 0.3)
                     if "outcome" in br and isinstance(br["outcome"], dict):
-                        br["outcome"]["at"] = round(b_start + br_off + 0.8 + len(br.get("facts", [])) * 0.7, 2)
+                        out_kw = extract_element_keywords(br["outcome"])
+                        out_off = find_first_word_offset(words, out_kw, min_time=cursor, default_offset=br_off + 1.2)
+                        br["outcome"]["at"] = round(b_start + out_off, 2)
+                        cursor = max(cursor + 0.4, out_off + 0.3)
 
             if "result_card" in b and isinstance(b["result_card"], dict):
-                res_kw = ["trap", "mark", "exclude", "furniture", "result", "isolated"]
+                res_kw = extract_element_keywords(b["result_card"]) + ["trap", "alert", "mark", "exclude", "result", "isolated"]
                 res_off = find_first_word_offset(words, res_kw, min_time=cursor, default_offset=dur * 0.92)
                 b["result_card"]["at"] = round(b_start + res_off, 2)
+                cursor = max(cursor + 0.4, res_off + 0.3)
+
+            if "example" in b and isinstance(b["example"], dict):
+                ex_kw = extract_element_keywords(b["example"])
+                ex_off = find_first_word_offset(words, ex_kw, min_time=cursor, default_offset=dur * 0.85)
+                b["example"]["at"] = round(b_start + ex_off, 2)
 
         # 2. STATUTE QUOTE LAYOUT ALIGNMENT
         elif layout == "statute_quote":
@@ -187,83 +268,91 @@ def align_screenplay_to_measured_audio(
                 b["quote"]["at"] = round(b_start + 0.5, 2)
 
             if "context_bubble" in b and isinstance(b["context_bubble"], dict):
-                bub_kw = ["year", "years", "transfer", "within", "window", "date", "period"]
-                bub_off = find_first_word_offset(words, bub_kw, min_time=2.0, default_offset=dur * 0.6)
+                bub_kw = extract_element_keywords(b["context_bubble"]) + ["year", "years", "transfer", "within", "window", "date", "period"]
+                bub_off = find_first_word_offset(words, bub_kw, min_time=1.8, default_offset=dur * 0.6)
                 b["context_bubble"]["at"] = round(b_start + bub_off, 2)
+                cursor = max(cursor + 0.5, bub_off + 0.4)
 
             if "sale_card" in b and isinstance(b["sale_card"], dict):
-                b["sale_card"]["at"] = round(b_start + 0.6, 2)
+                sc_kw = extract_element_keywords(b["sale_card"])
+                sc_off = find_first_word_offset(words, sc_kw, min_time=cursor, default_offset=0.8)
+                b["sale_card"]["at"] = round(b_start + sc_off, 2)
+                cursor = max(cursor + 0.5, sc_off + 0.4)
+
+            if "example" in b and isinstance(b["example"], dict):
+                ex_kw = extract_element_keywords(b["example"])
+                ex_off = find_first_word_offset(words, ex_kw, min_time=cursor, default_offset=dur * 0.7)
+                b["example"]["at"] = round(b_start + ex_off, 2)
 
         # 3. METER LAYOUT ALIGNMENT
         elif layout == "meter":
-            cursor = 0.5
             if "breakdown" in b and isinstance(b["breakdown"], list):
                 for i, it in enumerate(b["breakdown"]):
-                    lbl = it.get("label", "").lower()
-                    kw = []
-                    for term in ["land", "building", "plant", "machinery", "furniture"]:
-                        if term in lbl:
-                            kw.append(term)
-                    if not kw:
-                        kw = [w for w in lbl.split() if len(w) > 3]
+                    kw = extract_element_keywords(it, index=i)
                     off = find_first_word_offset(words, kw, min_time=cursor, default_offset=dur * (i + 1) / (len(b["breakdown"]) + 2))
                     it["at"] = round(b_start + off, 2)
                     cursor = max(cursor + 0.5, off + 0.4)
 
             if "meter_display" in b and isinstance(b["meter_display"], dict):
-                tot_kw = ["total", "pool", "29", "twenty", "lakhs", "lacs"]
+                tot_kw = extract_element_keywords(b["meter_display"]) + ["total", "pool", "ceiling", "threshold", "qualifying", "eligible", "lakhs", "lacs"]
                 tot_off = find_first_word_offset(words, tot_kw, min_time=cursor, default_offset=dur * 0.55)
                 b["meter_display"]["at"] = round(b_start + tot_off, 2)
+                cursor = max(cursor + 0.4, tot_off + 0.3)
 
             if "outcome" in b and isinstance(b["outcome"], dict):
-                out_kw = ["pool", "eligible", "set", "off", "stcg", "ltcg"]
+                out_kw = extract_element_keywords(b["outcome"]) + ["pool", "eligible", "set", "off", "stcg", "ltcg", "result", "benefit"]
                 out_off = find_first_word_offset(words, out_kw, min_time=cursor, default_offset=dur * 0.8)
                 b["outcome"]["at"] = round(b_start + out_off, 2)
+                cursor = max(cursor + 0.4, out_off + 0.3)
 
             if "padlock" in b and isinstance(b["padlock"], dict):
                 b["padlock"]["at"] = round(b_start + dur * 0.85, 2)
 
+            if "example" in b and isinstance(b["example"], dict):
+                ex_kw = extract_element_keywords(b["example"])
+                ex_off = find_first_word_offset(words, ex_kw, min_time=cursor, default_offset=dur * 0.88)
+                b["example"]["at"] = round(b_start + ex_off, 2)
+
         # 4. LEDGER LAYOUT ALIGNMENT
         elif layout == "ledger":
-            cursor = 0.5
             rows = b.get("ledger_rows", []) or b.get("rows", [])
             for i, r in enumerate(rows):
-                lbl = (r.get("label", "") or r.get("particulars", "")).lower()
-                kw = []
-                for term in ["building", "plant", "machinery", "deemed", "30", "zero", "land", "ltcg", "125", "balance", "furniture"]:
-                    if term in re.sub(r'[^a-zA-Z0-9]', '', lbl):
-                        kw.append(term)
-                if not kw:
-                    kw = [w for w in re.sub(r'[^a-zA-Z0-9 ]', '', lbl).split() if len(w) > 3 and w not in ["less", "total", "under", "with", "from"]]
+                kw = extract_element_keywords(r, index=i)
                 off = find_first_word_offset(words, kw, min_time=cursor, default_offset=dur * (i + 1) / (len(rows) + 2))
                 r["at"] = round(b_start + off, 2)
                 cursor = max(cursor + 0.4, off + 0.3)
 
             tot_obj = b.get("net_total") or b.get("total")
             if tot_obj and isinstance(tot_obj, dict):
-                tot_kw = ["total", "taxable", "result", "2", "two", "amount"]
+                tot_kw = extract_element_keywords(tot_obj) + ["total", "taxable", "result", "net", "amount", "gain", "remainder"]
                 tot_off = find_first_word_offset(words, tot_kw, min_time=cursor, default_offset=dur * 0.92)
                 tot_obj["at"] = round(b_start + tot_off, 2)
+                cursor = max(cursor + 0.4, tot_off + 0.3)
 
             if "callout" in b and isinstance(b["callout"], dict):
                 b["callout"]["at"] = round(b_start + 1.2, 2)
 
         # 5. TAKEAWAY LAYOUT ALIGNMENT
         elif layout == "takeaway":
-            cursor = 0.5
             rules = b.get("rules", []) or b.get("points", [])
             for i, r in enumerate(rules):
                 if isinstance(r, dict):
-                    num = str(r.get("num", i + 1))
-                    kw_map = {
-                        "1": ["first", "one", "furniture", "strict"],
-                        "2": ["second", "two", "50", "deemed", "stcg"],
-                        "3": ["third", "three", "30", "wipe", "beneficial", "minimize"]
-                    }
-                    kw = kw_map.get(num[-1:], [num])
+                    kw = extract_element_keywords(r, index=i)
                     off = find_first_word_offset(words, kw, min_time=cursor, default_offset=dur * (i + 1) / (len(rules) + 1))
                     r["at"] = round(b_start + off, 2)
                     cursor = max(cursor + 0.5, off + 0.4)
+
+        # 6. UNIVERSAL FALLBACK FOR OTHER LAYOUTS (timeline, split, compare, checklist)
+        else:
+            for sub_key in ["cards", "items", "nodes", "columns", "tags"]:
+                arr = b.get(sub_key)
+                if isinstance(arr, list):
+                    for i, it in enumerate(arr):
+                        if isinstance(it, dict):
+                            kw = extract_element_keywords(it, index=i)
+                            off = find_first_word_offset(words, kw, min_time=cursor, default_offset=dur * (i + 1) / (len(arr) + 1))
+                            it["at"] = round(b_start + off, 2)
+                            cursor = max(cursor + 0.4, off + 0.3)
 
     screenplay["duration_sec"] = round(current_time, 2)
     return screenplay

@@ -22,230 +22,174 @@ from pipeline.key_rotator import rotator, AllKeysQuotaExhaustedError
 from google import genai
 from google.genai import types
 
-PEDAGOGICAL_PROMPT = """You are a senior, beloved CA Final Tax Professor and Visual Explainer Architect for Indian Direct Tax.
-Your student needs to master this complex statutory provision.
+PEDAGOGICAL_PROMPT = """You are a senior, beloved CA Final Tax Professor and Visual Explainer Architect for Indian Direct Tax and Indirect Tax.
+Your student needs to master the statutory provision and solve the legal issue presented in this question.
 
-Question/Context:
+Context / Question:
 {question_text}
 
-Answer/Statutory Solution:
+Answer / Statutory Solution:
 {answer_text}
 
 Statutory Matrix:
 {provision_matrix}
 
 ========================================================================================
-CRITICAL PEDAGOGICAL RULE 1: CREATE A DISTINCT, COMPLETE STORY EXAMPLE
+CRITICAL PEDAGOGICAL RULE 1: CREATE A DISTINCT, COMPLETE PEDAGOGICAL EXAMPLE STORY
 ========================================================================================
 - DO NOT reuse the exact names or identical figures from the exam question!
-- Create a distinct, memorable persona / enterprise (e.g. 'Apex Engineering Ltd', 'Rajesh / Zenith Textiles', 'Kavya Motors').
-- Use different realistic amounts and years that mirror the legal principles of the section.
-- For Section 54G, include 4 distinct assets sold (Land, Building, Plant & Machinery, Furniture) and new assets acquired in the non-urban area.
+- Create a distinct, memorable persona / enterprise (e.g. 'Apex Engineering Ltd', 'Rajesh / Zenith Textiles', 'Kavya Motors', 'Anand Agro Products', etc.).
+- Invent a concrete, realistic case scenario with specific figures, assets/transactions, and dates that reflect the core legal dispute or statutory mechanism of the section.
+- Every situation and number used in your example must be mathematically coherent and legally precise.
 
 ========================================================================================
 CRITICAL PEDAGOGICAL RULE 2: FIRST JOB OF PRESENTATION IS A COMPLETE OVERVIEW UPFRONT (BEAT 1)
 ========================================================================================
-- The FIRST BEAT (Beat 1) MUST provide a complete, crystal-clear overview of the entire story example!
-- Every amount and situation MUST be laid out transparently right upfront:
-  * Who is the assessee and what is the situation (e.g. Shifting industrial undertaking from urban corporation limits to rural non-urban area)?
-  * EVERY asset sold, including Sale Proceeds and WDV/Cost:
-    - Land (Long-term non-depreciable asset)
-    - Building (Depreciable asset u/s 50)
-    - Plant & Machinery (Depreciable asset u/s 50)
-    - Furniture (Depreciable asset, but strictly excluded from Section 54G!)
-  * EVERY new asset acquired in the non-urban area (Land, Building, Plant & Machinery, Furniture).
+- Beat 1 MUST provide a complete, crystal-clear overview of the entire story example!
+- Every amount, asset, date, and factual situation MUST be laid out transparently right upfront:
+  * Who is the assessee and what is their business/situation?
+  * What is the core transaction or event triggering the tax provision?
+  * What are all the relevant assets, figures, considerations, costs, or turnover numbers involved?
+  * What is the classification or statutory filter (e.g., eligible vs ineligible, business vs capital, taxable vs exempt)?
 - The student must see the full financial and factual chessboard before diving into statutory analysis!
 
 ========================================================================================
 CRITICAL PEDAGOGICAL RULE 3: TEACH THE STATUTORY PROVISION STEP-BY-STEP USING THE EXAMPLE
 ========================================================================================
-Follow a logical 5-beat sequential journey:
-- Beat 1 ("fork"): COMPLETE FACT OVERVIEW & ASSET FILTER
-  Lay out the complete story scenario and separate the 3 Eligible Specified Assets (Land, Building, Plant & Machinery) from the 1 Ineligible Non-Specified Asset (Furniture & Fixtures).
-- Beat 2 ("statute_quote"): STATUTORY MANDATE & TIME HORIZON GATE
-  Show Section 54G(1) statutory conditions: Transfer of industrial undertaking from urban area + Reinvestment window (within 1 year before or 3 years after the date of transfer). Verify that the example's acquisition satisfies this window!
-- Beat 3 ("meter"): REINVESTMENT POOL & ELIGIBILITY CEILING
-  Compute the Eligible Reinvestment Pool (Land + Building + Plant acquired; Furniture strictly excluded).
-- Beat 4 ("ledger"): STEP-BY-STEP COMPUTATION & THE GOLDEN OPTIMIZATION TRICK
-  Step-by-step computation of capital gains:
-  * Building STCG u/s 50
-  * Plant & Machinery STCG u/s 50
-  * Total Deemed STCG eligible for Section 54G
-  * Less: Section 54G Exemption Priority 1 (Against 30% STCG)
-  * Net STCG = Nil
-  * Land LTCG (Sale − Cost)
-  * Less: Balance Section 54G Exemption
-  * Taxable LTCG on Land (12.5% u/s 112)
-  * Furniture STCG (Sale − WDV) [No Section 54G exemption!]
-  CRITICAL TEACHER INSIGHT: Explain the Golden Optimization Trick via a callout banner:
-  "The statute does NOT compel pro-rata apportionment! The assessee can exhaust the deduction in the most beneficial manner. Always exhaust Section 54G against 30% Short-Term Capital Gains first before offsetting 12.5% Long-Term Capital Gains!"
-  Calculate the Net Taxable Capital Gains!
-- Beat 5 ("takeaway"): 3 GOLDEN EXAM RULES
-  Summarize the 3 non-negotiable statutory doctrines for CA Final exams:
-  01: Strict Asset Basket (Furniture strictly excluded from sale and reinvestment)
-  02: Section 50 Deemed STCG is fully eligible for Section 54G exemption
-  03: Most Beneficial Set-Off Priority (wiping out higher tax bracket STCG first)
+Organize the lecture into 4 to 6 logical sequential beats matching the statutory architecture:
+- Beat 1 ("fork"): COMPLETE FACT OVERVIEW & ASSET / TRANSACTION FILTER
+  Lay out the complete story scenario and separate the qualifying elements from the non-qualifying elements.
+  Must include `intro_cards` for the opening narrative, followed by sequential `story_steps` for each transaction/asset, and classification `branches`.
+- Beat 2 ("statute_quote" or "checklist" or "case_card"): STATUTORY MANDATE & CONDITIONS GATE
+  Show the governing statutory section, sub-section, or legal conditions/time limits (e.g. reinvestment window, holding period, condition tests).
+- Beat 3 ("meter" or "compare"): ELIGIBILITY CEILING / STATUTORY THRESHOLD / QUALIFYING POOL
+  If there is a numerical limit, cap, threshold, or qualifying investment pool, visualize the gauge/bar with breakdown items.
+- Beat 4 ("ledger"): STEP-BY-STEP MATHEMATICAL COMPUTATION & TAX OPTIMIZATION INSIGHT
+  Show the step-by-step arithmetic computation of taxable amounts/deductions/exemptions with row-by-row breakdown and a total row. Include a callout banner highlighting the golden exam optimization trick or key legal interpretation.
+- Beat 5 ("takeaway"): 3 GOLDEN EXAM RULES / DOCTRINES
+  Summarize the 3 non-negotiable statutory principles or exam traps the student must remember for CA Final/Inter exams.
 
 ========================================================================================
-CRITICAL PEDAGOGICAL RULE 4: STRICT 1:1 VOICE-TO-SCREEN CORRESPONDENCE
+CRITICAL PEDAGOGICAL RULE 4: STRICT 1:1 VOICE-TO-SCREEN CORRESPONDENCE (UNIVERSAL LAW)
 ========================================================================================
 - WHATEVER IS SPOKEN IN voice_sync_text MUST BE SHOWN ON SCREEN IN DIRECT 1:1 CORRESPONDENCE!
-- When the teacher mentions an asset, an amount, a condition, or a rule, that element MUST appear visually on screen.
-- Never mention numbers or facts in voice that are missing from the visual layout!
-- Provide a callout banner or note during verbal explanations so the screen is never dead or unaligned.
+- When the teacher mentions an asset, an amount, a condition, a date, or a rule, that element MUST appear visually on screen.
+- NEVER mention numbers, facts, or entities in voice that are missing from the visual layout!
+- NEVER speak for more than 5 seconds without an animated visual element popping up!
+- In Beat 1 ("fork"), include 2 to 3 "intro_cards" that pop up sequentially when the teacher speaks the opening setup sentences:
+  * Card 1: Statutory Focus / Core Provision (e.g. Section and subject)
+  * Card 2: Assessee Persona / Enterprise Setup (e.g. Assessee name and business context)
+  * Card 3: Transaction / Event Trigger (e.g. Event date, nature of sale/transfer/deal)
+  Set "out_at" to exit right before the specific asset cards in story_steps begin!
 
-========================================================================================
 ========================================================================================
 CRITICAL PEDAGOGICAL RULE 5: AUTHENTIC, WARM MALAYALAM TEACHER DIALOGUE (NATURAL MANGLISH)
 ========================================================================================
-- The voice MUST sound like a REAL, ENERGETIC, PASSIONATE KERALA CA FACULTY teaching in a live CA Final classroom!
-- DO NOT generate robotic, awkward, or machine-translated Malayalam sentences.
-- NEVER use clumsy translated words like 'tanted', 'athinukku', 'conditions fill cheyyan', or 'decide cheythu'.
-- AVOID typos: use 'athayath' (NOT 'ithathayath'), 'ormavekkoo' (NOT 'ormathoykkoo'), 'taxable aanu' (NOT 'taxable aane'), 'vaangiya' / 'purchase cheytha' (NOT 'purchase chethya').
-- USE NATURAL, IDIOMATIC SPOKEN CLASSROOM MALAYALAM WITH SEQUENTIAL ASSET CUES:
-  * "Students, welcome back! Namukku Section 54G Capital Gains Exemption crystal clear aayi padikkaam. Oru practical case study nokkoo: Apex Engineering Limited urban corporation limit-il ninnum non-urban rural area-yilekku factory shift cheyyan theerumaanikkunnu."
-  * "Shifting-inte bhaagamaayi March 2026-il company 4 assets sell cheythu. Kando:
-     Onnamathathu, Land: sale consideration Rs 20 Lakhs, cost of acquisition Rs 15 Lakhs, appol Long-term Capital Gain Rs 5 Lakhs!
-     Randamathathu, Factory Building: sale proceeds Rs 25 Lakhs, WDV Rs 9 Lakhs, Section 50 prakaram Deemed Short-term Capital Gain Rs 16 Lakhs!
-     Moonnamathathu, Plant & Machinery: sale value Rs 18 Lakhs, WDV Rs 9 Lakhs, ithil Deemed Short-term Capital Gain Rs 9 Lakhs!
-     Naalaamathathu, Office Furniture: sale Rs 3 Lakhs, WDV Rs 2 Lakhs, Short-term Capital Gain Rs 1 Lakh!"
-  * "Ippo asset classification filter sreddhikkoo: Land, Building, Plant and Machinery maathrame Section 54G Eligible Specified Assets aayi qualify cheyyoo! Ennaal Furniture non-specified asset aayathinaal athinu exemption labhikkilla!"
-  * "Transfer date-inu shesham verum 4 months-il new assets purchase cheythathinaal ithu 3-year statutory window-kkullil perfect aayi qualify cheyyunnu!"
-  * "Income-tax Act-il pro-rata set-off niyamam illathathinaal 30% slab rate ulla Short-term Capital Gain aadyam wipe out cheythu tax liability minimize cheyyaam!"
-- Keep EVERY statutory term, section, sub-section, asset name, and amount in English Latin script.
-- The delivery must be warm, enthusiastic, engaging, and pedagogically crystal clear.
-
-========================================================================================
-CRITICAL PEDAGOGICAL RULE 6: VISUAL REPRESENTATION OF EVERY SPOKEN ASSET & AMOUNT
-========================================================================================
-- IN BEAT 1 ("fork"): story_steps MUST CONTAIN 4 CARDS SHOWING EVERY ASSET SOLD WITH ITS NUMBERS!
-  * Card 1: Land: Sale, Cost, LTCG
-  * Card 2: Building: Sale, WDV, Deemed STCG
-  * Card 3: Plant & Machinery: Sale, WDV, Deemed STCG
-  * Card 4: Furniture: Sale, WDV, STCG (Flagged as Non-Specified / Ineligible)
-  * Divider: "Asset Classification & Eligibility Filter under Section 54G"
-  * Left Branch: Eligible Specified Assets (Land, Building, Plant & Machinery)
-  * Right Branch: Ineligible Non-Specified Asset (Furniture & Fixtures)
-  * Result Card: Exam Trap Alert (Furniture strictly excluded from Section 54G basket!)
-- IN BEAT 3 ("meter"): breakdown MUST show each new asset acquired with its exact figure!
-- IN BEAT 4 ("ledger"): ledger_rows MUST show the step-by-step math and the Golden Optimization Trick callout!
-- IN BEAT 5 ("takeaway"): rules MUST show the 3 Golden Rules!
-
-========================================================================================
-CRITICAL UNIVERSAL RULE 7: NO SPOKEN LINE WITHOUT AN ANIMATED CARD / VISUAL ELEMENT
-========================================================================================
-- NEVER leave a spoken sentence or paragraph without a dedicated visual element on screen!
-- If the teacher speaks 3 introductory sentences before the asset breakdown, THERE MUST BE 3 DEDICATED INTRO CARDS ("intro_cards") THAT POP UP SEQUENTIALLY AS EACH LINE IS SPOKEN!
-- NEVER speak for 10, 15, or 25 seconds with only a static title or a single card!
-- When introducing a case study or practical scenario in Beat 1 ("fork"), include "intro_cards":
-  * Card 1: Statutory Core Provision / Scope (pops up when teacher introduces the section)
-  * Card 2: Case Setup & Relocation Path (pops up when teacher explains the company / situation)
-  * Card 3: Transaction / Shifting Event (pops up when teacher explains the transfer event)
-  * Set "out_at" right before the specific asset cards in story_steps begin!
+- Sound like a REAL, ENERGETIC, PASSIONATE KERALA CA FACULTY teaching in a live CA Final classroom!
+- Natural Manglish code-switching: Friendly Malayalam teacher scaffolding with standard English legal/tax terminology.
+- MANDATORY LANGUAGE RULES:
+  * SECTIONS & PROVISIONS: In English ('Section 54G', 'Section 50', 'Section 45(2)'). Never transliterate into Malayalam script.
+  * DATES & YEARS: In English ('1st April 2001', 'Assessment Year 2026-27', 'Financial Year 2025-26', 'March 2026'). Never translate dates into Malayalam words.
+  * TAX & FINANCIAL TERMS: In English ('Capital Gains', 'Short-term Capital Gain', 'Long-term Capital Gain', 'Written Down Value', 'Sale Consideration', 'Cost of Acquisition', 'Exemption', 'Deduction', 'Turnover').
+  * SEQUENTIAL ORDINAL CUES: Use natural Malayalam ordinal markers to cleanly introduce each asset or step:
+    'Onnamathathu...', 'Randamathathu...', 'Moonnamathathu...', 'Naalaamathathu...', or 'Aadyam...', 'Aduthathayi...', 'Avasanam...'
+  * NO ROBOTIC OR BROKEN WORDS: Use 'athayath' (NOT 'ithathayath'), 'ormavekkoo' (NOT 'ormathoykkoo'), 'taxable aanu' (NOT 'taxable aane'), 'vaangiya' / 'purchase cheytha' (NOT 'purchase chethya').
 
 ========================================================================================
 OUTPUT FORMAT: PURE JSON
 ========================================================================================
 Return STRICT VALID JSON matching this exact structure:
 {{
-  "context_pill": "Section 54G | Shifting of Industrial Undertaking",
+  "context_pill": "Section Name | Topic Name",
   "beats": [
     {{
       "id": "b1",
       "layout": "fork",
-      "voice_sync_text": "Students, welcome back! Namukku Section 54G Capital Gains Exemption crystal clear aayi padikkaam. Oru practical case study nokkoo: Apex Engineering Limited urban corporation limit-il ulla thangalude factory oru non-urban rural area-yilekku shift cheyyaan theerumaanikkunnu. Shifting-inte bhaagamaayi March 2026-il company 4 assets sell cheythu. Kando: Onnamathathu, Land, sale consideration Rs 20 Lakhs, cost of acquisition Rs 15 Lakhs, so Long-term Capital Gain Rs 5 Lakhs. Randamathathu, Factory Building, sale proceeds Rs 25 Lakhs, Written Down Value Rs 9 Lakhs, so Section 50 prakaram Deemed Short-term Capital Gain Rs 16 Lakhs. Moonnamathathu, Plant & Machinery, sale value Rs 18 Lakhs, Written Down Value Rs 9 Lakhs, so Short-term Capital Gain Rs 9 Lakhs. Naalaamathathu, Furniture, sale Rs 3 Lakhs, Written Down Value Rs 2 Lakhs, so Short-term Capital Gain Rs 1 Lakh. Ippo asset classification filter nokkoo: Section 54G prakaram Land, Building, and Plant & Machinery maathrame Eligible Specified Assets aayi qualify cheyyoo! Ennaal Furniture non-specified asset aayathukond athinu Section 54G exemption oru kaaranavashaalum labhikkilla!",
-      "title": {{"text": "Asset Eligibility Filter under Section 54G"}},
+      "voice_sync_text": "Malayalam teacher narration text introducing the section, the example assessee, each asset/transaction sequentially with ordinal cues, and the classification filter...",
+      "title": {{"text": "Complete Scenario Overview & Eligibility Filter"}},
       "intro_cards": [
-        {{"badge": "Statutory Focus", "title": "Section 54G Exemption", "sub": "Capital Gains on Shifting of Industrial Undertaking from Urban Area", "at": 2.5, "out_at": 28.0}},
-        {{"badge": "Case Study Setup", "title": "Apex Engineering Ltd", "sub": "Relocating Factory: Urban Corporation Limits ➔ Non-Urban Rural Area", "at": 8.5, "out_at": 28.0}},
-        {{"badge": "Relocation Transfer", "title": "4 Assets Transferred", "sub": "March 2026: Land, Building, Plant & Machinery, and Office Furniture Sold", "at": 21.0, "out_at": 28.0}}
+        {{"badge": "Statutory Focus", "title": "Section Name", "sub": "Core Legal Provision", "at": 2.5, "out_at": 25.0}},
+        {{"badge": "Case Study Setup", "title": "Assessee Name", "sub": "Business / Scenario Context", "at": 8.0, "out_at": 25.0}},
+        {{"badge": "Transfer / Trigger Event", "title": "Event Details", "sub": "Transaction Summary & Assets Involved", "at": 18.0, "out_at": 25.0}}
       ],
       "story_steps": [
-        {{"badge": "Asset 1: Land", "title": "Sale: Rs 20L | Cost: Rs 15L", "sub": "Long-term Capital Gain: Rs 5 Lakhs", "val": 500000}},
-        {{"badge": "Asset 2: Building", "title": "Sale: Rs 25L | WDV: Rs 9L", "sub": "Deemed STCG u/s 50: Rs 16 Lakhs", "val": 1600000}},
-        {{"badge": "Asset 3: Plant & Mach.", "title": "Sale: Rs 18L | WDV: Rs 9L", "sub": "Deemed STCG u/s 50: Rs 9 Lakhs", "val": 900000}},
-        {{"badge": "Asset 4: Furniture", "title": "Sale: Rs 3L | WDV: Rs 2L", "sub": "STCG: Rs 1 Lakh (Non-Specified)", "val": 100000}}
+        {{"badge": "Step 1: Item Name", "title": "Sale: Rs X | Cost/WDV: Rs Y", "sub": "Gain / Legal Status: Rs Z", "val": 100000}},
+        {{"badge": "Step 2: Item Name", "title": "Sale: Rs X | Cost/WDV: Rs Y", "sub": "Gain / Legal Status: Rs Z", "val": 200000}}
       ],
-      "divider": {{"text": "Asset Classification & Eligibility Filter under Section 54G"}},
+      "divider": {{"text": "Eligibility Classification / Legal Division"}},
       "branches": [
-        {{"side": "left", "label": "Eligible Specified Assets", "facts": [{{"text": "Land, Building, Plant & Machinery"}}, {{"text": "Total Qualifying Gains: Rs 30 Lakhs"}}, {{"text": "Qualifies for Section 54G Exemption"}}], "outcome": {{"text": "Eligible for Section 54G Exemption"}}}},
-        {{"side": "right", "label": "Ineligible Non-Specified Asset", "facts": [{{"text": "Office Furniture & Fixtures"}}, {{"text": "Excluded from Section 54G Definition"}}, {{"text": "Neither transfer nor reinvestment qualifies"}}], "outcome": {{"text": "No Exemption! Full STCG Taxable"}}}}
+        {{"side": "left", "label": "Qualifying / Eligible Branch", "facts": [{{"text": "Qualifying items/conditions"}}, {{"text": "Qualifying totals"}}], "outcome": {{"text": "Eligible for Benefit / Exemption"}}}},
+        {{"side": "right", "label": "Ineligible / Excluded Branch", "facts": [{{"text": "Ineligible items"}}, {{"text": "Statutory exclusion rule"}}], "outcome": {{"text": "Ineligible / Taxable"}}}}
       ],
-      "result_card": {{"badge": "Exam Trap Alert", "title": "Furniture Strictly Excluded", "sub": "Furniture is strictly excluded from Section 54G exemption basket!"}}
+      "result_card": {{"badge": "Exam Trap Alert", "title": "Critical Exclusion / Rule", "sub": "Why the excluded item fails statutory test"}}
     }},
     {{
       "id": "b2",
       "layout": "statute_quote",
-      "voice_sync_text": "Malayalam teacher narration text for beat 2 explaining the statutory mandate and reinvestment window...",
-      "title": {{"text": "Statutory Mandate & Reinvestment Window u/s 54G(1)"}},
+      "voice_sync_text": "Malayalam teacher narration explaining the statutory text, conditions, and time horizon...",
+      "title": {{"text": "Statutory Mandate & Conditions u/s ..."}},
       "quote": {{
-        "text": "Where the capital gain arises from the transfer of a capital asset, being plant, machinery, land or building or any rights in building or land, used for the purpose of an industrial undertaking situated in an urban area... and the assessee has within a period of one year before or three years after the date on which the transfer took place purchased new machinery or plant or acquired building or land...",
-        "citation": "Section 54G(1) of the Income-tax Act, 1961",
-        "emphasis": "plant, machinery, land or building... 1 year before or 3 years after"
+        "text": "Exact statutory wording or core legal provision...",
+        "citation": "Section ... of the Income-tax Act, 1961",
+        "emphasis": "key condition or time period in the quote"
       }},
       "context_bubble": {{
-        "badge": "Statutory Reinvestment Window",
-        "speaker": "Section 54G(1)",
-        "theme": "Time Horizon Condition",
-        "text": "Reinvestment Window: 1 Year Before or 3 Years After Transfer Date"
+        "badge": "Statutory Condition",
+        "speaker": "Section ...",
+        "theme": "Time Horizon / Gate Condition",
+        "text": "Summary of condition or time window"
       }}
     }},
     {{
       "id": "b3",
       "layout": "meter",
-      "voice_sync_text": "Malayalam teacher narration text for beat 3 calculating the eligible reinvestment pool...",
-      "title": {{"text": "Section 54G Eligible Reinvestment Pool"}},
+      "voice_sync_text": "Malayalam teacher narration calculating the qualifying threshold or reinvestment pool...",
+      "title": {{"text": "Qualifying Pool / Statutory Ceiling"}},
       "meter_display": {{
         "min_val": 0,
-        "max_val": 3500000,
-        "current_val": 3100000,
+        "max_val": 3000000,
+        "current_val": 2500000,
         "unit": "₹",
-        "threshold": 2500000,
-        "labels": {{"start": "₹ 0", "threshold_label": "STCG Threshold: ₹ 25L", "current_label": "Total Eligible Investment: ₹ 31L"}}
+        "threshold": 2000000,
+        "labels": {{"start": "₹ 0", "threshold_label": "Threshold / Cap: ₹ ...", "current_label": "Total Qualifying: ₹ ..."}}
       }},
       "breakdown": [
-        {{"label": "New Land Acquired", "val": 500000, "status": "Qualifies u/s 54G"}},
-        {{"label": "New Building Acquired", "val": 800000, "status": "Qualifies u/s 54G"}},
-        {{"label": "New Plant & Machinery", "val": 1800000, "status": "Qualifies u/s 54G"}},
-        {{"label": "New Furniture Purchased", "val": 300000, "status": "Ineligible (Excluded from 54G)"}}
+        {{"label": "Item 1", "val": 1000000, "status": "Qualifies u/s ..."}},
+        {{"label": "Item 2", "val": 1500000, "status": "Qualifies u/s ..."}},
+        {{"label": "Item 3", "val": 200000, "status": "Ineligible / Excluded"}}
       ],
-      "outcome": {{"text": "Eligible to Set-off against both STCG & LTCG", "tone": "ok"}}
+      "outcome": {{"text": "Statutory Eligibility / Outcome Result", "tone": "ok"}}
     }},
     {{
       "id": "b4",
       "layout": "ledger",
-      "voice_sync_text": "Malayalam teacher narration text for beat 4 explaining the golden optimization trick and computing the taxable gains...",
-      "title": {{"text": "Computation of Taxable Capital Gains for AY 2026-27"}},
+      "voice_sync_text": "Malayalam teacher narration calculating the step-by-step numbers and explaining the golden tax optimization trick...",
+      "title": {{"text": "Computation of Taxable Amount for AY ..."}},
       "callout": {{
         "badge": "Golden Optimization Trick",
-        "text": "Act-il pro-rata set-off niyamam illa: Higher tax bracket Short-term Capital Gain first wipe out cheyyanam!"
+        "text": "Key tax saving principle or set-off priority explained in plain terms"
       }},
       "ledger_rows": [
-        {{"label": "Building STCG u/s 50 (Sale − WDV)", "amount": 1600000, "type": "income"}},
-        {{"label": "Plant & Machinery STCG u/s 50 (Sale − WDV)", "amount": 900000, "type": "income"}},
-        {{"label": "Total Deemed STCG Eligible for Section 54G", "amount": 2500000, "type": "subtotal"}},
-        {{"label": "Less: Section 54G Exemption (Priority 1: Against 30% STCG)", "amount": -2500000, "type": "deduction"}},
-        {{"label": "Net STCG on Industrial Assets", "amount": 0, "type": "subtotal"}},
-        {{"label": "Land LTCG (Sale − Cost)", "amount": 500000, "type": "income"}},
-        {{"label": "Less: Balance Section 54G Exemption", "amount": -400000, "type": "deduction"}},
-        {{"label": "Taxable LTCG on Land (Taxable @ 12.5% u/s 112)", "amount": 100000, "type": "taxable"}},
-        {{"label": "Furniture STCG (Sale − WDV) [No 54G Exemption]", "amount": 100000, "type": "taxable"}}
+        {{"label": "Computation Line 1", "amount": 1000000, "type": "income"}},
+        {{"label": "Less: Exemption / Deduction Priority 1", "amount": -800000, "type": "deduction"}},
+        {{"label": "Net Subtotal", "amount": 200000, "type": "subtotal"}},
+        {{"label": "Taxable Balance @ X%", "amount": 200000, "type": "taxable"}}
       ],
       "net_total": {{
-        "label": "Total Taxable Capital Gains",
+        "label": "Total Taxable Income / Gain",
         "val": 200000,
-        "detail": "Taxable Remainder"
+        "detail": "Final Taxable Amount"
       }}
     }},
     {{
       "id": "b5",
       "layout": "takeaway",
-      "voice_sync_text": "Malayalam teacher narration text for beat 5 giving the 3 Golden Rules...",
-      "title": {{"text": "3 Golden Rules for Section 54G Exam Mastery"}},
+      "voice_sync_text": "Malayalam teacher narration delivering the 3 Golden Rules for exam mastery...",
+      "title": {{"text": "3 Golden Rules for Exam Mastery"}},
       "rules": [
-        {{"num": "01", "heading": "Strict Asset Basket (Furniture Excluded)", "body": "Furniture-nu Section 54G-il sthanamilla. Neither transfer nor reinvestment in Furniture qualifies."}},
-        {{"num": "02", "heading": "Section 50 Deemed STCG is Fully Eligible", "body": "Section 50 prakaram depreciable assets STCG aayal polum, Section 54G exemption valid aanu."}},
-        {{"num": "03", "heading": "Most Beneficial Set-Off Priority", "body": "Tax liability minimize cheyyan deduction aadyam 30% STCG-kk ethireyum, balance 12.5% LTCG-kk ethireyum set-off cheyyam!"}}
+        {{"num": "01", "heading": "First Rule Heading", "body": "First rule description in Malayalam and English"}},
+        {{"num": "02", "heading": "Second Rule Heading", "body": "Second rule description in Malayalam and English"}},
+        {{"num": "03", "heading": "Third Rule Heading", "body": "Third rule description in Malayalam and English"}}
       ]
     }}
   ]
@@ -280,7 +224,9 @@ def generate_pedagogical_screenplay_plan(q_num: int, q_text: str, ans_text: str,
 
         try:
             res = rotator.execute_with_retry(_call)
-            if res and res.get('beats'):
+            if isinstance(res, list):
+                res = {"context_pill": f"Statutory Analysis Q{q_num}", "beats": res}
+            if res and isinstance(res, dict) and res.get('beats'):
                 print(f"  [SCREENPLAY ARCHITECT] Successfully generated screenplay using {model_name}")
                 return res
         except Exception as e:
