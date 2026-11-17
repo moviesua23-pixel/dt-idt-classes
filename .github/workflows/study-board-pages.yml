@@ -34,6 +34,25 @@ jobs:
           python-version: "3.12"
       - name: Bundle screenplays and assemble site
         run: python pipeline/build_site.py --site-dir _site
+      - name: Install Playwright browser for visual checks
+        run: |
+          npm install --no-save --package-lock=false playwright
+          npx playwright install --with-deps chromium
+      - name: Test every question and visual beat
+        env:
+          TARGET_URL: http://127.0.0.1:4173/
+          SCREENSHOT_DIR: test-results/study-board
+        run: |
+          python -m http.server 4173 --directory _site > /tmp/study-board-http.log 2>&1 &
+          echo $! > /tmp/study-board-http.pid
+          node tests/study_board_playwright.js
+      - name: Upload visual regression screenshots
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: study-board-visual-checks
+          path: test-results/study-board/
+          if-no-files-found: ignore
       - name: Configure Pages
         uses: actions/configure-pages@v5
       - name: Upload site artifact

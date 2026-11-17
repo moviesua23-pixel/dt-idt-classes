@@ -5845,7 +5845,8 @@ try {
 }
 
 async function fetchPipelineUpdate() {
-  const endpoints = ["/api/data", "../data/pipeline_questions.json", "./data/pipeline_questions.json", "/data/pipeline_questions.json"];
+  window.__pipelineUpdateLoaded = false;
+  const endpoints = [window.resolveStudyBoardAssetUrl ? window.resolveStudyBoardAssetUrl("data/pipeline_questions.json") : new URL("data/pipeline_questions.json", document.baseURI).href];
   for (const ep of endpoints) {
     try {
       const res = await fetch(ep);
@@ -5860,6 +5861,7 @@ async function fetchPipelineUpdate() {
       }
     } catch(e) {}
   }
+  window.__pipelineUpdateLoaded = true;
 }
 
 window.handleGoogleSheetData = function(json) {
@@ -5972,8 +5974,8 @@ window.handleGoogleSheetData = function(json) {
         try {
           spObj = JSON.parse(screenplayStr);
           if (!window.EXPLAINER_SCREENPLAYS) window.EXPLAINER_SCREENPLAYS = {};
-          window.GENERATED_SCREENPLAYS = window.GENERATED_SCREENPLAYS || {};
-          window.GENERATED_SCREENPLAYS[window.normalizeExplainerQid("", chNum, qNum)] = spObj;
+          window.SHEET_SCREENPLAYS = window.SHEET_SCREENPLAYS || {};
+          window.SHEET_SCREENPLAYS[window.normalizeExplainerQid("", chNum, qNum)] = spObj;
         } catch(e) {
           console.warn("Failed to parse Col 10 screenplay for ch", chNum, "q", qNum, e);
         }
@@ -6021,6 +6023,8 @@ window.handleGoogleSheetData = function(json) {
 function fetchGoogleSheetsLive() {
   const s = document.createElement("script");
   s.src = "https://docs.google.com/spreadsheets/d/14O9I8ZAjnIp8i4SFtM0xZX-y62f5BNtdh25ibSC7ChE/gviz/tq?tqx=responseHandler:handleGoogleSheetData";
+  s.onload = () => { window.__sheetScriptFinished = true; };
+  s.onerror = () => { window.__sheetScriptFinished = true; window.__sheetLoadFailed = true; };
   document.head.appendChild(s);
 }
 
@@ -6898,20 +6902,8 @@ function getScreenplayForQuestion(q, p){
 
 function resolveExplainerAssetUrl(path) {
   if (!path) return '';
-  if (path.startsWith('http') || path.startsWith('data:') || path.startsWith('blob:') || path.startsWith('/')) return path;
-  return window.resolveExplainerAssetUrl ? window.resolveExplainerAssetUrl(path) : new URL(path, document.baseURI).href;
-}
-
-
-/* ==========================================================================
-   STATUTORY EXPLAINER STUDIO ENGINE (WHITE CANVAS & SELECTIVE IMAGERY)
-   ========================================================================== */
-
-
-function resolveExplainerAssetUrl(path) {
-  if (!path) return '';
-  if (/^(https?:|data:|blob:|\\/)/i.test(path)) return path;
-  return window.resolveExplainerAssetUrl ? window.resolveExplainerAssetUrl(path) : new URL(path, document.baseURI).href;
+  if (path.startsWith('http://') || path.startsWith('https://') || path.startsWith('data:') || path.startsWith('blob:') || path.startsWith('/')) return path;
+  return window.resolveStudyBoardAssetUrl ? window.resolveStudyBoardAssetUrl(path) : new URL(path, document.baseURI).href;
 }
 
 window.EXPLAINER_STUDIO_DECKS = {

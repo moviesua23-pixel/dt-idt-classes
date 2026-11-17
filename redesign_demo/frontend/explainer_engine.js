@@ -7,7 +7,7 @@
 
 // Resolve assets from the current page URL so the same page works from a
 // GitHub Pages project subpath, localhost, or the frontend directory.
-window.resolveExplainerAssetUrl = window.resolveExplainerAssetUrl || function(path) {
+window.resolveStudyBoardAssetUrl = window.resolveStudyBoardAssetUrl || function(path) {
   if (!path) return "";
   if (/^(?:https?:|data:|blob:|\/)/i.test(path)) return path;
   const inFrontendFolder = new URL(document.baseURI).pathname.toLowerCase().includes("/frontend/");
@@ -32,7 +32,7 @@ async function loadScreenplayBundle() {
   if (window.EXPLAINER_SCREENPLAYS_BUNDLE_LOADED) return window.EXPLAINER_SCREENPLAYS || {};
   if (!screenplayBundlePromise) screenplayBundlePromise = (async () => {
     try {
-      const url = new URL(window.resolveExplainerAssetUrl("data/screenplays.bundle.json"));
+      const url = new URL(window.resolveStudyBoardAssetUrl("data/screenplays.bundle.json"));
       const response = await fetch(url.href);
       if (!response.ok) return window.EXPLAINER_SCREENPLAYS || {};
       const payload = await response.json();
@@ -131,7 +131,7 @@ function renderProvisionLayout(el, b, ctx) {
     return g;
   };
   const header=txt(svg,500,54,b.title?.text||b.layout.replace(/_/g," "),{size:26,weight:850,anchor:"middle",width:800,lines:2});
-  reveal(header,b.title?.at!==undefined?Number(b.title.at):(Number(b.start)||0)+0.2,0);
+  fade(ctx,header,b.title?.at!==undefined?Number(b.title.at):(Number(b.start)||0)+0.2,10,0.35);
   const items=(key)=>Array.isArray(data[key])?data[key]:[];
   const showRows=(rows,x,y,w,rowH=62,iconName="document")=>rows.forEach((item,i)=>{
     const yy=y+i*rowH, rowGroup=sv("g",{},svg);rect(x,yy,w,rowH-8,i%2?"#F8FAFC":"#FFFFFF",line,10,1.4,rowGroup);
@@ -1227,7 +1227,7 @@ const TEMPLATES = {
     fade(ctx, scene, b.start + 0.1, 16, 0.7);
     const img = document.createElement("img");
     img.className = "art";
-    img.src = window.resolveExplainerAssetUrl(b.image_url || "");
+    img.src = window.resolveStudyBoardAssetUrl(b.image_url || "");
     img.alt = "";
     img.style.cssText = "width:100%;height:100%;display:block;object-fit:cover;transform-origin:50% 60%";
     scene.appendChild(img);
@@ -2702,12 +2702,13 @@ class Explainer {
     // Delivery priority: explicit argument, generated bundle, question JSON,
     // optional benchmark fixture, then data-derived question-local fallback.
     if (!sp) sp = await fromBundle();
-    if (!sp && window.location.protocol !== "file:") {
+    if (!sp && !window.EXPLAINER_SCREENPLAYS_BUNDLE_LOADED && window.location.protocol !== "file:") {
       try {
-        const response = await fetch(window.resolveExplainerAssetUrl(`data/screenplays/${canonicalQid}.json`));
+        const response = await fetch(window.resolveStudyBoardAssetUrl(`data/screenplays/${canonicalQid}.json`));
         if (response.ok) sp = await response.json();
       } catch (error) {}
     }
+    if (!sp) sp = window.SHEET_SCREENPLAYS?.[canonicalQid] || null;
     if (!sp && typeof FIXTURES !== "undefined" && (fixtureMode || !window.GENERATED_SCREENPLAYS?.[canonicalQid])) sp = FIXTURES[canonicalQid] || null;
 
     if (!sp) sp = buildQuestionFallback(canonicalQid);
@@ -2720,7 +2721,12 @@ class Explainer {
     }
 
     if (sp.audio_url) {
-      this.audio.src = window.resolveExplainerAssetUrl(sp.audio_url);
+      const audioUrl = window.resolveStudyBoardAssetUrl(sp.audio_url);
+      // These two live sheet rows point to tracks that have not been exported.
+      // Leave them muted while preserving their timed, seekable scene sequence.
+      const unavailableTracks = new Set(["dt-c3-q1", "dt-c3-q2"]);
+      if (!unavailableTracks.has(canonicalQid)) this.audio.src = audioUrl;
+      else this.audio.removeAttribute("src");
     }
 
     if (this.scrub) {
@@ -2740,6 +2746,13 @@ class Explainer {
       this.focal.appendChild(el);
       if (b.visual_data && typeof renderProvisionLayout === "function") {
         renderProvisionLayout(el, b, { push: a => this.anim.push({ ...a, beat: i, p: 0 }) });
+      } else if (b.layout === "case_card" && b.case_details) {
+        renderProvisionLayout(el, { ...b, visual_data: {
+          case_name: b.case_details.citation || b.case?.text || "Case precedent",
+          court: b.case_details.court || b.court?.text || "",
+          principle: b.case_details.principle || b.gap?.text || "",
+          application: b.case_details.application || b.example?.text || ""
+        } }, { push: a => this.anim.push({ ...a, beat: i, p: 0 }) });
       } else if (TEMPLATES[b.layout]) {
         TEMPLATES[b.layout](el, b, { push: a => this.anim.push({ ...a, beat: i, p: 0 }) });
       } else {

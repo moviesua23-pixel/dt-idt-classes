@@ -10,6 +10,7 @@ from google import genai
 from google.genai import types
 
 from pipeline.key_rotator import rotator
+from pipeline.validate_screenplay import validate_screenplay
 
 ARCHETYPES = [
     "threshold_test", "date_cutoff_before_after", "deemed_value_substitution",
@@ -119,8 +120,8 @@ def _generate_json(prompt: str, schema: dict, label: str) -> dict:
             last_error = exc
     raise RuntimeError(f"{label} structured generation failed: {last_error}")
 
-def _director_prompt(question: str, answer: str, provision: str, voiceover: str) -> str:
-    return f"""You are the visual director for a CA tax-law explainer. Choose an explanation structure based on the provision's actual mechanism and question facts. Return only the supplied JSON schema. Do not write the voice-over.\n\nQuestion:\n{question[:6000]}\n\nAnswer:\n{answer[:6000]}\n\nProvision summary:\n{provision[:5000]}\n\nExisting voice-over/source narration:\n{voiceover[:6000]}\n\nRules: choose exactly one listed archetype; justify in one sentence tied to facts in this question. List source-grounded people, amounts, dates, and legal anchors. Plan 3-8 ordered beats that explain every distinct provision point and example step. Beat 1 must be 'example_scene' and establish a broad view of the full example. End the plan with layout 'takeaway'. Choose layouts only from the schema. Do not invent legal tests, dates, amounts, or case citations."""
+def _director_prompt(question: str, answer: str, provision: str, voiceover: str, feedback: str = "") -> str:
+    return f"""You are the visual director for a CA tax-law explainer. Choose an explanation structure based on the provision's actual mechanism and question facts. Return only the supplied JSON schema. Do not write the voice-over.\n\nQuestion:\n{question[:6000]}\n\nAnswer:\n{answer[:6000]}\n\nProvision summary:\n{provision[:5000]}\n\nExisting voice-over/source narration:\n{voiceover[:6000]}\n\nRules: choose exactly one listed archetype; justify in one sentence tied to facts in this question. List source-grounded people, amounts, dates, and legal anchors. Plan 3-8 ordered beats that explain every distinct provision point and example step. Beat 1 must be 'example_scene' and establish a broad view of the full example. End the plan with layout 'takeaway'. Choose layouts only from the schema. Do not invent legal tests, dates, amounts, or case citations.\n\nQuality-gate feedback from the prior attempt (if any):\n{feedback}"""
 
 def _writer_schema(plan: dict) -> dict:
     properties = {
@@ -139,39 +140,61 @@ def _writer_schema(plan: dict) -> dict:
     required = ["question_id", "context_pill", "example_summary", *[f"beat_{i}" for i in range(1, len(plan["beat_plan"]) + 1)]]
     return obj(properties, required)
 
-def _writer_prompt(qid: str, question: str, answer: str, provision: str, voiceover: str, plan: dict) -> str:
-    return f"""Write the screenplay for the CA Study Board. Return only the supplied strict JSON schema. This is a SCREENPLAY writer stage; do not change the director's beat count, order, or layout.\n\nCanonical question id: {qid}\nDirector plan (follow beat-for-beat):\n{json.dumps(plan, ensure_ascii=False)}\n\nQuestion:\n{question[:6000]}\nAnswer:\n{answer[:6000]}\nProvision summary:\n{provision[:5000]}\nVoice-over/source narration:\n{voiceover[:6000]}\n\nWrite one clear narration segment per planned beat. Use a broad example that walks through every point, but use only names, sections, dates, and amounts supported by the supplied material. Include each listed anchor phrase verbatim in its beat's voice_sync_text so the acoustic aligner can place the matching visual. Keep visible text concise and specific. Populate the exact layout-specific visual_data fields. For example_scene, decompose every actor and key fact into labeled elements. The last takeaway beat summarizes the teaching points. No at/start/end timestamps; the acoustic aligner assigns all timing."""
+def _writer_prompt(qid: str, question: str, answer: str, provision: str, voiceover: str, plan: dict, feedback: str = "") -> str:
+    return f"""Write the screenplay for the CA Study Board. Return only the supplied strict JSON schema. This is a SCREENPLAY writer stage; do not change the director's beat count, order, or layout.\n\nCanonical question id: {qid}\nDirector plan (follow beat-for-beat):\n{json.dumps(plan, ensure_ascii=False)}\n\nQuestion:\n{question[:6000]}\nAnswer:\n{answer[:6000]}\nProvision summary:\n{provision[:5000]}\nVoice-over/source narration:\n{voiceover[:6000]}\n\nWrite one clear narration segment per planned beat. Use a broad example that walks through every point, but use only names, sections, dates, and amounts supported by the supplied material. Include each listed anchor phrase verbatim in its beat's voice_sync_text so the acoustic aligner can place the matching visual. Keep visible text concise and specific. Populate the exact layout-specific visual_data fields. For example_scene, decompose every actor and key fact into labeled elements. The last takeaway beat summarizes the teaching points. No at/start/end timestamps; the acoustic aligner assigns all timing.\n\nQuality-gate feedback from the prior attempt (if any):\n{feedback}"""
 
 def generate_dynamic_screenplay(qid: str, question: str, answer: str, provision: str, mindmap: dict[str, Any] | None = None) -> dict:
     voiceover = voiceover_context(mindmap, answer)
-    plan = _generate_json(_director_prompt(question, answer, provision, voiceover), DIRECTOR_SCHEMA, "Director")
-    if plan.get("archetype") not in ARCHETYPES or not isinstance(plan.get("beat_plan"), list):
-        raise ValueError("Director returned an invalid archetype or beat plan")
-    allowed = ARCHETYPE_LAYOUTS[plan["archetype"]]
-    if len(plan["beat_plan"]) < 3 or len(plan["beat_plan"]) > 8 or plan["beat_plan"][0].get("layout") != "example_scene" or plan["beat_plan"][-1].get("layout") != "takeaway":
-        raise ValueError("Director plan must open with an example scene, contain 3-8 beats, and end with a takeaway")
-    if any(beat.get("layout") not in allowed for beat in plan["beat_plan"]):
-        raise ValueError("Director selected a layout outside its archetype's visual vocabulary")
-    writer = _generate_json(_writer_prompt(qid, question, answer, provision, voiceover, plan), _writer_schema(plan), "Screenplay writer")
-    beats = [writer.get(f"beat_{i}") for i in range(1, len(plan["beat_plan"]) + 1)]
-    if any(not isinstance(beat, dict) for beat in beats) or [b.get("layout") for b in beats] != [b["layout"] for b in plan["beat_plan"]]:
-        raise ValueError("Screenplay writer changed the director's beat count or layout order")
-    for i, beat in enumerate(beats):
-        beat["start"] = 0.0
-        beat["end"] = 0.0
-        beat["id"] = f"b{i + 1}"
-        beat["title"]["at"] = 0.0
-        beat["director_goal"] = plan["beat_plan"][i]["beat_goal"]
-        beat["anchor_phrases"] = plan["beat_plan"][i]["anchor_phrases"]
-        beat["animation_role"] = "key_fact" if i in (0, len(beats) - 1) else "explanation"
-    return {
-        "question_id": qid,
-        "audio_url": "",
-        "duration_sec": 0.0,
-        "sync_offset_sec": 0.0,
-        "context_pill": writer.get("context_pill") or f"{plan['archetype'].replace('_', ' ').title()} · {qid}",
-        "example_summary": writer.get("example_summary", ""),
-        "director": {key: plan[key] for key in ("archetype", "justification", "protagonist", "actors", "key_numbers", "key_dates", "visual_metaphor")},
-        "fallback": False,
-        "beats": beats,
-    }
+    from pipeline.validate_screenplay import ROOT as PROJECT_ROOT
+    existing = []
+    directory = PROJECT_ROOT / "redesign_demo" / "data" / "screenplays"
+    for path in directory.glob("*.json"):
+        try:
+            item = json.loads(path.read_text(encoding="utf-8"))
+            if item.get("question_id") != qid and str(item.get("question_id", "")).startswith(qid.rsplit("-q", 1)[0] + "-"):
+                existing.append(item)
+        except Exception:
+            continue
+    feedback = ""
+    last_errors = []
+    for attempt in range(3):
+        try:
+            plan = _generate_json(_director_prompt(question, answer, provision, voiceover, feedback), DIRECTOR_SCHEMA, "Director")
+            if plan.get("archetype") not in ARCHETYPES or not isinstance(plan.get("beat_plan"), list):
+                raise ValueError("Director returned an invalid archetype or beat plan")
+            allowed = ARCHETYPE_LAYOUTS[plan["archetype"]]
+            if len(plan["beat_plan"]) < 3 or len(plan["beat_plan"]) > 8 or plan["beat_plan"][0].get("layout") != "example_scene" or plan["beat_plan"][-1].get("layout") != "takeaway":
+                raise ValueError("Director plan must open with an example scene, contain 3-8 beats, and end with a takeaway")
+            if any(beat.get("layout") not in allowed for beat in plan["beat_plan"]):
+                raise ValueError("Director selected a layout outside its archetype's visual vocabulary")
+            writer = _generate_json(_writer_prompt(qid, question, answer, provision, voiceover, plan, feedback), _writer_schema(plan), "Screenplay writer")
+            beats = [writer.get(f"beat_{i}") for i in range(1, len(plan["beat_plan"]) + 1)]
+            if any(not isinstance(beat, dict) for beat in beats) or [b.get("layout") for b in beats] != [b["layout"] for b in plan["beat_plan"]]:
+                raise ValueError("Screenplay writer changed the director's beat count or layout order")
+            for i, beat in enumerate(beats):
+                beat["start"] = 0.0
+                beat["end"] = 0.0
+                beat["id"] = f"b{i + 1}"
+                beat["title"]["at"] = 0.0
+                beat["director_goal"] = plan["beat_plan"][i]["beat_goal"]
+                beat["anchor_phrases"] = plan["beat_plan"][i]["anchor_phrases"]
+                beat["animation_role"] = "key_fact" if i in (0, len(beats) - 1) else "explanation"
+            candidate = {
+                "question_id": qid,
+                "audio_url": "",
+                "duration_sec": 0.0,
+                "sync_offset_sec": 0.0,
+                "context_pill": writer.get("context_pill") or f"{plan['archetype'].replace('_', ' ').title()} · {qid}",
+                "example_summary": writer.get("example_summary", ""),
+                "director": {key: plan[key] for key in ("archetype", "justification", "protagonist", "actors", "key_numbers", "key_dates", "visual_metaphor")},
+                "fallback": False,
+                "beats": beats,
+            }
+            last_errors = validate_screenplay(candidate, question, answer, provision, existing)
+            if not last_errors:
+                return candidate
+        except Exception as exc:
+            last_errors = [str(exc)]
+        feedback = "; ".join(last_errors)
+        print(f"  [SCREENPLAY QUALITY GATE] attempt {attempt + 1}/3 rejected {qid}: {feedback}")
+    raise ValueError(f"Screenplay rejected after two retries for {qid}: {'; '.join(last_errors)}")
