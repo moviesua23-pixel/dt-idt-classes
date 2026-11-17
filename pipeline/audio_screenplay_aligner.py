@@ -132,6 +132,15 @@ def align_screenplay_to_measured_audio(
         # 1. FORK LAYOUT ALIGNMENT
         if layout == "fork":
             cursor = 0.5
+            if "intro_cards" in b and isinstance(b["intro_cards"], list):
+                for i, ic in enumerate(b["intro_cards"]):
+                    combined = f"{ic.get('badge', '')} {ic.get('title', '')} {ic.get('sub', '')}".lower()
+                    kw = [w for w in re.sub(r'[^a-zA-Z0-9 ]', '', combined).split() if len(w) > 3 and w not in ["with", "from", "that", "this", "also", "unit"]]
+                    off = find_first_word_offset(words, kw, min_time=cursor, default_offset=1.5 + i * 4.5)
+                    ic["at"] = round(b_start + off, 2)
+                    cursor = max(cursor + 0.5, off + 0.4)
+
+            first_step_time = None
             if "story_steps" in b and isinstance(b["story_steps"], list):
                 for i, st in enumerate(b["story_steps"]):
                     combined = f"{st.get('badge', '')} {st.get('title', '')} {st.get('sub', '')}".lower()
@@ -141,7 +150,13 @@ def align_screenplay_to_measured_audio(
                             specific_kw.append(specific)
                     off = find_first_word_offset(words, specific_kw, min_time=cursor, default_offset=dur * (i + 1) / (len(b["story_steps"]) + 1))
                     st["at"] = round(b_start + off, 2)
+                    if first_step_time is None:
+                        first_step_time = st["at"]
                     cursor = max(cursor + 0.5, off + 0.4)
+
+            if "intro_cards" in b and isinstance(b["intro_cards"], list) and first_step_time:
+                for ic in b["intro_cards"]:
+                    ic["out_at"] = round(first_step_time - 0.4, 2)
 
             if "divider" in b and isinstance(b["divider"], dict):
                 div_kw = ["classification", "filter", "scope", "specified", "eligible"]

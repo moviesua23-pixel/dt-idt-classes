@@ -167,7 +167,7 @@ const sv = (name, attrs, parent) => {
   return e;
 };
 
-const fade = (ctx, el, at, dy = 12, dur = 0.55) => ctx.push({ el, kind: "fade", start: at, dur, dy });
+const fade = (ctx, el, at, dy = 12, dur = 0.55, outAt = null, outDur = 0.4) => ctx.push({ el, kind: "fade", start: at, dur, dy, out: outAt, outDur });
 
 function words(ctx, parent, text, at, step = 0.05) {
   let n = 0;
@@ -330,6 +330,28 @@ const TEMPLATES = {
   fork(el, b, ctx) {
     if (b.title) words(ctx, h("h2", el), b.title.text, b.title.at);
     const forkWrap = h("fork-wrap", el);
+
+    if (b.intro_cards && Array.isArray(b.intro_cards)) {
+      const introRow = h("story-steps-row intro-steps-row", forkWrap);
+      introRow.style.cssText = "display:flex;gap:1.2cqw;width:90%;margin-bottom:0.8cqw;justify-content:center;transition:all 0.3s ease;";
+      b.intro_cards.forEach(ic => {
+        const icCard = h("story-step-card intro-scenario-card " + (ic.tone || "info"), introRow);
+        icCard.style.cssText = "flex:1;max-width:320px;background:#FFFFFF;border:1.5px solid #E2E8F0;border-radius:12px;padding:0.8cqw 1.2cqw;box-shadow:0 4px 10px rgba(15,23,42,0.04);display:flex;flex-direction:column;gap:0.3cqw;border-top:3.5px solid #4F46E5;";
+        icCard.innerHTML = `
+          <div class="step-badge" style="background:#EEF2FF;color:#4F46E5;font-size:0.8cqw;font-weight:800;text-transform:uppercase;padding:0.2cqw 0.6cqw;border-radius:6px;width:fit-content;">${ic.badge || "Fact"}</div>
+          <div class="step-title" style="font-size:1.15cqw;font-weight:800;color:#0F172A;">${ic.title}</div>
+          <div class="step-sub" style="font-size:0.9cqw;color:#64748B;line-height:1.35;">${ic.sub || ""}</div>
+          ${ic.val ? `<div class="step-val num">${inr(ic.val)}</div>` : ""}
+        `;
+        fade(ctx, icCard, ic.at, 10, 0.4, ic.out_at);
+      });
+      if (b.intro_cards.some(ic => ic.out_at)) {
+        const maxOut = Math.max(...b.intro_cards.map(ic => ic.out_at || 0));
+        if (maxOut > 0) {
+          fade(ctx, introRow, b.intro_cards[0].at, 0, 0.4, maxOut, 0.4);
+        }
+      }
+    }
 
     if (b.story_steps && Array.isArray(b.story_steps)) {
       const stepsRow = h("story-steps-row", forkWrap);
@@ -1160,8 +1182,17 @@ class Explainer {
           a.el.style.opacity = p > 0 ? 1 : 0;
           break;
         case "fade":
-          a.el.style.opacity = p;
-          if (a.dy && !isReducedMotion()) a.el.style.transform = `translateY(${a.dy * (1 - p)}px)`;
+          if (a.out && t >= a.out) {
+            const outProg = ease(Math.min(1, Math.max(0, (t - a.out) / Math.max(0.001, a.outDur || 0.4))));
+            a.el.style.opacity = 1 - outProg;
+            if (a.dy && !isReducedMotion()) a.el.style.transform = `translateY(${(-a.dy) * outProg}px)`;
+            if (outProg >= 1) a.el.style.display = "none";
+            else a.el.style.display = "";
+          } else {
+            a.el.style.display = "";
+            a.el.style.opacity = p;
+            if (a.dy && !isReducedMotion()) a.el.style.transform = `translateY(${a.dy * (1 - p)}px)`;
+          }
           break;
         case "count": {
           const val = a.target * p;
@@ -2209,7 +2240,7 @@ FIXTURES["dt-c2-q32"] = {
           "title": "Sale: Rs 25L | WDV: Rs 9L",
           "sub": "Deemed STCG u/s 50: Rs 16 Lakhs",
           "val": 1600000,
-          "at": 38.06
+          "at": 37.98
         },
         {
           "badge": "Asset 3: Plant & Mach.",
@@ -2237,22 +2268,22 @@ FIXTURES["dt-c2-q32"] = {
           "facts": [
             {
               "text": "Land, Building, Plant & Machinery",
-              "at": 73.28
+              "at": 73.26
             },
             {
               "text": "Total Qualifying Gains: Rs 30 Lakhs",
-              "at": 74.28
+              "at": 74.26
             },
             {
               "text": "Qualifies for Section 54G Exemption",
-              "at": 75.28
+              "at": 75.26
             }
           ],
           "outcome": {
             "text": "Eligible for Section 54G Exemption",
-            "at": 75.78
+            "at": 75.76
           },
-          "at": 72.88
+          "at": 72.86
         },
         {
           "side": "right",
@@ -2285,7 +2316,30 @@ FIXTURES["dt-c2-q32"] = {
         "at": 76.21
       },
       "start": 0.0,
-      "end": 82.84
+      "end": 82.84,
+      "intro_cards": [
+        {
+          "badge": "Statutory Focus",
+          "title": "Section 54G Exemption",
+          "sub": "Capital Gains on Shifting of Industrial Undertaking from Urban Area",
+          "at": 6.6,
+          "out_at": 28.16
+        },
+        {
+          "badge": "Case Study Setup",
+          "title": "Apex Engineering Ltd",
+          "sub": "Relocating Factory: Urban Corporation Limits ➔ Non-Urban Rural Area",
+          "at": 12.1,
+          "out_at": 28.16
+        },
+        {
+          "badge": "Relocation Transfer",
+          "title": "4 Assets Transferred",
+          "sub": "March 2026: Land, Building, Plant & Machinery, and Office Furniture Sold",
+          "at": 25.94,
+          "out_at": 28.16
+        }
+      ]
     },
     {
       "id": "b2",

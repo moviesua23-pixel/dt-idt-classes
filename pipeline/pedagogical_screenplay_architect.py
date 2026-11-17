@@ -132,6 +132,18 @@ CRITICAL PEDAGOGICAL RULE 6: VISUAL REPRESENTATION OF EVERY SPOKEN ASSET & AMOUN
 - IN BEAT 5 ("takeaway"): rules MUST show the 3 Golden Rules!
 
 ========================================================================================
+CRITICAL UNIVERSAL RULE 7: NO SPOKEN LINE WITHOUT AN ANIMATED CARD / VISUAL ELEMENT
+========================================================================================
+- NEVER leave a spoken sentence or paragraph without a dedicated visual element on screen!
+- If the teacher speaks 3 introductory sentences before the asset breakdown, THERE MUST BE 3 DEDICATED INTRO CARDS ("intro_cards") THAT POP UP SEQUENTIALLY AS EACH LINE IS SPOKEN!
+- NEVER speak for 10, 15, or 25 seconds with only a static title or a single card!
+- When introducing a case study or practical scenario in Beat 1 ("fork"), include "intro_cards":
+  * Card 1: Statutory Core Provision / Scope (pops up when teacher introduces the section)
+  * Card 2: Case Setup & Relocation Path (pops up when teacher explains the company / situation)
+  * Card 3: Transaction / Shifting Event (pops up when teacher explains the transfer event)
+  * Set "out_at" right before the specific asset cards in story_steps begin!
+
+========================================================================================
 OUTPUT FORMAT: PURE JSON
 ========================================================================================
 Return STRICT VALID JSON matching this exact structure:
@@ -143,6 +155,11 @@ Return STRICT VALID JSON matching this exact structure:
       "layout": "fork",
       "voice_sync_text": "Students, welcome back! Namukku Section 54G Capital Gains Exemption crystal clear aayi padikkaam. Oru practical case study nokkoo: Apex Engineering Limited urban corporation limit-il ulla thangalude factory oru non-urban rural area-yilekku shift cheyyaan theerumaanikkunnu. Shifting-inte bhaagamaayi March 2026-il company 4 assets sell cheythu. Kando: Onnamathathu, Land, sale consideration Rs 20 Lakhs, cost of acquisition Rs 15 Lakhs, so Long-term Capital Gain Rs 5 Lakhs. Randamathathu, Factory Building, sale proceeds Rs 25 Lakhs, Written Down Value Rs 9 Lakhs, so Section 50 prakaram Deemed Short-term Capital Gain Rs 16 Lakhs. Moonnamathathu, Plant & Machinery, sale value Rs 18 Lakhs, Written Down Value Rs 9 Lakhs, so Short-term Capital Gain Rs 9 Lakhs. Naalaamathathu, Furniture, sale Rs 3 Lakhs, Written Down Value Rs 2 Lakhs, so Short-term Capital Gain Rs 1 Lakh. Ippo asset classification filter nokkoo: Section 54G prakaram Land, Building, and Plant & Machinery maathrame Eligible Specified Assets aayi qualify cheyyoo! Ennaal Furniture non-specified asset aayathukond athinu Section 54G exemption oru kaaranavashaalum labhikkilla!",
       "title": {{"text": "Asset Eligibility Filter under Section 54G"}},
+      "intro_cards": [
+        {{"badge": "Statutory Focus", "title": "Section 54G Exemption", "sub": "Capital Gains on Shifting of Industrial Undertaking from Urban Area", "at": 2.5, "out_at": 28.0}},
+        {{"badge": "Case Study Setup", "title": "Apex Engineering Ltd", "sub": "Relocating Factory: Urban Corporation Limits ➔ Non-Urban Rural Area", "at": 8.5, "out_at": 28.0}},
+        {{"badge": "Relocation Transfer", "title": "4 Assets Transferred", "sub": "March 2026: Land, Building, Plant & Machinery, and Office Furniture Sold", "at": 21.0, "out_at": 28.0}}
+      ],
       "story_steps": [
         {{"badge": "Asset 1: Land", "title": "Sale: Rs 20L | Cost: Rs 15L", "sub": "Long-term Capital Gain: Rs 5 Lakhs", "val": 500000}},
         {{"badge": "Asset 2: Building", "title": "Sale: Rs 25L | WDV: Rs 9L", "sub": "Deemed STCG u/s 50: Rs 16 Lakhs", "val": 1600000}},
