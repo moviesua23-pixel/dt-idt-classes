@@ -104,6 +104,206 @@ const FIXTURES = {
   }
 };
 FIXTURES["ch2_q14"] = FIXTURES["dt-c2-q14"];
+FIXTURES["dt-c2-q34"] = {
+  "question_id": "dt-c2-q34",
+  "audio_url": "data/audio/dt-c2-q34.mp3",
+  "duration_sec": 261.71,
+  "sync_offset_sec": 0.0,
+  "context_pill": "Capital Gains | Real Estate Taxation & Section 112",
+  "fallback": false,
+  "beats": [
+    {
+      "id": "b1",
+      "layout": "story_scene",
+      "scene_type": "sdv_comparison",
+      "kicker": "FACTUAL OVERVIEW & BENCHMARK DYNAMICS",
+      "badge": "Case Overview",
+      "title": {
+        "text": "Property Transfer: Stamp Duty Benchmark vs Actual Agreement",
+        "at": 0.3
+      },
+      "voice_sync_text": "Priypetta vidyarthikale, nammude case-ile assessee Mr. Vijay aanu. Vijay 1982-il oru residential house purchase cheythu, total cost ₹ 5,00,000. Ee property 1st April 2001-il Fair Market Value ₹ 15,00,000 aayirunnu, pakshe Stamp Duty Value ₹ 14,00,000 maathram. Ee asset-il randu thavana advance money forfeit cheythittundu: Onnamathathu June 2009-il ₹ 1,50,000, randamathathu July 2016-il ₹ 2,00,000. Pineed September 2015-il first floor construct cheythu for ₹ 5,08,000. Finally, Financial Year 2025-26-il property sale cheyyaan agreement vekkunnu for ₹ 40,00,000, with an advance of ₹ 2,00,000 received via account payee cheque on agreement date. Ennaal agreement date-ile Stamp Duty Value ₹ 52,00,000 aayirunnu! Ee multi-provision puzzle Section 50C, Section 51, matrum Section 112 vechu namukku solve cheyyaam.",
+      "elements": {
+        "actual_bar": {
+          "label": "Actual Consideration: ₹ 40,00,000 (Advance ₹ 2L by A/c Payee Cheque)",
+          "at": 50.32
+        },
+        "sdv_bar": {
+          "label": "Stamp Duty Value on Agreement Date: ₹ 52,00,000",
+          "at": 57.98
+        },
+        "safe_harbor": {
+          "label": "110% Safe Harbor Limit: ₹ 44,00,000 (Breached)",
+          "at": 58.88
+        },
+        "deemed_stamp": {
+          "label": "Section 50C Deemed Full Value of Consideration: ₹ 52,00,000",
+          "at": 63.02
+        }
+      },
+      "start": 0.0,
+      "end": 68.84
+    },
+    {
+      "id": "b2",
+      "layout": "statute_quote",
+      "voice_sync_text": "Nammal aadyam Section 50C-yude agreement date proviso shradhikkannam. Rule ithaanu: Date of agreement-um date of registration-um different aanenkil, agreement date-ile Stamp Duty Value consider cheyyaam, provided advance money account payee cheque vazhiyo electronic clearing system vazhiyo on or before agreement date receive cheythirikkanam. Ivide ₹ 2,00,000 account payee cheque vazhi agreement date-il thanne kittiyathinaal, ₹ 52,00,000 aanu benchmark SDV. Ee SDV actual consideration-te 110 percentinekaal kooduthal aaya kond, Section 50C prakaram full value of consideration aayi ₹ 52,00,000 edukkanam.",
+      "title": {
+        "text": "Statutory Mandate: Section 50C Agreement Date Proviso",
+        "at": 69.49
+      },
+      "quote": {
+        "text": "Where the date of agreement fixing the consideration and the date of registration are not the same, the value adopted by the stamp valuation authority on the date of agreement may be taken, provided consideration or part thereof has been received by way of an account payee cheque or electronic clearing system on or before the date of agreement.",
+        "citation": "Proviso to Section 50C(1) of the Income-tax Act, 1961",
+        "emphasis": "account payee cheque on or before the date of agreement",
+        "at": 69.69
+      },
+      "context_bubble": {
+        "badge": "Section 50C Filter",
+        "speaker": "Statutory Benchmark",
+        "theme": "Safe Harbor 110% Test",
+        "text": "SDV ₹ 52,00,000 exceeds ₹ 44,00,000 (110% of ₹ 40,00,000). Hence ₹ 52,00,000 is Deemed FVC.",
+        "at": 75.79
+      },
+      "start": 69.19,
+      "end": 112.39
+    },
+    {
+      "id": "b3",
+      "layout": "meter",
+      "voice_sync_text": "Aduthathayi, Cost of Acquisition calculate cheyyaam. Section 55(2)(b) prakaram 1st April 2001-nu munpu vaangiya asset-nu Fair Market Value ₹ 15,00,000 and Stamp Duty Value ₹ 14,00,000 compare cheythu lower amount edukkuka, athayath ₹ 14,00,000. Actual cost ₹ 5,00,000 aayathinaal higher value aaya ₹ 14,00,000 COA aayi varum. Ini advance forfeiture: June 2009-il forfeit cheytha ₹ 1,50,000 1st April 2014-nu munpaayathinaal Section 51 prakaram COA-il ninnu deduct cheythu ₹ 12,50,000 aakkum. Ennaal July 2016-ile ₹ 2,00,000 Section 56(2)(ix) prakaram Income from Other Sources-il tax cheythathinaal ivide deduct cheyyilla!",
+      "title": {
+        "text": "Cost of Acquisition Determination & Section 51 Filter",
+        "at": 113.04
+      },
+      "meter_display": {
+        "min_val": 0,
+        "max_val": 1500000,
+        "current_val": 1250000,
+        "unit": "₹",
+        "threshold": 1400000,
+        "labels": {
+          "start": "₹ 0",
+          "threshold_label": "Pre-Forfeiture Base: ₹ 14,00,000",
+          "current_label": "Net Adjusted COA: ₹ 12,50,000"
+        },
+        "at": 154.54
+      },
+      "breakdown": [
+        {
+          "label": "FMV capped at SDV as on 01-04-2001",
+          "val": 1400000,
+          "status": "Base COA u/s 55(2)(b)",
+          "at": 117.28
+        },
+        {
+          "label": "Less: Advance forfeited in June 2009 (Pre-01-04-2014)",
+          "val": -150000,
+          "status": "Deducted u/s 51",
+          "at": 138.26
+        },
+        {
+          "label": "Advance forfeited in July 2016 (Post-01-04-2014)",
+          "val": 0,
+          "status": "Taxed u/s 56(2)(ix) as IFOS (No COA reduction)",
+          "at": 153.54
+        }
+      ],
+      "outcome": {
+        "text": "Effective Cost of Acquisition = ₹ 12,50,000",
+        "tone": "ok",
+        "at": 155.44
+      },
+      "start": 112.74,
+      "end": 162.7
+    },
+    {
+      "id": "b4",
+      "layout": "ledger",
+      "voice_sync_text": "Ippo namukku capital gains computation-lekku kadakkaam. Deemed Full Value ₹ 52,00,000-il ninnu brokerage @ 1% on actual price ₹ 40,000 kurachu Net Consideration ₹ 51,60,000 kittunnu. Indexation illathe LTCG ₹ 34,02,000 aanu. Pakshe Finance Act 2024-te amendment prakaram, resident individual-nu 23rd July 2024-nu munpu vaangiya property-il indexation koduthu tax calculate cheyyanulla option undu. Indexed COA ₹ 47,00,000 and Indexed COI ₹ 7,52,000 kurakkumbol ₹ 2,92,000 Long-Term Capital Loss varunnu! Loss vannathinaal indexation scheme-il tax Nil aanu. Assessee-kku beneficial aaya Nil tax liability select cheyyaam!",
+      "title": {
+        "text": "Computation of Capital Gains & Section 112 Comparison (AY 2026-27)",
+        "at": 163.35
+      },
+      "callout": {
+        "badge": "Section 112 Parity Mechanism",
+        "text": "Resident Individual owning property acquired before 23-07-2024 gets benefit: If indexed tax is lower or Nil due to capital loss, taxable liability is restricted to Nil!",
+        "at": 164.25
+      },
+      "ledger_rows": [
+        {
+          "label": "Deemed Full Value of Consideration u/s 50C",
+          "amount": 5200000,
+          "type": "income",
+          "at": 166.45
+        },
+        {
+          "label": "Less: Brokerage Expenses (1% of ₹ 40,00,000)",
+          "amount": -40000,
+          "type": "deduction",
+          "at": 169.99
+        },
+        {
+          "label": "Net Sale Consideration",
+          "amount": 5160000,
+          "type": "subtotal",
+          "at": 174.91
+        },
+        {
+          "label": "Computation A: Without Indexation (LTCG: ₹ 34,02,000 @ 12.5% + Cess)",
+          "amount": 442260,
+          "type": "taxable",
+          "at": 179.69
+        },
+        {
+          "label": "Computation B: With Indexation (₹ 51,60,000 − ₹ 47,00,000 − ₹ 7,52,000 = Loss)",
+          "amount": 0,
+          "type": "subtotal",
+          "at": 181.77
+        }
+      ],
+      "net_total": {
+        "label": "Final Tax Liability Payable u/s 112",
+        "val": 0,
+        "detail": "Nil (Beneficial indexation comparison yields loss; tax is Nil)",
+        "at": 208.35
+      },
+      "start": 163.05,
+      "end": 212.29
+    },
+    {
+      "id": "b5",
+      "layout": "takeaway",
+      "voice_sync_text": "Exam hall-il ormaveykkendiye moonnu non-negotiable statutory rules: Onnamathathu, Section 50C agreement date SDV apply cheyyanenkil advance amount specified banking channel vazhi on or before agreement date receive cheythirikkanam. Randamathathu, Section 51 advance forfeiture cut-off date: 1st April 2014-nu munpulla forfeiture COA-il reduce cheyyumpol, athinu sheshamulla forfeiture Section 56(2)(ix) prakaram IFOS-il tax aakum. Moonnamathathu, Section 112 transitional relief: Real estate acquired before 23rd July 2024 aanenkil, indexation vazhi loss varukayanenkil final tax liability Nil aayi claim cheyyaam!",
+      "title": {
+        "text": "3 Golden Rules for Exam Mastery",
+        "at": 212.94
+      },
+      "rules": [
+        {
+          "num": "01",
+          "heading": "Section 50C Banking Channel Rule",
+          "body": "Agreement date Stamp Duty Value is valid only if advance consideration is received via account payee cheque/ECS on or before the agreement date.",
+          "at": 218.64
+        },
+        {
+          "num": "02",
+          "heading": "Forfeited Advance Dual Mechanism",
+          "body": "Advance forfeited before 01-04-2014 reduces Cost of Acquisition u/s 51. Advance forfeited on or after 01-04-2014 is taxable under IFOS u/s 56(2)(ix).",
+          "at": 223.46
+        },
+        {
+          "num": "03",
+          "heading": "Section 112 Beneficial Regime",
+          "body": "For properties acquired prior to 23-07-2024 by resident individuals, if indexation computation results in capital loss, the tax liability under Section 112 is effectively Nil.",
+          "at": 231.14
+        }
+      ],
+      "start": 212.64,
+      "end": 261.36
+    }
+  ]
+};
 FIXTURES["dt-c2-q30"] = {
   "question_id": "dt-c2-q30",
   "context_pill": "Section 50C · Section 54 · Section 54EC · Section 71 | Multiple Property & Inter-Head Set-off",
