@@ -12,6 +12,7 @@ import os
 import sys
 import json
 import re
+from difflib import SequenceMatcher
 import librosa
 from typing import Dict, Any, List, Optional
 from faster_whisper import WhisperModel
@@ -168,6 +169,52 @@ def find_first_word_offset(words: List[Dict[str, Any]], keywords: List[str], min
                 return w_start
     return max(min_time + 0.6, default_offset)
 
+def _tokens(text: str) -> List[str]:
+    return re.findall(r"[\w]+", str(text or "").lower(), flags=re.UNICODE)
+
+def fuzzy_phrase_alignment(words: List[Dict[str, Any]], phrase: str, min_time: float = 0.0) -> Dict[str, Any]:
+    """Find a spoken phrase in word-level Whisper output, allowing Manglish variation."""
+    expected = _tokens(phrase)
+    if not expected or not words:
+        return {"at": max(min_time, 0.0), "matched": False, "score": 0.0}
+    candidates = []
+    for index, word in enumerate(words):
+        if float(word.get("start", 0.0)) < min_time:
+            continue
+        for width in range(max(1, len(expected) - 1), len(expected) + 2):
+            group = words[index:index + width]
+            if not group:
+                continue
+            candidate = _tokens(" ".join(str(item.get("word", "")) for item in group))
+            if not candidate:
+                continue
+            score = SequenceMatcher(None, " ".join(expected), " ".join(candidate)).ratio()
+            if expected[0] == candidate[0]:
+                score += 0.12
+            if score > 1:
+                score = 1.0
+            candidates.append((score, float(word.get("start", 0.0))))
+    if not candidates:
+        return {"at": find_first_word_offset(words, expected, min_time=min_time), "matched": False, "score": 0.0}
+    score, at = max(candidates, key=lambda item: (item[0], -item[1]))
+    if score < 0.48:
+        at = find_first_word_offset(words, expected, min_time=min_time)
+        return {"at": at, "matched": False, "score": round(score, 3)}
+    return {"at": at, "matched": True, "score": round(score, 3)}
+
+def _visual_data_objects(value: Any) -> List[Dict[str, Any]]:
+    found: List[Dict[str, Any]] = []
+    if isinstance(value, list):
+        for item in value:
+            found.extend(_visual_data_objects(item))
+    elif isinstance(value, dict):
+        if any(key in value for key in ("label", "case_name", "rule", "principle")):
+            found.append(value)
+        for child in value.values():
+            if isinstance(child, (dict, list)):
+                found.extend(_visual_data_objects(child))
+    return found
+
 def align_screenplay_to_measured_audio(
     screenplay: Dict[str, Any],
     beat_transcripts: Dict[str, Dict[str, Any]],
@@ -182,7 +229,7 @@ def align_screenplay_to_measured_audio(
     beats = screenplay.get("beats", [])
     current_time = 0.0
 
-    for b in beats:
+    for beat_index, b in enumerate(beats):
         bid = b.get("id", "")
         transcript = beat_transcripts.get(bid, {})
         dur = transcript.get("duration", 0.0)
@@ -194,7 +241,7 @@ def align_screenplay_to_measured_audio(
         b_end = round(b_start + dur, 2)
         b["start"] = b_start
         b["end"] = b_end
-        current_time = b_end + sync_gap
+        current_time = b_end + (sync_gap if beat_index < len(beats) - 1 else 0.0)
 
         words = transcript.get("words", [])
         layout = b.get("layout", "")
@@ -204,6 +251,37 @@ def align_screenplay_to_measured_audio(
             b["title"]["at"] = round(b_start + 0.3, 2)
 
         cursor = 0.5
+
+        # The provision-led writer stores its scene facts in visual_data.
+        # Align each explicit director anchor against Whisper's word timestamps,
+        # then attach those measured times to the matching visual elements.
+        visual_data = b.get("visual_data")
+        if isinstance(visual_data, dict):
+            anchors = []
+            for phrase in b.get("anchor_phrases", []):
+                match = fuzzy_phrase_alignment(words, phrase, min_time=cursor)
+                offset = min(max(float(match["at"]), 0.0), max(0.0, dur - 0.08))
+                anchors.append({"phrase": phrase, "at": round(b_start + offset, 2), "matched": match["matched"], "score": match["score"]})
+                cursor = min(max(cursor + 0.15, offset + 0.08), dur)
+            b["anchor_alignment"] = anchors
+            objects = _visual_data_objects(visual_data)
+            next_anchor = 0
+            last_element_offset = 0.0
+            for item in objects:
+                text = " ".join(str(item.get(key, "")) for key in ("label", "detail", "value", "date", "status", "rule", "principle") if item.get(key))
+                item_match = fuzzy_phrase_alignment(words, text, min_time=0.0) if text else {"matched": False}
+                if item_match.get("matched"):
+                    offset = float(item_match["at"])
+                elif anchors:
+                    offset = max(0.0, anchors[min(next_anchor, len(anchors) - 1)]["at"] - b_start)
+                    next_anchor += 1
+                else:
+                    offset = min(dur * (next_anchor + 1) / (len(objects) + 1), max(0.0, dur - 0.1))
+                    next_anchor += 1
+                offset = max(last_element_offset, min(max(offset, 0.0), max(0.0, dur - 0.05)))
+                item["at"] = round(b_start + offset, 2)
+                last_element_offset = offset
+            continue
 
         # 0. STORY_SCENE LAYOUT ALIGNMENT
         if layout == "story_scene":
@@ -366,6 +444,18 @@ def align_screenplay_to_measured_audio(
                             cursor = max(cursor + 0.4, off + 0.3)
 
     screenplay["duration_sec"] = round(current_time, 2)
+    screenplay["audio_duration_sec"] = round(sum(float(beat_transcripts.get(b.get("id", ""), {}).get("duration", 0.0)) for b in beats) + max(0, len(beats) - 1) * sync_gap, 2)
+    previous_start = -1.0
+    for beat in beats:
+        start, end = float(beat.get("start", -1)), float(beat.get("end", -1))
+        if start < previous_start or end < start or start < 0 or end > screenplay["audio_duration_sec"] + 0.5:
+            raise ValueError(f"Non-monotonic or out-of-range screenplay timing in {beat.get('id')}")
+        previous_start = start
+        for value in (beat.get("title"), *(_visual_data_objects(beat.get("visual_data", {})))):
+            if isinstance(value, dict) and isinstance(value.get("at"), (int, float)) and not start <= float(value["at"]) <= end:
+                raise ValueError(f"Visual anchor outside beat {beat.get('id')}: {value.get('at')}")
+    if beats and abs(float(beats[-1]["end"]) - float(screenplay["audio_duration_sec"])) > 0.5:
+        raise ValueError("Final beat end differs from audio duration by more than 0.5 seconds")
     return screenplay
 
 def generate_alignment_log_summary(screenplay: Dict[str, Any]) -> str:
@@ -395,7 +485,7 @@ def synthesize_and_align_screenplay_audio(
     2. Stitches full audio into redesign_demo/data/audio/{qid}.mp3.
     3. Runs Whisper acoustic transcription to extract exact word timestamps.
     4. Aligns all screenplay elements to the measured audio.
-    5. Saves local screenplay JSON and updates engine fixtures.
+    5. Saves local per-question screenplay JSON for the static build bundle.
     Returns (aligned_screenplay, timing_summary_str).
     """
     from pipeline.phase3_audio import generate_gemini_audio
@@ -444,6 +534,8 @@ def synthesize_and_align_screenplay_audio(
     # Align screenplay
     aligned_sp = align_screenplay_to_measured_audio(screenplay_obj, beat_transcripts, sync_gap=0.35)
     aligned_sp["audio_url"] = f"data/audio/{qid}.mp3"
+    if abs(float(aligned_sp["duration_sec"]) - len(full_audio) / 1000.0) > 0.5:
+        raise ValueError("Aligned screenplay duration differs from the stitched audio by more than 0.5 seconds")
 
     # Save local screenplay JSON
     sp_path = os.path.join(PROJECT_ROOT, "redesign_demo", "data", "screenplays", f"{qid}.json")
