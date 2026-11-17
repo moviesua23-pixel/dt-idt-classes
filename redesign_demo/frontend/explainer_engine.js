@@ -5,6 +5,89 @@
 
 (function(){
 
+// Resolve assets from the current page URL so the same page works from a
+// GitHub Pages project subpath, localhost, or the frontend directory.
+window.resolveExplainerAssetUrl = window.resolveExplainerAssetUrl || function(path) {
+  if (!path) return "";
+  if (/^(?:https?:|data:|blob:|\/)/i.test(path)) return path;
+  const inFrontendFolder = new URL(document.baseURI).pathname.toLowerCase().includes("/frontend/");
+  const relative = path.startsWith("data/") ? `${inFrontendFolder ? "../" : "./"}${path}` : path;
+  return new URL(relative, document.baseURI).href;
+};
+
+window.normalizeExplainerQid = window.normalizeExplainerQid || function(value, chapter = 1, question = null) {
+  const raw = String(value || "").trim();
+  const legacy = raw.match(/^[a-z]+[-_](\d+)[-_](\d+)$/i);
+  if (legacy) return `dt-c${Number(legacy[1])}-q${Number(legacy[2])}`;
+  const match = raw.match(/(?:dt-)?c(\d+)[-_]q(\d+)/i) || raw.match(/ch(\d+)[-_]q(\d+)/i);
+  if (match) return `dt-c${Number(match[1])}-q${Number(match[2])}`;
+  const q = raw.match(/^q(\d+)$/i);
+  if (q) return `dt-c${Number(chapter)}-q${Number(q[1])}`;
+  if (question != null) return `dt-c${Number(chapter)}-q${Number(question)}`;
+  return raw;
+};
+
+let screenplayBundlePromise = null;
+async function loadScreenplayBundle() {
+  if (window.EXPLAINER_SCREENPLAYS_BUNDLE_LOADED) return window.EXPLAINER_SCREENPLAYS || {};
+  if (!screenplayBundlePromise) screenplayBundlePromise = (async () => {
+    try {
+      const url = new URL(window.resolveExplainerAssetUrl("data/screenplays.bundle.json"));
+      const response = await fetch(url.href);
+      if (!response.ok) return window.EXPLAINER_SCREENPLAYS || {};
+      const payload = await response.json();
+      const entries = payload.screenplays || payload;
+      window.GENERATED_SCREENPLAYS = window.GENERATED_SCREENPLAYS || {};
+      Object.entries(entries).forEach(([key, value]) => {
+        window.GENERATED_SCREENPLAYS[window.normalizeExplainerQid(key)] = value;
+      });
+      window.EXPLAINER_SCREENPLAYS_BUNDLE_LOADED = true;
+    } catch (error) {
+      // file:// and offline preview cannot fetch JSON; the question-local fallback remains usable.
+    }
+    return window.GENERATED_SCREENPLAYS || {};
+  })();
+  return screenplayBundlePromise;
+}
+
+function buildQuestionFallback(qid) {
+  const match = String(qid).match(/^dt-c(\d+)-q(\d+)$/);
+  const ch = match ? Number(match[1]) : 1;
+  const n = match ? Number(match[2]) : 1;
+  const source = document.getElementById("pipeline-data");
+  let raw = null;
+  if (source && source.textContent) {
+    try { raw = JSON.parse(source.textContent); } catch (error) {}
+  }
+  const question = (raw?.questions || []).find(item => Number(item.chapter_number) === ch && Number(item.question_number) === n)
+    || (window.D?.qna || []).find(item => Number(item.ch) === ch && Number(item.n) === n);
+  const provision = (raw?.provisions || []).find(item => Number(item.chapter_number) === ch && Number(item.question_number) === n);
+  const qTitle = question?.question_title || question?.title || `Chapter ${ch}, Question ${n}`;
+  const qText = question?.question_text || question?.question_text || "";
+  const answer = question?.answer_text || question?.rawAnswer || "";
+  const provisionText = provision?.provision_presentation_markdown || provision?.core_principle || "";
+  const mindmaps = raw?.mindmaps || {};
+  const mindmap = mindmaps[`ch${ch}_q${n}`] || mindmaps[qid] || null;
+  const ownSummary = mindmap?.doctrine || mindmap?.root?.title || provision?.topic_title || qTitle;
+  const excerpt = (value, max = 520) => String(value || "").replace(/\s+/g, " ").trim().slice(0, max);
+  const ownFacts = [excerpt(qText), excerpt(provisionText), excerpt(answer)].filter(Boolean);
+  const duration = Math.max(30, Number(provision?.dur || mindmap?.total_duration || 60));
+  const firstEnd = Math.max(10, duration * 0.4);
+  const secondEnd = Math.max(firstEnd + 10, duration * 0.78);
+  return {
+    question_id: qid,
+    context_pill: `Question-specific outline · Chapter ${ch} / Question ${n}`,
+    duration_sec: duration,
+    sync_offset_sec: 0,
+    fallback: true,
+    beats: [
+      { id: "outline", layout: "headline", start: 0, end: firstEnd, voice_sync_text: excerpt(qText, 900), title: { text: qTitle, at: 0.2 }, subtitle: { text: ownSummary, at: 1.4 } },
+      { id: "rule", layout: "statute_quote", start: firstEnd, end: secondEnd, voice_sync_text: excerpt(provisionText || answer, 1100), title: { text: "Provision and issue in this question", at: firstEnd + 0.2 }, quote: { text: excerpt(provisionText || answer || qText, 520), citation: ownSummary }, context_bubble: { text: excerpt(qText, 220), at: firstEnd + 1 } },
+      { id: "conclusion", layout: "takeaway", start: secondEnd, end: duration, voice_sync_text: excerpt(answer || provisionText || qText, 900), title: { text: "Question-specific recap", at: secondEnd + 0.2 }, points: [{ num: "✓", text: excerpt(answer || provisionText || qText, 280), at: secondEnd + 1 }] }
+    ]
+  };
+}
+
 const FIXTURES = {
   "dt-c2-q14": {
     "question_id": "dt-c2-q14",
@@ -798,7 +881,149 @@ function words(ctx, parent, text, at, step = 0.05) {
   });
 }
 
+// Data-driven renderer for the pedagogical layout catalog. Gemini chooses the
+// catalog key; the key selects a distinct visual structure here (not a preset).
+function renderCatalogLayout(el, b, ctx) {
+  const style = String(b.visual_style || "ledger_vertical");
+  const data = b.visual_data || {};
+  const svg = sv("svg", { viewBox: "0 0 1000 562", preserveAspectRatio: "xMidYMid meet" }, el);
+  svg.style.cssText = "position:absolute;inset:0;width:100%;height:100%;";
+  const rect = (x,y,w,h,fill="#fff",stroke="var(--line,#D9DFEA)",rx=14,sw=2) => sv("rect",{x,y,width:w,height:h,rx,fill,stroke,"stroke-width":sw},svg);
+  const line = (x1,y1,x2,y2,color="var(--line,#D9DFEA)",sw=3) => sv("path",{d:`M ${x1} ${y1} L ${x2} ${y2}`,stroke:color,"stroke-width":sw,fill:"none","stroke-linecap":"round"},svg);
+  const text = (x,y,value,size=18,weight=600,color="var(--ink,#121C2F)",anchor="start") => {
+    const t=sv("text",{x,y,"font-size":size,"font-weight":weight,fill:color,"text-anchor":anchor,"font-family":weight>=800?'var(--f-display,"Bricolage Grotesque",sans-serif)':'var(--f-body,"Schibsted Grotesk",sans-serif)'},svg);
+    t.textContent=String(value ?? "").slice(0,100); return t;
+  };
+  const multiline = (x,y,value,size=18,weight=600,color="var(--ink,#121C2F)",maxChars=66,maxLines=5) => {
+    const t=sv("text",{x,y,"font-size":size,"font-weight":weight,fill:color,"font-family":"var(--f-body,Schibsted Grotesk,sans-serif)"},svg);
+    const words=String(value||"").split(/\s+/);let lines=[],current="";
+    words.forEach(word=>{if((current+" "+word).trim().length>maxChars&&current){lines.push(current);current=word;}else current=(current?current+" ":"")+word;});
+    if(current)lines.push(current);lines.slice(0,maxLines).forEach((lineText,i)=>{const span=sv("tspan",{x,dy:i===0?0:`${size*1.4}px`},t);span.textContent=lineText;});return t;
+  };
+  const motion = b.animation || {};
+  const enterAlias = { slide_up: "slide_up_fast" };
+  const enterDef = typeof PRESETS !== "undefined" ? PRESETS.DEFS?.enter?.[enterAlias[motion.entrance] || motion.entrance] : null;
+  const tempoScale = motion.tempo === "snappy" ? 0.78 : motion.tempo === "calm" ? 1.25 : 1;
+  const animate = (node,index=0,emphasis=false) => {
+    const at=startSafe(index);
+    if(enterDef) ctx.push({el:node,kind:"tween",start:at,dur:(enterDef.dur||0.5)*tempoScale,ease:enterDef.ease||"out",from:enterDef.from||{o:0},to:enterDef.to||{o:1}});
+    else fade(ctx,node,at,10,0.45);
+    if(emphasis && motion.emphasis) {
+      const em=motion.emphasis;
+      if(em==="glow"||em==="color_shift") ctx.push({el:node,kind:"glow",start:at+0.25,dur:0.55});
+      else if(em==="pulse"||em==="scale_bump"||em==="shake") ctx.push({el:node,kind:"tween",start:at+0.25,dur:0.55,ease:em==="shake"?"wobble":"bump",from:{s:1},to:em==="shake"?{rot:3}:{s:1.06}});
+    }
+  };
+  const startSafe = i => (b.start||0)+0.7+i*0.65;
+  const box = (x,y,w,h,title,detail,index=0,accent="var(--accent,#3A47B5)") => {
+    const g=sv("g",{},svg); sv("rect",{x,y,width:w,height:h,rx:14,fill:index%2?"var(--surface-2,#F5F7FB)":"var(--surface,#FFFFFF)",stroke:accent,"stroke-width":2},g);
+    const a=sv("text",{x:x+18,y:y+31,"font-size":15,"font-weight":800,fill:accent,"font-family":'var(--f-display,"Bricolage Grotesque",sans-serif)'},g); a.textContent=String(title||"").slice(0,54);
+    const d=sv("text",{x:x+18,y:y+60,"font-size":13,"font-weight":600,fill:"var(--ink-2,var(--ink-2,#4A566C))","font-family":'var(--f-body,"Schibsted Grotesk",sans-serif)'},g); d.textContent=String(detail||"").slice(0,68);
+    animate(g,typeof index==="number"?index:0,index===0); return g;
+  };
+  const title = (b.title && (b.title.text || b.title)) || data.title || style.replace(/_/g," ");
+  text(500,62,title,25,900,"var(--ink,#121C2F)","middle");
+  const rows = data.rows || b.ledger_rows || b.rows || [];
+  const steps = data.steps || data.nodes || b.nodes || b.steps || [];
+  const branches = data.branches || b.branches || [];
+  const sides = data.sides || data.comparisons || b.cards || [];
+  const start = (b.start || 0)+0.8;
+  const timedFade = (node,i) => {
+    if(node===svg) { if(i===0) animate(node,0,true); return; }
+    animate(node,i,i===0);
+  };
+  const styleHas = (...parts) => parts.some(p=>style.includes(p));
+  let customRendered = true;
+  if (style === "ledger_vertical") {
+    const list=rows.length?rows:(data.items||[]); list.slice(0,6).forEach((r,i)=>{const y=125+i*58;rect(145,y,710,44,i===list.length-1?"var(--accent-soft,#E4E7FA)":"var(--surface,#FFFFFF)",i===list.length-1?"var(--accent,#3A47B5)":"var(--line,#D9DFEA)",8,1.5);text(172,y+28,r.sign==="minus"?"−":r.sign==="total"?"=":"+",17,900,r.sign==="minus"?"#DC2626":"var(--accent,#3A47B5)");text(210,y+28,r.label||r.particulars||"Particular",15,700,"var(--ink,#121C2F)");text(825,y+28,r.value??r.detail??"",14,800,"var(--ink,#121C2F)","end");timedFade(svg,i);});
+  } else if (style === "ledger_two_column") {
+    const comps=sides.length?sides:[{title:"Computation A",text:data.left||""},{title:"Computation B",text:data.right||""}]; comps.slice(0,2).forEach((c,i)=>{const x=90+i*425;rect(x,135,390,295,i?"#F0FDF4":"var(--accent-soft,#E4E7FA)",i?"var(--idt,#0C7A69)":"var(--accent,#3A47B5)",16,2);text(x+195,180,c.title||c.label||`Option ${i+1}`,19,900,i?"var(--idt,#0C7A69)":"var(--accent,#3A47B5)","middle");text(x+24,228,c.text||c.detail||"",15,650,"var(--ink-2,#4A566C)");(c.rows||[]).slice(0,4).forEach((r,j)=>text(x+25,275+j*32,`${r.label||"Item"}: ${r.value??""}`,13,650,"var(--ink,#121C2F)"));timedFade(svg,i);});
+  } else if (style === "slab_ladder") {
+    const tiers=data.tiers||rows;tiers.slice(0,6).forEach((r,i)=>{const w=240+i*92,x=(1000-w)/2,y=115+i*51;rect(x,y,w,43,i===tiers.length-1?"var(--accent,#3A47B5)":"var(--accent-soft,#E4E7FA)",i===tiers.length-1?"var(--accent,#3A47B5)":"#C7D2FE",6,1.5);text(500,y+27,`${r.label||`Slab ${i+1}`}  ${r.rate||r.value||""}`,13,800,i===tiers.length-1?"var(--surface,#FFFFFF)":"var(--accent,#3A47B5)","middle");timedFade(svg,i);});
+  } else if (style === "depreciation_block") {
+    const stages=data.steps||rows;const labels=stages.length?stages:[{label:"Opening WDV"},{label:"Additions"},{label:"Disposals"},{label:"Closing WDV"}];labels.slice(0,5).forEach((r,i)=>{const x=55+i*185;rect(x,195,155,125,i===labels.length-1?"#ECFDF5":"var(--surface-2,#F5F7FB)",i===labels.length-1?"var(--idt,#0C7A69)":"var(--line,#D9DFEA)",12,2);text(x+77,240,r.label||r.title||`Step ${i+1}`,14,800,"var(--ink,#121C2F)","middle");text(x+77,280,r.value??r.detail??"",15,700,"var(--accent,#3A47B5)","middle");if(i<labels.length-1)text(x+169,263,i===1?"−":"+",22,900,"var(--ink-2,#4A566C)","middle");timedFade(svg,i);});
+  } else if (style === "setoff_waterfall") {
+    const stages=steps.length?steps:branches;stages.slice(0,4).forEach((r,i)=>{const x=110+i*205,y=145+i*55;rect(x,y,180,90,i===stages.length-1?"#ECFDF5":"var(--accent-soft,#E4E7FA)",i===stages.length-1?"var(--idt,#0C7A69)":"#818CF8",12,2);text(x+90,y+34,r.label||r.title||`Set-off ${i+1}`,14,800,"var(--ink,#121C2F)","middle");text(x+90,y+62,r.detail||r.outcome||r.value||"",12,650,"var(--ink-2,#4A566C)","middle");timedFade(svg,i);});
+  } else if (style === "deduction_pyramid") {
+    const tiers=data.tiers||rows;tiers.slice(0,5).forEach((r,i)=>{const w=170+i*125,x=(1000-w)/2,y=125+i*58;rect(x,y,w,48,i===0?"#E0E7FF":"var(--surface-2,#F5F7FB)",i===0?"var(--accent,#3A47B5)":"var(--line,#D9DFEA)",5,1.5);text(500,y+29,`${r.label||`Deduction ${i+1}`} ${r.value??""}`,13,800,"var(--accent,#3A47B5)","middle");timedFade(svg,i);});
+  } else if (style === "charitable_accumulation") {
+    const pct=Number(data.application_percent||85);rect(130,220,740,100,"#FEF3C7","#F59E0B",16,2);rect(130,220,740*Math.max(0,Math.min(100,pct))/100,100,"var(--idt,#0C7A69)","var(--idt,#0C7A69)",16,0);text(130+740*pct/200,278,`${pct}% Applied`,18,900,"var(--surface,#FFFFFF)","middle");text(130+740*(pct/100+(1-pct/100)/2),278,`${100-pct}% Balance`,16,800,"#854D0E","middle");text(500,365,data.outcome||"Application and accumulation",15,700,"var(--ink-2,#4A566C)","middle");animate(svg,0,true);
+  } else if (style === "inverted_duty_formula") {
+    const parts=data.formula||rows;rect(95,175,810,185,"var(--surface-2,#F5F7FB)","var(--accent,#3A47B5)",18,3);text(500,225,data.formula_title||"Refund Formula",16,800,"var(--accent,#3A47B5)","middle");parts.slice(0,4).forEach((r,i)=>{const x=130+i*190;text(x+80,285,r.label||r.title||`Factor ${i+1}`,13,800,"var(--ink,#121C2F)","middle");text(x+80,325,r.value??r.detail??"",17,900,"var(--idt,#0C7A69)","middle");if(i<parts.length-1)text(x+175,305,i===parts.length-2?"=":"×",20,900,"var(--ink-2,#4A566C)","middle");});
+  } else if (style === "turnover_ratio_card") {
+    const pct=Number(data.percentage||data.metric?.value||0);sv("circle",{cx:500,cy:275,r:125,fill:"var(--accent-soft,#E4E7FA)",stroke:"var(--accent,#3A47B5)","stroke-width":18,"stroke-dasharray":`${Math.max(0,Math.min(100,pct))*7.85} 785`,transform:"rotate(-90 500 275)"},svg);text(500,268,`${pct}%`,42,900,"var(--accent,#3A47B5)","middle");text(500,315,data.ratio_label||"Presumptive rate",17,800,"var(--ink,#121C2F)","middle");text(500,445,data.outcome||"",15,650,"var(--ink-2,#4A566C)","middle");
+  } else if (style === "remuneration_calculator") {
+    const parts=rows.length?rows:(data.steps||[]);rect(145,145,710,285,"var(--surface-2,#F5F7FB)","var(--accent,#3A47B5)",18,2);text(500,190,data.formula_title||"Working Partner Remuneration Limit",17,900,"var(--accent,#3A47B5)","middle");
+    parts.slice(0,4).forEach((r,i)=>{const y=235+i*43;text(190,y,r.label||r.particulars||`Calculation ${i+1}`,15,700,"var(--ink-2,#4A566C)");text(810,y,r.value??r.detail??"",15,800,"var(--ink,#121C2F)","end");if(i<parts.length-1)line(185,y+12,815,y+12,"#E2E8F0",1);timedFade(svg,i);});
+    if(data.outcome)text(500,400,data.outcome,15,800,"var(--idt,#0C7A69)","middle");
+  } else if (style === "faceless_assessment_cycle") {
+    const nodes=steps.slice(0,5);sv("ellipse",{cx:500,cy:275,rx:320,ry:130,fill:"none",stroke:"#A5B4FC","stroke-width":5,"stroke-dasharray":"10 8"},svg);
+    nodes.forEach((it,i)=>{const a=(-Math.PI/2)+(i*Math.PI*2/nodes.length);const x=500+320*Math.cos(a),y=275+130*Math.sin(a);rect(x-100,y-32,200,64,"var(--surface,#FFFFFF)","var(--accent,#3A47B5)",14,2);text(x,y-2,it.label||it.title||`Routing ${i+1}`,13,800,"var(--ink,#121C2F)","middle");text(x,y+18,it.detail||"",11,600,"var(--ink-2,#4A566C)","middle");timedFade(svg,i);});
+  } else if (style === "job_work_circular_track") {
+    const nodes=steps.slice(0,3);sv("ellipse",{cx:500,cy:280,rx:300,ry:135,fill:"none",stroke:"#A5B4FC","stroke-width":5},svg);
+    nodes.forEach((it,i)=>{const a=(-Math.PI/2)+(i*Math.PI*2/Math.max(3,nodes.length));const x=500+300*Math.cos(a),y=280+135*Math.sin(a);sv("circle",{cx:x,cy:y,r:58,fill:i===nodes.length-1?"#ECFDF5":"var(--accent-soft,#E4E7FA)",stroke:i===nodes.length-1?"var(--idt,#0C7A69)":"var(--accent,#3A47B5)","stroke-width":3},svg);text(x,y-3,it.label||it.title||`Stage ${i+1}`,13,800,"var(--ink,#121C2F)","middle");text(x,y+18,it.detail||it.period||"",11,650,"var(--ink-2,#4A566C)","middle");timedFade(svg,i);});
+  } else if (style === "tds_deposit_calendar") {
+    const months=data.steps||steps;months.slice(0,6).forEach((m,i)=>{const col=i%3,row=Math.floor(i/3),x=145+col*245,y=145+row*135;rect(x,y,210,105,"var(--surface,#FFFFFF)","#C7D2FE",12,2);rect(x,y,210,30,"var(--accent-soft,#E4E7FA)","var(--accent-soft,#E4E7FA)",10,0);text(x+105,y+21,m.label||m.date||`Month ${i+1}`,13,800,"var(--accent,#3A47B5)","middle");text(x+105,y+65,m.detail||m.value||"Deposit / due date",12,650,"var(--ink-2,#4A566C)","middle");timedFade(svg,i);});
+  } else if (style === "appeals_hierarchy") {
+    const levels=steps;levels.slice(0,6).forEach((r,i)=>{const w=210+i*78,x=(1000-w)/2,y=105+i*55;rect(x,y,w,44,i===levels.length-1?"#ECFDF5":"var(--accent-soft,#E4E7FA)",i===levels.length-1?"var(--idt,#0C7A69)":"#A5B4FC",6,1.5);text(500,y+28,r.label||r.title||`Authority ${i+1}`,14,800,"var(--ink,#121C2F)","middle");timedFade(svg,i);});
+  } else if (style === "advance_tax_installments") {
+    const quarters=data.steps||steps;quarters.slice(0,4).forEach((q,i)=>{const x=112+i*205;rect(x,180,170,205,"var(--surface-2,#F5F7FB)","var(--line,#D9DFEA)",12,2);rect(x,385-Number(q.percentage||q.value||15)*2,170,Number(q.percentage||q.value||15)*2,"var(--accent,#3A47B5)","var(--accent,#3A47B5)",8,0);text(x+85,220,q.label||q.date||`Installment ${i+1}`,14,800,"var(--ink,#121C2F)","middle");text(x+85,250,q.percentage||q.value||"",18,900,"var(--accent,#3A47B5)","middle");timedFade(svg,i);});
+  } else {
+    customRendered = false;
+  }
+
+  if (customRendered) {
+    // A named catalog layout above produced its own composition.
+  } else if (styleHas("statute_quote","circular_bulletin","proviso_card","gavel_card")) {
+    const quote=(data.quote||b.quote||{}); rect(105,132,790,300,"var(--surface-2,#F5F7FB)",style.includes("gavel")?"#CA8A04":"var(--accent,#3A47B5)",18,4);
+    text(145,185,data.kicker||quote.citation||"STATUTORY RULE",14,800,"var(--accent,#3A47B5)");
+    const q=multiline(145,238,quote.text||data.summary||data.rule||"Add the applicable rule summary to visual_data.",20,650,"var(--ink,#121C2F)",68,6);
+    q.setAttribute("font-style","italic");
+    if(data.emphasis) { rect(135,375,730,46,"var(--accent-soft,#E4E7FA)","#C7D2FE",10,1); text(155,405,data.emphasis,16,800,"var(--accent,#3A47B5)"); }
+    animate(svg,0,true);
+  } else if (styleHas("trap_alert")) {
+    rect(90,145,820,250,"#FEF2F2","#DC2626",20,4); text(500,215,"EXAM TRAP",18,900,"#B91C1C","middle");
+    text(500,280,data.rule||data.summary||"Check the statutory condition before applying the benefit.",22,800,"#7F1D1D","middle");
+    text(500,340,data.result||"",16,700,"#991B1B","middle"); animate(svg,0,true);
+  } else if (styleHas("takeaway")) {
+    const items=data.items||data.points||b.points||b.rules||[]; const n=Math.max(1,Math.min(5,items.length));
+    items.slice(0,5).forEach((it,i)=>{const label=it.label||it.heading||it.text||it.body||it; const detail=it.detail||it.body||""; box(130,120+i*(330/n),740,Math.max(55,250/n),`${String(i+1).padStart(2,"0")}  ${label}`,detail,i,i===0?"var(--accent,#3A47B5)":"var(--idt,#0C7A69)");});
+  } else if (styleHas("meter","threshold","thermometer","ratio","limit","timer","gauge","safe_harbor")) {
+    const metrics=data.metrics||[]; const m=metrics[0]||data.metric||{}; const max=Number(m.max||m.limit||100)||100; const value=Math.max(0,Math.min(max,Number(m.value||m.current||0))); const pct=Math.max(0,Math.min(100,(value/max)*100));
+    rect(130,205,740,68,"#E2E8F0","var(--line,#D9DFEA)",34,1); rect(130,205,740*pct/100,68,"var(--accent,#3A47B5)","var(--accent,#3A47B5)",34,0);
+    const threshold=Number(m.threshold); if(Number.isFinite(threshold)&&max) {const tx=130+740*threshold/max; line(tx,180,tx,300,"#DC2626",4); text(tx,164,m.threshold_label||"Limit",13,800,"#B91C1C","middle");}
+    text(500,340,`${m.label||"Illustrative value"}: ${m.display_value||value}`,18,800,"var(--ink,#121C2F)","middle");
+    text(500,378,m.outcome||data.outcome||"Apply the statutory threshold to the example.",15,700,"var(--ink-2,#4A566C)","middle");
+    animate(svg,0,true);
+  } else if (styleHas("fork","tree","filter","checklist","tests","blocked_credit","amalgamation","dividend","waterfall")) {
+    if(styleHas("checklist","tests","blocked_credit","amalgamation","dividend")) {
+      const items=data.items||data.checks||steps; items.slice(0,5).forEach((it,i)=>{const ok=it.pass!==false;const y=130+i*70;rect(165,y,670,54,ok?"#F0FDF4":"#FEF2F2",ok?"#86EFAC":"#FCA5A5",10,1.5);text(190,y+35,ok?"✓":"×",22,900,ok?"var(--idt,#0C7A69)":"#DC2626");text(235,y+34,it.label||it.text||it.title||"Condition",16,700,"var(--ink,#121C2F)");timedFade(svg,i);});
+    } else {
+      rect(330,125,340,75,"var(--accent-soft,#E4E7FA)","var(--accent,#3A47B5)",14,2);text(500,170,data.question||data.root||"Which statutory condition applies?",17,800,"var(--accent,#3A47B5)","middle");
+      branches.slice(0,3).forEach((br,i)=>{const x=branches.length===2?(i?650:150):90+i*280; const w=branches.length===2?200:260;line(500,200,x+w/2,275,"#94A3B8",3);rect(x,275,w,130,br.pass===false?"#FEF2F2":"var(--surface-2,#F5F7FB)",br.pass===false?"#FCA5A5":"#C7D2FE",12,2);text(x+w/2,310,br.label||br.title||`Path ${i+1}`,15,800,"var(--ink,#121C2F)","middle");text(x+w/2,345,br.detail||br.outcome||"",13,600,"var(--ink-2,#4A566C)","middle");text(x+w/2,378,br.outcome||"",12,700,br.pass===false?"#B91C1C":"var(--idt,#0C7A69)","middle");timedFade(svg,i);});
+    }
+  } else if (styleHas("compare","split","matrix","two_column","regime","dtaa","composite","specified","company_vs","cash_vs","actual_vs","conflict")) {
+    const comps=sides.length?sides:[{title:data.left_title||"Option A",text:data.left_text||data.left||""},{title:data.right_title||"Option B",text:data.right_text||data.right||""}];
+    comps.slice(0,3).forEach((it,i)=>{const w=comps.length>2?250:365;const x=comps.length>2?100+i*270:115+i*390;box(x,160,w,230,it.title||it.label||`Case ${i+1}`,it.text||it.value||it.detail||"",i,i===0?"var(--accent,#3A47B5)":"var(--idt,#0C7A69)");});
+  } else if (styleHas("timeline","hierarchy","protocol","cycle","pipeline","calendar","installments","route","flow","job_work","penal_interest","waterfall")) {
+    const items=steps.length?steps:(data.items||[]);const n=Math.max(items.length,2);const gap=760/(n-1);
+    line(120,270,880,270,"#A5B4FC",5);
+    items.slice(0,7).forEach((it,i)=>{const x=120+i*gap;sv("circle",{cx:x,cy:270,r:22,fill:i===items.length-1?"var(--idt,#0C7A69)":"var(--accent,#3A47B5)",stroke:"#fff","stroke-width":4},svg);const up=i%2===0;const y=up?205:340;line(x,up?245:295,x,y+(up?18:-12),"#94A3B8",2);text(x,y,it.label||it.title||it.name||`Step ${i+1}`,13,800,"var(--ink,#121C2F)","middle");text(x,y+22,it.detail||it.sub||it.date||"",11,600,"var(--ink-2,#4A566C)","middle");timedFade(svg,i);});
+  } else if (styleHas("slab_ladder","pyramid","e_invoice_threshold_ladder")) {
+    const items=rows.length?rows:(data.tiers||steps);const n=Math.max(1,items.length);items.slice(0,6).forEach((it,i)=>{const w=250+i*78;const x=(1000-w)/2;const y=125+i*(300/n);rect(x,y,w,Math.max(42,250/n),i===n-1?"var(--accent-soft,#E4E7FA)":"var(--surface-2,#F5F7FB)",i===n-1?"var(--accent,#3A47B5)":"var(--line,#D9DFEA)",8,2);text(500,y+29,it.label||it.particulars||it.title||`Tier ${i+1}`,14,800,"var(--ink,#121C2F)","middle");text(500,y+49,it.value!==undefined?it.value:it.rate||it.detail||"",12,700,"var(--accent,#3A47B5)","middle");timedFade(svg,i);});
+  } else if (data.parties || data.transaction || data.asset || styleHas("scene","property_","rental_","amalgamation_merger","demerger","sole_prop","factory_relocation","search_unexplained","survey_business","bank_cash","immovable_property","crypto_vda","job_worker","works_contract","itc_blocked","cross_border","royalty_technical","export_lut","e_commerce","casual_taxable")) {
+    const people=data.parties||[];const facts=data.facts||steps;rect(80,155,840,260,"var(--surface-2,#F5F7FB)","var(--line,#D9DFEA)",18,1.5);
+    if(people[0]){sv("circle",{cx:220,cy:260,r:38,fill:"var(--accent-soft,#E4E7FA)",stroke:"var(--accent,#3A47B5)","stroke-width":3},svg);text(220,318,people[0].name||people[0].label||"Assessee",14,800,"var(--ink,#121C2F)","middle");}
+    if(people[1]){sv("circle",{cx:780,cy:260,r:38,fill:"#ECFDF5",stroke:"var(--idt,#0C7A69)","stroke-width":3},svg);text(780,318,people[1].name||people[1].label||"Counterparty",14,800,"var(--ink,#121C2F)","middle");}
+    rect(350,210,300,100,"#fff","#CA8A04",14,2);text(500,250,data.transaction||data.asset||"Transaction",16,800,"#854D0E","middle");text(500,280,data.amount||data.condition||"",13,600,"var(--ink-2,#4A566C)","middle");line(260,260,350,260,"var(--ink-2,#4A566C)",3);line(650,260,740,260,"var(--ink-2,#4A566C)",3);
+    facts.slice(0,3).forEach((it,i)=>box(120+i*260,350,230,52,it.label||it.title||`Key fact ${i+1}`,it.detail||it.value||"",i));
+  } else {
+    const items=rows.length?rows:(data.items||steps);items.slice(0,5).forEach((it,i)=>{const y=135+i*68;rect(140,y,720,52,i===items.length-1?"var(--accent-soft,#E4E7FA)":"var(--surface,#FFFFFF)",i===items.length-1?"var(--accent,#3A47B5)":"var(--line,#D9DFEA)",10,1.5);text(165,y+32,it.label||it.particulars||it.text||it.title||`Step ${i+1}`,15,700,"var(--ink,#121C2F)");text(830,y+32,it.value!==undefined?it.value:it.detail||"",14,800,"var(--accent,#3A47B5)","end");timedFade(svg,i);});
+  }
+}
+
 const TEMPLATES = {
+  catalog_layout(el, b, ctx) { renderCatalogLayout(el, b, ctx); },
   headline(el, b, ctx) {
     words(ctx, h("headline", el), b.title.text, b.title.at);
     if (b.subtitle) words(ctx, h("sub", el), b.subtitle.text, b.subtitle.at);
@@ -886,8 +1111,7 @@ const TEMPLATES = {
     fade(ctx, scene, b.start + 0.1, 16, 0.7);
     const img = document.createElement("img");
     img.className = "art";
-    const src = (b.image_url && !b.image_url.startsWith("http") && !b.image_url.startsWith("../") && !b.image_url.startsWith("/")) ? ("../" + b.image_url) : (b.image_url || "");
-    img.src = src;
+    img.src = window.resolveExplainerAssetUrl(b.image_url || "");
     img.alt = "";
     img.style.cssText = "width:100%;height:100%;display:block;object-fit:cover;transform-origin:50% 60%";
     scene.appendChild(img);
@@ -1471,7 +1695,7 @@ const TEMPLATES = {
   },
 
   story_scene(el, b, ctx) {
-    el.style.cssText = "position:absolute;inset:0;width:100%;height:100%;overflow:hidden;display:flex;flex-direction:column;align-items:center;";
+    el.classList.add("story-scene-beat");
 
     // Header
     const hdr = h("story-scene-hdr", el);
@@ -1596,6 +1820,50 @@ const TEMPLATES = {
       return g;
     };
 
+    const makeBuilding = (parent, x, y, col, label, sub) => {
+      const g = G_EL(parent);
+      R_EL(g, x - 45, y - 45, 90, 110, "#FFFFFF", { stroke: col, sw: 3.5, rx: 6 });
+      P_EL(g, `M ${x} ${y - 45} L ${x} ${y - 65}`, col, 2.5);
+      S_EL("circle", { cx: x, cy: y - 68, r: 4, fill: col }, g);
+      for (let r = 0; r < 3; r++) {
+        for (let c = 0; c < 3; c++) {
+          R_EL(g, x - 35 + c * 26, y - 32 + r * 26, 16, 16, "#FEF08A", { stroke: col, sw: 1.5, rx: 2 });
+        }
+      }
+      R_EL(g, x - 14, y + 42, 28, 23, col, { rx: 2 });
+      if (label) T_EL(g, x, y + 84, label, { size: 14.5, weight: 800, anchor: "middle", fill: "#0F172A" });
+      if (sub) T_EL(g, x, y + 102, sub, { size: 12, weight: 600, anchor: "middle", fill: "#64748B" });
+      return g;
+    };
+
+    const makeVehicle = (parent, x, y, col, label, sub) => {
+      const g = G_EL(parent);
+      P_EL(g, `M ${x - 40} ${y + 5} L ${x - 22} ${y - 25} L ${x + 22} ${y - 25} L ${x + 40} ${y + 5} Z`, col, 2.5, { fill: "#EEF2FF" });
+      R_EL(g, x - 55, y + 5, 110, 35, "#FFFFFF", { stroke: col, sw: 3.5, rx: 8 });
+      S_EL("circle", { cx: x - 30, cy: y + 40, r: 12, fill: "#1E293B", stroke: col, "stroke-width": 2 }, g);
+      S_EL("circle", { cx: x - 30, cy: y + 40, r: 4, fill: "#CBD5E1" }, g);
+      S_EL("circle", { cx: x + 30, cy: y + 40, r: 12, fill: "#1E293B", stroke: col, "stroke-width": 2 }, g);
+      S_EL("circle", { cx: x + 30, cy: y + 40, r: 4, fill: "#CBD5E1" }, g);
+      R_EL(g, x + 48, y + 12, 6, 10, "#FEF08A", { rx: 2 });
+      if (label) T_EL(g, x, y + 68, label, { size: 14.5, weight: 800, anchor: "middle", fill: "#0F172A" });
+      if (sub) T_EL(g, x, y + 86, sub, { size: 12, weight: 600, anchor: "middle", fill: "#64748B" });
+      return g;
+    };
+
+    const makeContract = (parent, x, y, col, label, sub) => {
+      const g = G_EL(parent);
+      R_EL(g, x - 35, y - 45, 70, 95, "#FFFFFF", { stroke: col, sw: 3, rx: 6 });
+      P_EL(g, `M ${x + 15} ${y - 45} L ${x + 35} ${y - 25} L ${x + 15} ${y - 25} Z`, col, 2, { fill: "#E0E7FF" });
+      for (let i = 0; i < 4; i++) {
+        P_EL(g, `M ${x - 22} ${y - 15 + i * 14} L ${x + 22} ${y - 15 + i * 14}`, "#CBD5E1", 2.5);
+      }
+      S_EL("circle", { cx: x + 15, cy: y + 32, r: 9, fill: "#FEE2E2", stroke: "#DC2626", "stroke-width": 1.5 }, g);
+      if (label) T_EL(g, x, y + 68, label, { size: 14.5, weight: 800, anchor: "middle", fill: "#0F172A" });
+      if (sub) T_EL(g, x, y + 86, sub, { size: 12, weight: 600, anchor: "middle", fill: "#64748B" });
+      return g;
+    };
+
+
     const at = (key, fallback) => {
       if (b.elements && b.elements[key] && typeof b.elements[key].at === "number") {
         return b.elements[key].at;
@@ -1606,8 +1874,40 @@ const TEMPLATES = {
       return b.start + fallback;
     };
 
+    // Generic case scene used for provision-specific Gemini examples. Keep this
+    // schema open so a new provision can supply its own parties, facts and values.
+    if (b.scene_type === "dynamic_case") {
+      const items = Object.entries(b.elements || {}).filter(([, item]) => item && (item.label || item.name || item.title || item.rule));
+      const columns = items.length > 3 ? 3 : Math.max(1, items.length);
+      const cardW = columns === 3 ? 270 : columns === 2 ? 390 : 560;
+      const gap = columns === 3 ? 24 : 30;
+      const totalW = columns * cardW + (columns - 1) * gap;
+      const x0 = (1000 - totalW) / 2;
+      const rowCount = Math.ceil(items.length / columns);
+      const cardH = rowCount > 1 ? 112 : 150;
+      const rowGap = 18;
+      const totalH = rowCount * cardH + (rowCount - 1) * rowGap;
+      const y0 = 190 + Math.max(0, (300 - totalH) / 2);
+
+      items.forEach(([key, item], index) => {
+        const col = index % columns;
+        const row = Math.floor(index / columns);
+        const x = x0 + col * (cardW + gap);
+        const y = y0 + row * (cardH + rowGap);
+        const group = G_EL(svg);
+        const isOutcome = /outcome|verdict|result/i.test(key);
+        const color = isOutcome ? "#059669" : (index % 2 ? "#4F46E5" : "#0F172A");
+        R_EL(group, x, y, cardW, cardH, isOutcome ? "#ECFDF5" : "#FFFFFF", { stroke: isOutcome ? "#059669" : "#CBD5E1", sw: 2, rx: 14 });
+        const label = String(item.label || item.title || item.name || key.replace(/_/g, " "));
+        const detail = String(item.rule || item.sub || (item.val !== undefined ? item.val : item.role) || "");
+        T_EL(group, x + 18, y + 34, label.slice(0, 46), { size: 15, weight: 800, fill: color });
+        if (detail) T_EL(group, x + 18, y + 67, detail.slice(0, 58), { size: 13, weight: 600, fill: "#334155" });
+        fade(ctx, group, typeof item.at === "number" ? item.at : b.start + 0.8 + index * 1.2, 12, 0.45);
+      });
+    }
+
     // 1. SCENE: rental_and_gift
-    if (b.scene_type === "rental_and_gift") {
+    else if (b.scene_type === "rental_and_gift") {
       const sep = P_EL(svg, "M 500 120 L 500 480", "#CBD5E1", 2, { dash: "6 6" });
       fade(ctx, sep, at("divider", 0.3), 0, 0.4);
 
@@ -1692,8 +1992,8 @@ const TEMPLATES = {
       fade(ctx, resG, at("net_loss", 5.6), 12, 0.5);
     }
 
-    // 3. SCENE: property_transfer_sdv (Real Estate, Seller, Buyer, House, Extension, Advance Cheque, SDV Gavel)
-    else if (b.scene_type === "property_transfer_sdv" || b.elements?.vijay || b.elements?.house_1982) {
+    // 3. SCENE: property_transfer_sdv (Preset dt-c2-q25 or explicit preset lab-property-50c)
+    else if ((b.scene_type === "property_transfer_sdv" && (this.sp?.question_id === "dt-c2-q25" || this.sp?.question_id === "lab-property-50c")) || (b.elements?.vijay && b.elements?.house_1982 && !b.elements?.assessee)) {
       // Ambient Ground line
       P_EL(svg, "M 60 480 L 940 480", "#CBD5E1", 2.5);
 
@@ -1967,14 +2267,124 @@ const TEMPLATES = {
       fade(ctx, poolBox, at("pool_box", 4.2), 10, 0.4);
     }
 
-    // 7. UNIVERSAL DYNAMIC FALLBACK FOR ANY OTHER SITUATIONAL STORY SCENE
+    // 7. UNIVERSAL DYNAMIC CASE RENDERER (For all newly generated statutory examples)
     else {
+      // Ambient ground line
+      P_EL(svg, "M 60 480 L 940 480", "#CBD5E1", 2.5);
+
       const elems = b.elements || {};
-      const keys = Object.keys(elems);
-      if (keys.length > 0) {
-        const gridCols = Math.min(keys.length, 3);
+      const handled = [];
+
+      // A. Assessee Entity (Positioned at Left: x = 140, y = 310)
+      const ass = elems.assessee || elems.seller || elems.payer || elems.client || elems.contractor;
+      if (ass) {
+        handled.push(Object.keys(elems).find(k => elems[k] === ass));
+        const x = ass.x || 140, y = ass.y || 310;
+        const col = ass.col || "#4F46E5";
+        let g;
+        if (ass.type === "company" || ass.type === "builder" || ass.type === "firm") {
+          g = makeBuilding(svg, x, y - 20, col, ass.name || ass.label || "Assessee", ass.role || ass.sub || "Taxpayer");
+        } else if (ass.type === "factory") {
+          g = makeFactory(svg, x, y - 20, col, ass.name || ass.label || "Assessee Unit", ass.role || ass.sub);
+        } else {
+          g = makePerson(svg, x, y, col, ass.name || ass.label || "Assessee", ass.role || ass.sub || "Taxpayer");
+        }
+        fade(ctx, g, ass.at !== undefined ? ass.at : b.start + 0.4, 12, 0.5);
+      }
+
+      // B. Counterparty / Buyer / Authority (Positioned at Right: x = 860, y = 310)
+      const cp = elems.counterparty || elems.buyer || elems.payee || elems.authority;
+      if (cp) {
+        handled.push(Object.keys(elems).find(k => elems[k] === cp));
+        const x = cp.x || 860, y = cp.y || 310;
+        const col = cp.col || "#059669";
+        const g = makePerson(svg, x, y, col, cp.name || cp.label || "Counterparty", cp.role || cp.sub || "Other Party");
+        fade(ctx, g, cp.at !== undefined ? cp.at : b.start + 1.2, 12, 0.5);
+      }
+
+      // C. Subject Asset / Property / Contract (Center-Left: x = 370, y = 280)
+      const ast = elems.asset || elems.property || elems.contract || elems.vehicle;
+      if (ast) {
+        handled.push(Object.keys(elems).find(k => elems[k] === ast));
+        const x = ast.x || 370, y = ast.y || 280;
+        const col = ast.col || "#2563EB";
+        let g;
+        if (ast.type === "building" || ast.type === "office" || ast.type === "shop") {
+          g = makeBuilding(svg, x, y, col, ast.name || ast.label || "Subject Property", ast.sub || ast.role || "Stock-in-Trade");
+        } else if (ast.type === "factory") {
+          g = makeFactory(svg, x, y, col, ast.name || ast.label || "Factory Unit", ast.sub || ast.role);
+        } else if (ast.type === "vehicle" || ast.type === "car") {
+          g = makeVehicle(svg, x, y + 10, col, ast.name || ast.label || "Motor Vehicle", ast.sub || ast.role);
+        } else if (ast.type === "contract" || ast.type === "agreement") {
+          g = makeContract(svg, x, y, col, ast.name || ast.label || "Contract Agreement", ast.sub || ast.role);
+        } else {
+          g = makeHouse(svg, x, y, col, ast.name || ast.label || "Residential Property", ast.sub || ast.role);
+        }
+        fade(ctx, g, ast.at !== undefined ? ast.at : b.start + 2.0, 12, 0.5);
+      }
+
+      // D. Deal Value / Stated Consideration Card (Center-Right: x = 610, y = 190)
+      const deal = elems.deal_card || elems.transaction || elems.stated_value || elems.consideration;
+      if (deal) {
+        handled.push(Object.keys(elems).find(k => elems[k] === deal));
+        const x = deal.x || 610, y = deal.y || 190, w = deal.w || 260, h = deal.h || 64;
+        const col = deal.tone === "ok" ? "#059669" : (deal.tone === "warn" ? "#DC2626" : "#4F46E5");
+        const g = G_EL(svg);
+        R_EL(g, x - w / 2, y - h / 2, w, h, "#FFFFFF", { stroke: col, sw: 2, rx: 10 });
+        T_EL(g, x, y - 8, deal.title || deal.label || "Stated Consideration", { size: 12.5, weight: 800, fill: "#0F172A", anchor: "middle" });
+        T_EL(g, x, y + 16, deal.val ? (typeof deal.val === "number" ? inr(deal.val) : deal.val) : (deal.sub || ""), { size: 16, weight: 800, fill: col, anchor: "middle" });
+        fade(ctx, g, deal.at !== undefined ? deal.at : b.start + 2.8, 10, 0.4);
+      }
+
+      // E. Benchmark / SDV / Threshold Card (Center-Right: x = 610, y = 280)
+      const bm = elems.sdv_card || elems.benchmark || elems.threshold || elems.sdv;
+      if (bm) {
+        handled.push(Object.keys(elems).find(k => elems[k] === bm));
+        const x = bm.x || 610, y = bm.y || 280, w = bm.w || 260, h = bm.h || 64;
+        const col = bm.tone === "ok" ? "#059669" : "#DC2626";
+        const g = G_EL(svg);
+        R_EL(g, x - w / 2, y - h / 2, w, h, "#FEF2F2", { stroke: col, sw: 2, rx: 10 });
+        T_EL(g, x, y - 8, bm.title || bm.label || "Statutory Benchmark / SDV", { size: 12, weight: 800, fill: col, anchor: "middle" });
+        T_EL(g, x, y + 16, bm.val ? (typeof bm.val === "number" ? inr(bm.val) : bm.val) : (bm.sub || ""), { size: 16, weight: 800, fill: col, anchor: "middle" });
+        fade(ctx, g, bm.at !== undefined ? bm.at : b.start + 3.6, 10, 0.4);
+      }
+
+      // F. Safe Harbor / Cap / Tolerance Pill (Center-Right: x = 610, y = 360)
+      const sh = elems.safe_harbor || elems.tolerance || elems.cap;
+      if (sh) {
+        handled.push(Object.keys(elems).find(k => elems[k] === sh));
+        const x = sh.x || 610, y = sh.y || 360;
+        const g = G_EL(svg);
+        R_EL(g, x - 130, y - 16, 260, 32, "#FEF08A", { stroke: "#CA8A04", sw: 1.5, rx: 16 });
+        T_EL(g, x, y + 5, sh.title || sh.label || (sh.val ? `Safe Harbor Cap: ${typeof sh.val === 'number' ? inr(sh.val) : sh.val}` : "110% Tolerance Test"), { size: 11.5, weight: 800, fill: "#854D0E", anchor: "middle" });
+        fade(ctx, g, sh.at !== undefined ? sh.at : b.start + 4.2, 8, 0.4);
+      }
+
+      // G. Outcome / Verdict Gavel or Banner (Bottom Center: x = 500, y = 490)
+      const out = elems.outcome || elems.verdict || elems.court_ruling || b.outcome;
+      if (out) {
+        handled.push(Object.keys(elems).find(k => elems[k] === out));
+        const x = out.x || 500, y = out.y || 490;
+        let g;
+        if (out.type === "gavel" || out.rule) {
+          g = makeGavel(svg, x, y, out.title || out.heading || "Statutory Verdict", out.rule || out.text || out.sub || "Provision Outcome Confirmed", out.w || 560, out.h || 68);
+        } else {
+          g = G_EL(svg);
+          const w = out.w || 520, h = out.h || 48;
+          const col = out.tone === "bad" ? "#DC2626" : "#059669";
+          const tint = out.tone === "bad" ? "#FEF2F2" : "#ECFDF5";
+          R_EL(g, x - w / 2, y - h / 2, w, h, tint, { stroke: col, sw: 2, rx: 24 });
+          T_EL(g, x, y + 6, out.text || out.title || out.label || "Statutory Outcome", { size: 13.5, weight: 800, fill: col, anchor: "middle" });
+        }
+        fade(ctx, g, out.at !== undefined ? out.at : b.start + 5.0, 12, 0.5);
+      }
+
+      // H. Render any other arbitrary elements from the screenplay
+      const remaining = Object.keys(elems).filter(k => !handled.includes(k) && elems[k]);
+      if (remaining.length > 0) {
+        const gridCols = Math.min(remaining.length, 3);
         const colW = Math.floor(860 / gridCols);
-        keys.forEach((k, idx) => {
+        remaining.forEach((k, idx) => {
           const item = elems[k];
           if (!item || typeof item !== "object") return;
           const colIdx = idx % gridCols;
@@ -1988,6 +2398,12 @@ const TEMPLATES = {
             g = makePerson(svg, x, y, col, item.name || item.label, item.role || item.sub);
           } else if (item.type === "house") {
             g = makeHouse(svg, x, y, col, item.name || item.label, item.role || item.sub);
+          } else if (item.type === "building" || item.type === "office") {
+            g = makeBuilding(svg, x, y, col, item.name || item.label, item.role || item.sub);
+          } else if (item.type === "vehicle") {
+            g = makeVehicle(svg, x, y, col, item.name || item.label, item.role || item.sub);
+          } else if (item.type === "contract") {
+            g = makeContract(svg, x, y, col, item.name || item.label, item.role || item.sub);
           } else if (item.type === "factory") {
             g = makeFactory(svg, x, y, col, item.name || item.label, item.role || item.sub);
           } else if (item.type === "gavel") {
@@ -2008,7 +2424,7 @@ const TEMPLATES = {
               T_EL(g, x - w / 2 + 14, y - h / 2 + 70, item.sub || item.text, { size: 11.5, weight: 600, fill: "#64748B" });
             }
             if (item.val) {
-              T_EL(g, x + w / 2 - 14, y - h / 2 + 50, inr(item.val), { size: 14, weight: 800, fill: col, anchor: "end" });
+              T_EL(g, x + w / 2 - 14, y - h / 2 + 50, typeof item.val === "number" ? inr(item.val) : item.val, { size: 14, weight: 800, fill: col, anchor: "end" });
             }
           }
           fade(ctx, g, item.at !== undefined ? item.at : (b.start + 0.5 + idx * 0.4), 10, 0.4);
@@ -2159,77 +2575,26 @@ class Explainer {
   }
 
   async load(qid, inlineSp = null) {
+    const canonicalQid = window.normalizeExplainerQid(qid);
+    const fixtureMode = new URLSearchParams(window.location.search).get("fixtures") === "1";
     let sp = inlineSp;
-    const normKey = qid ? qid.replace(/-/g, "_") : "";
-    const chKey = qid ? qid.replace(/^dt-/, "").replace(/-/g, "_") : "";
+    const fromBundle = async () => {
+      await loadScreenplayBundle();
+      return window.GENERATED_SCREENPLAYS?.[canonicalQid] || null;
+    };
 
-    if (!sp && typeof FIXTURES !== "undefined") {
-      sp = FIXTURES[qid] || FIXTURES[normKey] || FIXTURES[chKey];
-    }
-    if (!sp && window.EXPLAINER_SCREENPLAYS) {
-      sp = window.EXPLAINER_SCREENPLAYS[qid] || window.EXPLAINER_SCREENPLAYS[normKey] || window.EXPLAINER_SCREENPLAYS[chKey];
-    }
-
+    // Delivery priority: explicit argument, generated bundle, question JSON,
+    // optional benchmark fixture, then data-derived question-local fallback.
+    if (!sp) sp = await fromBundle();
     if (!sp && window.location.protocol !== "file:") {
       try {
-        const resp = await fetch(`/api/screenplay/${qid}`);
-        if (resp.ok) sp = await resp.json();
-      } catch (e) {}
+        const response = await fetch(window.resolveExplainerAssetUrl(`data/screenplays/${canonicalQid}.json`));
+        if (response.ok) sp = await response.json();
+      } catch (error) {}
     }
+    if (!sp && typeof FIXTURES !== "undefined" && (fixtureMode || !window.GENERATED_SCREENPLAYS?.[canonicalQid])) sp = FIXTURES[canonicalQid] || null;
 
-    if (!sp && window.location.protocol !== "file:") {
-      try {
-        const localResp = await fetch(`data/screenplays/${qid}.json`);
-        if (localResp.ok) sp = await localResp.json();
-      } catch (e) {}
-    }
-
-    // Check window.D for live screenplay
-    if (!sp && window.D && window.D.qna) {
-      const qObj = window.D.qna.find(item => item.id === qid || ("dt-c" + item.ch + "-q" + item.n) === qid);
-      if (qObj) {
-        const prov = window.D.prov?.[qObj.topic];
-        if (prov && prov.screenplay) {
-          sp = prov.screenplay;
-        }
-      }
-    }
-
-    if (!sp && window.EXPLAINER_SCREENPLAYS) {
-      sp = window.EXPLAINER_SCREENPLAYS[qid] || window.EXPLAINER_SCREENPLAYS[normKey] || window.EXPLAINER_SCREENPLAYS["dt-c2-q25"] || window.EXPLAINER_SCREENPLAYS["dt-c2-q14"];
-    }
-
-    if (!sp) {
-      console.warn("Could not find screenplay for", qid, "generating fallback structure...");
-      sp = {
-        question_id: qid,
-        context_pill: "Statutory Pedagogical Explainer",
-        duration_sec: 45.0,
-        beats: [
-          {
-            id: "b1",
-            layout: "headline",
-            start: 0,
-            end: 15,
-            voice_sync_text: "Statutory overview and core legal doctrine.",
-            title: { text: "Statutory Provision Analysis", at: 0.5 },
-            subtitle: { text: "Master the statutory principle before solving the exam case.", at: 2.0 }
-          },
-          {
-            id: "b2",
-            layout: "takeaway",
-            start: 15,
-            end: 45,
-            voice_sync_text: "Golden takeaways for CA Final / Inter exams.",
-            title: { text: "Key Statutory Takeaways", at: 15.5 },
-            points: [
-              { num: "1", text: "Verify statutory eligibility conditions under relevant section.", at: 18.0 },
-              { num: "2", text: "Compute capital gains and appropriate exemptions accurately.", at: 25.0 }
-            ]
-          }
-        ]
-      };
-    }
+    if (!sp) sp = buildQuestionFallback(canonicalQid);
 
     this.sp = sp;
     this.offset = sp.sync_offset_sec || 0;
@@ -2239,8 +2604,7 @@ class Explainer {
     }
 
     if (sp.audio_url) {
-      const aSrc = (sp.audio_url && !sp.audio_url.startsWith("http") && !sp.audio_url.startsWith("../") && !sp.audio_url.startsWith("/")) ? ("../" + sp.audio_url) : sp.audio_url;
-      this.audio.src = aSrc;
+      this.audio.src = window.resolveExplainerAssetUrl(sp.audio_url);
     }
 
     if (this.scrub) {

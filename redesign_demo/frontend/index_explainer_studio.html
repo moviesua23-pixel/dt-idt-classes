@@ -5758,7 +5758,7 @@ function buildModelFromPipeline(data) {
     );
     const topicId = q.topic_id || p?.topic_id || ("T_CH" + chNum + "_Q" + qNum);
     return {
-      id: `${subCode}-${chNum}-${qNum}`,
+      id: `dt-c${chNum}-q${qNum}`,
       sub: subCode,
       ch: chNum,
       n: qNum,
@@ -5972,10 +5972,8 @@ window.handleGoogleSheetData = function(json) {
         try {
           spObj = JSON.parse(screenplayStr);
           if (!window.EXPLAINER_SCREENPLAYS) window.EXPLAINER_SCREENPLAYS = {};
-          window.EXPLAINER_SCREENPLAYS["dt-c" + chNum + "-q" + qNum] = spObj;
-          window.EXPLAINER_SCREENPLAYS["dt_c" + chNum + "_q" + qNum] = spObj;
-          window.EXPLAINER_SCREENPLAYS["ch" + chNum + "_q" + qNum] = spObj;
-          window.EXPLAINER_SCREENPLAYS["q" + qNum] = spObj;
+          window.GENERATED_SCREENPLAYS = window.GENERATED_SCREENPLAYS || {};
+          window.GENERATED_SCREENPLAYS[window.normalizeExplainerQid("", chNum, qNum)] = spObj;
         } catch(e) {
           console.warn("Failed to parse Col 10 screenplay for ch", chNum, "q", qNum, e);
         }
@@ -6890,398 +6888,18 @@ function renderMindMapCanvasHtml(mm, q, p){
    KINETIC SCREENPLAY DATA MODEL & PLAYER ENGINE
    ========================================================================== */
 
-window.EXPLAINER_SCREENPLAYS = {
-  "ch2_q14": {
-    "title": "Section 45(2): Conversion of Capital Asset into Stock-in-Trade",
-    "badge": "§ 45(2) · PGBP & CG DEFERRAL",
-    "doctrine": "Section 45(2) Deemed Transfer & Tax Deferral",
-    "beats": [
-      {
-        "beat_order": 1,
-        "beat_type": "kinetic_headline",
-        "badge": "§ 45(2) · CHARGING TRIGGER",
-        "headline": "Section 45(2): Conversion into Stock-in-Trade",
-        "subtext": "Deemed Transfer under Section 2(47)(iv) with Statutory Tax Deferral",
-        "audio_file": "dt/ch2/q14/pt_0.mp3",
-        "voice_sync_text": "Section 45(2) പ്രകാരം ഒരു വ്യക്തി തൻ്റെ Capital Asset-നെ Stock-in-Trade ആയി convert ചെയ്യുമ്പോൾ transfer നടക്കുന്നു.",
-        "highlights": [
-          { "phrase": "Section 45(2)", "time_sec": 0.5 },
-          { "phrase": "Capital Asset", "time_sec": 2.2 },
-          { "phrase": "Stock-in-Trade", "time_sec": 3.8 }
-        ]
-      },
-      {
-        "beat_order": 2,
-        "beat_type": "statutory_trigger",
-        "badge": "SECTION 45(2) MANDATE",
-        "headline": "Tax Chargeability is Statutorily Deferred!",
-        "subtext": "Tax is NOT levied in the conversion year. Chargeability is postponed until the stock-in-trade is actually sold or transferred.",
-        "metric_chip": "Tax in P.Y. 2024-25: ₹ 0 (Zero Tax)",
-        "audio_file": "dt/ch2/q14/pt_1.mp3",
-        "voice_sync_text": "പക്ഷെ tax levy ചെയ്യുന്നത് conversion നടക്കുന്ന വർഷമല്ല, മറിച്ച് ആ stock യഥാർത്ഥത്തിൽ വിൽക്കുന്ന മുൻവർഷത്തിലാണ്.",
-        "highlights": [
-          { "phrase": "tax levy", "time_sec": 1.2 },
-          { "phrase": "conversion", "time_sec": 2.8 },
-          { "phrase": "stock", "time_sec": 4.5 },
-          { "phrase": "actually sold", "time_sec": 5.8 }
-        ]
-      },
-      {
-        "beat_order": 3,
-        "beat_type": "visual_scene",
-        "badge": "PRACTICAL CASE · 2010",
-        "headline": "Rahul's Prime Land Acquisition",
-        "subtext": "Purchased as a long-term capital investment for ₹ 10,00,000",
-        "image_url": "data/audio/dt/ch2/q14/sim_img_1.jpg",
-        "metric_chip": "Acquired 2010: ₹ 10,00,000",
-        "audio_file": "dt/ch2/q14/sim_1.mp3",
-        "voice_sync_text": "ഒരു practical example നോക്കാം. Rahul 2010-ൽ ₹ 10 Lakhs-ന് വാങ്ങിയ prime land, capital investment ആയി കൈവശം വെക്കുന്നു.",
-        "highlights": [
-          { "phrase": "Rahul", "time_sec": 1.0 },
-          { "phrase": "₹ 10 Lakhs", "time_sec": 2.2 },
-          { "phrase": "prime land", "time_sec": 3.5 }
-        ]
-      },
-      {
-        "beat_order": 4,
-        "beat_type": "visual_scene",
-        "badge": "CONVERSION EVENT · 2024",
-        "headline": "Converted into Real Estate Stock-in-Trade",
-        "subtext": "Fair Market Value (FMV) on date of conversion: ₹ 45,00,000",
-        "image_url": "data/audio/dt/ch2/q14/sim_img_2.jpg",
-        "metric_chip": "FMV on Conversion: ₹ 45,00,000",
-        "audio_file": "dt/ch2/q14/sim_2.mp3",
-        "voice_sync_text": "P.Y. 2024-25-ൽ ഈ സ്ഥലം real estate inventory ആയി convert ചെയ്യുന്നു. അന്നത്തെ Fair Market Value ₹ 45 Lakhs ആണ്.",
-        "highlights": [
-          { "phrase": "P.Y. 2024-25", "time_sec": 1.0 },
-          { "phrase": "convert", "time_sec": 2.6 },
-          { "phrase": "Fair Market Value", "time_sec": 4.2 },
-          { "phrase": "₹ 45 Lakhs", "time_sec": 5.4 }
-        ]
-      },
-      {
-        "beat_order": 5,
-        "beat_type": "dual_computation_step",
-        "badge": "COMPUTATION DUALITY",
-        "headline": "Dual Head Tax Split in Year of Actual Sale",
-        "subtext": "Developed villas sold in P.Y. 2025-26 for ₹ 65,00,000",
-        "audio_file": "dt/ch2/q14/sim_4.mp3",
-        "voice_sync_text": "Villas ₹ 65 Lakhs-ന് വിൽക്കുമ്പോൾ dual taxation split വരുന്നു: Capital Gain u/s 45(2) ₹ 26.5L, Business Profit u/s 28 ₹ 20L.",
-        "highlights": [
-          { "phrase": "₹ 65 Lakhs", "time_sec": 1.2 },
-          { "phrase": "dual taxation", "time_sec": 2.5 },
-          { "phrase": "Capital Gain", "time_sec": 3.8 },
-          { "phrase": "Business Profit", "time_sec": 5.5 }
-        ]
-      },
-      {
-        "beat_order": 6,
-        "beat_type": "statutory_trap",
-        "badge": "SECTION 54EC PRECEDENT",
-        "headline": "Crucial Exam Trap & CBDT Circular 791",
-        "subtext": "When does the 6-month period for Section 54EC investment begin?",
-        "trap_mistake": "Counting 6 months from the date of conversion. Since tax is deferred for years, the 6-month window would expire before tax crystallizes!",
-        "trap_statute": "CBDT Circular No. 791 clarifies that the 6-month period is counted from the date of SALE of stock-in-trade, perfectly protecting the taxpayer!",
-        "audio_file": "dt/ch2/q14/pt_4.mp3",
-        "voice_sync_text": "Section 54EC exemption claim ചെയ്യുമ്പോൾ 6 months count ചെയ്യേണ്ടത് conversion തീയതി മുതലല്ല, stock വിൽക്കുന്ന തീയതി മുതലാണെന്ന് CBDT Circular No. 791 വ്യക്തമാക്കുന്നു.",
-        "highlights": [
-          { "phrase": "Section 54EC", "time_sec": 1.0 },
-          { "phrase": "6 months", "time_sec": 2.5 },
-          { "phrase": "CBDT Circular No. 791", "time_sec": 4.8 },
-          { "phrase": "stock വിൽക്കുന്ന തീയതി", "time_sec": 6.2 }
-        ]
-      }
-    ]
-  },
-  "ch2_q21": {
-    "title": "Sections 9B & 45(4): Firm Reconstitution & Dissolution Taxation",
-    "badge": "§ 9B · § 45(4) · RULE 8AB",
-    "doctrine": "Firm Reconstitution Tax Framework",
-    "beats": [
-      {
-        "beat_order": 1,
-        "beat_type": "kinetic_headline",
-        "badge": "§ 9B & § 45(4) · STATUTE",
-        "headline": "Firm Reconstitution: Sections 9B & 45(4)",
-        "subtext": "Deemed Transfer of Assets and Taxation of Excess Payout to Partner",
-        "audio_file": "dt/ch2/q21/pt_0.mp3",
-        "voice_sync_text": "Finance Act 2021 വഴി Section 9B-യും Section 45(4)-ഉം introduce ചെയ്തു. ഒരു partner firm-ൽ നിന്ന് പിരിയുമ്പോൾ tax liability firm-ൻ്റെ കൈകളിൽ വരുന്നു.",
-        "highlights": [
-          { "phrase": "Section 9B", "time_sec": 1.5 },
-          { "phrase": "Section 45(4)", "time_sec": 3.0 },
-          { "phrase": "firm", "time_sec": 4.5 }
-        ]
-      },
-      {
-        "beat_order": 2,
-        "beat_type": "statutory_trigger",
-        "badge": "SECTION 9B MANDATE",
-        "headline": "Section 9B: Deemed Transfer of Capital Asset / Stock",
-        "subtext": "Distribution of capital assets or inventory by firm to partner is deemed a transfer by the firm at Fair Market Value.",
-        "metric_chip": "Deemed FVOC = Fair Market Value on receipt",
-        "audio_file": "dt/ch2/q21/sim_1.mp3",
-        "voice_sync_text": "Section 9B പ്രകാരം partner-ന് കൊടുക്കുന്ന ഏത് asset-ഉം Fair Market Value-ൽ deemed transfer ആയി tax ചെയ്യപ്പെടും.",
-        "highlights": [
-          { "phrase": "Section 9B", "time_sec": 1.0 },
-          { "phrase": "Fair Market Value", "time_sec": 2.8 },
-          { "phrase": "deemed transfer", "time_sec": 4.2 }
-        ]
-      },
-      {
-        "beat_order": 3,
-        "beat_type": "visual_scene",
-        "badge": "PARTNER RETIREMENT CASE",
-        "headline": "Suresh Retires from Apex Enterprises",
-        "subtext": "Retiring Partner Capital Balance: ₹ 25,00,000 (excluding revaluation)",
-        "image_url": "data/audio/dt/ch2/q21/sim_img_1.jpg",
-        "metric_chip": "Capital Balance: ₹ 25,00,000",
-        "audio_file": "dt/ch2/q21/sim_2.mp3",
-        "voice_sync_text": "Mr. Suresh വിരമിക്കുമ്പോൾ, Suresh-ൻ്റെ capital balance ₹ 25 Lakhs ആണ്.",
-        "highlights": [
-          { "phrase": "Suresh", "time_sec": 0.8 },
-          { "phrase": "capital balance", "time_sec": 2.0 },
-          { "phrase": "₹ 25 Lakhs", "time_sec": 3.2 }
-        ]
-      },
-      {
-        "beat_order": 4,
-        "beat_type": "visual_scene",
-        "badge": "PAYOUT PACKAGE",
-        "headline": "Settlement: Cash ₹ 15L + Commercial Building FMV ₹ 50L",
-        "subtext": "Total Value Delivered: ₹ 65,00,000 against Capital Credit of ₹ 25,00,000",
-        "image_url": "data/audio/dt/ch2/q21/sim_img_3.jpg",
-        "metric_chip": "Total Delivered: ₹ 65,00,000",
-        "audio_file": "dt/ch2/q21/sim_3.mp3",
-        "voice_sync_text": "Firm സുരേഷിന് Cash ₹ 15 Lakhs-ഉം FMV ₹ 50 Lakhs ഉള്ള Commercial Building-ഉം നൽകുന്നു.",
-        "highlights": [
-          { "phrase": "Cash ₹ 15 Lakhs", "time_sec": 1.5 },
-          { "phrase": "Commercial Building", "time_sec": 3.0 },
-          { "phrase": "₹ 50 Lakhs", "time_sec": 4.5 }
-        ]
-      },
-      {
-        "beat_order": 5,
-        "beat_type": "dual_computation_step",
-        "badge": "FORMULA INTEGRATION",
-        "headline": "Dual Computation: Section 9B & Section 45(4)",
-        "subtext": "Section 9B Gain = ₹ 20L | Section 45(4) Formula A = B + C - D = ₹ 40L",
-        "audio_file": "dt/ch2/q21/sim_4.mp3",
-        "voice_sync_text": "Building-ൽ Section 9B gain ₹ 20 Lakhs, excess payout-ൽ Section 45(4) gain ₹ 40 Lakhs firm tax അടയ്ക്കണം.",
-        "highlights": [
-          { "phrase": "Section 9B", "time_sec": 1.0 },
-          { "phrase": "₹ 20 Lakhs", "time_sec": 2.6 },
-          { "phrase": "Section 45(4)", "time_sec": 4.0 },
-          { "phrase": "₹ 40 Lakhs", "time_sec": 5.5 }
-        ]
-      },
-      {
-        "beat_order": 6,
-        "beat_type": "statutory_trap",
-        "badge": "RULE 8AB ATTRIBUTION",
-        "headline": "Rule 8AB Defense Against Double Taxation",
-        "subtext": "Attribution of Section 45(4) capital gains to remaining firm assets",
-        "trap_mistake": "Assuming Section 45(4) tax paid by firm is lost forever without any relief when remaining assets are sold.",
-        "trap_statute": "Rule 8AB attributes ₹ 40L among remaining capital assets. On subsequent sale, this attributed sum is deducted as cost u/s 48(iii)!",
-        "audio_file": "dt/ch2/q21/pt_3.mp3",
-        "voice_sync_text": "Rule 8AB പ്രകാരം ഈ ₹ 40 Lakhs ബാക്കിയുള്ള assets-ലേക്ക് attribute ചെയ്യുകയും, ഭാവിയിൽ Section 48(iii) deduction ലഭിക്കുകയും ചെയ്യും.",
-        "highlights": [
-          { "phrase": "Rule 8AB", "time_sec": 1.2 },
-          { "phrase": "₹ 40 Lakhs", "time_sec": 2.5 },
-          { "phrase": "Section 48(iii)", "time_sec": 4.5 },
-          { "phrase": "deduction", "time_sec": 5.8 }
-        ]
-      }
-    ]
-  }
-};
+window.EXPLAINER_SCREENPLAYS = window.EXPLAINER_SCREENPLAYS || {};
 
 function getScreenplayForQuestion(q, p){
-  const qn = String(q ? q.n : '');
-  const ch = String(q ? q.ch : (p ? p.chapter_number : '1'));
-  const chKey = 'ch' + ch + '_q' + qn;
-
-  // 1. Handcrafted screenplay
-  if (window.EXPLAINER_SCREENPLAYS[chKey]) return window.EXPLAINER_SCREENPLAYS[chKey];
-  if (ch === '1' && window.EXPLAINER_SCREENPLAYS['q' + qn]) return window.EXPLAINER_SCREENPLAYS['q' + qn];
-
-  // 2. Explicit screenplay on p or mm
-  if (p && p.screenplay && Array.isArray(p.screenplay.beats)) return p.screenplay;
-  const mm = getMindMapForQuestion(q, p);
-  if (mm && mm.screenplay && Array.isArray(mm.screenplay.beats)) return mm.screenplay;
-
-  // 3. Universal Adapter from Mindmap
-  return adaptToScreenplay(q, p, mm);
+  const qid = window.normalizeExplainerQid("", q?.ch || p?.chapter_number || 1, q?.n || p?.question_number);
+  const screenplay = window.GENERATED_SCREENPLAYS?.[qid] || p?.screenplay || null;
+  return screenplay && Array.isArray(screenplay.beats) && screenplay.beats.every(beat => beat.layout && beat.title && typeof beat.start === "number") ? screenplay : null;
 }
 
-function adaptToScreenplay(q, p, mm){
-  const qn = String(q ? q.n : '');
-  const ch = String(q ? q.ch : (p ? p.chapter_number : '1'));
-  const doctrine = (mm && mm.doctrine) || (p ? p.doctrine : '') || (q ? q.question_title : `Question ${qn}`);
-  const badge = (mm && mm.root && mm.root.badge) || ((p && p.secs) ? p.secs.join(' · ') : '§ STATUTE');
-
-  const beats = [];
-
-  // Beat 1: Intro hero
-  beats.push({
-    beat_order: 1,
-    beat_type: "kinetic_headline",
-    badge: badge,
-    headline: doctrine,
-    subtext: p ? p.principle : "Core Statutory Doctrine & Charging Principle",
-    audio_file: (mm && mm.root && mm.root.audio_file) || `dt/ch${ch}/q${qn}/pt_0.mp3`,
-    drive_id: mm && mm.root && mm.root.drive_audio_id,
-    voice_sync_text: (mm && mm.root && mm.root.voice_sync_text) || (p ? p.principle : ""),
-    highlights: []
-  });
-
-  // Check simulation steps
-  const sim = (mm && mm.concept_simulation) || (p && p.concept_simulation);
-  if (sim && Array.isArray(sim.steps) && sim.steps.length > 0) {
-    sim.steps.forEach((st, sidx) => {
-      beats.push({
-        beat_order: beats.length + 1,
-        beat_type: st.image_file ? "visual_scene" : "statutory_trigger",
-        badge: st.statutory_badge || `Step ${sidx + 1}`,
-        headline: st.scene_title || st.title || `Practical Step ${sidx + 1}`,
-        subtext: st.scene_summary || "",
-        image_url: st.image_file ? st.image_file : null,
-        metric_chip: st.hud_card?.metric || st.metric_value || null,
-        audio_file: st.audio_file || `dt/ch${ch}/q${qn}/sim_${sidx + 1}.mp3`,
-        drive_id: st.drive_audio_id,
-        voice_sync_text: st.voice_sync_text || "",
-        highlights: []
-      });
-    });
-  } else if (mm && Array.isArray(mm.branches)) {
-    // Branches to beats
-    mm.branches.forEach((b, bidx) => {
-      (b.points || []).forEach((pt, pidx) => {
-        let bType = "statutory_trigger";
-        if (pt.trap_data) bType = "statutory_trap";
-        else if (pt.table_data || pt.example_calc) bType = "dual_computation_step";
-
-        beats.push({
-          beat_order: beats.length + 1,
-          beat_type: bType,
-          badge: pt.badge || b.badge || "§ RULE",
-          headline: pt.title || b.branch_title,
-          subtext: (pt.body && pt.body[0]) ? pt.body[0] : b.branch_title,
-          metric_chip: null,
-          trap_mistake: pt.trap_data ? pt.trap_data.mistake : null,
-          trap_statute: pt.trap_data ? pt.trap_data.statutory_rule : null,
-          audio_file: pt.audio_file || `dt/ch${ch}/q${qn}/pt_${beats.length}.mp3`,
-          drive_id: pt.drive_audio_id,
-          voice_sync_text: pt.voice_sync_text || "",
-          highlights: pt.highlights || []
-        });
-      });
-    });
-  }
-
-  return {
-    title: doctrine,
-    badge: badge,
-    doctrine: doctrine,
-    beats: beats
-  };
-}
-
-function renderScreenplayBeatHtml(beat, screenplay){
-  if (!beat) return '';
-  let innerHtml = '';
-
-  if (beat.beat_type === 'kinetic_headline') {
-    innerHtml = `
-      <div class="beat-headline-wrap">
-        <span class="beat-pill-badge">${esc(beat.badge || '§ STATUTE')}</span>
-        <h1 class="beat-hero-title">${esc(beat.headline)}</h1>
-        <p class="beat-hero-subtitle">${esc(beat.subtext || '')}</p>
-      </div>
-    `;
-  } else if (beat.beat_type === 'statutory_trigger') {
-    innerHtml = `
-      <div class="beat-trigger-card">
-        <div class="btc-badge-row">
-          <span class="btc-tag">OPERATIVE STATUTORY MECHANISM</span>
-          <span class="btc-sec">${esc(beat.badge || 'RULE')}</span>
-        </div>
-        <h2 class="btc-title">${esc(beat.headline)}</h2>
-        <p class="btc-desc">${esc(beat.subtext || '')}</p>
-        ${beat.metric_chip ? `<div class="btc-metric-chip">${esc(beat.metric_chip)}</div>` : ''}
-      </div>
-    `;
-  } else if (beat.beat_type === 'visual_scene') {
-    innerHtml = `
-      <div class="beat-visual-scene">
-        <div class="bvs-image-container">
-          <img src="${esc(resolveExplainerAssetUrl(beat.image_url || 'data/audio/dt/ch2/q14/sim_img_1.jpg'))}" class="bvs-image" alt="${esc(beat.headline)}" onerror="this.src=resolveExplainerAssetUrl('data/audio/dt/ch2/q14/sim_img_1.jpg')">
-          <div class="bvs-scrim"></div>
-          <div class="bvs-top-badge">🎬 ${esc(beat.badge || 'PRACTICAL CASE')}</div>
-          ${beat.metric_chip ? `<div class="bvs-hover-metric">${esc(beat.metric_chip)}</div>` : ''}
-        </div>
-        <div class="bvs-caption-bar">
-          <h3 class="bvs-title">${esc(beat.headline)}</h3>
-          <p class="bvs-subtitle">${esc(beat.subtext || '')}</p>
-        </div>
-      </div>
-    `;
-  } else if (beat.beat_type === 'dual_computation_step') {
-    innerHtml = `
-      <div class="beat-computation-step">
-        <div class="bcs-header">
-          <span class="bcs-badge">${esc(beat.badge || 'DUAL TAXATION SPLIT')}</span>
-          <h2 class="bcs-title">${esc(beat.headline)}</h2>
-        </div>
-        <div class="bcs-grid">
-          <div class="bcs-card cg">
-            <div class="bcs-card-head">Capital Gains Head u/s 45(2)</div>
-            <div class="bcs-row"><span>Deemed Consideration (FMV on Conversion)</span><b>₹ 45,00,000</b></div>
-            <div class="bcs-row"><span>Less: Indexed Cost of Acquisition</span><b>(₹ 18,50,000)</b></div>
-            <div class="bcs-row result"><span>Long-Term Capital Gain (LTCG)</span><span class="chip-gain">₹ 26,50,000</span></div>
-          </div>
-          <div class="bcs-card pgbp">
-            <div class="bcs-card-head">Business Profits Head u/s 28</div>
-            <div class="bcs-row"><span>Actual Sale Consideration of Stock</span><b>₹ 65,00,000</b></div>
-            <div class="bcs-row"><span>Less: FMV on Conversion (Opening Cost)</span><b>(₹ 45,00,000)</b></div>
-            <div class="bcs-row result"><span>Profits & Gains of Business (PGBP)</span><span class="chip-profit">₹ 20,00,000</span></div>
-          </div>
-        </div>
-      </div>
-    `;
-  } else if (beat.beat_type === 'statutory_trap') {
-    innerHtml = `
-      <div class="beat-trap-step">
-        <div class="bts-header">
-          <span class="bts-badge">${esc(beat.badge || 'EXAM TRAP ALERT')}</span>
-          <h2 class="bts-title">${esc(beat.headline)}</h2>
-        </div>
-        <div class="bts-grid">
-          <div class="bts-card mistake">
-            <div class="bts-card-head">⚠️ COMMON STUDENT MISTAKE</div>
-            <p class="bts-card-text">${esc(beat.trap_mistake || beat.subtext)}</p>
-          </div>
-          <div class="bts-card statute">
-            <div class="bts-card-head">✓ STATUTORY MANDATE & PRECEDENT</div>
-            <p class="bts-card-text">${esc(beat.trap_statute || beat.headline)}</p>
-          </div>
-        </div>
-      </div>
-    `;
-  } else {
-    innerHtml = `
-      <div class="beat-headline-wrap">
-        <span class="beat-pill-badge">${esc(beat.badge || '§ STATUTE')}</span>
-        <h1 class="beat-hero-title">${esc(beat.headline)}</h1>
-        <p class="beat-hero-subtitle">${esc(beat.subtext || '')}</p>
-      </div>
-    `;
-  }
-
-  return `
-    <div class="kinetic-beat-mount kinetic-beat-active" id="active-beat-box">
-      ${innerHtml}
-    </div>
-  `;
+function resolveExplainerAssetUrl(path) {
+  if (!path) return '';
+  if (path.startsWith('http') || path.startsWith('data:') || path.startsWith('blob:') || path.startsWith('/')) return path;
+  return window.resolveExplainerAssetUrl ? window.resolveExplainerAssetUrl(path) : new URL(path, document.baseURI).href;
 }
 
 
@@ -7292,12 +6910,8 @@ function renderScreenplayBeatHtml(beat, screenplay){
 
 function resolveExplainerAssetUrl(path) {
   if (!path) return '';
-  if (path.startsWith('http://') || path.startsWith('https://') || path.startsWith('data:')) return path;
-  const clean = path.replace(/\\/g, '/').replace(/^\/+/, '');
-  if (window.location.protocol === 'file:') {
-    return new URL('../../' + clean, window.location.href).href;
-  }
-  return '/' + clean;
+  if (/^(https?:|data:|blob:|\\/)/i.test(path)) return path;
+  return window.resolveExplainerAssetUrl ? window.resolveExplainerAssetUrl(path) : new URL(path, document.baseURI).href;
 }
 
 window.EXPLAINER_STUDIO_DECKS = {
@@ -8083,7 +7697,7 @@ function makePlayer(p, q){
   });
   window.__explainer = explainer; // Test & debug hook
 
-  const qid = (q && (q.n === 14 || q.n === '14')) ? "dt-c2-q14" : ("dt-c" + (q.ch || 2) + "-q" + q.n);
+  const qid = window.normalizeExplainerQid("", q?.ch || 1, q?.n);
   explainer.load(qid);
 
   // Sync bottom player bar with explainer

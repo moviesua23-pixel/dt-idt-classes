@@ -1,0 +1,45 @@
+name: Build and deploy Study Board
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "redesign_demo/frontend/**"
+      - "redesign_demo/data/**"
+      - "pipeline/build_site.py"
+      - ".github/workflows/study-board-pages.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: github-pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Check out pipeline outputs
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Bundle screenplays and assemble site
+        run: python pipeline/build_site.py --site-dir _site
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
+      - name: Upload site artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
