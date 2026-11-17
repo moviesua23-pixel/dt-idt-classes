@@ -383,41 +383,6 @@ def generate_alignment_log_summary(screenplay: Dict[str, Any]) -> str:
         lines.append(f"{bid}[{layout}]: {st:.1f}s-{en:.1f}s (d{(en-st):.1f}s)")
     return "\n".join(lines)
 
-def update_engine_fixture(qid: str, screenplay: Dict[str, Any]):
-    engine_path = os.path.join(PROJECT_ROOT, "redesign_demo", "frontend", "explainer_engine.js")
-    if not os.path.exists(engine_path):
-        return
-    with open(engine_path, "r", encoding="utf-8") as f:
-        code = f.read()
-
-    norm_key = qid.replace("-", "_")
-    ch_key = re.sub(r"^dt-", "", qid).replace("-", "_")
-    fixture_str = f'FIXTURES["{qid}"] = {json.dumps(screenplay, indent=2, ensure_ascii=False)};'
-    pattern = rf'FIXTURES\["{qid}"\]\s*=\s*\{{[\s\S]*?\n\s*\}};'
-    if re.search(pattern, code):
-        code = re.sub(pattern, fixture_str, code, count=1)
-    else:
-        anchor = 'FIXTURES["ch2_q14"] = FIXTURES["dt-c2-q14"];'
-        if anchor in code:
-            code = code.replace(anchor, f'{anchor}\n{fixture_str}')
-        else:
-            code += f"\n{fixture_str}\n"
-
-    # Ensure aliases and window.EXPLAINER_SCREENPLAYS are registered
-    exp_reg = (
-        f'FIXTURES["{norm_key}"] = FIXTURES["{qid}"];\n'
-        f'FIXTURES["{ch_key}"] = FIXTURES["{qid}"];\n'
-        f'window.EXPLAINER_SCREENPLAYS["{qid}"] = FIXTURES["{qid}"];\n'
-        f'window.EXPLAINER_SCREENPLAYS["{norm_key}"] = FIXTURES["{qid}"];\n'
-        f'window.EXPLAINER_SCREENPLAYS["{ch_key}"] = FIXTURES["{qid}"];'
-    )
-    if f'window.EXPLAINER_SCREENPLAYS["{qid}"]' not in code:
-        if "})();" in code:
-            code = code.replace("})();", f"{exp_reg}\n\n}})();")
-
-    with open(engine_path, "w", encoding="utf-8") as f:
-        f.write(code)
-
 def synthesize_and_align_screenplay_audio(
     screenplay_obj: Dict[str, Any],
     subject: str,
@@ -486,6 +451,5 @@ def synthesize_and_align_screenplay_audio(
     with open(sp_path, "w", encoding="utf-8") as f:
         json.dump(aligned_sp, f, indent=2, ensure_ascii=False)
 
-    update_engine_fixture(qid, aligned_sp)
     timing_summary = generate_alignment_log_summary(aligned_sp)
     return aligned_sp, timing_summary

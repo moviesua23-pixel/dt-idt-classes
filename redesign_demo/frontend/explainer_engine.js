@@ -88,6 +88,113 @@ function buildQuestionFallback(qid) {
   };
 }
 
+function renderProvisionLayout(el, b, ctx) {
+  const data = b.visual_data || {};
+  const svg = sv("svg", { viewBox: "0 0 1000 562", preserveAspectRatio: "xMidYMid meet", role: "img", "aria-label": (b.title?.text || b.layout || "Provision diagram") }, el);
+  svg.style.cssText = "position:absolute;inset:0;width:100%;height:100%;overflow:visible";
+  const ink = "#18253B", muted = "#53627A", blue = "#4855C8", teal = "#137B68", line = "#CBD5E1", pale = "#F3F5FB";
+  const rect = (x,y,w,h,fill="#fff",stroke=line,rx=14,sw=2,parent=svg) => sv("rect",{x,y,width:w,height:h,rx,fill,stroke,"stroke-width":sw},parent);
+  const path = (d,color=line,width=3,parent=svg) => sv("path",{d,fill:"none",stroke:color,"stroke-width":width,"stroke-linecap":"round","stroke-linejoin":"round"},parent);
+  const txt = (parent,x,y,value,{size=18,weight=650,color=ink,anchor="start",width=300,lines=3}={}) => {
+    const text=String(value ?? "");
+    const group=sv("text",{x,y,"font-size":size,"font-weight":weight,fill:color,"text-anchor":anchor,"font-family":"system-ui, sans-serif"},parent);
+    const capacity=Math.max(8,Math.floor(width/(size*0.56)));
+    const words=text.split(/\s+/);let lineText="",wrapped=[];
+    for(const word of words){const next=(lineText?lineText+" ":"")+word;if(next.length>capacity&&lineText){wrapped.push(lineText);lineText=word;}else lineText=next;}
+    if(lineText)wrapped.push(lineText);
+    const fitted=Math.min(size, Math.max(11, size*Math.min(1, lines/Math.max(1,wrapped.length))));
+    wrapped.forEach((content,index)=>{const span=sv("tspan",{x,dy:index===0?0:`${fitted*1.3}px`},group);span.textContent=content;});
+    group.setAttribute("font-size",fitted);
+    return group;
+  };
+  const card=(x,y,w,h,label,detail,index=0,accent=blue)=>{
+    const group=sv("g",{},svg);rect(x,y,w,h,index%2?"#F8FAFC":"#FFFFFF",accent,14,2,group);
+    txt(group,x+w/2,y+31,label,{size:16,weight:800,color:accent,anchor:"middle",width:w-24,lines:2});
+    if(detail)txt(group,x+w/2,y+60,detail,{size:13,weight:600,color:muted,anchor:"middle",width:w-24,lines:3});
+    if(b.start!==undefined)reveal(group,(Number(b.start)||0)+0.55+index*0.35,index);
+    return group;
+  };
+  const icon=(name,x,y,color=blue)=>{
+    const g=sv("g",{transform:`translate(${x} ${y})`,fill:"none",stroke:color,"stroke-width":3,"stroke-linecap":"round","stroke-linejoin":"round"},svg);
+    if(name==="person"){sv("circle",{cx:0,cy:-8,r:9,fill:"#fff"},g);path("M -17 22 Q -16 1 0 1 Q 16 1 17 22 Z",color,3,g);}
+    else if(name==="house"){path("M -22 1 L 0 -18 L 22 1 M -17 -2 V 21 H 17 V -2 M -4 21 V 7 H 5 V 21",color,3,g);}
+    else if(name==="plot"){rect(-20,-18,40,38,"#F8FAFC",color,3,3,g);path("M -14 13 L 12 -13 M -8 18 L 18 -8",color,2,g);}
+    else if(name==="shares"){rect(-21,2,9,18,"#EEF2FF",color,2,2,g);rect(-5,-8,9,28,"#EEF2FF",color,2,2,g);rect(11,-18,9,38,"#EEF2FF",color,2,2,g);}
+    else if(name==="factory"){path("M -22 21 V -2 L -7 6 V -2 L 8 6 V -11 H 19 V 21 Z M 12 -19 V -11",color,3,g);}
+    else if(name==="money_bag"){path("M -10 -18 L 10 -18 M -7 -18 L -14 -8 M 7 -18 L 14 -8 M -15 -8 Q -25 8 -15 21 Q 0 29 15 21 Q 25 8 15 -8 Z M -7 4 Q 0 -2 7 4 Q 9 10 0 12 Q -8 14 -6 20 M 0 0 V -4",color,3,g);}
+    else if(name==="document"){path("M -14 -21 H 7 L 16 -12 V 21 H -14 Z M 7 -20 V -11 H 16 M -7 -3 H 9 M -7 5 H 9 M -7 13 H 5",color,3,g);}
+    else if(name==="gavel"){path("M -14 -15 L -3 -26 L 8 -15 L -3 -4 Z M 1 -4 L 17 12 M -22 22 H 20 M -10 12 H 12",color,4,g);}
+    else if(name==="bank"){path("M -23 -7 L 0 -21 L 23 -7 Z M -19 19 H 19 M -15 -4 V 15 M -5 -4 V 15 M 5 -4 V 15 M 15 -4 V 15",color,3,g);}
+    else if(name==="calendar"){rect(-20,-17,40,38,"#fff",color,4,3,g);path("M -20 -7 H 20 M -10 -23 V -12 M 10 -23 V -12 M -10 1 H -4 M 1 1 H 7 M -10 9 H -4",color,3,g);}
+    else if(name==="padlock"){path("M -14 -2 V -10 Q -14 -22 0 -22 Q 14 -22 14 -10 V -2",color,3,g);rect(-20,-2,40,28,"#fff",color,5,3,g);sv("circle",{cx:0,cy:9,r:3,fill:color},g);}
+    else {path("M 0 -22 V 20 M -19 -13 H 19 M -17 -13 L -24 4 H -9 Z M 17 -13 L 10 4 H 25 Z M -12 22 H 12",color,3,g);}
+    return g;
+  };
+  const header=txt(svg,500,54,b.title?.text||b.layout.replace(/_/g," "),{size:26,weight:850,anchor:"middle",width:800,lines:2});
+  fade(ctx,header,(Number(b.title?.at)||Number(b.start)||0)+0.2,10,0.35);
+  const items=(key)=>Array.isArray(data[key])?data[key]:[];
+  const showRows=(rows,x,y,w,rowH=62,iconName="document")=>rows.forEach((item,i)=>{
+    const yy=y+i*rowH;rect(x,yy,w,rowH-8,i%2?"#F8FAFC":"#FFFFFF",line,10,1.4);
+    if(iconName)icon(item.icon||iconName,x+28,yy+25, i%2?teal:blue);
+    txt(svg,x+58,yy+22,item.label||"",{size:14,weight:800,width:w-74,lines:2});
+    const detail=[item.date,item.value,item.detail,item.status].filter(Boolean).join(" · ");
+    if(detail)txt(svg,x+58,yy+43,detail,{size:11,weight:600,color:muted,width:w-74,lines:2});
+    reveal(svg,(Number(item.at)||Number(b.start)||0)+0.7+i*0.28,i);
+  });
+
+  const start=Number(b.start)||0;
+  const reveal=(node,at,index=0)=>{
+    fade(ctx,node,at,10,b.animation_role==="key_fact"?0.32:0.46);
+    if(b.animation_role==="key_fact" && index===0) ctx.push({el:node,kind:"tween",start:at+0.36,dur:0.5,ease:"bump",from:{s:1},to:{s:1.045}});
+  };
+  if(b.layout==="example_scene"){
+    const actors=items("actors").slice(0,3),facts=items("facts").slice(0,4);
+    actors.forEach((actor,i)=>{const x=190+i*310;icon(actor.icon||"person",x,172,i?teal:blue);txt(svg,x,225,actor.label,{size:16,weight:800,anchor:"middle",width:220,lines:2});});
+    card(325,252,350,68,data.transaction||"Transaction",b.director_goal||"Example overview",2,"#B7791F");
+    showRows(facts,120,350,760,49,"document");
+  } else if(b.layout==="decision_tree"){
+    card(330,95,340,72,data.root||"Apply the statutory test",data.rule||"",0);
+    const branches=items("branches").slice(0,4), colW=820/Math.max(1,branches.length);
+    branches.forEach((branch,i)=>{const x=90+i*colW+colW/2;path(`M 500 167 L ${x} 244`,line,2);card(x-colW*0.42,244,colW*0.84,150,branch.label,[branch.detail,branch.value,branch.status].filter(Boolean).join(" · "),i,i%2?teal:blue);});
+  } else if(b.layout==="checklist_gate"){
+    showRows(items("conditions").slice(0,6),140,102,720,65,"padlock");
+    if(data.outcome)card(300,500,400,45,data.outcome,"All required conditions",7,teal);
+  } else if(b.layout==="timeline_windows"){
+    const events=items("events").slice(0,6), gap=760/Math.max(1,events.length-1);
+    path("M 120 262 H 880",blue,5);
+    events.forEach((event,i)=>{const x=120+i*gap, y=i%2?350:158;sv("circle",{cx:x,cy:262,r:15,fill:i===events.length-1?teal:blue,stroke:"#fff","stroke-width":4},svg);path(`M ${x} ${i%2?277:247} V ${i%2?y-10:y+14}`,line,2);card(x-95,y,190,78,event.date||event.label,event.detail||event.value||"",i,i%2?teal:blue);});
+    if(data.window_label)txt(svg,500,470,data.window_label,{size:14,weight:800,color:teal,anchor:"middle",width:700,lines:2});
+  } else if(b.layout==="flow_actors"){
+    const actors=items("actors").slice(0,4), gap=760/Math.max(1,actors.length-1);
+    actors.forEach((actor,i)=>{const x=120+i*gap;icon(actor.icon||["person","bank","document"][i%3],x,220,i%2?teal:blue);txt(svg,x,272,actor.label,{size:14,weight:800,anchor:"middle",width:180,lines:2});if(i<actors.length-1){path(`M ${x+35} 220 H ${x+gap-38}`,blue,3);const edge=items("edges")[i];if(edge?.label)txt(svg,x+gap/2,198,edge.label,{size:12,weight:700,anchor:"middle",width:gap-24,lines:2});}});
+    items("edges").slice(0,4).forEach((edge,i)=>txt(svg,500,365+i*25,`${edge.label||"Flow"}: ${edge.detail||edge.value||""}`,{size:13,weight:650,anchor:"middle",width:760,lines:2}));
+  } else if(b.layout==="compare_regimes"){
+    const regimes=items("regimes").slice(0,3), w=760/Math.max(1,regimes.length);
+    regimes.forEach((regime,i)=>{icon(regime.icon||"scales",150+i*w,145,i?teal:blue);card(110+i*w,196,w-18,245,regime.label,[regime.value,regime.date,regime.detail,regime.status].filter(Boolean).join("\n"),i,i?teal:blue);});
+  } else if(b.layout==="slab_ladder"){
+    const tiers=items("tiers").slice(0,6);tiers.forEach((tier,i)=>{const w=280+i*96,x=(1000-w)/2,y=102+i*57;rect(x,y,w,48,i===tiers.length-1?"#E6F4EF":pale,i===tiers.length-1?teal:blue,8,2);txt(svg,500,y+30,`${tier.label}${tier.value?` · ${tier.value}`:""}`,{size:14,weight:800,anchor:"middle",width:w-24,lines:1});fade(ctx,svg,start+0.6+i*0.35,10,0.35);});
+  } else if(b.layout==="ledger"){
+    const rows=items("rows").slice(0,7);showRows(rows,130,95,740,52,null);
+    if(data.total)card(250,480,500,53,data.total,"Computed from the question facts",8,teal);
+  } else if(b.layout==="waterfall"){
+    const stages=items("stages").slice(0,5);stages.forEach((stage,i)=>{const x=110+i*175,y=145+i*42;card(x,y,155,112,stage.label,[stage.value,stage.detail,stage.status].filter(Boolean).join(" · "),i,i===stages.length-1?teal:blue);if(i<stages.length-1)path(`M ${x+155} ${y+56} H ${x+170}`,line,3);});
+  } else if(b.layout==="deemed_value"){
+    const actual=data.actual||{},deemed=data.deemed||{};icon(actual.icon||"money_bag",280,180,blue);icon(deemed.icon||"scales",720,180,teal);
+    card(125,240,310,150,actual.label||"Actual value",[actual.value,actual.detail].filter(Boolean).join(" · "),0,blue);
+    card(565,240,310,150,deemed.label||"Deemed value",[deemed.value,deemed.detail].filter(Boolean).join(" · "),1,teal);
+    path("M 440 314 H 560", "#B7791F",5);txt(svg,500,300,"statutory substitution",{size:12,weight:800,color:"#8B5E14",anchor:"middle",width:120,lines:2});
+    if(data.rule)txt(svg,500,455,data.rule,{size:15,weight:750,anchor:"middle",width:700,lines:3});
+  } else if(b.layout==="case_card"){
+    icon("gavel",220,180,"#B7791F");card(300,105,520,105,data.case_name||"Precedent",data.court||"",0,"#B7791F");
+    card(130,255,350,155,"Principle",data.principle||"",1,blue);card(520,255,350,155,"Applied to this question",data.application||"",2,teal);
+  } else if(b.layout==="statute_quote"){
+    icon("document",160,165,blue);card(220,108,660,78,data.citation||"Statutory rule",data.application||"",0,blue);
+    rect(120,228,760,190,"#F8FAFC",blue,16,2);txt(svg,155,270,data.rule||"",{size:18,weight:650,width:690,lines:6});
+  } else if(b.layout==="takeaway"){
+    showRows(items("rules").slice(0,4),130,115,740,80,"scales");
+  }
+}
+
 const FIXTURES = {
   "dt-c2-q14": {
     "question_id": "dt-c2-q14",
@@ -1023,6 +1130,15 @@ function renderCatalogLayout(el, b, ctx) {
 }
 
 const TEMPLATES = {
+  example_scene: (el, b, ctx) => renderProvisionLayout(el, b, ctx),
+  decision_tree: (el, b, ctx) => renderProvisionLayout(el, b, ctx),
+  checklist_gate: (el, b, ctx) => renderProvisionLayout(el, b, ctx),
+  timeline_windows: (el, b, ctx) => renderProvisionLayout(el, b, ctx),
+  flow_actors: (el, b, ctx) => renderProvisionLayout(el, b, ctx),
+  compare_regimes: (el, b, ctx) => renderProvisionLayout(el, b, ctx),
+  slab_ladder: (el, b, ctx) => renderProvisionLayout(el, b, ctx),
+  waterfall: (el, b, ctx) => renderProvisionLayout(el, b, ctx),
+  deemed_value: (el, b, ctx) => renderProvisionLayout(el, b, ctx),
   catalog_layout(el, b, ctx) { renderCatalogLayout(el, b, ctx); },
   headline(el, b, ctx) {
     words(ctx, h("headline", el), b.title.text, b.title.at);
@@ -2622,11 +2738,13 @@ class Explainer {
       el.id = "beat-" + (b.id || (i + 1));
       el.dataset.layout = b.layout;
       this.focal.appendChild(el);
-      if (TEMPLATES[b.layout]) {
+      if (b.visual_data && typeof renderProvisionLayout === "function") {
+        renderProvisionLayout(el, b, { push: a => this.anim.push({ ...a, beat: i, p: 0 }) });
+      } else if (TEMPLATES[b.layout]) {
         TEMPLATES[b.layout](el, b, { push: a => this.anim.push({ ...a, beat: i, p: 0 }) });
       } else {
         console.warn("Unknown layout:", b.layout);
-        TEMPLATES.headline(el, { title: { text: "Beat " + (i + 1), at: b.start } }, { push: a => this.anim.push({ ...a, beat: i, p: 0 }) });
+        TEMPLATES.headline(el, { title: { text: b.title?.text || sp.context_pill || "Question-specific explanation", at: b.start }, subtitle: { text: "This presentation layout needs to be regenerated for this question.", at: b.start + 0.5 } }, { push: a => this.anim.push({ ...a, beat: i, p: 0 }) });
       }
       return el;
     });

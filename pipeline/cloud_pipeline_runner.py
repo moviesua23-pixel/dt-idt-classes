@@ -35,7 +35,7 @@ from pipeline.synthesize_discrete_points import (
     count_total_points,
     count_ready_points
 )
-from pipeline.pedagogical_screenplay_architect import build_full_screenplay_for_question
+from pipeline.dynamic_screenplay import generate_dynamic_screenplay
 from pipeline.audio_screenplay_aligner import synthesize_and_align_screenplay_audio
 from pipeline.pdf_question_indexer import (
     build_pdf_index,
@@ -66,7 +66,7 @@ def is_modern_studio_screenplay(sp_data: Any) -> bool:
     beats = sp_data.get('beats', [])
     if not beats or not isinstance(beats, list) or len(beats) < 3:
         return False
-    modern_layouts = {'story_scene', 'fork', 'meter', 'ledger', 'takeaway', 'statute_quote', 'timeline', 'split', 'compare', 'case_card'}
+    modern_layouts = {'story_scene', 'fork', 'meter', 'ledger', 'takeaway', 'statute_quote', 'timeline', 'split', 'compare', 'case_card', 'example_scene', 'decision_tree', 'checklist_gate', 'timeline_windows', 'flow_actors', 'compare_regimes', 'slab_ladder', 'waterfall', 'deemed_value'}
     has_modern_beat = any(isinstance(b, dict) and b.get('layout') in modern_layouts for b in beats)
     is_legacy = any(isinstance(b, dict) and 'beat_type' in b and b.get('layout') is None for b in beats)
     return has_modern_beat and not is_legacy
@@ -522,13 +522,13 @@ def run_pipeline(limit=None, target_chapter=None, target_question=None, target_s
                 timing_status = existing.get('status', 'Screenplay Cached')
             else:
                 try:
-                    raw_sp_obj = build_full_screenplay_for_question(
-                        subject=subject,
-                        ch_no=chapter_no,
-                        q_num=q_num,
-                        q_text=q_text,
-                        ans_text=ans_text,
-                        prov_matrix=formatted_provision_matrix
+                    canonical_qid = f"dt-c{chapter_no}-q{q_num}"
+                    raw_sp_obj = generate_dynamic_screenplay(
+                        qid=canonical_qid,
+                        question=q_text,
+                        answer=ans_text,
+                        provision=formatted_provision_matrix,
+                        mindmap=mm_data if isinstance(mm_data, dict) else None,
                     )
                     if raw_sp_obj:
                         aligned_sp, timing_summary = synthesize_and_align_screenplay_audio(
