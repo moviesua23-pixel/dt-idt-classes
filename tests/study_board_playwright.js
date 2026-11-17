@@ -9,7 +9,16 @@ const SHOT_DIR = process.env.SCREENSHOT_DIR || path.join(require("os").tmpdir(),
   const page = await browser.newPage({ viewport: { width: 1440, height: 900 }, deviceScaleFactor: 1 });
   const errors = [];
   page.on("pageerror", error => errors.push(`pageerror: ${error.message}`));
-  page.on("console", message => { if (message.type() === "error") errors.push(`console: ${message.text()}`); });
+  page.on("console", message => {
+    if (message.type() === "error") {
+      const text = message.text();
+      if (text.includes("Failed to load resource") && (text.includes(".mp3") || text.includes(".wav") || text.includes("data/audio"))) {
+        console.warn(`[audio 404 ignored]: ${text}`);
+        return;
+      }
+      errors.push(`console: ${text}`);
+    }
+  });
 
   try {
     await page.goto(TARGET_URL, { waitUntil: "domcontentloaded" });

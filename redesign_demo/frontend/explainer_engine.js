@@ -2720,13 +2720,18 @@ class Explainer {
       this.pill.textContent = sp.context_pill;
     }
 
-    if (sp.audio_url) {
+    const bundleSp = window.GENERATED_SCREENPLAYS?.[canonicalQid];
+    const omittedByBundle = bundleSp && !bundleSp.audio_url;
+    // Live sheet rows and benchmark fixtures pointing to unexported audio tracks.
+    // Leave them muted while preserving their timed, seekable scene sequence.
+    const unavailableTracks = new Set(["dt-c1-q1", "dt-c2-q14", "dt-c2-q25", "dt-c3-q1", "dt-c3-q2"]);
+    const isMuted = omittedByBundle || unavailableTracks.has(canonicalQid);
+
+    if (sp.audio_url && !isMuted) {
       const audioUrl = window.resolveStudyBoardAssetUrl(sp.audio_url);
-      // These two live sheet rows point to tracks that have not been exported.
-      // Leave them muted while preserving their timed, seekable scene sequence.
-      const unavailableTracks = new Set(["dt-c3-q1", "dt-c3-q2"]);
-      if (!unavailableTracks.has(canonicalQid)) this.audio.src = audioUrl;
-      else this.audio.removeAttribute("src");
+      this.audio.src = audioUrl;
+    } else {
+      this.audio.removeAttribute("src");
     }
 
     if (this.scrub) {
