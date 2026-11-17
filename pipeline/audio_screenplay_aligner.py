@@ -390,6 +390,8 @@ def update_engine_fixture(qid: str, screenplay: Dict[str, Any]):
     with open(engine_path, "r", encoding="utf-8") as f:
         code = f.read()
 
+    norm_key = qid.replace("-", "_")
+    ch_key = re.sub(r"^dt-", "", qid).replace("-", "_")
     fixture_str = f'FIXTURES["{qid}"] = {json.dumps(screenplay, indent=2, ensure_ascii=False)};'
     pattern = rf'FIXTURES\["{qid}"\]\s*=\s*\{{[\s\S]*?\n\s*\}};'
     if re.search(pattern, code):
@@ -400,6 +402,18 @@ def update_engine_fixture(qid: str, screenplay: Dict[str, Any]):
             code = code.replace(anchor, f'{anchor}\n{fixture_str}')
         else:
             code += f"\n{fixture_str}\n"
+
+    # Ensure aliases and window.EXPLAINER_SCREENPLAYS are registered
+    exp_reg = (
+        f'FIXTURES["{norm_key}"] = FIXTURES["{qid}"];\n'
+        f'FIXTURES["{ch_key}"] = FIXTURES["{qid}"];\n'
+        f'window.EXPLAINER_SCREENPLAYS["{qid}"] = FIXTURES["{qid}"];\n'
+        f'window.EXPLAINER_SCREENPLAYS["{norm_key}"] = FIXTURES["{qid}"];\n'
+        f'window.EXPLAINER_SCREENPLAYS["{ch_key}"] = FIXTURES["{qid}"];'
+    )
+    if f'window.EXPLAINER_SCREENPLAYS["{qid}"]' not in code:
+        if "})();" in code:
+            code = code.replace("})();", f"{exp_reg}\n\n}})();")
 
     with open(engine_path, "w", encoding="utf-8") as f:
         f.write(code)

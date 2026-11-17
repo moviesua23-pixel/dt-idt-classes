@@ -1926,6 +1926,7 @@ class Explainer {
   }
 
   toggle() {
+    this._userGestureActive = true;
     if (this.isPlaying || (this.audio && !this.audio.paused)) {
       this.pause();
     } else {
@@ -1943,7 +1944,16 @@ class Explainer {
           if (typeof this.onPlay === "function") this.onPlay();
           this.loop();
         }).catch(err => {
-          console.warn("Audio autoplay blocked by browser, awaiting user gesture:", err);
+          console.warn("Audio autoplay blocked by browser or failed:", err);
+          if (this._userGestureActive || (this.audio && this.audio.error)) {
+            console.warn("Running visual presentation via animated virtual clock fallback.");
+            this.isPlaying = true;
+            this.updatePlayIcon(true);
+            if (typeof this.onPlay === "function") this.onPlay();
+            this.startVirtualClock();
+            this.loop();
+            return;
+          }
           this.isPlaying = false;
           this.updatePlayIcon(false);
           if (typeof this.onPause === "function") this.onPause();
@@ -3541,6 +3551,10 @@ window.EXPLAINER_SCREENPLAYS["dt-c2-q32"] = FIXTURES["dt-c2-q32"];
 window.EXPLAINER_SCREENPLAYS["dt_c2_q32"] = FIXTURES["dt-c2-q32"];
 window.EXPLAINER_SCREENPLAYS["ch2_q32"] = FIXTURES["dt-c2-q32"];
 
-
+FIXTURES["dt_c2_q34"] = FIXTURES["dt-c2-q34"];
+FIXTURES["ch2_q34"] = FIXTURES["dt-c2-q34"];
+window.EXPLAINER_SCREENPLAYS["dt-c2-q34"] = FIXTURES["dt-c2-q34"];
+window.EXPLAINER_SCREENPLAYS["dt_c2_q34"] = FIXTURES["dt-c2-q34"];
+window.EXPLAINER_SCREENPLAYS["ch2_q34"] = FIXTURES["dt-c2-q34"];
 
 })();
