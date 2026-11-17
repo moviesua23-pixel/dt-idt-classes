@@ -6,6 +6,7 @@ import argparse
 import json
 import re
 import shutil
+from urllib.parse import unquote, urlsplit
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -30,6 +31,15 @@ def bundle_screenplays() -> dict:
         screenplay = json.loads(path.read_text(encoding="utf-8"))
         qid = canonical_qid(screenplay.get("question_id", path.stem), path.stem)
         screenplay["question_id"] = qid
+        audio_url = str(screenplay.get("audio_url") or "").strip()
+        parsed_audio = urlsplit(audio_url)
+        if audio_url and not parsed_audio.scheme and not parsed_audio.netloc and not parsed_audio.path.startswith("/"):
+            audio_path = Path(unquote(parsed_audio.path))
+            if audio_path.parts[:1] == ("data",):
+                audio_path = Path(*audio_path.parts[1:])
+            if not (DATA / audio_path).is_file():
+                screenplay.pop("audio_url", None)
+                print(f"Omitting unavailable audio for {qid}: {audio_url}")
         records[qid] = screenplay
     output = DATA / "screenplays.bundle.json"
     output.write_text(json.dumps({"version": 1, "screenplays": records}, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
