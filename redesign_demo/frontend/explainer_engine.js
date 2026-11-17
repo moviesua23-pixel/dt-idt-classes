@@ -115,30 +115,82 @@ FIXTURES["dt-c2-q34"] = {
     {
       "id": "b1",
       "layout": "story_scene",
-      "scene_type": "sdv_comparison",
-      "kicker": "FACTUAL OVERVIEW & BENCHMARK DYNAMICS",
-      "badge": "Case Overview",
+      "scene_type": "property_transfer_sdv",
+      "kicker": "FACTUAL NARRATIVE & STATUTORY BENCHMARK",
+      "badge": "Property Transfer Case",
       "title": {
         "text": "Property Transfer: Stamp Duty Benchmark vs Actual Agreement",
         "at": 0.3
       },
       "voice_sync_text": "Priypetta vidyarthikale, nammude case-ile assessee Mr. Vijay aanu. Vijay 1982-il oru residential house purchase cheythu, total cost ₹ 5,00,000. Ee property 1st April 2001-il Fair Market Value ₹ 15,00,000 aayirunnu, pakshe Stamp Duty Value ₹ 14,00,000 maathram. Ee asset-il randu thavana advance money forfeit cheythittundu: Onnamathathu June 2009-il ₹ 1,50,000, randamathathu July 2016-il ₹ 2,00,000. Pineed September 2015-il first floor construct cheythu for ₹ 5,08,000. Finally, Financial Year 2025-26-il property sale cheyyaan agreement vekkunnu for ₹ 40,00,000, with an advance of ₹ 2,00,000 received via account payee cheque on agreement date. Ennaal agreement date-ile Stamp Duty Value ₹ 52,00,000 aayirunnu! Ee multi-provision puzzle Section 50C, Section 51, matrum Section 112 vechu namukku solve cheyyaam.",
       "elements": {
-        "actual_bar": {
-          "label": "Actual Consideration: ₹ 40,00,000 (Advance ₹ 2L by A/c Payee Cheque)",
-          "at": 50.32
+        "vijay": {
+          "label": "Mr. Vijay Assessee Seller",
+          "at": 3.58
         },
-        "sdv_bar": {
-          "label": "Stamp Duty Value on Agreement Date: ₹ 52,00,000",
-          "at": 57.98
+        "house_1982": {
+          "label": "Residential house purchased in 1982",
+          "at": 7.78
         },
-        "safe_harbor": {
-          "label": "110% Safe Harbor Limit: ₹ 44,00,000 (Breached)",
-          "at": 58.88
+        "cost_5l": {
+          "label": "Purchase cost ₹ 5,00,000",
+          "at": 11.36
         },
-        "deemed_stamp": {
-          "label": "Section 50C Deemed Full Value of Consideration: ₹ 52,00,000",
-          "at": 63.02
+        "benchmark_2001": {
+          "label": "1st April 2001 statutory base comparison",
+          "at": 13.86
+        },
+        "fmv_15l": {
+          "label": "Fair Market Value ₹ 15,00,000",
+          "at": 17.08
+        },
+        "sdv_14l": {
+          "label": "Stamp Duty Value ₹ 14,00,000",
+          "at": 20.9
+        },
+        "base_coa": {
+          "label": "Base COA Lower of FMV/SDV = ₹ 14,00,000",
+          "at": 22.5
+        },
+        "forfeit_2009": {
+          "label": "June 2009 advance forfeited ₹ 1,50,000 u/s 51",
+          "at": 28.22
+        },
+        "forfeit_2016": {
+          "label": "July 2016 advance forfeited ₹ 2,00,000 u/s 56(2)(ix)",
+          "at": 33.14
+        },
+        "floor_construction": {
+          "label": "First floor constructed Sep 2015 ₹ 5,08,000",
+          "at": 38.84
+        },
+        "buyer": {
+          "label": "The Buyer FY 2025-26",
+          "at": 45.0
+        },
+        "agreement_sale": {
+          "label": "Sale agreement consideration ₹ 40,00,000",
+          "at": 48.88
+        },
+        "cheque_advance": {
+          "label": "Advance ₹ 2,00,000 received via Account Payee Cheque",
+          "at": 53.36
+        },
+        "sdv_agreement": {
+          "label": "Agreement date Stamp Duty Value ₹ 52,00,000",
+          "at": 57.8
+        },
+        "safe_harbor_breach": {
+          "label": "110% safe harbor limit ₹ 44,00,000 breached",
+          "at": 59.18
+        },
+        "deemed_consideration": {
+          "label": "Section 50C Deemed Full Value of Consideration = ₹ 52,00,000",
+          "at": 61.46
+        },
+        "statutory_pills": {
+          "label": "Section 50C Section 51 Section 112 multi-provision puzzle",
+          "at": 63.08
         }
       },
       "start": 0.0,
@@ -1640,26 +1692,142 @@ const TEMPLATES = {
       fade(ctx, resG, at("net_loss", 5.6), 12, 0.5);
     }
 
-    // 3. SCENE: sdv_comparison
+    // 3. SCENE: property_transfer_sdv (Real Estate, Seller, Buyer, House, Extension, Advance Cheque, SDV Gavel)
+    else if (b.scene_type === "property_transfer_sdv" || b.elements?.vijay || b.elements?.house_1982) {
+      // Ambient Ground line
+      P_EL(svg, "M 60 480 L 940 480", "#CBD5E1", 2.5);
+
+      // 1. Assessee / Seller (Mr. Vijay)
+      const vijayG = makePerson(svg, 150, 310, "#4F46E5", "Mr. Vijay", "Assessee (Seller)");
+      fade(ctx, vijayG, at("vijay", 3.5), 12, 0.5);
+
+      // 2. Residential House (Purchased in 1982)
+      const houseG = G_EL(svg);
+      // Ground floor structure
+      R_EL(houseG, 320, 340, 150, 130, "#FFFFFF", { stroke: "#4F46E5", sw: 3.5, rx: 6 });
+      R_EL(houseG, 375, 395, 40, 75, "#4F46E5", { rx: 3 });
+      R_EL(houseG, 335, 360, 24, 24, "#FEF08A", { stroke: "#4F46E5", sw: 2, rx: 2 });
+      R_EL(houseG, 435, 360, 24, 24, "#FEF08A", { stroke: "#4F46E5", sw: 2, rx: 2 });
+      // Ground floor initial roof (fades out when first floor stacks)
+      const gfRoof = P_EL(houseG, "M 305 340 L 395 285 L 485 340 Z", "#4F46E5", 3.5, { fill: "#EEF2FF" });
+      fade(ctx, gfRoof, at("house_1982", 7.5), 10, 0.4, at("floor_construction", 38.5), 0.4);
+
+      // 1982 Purchase Pill
+      const p1982 = G_EL(houseG);
+      R_EL(p1982, 305, 490, 180, 32, "#EEF2FF", { stroke: "#4F46E5", sw: 1.5, rx: 16 });
+      T_EL(p1982, 395, 511, "Purchased 1982 · ₹ 5,00,000", { size: 11.5, weight: 800, fill: "#4F46E5", anchor: "middle" });
+      fade(ctx, p1982, at("cost_5l", 11.3), 8, 0.4);
+      fade(ctx, houseG, at("house_1982", 7.5), 12, 0.5);
+
+      // 3. 1st April 2001 Statutory Base Comparison Card
+      const bmCard = G_EL(svg);
+      R_EL(bmCard, 245, 120, 300, 68, "#FFFFFF", { stroke: "#6366F1", sw: 2, rx: 10 });
+      R_EL(bmCard, 245, 120, 300, 22, "#6366F1", { rx: 10 });
+      R_EL(bmCard, 245, 132, 300, 10, "#6366F1", { rx: 0 });
+      T_EL(bmCard, 395, 136, "01.04.2001 STATUTORY BASE u/s 55(2)(b)", { size: 10.5, weight: 800, fill: "#FFFFFF", anchor: "middle", ls: "0.06em" });
+      T_EL(bmCard, 260, 162, "FMV: ₹ 15,00,000", { size: 12.5, weight: 700, fill: "#64748B" });
+      T_EL(bmCard, 385, 162, "SDV: ₹ 14,00,000", { size: 12.5, weight: 700, fill: "#DC2626" });
+      T_EL(bmCard, 260, 180, "Base COA = Lower of FMV/SDV = ₹ 14,00,000", { size: 11.5, weight: 800, fill: "#059669" });
+      fade(ctx, bmCard, at("benchmark_2001", 13.8), 10, 0.5);
+
+      // 4. June 2009 Advance Forfeited (Pre-2014: Deducted from Cost)
+      const forf2009 = G_EL(svg);
+      R_EL(forf2009, 80, 200, 200, 46, "#FEF2F2", { stroke: "#DC2626", sw: 1.5, rx: 8 });
+      T_EL(forf2009, 180, 220, "Forfeited June 2009: ₹ 1.5L", { size: 11.5, weight: 800, fill: "#DC2626", anchor: "middle" });
+      T_EL(forf2009, 180, 237, "Deducted from Cost u/s 51", { size: 10, weight: 700, fill: "#059669", anchor: "middle" });
+      fade(ctx, forf2009, at("forfeit_2009", 28.2), 10, 0.4);
+
+      // 5. July 2016 Advance Forfeited (Post-2014: Taxed under IFOS)
+      const forf2016 = G_EL(svg);
+      R_EL(forf2016, 80, 145, 200, 46, "#FEF08A", { stroke: "#CA8A04", sw: 1.5, rx: 8 });
+      T_EL(forf2016, 180, 165, "Forfeited July 2016: ₹ 2.0L", { size: 11.5, weight: 800, fill: "#854D0E", anchor: "middle" });
+      T_EL(forf2016, 180, 182, "Taxed u/s 56(2)(ix) (Cost unaffected)", { size: 10, weight: 700, fill: "#854D0E", anchor: "middle" });
+      fade(ctx, forf2016, at("forfeit_2016", 33.1), 10, 0.4);
+
+      // 6. September 2015 First Floor Construction
+      const floorG = G_EL(svg);
+      R_EL(floorG, 325, 260, 140, 80, "#EFF6FF", { stroke: "#2563EB", sw: 3, rx: 4 });
+      P_EL(floorG, "M 310 260 L 395 205 L 480 260 Z", "#2563EB", 3.5, { fill: "#DBEAFE" });
+      R_EL(floorG, 345, 280, 22, 22, "#FEF08A", { stroke: "#2563EB", sw: 2, rx: 2 });
+      R_EL(floorG, 420, 280, 22, 22, "#FEF08A", { stroke: "#2563EB", sw: 2, rx: 2 });
+      const fPill = G_EL(floorG);
+      R_EL(fPill, 275, 215, 240, 26, "#DBEAFE", { stroke: "#2563EB", sw: 1.5, rx: 13 });
+      T_EL(fPill, 395, 232, "First Floor Built (Sep 2015): ₹ 5,08,000", { size: 10.5, weight: 800, fill: "#1D4ED8", anchor: "middle" });
+      fade(ctx, floorG, at("floor_construction", 38.8), 15, 0.6);
+
+      // 7. Buyer (FY 2025-26)
+      const buyerG = makePerson(svg, 850, 310, "#059669", "The Buyer", "FY 2025-26 Agreement");
+      fade(ctx, buyerG, at("buyer", 45.0), 12, 0.5);
+
+      // 8. Sale Agreement & Advance Cheque Arc
+      const saleCard = G_EL(svg);
+      R_EL(saleCard, 520, 310, 250, 60, "#FFFFFF", { stroke: "#059669", sw: 2, rx: 10 });
+      T_EL(saleCard, 645, 333, "Agreement Consideration: ₹ 40,00,000", { size: 12.5, weight: 800, fill: "#0F172A", anchor: "middle" });
+      T_EL(saleCard, 645, 353, "Advance: ₹ 2,00,000 (Account Payee Cheque)", { size: 11, weight: 700, fill: "#059669", anchor: "middle" });
+      fade(ctx, saleCard, at("agreement_sale", 48.8), 10, 0.4);
+
+      // Cheque flow animation arc
+      const chqArc = P_EL(svg, "M 810 320 C 720 250 560 250 480 340", "#059669", 3, { dash: "6 4" });
+      fade(ctx, chqArc, at("cheque_advance", 52.0), 0, 0.3);
+      ctx.push({ el: chqArc, kind: "draw", start: at("cheque_advance", 52.0), dur: 0.8 });
+
+      // 9. Stamp Duty Valuation Gavel & Benchmark
+      const sdvCard = G_EL(svg);
+      R_EL(sdvCard, 580, 120, 360, 150, "#FFFFFF", { stroke: "#DC2626", sw: 3, rx: 12 });
+      R_EL(sdvCard, 580, 120, 360, 30, "#DC2626", { rx: 12 });
+      R_EL(sdvCard, 580, 140, 360, 10, "#DC2626", { rx: 0 });
+      T_EL(sdvCard, 760, 141, "SECTION 50C BENCHMARK u/s 50C(1) PROVISO", { size: 11, weight: 800, fill: "#FFFFFF", anchor: "middle", ls: "0.06em" });
+      T_EL(sdvCard, 605, 175, "Agreement Date SDV: ₹ 52,00,000", { size: 15, weight: 800, fill: "#DC2626" });
+      T_EL(sdvCard, 605, 198, "110% Safe Harbor Limit: ₹ 44,00,000", { size: 13, weight: 700, fill: "#854D0E" });
+      T_EL(sdvCard, 605, 218, "Breach: SDV (₹ 52L) > 110% of Actual (₹ 44L)", { size: 11.5, weight: 700, fill: "#DC2626" });
+      
+      const deemPill = G_EL(sdvCard);
+      R_EL(deemPill, 595, 232, 330, 28, "#FEF2F2", { stroke: "#DC2626", sw: 1.5, rx: 14 });
+      T_EL(deemPill, 760, 251, "DEEMED FULL VALUE OF CONSIDERATION = ₹ 52,00,000", { size: 10.5, weight: 900, fill: "#DC2626", anchor: "middle", ls: "0.04em" });
+      fade(ctx, sdvCard, at("sdv_agreement", 57.8), 12, 0.5);
+
+      // 10. Multi-Provision Statutory Pillars (Bottom Center)
+      const secRow = G_EL(svg);
+      const secs = [
+        { label: "Section 50C", sub: "Deemed FVC: ₹ 52L", col: "#DC2626", tint: "#FEF2F2" },
+        { label: "Section 51", sub: "Advance Pre-2014 Less", col: "#4F46E5", tint: "#EEF2FF" },
+        { label: "Section 112", sub: "Beneficial Parity (Nil Tax)", col: "#059669", tint: "#ECFDF5" }
+      ];
+      secs.forEach((sc, i) => {
+        const pG = G_EL(secRow);
+        const px = 250 + i * 180;
+        R_EL(pG, px, 490, 160, 48, sc.tint, { stroke: sc.col, sw: 1.5, rx: 10 });
+        T_EL(pG, px + 80, 510, sc.label, { size: 12, weight: 800, fill: sc.col, anchor: "middle" });
+        T_EL(pG, px + 80, 526, sc.sub, { size: 10, weight: 600, fill: "#374151", anchor: "middle" });
+      });
+      fade(ctx, secRow, at("statutory_pills", 63.0), 10, 0.4);
+    }
+
+    // 4. SCENE: sdv_comparison (Dynamic Fallback for other standard SDV questions)
     else if (b.scene_type === "sdv_comparison") {
       const baseY = 420;
+      const actualVal = b.elements?.actual_bar?.val || 2500000;
+      const actualLabel = b.elements?.actual_bar?.label || `₹ ${Math.round(actualVal/100000)} Lakhs`;
+      const sdvVal = b.elements?.sdv_bar?.val || 3000000;
+      const sdvLabel = b.elements?.sdv_bar?.label || `₹ ${Math.round(sdvVal/100000)} Lakhs`;
+      const safeVal = Math.round(actualVal * 1.10);
+
       const bar1 = G_EL(svg);
       R_EL(bar1, 180, baseY - 180, 160, 180, "#EEF2FF", { stroke: "#4F46E5", sw: 3, rx: 12 });
       T_EL(bar1, 260, baseY - 200, "Actual Consideration", { size: 14, weight: 700, fill: "#64748B", anchor: "middle" });
-      T_EL(bar1, 260, baseY - 80, "₹ 25 Lakhs", { size: 24, weight: 800, fill: "#4F46E5", anchor: "middle" });
+      T_EL(bar1, 260, baseY - 80, inr(actualVal), { size: 24, weight: 800, fill: "#4F46E5", anchor: "middle" });
       fade(ctx, bar1, at("actual_bar", 0.6), 15, 0.5);
 
       const thLine = G_EL(svg);
       P_EL(thLine, "M 130 220 L 590 220", "#CA8A04", 2.5, { dash: "8 6" });
       R_EL(thLine, 210, 172, 185, 32, "#FEF08A", { stroke: "#CA8A04", sw: 1.5, rx: 16 });
-      T_EL(thLine, 302, 193, "110% Safe Harbor: ₹ 27.5L", { size: 12, weight: 800, fill: "#854D0E", anchor: "middle" });
+      T_EL(thLine, 302, 193, `110% Safe Harbor: ${inr(safeVal)}`, { size: 12, weight: 800, fill: "#854D0E", anchor: "middle" });
       fade(ctx, thLine, at("safe_harbor", 1.6), 0, 0.4);
 
       const bar2 = G_EL(svg);
       R_EL(bar2, 420, baseY - 225, 160, 225, "#FEF2F2", { stroke: "#DC2626", sw: 3.5, rx: 12 });
       T_EL(bar2, 500, baseY - 245, "Stamp Duty Value (SDV)", { size: 14, weight: 800, fill: "#DC2626", anchor: "middle" });
-      T_EL(bar2, 500, baseY - 100, "₹ 30 Lakhs", { size: 26, weight: 800, fill: "#DC2626", anchor: "middle" });
-      T_EL(bar2, 500, baseY - 65, "₹ 3.90L / 13%", { size: 13, weight: 700, fill: "#64748B", anchor: "middle" });
+      T_EL(bar2, 500, baseY - 100, inr(sdvVal), { size: 26, weight: 800, fill: "#DC2626", anchor: "middle" });
       fade(ctx, bar2, at("sdv_bar", 2.4), 18, 0.5);
 
       const stamp = G_EL(svg);
@@ -1667,16 +1835,9 @@ const TEMPLATES = {
       R_EL(stamp, 640, 160, 280, 36, "#DC2626", { rx: 14 });
       R_EL(stamp, 640, 180, 280, 16, "#DC2626", { rx: 0 });
       T_EL(stamp, 780, 184, "SECTION 50C TRIGGERED", { size: 13, weight: 800, fill: "#FFFFFF", anchor: "middle", ls: "0.08em" });
-      T_EL(stamp, 780, 220, "SDV (₹ 30L) > 110% (₹ 27.5L)", { size: 13, weight: 700, fill: "#111827", anchor: "middle" });
-      T_EL(stamp, 780, 245, "Deemed Full Value: ₹ 30,00,000", { size: 15, weight: 800, fill: "#DC2626", anchor: "middle" });
-      T_EL(stamp, 780, 275, "Less Cost u/s 49(1): ₹ 1,25,000", { size: 12, weight: 600, fill: "#64748B", anchor: "middle" });
+      T_EL(stamp, 780, 220, `SDV (${inr(sdvVal)}) > 110% (${inr(safeVal)})`, { size: 12, weight: 700, fill: "#111827", anchor: "middle" });
+      T_EL(stamp, 780, 245, `Deemed Full Value: ${inr(sdvVal)}`, { size: 14, weight: 800, fill: "#DC2626", anchor: "middle" });
       fade(ctx, stamp, at("stamp_50c", 3.6), 12, 0.5);
-
-      const ltcgPill = G_EL(svg);
-      R_EL(ltcgPill, 640, 325, 280, 56, "#EEF2FF", { stroke: "#4F46E5", sw: 2.5, rx: 12 });
-      T_EL(ltcgPill, 780, 350, "Gross LTCG: ₹ 28,75,000", { size: 17, weight: 800, fill: "#4F46E5", anchor: "middle" });
-      T_EL(ltcgPill, 780, 370, "₹ 30,00,000 − ₹ 1,25,000", { size: 11, weight: 600, fill: "#64748B", anchor: "middle" });
-      fade(ctx, ltcgPill, at("gross_ltcg", 4.6), 10, 0.4);
     }
 
     // 4. SCENE: adjacent_flats_merge

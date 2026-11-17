@@ -76,13 +76,19 @@ CRITICAL PEDAGOGICAL RULE 3: SITUATIONAL VISUAL MODELING & ELASTIC BEATS (UNIVER
     9. Golden Takeaways: Layout "takeaway". 3 non-negotiable statutory rules or exam traps.
 
 ========================================================================================
-CRITICAL PEDAGOGICAL RULE 4: STRICT 1:1 VOICE-TO-SCREEN CORRESPONDENCE (UNIVERSAL LAW)
+CRITICAL PEDAGOGICAL RULE 4: 1:1 VOICE-TO-SCREEN FIDELITY & COMPLETE SITUATIONAL DECOMPOSITION
 ========================================================================================
 - WHATEVER IS SPOKEN IN voice_sync_text MUST BE SHOWN ON SCREEN IN DIRECT 1:1 CORRESPONDENCE!
-- When the teacher mentions an asset, an amount, a condition, a date, or a rule, that element MUST appear visually on screen.
-- In "story_scene" beats, include an "elements" dictionary where each visual sub-element has semantic keywords and descriptive label (e.g. "urban_factory", "assets_box", "shift_arrow", "rural_factory", "pool_box") so the Whisper acoustic aligner syncs them down to the exact second!
-- NEVER mention numbers, facts, or entities in voice that are missing from the visual layout!
-- NEVER speak for more than 5 seconds without an animated visual element popping up!
+- In "story_scene" beats, you MUST decompose the entire scenario into ALL of its constituent entities, and map every single one to a distinct key in the "elements" dictionary:
+  * The Actor / Assessee (e.g. "assessee_person", "seller_vijay", "landlord_ramesh", "enterprise_apex")
+  * The Asset / Property / Machinery (e.g. "residential_house", "urban_factory", "qualifying_land")
+  * Every Historical Milestone / Improvement (e.g. "purchase_original_cost", "fmv_sdv_benchmark", "forfeited_advance", "construction_improvement")
+  * The Counterparty (e.g. "buyer_party", "tenant_kumar", "donee_son", "rural_authority")
+  * The Cash Flow / Cheque / Movement (e.g. "cheque_advance_payment", "rent_annual_flow", "relocation_transit")
+  * The Statutory Benchmark / Gavel / Outcome (e.g. "sdv_gavel_benchmark", "safe_harbor_breach", "deemed_consideration_stamp")
+- EVERY element must have a "label" containing the EXACT words, sections, and numbers spoken by the teacher at that exact moment.
+- The teacher narration MUST chronologically walk through these elements so that the Whisper acoustic aligner places each element at its exact second, with NO silent visual gaps greater than 4 seconds!
+- NEVER speak for more than 4-5 seconds without a new animated visual element popping up!
 
 ========================================================================================
 CRITICAL PEDAGOGICAL RULE 5: AUTHENTIC, WARM MALAYALAM TEACHER DIALOGUE (NATURAL MANGLISH)

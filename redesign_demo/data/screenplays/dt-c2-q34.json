@@ -9,30 +9,82 @@
     {
       "id": "b1",
       "layout": "story_scene",
-      "scene_type": "sdv_comparison",
-      "kicker": "FACTUAL OVERVIEW & BENCHMARK DYNAMICS",
-      "badge": "Case Overview",
+      "scene_type": "property_transfer_sdv",
+      "kicker": "FACTUAL NARRATIVE & STATUTORY BENCHMARK",
+      "badge": "Property Transfer Case",
       "title": {
         "text": "Property Transfer: Stamp Duty Benchmark vs Actual Agreement",
         "at": 0.3
       },
       "voice_sync_text": "Priypetta vidyarthikale, nammude case-ile assessee Mr. Vijay aanu. Vijay 1982-il oru residential house purchase cheythu, total cost ₹ 5,00,000. Ee property 1st April 2001-il Fair Market Value ₹ 15,00,000 aayirunnu, pakshe Stamp Duty Value ₹ 14,00,000 maathram. Ee asset-il randu thavana advance money forfeit cheythittundu: Onnamathathu June 2009-il ₹ 1,50,000, randamathathu July 2016-il ₹ 2,00,000. Pineed September 2015-il first floor construct cheythu for ₹ 5,08,000. Finally, Financial Year 2025-26-il property sale cheyyaan agreement vekkunnu for ₹ 40,00,000, with an advance of ₹ 2,00,000 received via account payee cheque on agreement date. Ennaal agreement date-ile Stamp Duty Value ₹ 52,00,000 aayirunnu! Ee multi-provision puzzle Section 50C, Section 51, matrum Section 112 vechu namukku solve cheyyaam.",
       "elements": {
-        "actual_bar": {
-          "label": "Actual Consideration: ₹ 40,00,000 (Advance ₹ 2L by A/c Payee Cheque)",
-          "at": 50.32
+        "vijay": {
+          "label": "Mr. Vijay Assessee Seller",
+          "at": 3.58
         },
-        "sdv_bar": {
-          "label": "Stamp Duty Value on Agreement Date: ₹ 52,00,000",
-          "at": 57.98
+        "house_1982": {
+          "label": "Residential house purchased in 1982",
+          "at": 7.78
         },
-        "safe_harbor": {
-          "label": "110% Safe Harbor Limit: ₹ 44,00,000 (Breached)",
-          "at": 58.88
+        "cost_5l": {
+          "label": "Purchase cost ₹ 5,00,000",
+          "at": 11.36
         },
-        "deemed_stamp": {
-          "label": "Section 50C Deemed Full Value of Consideration: ₹ 52,00,000",
-          "at": 63.02
+        "benchmark_2001": {
+          "label": "1st April 2001 statutory base comparison",
+          "at": 13.86
+        },
+        "fmv_15l": {
+          "label": "Fair Market Value ₹ 15,00,000",
+          "at": 17.08
+        },
+        "sdv_14l": {
+          "label": "Stamp Duty Value ₹ 14,00,000",
+          "at": 20.9
+        },
+        "base_coa": {
+          "label": "Base COA Lower of FMV/SDV = ₹ 14,00,000",
+          "at": 22.5
+        },
+        "forfeit_2009": {
+          "label": "June 2009 advance forfeited ₹ 1,50,000 u/s 51",
+          "at": 28.22
+        },
+        "forfeit_2016": {
+          "label": "July 2016 advance forfeited ₹ 2,00,000 u/s 56(2)(ix)",
+          "at": 33.14
+        },
+        "floor_construction": {
+          "label": "First floor constructed Sep 2015 ₹ 5,08,000",
+          "at": 38.84
+        },
+        "buyer": {
+          "label": "The Buyer FY 2025-26",
+          "at": 45.0
+        },
+        "agreement_sale": {
+          "label": "Sale agreement consideration ₹ 40,00,000",
+          "at": 48.88
+        },
+        "cheque_advance": {
+          "label": "Advance ₹ 2,00,000 received via Account Payee Cheque",
+          "at": 53.36
+        },
+        "sdv_agreement": {
+          "label": "Agreement date Stamp Duty Value ₹ 52,00,000",
+          "at": 57.8
+        },
+        "safe_harbor_breach": {
+          "label": "110% safe harbor limit ₹ 44,00,000 breached",
+          "at": 59.18
+        },
+        "deemed_consideration": {
+          "label": "Section 50C Deemed Full Value of Consideration = ₹ 52,00,000",
+          "at": 61.46
+        },
+        "statutory_pills": {
+          "label": "Section 50C Section 51 Section 112 multi-provision puzzle",
+          "at": 63.08
         }
       },
       "start": 0.0,
