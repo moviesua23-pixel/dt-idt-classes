@@ -1,0 +1,456 @@
+{
+  "question_id": "dt-c3-q4",
+  "audio_url": "data/audio/dt-c3-q4.mp3",
+  "duration_sec": 72.71,
+  "sync_offset_sec": 0.0,
+  "context_pill": "Amalgamation Depreciation Apportionment",
+  "example_summary": "Calculation of depreciation for Sai Ltd. and Shirdi Ltd. post-amalgamation using the Fifth Proviso to Section 32(1).",
+  "source_provision": "| Provision | Description | Statutory Basis |\n| :--- | :--- | :--- |\n| Depreciation Deduction | Allowable on block of assets | Section 32(1) |\n| Amalgamation Apportionment | Apportioned based on days of use | Fifth Proviso to Section 32(1) |\n| WDV Calculation | WDV at start of year for block | Section 43(6) |\n\n\n> [!IMPORTANT] Rule for Apportionment: The aggregate depreciation allowable to the amalgamating company and the amalgamated company shall not exceed the deduction calculated at prescribed rates as if the amalgamation had not taken place.\n\n\n> [!NOTE] Usage Threshold: Assets put to use for less than 180 days in the previous year attract depreciation at 50% of the normal prescribed rate.\n\n\n- The transfer price of assets between amalgamating and amalgamated companies is irrelevant for computing depreciation eligibility.\n- Total depreciation for the block is calculated on the aggregate WDV and current year additions, irrespective of the transfer.",
+  "director": {
+    "archetype": "computation_ledger",
+    "justification": "The provision requires a consolidated depreciation calculation followed by a proportional split between two entities based on the duration of asset usage.",
+    "protagonist": "Sai Ltd.",
+    "actors": [
+      "Shirdi Ltd."
+    ],
+    "key_numbers": [
+      "40,00,000",
+      "14,40,000",
+      "15%",
+      "7.5%",
+      "7,08,000",
+      "60,00,000",
+      "275/365",
+      "90/365",
+      "61/151",
+      "90/151"
+    ],
+    "key_dates": [
+      "01.04.2025",
+      "01.11.2025",
+      "01.01.2026",
+      "31.03.2026"
+    ],
+    "visual_metaphor": "A relay race where the total time is clocked for the team, then divided based on the distance each runner carried the baton.",
+    "beat_plan": [
+      {
+        "beat_goal": "Setup Sai Ltd's asset block and the mid-year purchase.",
+        "layout": "example_scene",
+        "anchor_phrases": [
+          "Sai Ltd.",
+          "40,00,000",
+          "01.11.2025"
+        ]
+      },
+      {
+        "beat_goal": "Calculate total depreciation as if no amalgamation happened.",
+        "layout": "ledger",
+        "anchor_phrases": [
+          "Section 32(1)",
+          "15%",
+          "7.5%",
+          "7,08,000"
+        ]
+      },
+      {
+        "beat_goal": "Identify the split date and the number of days for each company.",
+        "layout": "timeline_windows",
+        "anchor_phrases": [
+          "01.01.2026",
+          "275 days",
+          "90 days"
+        ]
+      },
+      {
+        "beat_goal": "Apportion the depreciation based on the ratio of days.",
+        "layout": "waterfall",
+        "anchor_phrases": [
+          "Fifth Proviso",
+          "ratio of the number of days"
+        ]
+      },
+      {
+        "beat_goal": "Dismiss the transfer price as irrelevant for depreciation.",
+        "layout": "deemed_value",
+        "anchor_phrases": [
+          "60,00,000",
+          "no implication"
+        ]
+      },
+      {
+        "beat_goal": "Final allowable depreciation for both companies.",
+        "layout": "takeaway",
+        "anchor_phrases": [
+          "4,95,684",
+          "2,12,316"
+        ]
+      }
+    ]
+  },
+  "fallback": false,
+  "beats": [
+    {
+      "layout": "example_scene",
+      "title": {
+        "text": "Asset Block Setup",
+        "at": 0.3
+      },
+      "voice_sync_text": "Sai Ltd. -ന്റെ asset block-ൽ 01.04.2025-ൽ 40,00,000 രൂപയുടെ WDV ഉണ്ടായിരുന്നു. പിന്നീട് 01.11.2025-ൽ പുതിയൊരു asset കൂടി വാങ്ങി.",
+      "visual_data": {
+        "actors": [
+          {
+            "label": "Sai Ltd.",
+            "detail": "Amalgamating Company",
+            "icon": "factory",
+            "at": 2.14
+          }
+        ],
+        "transaction": "Asset Purchase",
+        "facts": [
+          {
+            "label": "Opening WDV",
+            "amount": 4000000,
+            "date": "01.04.2025",
+            "icon": "money_bag",
+            "at": 7.76
+          },
+          {
+            "label": "New Addition",
+            "amount": 1440000,
+            "date": "01.11.2025",
+            "icon": "plot",
+            "at": 7.76
+          }
+        ],
+        "spoken_amounts": [
+          "40,00,000"
+        ]
+      },
+      "start": 0.0,
+      "end": 13.0,
+      "id": "b1",
+      "director_goal": "Setup Sai Ltd's asset block and the mid-year purchase.",
+      "anchor_phrases": [
+        "Sai Ltd.",
+        "40,00,000",
+        "01.11.2025"
+      ],
+      "animation_role": "key_fact",
+      "anchor_alignment": [
+        {
+          "phrase": "Sai Ltd.",
+          "at": 2.14,
+          "matched": true,
+          "score": 0.898
+        },
+        {
+          "phrase": "40,00,000",
+          "at": 5.42,
+          "matched": true,
+          "score": 0.875
+        },
+        {
+          "phrase": "01.11.2025",
+          "at": 9.14,
+          "matched": true,
+          "score": 0.667
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 3
+      }
+    },
+    {
+      "layout": "ledger",
+      "title": {
+        "text": "Notional Depreciation Calculation",
+        "at": 13.65
+      },
+      "voice_sync_text": "Section 32(1) പ്രകാരം, amalgamation നടന്നില്ലായിരുന്നുവെങ്കിൽ ലഭിക്കുമായിരുന്ന 15% ഉം 7.5% ഉം നിരക്കിൽ മൊത്തം 7,08,000 രൂപ depreciation കണക്കാക്കുന്നു.",
+      "visual_data": {
+        "rows": [
+          {
+            "label": "Depreciation @ 15%",
+            "amount": 600000,
+            "icon": "scales",
+            "at": 22.83
+          },
+          {
+            "label": "Depreciation @ 7.5%",
+            "amount": 108000,
+            "icon": "scales",
+            "at": 22.83
+          }
+        ],
+        "total": "7,08,000"
+      },
+      "start": 13.35,
+      "end": 27.47,
+      "id": "b2",
+      "director_goal": "Calculate total depreciation as if no amalgamation happened.",
+      "anchor_phrases": [
+        "Section 32(1)",
+        "15%",
+        "7.5%",
+        "7,08,000"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Section 32(1)",
+          "at": 22.83,
+          "matched": true,
+          "score": 0.552
+        },
+        {
+          "phrase": "15%",
+          "at": 20.74,
+          "matched": false,
+          "score": 0.0
+        },
+        {
+          "phrase": "7.5%",
+          "at": 23.85,
+          "matched": true,
+          "score": 0.62
+        },
+        {
+          "phrase": "7,08,000",
+          "at": 24.09,
+          "matched": true,
+          "score": 0.8
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 4
+      }
+    },
+    {
+      "layout": "timeline_windows",
+      "title": {
+        "text": "Apportionment Timeline",
+        "at": 28.12
+      },
+      "voice_sync_text": "01.01.2026-ൽ amalgamation നടന്നു. Sai Ltd. 275 days ഉം, Shirdi Ltd. 90 days ഉം assets ഉപയോഗിച്ചു.",
+      "visual_data": {
+        "events": [
+          {
+            "label": "Sai Ltd. Usage",
+            "value": "275 days",
+            "icon": "calendar",
+            "at": 31.69
+          },
+          {
+            "label": "Shirdi Ltd. Usage",
+            "value": "90 days",
+            "icon": "calendar",
+            "at": 33.17
+          }
+        ],
+        "window_label": "01.01.2026"
+      },
+      "start": 27.82,
+      "end": 38.86,
+      "id": "b3",
+      "director_goal": "Identify the split date and the number of days for each company.",
+      "anchor_phrases": [
+        "01.01.2026",
+        "275 days",
+        "90 days"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "01.01.2026",
+          "at": 28.6,
+          "matched": true,
+          "score": 0.526
+        },
+        {
+          "phrase": "275 days",
+          "at": 33.5,
+          "matched": true,
+          "score": 0.665
+        },
+        {
+          "phrase": "90 days",
+          "at": 36.38,
+          "matched": true,
+          "score": 0.564
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 3
+      }
+    },
+    {
+      "layout": "waterfall",
+      "title": {
+        "text": "Proportional Split",
+        "at": 39.51
+      },
+      "voice_sync_text": "Fifth Proviso പ്രകാരം, ഈ depreciation തുക കമ്പനികൾ assets ഉപയോഗിച്ച ratio of the number of days അടിസ്ഥാനത്തിൽ വീതിച്ചെടുക്കണം.",
+      "visual_data": {
+        "stages": [
+          {
+            "label": "Sai Ltd. Share",
+            "value": "275/365",
+            "icon": "document",
+            "at": 39.21
+          },
+          {
+            "label": "Shirdi Ltd. Share",
+            "value": "90/365",
+            "icon": "document",
+            "at": 39.21
+          }
+        ]
+      },
+      "start": 39.21,
+      "end": 49.17,
+      "id": "b4",
+      "director_goal": "Apportion the depreciation based on the ratio of days.",
+      "anchor_phrases": [
+        "Fifth Proviso",
+        "ratio of the number of days"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Fifth Proviso",
+          "at": 39.91,
+          "matched": true,
+          "score": 0.6
+        },
+        {
+          "phrase": "ratio of the number of days",
+          "at": 45.35,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 2,
+        "total": 2
+      }
+    },
+    {
+      "layout": "deemed_value",
+      "title": {
+        "text": "Transfer Price Irrelevance",
+        "at": 49.82
+      },
+      "voice_sync_text": "Assets 60,00,000 രൂപയ്ക്ക് transfer ചെയ്തെങ്കിലും, depreciation കണക്കാക്കുമ്പോൾ ഇതിന് no implication ആണ് ഉള്ളത്.",
+      "visual_data": {
+        "actual": {
+          "label": "Transfer Price",
+          "amount": 6000000,
+          "icon": "money_bag",
+          "at": 54.68
+        },
+        "deemed": {
+          "label": "Depreciation Impact",
+          "value": "Nil",
+          "icon": "padlock",
+          "at": 54.68
+        },
+        "rule": "Transfer price is irrelevant for depreciation",
+        "spoken_amounts": [
+          "60,00,000"
+        ],
+        "at": 50.44
+      },
+      "start": 49.52,
+      "end": 58.04,
+      "id": "b5",
+      "director_goal": "Dismiss the transfer price as irrelevant for depreciation.",
+      "anchor_phrases": [
+        "60,00,000",
+        "no implication"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "60,00,000",
+          "at": 55.1,
+          "matched": true,
+          "score": 0.484
+        },
+        {
+          "phrase": "no implication",
+          "at": 56.06,
+          "matched": false,
+          "score": 0.32
+        }
+      ],
+      "anchor_match": {
+        "matched": 1,
+        "total": 2
+      }
+    },
+    {
+      "layout": "takeaway",
+      "title": {
+        "text": "Final Allowable Depreciation",
+        "at": 58.69
+      },
+      "voice_sync_text": "അവസാനമായി, Sai Ltd.-ന് 4,95,684 രൂപയും, Shirdi Ltd.-ന് 2,12,316 രൂപയും depreciation ആയി ലഭിക്കുന്നു.",
+      "visual_data": {
+        "rules": [
+          {
+            "label": "Sai Ltd. Depreciation",
+            "amount": 495684,
+            "icon": "bank",
+            "at": 70.49
+          },
+          {
+            "label": "Shirdi Ltd. Depreciation",
+            "amount": 212316,
+            "icon": "bank",
+            "at": 70.49
+          }
+        ],
+        "spoken_amounts": [
+          "4,95,684",
+          "2,12,316"
+        ]
+      },
+      "start": 58.39,
+      "end": 72.71,
+      "id": "b6",
+      "director_goal": "Final allowable depreciation for both companies.",
+      "anchor_phrases": [
+        "4,95,684",
+        "2,12,316"
+      ],
+      "animation_role": "key_fact",
+      "anchor_alignment": [
+        {
+          "phrase": "4,95,684",
+          "at": 59.59,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "2,12,316",
+          "at": 65.27,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 2,
+        "total": 2
+      }
+    }
+  ],
+  "audio_duration_sec": 72.71,
+  "anchor_match": {
+    "matched": 14,
+    "total": 16,
+    "rate": 0.875
+  }
+}

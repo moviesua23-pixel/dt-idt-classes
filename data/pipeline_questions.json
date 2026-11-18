@@ -435,6 +435,42 @@
       "question_text": "Mr. Shyam purchased a house property on February 15, 1979 for ₹ 3,24,000. In addition, he has also paid stamp duty @10% on the stamp duty value of ₹ 3,50,000. In April, 2008, Mr. Shyam entered into an agreement with Mr. Mohan for sale of such property for ₹ 14,35,000 and received an amount of ₹ 1,11,000 as advance. However, the sale consideration did not materialize and Mr. Shyam forfeited the advance. In May 2015, he again entered into an agreement for sale of said house for ₹ 20,25,000 to Ms. Deepshikha and received ₹ 1,51,000 as advance. However, as Ms. Deepshikha did not pay the balance amount, Mr. Shyam forfeited the advance. In August, 2015, Mr. Shyam constructed the first floor by incurring a cost of ₹ 3,90,000. On November 15, 2025, Mr. Shyam entered into an agreement with Mr. Manish for sale of such house for ₹ 30,50,000 and received an amount of ₹ 1,50,000 as advance through an account payee cheque. Mr. Manish paid the balance entire sum and Mr. Shyam transferred the house to Mr. Manish on February 20, 2026. Mr. Shyam has paid the brokerage @1% of sale consideration to the broker. On April 1, 2001, fair market value of the house property was ₹ 11,85,000 and Stamp duty value was ₹ 10,70,000. Further, the Valuation as per Stamp duty Authority of such house on 15th November, 2025 was ₹ 39,00,000 and on 20+ February, 2026 was ₹ 41,00,000. Compute capital gains in the hands of Mr. Shyam for A.Y.2026-27. Also, compute tax liability under section 112, assuming that basic exemption limit has been fully exhausted against other income. Cll for F.Y. 2001-02: 100; F.Y. 2008-09: 137; F.Y. 2015-16: 254; F.Y. 2025-26: 376",
       "answer_text": "Computation of Capital gains in the hands of Mr. Shyam for A.Y, 2026-27\n\n| Particulars | ₹ |\n| :--- | :---: |\n| Amount (%)| Amount (%) | |\n| Actual sale consideration | 30,50,000 |\n| Valuation as per Stamp duty Authority on the date of agreemen₹ | 39,00,000 |\n| SS | |\n| SS) | |\n\n(Where the actual sale consideration is less than the value adopted by the Stamp Valuation Authority for the purpose of charging stamp duty, and such stamp duty value exceeds 110% of the actual sale consideration then, the value adopted by Stamp Valuation Authority shall be taken to be the full value of consideration as per section 50C. However, where the date of agreement is different from the date of registration, stamp duty value on the date of agreement can be considered, provided the whole or part of the consideration is received by way of account payee cheque/bank draft or by way of ECS through bank account or such other electronic mode as may be prescribed on or before the date of agreement. In the present case, since part of the payment is made by account payee cheque on the date of agreement, the stamp duty value on the date of agreement would be considered as full value of consideration) Deemed Full value of consideration [Since stamp duty value on the date of agreement exceeds 110% of the actual consideration, stamp duty value would be deemed as Full Value of Consideration] Less: Expenses on transfer (Brokerage @1% of ₹ 30,50,000) Net sale consideration Less: Cost of acquisition (Note 1) Less: Cost of improvement Long term capital gain 39,00,000 30,500 38,69,500 9,59,000 3,90,000 13,49,000 25,20,500 Computation of tax liability u/s 112\n\n| Particulars | ₹ |\n| :--- | :---: |\n| Amount (%) | |\n| On LTCG of ₹ 25,20,500 x 12.5% | |\n| Add: Health and Education cess @4% | |\n| On LTCG with indexation benefit | |\n| Net Sale consideration | |\n| Less: Indexed cost of acquisition [₹ 9,59,000 x 376/100] | |\n| Less: Indexed cost of Improvement [₹ 3,90,000 x 376/254] | |\n| Long-term capital loss | 38,69,500 |\n| 36,05,840 | |\n\n(313,663) 3,15,063 12,603 3.27,666 3.77,323 can neither be set off nor carried forward.\n\nSince the computation results in a long term capital loss, if indexation benefit is given, the tax u/s 112 would be Nil. However, this computation is only for determining tax liability, the said loss Notes:\n\n- **(1)** Computation of cost of acquisition\n\n| Particulars | ₹ |\n| :--- | :---: |\n| Amount (%)| | |\n| Amount (%) | |\n| Cost of acquisition, | |\n| Being the higher of | 10,70,000 |\n\n- **(2)**\n\n- **(i)** lower of Fair market value i.e, ₹ 11,85,000 and Stamp duty 10,70,000 value i.e., ₹ 10,70,000, on April 1, 2001\n\n- **(ii)** Actual cost of acquisition (₹ 3,24,000 + ₹ 35,000, being 3,59,000 stamp duty @10% of 2 3,50,000) Less: Advance money taken from Mr. Mohan and forfeited 1,11,000 Cost of acquisition 9,59,000 Where advance money has been received by the assessee, and retained by him, as a result of failure of the negotiations, section 51 will apply. The advance retained by the assessee will go to reduce the cost of acquisition.\n\nAccordingly, cost of acquisition after reducing the advance money forfeited would be ₹ 9,59,000 [i.e. ₹ 10,70,000 - ₹ 1,11,000 (being the advance money forfeited during the P.Y. 2008-09)]. However, where the advance money is forfeited during the previous year 2014-15 or thereafter, the amount forfeited would be taxable under the head \"Income from Other Sources\" and such amount will not be deducted from the cost of acquisition of such asset while calculating capital gains. Hence, ₹ 1,51,000, being the advance received from Ms. Deepshikha and retained by him, would have been taxable under the head \"Income from other sources\" in the hands of Mr. Shyam in A.Y.2016-17. CHAPTER - 3 Profits & Gains of Business or Profession (PGBP) D lati",
       "topic_id": "T_CH2_Q34"
+    },
+    {
+      "subject": "dt",
+      "chapter_number": 3,
+      "question_number": 1,
+      "question_title": "Depreciation on Block of Assets and Half-Rate Restriction u/s 32",
+      "question_text": "A newly qualified Chartered Accountant Mr. Dhaval, commenced practice and has acquired the following assets in his office during F.Y. 2025-26 at the cost shown against each item. Calculate the amount of depreciation that can be claimed from his professional income for A.Y.2026-27. Assume that all the assets were purchased by way of account payee cheque. S. Description Date of Date when Amount acquisition put to use x Computer including computer software 27 Sept, 25 1 Oct., 25 35,000 Computer UPS 2 Oct., 25 8 Oct., 25 8,500 Computer printer PGct; 25 1 Oct., 25 12,500 Books (of which books being annual publications | 1 Apr.,25 1 Apr., 25 13,000 are of ₹ 12,000) Office furniture (Acquired from a practising CA) 1 Apr., 25 1 Apr., 25 3,00,000 Laptop 26 Sep., 25 8 Oct., 25 43,000 WN PS oi a",
+      "answer_text": "Computation of depreciation allowable Asset Rate Depreciation Block 1 Furniture [See working note below] 10₹ 30,000 Block 2 Plant (Computer including computer software, computer UPS,| 40% laptop, computer printer & books) 34,500 Total depreciation allowable 64,500 Working Notes: Computation of depreciation Block of Assets x Block 1: Furniture - [Rate of depreciation - 10%] Put to use for more than 180 days [₹ 3,00,000@10%] 30,000 Block 2: Plant [Rate of depreciation - 40%]\n\n- **(a)** Computer including computer software (put to use for more than 180 days) 14,000 [₹ 35,000 @ 40%]\n\n- **(b)** Computer UPS (put to use for less than 180 days) [₹ 8,500@ 20%] [See note 1,700 below]\n\n- **(c)** Computer Printer (put to use for more than 180 days) [₹ 12,500 @ 40%] 5,000 {ad} Laptop {put toe use for less than 180 days} [₹ 43,000 @ 20%} [See note 8,600 below] Profits & Gains of Business or Profession\n\n- **(e)** Books (being annual publications or other than annual publications) (Put to 5,200 use for more than 180 days) [₹ 13,000 @ 40%] 34,500 Note - Where an asset is acquired by the assessee during the previous year and is put to use for the purposes of business or profession for a period of less than 180 days, the deduction on account of depreciation would be restricted to 50% of the prescribed rate.\n\nIn this case, since Mr. Dhaval commenced his practice in the P.Y.2025-26 and acquired the assets during the same year, the restriction of depreciation to 50% of the prescribed rate would apply to those assets which have been put to use for less than 180 days in that year, namely, laptop and computer UPS.",
+      "topic_id": "T_CH3_Q1"
+    },
+    {
+      "subject": "dt",
+      "chapter_number": 3,
+      "question_number": 2,
+      "question_title": "Section 32 & 43(6): Normal Depreciation, WDV Computation & Additional Depreciation",
+      "question_text": "Lights and Power Ltd. engaged in the business of generation of power, furnishes the following particulars pertaining to P.Y. 2025-26. Compute the depreciation allowable under section 32 for A.Y. 2026-27 and the written down value of the block of assets as on 01.04.2026, while computing his income under the head \"Profits and gains of business or profession\". The company has opted for the depreciation allowance on the basis of written down value. Assume that all the assets were purchased by way of account payee cheque. Assume company does not opt for the provisions of section 115BAA or section 115BAB. () 1. | Opening Written down value of Plant and Machinery (15% block) as on 5,78,000 01.04.2025 (Purchase value ₹ 8,00,000) 2. | Purchase of second hand machinery (15% block) on 29.12.2025 for business 2,00,000 purpose 3. | Machinery Y (15% block) purchased and installed on 12.07.2025 for the 8,00,000 purpose of power generation 4. | Acquired and installed for use a new air pollution control equipment on 2,50,000 31,7.2025 5. | New air conditioner purchased and installed in office premises on 8.9.2025 3,00,000 6. | New machinery Z (15% block) acquired and installed on 23.11.2025 for the 3,25,000 purpose of generation of power 7. | Sale value of an old machinery X, sold during the year (Purchase value ₹ 3,10,000 4,80,000, WDV as on 01.04.2025 ₹ 3,46,800)",
+      "answer_text": "Computation of depreciation allowance under section 32 Plant and Plant and Machinery Machinery Particul saa & (15%) (40%) (%) (%) Opening WDV as on 01.04.2025 5,78,000 - Profits & Gains of Business or Profession ee ee ee Add: Plant and Machinery acquired during the year - Second hand machinery 2,00,000 - Machinery Y 8,00,000 - Air conditioner for office 3,00,000 - Machinery Z 3,25,000 16,25,000 - - Air pollution control equipment - 2,50,000 22,03,000 2,50,000 Less: Asset sold during the year 3,10,000 Nil Written down value as on 31.3.2026 before charging 18,93,000 2,50,000 depreciation Normal depreciation 40% on air pollution control equipment (₹ 2,50,000 x - 1,00,000 40%) Depreciation on plant and machinery put to use for less than 180 days@ 7.5% (i.e., 50% of 15%) - Second hand machinery (₹ 2,00,000 x 7.5%) 15,000 - Machinery Z (₹ 3,25,000 x 7.5%) 24,375 39,375 15% on the balance WDV being put to use for more 2,05,200 than 180 days (₹ 13,68,000 x 15%) Additional depreciation - Machinery Y (₹ 8,00,000 x 20%) 1,60,000 - Machinery Z (2 3,25,000 x 10%, being 50% of 20%) 32,500 1,92,500 - - Air pollution control equipment (₹ 2,50,000 « 20%) - 50,000 Total depreciation 4,37,075 1,50,000 WDV as on 1.4.2026 14,55,925 1,00,000 Notes:\n\n- **(i)** | Power generation equipments qualify for claiming additional depreciation in respect of new plant and machinery.\n\n- **(ii)** | Additional depreciation is not allowed in respect of second hand machinery and air conditioner installed in office premises.\n\n- **(iii)** The balance 50% additional depreciation in respect of Machinery Z of ₹ 32,500 (10% x ₹ 3,25,000) can be claimed as deduction in subsequent financial year i.e., F.Y. 2026-27.",
+      "topic_id": "T_CH3_Q2"
+    },
+    {
+      "subject": "dt",
+      "chapter_number": 3,
+      "question_number": 3,
+      "question_title": "Section 32 Depreciation Allowance & WDV Computation on Block of Assets",
+      "question_text": "Compute the quantum of depreciation available under section 32 of the Income-tax Act, 1961 in respect of the following items of Plant and Machinery purchased by PQR Textile Ltd., by paying through account payee cheque, which is engaged in the manufacture of textile fabrics, for the year ended 31.3.2026. Assume company does not opt for the provisions of section 115BAA or section 115BAB: es Profits & Gains of Business or Profession SS a a ee (% In crores) New machinery installed on 1.5.2025 84 New Windmill purchased and installed on 18.6.2025. 22 Lorries for transporting goods to sales depots (purchased and put to use in July, 3 [ems DUrchased alte) pth Novembpe Fork-lift-trucks, used inside factory 4 Computers installed in office premises 1 Computers installed in factory 2 New imported machinery 12 The new imported machinery arrived at Chennai port on 30.03.2026 and was installed on 3.4.2026. All other items were installed during the year ended 31.3.2026. The company was newly started during the year. Also, compute the WDV of the various blocks of assets as on 1.4.2026 after charging depreciation for P.Y. 2025-26.",
+      "answer_text": "Computation of depreciation allowance under section 32\n\n| Particulars | ₹ |\n| :--- | :---: |\n| Normal | |\n| Additional | |\n| Depreciation | Depreciation | |\n\n(% in crores)\n\n- **(A)** Plant and Machinery (15% block) (Put to use for 180 days or more) - New machinery installed 84.00 84.00 - Lorries for transporting goods to depots 3.00 —= Normal Depreciation @15% & additional deprecation @ 13.05 16.80 20%\n\n- **(B)** Plant and Machinery (15% block) (Put to use for less than 180 days - hence, depreciation is restricted to 7.5%, being 50% of 15%) - Fork-lift trucks, used inside a factory 4.00 4.00 Normal Depreciation @ 7.5% & additional depreciation @ 0.30 0.40 10%\n\n- **(C)** Plant and Machinery (40% block) (Put to use for less than 180 days, hence depreciation restricted to 20%, i.e., 50% of 40%) - Computers installed in office premises 1.00 - - Computers installed in factory 2.00 2.00 3.00 2.00 i —S________ _____———___—___________| Profits & Gains of Business or Profession [Sa eS a Normal depreciation @20% & additional depreciation @ 0.60 0.20 10%\n\n- **(D)** Plant and Machinery (40% block) (Put to use for 180 days or more) (See Note 1) - New windmill purchased and installed 22.00 22.00 Normal Depreciation @ 40% & additional depreciation @ 8.80 4.40 20% Total depreciation and additional depreciation - Plant and Machinery (15% block) (A +B) 13.35 17.20 - Plant and Machinery (40% block) (C + D) 9.40 4.60\n\n| Depreciation available under section 32 x ₹ 44.55 crores\n\nComputation of Written Down Value (WDV) as on 01.04.2026\n\n| Particulars | ₹ |\n| :--- | :---: |\n| Plant & Machinery | |\n| 15% | |\n| 40% | |\n\n(% in crores) WDV as on 01.04.2025 (The company was started during the year - as Nil | Nil given in question) Add; Plant and Machinery acquired during the year - New Machinery installed 84.00 - Lorries for transporting goods to sales depots 3.00 - Fork-lift trucks, used inside factory 4.00 - New imported machinery 12.00 103.00 - - New Windmill purchased and installed - 22.00 - Computers installed in office premises - 1.00 - Computers installed in factory - 2.00 103.00 25.00 Less: Asset sold during the year Nil Nil WDYV as on 31.3.2026 (before charging depreciation) 103.00 25.00 Less: Depreciation for the P.Y.2025-26 - Normal depreciation 13.35 9.40 - Additional depreciation 17.20 4.60 WDV as on 1.4.2026 (after charging depreciation) 72.45 11.00 Notes:\n\n- **(1)** Windmills and any specially designed devices which run on windmills installed on or after 1.4.2014 would be eligible for depreciation @ 40%.\n\n- **(2)** New imported machinery was not installed during the previous year 2025-26. Hence, it would not be eligible for additional depreciation for A.Y. 2026-27. It would also not be eligible for normal depreciation for A.Y. 2026-27, since it was not put to use in the P.Y. 2025-26 being the year of acquisition. SSS SS Profits & Gains of Business or Profession a a a ay\n\n- **(3)** It may be noted that investment in the following plant and machinery would not be eligible for additional depreciation under section 32(1)(iia):\n\n- **(a)** Lorries for transporting goods to sales depots, being vehicles/road transport vehicles; and\n\n- **(b)** Computers installed in office premises.\n\n- **(4)** As per section 2(28) of the Motor Vehicles Act, 1988, the definition of a \"vehicle\" excludes, inter alia, a vehicle of special type adopted for use only in a factory or in any enclosed premises.\n\nTherefore, fork-lift trucks used inside the factory would not fall within the definition of \"vehicle\". Hence, it is eligible for additional deprecation under section 32(1)(iia).",
+      "topic_id": "T_CH3_Q3"
+    },
+    {
+      "subject": "dt",
+      "chapter_number": 3,
+      "question_number": 4,
+      "question_title": "Depreciation on Amalgamation: Section 32 and Section 43(6)",
+      "question_text": "Sai Ltd. has a block of assets carrying 15% rate of depreciation, whose written down value on 01.04.2025 was ₹ 40 lacs. It purchased another asset (second-hand plant and machinery) of the same block on 01.11.2025 for ₹ 14.40 lacs and put to use on the same day. Sai Ltd. was amalgamated with Shirdi Ltd.\n\nwith effect from 01.01.2026, You are required to compute the depreciation allowable to Sai Ltd. & Shirdi Ltd. for the previous year ended on 31.03.2026 assuming that the assets were transferred to Shirdi Ltd. at ₹ 60 lacs. Also assume that the plant and machinery were purchased by way of account payee cheque.",
+      "answer_text": "Statement showing computation of depreciation allowable to Sai Ltd. & Shirdi Ltd.\n\n| Particulars | ₹ |\n| :--- | :---: |\n| Written down value (WDV) as on 1.4.2025 | 40,00,000 |\n| Addition during the year (used for less than 180 days) | 14,40,000 |\n| Total | 54,40,000 |\n| Depreciation on ₹ 40,00,000 @ 15₹ | 6,00,000 |\n| Depreciation on ₹ 14,40,000 @ 7.5₹ | 1,08,000 |\n| Total depreciation for the year | 7,08,000 |\n| Apportionment between two companies: | |\n\n- **(a)** Amalgamating company, Sai Ltd. ₹ 6,00,000 x 275/365 4,52,055 ₹ 1,08,000 x 61/151 43,629 4,95,684\n\n- **(b)** Amalgamated company, Shirdi Ltd. ₹ 6,00,000 x 90/365 1,47,945 ₹ 1,08,000 x 90/151 64,371 2,12,316 Notes:\n\n- **(i)** The aggregate deduction, in respect of depreciation allowable to the amalgamating company and amalgamated company in the case of amalgamation shall not exceed in any case, the eee Profits & Gains of Business or Profession ee ere ee iy deduction calculated at the prescribed rates as if the amalgamation had not taken place. Such deduction shall be apportioned between the amalgamating company and the amalgamated company in the ratio of the number of days for which the assets were used by them.\n\n- **(ii)** | The price at which the assets were transferred, i.e., ₹ 60 lacs, has no implication in computing eligible depreciation.",
+      "topic_id": "T_CH3_Q4"
     }
   ],
   "provisions": [
@@ -869,6 +905,42 @@
       "topic_title": "Integrated Capital Gains Assessment: Section 50C Full Value of Consideration, Section 51 Forfeiture of Advance, Section 55 Cost of Acquisition & Section 112 Tax Rate",
       "provision_presentation_markdown": "### Statutory Summary Matrix: Capital Gains Provisions\n\n| Provision / Section | Statutory Rule & Condition | Tax Treatment & Legal Consequence |\n| :--- | :--- | :--- |\n| **Section 50C** | Stamp duty value on the date of agreement vs actual consideration. | If stamp duty value exceeds 110% of actual consideration and part payment is received via account payee cheque on/before agreement date, stamp duty value on agreement date is adopted as Full Value of Consideration. |\n| **Section 51** | Advance money received and forfeited due to failure of negotiations. | Such forfeited advance is deducted from the actual cost of acquisition or Fair Market Value while determining the cost of acquisition for future computation. |\n| **Section 55(2)(b)** | Capital asset acquired before 1st April 2001. | Assessee has the option to substitute the Actual Cost or the Fair Market Value of the asset as on 1st April 2001. |\n| **Section 112** | Tax on Long-Term Capital Gains. | Tax leviable at 12.5% without indexation benefit, or normal slab with indexation, ensuring beneficial computation. |\n\n> [!IMPORTANT]\n> Agreement Date Clause: Under Section 50C(1) second proviso, the stamp duty value on the date of agreement applies only if electronic or account payee payment is completed on or before the agreement date.\n\n> [!WARNING]\n> Treatment of Forfeited Advance: Forfeiture of advance under failed negotiations prior to 1st April 2014 reduces the cost of acquisition under Section 51. For advances forfeited on or after 1st April 2014, taxation shifts to Income from Other Sources under Section 56(2)(ix).",
       "drive_folder_id": "1GWdSmxpmnJ0azU-awF_k42R4qbWG96cw"
+    },
+    {
+      "subject": "dt",
+      "chapter_number": 3,
+      "question_number": 1,
+      "topic_id": "T_CH3_Q1",
+      "topic_title": "Depreciation on Block of Assets and Half-Rate Restriction u/s 32",
+      "provision_presentation_markdown": "| Category of Asset / Block | Applicable Depreciation Rate | Statutory Condition & Restriction | Legal Consequence u/s 32 |\n| :--- | :--- | :--- | :--- |\n| **Block 1: Furniture & Fittings** | **10%** | Acquired and put to use for more than 180 days | Full depreciation rate is allowed without reduction |\n| **Block 2: Plant & Machinery (General & Computers)** | **40% / 20%** | Put to use for less than 180 days during previous year | Depreciation restricted to 50% of normal rate |\n\n\n\n> [!IMPORTANT] Half-Rate Restriction Rule: Where any asset is acquired during the previous year and put to use for less than 180 days, the depreciation shall be restricted to 50 percent of the normal prescribed rate.\n\n\n\n> [!WARNING] Books and Computers Classification: Books (including annual publications) and computer software, peripherals, printers, UPS, and laptops form part of the block of Plant and Machinery eligible for the higher depreciation rate of 40%.",
+      "drive_folder_id": "1VVrw9-u9_IuptcQYgfudsha0fzdkRkjp"
+    },
+    {
+      "subject": "dt",
+      "chapter_number": 3,
+      "question_number": 2,
+      "topic_id": "T_CH3_Q2",
+      "topic_title": "Section 32 & 43(6): Normal Depreciation, WDV Computation & Additional Depreciation",
+      "provision_presentation_markdown": "# Section 32 & 43(6): Depreciation & Additional Depreciation Rules\n\n### **1. Master Statutory Matrix: Depreciation Framework**\n\n| Statutory Provision | Category / Mechanism | Key Condition / Benchmark | Statutory Tax Treatment |\n| :--- | :--- | :--- | :--- |\n| **Section 43(6)** | Computation of WDV | Opening WDV + Additions − Net Sale Considerations | Base Written Down Value for block depreciation |\n| **3rd Proviso to Sec 32(1)** | Half-Year Proviso | Asset put to use for **less than 180 days** in P.Y. | Restricted to **50% of normal depreciation** |\n| **Section 32(1)(iia)** | Additional Depreciation | New Plant & Machinery acquired for **manufacture or power generation/distribution** | Additional **20% deduction** on actual cost |\n| **2nd Proviso to Sec 32(1)(iia)** | Split Claim Rule | Asset put to use < 180 days in year of acquisition | **10% in Year 1** + **balance 10% in Year 2** |\n| **Sec 32(1)(iia) Exceptions** | Ineligible Assets | Second-hand assets, office appliances, premises assets | **Zero Additional Depreciation** |\n\n---\n\n### **2. Core Statutory Conditions & Rules**\n\n* **Power Generation Undertakings Option**: Undertakings engaged in generation or generation and distribution of power can opt for Written Down Value (WDV) method instead of Straight Line Method (SLM).\n\n* **Block of Assets Rate Classes**: Normal depreciation rates are prescribed under Rule 5 (e.g., General Plant & Machinery = 15%, Air Pollution Control Equipment = 40%).\n\n* **180-Day Rule Mechanics**: The 50% restriction applies separately to normal depreciation and additional depreciation if the asset is acquired and put to use for less than 180 days during the financial year.\n\n* **Balance 50% Additional Depreciation**: Where additional depreciation is restricted to 50% (10%) in the year of acquisition due to the 180-day rule, the balance 50% (10%) is statutorily allowable as deduction in the immediately succeeding financial year.\n\n---\n\n> [!IMPORTANT] Exclusion Benchmark for Office Premises & Second-Hand Assets: Additional depreciation under Section 32(1)(iia) is strictly denied for second-hand machinery (previously used in or outside India) and any plant/machinery installed in office premises, residential accommodation, or guest houses.\n\n> [!NOTE] Pollution Control Equipment Qualification: Air pollution control equipment installed in a factory or production unit qualifies as new plant and machinery eligible for both normal depreciation (at 40%) and additional depreciation (at 20%).",
+      "drive_folder_id": "1F43Z3LMw5MoeY62F0WPZILeFlLWT_P3a"
+    },
+    {
+      "subject": "dt",
+      "chapter_number": 3,
+      "question_number": 3,
+      "topic_id": "T_CH3_Q3",
+      "topic_title": "Section 32 Depreciation Allowance & WDV Computation on Block of Assets",
+      "provision_presentation_markdown": "### Statutory Summary Matrix: Section 32 Depreciation\n\n| Asset Block & Rate | Statutory Condition / Threshold | Tax Treatment & Depreciation Rate |\n| :--- | :--- | :--- |\n| **Plant & Machinery (15%)** | Assets put to use for 180 days or more in the previous year | Full normal depreciation at 15% and additional depreciation at 20% (if eligible) |\n| **Plant & Machinery (15%)** | Assets put to use for less than 180 days in the previous year | Restricted normal depreciation at 7.5% and additional depreciation at 10% (50% of full rates) |\n| **Plant & Machinery (40%)** | Computers, computer software, and windmills put to use for 180 days or more | Full normal depreciation at 40% and additional depreciation at 20% (if eligible) |\n| **Plant & Machinery (40%)** | Computers or windmills put to use for less than 180 days in the previous year | Restricted normal depreciation at 20% and additional depreciation at 10% (50% of full rates) |\n\n\n\n> [!IMPORTANT]\n> Usage Requirement: Assets acquired during the previous year but not put to use at all during that year are not eligible for any normal or additional depreciation for that assessment year.\n\n\n\n> [!WARNING]\n> Additional Depreciation Restrictions: Additional depreciation under Section 32(1)(iiqa) is available @ 20% to manufacturing undertakings on new machinery/plant, but is specifically barred for office appliances, road transport vehicles, and previously used machinery.",
+      "drive_folder_id": "1cwN4esYaF_KZ-SuMOIJoDrga0yJjrwVh"
+    },
+    {
+      "subject": "dt",
+      "chapter_number": 3,
+      "question_number": 4,
+      "topic_id": "T_CH3_Q4",
+      "topic_title": "Depreciation on Amalgamation: Section 32 and Section 43(6)",
+      "provision_presentation_markdown": "| Provision | Description | Statutory Basis |\n| :--- | :--- | :--- |\n| Depreciation Deduction | Allowable on block of assets | Section 32(1) |\n| Amalgamation Apportionment | Apportioned based on days of use | Fifth Proviso to Section 32(1) |\n| WDV Calculation | WDV at start of year for block | Section 43(6) |\n\n\n> [!IMPORTANT] Rule for Apportionment: The aggregate depreciation allowable to the amalgamating company and the amalgamated company shall not exceed the deduction calculated at prescribed rates as if the amalgamation had not taken place.\n\n\n> [!NOTE] Usage Threshold: Assets put to use for less than 180 days in the previous year attract depreciation at 50% of the normal prescribed rate.\n\n\n- The transfer price of assets between amalgamating and amalgamated companies is irrelevant for computing depreciation eligibility.\n- Total depreciation for the block is calculated on the aggregate WDV and current year additions, irrespective of the transfer.",
+      "drive_folder_id": "SCREENPLAY_BEAT_AUDIO_READY"
     }
   ],
   "mindmaps": {
@@ -14327,6 +14399,302 @@
       "total_points_count": 9,
       "completed_points_count": 3,
       "is_partially_complete": true
+    },
+    "ch3_q3": {
+      "doctrine": "Section 32 Depreciation Allowance & Block of Assets",
+      "root": {
+        "id": "root",
+        "number": "1",
+        "title": "Section 32 Depreciation Allowance",
+        "badge": "Sec 32 · Rule 5",
+        "voice_sync_text": "ഇവിടെ നമ്മൾ Section 32 പ്രകാരമുള്ള Depreciation allowance ഉം Written Down Value computation ഉം ആണ് പഠിക്കുന്നത്. Let's look at the statutory rules for block of assets.",
+        "t0": 0.0,
+        "t1": 11.13,
+        "pt_idx": 0,
+        "audio_file": "dt/ch3/q3/pt_0.mp3",
+        "drive_audio_id": "1Sb2nE-Vy9U63j2JSaB29z7gNd8FLNPP6"
+      },
+      "branches": [
+        {
+          "branch_id": "branch-1",
+          "branch_title": "Condition of Usage & 180-Day Rule",
+          "badge": "Section 32(1)",
+          "icon": "calculator",
+          "points": [
+            {
+              "id": "beat-1-1",
+              "title": "Put to Use Requirement",
+              "number": "1.1.1",
+              "badge": "Rule",
+              "body": [
+                "Asset must be owned by the assessee and used for the purpose of business or profession.",
+                "If an asset is acquired and put to use for less than 180 days in the year of acquisition, depreciation is restricted to 50% of the normal rate."
+              ],
+              "highlights": [
+                {
+                  "phrase": "used for the purpose of business",
+                  "time_sec": 2.1
+                },
+                {
+                  "phrase": "restricted to 50% of the normal rate",
+                  "time_sec": 7.4
+                }
+              ],
+              "table_data": null,
+              "voice_sync_text": "ഇവിടെ asset business-ൽ put to use ചെയ്തിരിക്കണം. acquisition ചെയ്ത വർഷത്തിൽ 180 ദിവസത്തിൽ குறைவாகയാണ് ഉപയോഗിച്ചതെങ്കിൽ, normal depreciation-ന്റെ പകുതി മാത്രമേ അനുവദിക്കുകയുള്ളൂ.",
+              "spoken": true,
+              "t0": 12.13,
+              "t1": 24.77,
+              "pt_idx": 1,
+              "audio_file": "dt/ch3/q3/pt_1.mp3",
+              "dur": 12.88,
+              "duration_seconds": 12.88,
+              "drive_audio_id": "1VducPVv6ejjmKR6Su47gXL17suBpu_Iq"
+            }
+          ],
+          "flow_summary": [],
+          "t0": 12.13,
+          "t1": 24.77
+        },
+        {
+          "branch_id": "branch-2",
+          "branch_title": "Depreciation Rates for Plant & Machinery Blocks",
+          "badge": "Rule 5",
+          "icon": "percent",
+          "points": [
+            {
+              "id": "beat-2-1",
+              "title": "General Machinery & Windmills",
+              "number": "1.2.1",
+              "badge": "Rates",
+              "body": [
+                "General Plant and Machinery falls under the 15% depreciation block.",
+                "Windmills and specially designed devices running on windmills installed on or after 1st April 2014 are eligible for 40% depreciation."
+              ],
+              "highlights": [
+                {
+                  "phrase": "15% depreciation block",
+                  "time_sec": 2.7
+                },
+                {
+                  "phrase": "eligible for 40% depreciation",
+                  "time_sec": 8.3
+                }
+              ],
+              "table_data": null,
+              "voice_sync_text": "General Plant and Machinery 15% block-ൽ വരുന്നു. അതുപോലെ Windmills പോലുള്ള പ്രത്യേക devices-ന് 40% depreciation rate ആണ് ബാധകമായിട്ടുള്ളത്.",
+              "spoken": true,
+              "t0": 26.77,
+              "t1": 36.7,
+              "pt_idx": 2,
+              "audio_file": "dt/ch3/q3/pt_2.mp3",
+              "dur": 11.8,
+              "duration_seconds": 11.8,
+              "drive_audio_id": "1TtcGLpeOyM31aVHJvahuZ7DI-D0JAz7j"
+            }
+          ],
+          "flow_summary": [],
+          "t0": 26.77,
+          "t1": 36.7
+        },
+        {
+          "branch_id": "branch-3",
+          "branch_title": "Additional Depreciation for Manufacturing",
+          "badge": "Section 32(1)(iiqa)",
+          "icon": "shield",
+          "points": [
+            {
+              "id": "beat-3-1",
+              "title": "Eligibility and Rates",
+              "number": "1.3.1",
+              "badge": "Section",
+              "body": [
+                "Additional depreciation @ 20% is available for new plant and machinery installed in manufacturing undertakings.",
+                "If put to use for less than 180 days, additional depreciation is restricted to 10% (50% of 20%)."
+              ],
+              "highlights": [
+                {
+                  "phrase": "Additional depreciation @ 20%",
+                  "time_sec": 2.0
+                },
+                {
+                  "phrase": "restricted to 10%",
+                  "time_sec": 6.5
+                }
+              ],
+              "table_data": null,
+              "voice_sync_text": "Manufacturing undertakings-ൽ പുതിയ plant and machinery install ചെയ്യുമ്പോൾ 20% additional depreciation ലഭിക്കും. 180 ദിവസത്തിൽ குறைவாகയാണ് put to use ചെയ്തതെങ്കിൽ അത് 10% ആയി കുറയും.",
+              "spoken": true,
+              "t0": 38.7,
+              "t1": 51.7,
+              "pt_idx": 3,
+              "audio_file": "dt/ch3/q3/pt_3.mp3",
+              "dur": 14.0,
+              "duration_seconds": 14.0,
+              "drive_audio_id": "1ld8I7M6z51vuHaywd8YRHDt9pfDR9k2_"
+            }
+          ],
+          "flow_summary": [],
+          "t0": 38.7,
+          "t1": 51.7
+        },
+        {
+          "branch_id": "branch-4",
+          "branch_title": "Computation of WDV of Block",
+          "badge": "Section 43(6)",
+          "icon": "building",
+          "points": [
+            {
+              "id": "beat-4-1",
+              "title": "Closing WDV Formula",
+              "number": "1.4.1",
+              "badge": "Formula",
+              "body": [
+                "WDV at the beginning plus actual cost of assets acquired during the year, less moneys payable in respect of assets sold or discarded.",
+                "Total depreciation (normal plus additional) for the year is deducted from the block to arrive at the closing WDV as on 1st April."
+              ],
+              "highlights": [
+                {
+                  "phrase": "actual cost of assets acquired",
+                  "time_sec": 2.2
+                },
+                {
+                  "phrase": "closing WDV as on 1st April",
+                  "time_sec": 7.1
+                }
+              ],
+              "table_data": null,
+              "voice_sync_text": "ഓരോ block-ന്റെയും WDV കണക്കാക്കുമ്പോൾ opening WDV-യോടൊപ്പം പുതിയ additions കൂട്ടി, sales deductions കുറച്ചതിന് ശേഷമാണ് depreciation charge ചെയ്യുന്നത്.",
+              "spoken": true,
+              "t0": 53.7,
+              "t1": 64.49,
+              "pt_idx": 4,
+              "audio_file": "dt/ch3/q3/pt_4.mp3",
+              "dur": 11.52,
+              "duration_seconds": 11.52,
+              "drive_audio_id": "1UWfxTFM3pnmO0r3kwBJf4N8xRoPXTS9T"
+            }
+          ],
+          "flow_summary": [],
+          "t0": 53.7,
+          "t1": 64.49
+        }
+      ],
+      "concept_simulation": {
+        "schema_version": "1.0",
+        "illustrative_only": true,
+        "doctrine_topic": "Section 32 Depreciation and WDV Computation",
+        "relevant_tax_year": "Financial Year 2025-26",
+        "statutory_assumptions": [
+          "Company is engaged in manufacturing with eligible new machinery additions.",
+          "Additions are bifurcated based on the 180-day put-to-use threshold rule."
+        ],
+        "intro_voice": "ഇനി ഒരു simple example വഴി depreciation calculation എങ്ങനെയാണെന്ന് നോക്കാം.",
+        "steps": [
+          {
+            "step_id": "step_1",
+            "step_order": 1,
+            "title": "Acquisition of New Machinery",
+            "metric_label": "Plant & Machinery Addition",
+            "metric_value": "₹ 84,00,00,000",
+            "voice_sync_text": "ആദ്യം കമ്പനി പുതിയ machinery acquire ചെയ്ത് 180 ദിവസത്തിൽ കൂടുതൽ put to use ചെയ്യുമ്പോൾ full depreciation rate ബാധകമാകുന്നു.",
+            "image_prompt": "Cinematic 2.5D isometric view of a modern textile manufacturing plant with heavy industrial machinery, dramatic studio lighting.",
+            "calculation_data": null,
+            "step_number": 1,
+            "audio_file": "dt/ch3/q3/sim_1.mp3",
+            "duration_seconds": 9.96,
+            "drive_audio_id": "1oE2RvhHZFxhzhSnU9KjPXuHQIdZw0Bv5",
+            "image_file": "dt/ch3/q3/sim_img_1.jpg"
+          },
+          {
+            "step_id": "step_2",
+            "step_order": 2,
+            "title": "Application of 180-Day Rule",
+            "metric_label": "Restricted Depreciation Asset",
+            "metric_value": "₹ 4,00,00,000",
+            "voice_sync_text": "180 ദിവസത്തിൽ குறைவாக put to use ചെയ്ത assets-ന് normal depreciation-ഉം additional depreciation-ഉം 50% ആയി restricted ചെയ്യപ്പെടുന്നു.",
+            "image_prompt": "Cinematic 2.5D isometric view of factory warehouse with fork-lift trucks and industrial goods, clean corporate lighting.",
+            "calculation_data": null,
+            "step_number": 2,
+            "audio_file": "dt/ch3/q3/sim_2.mp3",
+            "duration_seconds": 10.24,
+            "drive_audio_id": "1J2OLM_5uxx6Mg1ne0IrYS6SYWYhmTYA2",
+            "image_file": "dt/ch3/q3/sim_img_2.jpg"
+          },
+          {
+            "step_id": "step_3",
+            "step_order": 3,
+            "title": "Closing WDV Computation",
+            "metric_label": "Final Block WDV",
+            "metric_value": "₹ 72,45,00,000",
+            "voice_sync_text": "അവസാനമായി normal depreciation ഉം additional depreciation ഉം കുറച്ച് അടുത്ത financial year-ലേക്കുള്ള closing WDV കണക്കാക്കുന്നു.",
+            "image_prompt": "Cinematic 2.5D isometric view of financial audit ledger and digital tax calculation screens, professional corporate aesthetic.",
+            "calculation_data": null,
+            "step_number": 3,
+            "audio_file": "dt/ch3/q3/sim_3.mp3",
+            "duration_seconds": 10.0,
+            "drive_audio_id": "1t2TWcDzgmoJGdsQXOtLlU_oqmjSWek68",
+            "image_file": "dt/ch3/q3/sim_img_3.jpg"
+          }
+        ],
+        "intro_audio_file": "dt/ch3/q3/sim_intro.mp3",
+        "intro_dur": 3.68,
+        "intro_drive_audio_id": "1uEjyp6DBKvVSMzYzn2ugJkESrisNTQVx"
+      },
+      "explainer_presentation": {
+        "title": "Section 32 Depreciation Allowance & Block of Assets",
+        "badge": "§ Section 32",
+        "doctrine": "Depreciation Allowance & WDV",
+        "slides": [
+          {
+            "slide_order": 1,
+            "title": "Core Conditions for Depreciation u/s 32",
+            "subtitle": "Statutory Prerequisites",
+            "layout": "statutory_rule",
+            "image_required": false,
+            "image_prompt": null,
+            "voice_sync_text": "Section 32 പ്രകാരം depreciation ലഭിക്കണമെങ്കിൽ asset assessee-യുടെ ownership-ൽ ആയിരിക്കണം കൂടാതെ business-നായി put to use ചെയ്തിരിക്കുകയും വേണം.",
+            "cards": [
+              {
+                "heading": "Ownership & Usage",
+                "badge": "PREREQUISITE",
+                "points": [
+                  "Asset must be owned wholly or partly by the assessee.",
+                  "Asset must be used for the purpose of business or profession during the previous year."
+                ]
+              }
+            ],
+            "calculation_data": null,
+            "trap_data": null
+          },
+          {
+            "slide_order": 2,
+            "title": "The 180-Day Threshold Rule",
+            "subtitle": "Timing of Put-to-Use",
+            "layout": "statutory_rule",
+            "image_required": false,
+            "image_prompt": null,
+            "voice_sync_text": "acquisition ചെയ്ത വർഷത്തിൽ asset 180 ദിവസത്തിൽ കുറവാണ് ഉപയോഗിച്ചതെങ്കിൽ depreciation സാധാരണ നിരക്കിന്റെ പകുതിയായി restricted ചെയ്യും.",
+            "cards": [
+              {
+                "heading": "Restriction Rule",
+                "badge": "PROVISO",
+                "points": [
+                  "If asset is put to use for less than 180 days, normal and additional depreciation are restricted to 50%.",
+                  "Assets not put to use at all during the year earn zero depreciation for that assessment year."
+                ]
+              }
+            ],
+            "calculation_data": null,
+            "trap_data": null
+          }
+        ]
+      },
+      "total_duration": 66.49,
+      "drive_folder_id": "1cwN4esYaF_KZ-SuMOIJoDrga0yJjrwVh",
+      "total_points_count": 5,
+      "completed_points_count": 9,
+      "is_partially_complete": false
     }
   },
   "screenplays": {
@@ -15084,6 +15452,966 @@
           "end": 261.36
         }
       ]
+    },
+    "dt-c3-q1": {
+      "question_id": "dt-c3-q1",
+      "audio_url": "data/audio/dt-c3-q1.mp3",
+      "duration_sec": 222.59,
+      "sync_offset_sec": 0.0,
+      "context_pill": "Section 32 | Depreciation on Block of Assets & 180-Day Rule",
+      "fallback": false,
+      "beats": [
+        {
+          "id": "b1",
+          "layout": "story_scene",
+          "scene_type": "factory_shift",
+          "kicker": "FACTUAL NARRATIVE & STATUTORY SETUP",
+          "badge": "New Practice Setup",
+          "title": {
+            "text": "CA Ananya's Practice: Acquisition of Professional Assets",
+            "at": 0.3
+          },
+          "voice_sync_text": "Priypetta vidyarthikale, namukku CA Ananya-yude case nokkam! Previous Year 2025-26-il Ananya puthiya practice thudangi. Aadyamayi office setup cheyyan vendi 1st April 2025-il ₹ 2,50,000 vilamadikkunna second-hand office furniture vaangi put to use cheythu. Randamathathu, 20th September 2025-il ₹ 50,000 cost-il desktop computer vaangi 1st October 2025-il put to use aakki. Moonnamathathu, 5th October 2025-il ₹ 10,000 vilayulla computer UPS vaangi 10th October 2025-il use cheythu. Naalaamathathu, professional books ₹ 20,000-inu 1st April 2025-il thanne vaangi use cheythu. Avasanamayi, 25th September 2025-il ₹ 60,000-nte laptop vaangi 9th October 2025-il aanu put to use cheythath. Ella payments-um account payee cheque vazhiyano. Ippol Assessment Year 2026-27-il Ananya-kku ethra depreciation claim cheyyam ennanu nammal kandethandath.",
+          "elements": {
+            "assessee_person": {
+              "label": "CA Ananya: Commenced practice in P.Y. 2025-26",
+              "at": 32.1
+            },
+            "furniture_asset": {
+              "label": "Office Furniture: ₹ 2,50,000 | Put to use 1st Apr 2025",
+              "at": 33.0
+            },
+            "desktop_asset": {
+              "label": "Desktop Computer: ₹ 50,000 | Put to use 1st Oct 2025",
+              "at": 33.9
+            },
+            "books_asset": {
+              "label": "Professional Books: ₹ 20,000 | Put to use 1st Apr 2025",
+              "at": 34.8
+            },
+            "laptop_asset": {
+              "label": "Laptop: ₹ 60,000 | Put to use 9th Oct 2025",
+              "at": 35.7
+            },
+            "ups_asset": {
+              "label": "Computer UPS: ₹ 10,000 | Put to use 10th Oct 2025",
+              "at": 36.6
+            },
+            "banking_channel": {
+              "label": "All acquired via Account Payee Cheque",
+              "at": 37.5
+            },
+            "outcome_target": {
+              "label": "Allowable Depreciation u/s 32 for A.Y. 2026-27",
+              "at": 38.4
+            }
+          },
+          "start": 0.0,
+          "end": 64.2
+        },
+        {
+          "id": "b2",
+          "layout": "statute_quote",
+          "voice_sync_text": "Section 32-nte second proviso shradhicho! Previous Year-il acquire cheytha asset, business athallenkil profession-il 180 days-il thazhe mathrame put to use cheythittullu engil, depreciation rate normal prescribed rate-nte 50 percent aayi restrict cheyyum. Athayath 40 percent block-inu verum 20 percent-um, 10 percent block-inu 5 percent-um mathrame kittu. Koodathe rule orkkuka, computers, laptops, UPS, printers, pinne professional books ellam Plant and Machinery block-inte keezhil 40 percent rate-il aanu varunnath.",
+          "title": {
+            "text": "Statutory Mandate: Proviso to Section 32(1)",
+            "at": 64.85
+          },
+          "quote": {
+            "text": "Where an asset is acquired by the assessee during the previous year and is put to use for the purposes of business or profession for a period of less than 180 days in that previous year, the deduction under this sub-section in respect of such asset shall be restricted to 50% of the amount calculated at the percentage prescribed.",
+            "citation": "Second Proviso to Section 32(1) of the Income-tax Act, 1961",
+            "emphasis": "restricted to 50% of the prescribed percentage if put to use for less than 180 days",
+            "at": 65.05
+          },
+          "context_bubble": {
+            "badge": "180-Day Rule",
+            "speaker": "Section 32(1) Proviso",
+            "theme": "Restricted Depreciation Benchmark",
+            "text": "Asset acquired in PY & put to use < 180 days gets only 50% of normal depreciation rate",
+            "at": 72.75
+          },
+          "start": 64.55,
+          "end": 98.51
+        },
+        {
+          "id": "b3",
+          "layout": "fork",
+          "voice_sync_text": "Ivide namukku 180 days test apply cheyyam. Previous Year 2025-26 leap year allaathathinaal 365 days aanullath. 3rd October 2025-nu munp put to use cheytha assets 180 days or more use cheythittund. Office furniture 1st April-inu use cheythu, Desktop Computer 1st October-inu use cheythu, athayath 182 days. Books 1st April-inu use cheythu. Athukond ivakku full depreciation kittum. Ennal Laptop put to use cheythath 9th October-inanu, UPS 10th October-inanu. Randum 180 days-il thazhe mathrame use cheythittullu. Athukond 40 percent-inu pakaram ivakku 20 percent mathrame allowable aayittullu.",
+          "title": {
+            "text": "Statutory Classification: 180 Days Put-to-Use Filter",
+            "at": 99.16
+          },
+          "intro_cards": [
+            {
+              "kicker": "Threshold Benchmark",
+              "title": "180 Days in P.Y. 2025-26",
+              "body": "Cut-off date for full depreciation is put to use on or before 3rd October 2025",
+              "at": 99.9
+            }
+          ],
+          "divider": {
+            "title": "Period of Active Use during P.Y. 2025-26",
+            "at": 109.2
+          },
+          "branches": [
+            {
+              "label": "Put to Use ≥ 180 Days (Full Rate)",
+              "detail": "100% of prescribed rate allowed",
+              "badge": "Full Rate",
+              "tone": "ok",
+              "story_steps": [
+                {
+                  "tag": "Block 1 (10%)",
+                  "text": "Office Furniture: ₹ 2,50,000 (Put to use 1st Apr 2025 = 365 days) → 10% allowable"
+                },
+                {
+                  "tag": "Block 2 (40%)",
+                  "text": "Desktop Computer: ₹ 50,000 (Put to use 1st Oct 2025 = 182 days) → 40% allowable"
+                },
+                {
+                  "tag": "Block 2 (40%)",
+                  "text": "Professional Books: ₹ 20,000 (Put to use 1st Apr 2025 = 365 days) → 40% allowable"
+                }
+              ],
+              "at": 126.46
+            },
+            {
+              "label": "Put to Use < 180 Days (Half Rate)",
+              "detail": "Restricted to 50% of prescribed rate (20%)",
+              "badge": "Half Rate",
+              "tone": "warn",
+              "story_steps": [
+                {
+                  "tag": "Block 2 (Restricted)",
+                  "text": "Laptop: ₹ 60,000 (Put to use 9th Oct 2025 = 174 days) → Restricted to 20%"
+                },
+                {
+                  "tag": "Block 2 (Restricted)",
+                  "text": "Computer UPS: ₹ 10,000 (Put to use 10th Oct 2025 = 173 days) → Restricted to 20%"
+                }
+              ],
+              "at": 135.3
+            }
+          ],
+          "start": 98.86,
+          "end": 142.9
+        },
+        {
+          "id": "b4",
+          "layout": "ledger",
+          "voice_sync_text": "Ini step-by-step mathematical computation nokkam. Onnamathathu, Block 1 Furniture @ 10 percent: ₹ 2,50,000-inte 10 percent eduthal ₹ 25,000 allowable depreciation. Randamathathu, Block 2 Plant & Machinery: Desktop computer ₹ 50,000 @ 40 percent aanu ₹ 20,000. Books ₹ 20,000 @ 40 percent aanu ₹ 8,000. Ini half-rate assets: Laptop ₹ 60,000 @ 20 percent aanu ₹ 12,000, Computer UPS ₹ 10,000 @ 20 percent aanu ₹ 2,000. Plant block-inte total ₹ 42,000 aayi. So Block 1-um Block 2-um koodi koottumbozh total allowable depreciation ₹ 67,000 kittunnu!",
+          "title": {
+            "text": "Computation of Allowable Depreciation for A.Y. 2026-27",
+            "at": 143.55
+          },
+          "callout": {
+            "badge": "Section 32 Verification",
+            "text": "Computers, peripherals, and books constitute 'Plant' eligible for 40% base depreciation, subject to 180-day restriction.",
+            "at": 144.45
+          },
+          "ledger_rows": [
+            {
+              "label": "Block 1: Office Furniture (₹ 2,50,000 @ 10% - Full Rate)",
+              "amount": 25000,
+              "type": "income",
+              "at": 147.93
+            },
+            {
+              "label": "Block 2: Desktop Computer (₹ 50,000 @ 40% - ≥ 180 days)",
+              "amount": 20000,
+              "type": "income",
+              "at": 157.61
+            },
+            {
+              "label": "Block 2: Professional Books (₹ 20,000 @ 40% - ≥ 180 days)",
+              "amount": 8000,
+              "type": "income",
+              "at": 178.11
+            },
+            {
+              "label": "Block 2: Laptop (₹ 60,000 @ 20% - < 180 days restricted)",
+              "amount": 12000,
+              "type": "income",
+              "at": 180.95
+            },
+            {
+              "label": "Block 2: Computer UPS (₹ 10,000 @ 20% - < 180 days restricted)",
+              "amount": 2000,
+              "type": "income",
+              "at": 181.83
+            },
+            {
+              "label": "Total Block 2 (Plant & Machinery) Depreciation",
+              "amount": 42000,
+              "type": "subtotal",
+              "at": 183.59
+            }
+          ],
+          "net_total": {
+            "label": "Total Depreciation Allowable u/s 32",
+            "val": 67000,
+            "detail": "Block 1 (₹ 25,000) + Block 2 (₹ 42,000) = ₹ 67,000",
+            "at": 184.79
+          },
+          "start": 143.25,
+          "end": 187.57
+        },
+        {
+          "id": "b5",
+          "layout": "takeaway",
+          "voice_sync_text": "Exam hall-il thettikaan paadillatha 3 Golden Rules orkkuka. Onnamathathu, acquisition date alla, 'date put to use' aanu 180 days test-inu nokkendath. Randamathathu, books (annual publications aayalum allekilum), computer peripherals like UPS, printer, scanners ellam Plant & Machinery block-il 40 percent rate-il aanu varunnath. Moonnamathathu, previous year-il acquire cheytha asset-inu mathrame 180 days half-rate restriction apply aaku. Munnarivulla opening WDV-kku ithu baadhakamalla!",
+          "title": {
+            "text": "3 Golden Rules for Section 32 Exam Mastery",
+            "at": 188.22
+          },
+          "rules": [
+            {
+              "num": "01",
+              "heading": "Date Put to Use is Decisive",
+              "body": "The 180-day condition depends strictly on when the asset is 'put to use', not the date of purchase or invoice.",
+              "at": 212.2
+            },
+            {
+              "num": "02",
+              "heading": "Books & Computer Peripherals are Plant (40%)",
+              "body": "All books (annual or non-annual), laptops, printers, and UPS form part of the Plant block eligible for 40% depreciation.",
+              "at": 213.2
+            },
+            {
+              "num": "03",
+              "heading": "Half-Rate Restriction Applies Only in Year of Acquisition",
+              "body": "The 50% restriction under second proviso to Section 32(1) applies only if the asset is acquired during that same previous year.",
+              "at": 216.76
+            }
+          ],
+          "start": 187.92,
+          "end": 222.24
+        }
+      ]
+    },
+    "dt-c3-q2": {
+      "question_id": "dt-c3-q2",
+      "audio_url": "data/audio/dt-c3-q2.mp3",
+      "duration_sec": 305.38,
+      "sync_offset_sec": 0.0,
+      "context_pill": "Section 32 & 43(6) | Depreciation & Additional Depreciation for Power Undertakings",
+      "fallback": false,
+      "beats": [
+        {
+          "id": "b1",
+          "layout": "story_scene",
+          "scene_type": "factory_shift",
+          "kicker": "FACTUAL CHESSBOARD & OVERVIEW",
+          "badge": "Case Overview",
+          "title": {
+            "text": "Kaveri Energy & Power Ltd: P.Y. 2025-26 Asset Matrix",
+            "at": 0.3
+          },
+          "voice_sync_text": "Makkale, initial step aayi namukku Kaveri Energy and Power Limited-nte entire factual picture onnu manasilakkam. Company power generation business-il aanu engage cheythirikkunnathu, moreover avaru opt cheythirikkunnathu Section 32 prakaramulla Written Down Value method aanu. Financial Year 2025-26-il company-kkulla opening WDV of 15% Plant and Machinery block ennathu exactly six lakh rupees aanu. Ee varsham company 4 new machinery assets purchase cheythu, koodathe oru second hand machinery-yum vaangi, koode oru old machinery four lakh rupees-inu sell cheythu. Ithil 15% block-il varunna general plant, 40% block-il varunna air pollution control equipment, pinne Section 32(1)(iia) additional depreciation eligible aano alleo ennullathaanu nammude core legal chessboard!",
+          "elements": {
+            "assessee_company": {
+              "label": "Kaveri Energy & Power Ltd (Power Generation Business - WDV Method)",
+              "at": 3.0
+            },
+            "opening_wdv_15": {
+              "label": "Opening WDV 15% Block (01.04.2025): ₹ 6,00,000",
+              "at": 21.34
+            },
+            "machinery_additions": {
+              "label": "Additions: Turbine A (₹ 10L), Machinery B (₹ 5L), Second Hand (₹ 3L), Office AC (₹ 2L)",
+              "at": 24.32
+            },
+            "pollution_equip": {
+              "label": "Air Pollution Control Equipment (40% Block): ₹ 4,00,000",
+              "at": 43.56
+            },
+            "sale_deduction": {
+              "label": "Old Machinery Sold u/s 43(6): ₹ 4,00,000",
+              "at": 44.46
+            }
+          },
+          "start": 0.0,
+          "end": 53.24
+        },
+        {
+          "id": "b2",
+          "layout": "statute_quote",
+          "voice_sync_text": "Section 32(1)(iia) additional depreciation-nte statutory backbone nokkoo. Oru assessee generation or generation and distribution of power-il engage cheythittundengil, new plant and machinery acquire cheythu install cheythal twenty percent additional depreciation labhikkum. Ennal third proviso to Section 32(1) prakaram, asset put to use for less than 180 days aanengil, normal depreciation-um additional depreciation-um fifty percent aayi restrict cheyyum, athayath ten percent maathrame year of acquisition-il kittu. Pakshe second proviso to Section 32(1)(iia) parayunnu, aa balance ten percent additional depreciation immediately succeeding financial year-il deduction aayi claim cheyyam!",
+          "title": {
+            "text": "Statutory Mandate: Section 32(1)(iia) & Half-Year Proviso",
+            "at": 53.89
+          },
+          "quote": {
+            "text": "Where any new machinery or plant is acquired and installed by an assessee engaged in the business of manufacture or production of any article or thing or in the business of generation, transmission or distribution of power, a further sum equal to twenty per cent of the actual cost shall be allowed as deduction... Provided that where an asset is put to use for less than 180 days, such deduction shall be restricted to 50% and the balance 50% shall be allowed in the immediately succeeding previous year.",
+            "citation": "Section 32(1)(iia) of the Income-tax Act, 1961",
+            "emphasis": "generation, transmission or distribution of power... balance 50% shall be allowed in the immediately succeeding previous year",
+            "at": 54.09
+          },
+          "context_bubble": {
+            "badge": "Statutory Filter",
+            "speaker": "Section 32(1)(iia)",
+            "theme": "Power Sector & Split Claim Rule",
+            "text": "Power undertakings are eligible for 20% Additional Depreciation; <180 days usage splits claim into 10% in Year 1 and balance 10% in Year 2.",
+            "at": 56.03
+          },
+          "start": 53.59,
+          "end": 94.31
+        },
+        {
+          "id": "b3",
+          "layout": "fork",
+          "voice_sync_text": "Ippo namukku oro asset-nteyum eligibility onnu filter cheyyam. Onnamathathu, Turbine Machinery A ten lakh rupees-inu vaangi June tenth-inu install cheythu, put to use more than 180 days aanu, so full 15% normal depreciation-um 20% additional depreciation-um eligibl aanu. Randamathathu, Machinery B five lakh rupees November twenty-fifth-inu install cheythu, less than 180 days aayathukondu normal depreciation 7.5% and additional depreciation 10% maathrame ee varsham kittu. Moonnamathathu, three lakh rupees-inte second hand machinery-kk additional depreciation strictly denied aanu. Naalaamathathu, administrative office-il vecha two lakh rupees-inte air conditioner-kk Section 32(1)(iia) clause (b) prakaram additional depreciation kittilla. Avasanam, four lakh rupees-inte Air Pollution Control Equipment 40% block-il varum, koodathe 20% additional depreciation-num fully eligible aanu!",
+          "title": {
+            "text": "Asset Classification & Statutory Filter",
+            "at": 94.96
+          },
+          "left_branch": {
+            "badge": "Eligible for Additional Dep. (Sec 32(1)(iia))",
+            "items": [
+              {
+                "title": "Turbine Machinery A (15% Block)",
+                "desc": "Cost: ₹ 10,00,000 | Used ≥ 180 days → 20% Addl Dep (₹ 2,00,000)"
+              },
+              {
+                "title": "Machinery B (15% Block)",
+                "desc": "Cost: ₹ 5,00,000 | Used < 180 days → 10% Addl Dep (₹ 50,000, 10% c/f)"
+              },
+              {
+                "title": "Air Pollution Control Equipment (40% Block)",
+                "desc": "Cost: ₹ 4,00,000 | Used ≥ 180 days → 20% Addl Dep (₹ 80,000)"
+              }
+            ]
+          },
+          "right_branch": {
+            "badge": "Ineligible / Excluded from Addl Dep.",
+            "items": [
+              {
+                "title": "Second-Hand Machinery (15% Block)",
+                "desc": "Cost: ₹ 3,00,000 | Normal 7.5% (<180 days) | Addl Dep: Strictly NIL"
+              },
+              {
+                "title": "Office Air Conditioner (15% Block)",
+                "desc": "Cost: ₹ 2,00,000 | Normal 15% (≥180 days) | Addl Dep: NIL (Office Appliance)"
+              }
+            ]
+          },
+          "start": 94.66,
+          "end": 154.86
+        },
+        {
+          "id": "b4",
+          "layout": "ledger",
+          "voice_sync_text": "Ippol namukku General Plant and Machinery fifteen percent block-inte complete computation cheyyam. Opening WDV six lakh rupees. Additions total twenty lakh rupees aanu. Athil ninnu sale consideration aaya four lakh rupees deduct cheythal, depreciation compute cheyyunna munpulla WDV twenty-two lakh rupees aayi maari. Ee twenty-two lakh rupees-il, less than 180 days put to use cheytha second hand machinery three lakh rupees-inum Machinery B five lakh rupees-inum half rate, athayath seven point five percent normal depreciation kodukkum. Balance fourteen lakh rupees-inu full fifteen percent normal depreciation two lakh ten thousand rupees varum. Pine Turbine A-kku twenty percent additional depreciation two lakh rupees-um, Machinery B-kku ten percent additional depreciation fifty thousand rupees-um cherthu total five lakh twenty thousand rupees depreciation deduct cheythal, closing WDV sixteen lakh eighty thousand rupees aakum!",
+          "title": {
+            "text": "Plant & Machinery (15% Block) Computation",
+            "at": 155.51
+          },
+          "callout": {
+            "badge": "180-Day Rule Split Check",
+            "text": "Total additions < 180 days = ₹ 8,00,000 taxed @ 7.5%. Balance WDV of ₹ 14,00,000 taxed @ full 15%.",
+            "at": 156.41
+          },
+          "ledger_rows": [
+            {
+              "label": "Opening WDV as on 01.04.2025 (15% Block)",
+              "amount": 600000,
+              "type": "income",
+              "at": 160.85
+            },
+            {
+              "label": "Add: Additions during the year (Total 4 assets)",
+              "amount": 2000000,
+              "type": "income",
+              "at": 163.35
+            },
+            {
+              "label": "Less: Sale consideration of old Machinery X u/s 43(6)",
+              "amount": -400000,
+              "type": "deduction",
+              "at": 176.03
+            },
+            {
+              "label": "WDV before depreciation as on 31.03.2026",
+              "amount": 2200000,
+              "type": "subtotal",
+              "at": 207.27
+            },
+            {
+              "label": "Normal Dep: < 180 days assets (₹ 8,00,000 @ 7.5%)",
+              "amount": -60000,
+              "type": "deduction",
+              "at": 209.19
+            },
+            {
+              "label": "Normal Dep: Balance WDV (₹ 14,00,000 @ 15%)",
+              "amount": -210000,
+              "type": "deduction",
+              "at": 210.09
+            },
+            {
+              "label": "Additional Dep: Turbine A (₹ 10,00,000 @ 20%)",
+              "amount": -200000,
+              "type": "deduction",
+              "at": 210.99
+            },
+            {
+              "label": "Additional Dep: Machinery B (₹ 5,00,000 @ 10%)",
+              "amount": -50000,
+              "type": "deduction",
+              "at": 211.89
+            }
+          ],
+          "net_total": {
+            "label": "Closing WDV as on 01.04.2026 (15% Block)",
+            "val": 1680000,
+            "detail": "Total Dep 15% Block: ₹ 5,20,000 | Closing WDV: ₹ 16,80,000",
+            "at": 212.79
+          },
+          "start": 155.21,
+          "end": 210.61
+        },
+        {
+          "id": "b5",
+          "layout": "ledger",
+          "voice_sync_text": "Aduthathayi, Air Pollution Control Equipment-nte forty percent block nokkoo. Opening WDV nil aayirunnu. Addition four lakh rupees. Normal depreciation forty percent rate-il one lakh sixty thousand rupees. Section 32(1)(iia) prakaram pollution control equipment new plant and machinery aaya kondum July-il install cheytha kondum full twenty percent additional depreciation eighty thousand rupees kittum. So total depreciation for 40% block two lakh forty thousand rupees aavum, closing WDV one lakh sixty thousand rupees aayi nilkkum. Therefore, Kaveri Energy-kk AY 2026-27-il claim cheyyaavunna total depreciation ennathu five lakh twenty thousand plus two lakh forty thousand, equal to seven lakh sixty thousand rupees aanu!",
+          "title": {
+            "text": "Pollution Control (40% Block) & Grand Total",
+            "at": 211.26
+          },
+          "callout": {
+            "badge": "Pollution Control Dual Benefit",
+            "text": "Air pollution equipment qualifies for 40% normal depreciation + 20% additional depreciation.",
+            "at": 212.16
+          },
+          "ledger_rows": [
+            {
+              "label": "Cost of New Air Pollution Equipment (Installed 20.07.2025)",
+              "amount": 400000,
+              "type": "income",
+              "at": 212.46
+            },
+            {
+              "label": "Normal Depreciation @ 40% (Put to use ≥ 180 days)",
+              "amount": -160000,
+              "type": "deduction",
+              "at": 221.22
+            },
+            {
+              "label": "Additional Depreciation u/s 32(1)(iia) @ 20%",
+              "amount": -80000,
+              "type": "deduction",
+              "at": 236.56
+            },
+            {
+              "label": "Closing WDV of 40% Block as on 01.04.2026",
+              "amount": 160000,
+              "type": "subtotal",
+              "at": 245.0
+            },
+            {
+              "label": "Total Combined Section 32 Depreciation Claimable",
+              "amount": 760000,
+              "type": "taxable",
+              "at": 255.14
+            }
+          ],
+          "net_total": {
+            "label": "Total Allowable Depreciation (AY 2026-27)",
+            "val": 760000,
+            "detail": "15% Block: ₹ 5,20,000 + 40% Block: ₹ 2,40,000 = ₹ 7,60,000",
+            "at": 259.35
+          },
+          "start": 210.96,
+          "end": 263.56
+        },
+        {
+          "id": "b6",
+          "layout": "takeaway",
+          "voice_sync_text": "Final exam hall-il ormavekkenda 3 Golden Rules ithaanu makkale! Onnamathathu, power generation undertakings-nu Section 32(1)(iia) additional depreciation fully available aanu, normal manufacturing pole thanne. Randamathathu, second-hand assets-num office premises-il install cheyyunna air conditioner poleyulla office appliances-num additional depreciation strictly zero aanu. Moonnamathathu, put to use less than 180 days aayal 10% additional depreciation current year-il edukkaam, baakki 10% next financial year-il mandatorily claim cheyyam. Ee statutory nuances clear aayirunnal full marks guarantee aanu!",
+          "title": {
+            "text": "3 Golden Rules for Section 32 Mastery",
+            "at": 264.21
+          },
+          "rules": [
+            {
+              "num": "01",
+              "heading": "Power Generation Undertakings are Fully Eligible",
+              "body": "Assessees engaged in generation, transmission, or distribution of power qualify for 20% additional depreciation under Section 32(1)(iia) on new plant and machinery.",
+              "at": 269.73
+            },
+            {
+              "num": "02",
+              "heading": "Statutory Disqualifications under Proviso to Sec 32(1)(iia)",
+              "body": "Second-hand machinery (previously used in India or abroad) and any plant/machinery installed in office premises or residential accommodation get ZERO additional depreciation.",
+              "at": 300.75
+            },
+            {
+              "num": "03",
+              "heading": "Two-Year Split Mechanism for <180 Days Usage",
+              "body": "Where new eligible machinery is put to use for < 180 days in P.Y. of acquisition, claim 50% (10%) in Year 1; the balance 50% (10%) is statutorily claimed in Year 2 (AY 2027-28).",
+              "at": 301.75
+            }
+          ],
+          "start": 263.91,
+          "end": 305.03
+        }
+      ]
+    },
+    "dt-c3-q4": {
+      "question_id": "dt-c3-q4",
+      "audio_url": "data/audio/dt-c3-q4.mp3",
+      "duration_sec": 72.71,
+      "sync_offset_sec": 0.0,
+      "context_pill": "Amalgamation Depreciation Apportionment",
+      "example_summary": "Calculation of depreciation for Sai Ltd. and Shirdi Ltd. post-amalgamation using the Fifth Proviso to Section 32(1).",
+      "source_provision": "| Provision | Description | Statutory Basis |\n| :--- | :--- | :--- |\n| Depreciation Deduction | Allowable on block of assets | Section 32(1) |\n| Amalgamation Apportionment | Apportioned based on days of use | Fifth Proviso to Section 32(1) |\n| WDV Calculation | WDV at start of year for block | Section 43(6) |\n\n\n> [!IMPORTANT] Rule for Apportionment: The aggregate depreciation allowable to the amalgamating company and the amalgamated company shall not exceed the deduction calculated at prescribed rates as if the amalgamation had not taken place.\n\n\n> [!NOTE] Usage Threshold: Assets put to use for less than 180 days in the previous year attract depreciation at 50% of the normal prescribed rate.\n\n\n- The transfer price of assets between amalgamating and amalgamated companies is irrelevant for computing depreciation eligibility.\n- Total depreciation for the block is calculated on the aggregate WDV and current year additions, irrespective of the transfer.",
+      "director": {
+        "archetype": "computation_ledger",
+        "justification": "The provision requires a consolidated depreciation calculation followed by a proportional split between two entities based on the duration of asset usage.",
+        "protagonist": "Sai Ltd.",
+        "actors": [
+          "Shirdi Ltd."
+        ],
+        "key_numbers": [
+          "40,00,000",
+          "14,40,000",
+          "15%",
+          "7.5%",
+          "7,08,000",
+          "60,00,000",
+          "275/365",
+          "90/365",
+          "61/151",
+          "90/151"
+        ],
+        "key_dates": [
+          "01.04.2025",
+          "01.11.2025",
+          "01.01.2026",
+          "31.03.2026"
+        ],
+        "visual_metaphor": "A relay race where the total time is clocked for the team, then divided based on the distance each runner carried the baton.",
+        "beat_plan": [
+          {
+            "beat_goal": "Setup Sai Ltd's asset block and the mid-year purchase.",
+            "layout": "example_scene",
+            "anchor_phrases": [
+              "Sai Ltd.",
+              "40,00,000",
+              "01.11.2025"
+            ]
+          },
+          {
+            "beat_goal": "Calculate total depreciation as if no amalgamation happened.",
+            "layout": "ledger",
+            "anchor_phrases": [
+              "Section 32(1)",
+              "15%",
+              "7.5%",
+              "7,08,000"
+            ]
+          },
+          {
+            "beat_goal": "Identify the split date and the number of days for each company.",
+            "layout": "timeline_windows",
+            "anchor_phrases": [
+              "01.01.2026",
+              "275 days",
+              "90 days"
+            ]
+          },
+          {
+            "beat_goal": "Apportion the depreciation based on the ratio of days.",
+            "layout": "waterfall",
+            "anchor_phrases": [
+              "Fifth Proviso",
+              "ratio of the number of days"
+            ]
+          },
+          {
+            "beat_goal": "Dismiss the transfer price as irrelevant for depreciation.",
+            "layout": "deemed_value",
+            "anchor_phrases": [
+              "60,00,000",
+              "no implication"
+            ]
+          },
+          {
+            "beat_goal": "Final allowable depreciation for both companies.",
+            "layout": "takeaway",
+            "anchor_phrases": [
+              "4,95,684",
+              "2,12,316"
+            ]
+          }
+        ]
+      },
+      "fallback": false,
+      "beats": [
+        {
+          "layout": "example_scene",
+          "title": {
+            "text": "Asset Block Setup",
+            "at": 0.3
+          },
+          "voice_sync_text": "Sai Ltd. -ന്റെ asset block-ൽ 01.04.2025-ൽ 40,00,000 രൂപയുടെ WDV ഉണ്ടായിരുന്നു. പിന്നീട് 01.11.2025-ൽ പുതിയൊരു asset കൂടി വാങ്ങി.",
+          "visual_data": {
+            "actors": [
+              {
+                "label": "Sai Ltd.",
+                "detail": "Amalgamating Company",
+                "icon": "factory",
+                "at": 2.14
+              }
+            ],
+            "transaction": "Asset Purchase",
+            "facts": [
+              {
+                "label": "Opening WDV",
+                "amount": 4000000,
+                "date": "01.04.2025",
+                "icon": "money_bag",
+                "at": 7.76
+              },
+              {
+                "label": "New Addition",
+                "amount": 1440000,
+                "date": "01.11.2025",
+                "icon": "plot",
+                "at": 7.76
+              }
+            ],
+            "spoken_amounts": [
+              "40,00,000"
+            ]
+          },
+          "start": 0.0,
+          "end": 13.0,
+          "id": "b1",
+          "director_goal": "Setup Sai Ltd's asset block and the mid-year purchase.",
+          "anchor_phrases": [
+            "Sai Ltd.",
+            "40,00,000",
+            "01.11.2025"
+          ],
+          "animation_role": "key_fact",
+          "anchor_alignment": [
+            {
+              "phrase": "Sai Ltd.",
+              "at": 2.14,
+              "matched": true,
+              "score": 0.898
+            },
+            {
+              "phrase": "40,00,000",
+              "at": 5.42,
+              "matched": true,
+              "score": 0.875
+            },
+            {
+              "phrase": "01.11.2025",
+              "at": 9.14,
+              "matched": true,
+              "score": 0.667
+            }
+          ],
+          "anchor_match": {
+            "matched": 3,
+            "total": 3
+          }
+        },
+        {
+          "layout": "ledger",
+          "title": {
+            "text": "Notional Depreciation Calculation",
+            "at": 13.65
+          },
+          "voice_sync_text": "Section 32(1) പ്രകാരം, amalgamation നടന്നില്ലായിരുന്നുവെങ്കിൽ ലഭിക്കുമായിരുന്ന 15% ഉം 7.5% ഉം നിരക്കിൽ മൊത്തം 7,08,000 രൂപ depreciation കണക്കാക്കുന്നു.",
+          "visual_data": {
+            "rows": [
+              {
+                "label": "Depreciation @ 15%",
+                "amount": 600000,
+                "icon": "scales",
+                "at": 22.83
+              },
+              {
+                "label": "Depreciation @ 7.5%",
+                "amount": 108000,
+                "icon": "scales",
+                "at": 22.83
+              }
+            ],
+            "total": "7,08,000"
+          },
+          "start": 13.35,
+          "end": 27.47,
+          "id": "b2",
+          "director_goal": "Calculate total depreciation as if no amalgamation happened.",
+          "anchor_phrases": [
+            "Section 32(1)",
+            "15%",
+            "7.5%",
+            "7,08,000"
+          ],
+          "animation_role": "explanation",
+          "anchor_alignment": [
+            {
+              "phrase": "Section 32(1)",
+              "at": 22.83,
+              "matched": true,
+              "score": 0.552
+            },
+            {
+              "phrase": "15%",
+              "at": 20.74,
+              "matched": false,
+              "score": 0.0
+            },
+            {
+              "phrase": "7.5%",
+              "at": 23.85,
+              "matched": true,
+              "score": 0.62
+            },
+            {
+              "phrase": "7,08,000",
+              "at": 24.09,
+              "matched": true,
+              "score": 0.8
+            }
+          ],
+          "anchor_match": {
+            "matched": 3,
+            "total": 4
+          }
+        },
+        {
+          "layout": "timeline_windows",
+          "title": {
+            "text": "Apportionment Timeline",
+            "at": 28.12
+          },
+          "voice_sync_text": "01.01.2026-ൽ amalgamation നടന്നു. Sai Ltd. 275 days ഉം, Shirdi Ltd. 90 days ഉം assets ഉപയോഗിച്ചു.",
+          "visual_data": {
+            "events": [
+              {
+                "label": "Sai Ltd. Usage",
+                "value": "275 days",
+                "icon": "calendar",
+                "at": 31.69
+              },
+              {
+                "label": "Shirdi Ltd. Usage",
+                "value": "90 days",
+                "icon": "calendar",
+                "at": 33.17
+              }
+            ],
+            "window_label": "01.01.2026"
+          },
+          "start": 27.82,
+          "end": 38.86,
+          "id": "b3",
+          "director_goal": "Identify the split date and the number of days for each company.",
+          "anchor_phrases": [
+            "01.01.2026",
+            "275 days",
+            "90 days"
+          ],
+          "animation_role": "explanation",
+          "anchor_alignment": [
+            {
+              "phrase": "01.01.2026",
+              "at": 28.6,
+              "matched": true,
+              "score": 0.526
+            },
+            {
+              "phrase": "275 days",
+              "at": 33.5,
+              "matched": true,
+              "score": 0.665
+            },
+            {
+              "phrase": "90 days",
+              "at": 36.38,
+              "matched": true,
+              "score": 0.564
+            }
+          ],
+          "anchor_match": {
+            "matched": 3,
+            "total": 3
+          }
+        },
+        {
+          "layout": "waterfall",
+          "title": {
+            "text": "Proportional Split",
+            "at": 39.51
+          },
+          "voice_sync_text": "Fifth Proviso പ്രകാരം, ഈ depreciation തുക കമ്പനികൾ assets ഉപയോഗിച്ച ratio of the number of days അടിസ്ഥാനത്തിൽ വീതിച്ചെടുക്കണം.",
+          "visual_data": {
+            "stages": [
+              {
+                "label": "Sai Ltd. Share",
+                "value": "275/365",
+                "icon": "document",
+                "at": 39.21
+              },
+              {
+                "label": "Shirdi Ltd. Share",
+                "value": "90/365",
+                "icon": "document",
+                "at": 39.21
+              }
+            ]
+          },
+          "start": 39.21,
+          "end": 49.17,
+          "id": "b4",
+          "director_goal": "Apportion the depreciation based on the ratio of days.",
+          "anchor_phrases": [
+            "Fifth Proviso",
+            "ratio of the number of days"
+          ],
+          "animation_role": "explanation",
+          "anchor_alignment": [
+            {
+              "phrase": "Fifth Proviso",
+              "at": 39.91,
+              "matched": true,
+              "score": 0.6
+            },
+            {
+              "phrase": "ratio of the number of days",
+              "at": 45.35,
+              "matched": true,
+              "score": 1.0
+            }
+          ],
+          "anchor_match": {
+            "matched": 2,
+            "total": 2
+          }
+        },
+        {
+          "layout": "deemed_value",
+          "title": {
+            "text": "Transfer Price Irrelevance",
+            "at": 49.82
+          },
+          "voice_sync_text": "Assets 60,00,000 രൂപയ്ക്ക് transfer ചെയ്തെങ്കിലും, depreciation കണക്കാക്കുമ്പോൾ ഇതിന് no implication ആണ് ഉള്ളത്.",
+          "visual_data": {
+            "actual": {
+              "label": "Transfer Price",
+              "amount": 6000000,
+              "icon": "money_bag",
+              "at": 54.68
+            },
+            "deemed": {
+              "label": "Depreciation Impact",
+              "value": "Nil",
+              "icon": "padlock",
+              "at": 54.68
+            },
+            "rule": "Transfer price is irrelevant for depreciation",
+            "spoken_amounts": [
+              "60,00,000"
+            ],
+            "at": 50.44
+          },
+          "start": 49.52,
+          "end": 58.04,
+          "id": "b5",
+          "director_goal": "Dismiss the transfer price as irrelevant for depreciation.",
+          "anchor_phrases": [
+            "60,00,000",
+            "no implication"
+          ],
+          "animation_role": "explanation",
+          "anchor_alignment": [
+            {
+              "phrase": "60,00,000",
+              "at": 55.1,
+              "matched": true,
+              "score": 0.484
+            },
+            {
+              "phrase": "no implication",
+              "at": 56.06,
+              "matched": false,
+              "score": 0.32
+            }
+          ],
+          "anchor_match": {
+            "matched": 1,
+            "total": 2
+          }
+        },
+        {
+          "layout": "takeaway",
+          "title": {
+            "text": "Final Allowable Depreciation",
+            "at": 58.69
+          },
+          "voice_sync_text": "അവസാനമായി, Sai Ltd.-ന് 4,95,684 രൂപയും, Shirdi Ltd.-ന് 2,12,316 രൂപയും depreciation ആയി ലഭിക്കുന്നു.",
+          "visual_data": {
+            "rules": [
+              {
+                "label": "Sai Ltd. Depreciation",
+                "amount": 495684,
+                "icon": "bank",
+                "at": 70.49
+              },
+              {
+                "label": "Shirdi Ltd. Depreciation",
+                "amount": 212316,
+                "icon": "bank",
+                "at": 70.49
+              }
+            ],
+            "spoken_amounts": [
+              "4,95,684",
+              "2,12,316"
+            ]
+          },
+          "start": 58.39,
+          "end": 72.71,
+          "id": "b6",
+          "director_goal": "Final allowable depreciation for both companies.",
+          "anchor_phrases": [
+            "4,95,684",
+            "2,12,316"
+          ],
+          "animation_role": "key_fact",
+          "anchor_alignment": [
+            {
+              "phrase": "4,95,684",
+              "at": 59.59,
+              "matched": true,
+              "score": 1.0
+            },
+            {
+              "phrase": "2,12,316",
+              "at": 65.27,
+              "matched": true,
+              "score": 1.0
+            }
+          ],
+          "anchor_match": {
+            "matched": 2,
+            "total": 2
+          }
+        }
+      ],
+      "audio_duration_sec": 72.71,
+      "anchor_match": {
+        "matched": 14,
+        "total": 16,
+        "rate": 0.875
+      }
     }
   }
 }
