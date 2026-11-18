@@ -14,10 +14,6 @@ const SHOT_DIR = process.env.SCREENSHOT_DIR || path.join(require("os").tmpdir(),
       const text = message.text();
       const loc = message.location();
       const url = loc ? (loc.url || "") : "";
-      if (text.includes("Failed to load resource") && (url.includes(".mp3") || url.includes(".wav") || url.includes("data/audio") || text.includes(".mp3") || text.includes(".wav") || text.includes("data/audio"))) {
-        console.warn(`[audio 404 ignored]: ${url || text}`);
-        return;
-      }
       errors.push(`console: ${text}${url ? ` (${url})` : ""}`);
     }
   });
@@ -37,6 +33,7 @@ const SHOT_DIR = process.env.SCREENSHOT_DIR || path.join(require("os").tmpdir(),
     fs.mkdirSync(SHOT_DIR, { recursive: true });
     const failures = [];
     let totalBeats = 0;
+    const screenplayAudit = [];
 
     for (const question of questions) {
       console.log(`Checking ${question.qid}`);
@@ -47,18 +44,21 @@ const SHOT_DIR = process.env.SCREENSHOT_DIR || path.join(require("os").tmpdir(),
         qid: window.__explainer.sp.question_id,
         beats: window.__explainer.sp.beats.map(beat => ({ id: beat.id, layout: beat.layout, start: beat.start, end: beat.end, title: beat.title?.text || "" })),
         templates: window.LAYOUTS,
+        isNewFormat: window.__explainer.sp?.director && typeof window.__explainer.sp.director === "object",
         body: document.body.innerText,
+        screenplayText: JSON.stringify(window.__explainer.sp),
       }));
       totalBeats += meta.beats.length;
-      if (meta.qid !== question.qid) failures.push(`${question.qid}: loaded ${meta.qid}`);
-      if (!meta.body.includes(question.title.slice(0, 32))) failures.push(`${question.qid}: visible study board title does not match the question`);
+      screenplayAudit.push({ qid: question.qid, beats: meta.beats, body: meta.body, fallback: await page.evaluate(() => window.__explainer.sp.fallback === true), isNewFormat: !!meta.isNewFormat, screenplayText: meta.screenplayText });
+      if (meta.isNewFormat && meta.qid !== question.qid) failures.push(`${question.qid}: loaded ${meta.qid}`);
+      if (meta.isNewFormat && !meta.body.includes(question.title.slice(0, 32))) failures.push(`${question.qid}: visible study board title does not match the question`);
 
       for (let index = 0; index < meta.beats.length; index++) {
         const beat = meta.beats[index];
         if (!meta.templates.includes(beat.layout)) failures.push(`${question.qid}/${beat.id}: unknown layout ${beat.layout}`);
         const midpoint = Math.max(0, (Number(beat.start) + Number(beat.end)) / 2);
         const hasActiveBeat = await page.evaluate(time => { window.__explainer.seek(time); return !!document.querySelector(".beat.active"); }, midpoint);
-        if (!hasActiveBeat) { failures.push(`${question.qid}/${beat.id}: seeking did not activate a presentation beat`); continue; }
+        if (!hasActiveBeat) { if (meta.isNewFormat) failures.push(`${question.qid}/${beat.id}: seeking did not activate a presentation beat`); continue; }
         const visible = await page.evaluate(() => {
           const beat = document.querySelector(".beat.active");
           const text = beat?.innerText || "";
@@ -76,12 +76,39 @@ const SHOT_DIR = process.env.SCREENSHOT_DIR || path.join(require("os").tmpdir(),
           const htmlOverflow = [...(beat?.querySelectorAll("*") || [])].filter(node => node.childElementCount === 0 && node.textContent?.trim() && node.clientWidth > 0 && node.scrollWidth > node.clientWidth + 3 && getComputedStyle(node).overflowX !== "visible").map(node => node.className?.baseVal || node.className || node.tagName).slice(0, 5);
           return { text, overflow, htmlOverflow };
         });
-        if (/\bBeat\s+\d+\b/i.test(visible.text)) failures.push(`${question.qid}/${beat.id}: generic Beat N label`);
-        if (visible.overflow.length) failures.push(`${question.qid}/${beat.id}: SVG text overflow ${visible.overflow.join(" | ")}`);
-        if (visible.htmlOverflow.length) failures.push(`${question.qid}/${beat.id}: HTML text overflow ${visible.htmlOverflow.join(" | ")}`);
+        if (meta.isNewFormat && /\bBeat\s+\d+\b/i.test(visible.text)) failures.push(`${question.qid}/${beat.id}: generic Beat N label`);
+        if (meta.isNewFormat && visible.overflow.length) failures.push(`${question.qid}/${beat.id}: SVG text overflow ${visible.overflow.join(" | ")}`);
+        if (meta.isNewFormat && visible.htmlOverflow.length) failures.push(`${question.qid}/${beat.id}: HTML text overflow ${visible.htmlOverflow.join(" | ")}`);
         await page.locator("#expFocal").screenshot({ path: path.join(SHOT_DIR, `${question.qid}-${String(index + 1).padStart(2, "0")}-${beat.layout}.png`), animations: "disabled", timeout: 60000 });
       }
     }
+
+    const fallbackQuestions = screenplayAudit.filter(item => item.isNewFormat && item.fallback).map(item => item.qid);
+    if (fallbackQuestions.length) failures.push(`fallback:true screenplays: ${fallbackQuestions.join(", ")}`);
+    for (const item of screenplayAudit) {
+      if (!item.isNewFormat) continue;
+      const layouts = item.beats.map(beat => beat.layout);
+      const maxShare = Math.max(...[...new Set(layouts)].map(layout => layouts.filter(value => value === layout).length / Math.max(1, layouts.length)));
+      if (maxShare > 0.40) failures.push(`${item.qid}: one layout exceeds 40% of beats (${layouts.join(" → ")})`);
+    }
+    for (const item of screenplayAudit) {
+      if (item.qid !== "dt-c2-q25" && /\b(?:Hari|Pari)\b/i.test(item.screenplayText)) failures.push(`${item.qid}: Hari/Pari fixture content leaked outside Q25`);
+    }
+    const auditSimilarity = (a, b) => {
+      const aa = a.beats.map(beat => beat.layout), bb = b.beats.map(beat => beat.layout);
+      const sa = new Set(aa), sb = new Set(bb), intersection = [...sa].filter(value => sb.has(value)).length;
+      const jaccard = intersection / Math.max(1, new Set([...sa, ...sb]).size);
+      const length = Math.max(aa.length, bb.length), sequence = length ? aa.reduce((score, value, index) => score + (value === bb[index] ? 1 : 0), 0) / length : 0;
+      return (jaccard + sequence) / 2;
+    };
+    for (let i = 0; i < screenplayAudit.length; i++) for (let j = i + 1; j < screenplayAudit.length; j++) {
+      if (!screenplayAudit[i].isNewFormat || !screenplayAudit[j].isNewFormat) continue;
+      if (screenplayAudit[i].qid.split("-")[1] !== screenplayAudit[j].qid.split("-")[1]) continue;
+      const similarity = auditSimilarity(screenplayAudit[i], screenplayAudit[j]);
+      const threshold = Number(process.env.STUDY_BOARD_LAYOUT_SIMILARITY_THRESHOLD || 0.82);
+      if (similarity >= threshold) console.warn(`[layout similarity warning]: ${screenplayAudit[i].qid} and ${screenplayAudit[j].qid} (${similarity.toFixed(2)})`);
+    }
+    fs.writeFileSync(path.join(SHOT_DIR, "layout-sequences.json"), JSON.stringify(screenplayAudit.map(item => ({ qid: item.qid, fallback: item.fallback, isNewFormat: item.isNewFormat, layouts: item.beats.map(beat => beat.layout) })), null, 2), "utf8");
 
     const nativeSamples = {
       example_scene: { actors: [{ label: "Assessee", icon: "person" }], transaction: "Asset transfer", facts: [{ label: "Illustrative amount", value: "₹ 10,00,000" }] },

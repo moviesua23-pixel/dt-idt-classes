@@ -6,6 +6,8 @@ on:
     paths:
       - "redesign_demo/frontend/**"
       - "redesign_demo/data/**"
+      - "pipeline/**"
+      - "tests/**"
       - "pipeline/build_site.py"
       - ".github/workflows/study-board-pages.yml"
   workflow_dispatch:
@@ -34,6 +36,8 @@ jobs:
           python-version: "3.12"
       - name: Bundle screenplays and assemble site
         run: python pipeline/build_site.py --site-dir _site
+      - name: Validate generated screenplays
+        run: python pipeline/validate_screenplay.py --screenplay-dir redesign_demo/data/screenplays
       - name: Install Playwright browser for visual checks
         run: |
           npm install --no-save --package-lock=false playwright
