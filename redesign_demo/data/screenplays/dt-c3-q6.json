@@ -1,0 +1,420 @@
+{
+  "question_id": "dt-c3-q6",
+  "audio_url": "data/audio/dt-c3-q6.mp3",
+  "duration_sec": 79.12,
+  "sync_offset_sec": 0.0,
+  "context_pill": "Business Income Calculation",
+  "example_summary": "Calculating the taxable income for T Ltd., a tea manufacturing company, by applying Section 33AB deductions, Rule 8 agricultural splits, and Section 72 loss set-offs.",
+  "source_provision": "| Provision | Description | Condition/Formula |\n| :--- | :--- | :--- |\n| Section 33AB | Tea Development Account | Deposit with NABARD (Lower of actual or 40% of PGBP) |\n| Rule 8 | Tea Manufacturing | 60% treated as Agricultural Income (Exempt) |\n| Section 72 | Set-off of Loss | Carry forward business loss set-off against business profit |\n\n> [!IMPORTANT] Order of Computation\n> Deduction under Section 33AB must be computed on PGBP before applying Rule 8 and before set-off of carried forward business losses.\n\n> [!WARNING] Statutory Trap\n> Agricultural income (60%) is excluded from the taxable base. The loss under Section 72 can only be set-off against the remaining business income (40%).",
+  "director": {
+    "archetype": "computation_ledger",
+    "justification": "The problem requires a sequential calculation of business income involving a specific deduction, an agricultural income split, and a loss set-off, which is best represented as a ledger.",
+    "protagonist": "T Ltd.",
+    "actors": [
+      "NABARD",
+      "Tea Board"
+    ],
+    "key_numbers": [
+      "120 lacs",
+      "50 lacs",
+      "40% of 120 lacs",
+      "40 lacs",
+      "60% agricultural income"
+    ],
+    "key_dates": [
+      "A.Y. 2026-27"
+    ],
+    "visual_metaphor": "A cascading waterfall where the initial profit flows through different filters (deductions and exemptions) to arrive at the final taxable amount.",
+    "beat_plan": [
+      {
+        "beat_goal": "Introduce the initial business profit and the objective of calculating taxable income for T Ltd.",
+        "layout": "example_scene",
+        "anchor_phrases": [
+          "T Ltd.",
+          "120 lacs",
+          "A.Y. 2026-27"
+        ]
+      },
+      {
+        "beat_goal": "Calculate the Section 33AB deduction by comparing the actual deposit with the 40% ceiling.",
+        "layout": "deemed_value",
+        "anchor_phrases": [
+          "Section 33AB",
+          "NABARD",
+          "40% of 120 lacs",
+          "50 lacs"
+        ]
+      },
+      {
+        "beat_goal": "Apply Rule 8 to separate the agricultural income from the business income.",
+        "layout": "flow_actors",
+        "anchor_phrases": [
+          "Rule 8",
+          "60% agricultural income"
+        ]
+      },
+      {
+        "beat_goal": "Set off the brought forward business loss against the remaining taxable business income.",
+        "layout": "waterfall",
+        "anchor_phrases": [
+          "Section 72",
+          "40 lacs",
+          "set-off"
+        ]
+      },
+      {
+        "beat_goal": "Summarize the final taxable income and the remaining carry-forward loss.",
+        "layout": "takeaway",
+        "anchor_phrases": [
+          "Nil taxable income",
+          "11.20 lacs carry forward"
+        ]
+      }
+    ]
+  },
+  "fallback": false,
+  "beats": [
+    {
+      "layout": "example_scene",
+      "title": {
+        "text": "Introduction to T Ltd.",
+        "at": 0.3
+      },
+      "voice_sync_text": "T Ltd. enna tea manufacturing company-ude karyam namukku nokkaam. A.Y. 2026-27-il avarude business profit 120 lacs aanu. Ithu calculation-re starting point aanu.",
+      "visual_data": {
+        "actors": [
+          {
+            "label": "T Ltd.",
+            "detail": "Tea Growing & Manufacturing",
+            "icon": "factory",
+            "at": 0.4
+          }
+        ],
+        "transaction": "Business Profit Computation",
+        "facts": [
+          {
+            "label": "Business Profit",
+            "amount": 120,
+            "value": "₹ 120 lacs",
+            "icon": "money_bag",
+            "at": 7.62
+          },
+          {
+            "label": "Assessment Year",
+            "value": "A.Y. 2026-27",
+            "icon": "calendar",
+            "at": 7.62
+          }
+        ]
+      },
+      "start": 0.0,
+      "end": 13.72,
+      "id": "b1",
+      "director_goal": "Introduce the initial business profit and the objective of calculating taxable income for T Ltd.",
+      "anchor_phrases": [
+        "T Ltd.",
+        "120 lacs",
+        "A.Y. 2026-27"
+      ],
+      "animation_role": "key_fact",
+      "anchor_alignment": [
+        {
+          "phrase": "T Ltd.",
+          "at": 0.0,
+          "matched": false,
+          "score": 0.453
+        },
+        {
+          "phrase": "120 lacs",
+          "at": 8.86,
+          "matched": true,
+          "score": 0.944
+        },
+        {
+          "phrase": "A.Y. 2026-27",
+          "at": 5.62,
+          "matched": false,
+          "score": 0.286
+        }
+      ],
+      "anchor_match": {
+        "matched": 1,
+        "total": 3
+      }
+    },
+    {
+      "layout": "deemed_value",
+      "title": {
+        "text": "Section 33AB Deduction",
+        "at": 14.37
+      },
+      "voice_sync_text": "Section 33AB prakaram deduction labhikkan avar NABARD-il 50 lacs deposit cheythu. Ennal deduction limit 40% of 120 lacs, athayathu 48 lacs aanu. Ithu randilum kuravaaya 48 lacs aanu deduction aayi edukunnath.",
+      "visual_data": {
+        "actual": {
+          "label": "Actual Deposit",
+          "amount": 50,
+          "value": "₹ 50 lacs",
+          "detail": "Deposited with NABARD",
+          "icon": "bank",
+          "at": 19.03
+        },
+        "deemed": {
+          "label": "Statutory Limit",
+          "amount": 48,
+          "value": "₹ 48 lacs",
+          "detail": "40% of 120 lacs",
+          "icon": "scales",
+          "at": 22.41
+        },
+        "rule": "Section 33AB: Lower of Actual Deposit or 40% of Business Profit",
+        "at": 14.51
+      },
+      "start": 14.07,
+      "end": 32.87,
+      "id": "b2",
+      "director_goal": "Calculate the Section 33AB deduction by comparing the actual deposit with the 40% ceiling.",
+      "anchor_phrases": [
+        "Section 33AB",
+        "NABARD",
+        "40% of 120 lacs",
+        "50 lacs"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Section 33AB",
+          "at": 16.83,
+          "matched": true,
+          "score": 0.571
+        },
+        {
+          "phrase": "NABARD",
+          "at": 18.09,
+          "matched": true,
+          "score": 0.909
+        },
+        {
+          "phrase": "40% of 120 lacs",
+          "at": 23.17,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "50 lacs",
+          "at": 24.31,
+          "matched": true,
+          "score": 0.625
+        }
+      ],
+      "anchor_match": {
+        "matched": 4,
+        "total": 4
+      }
+    },
+    {
+      "layout": "flow_actors",
+      "title": {
+        "text": "Rule 8: Income Split",
+        "at": 33.52
+      },
+      "voice_sync_text": "Deduction kazhinju bakki ulla 72 lacs-ine Rule 8 upayogichu namukku thirikkam. Ithinte 60% agricultural income aanu, athayathu 43.20 lacs tax-il ninnu exempt aanu. Bakki ulla 40% mathrame business income aayi varu.",
+      "visual_data": {
+        "actors": [
+          {
+            "label": "Net Profit",
+            "amount": 72,
+            "value": "₹ 72 lacs",
+            "icon": "money_bag",
+            "at": 44.0
+          },
+          {
+            "label": "Agricultural Income",
+            "amount": 43.2,
+            "value": "₹ 43.20 lacs",
+            "detail": "60% agricultural income",
+            "status": "Exempt",
+            "icon": "plot",
+            "at": 44.0
+          },
+          {
+            "label": "Business Income",
+            "amount": 28.8,
+            "value": "₹ 28.80 lacs",
+            "detail": "40% Taxable Portion",
+            "icon": "factory",
+            "at": 51.38
+          }
+        ],
+        "edges": [
+          {
+            "label": "Rule 8 Split",
+            "from": "Net Profit",
+            "to": "Agricultural Income",
+            "at": 51.38
+          },
+          {
+            "label": "Rule 8 Split",
+            "from": "Net Profit",
+            "to": "Business Income",
+            "at": 51.38
+          }
+        ]
+      },
+      "start": 33.22,
+      "end": 52.74,
+      "id": "b3",
+      "director_goal": "Apply Rule 8 to separate the agricultural income from the business income.",
+      "anchor_phrases": [
+        "Rule 8",
+        "60% agricultural income"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Rule 8",
+          "at": 37.78,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "60% agricultural income",
+          "at": 40.54,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 2,
+        "total": 2
+      }
+    },
+    {
+      "layout": "waterfall",
+      "title": {
+        "text": "Section 72 Loss Set-off",
+        "at": 53.39
+      },
+      "voice_sync_text": "Ini Section 72 prakaram brought forward business loss set-off cheyyam. Avarude kayyil 40 lacs loss undu. Pakshe nammude business income 28.80 lacs mathrame ullu. So, full income-um set-off cheyyam.",
+      "visual_data": {
+        "stages": [
+          {
+            "label": "Business Income",
+            "amount": 28.8,
+            "value": "₹ 28.80 lacs",
+            "sign": "+",
+            "at": 62.45
+          },
+          {
+            "label": "B/F Business Loss",
+            "amount": 40,
+            "value": "₹ 40 lacs",
+            "detail": "Section 72",
+            "sign": "-",
+            "at": 62.45
+          },
+          {
+            "label": "Set-off Amount",
+            "amount": 28.8,
+            "value": "₹ 28.80 lacs",
+            "sign": "=",
+            "at": 63.19
+          }
+        ]
+      },
+      "start": 53.09,
+      "end": 68.49,
+      "id": "b4",
+      "director_goal": "Set off the brought forward business loss against the remaining taxable business income.",
+      "anchor_phrases": [
+        "Section 72",
+        "40 lacs",
+        "set-off"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Section 72",
+          "at": 54.21,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "40 lacs",
+          "at": 59.81,
+          "matched": true,
+          "score": 0.92
+        },
+        {
+          "phrase": "set-off",
+          "at": 66.81,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 3
+      }
+    },
+    {
+      "layout": "takeaway",
+      "title": {
+        "text": "Final Taxable Position",
+        "at": 69.14
+      },
+      "voice_sync_text": "Appol T Ltd.-inte taxable income Nil taxable income aanu. Set-off cheyyan kazhiyatha bakki 11.20 lacs carry forward cheyyam.",
+      "visual_data": {
+        "rules": [
+          {
+            "label": "Taxable Business Income",
+            "value": "Nil taxable income",
+            "status": "Final",
+            "icon": "document",
+            "at": 71.5
+          },
+          {
+            "label": "Unabsorbed Loss",
+            "amount": 11.2,
+            "value": "11.20 lacs carry forward",
+            "detail": "40 lacs - 28.80 lacs",
+            "icon": "money_bag",
+            "at": 76.38
+          }
+        ]
+      },
+      "start": 68.84,
+      "end": 79.12,
+      "id": "b5",
+      "director_goal": "Summarize the final taxable income and the remaining carry-forward loss.",
+      "anchor_phrases": [
+        "Nil taxable income",
+        "11.20 lacs carry forward"
+      ],
+      "animation_role": "key_fact",
+      "anchor_alignment": [
+        {
+          "phrase": "Nil taxable income",
+          "at": 71.88,
+          "matched": true,
+          "score": 0.889
+        },
+        {
+          "phrase": "11.20 lacs carry forward",
+          "at": 75.02,
+          "matched": true,
+          "score": 0.673
+        }
+      ],
+      "anchor_match": {
+        "matched": 2,
+        "total": 2
+      }
+    }
+  ],
+  "audio_duration_sec": 79.12,
+  "anchor_match": {
+    "matched": 12,
+    "total": 14,
+    "rate": 0.857
+  }
+}
