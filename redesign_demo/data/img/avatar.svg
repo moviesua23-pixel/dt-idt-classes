@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <!-- Base Head & Body -->
+  <circle cx="50" cy="40" r="28" fill="var(--matte, #F3F4F6)" stroke="var(--ink, #111827)" stroke-width="3"/>
+  <path d="M 20 95 C 20 72 34 68 50 68 C 66 68 80 72 80 95 Z" fill="var(--accent, #4F46E5)" opacity="0.9"/>
+  <!-- Eyes -->
+  <circle cx="41" cy="38" r="3.5" fill="var(--ink, #111827)"/>
+  <circle cx="59" cy="38" r="3.5" fill="var(--ink, #111827)"/>
+  
+  <!-- Mood S-A: Confused / Pondering -->
+  <g class="s-a">
+    <!-- Tilted eyebrow -->
+    <path d="M 36 30 Q 42 26 46 32" stroke="var(--ink, #111827)" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+    <path d="M 54 32 Q 58 34 64 31" stroke="var(--ink, #111827)" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+    <!-- Puzzled wavy mouth -->
+    <path d="M 43 52 Q 47 48 51 52 T 58 50" stroke="var(--ink, #111827)" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+    <!-- Question mark badge -->
+    <circle cx="76" cy="22" r="12" fill="var(--warn, #DC2626)" opacity="0.95"/>
+    <text x="76" y="27" font-family="system-ui, sans-serif" font-weight="900" font-size="14" fill="#FFFFFF" text-anchor="middle">?</text>
+  </g>
+  
+  <!-- Mood S-B: Confident / Unlocked -->
+  <g class="s-b" style="display:none;">
+    <!-- Confident eyebrows -->
+    <path d="M 36 29 Q 42 28 46 30" stroke="var(--ink, #111827)" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+    <path d="M 54 30 Q 58 28 64 29" stroke="var(--ink, #111827)" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+    <!-- Happy smile -->
+    <path d="M 42 49 Q 50 58 58 49" stroke="var(--ok, #059669)" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <!-- Checkmark badge -->
+    <circle cx="76" cy="22" r="12" fill="var(--ok, #059669)" opacity="0.95"/>
+    <path d="M 70 22 L 74 26 L 82 17" stroke="#FFFFFF" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </g>
+</svg>

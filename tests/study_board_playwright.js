@@ -12,11 +12,13 @@ const SHOT_DIR = process.env.SCREENSHOT_DIR || path.join(require("os").tmpdir(),
   page.on("console", message => {
     if (message.type() === "error") {
       const text = message.text();
-      if (text.includes("Failed to load resource") && (text.includes(".mp3") || text.includes(".wav") || text.includes("data/audio"))) {
-        console.warn(`[audio 404 ignored]: ${text}`);
+      const loc = message.location();
+      const url = loc ? (loc.url || "") : "";
+      if (text.includes("Failed to load resource") && (url.includes(".mp3") || url.includes(".wav") || url.includes("data/audio") || text.includes(".mp3") || text.includes(".wav") || text.includes("data/audio"))) {
+        console.warn(`[audio 404 ignored]: ${url || text}`);
         return;
       }
-      errors.push(`console: ${text}`);
+      errors.push(`console: ${text}${url ? ` (${url})` : ""}`);
     }
   });
 

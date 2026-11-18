@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <!-- Ring -->
+  <circle cx="36" cy="36" r="16" fill="none" stroke="var(--ink, #111827)" stroke-width="4"/>
+  <!-- Key 1 -->
+  <path d="M 48 44 L 80 76 L 76 80 L 72 76 L 68 80 L 64 76" stroke="var(--accent, #4F46E5)" stroke-width="4" stroke-linecap="round" fill="none"/>
+  <!-- Key 2 -->
+  <path d="M 44 48 L 72 84 L 68 88 L 64 84" stroke="var(--ok, #059669)" stroke-width="3" stroke-linecap="round" fill="none"/>
+</svg>

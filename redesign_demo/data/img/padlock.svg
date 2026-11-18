@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100%" height="100%">
+  <!-- Shackle group animated by tween -->
+  <g class="shackle" style="transform-origin: 30px 48px;">
+    <path d="M 30 48 V 30 C 30 18 70 18 70 30 V 48" stroke="var(--ink, #111827)" stroke-width="7" stroke-linecap="round" fill="none"/>
+  </g>
+  <!-- Body -->
+  <rect x="22" y="44" width="56" height="46" rx="10" fill="var(--accent, #4F46E5)" stroke="var(--ink, #111827)" stroke-width="3"/>
+  <!-- Keyhole -->
+  <circle cx="50" cy="62" r="5" fill="#FFFFFF"/>
+  <path d="M 48 64 L 46 76 L 54 76 L 52 64 Z" fill="#FFFFFF"/>
+</svg>
