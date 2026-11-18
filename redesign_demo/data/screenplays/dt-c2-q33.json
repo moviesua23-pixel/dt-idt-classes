@@ -1,0 +1,536 @@
+{
+  "question_id": "dt-c2-q33",
+  "audio_url": "data/audio/dt-c2-q33.mp3",
+  "duration_sec": 75.22,
+  "sync_offset_sec": 0.0,
+  "context_pill": "Section 112A & Grandfathering",
+  "example_summary": "Calculating LTCG for Mr. Prasun and Mr. Raj using the Section 55(2)(ac) grandfathering formula for assets acquired before 1st February 2018.",
+  "director": {
+    "archetype": "deemed_value_substitution",
+    "justification": "The core mechanism involves substituting the actual cost of acquisition with a grandfathered value determined by comparing actual cost, FMV as of 31.1.2018, and sale consideration.",
+    "protagonist": "Mr. Prasun & Mr. Raj",
+    "actors": [
+      "A Ltd",
+      "Fund A",
+      "Fund B",
+      "National Stock Exchange"
+    ],
+    "key_numbers": [
+      "₹400",
+      "₹1200",
+      "₹700",
+      "₹550",
+      "₹900",
+      "₹750",
+      "₹950",
+      "₹1,25,000",
+      "12.5%"
+    ],
+    "key_dates": [
+      "20.5.2017",
+      "31.1.2018",
+      "1.2.2018",
+      "31.8.2025",
+      "3.8.2025"
+    ],
+    "visual_metaphor": "A grandfathered floor-price shield that protects gains accrued before February 2018 from the new tax regime.",
+    "beat_plan": [
+      {
+        "beat_goal": "Establish the pre-2018 investment scenario for both assessees",
+        "layout": "example_scene",
+        "anchor_phrases": [
+          "Mr. Prasun",
+          "Mr. Raj",
+          "Acquired before 1st February 2018"
+        ]
+      },
+      {
+        "beat_goal": "Explain the Section 55(2)(ac) Grandfathering Formula",
+        "layout": "deemed_value",
+        "anchor_phrases": [
+          "Section 55(2)(ac)",
+          "Higher of Actual Cost",
+          "Lower of FMV and Sale Consideration"
+        ]
+      },
+      {
+        "beat_goal": "Define FMV determination for listed vs unlisted assets on 31.1.2018",
+        "layout": "decision_tree",
+        "anchor_phrases": [
+          "Highest Trading Price",
+          "Net Asset Value",
+          "31.1.2018"
+        ]
+      },
+      {
+        "beat_goal": "Calculate LTCG for Mr. Prasun's shares in A Ltd",
+        "layout": "ledger",
+        "anchor_phrases": [
+          "A Ltd",
+          "COA ₹700",
+          "LTCG ₹1,50,000"
+        ]
+      },
+      {
+        "beat_goal": "Calculate LTCG for Mr. Raj's units in Fund A and Fund B",
+        "layout": "ledger",
+        "anchor_phrases": [
+          "Fund A FMV ₹750",
+          "Fund B FMV ₹950",
+          "Total LTCG ₹30,000"
+        ]
+      },
+      {
+        "beat_goal": "Apply the Section 112A aggregate exemption threshold",
+        "layout": "waterfall",
+        "anchor_phrases": [
+          "₹1,25,000 exemption",
+          "Aggregate LTCG",
+          "Section 112A"
+        ]
+      },
+      {
+        "beat_goal": "Final tax liability determination for AY 2026-27",
+        "layout": "takeaway",
+        "anchor_phrases": [
+          "12.5% tax",
+          "Cess 4%",
+          "Taxable excess"
+        ]
+      }
+    ]
+  },
+  "fallback": false,
+  "beats": [
+    {
+      "layout": "example_scene",
+      "title": {
+        "text": "Investment Scenario",
+        "at": 0.3
+      },
+      "voice_sync_text": "നമ്മൾ ഇന്ന് Mr. Prasun, Mr. Raj എന്നിവരുടെ investment scenario നോക്കാം. ഇവർ രണ്ടുപേരും Acquired before 1st February 2018 ആയ assets ആണ് വിൽക്കുന്നത്.",
+      "visual_data": {
+        "actors": [
+          {
+            "label": "Mr. Prasun",
+            "icon": "person",
+            "at": 0.96
+          },
+          {
+            "label": "Mr. Raj",
+            "icon": "person",
+            "at": 2.52
+          }
+        ],
+        "transaction": "Acquired before 1st February 2018",
+        "facts": [
+          {
+            "label": "Mr. Prasun",
+            "detail": "A Ltd shares",
+            "date": "20.5.2017",
+            "at": 2.52
+          },
+          {
+            "label": "Mr. Raj",
+            "detail": "Fund A and Fund B",
+            "date": "1.2.2017",
+            "at": 2.52
+          }
+        ]
+      },
+      "start": 0.0,
+      "end": 12.44,
+      "id": "b1",
+      "director_goal": "Establish the pre-2018 investment scenario for both assessees",
+      "anchor_phrases": [
+        "Mr. Prasun",
+        "Mr. Raj",
+        "Acquired before 1st February 2018"
+      ],
+      "animation_role": "key_fact",
+      "anchor_alignment": [
+        {
+          "phrase": "Mr. Prasun",
+          "at": 0.96,
+          "matched": true,
+          "score": 0.962
+        },
+        {
+          "phrase": "Mr. Raj",
+          "at": 2.52,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Acquired before 1st February 2018",
+          "at": 8.12,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 3
+      }
+    },
+    {
+      "layout": "deemed_value",
+      "title": {
+        "text": "Grandfathering Formula",
+        "at": 13.09
+      },
+      "voice_sync_text": "Section 55(2)(ac) പ്രകാരം, cost കണ്ടുപിടിക്കാൻ Higher of Actual Cost ഉം, Lower of FMV and Sale Consideration ഉം compare ചെയ്യണം.",
+      "visual_data": {
+        "actual": {
+          "label": "Actual Cost",
+          "amount": 400,
+          "icon": "money_bag",
+          "at": 18.47
+        },
+        "deemed": {
+          "label": "Deemed Cost",
+          "amount": 700,
+          "icon": "scales",
+          "at": 18.47
+        },
+        "rule": "Higher of Actual Cost and Lower of FMV and Sale Consideration",
+        "at": 17.23
+      },
+      "start": 12.79,
+      "end": 23.91,
+      "id": "b2",
+      "director_goal": "Explain the Section 55(2)(ac) Grandfathering Formula",
+      "anchor_phrases": [
+        "Section 55(2)(ac)",
+        "Higher of Actual Cost",
+        "Lower of FMV and Sale Consideration"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Section 55(2)(ac)",
+          "at": 13.51,
+          "matched": true,
+          "score": 0.636
+        },
+        {
+          "phrase": "Higher of Actual Cost",
+          "at": 17.23,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Lower of FMV and Sale Consideration",
+          "at": 19.53,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 3
+      }
+    },
+    {
+      "layout": "decision_tree",
+      "title": {
+        "text": "FMV Determination",
+        "at": 24.56
+      },
+      "voice_sync_text": "31.1.2018-ൽ listed ആണെങ്കിൽ Highest Trading Price ഉം, unlisted ആണെങ്കിൽ Net Asset Value ഉം ആണ് FMV ആയി എടുക്കുന്നത്.",
+      "visual_data": {
+        "root": "FMV as on 31.1.2018",
+        "branches": [
+          {
+            "label": "Listed",
+            "detail": "Highest Trading Price",
+            "icon": "shares",
+            "at": 26.8
+          },
+          {
+            "label": "Unlisted",
+            "detail": "Net Asset Value",
+            "icon": "document",
+            "at": 29.78
+          }
+        ]
+      },
+      "start": 24.26,
+      "end": 33.98,
+      "id": "b3",
+      "director_goal": "Define FMV determination for listed vs unlisted assets on 31.1.2018",
+      "anchor_phrases": [
+        "Highest Trading Price",
+        "Net Asset Value",
+        "31.1.2018"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Highest Trading Price",
+          "at": 27.04,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Net Asset Value",
+          "at": 30.96,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "31.1.2018",
+          "at": 24.26,
+          "matched": false,
+          "score": 0.182
+        }
+      ],
+      "anchor_match": {
+        "matched": 2,
+        "total": 3
+      }
+    },
+    {
+      "layout": "ledger",
+      "title": {
+        "text": "Mr. Prasun's LTCG",
+        "at": 34.63
+      },
+      "voice_sync_text": "Mr. Prasun-ന്റെ A Ltd ഷെയറുകളുടെ COA ₹700 ആണ്. ഇതിൽ നിന്നും LTCG ₹1,50,000 ലഭിക്കുന്നു.",
+      "visual_data": {
+        "rows": [
+          {
+            "label": "Sale Price",
+            "amount": 1200,
+            "icon": "money_bag",
+            "at": 34.33
+          },
+          {
+            "label": "COA ₹700",
+            "amount": 700,
+            "icon": "shares",
+            "at": 37.29
+          }
+        ],
+        "total": "LTCG ₹1,50,000"
+      },
+      "start": 34.33,
+      "end": 45.25,
+      "id": "b4",
+      "director_goal": "Calculate LTCG for Mr. Prasun's shares in A Ltd",
+      "anchor_phrases": [
+        "A Ltd",
+        "COA ₹700",
+        "LTCG ₹1,50,000"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "A Ltd",
+          "at": 36.34,
+          "matched": false,
+          "score": 0.444
+        },
+        {
+          "phrase": "COA ₹700",
+          "at": 37.29,
+          "matched": true,
+          "score": 0.735
+        },
+        {
+          "phrase": "LTCG ₹1,50,000",
+          "at": 41.19,
+          "matched": true,
+          "score": 0.763
+        }
+      ],
+      "anchor_match": {
+        "matched": 2,
+        "total": 3
+      }
+    },
+    {
+      "layout": "ledger",
+      "title": {
+        "text": "Mr. Raj's LTCG",
+        "at": 45.9
+      },
+      "voice_sync_text": "Mr. Raj-ന്റെ Fund A FMV ₹750 ഉം Fund B FMV ₹950 ഉം ആണ്. ഇവ രണ്ടും കൂടി Total LTCG ₹30,000 വരുന്നു.",
+      "visual_data": {
+        "rows": [
+          {
+            "label": "Fund A FMV ₹750",
+            "amount": 750,
+            "icon": "money_bag",
+            "at": 46.94
+          },
+          {
+            "label": "Fund B FMV ₹950",
+            "amount": 950,
+            "icon": "money_bag",
+            "at": 51.08
+          }
+        ],
+        "total": "Total LTCG ₹30,000"
+      },
+      "start": 45.6,
+      "end": 59.24,
+      "id": "b5",
+      "director_goal": "Calculate LTCG for Mr. Raj's units in Fund A and Fund B",
+      "anchor_phrases": [
+        "Fund A FMV ₹750",
+        "Fund B FMV ₹950",
+        "Total LTCG ₹30,000"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Fund A FMV ₹750",
+          "at": 46.94,
+          "matched": true,
+          "score": 0.908
+        },
+        {
+          "phrase": "Fund B FMV ₹950",
+          "at": 51.08,
+          "matched": true,
+          "score": 0.889
+        },
+        {
+          "phrase": "Total LTCG ₹30,000",
+          "at": 55.08,
+          "matched": true,
+          "score": 0.853
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 3
+      }
+    },
+    {
+      "layout": "waterfall",
+      "title": {
+        "text": "Section 112A Exemption",
+        "at": 59.89
+      },
+      "voice_sync_text": "Section 112A പ്രകാരം Aggregate LTCG-ക്ക് ₹1,25,000 exemption ലഭിക്കുന്നു.",
+      "visual_data": {
+        "stages": [
+          {
+            "label": "Aggregate LTCG",
+            "amount": 180000,
+            "icon": "money_bag",
+            "at": 61.73
+          },
+          {
+            "label": "₹1,25,000 exemption",
+            "amount": 125000,
+            "sign": "-",
+            "icon": "scales",
+            "at": 63.57
+          }
+        ]
+      },
+      "start": 59.59,
+      "end": 67.23,
+      "id": "b6",
+      "director_goal": "Apply the Section 112A aggregate exemption threshold",
+      "anchor_phrases": [
+        "₹1,25,000 exemption",
+        "Aggregate LTCG",
+        "Section 112A"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "₹1,25,000 exemption",
+          "at": 63.57,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Aggregate LTCG",
+          "at": 61.79,
+          "matched": false,
+          "score": 0.167
+        },
+        {
+          "phrase": "Section 112A",
+          "at": 59.59,
+          "matched": false,
+          "score": 0.455
+        }
+      ],
+      "anchor_match": {
+        "matched": 1,
+        "total": 3
+      }
+    },
+    {
+      "layout": "takeaway",
+      "title": {
+        "text": "Final Tax Liability",
+        "at": 67.88
+      },
+      "voice_sync_text": "Taxable excess തുകയ്ക്ക് 12.5% tax ഉം Cess 4% ഉം ബാധകമാണ്.",
+      "visual_data": {
+        "rules": [
+          {
+            "label": "12.5% tax",
+            "detail": "On taxable excess",
+            "icon": "gavel",
+            "at": 69.64
+          },
+          {
+            "label": "Cess 4%",
+            "detail": "Additional levy",
+            "icon": "bank",
+            "at": 72.59
+          }
+        ]
+      },
+      "start": 67.58,
+      "end": 75.22,
+      "id": "b7",
+      "director_goal": "Final tax liability determination for AY 2026-27",
+      "anchor_phrases": [
+        "12.5% tax",
+        "Cess 4%",
+        "Taxable excess"
+      ],
+      "animation_role": "key_fact",
+      "anchor_alignment": [
+        {
+          "phrase": "12.5% tax",
+          "at": 69.64,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Cess 4%",
+          "at": 72.16,
+          "matched": true,
+          "score": 0.6
+        },
+        {
+          "phrase": "Taxable excess",
+          "at": 67.58,
+          "matched": false,
+          "score": 0.3
+        }
+      ],
+      "anchor_match": {
+        "matched": 2,
+        "total": 3
+      }
+    }
+  ],
+  "audio_duration_sec": 75.22,
+  "anchor_match": {
+    "matched": 16,
+    "total": 21,
+    "rate": 0.762
+  },
+  "source_provision": "### Statutory Summary Matrix: Section 112A & Grandfathering\n\n| Particulars | Statutory Rule & Conditions | Tax Treatment & Rate |\n| :--- | :--- | :--- |\n| **Asset Category** | Listed equity shares, units of equity-oriented fund, or business trust with STT paid at acquisition and transfer. | Long-Term Capital Asset held for more than 12 months. |\n| **Cost of Acquisition u/s 55(2)(ac)** | Higher of (a) Actual cost of acquisition; and (b) Lower of Fair Market Value as on 31st January 2018 and Full Value of Consideration. | Determines the stepped-up base cost for grandfathering. |\n| **Fair Market Value (31.1.2018)** | Listed Shares/Units: Highest trading price on recognized stock exchange on 31.1.2018. Unlisted Units: Net Asset Value as on 31.1.2018. | Benchmark price for the grandfathering formula. |\n| **Exemption & Tax Rate** | Gains up to ₹ 1,25,000 are exempt. Excess gains are chargeable to tax at 12.5% under Section 112A without indexation. | Flat tax rate plus applicable surcharge and health and education cess. |\n\n\n> [!IMPORTANT]\n> Grandfathering Rule u/s 55(2)(ac): For assets acquired before 1st February 2018, the cost of acquisition is protected by comparing the actual cost with the 31st January 2018 Fair Market Value and actual sale price.\n\n\n> [!WARNING]\n> Indexation Benefit: The benefit of indexation under the second proviso to Section 48 is explicitly not available for capital gains computed under Section 112A."
+}
