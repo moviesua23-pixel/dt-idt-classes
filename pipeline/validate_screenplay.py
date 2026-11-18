@@ -280,7 +280,7 @@ def validate_screenplay(screenplay: dict, question: str, answer: str, provision:
             issues.append(f"{beat.get('id', f'beat-{index+1}')} has no narration")
     return list(dict.fromkeys(issues))
 
-def load_questions(path: Path) -> dict[str, dict]:
+def load_questions(path: Path) -> tuple[dict[str, dict], list[dict]]:
     data = json.loads(path.read_text(encoding="utf-8"))
     questions = {}
     for question in data.get("questions", []):
@@ -288,7 +288,8 @@ def load_questions(path: Path) -> dict[str, dict]:
         subject = "idt" if "indirect" in subject or subject == "idt" else "dt"
         qid = f"{subject}-c{int(question.get('chapter_number') or 1)}-q{int(question.get('question_number') or 1)}"
         questions[qid] = question
-    return questions
+    embedded_provisions = data.get("provisions", []) if isinstance(data, dict) else []
+    return questions, embedded_provisions
 
 def main() -> int:
     parser = argparse.ArgumentParser()
@@ -296,7 +297,7 @@ def main() -> int:
     parser.add_argument("--screenplay-dir", type=Path, default=ROOT / "redesign_demo" / "data" / "screenplays")
     parser.add_argument("--questions", type=Path, default=ROOT / "redesign_demo" / "data" / "pipeline_questions.json")
     args = parser.parse_args()
-    questions = load_questions(args.questions)
+    questions, embedded_provisions = load_questions(args.questions)
     files = [args.screenplay] if args.screenplay else sorted(args.screenplay_dir.glob("*.json"))
     errors = []
     screenplays = []
@@ -326,8 +327,12 @@ def main() -> int:
         chapter = int(question.get("chapter_number") or 1)
         subject_prefix = qid.split("-", 1)[0]
         others = [other for _, other in screenplays if other.get("question_id") != qid and str(other.get("question_id", "")).startswith(f"{subject_prefix}-c{chapter}-")]
-        provision_data = json.loads((ROOT / "redesign_demo" / "data" / "provisions.json").read_text(encoding="utf-8"))
-        provisions = provision_data.get("provisions", []) if isinstance(provision_data, dict) else provision_data
+        prov_file = ROOT / "redesign_demo" / "data" / "provisions.json"
+        if prov_file.is_file():
+            provision_data = json.loads(prov_file.read_text(encoding="utf-8"))
+            provisions = provision_data.get("provisions", []) if isinstance(provision_data, dict) else provision_data
+        else:
+            provisions = embedded_provisions
         prov = next((item for item in provisions if ((item.get("chapter_number") is not None and int(item.get("chapter_number")) == chapter) or (chapter == 1 and item.get("chapter_number") is None)) and int(item.get("question_number") or 0) == int(question.get("question_number") or 0)), {})
         combined_provision = "\n".join(filter(None, (
             prov.get("provision_presentation_markdown", ""),
