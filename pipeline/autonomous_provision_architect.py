@@ -418,7 +418,12 @@ def extract_autonomous_provision(question_number: int, question_text: str, answe
     for attempt in range(max_retries):
         for model in models_to_try:
             try:
-                response = rotator.execute_with_retry(_call_gemini, model)
+                response = rotator.execute_with_retry(
+                    _call_gemini,
+                    model,
+                    timeout_ms=int(os.getenv("GEMINI_PROVISION_TIMEOUT_MS", "45000")),
+                    retry_transient=False,
+                )
                 
                 raw = response.text.strip()
                 if "```" in raw:
@@ -446,8 +451,11 @@ def extract_autonomous_provision(question_number: int, question_text: str, answe
                         else:
                             print(f"  [WARN] Explainer deck failed validation, skipping gracefully.")
                     return data
-            except AllKeysQuotaExhaustedError:
-                raise
+            except AllKeysQuotaExhaustedError as e:
+                # Free-tier request quotas are model-specific. Exhausting all
+                # keys for one model must not prevent trying the other models.
+                print(f"  [DEBUG] Model {model} quota exhausted across configured keys: {e}")
+                continue
             except Exception as e:
                 print(f"  [DEBUG] Model {model} attempt error: {e}")
                 time.sleep(1)

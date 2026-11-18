@@ -16,7 +16,11 @@ FRONTEND = ROOT / "redesign_demo" / "frontend"
 
 def canonical_qid(value: str, fallback: str | None = None) -> str:
     text = str(value or "").strip()
-    match = re.search(r"(?:dt-)?c(\d+)[-_]q(\d+)", text, re.I) or re.search(r"ch(\d+)[-_]q(\d+)", text, re.I)
+    match = re.search(r"(idt|dt)-?c(\d+)[-_]q(\d+)", text, re.I)
+    if match:
+        subject, chapter, question = match.groups()
+        return f"{subject.casefold()}-c{int(chapter)}-q{int(question)}"
+    match = re.search(r"(?:^|[-_])c(\d+)[-_]q(\d+)", text, re.I) or re.search(r"ch(\d+)[-_]q(\d+)", text, re.I)
     if match:
         return f"dt-c{int(match.group(1))}-q{int(match.group(2))}"
     if fallback:

@@ -210,10 +210,11 @@ def generate_pedagogical_screenplay_plan(q_num: int, q_text: str, ans_text: str,
     )
 
     models_to_try = [
-        'gemini-3.5-flash',
-        'gemini-3.8-flash',
-        'gemini-3.5-flash-lite',
+        'gemini-flash-lite-latest',
         'gemini-3.1-flash-lite',
+        'gemini-3.5-flash-lite',
+        'gemini-3.8-flash',
+        'gemini-3.5-flash',
         'gemini-3.1-pro-preview'
     ]
     for model_name in models_to_try:

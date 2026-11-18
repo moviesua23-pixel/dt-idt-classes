@@ -20,7 +20,7 @@ def is_quota_error(e: Exception) -> bool:
 
 def is_transient_error(e: Exception) -> bool:
     msg = str(e).lower()
-    return "503" in msg or "unavailable" in msg or "500" in msg or "high demand" in msg or "temporary" in msg or "timeout" in msg
+    return "503" in msg or "504" in msg or "deadline_exceeded" in msg or "unavailable" in msg or "500" in msg or "high demand" in msg or "temporary" in msg or "timeout" in msg
 
 class KeyRotator:
     def __init__(self):
@@ -39,6 +39,7 @@ class KeyRotator:
                 self.keys = [single]
         self._pool = itertools.cycle(self.keys)
         self.total_keys = len(self.keys)
+        self.api_attempts = 0
         print(f"KeyRotator initialized with {self.total_keys} active keys.")
 
     def get_client(self, timeout_ms=None):
@@ -59,7 +60,7 @@ class KeyRotator:
             http_options=types.HttpOptions(api_version='v1beta')
         )
 
-    def execute_with_retry(self, api_func, *args, **kwargs):
+    def execute_with_retry(self, api_func, *args, timeout_ms=None, retry_transient=True, **kwargs):
         """
         Executes a callable api_func(client, *args, **kwargs).
         If a 429 quota/rate limit error occurs, rotates through all available keys.
@@ -74,8 +75,9 @@ class KeyRotator:
         import time
 
         for attempt in range(self.total_keys):
-            client = self.get_client()
+            client = self.get_client(timeout_ms=timeout_ms)
             try:
+                self.api_attempts += 1
                 return api_func(client, *args, **kwargs)
             except Exception as e:
                 last_error = e
@@ -83,6 +85,8 @@ class KeyRotator:
                     quota_failures += 1
                     print(f"  [KEY ROTATION] Key {attempt + 1}/{self.total_keys} hit quota limit (429/ResourceExhausted). Rotating to next key...")
                 elif is_transient_error(e):
+                    if not retry_transient:
+                        raise
                     print(f"  [KEY ROTATION] Key {attempt + 1}/{self.total_keys} hit transient error (503/high demand). Waiting 2s and rotating to next key...")
                     time.sleep(2)
                 else:

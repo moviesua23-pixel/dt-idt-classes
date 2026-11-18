@@ -48,9 +48,9 @@ from pipeline.pdf_question_indexer import (
 
 def is_modern_studio_screenplay(sp_data: Any) -> bool:
     """
-    Checks if screenplay is in modern situational studio format
-    (contains context_pill and layout-driven beats like story_scene, fork, meter, ledger, etc.)
-    rather than legacy 2024 kinetic_headline schema.
+    Treat any existing, parseable screenplay with usable beats as complete.
+    Legacy formats remain playable and are only regenerated when the caller
+    explicitly passes --regenerate-legacy.
     """
     if not sp_data:
         return False
@@ -64,12 +64,17 @@ def is_modern_studio_screenplay(sp_data: Any) -> bool:
     if not isinstance(sp_data, dict):
         return False
     beats = sp_data.get('beats', [])
-    if not beats or not isinstance(beats, list) or len(beats) < 3:
+    if not isinstance(beats, list) or not beats:
         return False
-    modern_layouts = {'story_scene', 'fork', 'meter', 'ledger', 'takeaway', 'statute_quote', 'timeline', 'split', 'compare', 'case_card', 'example_scene', 'decision_tree', 'checklist_gate', 'timeline_windows', 'flow_actors', 'compare_regimes', 'slab_ladder', 'waterfall', 'deemed_value'}
-    has_modern_beat = any(isinstance(b, dict) and b.get('layout') in modern_layouts for b in beats)
-    is_legacy = any(isinstance(b, dict) and 'beat_type' in b and b.get('layout') is None for b in beats)
-    return has_modern_beat and not is_legacy
+    return all(isinstance(beat, dict) for beat in beats)
+
+def is_director_authored_screenplay(sp_data: Any) -> bool:
+    if isinstance(sp_data, str):
+        try:
+            sp_data = json.loads(sp_data)
+        except Exception:
+            return False
+    return isinstance(sp_data, dict) and isinstance(sp_data.get('director'), dict)
 
 # Configuration
 SERVICE_ACCOUNT_FILE = os.path.join(PROJECT_ROOT, 'credentials.json')
@@ -313,7 +318,7 @@ def fetch_existing_sheet_database():
         print(f"  [WARN] Failed to fetch existing sheets database: {e}")
         return {}
 
-def run_pipeline(limit=None, target_chapter=None, target_question=None, target_subject=None, force=False, only_new=False):
+def run_pipeline(limit=None, target_chapter=None, target_question=None, target_subject=None, force=False, only_new=False, regenerate_legacy=False, target_questions=None):
     print("="*75)
     print("STARTING POINT-BY-POINT CLOUD PIPELINE: Drive -> Gemini -> Discrete Voice -> Sheets")
     print("="*75)
@@ -350,7 +355,10 @@ def run_pipeline(limit=None, target_chapter=None, target_question=None, target_s
             continue
         if target_chapter and c != target_chapter:
             continue
+        selected_questions = {int(value) for value in (target_questions or []) if str(value).strip()}
         if target_question and q != target_question:
+            continue
+        if selected_questions and q not in selected_questions:
             continue
         queue.append(item)
 
@@ -364,6 +372,8 @@ def run_pipeline(limit=None, target_chapter=None, target_question=None, target_s
 
     generated_topics_cache = {}
     completed_in_run = 0
+    regeneration_results = []
+    needs_review = []
 
     for q_idx, item in enumerate(queue):
         subject = item['subject']
@@ -381,13 +391,15 @@ def run_pipeline(limit=None, target_chapter=None, target_question=None, target_s
             drive_id = existing.get('drive_id', '')
 
             # If user requested only new questions, or batch running across question bank without target_question
-            if only_new or (not force and not target_question and topic):
+            if only_new or (not force and not target_question and not regenerate_legacy and topic and is_modern_studio_screenplay(existing.get('screenplay'))):
                 print(f"  [SKIP EXISTING] {subject} Ch{chapter_no} Q{q_num} already in Sheets database ('{topic}'). Skipping to brand new questions.")
                 continue
 
             # If targeting a specific question without --force and it already has modern studio screenplay & audio complete
             has_screenplay = is_modern_studio_screenplay(existing.get('screenplay'))
-            if not force and topic and ('complete' in status_low or is_audio_ready(drive_id)) and 'paused' not in status_low and has_screenplay:
+            if not force and topic and ('complete' in status_low or is_audio_ready(drive_id)) and 'paused' not in status_low and has_screenplay and (not regenerate_legacy or is_director_authored_screenplay(existing.get('screenplay'))):
+                if regenerate_legacy:
+                    regeneration_results.append((f"{subject.lower()}-c{chapter_no}-q{q_num}", "already-modern", "screenplay passed director/layout/visual_data check"))
                 print(f"\n---> [{subject} Ch{chapter_no} Q{q_num} ({q_idx+1}/{total_questions})] Already 100% complete with modern Screenplay. Skipping!")
                 continue
 
@@ -486,6 +498,7 @@ def run_pipeline(limit=None, target_chapter=None, target_question=None, target_s
         current_topic = existing.get('topic') if existing else None
         current_prov_md = existing.get('prov_md') if existing else None
 
+        api_attempts_before = rotator.api_attempts
         try:
             # Legal Provision Architecture
             if existing_mm and current_topic and current_prov_md:
@@ -517,12 +530,19 @@ def run_pipeline(limit=None, target_chapter=None, target_question=None, target_s
             timing_status = ""
             existing_sp_str = existing.get('screenplay', '') if existing else ''
 
-            if not force and is_modern_studio_screenplay(existing_sp_str):
+            preserve_existing = is_modern_studio_screenplay(existing_sp_str) and (not regenerate_legacy or is_director_authored_screenplay(existing_sp_str))
+            if preserve_existing:
                 screenplay_json_str = existing_sp_str
                 timing_status = existing.get('status', 'Screenplay Cached')
+                try:
+                    screenplay_obj = json.loads(existing_sp_str) if isinstance(existing_sp_str, str) else existing_sp_str
+                except Exception:
+                    screenplay_obj = None
+                if regenerate_legacy:
+                    regeneration_results.append((f"{subject.lower()}-c{chapter_no}-q{q_num}", "already-modern", "existing screenplay preserved"))
             else:
                 try:
-                    canonical_qid = f"dt-c{chapter_no}-q{q_num}"
+                    canonical_qid = f"{subject.lower()}-c{chapter_no}-q{q_num}"
                     raw_sp_obj = generate_dynamic_screenplay(
                         qid=canonical_qid,
                         question=q_text,
@@ -531,18 +551,26 @@ def run_pipeline(limit=None, target_chapter=None, target_question=None, target_s
                         mindmap=mm_data if isinstance(mm_data, dict) else None,
                     )
                     if raw_sp_obj:
+                        preserve_fixture = canonical_qid in {"dt-c2-q14", "dt-c2-q25", "dt-c2-q30", "dt-c2-q32", "dt-c2-q34"}
                         aligned_sp, timing_summary = synthesize_and_align_screenplay_audio(
                             screenplay_obj=raw_sp_obj,
                             subject=subject,
                             chapter_no=chapter_no,
                             q_num=q_num,
-                            force_tts=force
+                            force_tts=force or regenerate_legacy,
+                            save_files=not preserve_fixture
                         )
                         screenplay_obj = aligned_sp
                         screenplay_json_str = json.dumps(aligned_sp, ensure_ascii=False)
                         timing_status = timing_summary
+                        if aligned_sp.get("needs_review") is True:
+                            needs_review.append((canonical_qid, aligned_sp.get("quality_issues", [])))
+                        if regenerate_legacy:
+                            regeneration_results.append((canonical_qid, "success", f"{len(aligned_sp.get('beats', []))} beats; anchor match {aligned_sp.get('anchor_match', {}).get('rate', 1):.0%}"))
                         print(f"  [SCREENPLAY & AUDIO READY] {subject} Ch{chapter_no} Q{q_num} synthesized and voice-aligned!")
                 except Exception as ex_sp:
+                    if regenerate_legacy:
+                        regeneration_results.append((f"{subject.lower()}-c{chapter_no}-q{q_num}", "fallback", str(ex_sp)))
                     print(f"  [WARN] Screenplay generation/alignment error: {ex_sp}")
 
             # Check Topic Deduplication & Reuse
@@ -553,6 +581,14 @@ def run_pipeline(limit=None, target_chapter=None, target_question=None, target_s
                 summary_json_str = cached['summary_json']
                 formatted_provision_matrix = cached['prov_md']
                 print(f"  [REUSED TOPIC] '{canonical_topic}' already generated! Skipping duplicate TTS. Reusing Drive Folder: {drive_folder_id}")
+            elif screenplay_obj and screenplay_obj.get('beats') and screenplay_obj.get('audio_url'):
+                drive_folder_id = existing.get('drive_id', '') if existing else 'SCREENPLAY_BEAT_AUDIO_READY'
+                summary_json_str = json.dumps(mm_data, ensure_ascii=False)
+                print(f"  [AUDIO QUOTA] {subject} Ch{chapter_no} Q{q_num}: screenplay audio exists for {len(screenplay_obj['beats'])} beats; skipped discrete-point TTS.")
+            elif screenplay_obj and screenplay_obj.get('beats'):
+                print(f"  [AUDIO QUOTA] {subject} Ch{chapter_no} Q{q_num}: generated {len(screenplay_obj['beats'])} screenplay TTS clips; skipped discrete-point TTS.")
+                drive_folder_id = existing.get('drive_id', '') if existing else 'SCREENPLAY_BEAT_AUDIO_READY'
+                summary_json_str = json.dumps(mm_data, ensure_ascii=False)
             else:
                 print(f"  [SYNTHESIZING AUDIO] Generating/Resuming Discrete Points for '{canonical_topic}' ({subject} Ch{chapter_no})...")
                 discrete_out_dir = os.path.join(PROJECT_ROOT, 'data', 'audio', subject.lower(), f'ch{chapter_no}', f'q{q_num}')
@@ -613,6 +649,7 @@ def run_pipeline(limit=None, target_chapter=None, target_question=None, target_s
             upsert_row_to_sheets(row)
             completed_in_run += 1
             print(f"  [DONE] Successfully saved {subject} Ch{chapter_no} Q{q_num} (11 columns with Screenplay & Pedagogical Narration) to Google Sheets.")
+            print(f"  [GEMINI USAGE] {subject} Ch{chapter_no} Q{q_num}: {rotator.api_attempts - api_attempts_before} API attempts in this question (including retries).")
             export_sheets_to_local_cache()
 
             if limit and completed_in_run >= limit:
@@ -620,6 +657,7 @@ def run_pipeline(limit=None, target_chapter=None, target_question=None, target_s
                 sys.exit(0)
 
         except AllKeysQuotaExhaustedError:
+            print(f"  [GEMINI USAGE] {subject} Ch{chapter_no} Q{q_num}: {rotator.api_attempts - api_attempts_before} API attempts before quota pause.")
             print("\n" + "="*75)
             print("[QUOTA PAUSE] Gemini API quota limit reached across all 3 keys.")
             print("Saving checkpoint and exiting gracefully without errors (exit code 0).")
@@ -653,6 +691,15 @@ def run_pipeline(limit=None, target_chapter=None, target_question=None, target_s
 
     export_sheets_to_local_cache()
     print("\n" + "="*75)
+    if needs_review:
+        print("QUESTIONS NEEDING REVIEW")
+        for qid, issues in needs_review:
+            print(f"  {qid}: {'; '.join(issues)}")
+    if regenerate_legacy:
+        print("LEGACY SCREENPLAY REGENERATION REPORT")
+        for qid, status, reason in regeneration_results:
+            print(f"  {qid}: {status} — {reason}")
+        print(f"  totals: {len(regeneration_results)} attempted/checked, {sum(status == 'success' for _, status, _ in regeneration_results)} generated, {sum(status == 'fallback' for _, status, _ in regeneration_results)} fallback, {sum(status == 'already-modern' for _, status, _ in regeneration_results)} already modern")
     print("DISCRETE POINT AUDIO PIPELINE COMPLETE! All queued questions are 100% synthesized.")
     print("="*75)
 
@@ -664,6 +711,8 @@ if __name__ == '__main__':
     parser.add_argument('--subject', type=str, default=None, help="Process specific subject (DT / IDT)")
     parser.add_argument('--force', action='store_true', help="Force re-generation of provision even if already in Sheets")
     parser.add_argument('--only-new', action='store_true', help="Process strictly brand new questions that are not yet in Google Sheets")
+    parser.add_argument('--regenerate-legacy', action='store_true', help="Regenerate legacy screenplays across the selected queue; preserve hand-authored fixture files")
+    parser.add_argument('--questions', type=str, default='', help="Comma-separated question numbers within the selected chapter/subject")
     args = parser.parse_args()
 
     run_pipeline(
@@ -672,5 +721,7 @@ if __name__ == '__main__':
         target_question=args.question,
         target_subject=args.subject,
         force=args.force,
-        only_new=args.only_new
+        only_new=args.only_new,
+        regenerate_legacy=args.regenerate_legacy,
+        target_questions=[part for part in args.questions.split(',') if part.strip()]
     )

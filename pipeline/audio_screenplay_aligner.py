@@ -26,11 +26,12 @@ _WHISPER_MODEL = None
 def get_whisper_model() -> WhisperModel:
     global _WHISPER_MODEL
     if _WHISPER_MODEL is None:
-        print("  [WHISPER] Loading WhisperModel('base', compute_type='int8')...")
-        _WHISPER_MODEL = WhisperModel("base", device="cpu", compute_type="int8")
+        model_name = os.getenv("STUDY_BOARD_WHISPER_MODEL", "small")
+        print(f"  [WHISPER] Loading WhisperModel('{model_name}', compute_type='int8')...")
+        _WHISPER_MODEL = WhisperModel(model_name, device="cpu", compute_type="int8")
     return _WHISPER_MODEL
 
-def transcribe_beat_clip(audio_path: str) -> Dict[str, Any]:
+def transcribe_beat_clip(audio_path: str, anchor_phrases: Optional[List[str]] = None) -> Dict[str, Any]:
     """
     Transcribes a single beat audio clip and returns duration, segments, and word timestamps.
     Prefers English mode to accurately detect Manglish statutory/tax terms & figures.
@@ -39,44 +40,65 @@ def transcribe_beat_clip(audio_path: str) -> Dict[str, Any]:
     if not os.path.exists(audio_path):
         return {"duration": 0.0, "segments": [], "words": []}
 
+    model_name = os.getenv("STUDY_BOARD_WHISPER_MODEL", "small")
+    stat = os.stat(audio_path)
+    cache_path = f"{audio_path}.whisper-{model_name}.json"
+    anchor_key = json.dumps(anchor_phrases or [], ensure_ascii=False, separators=(",", ":"))
+    try:
+        with open(cache_path, "r", encoding="utf-8") as cache_file:
+            cached = json.load(cache_file)
+        if cached.get("cache_version") == 2 and cached.get("source_size") == stat.st_size and cached.get("source_mtime_ns") == stat.st_mtime_ns and cached.get("anchor_key") == anchor_key:
+            return cached["transcript"]
+    except (OSError, ValueError, KeyError, TypeError):
+        pass
+
     audio, _ = librosa.load(audio_path, sr=16000)
     dur = round(float(librosa.get_duration(y=audio, sr=16000)), 2)
     model = get_whisper_model()
 
-    # Attempt English transcription first (captures numbers & English statutory terms with timestamps)
-    segments, _ = model.transcribe(audio, language="en", vad_filter=False, word_timestamps=True)
-    seg_list = list(segments)
+    detected_segments, detected_info = model.transcribe(audio, vad_filter=False, word_timestamps=True)
+    detected_list = list(detected_segments)
+    detected_language = getattr(detected_info, "language", None)
+    alternatives = [(detected_list, detected_info)]
+    # The detected-language transcript remains primary. A supplementary English
+    # pass can better recognize statutory terms and numerals embedded in Malayalam.
+    if anchor_phrases and detected_language and detected_language != "en":
+        try:
+            english_segments, english_info = model.transcribe(audio, language="en", vad_filter=False, word_timestamps=True)
+            alternatives.append((list(english_segments), english_info))
+        except Exception as exc:
+            print(f"  [WHISPER] English anchor pass unavailable for {os.path.basename(audio_path)}: {exc}")
 
-    # If empty, fallback to unconstrained language detection
-    if not seg_list:
-        segments, _ = model.transcribe(audio, vad_filter=False, word_timestamps=True)
-        seg_list = list(segments)
-
-    extracted_segs = []
-    extracted_words = []
-    for s in seg_list:
-        seg_info = {
-            "start": round(s.start, 2),
-            "end": round(s.end, 2),
-            "text": s.text.strip(),
-            "words": []
+    def make_transcript(seg_list, info):
+        extracted_segs = []
+        extracted_words = []
+        for segment in seg_list:
+            seg_info = {"start": round(segment.start, 2), "end": round(segment.end, 2), "text": segment.text.strip(), "words": []}
+            if segment.words:
+                for word in segment.words:
+                    word_info = {"word": word.word.strip(), "start": round(word.start, 2), "end": round(word.end, 2)}
+                    seg_info["words"].append(word_info)
+                    extracted_words.append(word_info)
+            extracted_segs.append(seg_info)
+        return {
+            "duration": dur,
+            "segments": extracted_segs,
+            "words": extracted_words,
+            "language": getattr(info, "language", detected_language),
+            "language_probability": float(getattr(info, "language_probability", 0.0) or 0.0)
         }
-        if s.words:
-            for w in s.words:
-                w_info = {
-                    "word": w.word.strip(),
-                    "start": round(w.start, 2),
-                    "end": round(w.end, 2)
-                }
-                seg_info["words"].append(w_info)
-                extracted_words.append(w_info)
-        extracted_segs.append(seg_info)
 
-    return {
-        "duration": dur,
-        "segments": extracted_segs,
-        "words": extracted_words
-    }
+    transcripts = [make_transcript(segments, info) for segments, info in alternatives]
+    if anchor_phrases:
+        transcript = max(transcripts, key=lambda item: (sum(fuzzy_phrase_alignment(item["words"], phrase)["matched"] for phrase in anchor_phrases), item["language_probability"], len(item["words"])))
+    else:
+        transcript = transcripts[0]
+    try:
+        with open(cache_path, "w", encoding="utf-8") as cache_file:
+            json.dump({"cache_version": 2, "source_size": stat.st_size, "source_mtime_ns": stat.st_mtime_ns, "anchor_key": anchor_key, "transcript": transcript}, cache_file, ensure_ascii=False)
+    except OSError:
+        pass
+    return transcript
 
 COMMON_STOPWORDS = {
     # English common words
@@ -172,6 +194,30 @@ def find_first_word_offset(words: List[Dict[str, Any]], keywords: List[str], min
 def _tokens(text: str) -> List[str]:
     return re.findall(r"[\w]+", str(text or "").lower(), flags=re.UNICODE)
 
+def character_position_ratio(spoken: str, phrase: str) -> float:
+    """Estimate visual timing from the best matching words' character offset."""
+    normalized = str(spoken or "").casefold()
+    target = str(phrase or "").casefold().strip()
+    if target and (offset := normalized.find(target)) >= 0:
+        return offset / max(1, len(normalized))
+    target_words = [word for word in _tokens(target) if len(word) > 1]
+    if not target_words:
+        return 0.0
+    words = list(re.finditer(r"[\w]+", normalized, flags=re.UNICODE))
+    best = None
+    for index, word in enumerate(words):
+        if word.group(0) not in target_words:
+            continue
+        overlap = 0
+        for candidate in words[index:index + len(target_words) + 1]:
+            if candidate.group(0) in target_words:
+                overlap += 1
+        score = overlap / max(1, len(set(target_words)))
+        candidate = (score, -index, word.start())
+        if best is None or candidate > best:
+            best = candidate
+    return best[2] / max(1, len(normalized)) if best else 0.0
+
 def fuzzy_phrase_alignment(words: List[Dict[str, Any]], phrase: str, min_time: float = 0.0) -> Dict[str, Any]:
     """Find a spoken phrase in word-level Whisper output, allowing Manglish variation."""
     expected = _tokens(phrase)
@@ -197,7 +243,11 @@ def fuzzy_phrase_alignment(words: List[Dict[str, Any]], phrase: str, min_time: f
     if not candidates:
         return {"at": find_first_word_offset(words, expected, min_time=min_time), "matched": False, "score": 0.0}
     score, at = max(candidates, key=lambda item: (item[0], -item[1]))
-    if score < 0.48:
+    # Currency values are often spoken as words ("30 lakhs") while shown as
+    # Indian-grouped numerals ("₹30,00,000"); allow the slightly lower score
+    # for these equivalent acoustic forms.
+    threshold = 0.46 if "₹" in str(phrase) or "INR" in str(phrase).upper() else 0.48
+    if score < threshold:
         at = find_first_word_offset(words, expected, min_time=min_time)
         return {"at": at, "matched": False, "score": round(score, 3)}
     return {"at": at, "matched": True, "score": round(score, 3)}
@@ -260,10 +310,14 @@ def align_screenplay_to_measured_audio(
             anchors = []
             for phrase in b.get("anchor_phrases", []):
                 match = fuzzy_phrase_alignment(words, phrase, min_time=cursor)
+                if not match["matched"]:
+                    spoken = str(b.get("voice_sync_text", ""))
+                    match["at"] = character_position_ratio(spoken, str(phrase)) * dur
                 offset = min(max(float(match["at"]), 0.0), max(0.0, dur - 0.08))
                 anchors.append({"phrase": phrase, "at": round(b_start + offset, 2), "matched": match["matched"], "score": match["score"]})
                 cursor = min(max(cursor + 0.15, offset + 0.08), dur)
             b["anchor_alignment"] = anchors
+            b["anchor_match"] = {"matched": sum(1 for anchor in anchors if anchor["matched"]), "total": len(anchors)}
             objects = _visual_data_objects(visual_data)
             next_anchor = 0
             last_element_offset = 0.0
@@ -272,11 +326,11 @@ def align_screenplay_to_measured_audio(
                 item_match = fuzzy_phrase_alignment(words, text, min_time=0.0) if text else {"matched": False}
                 if item_match.get("matched"):
                     offset = float(item_match["at"])
-                elif anchors:
-                    offset = max(0.0, anchors[min(next_anchor, len(anchors) - 1)]["at"] - b_start)
-                    next_anchor += 1
                 else:
-                    offset = min(dur * (next_anchor + 1) / (len(objects) + 1), max(0.0, dur - 0.1))
+                    spoken = str(b.get("voice_sync_text", ""))
+                    probe = " ".join(str(item.get(key, "")) for key in ("label", "detail", "value", "date") if item.get(key))
+                    ratio = character_position_ratio(spoken, probe)
+                    offset = min(max(0.0, ratio * dur), max(0.0, dur - 0.1))
                     next_anchor += 1
                 offset = max(last_element_offset, min(max(offset, 0.0), max(0.0, dur - 0.05)))
                 item["at"] = round(b_start + offset, 2)
@@ -456,6 +510,9 @@ def align_screenplay_to_measured_audio(
                 raise ValueError(f"Visual anchor outside beat {beat.get('id')}: {value.get('at')}")
     if beats and abs(float(beats[-1]["end"]) - float(screenplay["audio_duration_sec"])) > 0.5:
         raise ValueError("Final beat end differs from audio duration by more than 0.5 seconds")
+    total_anchors = sum(int(b.get("anchor_match", {}).get("total", 0)) for b in beats)
+    matched_anchors = sum(int(b.get("anchor_match", {}).get("matched", 0)) for b in beats)
+    screenplay["anchor_match"] = {"matched": matched_anchors, "total": total_anchors, "rate": round(matched_anchors / total_anchors, 3) if total_anchors else 0.0}
     return screenplay
 
 def generate_alignment_log_summary(screenplay: Dict[str, Any]) -> str:
@@ -470,15 +527,19 @@ def generate_alignment_log_summary(screenplay: Dict[str, Any]) -> str:
         layout = b.get("layout", "")
         st = b.get("start", 0.0)
         en = b.get("end", 0.0)
-        lines.append(f"{bid}[{layout}]: {st:.1f}s-{en:.1f}s (d{(en-st):.1f}s)")
+        matched = b.get("anchor_match", {})
+        lines.append(f"{bid}[{layout}]: {st:.1f}s-{en:.1f}s (d{(en-st):.1f}s), anchors {matched.get('matched',0)}/{matched.get('total',0)}")
+    result = screenplay.get("anchor_match", {})
+    lines.append(f"Anchor match: {result.get('matched',0)}/{result.get('total',0)} ({100*result.get('rate',1):.1f}%)")
     return "\n".join(lines)
 
-def synthesize_and_align_screenplay_audio(
+def _synthesize_and_align_screenplay_audio_once(
     screenplay_obj: Dict[str, Any],
     subject: str,
     chapter_no: int,
     q_num: int,
-    force_tts: bool = False
+    force_tts: bool = False,
+    save_files: bool = True
 ) -> tuple:
     """
     1. Synthesizes studio-grade audio for each beat via Gemini Aoede TTS.
@@ -515,7 +576,7 @@ def synthesize_and_align_screenplay_audio(
         clips.append(seg)
 
         # Transcribe with Whisper
-        transcript = transcribe_beat_clip(clip_path)
+        transcript = transcribe_beat_clip(clip_path, b.get("anchor_phrases", []))
         beat_transcripts[bid] = transcript
 
     # Stitch audio
@@ -528,20 +589,41 @@ def synthesize_and_align_screenplay_audio(
 
     out_audio_path = os.path.join(PROJECT_ROOT, "redesign_demo", "data", "audio", f"{qid}.mp3")
     os.makedirs(os.path.dirname(out_audio_path), exist_ok=True)
-    full_audio.export(out_audio_path, format="mp3", bitrate="192k")
-    print(f"    [STITCHED AUDIO] Saved {out_audio_path} ({len(full_audio)/1000:.1f}s)")
+    if save_files:
+        full_audio.export(out_audio_path, format="mp3", bitrate="192k")
+        print(f"    [STITCHED AUDIO] Saved {out_audio_path} ({len(full_audio)/1000:.1f}s)")
+    else:
+        print(f"    [STITCHED AUDIO] Kept generated audio in memory; preserved hand-authored fixture file for {qid}")
 
     # Align screenplay
     aligned_sp = align_screenplay_to_measured_audio(screenplay_obj, beat_transcripts, sync_gap=0.35)
     aligned_sp["audio_url"] = f"data/audio/{qid}.mp3"
+    rate = float(aligned_sp.get("anchor_match", {}).get("rate", 1.0))
+    print(f"  [ANCHOR MATCH] {qid}: {aligned_sp['anchor_match']['matched']}/{aligned_sp['anchor_match']['total']} ({rate:.1%})")
+    diagnostics_path = os.path.join(PROJECT_ROOT, "test-results", f"alignment-debug-{qid}.json")
+    os.makedirs(os.path.dirname(diagnostics_path), exist_ok=True)
+    with open(diagnostics_path, "w", encoding="utf-8") as diagnostic_file:
+        json.dump({"screenplay": aligned_sp, "transcripts": beat_transcripts}, diagnostic_file, ensure_ascii=False, indent=2)
+    if rate < 0.70:
+        raise ValueError(f"Anchor match below 70% for {qid}: {rate:.1%}")
     if abs(float(aligned_sp["duration_sec"]) - len(full_audio) / 1000.0) > 0.5:
         raise ValueError("Aligned screenplay duration differs from the stitched audio by more than 0.5 seconds")
 
     # Save local screenplay JSON
     sp_path = os.path.join(PROJECT_ROOT, "redesign_demo", "data", "screenplays", f"{qid}.json")
-    os.makedirs(os.path.dirname(sp_path), exist_ok=True)
-    with open(sp_path, "w", encoding="utf-8") as f:
-        json.dump(aligned_sp, f, indent=2, ensure_ascii=False)
+    if save_files:
+        os.makedirs(os.path.dirname(sp_path), exist_ok=True)
+        with open(sp_path, "w", encoding="utf-8") as f:
+            json.dump(aligned_sp, f, indent=2, ensure_ascii=False)
 
     timing_summary = generate_alignment_log_summary(aligned_sp)
     return aligned_sp, timing_summary
+
+def synthesize_and_align_screenplay_audio(screenplay_obj: Dict[str, Any], subject: str, chapter_no: int, q_num: int, force_tts: bool = False, save_files: bool = True) -> tuple:
+    try:
+        return _synthesize_and_align_screenplay_audio_once(screenplay_obj, subject, chapter_no, q_num, force_tts, save_files)
+    except ValueError as first_error:
+        if "Anchor match below 70%" not in str(first_error):
+            raise
+        print(f"  [ALIGN RETRY] Re-synthesizing {subject.lower()}-c{chapter_no}-q{q_num} once after low anchor match")
+        return _synthesize_and_align_screenplay_audio_once(screenplay_obj, subject, chapter_no, q_num, True, save_files)

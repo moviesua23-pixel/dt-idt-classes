@@ -10,6 +10,7 @@ if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
 
 from pipeline.key_rotator import rotator
+from pipeline.synthesize_ppt_audio import TTS_STYLE
 from google.genai import types
 
 try:
@@ -59,7 +60,7 @@ def generate_gemini_audio(script, output_mp3_path, voice_name=None):
             try:
                 resp = client.models.generate_content(
                     model=model,
-                    contents=script,
+                    contents=f"{TTS_STYLE}\n\nDeliver this as an expressive, warm teacher explanation with clear emphasis on the rule and example. Speak the narration verbatim:\n{script}",
                     config=types.GenerateContentConfig(
                         response_modalities=['AUDIO'],
                         speech_config=types.SpeechConfig(
@@ -79,7 +80,11 @@ def generate_gemini_audio(script, output_mp3_path, voice_name=None):
                 continue
         raise RuntimeError(f"All Gemini TTS models failed: {last_e}")
 
-    pcm_data, used_model = rotator.execute_with_retry(_call_tts)
+    pcm_data, used_model = rotator.execute_with_retry(
+        _call_tts,
+        timeout_ms=int(os.getenv("GEMINI_TTS_TIMEOUT_MS", "120000")),
+        retry_transient=False,
+    )
 
     # Write temporary WAV file
     temp_wav = output_mp3_path + ".temp.wav"
