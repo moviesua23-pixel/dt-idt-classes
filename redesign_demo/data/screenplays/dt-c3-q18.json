@@ -1,0 +1,358 @@
+{
+  "question_id": "dt-c3-q18",
+  "audio_url": "data/audio/dt-c3-q18.mp3",
+  "duration_sec": 63.52,
+  "sync_offset_sec": 0.0,
+  "context_pill": "Partnership Taxation",
+  "example_summary": "Calculating Book Profit and Allowable Partner Salary for Rao & Jain.",
+  "source_provision": "### Statutory Summary Matrix: Partnership Remuneration u/s 40(b)\n\n| Statutory Element | Relevant Section / Rule | Statutory Condition & Limits | Tax Treatment / Legal Consequence |\n| :--- | :--- | :--- | :--- |\n| **Book Profit Computation** | Explanation 3 to Section 40(b) | Net Profit as per P&L account computed under Chapter IV-D, adjusted for inadmissible items | Base figure for calculating maximum allowable partner remuneration |\n| **Depreciation Allowance** | Section 32 | Must be deducted while computing book profit under Chapter IV-D | Reduces the net profit to arrive at correct book profit |\n| **Interest on Capital** | Section 40(b)(iv) | Maximum allowable interest rate is 12 percent per annum | Excess interest over 12 percent is disallowed and added back |\n| **Partner Remuneration** | Section 40(b)(v) | Payable only to working partners and authorized by partnership deed | Restricted to statutory slab limits based on book profit |\n\n\n\n> [!IMPORTANT]\n> Section 40(b)(v) Slabs for Working Partner Salary:\n> - On the first ₹ 6,00,000 of book profit: ₹ 3,00,000 or 90% of book profit, whichever is more.\n> - On the balance of book profit: 60% of the balance book profit.\n\n\n\n> [!WARNING]\n> Mandatory Conditions for Remuneration Deduction:\n> - Remuneration must be authorized by the partnership deed.\n> - Payment must relate to a period after the partnership deed date (no retrospective effect).",
+  "director": {
+    "archetype": "computation_ledger",
+    "justification": "The question requires stepping through a sequential multi-step tax computation ledger starting from net profit to determine book profit and allowable partner salary under section 40(b).",
+    "protagonist": "Rao & Jain",
+    "actors": [
+      "Working Partners",
+      "Assessing Officer"
+    ],
+    "key_numbers": [
+      "10,00,000",
+      "30,000",
+      "1,50,000",
+      "15%",
+      "5,00,000",
+      "12%",
+      "60,000",
+      "7,90,000",
+      "6,00,000",
+      "3,00,000",
+      "90%",
+      "60%",
+      "1,14,000",
+      "6,54,000"
+    ],
+    "key_dates": [],
+    "visual_metaphor": "A tiered staircase ledger calculating business book profit and unlocking slab deductions step by step.",
+    "beat_plan": [
+      {
+        "beat_goal": "Establish the firm net profit baseline before adjustments.",
+        "layout": "example_scene",
+        "anchor_phrases": [
+          "Rao & Jain",
+          "Net Profit ₹ 10,00,000"
+        ]
+      },
+      {
+        "beat_goal": "Deduct depreciation under section 32 and adjust interest under section 40(b).",
+        "layout": "ledger",
+        "anchor_phrases": [
+          "Depreciation u/s 32",
+          "Interest @ 12% p.a."
+        ]
+      },
+      {
+        "beat_goal": "Arrive at the final book profit figure for the firm.",
+        "layout": "statute_quote",
+        "anchor_phrases": [
+          "Explanation 3 to Section 40(b)",
+          "Book Profit ₹ 7,90,000"
+        ]
+      },
+      {
+        "beat_goal": "Apply the statutory slab rates for working partner salary.",
+        "layout": "slab_ladder",
+        "anchor_phrases": [
+          "Section 40(b)(v)",
+          "First ₹ 6,00,000",
+          "Balance Book Profit"
+        ]
+      },
+      {
+        "beat_goal": "Summarize the maximum allowable working partners salary.",
+        "layout": "takeaway",
+        "anchor_phrases": [
+          "Maximum allowable partners salary",
+          "₹ 6,54,000"
+        ]
+      }
+    ]
+  },
+  "fallback": false,
+  "beats": [
+    {
+      "layout": "example_scene",
+      "title": {
+        "text": "The Baseline Profit",
+        "at": 0.3
+      },
+      "voice_sync_text": "Rao & Jain എന്ന partnership firm-ന്റെ കേസ് നോക്കാം. ഇവിടെ Net Profit ₹ 10,00,000 ആണ് റിപ്പോർട്ട് ചെയ്തിരിക്കുന്നത്.",
+      "visual_data": {
+        "actors": [
+          {
+            "label": "Rao & Jain",
+            "detail": "Partnership Firm",
+            "icon": "factory",
+            "at": 1.42
+          }
+        ],
+        "transaction": "Reporting Net Profit",
+        "facts": [
+          {
+            "label": "Net Profit",
+            "amount": 1000000,
+            "sign": "=",
+            "at": 4.74
+          }
+        ],
+        "spoken_amounts": [
+          "₹ 10,00,000",
+          "10,00,000"
+        ]
+      },
+      "start": 0.0,
+      "end": 8.16,
+      "id": "b1",
+      "director_goal": "Establish the firm net profit baseline before adjustments.",
+      "anchor_phrases": [
+        "Rao & Jain",
+        "Net Profit ₹ 10,00,000"
+      ],
+      "animation_role": "key_fact",
+      "anchor_alignment": [
+        {
+          "phrase": "Rao & Jain",
+          "at": 0.86,
+          "matched": true,
+          "score": 0.625
+        },
+        {
+          "phrase": "Net Profit ₹ 10,00,000",
+          "at": 4.74,
+          "matched": true,
+          "score": 0.698
+        }
+      ],
+      "anchor_match": {
+        "matched": 2,
+        "total": 2
+      }
+    },
+    {
+      "layout": "ledger",
+      "title": {
+        "text": "Adjusting Expenses",
+        "at": 8.81
+      },
+      "voice_sync_text": "ഈ ലാഭത്തിൽ നിന്ന് ആദ്യം Depreciation u/s 32 ആയ ₹ 1,50,000 കുറയ്ക്കണം. കൂടാതെ, Interest @ 12% p.a. എന്ന ലിമിറ്റിൽ ₹ 60,000 മാത്രമേ അനുവദിക്കൂ, ബാക്കി disallowed ആണ്.",
+      "visual_data": {
+        "rows": [
+          {
+            "label": "Net Profit",
+            "amount": 1000000,
+            "at": 8.83
+          },
+          {
+            "label": "Depreciation u/s 32",
+            "amount": 150000,
+            "sign": "-",
+            "at": 10.73
+          },
+          {
+            "label": "Interest @ 12% p.a.",
+            "detail": "12% of 5,00,000",
+            "amount": 60000,
+            "sign": "-",
+            "at": 17.49
+          }
+        ],
+        "total": "7,90,000",
+        "spoken_amounts": [
+          "₹ 1,50,000",
+          "₹ 60,000",
+          "1,50,000",
+          "60,000"
+        ]
+      },
+      "start": 8.51,
+      "end": 25.23,
+      "id": "b2",
+      "director_goal": "Deduct depreciation under section 32 and adjust interest under section 40(b).",
+      "anchor_phrases": [
+        "Depreciation u/s 32",
+        "Interest @ 12% p.a."
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Depreciation u/s 32",
+          "at": 10.73,
+          "matched": true,
+          "score": 0.912
+        },
+        {
+          "phrase": "Interest @ 12% p.a.",
+          "at": 17.49,
+          "matched": true,
+          "score": 0.806
+        }
+      ],
+      "anchor_match": {
+        "matched": 2,
+        "total": 2
+      }
+    },
+    {
+      "layout": "statute_quote",
+      "title": {
+        "text": "Defining Book Profit",
+        "at": 25.88
+      },
+      "voice_sync_text": "Explanation 3 to Section 40(b) പ്രകാരം അഡ്ജസ്റ്റ്മെന്റുകൾക്ക് ശേഷം നമുക്ക് ലഭിക്കുന്ന Book Profit ₹ 7,90,000 ആണ്.",
+      "visual_data": {
+        "rule": "Book profit means net profit computed under Chapter IV-D increased by remuneration if already deducted.",
+        "citation": "Explanation 3 to Section 40(b)",
+        "application": "Book Profit ₹ 7,90,000",
+        "at": 25.58
+      },
+      "start": 25.58,
+      "end": 35.5,
+      "id": "b3",
+      "director_goal": "Arrive at the final book profit figure for the firm.",
+      "anchor_phrases": [
+        "Explanation 3 to Section 40(b)",
+        "Book Profit ₹ 7,90,000"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Explanation 3 to Section 40(b)",
+          "at": 26.58,
+          "matched": true,
+          "score": 0.593
+        },
+        {
+          "phrase": "Book Profit ₹ 7,90,000",
+          "at": 31.6,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 2,
+        "total": 2
+      }
+    },
+    {
+      "layout": "slab_ladder",
+      "title": {
+        "text": "Section 40(b)(v) Slabs",
+        "at": 36.15
+      },
+      "voice_sync_text": "Section 40(b)(v) പ്രകാരം salary ലിമിറ്റ് നോക്കാം. First ₹ 6,00,000-ന് 90% അല്ലെങ്കിൽ ₹ 3,00,000 whichever is more എടുക്കണം. Balance Book Profit-ന് 60% ആണ് കണക്കാക്കേണ്ടത്.",
+      "visual_data": {
+        "tiers": [
+          {
+            "label": "First ₹ 6,00,000",
+            "detail": "90% of 6,00,000 or 3,00,000",
+            "amount": 540000,
+            "at": 41.81
+          },
+          {
+            "label": "Balance Book Profit",
+            "detail": "60% of (7,90,000 - 6,00,000)",
+            "amount": 114000,
+            "at": 48.31
+          }
+        ]
+      },
+      "start": 35.85,
+      "end": 52.13,
+      "id": "b4",
+      "director_goal": "Apply the statutory slab rates for working partner salary.",
+      "anchor_phrases": [
+        "Section 40(b)(v)",
+        "First ₹ 6,00,000",
+        "Balance Book Profit"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Section 40(b)(v)",
+          "at": 35.85,
+          "matched": false,
+          "score": 0.385
+        },
+        {
+          "phrase": "First ₹ 6,00,000",
+          "at": 41.81,
+          "matched": true,
+          "score": 0.72
+        },
+        {
+          "phrase": "Balance Book Profit",
+          "at": 48.31,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 2,
+        "total": 3
+      }
+    },
+    {
+      "layout": "takeaway",
+      "title": {
+        "text": "Maximum Allowable Salary",
+        "at": 52.78
+      },
+      "voice_sync_text": "അങ്ങനെ കണക്കാക്കുമ്പോൾ Maximum allowable partners salary ₹ 6,54,000 എന്ന് ലഭിക്കുന്നു. ഇതാണ് ഫേമിന് ഡിഡക്ഷനായി ക്ലെയിം ചെയ്യാൻ കഴിയുന്ന തുക.",
+      "visual_data": {
+        "rules": [
+          {
+            "label": "Maximum allowable partners salary",
+            "amount": 654000,
+            "icon": "money_bag",
+            "at": 53.08
+          }
+        ],
+        "spoken_amounts": [
+          "₹ 6,54,000",
+          "6,54,000"
+        ]
+      },
+      "start": 52.48,
+      "end": 63.52,
+      "id": "b5",
+      "director_goal": "Summarize the maximum allowable working partners salary.",
+      "anchor_phrases": [
+        "Maximum allowable partners salary",
+        "₹ 6,54,000"
+      ],
+      "animation_role": "key_fact",
+      "anchor_alignment": [
+        {
+          "phrase": "Maximum allowable partners salary",
+          "at": 53.08,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "₹ 6,54,000",
+          "at": 57.0,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 2,
+        "total": 2
+      }
+    }
+  ],
+  "audio_duration_sec": 63.52,
+  "anchor_match": {
+    "matched": 10,
+    "total": 11,
+    "rate": 0.909
+  }
+}

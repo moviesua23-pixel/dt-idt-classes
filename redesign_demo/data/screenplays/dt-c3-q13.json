@@ -1,0 +1,410 @@
+{
+  "question_id": "dt-c3-q13",
+  "audio_url": "data/audio/dt-c3-q13.mp3",
+  "duration_sec": 124.36,
+  "sync_offset_sec": 0.0,
+  "context_pill": "Section 35AD Asset Transfer",
+  "example_summary": "ABC Ltd transfers a building from its specified sugar warehousing unit to a non-specified edible oil unit within the 8-year lock-in period, triggering income recapture.",
+  "source_provision": "| Statutory Provision | Core Condition / Trigger | Tax Treatment / Legal Consequence |\n| :--- | :--- | :--- |\n| **Section 35AD(7B)** | Transfer of asset from specified business to non-specified business before 8 years | Deduction allowed less allowable depreciation u/s 32 is deemed as business income |\n| **Section 43(1) Explanation 13** | Subsequent use of asset in non-specified business unit | Actual cost for depreciation is reduced by the depreciation that would have been allowable |\n\n\n> [!IMPORTANT] Deemed Income Trap: The difference between the Section 35AD deduction and normal depreciation for the intervening period is brought to tax under PGBP.\n\n\n> [!WARNING] Depreciation Basis: Future depreciation is calculated on the reduced actual cost reflecting notional past depreciation.",
+  "director": {
+    "archetype": "deemed_value_substitution",
+    "justification": "The scenario involves the recapture of a previously claimed deduction as deemed income and the substitution of the asset's actual cost for future depreciation upon its transfer to a non-specified business.",
+    "protagonist": "ABC Ltd",
+    "actors": [
+      "Unit A (Sugar Warehousing)",
+      "Unit B (Edible Oil Warehousing)"
+    ],
+    "key_numbers": [
+      "₹ 50 lacs",
+      "10%",
+      "₹ 45,00,000",
+      "8 years"
+    ],
+    "key_dates": [
+      "1.4.2024",
+      "February 2026",
+      "A.Y. 2026-27"
+    ],
+    "visual_metaphor": "A 'Tax Recapture Scale' that balances the original deduction against a new income entry and a reduced cost basis.",
+    "beat_plan": [
+      {
+        "beat_goal": "Establish the setup of ABC Ltd and its two distinct business units",
+        "layout": "example_scene",
+        "anchor_phrases": [
+          "ABC Ltd",
+          "Unit A",
+          "Unit B",
+          "₹ 50 lacs"
+        ]
+      },
+      {
+        "beat_goal": "Highlight the 8-year restriction and the timing of the asset transfer",
+        "layout": "timeline_windows",
+        "anchor_phrases": [
+          "1.4.2024",
+          "February 2026",
+          "8 years"
+        ]
+      },
+      {
+        "beat_goal": "Calculate the deemed business income under Section 35AD(7B)",
+        "layout": "deemed_value",
+        "anchor_phrases": [
+          "Section 35AD(7B)",
+          "10% depreciation",
+          "₹ 45,00,000 deemed income"
+        ]
+      },
+      {
+        "beat_goal": "Determine the new actual cost for Unit B under Section 43(1)",
+        "layout": "flow_actors",
+        "anchor_phrases": [
+          "Section 43(1) Explanation 13",
+          "Actual cost",
+          "₹ 45,00,000"
+        ]
+      },
+      {
+        "beat_goal": "Summarize the dual tax impact of the transfer",
+        "layout": "takeaway",
+        "anchor_phrases": [
+          "Deemed Income Trap",
+          "Depreciation Basis",
+          "A.Y. 2026-27"
+        ]
+      }
+    ]
+  },
+  "fallback": false,
+  "beats": [
+    {
+      "layout": "example_scene",
+      "title": {
+        "text": "The Setup: ABC Ltd's Dual Units",
+        "at": 0.3
+      },
+      "voice_sync_text": "ABC Ltd-ന് രണ്ട് ബിസിനസ്സുകൾ ഉണ്ട്. Unit A എന്നത് sugar warehousing-നുള്ള specified business-ഉം, Unit B എന്നത് edible oil warehousing-നുള്ള non-specified business-ഉം ആണ്. Unit A-ക്ക് വേണ്ടി ₹ 50 lacs ചിലവാക്കി ഒരു building വാങ്ങി operations തുടങ്ങി.",
+      "visual_data": {
+        "actors": [
+          {
+            "label": "Unit A",
+            "detail": "Sugar Warehousing (Specified)",
+            "icon": "factory",
+            "at": 3.4
+          },
+          {
+            "label": "Unit B",
+            "detail": "Edible Oil Warehousing (Non-Specified)",
+            "icon": "factory",
+            "at": 7.78
+          }
+        ],
+        "transaction": "Asset Acquisition",
+        "facts": [
+          {
+            "label": "Building Cost",
+            "amount": 5000000,
+            "value": "₹ 50 lacs",
+            "icon": "house",
+            "at": 14.84
+          }
+        ]
+      },
+      "start": 0.0,
+      "end": 19.88,
+      "id": "b1",
+      "director_goal": "Establish the setup of ABC Ltd and its two distinct business units",
+      "anchor_phrases": [
+        "ABC Ltd",
+        "Unit A",
+        "Unit B",
+        "₹ 50 lacs"
+      ],
+      "animation_role": "key_fact",
+      "anchor_alignment": [
+        {
+          "phrase": "ABC Ltd",
+          "at": 3.02,
+          "matched": true,
+          "score": 0.898
+        },
+        {
+          "phrase": "Unit A",
+          "at": 3.4,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Unit B",
+          "at": 7.78,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "₹ 50 lacs",
+          "at": 15.92,
+          "matched": true,
+          "score": 0.92
+        }
+      ],
+      "anchor_match": {
+        "matched": 4,
+        "total": 4
+      }
+    },
+    {
+      "layout": "timeline_windows",
+      "title": {
+        "text": "The 8-Year Lock-in Period",
+        "at": 20.53
+      },
+      "voice_sync_text": "ഈ building 1.4.2024-ൽ ആണ് വാങ്ങിയത്. Section 35AD പ്രകാരം deduction എടുത്താൽ 8 years ആ asset specified business-ൽ തന്നെ ഉപയോഗിക്കണം എന്നൊരു restriction ഉണ്ട്. എന്നാൽ February 2026-ൽ, അതായത് വെറും രണ്ട് വർഷത്തിനുള്ളിൽ ഇത് Unit B-ലേക്ക് transfer ചെയ്തു.",
+      "visual_data": {
+        "events": [
+          {
+            "label": "Commencement",
+            "date": "1.4.2024",
+            "icon": "calendar",
+            "at": 21.35
+          },
+          {
+            "label": "Asset Transfer",
+            "date": "February 2026",
+            "status": "Violation",
+            "icon": "gavel",
+            "at": 32.47
+          }
+        ],
+        "window_label": "8 years Mandatory Usage"
+      },
+      "start": 20.23,
+      "end": 41.31,
+      "id": "b2",
+      "director_goal": "Highlight the 8-year restriction and the timing of the asset transfer",
+      "anchor_phrases": [
+        "1.4.2024",
+        "February 2026",
+        "8 years"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "1.4.2024",
+          "at": 21.35,
+          "matched": true,
+          "score": 0.933
+        },
+        {
+          "phrase": "February 2026",
+          "at": 34.07,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "8 years",
+          "at": 37.43,
+          "matched": true,
+          "score": 0.857
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 3
+      }
+    },
+    {
+      "layout": "deemed_value",
+      "title": {
+        "text": "Recapture under Section 35AD(7B)",
+        "at": 41.96
+      },
+      "voice_sync_text": "ഇവിടെ Section 35AD(7B) പ്രകാരം deemed income കണക്കാക്കണം. നമ്മൾ ആദ്യം ക്ലെയിം ചെയ്ത deduction-ൽ നിന്ന് normal 10% depreciation കുറയ്ക്കണം. അതായത് ₹ 50 lacs-ൽ നിന്ന് ₹ 5,00,000 കുറച്ചാൽ ബാക്കി ₹ 45,00,000 deemed income ആയി മാറും.",
+      "visual_data": {
+        "actual": {
+          "label": "Original Deduction",
+          "amount": 5000000,
+          "value": "₹ 50 lacs",
+          "at": 52.86
+        },
+        "deemed": {
+          "label": "Business Income",
+          "amount": 4500000,
+          "value": "₹ 45,00,000 deemed income",
+          "sign": "=",
+          "at": 59.88
+        },
+        "rule": "Section 35AD(7B): Deduction minus 10% depreciation",
+        "spoken_amounts": [
+          "₹ 5,00,000",
+          "5,00,000"
+        ],
+        "at": 47.7
+      },
+      "start": 41.66,
+      "end": 61.54,
+      "id": "b3",
+      "director_goal": "Calculate the deemed business income under Section 35AD(7B)",
+      "anchor_phrases": [
+        "Section 35AD(7B)",
+        "10% depreciation",
+        "₹ 45,00,000 deemed income"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Section 35AD(7B)",
+          "at": 42.38,
+          "matched": true,
+          "score": 0.987
+        },
+        {
+          "phrase": "10% depreciation",
+          "at": 50.56,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "₹ 45,00,000 deemed income",
+          "at": 59.88,
+          "matched": true,
+          "score": 0.722
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 3
+      }
+    },
+    {
+      "layout": "flow_actors",
+      "title": {
+        "text": "New Cost Basis for Unit B",
+        "at": 62.19
+      },
+      "voice_sync_text": "ഇനി Unit B-ൽ ഈ building-ന് depreciation ക്ലെയിം ചെയ്യുമ്പോൾ Section 43(1) Explanation 13 പ്രകാരം Actual cost കണക്കാക്കണം. Original cost-ൽ നിന്ന് depreciation കുറച്ച ₹ 45,00,000 ആയിരിക്കും Unit B-ലെ പുതിയ depreciation base.",
+      "visual_data": {
+        "actors": [
+          {
+            "label": "Unit A",
+            "detail": "Transferor",
+            "at": 63.11
+          },
+          {
+            "label": "Unit B",
+            "detail": "Transferee",
+            "at": 63.11
+          }
+        ],
+        "edges": [
+          {
+            "label": "Actual cost",
+            "from": "Unit A",
+            "to": "Unit B",
+            "amount": 4500000,
+            "value": "₹ 45,00,000",
+            "detail": "Section 43(1) Explanation 13",
+            "at": 66.39
+          }
+        ]
+      },
+      "start": 61.89,
+      "end": 80.41,
+      "id": "b4",
+      "director_goal": "Determine the new actual cost for Unit B under Section 43(1)",
+      "anchor_phrases": [
+        "Section 43(1) Explanation 13",
+        "Actual cost",
+        "₹ 45,00,000"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Section 43(1) Explanation 13",
+          "at": 66.67,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Actual cost",
+          "at": 70.45,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "₹ 45,00,000",
+          "at": 76.03,
+          "matched": true,
+          "score": 0.501
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 3
+      }
+    },
+    {
+      "layout": "takeaway",
+      "title": {
+        "text": "Tax Impact Summary",
+        "at": 81.06
+      },
+      "voice_sync_text": "ചുരുക്കത്തിൽ, A.Y. 2026-27-ൽ ഈ transfer മൂലം ഒരു Deemed Income Trap ഉണ്ടാകുന്നു. അതോടൊപ്പം തന്നെ Unit B-ൽ depreciation ക്ലെയിം ചെയ്യാനുള്ള പുതിയ Depreciation Basis നിശ്ചയിക്കപ്പെടുകയും ചെയ്യുന്നു.",
+      "visual_data": {
+        "rules": [
+          {
+            "label": "Deemed Income Trap",
+            "detail": "Taxable in A.Y. 2026-27",
+            "icon": "money_bag",
+            "at": 115.68
+          },
+          {
+            "label": "Depreciation Basis",
+            "detail": "Reduced Actual Cost u/s 43(1)",
+            "icon": "scales",
+            "at": 121.12
+          }
+        ]
+      },
+      "start": 80.76,
+      "end": 124.36,
+      "id": "b5",
+      "director_goal": "Summarize the dual tax impact of the transfer",
+      "anchor_phrases": [
+        "Deemed Income Trap",
+        "Depreciation Basis",
+        "A.Y. 2026-27"
+      ],
+      "animation_role": "key_fact",
+      "anchor_alignment": [
+        {
+          "phrase": "Deemed Income Trap",
+          "at": 115.68,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Depreciation Basis",
+          "at": 121.12,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "A.Y. 2026-27",
+          "at": 83.87,
+          "matched": false,
+          "score": 0.286
+        }
+      ],
+      "anchor_match": {
+        "matched": 2,
+        "total": 3
+      }
+    }
+  ],
+  "audio_duration_sec": 124.36,
+  "anchor_match": {
+    "matched": 15,
+    "total": 16,
+    "rate": 0.938
+  }
+}

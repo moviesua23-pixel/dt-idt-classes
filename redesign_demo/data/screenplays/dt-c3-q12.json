@@ -1,0 +1,592 @@
+{
+  "question_id": "dt-c3-q12",
+  "audio_url": "data/audio/dt-c3-q12.mp3",
+  "duration_sec": 72.02,
+  "sync_offset_sec": 0.0,
+  "context_pill": "Section 35AD & Section 73A",
+  "example_summary": "XYZ Ltd operates a Madurai Hotel and Coimbatore Hotel, computing 35AD deduction and Section 73A set-off.",
+  "source_provision": "### Statutory Summary Matrix: Section 35AD & Section 73A\n\n| Provision / Section | Eligible Activity / Scope | Qualifying Expenditure & Exclusions | Set-off & Carry Forward Rule |\n| :--- | :--- | :--- | :--- |\n| **Section 35AD** | Specified businesses including new hotels (two-star or above) | 100% deduction for capital expenditure (excluding land, goodwill, financial instruments) | Loss can be set-off **only** against another specified business under Section 73A |\n| **Section 73A** | Specified businesses under Section 35AD | Pre-commencement capital expenditure capitalized as on date of commencement qualifies | Unabsorbed specified business loss can be carried forward indefinitely for set-off against specified business income |\n\n\n> [!IMPORTANT] Land Exclusion Rule: Expenditure incurred on the acquisition of land or goodwill or financial instruments does not qualify for deduction under Section 35AD.\n\n\n> [!WARNING] Set-off Restriction: Loss from a specified business under Section 35AD can never be set off against normal business profits or any other head of income; it is exclusively restricted to profits from another specified business under Section 73A.",
+  "director": {
+    "archetype": "set_off_carry_forward_waterfall",
+    "justification": "The scenario involves calculating a specific deduction under Section 35AD to determine a loss, which then follows a restricted set-off path against another specified business under Section 73A.",
+    "protagonist": "XYZ Ltd",
+    "actors": [
+      "Madurai Hotel (3-star)",
+      "Coimbatore Hotel (4-star)"
+    ],
+    "key_numbers": [
+      "₹50 lakh",
+      "₹2 crore",
+      "₹1.50 crore",
+      "₹25 lakh",
+      "₹120 lakh",
+      "₹45 lakh"
+    ],
+    "key_dates": [
+      "1.4.2025",
+      "January to March 2025",
+      "A.Y. 2026-27"
+    ],
+    "visual_metaphor": "A specialized plumbing system where 'Specified Business' fluids can only mix with each other and never enter the 'General Business' pipes.",
+    "beat_plan": [
+      {
+        "beat_goal": "Establish XYZ Ltd's dual hotel operations and the commencement of the Madurai project.",
+        "layout": "example_scene",
+        "anchor_phrases": [
+          "XYZ Ltd",
+          "Madurai Hotel",
+          "Coimbatore Hotel",
+          "1.4.2025"
+        ]
+      },
+      {
+        "beat_goal": "Verify Section 35AD eligibility for the new 3-star hotel and the payment method.",
+        "layout": "checklist_gate",
+        "anchor_phrases": [
+          "Section 35AD",
+          "Specified Business",
+          "Account payee cheque",
+          "ECS"
+        ]
+      },
+      {
+        "beat_goal": "Apply the Land Exclusion rule to the current year capital expenditure.",
+        "layout": "deemed_value",
+        "anchor_phrases": [
+          "Excluding Land",
+          "₹1.50 crore",
+          "₹50 lakh eligible"
+        ]
+      },
+      {
+        "beat_goal": "Validate the pre-commencement expenditure capitalized on the start date.",
+        "layout": "timeline_windows",
+        "anchor_phrases": [
+          "January to March 2025",
+          "Capitalized on 1.4.2025",
+          "₹50 lakh"
+        ]
+      },
+      {
+        "beat_goal": "Compute the total deduction and the resulting loss for the Madurai unit.",
+        "layout": "ledger",
+        "anchor_phrases": [
+          "Total deduction ₹100 lakh",
+          "Profit ₹25 lakh",
+          "Loss ₹75 lakh"
+        ]
+      },
+      {
+        "beat_goal": "Demonstrate the Section 73A set-off against the Coimbatore hotel profits.",
+        "layout": "waterfall",
+        "anchor_phrases": [
+          "Section 73A",
+          "Set-off",
+          "₹120 lakh profit",
+          "Net ₹45 lakh"
+        ]
+      },
+      {
+        "beat_goal": "Summarize the restriction on set-off and the indefinite carry forward rule.",
+        "layout": "takeaway",
+        "anchor_phrases": [
+          "Only against specified business",
+          "Indefinite carry forward",
+          "Return filing mandatory"
+        ]
+      }
+    ]
+  },
+  "fallback": false,
+  "beats": [
+    {
+      "layout": "example_scene",
+      "title": {
+        "text": "XYZ Ltd Operations",
+        "at": 0.3
+      },
+      "voice_sync_text": "ഇവിടെ നമ്മൾ XYZ Ltd-ന്റെ Madurai Hotel, Coimbatore Hotel എന്നിവയുടെ operations ഉം 1.4.2025 തീയതിയും പരിശോധിക്കുന്നു.",
+      "visual_data": {
+        "actors": [
+          {
+            "label": "XYZ Ltd",
+            "detail": "Company",
+            "icon": "factory",
+            "at": 1.78
+          },
+          {
+            "label": "Madurai Hotel",
+            "detail": "3-star hotel",
+            "icon": "house",
+            "at": 1.78
+          },
+          {
+            "label": "Coimbatore Hotel",
+            "detail": "4-star hotel",
+            "icon": "house",
+            "at": 4.98
+          }
+        ],
+        "transaction": "Commencement on 1.4.2025",
+        "facts": [
+          {
+            "label": "Commencement Date",
+            "date": "1.4.2025",
+            "icon": "calendar",
+            "at": 9.37
+          }
+        ]
+      },
+      "start": 0.0,
+      "end": 12.64,
+      "id": "b1",
+      "director_goal": "Establish XYZ Ltd's dual hotel operations and the commencement of the Madurai project.",
+      "anchor_phrases": [
+        "XYZ Ltd",
+        "Madurai Hotel",
+        "Coimbatore Hotel",
+        "1.4.2025"
+      ],
+      "animation_role": "key_fact",
+      "anchor_alignment": [
+        {
+          "phrase": "XYZ Ltd",
+          "at": 1.78,
+          "matched": true,
+          "score": 0.898
+        },
+        {
+          "phrase": "Madurai Hotel",
+          "at": 4.98,
+          "matched": true,
+          "score": 0.621
+        },
+        {
+          "phrase": "Coimbatore Hotel",
+          "at": 4.36,
+          "matched": false,
+          "score": 0.476
+        },
+        {
+          "phrase": "1.4.2025",
+          "at": 9.26,
+          "matched": true,
+          "score": 0.667
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 4
+      }
+    },
+    {
+      "layout": "checklist_gate",
+      "title": {
+        "text": "Section 35AD Eligibility",
+        "at": 13.29
+      },
+      "voice_sync_text": "Section 35AD പ്രകാരം Specified Business ആയി അംഗീകരിക്കാൻ Account payee cheque അല്ലെങ്കിൽ ECS വഴിയാണ് പണം നൽകിയിട്ടുള്ളത്.",
+      "visual_data": {
+        "conditions": [
+          {
+            "label": "Section 35AD",
+            "detail": "Eligible specified business",
+            "pass": true,
+            "icon": "document",
+            "at": 13.51
+          },
+          {
+            "label": "Account payee cheque",
+            "detail": "Payment mode",
+            "pass": true,
+            "icon": "bank",
+            "at": 18.47
+          },
+          {
+            "label": "ECS",
+            "detail": "Electronic clearing service",
+            "pass": true,
+            "icon": "bank",
+            "at": 20.2
+          }
+        ],
+        "outcome": "Conditions Passed"
+      },
+      "start": 12.99,
+      "end": 22.79,
+      "id": "b2",
+      "director_goal": "Verify Section 35AD eligibility for the new 3-star hotel and the payment method.",
+      "anchor_phrases": [
+        "Section 35AD",
+        "Specified Business",
+        "Account payee cheque",
+        "ECS"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Section 35AD",
+          "at": 13.51,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Specified Business",
+          "at": 14.69,
+          "matched": false,
+          "score": 0.385
+        },
+        {
+          "phrase": "Account payee cheque",
+          "at": 18.47,
+          "matched": true,
+          "score": 0.87
+        },
+        {
+          "phrase": "ECS",
+          "at": 20.09,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 4
+      }
+    },
+    {
+      "layout": "deemed_value",
+      "title": {
+        "text": "Land Exclusion Rule",
+        "at": 23.44
+      },
+      "voice_sync_text": "₹1.50 crore land acquisition value ഒഴിവാക്കുമ്പോൾ, ₹50 lakh eligible capital expenditure ആയി ലഭിക്കുന്നു.",
+      "visual_data": {
+        "actual": {
+          "label": "Total Expenditure",
+          "amount": 200,
+          "value": "₹2 crore",
+          "icon": "money_bag",
+          "at": 29.6
+        },
+        "deemed": {
+          "label": "Excluding Land",
+          "amount": 50,
+          "value": "₹50 lakh eligible",
+          "icon": "plot",
+          "at": 29.6
+        },
+        "rule": "Land Exclusion Rule: ₹1.50 crore for land is excluded.",
+        "at": 25.44
+      },
+      "start": 23.14,
+      "end": 31.94,
+      "id": "b3",
+      "director_goal": "Apply the Land Exclusion rule to the current year capital expenditure.",
+      "anchor_phrases": [
+        "Excluding Land",
+        "₹1.50 crore",
+        "₹50 lakh eligible"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Excluding Land",
+          "at": 24.68,
+          "matched": true,
+          "score": 0.5
+        },
+        {
+          "phrase": "₹1.50 crore",
+          "at": 23.14,
+          "matched": false,
+          "score": 0.353
+        },
+        {
+          "phrase": "₹50 lakh eligible",
+          "at": 28.3,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 2,
+        "total": 3
+      }
+    },
+    {
+      "layout": "timeline_windows",
+      "title": {
+        "text": "Pre-commencement Capitalization",
+        "at": 32.59
+      },
+      "voice_sync_text": "January to March 2025 കാലയളവിൽ incurred ചെയ്ത ₹50 lakh Capitalized on 1.4.2025 ആണ്.",
+      "visual_data": {
+        "events": [
+          {
+            "label": "Pre-commencement period",
+            "window_start": "January to March 2025",
+            "window_end": "1.4.2025",
+            "amount": 50,
+            "value": "₹50 lakh",
+            "icon": "calendar",
+            "at": 35.45
+          }
+        ],
+        "window_label": "January to March 2025 to 1.4.2025"
+      },
+      "start": 32.29,
+      "end": 42.01,
+      "id": "b4",
+      "director_goal": "Validate the pre-commencement expenditure capitalized on the start date.",
+      "anchor_phrases": [
+        "January to March 2025",
+        "Capitalized on 1.4.2025",
+        "₹50 lakh"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "January to March 2025",
+          "at": 32.85,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Capitalized on 1.4.2025",
+          "at": 36.11,
+          "matched": true,
+          "score": 0.745
+        },
+        {
+          "phrase": "₹50 lakh",
+          "at": 37.17,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 3
+      }
+    },
+    {
+      "layout": "ledger",
+      "title": {
+        "text": "Madurai Unit Computation",
+        "at": 42.66
+      },
+      "voice_sync_text": "Total deduction ₹100 lakh ലഭിക്കുന്നു. Profit ₹25 lakh ഉം, അതിനെ തുടർന്ന് Loss ₹75 lakh ഉം കണക്കാക്കുന്നു.",
+      "visual_data": {
+        "rows": [
+          {
+            "label": "Profit before deduction",
+            "amount": 25,
+            "value": "₹25 lakh",
+            "sign": "+",
+            "icon": "money_bag",
+            "at": 46.46
+          },
+          {
+            "label": "Total deduction ₹100 lakh",
+            "amount": 100,
+            "value": "₹100 lakh",
+            "sign": "-",
+            "icon": "document",
+            "at": 46.46
+          },
+          {
+            "label": "Loss ₹75 lakh",
+            "amount": 75,
+            "value": "₹75 lakh",
+            "sign": "=",
+            "icon": "scales",
+            "at": 49.06
+          }
+        ],
+        "total": "Loss ₹75 lakh"
+      },
+      "start": 42.36,
+      "end": 51.76,
+      "id": "b5",
+      "director_goal": "Compute the total deduction and the resulting loss for the Madurai unit.",
+      "anchor_phrases": [
+        "Total deduction ₹100 lakh",
+        "Profit ₹25 lakh",
+        "Loss ₹75 lakh"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Total deduction ₹100 lakh",
+          "at": 43.54,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Profit ₹25 lakh",
+          "at": 46.46,
+          "matched": true,
+          "score": 0.995
+        },
+        {
+          "phrase": "Loss ₹75 lakh",
+          "at": 49.06,
+          "matched": true,
+          "score": 0.977
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 3
+      }
+    },
+    {
+      "layout": "waterfall",
+      "title": {
+        "text": "Section 73A Set-off",
+        "at": 52.41
+      },
+      "voice_sync_text": "Section 73A പ്രകാരം Coimbatore hotel ന്റെ ₹120 lakh profit ൽ നിന്നും Madurai hotel loss set-off ചെയ്ത് Net ₹45 lakh കണ്ടെത്തുന്നു.",
+      "visual_data": {
+        "stages": [
+          {
+            "label": "Coimbatore Profit",
+            "amount": 120,
+            "value": "₹120 lakh profit",
+            "sign": "+",
+            "icon": "money_bag",
+            "at": 54.99
+          },
+          {
+            "label": "Madurai Loss Set-off",
+            "amount": 75,
+            "value": "₹75 lakh",
+            "sign": "-",
+            "icon": "document",
+            "at": 54.99
+          },
+          {
+            "label": "Section 73A",
+            "amount": 45,
+            "value": "Net ₹45 lakh",
+            "sign": "=",
+            "icon": "scales",
+            "at": 54.99
+          }
+        ]
+      },
+      "start": 52.11,
+      "end": 62.99,
+      "id": "b6",
+      "director_goal": "Demonstrate the Section 73A set-off against the Coimbatore hotel profits.",
+      "anchor_phrases": [
+        "Section 73A",
+        "Set-off",
+        "₹120 lakh profit",
+        "Net ₹45 lakh"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Section 73A",
+          "at": 52.61,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Set-off",
+          "at": 54.99,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "₹120 lakh profit",
+          "at": 56.13,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Net ₹45 lakh",
+          "at": 60.73,
+          "matched": false,
+          "score": 0.333
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 4
+      }
+    },
+    {
+      "layout": "takeaway",
+      "title": {
+        "text": "Statutory Takeaways",
+        "at": 63.64
+      },
+      "voice_sync_text": "Only against specified business മാത്രമേ set-off ചെയ്യാൻ കഴിയൂ. Indefinite carry forward ചെയ്യാൻ Return filing mandatory ആണ്.",
+      "visual_data": {
+        "rules": [
+          {
+            "label": "Only against specified business",
+            "detail": "Set-off restriction",
+            "icon": "padlock",
+            "at": 63.34
+          },
+          {
+            "label": "Indefinite carry forward",
+            "detail": "Loss carry forward rule",
+            "icon": "calendar",
+            "at": 66.26
+          },
+          {
+            "label": "Return filing mandatory",
+            "detail": "Condition for carry forward",
+            "icon": "document",
+            "at": 69.46
+          }
+        ]
+      },
+      "start": 63.34,
+      "end": 72.02,
+      "id": "b7",
+      "director_goal": "Summarize the restriction on set-off and the indefinite carry forward rule.",
+      "anchor_phrases": [
+        "Only against specified business",
+        "Indefinite carry forward",
+        "Return filing mandatory"
+      ],
+      "animation_role": "key_fact",
+      "anchor_alignment": [
+        {
+          "phrase": "Only against specified business",
+          "at": 63.9,
+          "matched": true,
+          "score": 0.912
+        },
+        {
+          "phrase": "Indefinite carry forward",
+          "at": 69.12,
+          "matched": true,
+          "score": 0.754
+        },
+        {
+          "phrase": "Return filing mandatory",
+          "at": 69.46,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 3
+      }
+    }
+  ],
+  "audio_duration_sec": 72.02,
+  "anchor_match": {
+    "matched": 20,
+    "total": 24,
+    "rate": 0.833
+  }
+}

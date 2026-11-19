@@ -1,0 +1,503 @@
+{
+  "question_id": "dt-c3-q15",
+  "audio_url": "data/audio/dt-c3-q15.mp3",
+  "duration_sec": 181.67,
+  "sync_offset_sec": 0.0,
+  "context_pill": "Scheduled Bank: Bad Debts vs Provision",
+  "example_summary": "This example calculates the net deduction for bad debts for a Scheduled Bank by applying the proviso to Section 36(1)(vii), which requires setting off actual bad debts against the total provision balance created under Section 36(1)(viia).",
+  "source_provision": "### Statutory Interplay: Section 36(1)(vii) & Section 36(1)(viia)\n\n| Statutory Provision | Target Assessee | Quantitative Limit / Allowance | Statutory Basis |\n| :--- | :--- | :--- | :--- |\n| **Section 36(1)(viia)** | Scheduled Bank / Indian Bank | 8.5% of Gross Total Income + 10% of Aggregate Average Rural Advances | Provision for Bad & Doubtful Debts |\n| **Section 36(1)(vii)** | All Assessees (including Banks) | Actual Bad Debts written off in books of account | Direct Write-off Deduction |\n| **Proviso to Sec 36(1)(vii)** | Assessees covered u/s 36(1)(viia) | Restricted to: Write-off minus Closing Credit Balance of Provision | Proviso Excess Test |\n\n\n#### Key Statutory Conditions Checklist\n\n* **Current Year Provision Ceiling u/s 36(1)(viia):** Computed as 8.5% of Gross Total Income (before deduction u/s 36(1)(viia) and Chapter VI-A) **PLUS** 10% of Aggregate Average Advances (AAA) made by rural branches.\n* **Cumulative Credit Balance Rule:** Credit balance of provision u/s 36(1)(viia) equals **Opening Provision brought forward** PLUS **Current Year Provision allowed** u/s 36(1)(viia).\n* **Net Allowable Write-off u/s 36(1)(vii):** $\\text{Allowable Bad Debts Deduction} = \\text{Bad Debts written off} - \\text{Total Provision Balance u/s 36(1)(viia)}$.\n\n\n> [!IMPORTANT] Interplay Trap: Double Deduction Prohibition\n> A bank cannot claim full deduction for bad debts written off without reducing the existing provision credit balance. The proviso ensures that debts are first set off against provisions created u/s 36(1)(viia), avoiding double tax deduction.",
+  "director": {
+    "archetype": "set_off_carry_forward_waterfall",
+    "justification": "The provision credit balance acts as a primary absorption layer for bad debts, where only the excess write-off qualifies for a separate deduction under the proviso to Section 36(1)(vii).",
+    "protagonist": "Scheduled Bank",
+    "actors": [
+      "Rural Branches",
+      "Urban Advances",
+      "Income Tax Department"
+    ],
+    "key_numbers": [
+      "₹100 lakh",
+      "₹800 lakh",
+      "₹300 lakh",
+      "₹210 lakh",
+      "8.5%",
+      "10%",
+      "₹198 lakh",
+      "₹12 lakh"
+    ],
+    "key_dates": [
+      "A.Y. 2025-26",
+      "A.Y. 2026-27",
+      "31.3.2026"
+    ],
+    "visual_metaphor": "A provision reservoir that must be completely filled by bad debt write-offs before any deduction 'overflows' into the Section 36(1)(vii) bucket.",
+    "beat_plan": [
+      {
+        "beat_goal": "Establish the bank's starting financial position and the two relevant sections.",
+        "layout": "example_scene",
+        "anchor_phrases": [
+          "Scheduled Bank",
+          "A.Y. 2026-27",
+          "Section 36(1)(vii)",
+          "Section 36(1)(viia)"
+        ]
+      },
+      {
+        "beat_goal": "Calculate the current year provision allowed under Section 36(1)(viia).",
+        "layout": "ledger",
+        "anchor_phrases": [
+          "8.5% of ₹800 lakhs",
+          "10% of ₹300 lakhs",
+          "₹98 lakh"
+        ]
+      },
+      {
+        "beat_goal": "Aggregate the total credit balance in the provision account.",
+        "layout": "waterfall",
+        "anchor_phrases": [
+          "Opening Provision ₹100 lakh",
+          "Current Provision ₹98 lakh",
+          "Total Balance ₹198 lakh"
+        ]
+      },
+      {
+        "beat_goal": "Introduce the actual bad debts written off in the books.",
+        "layout": "flow_actors",
+        "anchor_phrases": [
+          "Bad debts written off",
+          "₹210 lakh",
+          "Urban advances"
+        ]
+      },
+      {
+        "beat_goal": "Apply the Proviso to Section 36(1)(vii) to determine the excess.",
+        "layout": "checklist_gate",
+        "anchor_phrases": [
+          "Proviso to Section 36(1)(vii)",
+          "Excess over Provision",
+          "₹210 lakh minus ₹198 lakh"
+        ]
+      },
+      {
+        "beat_goal": "Conclude with the final allowable deduction for the assessment year.",
+        "layout": "takeaway",
+        "anchor_phrases": [
+          "Deduction allowable",
+          "₹12 lakh",
+          "A.Y. 2026-27"
+        ]
+      }
+    ]
+  },
+  "fallback": false,
+  "beats": [
+    {
+      "layout": "example_scene",
+      "title": {
+        "text": "Scheduled Bank Statutory Interplay",
+        "at": 0.3
+      },
+      "voice_sync_text": "നമസ്കാരം. ഇന്ന് നമ്മൾ പഠിക്കാൻ പോകുന്നത് Scheduled Bank-കൾക്കുള്ള Section 36(1)(vii) Bad Debts write off ഉം Section 36(1)(viia) Provision for Bad & Doubtful Debts ഉം തമ്മിലുള്ള statutory interplay ആണ്. A.Y. 2026-27-ലെ ഒരു കേസ് നമുക്ക് പരിശോധിക്കാം.",
+      "visual_data": {
+        "actors": [
+          {
+            "label": "Scheduled Bank",
+            "icon": "bank",
+            "at": 3.47
+          },
+          {
+            "label": "Income Tax Department",
+            "icon": "gavel",
+            "at": 3.47
+          }
+        ],
+        "transaction": "Tax Audit for A.Y. 2026-27",
+        "facts": [
+          {
+            "label": "Section 36(1)(vii)",
+            "detail": "Bad Debts Write-off",
+            "at": 3.5
+          },
+          {
+            "label": "Section 36(1)(viia)",
+            "detail": "Provision for Bad Debts",
+            "at": 8.84
+          }
+        ]
+      },
+      "start": 0.0,
+      "end": 21.0,
+      "id": "b1",
+      "director_goal": "Establish the bank's starting financial position and the two relevant sections.",
+      "anchor_phrases": [
+        "Scheduled Bank",
+        "A.Y. 2026-27",
+        "Section 36(1)(vii)",
+        "Section 36(1)(viia)"
+      ],
+      "animation_role": "key_fact",
+      "anchor_alignment": [
+        {
+          "phrase": "Scheduled Bank",
+          "at": 3.47,
+          "matched": false,
+          "score": 0.452
+        },
+        {
+          "phrase": "A.Y. 2026-27",
+          "at": 16.8,
+          "matched": true,
+          "score": 0.952
+        },
+        {
+          "phrase": "Section 36(1)(vii)",
+          "at": 5.59,
+          "matched": false,
+          "score": 0.174
+        },
+        {
+          "phrase": "Section 36(1)(viia)",
+          "at": 9.15,
+          "matched": false,
+          "score": 0.167
+        }
+      ],
+      "anchor_match": {
+        "matched": 1,
+        "total": 4
+      }
+    },
+    {
+      "layout": "ledger",
+      "title": {
+        "text": "Current Year Provision Calculation",
+        "at": 21.65
+      },
+      "voice_sync_text": "Section 36(1)(viia) അനുസരിച്ച് current year provision അനുവദിക്കുന്നത് Gross Total Income-ന്റെ 8.5% of ₹800 lakhs ഉം, rural branches നൽകിയ advances-ന്റെ 10% of ₹300 lakhs ഉം ചേർത്താണ്. ഇത് ആകെ ₹98 lakh വരും.",
+      "visual_data": {
+        "rows": [
+          {
+            "label": "8.5% of ₹800 lakhs",
+            "amount": 68,
+            "icon": "money_bag",
+            "at": 55.59
+          },
+          {
+            "label": "10% of ₹300 lakhs",
+            "amount": 30,
+            "icon": "house",
+            "at": 60.41
+          }
+        ],
+        "total": "₹98 lakh"
+      },
+      "start": 21.35,
+      "end": 65.35,
+      "id": "b2",
+      "director_goal": "Calculate the current year provision allowed under Section 36(1)(viia).",
+      "anchor_phrases": [
+        "8.5% of ₹800 lakhs",
+        "10% of ₹300 lakhs",
+        "₹98 lakh"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "8.5% of ₹800 lakhs",
+          "at": 55.59,
+          "matched": true,
+          "score": 0.932
+        },
+        {
+          "phrase": "10% of ₹300 lakhs",
+          "at": 60.41,
+          "matched": true,
+          "score": 0.92
+        },
+        {
+          "phrase": "₹98 lakh",
+          "at": 63.77,
+          "matched": true,
+          "score": 0.787
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 3
+      }
+    },
+    {
+      "layout": "waterfall",
+      "title": {
+        "text": "Total Provision Credit Balance",
+        "at": 66.0
+      },
+      "voice_sync_text": "Explanation 2 പ്രകാരം total credit balance കണക്കാക്കുമ്പോൾ Opening Provision ₹100 lakh brought forward-ന്റെ കൂടെ Current Provision ₹98 lakh കൂടി ആഡ് ചെയ്യണം. അപ്പോൾ Total Balance ₹198 lakh ആയി മാറുന്നു.",
+      "visual_data": {
+        "stages": [
+          {
+            "label": "Opening Provision ₹100 lakh",
+            "amount": 100,
+            "sign": "+",
+            "at": 70.44
+          },
+          {
+            "label": "Current Provision ₹98 lakh",
+            "amount": 98,
+            "sign": "+",
+            "at": 74.22
+          },
+          {
+            "label": "Total Balance ₹198 lakh",
+            "amount": 198,
+            "sign": "=",
+            "at": 78.36
+          }
+        ]
+      },
+      "start": 65.7,
+      "end": 81.7,
+      "id": "b3",
+      "director_goal": "Aggregate the total credit balance in the provision account.",
+      "anchor_phrases": [
+        "Opening Provision ₹100 lakh",
+        "Current Provision ₹98 lakh",
+        "Total Balance ₹198 lakh"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Opening Provision ₹100 lakh",
+          "at": 70.44,
+          "matched": true,
+          "score": 0.912
+        },
+        {
+          "phrase": "Current Provision ₹98 lakh",
+          "at": 74.22,
+          "matched": true,
+          "score": 0.896
+        },
+        {
+          "phrase": "Total Balance ₹198 lakh",
+          "at": 78.36,
+          "matched": true,
+          "score": 0.834
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 3
+      }
+    },
+    {
+      "layout": "flow_actors",
+      "title": {
+        "text": "Actual Bad Debts Written Off",
+        "at": 82.35
+      },
+      "voice_sync_text": "ഈ വർഷം Urban advances-മായി ബന്ധപ്പെട്ട് Bad debts written off ചെയ്തത് ₹210 lakh ആണ്. ഇത് ബുക്സിൽ രേഖപ്പെടുത്തിയിട്ടുണ്ട്.",
+      "visual_data": {
+        "actors": [
+          {
+            "label": "Urban advances",
+            "icon": "factory",
+            "at": 87.05
+          },
+          {
+            "label": "Books of Account",
+            "icon": "document",
+            "at": 87.05
+          }
+        ],
+        "edges": [
+          {
+            "label": "Bad debts written off",
+            "amount": 210,
+            "from": "Urban advances",
+            "to": "Books of Account",
+            "at": 87.05
+          }
+        ],
+        "spoken_amounts": [
+          "₹210 lakh"
+        ]
+      },
+      "start": 82.05,
+      "end": 92.09,
+      "id": "b4",
+      "director_goal": "Introduce the actual bad debts written off in the books.",
+      "anchor_phrases": [
+        "Bad debts written off",
+        "₹210 lakh",
+        "Urban advances"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Bad debts written off",
+          "at": 84.33,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "₹210 lakh",
+          "at": 88.07,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Urban advances",
+          "at": 82.63,
+          "matched": false,
+          "score": 0.333
+        }
+      ],
+      "anchor_match": {
+        "matched": 2,
+        "total": 3
+      }
+    },
+    {
+      "layout": "checklist_gate",
+      "title": {
+        "text": "The Proviso Excess Test",
+        "at": 92.74
+      },
+      "voice_sync_text": "Proviso to Section 36(1)(vii) പ്രകാരം books-ൽ write off ചെയ്ത actual Bad Debts, existing total provision credit balance-നെക്കാൾ ഉയർന്ന തുകയാണെങ്കിൽ മാത്രമേ ആ Excess amount deduct ചെയ്യാൻ പാടുള്ളൂ. ഇവിടെ Excess over Provision എന്നത് ₹210 lakh minus ₹198 lakh ആണ്.",
+      "visual_data": {
+        "conditions": [
+          {
+            "label": "Actual Bad Debts",
+            "amount": 210,
+            "pass": true,
+            "at": 126.5
+          },
+          {
+            "label": "Total Provision Balance",
+            "amount": 198,
+            "sign": "-",
+            "at": 128.54
+          }
+        ],
+        "outcome": "₹12 lakh",
+        "spoken_amounts": [
+          "₹210 lakh",
+          "₹198 lakh"
+        ]
+      },
+      "start": 92.44,
+      "end": 140.6,
+      "id": "b5",
+      "director_goal": "Apply the Proviso to Section 36(1)(vii) to determine the excess.",
+      "anchor_phrases": [
+        "Proviso to Section 36(1)(vii)",
+        "Excess over Provision",
+        "₹210 lakh minus ₹198 lakh"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Proviso to Section 36(1)(vii)",
+          "at": 122.38,
+          "matched": true,
+          "score": 0.866
+        },
+        {
+          "phrase": "Excess over Provision",
+          "at": 135.5,
+          "matched": true,
+          "score": 0.905
+        },
+        {
+          "phrase": "₹210 lakh minus ₹198 lakh",
+          "at": 136.96,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 3
+      }
+    },
+    {
+      "layout": "takeaway",
+      "title": {
+        "text": "Final Allowable Deduction",
+        "at": 141.25
+      },
+      "voice_sync_text": "അതുകൊണ്ട് A.Y. 2026-27-ലേക്ക് Section 36(1)(vii) പ്രകാരം Deduction allowable ആയിട്ടുള്ളത് ₹12 lakh ആണ്. ബാക്കി തുക provision reservoir-ൽ നിന്നും അഡ്ജസ്റ്റ് ചെയ്യപ്പെട്ടു.",
+      "visual_data": {
+        "rules": [
+          {
+            "label": "Deduction allowable",
+            "value": "₹12 lakh",
+            "icon": "money_bag",
+            "at": 175.19
+          },
+          {
+            "label": "Assessment Year",
+            "value": "A.Y. 2026-27",
+            "icon": "calendar",
+            "at": 175.19
+          },
+          {
+            "label": "Statutory Basis",
+            "value": "Proviso to Section 36(1)(vii)",
+            "icon": "scales",
+            "at": 175.19
+          }
+        ]
+      },
+      "start": 140.95,
+      "end": 181.67,
+      "id": "b6",
+      "director_goal": "Conclude with the final allowable deduction for the assessment year.",
+      "anchor_phrases": [
+        "Deduction allowable",
+        "₹12 lakh",
+        "A.Y. 2026-27"
+      ],
+      "animation_role": "key_fact",
+      "anchor_alignment": [
+        {
+          "phrase": "Deduction allowable",
+          "at": 175.19,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "₹12 lakh",
+          "at": 176.85,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "A.Y. 2026-27",
+          "at": 143.35,
+          "matched": false,
+          "score": 0.286
+        }
+      ],
+      "anchor_match": {
+        "matched": 2,
+        "total": 3
+      }
+    }
+  ],
+  "needs_review": true,
+  "quality_issues": [
+    "unsupported amount: 10000000",
+    "unsupported amount: 1200000",
+    "unsupported amount: 19800000",
+    "unsupported amount: 21000000",
+    "unsupported amount: 9800000"
+  ],
+  "audio_duration_sec": 181.67,
+  "anchor_match": {
+    "matched": 14,
+    "total": 19,
+    "rate": 0.737
+  }
+}

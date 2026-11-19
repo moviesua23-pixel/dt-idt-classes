@@ -1,0 +1,512 @@
+{
+  "question_id": "dt-c3-q19",
+  "audio_url": "data/audio/dt-c3-q19.mp3",
+  "duration_sec": 144.87,
+  "sync_offset_sec": 0.0,
+  "context_pill": "PGBP - Section 43B Deductions",
+  "example_summary": "Deduction of interest on loans converted into fresh loans under Section 43B.",
+  "source_provision": "| Category | Provision | Statutory Condition |\n| :--- | :--- | :--- |\n| Scope | Section 43B(d) / 43B(e) | Interest on loans from specified financial institutions or scheduled banks |\n| Timing | Actual Payment Rule | Deduction allowable only in the Previous Year in which payment is actually made |\n| Exclusion | Explanation 3C | Conversion of unpaid interest into a loan is NOT considered 'actual payment' |\n\n> [!IMPORTANT] Statutory Trigger:\n> The deduction for interest payable to financial institutions and banks is subject to the 'Actual Payment' condition under Section 43B. Even if the assessee follows the mercantile system of accounting, the tax benefit is deferred until the cash outflow occurs.\n\n> [!WARNING] The Conversion Trap:\n> When an assessee defaults on interest and enters into a restructuring agreement where the interest is converted into a fresh loan, Section 43B explicitly bars the deduction upon such conversion. The deduction is deferred until the subsequent repayment of the converted loan installments.",
+  "director": {
+    "archetype": "threshold_test",
+    "justification": "The scenario tests whether the 'actual payment' threshold under Section 43B is met, specifically clarifying that interest conversion into a loan fails this test.",
+    "protagonist": "Hari",
+    "actors": [
+      "Andhra Pradesh State Financial Corporation (APSFC)",
+      "Indian Bank"
+    ],
+    "key_numbers": [
+      "15,00,000",
+      "30,00,000",
+      "45,00,000",
+      "60 installments",
+      "1,25,000",
+      "1,50,000",
+      "2,75,000"
+    ],
+    "key_dates": [
+      "2025-26",
+      "31.3.2026"
+    ],
+    "visual_metaphor": "A toll gate that only accepts cash (actual payment) and rejects IOUs (loan conversion) for passage to the deduction zone.",
+    "beat_plan": [
+      {
+        "beat_goal": "Establish Hari's business context and the massive interest liability being claimed.",
+        "layout": "example_scene",
+        "anchor_phrases": [
+          "Hari",
+          "agricultural commodities",
+          "45,00,000 interest"
+        ]
+      },
+      {
+        "beat_goal": "Introduce the statutory gatekeeper: Section 43B.",
+        "layout": "checklist_gate",
+        "anchor_phrases": [
+          "Section 43B",
+          "Actual Payment Rule",
+          "irrespective of method of accounting"
+        ]
+      },
+      {
+        "beat_goal": "Expose the 'Conversion Trap' where interest becomes a loan.",
+        "layout": "deemed_value",
+        "anchor_phrases": [
+          "Explanation 3C",
+          "converted into loan",
+          "not construed as payment"
+        ]
+      },
+      {
+        "beat_goal": "Calculate the allowable deduction for the APSFC loan based on actual installments.",
+        "layout": "ledger",
+        "anchor_phrases": [
+          "APSFC",
+          "15,00,000",
+          "5 installments",
+          "1,25,000 allowable"
+        ]
+      },
+      {
+        "beat_goal": "Calculate the allowable deduction for the Indian Bank loan based on actual installments.",
+        "layout": "ledger",
+        "anchor_phrases": [
+          "Indian Bank",
+          "30,00,000",
+          "3 installments",
+          "1,50,000 allowable"
+        ]
+      },
+      {
+        "beat_goal": "Summarize the final allowable amount versus the rejected claim.",
+        "layout": "takeaway",
+        "anchor_phrases": [
+          "Total amount eligible",
+          "2,75,000",
+          "claim of 45,00,000 not tenable"
+        ]
+      }
+    ]
+  },
+  "fallback": false,
+  "beats": [
+    {
+      "layout": "example_scene",
+      "title": {
+        "text": "Hari's Claimed Interest Liability",
+        "at": 0.3
+      },
+      "voice_sync_text": "Hari agricultural commodities ബിസിനസ് നടത്തുന്നു. ഹരി തൻ്റെ ബിസിനസ്സിൽ APSFC, Indian Bank എന്നിവരിൽ നിന്നുള്ള ലോൺ പലിശയായി 45,00,000 interest മുഴുവനായി അലവൻസിനായി ക്ലെയിം ചെയ്തു.",
+      "visual_data": {
+        "actors": [
+          {
+            "label": "Hari",
+            "detail": "Trader in agricultural commodities",
+            "icon": "person",
+            "at": 0.8
+          },
+          {
+            "label": "APSFC & Indian Bank",
+            "detail": "Lenders",
+            "icon": "bank",
+            "at": 6.88
+          }
+        ],
+        "transaction": "Borrowing & Restructuring",
+        "facts": [
+          {
+            "label": "Business",
+            "detail": "Purchase and sale of agricultural commodities",
+            "at": 6.88
+          },
+          {
+            "label": "Total Interest Claimed",
+            "amount": 4500000,
+            "value": "45,00,000 interest",
+            "icon": "money_bag",
+            "at": 11.08
+          }
+        ]
+      },
+      "start": 0.0,
+      "end": 16.0,
+      "id": "b1",
+      "director_goal": "Establish Hari's business context and the massive interest liability being claimed.",
+      "anchor_phrases": [
+        "Hari",
+        "agricultural commodities",
+        "45,00,000 interest"
+      ],
+      "animation_role": "key_fact",
+      "anchor_alignment": [
+        {
+          "phrase": "Hari",
+          "at": 4.1,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "agricultural commodities",
+          "at": 0.45,
+          "matched": false,
+          "score": 0.308
+        },
+        {
+          "phrase": "45,00,000 interest",
+          "at": 11.48,
+          "matched": true,
+          "score": 0.804
+        }
+      ],
+      "anchor_match": {
+        "matched": 2,
+        "total": 3
+      }
+    },
+    {
+      "layout": "checklist_gate",
+      "title": {
+        "text": "Section 43B: Actual Payment Rule",
+        "at": 16.65
+      },
+      "voice_sync_text": "എന്നാൽ Section 43B അനുസരിച്ച്, ബാങ്ക് ലോൺ പലിശ Actual Payment Rule അടിസ്ഥാനത്തിൽ മാത്രമേ ഡിഡക്ഷൻ അനുവദിക്കൂ, irrespective of method of accounting.",
+      "visual_data": {
+        "conditions": [
+          {
+            "label": "Section 43B",
+            "detail": "Interest on bank/FI loans",
+            "pass": true,
+            "icon": "document",
+            "at": 17.43
+          },
+          {
+            "label": "Actual Payment Rule",
+            "detail": "Deduction allowed only on cash outflow",
+            "pass": true,
+            "icon": "money_bag",
+            "at": 21.79
+          },
+          {
+            "label": "Method of Accounting",
+            "detail": "Irrespective of mercantile or cash basis",
+            "pass": true,
+            "icon": "scales",
+            "at": 26.69
+          }
+        ],
+        "outcome": "Actual payment mandatory for deduction"
+      },
+      "start": 16.35,
+      "end": 28.07,
+      "id": "b2",
+      "director_goal": "Introduce the statutory gatekeeper: Section 43B.",
+      "anchor_phrases": [
+        "Section 43B",
+        "Actual Payment Rule",
+        "irrespective of method of accounting"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Section 43B",
+          "at": 17.43,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Actual Payment Rule",
+          "at": 21.79,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "irrespective of method of accounting",
+          "at": 25.81,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 3
+      }
+    },
+    {
+      "layout": "deemed_value",
+      "title": {
+        "text": "Conversion Trap under Explanation 3C",
+        "at": 28.72
+      },
+      "voice_sync_text": "Explanation 3C വ്യക്തമാക്കുന്നത്, unpaid interest converted into loan ആണെങ്കിൽ, അത് payment ആയി not construed as payment.",
+      "visual_data": {
+        "actual": {
+          "label": "Unpaid Interest Converted",
+          "detail": "Interest converted into 60 installments",
+          "icon": "document",
+          "at": 58.96
+        },
+        "deemed": {
+          "label": "Deemed Payment",
+          "detail": "Not construed as payment upon conversion",
+          "pass": false,
+          "icon": "padlock",
+          "at": 61.7
+        },
+        "rule": "Explanation 3C: Deduction deferred until actual payment of installments",
+        "at": 56.66
+      },
+      "start": 28.42,
+      "end": 64.34,
+      "id": "b3",
+      "director_goal": "Expose the 'Conversion Trap' where interest becomes a loan.",
+      "anchor_phrases": [
+        "Explanation 3C",
+        "converted into loan",
+        "not construed as payment"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Explanation 3C",
+          "at": 50.74,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "converted into loan",
+          "at": 59.84,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "not construed as payment",
+          "at": 62.66,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 3
+      }
+    },
+    {
+      "layout": "ledger",
+      "title": {
+        "text": "APSFC Loan Deduction Calculation",
+        "at": 64.99
+      },
+      "voice_sync_text": "APSFC ലോൺ തുകയായ 15,00,000 ൽ, 60 ഇൻസ്‌റ്റാൾമെന്റുകളിൽ 5 installments അടച്ചതിനാൽ 1,25,000 allowable ആകുന്നു.",
+      "visual_data": {
+        "rows": [
+          {
+            "label": "APSFC Interest Converted",
+            "amount": 1500000,
+            "value": "15,00,000",
+            "at": 70.7
+          },
+          {
+            "label": "Installments Paid",
+            "value": "5 installments out of 60",
+            "at": 75.3
+          },
+          {
+            "label": "Calculation",
+            "detail": "(15,00,000 / 60) * 5",
+            "amount": 125000,
+            "value": "1,25,000 allowable",
+            "sign": "+",
+            "at": 75.3
+          }
+        ],
+        "total": "1,25,000 allowable"
+      },
+      "start": 64.69,
+      "end": 102.53,
+      "id": "b4",
+      "director_goal": "Calculate the allowable deduction for the APSFC loan based on actual installments.",
+      "anchor_phrases": [
+        "APSFC",
+        "15,00,000",
+        "5 installments",
+        "1,25,000 allowable"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "APSFC",
+          "at": 85.77,
+          "matched": true,
+          "score": 0.571
+        },
+        {
+          "phrase": "15,00,000",
+          "at": 70.7,
+          "matched": false,
+          "score": 0.2
+        },
+        {
+          "phrase": "5 installments",
+          "at": 83.79,
+          "matched": false,
+          "score": 0.333
+        },
+        {
+          "phrase": "1,25,000 allowable",
+          "at": 92.98,
+          "matched": false,
+          "score": 0.341
+        }
+      ],
+      "anchor_match": {
+        "matched": 1,
+        "total": 4
+      }
+    },
+    {
+      "layout": "ledger",
+      "title": {
+        "text": "Indian Bank Loan Deduction Calculation",
+        "at": 103.18
+      },
+      "voice_sync_text": "Indian Bank ലോൺ തുകയായ 30,00,000 ൽ, 3 installments അടച്ചതിനാൽ 1,50,000 allowable ആകുന്നു.",
+      "visual_data": {
+        "rows": [
+          {
+            "label": "Indian Bank Interest Converted",
+            "amount": 3000000,
+            "value": "30,00,000",
+            "at": 103.24
+          },
+          {
+            "label": "Installments Paid",
+            "value": "3 installments out of 60",
+            "at": 106.56
+          },
+          {
+            "label": "Calculation",
+            "detail": "(30,00,000 / 60) * 3",
+            "amount": 150000,
+            "value": "1,50,000 allowable",
+            "sign": "+",
+            "at": 106.56
+          }
+        ],
+        "total": "1,50,000 allowable"
+      },
+      "start": 102.88,
+      "end": 111.04,
+      "id": "b5",
+      "director_goal": "Calculate the allowable deduction for the Indian Bank loan based on actual installments.",
+      "anchor_phrases": [
+        "Indian Bank",
+        "30,00,000",
+        "3 installments",
+        "1,50,000 allowable"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Indian Bank",
+          "at": 103.46,
+          "matched": true,
+          "score": 0.533
+        },
+        {
+          "phrase": "30,00,000",
+          "at": 107.42,
+          "matched": true,
+          "score": 0.632
+        },
+        {
+          "phrase": "3 installments",
+          "at": 106.18,
+          "matched": false,
+          "score": 0.095
+        },
+        {
+          "phrase": "1,50,000 allowable",
+          "at": 108.82,
+          "matched": true,
+          "score": 0.56
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 4
+      }
+    },
+    {
+      "layout": "takeaway",
+      "title": {
+        "text": "Final Assessment & Summary",
+        "at": 111.69
+      },
+      "voice_sync_text": "അതിനാൽ Total amount eligible 2,75,000 മാത്രമാണ്; മുഴുവൻ claim of 45,00,000 not tenable.",
+      "visual_data": {
+        "rules": [
+          {
+            "label": "Total amount eligible",
+            "amount": 275000,
+            "value": "2,75,000",
+            "pass": true,
+            "icon": "scales",
+            "at": 138.29
+          },
+          {
+            "label": "Original Claim Status",
+            "detail": "Claim of 45,00,000 not tenable under Section 43B",
+            "amount": 4500000,
+            "value": "45,00,000",
+            "pass": false,
+            "icon": "gavel",
+            "at": 138.29
+          }
+        ]
+      },
+      "start": 111.39,
+      "end": 144.87,
+      "id": "b6",
+      "director_goal": "Summarize the final allowable amount versus the rejected claim.",
+      "anchor_phrases": [
+        "Total amount eligible",
+        "2,75,000",
+        "claim of 45,00,000 not tenable"
+      ],
+      "animation_role": "key_fact",
+      "anchor_alignment": [
+        {
+          "phrase": "Total amount eligible",
+          "at": 138.29,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "2,75,000",
+          "at": 139.85,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "claim of 45,00,000 not tenable",
+          "at": 142.31,
+          "matched": true,
+          "score": 0.894
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 3
+      }
+    }
+  ],
+  "needs_review": true,
+  "quality_issues": [
+    "Q25-specific Hari/Pari names leaked into another question"
+  ],
+  "audio_duration_sec": 144.87,
+  "anchor_match": {
+    "matched": 15,
+    "total": 20,
+    "rate": 0.75
+  }
+}

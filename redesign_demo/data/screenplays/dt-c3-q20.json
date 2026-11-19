@@ -1,0 +1,386 @@
+{
+  "question_id": "dt-c3-q20",
+  "audio_url": "data/audio/dt-c3-q20.mp3",
+  "duration_sec": 145.16,
+  "sync_offset_sec": 0.0,
+  "context_pill": "Section 43B & Explanation 3C",
+  "example_summary": "A Ltd. issued debentures worth 3.50 crores to IFCI Ltd. on 31.3.2026 in lieu of unpaid interest and claimed deduction for A.Y.2026-27.",
+  "source_provision": "| Statutory Provision / Explanation | Core Applicability & Threshold | Mandatory Tax Treatment & Legal Consequence |\n| :--- | :--- | :--- |\n| **Section 43B Main Provision** | Sums payable by way of interest on any loan or borrowing from a public financial institution. | Allowed as deduction strictly in the previous year in which such sum is **actually paid** by the assessee. |\n| **Section 43B Proviso** | Sums paid on or before the due date of filing return of income under **Section 139(1)**. | Allowed as deduction if actual payment is completed prior to the specified return filing deadline. |\n| **Section 43B Explanation 3C** | Interest payable converted into a loan, borrowing, advance, or debenture deferred to a future date. | Conversion into debentures or new borrowings **shall not be deemed as actual payment**, disallowing the deduction. |\n\n\n> [!IMPORTANT]\n> Legislative Intent of Explanation 3C: The statutory insertion of Explanation 3C ensures that mere book entries substituting unpaid interest liabilities with structured debt instruments (like debentures) do not bypass the cash-flow realization requirement mandated under Section 43B.\n\n\n> [!WARNING]\n> Assessing Officer Authority: If an assessee claims a business deduction for interest converted into debentures without cash outflow, the Assessing Officer is statutorily bound to reject the deduction under Section 43B read with Explanation 3C.",
+  "director": {
+    "archetype": "exception_override",
+    "justification": "The case tests whether the conversion of unpaid interest into debentures overrides the general deduction rule under Section 43B via Explanation 3C.",
+    "protagonist": "A Ltd.",
+    "actors": [
+      "A Ltd.",
+      "IFCI Ltd.",
+      "Assessing Officer"
+    ],
+    "key_numbers": [
+      "3.50 crores"
+    ],
+    "key_dates": [
+      "31.3.2026",
+      "A.Y.2026-27"
+    ],
+    "visual_metaphor": "A ledger balance sheet where paper debentures are weighed against physical cash outflow, showing that paper replacement fails the cash payment test.",
+    "beat_plan": [
+      {
+        "beat_goal": "Establish A Ltd. owing interest to IFCI Ltd. and issuing debentures on 31.3.2026.",
+        "layout": "example_scene",
+        "anchor_phrases": [
+          "A Ltd.",
+          "IFCI Ltd.",
+          "31.3.2026",
+          "3.50 crores"
+        ]
+      },
+      {
+        "beat_goal": "Explain the general rule under Section 43B requiring actual payment for interest deduction.",
+        "layout": "statute_quote",
+        "anchor_phrases": [
+          "Section 43B",
+          "actually paid",
+          "PGBP"
+        ]
+      },
+      {
+        "beat_goal": "Examine the proviso regarding payment on or before the due date under Section 139(1).",
+        "layout": "checklist_gate",
+        "anchor_phrases": [
+          "Section 139(1)",
+          "due date",
+          "proviso"
+        ]
+      },
+      {
+        "beat_goal": "Analyze Explanation 3C regarding the conversion of interest into debentures.",
+        "layout": "flow_actors",
+        "anchor_phrases": [
+          "Explanation 3C",
+          "debentures",
+          "deferred to a future date"
+        ]
+      },
+      {
+        "beat_goal": "Conclude on the validity of the Assessing Officer's action rejecting the deduction.",
+        "layout": "takeaway",
+        "anchor_phrases": [
+          "Assessing Officer",
+          "A.Y.2026-27",
+          "correct"
+        ]
+      }
+    ]
+  },
+  "fallback": false,
+  "beats": [
+    {
+      "layout": "example_scene",
+      "title": {
+        "text": "A Ltd. & IFCI Ltd. Interest Liability",
+        "at": 0.3
+      },
+      "voice_sync_text": "ഇവിടെ നമ്മൾ PGBP-യിലെ വളരെ important ആയ ഒരു statutory provision ആണ് പഠിക്കുന്നത്. On 31.3.2026, A Ltd. has an outstanding interest liability of 3.50 crores towards IFCI Ltd., issuing debentures in lieu of actual cash.",
+      "visual_data": {
+        "actors": [
+          {
+            "label": "A Ltd.",
+            "amount": 3.5,
+            "icon": "factory",
+            "at": 38.12
+          },
+          {
+            "label": "IFCI Ltd.",
+            "amount": 3.5,
+            "icon": "bank",
+            "at": 43.4
+          }
+        ],
+        "transaction": "Issuance of debentures in lieu of interest",
+        "facts": [
+          {
+            "label": "Date",
+            "date": "31.3.2026",
+            "at": 43.4
+          },
+          {
+            "label": "Amount",
+            "amount": 3.5,
+            "at": 43.4
+          },
+          {
+            "label": "Assessment Year",
+            "value": "A.Y.2026-27",
+            "at": 43.4
+          }
+        ],
+        "spoken_amounts": [
+          "3.50 crores"
+        ]
+      },
+      "start": 0.0,
+      "end": 47.92,
+      "id": "b1",
+      "director_goal": "Establish A Ltd. owing interest to IFCI Ltd. and issuing debentures on 31.3.2026.",
+      "anchor_phrases": [
+        "A Ltd.",
+        "IFCI Ltd.",
+        "31.3.2026",
+        "3.50 crores"
+      ],
+      "animation_role": "key_fact",
+      "anchor_alignment": [
+        {
+          "phrase": "A Ltd.",
+          "at": 38.12,
+          "matched": true,
+          "score": 0.834
+        },
+        {
+          "phrase": "IFCI Ltd.",
+          "at": 43.4,
+          "matched": true,
+          "score": 0.92
+        },
+        {
+          "phrase": "31.3.2026",
+          "at": 18.77,
+          "matched": false,
+          "score": 0.211
+        },
+        {
+          "phrase": "3.50 crores",
+          "at": 31.8,
+          "matched": false,
+          "score": 0.32
+        }
+      ],
+      "anchor_match": {
+        "matched": 2,
+        "total": 4
+      }
+    },
+    {
+      "layout": "statute_quote",
+      "title": {
+        "text": "Section 43B General Rule",
+        "at": 48.57
+      },
+      "voice_sync_text": "Section 43B പ്രകാരം public financial institution-ൽ നിന്നുള്ള loan-ന്റെ interest, actually paid നടത്തിയാൽ മാത്രമേ PGBP-ൽ deduction ആയി claim ചെയ്യാൻ പറ്റൂ.",
+      "visual_data": {
+        "rule": "Interest payable on loan from public financial institution is allowable only on actual payment",
+        "citation": "Section 43B",
+        "application": "Deduction allowed strictly in the year of actual cash payment",
+        "at": 51.07
+      },
+      "start": 48.27,
+      "end": 60.35,
+      "id": "b2",
+      "director_goal": "Explain the general rule under Section 43B requiring actual payment for interest deduction.",
+      "anchor_phrases": [
+        "Section 43B",
+        "actually paid",
+        "PGBP"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Section 43B",
+          "at": 48.79,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "actually paid",
+          "at": 58.67,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "PGBP",
+          "at": 57.13,
+          "matched": false,
+          "score": 0.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 2,
+        "total": 3
+      }
+    },
+    {
+      "layout": "checklist_gate",
+      "title": {
+        "text": "Section 139(1) Proviso Check",
+        "at": 61.0
+      },
+      "voice_sync_text": "ഈ rule-ന് ഒരു proviso ഉണ്ട്. Assessee തുക due date-ന് മുൻപ്, അതായത് Section 139(1) പറയുന്ന date-നുള്ളിൽ pay ചെയ്യുകയാണെങ്കിൽ deduction allow ചെയ്യും.",
+      "visual_data": {
+        "conditions": [
+          {
+            "label": "Proviso check",
+            "detail": "Payment on or before due date under Section 139(1)",
+            "pass": false,
+            "at": 62.32
+          }
+        ],
+        "outcome": "Actual payment before due date qualifies for deduction"
+      },
+      "start": 60.7,
+      "end": 73.46,
+      "id": "b3",
+      "director_goal": "Examine the proviso regarding payment on or before the due date under Section 139(1).",
+      "anchor_phrases": [
+        "Section 139(1)",
+        "due date",
+        "proviso"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Section 139(1)",
+          "at": 67.58,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "due date",
+          "at": 69.74,
+          "matched": true,
+          "score": 0.75
+        },
+        {
+          "phrase": "proviso",
+          "at": 61.9,
+          "matched": false,
+          "score": 0.19
+        }
+      ],
+      "anchor_match": {
+        "matched": 2,
+        "total": 3
+      }
+    },
+    {
+      "layout": "flow_actors",
+      "title": {
+        "text": "Explanation 3C & Debentures",
+        "at": 74.11
+      },
+      "voice_sync_text": "ഏറ്റവും പ്രധാനം Explanation 3C ആണ്. Interest pay ചെയ്യാതെ debentures ആയി convert ചെയ്താൽ അത് actual payment ആയി കണക്കാക്കാൻ പറ്റില്ലെന്ന് law വ്യക്തമായി പറയുന്നുണ്ട്, which is deferred to a future date.",
+      "visual_data": {
+        "actors": [
+          {
+            "label": "A Ltd.",
+            "icon": "factory",
+            "at": 87.79
+          },
+          {
+            "label": "IFCI Ltd.",
+            "icon": "bank",
+            "at": 87.79
+          }
+        ],
+        "edges": [
+          {
+            "label": "Explanation 3C",
+            "detail": "Conversion of interest into debentures deferred to a future date",
+            "at": 99.73
+          }
+        ]
+      },
+      "start": 73.81,
+      "end": 109.45,
+      "id": "b4",
+      "director_goal": "Analyze Explanation 3C regarding the conversion of interest into debentures.",
+      "anchor_phrases": [
+        "Explanation 3C",
+        "debentures",
+        "deferred to a future date"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Explanation 3C",
+          "at": 93.73,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "debentures",
+          "at": 102.71,
+          "matched": true,
+          "score": 0.947
+        },
+        {
+          "phrase": "deferred to a future date",
+          "at": 107.85,
+          "matched": true,
+          "score": 0.936
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 3
+      }
+    },
+    {
+      "layout": "takeaway",
+      "title": {
+        "text": "Assessing Officer Action Conclusion",
+        "at": 110.1
+      },
+      "voice_sync_text": "അതുകൊണ്ട്, Assessing Officer-ന്റെ action rejecting the deduction for A.Y.2026-27 is correct.",
+      "visual_data": {
+        "rules": [
+          {
+            "label": "Assessing Officer Action",
+            "detail": "Rejection of deduction for A.Y.2026-27 is correct as paper conversion is not actual payment",
+            "pass": true,
+            "at": 138.96
+          }
+        ]
+      },
+      "start": 109.8,
+      "end": 145.16,
+      "id": "b5",
+      "director_goal": "Conclude on the validity of the Assessing Officer's action rejecting the deduction.",
+      "anchor_phrases": [
+        "Assessing Officer",
+        "A.Y.2026-27",
+        "correct"
+      ],
+      "animation_role": "key_fact",
+      "anchor_alignment": [
+        {
+          "phrase": "Assessing Officer",
+          "at": 138.96,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "A.Y.2026-27",
+          "at": 142.0,
+          "matched": true,
+          "score": 0.952
+        },
+        {
+          "phrase": "correct",
+          "at": 144.4,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 3
+      }
+    }
+  ],
+  "audio_duration_sec": 145.16,
+  "anchor_match": {
+    "matched": 12,
+    "total": 16,
+    "rate": 0.75
+  }
+}

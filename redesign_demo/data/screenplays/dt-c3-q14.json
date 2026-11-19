@@ -1,0 +1,411 @@
+{
+  "question_id": "dt-c3-q14",
+  "audio_url": "data/audio/dt-c3-q14.mp3",
+  "duration_sec": 144.72,
+  "sync_offset_sec": 0.0,
+  "context_pill": "Section 36(1)(iva)",
+  "example_summary": "Computation of deduction u/s 36(1)(iva) and disallowance for X Ltd. contributing to a pension scheme.",
+  "source_provision": "### Statutory Summary Matrix: Section 36(1)(iva) & Section 43B\n\n| Statutory Head / Section | Core Condition & Threshold | Permissible Deduction / Disallowance Rule |\n| :--- | :--- | :--- |\n| **Section 36(1)(iva)** | Contribution by employer to a notified pension scheme under Section 80CCD. | Restricted to **14% of salary** of the employee for the relevant previous year. |\n| **Salary Definition** | Includes **Basic Salary** plus **Dearness Allowance**, provided DA forms part of retirement benefits (pay). | Any employer contribution exceeding **14% of salary** is disallowed under PGBP. |\n\n> [!IMPORTANT] Statutory Cap Rule: Under Section 36(1)(iva), if the employer contributes more than 14% of the employee's salary towards a notified pension scheme, the excess contribution is strictly disallowed as a business expense under Section 36(1)(iva).\n\n> [!NOTE] Definition of Salary: Salary for computing the 14% limit specifically comprises Basic Salary and Dearness Allowance, but only if Dearness Allowance forms part of the pay under the terms of employment.",
+  "director": {
+    "archetype": "threshold_test",
+    "justification": "The provision requires a comparison between the actual employer contribution and a statutory ceiling of 14% of salary to determine the allowable deduction and potential disallowance.",
+    "protagonist": "X Ltd.",
+    "actors": [
+      "X Ltd.",
+      "Employees"
+    ],
+    "key_numbers": [
+      "20%",
+      "40%",
+      "10,00,000",
+      "14,00,000",
+      "2,00,000",
+      "14%",
+      "1,96,000",
+      "4,000"
+    ],
+    "key_dates": [],
+    "visual_metaphor": "A funnel with a fixed capacity filter where excess liquid spills over the sides.",
+    "beat_plan": [
+      {
+        "beat_goal": "Introduce the employer contribution scenario for X Ltd.",
+        "layout": "example_scene",
+        "anchor_phrases": [
+          "X Ltd.",
+          "pension scheme",
+          "Section 80CCD",
+          "10,00,000"
+        ]
+      },
+      {
+        "beat_goal": "Define the salary base for the 14% calculation.",
+        "layout": "ledger",
+        "anchor_phrases": [
+          "Basic Salary",
+          "Dearness Allowance",
+          "14,00,000"
+        ]
+      },
+      {
+        "beat_goal": "Apply the 14% statutory cap to the salary base.",
+        "layout": "deemed_value",
+        "anchor_phrases": [
+          "Section 36(1)(iva)",
+          "14% limit",
+          "1,96,000"
+        ]
+      },
+      {
+        "beat_goal": "Calculate the disallowance for the excess contribution.",
+        "layout": "waterfall",
+        "anchor_phrases": [
+          "Actual contribution",
+          "2,00,000",
+          "4,000 disallowance"
+        ]
+      },
+      {
+        "beat_goal": "Summarize the tax treatment of excess contributions.",
+        "layout": "takeaway",
+        "anchor_phrases": [
+          "PGBP",
+          "add back",
+          "excess contribution"
+        ]
+      }
+    ]
+  },
+  "fallback": false,
+  "beats": [
+    {
+      "layout": "example_scene",
+      "title": {
+        "text": "Employer Contribution Scenario",
+        "at": 0.3
+      },
+      "voice_sync_text": "இங்கு X Ltd. employee-களின் pension scheme-க்காக contribute செய்கிறது. Section 80CCD கீழ் உள்ள இந்த திட்டத்தில் 10,00,000 basic salary-க்கு contribution வழங்கப்படுகிறது.",
+      "visual_data": {
+        "actors": [
+          {
+            "label": "X Ltd.",
+            "amount": 1000000,
+            "icon": "factory",
+            "at": 29.12
+          },
+          {
+            "label": "Employees",
+            "icon": "person",
+            "at": 29.76
+          }
+        ],
+        "transaction": "pension scheme contribution under Section 80CCD",
+        "facts": [
+          {
+            "label": "Basic Salary",
+            "amount": 1000000,
+            "value": "10,00,000",
+            "at": 37.3
+          }
+        ]
+      },
+      "start": 0.0,
+      "end": 40.32,
+      "id": "b1",
+      "director_goal": "Introduce the employer contribution scenario for X Ltd.",
+      "anchor_phrases": [
+        "X Ltd.",
+        "pension scheme",
+        "Section 80CCD",
+        "10,00,000"
+      ],
+      "animation_role": "key_fact",
+      "anchor_alignment": [
+        {
+          "phrase": "X Ltd.",
+          "at": 29.12,
+          "matched": true,
+          "score": 0.667
+        },
+        {
+          "phrase": "pension scheme",
+          "at": 30.84,
+          "matched": true,
+          "score": 0.6
+        },
+        {
+          "phrase": "Section 80CCD",
+          "at": 33.5,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "10,00,000",
+          "at": 36.84,
+          "matched": true,
+          "score": 0.495
+        }
+      ],
+      "anchor_match": {
+        "matched": 4,
+        "total": 4
+      }
+    },
+    {
+      "layout": "ledger",
+      "title": {
+        "text": "Salary Base Computation",
+        "at": 40.97
+      },
+      "voice_sync_text": "Salary base கணக்கிட Basic Salary மற்றும் Dearness Allowance எடுத்துக்கொள்ளப்படுகிறது. இங்கு Basic Salary 10,00,000 மற்றும் Dearness Allowance 4,00,000 சேர்த்து total salary 14,00,000 ஆகிறது.",
+      "visual_data": {
+        "rows": [
+          {
+            "label": "Basic Salary",
+            "amount": 1000000,
+            "value": "10,00,000",
+            "at": 41.45
+          },
+          {
+            "label": "Dearness Allowance",
+            "amount": 400000,
+            "value": "4,00,000",
+            "at": 49.71
+          },
+          {
+            "label": "Salary Base",
+            "amount": 1400000,
+            "value": "14,00,000",
+            "at": 49.71
+          }
+        ],
+        "total": "14,00,000"
+      },
+      "start": 40.67,
+      "end": 54.63,
+      "id": "b2",
+      "director_goal": "Define the salary base for the 14% calculation.",
+      "anchor_phrases": [
+        "Basic Salary",
+        "Dearness Allowance",
+        "14,00,000"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Basic Salary",
+          "at": 41.45,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Dearness Allowance",
+          "at": 44.35,
+          "matched": true,
+          "score": 0.545
+        },
+        {
+          "phrase": "14,00,000",
+          "at": 53.38,
+          "matched": false,
+          "score": 0.473
+        }
+      ],
+      "anchor_match": {
+        "matched": 2,
+        "total": 3
+      }
+    },
+    {
+      "layout": "deemed_value",
+      "title": {
+        "text": "Statutory Cap Application",
+        "at": 55.28
+      },
+      "voice_sync_text": "Section 36(1)(iva) பிரகாரம் 14% limit apply செய்யப்படுகிறது. 14,00,000 மீதான 14% limit மூலம் permissible deduction 1,96,000 நிர்ணயிக்கப்படுகிறது.",
+      "visual_data": {
+        "actual": {
+          "label": "Actual Salary Base",
+          "amount": 1400000,
+          "value": "14,00,000",
+          "at": 82.62
+        },
+        "deemed": {
+          "label": "Permissible Deduction",
+          "amount": 196000,
+          "value": "1,96,000",
+          "at": 90.54
+        },
+        "rule": "Section 36(1)(iva) 14% limit",
+        "at": 82.62
+      },
+      "start": 54.98,
+      "end": 94.5,
+      "id": "b3",
+      "director_goal": "Apply the 14% statutory cap to the salary base.",
+      "anchor_phrases": [
+        "Section 36(1)(iva)",
+        "14% limit",
+        "1,96,000"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Section 36(1)(iva)",
+          "at": 82.62,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "14% limit",
+          "at": 85.46,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "1,96,000",
+          "at": 91.76,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 3
+      }
+    },
+    {
+      "layout": "waterfall",
+      "title": {
+        "text": "Disallowance Calculation",
+        "at": 95.15
+      },
+      "voice_sync_text": "Actual contribution 2,00,000 ஆகும். Permissible deduction 1,96,000 போக மீதமுள்ள 4,000 excess contribution disallowance ஆகிறது.",
+      "visual_data": {
+        "stages": [
+          {
+            "label": "Actual contribution",
+            "amount": 200000,
+            "value": "2,00,000",
+            "sign": "+",
+            "at": 124.37
+          },
+          {
+            "label": "Permissible deduction",
+            "amount": 196000,
+            "value": "1,96,000",
+            "sign": "-",
+            "at": 126.97
+          },
+          {
+            "label": "4,000 disallowance",
+            "amount": 4000,
+            "value": "4,000",
+            "sign": "=",
+            "at": 132.21
+          }
+        ]
+      },
+      "start": 94.85,
+      "end": 134.05,
+      "id": "b4",
+      "director_goal": "Calculate the disallowance for the excess contribution.",
+      "anchor_phrases": [
+        "Actual contribution",
+        "2,00,000",
+        "4,000 disallowance"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Actual contribution",
+          "at": 124.37,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "2,00,000",
+          "at": 128.09,
+          "matched": true,
+          "score": 0.625
+        },
+        {
+          "phrase": "4,000 disallowance",
+          "at": 132.21,
+          "matched": true,
+          "score": 0.667
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 3
+      }
+    },
+    {
+      "layout": "takeaway",
+      "title": {
+        "text": "Tax Treatment Summary",
+        "at": 134.7
+      },
+      "voice_sync_text": "முடிவாக Profits & Gains of Business or Profession (PGBP) கீழ் excess contribution-ஐ add back செய்து disallow செய்யப்படுகிறது.",
+      "visual_data": {
+        "rules": [
+          {
+            "label": "PGBP",
+            "detail": "Profits & Gains of Business or Profession",
+            "at": 135.7
+          },
+          {
+            "label": "add back",
+            "detail": "Add back excess amount",
+            "at": 138.78
+          },
+          {
+            "label": "excess contribution",
+            "detail": "Disallowance of excess contribution above statutory limit",
+            "at": 138.78
+          }
+        ]
+      },
+      "start": 134.4,
+      "end": 144.72,
+      "id": "b5",
+      "director_goal": "Summarize the tax treatment of excess contributions.",
+      "anchor_phrases": [
+        "PGBP",
+        "add back",
+        "excess contribution"
+      ],
+      "animation_role": "key_fact",
+      "anchor_alignment": [
+        {
+          "phrase": "PGBP",
+          "at": 138.78,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "add back",
+          "at": 141.34,
+          "matched": false,
+          "score": 0.174
+        },
+        {
+          "phrase": "excess contribution",
+          "at": 139.52,
+          "matched": false,
+          "score": 0.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 1,
+        "total": 3
+      }
+    }
+  ],
+  "audio_duration_sec": 144.72,
+  "anchor_match": {
+    "matched": 13,
+    "total": 16,
+    "rate": 0.812
+  }
+}

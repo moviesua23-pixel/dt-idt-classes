@@ -1,0 +1,571 @@
+{
+  "question_id": "dt-c3-q16",
+  "audio_url": "data/audio/dt-c3-q16.mp3",
+  "duration_sec": 233.74,
+  "sync_offset_sec": 0.0,
+  "context_pill": "TDS Non-Compliance & Disallowance",
+  "example_summary": "Delta Ltd. failed to deduct TDS on Salary and Directors' Remuneration in March 2026, leading to a 30% disallowance under Section 40(a)(ia).",
+  "source_provision": "| Statutory Provision | Subject Matter | Threshold / Condition | Disallowance Rate |\n| :--- | :--- | :--- | :--- |\n| Section 192 | Salary | Payment basis | 30% u/s 40(a)(ia) |\n| Section 194 | Directors' Remuneration | Credit/Payment whichever is earlier | 30% u/s 40(a)(ia) |\n\n> [!IMPORTANT] Scope of Section 40(a)(ia): \nThis section applies to any sum payable to a resident on which tax is deductible under Chapter XVII-B. If TDS is not deducted, or after deduction is not remitted within the due date specified in Section 139(1), 30% of the amount is disallowed.\n\n> [!NOTE] Timing of Deduction:\nFor salary, the tax must be deducted at the time of payment. For directors' remuneration, the tax must be deducted at the time of credit to the payee's account or payment, whichever is earlier.",
+  "director": {
+    "archetype": "computation_ledger",
+    "justification": "The scenario requires calculating a specific 30% disallowance on multiple expense items (Salary and Directors' Remuneration) due to non-compliance with TDS provisions under Section 40(a)(ia).",
+    "protagonist": "Delta Ltd.",
+    "actors": [
+      "Resident Employees",
+      "Resident Directors"
+    ],
+    "key_numbers": [
+      "₹12,00,000",
+      "₹28,000",
+      "30%",
+      "₹3,60,000",
+      "₹8,400",
+      "₹3,68,400"
+    ],
+    "key_dates": [
+      "March 2026",
+      "April 2026",
+      "July 2026",
+      "P.Y. 2025-26",
+      "A.Y. 2026-27",
+      "A.Y. 2027-28"
+    ],
+    "visual_metaphor": "A corporate expense ledger where specific line items are partially redacted with a '30% Disallowed' stamp, moving those values into a taxable profit column.",
+    "beat_plan": [
+      {
+        "beat_goal": "Establish the financial scenario for Delta Ltd in March 2026",
+        "layout": "example_scene",
+        "anchor_phrases": [
+          "Delta Ltd.",
+          "March 2026",
+          "₹12,00,000 Salary",
+          "₹28,000 Directors' remuneration"
+        ]
+      },
+      {
+        "beat_goal": "Introduce the statutory consequence of non-deduction",
+        "layout": "statute_quote",
+        "anchor_phrases": [
+          "Section 40(a)(ia)",
+          "30% Disallowance",
+          "Resident Payee"
+        ]
+      },
+      {
+        "beat_goal": "Explain TDS timing for Salary under Section 192",
+        "layout": "timeline_windows",
+        "anchor_phrases": [
+          "Section 192",
+          "Time of payment",
+          "March 2026"
+        ]
+      },
+      {
+        "beat_goal": "Explain TDS timing for Directors' Remuneration under Section 194J",
+        "layout": "decision_tree",
+        "anchor_phrases": [
+          "Section 194J",
+          "Credit or Payment",
+          "Whichever is earlier"
+        ]
+      },
+      {
+        "beat_goal": "Calculate the total disallowance for A.Y. 2026-27",
+        "layout": "ledger",
+        "anchor_phrases": [
+          "₹3,60,000",
+          "₹8,400",
+          "Total ₹3,68,400"
+        ]
+      },
+      {
+        "beat_goal": "Analyze the impact of subsequent deduction and payment",
+        "layout": "flow_actors",
+        "anchor_phrases": [
+          "April 2026",
+          "July 2026",
+          "Allowed in A.Y. 2027-28"
+        ]
+      },
+      {
+        "beat_goal": "Summarize the compliance requirement and tax impact",
+        "layout": "takeaway",
+        "anchor_phrases": [
+          "30% of expense",
+          "Permanent vs Timing difference",
+          "P.Y. 2025-26"
+        ]
+      }
+    ]
+  },
+  "fallback": false,
+  "beats": [
+    {
+      "layout": "example_scene",
+      "title": {
+        "text": "Delta Ltd.'s March Expenses",
+        "at": 0.3
+      },
+      "voice_sync_text": "നമുക്ക് Delta Ltd. എന്ന കമ്പനിയുടെ കാര്യം നോക്കാം. March 2026-ൽ അവർ രണ്ട് പ്രധാന എക്സ്പെൻസുകൾ റെക്കോർഡ് ചെയ്തു. ഒന്ന്, എംപ്ലോയീസിന് നൽകിയ ₹12,00,000 Salary. രണ്ട്, ₹28,000 Directors' remuneration. എന്നാൽ ഈ രണ്ട് പേയ്‌മെന്റുകളിലും അവർ TDS ഡിഡക്ട് ചെയ്തില്ല.",
+      "visual_data": {
+        "actors": [
+          {
+            "label": "Delta Ltd.",
+            "icon": "factory",
+            "at": 0.86
+          },
+          {
+            "label": "Employees",
+            "icon": "person",
+            "at": 12.14
+          },
+          {
+            "label": "Directors",
+            "icon": "person",
+            "at": 15.22
+          }
+        ],
+        "transaction": "Year-end Expenses",
+        "facts": [
+          {
+            "label": "Salary",
+            "amount": 1200000,
+            "date": "March 2026",
+            "icon": "money_bag",
+            "at": 15.22
+          },
+          {
+            "label": "Directors' remuneration",
+            "amount": 28000,
+            "date": "March 2026",
+            "icon": "money_bag",
+            "at": 15.22
+          }
+        ],
+        "spoken_amounts": [
+          "₹12,00,000",
+          "₹28,000",
+          "12,00,000",
+          "28,000"
+        ]
+      },
+      "start": 0.0,
+      "end": 21.44,
+      "id": "b1",
+      "director_goal": "Establish the financial scenario for Delta Ltd in March 2026",
+      "anchor_phrases": [
+        "Delta Ltd.",
+        "March 2026",
+        "₹12,00,000 Salary",
+        "₹28,000 Directors' remuneration"
+      ],
+      "animation_role": "key_fact",
+      "anchor_alignment": [
+        {
+          "phrase": "Delta Ltd.",
+          "at": 0.86,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "March 2026",
+          "at": 4.0,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "₹12,00,000 Salary",
+          "at": 11.32,
+          "matched": true,
+          "score": 0.735
+        },
+        {
+          "phrase": "₹28,000 Directors' remuneration",
+          "at": 14.38,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 4,
+        "total": 4
+      }
+    },
+    {
+      "layout": "statute_quote",
+      "title": {
+        "text": "Consequences of Non-Deduction",
+        "at": 22.09
+      },
+      "voice_sync_text": "ഇവിടെയാണ് Section 40(a)(ia) വരുന്നത്. ഒരു Resident Payee-ക്ക് നൽകുന്ന തുകയിൽ TDS ഡിഡക്ട് ചെയ്തില്ലെങ്കിൽ, ആ എക്സ്പെൻസിന്റെ 30% Disallowance ബിസിനസ് ഇൻകം കണക്കാക്കുമ്പോൾ ബാധകമാകും.",
+      "visual_data": {
+        "rule": "30% of any sum payable to a resident shall be disallowed if tax is not deducted or paid.",
+        "citation": "Section 40(a)(ia)",
+        "application": "Resident Payee",
+        "at": 21.79
+      },
+      "start": 21.79,
+      "end": 36.19,
+      "id": "b2",
+      "director_goal": "Introduce the statutory consequence of non-deduction",
+      "anchor_phrases": [
+        "Section 40(a)(ia)",
+        "30% Disallowance",
+        "Resident Payee"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Section 40(a)(ia)",
+          "at": 22.61,
+          "matched": true,
+          "score": 0.826
+        },
+        {
+          "phrase": "30% Disallowance",
+          "at": 30.85,
+          "matched": true,
+          "score": 0.703
+        },
+        {
+          "phrase": "Resident Payee",
+          "at": 33.71,
+          "matched": true,
+          "score": 0.516
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 3
+      }
+    },
+    {
+      "layout": "timeline_windows",
+      "title": {
+        "text": "TDS Timing: Salary",
+        "at": 36.84
+      },
+      "voice_sync_text": "Salary-യുടെ കാര്യത്തിൽ Section 192 പ്രകാരം Time of payment-ലാണ് ടാക്സ് ഡിഡക്ട് ചെയ്യേണ്ടത്. March 2026-ൽ പേയ്‌മെന്റ് നടന്നതിനാൽ ആ സമയത്ത് തന്നെ TDS പിടിക്കേണ്ടതായിരുന്നു.",
+      "visual_data": {
+        "events": [
+          {
+            "label": "Salary Payment",
+            "date": "March 2026",
+            "amount": 1200000,
+            "status": "TDS Due",
+            "at": 71.92
+          }
+        ],
+        "window_label": "Section 192"
+      },
+      "start": 36.54,
+      "end": 78.1,
+      "id": "b3",
+      "director_goal": "Explain TDS timing for Salary under Section 192",
+      "anchor_phrases": [
+        "Section 192",
+        "Time of payment",
+        "March 2026"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Section 192",
+          "at": 71.92,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Time of payment",
+          "at": 75.58,
+          "matched": true,
+          "score": 0.541
+        },
+        {
+          "phrase": "March 2026",
+          "at": 59.03,
+          "matched": false,
+          "score": 0.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 2,
+        "total": 3
+      }
+    },
+    {
+      "layout": "decision_tree",
+      "title": {
+        "text": "TDS Timing: Directors' Remuneration",
+        "at": 78.75
+      },
+      "voice_sync_text": "എന്നാൽ Directors' Remuneration-ന്റെ കേസിൽ Section 194J ആണ് ബാധകം. ഇവിടെ Credit or Payment, Whichever is earlier എന്ന ക്രൈറ്റീരിയ നോക്കണം. March 2026-ൽ തുക ക്രെഡിറ്റ് ചെയ്തപ്പോൾ തന്നെ TDS ബാധ്യത വരുന്നു.",
+      "visual_data": {
+        "root": "Section 194J TDS Trigger",
+        "branches": [
+          {
+            "label": "Credit to Payee",
+            "date": "March 2026",
+            "status": "Earlier",
+            "at": 111.68
+          },
+          {
+            "label": "Payment",
+            "date": "April 2026",
+            "at": 111.68
+          },
+          {
+            "label": "TDS Requirement",
+            "detail": "Whichever is earlier",
+            "pass": true,
+            "at": 111.68
+          }
+        ]
+      },
+      "start": 78.45,
+      "end": 127.09,
+      "id": "b4",
+      "director_goal": "Explain TDS timing for Directors' Remuneration under Section 194J",
+      "anchor_phrases": [
+        "Section 194J",
+        "Credit or Payment",
+        "Whichever is earlier"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Section 194J",
+          "at": 114.67,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Credit or Payment",
+          "at": 95.79,
+          "matched": false,
+          "score": 0.1
+        },
+        {
+          "phrase": "Whichever is earlier",
+          "at": 100.36,
+          "matched": false,
+          "score": 0.357
+        }
+      ],
+      "anchor_match": {
+        "matched": 1,
+        "total": 3
+      }
+    },
+    {
+      "layout": "ledger",
+      "title": {
+        "text": "Disallowance Calculation A.Y. 2026-27",
+        "at": 127.74
+      },
+      "voice_sync_text": "ഇനി നമുക്ക് ടോട്ടൽ ഡിസലവൻസ് നോക്കാം. Salary-യുടെ 30% ആയ ₹3,60,000-ഉം, Directors' remuneration-ന്റെ 30% ആയ ₹8,400-ഉം ചേർത്ത് Total ₹3,68,400 ഈ വർഷം ഡിസലൗ ചെയ്യപ്പെടും.",
+      "visual_data": {
+        "rows": [
+          {
+            "label": "Salary Disallowance",
+            "amount": 360000,
+            "detail": "30% of 12,00,000",
+            "at": 161.52
+          },
+          {
+            "label": "Remuneration Disallowance",
+            "amount": 8400,
+            "detail": "30% of 28,000",
+            "at": 165.76
+          }
+        ],
+        "total": "Total ₹3,68,400",
+        "spoken_amounts": [
+          "₹3,60,000",
+          "₹8,400",
+          "3,60,000",
+          "8,400"
+        ]
+      },
+      "start": 127.44,
+      "end": 174.4,
+      "id": "b5",
+      "director_goal": "Calculate the total disallowance for A.Y. 2026-27",
+      "anchor_phrases": [
+        "₹3,60,000",
+        "₹8,400",
+        "Total ₹3,68,400"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "₹3,60,000",
+          "at": 162.44,
+          "matched": true,
+          "score": 0.933
+        },
+        {
+          "phrase": "₹8,400",
+          "at": 166.76,
+          "matched": true,
+          "score": 0.75
+        },
+        {
+          "phrase": "Total ₹3,68,400",
+          "at": 169.4,
+          "matched": true,
+          "score": 0.847
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 3
+      }
+    },
+    {
+      "layout": "flow_actors",
+      "title": {
+        "text": "Subsequent Compliance",
+        "at": 175.05
+      },
+      "voice_sync_text": "ഒരുപക്ഷേ Delta Ltd. ഏപ്രിൽ 2026-ൽ ടാക്സ് ഡിഡക്ട് ചെയ്ത് July 2026-ൽ അത് ഗവൺമെന്റിലേക്ക് അടച്ചാൽ, ആ തുക Allowed in A.Y. 2027-28 ആയി മാറും. അതായത് അടുത്ത അസസ്‌മെന്റ് ഇയറിൽ ഈ ഡിഡക്ഷൻ ക്ലെയിം ചെയ്യാം.",
+      "visual_data": {
+        "actors": [
+          {
+            "label": "Delta Ltd.",
+            "icon": "factory",
+            "at": 175.89
+          },
+          {
+            "label": "Government",
+            "icon": "bank",
+            "at": 180.09
+          }
+        ],
+        "edges": [
+          {
+            "label": "Deduction",
+            "date": "April 2026",
+            "at": 190.47
+          },
+          {
+            "label": "Remittance",
+            "date": "July 2026",
+            "at": 190.47
+          },
+          {
+            "label": "Deduction Allowed",
+            "detail": "Allowed in A.Y. 2027-28",
+            "pass": true,
+            "at": 190.47
+          }
+        ]
+      },
+      "start": 174.75,
+      "end": 191.99,
+      "id": "b6",
+      "director_goal": "Analyze the impact of subsequent deduction and payment",
+      "anchor_phrases": [
+        "April 2026",
+        "July 2026",
+        "Allowed in A.Y. 2027-28"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "April 2026",
+          "at": 176.47,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "July 2026",
+          "at": 180.09,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Allowed in A.Y. 2027-28",
+          "at": 184.41,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 3
+      }
+    },
+    {
+      "layout": "takeaway",
+      "title": {
+        "text": "Key Compliance Summary",
+        "at": 192.64
+      },
+      "voice_sync_text": "ചുരുക്കത്തിൽ, TDS ഡിഫോൾട്ട് വരുത്തിയാൽ 30% of expense ഡിസലൗ ചെയ്യപ്പെടും. ഇത് P.Y. 2025-26-ൽ ടാക്സ് കൂട്ടുമെങ്കിലും, പിന്നീട് ടാക്സ് അടയ്ക്കുമ്പോൾ അത് ഡിഡക്ഷനായി ലഭിക്കുന്ന ഒരു Timing difference ആണ്.",
+      "visual_data": {
+        "rules": [
+          {
+            "label": "Disallowance Rate",
+            "value": "30% of expense",
+            "at": 222.18
+          },
+          {
+            "label": "Relevant Year",
+            "value": "P.Y. 2025-26",
+            "at": 222.18
+          },
+          {
+            "label": "Nature",
+            "value": "Permanent vs Timing difference",
+            "at": 225.72
+          }
+        ]
+      },
+      "start": 192.34,
+      "end": 233.74,
+      "id": "b7",
+      "director_goal": "Summarize the compliance requirement and tax impact",
+      "anchor_phrases": [
+        "30% of expense",
+        "Permanent vs Timing difference",
+        "P.Y. 2025-26"
+      ],
+      "animation_role": "key_fact",
+      "anchor_alignment": [
+        {
+          "phrase": "30% of expense",
+          "at": 222.7,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Permanent vs Timing difference",
+          "at": 225.84,
+          "matched": true,
+          "score": 0.745
+        },
+        {
+          "phrase": "P.Y. 2025-26",
+          "at": 208.57,
+          "matched": false,
+          "score": 0.4
+        }
+      ],
+      "anchor_match": {
+        "matched": 2,
+        "total": 3
+      }
+    }
+  ],
+  "needs_review": true,
+  "quality_issues": [
+    "unsupported section/rule: Section 194J"
+  ],
+  "audio_duration_sec": 233.74,
+  "anchor_match": {
+    "matched": 18,
+    "total": 22,
+    "rate": 0.818
+  }
+}

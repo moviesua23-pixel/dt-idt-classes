@@ -1,0 +1,560 @@
+{
+  "question_id": "dt-c3-q9",
+  "audio_url": "data/audio/dt-c3-q9.mp3",
+  "duration_sec": 103.47,
+  "sync_offset_sec": 0.0,
+  "context_pill": "Scientific Research Deductions",
+  "example_summary": "A Ltd. calculates its Section 35 deductions for P.Y. 2025-26, covering external contributions to IISc and X Ltd., specific IIT projects, and in-house R&D while excluding land costs.",
+  "source_provision": "### Master Statutory Summary Matrix: Section 35 Scientific Research Deductions\n\n| Nature of Expenditure / Contribution | Statutory Provision | Eligible Assessee | Rate of Deduction | Key Statutory Conditions & Exclusions |\n| :--- | :--- | :--- | :--- | :--- |\n| Sum paid to notified approved Research Association / University / College | Section 35(1)(ii) | Any assessee | 100% | Must be used for scientific research approved by the prescribed authority. |\n| Sum paid to a Company registered in India for scientific research | Section 35(1)(iia) | Any assessee | 100% | Company's main object must be scientific research and development approved by prescribed authority. |\n| Sum paid to National Laboratory / University / IIT for approved programme | Section 35(2AA) | Any assessee | 100% | Specific direction and approval for scientific research programme required. |\n| In-house Revenue & Capital Expenditure on Research & Development | Section 35(2AB) | Company engaged in biotechnology or manufacturing | 100% | **Exclusion:** Cost of acquisition of land is strictly **not eligible** for deduction under capital expenditure. |\n\n\n\n> [!IMPORTANT] Statutory Trap on Land Cost: Under Section 35(2AB), while capital expenditure on in-house research facilities qualifies for deduction, any expenditure incurred on the acquisition of land is expressly excluded from the eligible capital base.\n\n\n\n> [!NOTE] Approval Requirements: All contributions made to external institutions under Section 35(1) and Section 35(2AA) mandate prior notification and approval from the prescribed scientific authority to claim statutory deductions.",
+  "director": {
+    "archetype": "computation_ledger",
+    "justification": "The problem requires a systematic calculation of total deductions under Section 35 by categorizing various R&D expenditures and applying specific statutory exclusions for land.",
+    "protagonist": "A Ltd.",
+    "actors": [
+      "IISc Bangalore",
+      "IIT Delhi",
+      "X Ltd.",
+      "Prescribed Authority"
+    ],
+    "key_numbers": [
+      "1,00,000",
+      "2,50,000",
+      "4,00,000",
+      "3,00,000",
+      "7,50,000",
+      "5,00,000",
+      "13,00,000"
+    ],
+    "key_dates": [
+      "P.Y. 2025-26"
+    ],
+    "visual_metaphor": "A scientific laboratory sorting tray where various expense receipts are filtered through statutory sieves to produce a final deduction total.",
+    "beat_plan": [
+      {
+        "beat_goal": "Establish the profile of A Ltd. and the scope of scientific research deductions for P.Y. 2025-26.",
+        "layout": "example_scene",
+        "anchor_phrases": [
+          "A Ltd.",
+          "Manufacturing business",
+          "P.Y. 2025-26",
+          "Section 35"
+        ]
+      },
+      {
+        "beat_goal": "Calculate deductions for external payments to research associations and companies.",
+        "layout": "flow_actors",
+        "anchor_phrases": [
+          "Section 35(1)(ii)",
+          "IISc Bangalore",
+          "1,00,000",
+          "Section 35(1)(iia)",
+          "X Ltd.",
+          "4,00,000",
+          "100% deduction"
+        ]
+      },
+      {
+        "beat_goal": "Address the specific payment to IIT Delhi for an approved programme.",
+        "layout": "flow_actors",
+        "anchor_phrases": [
+          "Section 35(2AA)",
+          "IIT Delhi",
+          "2,50,000",
+          "Approved scientific research programme"
+        ]
+      },
+      {
+        "beat_goal": "Process in-house revenue expenditure for the manufacturing company.",
+        "layout": "ledger",
+        "anchor_phrases": [
+          "Section 35(2AB)",
+          "In-house research",
+          "Revenue expenditure",
+          "3,00,000"
+        ]
+      },
+      {
+        "beat_goal": "Apply the statutory exclusion for land cost from in-house capital expenditure.",
+        "layout": "waterfall",
+        "anchor_phrases": [
+          "Capital expenditure",
+          "7,50,000",
+          "Less: Cost of land",
+          "5,00,000",
+          "Eligible amount 2,50,000"
+        ]
+      },
+      {
+        "beat_goal": "Summarize the total allowable deduction under Section 35.",
+        "layout": "takeaway",
+        "anchor_phrases": [
+          "Total deduction allowable",
+          "13,00,000",
+          "Land cost strictly excluded"
+        ]
+      }
+    ]
+  },
+  "fallback": false,
+  "beats": [
+    {
+      "layout": "example_scene",
+      "title": {
+        "text": "A Ltd. Profile & Scope",
+        "at": 0.3
+      },
+      "voice_sync_text": "Income tax-il business head-il scientific research expenditure-inu uLla deductions evideyanu padikkunnathu. Section 35 prakaaramulla various provisions-um conditions-um namukku nokkaam. Namukku A Ltd. enna manufacturing business-inte P.Y. 2025-26-ile case edukkaam.",
+      "visual_data": {
+        "actors": [
+          {
+            "label": "A Ltd.",
+            "detail": "Manufacturing business",
+            "icon": "factory",
+            "at": 10.04
+          }
+        ],
+        "transaction": "Scientific Research Deductions",
+        "facts": [
+          {
+            "label": "Assessment Year",
+            "value": "P.Y. 2025-26",
+            "at": 14.64
+          },
+          {
+            "label": "Statutory Section",
+            "value": "Section 35",
+            "at": 14.64
+          }
+        ]
+      },
+      "start": 0.0,
+      "end": 21.88,
+      "id": "b1",
+      "director_goal": "Establish the profile of A Ltd. and the scope of scientific research deductions for P.Y. 2025-26.",
+      "anchor_phrases": [
+        "A Ltd.",
+        "Manufacturing business",
+        "P.Y. 2025-26",
+        "Section 35"
+      ],
+      "animation_role": "key_fact",
+      "anchor_alignment": [
+        {
+          "phrase": "A Ltd.",
+          "at": 10.04,
+          "matched": true,
+          "score": 0.691
+        },
+        {
+          "phrase": "Manufacturing business",
+          "at": 17.01,
+          "matched": false,
+          "score": 0.4
+        },
+        {
+          "phrase": "P.Y. 2025-26",
+          "at": 18.28,
+          "matched": true,
+          "score": 0.667
+        },
+        {
+          "phrase": "Section 35",
+          "at": 8.92,
+          "matched": false,
+          "score": 0.167
+        }
+      ],
+      "anchor_match": {
+        "matched": 2,
+        "total": 4
+      }
+    },
+    {
+      "layout": "flow_actors",
+      "title": {
+        "text": "External Research Payments",
+        "at": 22.53
+      },
+      "voice_sync_text": "Evide nammal kanunnathu external institutions-ilekkullla payments aanu. Section 35(1)(ii) prakaaram IISc Bangalore-inu nalkiya 1,00,000 matrum Section 35(1)(iia) prakaaram X Ltd.-inu nalkiya 4,00,000-inu 100% deduction labhikkum.",
+      "visual_data": {
+        "actors": [
+          {
+            "label": "IISc Bangalore",
+            "icon": "bank",
+            "at": 29.61
+          },
+          {
+            "label": "X Ltd.",
+            "detail": "Approved R&D Co.",
+            "icon": "factory",
+            "at": 35.25
+          }
+        ],
+        "edges": [
+          {
+            "label": "Section 35(1)(ii)",
+            "amount": 100000,
+            "detail": "100% deduction",
+            "at": 35.25
+          },
+          {
+            "label": "Section 35(1)(iia)",
+            "amount": 400000,
+            "detail": "100% deduction",
+            "at": 35.25
+          }
+        ],
+        "spoken_amounts": [
+          "1,00,000",
+          "4,00,000"
+        ]
+      },
+      "start": 22.23,
+      "end": 39.55,
+      "id": "b2",
+      "director_goal": "Calculate deductions for external payments to research associations and companies.",
+      "anchor_phrases": [
+        "Section 35(1)(ii)",
+        "IISc Bangalore",
+        "1,00,000",
+        "Section 35(1)(iia)",
+        "X Ltd.",
+        "4,00,000",
+        "100% deduction"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Section 35(1)(ii)",
+          "at": 27.27,
+          "matched": true,
+          "score": 0.995
+        },
+        {
+          "phrase": "IISc Bangalore",
+          "at": 29.61,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "1,00,000",
+          "at": 37.65,
+          "matched": true,
+          "score": 0.545
+        },
+        {
+          "phrase": "Section 35(1)(iia)",
+          "at": 37.97,
+          "matched": true,
+          "score": 0.48
+        },
+        {
+          "phrase": "X Ltd.",
+          "at": 35.24,
+          "matched": false,
+          "score": 0.143
+        },
+        {
+          "phrase": "4,00,000",
+          "at": 36.68,
+          "matched": false,
+          "score": 0.0
+        },
+        {
+          "phrase": "100% deduction",
+          "at": 38.35,
+          "matched": true,
+          "score": 0.727
+        }
+      ],
+      "anchor_match": {
+        "matched": 5,
+        "total": 7
+      }
+    },
+    {
+      "layout": "flow_actors",
+      "title": {
+        "text": "Approved Programme at IIT",
+        "at": 40.2
+      },
+      "voice_sync_text": "Section 35(2AA) prakaaram National Laboratories, Universities, allengil IIT Delhi-ukalil approved scientific research programme-inu vendi cheyyunna 2,50,000 payments-inu 100% deduction claim cheyyaam.",
+      "visual_data": {
+        "actors": [
+          {
+            "label": "IIT Delhi",
+            "icon": "bank",
+            "at": 46.18
+          }
+        ],
+        "edges": [
+          {
+            "label": "Section 35(2AA)",
+            "amount": 250000,
+            "detail": "Approved scientific research programme",
+            "at": 46.18
+          }
+        ],
+        "spoken_amounts": [
+          "2,50,000"
+        ]
+      },
+      "start": 39.9,
+      "end": 55.7,
+      "id": "b3",
+      "director_goal": "Address the specific payment to IIT Delhi for an approved programme.",
+      "anchor_phrases": [
+        "Section 35(2AA)",
+        "IIT Delhi",
+        "2,50,000",
+        "Approved scientific research programme"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Section 35(2AA)",
+          "at": 40.6,
+          "matched": true,
+          "score": 0.6
+        },
+        {
+          "phrase": "IIT Delhi",
+          "at": 46.18,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "2,50,000",
+          "at": 50.76,
+          "matched": true,
+          "score": 0.933
+        },
+        {
+          "phrase": "Approved scientific research programme",
+          "at": 46.93,
+          "matched": false,
+          "score": 0.264
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 4
+      }
+    },
+    {
+      "layout": "ledger",
+      "title": {
+        "text": "In-house Revenue Expenditure",
+        "at": 56.35
+      },
+      "voice_sync_text": "Section 35(2AB) company assessee-kkulaathaane. Manufacturing business cheyyunna company-kalkku in-house research and development facility-kku varunna 3,00,000 revenue expenditure-inu 100% deduction kittum.",
+      "visual_data": {
+        "rows": [
+          {
+            "label": "In-house research",
+            "detail": "Revenue expenditure",
+            "amount": 300000,
+            "sign": "+",
+            "at": 64.35
+          }
+        ],
+        "total": "Section 35(2AB)",
+        "spoken_amounts": [
+          "3,00,000"
+        ]
+      },
+      "start": 56.05,
+      "end": 71.61,
+      "id": "b4",
+      "director_goal": "Process in-house revenue expenditure for the manufacturing company.",
+      "anchor_phrases": [
+        "Section 35(2AB)",
+        "In-house research",
+        "Revenue expenditure",
+        "3,00,000"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Section 35(2AB)",
+          "at": 56.75,
+          "matched": true,
+          "score": 0.6
+        },
+        {
+          "phrase": "In-house research",
+          "at": 64.35,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Revenue expenditure",
+          "at": 68.12,
+          "matched": false,
+          "score": 0.467
+        },
+        {
+          "phrase": "3,00,000",
+          "at": 67.44,
+          "matched": false,
+          "score": 0.462
+        }
+      ],
+      "anchor_match": {
+        "matched": 2,
+        "total": 4
+      }
+    },
+    {
+      "layout": "waterfall",
+      "title": {
+        "text": "Capital Expenditure & Land Exclusion",
+        "at": 72.26
+      },
+      "voice_sync_text": "Oru important restriction evide ullathu, capital expenditure-il land purchase cheytha cost varunnundenkil athu strictly exclude cheyyandi varum. Total 7,50,000-il ninnu 5,00,000 cost of land kurachaal eligible amount 2,50,000 mathrame deduction aayi edukku. Land cost-inu deduction kittilla.",
+      "visual_data": {
+        "stages": [
+          {
+            "label": "Capital expenditure",
+            "amount": 750000,
+            "icon": "money_bag",
+            "at": 78.36
+          },
+          {
+            "label": "Less: Cost of land",
+            "amount": 500000,
+            "sign": "-",
+            "icon": "plot",
+            "at": 82.4
+          },
+          {
+            "label": "Eligible amount 2,50,000",
+            "amount": 250000,
+            "sign": "=",
+            "status": "Eligible",
+            "at": 87.06
+          }
+        ],
+        "spoken_amounts": [
+          "7,50,000",
+          "5,00,000"
+        ]
+      },
+      "start": 71.96,
+      "end": 93.88,
+      "id": "b5",
+      "director_goal": "Apply the statutory exclusion for land cost from in-house capital expenditure.",
+      "anchor_phrases": [
+        "Capital expenditure",
+        "7,50,000",
+        "Less: Cost of land",
+        "5,00,000",
+        "Eligible amount 2,50,000"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Capital expenditure",
+          "at": 78.36,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "7,50,000",
+          "at": 82.74,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Less: Cost of land",
+          "at": 84.26,
+          "matched": true,
+          "score": 0.672
+        },
+        {
+          "phrase": "5,00,000",
+          "at": 84.76,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Eligible amount 2,50,000",
+          "at": 87.06,
+          "matched": true,
+          "score": 0.843
+        }
+      ],
+      "anchor_match": {
+        "matched": 5,
+        "total": 5
+      }
+    },
+    {
+      "layout": "takeaway",
+      "title": {
+        "text": "Total Allowable Deduction",
+        "at": 94.53
+      },
+      "voice_sync_text": "Appol total deduction allowable 13,00,000 aanu. Ormikkuka, land cost strictly excluded aanu.",
+      "visual_data": {
+        "rules": [
+          {
+            "label": "Total deduction allowable",
+            "amount": 1300000,
+            "icon": "scales",
+            "at": 95.35
+          },
+          {
+            "label": "Land cost strictly excluded",
+            "detail": "Section 35(2AB) restriction",
+            "icon": "padlock",
+            "at": 99.37
+          }
+        ],
+        "spoken_amounts": [
+          "13,00,000"
+        ]
+      },
+      "start": 94.23,
+      "end": 103.47,
+      "id": "b6",
+      "director_goal": "Summarize the total allowable deduction under Section 35.",
+      "anchor_phrases": [
+        "Total deduction allowable",
+        "13,00,000",
+        "Land cost strictly excluded"
+      ],
+      "animation_role": "key_fact",
+      "anchor_alignment": [
+        {
+          "phrase": "Total deduction allowable",
+          "at": 95.35,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "13,00,000",
+          "at": 97.31,
+          "matched": true,
+          "score": 0.501
+        },
+        {
+          "phrase": "Land cost strictly excluded",
+          "at": 99.37,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 3
+      }
+    }
+  ],
+  "audio_duration_sec": 103.47,
+  "anchor_match": {
+    "matched": 20,
+    "total": 27,
+    "rate": 0.741
+  }
+}

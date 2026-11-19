@@ -1,0 +1,408 @@
+{
+  "question_id": "dt-c3-q21",
+  "audio_url": "data/audio/dt-c3-q21.mp3",
+  "duration_sec": 176.32,
+  "sync_offset_sec": 0.0,
+  "context_pill": "Section 44A: Trade Association Deficiency",
+  "example_summary": "Boat Club, a trade association, seeks to set off its member expenditure deficiency of ₹ 1,85,000 against other income of ₹ 2,75,000 for AY 2026-27, subject to the 50% statutory ceiling.",
+  "source_provision": "| Aspect | Statutory Rule | Tax Treatment |\n| :--- | :--- | :--- |\n| Scope | Mutual Association (Trade Association) | Taxable as AOP/BOI |\n| Deficiency | Expenditure > Member Income | Set-off against other income |\n| Ceiling | Max deduction under Section 44A | 50% of Total Income (pre-deduction) |\n\n\n> [!IMPORTANT] Section 44A Sequence\n1. Calculate deficiency: (Expenditure for members - Income from members).\n2. Set off against PGBP income first.\n3. If PGBP is insufficient, set off against other heads of income.\n4. Apply ceiling: Deduction cannot exceed 50% of the total income computed before this allowance.\n\n\n> [!WARNING] Statutory Trap\n- Any unabsorbed deficiency after the 50% ceiling cannot be carried forward to subsequent Assessment Years.\n- Section 44AA mandates strict maintenance of books of account to support such claims.",
+  "director": {
+    "archetype": "set_off_carry_forward_waterfall",
+    "justification": "Section 44A involves absorbing member expenditure deficiency against business and other income heads through a capped set-off waterfall where unabsorbed amounts lapse without carry forward.",
+    "protagonist": "Boat Club",
+    "actors": [
+      "Boat Club",
+      "Members",
+      "Income-tax Department"
+    ],
+    "key_numbers": [
+      "₹ 2,00,000",
+      "₹ 3,85,000",
+      "₹ 1,85,000",
+      "₹ 2,75,000",
+      "50%",
+      "₹ 1,37,500",
+      "₹ 47,500"
+    ],
+    "key_dates": [
+      "31st March, 2026",
+      "AY 2026-27"
+    ],
+    "visual_metaphor": "Deficiency water stream flowing into an other income container, limited by a 50 percent restrictor valve with excess spilling off into a dead drain.",
+    "beat_plan": [
+      {
+        "beat_goal": "Introduce Boat Club's financial operations for AY 2026-27 under Section 44A.",
+        "layout": "example_scene",
+        "anchor_phrases": [
+          "Boat Club",
+          "AY 2026-27",
+          "Section 44A"
+        ]
+      },
+      {
+        "beat_goal": "Compute the member deficiency by subtracting member expenditures from subscription income.",
+        "layout": "ledger",
+        "anchor_phrases": [
+          "Subscription ₹ 2,00,000",
+          "Expenses ₹ 3,85,000",
+          "Deficiency ₹ 1,85,000"
+        ]
+      },
+      {
+        "beat_goal": "Apply the 50 percent pre-deduction ceiling against taxable other income to determine allowable set-off.",
+        "layout": "waterfall",
+        "anchor_phrases": [
+          "Other income ₹ 2,75,000",
+          "50% ceiling limit",
+          "Deduction ₹ 1,37,500"
+        ]
+      },
+      {
+        "beat_goal": "Highlight the statutory trap regarding unabsorbed deficiency carry forward and books maintenance.",
+        "layout": "checklist_gate",
+        "anchor_phrases": [
+          "Unabsorbed ₹ 47,500",
+          "No carry forward",
+          "Section 44AA"
+        ]
+      },
+      {
+        "beat_goal": "Summarize final taxable income computation of Boat Club for AY 2026-27.",
+        "layout": "takeaway",
+        "anchor_phrases": [
+          "Taxable Income ₹ 1,37,500",
+          "Section 44A",
+          "Boat Club"
+        ]
+      }
+    ]
+  },
+  "fallback": false,
+  "beats": [
+    {
+      "layout": "example_scene",
+      "title": {
+        "text": "Introduction to Section 44A",
+        "at": 0.3
+      },
+      "voice_sync_text": "Section 44A പ്രകാരം ഒരു trade association-ന് അവരുടെ members-ൽ നിന്ന് ലഭിക്കുന്ന വരുമാനത്തേക്കാൾ കൂടുതൽ ചിലവുകൾ വരികയാണെങ്കിൽ, ആ difference അല്ലെങ്കിൽ deficiency എങ്ങനെ set off ചെയ്യാം എന്ന് നോക്കാം. Boat Club-ന്റെ AY 2026-27 ലെ കേസ് നമുക്ക് ഉദാഹരണമായി എടുക്കാം.",
+      "visual_data": {
+        "actors": [
+          {
+            "label": "Boat Club",
+            "icon": "house",
+            "at": 19.12
+          }
+        ],
+        "transaction": "AY 2026-27 Assessment",
+        "facts": [
+          {
+            "label": "Section 44A",
+            "detail": "Mutual Association Rule",
+            "icon": "document",
+            "at": 19.12
+          },
+          {
+            "label": "AY 2026-27",
+            "icon": "calendar",
+            "at": 19.12
+          }
+        ]
+      },
+      "start": 0.0,
+      "end": 20.72,
+      "id": "b1",
+      "director_goal": "Introduce Boat Club's financial operations for AY 2026-27 under Section 44A.",
+      "anchor_phrases": [
+        "Boat Club",
+        "AY 2026-27",
+        "Section 44A"
+      ],
+      "animation_role": "key_fact",
+      "anchor_alignment": [
+        {
+          "phrase": "Boat Club",
+          "at": 19.12,
+          "matched": true,
+          "score": 0.842
+        },
+        {
+          "phrase": "AY 2026-27",
+          "at": 16.99,
+          "matched": false,
+          "score": 0.118
+        },
+        {
+          "phrase": "Section 44A",
+          "at": 0.0,
+          "matched": false,
+          "score": 0.222
+        }
+      ],
+      "anchor_match": {
+        "matched": 1,
+        "total": 3
+      }
+    },
+    {
+      "layout": "ledger",
+      "title": {
+        "text": "Calculating Member Deficiency",
+        "at": 21.37
+      },
+      "voice_sync_text": "ഇവിടെ deficiency എന്ന് പറയുന്നത് മെമ്പേഴ്സിന്റെ നന്മയ്ക്കായി ചെലവാക്കിയ തുക അവരുടെ സബ്സ്ക്രിപ്ഷൻ വരുമാനത്തേക്കാൾ കൂടുമ്പോഴാണ്. Boat Club-ന് Subscription ₹ 2,00,000 ലഭിച്ചപ്പോൾ Expenses ₹ 3,85,000 ആയി. അപ്പോൾ Deficiency ₹ 1,85,000 വരുന്നു.",
+      "visual_data": {
+        "rows": [
+          {
+            "label": "Subscription ₹ 2,00,000",
+            "amount": 200000,
+            "icon": "money_bag",
+            "at": 61.75
+          },
+          {
+            "label": "Expenses ₹ 3,85,000",
+            "amount": 385000,
+            "sign": "-",
+            "icon": "money_bag",
+            "at": 64.51
+          }
+        ],
+        "total": "Deficiency ₹ 1,85,000"
+      },
+      "start": 21.07,
+      "end": 71.23,
+      "id": "b2",
+      "director_goal": "Compute the member deficiency by subtracting member expenditures from subscription income.",
+      "anchor_phrases": [
+        "Subscription ₹ 2,00,000",
+        "Expenses ₹ 3,85,000",
+        "Deficiency ₹ 1,85,000"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Subscription ₹ 2,00,000",
+          "at": 61.75,
+          "matched": true,
+          "score": 0.838
+        },
+        {
+          "phrase": "Expenses ₹ 3,85,000",
+          "at": 64.51,
+          "matched": true,
+          "score": 0.765
+        },
+        {
+          "phrase": "Deficiency ₹ 1,85,000",
+          "at": 68.17,
+          "matched": true,
+          "score": 0.806
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 3
+      }
+    },
+    {
+      "layout": "waterfall",
+      "title": {
+        "text": "Applying the 50% Ceiling",
+        "at": 71.88
+      },
+      "voice_sync_text": "ഈ തുക ആദ്യം PGBP ഇൻകമിൽ നിന്നും, പിന്നീട് മറ്റ് ഹെഡുകളിൽ നിന്നും കുറയ്ക്കാൻ നിയമം അനുവദിക്കുന്നു. ക്ലബ്ബിന്റെ Other income ₹ 2,75,000 ആണ്. പ്രധാനപ്പെട്ട കാര്യം എന്താണെന്നുവെച്ചാൽ, ഈ ഡിഡക്ഷൻ 50% ceiling limit-ന് വിധേയമാണ്. അതുകൊണ്ട് Deduction ₹ 1,37,500 മാത്രമേ അനുവദിക്കൂ.",
+      "visual_data": {
+        "stages": [
+          {
+            "label": "Other income ₹ 2,75,000",
+            "amount": 275000,
+            "icon": "money_bag",
+            "at": 104.56
+          },
+          {
+            "label": "50% ceiling limit",
+            "value": "50%",
+            "icon": "scales",
+            "at": 110.44
+          },
+          {
+            "label": "Deduction ₹ 1,37,500",
+            "amount": 137500,
+            "sign": "-",
+            "icon": "money_bag",
+            "at": 113.2
+          }
+        ]
+      },
+      "start": 71.58,
+      "end": 117.42,
+      "id": "b3",
+      "director_goal": "Apply the 50 percent pre-deduction ceiling against taxable other income to determine allowable set-off.",
+      "anchor_phrases": [
+        "Other income ₹ 2,75,000",
+        "50% ceiling limit",
+        "Deduction ₹ 1,37,500"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Other income ₹ 2,75,000",
+          "at": 104.56,
+          "matched": true,
+          "score": 0.82
+        },
+        {
+          "phrase": "50% ceiling limit",
+          "at": 110.44,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Deduction ₹ 1,37,500",
+          "at": 113.2,
+          "matched": true,
+          "score": 0.684
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 3
+      }
+    },
+    {
+      "layout": "checklist_gate",
+      "title": {
+        "text": "Statutory Restrictions",
+        "at": 118.07
+      },
+      "voice_sync_text": "ബാക്കി വരുന്ന Unabsorbed ₹ 47,500 ക്യാരി ഫോർവേഡ് ചെയ്യാൻ സാധിക്കില്ല എന്ന് പ്രത്യേകം ഓർക്കുക. No carry forward എന്നതാണ് ഇവിടുത്തെ നിയമം. കൂടാതെ Section 44AA പ്രകാരം കൃത്യമായി ബുക്കുകൾ മെയിന്റയിൻ ചെയ്യേണ്ടതുണ്ട്.",
+      "visual_data": {
+        "conditions": [
+          {
+            "label": "Unabsorbed ₹ 47,500",
+            "pass": false,
+            "icon": "money_bag",
+            "at": 119.95
+          },
+          {
+            "label": "No carry forward",
+            "pass": true,
+            "icon": "padlock",
+            "at": 126.09
+          },
+          {
+            "label": "Section 44AA",
+            "pass": true,
+            "icon": "document",
+            "at": 130.05
+          }
+        ],
+        "outcome": "Lapsed Deficiency"
+      },
+      "start": 117.77,
+      "end": 134.77,
+      "id": "b4",
+      "director_goal": "Highlight the statutory trap regarding unabsorbed deficiency carry forward and books maintenance.",
+      "anchor_phrases": [
+        "Unabsorbed ₹ 47,500",
+        "No carry forward",
+        "Section 44AA"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Unabsorbed ₹ 47,500",
+          "at": 119.95,
+          "matched": true,
+          "score": 0.787
+        },
+        {
+          "phrase": "No carry forward",
+          "at": 126.09,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Section 44AA",
+          "at": 130.05,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 3
+      }
+    },
+    {
+      "layout": "takeaway",
+      "title": {
+        "text": "Final Taxable Income",
+        "at": 135.42
+      },
+      "voice_sync_text": "ചുരുക്കത്തിൽ, Boat Club-ന്റെ AY 2026-27 ലെ ഫൈനൽ Taxable Income ₹ 1,37,500 ആണ്. Section 44A പ്രകാരമുള്ള ഈ നിയമങ്ങൾ എല്ലാ ട്രേഡ് അസോസിയേഷനുകളും ശ്രദ്ധിക്കേണ്ടതാണ്.",
+      "visual_data": {
+        "rules": [
+          {
+            "label": "Taxable Income ₹ 1,37,500",
+            "icon": "scales",
+            "at": 163.72
+          },
+          {
+            "label": "Section 44A",
+            "icon": "document",
+            "at": 171.1
+          },
+          {
+            "label": "Boat Club",
+            "icon": "house",
+            "at": 171.1
+          }
+        ],
+        "spoken_dates": [
+          "AY 2026-27"
+        ]
+      },
+      "start": 135.12,
+      "end": 176.32,
+      "id": "b5",
+      "director_goal": "Summarize final taxable income computation of Boat Club for AY 2026-27.",
+      "anchor_phrases": [
+        "Taxable Income ₹ 1,37,500",
+        "Section 44A",
+        "Boat Club"
+      ],
+      "animation_role": "key_fact",
+      "anchor_alignment": [
+        {
+          "phrase": "Taxable Income ₹ 1,37,500",
+          "at": 163.72,
+          "matched": true,
+          "score": 0.816
+        },
+        {
+          "phrase": "Section 44A",
+          "at": 171.1,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Boat Club",
+          "at": 138.7,
+          "matched": false,
+          "score": 0.414
+        }
+      ],
+      "anchor_match": {
+        "matched": 2,
+        "total": 3
+      }
+    }
+  ],
+  "audio_duration_sec": 176.32,
+  "anchor_match": {
+    "matched": 12,
+    "total": 15,
+    "rate": 0.8
+  }
+}

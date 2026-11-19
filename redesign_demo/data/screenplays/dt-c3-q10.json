@@ -1,0 +1,457 @@
+{
+  "question_id": "dt-c3-q10",
+  "audio_url": "data/audio/dt-c3-q10.mp3",
+  "duration_sec": 70.72,
+  "sync_offset_sec": 0.0,
+  "context_pill": "Section 35ABB Amortisation",
+  "example_summary": "Easy Call Ltd. acquires a 10-year telecom licence paid in 3 instalments, computing deduction for A.Y. 2026-27.",
+  "source_provision": "### Statutory Summary Matrix: Section 35ABB\n\n| Statutory Parameter | Legal Rule & Condition | Tax Treatment | Deductibility Benchmark |\n| :--- | :--- | :--- | :--- |\n| **Nature of Expenditure** | Any capital expenditure actually paid for acquiring telecommunication licences | Allowed as amortised deduction | Spread equally over active licence period |\n| **Timing: Payment Before Commencement** | Payment made before business commences | Deduction begins in the **year of commencement of business** | Spread over remaining unexpired period |\n| **Timing: Payment After Commencement** | Payment made after business commences | Deduction begins in the **year of actual payment** | Spread over remaining unexpired period |\n\n\n> [!IMPORTANT]\n> Duration of Deduction: The deduction continues until the final year in which the licence ceases to be in force. Unexpired period is computed from the relevant previous year until the date of licence expiry.\n\n\n> [!WARNING]\n> Actual Payment Condition: Deduction u/s 35ABB strictly requires **actual payment**. Mere liability or provision accrued does not trigger amortisation until cash outflow occurs.",
+  "director": {
+    "archetype": "computation_ledger",
+    "justification": "Section 35ABB requires tracking each actual instalment paid against its unexpired licence period to compute the total amortisation deduction in the ledger for A.Y. 2026-27.",
+    "protagonist": "Easy Call Ltd.",
+    "actors": [
+      "Easy Call Ltd.",
+      "Assessing Officer"
+    ],
+    "key_numbers": [
+      "₹ 27,00,000",
+      "₹ 9,00,000",
+      "₹ 1,00,000",
+      "₹ 1,12,500",
+      "₹ 3,12,500"
+    ],
+    "key_dates": [
+      "01-04-2023",
+      "31-03-2033",
+      "01-04-2024",
+      "P.Y. 2023-24",
+      "P.Y. 2024-25",
+      "P.Y. 2025-26",
+      "A.Y. 2026-27"
+    ],
+    "visual_metaphor": "A multi-column amortisation ledger splitting telecom licence instalment payments across remaining active licence years.",
+    "beat_plan": [
+      {
+        "beat_goal": "Introduce Easy Call Ltd. acquiring a 10-year telecom licence for ₹ 27 lacs paid in 3 instalments.",
+        "layout": "example_scene",
+        "anchor_phrases": [
+          "Easy Call Ltd.",
+          "₹ 27,00,000",
+          "3 instalments",
+          "₹ 9,00,000"
+        ]
+      },
+      {
+        "beat_goal": "Verify statutory conditions u/s 35ABB regarding actual payment and business commencement timing.",
+        "layout": "checklist_gate",
+        "anchor_phrases": [
+          "Section 35ABB",
+          "actual payment",
+          "commencement of business"
+        ]
+      },
+      {
+        "beat_goal": "Map key dates and calculate unexpired licence duration from business commencement.",
+        "layout": "timeline_windows",
+        "anchor_phrases": [
+          "01-04-2023",
+          "01-04-2024",
+          "31-03-2033",
+          "unexpired period"
+        ]
+      },
+      {
+        "beat_goal": "Compute the amortisation breakdown for each instalment in the ledger for P.Y. 2025-26.",
+        "layout": "ledger",
+        "anchor_phrases": [
+          "₹ 1,00,000",
+          "₹ 1,12,500",
+          "9 years",
+          "8 years"
+        ]
+      },
+      {
+        "beat_goal": "Summarise total Section 35ABB deduction allowed for A.Y. 2026-27.",
+        "layout": "takeaway",
+        "anchor_phrases": [
+          "A.Y. 2026-27",
+          "₹ 3,12,500",
+          "Section 35ABB"
+        ]
+      }
+    ]
+  },
+  "fallback": false,
+  "beats": [
+    {
+      "layout": "example_scene",
+      "title": {
+        "text": "Telecom Licence Acquisition",
+        "at": 0.3
+      },
+      "voice_sync_text": "Easy Call Ltd. Mumbai-യിൽ telecom services നൽകാനായി 10-year licence സ്വന്തമാക്കി. Total licence fee ₹ 27,00,000 ആണ്, ഇത് 3 instalments ആയി ₹ 9,00,000 വീതം pay ചെയ്യുന്നു.",
+      "visual_data": {
+        "actors": [
+          {
+            "label": "Easy Call Ltd.",
+            "detail": "Telecom Operator",
+            "icon": "factory",
+            "at": 0.0
+          }
+        ],
+        "transaction": "Licence Fee Payment",
+        "facts": [
+          {
+            "label": "Total Licence Fee",
+            "value": "₹ 27,00,000",
+            "amount": 2700000,
+            "icon": "money_bag",
+            "at": 5.92
+          },
+          {
+            "label": "Instalment Plan",
+            "value": "3 instalments",
+            "detail": "₹ 9,00,000 each",
+            "amount": 900000,
+            "icon": "document",
+            "at": 8.88
+          }
+        ]
+      },
+      "start": 0.0,
+      "end": 12.0,
+      "id": "b1",
+      "director_goal": "Introduce Easy Call Ltd. acquiring a 10-year telecom licence for ₹ 27 lacs paid in 3 instalments.",
+      "anchor_phrases": [
+        "Easy Call Ltd.",
+        "₹ 27,00,000",
+        "3 instalments",
+        "₹ 9,00,000"
+      ],
+      "animation_role": "key_fact",
+      "anchor_alignment": [
+        {
+          "phrase": "Easy Call Ltd.",
+          "at": 0.58,
+          "matched": true,
+          "score": 0.64
+        },
+        {
+          "phrase": "₹ 27,00,000",
+          "at": 7.28,
+          "matched": true,
+          "score": 0.484
+        },
+        {
+          "phrase": "3 instalments",
+          "at": 9.12,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "₹ 9,00,000",
+          "at": 9.81,
+          "matched": false,
+          "score": 0.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 4
+      }
+    },
+    {
+      "layout": "checklist_gate",
+      "title": {
+        "text": "Section 35ABB Statutory Conditions",
+        "at": 12.65
+      },
+      "voice_sync_text": "Section 35ABB പ്രകാരം deduction ലഭിക്കാൻ actual payment നിർബന്ധമാണ്. Business commencement-ന് മുൻപുള്ള payment ആണെങ്കിൽ deduction commencement of business വർഷം മുതൽ നൽകും.",
+      "visual_data": {
+        "conditions": [
+          {
+            "label": "Section 35ABB Statutory Condition",
+            "detail": "Deduction requires actual payment",
+            "value": "actual payment",
+            "pass": true,
+            "icon": "scales",
+            "at": 12.73
+          },
+          {
+            "label": "Commencement Rule",
+            "detail": "Payment prior to commencement allowed from commencement year",
+            "value": "commencement of business",
+            "pass": true,
+            "icon": "calendar",
+            "at": 19.23
+          }
+        ],
+        "outcome": "Eligible for amortisation deduction u/s 35ABB"
+      },
+      "start": 12.35,
+      "end": 25.07,
+      "id": "b2",
+      "director_goal": "Verify statutory conditions u/s 35ABB regarding actual payment and business commencement timing.",
+      "anchor_phrases": [
+        "Section 35ABB",
+        "actual payment",
+        "commencement of business"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Section 35ABB",
+          "at": 18.11,
+          "matched": true,
+          "score": 0.56
+        },
+        {
+          "phrase": "actual payment",
+          "at": 18.93,
+          "matched": true,
+          "score": 0.667
+        },
+        {
+          "phrase": "commencement of business",
+          "at": 19.23,
+          "matched": true,
+          "score": 0.838
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 3
+      }
+    },
+    {
+      "layout": "timeline_windows",
+      "title": {
+        "text": "Licence Duration & Unexpired Period",
+        "at": 25.72
+      },
+      "voice_sync_text": "Licence starting date 01-04-2023 എങ്കിലും business commence ചെയ്തത് 01-04-2024-ൽ ആണ്. Licence 31-03-2033-ൽ അവസാനിക്കുന്നതിനാൽ remaining unexpired period accurately calculate ചെയ്യണം.",
+      "visual_data": {
+        "events": [
+          {
+            "label": "Licence Start",
+            "date": "01-04-2023",
+            "icon": "document",
+            "at": 35.2
+          },
+          {
+            "label": "Business Commencement",
+            "date": "01-04-2024",
+            "icon": "factory",
+            "at": 35.2
+          },
+          {
+            "label": "Licence Expiry",
+            "date": "31-03-2033",
+            "icon": "calendar",
+            "at": 35.2
+          },
+          {
+            "label": "Unexpired Duration Calculation",
+            "detail": "Remaining term from commencement/payment",
+            "value": "unexpired period",
+            "icon": "scales",
+            "at": 35.2
+          }
+        ],
+        "window_label": "Licence Timeline Analysis"
+      },
+      "start": 25.42,
+      "end": 43.66,
+      "id": "b3",
+      "director_goal": "Map key dates and calculate unexpired licence duration from business commencement.",
+      "anchor_phrases": [
+        "01-04-2023",
+        "01-04-2024",
+        "31-03-2033",
+        "unexpired period"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "01-04-2023",
+          "at": 27.72,
+          "matched": true,
+          "score": 0.583
+        },
+        {
+          "phrase": "01-04-2024",
+          "at": 31.86,
+          "matched": true,
+          "score": 0.583
+        },
+        {
+          "phrase": "31-03-2033",
+          "at": 35.76,
+          "matched": true,
+          "score": 0.56
+        },
+        {
+          "phrase": "unexpired period",
+          "at": 40.08,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 4,
+        "total": 4
+      }
+    },
+    {
+      "layout": "ledger",
+      "title": {
+        "text": "Amortisation Breakdown for P.Y. 2025-26",
+        "at": 44.31
+      },
+      "voice_sync_text": "First 2 instalments 9 years വച്ച് split ചെയ്ത് annual deduction ₹ 1,00,000 വീതം വരുന്നു. Third instalment 8 years കൊണ്ടാണ് divide ചെയ്യുന്നത്, അതുകൊണ്ട് deduction ₹ 1,12,500 ആകും.",
+      "visual_data": {
+        "rows": [
+          {
+            "label": "P.Y. 2023-24 Instalment",
+            "detail": "9 years unexpired period",
+            "value": "₹ 1,00,000",
+            "amount": 100000,
+            "icon": "money_bag",
+            "at": 49.5
+          },
+          {
+            "label": "P.Y. 2024-25 Instalment",
+            "detail": "9 years unexpired period",
+            "value": "₹ 1,00,000",
+            "amount": 100000,
+            "icon": "money_bag",
+            "at": 49.5
+          },
+          {
+            "label": "P.Y. 2025-26 Instalment",
+            "detail": "8 years unexpired period",
+            "value": "₹ 1,12,500",
+            "amount": 112500,
+            "icon": "money_bag",
+            "at": 52.41
+          }
+        ],
+        "total": "₹ 3,12,500"
+      },
+      "start": 44.01,
+      "end": 58.45,
+      "id": "b4",
+      "director_goal": "Compute the amortisation breakdown for each instalment in the ledger for P.Y. 2025-26.",
+      "anchor_phrases": [
+        "₹ 1,00,000",
+        "₹ 1,12,500",
+        "9 years",
+        "8 years"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "₹ 1,00,000",
+          "at": 55.69,
+          "matched": true,
+          "score": 0.62
+        },
+        {
+          "phrase": "₹ 1,12,500",
+          "at": 55.99,
+          "matched": true,
+          "score": 0.857
+        },
+        {
+          "phrase": "9 years",
+          "at": 45.62,
+          "matched": false,
+          "score": 0.353
+        },
+        {
+          "phrase": "8 years",
+          "at": 52.56,
+          "matched": false,
+          "score": 0.353
+        }
+      ],
+      "anchor_match": {
+        "matched": 2,
+        "total": 4
+      }
+    },
+    {
+      "layout": "takeaway",
+      "title": {
+        "text": "Total Deduction Allowed",
+        "at": 59.1
+      },
+      "voice_sync_text": "A.Y. 2026-27-ൽ Easy Call Ltd.-ന് Section 35ABB പ്രകാരം total ₹ 3,12,500 deduction ലഭിക്കും.",
+      "visual_data": {
+        "rules": [
+          {
+            "label": "Assessment Year",
+            "value": "A.Y. 2026-27",
+            "icon": "calendar",
+            "at": 59.45
+          },
+          {
+            "label": "Total Allowed Deduction",
+            "value": "₹ 3,12,500",
+            "amount": 312500,
+            "icon": "money_bag",
+            "at": 65.76
+          },
+          {
+            "label": "Statutory Provision",
+            "value": "Section 35ABB",
+            "detail": "Amortisation of telecom licence fee",
+            "icon": "document",
+            "at": 65.76
+          }
+        ]
+      },
+      "start": 58.8,
+      "end": 70.72,
+      "id": "b5",
+      "director_goal": "Summarise total Section 35ABB deduction allowed for A.Y. 2026-27.",
+      "anchor_phrases": [
+        "A.Y. 2026-27",
+        "₹ 3,12,500",
+        "Section 35ABB"
+      ],
+      "animation_role": "key_fact",
+      "anchor_alignment": [
+        {
+          "phrase": "A.Y. 2026-27",
+          "at": 58.8,
+          "matched": false,
+          "score": 0.429
+        },
+        {
+          "phrase": "₹ 3,12,500",
+          "at": 66.98,
+          "matched": true,
+          "score": 0.933
+        },
+        {
+          "phrase": "Section 35ABB",
+          "at": 69.4,
+          "matched": true,
+          "score": 0.545
+        }
+      ],
+      "anchor_match": {
+        "matched": 2,
+        "total": 3
+      }
+    }
+  ],
+  "audio_duration_sec": 70.72,
+  "anchor_match": {
+    "matched": 14,
+    "total": 18,
+    "rate": 0.778
+  }
+}

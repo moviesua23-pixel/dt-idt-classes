@@ -1,0 +1,510 @@
+{
+  "question_id": "dt-c3-q17",
+  "audio_url": "data/audio/dt-c3-q17.mp3",
+  "duration_sec": 180.71,
+  "sync_offset_sec": 0.0,
+  "context_pill": "Section 40(a)(ia) TDS Disallowance & Turnover Thresholds",
+  "example_summary": "Analysis of disallowance under section 40(a)(ia) for interest, salary, and commission paid by Mr. Yuvan Raja during financial year 2025-26.",
+  "source_provision": "| Nature of Payment / Expenditure | Applicable TDS Section & Threshold Conditions | Statutory Disallowance Rule u/s 40(a)(ia) | Tax Treatment & Legal Consequence |\n| :--- | :--- | :--- | :--- |\n| **Interest to Resident Firm** | **Section 194A**: Applicable only if total turnover of the individual or HUF payer in the immediately preceding previous year exceeds **₹ 100 Lakhs** (business) or **₹ 50 Lakhs** (profession). | No obligation to deduct tax at source if previous year turnover does not exceed the statutory threshold limits. | **No disallowance** under Section 40(a)(ia) as no default in TDS obligation arises.\n| **Salary to Resident Individual** | **Section 192**: Mandatory for **all assessee-employers** irrespective of turnover or gross receipts limits in the preceding previous year. | Failure to deduct tax at source attracts disallowance under Section 40(a)(ia) read with Chapter XVII-B. | **30% disallowance** of the salary sum payable or paid is triggered under Section 40(a)(ia).\n| **Commission to Resident** | **Section 194H** (exceeding **₹ 20,000**) and **Section 194M** (aggregate exceeding **₹ 50 Lakhs**): Applicable if previous year turnover exceeds **₹ 100 Lakhs** or threshold aggregate is breached. | If previous year turnover is below **₹ 100 Lakhs** and aggregate payment does not exceed **₹ 50 Lakhs**, no TDS liability arises. | **No disallowance** under Section 40(a)(ia) due to absence of statutory requirement to deduct tax at source.\n\n\n> [!IMPORTANT] Turnover Threshold Rule:\n> For individual and HUF assessees, the obligation to deduct tax at source under sections like Section 194A, Section 194H, Section 194I, Section 194J, and Section 194M is triggered only if their total sales, gross receipts, or turnover from business exceeds ₹ 100 Lakhs, or from profession exceeds ₹ 50 Lakhs, in the immediately preceding previous year.\n\n\n> [!WARNING] Universal Applicability of Section 192:\n> Section 192 governing tax deduction at source on salary has no turnover threshold exemption. Every employer, regardless of turnover size, must deduct tax at source from salary payments, failing which Section 40(a)(ia) 30% disallowance squarely applies.",
+  "director": {
+    "archetype": "conditions_checklist",
+    "justification": "The question evaluates multiple independent expenditure items against different statutory threshold conditions and rules under section 40(a)(ia).",
+    "protagonist": "Mr. Yuvan Raja",
+    "actors": [
+      "Mr. Yuvan Raja",
+      "Rehman & Co.",
+      "Mr. Vidyasagar"
+    ],
+    "key_numbers": [
+      "99 lacs",
+      "45,000",
+      "15,00,000",
+      "26,000",
+      "100 lakhs",
+      "30%",
+      "4,50,000",
+      "50 lakh"
+    ],
+    "key_dates": [
+      "31.3.2025",
+      "2.7.2025",
+      "2025-26"
+    ],
+    "visual_metaphor": "A tax compliance gate checking individual expenditure items against turnover thresholds and statutory provisions.",
+    "beat_plan": [
+      {
+        "beat_goal": "Introduce Mr. Yuvan Raja and his business turnover of 99 lacs for the year ended 31.3.2025.",
+        "layout": "example_scene",
+        "anchor_phrases": [
+          "Mr. Yuvan Raja",
+          "99 lacs",
+          "31.3.2025",
+          "2025-26"
+        ]
+      },
+      {
+        "beat_goal": "Examine the interest payment of 45,000 to Rehman & Co. under Section 194A and turnover limits.",
+        "layout": "checklist_gate",
+        "anchor_phrases": [
+          "45,000",
+          "Rehman & Co.",
+          "Section 194A",
+          "100 lakhs"
+        ]
+      },
+      {
+        "beat_goal": "Analyze the salary payment of 15,00,000 under Section 192 and the universal employer rule.",
+        "layout": "statute_quote",
+        "anchor_phrases": [
+          "15,00,000",
+          "Section 192",
+          "Chapter XVII-B",
+          "30%"
+        ]
+      },
+      {
+        "beat_goal": "Evaluate the commission payment of 26,000 to Mr. Vidyasagar under Section 194H and Section 194M.",
+        "layout": "decision_tree",
+        "anchor_phrases": [
+          "26,000",
+          "Mr. Vidyasagar",
+          "Section 194H",
+          "Section 194M"
+        ]
+      },
+      {
+        "beat_goal": "Compute the final disallowance under Section 40(a)(ia) totaling 4,50,000 for salary.",
+        "layout": "ledger",
+        "anchor_phrases": [
+          "Section 40(a)(ia)",
+          "4,50,000",
+          "30%",
+          "Profits & Gains"
+        ]
+      },
+      {
+        "beat_goal": "Summarize the final tax treatment for all three expenditure items.",
+        "layout": "takeaway",
+        "anchor_phrases": [
+          "No disallowance",
+          "30% disallowance",
+          "Turnover Threshold Rule",
+          "Section 192"
+        ]
+      }
+    ]
+  },
+  "fallback": false,
+  "beats": [
+    {
+      "layout": "example_scene",
+      "title": {
+        "text": "Mr. Yuvan Raja's Business Turnovers",
+        "at": 0.3
+      },
+      "voice_sync_text": "Income Tax Act-ile Section 40(a)(ia) പ്രകാരം, resident-ന് നൽകുന്ന ചില expenditure-കൾക്ക് TDS deduct ചെയ്യാതിരുന്നാലോ അല്ലെങ്കിൽ remit ചെയ്യാതിരുന്നാലോ ഉണ്ടാകുന്ന disallowance rules എന്തൊക്കെയാണെന്ന് നമുക്ക് നോക്കാം. Mr. Yuvan Raja, a resident individual, had a turnover of 99 lacs for the year ended 31.3.2025 during 2025-26.",
+      "visual_data": {
+        "actors": [
+          {
+            "label": "Mr. Yuvan Raja",
+            "detail": "Resident individual",
+            "icon": "person",
+            "at": 41.48
+          }
+        ],
+        "transaction": "Business turnover assessment for 2025-26",
+        "facts": [
+          {
+            "label": "Turnover",
+            "value": "99 lacs",
+            "amount": 9900000,
+            "at": 44.48
+          },
+          {
+            "label": "Year Ended",
+            "date": "31.3.2025",
+            "at": 46.52
+          },
+          {
+            "label": "Financial Year",
+            "value": "2025-26",
+            "at": 49.16
+          }
+        ]
+      },
+      "start": 0.0,
+      "end": 51.24,
+      "id": "b1",
+      "director_goal": "Introduce Mr. Yuvan Raja and his business turnover of 99 lacs for the year ended 31.3.2025.",
+      "anchor_phrases": [
+        "Mr. Yuvan Raja",
+        "99 lacs",
+        "31.3.2025",
+        "2025-26"
+      ],
+      "animation_role": "key_fact",
+      "anchor_alignment": [
+        {
+          "phrase": "Mr. Yuvan Raja",
+          "at": 41.48,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "99 lacs",
+          "at": 45.12,
+          "matched": true,
+          "score": 0.92
+        },
+        {
+          "phrase": "31.3.2025",
+          "at": 47.0,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "2025-26",
+          "at": 49.34,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 4,
+        "total": 4
+      }
+    },
+    {
+      "layout": "checklist_gate",
+      "title": {
+        "text": "Interest Payment Check under Section 194A",
+        "at": 51.89
+      },
+      "voice_sync_text": "Section 194A പ്രകാരം resident-ന് നൽകുന്ന interest-ന് TDS deduct ചെയ്യേണ്ട ബാധ്യത ഉണ്ട്. 45,000 paid to Rehman & Co. is checked against the 100 lakhs threshold rule.",
+      "visual_data": {
+        "conditions": [
+          {
+            "label": "Rehman & Co.",
+            "detail": "Resident partnership firm",
+            "amount": 45000,
+            "icon": "document",
+            "at": 54.91
+          },
+          {
+            "label": "Section 194A",
+            "detail": "Interest TDS requirement",
+            "at": 54.91
+          },
+          {
+            "label": "Turnover Limit",
+            "detail": "100 lakhs",
+            "amount": 10000000,
+            "pass": true,
+            "at": 62.17
+          }
+        ],
+        "outcome": "No disallowance under Section 40(a)(ia)",
+        "spoken_amounts": [
+          "45,000"
+        ]
+      },
+      "start": 51.59,
+      "end": 64.47,
+      "id": "b2",
+      "director_goal": "Examine the interest payment of 45,000 to Rehman & Co. under Section 194A and turnover limits.",
+      "anchor_phrases": [
+        "45,000",
+        "Rehman & Co.",
+        "Section 194A",
+        "100 lakhs"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "45,000",
+          "at": 58.55,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Rehman & Co.",
+          "at": 60.37,
+          "matched": true,
+          "score": 0.727
+        },
+        {
+          "phrase": "Section 194A",
+          "at": 51.59,
+          "matched": false,
+          "score": 0.32
+        },
+        {
+          "phrase": "100 lakhs",
+          "at": 62.41,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 4
+      }
+    },
+    {
+      "layout": "statute_quote",
+      "title": {
+        "text": "Salary Payment Rule under Section 192",
+        "at": 65.12
+      },
+      "voice_sync_text": "Chapter XVII-B പ്രകാരം Section 192 അനുസരിച്ചുള്ള salary payment-ന്റെ മേൽ TDS deduct ചെയ്യേണ്ട ബാധ്യത എല്ലാ employer-മാർക്കും ബാധകമാണ്. turnover limit ഇവിടെ ബാധകമല്ലാത്തതിനാൽ 15,00,000 paid triggers 30% disallowance.",
+      "visual_data": {
+        "rule": "Section 192 universal employer rule for salary",
+        "citation": "Chapter XVII-B",
+        "application": "15,00,000 salary paid without TDS attracts 30% disallowance",
+        "at": 67.62
+      },
+      "start": 64.82,
+      "end": 83.02,
+      "id": "b3",
+      "director_goal": "Analyze the salary payment of 15,00,000 under Section 192 and the universal employer rule.",
+      "anchor_phrases": [
+        "15,00,000",
+        "Section 192",
+        "Chapter XVII-B",
+        "30%"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "15,00,000",
+          "at": 78.36,
+          "matched": true,
+          "score": 0.484
+        },
+        {
+          "phrase": "Section 192",
+          "at": 66.77,
+          "matched": false,
+          "score": 0.19
+        },
+        {
+          "phrase": "Chapter XVII-B",
+          "at": 64.82,
+          "matched": false,
+          "score": 0.333
+        },
+        {
+          "phrase": "30%",
+          "at": 80.68,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 2,
+        "total": 4
+      }
+    },
+    {
+      "layout": "decision_tree",
+      "title": {
+        "text": "Commission Payment under Section 194H & 194M",
+        "at": 83.67
+      },
+      "voice_sync_text": "Commission payment-ന്റെ കാര്യത്തിൽ, Mr. Vidyasagar-ന് നൽകിയ 26,000 on 2.7.2025-ന് Section 194H അല്ലെങ്കിൽ Section 194M പ്രകാരമുള്ള monetary thresholds മറികടന്നാൽ മാത്രമേ TDS obligation ഉം disallowance-ഉം വരൂ.",
+      "visual_data": {
+        "root": "Commission of 26,000 paid to Mr. Vidyasagar on 2.7.2025",
+        "branches": [
+          {
+            "label": "Section 194H",
+            "amount": 26000,
+            "pass": false,
+            "at": 117.71
+          },
+          {
+            "label": "Section 194M",
+            "detail": "Aggregate limit",
+            "pass": false,
+            "at": 117.71
+          }
+        ]
+      },
+      "start": 83.37,
+      "end": 127.57,
+      "id": "b4",
+      "director_goal": "Evaluate the commission payment of 26,000 to Mr. Vidyasagar under Section 194H and Section 194M.",
+      "anchor_phrases": [
+        "26,000",
+        "Mr. Vidyasagar",
+        "Section 194H",
+        "Section 194M"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "26,000",
+          "at": 113.93,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Mr. Vidyasagar",
+          "at": 91.02,
+          "matched": false,
+          "score": 0.333
+        },
+        {
+          "phrase": "Section 194H",
+          "at": 117.71,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Section 194M",
+          "at": 119.79,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 4
+      }
+    },
+    {
+      "layout": "ledger",
+      "title": {
+        "text": "Computation of Disallowance",
+        "at": 128.22
+      },
+      "voice_sync_text": "Section 40(a)(ia) പ്രകാരം profits and gains of business or profession-ൽ വരുന്ന final disallowance computed for salary is 4,50,000 based on the 30% rate.",
+      "visual_data": {
+        "rows": [
+          {
+            "label": "Salary Disallowance",
+            "amount": 450000,
+            "sign": "-",
+            "at": 133.56
+          },
+          {
+            "label": "Disallowance Rate",
+            "value": "30%",
+            "sign": "=",
+            "at": 134.06
+          }
+        ],
+        "total": "Profits & Gains: 4,50,000 disallowed under Section 40(a)(ia)"
+      },
+      "start": 127.92,
+      "end": 140.32,
+      "id": "b5",
+      "director_goal": "Compute the final disallowance under Section 40(a)(ia) totaling 4,50,000 for salary.",
+      "anchor_phrases": [
+        "Section 40(a)(ia)",
+        "4,50,000",
+        "30%",
+        "Profits & Gains"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Section 40(a)(ia)",
+          "at": 132.64,
+          "matched": true,
+          "score": 0.488
+        },
+        {
+          "phrase": "4,50,000",
+          "at": 136.66,
+          "matched": true,
+          "score": 0.933
+        },
+        {
+          "phrase": "30%",
+          "at": 138.98,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Profits & Gains",
+          "at": 130.04,
+          "matched": false,
+          "score": 0.235
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 4
+      }
+    },
+    {
+      "layout": "takeaway",
+      "title": {
+        "text": "Summary of Tax Treatments",
+        "at": 140.97
+      },
+      "voice_sync_text": "തന്നിരിക്കുന്ന മൂന്ന് expenditure items-ന്റെയും ഫൈനൽ tax treatment ഇതാണ്: Turnover Threshold Rule കാരണം interest-നും commission-നും no disallowance; എന്നാൽ universal Section 192 rule പ്രകാരം salary-ക്ക് 30% disallowance.",
+      "visual_data": {
+        "rules": [
+          {
+            "label": "Turnover Threshold Rule",
+            "detail": "No disallowance for interest and commission",
+            "at": 170.67
+          },
+          {
+            "label": "Section 192",
+            "detail": "30% disallowance for salary",
+            "at": 175.93
+          }
+        ]
+      },
+      "start": 140.67,
+      "end": 180.71,
+      "id": "b6",
+      "director_goal": "Summarize the final tax treatment for all three expenditure items.",
+      "anchor_phrases": [
+        "No disallowance",
+        "30% disallowance",
+        "Turnover Threshold Rule",
+        "Section 192"
+      ],
+      "animation_role": "key_fact",
+      "anchor_alignment": [
+        {
+          "phrase": "No disallowance",
+          "at": 173.87,
+          "matched": true,
+          "score": 0.741
+        },
+        {
+          "phrase": "30% disallowance",
+          "at": 178.65,
+          "matched": true,
+          "score": 0.57
+        },
+        {
+          "phrase": "Turnover Threshold Rule",
+          "at": 154.14,
+          "matched": false,
+          "score": 0.267
+        },
+        {
+          "phrase": "Section 192",
+          "at": 170.88,
+          "matched": false,
+          "score": 0.286
+        }
+      ],
+      "anchor_match": {
+        "matched": 2,
+        "total": 4
+      }
+    }
+  ],
+  "audio_duration_sec": 180.71,
+  "anchor_match": {
+    "matched": 17,
+    "total": 24,
+    "rate": 0.708
+  }
+}

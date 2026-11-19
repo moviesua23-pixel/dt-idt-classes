@@ -1,0 +1,754 @@
+{
+  "question_id": "dt-c3-q8",
+  "audio_url": "data/audio/dt-c3-q8.mp3",
+  "duration_sec": 168.65,
+  "sync_offset_sec": 0.0,
+  "context_pill": "Section 33AB & Rule 8: Tea Development Account",
+  "example_summary": "G Ltd. claims Section 33AB deduction for tea business profits, manages subsequent fund withdrawals for assets, and navigates the tax implications of premature asset sales and mis-utilization.",
+  "source_provision": "### Statutory Summary Matrix: Section 33AB & Rule 8\n\n| Statutory Provision / Rule | Core Condition / Threshold | Tax Treatment & Legal Consequence |\n| :--- | :--- | :--- |\n| **Section 33AB(1)** | Deposit in Tea Development Account on or before specified due date | Deduction allowed is lower of actual deposit or 40% of composite business profits. |\n| **Section 33AB(4)** | Utilization of withdrawn amount for non-permissible assets (e.g. office machinery) | Deemed as profits and gains of business for the previous year of withdrawal. |\n| **Section 33AB(6)** | Utilization of withdrawn amount for specified non-depreciable assets | No fresh deduction under Section 33AB since funds originate from already-deducted deposits. |\n| **Section 33AB(7)** | Failure to utilize withdrawn amount within the same financial year of withdrawal | Chargeable to tax as business income in the year of withdrawal. |\n| **Section 33AB(8)** | Sale of asset acquired out of deposit before expiry of 8 years | Cost of such asset is deemed as profits and gains of business in the year of sale. |\n| **Rule 8** | Composite business of growing and manufacturing tea in India | 40% taxable as business income; 60% treated as agricultural income exempt from tax. |\n\n> [!IMPORTANT]\n> Segregation Requirement: When any part of a withdrawal amount becomes taxable under Section 33AB, the income must be strictly segregated into 40% business income and 60% agricultural income pursuant to Rule 8 before setting off brought-forward business losses under Section 72.\n\n> [!WARNING]\n> Asset Sale Restriction: Selling an asset purchased from a Tea Development Account within 8 years from the end of the acquisition year triggers immediate business income taxability under Section 33AB(8).",
+  "director": {
+    "archetype": "computation_ledger",
+    "justification": "The scenario requires a multi-step calculation of composite income, deduction limits u/s 33AB, and the subsequent taxability of mis-utilized funds across different assessment years.",
+    "protagonist": "G Ltd.",
+    "actors": [
+      "Income Tax Department",
+      "Tea Board"
+    ],
+    "key_numbers": [
+      "₹ 60,00,000",
+      "₹ 11,00,000",
+      "₹ 14,00,000",
+      "₹ 10,00,000",
+      "₹ 6,00,000",
+      "₹ 3,00,000",
+      "₹ 1,00,000",
+      "40%",
+      "60%"
+    ],
+    "key_dates": [
+      "31.03.2025",
+      "01.09.2025",
+      "25.01.2026",
+      "05.04.2026",
+      "April 2026"
+    ],
+    "visual_metaphor": "A tea plantation processing plant with a 'Tax Sieve' that separates 40/60 and a 'Deposit Silo' for Section 33AB funds.",
+    "beat_plan": [
+      {
+        "beat_goal": "Establish G Ltd's composite business profits and the initial deposit into the Tea Development Account.",
+        "layout": "example_scene",
+        "anchor_phrases": [
+          "G Ltd.",
+          "Composite business profits ₹ 60,00,000",
+          "Deposit ₹ 11,00,000",
+          "01.09.2025"
+        ]
+      },
+      {
+        "beat_goal": "Calculate the deduction limit under Section 33AB(1) comparing actual deposit vs 40% of profits.",
+        "layout": "slab_ladder",
+        "anchor_phrases": [
+          "Section 33AB(1)",
+          "Lower of",
+          "Actual deposit ₹ 11,00,000",
+          "40% of profits ₹ 24,00,000"
+        ]
+      },
+      {
+        "beat_goal": "Compute the business income for AY 2025-26 including Rule 8 segregation and loss set-off.",
+        "layout": "ledger",
+        "anchor_phrases": [
+          "Rule 8",
+          "60% Agricultural Income",
+          "40% Business Income",
+          "Brought forward loss ₹ 14,00,000",
+          "Taxable income ₹ 5,60,000"
+        ]
+      },
+      {
+        "beat_goal": "Analyze the withdrawal of ₹ 10 lakhs and categorize utilization as permissible or non-permissible.",
+        "layout": "checklist_gate",
+        "anchor_phrases": [
+          "Withdrawal ₹ 10,00,000",
+          "Non-depreciable asset ₹ 6,00,000",
+          "Office machinery ₹ 3,00,000",
+          "Late utilization ₹ 1,00,000"
+        ]
+      },
+      {
+        "beat_goal": "Determine the tax consequences of mis-utilized funds under Section 33AB(4) and 33AB(7).",
+        "layout": "flow_actors",
+        "anchor_phrases": [
+          "Section 33AB(4)",
+          "Section 33AB(7)",
+          "Deemed profits ₹ 4,00,000",
+          "40% Taxable ₹ 1,60,000"
+        ]
+      },
+      {
+        "beat_goal": "Explain the 8-year lock-in period for assets purchased from the deposit account.",
+        "layout": "timeline_windows",
+        "anchor_phrases": [
+          "Section 33AB(8)",
+          "8 years lock-in",
+          "Sale in April 2026"
+        ]
+      },
+      {
+        "beat_goal": "Calculate the deemed business income and capital gains from the premature sale of the asset.",
+        "layout": "deemed_value",
+        "anchor_phrases": [
+          "Deemed business income ₹ 6,00,000",
+          "Short term capital gains ₹ 2,00,000",
+          "Sale price ₹ 8,00,000"
+        ]
+      },
+      {
+        "beat_goal": "Summarize the interaction between Section 33AB deductions and Rule 8 composite income segregation.",
+        "layout": "takeaway",
+        "anchor_phrases": [
+          "40/60 Split",
+          "Section 33AB compliance",
+          "Utilization monitoring"
+        ]
+      }
+    ]
+  },
+  "fallback": false,
+  "beats": [
+    {
+      "layout": "example_scene",
+      "title": {
+        "text": "G Ltd.'s Tea Business & Deposit",
+        "at": 0.3
+      },
+      "voice_sync_text": "G Ltd. എന്ന കമ്പനി tea growing and manufacturing business-ൽ ഏർപ്പെട്ടിരിക്കുകയാണ്. P.Y. 2024-25-ൽ അവരുടെ Composite business profits ₹ 60,00,000 ആയിരുന്നു. Section 33AB പ്രകാരം deduction ക്ലെയിം ചെയ്യാൻ 01.09.2025-ന് അവർ ₹ 11,00,000 Tea Development Account-ൽ Deposit ചെയ്തു.",
+      "visual_data": {
+        "actors": [
+          {
+            "label": "G Ltd.",
+            "detail": "Tea Manufacturer",
+            "icon": "factory",
+            "at": 0.0
+          },
+          {
+            "label": "Tea Board",
+            "detail": "Deposit Account",
+            "icon": "bank",
+            "at": 20.84
+          }
+        ],
+        "transaction": "Deposit for Section 33AB",
+        "facts": [
+          {
+            "label": "Composite business profits",
+            "amount": 6000000,
+            "icon": "money_bag",
+            "at": 20.84
+          },
+          {
+            "label": "Deposit Amount",
+            "amount": 1100000,
+            "date": "01.09.2025",
+            "icon": "calendar",
+            "at": 22.1
+          }
+        ],
+        "spoken_amounts": [
+          "₹ 60,00,000",
+          "₹ 11,00,000",
+          "60,00,000",
+          "11,00,000"
+        ],
+        "spoken_dates": [
+          "P.Y. 2024-25"
+        ]
+      },
+      "start": 0.0,
+      "end": 23.28,
+      "id": "b1",
+      "director_goal": "Establish G Ltd's composite business profits and the initial deposit into the Tea Development Account.",
+      "anchor_phrases": [
+        "G Ltd.",
+        "Composite business profits ₹ 60,00,000",
+        "Deposit ₹ 11,00,000",
+        "01.09.2025"
+      ],
+      "animation_role": "key_fact",
+      "anchor_alignment": [
+        {
+          "phrase": "G Ltd.",
+          "at": 0.68,
+          "matched": true,
+          "score": 0.5
+        },
+        {
+          "phrase": "Composite business profits ₹ 60,00,000",
+          "at": 9.4,
+          "matched": true,
+          "score": 0.965
+        },
+        {
+          "phrase": "Deposit ₹ 11,00,000",
+          "at": 22.1,
+          "matched": true,
+          "score": 0.703
+        },
+        {
+          "phrase": "01.09.2025",
+          "at": 17.23,
+          "matched": false,
+          "score": 0.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 4
+      }
+    },
+    {
+      "layout": "slab_ladder",
+      "title": {
+        "text": "Section 33AB(1) Deduction Limit",
+        "at": 23.93
+      },
+      "voice_sync_text": "Section 33AB(1) പ്രകാരം ലഭിക്കുന്ന deduction എന്നത് രണ്ട് കാര്യങ്ങളിൽ Lower of ആയിരിക്കും. ഒന്ന്, Actual deposit ₹ 11,00,000. രണ്ട്, 40% of profits, അതായത് ₹ 60,00,000-ന്റെ 40 percentage ആയ ₹ 24,00,000. ഇതിൽ കുറഞ്ഞ തുകയായ ₹ 11,00,000 നമുക്ക് deduction ആയി ലഭിക്കും.",
+      "visual_data": {
+        "tiers": [
+          {
+            "label": "Actual deposit",
+            "amount": 1100000,
+            "status": "Lower - Selected",
+            "at": 31.35
+          },
+          {
+            "label": "40% of profits",
+            "amount": 2400000,
+            "detail": "40% of ₹ 60,00,000",
+            "at": 34.87
+          }
+        ],
+        "spoken_amounts": [
+          "₹ 11,00,000",
+          "₹ 24,00,000",
+          "11,00,000",
+          "24,00,000"
+        ]
+      },
+      "start": 23.63,
+      "end": 46.35,
+      "id": "b2",
+      "director_goal": "Calculate the deduction limit under Section 33AB(1) comparing actual deposit vs 40% of profits.",
+      "anchor_phrases": [
+        "Section 33AB(1)",
+        "Lower of",
+        "Actual deposit ₹ 11,00,000",
+        "40% of profits ₹ 24,00,000"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Section 33AB(1)",
+          "at": 24.13,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Lower of",
+          "at": 27.97,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Actual deposit ₹ 11,00,000",
+          "at": 31.35,
+          "matched": true,
+          "score": 0.893
+        },
+        {
+          "phrase": "40% of profits ₹ 24,00,000",
+          "at": 34.87,
+          "matched": true,
+          "score": 0.87
+        }
+      ],
+      "anchor_match": {
+        "matched": 4,
+        "total": 4
+      }
+    },
+    {
+      "layout": "ledger",
+      "title": {
+        "text": "AY 2025-26 Business Income",
+        "at": 47.0
+      },
+      "voice_sync_text": "ഇനി AY 2025-26-ലെ business income കണക്കാക്കാം. Rule 8 അനുസരിച്ച് composite income-നെ 60% Agricultural Income ആയും 40% Business Income ആയും തിരിക്കണം. ₹ 49,00,000-ൽ നിന്നും 60 percentage മാറ്റിയാൽ ബാക്കി 40 percentage ആയ ₹ 19,60,000 വരും. ഇതിൽ നിന്നും Brought forward loss ₹ 14,00,000 set-off ചെയ്താൽ Taxable income ₹ 5,60,000 ആയിരിക്കും.",
+      "visual_data": {
+        "rows": [
+          {
+            "label": "Composite Profit",
+            "amount": 6000000,
+            "at": 54.0
+          },
+          {
+            "label": "Less: Sec 33AB Deduction",
+            "amount": 1100000,
+            "sign": "-",
+            "at": 54.0
+          },
+          {
+            "label": "Balance",
+            "amount": 4900000,
+            "sign": "=",
+            "at": 54.0
+          },
+          {
+            "label": "60% Agricultural Income",
+            "amount": 2940000,
+            "sign": "-",
+            "at": 55.32
+          },
+          {
+            "label": "40% Business Income",
+            "amount": 1960000,
+            "sign": "=",
+            "at": 57.84
+          },
+          {
+            "label": "Brought forward loss",
+            "amount": 1400000,
+            "sign": "-",
+            "at": 69.16
+          }
+        ],
+        "total": "Taxable income ₹ 5,60,000",
+        "spoken_amounts": [
+          "₹ 49,00,000",
+          "₹ 19,60,000",
+          "₹ 14,00,000",
+          "49,00,000",
+          "19,60,000",
+          "14,00,000"
+        ],
+        "spoken_dates": [
+          "AY 2025-26"
+        ]
+      },
+      "start": 46.7,
+      "end": 76.86,
+      "id": "b3",
+      "director_goal": "Compute the business income for AY 2025-26 including Rule 8 segregation and loss set-off.",
+      "anchor_phrases": [
+        "Rule 8",
+        "60% Agricultural Income",
+        "40% Business Income",
+        "Brought forward loss ₹ 14,00,000",
+        "Taxable income ₹ 5,60,000"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Rule 8",
+          "at": 52.3,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "60% Agricultural Income",
+          "at": 55.32,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "40% Business Income",
+          "at": 57.84,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Brought forward loss ₹ 14,00,000",
+          "at": 69.16,
+          "matched": false,
+          "score": 0.4
+        },
+        {
+          "phrase": "Taxable income ₹ 5,60,000",
+          "at": 73.08,
+          "matched": true,
+          "score": 0.88
+        }
+      ],
+      "anchor_match": {
+        "matched": 4,
+        "total": 5
+      }
+    },
+    {
+      "layout": "checklist_gate",
+      "title": {
+        "text": "Withdrawal Utilization Analysis",
+        "at": 77.51
+      },
+      "voice_sync_text": "25.01.2026-ന് Withdrawal ₹ 10,00,000 നടത്തി. ഇതിൽ Non-depreciable asset വാങ്ങാൻ ഉപയോഗിച്ച ₹ 6,00,000 permissible ആണ്. എന്നാൽ Office machinery വാങ്ങാൻ ഉപയോഗിച്ച ₹ 3,00,000-ഉം, 05.04.2026-ന് മാത്രം ചിലവാക്കിയ Late utilization ആയ ₹ 1,00,000-ഉം non-permissible ആണ്.",
+      "visual_data": {
+        "conditions": [
+          {
+            "label": "Non-depreciable asset",
+            "amount": 600000,
+            "pass": true,
+            "detail": "Permissible",
+            "at": 83.53
+          },
+          {
+            "label": "Office machinery",
+            "amount": 300000,
+            "pass": false,
+            "detail": "Non-permissible",
+            "at": 88.81
+          },
+          {
+            "label": "Late utilization",
+            "amount": 100000,
+            "date": "05.04.2026",
+            "pass": false,
+            "detail": "Outside PY",
+            "at": 92.52
+          }
+        ],
+        "outcome": "Withdrawal ₹ 10,00,000",
+        "spoken_amounts": [
+          "₹ 6,00,000",
+          "₹ 3,00,000",
+          "₹ 1,00,000",
+          "6,00,000",
+          "3,00,000",
+          "1,00,000"
+        ],
+        "spoken_dates": [
+          "25.01.2026"
+        ]
+      },
+      "start": 77.21,
+      "end": 100.05,
+      "id": "b4",
+      "director_goal": "Analyze the withdrawal of ₹ 10 lakhs and categorize utilization as permissible or non-permissible.",
+      "anchor_phrases": [
+        "Withdrawal ₹ 10,00,000",
+        "Non-depreciable asset ₹ 6,00,000",
+        "Office machinery ₹ 3,00,000",
+        "Late utilization ₹ 1,00,000"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Withdrawal ₹ 10,00,000",
+          "at": 82.79,
+          "matched": true,
+          "score": 0.787
+        },
+        {
+          "phrase": "Non-depreciable asset ₹ 6,00,000",
+          "at": 83.53,
+          "matched": true,
+          "score": 0.796
+        },
+        {
+          "phrase": "Office machinery ₹ 3,00,000",
+          "at": 88.81,
+          "matched": true,
+          "score": 0.855
+        },
+        {
+          "phrase": "Late utilization ₹ 1,00,000",
+          "at": 95.32,
+          "matched": false,
+          "score": 0.36
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 4
+      }
+    },
+    {
+      "layout": "flow_actors",
+      "title": {
+        "text": "Tax on Mis-utilized Funds",
+        "at": 100.7
+      },
+      "voice_sync_text": "Mis-utilize ചെയ്ത തുകയ്ക്ക് Section 33AB(4) ഉം Section 33AB(7) ഉം പ്രകാരം ടാക്സ് നൽകണം. ഇവിടെ Deemed profits ₹ 4,00,000 ആണ്. ഇതിന്റെ 40% Taxable ആയ ₹ 1,60,000 business income ആയി കണക്കാക്കും. ബാക്കി 60 percentage agricultural income ആണ്.",
+      "visual_data": {
+        "actors": [
+          {
+            "label": "G Ltd.",
+            "icon": "factory",
+            "at": 100.4
+          },
+          {
+            "label": "Income Tax Department",
+            "icon": "gavel",
+            "at": 117.44
+          }
+        ],
+        "edges": [
+          {
+            "label": "Section 33AB(4) & (7)",
+            "detail": "Mis-utilization",
+            "amount": 400000,
+            "at": 117.44
+          },
+          {
+            "label": "Deemed profits",
+            "amount": 400000,
+            "sign": "=",
+            "at": 117.44
+          },
+          {
+            "label": "40% Taxable",
+            "amount": 160000,
+            "status": "Business Income",
+            "at": 117.44
+          }
+        ],
+        "spoken_amounts": [
+          "₹ 4,00,000",
+          "₹ 1,60,000",
+          "4,00,000",
+          "1,60,000"
+        ]
+      },
+      "start": 100.4,
+      "end": 122.32,
+      "id": "b5",
+      "director_goal": "Determine the tax consequences of mis-utilized funds under Section 33AB(4) and 33AB(7).",
+      "anchor_phrases": [
+        "Section 33AB(4)",
+        "Section 33AB(7)",
+        "Deemed profits ₹ 4,00,000",
+        "40% Taxable ₹ 1,60,000"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Section 33AB(4)",
+          "at": 102.4,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Section 33AB(7)",
+          "at": 104.84,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Deemed profits ₹ 4,00,000",
+          "at": 109.52,
+          "matched": true,
+          "score": 0.847
+        },
+        {
+          "phrase": "40% Taxable ₹ 1,60,000",
+          "at": 114.22,
+          "matched": true,
+          "score": 0.78
+        }
+      ],
+      "anchor_match": {
+        "matched": 4,
+        "total": 4
+      }
+    },
+    {
+      "layout": "timeline_windows",
+      "title": {
+        "text": "Asset Lock-in Period",
+        "at": 122.97
+      },
+      "voice_sync_text": "Section 33AB(8) പ്രകാരം ഈ ഫണ്ട് ഉപയോഗിച്ച് വാങ്ങുന്ന അസറ്റുകൾക്ക് 8 years lock-in period ഉണ്ട്. എന്നാൽ G Ltd. ഈ അസറ്റ് Sale in April 2026-ൽ തന്നെ വിറ്റു. ഇത് നിയമലംഘനമാണ്.",
+      "visual_data": {
+        "events": [
+          {
+            "label": "Asset Acquired",
+            "date": "P.Y. 2025-26",
+            "icon": "factory",
+            "at": 131.93
+          },
+          {
+            "label": "Sale in April 2026",
+            "date": "April 2026",
+            "status": "Violation",
+            "icon": "money_bag",
+            "at": 132.47
+          }
+        ],
+        "window_label": "8 years lock-in"
+      },
+      "start": 122.67,
+      "end": 136.95,
+      "id": "b6",
+      "director_goal": "Explain the 8-year lock-in period for assets purchased from the deposit account.",
+      "anchor_phrases": [
+        "Section 33AB(8)",
+        "8 years lock-in",
+        "Sale in April 2026"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Section 33AB(8)",
+          "at": 123.17,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "8 years lock-in",
+          "at": 128.25,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Sale in April 2026",
+          "at": 132.47,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 3
+      }
+    },
+    {
+      "layout": "deemed_value",
+      "title": {
+        "text": "Consequences of Premature Sale",
+        "at": 137.6
+      },
+      "voice_sync_text": "ഈ premature sale കാരണം, അസറ്റിന്റെ കോസ്റ്റ് ആയ ₹ 6,00,000 Deemed business income ആയി മാറും. ഇതിന്റെ 40 percentage ടാക്സ് ചെയ്യപ്പെടും. കൂടാതെ Sale price ₹ 8,00,000 ആയതിനാൽ Short term capital gains ₹ 2,00,000 കൂടി കണക്കാക്കണം.",
+      "visual_data": {
+        "actual": {
+          "label": "Sale price",
+          "amount": 800000,
+          "at": 152.56
+        },
+        "deemed": {
+          "label": "Deemed business income",
+          "amount": 600000,
+          "detail": "Cost of asset",
+          "at": 152.56
+        },
+        "rule": "Short term capital gains ₹ 2,00,000",
+        "spoken_amounts": [
+          "₹ 6,00,000",
+          "₹ 8,00,000",
+          "6,00,000",
+          "8,00,000"
+        ],
+        "at": 152.56
+      },
+      "start": 137.3,
+      "end": 156.3,
+      "id": "b7",
+      "director_goal": "Calculate the deemed business income and capital gains from the premature sale of the asset.",
+      "anchor_phrases": [
+        "Deemed business income ₹ 6,00,000",
+        "Short term capital gains ₹ 2,00,000",
+        "Sale price ₹ 8,00,000"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Deemed business income ₹ 6,00,000",
+          "at": 143.36,
+          "matched": true,
+          "score": 0.907
+        },
+        {
+          "phrase": "Short term capital gains ₹ 2,00,000",
+          "at": 152.56,
+          "matched": true,
+          "score": 0.896
+        },
+        {
+          "phrase": "Sale price ₹ 8,00,000",
+          "at": 149.29,
+          "matched": false,
+          "score": 0.364
+        }
+      ],
+      "anchor_match": {
+        "matched": 2,
+        "total": 3
+      }
+    },
+    {
+      "layout": "takeaway",
+      "title": {
+        "text": "Key Compliance Summary",
+        "at": 156.95
+      },
+      "voice_sync_text": "ചുരുക്കത്തിൽ, tea business-ൽ 40/60 Split കൃത്യമായി പാലിക്കണം. Section 33AB compliance ഉറപ്പാക്കുകയും ഫണ്ടുകളുടെ Utilization monitoring നടത്തുകയും വേണം.",
+      "visual_data": {
+        "rules": [
+          {
+            "label": "40/60 Split",
+            "detail": "Rule 8 Segregation",
+            "at": 158.87
+          },
+          {
+            "label": "Section 33AB compliance",
+            "detail": "Deposit & Deduction limits",
+            "at": 162.15
+          },
+          {
+            "label": "Utilization monitoring",
+            "detail": "Avoid Section 33AB(4)/(7)/(8) triggers",
+            "at": 162.15
+          }
+        ]
+      },
+      "start": 156.65,
+      "end": 168.65,
+      "id": "b8",
+      "director_goal": "Summarize the interaction between Section 33AB deductions and Rule 8 composite income segregation.",
+      "anchor_phrases": [
+        "40/60 Split",
+        "Section 33AB compliance",
+        "Utilization monitoring"
+      ],
+      "animation_role": "key_fact",
+      "anchor_alignment": [
+        {
+          "phrase": "40/60 Split",
+          "at": 158.87,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Section 33AB compliance",
+          "at": 162.15,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Utilization monitoring",
+          "at": 166.65,
+          "matched": true,
+          "score": 0.684
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 3
+      }
+    }
+  ],
+  "audio_duration_sec": 168.65,
+  "anchor_match": {
+    "matched": 26,
+    "total": 30,
+    "rate": 0.867
+  }
+}

@@ -1,0 +1,645 @@
+{
+  "question_id": "dt-c3-q7",
+  "audio_url": "data/audio/dt-c3-q7.mp3",
+  "duration_sec": 148.53,
+  "sync_offset_sec": 0.0,
+  "context_pill": "Section 33AB & NABARD Withdrawals",
+  "example_summary": "M/s. Gomati P Ltd. calculates its taxable business income by adjusting book profits for Section 33AB deductions, adding back deemed income from misutilized NABARD withdrawals and premature asset sales, and applying Section 79 loss restrictions.",
+  "source_provision": "### Statutory Summary Matrix: Section 33AB & NABARD Withdrawals\n\n| Statutory Provision | Core Condition / Threshold | Tax Treatment / Legal Consequence |\n| :--- | :--- | :--- |\n| **Section 33AB Deduction** | Lower of deposit made within specified time or 40% of business profits | Allowed as business deduction in the year of deposit |\n| **NABARD Withdrawal Utilization** | Must be used for approved scheme (e.g. machinery, godown, replanting) | Exempt from deemed income if utilized as per specified scheme |\n| **Non-Permissible Withdrawal u/s 33AB(7)** | Amount withdrawn but not utilized within PY or spent on ineligible items | Deemed as Profits and Gains of Business or Profession in that PY |\n| **Premature Asset Sale u/s 33AB(8)** | Sale of asset acquired out of deposit before expiry of 8 years | Cost of such asset is deemed as PGBP income in the year of sale |\n\n\n> [!IMPORTANT] Dual Deduction Restriction: No depreciation or business deduction is allowable on assets acquired out of special account withdrawals if the original deposit was already allowed as a deduction u/s 33AB.\n\n\n> [!WARNING] Deemed Income Trap: Unutilized withdrawal amounts at the end of the previous year automatically trigger deemed business income under Section 33AB.",
+  "director": {
+    "archetype": "computation_ledger",
+    "justification": "The scenario requires a sequential calculation of taxable income starting from book profits, incorporating specific statutory deductions under Section 33AB and adding back deemed incomes from misutilization and premature asset sales.",
+    "protagonist": "M/s. Gomati P Ltd.",
+    "actors": [
+      "Mr. A",
+      "Mr. B",
+      "NABARD"
+    ],
+    "key_numbers": [
+      "37.65 crores",
+      "30 crores",
+      "28 crores",
+      "40%",
+      "13.65 crores",
+      "65%",
+      "35%",
+      "6 crores"
+    ],
+    "key_dates": [
+      "31.03.2026",
+      "29.04.2026",
+      "01.08.2025",
+      "10.05.2021"
+    ],
+    "visual_metaphor": "A multi-stage filtration system where raw rubber profits are refined through statutory deductions and additions to reach the taxable essence.",
+    "beat_plan": [
+      {
+        "beat_goal": "Establish the starting financial position of the rubber manufacturing business",
+        "layout": "example_scene",
+        "anchor_phrases": [
+          "M/s. Gomati P Ltd.",
+          "Net profit 37.65 crores",
+          "Rubber manufacturing"
+        ]
+      },
+      {
+        "beat_goal": "Adjust book depreciation to tax-allowable depreciation",
+        "layout": "ledger",
+        "anchor_phrases": [
+          "Add: Excess depreciation",
+          "30 crores vs 28 crores",
+          "Adjusted Profit 39.65 crores"
+        ]
+      },
+      {
+        "beat_goal": "Calculate the Section 33AB deduction for NABARD deposits",
+        "layout": "decision_tree",
+        "anchor_phrases": [
+          "Section 33AB Deduction",
+          "Lower of Deposit 30 crores",
+          "40% of profits",
+          "15.86 crores allowed"
+        ]
+      },
+      {
+        "beat_goal": "Identify deemed income from non-permissible utilization of withdrawals",
+        "layout": "deemed_value",
+        "anchor_phrases": [
+          "Office appliances Chennai",
+          "Non-permissible utilization",
+          "Deemed PGBP 10 crores"
+        ]
+      },
+      {
+        "beat_goal": "Calculate deemed income from unutilized withdrawal balances",
+        "layout": "waterfall",
+        "anchor_phrases": [
+          "Unutilized withdrawal",
+          "13.65 crores",
+          "Deemed profits"
+        ]
+      },
+      {
+        "beat_goal": "Apply the 8-year lock-in rule for assets acquired via the scheme",
+        "layout": "timeline_windows",
+        "anchor_phrases": [
+          "Sale of machinery",
+          "Within 8 years",
+          "Cost deemed as income 10 crores"
+        ]
+      },
+      {
+        "beat_goal": "Apply Section 79 restriction on brought forward losses due to shareholding change",
+        "layout": "checklist_gate",
+        "anchor_phrases": [
+          "Section 79",
+          "Mr. A to Mr. B",
+          "60% share transfer",
+          "Loss 6 crores lapsed"
+        ]
+      },
+      {
+        "beat_goal": "Finalize the taxable business income after agricultural exemption",
+        "layout": "takeaway",
+        "anchor_phrases": [
+          "65% Agricultural Exempt",
+          "35% Business Taxable",
+          "Business income 20.104 crores"
+        ]
+      }
+    ]
+  },
+  "fallback": false,
+  "beats": [
+    {
+      "layout": "example_scene",
+      "title": {
+        "text": "Starting Financial Position",
+        "at": 0.3
+      },
+      "voice_sync_text": "M/s. Gomati P Ltd. എന്ന കമ്പനിയുടെ rubber manufacturing business-ന്റെ കാര്യം നോക്കാം. അവരുടെ Net profit 37.65 crores ആണ്. Rubber manufacturing-ൽ നിന്നുള്ള ഈ ലാഭത്തിൽ നിന്നാണ് നമ്മൾ ടാക്സ് കണക്കാക്കി തുടങ്ങുന്നത്.",
+      "visual_data": {
+        "actors": [
+          {
+            "label": "M/s. Gomati P Ltd.",
+            "icon": "factory",
+            "detail": "Rubber Manufacturing",
+            "at": 0.7
+          }
+        ],
+        "transaction": "Profit & Loss Account",
+        "facts": [
+          {
+            "label": "Net profit 37.65 crores",
+            "amount": 37.65,
+            "icon": "money_bag",
+            "at": 6.94
+          }
+        ]
+      },
+      "start": 0.0,
+      "end": 16.36,
+      "id": "b1",
+      "director_goal": "Establish the starting financial position of the rubber manufacturing business",
+      "anchor_phrases": [
+        "M/s. Gomati P Ltd.",
+        "Net profit 37.65 crores",
+        "Rubber manufacturing"
+      ],
+      "animation_role": "key_fact",
+      "anchor_alignment": [
+        {
+          "phrase": "M/s. Gomati P Ltd.",
+          "at": 6.06,
+          "matched": true,
+          "score": 0.638
+        },
+        {
+          "phrase": "Net profit 37.65 crores",
+          "at": 6.94,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Rubber manufacturing",
+          "at": 11.28,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 3
+      }
+    },
+    {
+      "layout": "ledger",
+      "title": {
+        "text": "Depreciation Adjustment",
+        "at": 17.01
+      },
+      "voice_sync_text": "ആദ്യം നമ്മൾ book depreciation ടാക്സ് നിയമങ്ങൾക്കനുസരിച്ച് adjust ചെയ്യണം. Add: Excess depreciation. ഇവിടെ 30 crores vs 28 crores ആണ് വ്യത്യാസം. അപ്പോൾ 2 crores അധികമായി വന്നത് ലാഭത്തിലേക്ക് തിരികെ ചേർക്കുമ്പോൾ Adjusted Profit 39.65 crores ആയി മാറുന്നു.",
+      "visual_data": {
+        "rows": [
+          {
+            "label": "Book Depreciation",
+            "amount": 30,
+            "sign": "+",
+            "at": 18.11
+          },
+          {
+            "label": "Tax Depreciation",
+            "amount": 28,
+            "sign": "-",
+            "at": 18.29
+          },
+          {
+            "label": "Add: Excess depreciation",
+            "amount": 2,
+            "sign": "+",
+            "at": 22.41
+          }
+        ],
+        "total": "Adjusted Profit 39.65 crores",
+        "spoken_amounts": [
+          "30 crores",
+          "28 crores",
+          "2 crores"
+        ]
+      },
+      "start": 16.71,
+      "end": 38.67,
+      "id": "b2",
+      "director_goal": "Adjust book depreciation to tax-allowable depreciation",
+      "anchor_phrases": [
+        "Add: Excess depreciation",
+        "30 crores vs 28 crores",
+        "Adjusted Profit 39.65 crores"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Add: Excess depreciation",
+          "at": 22.41,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "30 crores vs 28 crores",
+          "at": 25.93,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Adjusted Profit 39.65 crores",
+          "at": 32.25,
+          "matched": true,
+          "score": 0.995
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 3
+      }
+    },
+    {
+      "layout": "decision_tree",
+      "title": {
+        "text": "Section 33AB Deduction",
+        "at": 39.32
+      },
+      "voice_sync_text": "ഇനി Section 33AB Deduction എത്രയാണെന്ന് നോക്കാം. ഇത് Lower of Deposit 30 crores അല്ലെങ്കിൽ 40% of profits ആണ്. 39.65 crores-ന്റെ 40% എന്ന് പറയുന്നത് 15.86 crores ആണ്. ഇതിൽ കുറഞ്ഞ തുകയായ 15.86 crores allowed ആയി ലഭിക്കും.",
+      "visual_data": {
+        "root": "Section 33AB Deduction",
+        "branches": [
+          {
+            "label": "Lower of Deposit 30 crores",
+            "amount": 30,
+            "icon": "bank",
+            "at": 44.0
+          },
+          {
+            "label": "40% of profits",
+            "amount": 15.86,
+            "detail": "40% of 39.65 crores",
+            "icon": "scales",
+            "at": 47.38
+          },
+          {
+            "label": "15.86 crores allowed",
+            "amount": 15.86,
+            "pass": true,
+            "at": 53.98
+          }
+        ]
+      },
+      "start": 39.02,
+      "end": 61.78,
+      "id": "b3",
+      "director_goal": "Calculate the Section 33AB deduction for NABARD deposits",
+      "anchor_phrases": [
+        "Section 33AB Deduction",
+        "Lower of Deposit 30 crores",
+        "40% of profits",
+        "15.86 crores allowed"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Section 33AB Deduction",
+          "at": 40.14,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Lower of Deposit 30 crores",
+          "at": 44.0,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "40% of profits",
+          "at": 47.38,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "15.86 crores allowed",
+          "at": 53.98,
+          "matched": true,
+          "score": 0.87
+        }
+      ],
+      "anchor_match": {
+        "matched": 4,
+        "total": 4
+      }
+    },
+    {
+      "layout": "deemed_value",
+      "title": {
+        "text": "Misutilization of Withdrawals",
+        "at": 62.43
+      },
+      "voice_sync_text": "NABARD അക്കൗണ്ടിൽ നിന്ന് പിൻവലിച്ച തുകയിൽ 10 crores ഉപയോഗിച്ച് Office appliances Chennai-ൽ വാങ്ങി. ഇത് ഒരു Non-permissible utilization ആയതുകൊണ്ട്, ഈ തുക Deemed PGBP 10 crores ആയി ബിസിനസ് വരുമാനത്തിൽ കൂട്ടണം.",
+      "visual_data": {
+        "actual": {
+          "label": "Office appliances Chennai",
+          "amount": 10,
+          "icon": "house",
+          "at": 69.69
+        },
+        "deemed": {
+          "label": "Deemed PGBP 10 crores",
+          "amount": 10,
+          "icon": "money_bag",
+          "at": 73.21
+        },
+        "rule": "Non-permissible utilization",
+        "at": 69.69
+      },
+      "start": 62.13,
+      "end": 77.65,
+      "id": "b4",
+      "director_goal": "Identify deemed income from non-permissible utilization of withdrawals",
+      "anchor_phrases": [
+        "Office appliances Chennai",
+        "Non-permissible utilization",
+        "Deemed PGBP 10 crores"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Office appliances Chennai",
+          "at": 66.77,
+          "matched": true,
+          "score": 0.93
+        },
+        {
+          "phrase": "Non-permissible utilization",
+          "at": 69.69,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Deemed PGBP 10 crores",
+          "at": 73.21,
+          "matched": true,
+          "score": 0.957
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 3
+      }
+    },
+    {
+      "layout": "waterfall",
+      "title": {
+        "text": "Unutilized Withdrawal Balance",
+        "at": 78.3
+      },
+      "voice_sync_text": "പിൻവലിച്ച 40 crores-ൽ ബാക്കി വന്ന Unutilized withdrawal തുകയായ 13.65 crores നോക്കാം. ഈ തുക ആ വർഷം ഉപയോഗിക്കാത്തതിനാൽ Deemed profits ആയി കണക്കാക്കി ടാക്സ് നൽകേണ്ടി വരും.",
+      "visual_data": {
+        "stages": [
+          {
+            "label": "Total Withdrawal",
+            "amount": 40,
+            "at": 81.94
+          },
+          {
+            "label": "Utilized Amount",
+            "amount": 26.35,
+            "sign": "-",
+            "at": 81.94
+          },
+          {
+            "label": "Unutilized withdrawal",
+            "amount": 13.65,
+            "detail": "Deemed profits",
+            "at": 81.94
+          }
+        ],
+        "spoken_amounts": [
+          "40 crores",
+          "13.65 crores"
+        ]
+      },
+      "start": 78.0,
+      "end": 91.92,
+      "id": "b5",
+      "director_goal": "Calculate deemed income from unutilized withdrawal balances",
+      "anchor_phrases": [
+        "Unutilized withdrawal",
+        "13.65 crores",
+        "Deemed profits"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Unutilized withdrawal",
+          "at": 80.44,
+          "matched": true,
+          "score": 0.952
+        },
+        {
+          "phrase": "13.65 crores",
+          "at": 83.1,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Deemed profits",
+          "at": 89.0,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 3
+      }
+    },
+    {
+      "layout": "timeline_windows",
+      "title": {
+        "text": "8-Year Lock-in Rule",
+        "at": 92.57
+      },
+      "voice_sync_text": "അടുത്തത് Sale of machinery ആണ്. 10.05.2021-ൽ വാങ്ങിയ മെഷീനറി 31.03.2026-ൽ വിറ്റു. ഇത് Within 8 years ആയതുകൊണ്ട്, ആ മെഷീനറിയുടെ Cost deemed as income 10 crores ആയി ബിസിനസ് ലാഭത്തിൽ ഉൾപ്പെടുത്തണം.",
+      "visual_data": {
+        "events": [
+          {
+            "label": "Purchase of machinery",
+            "date": "10.05.2021",
+            "amount": 10,
+            "icon": "calendar",
+            "at": 95.45
+          },
+          {
+            "label": "Sale of machinery",
+            "date": "31.03.2026",
+            "amount": 10,
+            "icon": "money_bag",
+            "at": 95.45
+          }
+        ],
+        "window_label": "Within 8 years - Cost deemed as income 10 crores"
+      },
+      "start": 92.27,
+      "end": 110.99,
+      "id": "b6",
+      "director_goal": "Apply the 8-year lock-in rule for assets acquired via the scheme",
+      "anchor_phrases": [
+        "Sale of machinery",
+        "Within 8 years",
+        "Cost deemed as income 10 crores"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Sale of machinery",
+          "at": 93.51,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Within 8 years",
+          "at": 103.33,
+          "matched": true,
+          "score": 0.64
+        },
+        {
+          "phrase": "Cost deemed as income 10 crores",
+          "at": 106.79,
+          "matched": true,
+          "score": 0.581
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 3
+      }
+    },
+    {
+      "layout": "checklist_gate",
+      "title": {
+        "text": "Section 79 Loss Restriction",
+        "at": 111.64
+      },
+      "voice_sync_text": "ഇനി Section 79 പ്രകാരം brought forward losses സെറ്റ് ഓഫ് ചെയ്യാൻ പറ്റുമോ എന്ന് നോക്കാം. Mr. A to Mr. B ലേക്ക് 60% share transfer നടന്നു. 51 ശതമാനത്തിൽ കൂടുതൽ ഷെയർ ഹോൾഡിങ് മാറിയതുകൊണ്ട്, പഴയ Loss 6 crores lapsed ആയി പോകും.",
+      "visual_data": {
+        "conditions": [
+          {
+            "label": "Section 79",
+            "detail": "Shareholding change",
+            "pass": false,
+            "at": 123.66
+          },
+          {
+            "label": "Mr. A to Mr. B",
+            "detail": "60% share transfer",
+            "pass": false,
+            "at": 123.66
+          }
+        ],
+        "outcome": "Loss 6 crores lapsed"
+      },
+      "start": 111.34,
+      "end": 130.74,
+      "id": "b7",
+      "director_goal": "Apply Section 79 restriction on brought forward losses due to shareholding change",
+      "anchor_phrases": [
+        "Section 79",
+        "Mr. A to Mr. B",
+        "60% share transfer",
+        "Loss 6 crores lapsed"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Section 79",
+          "at": 117.34,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Mr. A to Mr. B",
+          "at": 118.12,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "60% share transfer",
+          "at": 120.54,
+          "matched": true,
+          "score": 0.83
+        },
+        {
+          "phrase": "Loss 6 crores lapsed",
+          "at": 128.44,
+          "matched": true,
+          "score": 0.722
+        }
+      ],
+      "anchor_match": {
+        "matched": 4,
+        "total": 4
+      }
+    },
+    {
+      "layout": "takeaway",
+      "title": {
+        "text": "Final Taxable Income",
+        "at": 131.39
+      },
+      "voice_sync_text": "അവസാനമായി, റബ്ബർ ബിസിനസ്സിൽ 65% Agricultural Exempt ആണ്, ബാക്കി 35% Business Taxable ആണ്. അങ്ങനെ എല്ലാ അഡ്ജസ്റ്റ്മെന്റുകൾക്കും ശേഷം നമ്മുടെ ഫൈനൽ Business income 20.104 crores ആയി മാറുന്നു.",
+      "visual_data": {
+        "rules": [
+          {
+            "label": "65% Agricultural Exempt",
+            "amount": 37.336,
+            "icon": "scales",
+            "at": 135.45
+          },
+          {
+            "label": "35% Business Taxable",
+            "amount": 20.104,
+            "icon": "money_bag",
+            "at": 139.01
+          },
+          {
+            "label": "Business income 20.104 crores",
+            "amount": 20.104,
+            "status": "Final Taxable",
+            "at": 143.95
+          }
+        ]
+      },
+      "start": 131.09,
+      "end": 148.53,
+      "id": "b8",
+      "director_goal": "Finalize the taxable business income after agricultural exemption",
+      "anchor_phrases": [
+        "65% Agricultural Exempt",
+        "35% Business Taxable",
+        "Business income 20.104 crores"
+      ],
+      "animation_role": "key_fact",
+      "anchor_alignment": [
+        {
+          "phrase": "65% Agricultural Exempt",
+          "at": 135.45,
+          "matched": true,
+          "score": 0.927
+        },
+        {
+          "phrase": "35% Business Taxable",
+          "at": 139.01,
+          "matched": true,
+          "score": 0.914
+        },
+        {
+          "phrase": "Business income 20.104 crores",
+          "at": 143.95,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 3
+      }
+    }
+  ],
+  "needs_review": true,
+  "quality_issues": [
+    "unsupported section/rule: Section 79"
+  ],
+  "audio_duration_sec": 148.53,
+  "anchor_match": {
+    "matched": 26,
+    "total": 26,
+    "rate": 1.0
+  }
+}

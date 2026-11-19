@@ -1,0 +1,625 @@
+{
+  "question_id": "dt-c3-q11",
+  "audio_url": "data/audio/dt-c3-q11.mp3",
+  "duration_sec": 144.9,
+  "sync_offset_sec": 0.0,
+  "context_pill": "Section 35AD & Section 73A",
+  "example_summary": "Mr. A sets up three warehousing facilities (food grains, sugar, and edible oil) and we must determine the tax treatment for each, specifically focusing on Section 35AD deductions for specified businesses and the ring-fencing of losses under Section 73A.",
+  "source_provision": "### Master Statutory Summary Matrix\n\n| Business Activity / Nature | Statutory Section | Capital Expenditure Treatment | Eligible Tax Consequence & Loss Rule |\n| :--- | :--- | :--- | :--- |\n| **Specified Business (Warehousing for Agriculture/Sugar)** | Section 35AD | 100% deduction for capital expenditure incurred (excluding land) | 100% deduction allowed; Losses can be carried forward indefinitely and set-off only against specified business profits u/s 73A |\n| **Non-Specified Business (Warehousing for Edible Oil)** | Section 32 | Capital expenditure capitalized; eligible for standard depreciation | Depreciation allowed (e.g. 10% for buildings); Normal business profit/loss treatment |\n\n\n> [!IMPORTANT] Section 35AD Exclusion: Expenditure on acquisition of land does not qualify for deduction under Section 35AD.\n\n\n> [!WARNING] Section 73A Restriction: Loss from a specified business can be set-off only against profits from another specified business and cannot be set-off against non-specified business profits.",
+  "director": {
+    "archetype": "classification_decision_tree",
+    "justification": "The provision requires classifying three warehousing streams into specified versus non-specified businesses to determine Section 35AD deduction eligibility, land cost exclusion, Section 32 depreciation, and Section 73A loss set-off restrictions.",
+    "protagonist": "Mr. A",
+    "actors": [
+      "Mr. A"
+    ],
+    "key_numbers": [
+      "₹ 80 lakh",
+      "₹ 60 lakh",
+      "₹ 50 lakh",
+      "₹ 30 lakh",
+      "₹ 40 lakh",
+      "₹ 20 lakh",
+      "₹ 15 lakh",
+      "₹ 10 lakh",
+      "₹ 16 lakh",
+      "₹ 14 lakh",
+      "₹ 31 lakh",
+      "₹ 28 lakh",
+      "₹ 55 lakh",
+      "100%",
+      "10%"
+    ],
+    "key_dates": [
+      "1.4.2025",
+      "January to March, 2025",
+      "P.Y.2025-26",
+      "A.Y. 2026-27"
+    ],
+    "visual_metaphor": "A three-warehouse sorting hub branching food grains and sugar into Section 35AD deduction chutes and edible oil into a Section 32 depreciation track.",
+    "beat_plan": [
+      {
+        "beat_goal": "Establish Mr. A setting up three distinct warehousing facilities and incurring capital expenditures.",
+        "layout": "example_scene",
+        "anchor_phrases": [
+          "Mr. A",
+          "1.4.2025",
+          "warehousing facility",
+          "A.Y. 2026-27"
+        ]
+      },
+      {
+        "beat_goal": "Classify warehousing businesses into Section 35AD specified vs non-specified streams.",
+        "layout": "decision_tree",
+        "anchor_phrases": [
+          "Section 35AD",
+          "specified business",
+          "food grains",
+          "sugar",
+          "edible oil"
+        ]
+      },
+      {
+        "beat_goal": "Exclude land cost from prior capital expenditure for Section 35AD eligibility.",
+        "layout": "deemed_value",
+        "anchor_phrases": [
+          "exclusion of land",
+          "₹ 50 lakh",
+          "₹ 40 lakh",
+          "₹ 30 lakh",
+          "₹ 20 lakh"
+        ]
+      },
+      {
+        "beat_goal": "Compute 100% Section 35AD deduction and resulting specified business loss.",
+        "layout": "ledger",
+        "anchor_phrases": [
+          "100% deduction",
+          "₹ 85 lakh",
+          "Section 35AD loss",
+          "₹ 55 lakh"
+        ]
+      },
+      {
+        "beat_goal": "Calculate depreciation u/s 32 and taxable profit for edible oil business.",
+        "layout": "ledger",
+        "anchor_phrases": [
+          "Section 32",
+          "depreciation @ 10%",
+          "₹ 3 lakh",
+          "₹ 28 lakh"
+        ]
+      },
+      {
+        "beat_goal": "Apply Section 73A ring-fencing rule prohibiting set-off of specified loss against general profits.",
+        "layout": "waterfall",
+        "anchor_phrases": [
+          "Section 73A",
+          "ring-fenced loss",
+          "cannot be set-off",
+          "carried forward"
+        ]
+      },
+      {
+        "beat_goal": "Summarize core principles of Section 35AD eligibility and Section 73A loss restrictions.",
+        "layout": "takeaway",
+        "anchor_phrases": [
+          "Section 35AD vs Section 32",
+          "Section 73A restriction"
+        ]
+      }
+    ]
+  },
+  "fallback": false,
+  "beats": [
+    {
+      "layout": "example_scene",
+      "title": {
+        "text": "Business Commencement & Capex",
+        "at": 0.3
+      },
+      "voice_sync_text": "Mr. A 1.4.2025-ൽ മൂന്ന് warehousing facility തുടങ്ങുകയാണ്. Food grains, sugar, edible oil എന്നിവയ്ക്കായി January to March, 2025 കാലയളവിൽ അദ്ദേഹം capital expenditure നടത്തി. ഇത് A.Y. 2026-27-ലേക്കുള്ള കണക്കുകളാണ്.",
+      "visual_data": {
+        "actors": [
+          {
+            "label": "Mr. A",
+            "icon": "person",
+            "detail": "Warehouse Owner",
+            "at": 0.0
+          }
+        ],
+        "transaction": "Commencement of Warehousing Operations",
+        "facts": [
+          {
+            "label": "Commencement Date",
+            "date": "1.4.2025",
+            "icon": "calendar",
+            "at": 0.0
+          },
+          {
+            "label": "Pre-commencement Period",
+            "detail": "January to March, 2025",
+            "at": 8.48
+          },
+          {
+            "label": "Assessment Year",
+            "value": "A.Y. 2026-27",
+            "at": 15.98
+          }
+        ]
+      },
+      "start": 0.0,
+      "end": 19.6,
+      "id": "b1",
+      "director_goal": "Establish Mr. A setting up three distinct warehousing facilities and incurring capital expenditures.",
+      "anchor_phrases": [
+        "Mr. A",
+        "1.4.2025",
+        "warehousing facility",
+        "A.Y. 2026-27"
+      ],
+      "animation_role": "key_fact",
+      "anchor_alignment": [
+        {
+          "phrase": "Mr. A",
+          "at": 0.0,
+          "matched": false,
+          "score": 0.462
+        },
+        {
+          "phrase": "1.4.2025",
+          "at": 1.44,
+          "matched": true,
+          "score": 0.933
+        },
+        {
+          "phrase": "warehousing facility",
+          "at": 3.88,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "A.Y. 2026-27",
+          "at": 16.1,
+          "matched": true,
+          "score": 0.87
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 4
+      }
+    },
+    {
+      "layout": "decision_tree",
+      "title": {
+        "text": "Classification of Businesses",
+        "at": 20.25
+      },
+      "voice_sync_text": "ഇവിടെ നമ്മൾ Section 35AD പ്രകാരം specified business ഏതാണെന്ന് നോക്കണം. Food grains ഉം sugar ഉം specified business ആണ്. എന്നാൽ edible oil ഒരു non-specified business ആണ്.",
+      "visual_data": {
+        "root": "Warehousing Business",
+        "branches": [
+          {
+            "label": "Specified Business",
+            "detail": "Section 35AD Eligible",
+            "value": "Food grains & Sugar",
+            "pass": true,
+            "at": 21.33
+          },
+          {
+            "label": "Non-Specified Business",
+            "detail": "Section 32 Eligible",
+            "value": "Edible oil",
+            "pass": false,
+            "at": 27.57
+          }
+        ]
+      },
+      "start": 19.95,
+      "end": 32.95,
+      "id": "b2",
+      "director_goal": "Classify warehousing businesses into Section 35AD specified vs non-specified streams.",
+      "anchor_phrases": [
+        "Section 35AD",
+        "specified business",
+        "food grains",
+        "sugar",
+        "edible oil"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Section 35AD",
+          "at": 25.39,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "specified business",
+          "at": 27.79,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "food grains",
+          "at": 25.44,
+          "matched": false,
+          "score": 0.471
+        },
+        {
+          "phrase": "sugar",
+          "at": 26.6,
+          "matched": false,
+          "score": 0.444
+        },
+        {
+          "phrase": "edible oil",
+          "at": 29.99,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 5
+      }
+    },
+    {
+      "layout": "deemed_value",
+      "title": {
+        "text": "Exclusion of Land Cost",
+        "at": 33.6
+      },
+      "voice_sync_text": "Section 35AD ക്ലെയിം ചെയ്യുമ്പോൾ exclusion of land ശ്രദ്ധിക്കണം. Food grains-ന് ₹ 80 lakh-ൽ ₹ 50 lakh land ആണ്. Sugar-ന് ₹ 60 lakh-ൽ ₹ 40 lakh land ആണ്. Edible oil-ന് ₹ 50 lakh-ൽ ₹ 30 lakh land ആണ്. കൂടാതെ ₹ 20 lakh ഉം ₹ 15 lakh ഉം ₹ 10 lakh ഉം extension-നായി ചിലവാക്കി.",
+      "visual_data": {
+        "actual": {
+          "label": "Total Capex",
+          "amount": 190,
+          "detail": "80L + 60L + 50L",
+          "at": 38.94
+        },
+        "deemed": {
+          "label": "Eligible Capex (Excl. Land)",
+          "amount": 70,
+          "detail": "30L + 20L + 20L",
+          "at": 38.94
+        },
+        "rule": "Section 35AD: Exclusion of land cost from deduction eligibility.",
+        "spoken_amounts": [
+          "₹ 40 lakh",
+          "₹ 15 lakh",
+          "₹ 10 lakh"
+        ],
+        "at": 33.98
+      },
+      "start": 33.3,
+      "end": 56.66,
+      "id": "b3",
+      "director_goal": "Exclude land cost from prior capital expenditure for Section 35AD eligibility.",
+      "anchor_phrases": [
+        "exclusion of land",
+        "₹ 50 lakh",
+        "₹ 40 lakh",
+        "₹ 30 lakh",
+        "₹ 20 lakh"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "exclusion of land",
+          "at": 36.06,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "₹ 50 lakh",
+          "at": 40.76,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "₹ 40 lakh",
+          "at": 44.84,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "₹ 30 lakh",
+          "at": 49.1,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "₹ 20 lakh",
+          "at": 51.58,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 5,
+        "total": 5
+      }
+    },
+    {
+      "layout": "ledger",
+      "title": {
+        "text": "Specified Business Loss (u/s 35AD)",
+        "at": 57.31
+      },
+      "voice_sync_text": "Specified business-ന് 100% deduction കിട്ടും. Food grains-നും sugar-നും കൂടി ആകെ ₹ 85 lakh deduction വരും. ലാഭം കുറച്ചാൽ Section 35AD loss ₹ 55 lakh ആണ്.",
+      "visual_data": {
+        "rows": [
+          {
+            "label": "Profits (Food Grains + Sugar)",
+            "amount": 30,
+            "detail": "16L + 14L",
+            "at": 61.31
+          },
+          {
+            "label": "100% deduction u/s 35AD",
+            "amount": 85,
+            "detail": "50L + 35L",
+            "sign": "-",
+            "at": 61.31
+          }
+        ],
+        "total": "Section 35AD loss: ₹ 55 lakh",
+        "spoken_amounts": [
+          "₹ 85 lakh"
+        ]
+      },
+      "start": 57.01,
+      "end": 73.53,
+      "id": "b4",
+      "director_goal": "Compute 100% Section 35AD deduction and resulting specified business loss.",
+      "anchor_phrases": [
+        "100% deduction",
+        "₹ 85 lakh",
+        "Section 35AD loss",
+        "₹ 55 lakh"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "100% deduction",
+          "at": 58.63,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "₹ 85 lakh",
+          "at": 64.83,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Section 35AD loss",
+          "at": 69.09,
+          "matched": true,
+          "score": 0.92
+        },
+        {
+          "phrase": "₹ 55 lakh",
+          "at": 72.43,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 4,
+        "total": 4
+      }
+    },
+    {
+      "layout": "ledger",
+      "title": {
+        "text": "Edible Oil Business Profit (u/s 32)",
+        "at": 74.18
+      },
+      "voice_sync_text": "Edible oil specified business അല്ലാത്തതുകൊണ്ട് Section 32 പ്രകാരം depreciation @ 10% ആണ് എടുക്കുന്നത്. ₹ 30 lakh-ന്റെ 10% ആയ ₹ 3 lakh കുറച്ചാൽ taxable profit ₹ 28 lakh കിട്ടും.",
+      "visual_data": {
+        "rows": [
+          {
+            "label": "Profit before Depreciation",
+            "amount": 31,
+            "at": 78.36
+          },
+          {
+            "label": "Section 32 Depreciation @ 10%",
+            "amount": 3,
+            "detail": "10% of 30L",
+            "sign": "-",
+            "at": 78.36
+          }
+        ],
+        "total": "Taxable Profit: ₹ 28 lakh",
+        "spoken_amounts": [
+          "₹ 3 lakh"
+        ]
+      },
+      "start": 73.88,
+      "end": 88.72,
+      "id": "b5",
+      "director_goal": "Calculate depreciation u/s 32 and taxable profit for edible oil business.",
+      "anchor_phrases": [
+        "Section 32",
+        "depreciation @ 10%",
+        "₹ 3 lakh",
+        "₹ 28 lakh"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Section 32",
+          "at": 77.56,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "depreciation @ 10%",
+          "at": 79.02,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "₹ 3 lakh",
+          "at": 83.82,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "₹ 28 lakh",
+          "at": 86.8,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 4,
+        "total": 4
+      }
+    },
+    {
+      "layout": "waterfall",
+      "title": {
+        "text": "Section 73A Loss Restriction",
+        "at": 89.37
+      },
+      "voice_sync_text": "ഇനി Section 73A പ്രകാരമുള്ള ring-fenced loss നിയമം നോക്കാം. Specified business-ലെ ₹ 55 lakh നഷ്ടം edible oil ബിസിനസ്സിലെ ലാഭവുമായി cannot be set-off. ഇത് അടുത്ത വർഷത്തേക്ക് carried forward ചെയ്യണം.",
+      "visual_data": {
+        "stages": [
+          {
+            "label": "Specified Business Loss",
+            "amount": 55,
+            "status": "Ring-fenced",
+            "at": 123.15
+          },
+          {
+            "label": "Non-Specified Profit",
+            "amount": 28,
+            "detail": "Edible Oil",
+            "at": 123.15
+          },
+          {
+            "label": "Set-off Status",
+            "detail": "cannot be set-off",
+            "pass": false,
+            "at": 125.03
+          },
+          {
+            "label": "Carry Forward",
+            "amount": 55,
+            "status": "carried forward",
+            "at": 130.01
+          }
+        ],
+        "spoken_amounts": [
+          "₹ 55 lakh"
+        ]
+      },
+      "start": 89.07,
+      "end": 132.15,
+      "id": "b6",
+      "director_goal": "Apply Section 73A ring-fencing rule prohibiting set-off of specified loss against general profits.",
+      "anchor_phrases": [
+        "Section 73A",
+        "ring-fenced loss",
+        "cannot be set-off",
+        "carried forward"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Section 73A",
+          "at": 118.11,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "ring-fenced loss",
+          "at": 120.47,
+          "matched": true,
+          "score": 0.995
+        },
+        {
+          "phrase": "cannot be set-off",
+          "at": 125.75,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "carried forward",
+          "at": 130.01,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 4,
+        "total": 4
+      }
+    },
+    {
+      "layout": "takeaway",
+      "title": {
+        "text": "Key Tax Principles",
+        "at": 132.8
+      },
+      "voice_sync_text": "ചുരുക്കത്തിൽ, Section 35AD vs Section 32 തമ്മിലുള്ള വ്യത്യാസവും Section 73A restriction-ഉം കൃത്യമായി മനസ്സിലാക്കണം. Land cost എപ്പോഴും ഒഴിവാക്കണം.",
+      "visual_data": {
+        "rules": [
+          {
+            "label": "Section 35AD vs Section 32",
+            "detail": "100% Deduction vs Depreciation for non-specified business.",
+            "at": 133.94
+          },
+          {
+            "label": "Section 73A restriction",
+            "detail": "Specified business loss only set-off against specified business profit.",
+            "at": 138.14
+          },
+          {
+            "label": "Land Exclusion",
+            "detail": "Cost of land is never eligible for Section 35AD deduction.",
+            "at": 142.22
+          }
+        ]
+      },
+      "start": 132.5,
+      "end": 144.9,
+      "id": "b7",
+      "director_goal": "Summarize core principles of Section 35AD eligibility and Section 73A loss restrictions.",
+      "anchor_phrases": [
+        "Section 35AD vs Section 32",
+        "Section 73A restriction"
+      ],
+      "animation_role": "key_fact",
+      "anchor_alignment": [
+        {
+          "phrase": "Section 35AD vs Section 32",
+          "at": 133.94,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Section 73A restriction",
+          "at": 138.14,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 2,
+        "total": 2
+      }
+    }
+  ],
+  "audio_duration_sec": 144.9,
+  "anchor_match": {
+    "matched": 25,
+    "total": 28,
+    "rate": 0.893
+  }
+}
