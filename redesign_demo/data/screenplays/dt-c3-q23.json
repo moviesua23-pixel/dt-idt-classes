@@ -1,0 +1,575 @@
+{
+  "question_id": "dt-c3-q23",
+  "audio_url": "data/audio/dt-c3-q23.mp3",
+  "duration_sec": 106.93,
+  "sync_offset_sec": 0.0,
+  "context_pill": "Presumptive Taxation & Audit Mandate",
+  "example_summary": "Mr. Praveen evaluates eligibility under Section 44AD for his retail trade, computing presumptive income, assessing the exit restriction penalty under Section 44AD(4), audit under Section 44AB, and filing due dates.",
+  "source_provision": "| Provision | Description | Condition / Threshold |\n| :--- | :--- | :--- |\n| Section 44AD(1) | Presumptive Income | 8% (cash) / 6% (digital) of Gross Receipts |\n| Section 44AD(4) | Exit Restriction | Mandatory 5-year cooling off period if opting out |\n| Section 44AB | Audit Mandate | Required if profit declared is less than 44AD rate |\n| Section 139(1) | Due Date | 31st July or 31st October (if audited) |\n\n> [!IMPORTANT] Eligibility Criteria:\n- Turnover must be less than ₹ 300 Lakhs.\n- Cash receipts must not exceed 5% of total turnover.\n- Eligible business must not include those specified under section 44AE or agency commission.\n\n> [!WARNING] Exit Restriction:\n- If an assessee opts out of section 44AD, they cannot avail the presumptive scheme for 5 consecutive assessment years. \n- During these 5 years, if total income exceeds the basic exemption limit, tax audit under section 44AB is mandatory.",
+  "director": {
+    "archetype": "threshold_test",
+    "justification": "The case evaluates Mr. Praveen's eligibility for presumptive taxation based on the dual thresholds of turnover under ₹ 300 Lakhs and cash receipts within the 5% limit.",
+    "protagonist": "Mr. Praveen",
+    "actors": [
+      "Income Tax Department",
+      "Chartered Accountant"
+    ],
+    "key_numbers": [
+      "₹ 2,98,50,000",
+      "₹ 14,00,000",
+      "₹ 3,00,00,000",
+      "5%",
+      "8%",
+      "6%",
+      "₹ 18,19,000",
+      "₹ 15,00,000"
+    ],
+    "key_dates": [
+      "P.Y. 2025-26",
+      "A.Y. 2026-27",
+      "31st July 2026",
+      "31st October 2026"
+    ],
+    "visual_metaphor": "A dual-key security gate for the 'Presumptive Lane' where keys represent turnover and cash percentage.",
+    "beat_plan": [
+      {
+        "beat_goal": "Introduce Mr. Praveen's retail business and total turnover for the financial year.",
+        "layout": "example_scene",
+        "anchor_phrases": [
+          "Mr. Praveen",
+          "Retail Trade",
+          "₹ 2,98,50,000"
+        ]
+      },
+      {
+        "beat_goal": "Verify eligibility by checking the turnover and cash receipt thresholds.",
+        "layout": "checklist_gate",
+        "anchor_phrases": [
+          "Section 44AD",
+          "₹ 300 Lakhs limit",
+          "5% Cash threshold"
+        ]
+      },
+      {
+        "beat_goal": "Calculate the presumptive income using the 8% and 6% rates.",
+        "layout": "deemed_value",
+        "anchor_phrases": [
+          "8% on Cash",
+          "6% on Digital",
+          "₹ 18,19,000"
+        ]
+      },
+      {
+        "beat_goal": "Compare the presumptive income against the actual profits recorded in books.",
+        "layout": "compare_regimes",
+        "anchor_phrases": [
+          "Books Profit ₹ 15,00,000",
+          "Lower than Presumptive"
+        ]
+      },
+      {
+        "beat_goal": "Explain the 5-year lock-out penalty for opting out of the presumptive scheme.",
+        "layout": "timeline_windows",
+        "anchor_phrases": [
+          "Section 44AD(4)",
+          "5-year cooling off",
+          "A.Y. 2027-28 to A.Y. 2031-32"
+        ]
+      },
+      {
+        "beat_goal": "Detail the mandatory tax audit requirement if opting for lower book profits.",
+        "layout": "flow_actors",
+        "anchor_phrases": [
+          "Section 44AB",
+          "Tax Audit mandatory",
+          "Chartered Accountant"
+        ]
+      },
+      {
+        "beat_goal": "Specify the different filing due dates for presumptive vs. audited accounts.",
+        "layout": "timeline_windows",
+        "anchor_phrases": [
+          "31st July 2026",
+          "31st October 2026"
+        ]
+      },
+      {
+        "beat_goal": "Summarize the trade-off between presumptive simplicity and audit obligations.",
+        "layout": "takeaway",
+        "anchor_phrases": [
+          "Presumptive vs Audit",
+          "Compliance Choice"
+        ]
+      }
+    ]
+  },
+  "fallback": false,
+  "beats": [
+    {
+      "layout": "example_scene",
+      "title": {
+        "text": "Retail Trade Turnover",
+        "at": 0.3
+      },
+      "voice_sync_text": "നമസ്കാരം, ഇന്ന് നമ്മൾ നോക്കുന്നത് Mr. Praveen-ന്റെ Retail Trade ബിസിനസ്സും total turnover ₹ 2,98,50,000 ഉം ആണ്.",
+      "visual_data": {
+        "actors": [
+          {
+            "label": "Mr. Praveen",
+            "detail": "Retail Trader",
+            "icon": "person",
+            "at": 2.58
+          }
+        ],
+        "transaction": "Retail Business Turnover Assessment",
+        "facts": [
+          {
+            "label": "Total Turnover",
+            "value": "₹ 2,98,50,000",
+            "icon": "money_bag",
+            "at": 5.92
+          }
+        ]
+      },
+      "start": 0.0,
+      "end": 12.12,
+      "id": "b1",
+      "director_goal": "Introduce Mr. Praveen's retail business and total turnover for the financial year.",
+      "anchor_phrases": [
+        "Mr. Praveen",
+        "Retail Trade",
+        "₹ 2,98,50,000"
+      ],
+      "animation_role": "key_fact",
+      "anchor_alignment": [
+        {
+          "phrase": "Mr. Praveen",
+          "at": 2.58,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Retail Trade",
+          "at": 4.2,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "₹ 2,98,50,000",
+          "at": 7.96,
+          "matched": true,
+          "score": 0.906
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 3
+      }
+    },
+    {
+      "layout": "checklist_gate",
+      "title": {
+        "text": "Eligibility Thresholds",
+        "at": 12.77
+      },
+      "voice_sync_text": "Section 44AD പ്രകാരം, ₹ 300 Lakhs limit ഉം 5% Cash threshold ഉം പാലിച്ചുകൊണ്ട് eligibility verify ചെയ്യുന്നു.",
+      "visual_data": {
+        "conditions": [
+          {
+            "label": "Turnover Limit",
+            "detail": "Below ₹ 300 Lakhs",
+            "pass": true,
+            "icon": "document",
+            "at": 14.21
+          },
+          {
+            "label": "Cash Receipts",
+            "detail": "Within 5% threshold",
+            "pass": true,
+            "icon": "money_bag",
+            "at": 17.39
+          }
+        ],
+        "outcome": "Eligible for Section 44AD"
+      },
+      "start": 12.47,
+      "end": 21.91,
+      "id": "b2",
+      "director_goal": "Verify eligibility by checking the turnover and cash receipt thresholds.",
+      "anchor_phrases": [
+        "Section 44AD",
+        "₹ 300 Lakhs limit",
+        "5% Cash threshold"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Section 44AD",
+          "at": 12.47,
+          "matched": false,
+          "score": 0.444
+        },
+        {
+          "phrase": "₹ 300 Lakhs limit",
+          "at": 15.27,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "5% Cash threshold",
+          "at": 17.13,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 2,
+        "total": 3
+      }
+    },
+    {
+      "layout": "deemed_value",
+      "title": {
+        "text": "Presumptive Income Calculation",
+        "at": 22.56
+      },
+      "voice_sync_text": "8% on Cash ഉം 6% on Digital ഉം കണക്കാക്കുമ്പോൾ presumptive income ₹ 18,19,000 ആയി ലഭിക്കുന്നു.",
+      "visual_data": {
+        "actual": {
+          "label": "Gross Receipts",
+          "amount": 29850000,
+          "icon": "money_bag",
+          "at": 52.66
+        },
+        "deemed": {
+          "label": "Presumptive Income",
+          "amount": 1819000,
+          "icon": "scales",
+          "at": 57.04
+        },
+        "rule": "8% on cash receipts and 6% on digital mode receipts",
+        "spoken_amounts": [
+          "₹ 18,19,000",
+          "18,19,000"
+        ],
+        "at": 52.66
+      },
+      "start": 22.26,
+      "end": 61.1,
+      "id": "b3",
+      "director_goal": "Calculate the presumptive income using the 8% and 6% rates.",
+      "anchor_phrases": [
+        "8% on Cash",
+        "6% on Digital",
+        "₹ 18,19,000"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "8% on Cash",
+          "at": 53.6,
+          "matched": true,
+          "score": 0.875
+        },
+        {
+          "phrase": "6% on Digital",
+          "at": 55.36,
+          "matched": true,
+          "score": 0.909
+        },
+        {
+          "phrase": "₹ 18,19,000",
+          "at": 58.06,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 3
+      }
+    },
+    {
+      "layout": "compare_regimes",
+      "title": {
+        "text": "Books Profit vs Presumptive",
+        "at": 61.75
+      },
+      "voice_sync_text": "Books Profit ₹ 15,00,000 എന്നത് Presumptive income-നേക്കാൾ Lower than Presumptive ആകുന്നു.",
+      "visual_data": {
+        "regimes": [
+          {
+            "label": "Books Profit ₹ 15,00,000",
+            "detail": "Declared as per books",
+            "icon": "document",
+            "at": 61.81
+          },
+          {
+            "label": "Presumptive Income",
+            "detail": "Higher statutory value",
+            "icon": "scales",
+            "at": 66.73
+          }
+        ]
+      },
+      "start": 61.45,
+      "end": 67.49,
+      "id": "b4",
+      "director_goal": "Compare the presumptive income against the actual profits recorded in books.",
+      "anchor_phrases": [
+        "Books Profit ₹ 15,00,000",
+        "Lower than Presumptive"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Books Profit ₹ 15,00,000",
+          "at": 61.45,
+          "matched": false,
+          "score": 0.333
+        },
+        {
+          "phrase": "Lower than Presumptive",
+          "at": 65.37,
+          "matched": true,
+          "score": 0.787
+        }
+      ],
+      "anchor_match": {
+        "matched": 1,
+        "total": 2
+      }
+    },
+    {
+      "layout": "timeline_windows",
+      "title": {
+        "text": "5-Year Cooling-Off Penalty",
+        "at": 68.14
+      },
+      "voice_sync_text": "Section 44AD(4) പ്രകാരം 5-year cooling off period ബാധകമാകുന്നു, ഇത് A.Y. 2027-28 to A.Y. 2031-32 വരെയുള്ള കാലയളവിലാണ്.",
+      "visual_data": {
+        "events": [
+          {
+            "label": "Cooling-off Start",
+            "date": "A.Y. 2027-28",
+            "icon": "calendar",
+            "at": 71.54
+          },
+          {
+            "label": "Cooling-off End",
+            "date": "A.Y. 2031-32",
+            "icon": "calendar",
+            "at": 71.54
+          }
+        ],
+        "window_label": "Section 44AD(4) Lock-out Period"
+      },
+      "start": 67.84,
+      "end": 80.56,
+      "id": "b5",
+      "director_goal": "Explain the 5-year lock-out penalty for opting out of the presumptive scheme.",
+      "anchor_phrases": [
+        "Section 44AD(4)",
+        "5-year cooling off",
+        "A.Y. 2027-28 to A.Y. 2031-32"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Section 44AD(4)",
+          "at": 68.46,
+          "matched": true,
+          "score": 0.571
+        },
+        {
+          "phrase": "5-year cooling off",
+          "at": 70.88,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "A.Y. 2027-28 to A.Y. 2031-32",
+          "at": 74.36,
+          "matched": true,
+          "score": 0.96
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 3
+      }
+    },
+    {
+      "layout": "flow_actors",
+      "title": {
+        "text": "Tax Audit Requirement",
+        "at": 81.21
+      },
+      "voice_sync_text": "Section 44AB പ്രകാരം Tax Audit mandatory ആണ്, ഇതിനായി ഒരു Chartered Accountant-ന്റെ സേവനം ആവശ്യമാണ്.",
+      "visual_data": {
+        "actors": [
+          {
+            "label": "Mr. Praveen",
+            "icon": "person",
+            "at": 80.91
+          },
+          {
+            "label": "Chartered Accountant",
+            "icon": "person",
+            "at": 86.81
+          }
+        ],
+        "edges": [
+          {
+            "label": "Section 44AB Tax Audit mandatory",
+            "icon": "document",
+            "at": 86.81
+          }
+        ]
+      },
+      "start": 80.91,
+      "end": 89.59,
+      "id": "b6",
+      "director_goal": "Detail the mandatory tax audit requirement if opting for lower book profits.",
+      "anchor_phrases": [
+        "Section 44AB",
+        "Tax Audit mandatory",
+        "Chartered Accountant"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Section 44AB",
+          "at": 80.91,
+          "matched": false,
+          "score": 0.471
+        },
+        {
+          "phrase": "Tax Audit mandatory",
+          "at": 83.73,
+          "matched": true,
+          "score": 0.767
+        },
+        {
+          "phrase": "Chartered Accountant",
+          "at": 86.81,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 2,
+        "total": 3
+      }
+    },
+    {
+      "layout": "timeline_windows",
+      "title": {
+        "text": "Return Filing Due Dates",
+        "at": 90.24
+      },
+      "voice_sync_text": "Presumptive vs audited accounts അനുസരിച്ച് due dates 31st July 2026 ഉം 31st October 2026 ഉം ആകുന്നു.",
+      "visual_data": {
+        "events": [
+          {
+            "label": "Presumptive Due Date",
+            "date": "31st July 2026",
+            "icon": "calendar",
+            "at": 92.44
+          },
+          {
+            "label": "Audit Due Date",
+            "date": "31st October 2026",
+            "icon": "calendar",
+            "at": 96.02
+          }
+        ],
+        "window_label": "Filing Windows for P.Y. 2025-26 / A.Y. 2026-27"
+      },
+      "start": 89.94,
+      "end": 99.54,
+      "id": "b7",
+      "director_goal": "Specify the different filing due dates for presumptive vs. audited accounts.",
+      "anchor_phrases": [
+        "31st July 2026",
+        "31st October 2026"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "31st July 2026",
+          "at": 93.94,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "31st October 2026",
+          "at": 96.28,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 2,
+        "total": 2
+      }
+    },
+    {
+      "layout": "takeaway",
+      "title": {
+        "text": "Summary and Takeaway",
+        "at": 100.19
+      },
+      "voice_sync_text": "Presumptive vs Audit തമ്മിലുള്ള Compliance Choice വളരെ ശ്രദ്ധയോടെ കൈകാര്യം ചെയ്യേണ്ടതുണ്ട്.",
+      "visual_data": {
+        "rules": [
+          {
+            "label": "Presumptive vs Audit",
+            "detail": "Evaluate turnover and cash limits",
+            "icon": "scales",
+            "at": 99.89
+          },
+          {
+            "label": "Compliance Choice",
+            "detail": "Assess 5-year lock-out implications",
+            "icon": "document",
+            "at": 102.57
+          }
+        ]
+      },
+      "start": 99.89,
+      "end": 106.93,
+      "id": "b8",
+      "director_goal": "Summarize the trade-off between presumptive simplicity and audit obligations.",
+      "anchor_phrases": [
+        "Presumptive vs Audit",
+        "Compliance Choice"
+      ],
+      "animation_role": "key_fact",
+      "anchor_alignment": [
+        {
+          "phrase": "Presumptive vs Audit",
+          "at": 100.87,
+          "matched": true,
+          "score": 0.625
+        },
+        {
+          "phrase": "Compliance Choice",
+          "at": 102.57,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 2,
+        "total": 2
+      }
+    }
+  ],
+  "audio_duration_sec": 106.93,
+  "anchor_match": {
+    "matched": 18,
+    "total": 21,
+    "rate": 0.857
+  }
+}
