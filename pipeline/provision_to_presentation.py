@@ -37,28 +37,18 @@ from pipeline.key_rotator import rotator
 def synthesize_malayalam_voice(script: str, output_mp3_path: str, voice_name: str = "ml-IN-SobhanaNeural") -> float:
     """
     Synthesizes authentic Malayalam teacher narration audio for a presentation slide.
-    Supports EdgeTTS (ml-IN-SobhanaNeural / ml-IN-MidhunNeural) and Gemini TTS.
+    Uses EdgeTTS (ml-IN-SobhanaNeural / ml-IN-MidhunNeural) for authentic Malayalam speech.
     Returns the exact audio duration in seconds.
     """
     os.makedirs(os.path.dirname(os.path.abspath(output_mp3_path)), exist_ok=True)
     
-    # 1. Try Gemini Expressive TTS if configured and API key available
-    try:
-        from pipeline.phase3_audio import generate_gemini_audio
-        dur, engine = generate_gemini_audio(script, output_mp3_path, voice_name="Aoede")
-        if os.path.exists(output_mp3_path) and os.path.getsize(output_mp3_path) > 2000:
-            print(f"   [TTS] Synthesized via {engine}: {dur:.1f}s")
-            return dur
-    except Exception:
-        pass
-        
-    # 2. Ultra-reliable EdgeTTS Malayalam synthesis
+    # 1. Primary: Authentic Malayalam Neural TTS (EdgeTTS)
     try:
         import edge_tts
         edge_voice = "ml-IN-SobhanaNeural" if "midhun" not in voice_name.lower() else "ml-IN-MidhunNeural"
         
         async def _edge_gen():
-            comm = edge_tts.Communicate(script, edge_voice)
+            comm = edge_tts.Communicate(script, edge_voice, rate="+5%")
             await comm.save(output_mp3_path)
             
         asyncio.run(_edge_gen())
@@ -68,12 +58,24 @@ def synthesize_malayalam_voice(script: str, output_mp3_path: str, voice_name: st
             ['ffprobe', '-v', 'error', '-show_entries', 'format=duration', '-of', 'default=noprint_wrappers=1:nokey=1', output_mp3_path],
             capture_output=True, text=True
         )
-        dur = float(res.stdout.strip()) if res.stdout.strip() else 6.0
-        print(f"   [TTS] Synthesized via EdgeTTS ({edge_voice}): {dur:.1f}s")
-        return dur
+        dur = float(res.stdout.strip()) if res.stdout.strip() else 10.0
+        if os.path.exists(output_mp3_path) and os.path.getsize(output_mp3_path) > 1000:
+            print(f"   [TTS] Synthesized via EdgeTTS ({edge_voice}): {dur:.1f}s")
+            return dur
     except Exception as e:
-        print(f"   [TTS Error] EdgeTTS failed ({e}), creating dummy audio duration placeholder.")
-        return 7.0
+        print(f"   [TTS] EdgeTTS error ({e}), trying Gemini Voice fallback...")
+
+    # 2. Fallback: Gemini Voice (with strict verbatim reading instruction)
+    try:
+        from pipeline.phase3_audio import generate_gemini_audio
+        verbatim_script = f"Read the following teacher explanation aloud verbatim in Malayalam with English tax terminology. Speak ONLY this text and nothing else:\n\n{script}"
+        dur, engine = generate_gemini_audio(verbatim_script, output_mp3_path, voice_name="Aoede")
+        if os.path.exists(output_mp3_path) and os.path.getsize(output_mp3_path) > 2000:
+            print(f"   [TTS] Synthesized via {engine}: {dur:.1f}s")
+            return dur
+    except Exception as e:
+        print(f"   [TTS Error] All voice synthesis options failed: {e}")
+        return 8.0
 
 
 # -------------------------------------------------------------------------

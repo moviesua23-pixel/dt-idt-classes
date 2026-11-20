@@ -1,192 +1,193 @@
 window.LATEST_PRESENTATION = {
-  "id": "dt-mastering_sec_51__56_2__ix____sec_5",
-  "title": "Mastering Sec 51, 56(2)(ix) & Sec 54 Capital Gains Exemption",
+  "id": "dt-capital_gains__forfeiture_of_advanc",
+  "title": "Capital Gains: Forfeiture of Advance Money & Sec 54 Exemption",
   "subject": "DT",
   "domain": "Real Estate",
-  "provision_raw": "Section 54 & Section 51: Capital Gains Exemption & Forfeiture of Advance Money\nProvision / Section\tStatutory Trigger / Condition\tTax Treatment / Formula\tJudicial Benchmark / Landmark Rule\nSection 51\tAdvance money forfeited prior to 01/04/2014\tReduced from Cost of Acquisition\tReduces base cost before applying indexation\nSection 56(2)(ix)\tAdvance money forfeited on or after 01/04/2014\tTaxed under Income from Other Sources\tDoes NOT reduce Cost of Acquisition\nSection 54\tPurchase/construction of residential house\tExempt = Lower of Capital Gain or Cost of New Asset\tPurchase: 1 yr before or 2 yrs after transfer; Construction: 3 yrs after\nSection 54 Proviso\tCapital Gain ≤ ₹ 2 Crore (Once-in-a-lifetime)\tExemption available for Two residential houses in India\tAggregate investment across both houses is eligible",
-  "story_summary": "Mr. Rajesh sells his residential house in Ernakulam after forfeiting advance money in two different tax regimes (2011 and 2016). He calculates his net capital gain of ₹1.5 Crores and strategically reinvests it into two smaller residential properties under the Section 54 Proviso once-in-a-lifetime rule.",
+  "provision_raw": "Section 54 & Section 51: Capital Gains Exemption & Forfeiture of Advance Money. Section 51: Advance money forfeited prior to 01/04/2014 reduced from Cost of Acquisition. Section 56(2)(ix): Advance money forfeited on or after 01/04/2014 taxed under Income from Other Sources, does not reduce COA. Section 54: Reinvestment in residential house.",
+  "story_summary": "Vikram purchased a property in Kochi for ₹30 Lakhs. He forfeited an advance of ₹5 Lakhs in 2012 (pre-2014) and ₹8 Lakhs in 2018 (post-2014), before finally selling the property for ₹1 Crore in 2023 and reinvesting in a residential house.",
   "total_slides": 6,
-  "total_duration": 282.2,
+  "total_duration": 152.3,
   "slides": [
     {
       "slide_number": 1,
-      "slide_title": "Pre-2014 Advance Forfeiture: Reduction from Cost (Sec 51)",
-      "scene_purpose": "Explain how advance money forfeited prior to 01/04/2014 reduces the original Cost of Acquisition (COA).",
-      "archetype_id": "take_away",
-      "dialogue_manglish": "Friends, look at Rajesh's case. 2005-ൽ Rajesh 10 Lakhs-ന് buy ചെയ്ത residential house 2011-ൽ sell ചെയ്യാൻ ഒരു deal ആക്കി. Buyer deal cancel ചെയ്തപ്പോൾ 2 Lakhs advance money forfeit ചെയ്തു. Section 51 പ്രകാരം 01/04/2014-ന് മുമ്പ് forfeit ചെയ്ത advance money, property-യുടെ original Cost of Acquisition-ൽ നിന്ന് deduct ചെയ്യണം. So base cost ₹10L ൽ നിന്ന് ₹2L കുറഞ്ഞ് net ₹8L ആയി മാറും!",
-      "audio_file": "data/audio/presentations/dt-mastering_sec_51__56_2__ix____sec_5/slide_1.mp3",
-      "audio_duration": 57.2,
-      "duration": 58.2,
+      "slide_title": "Pre-2014 Advance Forfeiture",
+      "scene_purpose": "Demonstrate the receipt and forfeiture of advance money prior to 01/04/2014 under Section 51.",
+      "archetype_id": "give_and_receive",
+      "dialogue_manglish": "First scene-ൽ, 2012-ൽ Vikram magnetic plot sell ചെയ്യാൻ Mr. A ആയിട്ട് agreement ഉണ്ടാക്കി. Mr. A 5 Lakhs advance ആയി നൽകി, പക്ഷെ transaction complete ചെയ്യാൻ പറ്റിയില്ല. So Vikram 5 Lakhs forfeit ചെയ്തു. Since this forfeiture happened prior to 01/04/2014, Section 51 പ്രകാരം dynamic asset-ന്റെ Cost of Acquisition-ൽ നിന്ന് ഇത് reduce ചെയ്യണം.",
+      "audio_file": "data/audio/presentations/dt-capital_gains__forfeiture_of_advanc/slide_1.mp3",
+      "audio_duration": 30.36,
+      "duration": 31.4,
       "cues": {
         "cue_start": 0.5,
-        "cue_action": 22.9,
-        "cue_conclusion": 45.8
+        "cue_action": 12.1,
+        "cue_conclusion": 24.3
       },
       "slots": {
-        "title": "Sec 51: Pre-2014 Advance Money Forfeiture",
-        "whole_label": "Original Purchase Cost (2005)",
-        "whole_val": 1000000,
-        "chunks": [
-          {
-            "label": "Forfeited Advance (2011 - Pre 01/04/2014)",
-            "val": 200000
-          }
-        ],
-        "result_label": "Adjusted Cost of Acquisition (COA)",
-        "note": "Under Sec 51, advance forfeited prior to 01-04-2014 is deducted from COA before indexation."
+        "title": "2012: Advance Forfeited (Pre-01/04/2014)",
+        "giver": "Mr. A (Buyer 1)",
+        "receiver": "Vikram (Owner)",
+        "item_label": "Advance Forfeited",
+        "item_icon": "house",
+        "item_value": 500000,
+        "payment_amount": 500000,
+        "tag_text": "Section 51 Applicable",
+        "note": "Advance forfeited prior to 01/04/2014 reduces Cost of Acquisition."
       }
     },
     {
       "slide_number": 2,
-      "slide_title": "Post-2014 Advance Forfeiture: Taxed as IFOS (Sec 56(2)(ix))",
-      "scene_purpose": "Demonstrate that advance money forfeited on/after 01/04/2014 does not touch COA and is taxed under Income from Other Sources.",
-      "archetype_id": "key_statement",
-      "dialogue_manglish": "2016-ൽ Rajesh വീണ്ടും 5 Lakhs advance received & forfeited. Dynamic change in tax law! Section 56(2)(ix) പ്രകാരം 01/04/2014-ന് ശേഷം forfeit ചെയ്യുന്ന advance money 'Income from Other Sources'-ൽ അതാത് വർഷം fully taxable ആണ്. It will NEVER reduce the Cost of Acquisition!",
-      "audio_file": "data/audio/presentations/dt-mastering_sec_51__56_2__ix____sec_5/slide_2.mp3",
-      "audio_duration": 47.8,
-      "duration": 48.8,
+      "slide_title": "Adjustment to Cost of Acquisition (Section 51)",
+      "scene_purpose": "Show the reduction of original Cost of Acquisition due to pre-2014 forfeiture.",
+      "archetype_id": "take_away",
+      "dialogue_manglish": "ഇവിടെ Vikram-ന്റെ original Cost of Acquisition 30 Lakhs ആയിരുന്നു. Section 51 പ്രകാരം pre-2014 forfeit ചെയ്ത 5 Lakhs match ചെയ്ത് deduct ചെയ്യുമ്പോൾ, adjusted Cost of Acquisition 25 Lakhs ആയി മാറും.",
+      "audio_file": "data/audio/presentations/dt-capital_gains__forfeiture_of_advanc/slide_2.mp3",
+      "audio_duration": 19.272,
+      "duration": 20.3,
       "cues": {
         "cue_start": 0.5,
-        "cue_action": 19.1,
-        "cue_conclusion": 38.2
+        "cue_action": 7.7,
+        "cue_conclusion": 15.4
       },
       "slots": {
-        "title": "Sec 56(2)(ix): Post-2014 Advance Forfeiture",
-        "statement": "Advance money forfeited on or after 01/04/2014 is directly taxable under Income from Other Sources.",
-        "highlight_phrase": "Taxable under IFOS (No COA Reduction)",
-        "support_line": "Taxed in the year of forfeiture; Cost of Acquisition remains completely unaffected.",
-        "icon_type": "house"
+        "title": "Impact of Sec 51 on Cost of Acquisition",
+        "whole_label": "Original Purchase Price",
+        "whole_val": 3000000,
+        "chunks": [
+          {
+            "label": "Pre-2014 Advance Forfeited (Sec 51)",
+            "val": 500000
+          }
+        ],
+        "result_label": "Adjusted Cost of Acquisition",
+        "note": "Original COA ₹30L - Pre-2014 Advance ₹5L = Adjusted COA ₹25L."
       }
     },
     {
       "slide_number": 3,
-      "slide_title": "Net Long Term Capital Gain (LTCG) Calculation",
-      "scene_purpose": "Show the calculation of net Capital Gain after applying indexed cost to the adjusted base cost.",
-      "archetype_id": "formula_builder",
-      "dialogue_manglish": "2023-ൽ Rajesh ഈ house ₹2.10 Crores-ന് sell ചെയ്യുന്നു. Adjusted base cost ₹8 Lakhs index ചെയ്ത് Deduct ചെയ്തപ്പോൾ Net Long-Term Capital Gain ₹1.50 Crores ലഭിക്കുന്നു. Let's see how Rajesh can save tax on this ₹1.50 Crores!",
-      "audio_file": "data/audio/presentations/dt-mastering_sec_51__56_2__ix____sec_5/slide_3.mp3",
-      "audio_duration": 21.3,
-      "duration": 22.3,
+      "slide_title": "Post-2014 Advance Forfeiture",
+      "scene_purpose": "Demonstrate forfeiture of advance money on/after 01/04/2014 governed by Section 56(2)(ix).",
+      "archetype_id": "give_and_receive",
+      "dialogue_manglish": "Next, 2018-ൽ Mr. B ആയിട്ട് ഉണ്ടാക്കിയ agreement-ൽ Vikram 8 Lakhs advance വാങ്ങുകയും forfeit ചെയ്യുകയും ചെയ്തു. But remember, 01/04/2014-ന് ശേഷം നടക്കുന്ന forfeiture Section 56(2)(ix) പ്രകാരം Income from Other Sources (IFOS) ആയി full tax ചെയ്യപ്പെടും. Cost of Acquisition-ൽ ഒരു reduction-ഉം വരില്ല!",
+      "audio_file": "data/audio/presentations/dt-capital_gains__forfeiture_of_advanc/slide_3.mp3",
+      "audio_duration": 26.928,
+      "duration": 27.9,
       "cues": {
         "cue_start": 0.5,
-        "cue_action": 8.5,
-        "cue_conclusion": 17.0
+        "cue_action": 10.8,
+        "cue_conclusion": 21.5
       },
       "slots": {
-        "title": "Net LTCG Computation for FY 2023-24",
-        "chips": [
-          {
-            "label": "Full Value of Consideration",
-            "val": 21000000,
-            "op": "+",
-            "is_total": false
-          },
-          {
-            "label": "Indexed Cost of Acquisition (Base ₹8L)",
-            "val": 6000000,
-            "op": "-",
-            "is_total": false
-          },
-          {
-            "label": "Net Taxable LTCG (Before Exemption)",
-            "val": 15000000,
-            "op": "=",
-            "is_total": true
-          }
-        ],
-        "note": "Net LTCG comes out to ₹ 1.50 Crores."
+        "title": "2018: Advance Forfeited (Post-01/04/2014)",
+        "giver": "Mr. B (Buyer 2)",
+        "receiver": "Vikram (Owner)",
+        "item_label": "Advance Forfeited",
+        "item_icon": "house",
+        "item_value": 800000,
+        "payment_amount": 800000,
+        "tag_text": "Section 56(2)(ix) Applicable",
+        "note": "Taxable under IFOS in the year of forfeiture. COA remains unchanged!"
       }
     },
     {
       "slide_number": 4,
-      "slide_title": "Section 54 Proviso: Qualification Gate for 2 Houses",
-      "scene_purpose": "Check whether Rajesh meets the criteria for investing in TWO residential houses under the Sec 54 Proviso.",
-      "archetype_id": "conditions_gate",
-      "dialogue_manglish": "Section 54 പ്രകാരം normally 1 residential house-ൽ മാത്രമേ exemption കിട്ടു. But look at the Special Proviso! Capital gain ₹2 Crores-ൽ താഴെ ആണെങ്കിൽ, Assessee-ക്ക് once-in-a-lifetime offer ആയി INDIA-യിൽ 2 residential houses buy ചെയ്യാം. Here LTCG ₹1.5 Cr ≤ ₹2 Cr, test passed!",
-      "audio_file": "data/audio/presentations/dt-mastering_sec_51__56_2__ix____sec_5/slide_4.mp3",
-      "audio_duration": 51.2,
-      "duration": 52.2,
+      "slide_title": "Comparative Tax Matrix: Sec 51 vs Sec 56(2)(ix)",
+      "scene_purpose": "Summarize the statutory distinction based on the cutoff date of 1st April 2014.",
+      "archetype_id": "table_reveal",
+      "dialogue_manglish": "Exam point of view-ൽ ഈ cutoff date വളരെ crucial ആണ്. Cutoff line: 01/04/2014! ഇതിന് മുൻപുള്ള forfeiture Cost of Acquisition-ൽ നിന്ന് reduce ചെയ്യണം. 01/04/2014-ലോ അതിനു ശേഷമോ ഉള്ള forfeiture IFOS-ൽ Tax ചെയ്യും, COA-ൽ no change!",
+      "audio_file": "data/audio/presentations/dt-capital_gains__forfeiture_of_advanc/slide_4.mp3",
+      "audio_duration": 22.824,
+      "duration": 23.8,
       "cues": {
         "cue_start": 0.5,
-        "cue_action": 20.5,
-        "cue_conclusion": 41.0
+        "cue_action": 9.1,
+        "cue_conclusion": 18.3
       },
       "slots": {
-        "title": "Sec 54 Proviso: Two Residential Houses Benefit Gate",
-        "door_label": "Eligible for 2 Houses Exemption",
-        "all_required": true,
-        "conditions": [
-          {
-            "text": "Transfer of Long Term Residential House Property",
-            "met": true
-          },
-          {
-            "text": "Net Capital Gain does NOT exceed ₹ 2 Crores (Actual: ₹ 1.5 Cr)",
-            "met": true
-          },
-          {
-            "text": "Option exercised ONCE in a lifetime",
-            "met": true
-          }
+        "title": "Statutory Comparison Matrix",
+        "headers": [
+          "Period of Forfeiture",
+          "Taxability at Forfeiture",
+          "Effect on COA"
         ],
-        "note": "All conditions satisfied! Rajesh can invest in two residential properties in India."
+        "rows": [
+          [
+            "Prior to 01/04/2014",
+            "Not Taxed immediately",
+            "Deducted from COA (Sec 51)"
+          ],
+          [
+            "On or after 01/04/2014",
+            "Taxed under IFOS (Sec 56(2)(ix))",
+            "No Reduction from COA"
+          ]
+        ],
+        "spotlight_row": 1,
+        "note": "Crucial distinction: Post-2014 advance is taxed upfront as revenue income."
       }
     },
     {
       "slide_number": 5,
-      "slide_title": "Reinvestment Consolidation into Two Properties",
-      "scene_purpose": "Demonstrate the aggregation of investment across two new residential houses.",
-      "archetype_id": "merge_into_one",
-      "dialogue_manglish": "Rajesh 2 years-നുള്ളിൽ Kakkanad-ൽ ₹80 Lakhs-ൻ്റെ ഒരു apartment-ഉം Aluva-യിൽ ₹60 Lakhs-ൻ്റെ ഒരു house-ഉം buy ചെയ്തു. Sec 54 Proviso അനുവദിക്കുന്നതുപോലെ ഈ രണ്ട് residential houses-ൻ്റെയും total investment ₹1.40 Crores എലിജിബിൾ reinvestment ആയി മാറും!",
-      "audio_file": "data/audio/presentations/dt-mastering_sec_51__56_2__ix____sec_5/slide_5.mp3",
-      "audio_duration": 48.7,
-      "duration": 49.7,
+      "slide_title": "Final Sale & Capital Gain Computation",
+      "scene_purpose": "Calculate the final Capital Gain when property is sold in 2023.",
+      "archetype_id": "formula_builder",
+      "dialogue_manglish": "2023-ൽ Vikram ഈ property 1 Crore-ന് വിറ്റു. Capital Gain calculate ചെയ്യുമ്പോൾ Sale Consideration 1 Crore-ൽ നിന്ന് Adjusted COA 25 Lakhs മാത്രം subtract ചെയ്യുക. 2018-ലെ 8 Lakhs already IFOS-ൽ tax ആയതുകൊണ്ട് COA 25 Lakhs തന്നെയായിരിക്കും. Total Capital Gain: 75 Lakhs!",
+      "audio_file": "data/audio/presentations/dt-capital_gains__forfeiture_of_advanc/slide_5.mp3",
+      "audio_duration": 26.088,
+      "duration": 27.1,
       "cues": {
         "cue_start": 0.5,
-        "cue_action": 19.5,
-        "cue_conclusion": 39.0
+        "cue_action": 10.4,
+        "cue_conclusion": 20.9
       },
       "slots": {
-        "title": "Consolidation of Reinvestment in Two Houses",
-        "streams": [
+        "title": "Capital Gain Computation (2023)",
+        "chips": [
           {
-            "label": "Kakkanad Apartment (Purchase)",
-            "val": 8000000,
-            "tone": "positive"
+            "label": "Full Value of Consideration",
+            "val": 10000000,
+            "op": "+",
+            "is_total": false
           },
           {
-            "label": "Aluva Villa (Purchase)",
-            "val": 6000000,
-            "tone": "positive"
+            "label": "Adjusted COA (30L - 5L)",
+            "val": 2500000,
+            "op": "-",
+            "is_total": false
+          },
+          {
+            "label": "Taxable Capital Gain",
+            "val": 7500000,
+            "op": "=",
+            "is_total": true
           }
         ],
-        "merged_label": "Total Reinvestment Eligible for Sec 54 (₹ 1.40 Cr)",
-        "note": "Aggregate cost of both residential houses purchased within 2 years."
+        "note": "Post-2014 advance of ₹8L did not alter the COA of ₹25L."
       }
     },
     {
       "slide_number": 6,
-      "slide_title": "Final Section 54 Exemption & Taxable LTCG",
-      "scene_purpose": "Compare Capital Gain vs Cost of New Assets to calculate final exemption (Lower of the two).",
-      "archetype_id": "compare_two",
-      "dialogue_manglish": "Final Exemption benchmark! Sec 54 പ്രകാരം Exemption = Lower of Capital Gain (₹1.50 Cr) OR Cost of New Assets (₹1.40 Cr). So Rajesh-ന് ₹1.40 Crores full exemption ആയി ലഭിക്കും! Remaining Taxable LTCG represents just ₹10 Lakhs. Brilliant tax planning!",
-      "audio_file": "data/audio/presentations/dt-mastering_sec_51__56_2__ix____sec_5/slide_6.mp3",
-      "audio_duration": 50.0,
-      "duration": 51.0,
+      "slide_title": "Section 54 Reinvestment Timeline Check",
+      "scene_purpose": "Verify if the reinvestment in a residential house satisfies Section 54 timeline criteria.",
+      "archetype_id": "time_range",
+      "dialogue_manglish": "ഇനി final step! Vikram 75 Lakhs Capital Gain ലഭിച്ച ശേഷം 1 year-നുള്ളിൽ പുതിയൊരു Residential House purchase ചെയ്തു. Section 54 പ്രകാരം sale തീയതി മുതൽ 2 years-നുള്ളിൽ new house purchase ചെയ്താൽ full Capital Gain Exemption എലിജിബിൾ ആണ്!",
+      "audio_file": "data/audio/presentations/dt-capital_gains__forfeiture_of_advanc/slide_6.mp3",
+      "audio_duration": 20.76,
+      "duration": 21.8,
       "cues": {
         "cue_start": 0.5,
-        "cue_action": 20.0,
-        "cue_conclusion": 40.0
+        "cue_action": 8.3,
+        "cue_conclusion": 16.6
       },
       "slots": {
-        "title": "Sec 54 Final Exemption Benchmark",
-        "label_a": "Capital Gain Available",
-        "val_a": 15000000,
-        "label_b": "Cost of 2 New Houses",
-        "val_b": 14000000,
-        "mode": "lower",
-        "cap_amount": 14000000,
-        "note": "Exemption allowed is LOWER of Capital Gain or Investment in New Assets. Final Taxable LTCG = ₹ 10 Lakhs."
+        "title": "Sec 54 Reinvestment Window",
+        "start_label": "Date of Sale",
+        "span_length": 2,
+        "span_unit": "Years",
+        "span_label": "2 Years Purchase Window",
+        "event_label": "Purchased New House",
+        "event_offset": 1,
+        "is_inside": true,
+        "note": "Reinvestment made within statutory 2-year window. Full Sec 54 exemption granted!"
       }
     }
   ]

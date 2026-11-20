@@ -1,0 +1,1295 @@
+{
+  "qid": "dt-c2-q4",
+  "question_id": "dt-c2-q4",
+  "layout": "story_stage",
+  "story_title": "The Legacy of Vikram's Land and the 2001 Benchmark",
+  "timeline": {
+    "total_duration": 173.65,
+    "scene_count": 4
+  },
+  "audio_file": "audio/dt-c2-q4_story.mp3",
+  "scenes": [
+    {
+      "scene_id": "scene_1_sale",
+      "scene_type": "story",
+      "teaching_step_ref": 1,
+      "title": "Calculating Net Proceeds",
+      "actors": [
+        {
+          "id": "actor_1",
+          "name": "Vikram",
+          "role": "Seller",
+          "x": 100,
+          "y": 250
+        }
+      ],
+      "assets": [
+        {
+          "id": "asset_1",
+          "type": "land",
+          "label": "Ancestral Land",
+          "x": 300,
+          "y": 200
+        }
+      ],
+      "events": [
+        {
+          "id": "evt_sale",
+          "type": "sale",
+          "date": "15th October 2024",
+          "amount": 9000000
+        }
+      ],
+      "facts": {
+        "gross_sale_price": 9000000,
+        "transfer_expenses": 100000
+      },
+      "rule_applied": {
+        "section": "Section 48",
+        "condition": "Net Sale Consideration is Gross Price minus Transfer Expenses",
+        "formula": "gross_sale_price - transfer_expenses"
+      },
+      "calculation": {
+        "steps": [
+          {
+            "step_idx": 1,
+            "desc": "Subtracting brokerage of ₹ 1,00,000 from ₹ 90,00,000",
+            "value": 8900000,
+            "element_id": "calc_step_1"
+          }
+        ],
+        "result_label": "Net Sale Consideration",
+        "result_value": 8900000,
+        "element_id": "result_badge"
+      },
+      "sentences": [
+        {
+          "sentence_id": "s1_sit",
+          "phase": "situation",
+          "text": "നമ്മുടെ Vikram തന്റെ കൈവശമുള്ള ancestral land 15th October 2024-ൽ ₹ 90,00,000 എന്ന തുകയ്ക്ക് വിൽക്കാൻ തീരുമാനിച്ചു.",
+          "tied_element_ids": [
+            "actor_1",
+            "asset_1",
+            "evt_sale"
+          ]
+        },
+        {
+          "sentence_id": "s1_rule",
+          "phase": "rule",
+          "text": "Section 48 അനുസരിച്ച്, Gross Sale Consideration-ൽ നിന്നും വിൽപനയ്ക്കായി ചിലവായ transfer expenses കുറച്ചാൽ മാത്രമേ നമുക്ക് Net Sale Consideration ലഭിക്കുകയുള്ളൂ.",
+          "tied_element_ids": [
+            "rule_box"
+          ]
+        },
+        {
+          "sentence_id": "s1_calc",
+          "phase": "calculation",
+          "text": "ഇവിടെ ₹ 90,00,000-ൽ നിന്നും brokerage ഇനത്തിൽ വന്ന ₹ 1,00,000 നാം കുറയ്ക്കുന്നു.",
+          "tied_element_ids": [
+            "calc_step_1"
+          ]
+        },
+        {
+          "sentence_id": "s1_res",
+          "phase": "result",
+          "text": "അങ്ങനെ Vikram-ന്റെ കൈവശം എത്തുന്ന യഥാർത്ഥ തുക അഥവാ Net Sale Consideration ₹ 89,00,000 ആണ്.",
+          "tied_element_ids": [
+            "result_badge"
+          ]
+        }
+      ],
+      "start": 0.0,
+      "duration": 36.4,
+      "sentence_timings": [
+        {
+          "sentence_id": "s1_sit",
+          "phase": "situation",
+          "text": "നമ്മുടെ Vikram തന്റെ കൈവശമുള്ള ancestral land 15th October 2024-ൽ ₹ 90,00,000 എന്ന തുകയ്ക്ക് വിൽക്കാൻ തീരുമാനിച്ചു.",
+          "cue": 0.14,
+          "start": 0.29,
+          "end": 9.511,
+          "method": "pause_detect",
+          "tied_element_ids": [
+            "actor_1",
+            "asset_1",
+            "evt_sale"
+          ]
+        },
+        {
+          "sentence_id": "s1_rule",
+          "phase": "rule",
+          "text": "Section 48 അനുസരിച്ച്, Gross Sale Consideration-ൽ നിന്നും വിൽപനയ്ക്കായി ചിലവായ transfer expenses കുറച്ചാൽ മാത്രമേ നമുക്ക് Net Sale Consideration ലഭിക്കുകയുള്ളൂ.",
+          "cue": 10.462,
+          "start": 10.612,
+          "end": 22.339,
+          "method": "pause_detect",
+          "tied_element_ids": [
+            "rule_box"
+          ]
+        },
+        {
+          "sentence_id": "s1_calc",
+          "phase": "calculation",
+          "text": "ഇവിടെ ₹ 90,00,000-ൽ നിന്നും brokerage ഇനത്തിൽ വന്ന ₹ 1,00,000 നാം കുറയ്ക്കുന്നു.",
+          "cue": 22.559,
+          "start": 22.709,
+          "end": 28.754,
+          "method": "pause_detect",
+          "tied_element_ids": [
+            "calc_step_1"
+          ]
+        },
+        {
+          "sentence_id": "s1_res",
+          "phase": "result",
+          "text": "അങ്ങനെ Vikram-ന്റെ കൈവശം എത്തുന്ന യഥാർത്ഥ തുക അഥവാ Net Sale Consideration ₹ 89,00,000 ആണ്.",
+          "cue": 28.84,
+          "start": 28.99,
+          "end": 35.97,
+          "method": "pause_detect",
+          "tied_element_ids": [
+            "result_badge"
+          ]
+        }
+      ],
+      "canvas_updates": [
+        {
+          "cue": 0.14,
+          "action": "actor_enter",
+          "entity_id": "actor_1",
+          "data": {
+            "id": "actor_1",
+            "name": "Vikram",
+            "role": "Seller",
+            "x": 100,
+            "y": 250
+          },
+          "anim_duration": 0.5
+        },
+        {
+          "cue": 0.14,
+          "action": "asset_enter",
+          "entity_id": "asset_1",
+          "data": {
+            "id": "asset_1",
+            "type": "land",
+            "label": "Ancestral Land",
+            "x": 300,
+            "y": 200
+          },
+          "anim_duration": 0.5
+        },
+        {
+          "cue": 0.14,
+          "action": "event_trigger",
+          "entity_id": "evt_sale",
+          "data": {
+            "id": "evt_sale",
+            "type": "sale",
+            "date": "15th October 2024",
+            "amount": 9000000
+          },
+          "anim_duration": 0.5
+        },
+        {
+          "cue": 10.462,
+          "action": "rule_panel_enter",
+          "entity_id": "rule_panel",
+          "canvas_width_pct": 55,
+          "rule_panel_width_pct": 45,
+          "data": {
+            "section": "Section 48",
+            "condition": "Net Sale Consideration is Gross Price minus Transfer Expenses",
+            "formula": "gross_sale_price - transfer_expenses"
+          },
+          "anim_duration": 0.5
+        },
+        {
+          "cue": 22.559,
+          "action": "calc_step_show",
+          "entity_id": "calc_step_1",
+          "data": {
+            "step_idx": 1,
+            "desc": "Subtracting brokerage of ₹ 1,00,000 from ₹ 90,00,000",
+            "value": 8900000,
+            "element_id": "calc_step_1"
+          },
+          "anim_duration": 0.4
+        },
+        {
+          "cue": 28.84,
+          "action": "result_badge_highlight",
+          "entity_id": "result_badge",
+          "data": {
+            "label": "Net Sale Consideration",
+            "value": 8900000
+          },
+          "anim_duration": 0.4
+        }
+      ]
+    },
+    {
+      "scene_id": "scene_2_coa",
+      "scene_type": "story",
+      "teaching_step_ref": 2,
+      "title": "The 2001 Valuation Puzzle",
+      "actors": [
+        {
+          "id": "actor_1",
+          "name": "Vikram",
+          "role": "Owner",
+          "x": 100,
+          "y": 250
+        }
+      ],
+      "assets": [
+        {
+          "id": "asset_1",
+          "type": "land",
+          "label": "Ancestral Land",
+          "x": 300,
+          "y": 200
+        }
+      ],
+      "events": [
+        {
+          "id": "evt_purchase",
+          "type": "purchase",
+          "date": "10th June 1995",
+          "amount": 200000
+        }
+      ],
+      "facts": {
+        "actual_cost": 200000,
+        "fmv_2001": 1500000,
+        "sdv_2001": 1400000
+      },
+      "rule_applied": {
+        "section": "Section 55(2)(b)(i)",
+        "condition": "Higher of Cost or FMV as on 1.4.2001, but FMV cannot exceed SDV",
+        "formula": "min(max(actual_cost, fmv_2001), sdv_2001)"
+      },
+      "calculation": {
+        "steps": [
+          {
+            "step_idx": 1,
+            "desc": "Higher of Actual Cost ₹ 2,00,000 and FMV ₹ 15,00,000 is ₹ 15,00,000",
+            "value": 1500000,
+            "element_id": "calc_step_1"
+          },
+          {
+            "step_idx": 2,
+            "desc": "Capping FMV at Stamp Duty Value ₹ 14,00,000",
+            "value": 1400000,
+            "element_id": "calc_step_2"
+          }
+        ],
+        "result_label": "Cost of Acquisition",
+        "result_value": 1400000,
+        "element_id": "result_badge"
+      },
+      "sentences": [
+        {
+          "sentence_id": "s2_sit",
+          "phase": "situation",
+          "text": "Vikram ഈ സ്ഥലം 10th June 1995-ൽ വെറും ₹ 2,00,000 നൽകിയാണ് വാങ്ങിയത്, എന്നാൽ 1st April 2001-ൽ ഇതിന്റെ Fair Market Value ₹ 15,00,000 ആയിരുന്നു.",
+          "tied_element_ids": [
+            "actor_1",
+            "evt_purchase"
+          ]
+        },
+        {
+          "sentence_id": "s2_rule",
+          "phase": "rule",
+          "text": "Section 55(2)(b)(i) പ്രകാരം 1st April 2001-ന് മുൻപ് വാങ്ങിയ asset-ന്റെ Cost of Acquisition കണക്കാക്കുമ്പോൾ Actual Cost അല്ലെങ്കിൽ FMV എന്നിവയിൽ ഉയർന്നത് എടുക്കാം, പക്ഷെ അത് Stamp Duty Value-ൽ കൂടാൻ പാടില്ല.",
+          "tied_element_ids": [
+            "rule_box"
+          ]
+        },
+        {
+          "sentence_id": "s2_calc_1",
+          "phase": "calculation",
+          "text": "ആദ്യം നാം Actual Cost ആയ ₹ 2,00,000-ഉം Fair Market Value ആയ ₹ 15,00,000-ഉം താരതമ്യം ചെയ്യുമ്പോൾ ഉയർന്ന തുക ₹ 15,00,000 ആണെന്ന് കാണാം.",
+          "tied_element_ids": [
+            "calc_step_1"
+          ]
+        },
+        {
+          "sentence_id": "s2_calc_2",
+          "phase": "calculation",
+          "text": "എങ്കിലും 1st April 2001-ലെ Stamp Duty Value ₹ 14,00,000 ആയതിനാൽ നിയമപരമായി നമുക്ക് ആ തുകയിൽ കൂടുതൽ എടുക്കാൻ സാധിക്കില്ല.",
+          "tied_element_ids": [
+            "calc_step_2"
+          ]
+        },
+        {
+          "sentence_id": "s2_res",
+          "phase": "result",
+          "text": "അതുകൊണ്ട് Vikram-ന്റെ Cost of Acquisition ആയി നാം ₹ 14,00,000 നിശ്ചയിക്കുന്നു.",
+          "tied_element_ids": [
+            "result_badge"
+          ]
+        }
+      ],
+      "start": 36.75,
+      "duration": 51.9,
+      "sentence_timings": [
+        {
+          "sentence_id": "s2_sit",
+          "phase": "situation",
+          "text": "Vikram ഈ സ്ഥലം 10th June 1995-ൽ വെറും ₹ 2,00,000 നൽകിയാണ് വാങ്ങിയത്, എന്നാൽ 1st April 2001-ൽ ഇതിന്റെ Fair Market Value ₹ 15,00,000 ആയിരുന്നു.",
+          "cue": 36.82,
+          "start": 36.97,
+          "end": 47.666,
+          "method": "pause_detect",
+          "tied_element_ids": [
+            "actor_1",
+            "evt_purchase"
+          ]
+        },
+        {
+          "sentence_id": "s2_rule",
+          "phase": "rule",
+          "text": "Section 55(2)(b)(i) പ്രകാരം 1st April 2001-ന് മുൻപ് വാങ്ങിയ asset-ന്റെ Cost of Acquisition കണക്കാക്കുമ്പോൾ Actual Cost അല്ലെങ്കിൽ FMV എന്നിവയിൽ ഉയർന്നത് എടുക്കാം, പക്ഷെ അത് Stamp Duty Value-ൽ കൂടാൻ പാടില്ല.",
+          "cue": 48.872,
+          "start": 49.022,
+          "end": 63.292,
+          "method": "pause_detect",
+          "tied_element_ids": [
+            "rule_box"
+          ]
+        },
+        {
+          "sentence_id": "s2_calc_1",
+          "phase": "calculation",
+          "text": "ആദ്യം നാം Actual Cost ആയ ₹ 2,00,000-ഉം Fair Market Value ആയ ₹ 15,00,000-ഉം താരതമ്യം ചെയ്യുമ്പോൾ ഉയർന്ന തുക ₹ 15,00,000 ആണെന്ന് കാണാം.",
+          "cue": 64.348,
+          "start": 64.498,
+          "end": 73.381,
+          "method": "pause_detect",
+          "tied_element_ids": [
+            "calc_step_1"
+          ]
+        },
+        {
+          "sentence_id": "s2_calc_2",
+          "phase": "calculation",
+          "text": "എങ്കിലും 1st April 2001-ലെ Stamp Duty Value ₹ 14,00,000 ആയതിനാൽ നിയമപരമായി നമുക്ക് ആ തുകയിൽ കൂടുതൽ എടുക്കാൻ സാധിക്കില്ല.",
+          "cue": 74.449,
+          "start": 74.599,
+          "end": 82.483,
+          "method": "pause_detect",
+          "tied_element_ids": [
+            "calc_step_2"
+          ]
+        },
+        {
+          "sentence_id": "s2_res",
+          "phase": "result",
+          "text": "അതുകൊണ്ട് Vikram-ന്റെ Cost of Acquisition ആയി നാം ₹ 14,00,000 നിശ്ചയിക്കുന്നു.",
+          "cue": 83.435,
+          "start": 83.585,
+          "end": 88.4,
+          "method": "pause_detect",
+          "tied_element_ids": [
+            "result_badge"
+          ]
+        }
+      ],
+      "canvas_updates": [
+        {
+          "cue": 36.82,
+          "action": "actor_enter",
+          "entity_id": "actor_1",
+          "data": {
+            "id": "actor_1",
+            "name": "Vikram",
+            "role": "Owner",
+            "x": 100,
+            "y": 250
+          },
+          "anim_duration": 0.5
+        },
+        {
+          "cue": 36.82,
+          "action": "event_trigger",
+          "entity_id": "evt_purchase",
+          "data": {
+            "id": "evt_purchase",
+            "type": "purchase",
+            "date": "10th June 1995",
+            "amount": 200000
+          },
+          "anim_duration": 0.5
+        },
+        {
+          "cue": 48.872,
+          "action": "rule_panel_enter",
+          "entity_id": "rule_panel",
+          "canvas_width_pct": 55,
+          "rule_panel_width_pct": 45,
+          "data": {
+            "section": "Section 55(2)(b)(i)",
+            "condition": "Higher of Cost or FMV as on 1.4.2001, but FMV cannot exceed SDV",
+            "formula": "min(max(actual_cost, fmv_2001), sdv_2001)"
+          },
+          "anim_duration": 0.5
+        },
+        {
+          "cue": 64.348,
+          "action": "calc_step_show",
+          "entity_id": "calc_step_1",
+          "data": {
+            "step_idx": 1,
+            "desc": "Higher of Actual Cost ₹ 2,00,000 and FMV ₹ 15,00,000 is ₹ 15,00,000",
+            "value": 1500000,
+            "element_id": "calc_step_1"
+          },
+          "anim_duration": 0.4
+        },
+        {
+          "cue": 74.449,
+          "action": "calc_step_show",
+          "entity_id": "calc_step_2",
+          "data": {
+            "step_idx": 2,
+            "desc": "Capping FMV at Stamp Duty Value ₹ 14,00,000",
+            "value": 1400000,
+            "element_id": "calc_step_2"
+          },
+          "anim_duration": 0.4
+        },
+        {
+          "cue": 83.435,
+          "action": "result_badge_highlight",
+          "entity_id": "result_badge",
+          "data": {
+            "label": "Cost of Acquisition",
+            "value": 1400000
+          },
+          "anim_duration": 0.4
+        }
+      ]
+    },
+    {
+      "scene_id": "scene_3_coi",
+      "scene_type": "story",
+      "teaching_step_ref": 3,
+      "title": "Ignoring the Past Improvements",
+      "actors": [
+        {
+          "id": "actor_1",
+          "name": "Vikram",
+          "role": "Owner",
+          "x": 100,
+          "y": 250
+        }
+      ],
+      "assets": [
+        {
+          "id": "asset_1",
+          "type": "land",
+          "label": "Ancestral Land",
+          "x": 300,
+          "y": 200
+        }
+      ],
+      "events": [
+        {
+          "id": "evt_imp_1",
+          "type": "improvement",
+          "date": "12th August 1998",
+          "amount": 400000
+        },
+        {
+          "id": "evt_imp_2",
+          "type": "improvement",
+          "date": "20th May 2005",
+          "amount": 800000
+        },
+        {
+          "id": "evt_imp_3",
+          "type": "improvement",
+          "date": "10th June 2015",
+          "amount": 600000
+        }
+      ],
+      "facts": {
+        "imp_pre_2001": 400000,
+        "imp_2005": 800000,
+        "imp_2015": 600000
+      },
+      "rule_applied": {
+        "section": "Section 55(1)(b)",
+        "condition": "Cost of improvement incurred before 1st April 2001 is ignored",
+        "formula": "0 + imp_2005 + imp_2015"
+      },
+      "calculation": {
+        "steps": [
+          {
+            "step_idx": 1,
+            "desc": "Ignoring improvement of ₹ 4,00,000 made on 12th August 1998",
+            "value": 0,
+            "element_id": "calc_step_1"
+          },
+          {
+            "step_idx": 2,
+            "desc": "Adding improvements made after 2001: ₹ 8,00,000 + ₹ 6,00,000",
+            "value": 1400000,
+            "element_id": "calc_step_2"
+          }
+        ],
+        "result_label": "Total Cost of Improvement",
+        "result_value": 1400000,
+        "element_id": "result_badge"
+      },
+      "sentences": [
+        {
+          "sentence_id": "s3_sit",
+          "phase": "situation",
+          "text": "Vikram ഈ സ്ഥലത്ത് 12th August 1998-ൽ ₹ 4,00,000-ഉം, പിന്നീട് 2005-ലും 2015-ലുമായി ₹ 14,00,000-ഉം വികസന പ്രവർത്തനങ്ങൾക്കായി ചിലവാക്കിയിരുന്നു.",
+          "tied_element_ids": [
+            "evt_imp_1",
+            "evt_imp_2",
+            "evt_imp_3"
+          ]
+        },
+        {
+          "sentence_id": "s3_rule",
+          "phase": "rule",
+          "text": "Section 55(1)(b) പ്രകാരം 1st April 2001-ന് മുൻപ് നടത്തിയ എല്ലാ Cost of Improvement-കളും നാം പൂർണ്ണമായും അവഗണിക്കണം.",
+          "tied_element_ids": [
+            "rule_box"
+          ]
+        },
+        {
+          "sentence_id": "s3_calc_1",
+          "phase": "calculation",
+          "text": "അതുകൊണ്ട് 12th August 1998-ൽ ചിലവാക്കിയ ₹ 4,00,000 നാം കണക്കിലെടുക്കുന്നില്ല, അതിന്റെ മൂല്യം Nil ആയി മാറുന്നു.",
+          "tied_element_ids": [
+            "calc_step_1"
+          ]
+        },
+        {
+          "sentence_id": "s3_calc_2",
+          "phase": "calculation",
+          "text": "ബാക്കിയുള്ള ₹ 8,00,000-ഉം ₹ 6,00,000-ഉം കൂട്ടുമ്പോൾ നമുക്ക് ആകെ അനുവദനീയമായ തുക ലഭിക്കും.",
+          "tied_element_ids": [
+            "calc_step_2"
+          ]
+        },
+        {
+          "sentence_id": "s3_res",
+          "phase": "result",
+          "text": "ഇവിടെ Vikram-ന് ലഭിക്കുന്ന ആകെ Cost of Improvement കൃത്യം ₹ 14,00,000 ആണ്.",
+          "tied_element_ids": [
+            "result_badge"
+          ]
+        }
+      ],
+      "start": 89.0,
+      "duration": 45.6,
+      "sentence_timings": [
+        {
+          "sentence_id": "s3_sit",
+          "phase": "situation",
+          "text": "Vikram ഈ സ്ഥലത്ത് 12th August 1998-ൽ ₹ 4,00,000-ഉം, പിന്നീട് 2005-ലും 2015-ലുമായി ₹ 14,00,000-ഉം വികസന പ്രവർത്തനങ്ങൾക്കായി ചിലവാക്കിയിരുന്നു.",
+          "cue": 89.11,
+          "start": 89.26,
+          "end": 101.268,
+          "method": "pause_detect",
+          "tied_element_ids": [
+            "evt_imp_1",
+            "evt_imp_2",
+            "evt_imp_3"
+          ]
+        },
+        {
+          "sentence_id": "s3_rule",
+          "phase": "rule",
+          "text": "Section 55(1)(b) പ്രകാരം 1st April 2001-ന് മുൻപ് നടത്തിയ എല്ലാ Cost of Improvement-കളും നാം പൂർണ്ണമായും അവഗണിക്കണം.",
+          "cue": 100.402,
+          "start": 100.552,
+          "end": 111.061,
+          "method": "pause_detect",
+          "tied_element_ids": [
+            "rule_box"
+          ]
+        },
+        {
+          "sentence_id": "s3_calc_1",
+          "phase": "calculation",
+          "text": "അതുകൊണ്ട് 12th August 1998-ൽ ചിലവാക്കിയ ₹ 4,00,000 നാം കണക്കിലെടുക്കുന്നില്ല, അതിന്റെ മൂല്യം Nil ആയി മാറുന്നു.",
+          "cue": 110.932,
+          "start": 111.082,
+          "end": 120.429,
+          "method": "pause_detect",
+          "tied_element_ids": [
+            "calc_step_1"
+          ]
+        },
+        {
+          "sentence_id": "s3_calc_2",
+          "phase": "calculation",
+          "text": "ബാക്കിയുള്ള ₹ 8,00,000-ഉം ₹ 6,00,000-ഉം കൂട്ടുമ്പോൾ നമുക്ക് ആകെ അനുവദനീയമായ തുക ലഭിക്കും.",
+          "cue": 120.534,
+          "start": 120.684,
+          "end": 128.008,
+          "method": "pause_detect",
+          "tied_element_ids": [
+            "calc_step_2"
+          ]
+        },
+        {
+          "sentence_id": "s3_res",
+          "phase": "result",
+          "text": "ഇവിടെ Vikram-ന് ലഭിക്കുന്ന ആകെ Cost of Improvement കൃത്യം ₹ 14,00,000 ആണ്.",
+          "cue": 128.846,
+          "start": 128.996,
+          "end": 134.31,
+          "method": "pause_detect",
+          "tied_element_ids": [
+            "result_badge"
+          ]
+        }
+      ],
+      "canvas_updates": [
+        {
+          "cue": 89.11,
+          "action": "event_trigger",
+          "entity_id": "evt_imp_1",
+          "data": {
+            "id": "evt_imp_1",
+            "type": "improvement",
+            "date": "12th August 1998",
+            "amount": 400000
+          },
+          "anim_duration": 0.5
+        },
+        {
+          "cue": 89.11,
+          "action": "event_trigger",
+          "entity_id": "evt_imp_2",
+          "data": {
+            "id": "evt_imp_2",
+            "type": "improvement",
+            "date": "20th May 2005",
+            "amount": 800000
+          },
+          "anim_duration": 0.5
+        },
+        {
+          "cue": 89.11,
+          "action": "event_trigger",
+          "entity_id": "evt_imp_3",
+          "data": {
+            "id": "evt_imp_3",
+            "type": "improvement",
+            "date": "10th June 2015",
+            "amount": 600000
+          },
+          "anim_duration": 0.5
+        },
+        {
+          "cue": 100.402,
+          "action": "rule_panel_enter",
+          "entity_id": "rule_panel",
+          "canvas_width_pct": 55,
+          "rule_panel_width_pct": 45,
+          "data": {
+            "section": "Section 55(1)(b)",
+            "condition": "Cost of improvement incurred before 1st April 2001 is ignored",
+            "formula": "0 + imp_2005 + imp_2015"
+          },
+          "anim_duration": 0.5
+        },
+        {
+          "cue": 110.932,
+          "action": "calc_step_show",
+          "entity_id": "calc_step_1",
+          "data": {
+            "step_idx": 1,
+            "desc": "Ignoring improvement of ₹ 4,00,000 made on 12th August 1998",
+            "value": 0,
+            "element_id": "calc_step_1"
+          },
+          "anim_duration": 0.4
+        },
+        {
+          "cue": 120.534,
+          "action": "calc_step_show",
+          "entity_id": "calc_step_2",
+          "data": {
+            "step_idx": 2,
+            "desc": "Adding improvements made after 2001: ₹ 8,00,000 + ₹ 6,00,000",
+            "value": 1400000,
+            "element_id": "calc_step_2"
+          },
+          "anim_duration": 0.4
+        },
+        {
+          "cue": 128.846,
+          "action": "result_badge_highlight",
+          "entity_id": "result_badge",
+          "data": {
+            "label": "Total Cost of Improvement",
+            "value": 1400000
+          },
+          "anim_duration": 0.4
+        }
+      ]
+    },
+    {
+      "scene_id": "scene_4_bridge",
+      "scene_type": "bridge",
+      "teaching_step_ref": 4,
+      "title": "Final ICAI Computation",
+      "actors": [
+        {
+          "id": "actor_icai",
+          "name": "Mr. X",
+          "role": "Assessee",
+          "x": 150,
+          "y": 250
+        }
+      ],
+      "assets": [
+        {
+          "id": "asset_icai",
+          "type": "house",
+          "label": "Residential House",
+          "x": 350,
+          "y": 200
+        }
+      ],
+      "events": [
+        {
+          "id": "evt_icai_sale",
+          "type": "sale",
+          "date": "15th December 2024",
+          "amount": 7800000
+        }
+      ],
+      "facts": {
+        "net_consideration": 7750000,
+        "coa": 810000,
+        "coi": 1285000
+      },
+      "rule_applied": {
+        "section": "Section 45",
+        "condition": "Capital Gain = Net Consideration - COA - COI",
+        "formula": "net_consideration - coa - coi"
+      },
+      "calculation": {
+        "steps": [
+          {
+            "step_idx": 1,
+            "desc": "₹ 77,50,000 - ₹ 8,10,000 - ₹ 12,85,000",
+            "value": 5655000,
+            "element_id": "calc_step_final"
+          }
+        ],
+        "result_label": "Long-term Capital Gain",
+        "result_value": 5655000,
+        "element_id": "result_badge"
+      },
+      "sentences": [
+        {
+          "sentence_id": "sb_sit",
+          "phase": "situation",
+          "text": "ഇനി നമുക്ക് ICAI ചോദ്യത്തിലെ Mr. X-ന്റെ കണക്കുകൾ പരിശോധിക്കാം, അദ്ദേഹം 15th December 2024-ൽ തന്റെ വീട് വിറ്റു.",
+          "tied_element_ids": [
+            "actor_icai",
+            "asset_icai",
+            "evt_icai_sale"
+          ]
+        },
+        {
+          "sentence_id": "sb_rule",
+          "phase": "rule",
+          "text": "നമ്മൾ പഠിച്ച നിയമങ്ങൾ പ്രകാരം Net Sale Consideration-ൽ നിന്നും COA-യും COI-യും കുറയ്ക്കണം.",
+          "tied_element_ids": [
+            "rule_box"
+          ]
+        },
+        {
+          "sentence_id": "sb_calc",
+          "phase": "calculation",
+          "text": "ഇവിടെ Net Consideration ₹ 77,50,000-ൽ നിന്നും COA ആയ ₹ 8,10,000-ഉം COI ആയ ₹ 12,85,000-ഉം നാം കുറയ്ക്കുന്നു.",
+          "tied_element_ids": [
+            "calc_step_final"
+          ]
+        },
+        {
+          "sentence_id": "sb_res",
+          "phase": "result",
+          "text": "അവസാനമായി Mr. X നൽകേണ്ട Long-term Capital Gain കൃത്യമായി ₹ 56,55,000 ആണെന്ന് നമുക്ക് കണ്ടെത്താം!",
+          "tied_element_ids": [
+            "result_badge"
+          ]
+        }
+      ],
+      "start": 134.95,
+      "duration": 38.7,
+      "sentence_timings": [
+        {
+          "sentence_id": "sb_sit",
+          "phase": "situation",
+          "text": "ഇനി നമുക്ക് ICAI ചോദ്യത്തിലെ Mr. X-ന്റെ കണക്കുകൾ പരിശോധിക്കാം, അദ്ദേഹം 15th December 2024-ൽ തന്റെ വീട് വിറ്റു.",
+          "cue": 135.06,
+          "start": 135.21,
+          "end": 145.62,
+          "method": "pause_detect",
+          "tied_element_ids": [
+            "actor_icai",
+            "asset_icai",
+            "evt_icai_sale"
+          ]
+        },
+        {
+          "sentence_id": "sb_rule",
+          "phase": "rule",
+          "text": "നമ്മൾ പഠിച്ച നിയമങ്ങൾ പ്രകാരം Net Sale Consideration-ൽ നിന്നും COA-യും COI-യും കുറയ്ക്കണം.",
+          "cue": 146.468,
+          "start": 146.618,
+          "end": 154.138,
+          "method": "pause_detect",
+          "tied_element_ids": [
+            "rule_box"
+          ]
+        },
+        {
+          "sentence_id": "sb_calc",
+          "phase": "calculation",
+          "text": "ഇവിടെ Net Consideration ₹ 77,50,000-ൽ നിന്നും COA ആയ ₹ 8,10,000-ഉം COI ആയ ₹ 12,85,000-ഉം നാം കുറയ്ക്കുന്നു.",
+          "cue": 153.988,
+          "start": 154.138,
+          "end": 164.265,
+          "method": "proportional",
+          "tied_element_ids": [
+            "calc_step_final"
+          ]
+        },
+        {
+          "sentence_id": "sb_res",
+          "phase": "result",
+          "text": "അവസാനമായി Mr. X നൽകേണ്ട Long-term Capital Gain കൃത്യമായി ₹ 56,55,000 ആണെന്ന് നമുക്ക് കണ്ടെത്താം!",
+          "cue": 164.336,
+          "start": 164.486,
+          "end": 173.35,
+          "method": "pause_detect",
+          "tied_element_ids": [
+            "result_badge"
+          ]
+        }
+      ],
+      "canvas_updates": [
+        {
+          "cue": 135.06,
+          "action": "actor_enter",
+          "entity_id": "actor_icai",
+          "data": {
+            "id": "actor_icai",
+            "name": "Mr. X",
+            "role": "Assessee",
+            "x": 150,
+            "y": 250
+          },
+          "anim_duration": 0.5
+        },
+        {
+          "cue": 135.06,
+          "action": "asset_enter",
+          "entity_id": "asset_icai",
+          "data": {
+            "id": "asset_icai",
+            "type": "house",
+            "label": "Residential House",
+            "x": 350,
+            "y": 200
+          },
+          "anim_duration": 0.5
+        },
+        {
+          "cue": 135.06,
+          "action": "event_trigger",
+          "entity_id": "evt_icai_sale",
+          "data": {
+            "id": "evt_icai_sale",
+            "type": "sale",
+            "date": "15th December 2024",
+            "amount": 7800000
+          },
+          "anim_duration": 0.5
+        },
+        {
+          "cue": 146.468,
+          "action": "rule_panel_enter",
+          "entity_id": "rule_panel",
+          "canvas_width_pct": 55,
+          "rule_panel_width_pct": 45,
+          "data": {
+            "section": "Section 45",
+            "condition": "Capital Gain = Net Consideration - COA - COI",
+            "formula": "net_consideration - coa - coi"
+          },
+          "anim_duration": 0.5
+        },
+        {
+          "cue": 153.988,
+          "action": "calc_step_show",
+          "entity_id": "calc_step_final",
+          "data": {
+            "step_idx": 1,
+            "desc": "₹ 77,50,000 - ₹ 8,10,000 - ₹ 12,85,000",
+            "value": 5655000,
+            "element_id": "calc_step_final"
+          },
+          "anim_duration": 0.4
+        },
+        {
+          "cue": 164.336,
+          "action": "result_badge_highlight",
+          "entity_id": "result_badge",
+          "data": {
+            "label": "Long-term Capital Gain",
+            "value": 5655000
+          },
+          "anim_duration": 0.4
+        }
+      ]
+    }
+  ],
+  "canvas_updates": [
+    {
+      "cue": 0.14,
+      "action": "actor_enter",
+      "entity_id": "actor_1",
+      "data": {
+        "id": "actor_1",
+        "name": "Vikram",
+        "role": "Seller",
+        "x": 100,
+        "y": 250
+      },
+      "anim_duration": 0.5
+    },
+    {
+      "cue": 0.14,
+      "action": "asset_enter",
+      "entity_id": "asset_1",
+      "data": {
+        "id": "asset_1",
+        "type": "land",
+        "label": "Ancestral Land",
+        "x": 300,
+        "y": 200
+      },
+      "anim_duration": 0.5
+    },
+    {
+      "cue": 0.14,
+      "action": "event_trigger",
+      "entity_id": "evt_sale",
+      "data": {
+        "id": "evt_sale",
+        "type": "sale",
+        "date": "15th October 2024",
+        "amount": 9000000
+      },
+      "anim_duration": 0.5
+    },
+    {
+      "cue": 10.462,
+      "action": "rule_panel_enter",
+      "entity_id": "rule_panel",
+      "canvas_width_pct": 55,
+      "rule_panel_width_pct": 45,
+      "data": {
+        "section": "Section 48",
+        "condition": "Net Sale Consideration is Gross Price minus Transfer Expenses",
+        "formula": "gross_sale_price - transfer_expenses"
+      },
+      "anim_duration": 0.5
+    },
+    {
+      "cue": 22.559,
+      "action": "calc_step_show",
+      "entity_id": "calc_step_1",
+      "data": {
+        "step_idx": 1,
+        "desc": "Subtracting brokerage of ₹ 1,00,000 from ₹ 90,00,000",
+        "value": 8900000,
+        "element_id": "calc_step_1"
+      },
+      "anim_duration": 0.4
+    },
+    {
+      "cue": 28.84,
+      "action": "result_badge_highlight",
+      "entity_id": "result_badge",
+      "data": {
+        "label": "Net Sale Consideration",
+        "value": 8900000
+      },
+      "anim_duration": 0.4
+    },
+    {
+      "cue": 36.82,
+      "action": "actor_enter",
+      "entity_id": "actor_1",
+      "data": {
+        "id": "actor_1",
+        "name": "Vikram",
+        "role": "Owner",
+        "x": 100,
+        "y": 250
+      },
+      "anim_duration": 0.5
+    },
+    {
+      "cue": 36.82,
+      "action": "event_trigger",
+      "entity_id": "evt_purchase",
+      "data": {
+        "id": "evt_purchase",
+        "type": "purchase",
+        "date": "10th June 1995",
+        "amount": 200000
+      },
+      "anim_duration": 0.5
+    },
+    {
+      "cue": 48.872,
+      "action": "rule_panel_enter",
+      "entity_id": "rule_panel",
+      "canvas_width_pct": 55,
+      "rule_panel_width_pct": 45,
+      "data": {
+        "section": "Section 55(2)(b)(i)",
+        "condition": "Higher of Cost or FMV as on 1.4.2001, but FMV cannot exceed SDV",
+        "formula": "min(max(actual_cost, fmv_2001), sdv_2001)"
+      },
+      "anim_duration": 0.5
+    },
+    {
+      "cue": 64.348,
+      "action": "calc_step_show",
+      "entity_id": "calc_step_1",
+      "data": {
+        "step_idx": 1,
+        "desc": "Higher of Actual Cost ₹ 2,00,000 and FMV ₹ 15,00,000 is ₹ 15,00,000",
+        "value": 1500000,
+        "element_id": "calc_step_1"
+      },
+      "anim_duration": 0.4
+    },
+    {
+      "cue": 74.449,
+      "action": "calc_step_show",
+      "entity_id": "calc_step_2",
+      "data": {
+        "step_idx": 2,
+        "desc": "Capping FMV at Stamp Duty Value ₹ 14,00,000",
+        "value": 1400000,
+        "element_id": "calc_step_2"
+      },
+      "anim_duration": 0.4
+    },
+    {
+      "cue": 83.435,
+      "action": "result_badge_highlight",
+      "entity_id": "result_badge",
+      "data": {
+        "label": "Cost of Acquisition",
+        "value": 1400000
+      },
+      "anim_duration": 0.4
+    },
+    {
+      "cue": 89.11,
+      "action": "event_trigger",
+      "entity_id": "evt_imp_1",
+      "data": {
+        "id": "evt_imp_1",
+        "type": "improvement",
+        "date": "12th August 1998",
+        "amount": 400000
+      },
+      "anim_duration": 0.5
+    },
+    {
+      "cue": 89.11,
+      "action": "event_trigger",
+      "entity_id": "evt_imp_2",
+      "data": {
+        "id": "evt_imp_2",
+        "type": "improvement",
+        "date": "20th May 2005",
+        "amount": 800000
+      },
+      "anim_duration": 0.5
+    },
+    {
+      "cue": 89.11,
+      "action": "event_trigger",
+      "entity_id": "evt_imp_3",
+      "data": {
+        "id": "evt_imp_3",
+        "type": "improvement",
+        "date": "10th June 2015",
+        "amount": 600000
+      },
+      "anim_duration": 0.5
+    },
+    {
+      "cue": 100.402,
+      "action": "rule_panel_enter",
+      "entity_id": "rule_panel",
+      "canvas_width_pct": 55,
+      "rule_panel_width_pct": 45,
+      "data": {
+        "section": "Section 55(1)(b)",
+        "condition": "Cost of improvement incurred before 1st April 2001 is ignored",
+        "formula": "0 + imp_2005 + imp_2015"
+      },
+      "anim_duration": 0.5
+    },
+    {
+      "cue": 110.932,
+      "action": "calc_step_show",
+      "entity_id": "calc_step_1",
+      "data": {
+        "step_idx": 1,
+        "desc": "Ignoring improvement of ₹ 4,00,000 made on 12th August 1998",
+        "value": 0,
+        "element_id": "calc_step_1"
+      },
+      "anim_duration": 0.4
+    },
+    {
+      "cue": 120.534,
+      "action": "calc_step_show",
+      "entity_id": "calc_step_2",
+      "data": {
+        "step_idx": 2,
+        "desc": "Adding improvements made after 2001: ₹ 8,00,000 + ₹ 6,00,000",
+        "value": 1400000,
+        "element_id": "calc_step_2"
+      },
+      "anim_duration": 0.4
+    },
+    {
+      "cue": 128.846,
+      "action": "result_badge_highlight",
+      "entity_id": "result_badge",
+      "data": {
+        "label": "Total Cost of Improvement",
+        "value": 1400000
+      },
+      "anim_duration": 0.4
+    },
+    {
+      "cue": 135.06,
+      "action": "actor_enter",
+      "entity_id": "actor_icai",
+      "data": {
+        "id": "actor_icai",
+        "name": "Mr. X",
+        "role": "Assessee",
+        "x": 150,
+        "y": 250
+      },
+      "anim_duration": 0.5
+    },
+    {
+      "cue": 135.06,
+      "action": "asset_enter",
+      "entity_id": "asset_icai",
+      "data": {
+        "id": "asset_icai",
+        "type": "house",
+        "label": "Residential House",
+        "x": 350,
+        "y": 200
+      },
+      "anim_duration": 0.5
+    },
+    {
+      "cue": 135.06,
+      "action": "event_trigger",
+      "entity_id": "evt_icai_sale",
+      "data": {
+        "id": "evt_icai_sale",
+        "type": "sale",
+        "date": "15th December 2024",
+        "amount": 7800000
+      },
+      "anim_duration": 0.5
+    },
+    {
+      "cue": 146.468,
+      "action": "rule_panel_enter",
+      "entity_id": "rule_panel",
+      "canvas_width_pct": 55,
+      "rule_panel_width_pct": 45,
+      "data": {
+        "section": "Section 45",
+        "condition": "Capital Gain = Net Consideration - COA - COI",
+        "formula": "net_consideration - coa - coi"
+      },
+      "anim_duration": 0.5
+    },
+    {
+      "cue": 153.988,
+      "action": "calc_step_show",
+      "entity_id": "calc_step_final",
+      "data": {
+        "step_idx": 1,
+        "desc": "₹ 77,50,000 - ₹ 8,10,000 - ₹ 12,85,000",
+        "value": 5655000,
+        "element_id": "calc_step_final"
+      },
+      "anim_duration": 0.4
+    },
+    {
+      "cue": 164.336,
+      "action": "result_badge_highlight",
+      "entity_id": "result_badge",
+      "data": {
+        "label": "Long-term Capital Gain",
+        "value": 5655000
+      },
+      "anim_duration": 0.4
+    }
+  ],
+  "sync_report": {
+    "sync_passed": true,
+    "stitched_duration": 173.65,
+    "timeline_duration": 173.65,
+    "duration_diff": 0.0,
+    "duration_diff_ok": true,
+    "total_scenes": 4,
+    "total_sentences": 18,
+    "method_counts": {
+      "pause_detect": 17,
+      "word_hits": 0,
+      "proportional_fallback": 1
+    },
+    "fallback_rate": 0.056,
+    "fallback_rate_ok": true,
+    "independent_offset_median": 0.29,
+    "independent_offset_sample_count": 13,
+    "independent_offset_ok": true,
+    "pause_whisper_agreement_rate": 0.615,
+    "total_canvas_updates": 25
+  },
+  "validation_result": {
+    "passed": true,
+    "issues": []
+  },
+  "approved": false,
+  "review_status": "unreviewed",
+  "audio_url": "data/audio/dt-c2-q4_story.mp3",
+  "duration_sec": 173.65
+}

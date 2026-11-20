@@ -1,0 +1,85 @@
+{
+  "id": "dt-mastering_section_50c__stamp_duty_v",
+  "title": "Mastering Section 50C: Stamp Duty Value as Deemed Consideration",
+  "subject": "DT",
+  "domain": "Real Estate",
+  "provision_raw": "Section 50C: Where consideration received on transfer of land or building is less than the stamp duty value assessed by stamp valuation authority, such stamp duty value shall be deemed to be the full value of consideration.",
+  "story_summary": "Rahul sells a commercial plot in Kochi to Anita for an agreed price of ₹40 Lakhs. However, the State Stamp Valuation Authority assesses the Stamp Duty Value (SDV) of the land at ₹60 Lakhs. Under Section 50C, because the agreed price is lower than the SDV, the Income Tax Department deems ₹60 Lakhs as the Full Value of Consideration for computing Capital Gains.",
+  "total_slides": 3,
+  "total_duration": 56.0,
+  "slides": [
+    {
+      "slide_number": 1,
+      "slide_title": "The Real Estate Transaction Setup",
+      "scene_purpose": "Setup: Rahul sells his Kochi commercial plot to Anita for ₹40 Lakhs",
+      "archetype_id": "give_and_receive",
+      "dialogue_manglish": "Namukku nokkam, Rahul Kochi-yil ulla thante commercial plot Anita-ykku transfer cheyyukayanu. Both parties agree cheytha actual consideration ₹40 Lakhs aanu. Actual cash/bank payment aayi Rahul-nukittiya amount ithanu.",
+      "audio_file": "data/audio/presentations/dt-mastering_section_50c__stamp_duty_v/slide_1.mp3",
+      "audio_duration": 16.2,
+      "duration": 17.2,
+      "cues": {
+        "cue_start": 0.5,
+        "cue_action": 6.5,
+        "cue_conclusion": 13.0
+      },
+      "slots": {
+        "title": "Property Sale Agreement",
+        "giver": "Rahul (Seller)",
+        "receiver": "Anita (Buyer)",
+        "item_label": "Kochi Commercial Plot",
+        "item_icon": "house",
+        "item_value": 4000000,
+        "payment_amount": 4000000,
+        "tag_text": "Agreed Sale Consideration",
+        "note": "Actual sale consideration received: ₹40,00,000"
+      }
+    },
+    {
+      "slide_number": 2,
+      "slide_title": "Agreed Price vs. Stamp Duty Benchmark",
+      "scene_purpose": "Valuation Assessment: Comparing agreed price of ₹40L against Stamp Duty Value of ₹60L",
+      "archetype_id": "compare_two",
+      "dialogue_manglish": "Pakshe Income Tax assessment samayath, Assessing Officer Sub-Registrar Office-ile Stamp Duty Value (SDV) check cheyyunnu. Stamp duty valuation ₹60 Lakhs aanu. Here, Agreed Consideration (₹40L) is lower than SDV (₹60L). Scale tilt aakukayum SDV override cheyyukayum cheyyunnu!",
+      "audio_file": "data/audio/presentations/dt-mastering_section_50c__stamp_duty_v/slide_2.mp3",
+      "audio_duration": 21.0,
+      "duration": 22.0,
+      "cues": {
+        "cue_start": 0.5,
+        "cue_action": 8.4,
+        "cue_conclusion": 16.8
+      },
+      "slots": {
+        "title": "Sec 50C Benchmark Test",
+        "label_a": "Agreed Consideration",
+        "val_a": 4000000,
+        "label_b": "Stamp Duty Value (SDV)",
+        "val_b": 6000000,
+        "mode": "lower",
+        "cap_amount": 6000000,
+        "note": "Agreed Price (₹40L) < SDV (₹60L) ➔ SDV becomes Deemed FVC"
+      }
+    },
+    {
+      "slide_number": 3,
+      "slide_title": "Statutory Rule & Final Capital Gains Impact",
+      "scene_purpose": "Statutory Takeaway: Highlighting Section 50C deeming provision",
+      "archetype_id": "key_statement",
+      "dialogue_manglish": "So simple rule: Land or Building transfer cheyyumbol, consideration received SDV-nekkal kuravanenkil, Stamp Duty Value shall be deemed to be the Full Value of Consideration. Capital Gains compute cheyyenda FVC ₹60 Lakhs aayirikkum!",
+      "audio_file": "data/audio/presentations/dt-mastering_section_50c__stamp_duty_v/slide_3.mp3",
+      "audio_duration": 15.8,
+      "duration": 16.8,
+      "cues": {
+        "cue_start": 0.5,
+        "cue_action": 6.3,
+        "cue_conclusion": 12.6
+      },
+      "slots": {
+        "title": "Section 50C Core Mandate",
+        "statement": "Where consideration received on transfer of land or building is less than Stamp Duty Value, such Stamp Duty Value is DEEMED as Full Value of Consideration.",
+        "highlight_phrase": "Stamp Duty Value is DEEMED as Full Value of Consideration",
+        "support_line": "Rahul must compute Capital Gains using ₹60 Lakhs as FVC instead of ₹40 Lakhs.",
+        "icon_type": "scale"
+      }
+    }
+  ]
+}

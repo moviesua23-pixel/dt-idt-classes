@@ -1,0 +1,23 @@
+{
+  "id": "dt_statutory_provision_analysis",
+  "subject": "DT",
+  "provision_raw": "Section 50C: Where consideration received on transfer of land or building is less than Stamp Duty Value, the Stamp Duty Value is deemed as full value of consideration.",
+  "archetype_id": "compare_two",
+  "title": "DT Statutory Provision Analysis",
+  "scenario_story": "Real-life educational scenario illustrating DT Statutory Provision Analysis using practical business entities.",
+  "slots": {
+    "title": "DT Statutory Provision Analysis",
+    "label_a": "Declared Value",
+    "val_a": 1800000,
+    "label_b": "Standard Benchmark",
+    "val_b": 2500000,
+    "mode": "higher",
+    "cap_amount": null
+  },
+  "teacher_narration": "Ee provisionil nammal DT Statutory Provision Analysis examine cheyyumpol practical example koodi manasilakkanam.",
+  "cues": {
+    "cue_start": 0.5,
+    "cue_action": 4.5,
+    "cue_conclusion": 9.5
+  }
+}

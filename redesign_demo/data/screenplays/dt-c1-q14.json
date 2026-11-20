@@ -1,0 +1,284 @@
+{
+  "question_id": "dt-c1-q14",
+  "audio_url": "",
+  "duration_sec": 0.0,
+  "sync_offset_sec": 0.0,
+  "context_pill": "Section 10(10BC) Exemption",
+  "example_summary": "Compensation of ₹ 5,00,000 paid by the Government of Chhattisgarh to Amit's parents for the Dantewada bomb blast.",
+  "director": {
+    "archetype": "conditions_checklist",
+    "justification": "The provision requires verifying if the specific event and the payer satisfy the multi-pronged definition of a disaster under the Disaster Management Act to qualify for the Section 10(10BC) exemption.",
+    "protagonist": "Parents of Amit",
+    "actors": [
+      "Government of Chhattisgarh",
+      "Amit"
+    ],
+    "key_numbers": [
+      "₹ 5,00,000",
+      "Section 10(10BC)"
+    ],
+    "key_dates": [
+      "Disaster Management Act, 2005"
+    ],
+    "visual_metaphor": "A statutory shield filtering a government compensation check from a tax storm cloud.",
+    "beat_plan": [
+      {
+        "beat_goal": "Establish the receipt of compensation by Amit's parents from the State Government.",
+        "layout": "example_scene",
+        "anchor_phrases": [
+          "₹ 5,00,000",
+          "Government of Chhattisgarh",
+          "Dantewada bomb blast"
+        ]
+      },
+      {
+        "beat_goal": "Verify if the payer is a qualifying authority under the section.",
+        "layout": "flow_actors",
+        "anchor_phrases": [
+          "Central Government",
+          "State Government",
+          "Local Authority"
+        ]
+      },
+      {
+        "beat_goal": "Define the event as a disaster using the 2005 Act criteria.",
+        "layout": "checklist_gate",
+        "anchor_phrases": [
+          "Disaster Management Act, 2005",
+          "Natural or man-made causes",
+          "Mishap"
+        ]
+      },
+      {
+        "beat_goal": "Assess the severity and magnitude of the occurrence.",
+        "layout": "checklist_gate",
+        "anchor_phrases": [
+          "Substantial loss of life",
+          "Beyond coping capacity"
+        ]
+      },
+      {
+        "beat_goal": "Apply the specific exemption provision of the Income Tax Act.",
+        "layout": "statute_quote",
+        "anchor_phrases": [
+          "Section 10(10BC)",
+          "Exempt from tax"
+        ]
+      },
+      {
+        "beat_goal": "Conclude on the taxability of the specific amount in the question.",
+        "layout": "takeaway",
+        "anchor_phrases": [
+          "₹ 5 lacs",
+          "Exempt under section 10(10BC)",
+          "Not chargeable to tax"
+        ]
+      }
+    ]
+  },
+  "fallback": false,
+  "beats": [
+    {
+      "layout": "example_scene",
+      "title": {
+        "text": "Receipt of Compensation",
+        "at": 0.0
+      },
+      "voice_sync_text": "Amit-ന്റെ മാതാപിതാക്കൾക്ക് Government of Chhattisgarh-ൽ നിന്നും ₹ 5,00,000 compensation ലഭിച്ചു. Dantewada bomb blast-ൽ മകൻ നഷ്ടപ്പെട്ട ആ കുടുംബത്തിന് ലഭിച്ച ഈ തുകയുടെ taxability നമുക്ക് പരിശോധിക്കാം.",
+      "visual_data": {
+        "actors": [
+          {
+            "label": "Govt of Chhattisgarh",
+            "icon": "bank"
+          },
+          {
+            "label": "Parents of Amit",
+            "icon": "person"
+          }
+        ],
+        "transaction": "Compensation Payment",
+        "facts": [
+          {
+            "label": "Amount",
+            "value": "₹ 5,00,000"
+          },
+          {
+            "label": "Event",
+            "detail": "Dantewada bomb blast"
+          }
+        ]
+      },
+      "start": 0.0,
+      "end": 0.0,
+      "id": "b1",
+      "director_goal": "Establish the receipt of compensation by Amit's parents from the State Government.",
+      "anchor_phrases": [
+        "₹ 5,00,000",
+        "Government of Chhattisgarh",
+        "Dantewada bomb blast"
+      ],
+      "animation_role": "key_fact"
+    },
+    {
+      "layout": "flow_actors",
+      "title": {
+        "text": "Qualifying Payer",
+        "at": 0.0
+      },
+      "voice_sync_text": "ഈ exemption ലഭിക്കണമെങ്കിൽ compensation തുക തന്നിരിക്കുന്നത് Central Government, State Government അല്ലെങ്കിൽ Local Authority ആയിരിക്കണം.",
+      "visual_data": {
+        "actors": [
+          {
+            "label": "Central Government",
+            "icon": "bank"
+          },
+          {
+            "label": "State Government",
+            "icon": "bank",
+            "pass": true
+          },
+          {
+            "label": "Local Authority",
+            "icon": "bank"
+          }
+        ],
+        "edges": [
+          {
+            "label": "Authorized Payers"
+          }
+        ]
+      },
+      "start": 0.0,
+      "end": 0.0,
+      "id": "b2",
+      "director_goal": "Verify if the payer is a qualifying authority under the section.",
+      "anchor_phrases": [
+        "Central Government",
+        "State Government",
+        "Local Authority"
+      ],
+      "animation_role": "explanation"
+    },
+    {
+      "layout": "checklist_gate",
+      "title": {
+        "text": "Defining Disaster",
+        "at": 0.0
+      },
+      "voice_sync_text": "Disaster എന്ന വാക്കിന്റെ അർത്ഥം Disaster Management Act, 2005 പ്രകാരമാണ് എടുക്കുന്നത്. അത് Natural or man-made causes മൂലമുള്ള Mishap ആകാം.",
+      "visual_data": {
+        "conditions": [
+          {
+            "label": "Disaster Management Act, 2005",
+            "pass": true
+          },
+          {
+            "label": "Natural or man-made causes",
+            "pass": true
+          },
+          {
+            "label": "Mishap",
+            "pass": true
+          }
+        ],
+        "outcome": "Disaster Defined"
+      },
+      "start": 0.0,
+      "end": 0.0,
+      "id": "b3",
+      "director_goal": "Define the event as a disaster using the 2005 Act criteria.",
+      "anchor_phrases": [
+        "Disaster Management Act, 2005",
+        "Natural or man-made causes",
+        "Mishap"
+      ],
+      "animation_role": "explanation"
+    },
+    {
+      "layout": "checklist_gate",
+      "title": {
+        "text": "Severity & Magnitude",
+        "at": 0.0
+      },
+      "voice_sync_text": "അവിടെ Substantial loss of life അല്ലെങ്കിൽ human suffering ഉണ്ടായിരിക്കണം. അത് affected community-യുടെ Beyond coping capacity ഉള്ള magnitude ഉള്ളതായിരിക്കണം.",
+      "visual_data": {
+        "conditions": [
+          {
+            "label": "Substantial loss of life",
+            "pass": true
+          },
+          {
+            "label": "Beyond coping capacity",
+            "pass": true
+          }
+        ],
+        "outcome": "Severity Met"
+      },
+      "start": 0.0,
+      "end": 0.0,
+      "id": "b4",
+      "director_goal": "Assess the severity and magnitude of the occurrence.",
+      "anchor_phrases": [
+        "Substantial loss of life",
+        "Beyond coping capacity"
+      ],
+      "animation_role": "explanation"
+    },
+    {
+      "layout": "statute_quote",
+      "title": {
+        "text": "Exemption Provision",
+        "at": 0.0
+      },
+      "voice_sync_text": "Section 10(10BC) പ്രകാരം ഇത്തരം സാഹചര്യങ്ങളിൽ ലഭിക്കുന്ന compensation തുക പൂർണ്ണമായും Exempt from tax ആണ്.",
+      "visual_data": {
+        "rule": "Any amount received from the Central Government or a State Government or a local authority by an individual or his legal heir as compensation on account of any disaster shall be exempt.",
+        "citation": "Section 10(10BC)",
+        "application": "Exempt from tax"
+      },
+      "start": 0.0,
+      "end": 0.0,
+      "id": "b5",
+      "director_goal": "Apply the specific exemption provision of the Income Tax Act.",
+      "anchor_phrases": [
+        "Section 10(10BC)",
+        "Exempt from tax"
+      ],
+      "animation_role": "explanation"
+    },
+    {
+      "layout": "takeaway",
+      "title": {
+        "text": "Final Conclusion",
+        "at": 0.0
+      },
+      "voice_sync_text": "അതുകൊണ്ട് Dantewada bomb blast കാരണം ലഭിച്ച ₹ 5 lacs പൂർണ്ണമായും Exempt under section 10(10BC) ആണ്. ഇത് Not chargeable to tax.",
+      "visual_data": {
+        "rules": [
+          {
+            "label": "Final Amount",
+            "value": "₹ 5 lacs"
+          },
+          {
+            "label": "Status",
+            "value": "Exempt under section 10(10BC)"
+          },
+          {
+            "label": "Tax Impact",
+            "value": "Not chargeable to tax"
+          }
+        ]
+      },
+      "start": 0.0,
+      "end": 0.0,
+      "id": "b6",
+      "director_goal": "Conclude on the taxability of the specific amount in the question.",
+      "anchor_phrases": [
+        "₹ 5 lacs",
+        "Exempt under section 10(10BC)",
+        "Not chargeable to tax"
+      ],
+      "animation_role": "key_fact"
+    }
+  ]
+}

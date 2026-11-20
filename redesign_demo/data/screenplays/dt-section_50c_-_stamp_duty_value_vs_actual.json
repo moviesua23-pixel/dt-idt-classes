@@ -1,0 +1,26 @@
+{
+  "id": "section_50c_-_stamp_duty_value_vs_actual",
+  "subject": "DT",
+  "provision_raw": "Section 50C: Where consideration received on transfer of land or building is less than the stamp duty value assessed by stamp valuation authority, such stamp duty value shall be deemed to be the full value of consideration.",
+  "archetype_id": "compare_two",
+  "title": "Section 50C - Stamp Duty Value vs Actual Consideration",
+  "scenario_story": "Rahul sold his residential land in Kochi to Ananya for ₹40 Lakhs, even though the State Government's official Stamp Duty Value for the plot was ₹60 Lakhs. For calculating capital gains tax, the tax department overrides the ₹40 Lakhs deal price and deems ₹60 Lakhs as the actual sale value.",
+  "slots": {
+    "entity_name": "Rahul (Seller)",
+    "asset_description": "Residential Plot in Kochi",
+    "left_column_label": "Actual Agreement Value",
+    "left_column_amount": "₹40 Lakhs",
+    "right_column_label": "Government Stamp Duty Value",
+    "right_column_amount": "₹60 Lakhs",
+    "comparison_rule": "If Actual Price < Stamp Duty Value",
+    "winning_column": "right",
+    "final_result_label": "Deemed Sale Consideration for Capital Gains",
+    "final_result_amount": "₹60 Lakhs"
+  },
+  "teacher_narration": "Nammal Rahul-inte case eduthu nokku. Rahul Kochi-yile tande plot Ananya-kk ₹40 Lakhs-inaa vilchathu. Pakshe state government-inte Stamp Duty Valuation Authority fix cheytha minimum rate ₹60 Lakhs aayirunnu. Section 50C prakaaram, actual sale price Stamp Duty Value-nekkal kuravanengil, Income Tax department actual price thallikkalayum. Capital Gains calculate cheyyumpol higher value aaya ₹60 Lakhs thanne Deemed Sale Value aayi edukkum!",
+  "cues": {
+    "cue_start": 0.5,
+    "cue_action": 4.5,
+    "cue_conclusion": 9.5
+  }
+}
