@@ -1,0 +1,703 @@
+{
+  "question_id": "dt-c3-q33",
+  "audio_url": "data/audio/dt-c3-q33.mp3",
+  "duration_sec": 317.02,
+  "sync_offset_sec": 0.0,
+  "context_pill": "Computation of Total Income for Lambda Ltd. A.Y. 2026-27",
+  "example_summary": "Step-by-step computation ledger starting from net profit as per profit and loss to arrive at total income of Lambda Ltd. by adjusting PGBP additions, deductions, and Chapter VI-A deductions.",
+  "source_provision": "### Statutory Summary Matrix: PGBP Adjustments & Provisions\n\n| Provision / Area | Statutory Section | Core Condition / Test | Statutory Treatment / Consequence |\n| :--- | :--- | :--- | :--- |\n| **Depreciation** | Section 32 | Assets used for business; Income-tax Rules vs Companies Act | Add back book depreciation; deduct Income-tax Rules depreciation |\n| **Provisions vs Actuals** | Section 36(1)(iv) / 36(1)(va) | Actuarial/unascertained vs actual payments within due date | Provisions disallowed; actual payments allowed |\n| **Wage & Periodical Revisions** | Section 37(1) read with ICDS X | Reliable estimate and reasonable certainty of obligation | Allowable if based on fair estimate; no adjustment if already debited |\n| **Capital Loss by Fire** | Section 28 / Section 37(1) | Destruction of capital asset by fire | Capital in nature; disallow and add back to business income |\n| **Political Contributions** | Section 37(1) / 37(2B) | Advertisement in souvenirs of political parties | Prohibited deduction for companies; add back to income |\n| **Statutory Dues Refund** | Section 41(1) | Cessation or remission of trading liability or refund of tax | Taxable as business income to the extent retained by assessee |\n| **Government Assistance** | Section 28(iv) / Subsidies | Grants, concessions or subsidies by Central/State Government | Taxable as business income unless specifically exempt |\n\n\n> [!IMPORTANT]\n> Provisions & Reserves: General provisions for gratuity or unascertained liabilities are inadmissible under PGBP unless actual payment conditions under Section 43B or specific statutory allowances are satisfied.\n\n\n> [!WARNING]\n> Statutory Dues: Any refund of tax or statutory liability previously allowed as deduction becomes taxable under Section 41(1) when refunded, unless refunded back to the actual customers.",
+  "director": {
+    "archetype": "computation_ledger",
+    "justification": "The provision requires building a step-by-step computation ledger starting from net profit as per profit and loss to arrive at the total income of Lambda Ltd. by adjusting various PGBP additions, deductions, and Chapter VI-A deductions.",
+    "protagonist": "Lambda Ltd.",
+    "actors": [
+      "Lambda Ltd.",
+      "Maharashtra State Government",
+      "Election Commission of India",
+      "High Court",
+      "Insurance Company"
+    ],
+    "key_numbers": [
+      "750 Lakhs",
+      "52 Lakhs",
+      "4.80 Lakhs",
+      "18 Lakhs",
+      "12 Lakhs",
+      "17 Lakhs",
+      "24 Lakhs",
+      "3 Lakh",
+      "320 Lakhs",
+      "160 lakhs",
+      "2.30 Lakhs",
+      "3 Lakhs",
+      "71 Lakhs",
+      "8 lakhs",
+      "3 lakhs",
+      "2 lakhs",
+      "1 lakh",
+      "9,06,00,000"
+    ],
+    "key_dates": [
+      "01.04.2015",
+      "31st March, 2026",
+      "A.Y. 2026-27"
+    ],
+    "visual_metaphor": "A grand accounting ledger transforming net book profit through statutory additions and deductions to final total income.",
+    "beat_plan": [
+      {
+        "beat_goal": "Establish the starting net profit of Lambda Ltd. as per the Statement of Profit and Loss for A.Y. 2026-27.",
+        "layout": "example_scene",
+        "anchor_phrases": [
+          "Lambda Ltd.",
+          "Statement of Profit and Loss",
+          "750 Lakhs",
+          "A.Y. 2026-27"
+        ]
+      },
+      {
+        "beat_goal": "Add back book depreciation and adjust provisions for gratuity and wage revision under Section 36.",
+        "layout": "ledger",
+        "anchor_phrases": [
+          "Depreciation as per Companies Act",
+          "Provision for gratuity",
+          "Section 36(1)(iv)",
+          "ICDS X"
+        ]
+      },
+      {
+        "beat_goal": "Treat capital loss by fire, scrap value adjustments, and political souvenir advertisement disallowance under Section 37.",
+        "layout": "checklist_gate",
+        "anchor_phrases": [
+          "Loss due to destruction",
+          "Section 37(2B)",
+          "Election Commission of India",
+          "Scrap value"
+        ]
+      },
+      {
+        "beat_goal": "Incorporate taxable government refunds under Section 41(1) and power tariff concessions.",
+        "layout": "flow_actors",
+        "anchor_phrases": [
+          "Section 41(1)",
+          "High Court",
+          "Current Liabilities",
+          "State Government"
+        ]
+      },
+      {
+        "beat_goal": "Deduct Income-tax Rules depreciation, foreign dividend income, and capital gains reallocations.",
+        "layout": "slab_ladder",
+        "anchor_phrases": [
+          "Income-tax Rules",
+          "71 Lakhs",
+          "Section 112A",
+          "Income from other sources"
+        ]
+      },
+      {
+        "beat_goal": "Apply Chapter VI-A deduction under Section 80GGB for political party advertisement contributions.",
+        "layout": "compare_regimes",
+        "anchor_phrases": [
+          "Section 80GGB",
+          "Gross Total Income",
+          "9,06,00,000",
+          "Total Income"
+        ]
+      },
+      {
+        "beat_goal": "Summarize the final computation and statutory takeaways for PGBP adjustments.",
+        "layout": "takeaway",
+        "anchor_phrases": [
+          "Total Income",
+          "Computation",
+          "Statutory Summary",
+          "Lambda Ltd."
+        ]
+      }
+    ]
+  },
+  "fallback": false,
+  "beats": [
+    {
+      "layout": "example_scene",
+      "title": {
+        "text": "Starting Net Profit of Lambda Ltd.",
+        "at": 0.3
+      },
+      "voice_sync_text": "ഇവിടെ നമ്മൾ PGBP computation-ൽ വശഗീകരിക്കേണ്ട വിവിധ statutory provisions-ഉം allowances-ഉം disallowances-ഉം ആണ് പഠിക്കുന്നത്. Let's analyze each rule step by step. Lambda Ltd. started its Statement of Profit and Loss for A.Y. 2026-27 showing a net profit of 750 Lakhs.",
+      "visual_data": {
+        "actors": [
+          {
+            "label": "Lambda Ltd.",
+            "amount": 750,
+            "status": "active",
+            "icon": "factory",
+            "at": 41.34
+          }
+        ],
+        "transaction": "Net profit as per Statement of Profit and Loss",
+        "facts": [
+          {
+            "label": "A.Y. 2026-27",
+            "value": "750 Lakhs",
+            "amount": 750,
+            "sign": "=",
+            "date": "31st March, 2026",
+            "icon": "calendar",
+            "at": 47.46
+          },
+          {
+            "label": "Lambda Ltd.",
+            "value": "750 Lakhs",
+            "amount": 750,
+            "icon": "factory",
+            "at": 47.46
+          },
+          {
+            "label": "Statement of Profit and Loss",
+            "value": "750 Lakhs",
+            "amount": 750,
+            "icon": "document",
+            "at": 47.46
+          }
+        ]
+      },
+      "start": 0.0,
+      "end": 50.56,
+      "id": "b1",
+      "director_goal": "Establish the starting net profit of Lambda Ltd. as per the Statement of Profit and Loss for A.Y. 2026-27.",
+      "anchor_phrases": [
+        "Lambda Ltd.",
+        "Statement of Profit and Loss",
+        "750 Lakhs",
+        "A.Y. 2026-27"
+      ],
+      "animation_role": "key_fact",
+      "anchor_alignment": [
+        {
+          "phrase": "Lambda Ltd.",
+          "at": 41.34,
+          "matched": true,
+          "score": 0.953
+        },
+        {
+          "phrase": "Statement of Profit and Loss",
+          "at": 42.94,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "750 Lakhs",
+          "at": 48.62,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "A.Y. 2026-27",
+          "at": 41.66,
+          "matched": false,
+          "score": 0.125
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 4
+      }
+    },
+    {
+      "layout": "ledger",
+      "title": {
+        "text": "Depreciation and Wage Provisions Adjustments",
+        "at": 51.21
+      },
+      "voice_sync_text": "ഈ section പ്രകാരം, Statement of Profit and Loss-ൽ debit ചെയ്തിട്ടുള്ള book depreciation add back ചെയ്യണം. അതിനുശേഷം Depreciation as per Companies Act 52 Lakhs add back ചെയ്ത്, Provision for gratuity and Provision for wages payable to workers under Section 36(1)(iv) along with ICDS X adjustments are evaluated.",
+      "visual_data": {
+        "rows": [
+          {
+            "label": "Depreciation as per Companies Act",
+            "amount": 52,
+            "sign": "+",
+            "icon": "document",
+            "at": 88.75
+          },
+          {
+            "label": "Provision for gratuity",
+            "amount": 160,
+            "sign": "+",
+            "icon": "document",
+            "at": 93.09
+          },
+          {
+            "label": "Section 36(1)(iv)",
+            "detail": "Allowable deduction",
+            "sign": "-",
+            "icon": "scales",
+            "at": 96.97
+          },
+          {
+            "label": "ICDS X",
+            "detail": "Reliable estimate",
+            "sign": "+",
+            "icon": "document",
+            "at": 98.13
+          }
+        ],
+        "total": "160 Lakhs",
+        "spoken_amounts": [
+          "52 Lakhs"
+        ]
+      },
+      "start": 50.91,
+      "end": 103.75,
+      "id": "b2",
+      "director_goal": "Add back book depreciation and adjust provisions for gratuity and wage revision under Section 36.",
+      "anchor_phrases": [
+        "Depreciation as per Companies Act",
+        "Provision for gratuity",
+        "Section 36(1)(iv)",
+        "ICDS X"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Depreciation as per Companies Act",
+          "at": 88.75,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Provision for gratuity",
+          "at": 93.09,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Section 36(1)(iv)",
+          "at": 96.97,
+          "matched": true,
+          "score": 0.804
+        },
+        {
+          "phrase": "ICDS X",
+          "at": 100.33,
+          "matched": true,
+          "score": 0.909
+        }
+      ],
+      "anchor_match": {
+        "matched": 4,
+        "total": 4
+      }
+    },
+    {
+      "layout": "checklist_gate",
+      "title": {
+        "text": "Capital Loss and Political Advertisement Disallowances",
+        "at": 104.4
+      },
+      "voice_sync_text": "യന്ത്രങ്ങൾ തീപിടിച്ച് നശിക്കുമ്പോഴുണ്ടാകുന്ന Loss due to destruction capital in nature ആയതിനാൽ PGBP-ൽ allowance കിട്ടില്ല. അതുപോലെ Section 37(2B) പ്രകാരം Election Commission of India-ൽ registered ആയ political party souvenir-ൽ കൊടുക്കുന്ന advertisement charges Scraped value adjustments-ഉം കൂടി disallow ചെയ്യപ്പെടും.",
+      "visual_data": {
+        "conditions": [
+          {
+            "label": "Loss due to destruction",
+            "amount": 17,
+            "sign": "+",
+            "icon": "document",
+            "at": 124.16
+          },
+          {
+            "label": "Section 37(2B)",
+            "detail": "Political party souvenir advertisement",
+            "amount": 2.3,
+            "sign": "+",
+            "icon": "gavel",
+            "at": 136.08
+          },
+          {
+            "label": "Election Commission of India",
+            "detail": "Registered political party",
+            "icon": "person",
+            "at": 136.08
+          },
+          {
+            "label": "Scrap value",
+            "amount": 3,
+            "sign": "-",
+            "icon": "money_bag",
+            "at": 140.32
+          }
+        ],
+        "outcome": "Disallow capital and political advertisement expenses"
+      },
+      "start": 104.1,
+      "end": 143.54,
+      "id": "b3",
+      "director_goal": "Treat capital loss by fire, scrap value adjustments, and political souvenir advertisement disallowance under Section 37.",
+      "anchor_phrases": [
+        "Loss due to destruction",
+        "Section 37(2B)",
+        "Election Commission of India",
+        "Scrap value"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Loss due to destruction",
+          "at": 124.16,
+          "matched": true,
+          "score": 0.826
+        },
+        {
+          "phrase": "Section 37(2B)",
+          "at": 132.24,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Election Commission of India",
+          "at": 134.54,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Scrap value",
+          "at": 140.32,
+          "matched": true,
+          "score": 0.88
+        }
+      ],
+      "anchor_match": {
+        "matched": 4,
+        "total": 4
+      }
+    },
+    {
+      "layout": "flow_actors",
+      "title": {
+        "text": "Government Refunds and Taxable Dues",
+        "at": 144.19
+      },
+      "voice_sync_text": "Government-ൽ നിന്ന് ലഭിക്കുന്ന tax refund-ൽ customers-ന് തിരികെ കൊടുക്കാതെ company കൈവശം വെക്കുന്ന തുക Section 41(1) പ്രകാരം taxable ആണ്. High Court വിധിച്ചതുപോലെ Current Liabilities-ൽ നിലനിൽക്കുന്ന ബാലൻസും Maharashtra State Government നൽകിയ power tariff concession-ഉം analysis ചെയ്യണം.",
+      "visual_data": {
+        "actors": [
+          {
+            "label": "High Court",
+            "icon": "gavel",
+            "at": 179.81
+          },
+          {
+            "label": "State Government",
+            "icon": "house",
+            "at": 184.47
+          },
+          {
+            "label": "Current Liabilities",
+            "amount": 1,
+            "icon": "document",
+            "at": 184.47
+          }
+        ],
+        "edges": [
+          {
+            "label": "Section 41(1)",
+            "amount": 1,
+            "sign": "+",
+            "icon": "document",
+            "at": 184.47
+          }
+        ]
+      },
+      "start": 143.89,
+      "end": 188.21,
+      "id": "b4",
+      "director_goal": "Incorporate taxable government refunds under Section 41(1) and power tariff concessions.",
+      "anchor_phrases": [
+        "Section 41(1)",
+        "High Court",
+        "Current Liabilities",
+        "State Government"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Section 41(1)",
+          "at": 176.83,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "High Court",
+          "at": 179.81,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Current Liabilities",
+          "at": 181.19,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "State Government",
+          "at": 184.47,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 4,
+        "total": 4
+      }
+    },
+    {
+      "layout": "slab_ladder",
+      "title": {
+        "text": "Income-tax Rules Depreciation & Other Deductions",
+        "at": 188.86
+      },
+      "voice_sync_text": "അതിനുശേഷം Income-tax Rules പ്രകാരമുള്ള depreciation allowance ആയി കുറയ്ക്കാം. 71 Lakhs depreciation, foreign dividend income, കൂടാതെ Section 112A പ്രകാരമുള്ള capital gains reallocations under Income from other sources പരിശോധിക്കണം.",
+      "visual_data": {
+        "tiers": [
+          {
+            "label": "Income-tax Rules",
+            "amount": 71,
+            "sign": "-",
+            "icon": "document",
+            "at": 218.18
+          },
+          {
+            "label": "71 Lakhs",
+            "amount": 71,
+            "sign": "-",
+            "icon": "money_bag",
+            "at": 220.34
+          },
+          {
+            "label": "Section 112A",
+            "amount": 3,
+            "sign": "-",
+            "icon": "shares",
+            "at": 230.3
+          },
+          {
+            "label": "Income from other sources",
+            "amount": 12,
+            "sign": "-",
+            "icon": "bank",
+            "at": 230.3
+          }
+        ]
+      },
+      "start": 188.56,
+      "end": 231.36,
+      "id": "b5",
+      "director_goal": "Deduct Income-tax Rules depreciation, foreign dividend income, and capital gains reallocations.",
+      "anchor_phrases": [
+        "Income-tax Rules",
+        "71 Lakhs",
+        "Section 112A",
+        "Income from other sources"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Income-tax Rules",
+          "at": 218.18,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "71 Lakhs",
+          "at": 220.34,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Section 112A",
+          "at": 230.3,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Income from other sources",
+          "at": 224.13,
+          "matched": false,
+          "score": 0.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 4
+      }
+    },
+    {
+      "layout": "compare_regimes",
+      "title": {
+        "text": "Chapter VI-A Political Contributions Deduction",
+        "at": 232.01
+      },
+      "voice_sync_text": "Apply Chapter VI-A deduction under Section 80GGB for political party advertisement contributions to arrive at Gross Total Income 9,06,00,000 and the final Total Income.",
+      "visual_data": {
+        "regimes": [
+          {
+            "label": "Section 80GGB",
+            "amount": 2.3,
+            "sign": "-",
+            "icon": "document",
+            "at": 261.65
+          },
+          {
+            "label": "Gross Total Income",
+            "amount": 9.083,
+            "sign": "=",
+            "icon": "scales",
+            "at": 266.25
+          },
+          {
+            "label": "9,06,00,000",
+            "amount": 9.06,
+            "sign": "=",
+            "icon": "money_bag",
+            "at": 266.25
+          },
+          {
+            "label": "Total Income",
+            "amount": 9.06,
+            "sign": "=",
+            "icon": "bank",
+            "at": 266.41
+          }
+        ]
+      },
+      "start": 231.71,
+      "end": 271.15,
+      "id": "b6",
+      "director_goal": "Apply Chapter VI-A deduction under Section 80GGB for political party advertisement contributions.",
+      "anchor_phrases": [
+        "Section 80GGB",
+        "Gross Total Income",
+        "9,06,00,000",
+        "Total Income"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Section 80GGB",
+          "at": 261.65,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Gross Total Income",
+          "at": 266.25,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "9,06,00,000",
+          "at": 261.99,
+          "matched": false,
+          "score": 0.214
+        },
+        {
+          "phrase": "Total Income",
+          "at": 269.87,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 4
+      }
+    },
+    {
+      "layout": "takeaway",
+      "title": {
+        "text": "Statutory Summary & Final Takeaways",
+        "at": 271.8
+      },
+      "voice_sync_text": "Summarize the final Computation and Statutory Summary of PGBP adjustments for Lambda Ltd., ensuring all allowances, disallowances, and deductions are correctly recorded under the Income-tax Act.",
+      "visual_data": {
+        "rules": [
+          {
+            "label": "Total Income",
+            "value": "9,06,00,000",
+            "icon": "bank",
+            "at": 313.5
+          },
+          {
+            "label": "Computation",
+            "value": "Complete",
+            "icon": "document",
+            "at": 313.5
+          },
+          {
+            "label": "Statutory Summary",
+            "value": "Verified",
+            "icon": "scales",
+            "at": 313.5
+          },
+          {
+            "label": "Lambda Ltd.",
+            "value": "A.Y. 2026-27",
+            "icon": "factory",
+            "at": 313.5
+          }
+        ]
+      },
+      "start": 271.5,
+      "end": 317.02,
+      "id": "b7",
+      "director_goal": "Summarize the final computation and statutory takeaways for PGBP adjustments.",
+      "anchor_phrases": [
+        "Total Income",
+        "Computation",
+        "Statutory Summary",
+        "Lambda Ltd."
+      ],
+      "animation_role": "key_fact",
+      "anchor_alignment": [
+        {
+          "phrase": "Total Income",
+          "at": 315.04,
+          "matched": true,
+          "score": 0.727
+        },
+        {
+          "phrase": "Computation",
+          "at": 276.19,
+          "matched": false,
+          "score": 0.476
+        },
+        {
+          "phrase": "Statutory Summary",
+          "at": 279.95,
+          "matched": false,
+          "score": 0.25
+        },
+        {
+          "phrase": "Lambda Ltd.",
+          "at": 289.8,
+          "matched": false,
+          "score": 0.353
+        }
+      ],
+      "anchor_match": {
+        "matched": 1,
+        "total": 4
+      }
+    }
+  ],
+  "needs_review": true,
+  "quality_issues": [
+    "unsupported section/rule: Section 37(2B)",
+    "unsupported section/rule: Section 112A"
+  ],
+  "audio_duration_sec": 317.02,
+  "anchor_match": {
+    "matched": 22,
+    "total": 28,
+    "rate": 0.786
+  }
+}

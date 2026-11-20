@@ -1,0 +1,673 @@
+{
+  "question_id": "dt-c3-q34",
+  "audio_url": "data/audio/dt-c3-q34.mp3",
+  "duration_sec": 284.41,
+  "sync_offset_sec": 0.0,
+  "context_pill": "PGBP & Statutory Adjustments",
+  "example_summary": "Reconciliation of Book Profit with Income Tax Provisions for Parik Hospitality Limited for A.Y. 2026-27.",
+  "source_provision": "### Master Statutory Summary Matrix\n\n| Area / Provision | Statutory Section / Rule | Operative Threshold / Condition | Tax Treatment / Legal Consequence |\n| :--- | :--- | :--- | :--- |\n| **Cash Payments** | Section 40A(3) read with Rule 6DD | Expenditure exceeding ₹10,000 in cash per day per person | Disallowed 100% unless covered by Rule 6DD exceptions (e.g. cultivators/fishermen) |\n| **Pension Contribution** | Section 36(1)(iva) & Section 40A(9) | Employer contribution towards notified pension scheme | Allowed up to 14% of salary; excess over 14% is disallowed u/s 40A(9) |\n| **TDS on Transport** | Section 194C & Section 40(a)(ia) | Payments to transport contractors opting for Section 44AE | No TDS liability if PAN and presumptive declaration are furnished |\n| **Intra-Group Transfer** | Section 47(iv) | Transfer of capital asset to a 100% subsidiary Indian company | Not regarded as transfer; capital gains not chargeable |\n| **TDS on Director Fees** | Section 194J & Section 40(a)(ia) | Fees paid to independent directors for attending Board meetings | TDS deductible under Section 194J; 30% disallowance u/s 40(a)(ia) on default |\n\n\n> [!IMPORTANT] Statutory Traps in PGBP:\n> - Capital vs Revenue: Expenditure on projects not related to existing business and abandoned without creating an asset is treated as capital expenditure and disallowed.\n> - TDS Defaults: Non-deduction of tax from professional or managerial fees attracts a 30% disallowance under Section 40(a)(ia).\n\n\n> [!WARNING] Cash Payment Rule Exceptions:\n> Rule 6DD provides specific relaxations for payments made to producers of products (like agricultural produce, fish, or livestock) directly, but middlemen or agents do not enjoy these exemptions.",
+  "director": {
+    "archetype": "computation_ledger",
+    "justification": "The question requires a comprehensive computation ledger starting from book profit and adjusting various additions and deductions under PGBP and other heads.",
+    "protagonist": "Parik Hospitality Limited",
+    "actors": [
+      "Parik Hospitality Limited",
+      "Mr. Raja",
+      "Mr. Khalid",
+      "M/s. Bansal Transport",
+      "Avimunya Limited"
+    ],
+    "key_numbers": [
+      "1,52,00,000",
+      "0.25 lakh",
+      "0.30 lakh",
+      "4 lakhs",
+      "16%",
+      "6.50 lakhs",
+      "12 lakhs",
+      "2.50 lakhs",
+      "10 lakhs",
+      "1 lakh",
+      "15 lakhs",
+      "7 lakhs"
+    ],
+    "key_dates": [
+      "31st March, 2026",
+      "3rd December",
+      "10th December",
+      "1st June, 2024",
+      "25.09.2026"
+    ],
+    "visual_metaphor": "An escalating ledger adjustment scale where book profits are systematically reconciled with tax statutes.",
+    "beat_plan": [
+      {
+        "beat_goal": "Establish the starting net profit from the Statement of Profit and Loss.",
+        "layout": "example_scene",
+        "anchor_phrases": [
+          "Parik Hospitality Limited",
+          "1,52,00,000",
+          "Statement of Profit and Loss"
+        ]
+      },
+      {
+        "beat_goal": "Analyze cash disallowances for payments exceeding statutory limits under Section 40A(3) and Rule 6DD.",
+        "layout": "checklist_gate",
+        "anchor_phrases": [
+          "Section 40A(3)",
+          "Rule 6DD",
+          "30,000"
+        ]
+      },
+      {
+        "beat_goal": "Examine pension contributions and salary caps under Section 36(1)(iva) and Section 40A(9).",
+        "layout": "slab_ladder",
+        "anchor_phrases": [
+          "Section 36(1)(iva)",
+          "Section 40A(9)",
+          "14%"
+        ]
+      },
+      {
+        "beat_goal": "Verify transport contractor TDS exemptions with presumptive taxation under Section 44AE and Section 194C.",
+        "layout": "decision_tree",
+        "anchor_phrases": [
+          "Section 194C",
+          "Section 44AE",
+          "M/s. Bansal Transport"
+        ]
+      },
+      {
+        "beat_goal": "Evaluate capital gains exemption on asset transfers to 100% subsidiaries under Section 47(iv).",
+        "layout": "compare_regimes",
+        "anchor_phrases": [
+          "Section 47(iv)",
+          "Avimunya Limited",
+          "12 lakhs"
+        ]
+      },
+      {
+        "beat_goal": "Process director fee TDS defaults and consequential disallowances under Section 194J and Section 40(a)(ia).",
+        "layout": "flow_actors",
+        "anchor_phrases": [
+          "Section 194J",
+          "Section 40(a)(ia)",
+          "30%"
+        ]
+      },
+      {
+        "beat_goal": "Summarize final total income computation and Chapter VI-A deductions.",
+        "layout": "ledger",
+        "anchor_phrases": [
+          "Gross Total Income",
+          "Section 80M",
+          "Total Income"
+        ]
+      },
+      {
+        "beat_goal": "Conclude with key takeaways regarding statutory additions and deductions in PGBP computations.",
+        "layout": "takeaway",
+        "anchor_phrases": [
+          "Profits and Gains of Business or Profession",
+          "Assessment Year 2026-27"
+        ]
+      }
+    ]
+  },
+  "fallback": false,
+  "beats": [
+    {
+      "layout": "example_scene",
+      "title": {
+        "text": "Starting Profit & Loss Base",
+        "at": 0.3
+      },
+      "voice_sync_text": "Parik Hospitality Limited-ന്റെ Statement of Profit and Loss പ്രകാരം net profit ₹ 1,52,00,000 ആണ്. ഇവിടെ നമ്മൾ PGBP, Capital Gains, TDS എന്നിവ ഉൾപ്പെടുന്ന വിവിധ statutory sections ആണ് പഠിക്കുന്നത്. ഈ provisions എങ്ങനെ computation-ൽ apply ചെയ്യണമെന്ന് നോക്കാം.",
+      "visual_data": {
+        "actors": [
+          {
+            "label": "Parik Hospitality Limited",
+            "detail": "Assessee Company",
+            "icon": "house",
+            "at": 27.66
+          }
+        ],
+        "transaction": "Statement of Profit and Loss Reconciliation",
+        "facts": [
+          {
+            "label": "Net Profit as per Statement of Profit and Loss",
+            "amount": 15200000,
+            "value": "₹ 1,52,00,000",
+            "icon": "money_bag",
+            "at": 27.66
+          }
+        ]
+      },
+      "start": 0.0,
+      "end": 46.56,
+      "id": "b1",
+      "director_goal": "Establish the starting net profit from the Statement of Profit and Loss.",
+      "anchor_phrases": [
+        "Parik Hospitality Limited",
+        "1,52,00,000",
+        "Statement of Profit and Loss"
+      ],
+      "animation_role": "key_fact",
+      "anchor_alignment": [
+        {
+          "phrase": "Parik Hospitality Limited",
+          "at": 27.66,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "1,52,00,000",
+          "at": 32.72,
+          "matched": true,
+          "score": 0.52
+        },
+        {
+          "phrase": "Statement of Profit and Loss",
+          "at": 5.59,
+          "matched": false,
+          "score": 0.452
+        }
+      ],
+      "anchor_match": {
+        "matched": 2,
+        "total": 3
+      }
+    },
+    {
+      "layout": "checklist_gate",
+      "title": {
+        "text": "Cash Payments Disallowance",
+        "at": 47.21
+      },
+      "voice_sync_text": "Section 40A(3) പ്രകാരം ഒരു ദിവസത്തിൽ ഒരാൾക്ക് പത്തുനായിരം രൂപയിൽ കൂടുതൽ പണമായി നൽകിയാൽ മുഴുവൻ തുകയും disallow ചെയ്യും. എന്നാൽ Rule 6DD പ്രകാരം fishermen-ന് നൽകുന്ന പണത്തിന് exception ലഭിക്കും, middlemen-ന് ലഭിക്കില്ല. അതിനാൽ Mr. Khalid-ന് നൽകിയ ₹ 30,000 disallow ചെയ്യപ്പെടും.",
+      "visual_data": {
+        "conditions": [
+          {
+            "label": "Section 40A(3) Cash Limit Exceeded",
+            "detail": "Cash payment > ₹ 10,000 per day per person",
+            "amount": 10000,
+            "value": "₹ 10,000",
+            "pass": false,
+            "icon": "money_bag",
+            "at": 73.55
+          },
+          {
+            "label": "Rule 6DD Exception for Fisherman",
+            "detail": "Payment of ₹ 25,000 to Mr. Raja",
+            "amount": 25000,
+            "value": "₹ 25,000",
+            "pass": true,
+            "icon": "person",
+            "at": 81.91
+          },
+          {
+            "label": "Rule 6DD Exception for Middleman",
+            "detail": "Payment of ₹ 30,000 to Mr. Khalid",
+            "amount": 30000,
+            "value": "₹ 30,000",
+            "pass": false,
+            "icon": "person",
+            "at": 81.91
+          }
+        ],
+        "outcome": "Disallowance of ₹ 30,000 under Section 40A(3)"
+      },
+      "start": 46.91,
+      "end": 92.43,
+      "id": "b2",
+      "director_goal": "Analyze cash disallowances for payments exceeding statutory limits under Section 40A(3) and Rule 6DD.",
+      "anchor_phrases": [
+        "Section 40A(3)",
+        "Rule 6DD",
+        "30,000"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Section 40A(3)",
+          "at": 73.55,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Rule 6DD",
+          "at": 81.91,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "30,000",
+          "at": 89.97,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 3
+      }
+    },
+    {
+      "layout": "slab_ladder",
+      "title": {
+        "text": "Pension Scheme Statutory Cap",
+        "at": 93.08
+      },
+      "voice_sync_text": "Section 36(1)(iva) അനുസരിച്ച് pension scheme-ലേക്കുള്ള employer contribution basic salary-യുടെയും dearness allowance-ന്റെയും 14% വരെ മാത്രമേ allow ചെയ്യൂ. അതിൽ കൂടുതലുള്ള തുക Section 40A(9) പ്രകാരം disallow ചെയ്യപ്പെടും.",
+      "visual_data": {
+        "tiers": [
+          {
+            "label": "Section 36(1)(iva) Statutory Cap",
+            "detail": "Allowable up to 14% of Basic + DA",
+            "value": "14%",
+            "pass": true,
+            "icon": "scales",
+            "at": 123.02
+          },
+          {
+            "label": "Actual Employer Contribution",
+            "detail": "16% contributed (₹ 4 lakhs total)",
+            "amount": 400000,
+            "value": "16%",
+            "pass": false,
+            "icon": "money_bag",
+            "at": 125.48
+          },
+          {
+            "label": "Section 40A(9) Disallowance",
+            "detail": "Excess 2% disallowed",
+            "amount": 50000,
+            "value": "₹ 50,000",
+            "pass": false,
+            "icon": "gavel",
+            "at": 125.48
+          }
+        ]
+      },
+      "start": 92.78,
+      "end": 137.38,
+      "id": "b3",
+      "director_goal": "Examine pension contributions and salary caps under Section 36(1)(iva) and Section 40A(9).",
+      "anchor_phrases": [
+        "Section 36(1)(iva)",
+        "Section 40A(9)",
+        "14%"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Section 36(1)(iva)",
+          "at": 123.02,
+          "matched": true,
+          "score": 0.769
+        },
+        {
+          "phrase": "Section 40A(9)",
+          "at": 134.04,
+          "matched": true,
+          "score": 0.92
+        },
+        {
+          "phrase": "14%",
+          "at": 118.12,
+          "matched": false,
+          "score": 0.333
+        }
+      ],
+      "anchor_match": {
+        "matched": 2,
+        "total": 3
+      }
+    },
+    {
+      "layout": "decision_tree",
+      "title": {
+        "text": "Transport Contractor TDS Exemption",
+        "at": 138.03
+      },
+      "voice_sync_text": "Section 194C പ്രകാരം transport contractor ആയ M/s. Bansal Transport Section 44AE-ൽ presumptive taxation opt ചെയ്തിട്ടുണ്ടെങ്കിൽ, അവർ PAN ഉം declaration ഉം നൽകിയാൽ TDS പിടിക്കേണ്ടതില്ല.",
+      "visual_data": {
+        "root": "TDS Requirement on Payment to M/s. Bansal Transport",
+        "branches": [
+          {
+            "label": "Section 194C Contractor TDS Rule",
+            "detail": "General mandate to deduct TDS",
+            "pass": false,
+            "icon": "document",
+            "at": 145.81
+          },
+          {
+            "label": "Section 44AE Presumptive Opt-in",
+            "detail": "Declaration & PAN provided by M/s. Bansal Transport",
+            "pass": true,
+            "icon": "document",
+            "at": 168.31
+          },
+          {
+            "label": "Final TDS Obligation",
+            "detail": "No TDS required to be deducted",
+            "pass": true,
+            "icon": "scales",
+            "at": 172.08
+          }
+        ]
+      },
+      "start": 137.73,
+      "end": 176.53,
+      "id": "b4",
+      "director_goal": "Verify transport contractor TDS exemptions with presumptive taxation under Section 44AE and Section 194C.",
+      "anchor_phrases": [
+        "Section 194C",
+        "Section 44AE",
+        "M/s. Bansal Transport"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Section 194C",
+          "at": 163.13,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Section 44AE",
+          "at": 168.31,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "M/s. Bansal Transport",
+          "at": 147.27,
+          "matched": false,
+          "score": 0.359
+        }
+      ],
+      "anchor_match": {
+        "matched": 2,
+        "total": 3
+      }
+    },
+    {
+      "layout": "compare_regimes",
+      "title": {
+        "text": "Intra-Group Asset Transfer Exemption",
+        "at": 177.18
+      },
+      "voice_sync_text": "Section 47(iv) പ്രകാരം holding company തങ്ങളുടെ 100% subsidiary ആയ Avimunya Limited-ക്ക് capital asset transfer ചെയ്താൽ അത് transfer ആയി കണക്കാക്കില്ല. അതിനാൽ ₹ 12 lakhs capital gains tax ബാധകമല്ല.",
+      "visual_data": {
+        "regimes": [
+          {
+            "label": "Section 47(iv) Asset Transfer",
+            "detail": "Transfer to 100% Subsidiary Avimunya Limited",
+            "value": "100% Subsidiary",
+            "pass": true,
+            "icon": "house",
+            "at": 205.12
+          },
+          {
+            "label": "Profit on Land Sale",
+            "detail": "Profit credited to P&L",
+            "amount": 1200000,
+            "value": "12 lakhs",
+            "pass": true,
+            "icon": "money_bag",
+            "at": 212.32
+          },
+          {
+            "label": "Tax Treatment",
+            "detail": "Not regarded as transfer; deducted from P&L profit",
+            "value": "Exempt",
+            "pass": true,
+            "icon": "scales",
+            "at": 212.32
+          }
+        ]
+      },
+      "start": 176.88,
+      "end": 220.24,
+      "id": "b5",
+      "director_goal": "Evaluate capital gains exemption on asset transfers to 100% subsidiaries under Section 47(iv).",
+      "anchor_phrases": [
+        "Section 47(iv)",
+        "Avimunya Limited",
+        "12 lakhs"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Section 47(iv)",
+          "at": 205.12,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Avimunya Limited",
+          "at": 211.28,
+          "matched": true,
+          "score": 0.909
+        },
+        {
+          "phrase": "12 lakhs",
+          "at": 217.24,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 3
+      }
+    },
+    {
+      "layout": "flow_actors",
+      "title": {
+        "text": "Director Fees TDS Default",
+        "at": 220.89
+      },
+      "voice_sync_text": "Directors-ന് നൽകുന്ന meeting fee-ക്ക് Section 194J പ്രകാരം TDS deduct ചെയ്യണം. TDS deduct ചെയ്തില്ലെങ്കിൽ Section 40(a)(ia) പ്രകാരം ആ ചെലവിന്റെ 30% disallow ചെയ്യും.",
+      "visual_data": {
+        "actors": [
+          {
+            "label": "Parik Hospitality Limited",
+            "detail": "Payer",
+            "icon": "house",
+            "at": 220.59
+          },
+          {
+            "label": "Independent Directors",
+            "detail": "Receivers of Director Fee",
+            "icon": "person",
+            "at": 220.59
+          }
+        ],
+        "edges": [
+          {
+            "label": "Fee paid without TDS under Section 194J",
+            "from": "Parik Hospitality Limited",
+            "to": "Independent Directors",
+            "icon": "document",
+            "at": 228.19
+          },
+          {
+            "label": "Section 40(a)(ia) Statutory Penalty",
+            "detail": "Disallowance @ 30% on default",
+            "amount": 30000,
+            "value": "30%",
+            "icon": "gavel",
+            "at": 258.03
+          }
+        ]
+      },
+      "start": 220.59,
+      "end": 263.83,
+      "id": "b6",
+      "director_goal": "Process director fee TDS defaults and consequential disallowances under Section 194J and Section 40(a)(ia).",
+      "anchor_phrases": [
+        "Section 194J",
+        "Section 40(a)(ia)",
+        "30%"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Section 194J",
+          "at": 252.31,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Section 40(a)(ia)",
+          "at": 258.03,
+          "matched": true,
+          "score": 0.823
+        },
+        {
+          "phrase": "30%",
+          "at": 258.33,
+          "matched": false,
+          "score": 0.4
+        }
+      ],
+      "anchor_match": {
+        "matched": 2,
+        "total": 3
+      }
+    },
+    {
+      "layout": "ledger",
+      "title": {
+        "text": "Computation of Total Income",
+        "at": 264.48
+      },
+      "voice_sync_text": "Gross Total Income റെക്കോർഡ് ചെയ്ത ശേഷം, Section 80M പ്രകാരമുള്ള deduction കുറച്ചാൽ നമുക്ക് ഒടുവിൽ Total Income ലഭിക്കും.",
+      "visual_data": {
+        "rows": [
+          {
+            "label": "Income from PGBP",
+            "value": "₹ 1,27,10,000",
+            "amount": 12710000,
+            "icon": "money_bag",
+            "at": 271.4
+          },
+          {
+            "label": "Income from Other Sources",
+            "value": "₹ 5,00,000",
+            "amount": 500000,
+            "icon": "money_bag",
+            "at": 271.4
+          },
+          {
+            "label": "Gross Total Income",
+            "value": "₹ 1,32,10,000",
+            "amount": 13210000,
+            "icon": "scales",
+            "at": 271.4
+          },
+          {
+            "label": "Deduction under Section 80M",
+            "value": "₹ 5,00,000",
+            "amount": 500000,
+            "icon": "document",
+            "at": 271.4
+          }
+        ],
+        "total": "Total Income = ₹ 1,27,10,000"
+      },
+      "start": 264.18,
+      "end": 272.74,
+      "id": "b7",
+      "director_goal": "Summarize final total income computation and Chapter VI-A deductions.",
+      "anchor_phrases": [
+        "Gross Total Income",
+        "Section 80M",
+        "Total Income"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Gross Total Income",
+          "at": 264.8,
+          "matched": true,
+          "score": 0.8
+        },
+        {
+          "phrase": "Section 80M",
+          "at": 267.22,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Total Income",
+          "at": 270.56,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 3
+      }
+    },
+    {
+      "layout": "takeaway",
+      "title": {
+        "text": "Key Assessment Principles",
+        "at": 273.39
+      },
+      "voice_sync_text": "Assessment Year 2026-27-ലെ Profits and Gains of Business or Profession computation-ൽ ഇതുപോലുള്ള statutory adjustments കൃത്യമായി പാലിക്കേണ്ടതുണ്ട്.",
+      "visual_data": {
+        "rules": [
+          {
+            "label": "Profits and Gains of Business or Profession",
+            "detail": "Apply statutory additions and disallowances systematically from P&L profit.",
+            "icon": "scales",
+            "at": 277.11
+          },
+          {
+            "label": "Assessment Year 2026-27 Compliance",
+            "detail": "Ensure strict adherence to cash limits, TDS rules, and Chapter VI-A deductions.",
+            "icon": "calendar",
+            "at": 277.11
+          }
+        ]
+      },
+      "start": 273.09,
+      "end": 284.41,
+      "id": "b8",
+      "director_goal": "Conclude with key takeaways regarding statutory additions and deductions in PGBP computations.",
+      "anchor_phrases": [
+        "Profits and Gains of Business or Profession",
+        "Assessment Year 2026-27"
+      ],
+      "animation_role": "key_fact",
+      "anchor_alignment": [
+        {
+          "phrase": "Profits and Gains of Business or Profession",
+          "at": 277.11,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Assessment Year 2026-27",
+          "at": 273.09,
+          "matched": false,
+          "score": 0.372
+        }
+      ],
+      "anchor_match": {
+        "matched": 1,
+        "total": 2
+      }
+    }
+  ],
+  "audio_duration_sec": 284.41,
+  "anchor_match": {
+    "matched": 18,
+    "total": 23,
+    "rate": 0.783
+  }
+}

@@ -1,0 +1,640 @@
+{
+  "question_id": "dt-c3-q30",
+  "audio_url": "data/audio/dt-c3-q30.mp3",
+  "duration_sec": 185.93,
+  "sync_offset_sec": 0.0,
+  "context_pill": "Corporate PGBP Computation",
+  "example_summary": "Alpha Ltd's PGBP computation involving cash disallowances, current repairs, cessation of liability, and scientific research deductions for AY 2026-27.",
+  "source_provision": "### Statutory Summary Matrix: Corporate PGBP Adjustments\n\n| Area / Head | Statutory Section / Rule | Operative Threshold / Condition | Tax Treatment / Legal Consequence |\n| :--- | :--- | :--- | :--- |\n| Related Party Payment | Section 40A(2) | Excessive or unreasonable payments to directors or relatives | Disallowance of the excess portion over market value |\n| Cash Payments | Section 40A(3) | Aggregate cash payment exceeding ₹10,000 to a person in a single day | 100% disallowance of the cash expenditure amount |\n| Current Repairs | Section 31 | Expenditure on replacement of worn-out parts not bringing a new asset | Fully allowed as revenue expenditure if no enduring benefit |\n| Cessation of Liability | Section 41(1) | Remission or cessation of a trading liability previously allowed as deduction | Deemed business income in the year of cessation |\n| Export Incentives | Section 28(iiia) | Sale of import entitlements or licenses granted under export schemes | Chargeable as business income under PGBP |\n| Scientific Research | Section 35(2AB) | Capital and revenue expenditure on in-house R&D by approved biotech companies | 100% deduction under Section 35(2AB) |\n\n\n> [!IMPORTANT] Disallowance Interplay:\n> Section 40A(3) applies independently of Section 40A(2). When a cash payment exceeds the ₹10,000 threshold, the entire qualifying sum faces complete disallowance regardless of market value reasonableness.\n\n\n> [!NOTE] Tangible Fixed Asset ICDS V Benchmark:\n> Under ICDS V, only expenditure that increases future benefits from an existing asset beyond its previously assessed standard of performance is capitalized to actual cost.",
+  "director": {
+    "archetype": "computation_ledger",
+    "justification": "The scenario involves a series of specific statutory adjustments to a reported net profit to arrive at the final taxable income under the PGBP head.",
+    "protagonist": "Alpha Ltd",
+    "actors": [
+      "Alpha Ltd",
+      "Director's sister concern",
+      "Creditor",
+      "Prescribed Authority"
+    ],
+    "key_numbers": [
+      "₹ 12,50,000",
+      "₹ 60,000",
+      "₹ 52,000",
+      "₹ 1,80,000",
+      "₹ 6,000",
+      "₹ 1,00,000",
+      "₹ 2,00,000"
+    ],
+    "key_dates": [
+      "31st March 2026",
+      "AY 2026-27",
+      "AY 2022-23"
+    ],
+    "visual_metaphor": "A multi-stage filtration system for P&L items where each item is tested against statutory sieves.",
+    "beat_plan": [
+      {
+        "beat_goal": "Establish the starting point of Alpha Ltd's financial statement.",
+        "layout": "example_scene",
+        "anchor_phrases": [
+          "Net Profit",
+          "₹ 12,50,000",
+          "Alpha Ltd"
+        ]
+      },
+      {
+        "beat_goal": "Apply the dual disallowance for advertisement expenditure.",
+        "layout": "waterfall",
+        "anchor_phrases": [
+          "Section 40A(2)",
+          "Section 40A(3)",
+          "₹ 8,000",
+          "₹ 52,000"
+        ]
+      },
+      {
+        "beat_goal": "Evaluate the nature of plant and machinery repairs.",
+        "layout": "checklist_gate",
+        "anchor_phrases": [
+          "Section 31",
+          "Current Repairs",
+          "₹ 1.80 lacs"
+        ]
+      },
+      {
+        "beat_goal": "Address the cessation of trading liability.",
+        "layout": "deemed_value",
+        "anchor_phrases": [
+          "Section 41(1)",
+          "Liability Foregone",
+          "₹ 6,000"
+        ]
+      },
+      {
+        "beat_goal": "Confirm the taxability of export incentives.",
+        "layout": "statute_quote",
+        "anchor_phrases": [
+          "Section 28(iiia)",
+          "Import Entitlements",
+          "₹ 1 lac"
+        ]
+      },
+      {
+        "beat_goal": "Verify the deduction for in-house scientific research.",
+        "layout": "flow_actors",
+        "anchor_phrases": [
+          "Section 35(2AB)",
+          "Biotechnology",
+          "₹ 2,00,000"
+        ]
+      },
+      {
+        "beat_goal": "Summarize the final taxable income computation.",
+        "layout": "ledger",
+        "anchor_phrases": [
+          "Taxable Income",
+          "₹ 13,16,000"
+        ]
+      },
+      {
+        "beat_goal": "Highlight the critical rule on cash payment disallowance.",
+        "layout": "takeaway",
+        "anchor_phrases": [
+          "Cash Disallowance",
+          "₹ 10,000 Threshold",
+          "Independent Application"
+        ]
+      }
+    ]
+  },
+  "fallback": false,
+  "beats": [
+    {
+      "layout": "example_scene",
+      "title": {
+        "text": "Starting Point: Net Profit",
+        "at": 0.3
+      },
+      "voice_sync_text": "Alpha Ltd എന്ന manufacturing company-യുടെ financial statements നമുക്ക് നോക്കാം. 31st March 2026-ൽ അവസാനിച്ച വർഷം ഇവർ കാണിച്ചിരിക്കുന്ന Net Profit ₹ 12,50,000 ആണ്.",
+      "visual_data": {
+        "actors": [
+          {
+            "label": "Alpha Ltd",
+            "detail": "Manufacturing Company",
+            "icon": "factory",
+            "at": 4.64
+          }
+        ],
+        "transaction": "Financial Year End",
+        "facts": [
+          {
+            "label": "Net Profit",
+            "amount": 1250000,
+            "date": "31st March 2026",
+            "icon": "money_bag",
+            "at": 5.24
+          }
+        ],
+        "spoken_amounts": [
+          "₹ 12,50,000",
+          "12,50,000"
+        ]
+      },
+      "start": 0.0,
+      "end": 13.0,
+      "id": "b1",
+      "director_goal": "Establish the starting point of Alpha Ltd's financial statement.",
+      "anchor_phrases": [
+        "Net Profit",
+        "₹ 12,50,000",
+        "Alpha Ltd"
+      ],
+      "animation_role": "key_fact",
+      "anchor_alignment": [
+        {
+          "phrase": "Net Profit",
+          "at": 5.24,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "₹ 12,50,000",
+          "at": 10.78,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Alpha Ltd",
+          "at": 0.0,
+          "matched": false,
+          "score": 0.133
+        }
+      ],
+      "anchor_match": {
+        "matched": 2,
+        "total": 3
+      }
+    },
+    {
+      "layout": "waterfall",
+      "title": {
+        "text": "Advertisement Expenditure Disallowance",
+        "at": 13.65
+      },
+      "voice_sync_text": "ആദ്യം advertisement expenditure നോക്കാം. Director-ുടെ sister concern-ന് ₹ 60,000 cash ആയി കൊടുത്തു. ഇതിന്റെ market value ₹ 52,000 മാത്രമാണ്. അപ്പോൾ Section 40A(2) പ്രകാരം excess ആയ ₹ 8,000 disallow ചെയ്യണം. ബാക്കി ₹ 52,000 cash ആയി കൊടുത്തതുകൊണ്ട് Section 40A(3) പ്രകാരം അതും പൂർണ്ണമായും disallow ചെയ്യപ്പെടും.",
+      "visual_data": {
+        "stages": [
+          {
+            "label": "Total Payment",
+            "amount": 60000,
+            "icon": "money_bag",
+            "at": 30.15
+          },
+          {
+            "label": "Section 40A(2) Disallowance",
+            "detail": "Excess over Market Value",
+            "amount": 8000,
+            "sign": "-",
+            "at": 52.45
+          },
+          {
+            "label": "Section 40A(3) Disallowance",
+            "detail": "Cash Payment > 10,000",
+            "amount": 52000,
+            "sign": "-",
+            "at": 52.45
+          }
+        ],
+        "spoken_amounts": [
+          "₹ 60,000",
+          "₹ 52,000",
+          "₹ 8,000",
+          "60,000",
+          "52,000",
+          "8,000"
+        ]
+      },
+      "start": 13.35,
+      "end": 64.31,
+      "id": "b2",
+      "director_goal": "Apply the dual disallowance for advertisement expenditure.",
+      "anchor_phrases": [
+        "Section 40A(2)",
+        "Section 40A(3)",
+        "₹ 8,000",
+        "₹ 52,000"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Section 40A(2)",
+          "at": 52.45,
+          "matched": true,
+          "score": 0.953
+        },
+        {
+          "phrase": "Section 40A(3)",
+          "at": 60.05,
+          "matched": true,
+          "score": 0.953
+        },
+        {
+          "phrase": "₹ 8,000",
+          "at": 62.47,
+          "matched": true,
+          "score": 0.75
+        },
+        {
+          "phrase": "₹ 52,000",
+          "at": 33.24,
+          "matched": false,
+          "score": 0.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 4
+      }
+    },
+    {
+      "layout": "checklist_gate",
+      "title": {
+        "text": "Repairs of Plant & Machinery",
+        "at": 64.96
+      },
+      "voice_sync_text": "അടുത്തത് Repairs of plant and machinery ആണ്. ₹ 1.80 lacs ചിലവാക്കി worn out parts മാറ്റി. ഇത് Section 31 പ്രകാരം Current Repairs ആണ്, കാരണം ഇത് പുതിയ asset ഉണ്ടാക്കുന്നില്ല. അതുകൊണ്ട് ഇതിൽ പ്രത്യേക adjustment ആവശ്യമില്ല.",
+      "visual_data": {
+        "conditions": [
+          {
+            "label": "Section 31",
+            "detail": "Current Repairs",
+            "pass": true,
+            "at": 73.74
+          },
+          {
+            "label": "New Asset?",
+            "detail": "Replacement of worn out parts",
+            "pass": false,
+            "at": 76.04
+          },
+          {
+            "label": "Expenditure",
+            "amount": 180000,
+            "icon": "factory",
+            "at": 76.04
+          }
+        ],
+        "outcome": "Fully Deductible Revenue Expenditure",
+        "spoken_amounts": [
+          "₹ 1.80 lacs"
+        ]
+      },
+      "start": 64.66,
+      "end": 80.42,
+      "id": "b3",
+      "director_goal": "Evaluate the nature of plant and machinery repairs.",
+      "anchor_phrases": [
+        "Section 31",
+        "Current Repairs",
+        "₹ 1.80 lacs"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Section 31",
+          "at": 72.58,
+          "matched": true,
+          "score": 0.944
+        },
+        {
+          "phrase": "Current Repairs",
+          "at": 74.12,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "₹ 1.80 lacs",
+          "at": 67.88,
+          "matched": false,
+          "score": 0.4
+        }
+      ],
+      "anchor_match": {
+        "matched": 2,
+        "total": 3
+      }
+    },
+    {
+      "layout": "deemed_value",
+      "title": {
+        "text": "Cessation of Trading Liability",
+        "at": 81.07
+      },
+      "voice_sync_text": "ഒരു Creditor ₹ 6,000-ന്റെ liability വേണ്ടെന്ന് വെച്ചു. ഇത് AY 2022-23-ൽ deduction എടുത്തതാണ്. ഇപ്പോൾ Section 41(1) പ്രകാരം ഇത് Liability Foregone ആയി കണക്കാക്കി business income ആയി ആഡ് ചെയ്യണം.",
+      "visual_data": {
+        "actual": {
+          "label": "Liability Foregone",
+          "amount": 6000,
+          "date": "AY 2022-23",
+          "icon": "document",
+          "at": 120.39
+        },
+        "deemed": {
+          "label": "Business Income",
+          "amount": 6000,
+          "icon": "money_bag",
+          "at": 122.29
+        },
+        "rule": "Section 41(1)",
+        "spoken_amounts": [
+          "₹ 6,000",
+          "6,000"
+        ],
+        "at": 117.37
+      },
+      "start": 80.77,
+      "end": 124.57,
+      "id": "b4",
+      "director_goal": "Address the cessation of trading liability.",
+      "anchor_phrases": [
+        "Section 41(1)",
+        "Liability Foregone",
+        "₹ 6,000"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Section 41(1)",
+          "at": 117.37,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Liability Foregone",
+          "at": 120.39,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "₹ 6,000",
+          "at": 83.72,
+          "matched": false,
+          "score": 0.182
+        }
+      ],
+      "anchor_match": {
+        "matched": 2,
+        "total": 3
+      }
+    },
+    {
+      "layout": "statute_quote",
+      "title": {
+        "text": "Taxability of Export Incentives",
+        "at": 125.22
+      },
+      "voice_sync_text": "Import Entitlements വിറ്റപ്പോൾ കിട്ടിയ ₹ 1 lac ഒരു capital receipt ആണെന്നാണ് കമ്പനി പറയുന്നത്. പക്ഷെ Section 28(iiia) പ്രകാരം ഇത് business income ആണ്. ഇത് ഓൾറെഡി P&L-ൽ ഉള്ളതുകൊണ്ട് മാറ്റം വേണ്ട.",
+      "visual_data": {
+        "rule": "Sale of import entitlements is taxable as business income.",
+        "citation": "Section 28(iiia)",
+        "application": "Import Entitlements ₹ 1 lac already credited to P&L.",
+        "at": 131.64
+      },
+      "start": 124.92,
+      "end": 141.44,
+      "id": "b5",
+      "director_goal": "Confirm the taxability of export incentives.",
+      "anchor_phrases": [
+        "Section 28(iiia)",
+        "Import Entitlements",
+        "₹ 1 lac"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Section 28(iiia)",
+          "at": 133.38,
+          "matched": true,
+          "score": 0.92
+        },
+        {
+          "phrase": "Import Entitlements",
+          "at": 124.92,
+          "matched": false,
+          "score": 0.417
+        },
+        {
+          "phrase": "₹ 1 lac",
+          "at": 139.08,
+          "matched": true,
+          "score": 0.5
+        }
+      ],
+      "anchor_match": {
+        "matched": 2,
+        "total": 3
+      }
+    },
+    {
+      "layout": "flow_actors",
+      "title": {
+        "text": "In-house Scientific Research",
+        "at": 142.09
+      },
+      "voice_sync_text": "Biotechnology business-ൽ ഏർപ്പെട്ടിരിക്കുന്ന Alpha Ltd, Prescribed Authority-യുടെ അപ്രൂവലോടെ ₹ 2,00,000 R&D-ക്കായി ചിലവാക്കി. Section 35(2AB) പ്രകാരം ഇതിന് 100% deduction ലഭിക്കും. ഇത് ഓൾറെഡി ഡെബിറ്റ് ചെയ്തതാണ്.",
+      "visual_data": {
+        "actors": [
+          {
+            "label": "Alpha Ltd",
+            "icon": "factory",
+            "at": 144.79
+          },
+          {
+            "label": "Prescribed Authority",
+            "icon": "gavel",
+            "at": 146.57
+          }
+        ],
+        "edges": [
+          {
+            "label": "Biotechnology R&D",
+            "amount": 200000,
+            "detail": "Section 35(2AB)",
+            "at": 146.57
+          }
+        ],
+        "spoken_amounts": [
+          "₹ 2,00,000",
+          "2,00,000"
+        ]
+      },
+      "start": 141.79,
+      "end": 158.55,
+      "id": "b6",
+      "director_goal": "Verify the deduction for in-house scientific research.",
+      "anchor_phrases": [
+        "Section 35(2AB)",
+        "Biotechnology",
+        "₹ 2,00,000"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Section 35(2AB)",
+          "at": 151.73,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Biotechnology",
+          "at": 141.79,
+          "matched": false,
+          "score": 0.4
+        },
+        {
+          "phrase": "₹ 2,00,000",
+          "at": 149.18,
+          "matched": false,
+          "score": 0.429
+        }
+      ],
+      "anchor_match": {
+        "matched": 1,
+        "total": 3
+      }
+    },
+    {
+      "layout": "ledger",
+      "title": {
+        "text": "Computation of Taxable Income",
+        "at": 159.2
+      },
+      "voice_sync_text": "ഇനി നമുക്ക് ഫൈനൽ Taxable Income കണക്കാക്കാം. Net profit-നോട് disallowances ആഡ് ചെയ്യുമ്പോൾ നമുക്ക് കിട്ടുന്ന ആകെ തുക ₹ 13,16,000 ആണ്.",
+      "visual_data": {
+        "rows": [
+          {
+            "label": "Net Profit",
+            "amount": 1250000,
+            "at": 165.5
+          },
+          {
+            "label": "Add: Sec 40A(2) Disallowance",
+            "amount": 8000,
+            "sign": "+",
+            "at": 165.5
+          },
+          {
+            "label": "Add: Sec 40A(3) Disallowance",
+            "amount": 52000,
+            "sign": "+",
+            "at": 165.5
+          },
+          {
+            "label": "Add: Sec 41(1) Income",
+            "amount": 6000,
+            "sign": "+",
+            "at": 165.5
+          }
+        ],
+        "total": "₹ 13,16,000"
+      },
+      "start": 158.9,
+      "end": 170.5,
+      "id": "b7",
+      "director_goal": "Summarize the final taxable income computation.",
+      "anchor_phrases": [
+        "Taxable Income",
+        "₹ 13,16,000"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Taxable Income",
+          "at": 160.36,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "₹ 13,16,000",
+          "at": 167.74,
+          "matched": true,
+          "score": 0.834
+        }
+      ],
+      "anchor_match": {
+        "matched": 2,
+        "total": 2
+      }
+    },
+    {
+      "layout": "takeaway",
+      "title": {
+        "text": "Key Takeaway: Cash Disallowance",
+        "at": 171.15
+      },
+      "voice_sync_text": "പ്രധാനമായും ഓർക്കേണ്ടത് Cash Disallowance നിയമമാണ്. ₹ 10,000 Threshold കഴിഞ്ഞാൽ Section 40A(3) പ്രകാരം ആ തുക മുഴുവനായി disallow ചെയ്യപ്പെടും. ഇത് മറ്റ് സെക്ഷനുകളിൽ നിന്ന് സ്വതന്ത്രമായി അപ്ലൈ ചെയ്യണം.",
+      "visual_data": {
+        "rules": [
+          {
+            "label": "Cash Disallowance",
+            "detail": "Section 40A(3)",
+            "at": 173.01
+          },
+          {
+            "label": "₹ 10,000 Threshold",
+            "detail": "Per person per day",
+            "at": 175.59
+          },
+          {
+            "label": "Independent Application",
+            "detail": "Applies regardless of Section 40A(2)",
+            "at": 182.77
+          }
+        ]
+      },
+      "start": 170.85,
+      "end": 185.93,
+      "id": "b8",
+      "director_goal": "Highlight the critical rule on cash payment disallowance.",
+      "anchor_phrases": [
+        "Cash Disallowance",
+        "₹ 10,000 Threshold",
+        "Independent Application"
+      ],
+      "animation_role": "key_fact",
+      "anchor_alignment": [
+        {
+          "phrase": "Cash Disallowance",
+          "at": 173.01,
+          "matched": true,
+          "score": 0.823
+        },
+        {
+          "phrase": "₹ 10,000 Threshold",
+          "at": 175.59,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Independent Application",
+          "at": 182.77,
+          "matched": true,
+          "score": 0.667
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 3
+      }
+    }
+  ],
+  "needs_review": true,
+  "quality_issues": [
+    "unsupported date: period:2025-26"
+  ],
+  "audio_duration_sec": 185.93,
+  "anchor_match": {
+    "matched": 17,
+    "total": 24,
+    "rate": 0.708
+  }
+}

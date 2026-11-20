@@ -1,0 +1,501 @@
+{
+  "question_id": "dt-c3-q24",
+  "audio_url": "data/audio/dt-c3-q24.mp3",
+  "duration_sec": 78.34,
+  "sync_offset_sec": 0.0,
+  "context_pill": "Section 44AE Presumptive Taxation",
+  "example_summary": "Computation of presumptive business income for Mr. X operating goods vehicles during P.Y. 2025-26 under Section 44AE.",
+  "source_provision": "| Category | Statutory Provision | Operative Threshold / Rate | Tax Treatment / Legal Consequence |\n| --- | --- | --- | --- |\n| **Eligible Assessee** | Section 44AE(1) | Owning not more than **10 goods vehicles** at any time during the previous year | Can opt for presumptive income computation |\n| **Heavy Goods Vehicle** | Section 44AE(2)(i) | Gross vehicle weight **exceeds 12,000 kg** | **₹ 1,000 per ton** of gross vehicle weight / unladen weight per month or part of month |\n| **Other Goods Carriage** | Section 44AE(2)(ii) | Gross vehicle weight **not exceeding 12,000 kg** | **₹ 7,500 per month** or part of month for each vehicle |\n| **Ownership Period** | Section 44AE(7) | Calculated for each month or part of the month the vehicle is owned | Actual utilization or date of put to use does **not** restrict the ownership period calculation |\n\n\n> [!IMPORTANT] Threshold Limit Rule:\n> If the assessee owns more than **10 goods vehicles** at any time during the previous year, Section 44AE cannot be applied, and regular books of account must be maintained under Section 44AA and audited under Section 44AB.\n\n\n> [!WARNING] Partial Month Rule:\n> Any part of a month during which the vehicle is owned by the assessee must be considered as a full month for computing presumptive business income under Section 44AE.",
+  "director": {
+    "archetype": "computation_ledger",
+    "justification": "The provision requires a structured tally of income based on vehicle weight classification and ownership duration, making a ledger-based computation the most effective explanatory model.",
+    "protagonist": "Mr. X",
+    "actors": [
+      "Mr. X"
+    ],
+    "key_numbers": [
+      "10 goods vehicles",
+      "12,000 kg",
+      "₹ 1,000 per ton",
+      "₹ 7,500",
+      "15 ton",
+      "18 months",
+      "55 months",
+      "₹ 6,82,500"
+    ],
+    "key_dates": [
+      "1.4.2025",
+      "10.04.2025",
+      "15.03.2026",
+      "16.07.2025",
+      "02.01.2026",
+      "29.08.2025",
+      "23.02.2026"
+    ],
+    "visual_metaphor": "A logistics fleet dashboard where vehicles are sorted into weight-based lanes and a calendar tracks ownership months.",
+    "beat_plan": [
+      {
+        "beat_goal": "Establish Mr. X's business commencement and fleet size",
+        "layout": "example_scene",
+        "anchor_phrases": [
+          "Mr. X",
+          "P.Y. 2025-26",
+          "7,000 kg",
+          "15,000 kg"
+        ]
+      },
+      {
+        "beat_goal": "Verify eligibility under the 10-vehicle threshold",
+        "layout": "checklist_gate",
+        "anchor_phrases": [
+          "Section 44AE",
+          "10 goods vehicles"
+        ]
+      },
+      {
+        "beat_goal": "Classify vehicles into Heavy Goods and Others",
+        "layout": "decision_tree",
+        "anchor_phrases": [
+          "Heavy Goods Vehicle",
+          "12,000 kg"
+        ]
+      },
+      {
+        "beat_goal": "Explain the ownership month rule vs put-to-use",
+        "layout": "timeline_windows",
+        "anchor_phrases": [
+          "month or part of the month",
+          "owned",
+          "10.04.2025"
+        ]
+      },
+      {
+        "beat_goal": "Calculate income for Heavy Goods Vehicles",
+        "layout": "ledger",
+        "anchor_phrases": [
+          "15 ton",
+          "₹ 1,000 per ton",
+          "18 months"
+        ]
+      },
+      {
+        "beat_goal": "Calculate income for other goods carriages",
+        "layout": "ledger",
+        "anchor_phrases": [
+          "₹ 7,500",
+          "55 months"
+        ]
+      },
+      {
+        "beat_goal": "Summarize the total presumptive business income",
+        "layout": "takeaway",
+        "anchor_phrases": [
+          "₹ 6,82,500",
+          "A.Y. 2026-27"
+        ]
+      }
+    ]
+  },
+  "fallback": false,
+  "beats": [
+    {
+      "layout": "example_scene",
+      "title": {
+        "text": "Business Commencement & Fleet",
+        "at": 0.3
+      },
+      "voice_sync_text": "ഇവിടെ നമ്മൾ Mr. X-ന്റെ business commencement ഉം fleet size ഉം നോക്കാം. അദ്ദേഹം P.Y. 2025-26 ൽ വിവിധ vehicles വാങ്ങിയത് കണക്കാക്കണം. ചിലതിന് 7,000 kg ഉം മറ്റുള്ളവയ്ക്ക് 15,000 kg ഉം ആണ് weight.",
+      "visual_data": {
+        "actors": [
+          {
+            "label": "Mr. X",
+            "detail": "Assessee",
+            "icon": "person",
+            "at": 1.28
+          }
+        ],
+        "transaction": "Vehicle purchase for fleet",
+        "facts": [
+          {
+            "label": "P.Y. 2025-26",
+            "detail": "Previous Year",
+            "at": 5.86
+          },
+          {
+            "label": "7,000 kg",
+            "detail": "Weight category",
+            "at": 11.5
+          },
+          {
+            "label": "15,000 kg",
+            "detail": "Weight category",
+            "at": 13.94
+          }
+        ]
+      },
+      "start": 0.0,
+      "end": 16.36,
+      "id": "b1",
+      "director_goal": "Establish Mr. X's business commencement and fleet size",
+      "anchor_phrases": [
+        "Mr. X",
+        "P.Y. 2025-26",
+        "7,000 kg",
+        "15,000 kg"
+      ],
+      "animation_role": "key_fact",
+      "anchor_alignment": [
+        {
+          "phrase": "Mr. X",
+          "at": 1.28,
+          "matched": true,
+          "score": 0.92
+        },
+        {
+          "phrase": "P.Y. 2025-26",
+          "at": 5.86,
+          "matched": true,
+          "score": 0.909
+        },
+        {
+          "phrase": "7,000 kg",
+          "at": 11.5,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "15,000 kg",
+          "at": 13.94,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 4,
+        "total": 4
+      }
+    },
+    {
+      "layout": "checklist_gate",
+      "title": {
+        "text": "Eligibility Check",
+        "at": 17.01
+      },
+      "voice_sync_text": "ഈ section 44AE പ്രകാരം business ചെയ്യണമെങ്കിൽ assessee-ന്റെ കൈവശം എപ്പോഴെങ്കിലും 10 goods vehicles ൽ കൂടുതൽ ഉണ്ടാകാൻ പാടില്ല.",
+      "visual_data": {
+        "conditions": [
+          {
+            "label": "Section 44AE",
+            "detail": "Presumptive scheme",
+            "pass": true,
+            "at": 17.09
+          },
+          {
+            "label": "10 goods vehicles",
+            "detail": "Maximum threshold limit",
+            "pass": true,
+            "at": 21.85
+          }
+        ],
+        "outcome": "Eligible for Section 44AE"
+      },
+      "start": 16.71,
+      "end": 26.03,
+      "id": "b2",
+      "director_goal": "Verify eligibility under the 10-vehicle threshold",
+      "anchor_phrases": [
+        "Section 44AE",
+        "10 goods vehicles"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Section 44AE",
+          "at": 20.73,
+          "matched": true,
+          "score": 0.522
+        },
+        {
+          "phrase": "10 goods vehicles",
+          "at": 21.85,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 2,
+        "total": 2
+      }
+    },
+    {
+      "layout": "decision_tree",
+      "title": {
+        "text": "Vehicle Classification",
+        "at": 26.68
+      },
+      "voice_sync_text": "നമ്മുടെ vehicles-നെ തിരിക്കണം. അതിൽ Heavy Goods Vehicle എന്നാൽ gross vehicle weight 12,000 kg ൽ കൂടുതൽ ഉള്ളവയാണ്.",
+      "visual_data": {
+        "root": "Vehicle Classification",
+        "branches": [
+          {
+            "label": "Heavy Goods Vehicle",
+            "detail": "Exceeds 12,000 kg",
+            "at": 29.2
+          },
+          {
+            "label": "12,000 kg",
+            "detail": "Weight threshold boundary",
+            "at": 33.42
+          }
+        ]
+      },
+      "start": 26.38,
+      "end": 36.58,
+      "id": "b3",
+      "director_goal": "Classify vehicles into Heavy Goods and Others",
+      "anchor_phrases": [
+        "Heavy Goods Vehicle",
+        "12,000 kg"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Heavy Goods Vehicle",
+          "at": 29.2,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "12,000 kg",
+          "at": 33.42,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 2,
+        "total": 2
+      }
+    },
+    {
+      "layout": "timeline_windows",
+      "title": {
+        "text": "Ownership Period Rule",
+        "at": 37.23
+      },
+      "voice_sync_text": "ownership month rule പ്രകാരം month or part of the month ഉം vehicle owned ചെയ്ത കാലയളവും നോക്കണം. Actual put to use date അല്ല, മറിച്ച് 10.04.2025 മുതലുള്ള ownership ആണ് പ്രധാനം.",
+      "visual_data": {
+        "events": [
+          {
+            "label": "10.04.2025",
+            "detail": "Purchase date",
+            "date": "10.04.2025",
+            "at": 46.65
+          }
+        ],
+        "window_label": "month or part of the month owned"
+      },
+      "start": 36.93,
+      "end": 51.45,
+      "id": "b4",
+      "director_goal": "Explain the ownership month rule vs put-to-use",
+      "anchor_phrases": [
+        "month or part of the month",
+        "owned",
+        "10.04.2025"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "month or part of the month",
+          "at": 39.53,
+          "matched": true,
+          "score": 0.755
+        },
+        {
+          "phrase": "owned",
+          "at": 41.77,
+          "matched": true,
+          "score": 0.667
+        },
+        {
+          "phrase": "10.04.2025",
+          "at": 46.65,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 3
+      }
+    },
+    {
+      "layout": "ledger",
+      "title": {
+        "text": "Heavy Goods Vehicles Income",
+        "at": 52.1
+      },
+      "voice_sync_text": "Heavy Goods Vehicles-ന്റെ income കണക്കാക്കാൻ 15 ton ഉം, ₹ 1,000 per ton ഉം, കൂടാതെ 18 months ഉം ഉപയോഗിക്കുന്നു.",
+      "visual_data": {
+        "rows": [
+          {
+            "label": "15 ton",
+            "detail": "Weight",
+            "at": 55.04
+          },
+          {
+            "label": "₹ 1,000 per ton",
+            "detail": "Rate",
+            "at": 56.4
+          },
+          {
+            "label": "18 months",
+            "detail": "Period",
+            "at": 57.7
+          }
+        ],
+        "total": "Computation for HGV"
+      },
+      "start": 51.8,
+      "end": 60.8,
+      "id": "b5",
+      "director_goal": "Calculate income for Heavy Goods Vehicles",
+      "anchor_phrases": [
+        "15 ton",
+        "₹ 1,000 per ton",
+        "18 months"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "15 ton",
+          "at": 55.04,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "₹ 1,000 per ton",
+          "at": 56.4,
+          "matched": true,
+          "score": 0.76
+        },
+        {
+          "phrase": "18 months",
+          "at": 57.7,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 3
+      }
+    },
+    {
+      "layout": "ledger",
+      "title": {
+        "text": "Other Goods Carriages Income",
+        "at": 61.45
+      },
+      "voice_sync_text": "മറ്റ് goods carriages-ന് മാസം ₹ 7,500 വെച്ച് 55 months ആണ് കണക്കാക്കുന്നത്.",
+      "visual_data": {
+        "rows": [
+          {
+            "label": "₹ 7,500",
+            "detail": "Monthly rate",
+            "at": 63.37
+          },
+          {
+            "label": "55 months",
+            "detail": "Total months",
+            "at": 65.43
+          }
+        ],
+        "total": "Computation for other carriages"
+      },
+      "start": 61.15,
+      "end": 67.55,
+      "id": "b6",
+      "director_goal": "Calculate income for other goods carriages",
+      "anchor_phrases": [
+        "₹ 7,500",
+        "55 months"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "₹ 7,500",
+          "at": 63.37,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "55 months",
+          "at": 65.43,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 2,
+        "total": 2
+      }
+    },
+    {
+      "layout": "takeaway",
+      "title": {
+        "text": "Total Presumptive Income",
+        "at": 68.2
+      },
+      "voice_sync_text": "അങ്ങനെ A.Y. 2026-27 ലേക്ക് Mr. X-ന്റെ total presumptive business income ₹ 6,82,500 ആയി വരുന്നു.",
+      "visual_data": {
+        "rules": [
+          {
+            "label": "₹ 6,82,500",
+            "detail": "Total presumptive income under Section 44AE",
+            "at": 72.08
+          },
+          {
+            "label": "A.Y. 2026-27",
+            "detail": "Assessment Year",
+            "at": 72.08
+          }
+        ]
+      },
+      "start": 67.9,
+      "end": 78.34,
+      "id": "b7",
+      "director_goal": "Summarize the total presumptive business income",
+      "anchor_phrases": [
+        "₹ 6,82,500",
+        "A.Y. 2026-27"
+      ],
+      "animation_role": "key_fact",
+      "anchor_alignment": [
+        {
+          "phrase": "₹ 6,82,500",
+          "at": 75.34,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "A.Y. 2026-27",
+          "at": 68.67,
+          "matched": false,
+          "score": 0.3
+        }
+      ],
+      "anchor_match": {
+        "matched": 1,
+        "total": 2
+      }
+    }
+  ],
+  "audio_duration_sec": 78.34,
+  "anchor_match": {
+    "matched": 17,
+    "total": 18,
+    "rate": 0.944
+  }
+}

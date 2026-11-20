@@ -1,0 +1,694 @@
+{
+  "question_id": "dt-c3-q25",
+  "audio_url": "data/audio/dt-c3-q25.mp3",
+  "duration_sec": 148.78,
+  "sync_offset_sec": 0.0,
+  "context_pill": "Presumptive Taxation vs. Books of Account",
+  "example_summary": "Ms. Janani, an interior decorator with ₹ 47.8L receipts, must decide between the 50% presumptive profit scheme (Section 44ADA) and maintaining books of account, considering house property income and advance tax interest.",
+  "source_provision": "### Master Statutory Summary Matrix\n\n| Area / Provision | Statutory Section | Operative Threshold / Condition | Tax Treatment / Legal Consequence |\n| :--- | :--- | :--- | :--- |\n| **Presumptive Profession** | Section 44ADA | Gross receipts up to ₹ 75,00,000 (with cash receipts up to 5%) | Deemed profit is 50% of gross receipts; all deductions u/s 30 to 38 are deemed allowed. |\n| **Books & Audit** | Section 44AA & 44AB | Declaring lower than 50% profit | Mandatory maintenance of books and tax audit; due date is 31st October. |\n| **House Property** | Section 24 | Standard deduction on Let-out property | 30% deduction from Annual Value; self-occupied property income is Nil. |\n| **Advance Tax Interest** | Section 234B & 234C | Default in payment of advance tax installments | Simple interest @ 1% per month for default or short-payment of advance tax. |\n\n\n> [!IMPORTANT] Presumptive Disallowance: Under Section 44ADA, once presumptive income is computed at 50%, no separate deduction for depreciation u/s 32 or any other business expense is permissible.\n\n\n> [!WARNING] Lower Profit Trap: If an assessee claims profits lower than 50% and total income exceeds the basic exemption limit, maintaining books u/s 44AA and getting an audit done u/s 44AB is compulsory.",
+  "director": {
+    "archetype": "two_regime_comparison",
+    "justification": "The question requires comparing two distinct options for Ms. Janani: opting for presumptive taxation under section 44ADA versus computing income as per books of account.",
+    "protagonist": "Ms. Janani",
+    "actors": [
+      "Ms. Janani",
+      "Tax Advisor"
+    ],
+    "key_numbers": [
+      "₹ 47,80,000",
+      "₹ 25,00,000",
+      "₹ 1,50,000",
+      "₹ 15,000",
+      "₹ 23,90,000",
+      "₹ 25,16,000",
+      "₹ 5,89,992",
+      "₹ 6,01,790",
+      "₹ 24,76,000",
+      "₹ 6,12,450",
+      "₹ 10,660"
+    ],
+    "key_dates": [
+      "31.03.2026",
+      "April, 2026",
+      "31.10.2026",
+      "31st July, 2026",
+      "15.06.2025",
+      "15.09.2025",
+      "15.12.2025",
+      "15.03.2026"
+    ],
+    "visual_metaphor": "A side-by-side weighing scale balancing presumptive tax computation against books of account computation including interest.",
+    "beat_plan": [
+      {
+        "beat_goal": "Establish Ms. Janani's interior decoration profession gross receipts and the consultation context in April 2026.",
+        "layout": "example_scene",
+        "anchor_phrases": [
+          "Ms. Janani",
+          "₹ 47,80,000",
+          "interior decoration profession",
+          "April, 2026"
+        ]
+      },
+      {
+        "beat_goal": "Evaluate eligibility for presumptive taxation under section 44ADA based on the ₹ 50,00,000 threshold.",
+        "layout": "checklist_gate",
+        "anchor_phrases": [
+          "Section 44ADA",
+          "₹ 50,00,000",
+          "deemed profit",
+          "50%"
+        ]
+      },
+      {
+        "beat_goal": "Compute income from house property for both self-occupied and let-out properties under section 24.",
+        "layout": "ledger",
+        "anchor_phrases": [
+          "Section 24",
+          "₹ 15,000",
+          "Annual Value",
+          "30% standard deduction"
+        ]
+      },
+      {
+        "beat_goal": "Compare Regime I (Presumptive Basis u/s 44ADA) total tax and interest liability.",
+        "layout": "compare_regimes",
+        "anchor_phrases": [
+          "Presumptive basis",
+          "Total Income",
+          "₹ 25,16,000",
+          "₹ 6,01,790"
+        ]
+      },
+      {
+        "beat_goal": "Compare Regime II (Books of Account Basis) including net income and depreciation adjustments.",
+        "layout": "compare_regimes",
+        "anchor_phrases": [
+          "Books of account",
+          "₹ 25,00,000",
+          "depreciation",
+          "₹ 6,12,450"
+        ]
+      },
+      {
+        "beat_goal": "Analyze advance tax default interest implications under sections 234B and 234C.",
+        "layout": "flow_actors",
+        "anchor_phrases": [
+          "Section 234B",
+          "Section 234C",
+          "advance tax",
+          "1% per month"
+        ]
+      },
+      {
+        "beat_goal": "Conclude the final recommendation on why opting for presumptive tax is beneficial and state the return filing due date.",
+        "layout": "takeaway",
+        "anchor_phrases": [
+          "₹ 10,660",
+          "Section 44ADA",
+          "beneficial",
+          "31st July, 2026"
+        ]
+      }
+    ]
+  },
+  "fallback": false,
+  "beats": [
+    {
+      "layout": "example_scene",
+      "title": {
+        "text": "Consultation with Ms. Janani",
+        "at": 0.3
+      },
+      "voice_sync_text": "Ms. Janani ഒരു interior decoration profession നടത്തുകയാണ്. April, 2026-ൽ അവർ തന്റെ Tax Advisor-നെ കാണുന്നു. 31.03.2026-ൽ അവസാനിച്ച വർഷത്തെ അവരുടെ gross receipts ₹ 47,80,000 ആണ്.",
+      "visual_data": {
+        "actors": [
+          {
+            "label": "Ms. Janani",
+            "detail": "Interior Decorator",
+            "icon": "person",
+            "at": 1.14
+          },
+          {
+            "label": "Tax Advisor",
+            "detail": "Consultant",
+            "icon": "person",
+            "at": 7.26
+          }
+        ],
+        "transaction": "Tax Planning Consultation",
+        "facts": [
+          {
+            "label": "Gross Receipts",
+            "amount": 4780000,
+            "date": "31.03.2026",
+            "icon": "money_bag",
+            "at": 13.88
+          },
+          {
+            "label": "Consultation Date",
+            "date": "April, 2026",
+            "icon": "calendar",
+            "at": 13.88
+          }
+        ],
+        "spoken_amounts": [
+          "₹ 47,80,000",
+          "47,80,000"
+        ]
+      },
+      "start": 0.0,
+      "end": 18.44,
+      "id": "b1",
+      "director_goal": "Establish Ms. Janani's interior decoration profession gross receipts and the consultation context in April 2026.",
+      "anchor_phrases": [
+        "Ms. Janani",
+        "₹ 47,80,000",
+        "interior decoration profession",
+        "April, 2026"
+      ],
+      "animation_role": "key_fact",
+      "anchor_alignment": [
+        {
+          "phrase": "Ms. Janani",
+          "at": 0.74,
+          "matched": true,
+          "score": 0.8
+        },
+        {
+          "phrase": "₹ 47,80,000",
+          "at": 15.48,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "interior decoration profession",
+          "at": 1.56,
+          "matched": false,
+          "score": 0.056
+        },
+        {
+          "phrase": "April, 2026",
+          "at": 6.15,
+          "matched": false,
+          "score": 0.25
+        }
+      ],
+      "anchor_match": {
+        "matched": 2,
+        "total": 4
+      }
+    },
+    {
+      "layout": "checklist_gate",
+      "title": {
+        "text": "Eligibility for Section 44ADA",
+        "at": 19.09
+      },
+      "voice_sync_text": "Section 44ADA പ്രകാരം presumptive taxation തിരഞ്ഞെടുക്കാൻ gross receipts ₹ 50,00,000-ൽ താഴെ ആയിരിക്കണം. ഇവിടെ ₹ 47,80,000 ആയതുകൊണ്ട് അവർക്ക് ഇത് സാധ്യമാണ്. ഇതിൽ deemed profit എന്നത് gross receipts-ന്റെ 50% ആയിരിക്കും.",
+      "visual_data": {
+        "conditions": [
+          {
+            "label": "Gross Receipts Limit",
+            "amount": 5000000,
+            "status": "Below Limit",
+            "pass": true,
+            "icon": "scales",
+            "at": 21.87
+          },
+          {
+            "label": "Actual Receipts",
+            "amount": 4780000,
+            "pass": true,
+            "icon": "money_bag",
+            "at": 21.87
+          },
+          {
+            "label": "Deemed Profit Rate",
+            "value": "50%",
+            "icon": "document",
+            "at": 33.47
+          }
+        ],
+        "outcome": "Eligible for Section 44ADA",
+        "spoken_amounts": [
+          "₹ 50,00,000",
+          "₹ 47,80,000",
+          "50,00,000",
+          "47,80,000"
+        ]
+      },
+      "start": 18.79,
+      "end": 38.19,
+      "id": "b2",
+      "director_goal": "Evaluate eligibility for presumptive taxation under section 44ADA based on the ₹ 50,00,000 threshold.",
+      "anchor_phrases": [
+        "Section 44ADA",
+        "₹ 50,00,000",
+        "deemed profit",
+        "50%"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Section 44ADA",
+          "at": 19.47,
+          "matched": true,
+          "score": 0.556
+        },
+        {
+          "phrase": "₹ 50,00,000",
+          "at": 29.51,
+          "matched": true,
+          "score": 0.667
+        },
+        {
+          "phrase": "deemed profit",
+          "at": 33.47,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "50%",
+          "at": 34.95,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 4,
+        "total": 4
+      }
+    },
+    {
+      "layout": "ledger",
+      "title": {
+        "text": "Income from House Property",
+        "at": 38.84
+      },
+      "voice_sync_text": "അടുത്തതായി house property income നോക്കാം. Section 24 പ്രകാരം self-occupied property-യുടെ മൂല്യം Nil ആണ്. Let-out property-ക്ക് മാസം ₹ 15,000 വെച്ച് Annual Value ₹ 1,80,000 വരും. ഇതിൽ നിന്നും 30% standard deduction കുറച്ചാൽ ₹ 1,26,000 ആണ് net income.",
+      "visual_data": {
+        "rows": [
+          {
+            "label": "Self-occupied Property",
+            "value": "Nil",
+            "icon": "house",
+            "at": 44.08
+          },
+          {
+            "label": "Let-out Rent (Monthly)",
+            "amount": 15000,
+            "icon": "money_bag",
+            "at": 50.52
+          },
+          {
+            "label": "Annual Value",
+            "amount": 180000,
+            "sign": "=",
+            "icon": "money_bag",
+            "at": 50.52
+          },
+          {
+            "label": "30% standard deduction",
+            "amount": 54000,
+            "sign": "-",
+            "icon": "document",
+            "at": 55.72
+          }
+        ],
+        "total": "₹ 1,26,000",
+        "spoken_amounts": [
+          "₹ 15,000",
+          "₹ 1,80,000",
+          "15,000",
+          "1,80,000"
+        ]
+      },
+      "start": 38.54,
+      "end": 61.42,
+      "id": "b3",
+      "director_goal": "Compute income from house property for both self-occupied and let-out properties under section 24.",
+      "anchor_phrases": [
+        "Section 24",
+        "₹ 15,000",
+        "Annual Value",
+        "30% standard deduction"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Section 24",
+          "at": 42.04,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "₹ 15,000",
+          "at": 48.28,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Annual Value",
+          "at": 52.14,
+          "matched": false,
+          "score": 0.316
+        },
+        {
+          "phrase": "30% standard deduction",
+          "at": 55.72,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 4
+      }
+    },
+    {
+      "layout": "compare_regimes",
+      "title": {
+        "text": "Regime I: Presumptive Basis",
+        "at": 62.07
+      },
+      "voice_sync_text": "Presumptive basis തിരഞ്ഞെടുക്കുകയാണെങ്കിൽ, Total Income ₹ 25,16,000 വരും. ഇതിന്റെ ടാക്സും സെസ്സും ചേർത്ത് ₹ 5,89,992 ആകും. അഡ്വാൻസ് ടാക്സ് അടയ്ക്കാത്തതിനാൽ പലിശയും ചേർത്ത് ആകെ ബാധ്യത ₹ 6,01,790 ആണ്.",
+      "visual_data": {
+        "regimes": [
+          {
+            "label": "Total Income (Presumptive)",
+            "amount": 2516000,
+            "icon": "money_bag",
+            "at": 64.29
+          },
+          {
+            "label": "Tax Liability (incl. Cess)",
+            "amount": 589992,
+            "icon": "bank",
+            "at": 74.37
+          },
+          {
+            "label": "Total Tax & Interest",
+            "amount": 601790,
+            "status": "Final Liability",
+            "icon": "scales",
+            "at": 74.37
+          }
+        ],
+        "spoken_amounts": [
+          "₹ 25,16,000",
+          "₹ 5,89,992",
+          "₹ 6,01,790",
+          "25,16,000",
+          "5,89,992",
+          "6,01,790"
+        ]
+      },
+      "start": 61.77,
+      "end": 81.29,
+      "id": "b4",
+      "director_goal": "Compare Regime I (Presumptive Basis u/s 44ADA) total tax and interest liability.",
+      "anchor_phrases": [
+        "Presumptive basis",
+        "Total Income",
+        "₹ 25,16,000",
+        "₹ 6,01,790"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Presumptive basis",
+          "at": 61.77,
+          "matched": false,
+          "score": 0.455
+        },
+        {
+          "phrase": "Total Income",
+          "at": 64.29,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "₹ 25,16,000",
+          "at": 65.21,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "₹ 6,01,790",
+          "at": 75.71,
+          "matched": true,
+          "score": 0.995
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 4
+      }
+    },
+    {
+      "layout": "compare_regimes",
+      "title": {
+        "text": "Regime II: Books of Account",
+        "at": 81.94
+      },
+      "voice_sync_text": "ഇനി Books of account പ്രകാരം നോക്കിയാൽ, ₹ 25,00,000 ലാഭത്തിൽ നിന്നും depreciation ₹ 1,50,000 കുറയ്ക്കാം. പക്ഷേ ഇവിടെ അഡ്വാൻസ് ടാക്സ് ഇൻസ്റ്റാൾമെന്റുകൾ വൈകിയതിനാൽ പലിശ കൂടും. അങ്ങനെ ആകെ ബാധ്യത ₹ 6,12,450 ആയി ഉയരും.",
+      "visual_data": {
+        "regimes": [
+          {
+            "label": "Net Income (Before Dep.)",
+            "amount": 2500000,
+            "icon": "money_bag",
+            "at": 81.64
+          },
+          {
+            "label": "Depreciation",
+            "amount": 150000,
+            "sign": "-",
+            "icon": "document",
+            "at": 85.12
+          },
+          {
+            "label": "Total Tax & Interest",
+            "amount": 612450,
+            "status": "Higher Liability",
+            "icon": "scales",
+            "at": 85.12
+          }
+        ],
+        "spoken_amounts": [
+          "₹ 25,00,000",
+          "₹ 1,50,000",
+          "₹ 6,12,450",
+          "25,00,000",
+          "1,50,000",
+          "6,12,450"
+        ]
+      },
+      "start": 81.64,
+      "end": 103.6,
+      "id": "b5",
+      "director_goal": "Compare Regime II (Books of Account Basis) including net income and depreciation adjustments.",
+      "anchor_phrases": [
+        "Books of account",
+        "₹ 25,00,000",
+        "depreciation",
+        "₹ 6,12,450"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Books of account",
+          "at": 82.78,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "₹ 25,00,000",
+          "at": 90.1,
+          "matched": true,
+          "score": 0.52
+        },
+        {
+          "phrase": "depreciation",
+          "at": 97.92,
+          "matched": true,
+          "score": 0.48
+        },
+        {
+          "phrase": "₹ 6,12,450",
+          "at": 98.92,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 4,
+        "total": 4
+      }
+    },
+    {
+      "layout": "flow_actors",
+      "title": {
+        "text": "Interest on Advance Tax Default",
+        "at": 104.25
+      },
+      "voice_sync_text": "Advance tax കൃത്യസമയത്ത് അടയ്ക്കാത്തതുകൊണ്ട് Section 234B പ്രകാരവും, ഓരോ ക്വാർട്ടറിലെയും ഷോർട്ട്ഫാളിന് Section 234C പ്രകാരവും 1% per month എന്ന നിരക്കിൽ പലിശ നൽകേണ്ടി വരും. 15.06.2025, 15.09.2025, 15.12.2025, 15.03.2026 എന്നീ തീയതികളിലെ കുടിശ്ശിക ഇതിനെ ബാധിക്കും.",
+      "visual_data": {
+        "actors": [
+          {
+            "label": "Section 234B",
+            "detail": "Default in payment",
+            "icon": "gavel",
+            "at": 106.91
+          },
+          {
+            "label": "Section 234C",
+            "detail": "Deferment of installments",
+            "icon": "gavel",
+            "at": 109.95
+          }
+        ],
+        "edges": [
+          {
+            "label": "Interest Rate",
+            "value": "1% per month",
+            "icon": "money_bag",
+            "at": 114.47
+          },
+          {
+            "label": "Installment Dates",
+            "detail": "15.06.2025 to 15.03.2026",
+            "icon": "calendar",
+            "at": 117.27
+          }
+        ],
+        "spoken_dates": [
+          "15.09.2025",
+          "15.12.2025"
+        ]
+      },
+      "start": 103.95,
+      "end": 132.63,
+      "id": "b6",
+      "director_goal": "Analyze advance tax default interest implications under sections 234B and 234C.",
+      "anchor_phrases": [
+        "Section 234B",
+        "Section 234C",
+        "advance tax",
+        "1% per month"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Section 234B",
+          "at": 106.91,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Section 234C",
+          "at": 109.95,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "advance tax",
+          "at": 103.95,
+          "matched": false,
+          "score": 0.4
+        },
+        {
+          "phrase": "1% per month",
+          "at": 115.25,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 4
+      }
+    },
+    {
+      "layout": "takeaway",
+      "title": {
+        "text": "Final Recommendation",
+        "at": 133.28
+      },
+      "voice_sync_text": "ചുരുക്കത്തിൽ, Section 44ADA തിരഞ്ഞെടുക്കുന്നതാണ് beneficial. ഇതിലൂടെ ₹ 10,660 ലാഭിക്കാം. ഈ സാഹചര്യത്തിൽ return ഫയൽ ചെയ്യേണ്ട അവസാന തീയതി 31st July, 2026 ആണ്.",
+      "visual_data": {
+        "rules": [
+          {
+            "label": "Tax Saving",
+            "amount": 10660,
+            "icon": "money_bag",
+            "at": 132.98
+          },
+          {
+            "label": "Opt for Section 44ADA",
+            "status": "Beneficial",
+            "icon": "scales",
+            "at": 134.02
+          },
+          {
+            "label": "Return Filing Due Date",
+            "date": "31st July, 2026",
+            "icon": "calendar",
+            "at": 145.36
+          }
+        ],
+        "spoken_amounts": [
+          "₹ 10,660",
+          "10,660"
+        ]
+      },
+      "start": 132.98,
+      "end": 148.78,
+      "id": "b7",
+      "director_goal": "Conclude the final recommendation on why opting for presumptive tax is beneficial and state the return filing due date.",
+      "anchor_phrases": [
+        "₹ 10,660",
+        "Section 44ADA",
+        "beneficial",
+        "31st July, 2026"
+      ],
+      "animation_role": "key_fact",
+      "anchor_alignment": [
+        {
+          "phrase": "₹ 10,660",
+          "at": 138.88,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Section 44ADA",
+          "at": 134.39,
+          "matched": false,
+          "score": 0.364
+        },
+        {
+          "phrase": "beneficial",
+          "at": 137.91,
+          "matched": false,
+          "score": 0.429
+        },
+        {
+          "phrase": "31st July, 2026",
+          "at": 145.36,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 2,
+        "total": 4
+      }
+    }
+  ],
+  "audio_duration_sec": 148.78,
+  "anchor_match": {
+    "matched": 21,
+    "total": 28,
+    "rate": 0.75
+  }
+}

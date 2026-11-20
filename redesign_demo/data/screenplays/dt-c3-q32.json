@@ -1,0 +1,434 @@
+{
+  "question_id": "dt-c3-q32",
+  "audio_url": "data/audio/dt-c3-q32.mp3",
+  "duration_sec": 214.6,
+  "sync_offset_sec": 0.0,
+  "context_pill": "PGBP: Survey Adjustments & Section 35AD",
+  "example_summary": "This example calculates the taxable income for Pingu Trading Pvt. Ltd. by adjusting book profits for survey-detected stock differences, statutory disallowances for political ads and TDS defaults, and applying the 100% deduction for specified warehousing business under Section 35AD.",
+  "source_provision": "### Statutory Summary Matrix: PGBP Adjustments & Direct Tax Rules\n\n| Area / Head | Statutory Section / Rule | Operative Threshold / Condition | Tax Treatment / Legal Consequence |\n| :--- | :--- | :--- | :--- |\n| **Stock Survey** | Section 133A | Survey revealing unrecorded stocks or omitted sales | Added directly to business income / PGBP |\n| **Rented Premises Repairs** | Section 30(a)(i) / Section 37 | Tenant incurring repairs without contractual obligation | Allowable u/s 37 if required for efficient business operations |\n| **Political Advertisements** | Section 37(2B) | Advertisement in souvenirs of political parties | Strictly disallowed as business expenditure |\n| **TDS Non-Deduction** | Section 40(a)(ia) | Specified payments made without tax deduction at source | 30% of such sum disallowed under PGBP |\n| **Excessive Payments** | Section 40A(2) | Payments to related parties exceeding fair market value | Excess amount over fair market value disallowed |\n| **Specified Business** | Section 35AD | Capital expenditure on specified businesses like warehousing | 100% deduction of capital expenditure allowed |\n| **Specified Business Loss** | Section 73A | Loss from specified business u/s 35AD | Can be set off and carried forward only against specified business income |\n\n> [!IMPORTANT]\n> Section 35AD Deduction: Capital expenditure incurred on specified businesses qualifies for a 100% deduction, and any resulting loss can be carried forward exclusively under Section 73A.\n\n> [!WARNING]\n> Section 40(a)(ia) Disallowance: Failure to deduct tax at source on resident payments results in a statutory disallowance of 30% of the expenditure.",
+  "director": {
+    "archetype": "computation_ledger",
+    "justification": "The problem requires a comprehensive reconciliation of book profit to taxable income by adjusting for survey findings, specific disallowances, and section 35AD deductions.",
+    "protagonist": "Pingu Trading Pvt. Ltd.",
+    "actors": [
+      "Mr. X",
+      "Wife of Director",
+      "Income Tax Department"
+    ],
+    "key_numbers": [
+      "33,90,000",
+      "3,75,000",
+      "25,00,000",
+      "30%",
+      "100%"
+    ],
+    "key_dates": [
+      "31.03.2026",
+      "13.03.2026",
+      "15.09.2025"
+    ],
+    "visual_metaphor": "A balancing scale where the starting net profit is adjusted by adding back disallowed expenses and subtracting tax-deductible capital investments.",
+    "beat_plan": [
+      {
+        "beat_goal": "Establish the starting net profit and the impact of the survey findings.",
+        "layout": "example_scene",
+        "anchor_phrases": [
+          "Net profit 33,90,000",
+          "Section 133A",
+          "3,75,000"
+        ]
+      },
+      {
+        "beat_goal": "Reconcile business income by adjusting for non-allowable expenses and specific disallowances.",
+        "layout": "ledger",
+        "anchor_phrases": [
+          "Section 37(2B)",
+          "Section 40A(2)",
+          "Section 40(a)(ia)"
+        ]
+      },
+      {
+        "beat_goal": "Apply the specific deduction for capital expenditure on warehousing.",
+        "layout": "deemed_value",
+        "anchor_phrases": [
+          "Section 35AD",
+          "25,00,000",
+          "100% deduction"
+        ]
+      },
+      {
+        "beat_goal": "Handle the loss from specified business and carry forward rules.",
+        "layout": "waterfall",
+        "anchor_phrases": [
+          "Section 73A",
+          "Specified business loss"
+        ]
+      },
+      {
+        "beat_goal": "Summarize the final taxable income calculation.",
+        "layout": "takeaway",
+        "anchor_phrases": [
+          "Total Income",
+          "Section 80GGB"
+        ]
+      }
+    ]
+  },
+  "fallback": false,
+  "beats": [
+    {
+      "layout": "example_scene",
+      "title": {
+        "text": "Net Profit & Survey Findings",
+        "at": 0.3
+      },
+      "voice_sync_text": "നമ്മുടെ കഥയിലെ protagonist Pingu Trading Pvt. Ltd. ആണ്. അവരുടെ Net profit 33,90,000 രൂപയാണ്. എന്നാൽ 31.03.2026-ൽ നടന്ന Section 133A survey-ൽ ചില കാര്യങ്ങൾ കണ്ടെത്തി. ഇതിന്റെ ഫലമായി 3,75,000 രൂപ business income-ലേക്ക് add ചെയ്യേണ്ടി വന്നു.",
+      "visual_data": {
+        "actors": [
+          {
+            "label": "Pingu Trading Pvt. Ltd.",
+            "icon": "factory",
+            "detail": "Assessee",
+            "at": 29.32
+          },
+          {
+            "label": "IT Department",
+            "icon": "gavel",
+            "detail": "Survey Authority",
+            "at": 29.32
+          }
+        ],
+        "transaction": "Survey Adjustments",
+        "facts": [
+          {
+            "label": "Net profit 33,90,000",
+            "amount": 3390000,
+            "icon": "money_bag",
+            "at": 31.56
+          },
+          {
+            "label": "Section 133A",
+            "detail": "Survey Date",
+            "date": "31.03.2026",
+            "icon": "calendar",
+            "at": 35.34
+          },
+          {
+            "label": "3,75,000",
+            "detail": "Stock & Sales Difference",
+            "amount": 375000,
+            "sign": "+",
+            "icon": "scales",
+            "at": 43.2
+          }
+        ]
+      },
+      "start": 0.0,
+      "end": 47.2,
+      "id": "b1",
+      "director_goal": "Establish the starting net profit and the impact of the survey findings.",
+      "anchor_phrases": [
+        "Net profit 33,90,000",
+        "Section 133A",
+        "3,75,000"
+      ],
+      "animation_role": "key_fact",
+      "anchor_alignment": [
+        {
+          "phrase": "Net profit 33,90,000",
+          "at": 31.56,
+          "matched": true,
+          "score": 0.882
+        },
+        {
+          "phrase": "Section 133A",
+          "at": 35.34,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "3,75,000",
+          "at": 43.2,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 3
+      }
+    },
+    {
+      "layout": "ledger",
+      "title": {
+        "text": "Business Income Reconciliation",
+        "at": 47.85
+      },
+      "voice_sync_text": "അടുത്തതായി disallowances നോക്കാം. Section 37(2B) പ്രകാരം political party-യുടെ souvenir-ൽ നൽകിയ advertisement-ന്റെ 2,500 രൂപ disallowed ആണ്. Director-ന്റെ ഭാര്യക്ക് നൽകിയ തുകയിൽ fair market value-ക്ക് മുകളിലുള്ള 75,000 രൂപ Section 40A(2) പ്രകാരം disallow ചെയ്തു. കൂടാതെ TDS deduct ചെയ്യാത്തതിനാൽ interest-ന്റെ 30% അതായത് 24,000 രൂപ Section 40(a)(ia) പ്രകാരം add back ചെയ്തു.",
+      "visual_data": {
+        "rows": [
+          {
+            "label": "Section 37(2B)",
+            "detail": "Political Advertisement",
+            "amount": 2500,
+            "sign": "+",
+            "at": 77.93
+          },
+          {
+            "label": "Section 40A(2)",
+            "detail": "Excess to Director's Wife",
+            "amount": 75000,
+            "sign": "+",
+            "at": 91.45
+          },
+          {
+            "label": "Section 40(a)(ia)",
+            "detail": "30% of Interest (80,000)",
+            "amount": 24000,
+            "sign": "+",
+            "at": 91.45
+          },
+          {
+            "label": "GST Penalty",
+            "detail": "Delayed Filing",
+            "amount": 5300,
+            "sign": "+",
+            "at": 91.45
+          }
+        ],
+        "total": "Adjusted Business Income",
+        "spoken_amounts": [
+          "2,500",
+          "75,000",
+          "24,000"
+        ]
+      },
+      "start": 47.55,
+      "end": 105.27,
+      "id": "b2",
+      "director_goal": "Reconcile business income by adjusting for non-allowable expenses and specific disallowances.",
+      "anchor_phrases": [
+        "Section 37(2B)",
+        "Section 40A(2)",
+        "Section 40(a)(ia)"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Section 37(2B)",
+          "at": 77.93,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Section 40A(2)",
+          "at": 91.45,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Section 40(a)(ia)",
+          "at": 98.77,
+          "matched": false,
+          "score": 0.457
+        }
+      ],
+      "anchor_match": {
+        "matched": 2,
+        "total": 3
+      }
+    },
+    {
+      "layout": "deemed_value",
+      "title": {
+        "text": "Specified Business Deduction",
+        "at": 105.92
+      },
+      "voice_sync_text": "Pingu Trading ഒരു agricultural warehouse നിർമ്മിക്കാൻ 25,00,000 രൂപ invest ചെയ്തിട്ടുണ്ട്. Section 35AD പ്രകാരം ഇങ്ങനെയുള്ള specified business-ന് 100% deduction ലഭിക്കും.",
+      "visual_data": {
+        "actual": {
+          "label": "Warehousing Income",
+          "amount": 1500000,
+          "icon": "house",
+          "at": 112.56
+        },
+        "deemed": {
+          "label": "25,00,000",
+          "detail": "Capital Expenditure",
+          "amount": 2500000,
+          "icon": "money_bag",
+          "at": 112.56
+        },
+        "rule": "Section 35AD: 100% deduction for specified business",
+        "at": 112.56
+      },
+      "start": 105.62,
+      "end": 119.22,
+      "id": "b3",
+      "director_goal": "Apply the specific deduction for capital expenditure on warehousing.",
+      "anchor_phrases": [
+        "Section 35AD",
+        "25,00,000",
+        "100% deduction"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Section 35AD",
+          "at": 112.56,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "25,00,000",
+          "at": 109.94,
+          "matched": false,
+          "score": 0.444
+        },
+        {
+          "phrase": "100% deduction",
+          "at": 114.86,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 2,
+        "total": 3
+      }
+    },
+    {
+      "layout": "waterfall",
+      "title": {
+        "text": "Specified Business Loss",
+        "at": 119.87
+      },
+      "voice_sync_text": "ഈ warehousing business-ൽ നിന്നുള്ള income 15,00,000 രൂപയാണ്. എന്നാൽ 25,00,000 രൂപ deduction ഉള്ളതിനാൽ 10,00,000 രൂപയുടെ Specified business loss ഉണ്ടാകുന്നു. Section 73A പ്രകാരം ഈ നഷ്ടം മറ്റ് business income-മായി set off ചെയ്യാൻ കഴിയില്ല, ഇത് carry forward മാത്രമേ ചെയ്യാൻ പറ്റൂ.",
+      "visual_data": {
+        "stages": [
+          {
+            "label": "Warehousing Income",
+            "amount": 1500000,
+            "sign": "+",
+            "at": 148.35
+          },
+          {
+            "label": "Section 35AD Deduction",
+            "amount": 2500000,
+            "sign": "-",
+            "at": 158.73
+          },
+          {
+            "label": "Specified business loss",
+            "detail": "Section 73A Carry Forward",
+            "amount": 1000000,
+            "status": "Loss",
+            "at": 158.73
+          }
+        ],
+        "spoken_amounts": [
+          "15,00,000",
+          "25,00,000",
+          "10,00,000"
+        ]
+      },
+      "start": 119.57,
+      "end": 166.89,
+      "id": "b4",
+      "director_goal": "Handle the loss from specified business and carry forward rules.",
+      "anchor_phrases": [
+        "Section 73A",
+        "Specified business loss"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Section 73A",
+          "at": 158.73,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Specified business loss",
+          "at": 161.43,
+          "matched": true,
+          "score": 0.558
+        }
+      ],
+      "anchor_match": {
+        "matched": 2,
+        "total": 2
+      }
+    },
+    {
+      "layout": "takeaway",
+      "title": {
+        "text": "Final Taxable Income",
+        "at": 167.54
+      },
+      "voice_sync_text": "അവസാനമായി, business income-നോടൊപ്പം interest on refund കൂടി ചേർത്ത് Gross Total Income കണ്ടെത്താം. ഇതിൽ നിന്നും Section 80GGB പ്രകാരം political party-ക്കും Electoral Trust-നും നൽകിയ 1,02,500 രൂപ കുറച്ചാൽ നമുക്ക് 23,60,370 രൂപ Total Income ആയി ലഭിക്കും.",
+      "visual_data": {
+        "rules": [
+          {
+            "label": "Total Income",
+            "amount": 2360370,
+            "icon": "scales",
+            "at": 200.24
+          },
+          {
+            "label": "Section 80GGB",
+            "detail": "Political Contributions",
+            "amount": 102500,
+            "pass": true,
+            "icon": "document",
+            "at": 202.64
+          },
+          {
+            "label": "Section 73A",
+            "detail": "Loss Carry Forward",
+            "amount": 1000000,
+            "icon": "calendar",
+            "at": 202.64
+          }
+        ],
+        "spoken_amounts": [
+          "1,02,500",
+          "23,60,370"
+        ]
+      },
+      "start": 167.24,
+      "end": 214.6,
+      "id": "b5",
+      "director_goal": "Summarize the final taxable income calculation.",
+      "anchor_phrases": [
+        "Total Income",
+        "Section 80GGB"
+      ],
+      "animation_role": "key_fact",
+      "anchor_alignment": [
+        {
+          "phrase": "Total Income",
+          "at": 200.24,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Section 80GGB",
+          "at": 202.64,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 2,
+        "total": 2
+      }
+    }
+  ],
+  "audio_duration_sec": 214.6,
+  "anchor_match": {
+    "matched": 11,
+    "total": 13,
+    "rate": 0.846
+  }
+}

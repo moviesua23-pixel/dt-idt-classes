@@ -1,0 +1,647 @@
+{
+  "question_id": "dt-c3-q29",
+  "audio_url": "data/audio/dt-c3-q29.mp3",
+  "duration_sec": 155.34,
+  "sync_offset_sec": 0.0,
+  "context_pill": "PGBP Computation & Statutory Deductions",
+  "example_summary": "Isac Limited, a biotechnology firm, must adjust its net profit by filtering out disallowed capital expenditures (like land for R&D and skill development) and non-business items (like political ads and tax loan interest) to compute its taxable PGBP income for AY 2026-27.",
+  "source_provision": "### Statutory Summary Matrix: Corporate PGBP Adjustments\n\n| Area / Head | Statutory Section / Rule | Operative Threshold / Condition | Tax Treatment / Legal Consequence |\n| :--- | :--- | :--- | :--- |\n| In-House Research | Section 35(1)(iv) & 35(2) | Capital expenditure on scientific research | Land cost disallowed; Building cost 100% allowed |\n| Biotech Research | Section 35(2AB) | Raw material and revenue expenditure for approved R&D | Qualifies for 100% deduction |\n| Agricultural Extension | Section 35CCC | Expenditure on notified agricultural extension project | 100% deduction allowed |\n| Skill Development | Section 35CCD | Expenditure on notified skill development project | Land cost disallowed; Training expenses 100% allowed |\n| Political Advertisements | Section 37(2B) | Advertisement in souvenir published by political party | Strictly disallowed as PGBP expense |\n\n\n> [!NOTE] Capital vs Revenue Disallowances: Expenses of a capital nature such as issue of right shares are disallowed under PGBP, whereas debenture issue expenses are allowed as revenue expenditure.\n\n\n> [!IMPORTANT] Non-Business and Penalty Disallowances: Interest on loan taken for advance tax payment and penalties for violating civil/criminal laws (like GST penalties) are inadmissible, whereas contractual breach damages are allowable business losses.",
+  "director": {
+    "archetype": "computation_ledger",
+    "justification": "The problem requires a systematic adjustment of the net profit by identifying and adding back specific disallowed expenses under various PGBP sections to arrive at the final taxable income.",
+    "protagonist": "Isac Limited",
+    "actors": [
+      "GST Department",
+      "Political Party",
+      "Bank",
+      "Subsidiary Company"
+    ],
+    "key_numbers": [
+      "₹ 35,25,890",
+      "₹ 5,00,000",
+      "₹ 40,00,000",
+      "₹ 83,60,890"
+    ],
+    "key_dates": [
+      "31.03.2026",
+      "AY 2026-27"
+    ],
+    "visual_metaphor": "A Tax Filtration Laboratory where raw net profit passes through statutory filters to separate allowable business costs from disallowable capital and personal items.",
+    "beat_plan": [
+      {
+        "beat_goal": "Establish the starting point of the PGBP computation for Isac Limited.",
+        "layout": "example_scene",
+        "anchor_phrases": [
+          "Isac Limited",
+          "Biotechnology business",
+          "Net Profit ₹ 35,25,890",
+          "AY 2026-27"
+        ]
+      },
+      {
+        "beat_goal": "Analyze Scientific Research expenditures under Section 35.",
+        "layout": "flow_actors",
+        "anchor_phrases": [
+          "Section 35",
+          "Land ₹ 5,00,000 disallowed",
+          "Building 100% allowable",
+          "Raw material u/s 35(2AB)"
+        ]
+      },
+      {
+        "beat_goal": "Evaluate specialized project deductions for Agri and Skill development.",
+        "layout": "checklist_gate",
+        "anchor_phrases": [
+          "Section 35CCC",
+          "Agricultural extension project",
+          "Section 35CCD",
+          "Skill development Land ₹ 40,00,000 disallowed"
+        ]
+      },
+      {
+        "beat_goal": "Distinguish between Capital and Revenue financial expenditures.",
+        "layout": "compare_regimes",
+        "anchor_phrases": [
+          "Right shares issue ₹ 80,000",
+          "Capital nature disallowed",
+          "Debenture issue allowable",
+          "Revenue expenditure"
+        ]
+      },
+      {
+        "beat_goal": "Identify statutory disallowances for political ads and penalties.",
+        "layout": "waterfall",
+        "anchor_phrases": [
+          "Section 37(2B)",
+          "Political souvenir ₹ 75,000",
+          "GST Penalty ₹ 35,000",
+          "Breach of contract allowable"
+        ]
+      },
+      {
+        "beat_goal": "Address non-business interest and contingent provisions.",
+        "layout": "ledger",
+        "anchor_phrases": [
+          "Advance income-tax loan interest ₹ 60,000",
+          "Provision for loss of subsidiary ₹ 85,000",
+          "Not for business purpose"
+        ]
+      },
+      {
+        "beat_goal": "Conclude with the final PGBP income and the Section 80GGB cross-reference.",
+        "layout": "takeaway",
+        "anchor_phrases": [
+          "Total Add-backs ₹ 48,35,000",
+          "Final PGBP ₹ 83,60,890",
+          "Section 80GGB deduction"
+        ]
+      }
+    ]
+  },
+  "fallback": false,
+  "beats": [
+    {
+      "layout": "example_scene",
+      "title": {
+        "text": "Starting Point: Net Profit",
+        "at": 0.3
+      },
+      "voice_sync_text": "Isac Limited എന്ന Biotechnology business-ന്റെ PGBP computation നമുക്ക് നോക്കാം. Financial year ended 31.03.2026-ൽ ഇവരുടെ Net Profit ₹ 35,25,890 ആണ്. AY 2026-27-ലേക്ക് ഈ ലാഭത്തിൽ വരുത്തേണ്ട മാറ്റങ്ങൾ നമുക്ക് പരിശോധിക്കാം.",
+      "visual_data": {
+        "actors": [
+          {
+            "label": "Isac Limited",
+            "detail": "Biotechnology business",
+            "icon": "factory",
+            "at": 0.38
+          }
+        ],
+        "transaction": "PGBP Computation",
+        "facts": [
+          {
+            "label": "Net Profit",
+            "amount": 3525890,
+            "icon": "money_bag",
+            "at": 10.42
+          },
+          {
+            "label": "Assessment Year",
+            "value": "AY 2026-27",
+            "icon": "calendar",
+            "at": 16.72
+          },
+          {
+            "label": "Closing Date",
+            "date": "31.03.2026",
+            "icon": "calendar",
+            "at": 16.72
+          }
+        ],
+        "spoken_amounts": [
+          "₹ 35,25,890",
+          "35,25,890"
+        ]
+      },
+      "start": 0.0,
+      "end": 22.52,
+      "id": "b1",
+      "director_goal": "Establish the starting point of the PGBP computation for Isac Limited.",
+      "anchor_phrases": [
+        "Isac Limited",
+        "Biotechnology business",
+        "Net Profit ₹ 35,25,890",
+        "AY 2026-27"
+      ],
+      "animation_role": "key_fact",
+      "anchor_alignment": [
+        {
+          "phrase": "Isac Limited",
+          "at": 0.76,
+          "matched": true,
+          "score": 0.737
+        },
+        {
+          "phrase": "Biotechnology business",
+          "at": 1.52,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Net Profit ₹ 35,25,890",
+          "at": 10.42,
+          "matched": true,
+          "score": 0.882
+        },
+        {
+          "phrase": "AY 2026-27",
+          "at": 16.72,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 4,
+        "total": 4
+      }
+    },
+    {
+      "layout": "flow_actors",
+      "title": {
+        "text": "Scientific Research (Section 35)",
+        "at": 23.17
+      },
+      "voice_sync_text": "Section 35 പ്രകാരം scientific research-ന് വേണ്ടി വാങ്ങിയ Land ₹ 5,00,000 disallowed ആണ്, കാരണം land-ന് deduction ലഭിക്കില്ല. എന്നാൽ Building 100% allowable ആണ്. കൂടാതെ Section 35(2AB) പ്രകാരം raw material cost-ഉം നമുക്ക് claim ചെയ്യാം.",
+      "visual_data": {
+        "actors": [
+          {
+            "label": "R&D Unit",
+            "detail": "In-house Research",
+            "icon": "factory",
+            "at": 25.07
+          }
+        ],
+        "edges": [
+          {
+            "label": "Land",
+            "amount": 500000,
+            "status": "Disallowed",
+            "pass": false,
+            "icon": "plot",
+            "at": 28.23
+          },
+          {
+            "label": "Building",
+            "detail": "100% allowable",
+            "pass": true,
+            "icon": "house",
+            "at": 33.61
+          },
+          {
+            "label": "Raw material",
+            "detail": "u/s 35(2AB)",
+            "pass": true,
+            "icon": "document",
+            "at": 39.29
+          }
+        ],
+        "spoken_amounts": [
+          "₹ 5,00,000",
+          "5,00,000"
+        ]
+      },
+      "start": 22.87,
+      "end": 41.75,
+      "id": "b2",
+      "director_goal": "Analyze Scientific Research expenditures under Section 35.",
+      "anchor_phrases": [
+        "Section 35",
+        "Land ₹ 5,00,000 disallowed",
+        "Building 100% allowable",
+        "Raw material u/s 35(2AB)"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Section 35",
+          "at": 36.69,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Land ₹ 5,00,000 disallowed",
+          "at": 27.45,
+          "matched": false,
+          "score": 0.353
+        },
+        {
+          "phrase": "Building 100% allowable",
+          "at": 33.47,
+          "matched": false,
+          "score": 0.286
+        },
+        {
+          "phrase": "Raw material u/s 35(2AB)",
+          "at": 39.29,
+          "matched": true,
+          "score": 0.82
+        }
+      ],
+      "anchor_match": {
+        "matched": 2,
+        "total": 4
+      }
+    },
+    {
+      "layout": "checklist_gate",
+      "title": {
+        "text": "Agri & Skill Development Projects",
+        "at": 42.4
+      },
+      "voice_sync_text": "അടുത്തതായി Section 35CCC പ്രകാരം Agricultural extension project-ന്റെ ചിലവുകൾ പൂർണ്ണമായും അനുവദനീയമാണ്. എന്നാൽ Section 35CCD പ്രകാരം Skill development project-ന് വേണ്ടി വാങ്ങിയ Skill development Land ₹ 40,00,000 disallowed ആണ്.",
+      "visual_data": {
+        "conditions": [
+          {
+            "label": "Section 35CCC",
+            "detail": "Agricultural extension project",
+            "pass": true,
+            "icon": "scales",
+            "at": 73.1
+          },
+          {
+            "label": "Section 35CCD",
+            "detail": "Skill development Land",
+            "amount": 4000000,
+            "pass": false,
+            "icon": "plot",
+            "at": 79.76
+          }
+        ],
+        "outcome": "Only non-land capital expenditure allowed u/s 35CCD",
+        "spoken_amounts": [
+          "₹ 40,00,000",
+          "40,00,000"
+        ]
+      },
+      "start": 42.1,
+      "end": 86.02,
+      "id": "b3",
+      "director_goal": "Evaluate specialized project deductions for Agri and Skill development.",
+      "anchor_phrases": [
+        "Section 35CCC",
+        "Agricultural extension project",
+        "Section 35CCD",
+        "Skill development Land ₹ 40,00,000 disallowed"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Section 35CCC",
+          "at": 70.8,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Agricultural extension project",
+          "at": 73.1,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Section 35CCD",
+          "at": 77.68,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Skill development Land ₹ 40,00,000 disallowed",
+          "at": 80.04,
+          "matched": true,
+          "score": 0.762
+        }
+      ],
+      "anchor_match": {
+        "matched": 4,
+        "total": 4
+      }
+    },
+    {
+      "layout": "compare_regimes",
+      "title": {
+        "text": "Capital vs Revenue Expenditure",
+        "at": 86.67
+      },
+      "voice_sync_text": "Financial expenditures നോക്കുമ്പോൾ, Right shares issue ₹ 80,000 എന്നത് Capital nature disallowed ആണ്. എന്നാൽ Debenture issue allowable ആണ്, കാരണം ഇതൊരു Revenue expenditure ആയിട്ടാണ് കണക്കാക്കുന്നത്.",
+      "visual_data": {
+        "regimes": [
+          {
+            "label": "Right shares issue",
+            "amount": 80000,
+            "detail": "Capital nature disallowed",
+            "pass": false,
+            "icon": "shares",
+            "at": 93.09
+          },
+          {
+            "label": "Debenture issue",
+            "detail": "Revenue expenditure",
+            "pass": true,
+            "icon": "document",
+            "at": 96.87
+          }
+        ],
+        "spoken_amounts": [
+          "₹ 80,000",
+          "80,000"
+        ]
+      },
+      "start": 86.37,
+      "end": 102.21,
+      "id": "b4",
+      "director_goal": "Distinguish between Capital and Revenue financial expenditures.",
+      "anchor_phrases": [
+        "Right shares issue ₹ 80,000",
+        "Capital nature disallowed",
+        "Debenture issue allowable",
+        "Revenue expenditure"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Right shares issue ₹ 80,000",
+          "at": 93.09,
+          "matched": true,
+          "score": 0.886
+        },
+        {
+          "phrase": "Capital nature disallowed",
+          "at": 93.41,
+          "matched": true,
+          "score": 0.93
+        },
+        {
+          "phrase": "Debenture issue allowable",
+          "at": 96.87,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Revenue expenditure",
+          "at": 99.63,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 4,
+        "total": 4
+      }
+    },
+    {
+      "layout": "waterfall",
+      "title": {
+        "text": "Statutory Disallowances",
+        "at": 102.86
+      },
+      "voice_sync_text": "Section 37(2B) പ്രകാരം Political souvenir ₹ 75,000 disallowed ആണ്. അതുപോലെ നിയമലംഘനത്തിന് നൽകിയ GST Penalty ₹ 35,000-ഉം അനുവദിക്കില്ല. എന്നാൽ Breach of contract allowable ആണ്.",
+      "visual_data": {
+        "stages": [
+          {
+            "label": "Political souvenir",
+            "amount": 75000,
+            "detail": "Section 37(2B)",
+            "pass": false,
+            "icon": "document",
+            "at": 105.28
+          },
+          {
+            "label": "GST Penalty",
+            "amount": 35000,
+            "detail": "Penal in nature",
+            "pass": false,
+            "icon": "gavel",
+            "at": 109.76
+          },
+          {
+            "label": "Breach of contract",
+            "detail": "Allowable business loss",
+            "pass": true,
+            "icon": "scales",
+            "at": 116.0
+          }
+        ],
+        "spoken_amounts": [
+          "₹ 75,000",
+          "₹ 35,000",
+          "75,000",
+          "35,000"
+        ]
+      },
+      "start": 102.56,
+      "end": 118.08,
+      "id": "b5",
+      "director_goal": "Identify statutory disallowances for political ads and penalties.",
+      "anchor_phrases": [
+        "Section 37(2B)",
+        "Political souvenir ₹ 75,000",
+        "GST Penalty ₹ 35,000",
+        "Breach of contract allowable"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Section 37(2B)",
+          "at": 103.12,
+          "matched": true,
+          "score": 0.556
+        },
+        {
+          "phrase": "Political souvenir ₹ 75,000",
+          "at": 105.28,
+          "matched": true,
+          "score": 0.946
+        },
+        {
+          "phrase": "GST Penalty ₹ 35,000",
+          "at": 109.76,
+          "matched": true,
+          "score": 0.87
+        },
+        {
+          "phrase": "Breach of contract allowable",
+          "at": 116.0,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 4,
+        "total": 4
+      }
+    },
+    {
+      "layout": "ledger",
+      "title": {
+        "text": "Non-Business & Contingent Items",
+        "at": 118.73
+      },
+      "voice_sync_text": "Advance income-tax loan interest ₹ 60,000 business purpose-ന് അല്ലാത്തതിനാൽ disallowed ആണ്. അതുപോലെ Provision for loss of subsidiary ₹ 85,000 എന്നത് ഒരു contingent liability ആയതുകൊണ്ട് അനുവദിക്കില്ല.",
+      "visual_data": {
+        "rows": [
+          {
+            "label": "Advance income-tax loan interest",
+            "amount": 60000,
+            "detail": "Not for business purpose",
+            "pass": false,
+            "icon": "bank",
+            "at": 118.43
+          },
+          {
+            "label": "Provision for loss of subsidiary",
+            "amount": 85000,
+            "detail": "Contingent liability",
+            "pass": false,
+            "icon": "money_bag",
+            "at": 126.41
+          }
+        ],
+        "total": "Disallowed Items",
+        "spoken_amounts": [
+          "₹ 60,000",
+          "₹ 85,000",
+          "60,000",
+          "85,000"
+        ]
+      },
+      "start": 118.43,
+      "end": 133.79,
+      "id": "b6",
+      "director_goal": "Address non-business interest and contingent provisions.",
+      "anchor_phrases": [
+        "Advance income-tax loan interest ₹ 60,000",
+        "Provision for loss of subsidiary ₹ 85,000",
+        "Not for business purpose"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Advance income-tax loan interest ₹ 60,000",
+          "at": 119.23,
+          "matched": true,
+          "score": 0.849
+        },
+        {
+          "phrase": "Provision for loss of subsidiary ₹ 85,000",
+          "at": 126.41,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Not for business purpose",
+          "at": 130.29,
+          "matched": true,
+          "score": 0.52
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 3
+      }
+    },
+    {
+      "layout": "takeaway",
+      "title": {
+        "text": "Final PGBP Computation",
+        "at": 134.44
+      },
+      "voice_sync_text": "അങ്ങനെ Total Add-backs ₹ 48,35,000 വരുന്നു. ഇത് കൂട്ടിയാൽ കിട്ടുന്ന Final PGBP ₹ 83,60,890 ആണ്. ഓർക്കുക, political party-ക്ക് നൽകിയ തുക PGBP-യിൽ കിട്ടില്ലെങ്കിലും Section 80GGB deduction ആയി claim ചെയ്യാം.",
+      "visual_data": {
+        "rules": [
+          {
+            "label": "Total Add-backs",
+            "amount": 4835000,
+            "icon": "money_bag",
+            "at": 135.12
+          },
+          {
+            "label": "Final PGBP",
+            "amount": 8360890,
+            "icon": "scales",
+            "at": 140.12
+          },
+          {
+            "label": "Section 80GGB deduction",
+            "detail": "For political advertisement",
+            "icon": "document",
+            "at": 152.12
+          }
+        ],
+        "spoken_amounts": [
+          "₹ 48,35,000",
+          "₹ 83,60,890",
+          "48,35,000",
+          "83,60,890"
+        ]
+      },
+      "start": 134.14,
+      "end": 155.34,
+      "id": "b7",
+      "director_goal": "Conclude with the final PGBP income and the Section 80GGB cross-reference.",
+      "anchor_phrases": [
+        "Total Add-backs ₹ 48,35,000",
+        "Final PGBP ₹ 83,60,890",
+        "Section 80GGB deduction"
+      ],
+      "animation_role": "key_fact",
+      "anchor_alignment": [
+        {
+          "phrase": "Total Add-backs ₹ 48,35,000",
+          "at": 135.12,
+          "matched": true,
+          "score": 0.928
+        },
+        {
+          "phrase": "Final PGBP ₹ 83,60,890",
+          "at": 140.12,
+          "matched": true,
+          "score": 0.735
+        },
+        {
+          "phrase": "Section 80GGB deduction",
+          "at": 152.12,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 3
+      }
+    }
+  ],
+  "audio_duration_sec": 155.34,
+  "anchor_match": {
+    "matched": 24,
+    "total": 26,
+    "rate": 0.923
+  }
+}

@@ -1,0 +1,479 @@
+{
+  "question_id": "dt-c3-q35",
+  "audio_url": "data/audio/dt-c3-q35.mp3",
+  "duration_sec": 283.86,
+  "sync_offset_sec": 0.0,
+  "context_pill": "PGBP Computation & Adjustments for Sankar Ltd.",
+  "example_summary": "Sankar Ltd net profit computation under PGBP incorporating adjustments for Section 36(1)(iii), Section 40(a)(ia), Section 36(1)(va), and Section 80JJAA.",
+  "source_provision": "### Statutory Summary Matrix: PGBP Adjustments & Disallowances\n\n| Section / Rule | Statutory Provision & Condition | Tax Treatment / Legal Consequence |\n| :--- | :--- | :--- |\n| **Section 36(1)(iii)** | Interest on capital borrowed for asset acquisition | Disallowed for the period from borrowing till asset is first put to use; added back to business income. |\n| **Section 43B** | Statutory dues & employer contributions to welfare funds | Allowed as deduction if deposited on or before the due date of filing return under Section 139(1). |\n| **Section 36(1)(va)** | Employee contributions to PF / EPF | Treated as income if not deposited on or before the due date under the respective Provident Fund Act. |\n| **Section 40(a)(ia)** | Non-deduction of Tax at Source (TDS) on resident payments | 30 percent of any sum paid to a resident on which TDS was required is disallowed. |\n| **Section 41(1)** | Remission or cessation of a trading liability | Taxable as business income if a benefit is obtained by way of remission or cessation. |\n\n\n> [!IMPORTANT]\n> Capitalization Rule: Under the proviso to Section 36(1)(iii), interest paid on borrowings specifically for acquiring a capital asset prior to its first use cannot be claimed as revenue expenditure.\n\n\n> [!WARNING]\n> TDS Default Consequence: Failure to deduct tax under Section 194C on labor charges results in a statutory disallowance of 30 percent of the relevant expenditure under Section 40(a)(ia).",
+  "director": {
+    "archetype": "computation_ledger",
+    "justification": "The provision mechanism requires a structured multi-step computation starting from net profit, applying additions and deductions across various sections like 36(1)(iii), 43B, 36(1)(va), 40(a)(ia), and 80JJAA to arrive at total income and tax liability for Sankar Ltd.",
+    "protagonist": "Sankar Ltd",
+    "actors": [
+      "Sankar Ltd",
+      "A & Co"
+    ],
+    "key_numbers": [
+      "2,72,00,000",
+      "47,00,000",
+      "26,00,000",
+      "3,00,000",
+      "30,00,000",
+      "25,00,000",
+      "2,54,89,380",
+      "70,91,150"
+    ],
+    "key_dates": [
+      "31st March, 2026",
+      "29th July, 2026",
+      "1.4.2025",
+      "31st May, 2026",
+      "1.7.2025"
+    ],
+    "visual_metaphor": "A multi-layered accounting waterfall descending from net profit to net taxable income through statutory adjustments.",
+    "beat_plan": [
+      {
+        "beat_goal": "Establish the starting net profit baseline for Sankar Ltd.",
+        "layout": "example_scene",
+        "anchor_phrases": [
+          "Sankar Ltd",
+          "2,72,00,000"
+        ]
+      },
+      {
+        "beat_goal": "Apply interest disallowance under Section 36(1)(iii) proviso for pre-use period.",
+        "layout": "ledger",
+        "anchor_phrases": [
+          "Section 36(1)(iii)",
+          "25 lakhs"
+        ]
+      },
+      {
+        "beat_goal": "Disallow 30 percent of labor charges under Section 40(a)(ia) for TDS default on payment to A & Co.",
+        "layout": "checklist_gate",
+        "anchor_phrases": [
+          "Section 40(a)(ia)",
+          "Section 194C"
+        ]
+      },
+      {
+        "beat_goal": "Treat unremitted employee EPF contribution as income under Section 36(1)(va).",
+        "layout": "ledger",
+        "anchor_phrases": [
+          "Section 36(1)(va)",
+          "3,00,000"
+        ]
+      },
+      {
+        "beat_goal": "Deduct allowable wage revision provision and compute depreciation under Income-tax Rules.",
+        "layout": "slab_ladder",
+        "anchor_phrases": [
+          "12,00,000",
+          "Depreciation"
+        ]
+      },
+      {
+        "beat_goal": "Compute Chapter VI-A deduction under Section 80JJAA for additional employees.",
+        "layout": "flow_actors",
+        "anchor_phrases": [
+          "Section 80JJAA",
+          "9,30,000"
+        ]
+      },
+      {
+        "beat_goal": "Summarize total income, tax payable, surcharge, and cess for Sankar Ltd.",
+        "layout": "takeaway",
+        "anchor_phrases": [
+          "2,54,89,380",
+          "70,91,150"
+        ]
+      }
+    ]
+  },
+  "fallback": false,
+  "beats": [
+    {
+      "layout": "example_scene",
+      "title": {
+        "text": "Baseline Net Profit",
+        "at": 0.3
+      },
+      "voice_sync_text": "ഇവിടെ നമ്മൾ Sankar Ltd-ന്റെ net profit baseline മുതൽ start ചെയ്യുന്നു. Net profit as per the statement of profit and loss is 2,72,00,000 for the year ended 31st March, 2026.",
+      "visual_data": {
+        "actors": [
+          {
+            "label": "Sankar Ltd",
+            "detail": "Footwear and leather products manufacturer",
+            "icon": "factory",
+            "at": 31.8
+          }
+        ],
+        "transaction": "Net profit baseline assessment",
+        "facts": [
+          {
+            "label": "Sankar Ltd",
+            "value": "2,72,00,000",
+            "amount": 27200000,
+            "date": "31st March, 2026",
+            "sign": "+",
+            "at": 37.34
+          }
+        ]
+      },
+      "start": 0.0,
+      "end": 40.12,
+      "id": "b1",
+      "director_goal": "Establish the starting net profit baseline for Sankar Ltd.",
+      "anchor_phrases": [
+        "Sankar Ltd",
+        "2,72,00,000"
+      ],
+      "animation_role": "key_fact",
+      "anchor_alignment": [
+        {
+          "phrase": "Sankar Ltd",
+          "at": 31.8,
+          "matched": true,
+          "score": 0.64
+        },
+        {
+          "phrase": "2,72,00,000",
+          "at": 35.72,
+          "matched": true,
+          "score": 0.505
+        }
+      ],
+      "anchor_match": {
+        "matched": 2,
+        "total": 2
+      }
+    },
+    {
+      "layout": "ledger",
+      "title": {
+        "text": "Interest Disallowance",
+        "at": 40.77
+      },
+      "voice_sync_text": "Section 36(1)(iii) proviso പ്രകാരം, interest on term loan for purchase of plant and machinery of 25 lakhs availed on 1.4.2025 has an adjustment of 25 lakhs or proportional pre-use interest added back.",
+      "visual_data": {
+        "rows": [
+          {
+            "label": "Section 36(1)(iii)",
+            "detail": "Interest on term loan for plant and machinery pre-use period",
+            "value": "1,75,000",
+            "amount": 175000,
+            "date": "1.4.2025",
+            "sign": "+",
+            "at": 68.51
+          }
+        ],
+        "total": "1,75,000",
+        "spoken_amounts": [
+          "25 lakhs"
+        ]
+      },
+      "start": 40.47,
+      "end": 84.91,
+      "id": "b2",
+      "director_goal": "Apply interest disallowance under Section 36(1)(iii) proviso for pre-use period.",
+      "anchor_phrases": [
+        "Section 36(1)(iii)",
+        "25 lakhs"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Section 36(1)(iii)",
+          "at": 68.51,
+          "matched": true,
+          "score": 0.769
+        },
+        {
+          "phrase": "25 lakhs",
+          "at": 75.73,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 2,
+        "total": 2
+      }
+    },
+    {
+      "layout": "checklist_gate",
+      "title": {
+        "text": "TDS Default on Labor Charges",
+        "at": 85.56
+      },
+      "voice_sync_text": "Section 40(a)(ia) പ്രകാരം Section 194C TDS default വരുത്തിയ payment to A & Co. subcontractor-ൽ 30 percent labor charges disallow ചെയ്യുന്നു, amounting to 3,00,000.",
+      "visual_data": {
+        "conditions": [
+          {
+            "label": "Section 40(a)(ia)",
+            "detail": "Non-deduction of tax under Section 194C on sub-contractor payment",
+            "value": "3,00,000",
+            "amount": 300000,
+            "sign": "+",
+            "at": 113.26
+          }
+        ],
+        "outcome": "Disallowance of 30 percent of labor charges under Section 40(a)(ia)"
+      },
+      "start": 85.26,
+      "end": 125.78,
+      "id": "b3",
+      "director_goal": "Disallow 30 percent of labor charges under Section 40(a)(ia) for TDS default on payment to A & Co.",
+      "anchor_phrases": [
+        "Section 40(a)(ia)",
+        "Section 194C"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Section 40(a)(ia)",
+          "at": 113.26,
+          "matched": true,
+          "score": 0.823
+        },
+        {
+          "phrase": "Section 194C",
+          "at": 116.44,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 2,
+        "total": 2
+      }
+    },
+    {
+      "layout": "ledger",
+      "title": {
+        "text": "Unremitted EPF Contribution",
+        "at": 126.43
+      },
+      "voice_sync_text": "Section 36(1)(va) പ്രകാരം employee's contribution to EPF of 3,00,000 deposited on 29th July, 2026 after the due date is treated as income.",
+      "visual_data": {
+        "rows": [
+          {
+            "label": "Section 36(1)(va)",
+            "detail": "Employee contribution to EPF not deposited by due date",
+            "value": "3,00,000",
+            "amount": 300000,
+            "date": "29th July, 2026",
+            "sign": "+",
+            "at": 155.25
+          }
+        ],
+        "total": "3,00,000"
+      },
+      "start": 126.13,
+      "end": 165.81,
+      "id": "b4",
+      "director_goal": "Treat unremitted employee EPF contribution as income under Section 36(1)(va).",
+      "anchor_phrases": [
+        "Section 36(1)(va)",
+        "3,00,000"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Section 36(1)(va)",
+          "at": 155.25,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "3,00,000",
+          "at": 143.38,
+          "matched": false,
+          "score": 0.406
+        }
+      ],
+      "anchor_match": {
+        "matched": 1,
+        "total": 2
+      }
+    },
+    {
+      "layout": "slab_ladder",
+      "title": {
+        "text": "Deductions & Depreciation",
+        "at": 166.46
+      },
+      "voice_sync_text": "അടുത്തതായി 12,00,000 wage revision provision deduct ചെയ്യുന്നു, കൂടാതെ Income-tax Rules പ്രകാരം depreciation-ഉം കണക്കാക്കുന്നു.",
+      "visual_data": {
+        "tiers": [
+          {
+            "label": "Provision for wages",
+            "detail": "Fair estimate of wage revision payable to workers",
+            "value": "12,00,000",
+            "amount": 1200000,
+            "sign": "-",
+            "at": 169.6
+          },
+          {
+            "label": "Depreciation",
+            "detail": "Depreciation under Income-tax Rules including factory building and machinery",
+            "value": "50,55,625",
+            "amount": 5055625,
+            "sign": "-",
+            "at": 202.44
+          }
+        ]
+      },
+      "start": 166.16,
+      "end": 205.84,
+      "id": "b5",
+      "director_goal": "Deduct allowable wage revision provision and compute depreciation under Income-tax Rules.",
+      "anchor_phrases": [
+        "12,00,000",
+        "Depreciation"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "12,00,000",
+          "at": 198.52,
+          "matched": true,
+          "score": 0.484
+        },
+        {
+          "phrase": "Depreciation",
+          "at": 202.44,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 2,
+        "total": 2
+      }
+    },
+    {
+      "layout": "flow_actors",
+      "title": {
+        "text": "Chapter VI-A Deduction",
+        "at": 206.49
+      },
+      "voice_sync_text": "Section 80JJAA പ്രകാരം additional employees-ന്റെ employment അടിസ്ഥാനമാക്കി 9,30,000 deduction compute ചെയ്യുന്നു.",
+      "visual_data": {
+        "actors": [
+          {
+            "label": "Sankar Ltd",
+            "detail": "Assessee company",
+            "icon": "factory",
+            "at": 206.19
+          },
+          {
+            "label": "Additional Employees",
+            "detail": "Workman under Industrial Disputes Act",
+            "icon": "person",
+            "at": 235.05
+          }
+        ],
+        "edges": [
+          {
+            "label": "Section 80JJAA",
+            "detail": "Deduction for additional employees",
+            "value": "9,30,000",
+            "amount": 930000,
+            "sign": "-",
+            "at": 235.05
+          }
+        ]
+      },
+      "start": 206.19,
+      "end": 241.31,
+      "id": "b6",
+      "director_goal": "Compute Chapter VI-A deduction under Section 80JJAA for additional employees.",
+      "anchor_phrases": [
+        "Section 80JJAA",
+        "9,30,000"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Section 80JJAA",
+          "at": 232.73,
+          "matched": true,
+          "score": 0.977
+        },
+        {
+          "phrase": "9,30,000",
+          "at": 237.99,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 2,
+        "total": 2
+      }
+    },
+    {
+      "layout": "takeaway",
+      "title": {
+        "text": "Final Tax Liability Summary",
+        "at": 241.96
+      },
+      "voice_sync_text": "Finally Sankar Ltd-ന്റെ total income 2,54,89,380 ആയി വരുന്നു, tax liability and cess ചേർത്ത് total tax payable 70,91,150 ആവുന്നു.",
+      "visual_data": {
+        "rules": [
+          {
+            "label": "Total Income",
+            "detail": "Total taxable income rounded off",
+            "value": "2,54,89,380",
+            "amount": 25489380,
+            "sign": "=",
+            "at": 271.66
+          },
+          {
+            "label": "Tax Liability",
+            "detail": "Tax payable including surcharge and cess rounded off",
+            "value": "70,91,150",
+            "amount": 7091150,
+            "sign": "=",
+            "at": 277.06
+          }
+        ]
+      },
+      "start": 241.66,
+      "end": 283.86,
+      "id": "b7",
+      "director_goal": "Summarize total income, tax payable, surcharge, and cess for Sankar Ltd.",
+      "anchor_phrases": [
+        "2,54,89,380",
+        "70,91,150"
+      ],
+      "animation_role": "key_fact",
+      "anchor_alignment": [
+        {
+          "phrase": "2,54,89,380",
+          "at": 273.6,
+          "matched": true,
+          "score": 0.72
+        },
+        {
+          "phrase": "70,91,150",
+          "at": 280.44,
+          "matched": true,
+          "score": 0.903
+        }
+      ],
+      "anchor_match": {
+        "matched": 2,
+        "total": 2
+      }
+    }
+  ],
+  "audio_duration_sec": 283.86,
+  "anchor_match": {
+    "matched": 13,
+    "total": 14,
+    "rate": 0.929
+  }
+}

@@ -1,0 +1,631 @@
+{
+  "question_id": "dt-c3-q26",
+  "audio_url": "data/audio/dt-c3-q26.mp3",
+  "duration_sec": 197.02,
+  "sync_offset_sec": 0.0,
+  "context_pill": "XYZ & Co. Presumptive Taxation & Audit Mandate",
+  "example_summary": "Comprehensive analysis of XYZ & Co. turnover, 5% cash threshold under Section 44AD, and comparison between presumptive taxation and regular books assessment.",
+  "source_provision": "### Master Statutory Summary Matrix\n\n| Area / Head | Statutory Section / Rule | Operative Threshold / Condition | Tax Treatment / Legal Consequence |\n| :--- | :--- | :--- | :--- |\n| **Presumptive Business Income** | **Section 44AD** | Total turnover up to ₹ 300 Lakhs, provided cash receipts do not exceed 5% of total turnover. | Deemed profit at 8% (for digital/bank receipts) or 6% (for cash/non-account payee receipts up to threshold) of turnover. |\n| **Tax Audit Mandate** | **Section 44AB** | Turnover exceeds threshold or conditions of Section 44AD are breached. | Compulsory tax audit of accounts unless presumptive scheme is opted and conditions satisfied. |\n| **Partner Remuneration & Interest** | **Section 40(b)** | Payments authorized by partnership deed to working partners. | Interest restricted to 12% p.a. simple interest; Remuneration capped based on book profits slab. Disallowed under presumptive taxation. |\n| **Cash Expenditure Disallowance** | **Section 40A(3)** | Payments exceeding ₹ 10,000 in a single day made otherwise than by account payee cheque/draft/electronic clearing system. | 100% of such expenditure is disallowed and added back to taxable income. |\n| **Capital Gains** | **Section 45 / Section 50** | Transfer of capital assets (short-term or long-term). | Full value of consideration minus cost of acquisition/indexed cost or written down value (for depreciable assets). |\n| **Set-off of Business Loss** | **Section 72** | Brought forward business losses from eligible preceding assessment years. | Can be set-off against current year business income (both normal and presumptive, subject to provisions). |\n\n\n> [!IMPORTANT] Presumptive Taxation Condition: If cash receipts exceed 5% of total turnover, the assessee cannot invoke Section 44AD and must maintain regular books of accounts.\n\n\n> [!WARNING] Disallowance Trap: Under Section 44AD, no deduction for partner interest or remuneration is allowed, as profits are computed at statutory flat rates.",
+  "director": {
+    "archetype": "two_regime_comparison",
+    "justification": "Compares total income and tax audit obligations of XYZ & Co. under Section 44AD presumptive taxation versus regular tax assessment triggered by breaching the 5% cash receipt threshold.",
+    "protagonist": "XYZ & Co.",
+    "actors": [
+      "Partner A",
+      "Partner B",
+      "Partner C",
+      "Partner D"
+    ],
+    "key_numbers": [
+      "₹ 2,80,00,000",
+      "₹ 10,50,000",
+      "₹ 2,00,000",
+      "₹ 4,00,000",
+      "5%",
+      "4.46%",
+      "5.17%",
+      "₹ 61,30,000",
+      "₹ 36,19,000"
+    ],
+    "key_dates": [
+      "30.04.2021",
+      "30.03.2026",
+      "P.Y. 2025-26",
+      "A.Y. 2026-27",
+      "A.Y. 2022-23"
+    ],
+    "visual_metaphor": "A digital balance scale weighing cash receipt percentages against statutory threshold gates to route the firm between presumptive flat-rate taxes and detailed audit ledgers.",
+    "beat_plan": [
+      {
+        "beat_goal": "Introduce XYZ & Co., its electric kettle manufacturing business turnover of ₹ 2,80,00,000, and partner structure.",
+        "layout": "example_scene",
+        "anchor_phrases": [
+          "XYZ & Co.",
+          "₹ 2,80,00,000 turnover",
+          "3 working partners"
+        ]
+      },
+      {
+        "beat_goal": "Evaluate the Section 44AD 5% cash threshold eligibility across both cheque receipt scenarios.",
+        "layout": "checklist_gate",
+        "anchor_phrases": [
+          "Section 44AD",
+          "5% cash limit",
+          "4.46% in Scenario 1",
+          "5.17% in Scenario 2"
+        ]
+      },
+      {
+        "beat_goal": "Contrast the audit mandate and statutory path of Presumptive Taxation against Regular Books Assessment.",
+        "layout": "compare_regimes",
+        "anchor_phrases": [
+          "Presumptive taxation 44AD",
+          "Audit under 44AB",
+          "Scenario 1 vs Scenario 2"
+        ]
+      },
+      {
+        "beat_goal": "Compute total taxable income under Scenario 1 using 6% and 8% presumptive rates and brought forward loss set-off.",
+        "layout": "ledger",
+        "anchor_phrases": [
+          "6% of ₹ 2,67,50,000",
+          "8% of ₹ 12,50,000",
+          "Brought forward loss ₹ 75,000",
+          "Total income ₹ 61,30,000"
+        ]
+      },
+      {
+        "beat_goal": "Calculate book loss and disallowances under Section 40(b) and Section 40A(3) for Scenario 2.",
+        "layout": "ledger",
+        "anchor_phrases": [
+          "Section 40A(3) disallowance ₹ 1,44,000",
+          "Excess interest 3%",
+          "Book loss ₹ 5,81,000"
+        ]
+      },
+      {
+        "beat_goal": "Apply intra-head loss set-off of current year business loss against Long-Term Capital Gains.",
+        "layout": "waterfall",
+        "anchor_phrases": [
+          "Business loss ₹ 8,81,000",
+          "LTCG ₹ 45,00,000",
+          "Total income ₹ 36,19,000"
+        ]
+      },
+      {
+        "beat_goal": "Summarize key compliance takeaways regarding non-account payee cheques and 5% threshold limits.",
+        "layout": "takeaway",
+        "anchor_phrases": [
+          "Non-account payee cheque treated as cash",
+          "5% threshold compliance",
+          "Tax audit requirement"
+        ]
+      }
+    ]
+  },
+  "fallback": false,
+  "beats": [
+    {
+      "layout": "example_scene",
+      "title": {
+        "text": "XYZ & Co. Firm Profile",
+        "at": 0.3
+      },
+      "voice_sync_text": "ഇവിടെ നമ്മൾ പഠിക്കുന്നത് Presumptive Taxation, Tax Audit, Partnership Disallowances, Cash Payment Restrictions, കൂടാതെ Capital Gains എന്നിവ ഉൾപ്പെടുന്ന ഒരു Comprehensive Multi-Provision Assessment ആണ്. XYZ & Co. എന്ന partnership firm-ൽ 3 working partners A, B, C കൂടാതെ ഒരു non-working partner D ഉണ്ട്. ഇവർ electric kettles manufacturing business നടത്തുന്നു. P.Y. 2025-26 ൽ ഇവരുടെ turnover ₹ 2,80,00,000 ആണ്.",
+      "visual_data": {
+        "actors": [
+          {
+            "label": "XYZ & Co.",
+            "detail": "Partnership Firm",
+            "icon": "factory",
+            "at": 15.84
+          },
+          {
+            "label": "Partner A, B, C",
+            "detail": "Working Partners",
+            "icon": "person",
+            "at": 18.06
+          },
+          {
+            "label": "Partner D",
+            "detail": "Non-Working Partner",
+            "icon": "person",
+            "at": 22.02
+          }
+        ],
+        "transaction": "Manufacturing and selling electric kettles in P.Y. 2025-26",
+        "facts": [
+          {
+            "label": "XYZ & Co.",
+            "detail": "Firm name",
+            "value": "Partnership",
+            "at": 22.02
+          },
+          {
+            "label": "₹ 2,80,00,000 turnover",
+            "detail": "Total turnover for P.Y. 2025-26",
+            "amount": 28000000,
+            "value": "₹ 2,80,00,000",
+            "at": 30.55
+          },
+          {
+            "label": "3 working partners",
+            "detail": "Active partners A, B, and C",
+            "value": "3",
+            "at": 30.55
+          }
+        ]
+      },
+      "start": 0.0,
+      "end": 34.24,
+      "id": "b1",
+      "director_goal": "Introduce XYZ & Co., its electric kettle manufacturing business turnover of ₹ 2,80,00,000, and partner structure.",
+      "anchor_phrases": [
+        "XYZ & Co.",
+        "₹ 2,80,00,000 turnover",
+        "3 working partners"
+      ],
+      "animation_role": "key_fact",
+      "anchor_alignment": [
+        {
+          "phrase": "XYZ & Co.",
+          "at": 17.52,
+          "matched": true,
+          "score": 0.87
+        },
+        {
+          "phrase": "₹ 2,80,00,000 turnover",
+          "at": 28.9,
+          "matched": true,
+          "score": 0.571
+        },
+        {
+          "phrase": "3 working partners",
+          "at": 19.81,
+          "matched": false,
+          "score": 0.32
+        }
+      ],
+      "anchor_match": {
+        "matched": 2,
+        "total": 3
+      }
+    },
+    {
+      "layout": "checklist_gate",
+      "title": {
+        "text": "Section 44AD 5% Cash Threshold Check",
+        "at": 34.89
+      },
+      "voice_sync_text": "Section 44AD പ്രകാരം resident individual, HUF, അല്ലെങ്കിൽ partnership firm എന്നിവർക്ക് presumptive income declare ചെയ്യാം. ഇവിടെ turnover ₹ 300 Lakhs-ൽ താഴെ ആയിരിക്കണം, കൂടാതെ cash receipts total turnover-ന്റെ 5 percentage-ൽ കൂടാൻ പാടില്ല. Scenario 1-ൽ cash receipts കൂടാതെ non-account payee cheques ഉൾപ്പെടെ total cash/non-account receipts 4.46% ആണ്. എന്നാൽ Scenario 2-ൽ ഇത് 5.17% ആയി ഉയരുന്നു.",
+      "visual_data": {
+        "conditions": [
+          {
+            "label": "Section 44AD",
+            "detail": "Presumptive taxation eligibility check",
+            "status": "Applicable for turnover up to ₹ 300 Lakhs",
+            "at": 41.61
+          },
+          {
+            "label": "5% cash limit",
+            "detail": "Cash and non-account payee receipts threshold",
+            "pass": true,
+            "value": "5%",
+            "at": 67.71
+          },
+          {
+            "label": "4.46% in Scenario 1",
+            "detail": "Cash and non-account payee receipts ratio in Scenario 1",
+            "pass": true,
+            "amount": 4.46,
+            "value": "4.46%",
+            "at": 67.71
+          },
+          {
+            "label": "5.17% in Scenario 2",
+            "detail": "Cash and non-account payee receipts ratio in Scenario 2",
+            "pass": false,
+            "amount": 5.17,
+            "value": "5.17%",
+            "at": 67.71
+          }
+        ],
+        "outcome": "Scenario 1 qualifies for Section 44AD, while Scenario 2 breaches the 5% threshold and requires regular books audit."
+      },
+      "start": 34.59,
+      "end": 70.67,
+      "id": "b2",
+      "director_goal": "Evaluate the Section 44AD 5% cash threshold eligibility across both cheque receipt scenarios.",
+      "anchor_phrases": [
+        "Section 44AD",
+        "5% cash limit",
+        "4.46% in Scenario 1",
+        "5.17% in Scenario 2"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Section 44AD",
+          "at": 62.15,
+          "matched": true,
+          "score": 0.48
+        },
+        {
+          "phrase": "5% cash limit",
+          "at": 67.71,
+          "matched": true,
+          "score": 0.545
+        },
+        {
+          "phrase": "4.46% in Scenario 1",
+          "at": 56.51,
+          "matched": false,
+          "score": 0.1
+        },
+        {
+          "phrase": "5.17% in Scenario 2",
+          "at": 56.51,
+          "matched": false,
+          "score": 0.2
+        }
+      ],
+      "anchor_match": {
+        "matched": 2,
+        "total": 4
+      }
+    },
+    {
+      "layout": "compare_regimes",
+      "title": {
+        "text": "Presumptive Taxation vs Regular Books Assessment",
+        "at": 71.32
+      },
+      "voice_sync_text": "Presumptive taxation 44AD പ്രകാരം books of accounts maintain ചെയ്യേണ്ടതില്ല. എന്നാൽ turn-over-ന്റെ নির্দিষ্ট percentage profit ആയി കാണിച്ചാൽ മതിയാകും. മറുവശത്ത് Audit under 44AB അനുസരിച്ച് Scenario 2-ൽ books of accounts audit നിർബന്ധമാണ്, കൂടാതെ normal provisions പ്രകാരം income compute ചെയ്യണം.",
+      "visual_data": {
+        "regimes": [
+          {
+            "label": "Presumptive taxation 44AD",
+            "detail": "No audit required if cash receipts do not exceed 5% of turnover",
+            "status": "Scenario 1",
+            "at": 71.56
+          },
+          {
+            "label": "Audit under 44AB",
+            "detail": "Compulsory tax audit when conditions of Section 44AD are breached",
+            "status": "Scenario 2",
+            "at": 78.36
+          },
+          {
+            "label": "Scenario 1 vs Scenario 2",
+            "detail": "Comparison of compliance requirements based on cash receipt ratio",
+            "status": "Compared",
+            "at": 84.98
+          }
+        ]
+      },
+      "start": 71.02,
+      "end": 92.1,
+      "id": "b3",
+      "director_goal": "Contrast the audit mandate and statutory path of Presumptive Taxation against Regular Books Assessment.",
+      "anchor_phrases": [
+        "Presumptive taxation 44AD",
+        "Audit under 44AB",
+        "Scenario 1 vs Scenario 2"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Presumptive taxation 44AD",
+          "at": 71.56,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Audit under 44AB",
+          "at": 82.44,
+          "matched": true,
+          "score": 0.987
+        },
+        {
+          "phrase": "Scenario 1 vs Scenario 2",
+          "at": 84.98,
+          "matched": true,
+          "score": 0.596
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 3
+      }
+    },
+    {
+      "layout": "ledger",
+      "title": {
+        "text": "Scenario 1 Total Income Computation",
+        "at": 92.75
+      },
+      "voice_sync_text": "Scenario 1-ൽ total taxable income compute ചെയ്യുമ്പോൾ bank receipts-ന് 6% ഉം cash receipts-ന് 8% ഉം കണക്കാക്കുന്നു. അതായത് 6% of ₹ 2,67,50,000 ഉം, 8% of ₹ 12,50,000 ഉം ചേർത്ത് presumptive business income കണക്കാക്കാം. ഇതിൽ നിന്ന് Brought forward loss ₹ 75,000 set-off ചെയ്ത്, Capital Gains ഉം കൂട്ടി Total income ₹ 61,30,000 ആയി കണക്കാക്കുന്നു.",
+      "visual_data": {
+        "rows": [
+          {
+            "label": "6% of ₹ 2,67,50,000",
+            "detail": "Presumptive income on bank receipts",
+            "amount": 1605000,
+            "value": "₹ 16,05,000",
+            "sign": "+",
+            "at": 103.13
+          },
+          {
+            "label": "8% of ₹ 12,50,000",
+            "detail": "Presumptive income on cash and non-account receipts",
+            "amount": 100000,
+            "value": "₹ 1,00,000",
+            "sign": "+",
+            "at": 107.19
+          },
+          {
+            "label": "Brought forward loss ₹ 75,000",
+            "detail": "Set-off of loss of A.Y. 2022-23 under Section 72",
+            "amount": 75000,
+            "value": "₹ 75,000",
+            "sign": "-",
+            "at": 113.39
+          }
+        ],
+        "total": "Total income ₹ 61,30,000"
+      },
+      "start": 92.45,
+      "end": 123.81,
+      "id": "b4",
+      "director_goal": "Compute total taxable income under Scenario 1 using 6% and 8% presumptive rates and brought forward loss set-off.",
+      "anchor_phrases": [
+        "6% of ₹ 2,67,50,000",
+        "8% of ₹ 12,50,000",
+        "Brought forward loss ₹ 75,000",
+        "Total income ₹ 61,30,000"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "6% of ₹ 2,67,50,000",
+          "at": 104.51,
+          "matched": true,
+          "score": 0.706
+        },
+        {
+          "phrase": "8% of ₹ 12,50,000",
+          "at": 107.19,
+          "matched": true,
+          "score": 0.765
+        },
+        {
+          "phrase": "Brought forward loss ₹ 75,000",
+          "at": 113.39,
+          "matched": false,
+          "score": 0.423
+        },
+        {
+          "phrase": "Total income ₹ 61,30,000",
+          "at": 118.99,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 4
+      }
+    },
+    {
+      "layout": "ledger",
+      "title": {
+        "text": "Scenario 2 Disallowances & Book Loss Computation",
+        "at": 124.46
+      },
+      "voice_sync_text": "Scenario 2-ൽ non-account payee cheques വർദ്ധിച്ചതുകൊണ്ട് Section 44AD ബാധകമല്ല. ഇവിടെ Section 40A(3) disallowance ₹ 1,44,000 വരുന്നു. കൂടാതെ partner interest-ൽ Excess interest 3% disallow ചെയ്യുന്നു. ഇവയെല്ലാം ചേർത്ത് கணக்கு கூட்டி பார்க்கும்போது Book loss ₹ 5,81,000 ആയി ലഭിക്കുന്നു.",
+      "visual_data": {
+        "rows": [
+          {
+            "label": "Section 40A(3) disallowance ₹ 1,44,000",
+            "detail": "Cash payments exceeding ₹ 10,000 limit",
+            "amount": 144000,
+            "value": "₹ 1,44,000",
+            "sign": "+",
+            "at": 131.98
+          },
+          {
+            "label": "Excess interest 3%",
+            "detail": "Interest paid to partner B exceeding 12% limit under Section 40(b)",
+            "amount": 30000,
+            "value": "₹ 30,000",
+            "sign": "+",
+            "at": 139.36
+          },
+          {
+            "label": "Book loss ₹ 5,81,000",
+            "detail": "Net loss computed under normal business provisions",
+            "amount": 581000,
+            "value": "₹ 5,81,000",
+            "sign": "-",
+            "at": 145.62
+          }
+        ],
+        "total": "Book loss ₹ 5,81,000"
+      },
+      "start": 124.16,
+      "end": 150.0,
+      "id": "b5",
+      "director_goal": "Calculate book loss and disallowances under Section 40(b) and Section 40A(3) for Scenario 2.",
+      "anchor_phrases": [
+        "Section 40A(3) disallowance ₹ 1,44,000",
+        "Excess interest 3%",
+        "Book loss ₹ 5,81,000"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Section 40A(3) disallowance ₹ 1,44,000",
+          "at": 131.98,
+          "matched": true,
+          "score": 0.76
+        },
+        {
+          "phrase": "Excess interest 3%",
+          "at": 139.36,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Book loss ₹ 5,81,000",
+          "at": 145.62,
+          "matched": true,
+          "score": 0.803
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 3
+      }
+    },
+    {
+      "layout": "waterfall",
+      "title": {
+        "text": "Scenario 2 Loss Set-Off & Total Income Waterfall",
+        "at": 150.65
+      },
+      "voice_sync_text": "Scenario 2-ൽ computed ആയ Business loss ₹ 8,81,000 current year-ലെ Long-Term Capital Gains ആയ LTCG ₹ 45,00,000-ൽ നിന്ന് set-off ചെയ്യുന്നു. ഇത്തരത്തിൽ intra-head loss adjustments കഴിഞ്ഞതിനു ശേഷം Total income ₹ 36,19,000 ആയി നിർണ്ണയിക്കപ്പെടുന്നു.",
+      "visual_data": {
+        "stages": [
+          {
+            "label": "Business loss ₹ 8,81,000",
+            "detail": "Current year business loss including partnership adjustments",
+            "amount": -881000,
+            "value": "₹ 8,81,000",
+            "sign": "-",
+            "at": 153.03
+          },
+          {
+            "label": "LTCG ₹ 45,00,000",
+            "detail": "Long-term capital gains from transfer of plot on 30.03.2026",
+            "amount": 4500000,
+            "value": "₹ 45,00,000",
+            "sign": "+",
+            "at": 159.35
+          },
+          {
+            "label": "Total income ₹ 36,19,000",
+            "detail": "Gross total income after intra-head loss set-off for A.Y. 2026-27",
+            "amount": 3619000,
+            "value": "₹ 36,19,000",
+            "sign": "=",
+            "at": 166.97
+          }
+        ]
+      },
+      "start": 150.35,
+      "end": 171.71,
+      "id": "b6",
+      "director_goal": "Apply intra-head loss set-off of current year business loss against Long-Term Capital Gains.",
+      "anchor_phrases": [
+        "Business loss ₹ 8,81,000",
+        "LTCG ₹ 45,00,000",
+        "Total income ₹ 36,19,000"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Business loss ₹ 8,81,000",
+          "at": 153.03,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "LTCG ₹ 45,00,000",
+          "at": 159.35,
+          "matched": true,
+          "score": 0.582
+        },
+        {
+          "phrase": "Total income ₹ 36,19,000",
+          "at": 166.97,
+          "matched": true,
+          "score": 0.903
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 3
+      }
+    },
+    {
+      "layout": "takeaway",
+      "title": {
+        "text": "Key Statutory Compliance Takeaways",
+        "at": 172.36
+      },
+      "voice_sync_text": "ഈ പ്രൊവിഷനുകളിൽ നിന്ന് നാം മനസ്സിലാക്കേണ്ട പ്രധാന നിയമങ്ങൾ ഇവയാണ്: Non-account payee cheque treated as cash ആയി കണക്കാക്കപ്പെടുന്നു. കൂടാതെ 5% threshold compliance കർശനമായി പാലിച്ചാൽ മാത്രമേ Section 44AD presumptive taxation ആനുകൂല്യം ലഭിക്കൂ. മറിച്ചായാൽ Tax audit requirement നിർബന്ധമായും പാലിക്കേണ്ടതാണ്.",
+      "visual_data": {
+        "rules": [
+          {
+            "label": "Non-account payee cheque treated as cash",
+            "detail": "Cheques not drawn as account payee are counted towards cash receipt limits under Section 44AD",
+            "icon": "document",
+            "at": 176.68
+          },
+          {
+            "label": "5% threshold compliance",
+            "detail": "Total cash and non-account receipts must not exceed 5% of total turnover",
+            "icon": "scales",
+            "at": 182.86
+          },
+          {
+            "label": "Tax audit requirement",
+            "detail": "Mandatory tax audit under Section 44AB if presumptive conditions are breached",
+            "icon": "gavel",
+            "at": 193.24
+          }
+        ]
+      },
+      "start": 172.06,
+      "end": 197.02,
+      "id": "b7",
+      "director_goal": "Summarize key compliance takeaways regarding non-account payee cheques and 5% threshold limits.",
+      "anchor_phrases": [
+        "Non-account payee cheque treated as cash",
+        "5% threshold compliance",
+        "Tax audit requirement"
+      ],
+      "animation_role": "key_fact",
+      "anchor_alignment": [
+        {
+          "phrase": "Non-account payee cheque treated as cash",
+          "at": 176.68,
+          "matched": true,
+          "score": 0.925
+        },
+        {
+          "phrase": "5% threshold compliance",
+          "at": 182.86,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Tax audit requirement",
+          "at": 193.24,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 3
+      }
+    }
+  ],
+  "audio_duration_sec": 197.02,
+  "anchor_match": {
+    "matched": 19,
+    "total": 23,
+    "rate": 0.826
+  }
+}

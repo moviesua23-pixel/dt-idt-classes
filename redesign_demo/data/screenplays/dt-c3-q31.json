@@ -1,0 +1,578 @@
+{
+  "question_id": "dt-c3-q31",
+  "audio_url": "data/audio/dt-c3-q31.mp3",
+  "duration_sec": 158.3,
+  "sync_offset_sec": 0.0,
+  "context_pill": "PGBP Computation & Total Income of ILT Limited",
+  "example_summary": "Computation of total income for ILT Limited for AY 2026-27 starting from a net profit of ₹ 405 lacs, incorporating adjustments for Section 28(iv), Section 41(1), Section 43B, Section 40(a)(i), Rule 6DD(i), and Section 80GGB.",
+  "source_provision": "### Statutory Summary Matrix: Business Income & Deductions\n\n| Statutory Provision | Nature of Transaction / Item | Core Statutory Condition | Tax Treatment / Legal Consequence |\n| :--- | :--- | :--- | :--- |\n| **Section 28(iv)** | Benefit or Perquisite | Value of any benefit or perquisite arising from business, whether convertible into money or not | Taxable as business income under Section 28(iv) |\n| **Section 41(1)** | Remission or Cessation of Trading Liability | Allowance or deduction was made in past years in respect of loss, expenditure, or trading liability | Deemed income in the year of remission or cessation, irrespective of accounting entry or running account status |\n| **Section 43B** | Conversion of Arrear Interest into Loan | Interest due to scheduled banks is allowed only on actual payment; conversion into a fresh loan is not actual payment | Disallowed at conversion; actual payment of funded loan instalments is allowed as deduction |\n| **Section 40(a)(i)** | Interest Payable Outside India | Tax must be deducted at source and deposited on or before the due date of filing return under Section 139(1) | Fully allowed if TDS is deposited within the statutory due date under Section 139(1) |\n| **Section 40A(3) & Rule 6DD(i)** | Cash Payments for Salary | Cash payments exceeding statutory limits attract disallowance unless covered by specified exceptions | Allowed if employee is temporarily posted for a continuous period of more than 15 days in a non-normal place of duty |\n| **Section 80GGB** | Contribution to Electoral Trust | Contribution made by an Indian company to an electoral trust by any mode other than cash | Allowed as deduction from Gross Total Income under Chapter VI-A |\n\n\n> [!IMPORTANT] Section 43B Rule on Funded Interest:\n> Conversion of unpaid interest into a fresh loan or funded interest does not amount to actual payment. Deduction is permitted only when the instalments of the funded interest are actually paid to the financial institution.\n\n\n> [!NOTE] Rule 6DD(i) Exception:\n> Cash payments of salary made to an employee stationed temporarily for a continuous period exceeding 15 days outside their normal place of duty are expressly protected from Section 40A(3) disallowance.",
+  "director": {
+    "archetype": "computation_ledger",
+    "justification": "The question requires computing the total business income and total income of ILT Limited by adjusting net profit for various statutory add-backs and deductions under Sections 28(iv), 41(1), 43B, 40(a)(i), 40A(3), and 80GGB.",
+    "protagonist": "ILT Limited",
+    "actors": [
+      "Raw Material Supplier",
+      "Andhra Bank",
+      "US Foreign Company",
+      "Sandeep (Sales Executive)",
+      "Electoral Trust"
+    ],
+    "key_numbers": [
+      "₹ 405 lacs",
+      "₹ 10 lacs",
+      "₹ 2 lacs",
+      "₹ 1.60 lacs",
+      "₹ 5 lacs",
+      "₹ 45,000",
+      "₹ 47,000",
+      "₹ 50,000",
+      "₹ 4,15,40,000"
+    ],
+    "key_dates": [
+      "AY 2026-27",
+      "31st March 2026"
+    ],
+    "visual_metaphor": "An interactive tax computation ledger sheet reconciling profit and loss entries with Income Tax Act adjustments.",
+    "beat_plan": [
+      {
+        "beat_goal": "Establish the starting point of net profit and state the overall objective of computing total income for ILT Limited.",
+        "layout": "example_scene",
+        "anchor_phrases": [
+          "ILT Limited",
+          "Net Profit ₹ 405 lacs",
+          "AY 2026-27"
+        ]
+      },
+      {
+        "beat_goal": "Demonstrate the add-back of perquisites under Section 28(iv) and deemed income from waiver under Section 41(1).",
+        "layout": "deemed_value",
+        "anchor_phrases": [
+          "Section 28(iv)",
+          "Air Ticket ₹ 10 lacs",
+          "Section 41(1)",
+          "Waiver ₹ 2 lacs"
+        ]
+      },
+      {
+        "beat_goal": "Illustrate Section 43B rule where conversion of unpaid interest into loan is disallowed, but actual payment of funded instalments is allowed.",
+        "layout": "ledger",
+        "anchor_phrases": [
+          "Section 43B",
+          "Funded Interest",
+          "Actual Payment ₹ 1.60 lacs"
+        ]
+      },
+      {
+        "beat_goal": "Show that interest paid to foreign company is allowed as deduction since TDS was deposited before Section 139(1) due date.",
+        "layout": "flow_actors",
+        "anchor_phrases": [
+          "Section 40(a)(i)",
+          "US Company",
+          "Section 139(1)"
+        ]
+      },
+      {
+        "beat_goal": "Explain the cash salary exception under Rule 6DD(i) protecting payments from Section 40A(3) disallowance due to continuous temporary posting over 15 days.",
+        "layout": "example_scene",
+        "anchor_phrases": [
+          "Section 40A(3)",
+          "Rule 6DD(i)",
+          "Sandeep",
+          "Continuous posting > 15 days"
+        ]
+      },
+      {
+        "beat_goal": "Detail the tax treatment of electoral trust contribution: disallowed under PGBP but allowed as deduction under Section 80GGB.",
+        "layout": "checklist_gate",
+        "anchor_phrases": [
+          "Electoral Trust",
+          "₹ 50,000",
+          "Section 80GGB",
+          "Chapter VI-A"
+        ]
+      },
+      {
+        "beat_goal": "Summarize the step-by-step PGBP computation arriving at final total income.",
+        "layout": "takeaway",
+        "anchor_phrases": [
+          "Business Income ₹ 4,15,90,000",
+          "Deduction Section 80GGB ₹ 50,000",
+          "Total Income ₹ 4,15,40,000"
+        ]
+      }
+    ]
+  },
+  "fallback": false,
+  "beats": [
+    {
+      "layout": "example_scene",
+      "title": {
+        "text": "Starting Point: Net Profit of ILT Limited",
+        "at": 0.3
+      },
+      "voice_sync_text": "ഇവിടെ നമ്മൾ ILT Limited-ന്റെ AY 2026-27 ലെ Net Profit ₹ 405 lacs-ൽ തുടങ്ങി Total Income compute ചെയ്യുകയാണ്.",
+      "visual_data": {
+        "actors": [
+          {
+            "label": "ILT Limited",
+            "detail": "Manufacturing pipes and tubes",
+            "icon": "factory",
+            "at": 31.42
+          }
+        ],
+        "transaction": "Net Profit computation baseline for AY 2026-27",
+        "facts": [
+          {
+            "label": "Net Profit",
+            "amount": 40500000,
+            "value": "₹ 405 lacs",
+            "date": "AY 2026-27",
+            "sign": "=",
+            "at": 46.24
+          }
+        ]
+      },
+      "start": 0.0,
+      "end": 51.44,
+      "id": "b1",
+      "director_goal": "Establish the starting point of net profit and state the overall objective of computing total income for ILT Limited.",
+      "anchor_phrases": [
+        "ILT Limited",
+        "Net Profit ₹ 405 lacs",
+        "AY 2026-27"
+      ],
+      "animation_role": "key_fact",
+      "anchor_alignment": [
+        {
+          "phrase": "ILT Limited",
+          "at": 31.42,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Net Profit ₹ 405 lacs",
+          "at": 35.3,
+          "matched": true,
+          "score": 0.977
+        },
+        {
+          "phrase": "AY 2026-27",
+          "at": 43.78,
+          "matched": true,
+          "score": 0.727
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 3
+      }
+    },
+    {
+      "layout": "deemed_value",
+      "title": {
+        "text": "Perquisites and Waiver: Section 28(iv) & 41(1)",
+        "at": 52.09
+      },
+      "voice_sync_text": "Section 28(iv) പ്രകാരം Air Ticket ₹ 10 lacs ബിസിനസ്സ് income ആയി taxable ആണ്. കൂടാതെ Section 41(1) പ്രകാരം supplier Waiver ₹ 2 lacs deemed income ആയി മാറുന്നു.",
+      "visual_data": {
+        "actual": {
+          "label": "Actual Benefit",
+          "amount": 1000000,
+          "value": "₹ 10 lacs",
+          "icon": "money_bag",
+          "at": 82.31
+        },
+        "deemed": {
+          "label": "Section 41(1) Waiver",
+          "amount": 200000,
+          "value": "₹ 2 lacs",
+          "icon": "document",
+          "at": 85.97
+        },
+        "rule": "Section 28(iv) and Section 41(1) adjustments",
+        "at": 80.07
+      },
+      "start": 51.79,
+      "end": 91.31,
+      "id": "b2",
+      "director_goal": "Demonstrate the add-back of perquisites under Section 28(iv) and deemed income from waiver under Section 41(1).",
+      "anchor_phrases": [
+        "Section 28(iv)",
+        "Air Ticket ₹ 10 lacs",
+        "Section 41(1)",
+        "Waiver ₹ 2 lacs"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Section 28(iv)",
+          "at": 80.07,
+          "matched": true,
+          "score": 0.99
+        },
+        {
+          "phrase": "Air Ticket ₹ 10 lacs",
+          "at": 82.19,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Section 41(1)",
+          "at": 85.97,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Waiver ₹ 2 lacs",
+          "at": 88.33,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 4,
+        "total": 4
+      }
+    },
+    {
+      "layout": "ledger",
+      "title": {
+        "text": "Funded Interest Rule under Section 43B",
+        "at": 91.96
+      },
+      "voice_sync_text": "Section 43B പ്രകാരം unpaid interest conversion disallowed ആണ്, എങ്കിലും Actual Payment ₹ 1.60 lacs allowable ആണ്.",
+      "visual_data": {
+        "rows": [
+          {
+            "label": "Actual Payment of Funded Interest",
+            "amount": 160000,
+            "value": "₹ 1.60 lacs",
+            "sign": "-",
+            "icon": "bank",
+            "at": 97.18
+          }
+        ],
+        "total": "₹ 1,60,000"
+      },
+      "start": 91.66,
+      "end": 100.9,
+      "id": "b3",
+      "director_goal": "Illustrate Section 43B rule where conversion of unpaid interest into loan is disallowed, but actual payment of funded instalments is allowed.",
+      "anchor_phrases": [
+        "Section 43B",
+        "Funded Interest",
+        "Actual Payment ₹ 1.60 lacs"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Section 43B",
+          "at": 91.66,
+          "matched": false,
+          "score": 0.429
+        },
+        {
+          "phrase": "Funded Interest",
+          "at": 93.52,
+          "matched": true,
+          "score": 0.8
+        },
+        {
+          "phrase": "Actual Payment ₹ 1.60 lacs",
+          "at": 97.18,
+          "matched": true,
+          "score": 0.983
+        }
+      ],
+      "anchor_match": {
+        "matched": 2,
+        "total": 3
+      }
+    },
+    {
+      "layout": "flow_actors",
+      "title": {
+        "text": "Interest to Foreign Company under Section 40(a)(i)",
+        "at": 101.55
+      },
+      "voice_sync_text": "Section 40(a)(i) പ്രകാരം US Company-ക്ക് നൽകിയ ഇൻട്രെസ്റ്റ് allowed ആണ്, കാരണം TDS Section 139(1) due date-ന് മുൻപ് deposit ചെയ്തു.",
+      "visual_data": {
+        "actors": [
+          {
+            "label": "ILT Limited",
+            "icon": "factory",
+            "at": 107.67
+          },
+          {
+            "label": "US Company",
+            "icon": "person",
+            "at": 107.67
+          }
+        ],
+        "edges": [
+          {
+            "label": "Section 40(a)(i) Interest Deduction with Section 139(1) Compliance",
+            "amount": 500000,
+            "value": "₹ 5 lacs",
+            "icon": "document",
+            "at": 107.67
+          }
+        ]
+      },
+      "start": 101.25,
+      "end": 112.93,
+      "id": "b4",
+      "director_goal": "Show that interest paid to foreign company is allowed as deduction since TDS was deposited before Section 139(1) due date.",
+      "anchor_phrases": [
+        "Section 40(a)(i)",
+        "US Company",
+        "Section 139(1)"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Section 40(a)(i)",
+          "at": 102.03,
+          "matched": true,
+          "score": 0.87
+        },
+        {
+          "phrase": "US Company",
+          "at": 104.65,
+          "matched": true,
+          "score": 0.87
+        },
+        {
+          "phrase": "Section 139(1)",
+          "at": 108.59,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 3
+      }
+    },
+    {
+      "layout": "example_scene",
+      "title": {
+        "text": "Cash Salary Exception: Section 40A(3) & Rule 6DD(i)",
+        "at": 113.58
+      },
+      "voice_sync_text": "Section 40A(3) disallowance ബാധകമല്ല, കാരണം Sandeep-ന് Continuous posting > 15 days Bangalore-ൽ ഉണ്ടായതിനാൽ Rule 6DD(i) പ്രകാരം cash salary protected ആണ്.",
+      "visual_data": {
+        "actors": [
+          {
+            "label": "Sandeep",
+            "detail": "Sales Executive",
+            "icon": "person",
+            "at": 117.48
+          }
+        ],
+        "transaction": "Cash salary payment during temporary posting",
+        "facts": [
+          {
+            "label": "Continuous posting > 15 days",
+            "detail": "Rule 6DD(i) exception",
+            "icon": "calendar",
+            "at": 118.22
+          },
+          {
+            "label": "Salary Month May",
+            "amount": 45000,
+            "value": "₹ 45,000",
+            "sign": "-",
+            "at": 125.1
+          },
+          {
+            "label": "Salary Month September",
+            "amount": 47000,
+            "value": "₹ 47,000",
+            "sign": "-",
+            "at": 125.1
+          }
+        ]
+      },
+      "start": 113.28,
+      "end": 126.76,
+      "id": "b5",
+      "director_goal": "Explain the cash salary exception under Rule 6DD(i) protecting payments from Section 40A(3) disallowance due to continuous temporary posting over 15 days.",
+      "anchor_phrases": [
+        "Section 40A(3)",
+        "Rule 6DD(i)",
+        "Sandeep",
+        "Continuous posting > 15 days"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Section 40A(3)",
+          "at": 113.86,
+          "matched": true,
+          "score": 0.99
+        },
+        {
+          "phrase": "Rule 6DD(i)",
+          "at": 122.66,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Sandeep",
+          "at": 117.13,
+          "matched": false,
+          "score": 0.364
+        },
+        {
+          "phrase": "Continuous posting > 15 days",
+          "at": 118.09,
+          "matched": false,
+          "score": 0.308
+        }
+      ],
+      "anchor_match": {
+        "matched": 2,
+        "total": 4
+      }
+    },
+    {
+      "layout": "checklist_gate",
+      "title": {
+        "text": "Electoral Trust Contribution: Section 80GGB",
+        "at": 127.41
+      },
+      "voice_sync_text": "Electoral Trust-ലേക്ക് നൽകിയ ₹ 50,000 PGBP-യിൽ disallow ചെയ്യുമെങ്കിലും, Section 80GGB പ്രകാരം Chapter VI-A deduction ആയി claim ചെയ്യാവുന്നതാണ്.",
+      "visual_data": {
+        "conditions": [
+          {
+            "label": "Electoral Trust Contribution",
+            "amount": 50000,
+            "value": "₹ 50,000",
+            "pass": true,
+            "icon": "money_bag",
+            "at": 127.11
+          }
+        ],
+        "outcome": "Section 80GGB Deduction Allowed under Chapter VI-A"
+      },
+      "start": 127.11,
+      "end": 139.31,
+      "id": "b6",
+      "director_goal": "Detail the tax treatment of electoral trust contribution: disallowed under PGBP but allowed as deduction under Section 80GGB.",
+      "anchor_phrases": [
+        "Electoral Trust",
+        "₹ 50,000",
+        "Section 80GGB",
+        "Chapter VI-A"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Electoral Trust",
+          "at": 127.11,
+          "matched": false,
+          "score": 0.417
+        },
+        {
+          "phrase": "₹ 50,000",
+          "at": 128.97,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Section 80GGB",
+          "at": 133.03,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Chapter VI-A",
+          "at": 135.61,
+          "matched": true,
+          "score": 0.938
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 4
+      }
+    },
+    {
+      "layout": "takeaway",
+      "title": {
+        "text": "Final Computation of Total Income",
+        "at": 139.96
+      },
+      "voice_sync_text": "അങ്ങനെ Business Income ₹ 4,15,90,000 ആയി കണക്കാക്കി, അതിൽ നിന്നും Deduction Section 80GGB ₹ 50,000 കുറച്ച് final Total Income ₹ 4,15,40,000 ആയി determine ചെയ്യുന്നു.",
+      "visual_data": {
+        "rules": [
+          {
+            "label": "Business Income",
+            "amount": 41590000,
+            "value": "₹ 4,15,90,000",
+            "sign": "=",
+            "icon": "document",
+            "at": 140.86
+          },
+          {
+            "label": "Deduction Section 80GGB",
+            "amount": 50000,
+            "value": "₹ 50,000",
+            "sign": "-",
+            "icon": "money_bag",
+            "at": 147.26
+          },
+          {
+            "label": "Total Income",
+            "amount": 41540000,
+            "value": "₹ 4,15,40,000",
+            "sign": "=",
+            "icon": "scales",
+            "at": 147.26
+          }
+        ]
+      },
+      "start": 139.66,
+      "end": 158.3,
+      "id": "b7",
+      "director_goal": "Summarize the step-by-step PGBP computation arriving at final total income.",
+      "anchor_phrases": [
+        "Business Income ₹ 4,15,90,000",
+        "Deduction Section 80GGB ₹ 50,000",
+        "Total Income ₹ 4,15,40,000"
+      ],
+      "animation_role": "key_fact",
+      "anchor_alignment": [
+        {
+          "phrase": "Business Income ₹ 4,15,90,000",
+          "at": 140.86,
+          "matched": true,
+          "score": 0.941
+        },
+        {
+          "phrase": "Deduction Section 80GGB ₹ 50,000",
+          "at": 147.26,
+          "matched": true,
+          "score": 0.934
+        },
+        {
+          "phrase": "Total Income ₹ 4,15,40,000",
+          "at": 151.96,
+          "matched": true,
+          "score": 0.683
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 3
+      }
+    }
+  ],
+  "audio_duration_sec": 158.3,
+  "anchor_match": {
+    "matched": 20,
+    "total": 24,
+    "rate": 0.833
+  }
+}

@@ -1,0 +1,657 @@
+{
+  "question_id": "dt-c3-q28",
+  "audio_url": "data/audio/dt-c3-q28.mp3",
+  "duration_sec": 110.82,
+  "sync_offset_sec": 0.0,
+  "context_pill": "M/s. HIG Assessment",
+  "example_summary": "Computation of total income for partnership firm M/s. HIG with adjustments under Section 40(b), Section 40A(3), ICDS II, Section 32, and Section 72.",
+  "source_provision": "### Statutory Summary Matrix: Partnership Taxation & Business Income\n\n| Area / Head | Statutory Section / Rule | Operative Threshold / Condition | Tax Treatment / Legal Consequence |\n| :--- | :--- | :--- | :--- |\n| **Partner Remuneration & Interest** | Section 40(b) | Authorization by partnership deed; slab-limits based on book profit | Excess salary or unauthorized interest disallowed; interest restricted to deed date |\n| **Current Account Interest** | Section 40(b)(iv) | Must be explicitly authorized by partnership deed | Interest on current accounts disallowed if deed specifies capital accounts only |\n| **Cash Payment Limits** | Section 40A(3) | Payments exceeding specified thresholds for stock-in-trade via non-electronic modes | 100% disallowance of expenditure incurred otherwise than by account payee instruments |\n| **Depreciation & Asset Ownership**| Section 32 | Assets owned and used for business purposes | Depreciation allowed even if registered in partner's name, subject to business user test |\n| **Brought Forward Losses** | Section 72 | Business losses of preceding assessment years | Set-off allowed against business income of current assessment year |\n\n\n> [!IMPORTANT]\n> Section 40(b) Condition: Remuneration and interest to partners are deductible only if authorized by the partnership deed, and interest cannot be allowed for any period prior to the execution of the deed.\n\n\n> [!WARNING]\n> Cash Payment Restrictions: Payments for stock-in-trade exceeding statutory cash limits through non-compliant modes attract total disallowance under Section 40A(3).",
+  "director": {
+    "archetype": "computation_ledger",
+    "justification": "The question requires a comprehensive step-by-step computation of total income for a partnership firm, adjusting net profit for various disallowances under Section 40(b), Section 40A(3), and allowances like depreciation.",
+    "protagonist": "M/s. HIG",
+    "actors": [
+      "H",
+      "I",
+      "G",
+      "Hindu Undivided Family of partner H"
+    ],
+    "key_numbers": [
+      "3,50,000",
+      "1,00,000",
+      "50,000",
+      "20,000",
+      "25,000",
+      "30,000",
+      "15,000",
+      "37,500",
+      "5,00,000",
+      "60,000",
+      "65,000",
+      "5,00,000"
+    ],
+    "key_dates": [
+      "1.4.2015",
+      "1.10.2025",
+      "31.3.2026",
+      "20.4.2026",
+      "1.11.2025"
+    ],
+    "visual_metaphor": "A ledger scale balancing book profits against statutory adjustments for partnership remuneration and disallowances.",
+    "beat_plan": [
+      {
+        "beat_goal": "Introduce M/s. HIG and the baseline net profit for the year ending 31.3.2026.",
+        "layout": "example_scene",
+        "anchor_phrases": [
+          "M/s. HIG",
+          "Net profit",
+          "3,50,000",
+          "31.3.2026"
+        ]
+      },
+      {
+        "beat_goal": "Compute partnership interest disallowances under Section 40(b) based on the partnership deed execution date.",
+        "layout": "checklist_gate",
+        "anchor_phrases": [
+          "Section 40(b)",
+          "capital accounts",
+          "current accounts",
+          "1.10.2025"
+        ]
+      },
+      {
+        "beat_goal": "Evaluate cash payment restrictions on stock-in-trade purchases under Section 40A(3).",
+        "layout": "decision_tree",
+        "anchor_phrases": [
+          "Section 40A(3)",
+          "crossed cheque",
+          "25,000",
+          "stock in trade"
+        ]
+      },
+      {
+        "beat_goal": "Adjust closing stock valuation per ICDS II for a dissolved firm.",
+        "layout": "deemed_value",
+        "anchor_phrases": [
+          "ICDS II",
+          "closing stock",
+          "65,000",
+          "60,000"
+        ]
+      },
+      {
+        "beat_goal": "Apply depreciation allowances for assets used in business including motor car and new machinery under Section 32.",
+        "layout": "flow_actors",
+        "anchor_phrases": [
+          "Section 32",
+          "motor car",
+          "additional depreciation",
+          "5,00,000"
+        ]
+      },
+      {
+        "beat_goal": "Determine working partner salary limits based on book profit slabs and compute final business income after set-off of losses.",
+        "layout": "ledger",
+        "anchor_phrases": [
+          "book profit",
+          "working partners",
+          "Section 72",
+          "business loss"
+        ]
+      },
+      {
+        "beat_goal": "Summarize the final total income including income from other sources and conclude the assessment.",
+        "layout": "takeaway",
+        "anchor_phrases": [
+          "Total Income",
+          "3,80,000",
+          "Income from other sources",
+          "fixed deposits"
+        ]
+      }
+    ]
+  },
+  "fallback": false,
+  "beats": [
+    {
+      "layout": "example_scene",
+      "title": {
+        "text": "Introduction to M/s. HIG Net Profit",
+        "at": 0.3
+      },
+      "voice_sync_text": "നമ്മൾ ഇവിടെ പഠിക്കുന്നത് partnership firm-ന്റെ assessment സംബന്ധിച്ച statutory provisions ആണ്. M/s. HIG എന്ന firm-ന്റെ net profit ആയ 3,50,000 for year ended 31.3.2026 വെച്ചാണ് കണക്കാക്കുന്നത്.",
+      "visual_data": {
+        "actors": [
+          {
+            "label": "M/s. HIG",
+            "detail": "Partnership Firm",
+            "icon": "factory",
+            "at": 2.0
+          },
+          {
+            "label": "Partner H",
+            "detail": "Working Partner",
+            "icon": "person",
+            "at": 2.0
+          },
+          {
+            "label": "Partner I",
+            "detail": "Partner",
+            "icon": "person",
+            "at": 2.0
+          },
+          {
+            "label": "Partner G",
+            "detail": "Working Partner",
+            "icon": "person",
+            "at": 2.0
+          }
+        ],
+        "transaction": "Baseline Net Profit Computation",
+        "facts": [
+          {
+            "label": "Net profit",
+            "amount": 350000,
+            "value": "3,50,000",
+            "date": "31.3.2026",
+            "sign": "=",
+            "at": 8.58
+          }
+        ]
+      },
+      "start": 0.0,
+      "end": 16.84,
+      "id": "b1",
+      "director_goal": "Introduce M/s. HIG and the baseline net profit for the year ending 31.3.2026.",
+      "anchor_phrases": [
+        "M/s. HIG",
+        "Net profit",
+        "3,50,000",
+        "31.3.2026"
+      ],
+      "animation_role": "key_fact",
+      "anchor_alignment": [
+        {
+          "phrase": "M/s. HIG",
+          "at": 9.88,
+          "matched": true,
+          "score": 0.588
+        },
+        {
+          "phrase": "Net profit",
+          "at": 10.44,
+          "matched": false,
+          "score": 0.364
+        },
+        {
+          "phrase": "3,50,000",
+          "at": 13.6,
+          "matched": true,
+          "score": 0.549
+        },
+        {
+          "phrase": "31.3.2026",
+          "at": 14.02,
+          "matched": true,
+          "score": 0.615
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 4
+      }
+    },
+    {
+      "layout": "checklist_gate",
+      "title": {
+        "text": "Section 40(b) Partnership Interest and Deed",
+        "at": 17.49
+      },
+      "voice_sync_text": "ഇവിടെ Section 40(b) അനുസരിച്ച്, partnership deed-ൽ authorize ചെയ്ത salary ഉം interest ഉം മാത്രമേ deduction കിട്ടുകയുള്ളൂ. capital accounts ഉം current accounts ഉം പരിശോധിക്കുമ്പോൾ 1.10.2025 ലെ deed അനുസരിച്ചാണ് interest അനുവദിക്കുക.",
+      "visual_data": {
+        "conditions": [
+          {
+            "label": "Section 40(b)",
+            "detail": "Partnership interest and remuneration authorization",
+            "pass": true,
+            "at": 18.01
+          },
+          {
+            "label": "capital accounts",
+            "detail": "Interest allowed from deed date",
+            "pass": true,
+            "at": 26.01
+          },
+          {
+            "label": "current accounts",
+            "detail": "No authorization in deed",
+            "pass": false,
+            "at": 27.05
+          },
+          {
+            "label": "1.10.2025",
+            "detail": "New partnership deed execution date",
+            "pass": true,
+            "at": 27.05
+          }
+        ],
+        "outcome": "Disallowance of unauthorized interest and pre-deed interest."
+      },
+      "start": 17.19,
+      "end": 33.71,
+      "id": "b2",
+      "director_goal": "Compute partnership interest disallowances under Section 40(b) based on the partnership deed execution date.",
+      "anchor_phrases": [
+        "Section 40(b)",
+        "capital accounts",
+        "current accounts",
+        "1.10.2025"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Section 40(b)",
+          "at": 18.01,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "capital accounts",
+          "at": 26.01,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "current accounts",
+          "at": 27.05,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "1.10.2025",
+          "at": 29.23,
+          "matched": true,
+          "score": 0.875
+        }
+      ],
+      "anchor_match": {
+        "matched": 4,
+        "total": 4
+      }
+    },
+    {
+      "layout": "decision_tree",
+      "title": {
+        "text": "Section 40A(3) Cash Payment Restrictions",
+        "at": 34.36
+      },
+      "voice_sync_text": "Stock-in-trade വാങ്ങുമ്പോൾ crossed cheque വഴി payment നടത്തിയാൽ, Section 40A(3) പ്രകാരം ആ തുക മുഴുവൻ disallow ചെയ്യപ്പെടും. 25,000 രൂപയുടെ payment-ൽ crossed cheque ഉപയോഗിച്ചതിനാൽ 100% disallow ആകുന്നു.",
+      "visual_data": {
+        "root": "Section 40A(3) Payment Mode Check",
+        "branches": [
+          {
+            "label": "stock in trade",
+            "detail": "Purchase of television sets",
+            "value": "25,000",
+            "amount": 25000,
+            "pass": false,
+            "icon": "document",
+            "at": 34.34
+          },
+          {
+            "label": "crossed cheque",
+            "detail": "Non-compliant payment mode",
+            "pass": false,
+            "icon": "money_bag",
+            "at": 44.42
+          }
+        ]
+      },
+      "start": 34.06,
+      "end": 51.02,
+      "id": "b3",
+      "director_goal": "Evaluate cash payment restrictions on stock-in-trade purchases under Section 40A(3).",
+      "anchor_phrases": [
+        "Section 40A(3)",
+        "crossed cheque",
+        "25,000",
+        "stock in trade"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Section 40A(3)",
+          "at": 43.66,
+          "matched": true,
+          "score": 0.953
+        },
+        {
+          "phrase": "crossed cheque",
+          "at": 44.42,
+          "matched": true,
+          "score": 0.72
+        },
+        {
+          "phrase": "25,000",
+          "at": 48.12,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "stock in trade",
+          "at": 34.06,
+          "matched": false,
+          "score": 0.32
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 4
+      }
+    },
+    {
+      "layout": "deemed_value",
+      "title": {
+        "text": "ICDS II Closing Stock Valuation",
+        "at": 51.67
+      },
+      "voice_sync_text": "അതുപോലെ ICDS II അനുസരിച്ച് dissolved firm-ന്റെ closing stock valuation നെ കുറിച്ച് നോക്കാം. 60,000 രൂപ cost ഉള്ളത് net realizable value ആയ 65,000 രൂപയിലേക്ക് adjust ചെയ്യണം.",
+      "visual_data": {
+        "actual": {
+          "label": "Cost valuation",
+          "amount": 60000,
+          "value": "60,000",
+          "icon": "document",
+          "at": 59.15
+        },
+        "deemed": {
+          "label": "ICDS II NRV valuation",
+          "amount": 65000,
+          "value": "65,000",
+          "icon": "scales",
+          "at": 59.15
+        },
+        "rule": "Closing stock-in-trade valued at net realizable value for dissolved firm with 5,000 adjustment.",
+        "at": 55.57
+      },
+      "start": 51.37,
+      "end": 66.53,
+      "id": "b4",
+      "director_goal": "Adjust closing stock valuation per ICDS II for a dissolved firm.",
+      "anchor_phrases": [
+        "ICDS II",
+        "closing stock",
+        "65,000",
+        "60,000"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "ICDS II",
+          "at": 52.51,
+          "matched": true,
+          "score": 0.889
+        },
+        {
+          "phrase": "closing stock",
+          "at": 55.57,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "65,000",
+          "at": 61.37,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "60,000",
+          "at": 59.43,
+          "matched": false,
+          "score": 0.154
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 4
+      }
+    },
+    {
+      "layout": "flow_actors",
+      "title": {
+        "text": "Section 32 Depreciation Allowances",
+        "at": 67.18
+      },
+      "voice_sync_text": "Section 32 പ്രകാരം asset business-ന് വേണ്ടി exclusive ആയി ഉപയോഗിക്കുന്നുണ്ടെങ്കിൽ depreciation കിട്ടും. motor car partner-ന്റെ പേരിൽ register ചെയ്തിട്ടുണ്ടെങ്കിലും 5,000,000 cost ഉള്ള new machinery-യുടെ additional depreciation ഉം firm-ന് കിട്ടുന്നതാണ്.",
+      "visual_data": {
+        "actors": [
+          {
+            "label": "motor car",
+            "detail": "Registered in name of partner H",
+            "icon": "person",
+            "at": 74.16
+          },
+          {
+            "label": "new machinery",
+            "detail": "Cost of 5,00,000 installed for pens",
+            "amount": 500000,
+            "value": "5,00,000",
+            "icon": "factory",
+            "at": 81.28
+          }
+        ],
+        "edges": [
+          {
+            "label": "Section 32",
+            "detail": "Depreciation and additional depreciation allowance",
+            "pass": true,
+            "icon": "scales",
+            "at": 81.28
+          }
+        ],
+        "spoken_amounts": [
+          "5,000"
+        ]
+      },
+      "start": 66.88,
+      "end": 82.96,
+      "id": "b5",
+      "director_goal": "Apply depreciation allowances for assets used in business including motor car and new machinery under Section 32.",
+      "anchor_phrases": [
+        "Section 32",
+        "motor car",
+        "additional depreciation",
+        "5,00,000"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Section 32",
+          "at": 67.52,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "motor car",
+          "at": 74.16,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "additional depreciation",
+          "at": 78.7,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "5,00,000",
+          "at": 77.47,
+          "matched": false,
+          "score": 0.453
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 4
+      }
+    },
+    {
+      "layout": "ledger",
+      "title": {
+        "text": "Working Partner Salary and Business Loss",
+        "at": 83.61
+      },
+      "voice_sync_text": "Book profit slabs അനുസരിച്ച് working partners salary limits നിശ്ചയിക്കുന്നു. Section 72 പ്രകാരം brought forward business loss ആയ 50,000 രൂപ set-off ചെയ്ത് final business income കണ്ടുപിടിക്കാം.",
+      "visual_data": {
+        "rows": [
+          {
+            "label": "book profit",
+            "detail": "Computed as per statutory rules",
+            "value": "3,80,000",
+            "amount": 380000,
+            "sign": "+",
+            "at": 83.81
+          },
+          {
+            "label": "working partners",
+            "detail": "Salary limit applied",
+            "value": "2,50,000",
+            "amount": 250000,
+            "sign": "-",
+            "at": 88.13
+          },
+          {
+            "label": "business loss",
+            "detail": "Set-off under Section 72",
+            "value": "50,000",
+            "amount": 50000,
+            "sign": "-",
+            "at": 95.89
+          }
+        ],
+        "total": "Income from business 3,55,000"
+      },
+      "start": 83.31,
+      "end": 97.83,
+      "id": "b6",
+      "director_goal": "Determine working partner salary limits based on book profit slabs and compute final business income after set-off of losses.",
+      "anchor_phrases": [
+        "book profit",
+        "working partners",
+        "Section 72",
+        "business loss"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "book profit",
+          "at": 83.81,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "working partners",
+          "at": 88.13,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Section 72",
+          "at": 89.63,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "business loss",
+          "at": 95.89,
+          "matched": true,
+          "score": 0.882
+        }
+      ],
+      "anchor_match": {
+        "matched": 4,
+        "total": 4
+      }
+    },
+    {
+      "layout": "takeaway",
+      "title": {
+        "text": "Total Income Summary and Conclusion",
+        "at": 98.48
+      },
+      "voice_sync_text": "അവസാനമായി Income from other sources ആയ fixed deposits നിന്നുള്ള 25,000 രൂപ കൂടി ചേർത്ത് final Total Income 3,80,000 രൂപ എന്ന് കണക്കാക്കുന്നു.",
+      "visual_data": {
+        "rules": [
+          {
+            "label": "Total Income",
+            "amount": 380000,
+            "value": "3,80,000",
+            "icon": "money_bag",
+            "at": 106.12
+          },
+          {
+            "label": "Income from other sources",
+            "amount": 25000,
+            "value": "25,000",
+            "icon": "bank",
+            "at": 106.12
+          },
+          {
+            "label": "fixed deposits",
+            "detail": "Interest income from bank surplus funds",
+            "value": "25,000",
+            "icon": "document",
+            "at": 106.12
+          }
+        ]
+      },
+      "start": 98.18,
+      "end": 110.82,
+      "id": "b7",
+      "director_goal": "Summarize the final total income including income from other sources and conclude the assessment.",
+      "anchor_phrases": [
+        "Total Income",
+        "3,80,000",
+        "Income from other sources",
+        "fixed deposits"
+      ],
+      "animation_role": "key_fact",
+      "anchor_alignment": [
+        {
+          "phrase": "Total Income",
+          "at": 106.12,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "3,80,000",
+          "at": 107.28,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Income from other sources",
+          "at": 99.08,
+          "matched": false,
+          "score": 0.167
+        },
+        {
+          "phrase": "fixed deposits",
+          "at": 101.68,
+          "matched": false,
+          "score": 0.111
+        }
+      ],
+      "anchor_match": {
+        "matched": 2,
+        "total": 4
+      }
+    }
+  ],
+  "audio_duration_sec": 110.82,
+  "anchor_match": {
+    "matched": 22,
+    "total": 28,
+    "rate": 0.786
+  }
+}
