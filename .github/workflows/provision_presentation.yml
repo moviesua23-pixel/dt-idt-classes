@@ -72,9 +72,8 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action Bot"
           # Guardrail: Preserve frontend files
-          git checkout -- redesign_demo/frontend/index.html 2>/dev/null || true
           git add redesign_demo/data/screenplays/ redesign_demo/data/audio/presentations/ viewer/latest_presentation.js data/
-          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto: Generate multi-slide presentation & voice for ${{ github.event.inputs.subject }} provision [skip ci]" && git push)
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto: Generate multi-slide presentation & voice for ${{ github.event.inputs.subject }} provision [skip ci]" && git pull --rebase origin main && git push)
 
       - name: Generate Job Summary
         run: |
