@@ -25,6 +25,14 @@ on:
           - Shares & Securities
           - Goods & Logistics
           - General Business
+      voice:
+        description: 'Malayalam Teacher Voice'
+        required: false
+        default: 'ml-IN-MidhunNeural'
+        type: choice
+        options:
+          - ml-IN-MidhunNeural
+          - ml-IN-SobhanaNeural
 
 permissions:
   contents: write
@@ -65,7 +73,8 @@ jobs:
           python pipeline/provision_to_presentation.py \
             --provision "${{ github.event.inputs.provision_text }}" \
             --subject "${{ github.event.inputs.subject }}" \
-            --domain "${{ github.event.inputs.domain }}"
+            --domain "${{ github.event.inputs.domain }}" \
+            --voice "${{ github.event.inputs.voice || 'ml-IN-MidhunNeural' }}"
 
       - name: Commit & Push Presentation Screenplay
         run: |

@@ -32,27 +32,93 @@ if PROJECT_ROOT not in sys.path:
 from pipeline.key_rotator import rotator
 
 # -------------------------------------------------------------------------
-# Voice Synthesis Engine (EdgeTTS & Gemini TTS)
 # -------------------------------------------------------------------------
-def synthesize_malayalam_voice(script: str, output_mp3_path: str, voice_name: str = "ml-IN-SobhanaNeural") -> float:
+# Voice Clarity & Text Normalization Engine
+# -------------------------------------------------------------------------
+def normalize_script_for_clarity(text: str) -> str:
     """
-    Synthesizes authentic Malayalam teacher narration audio for a presentation slide.
-    Uses EdgeTTS (ml-IN-SobhanaNeural / ml-IN-MidhunNeural) for authentic Malayalam speech.
+    Normalizes statutory presentation dialogue for crystal-clear TTS pronunciation:
+    - Expands numeric dates like 01/04/2014 or 1-4-2014 into spoken English: '1st April 2014'
+    - Normalizes Indian currency formatting: ₹ 5 Lakhs -> 5 Lakh Rupees
+    - Adds natural phonetic spacing around English/Malayalam hyphenated suffixes (e.g. 'Plot-ൽ' -> 'Plot - ൽ')
+    - Cleans up weird generative artifacts (e.g. 'magnetic plot', 'dynamic asset')
+    """
+    if not text:
+        return ""
+    t = text
+    
+    # 1. Expand numeric dates to English words (critical for clear pronunciation)
+    months = ['', 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+    def _date_sub(m):
+        d, mo, yr = int(m.group(1)), int(m.group(2)), m.group(3)
+        suf = 'st' if d in (1, 21, 31) else ('nd' if d in (2, 22) else ('rd' if d in (3, 23) else 'th'))
+        return f"{d}{suf} {months[mo]} {yr}"
+    t = re.sub(r'\b(0?[1-9]|[12][0-9]|3[01])[-/.](0?[1-9]|1[0-2])[-/.]((?:19|20)\d{2})\b', _date_sub, t)
+    
+    # 2. Currency symbol normalization
+    t = re.sub(r'₹\s*([0-9]+(?:\.[0-9]+)?)\s*(?:Cr|Crore|Crores)\b', r'\1 Crore Rupees', t, flags=re.IGNORECASE)
+    t = re.sub(r'₹\s*([0-9]+(?:\.[0-9]+)?)\s*(?:Lakh|Lakhs|Lac|Lacs)\b', r'\1 Lakh Rupees', t, flags=re.IGNORECASE)
+    t = re.sub(r'₹\s*([0-9,]+)', r'\1 Rupees', t)
+    
+    # 3. Clean section references
+    t = re.sub(r'\bu/s\.?\s*', 'Section ', t, flags=re.IGNORECASE)
+    t = re.sub(r'\bSec\.?\s*', 'Section ', t, flags=re.IGNORECASE)
+    
+    # 4. Remove hallucinated template terms
+    t = re.sub(r'\bmagnetic plot\b', 'commercial plot', t, flags=re.IGNORECASE)
+    t = re.sub(r'\bdynamic asset\b', 'asset', t, flags=re.IGNORECASE)
+    
+    # 5. Phonetic boundary smoothing for mixed English + Malayalam suffixes
+    # Giving a tiny phonetic breathing room prevents the neural voice from swallowing English consonants
+    t = re.sub(r'([A-Za-z0-9])-(ൽ|ന്റെ|ക്ക്|ന്|നെ|യോ|ഉം)', r'\1 - \2', t)
+    
+    # 6. Spacing cleanup
+    t = re.sub(r'\s+', ' ', t).strip()
+    return t
+
+
+def synthesize_malayalam_voice(script: str, output_mp3_path: str, voice_name: str = "ml-IN-MidhunNeural") -> float:
+    """
+    Synthesizes authentic, crystal-clear Malayalam teacher narration audio for a presentation slide.
+    Applies phonetic text normalization, EdgeTTS neural synthesis, and FFmpeg studio clarity EQ.
     Returns the exact audio duration in seconds.
     """
     os.makedirs(os.path.dirname(os.path.abspath(output_mp3_path)), exist_ok=True)
+    clean_text = normalize_script_for_clarity(script)
     
-    # 1. Primary: Authentic Malayalam Neural TTS (EdgeTTS)
+    # Select voice (Midhun for deeper, clearer male teacher voice; Sobhana for female)
+    edge_voice = "ml-IN-MidhunNeural" if "sobhana" not in voice_name.lower() else "ml-IN-SobhanaNeural"
+    raw_temp = output_mp3_path + ".raw.mp3"
+    
+    # 1. Primary: Authentic Malayalam Neural TTS (EdgeTTS) with Clarity EQ
     try:
         import edge_tts
-        edge_voice = "ml-IN-SobhanaNeural" if "midhun" not in voice_name.lower() else "ml-IN-MidhunNeural"
         
         async def _edge_gen():
-            comm = edge_tts.Communicate(script, edge_voice, rate="+5%")
-            await comm.save(output_mp3_path)
+            # rate='-3%' provides relaxed, clear teacher pacing with crisp syllable enunciation
+            comm = edge_tts.Communicate(clean_text, edge_voice, rate="-3%")
+            await comm.save(raw_temp)
             
         asyncio.run(_edge_gen())
         
+        # Audio Clarity Engineering with FFmpeg:
+        # - volume=1.25: optimal vocal loudness
+        # - equalizer 3.2kHz (+4dB): brings out consonant definitions (k, t, p, s, ch)
+        # - equalizer 250Hz (-2dB): clears muddy low-mid resonance
+        # - acompressor: smooths out syllable levels
+        # - 128k MP3 encoding
+        subprocess.run([
+            'ffmpeg', '-y', '-i', raw_temp,
+            '-af', 'volume=1.25,equalizer=f=3200:width_type=h:width=1200:g=4,equalizer=f=250:width_type=h:width=150:g=-2,acompressor=threshold=-16dB:ratio=3:attack=5:release=50',
+            '-b:a', '128k', output_mp3_path
+        ], check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        
+        if os.path.exists(raw_temp):
+            try:
+                os.remove(raw_temp)
+            except Exception:
+                pass
+                
         # Measure duration with ffprobe
         res = subprocess.run(
             ['ffprobe', '-v', 'error', '-show_entries', 'format=duration', '-of', 'default=noprint_wrappers=1:nokey=1', output_mp3_path],
@@ -60,15 +126,17 @@ def synthesize_malayalam_voice(script: str, output_mp3_path: str, voice_name: st
         )
         dur = float(res.stdout.strip()) if res.stdout.strip() else 10.0
         if os.path.exists(output_mp3_path) and os.path.getsize(output_mp3_path) > 1000:
-            print(f"   [TTS] Synthesized via EdgeTTS ({edge_voice}): {dur:.1f}s")
+            print(f"   [TTS Clarity Engine] Synthesized via {edge_voice} (Studio 128k): {dur:.1f}s")
             return dur
     except Exception as e:
         print(f"   [TTS] EdgeTTS error ({e}), trying Gemini Voice fallback...")
+        if os.path.exists(raw_temp) and not os.path.exists(output_mp3_path):
+            os.rename(raw_temp, output_mp3_path)
 
     # 2. Fallback: Gemini Voice (with strict verbatim reading instruction)
     try:
         from pipeline.phase3_audio import generate_gemini_audio
-        verbatim_script = f"Read the following teacher explanation aloud verbatim in Malayalam with English tax terminology. Speak ONLY this text and nothing else:\n\n{script}"
+        verbatim_script = f"Read the following teacher explanation aloud verbatim in Malayalam with English tax terminology. Speak ONLY this text and nothing else:\n\n{clean_text}"
         dur, engine = generate_gemini_audio(verbatim_script, output_mp3_path, voice_name="Aoede")
         if os.path.exists(output_mp3_path) and os.path.getsize(output_mp3_path) > 2000:
             print(f"   [TTS] Synthesized via {engine}: {dur:.1f}s")
@@ -450,7 +518,7 @@ def main():
     parser.add_argument("--provision", required=True, help="Statutory provision text")
     parser.add_argument("--subject", default="DT", help="Subject (DT or IDT)")
     parser.add_argument("--domain", default="Real Estate", help="Real-life domain (Real Estate, Shares, Goods)")
-    parser.add_argument("--voice", default="ml-IN-SobhanaNeural", help="Malayalam TTS voice name")
+    parser.add_argument("--voice", default="ml-IN-MidhunNeural", help="Malayalam TTS voice name (ml-IN-MidhunNeural or ml-IN-SobhanaNeural)")
     parser.add_argument("--output", default=None, help="Output path for presentation screenplay JSON")
     args = parser.parse_args()
 

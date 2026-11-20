@@ -701,6 +701,10 @@
             <option value="Goods & Logistics">Goods & Logistics</option>
             <option value="General Business">General Business</option>
           </select>
+          <select id="voice_select" class="select-input" title="Malayalam Teacher Voice">
+            <option value="ml-IN-MidhunNeural" selected>🎙️ Midhun (Male Teacher - Deep & Clear)</option>
+            <option value="ml-IN-SobhanaNeural">🎙️ Sobhana (Female Teacher)</option>
+          </select>
         </div>
 
         <div class="btn-group">
@@ -1316,7 +1320,8 @@
         }
         const subject = document.getElementById("subject_select").value;
         const domain = document.getElementById("domain_select").value;
-        triggerGitHubWorkflow(text, subject, domain);
+        const voice = document.getElementById("voice_select") ? document.getElementById("voice_select").value : "ml-IN-MidhunNeural";
+        triggerGitHubWorkflow(text, subject, domain, voice);
       };
 
       // Secondary Button: ⚡ Run Local Pipeline Preview
@@ -1356,7 +1361,7 @@
     // -------------------------------------------------------------------------
     // Trigger GitHub Workflow for Pasted Provision
     // -------------------------------------------------------------------------
-    async function triggerGitHubWorkflow(provisionText, subject, domain) {
+    async function triggerGitHubWorkflow(provisionText, subject, domain, voice = "ml-IN-MidhunNeural") {
       const pat = document.getElementById("gh_pat_input").value.trim() || localStorage.getItem("dt_github_pat");
       const owner = document.getElementById("gh_owner_input").value.trim() || "moviesua23-pixel";
       const repo = document.getElementById("gh_repo_input").value.trim() || "dt-idt-classes";
@@ -1369,7 +1374,7 @@
         return;
       }
 
-      showStatus(`🚀 <strong>Dispatching workflow to GitHub Actions...</strong><br>Repository: <code>${owner}/${repo}</code> | Branch: <code>${branch}</code>`, "info");
+      showStatus(`🚀 <strong>Dispatching workflow to GitHub Actions...</strong><br>Repository: <code>${owner}/${repo}</code> | Voice: <code>${voice}</code> | Branch: <code>${branch}</code>`, "info");
 
       try {
         const url = `https://api.github.com/repos/${owner}/${repo}/actions/workflows/${wf}/dispatches`;
@@ -1385,7 +1390,8 @@
             inputs: {
               provision_text: provisionText,
               subject: subject,
-              domain: domain
+              domain: domain,
+              voice: voice
             }
           })
         });
