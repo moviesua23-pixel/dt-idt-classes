@@ -1,0 +1,528 @@
+{
+  "total_test_cases": 40,
+  "correct_predictions": 40,
+  "hit_rate_pct": 100.0,
+  "misses": [],
+  "eval_cases": [
+    {
+      "id": "eval_01",
+      "text": "Father gifts a commercial land parcel to his daughter without any consideration.",
+      "expected": "gift_of_asset",
+      "predicted_top1": "gift_of_asset",
+      "predicted_top3": [
+        "gift_of_asset",
+        "previous_owner_cost",
+        "inheritance_by_will"
+      ],
+      "score_top1": 38,
+      "hit": true
+    },
+    {
+      "id": "eval_02",
+      "text": "Property agreed sale consideration is lower than stamp valuation authority guide rate.",
+      "expected": "stamp_value_substitution",
+      "predicted_top1": "stamp_value_substitution",
+      "predicted_top3": [
+        "stamp_value_substitution",
+        "lower_of_two_values",
+        "flat_rate_plus_cess"
+      ],
+      "score_top1": 84,
+      "hit": true
+    },
+    {
+      "id": "eval_03",
+      "text": "Net capital gain ledger computation deducting acquisition costs and transfer expenses from sale value.",
+      "expected": "capital_gain_ledger",
+      "predicted_top1": "capital_gain_ledger",
+      "predicted_top3": [
+        "capital_gain_ledger",
+        "compulsory_acquisition",
+        "stamp_value_substitution"
+      ],
+      "score_top1": 163,
+      "hit": true
+    },
+    {
+      "id": "eval_04",
+      "text": "Taxpayer purchases a new residential apartment within the two year statutory reinvestment period.",
+      "expected": "reinvestment_window",
+      "predicted_top1": "reinvestment_window",
+      "predicted_top3": [
+        "reinvestment_window",
+        "holding_period_clock",
+        "two_taxpayers_side_by_side"
+      ],
+      "score_top1": 42,
+      "hit": true
+    },
+    {
+      "id": "eval_05",
+      "text": "Checklist evaluating whether all five statutory criteria are fulfilled to unlock exemption.",
+      "expected": "conditions_checklist_gate",
+      "predicted_top1": "conditions_checklist_gate",
+      "predicted_top3": [
+        "conditions_checklist_gate",
+        "exemption_threshold_waterfall",
+        "capital_gain_ledger"
+      ],
+      "score_top1": 42,
+      "hit": true
+    },
+    {
+      "id": "eval_06",
+      "text": "Outright commercial sale of residential property where consideration is paid across two installments.",
+      "expected": "sale_of_asset",
+      "predicted_top1": "sale_of_asset",
+      "predicted_top3": [
+        "sale_of_asset",
+        "capital_gain_ledger",
+        "stamp_value_substitution"
+      ],
+      "score_top1": 34,
+      "hit": true
+    },
+    {
+      "id": "eval_07",
+      "text": "Individual total taxable income filling tax brackets progressively across slab steps.",
+      "expected": "slab_ladder",
+      "predicted_top1": "slab_ladder",
+      "predicted_top3": [
+        "slab_ladder",
+        "flat_rate_plus_cess",
+        "tds_flow"
+      ],
+      "score_top1": 44,
+      "hit": true
+    },
+    {
+      "id": "eval_08",
+      "text": "Tax deducted at source withheld by payer and remitted to government tax department.",
+      "expected": "tds_flow",
+      "predicted_top1": "tds_flow",
+      "predicted_top3": [
+        "tds_flow",
+        "flat_rate_plus_cess",
+        "slab_ladder"
+      ],
+      "score_top1": 26,
+      "hit": true
+    },
+    {
+      "id": "eval_09",
+      "text": "Salary breakup statement calculating gross earnings, allowances, and net take-home salary.",
+      "expected": "salary_breakup",
+      "predicted_top1": "salary_breakup",
+      "predicted_top3": [
+        "salary_breakup",
+        "capital_gain_ledger",
+        "two_taxpayers_side_by_side"
+      ],
+      "score_top1": 93,
+      "hit": true
+    },
+    {
+      "id": "eval_10",
+      "text": "High court ruling bench precedent decision establishing binding legal interpretation.",
+      "expected": "case_law_card",
+      "predicted_top1": "case_law_card",
+      "predicted_top3": [
+        "case_law_card",
+        "conditions_checklist_gate",
+        "lower_of_two_values"
+      ],
+      "score_top1": 24,
+      "hit": true
+    },
+    {
+      "id": "eval_11",
+      "text": "Son inherits ancestral residential house upon father demise under testamentary will.",
+      "expected": "inheritance_by_will",
+      "predicted_top1": "inheritance_by_will",
+      "predicted_top3": [
+        "inheritance_by_will",
+        "previous_owner_cost",
+        "gift_of_asset"
+      ],
+      "score_top1": 30,
+      "hit": true
+    },
+    {
+      "id": "eval_12",
+      "text": "Hindu undivided family coparceners effect total partition and distribute joint family estate.",
+      "expected": "huf_partition",
+      "predicted_top1": "huf_partition",
+      "predicted_top3": [
+        "huf_partition",
+        "liquidation_distribution",
+        "exemption_threshold_waterfall"
+      ],
+      "score_top1": 34,
+      "hit": true
+    },
+    {
+      "id": "eval_13",
+      "text": "Two domestic manufacturing companies combine via corporate amalgamation and issue new equity shares.",
+      "expected": "amalgamation_of_companies",
+      "predicted_top1": "amalgamation_of_companies",
+      "predicted_top3": [
+        "amalgamation_of_companies",
+        "huf_partition",
+        "conversion_firm_to_company"
+      ],
+      "score_top1": 64,
+      "hit": true
+    },
+    {
+      "id": "eval_14",
+      "text": "Partnership firm converts into a corporate private limited company allotting partner shares.",
+      "expected": "conversion_firm_to_company",
+      "predicted_top1": "conversion_firm_to_company",
+      "predicted_top3": [
+        "conversion_firm_to_company",
+        "capital_contribution_to_firm",
+        "huf_partition"
+      ],
+      "score_top1": 82,
+      "hit": true
+    },
+    {
+      "id": "eval_15",
+      "text": "Two property owners exchange plots of land and settle unequal values through cash boot balance.",
+      "expected": "exchange_of_assets",
+      "predicted_top1": "exchange_of_assets",
+      "predicted_top3": [
+        "exchange_of_assets",
+        "stamp_value_substitution",
+        "lower_of_two_values"
+      ],
+      "score_top1": 76,
+      "hit": true
+    },
+    {
+      "id": "eval_16",
+      "text": "Government department compulsory acquisition of agricultural land with enhanced compensation receipt.",
+      "expected": "compulsory_acquisition",
+      "predicted_top1": "compulsory_acquisition",
+      "predicted_top3": [
+        "compulsory_acquisition",
+        "gift_of_asset",
+        "stamp_value_substitution"
+      ],
+      "score_top1": 159,
+      "hit": true
+    },
+    {
+      "id": "eval_17",
+      "text": "Partner introduces commercial machinery as capital contribution into a partnership firm at book value.",
+      "expected": "capital_contribution_to_firm",
+      "predicted_top1": "capital_contribution_to_firm",
+      "predicted_top3": [
+        "capital_contribution_to_firm",
+        "stamp_value_substitution",
+        "lower_of_two_values"
+      ],
+      "score_top1": 124,
+      "hit": true
+    },
+    {
+      "id": "eval_18",
+      "text": "Company enters voluntary winding up and distributes surplus physical assets and cash to shareholders.",
+      "expected": "liquidation_distribution",
+      "predicted_top1": "liquidation_distribution",
+      "predicted_top3": [
+        "liquidation_distribution",
+        "conversion_firm_to_company",
+        "huf_partition"
+      ],
+      "score_top1": 84,
+      "hit": true
+    },
+    {
+      "id": "eval_19",
+      "text": "Adopting the lower benchmark value between actual cost and statutory ceiling limit.",
+      "expected": "lower_of_two_values",
+      "predicted_top1": "lower_of_two_values",
+      "predicted_top3": [
+        "lower_of_two_values",
+        "stamp_value_substitution",
+        "higher_of_cost_or_fmv"
+      ],
+      "score_top1": 84,
+      "hit": true
+    },
+    {
+      "id": "eval_20",
+      "text": "House acquired before cutoff date where cost is compared against market valuation on cutoff date.",
+      "expected": "value_on_cutoff_date",
+      "predicted_top1": "value_on_cutoff_date",
+      "predicted_top3": [
+        "value_on_cutoff_date",
+        "higher_of_cost_or_fmv",
+        "improvement_cutoff_timeline"
+      ],
+      "score_top1": 100,
+      "hit": true
+    },
+    {
+      "id": "eval_21",
+      "text": "Selecting the higher amount between declared base cost and market value benchmark up to limit ceiling.",
+      "expected": "higher_of_cost_or_fmv",
+      "predicted_top1": "higher_of_cost_or_fmv",
+      "predicted_top3": [
+        "higher_of_cost_or_fmv",
+        "stamp_value_substitution",
+        "lower_of_two_values"
+      ],
+      "score_top1": 138,
+      "hit": true
+    },
+    {
+      "id": "eval_22",
+      "text": "Comparing acquisition cost against declared fair market value to choose the higher cost base.",
+      "expected": "higher_of_cost_or_fmv",
+      "predicted_top1": "higher_of_cost_or_fmv",
+      "predicted_top3": [
+        "higher_of_cost_or_fmv",
+        "capital_gain_ledger",
+        "indexed_cost"
+      ],
+      "score_top1": 104,
+      "hit": true
+    },
+    {
+      "id": "eval_23",
+      "text": "Asset cost base climbs across consecutive tax years through cost inflation index multiplier ladder.",
+      "expected": "indexed_cost",
+      "predicted_top1": "indexed_cost",
+      "predicted_top3": [
+        "indexed_cost",
+        "slab_ladder",
+        "gift_of_asset"
+      ],
+      "score_top1": 68,
+      "hit": true
+    },
+    {
+      "id": "eval_24",
+      "text": "Calculating indexed cost of acquisition using transfer year index and acquisition year base index.",
+      "expected": "indexed_cost",
+      "predicted_top1": "indexed_cost",
+      "predicted_top3": [
+        "indexed_cost",
+        "compulsory_acquisition",
+        "previous_owner_cost"
+      ],
+      "score_top1": 135,
+      "hit": true
+    },
+    {
+      "id": "eval_25",
+      "text": "Cost incurred by grandfather travels through father settlement to become grandson cost of acquisition.",
+      "expected": "previous_owner_cost",
+      "predicted_top1": "previous_owner_cost",
+      "predicted_top3": [
+        "previous_owner_cost",
+        "compulsory_acquisition",
+        "indexed_cost"
+      ],
+      "score_top1": 60,
+      "hit": true
+    },
+    {
+      "id": "eval_26",
+      "text": "Succession chain where cost incurred by original owner carries over to successor beneficiary.",
+      "expected": "previous_owner_cost",
+      "predicted_top1": "previous_owner_cost",
+      "predicted_top3": [
+        "previous_owner_cost",
+        "indexed_cost",
+        "higher_of_cost_or_fmv"
+      ],
+      "score_top1": 84,
+      "hit": true
+    },
+    {
+      "id": "eval_27",
+      "text": "Aggregating months held by donor with months held by donee to evaluate twenty-four months threshold.",
+      "expected": "holding_period_clock",
+      "predicted_top1": "holding_period_clock",
+      "predicted_top3": [
+        "holding_period_clock",
+        "exemption_threshold_waterfall",
+        "gift_of_asset"
+      ],
+      "score_top1": 54,
+      "hit": true
+    },
+    {
+      "id": "eval_28",
+      "text": "Holding period clock stacking previous owner months to classify asset as long period or short period.",
+      "expected": "holding_period_clock",
+      "predicted_top1": "holding_period_clock",
+      "predicted_top3": [
+        "holding_period_clock",
+        "gift_of_asset",
+        "inheritance_by_will"
+      ],
+      "score_top1": 179,
+      "hit": true
+    },
+    {
+      "id": "eval_29",
+      "text": "Two co-owners compute their individual capital gain tax returns side by side in parallel ledgers.",
+      "expected": "two_taxpayers_side_by_side",
+      "predicted_top1": "two_taxpayers_side_by_side",
+      "predicted_top3": [
+        "two_taxpayers_side_by_side",
+        "capital_gain_ledger",
+        "flat_rate_plus_cess"
+      ],
+      "score_top1": 86,
+      "hit": true
+    },
+    {
+      "id": "eval_30",
+      "text": "Parallel side-by-side computation of tax liability under old tax regime versus new tax regime.",
+      "expected": "two_taxpayers_side_by_side",
+      "predicted_top1": "two_taxpayers_side_by_side",
+      "predicted_top3": [
+        "two_taxpayers_side_by_side",
+        "flat_rate_plus_cess",
+        "tds_flow"
+      ],
+      "score_top1": 54,
+      "hit": true
+    },
+    {
+      "id": "eval_31",
+      "text": "Timeline of capital improvements where renovation done prior to cutoff date is excluded as nil cost.",
+      "expected": "improvement_cutoff_timeline",
+      "predicted_top1": "improvement_cutoff_timeline",
+      "predicted_top3": [
+        "improvement_cutoff_timeline",
+        "value_on_cutoff_date",
+        "reinvestment_window"
+      ],
+      "score_top1": 104,
+      "hit": true
+    },
+    {
+      "id": "eval_32",
+      "text": "Evaluating expenditure timeline to accept post cutoff improvement and disregard pre cutoff cost.",
+      "expected": "improvement_cutoff_timeline",
+      "predicted_top1": "improvement_cutoff_timeline",
+      "predicted_top3": [
+        "improvement_cutoff_timeline",
+        "value_on_cutoff_date",
+        "reinvestment_window"
+      ],
+      "score_top1": 106,
+      "hit": true
+    },
+    {
+      "id": "eval_33",
+      "text": "Prospective buyer defaults on property purchase deal causing seller to forfeit and retain advance token.",
+      "expected": "advance_forfeited",
+      "predicted_top1": "advance_forfeited",
+      "predicted_top3": [
+        "advance_forfeited",
+        "gift_of_asset",
+        "stamp_value_substitution"
+      ],
+      "score_top1": 56,
+      "hit": true
+    },
+    {
+      "id": "eval_34",
+      "text": "Negotiation deal cancelled and earnest advance money forfeited resulting in cost base reduction.",
+      "expected": "advance_forfeited",
+      "predicted_top1": "advance_forfeited",
+      "predicted_top3": [
+        "advance_forfeited",
+        "capital_gain_ledger",
+        "higher_of_cost_or_fmv"
+      ],
+      "score_top1": 112,
+      "hit": true
+    },
+    {
+      "id": "eval_35",
+      "text": "Computing special flat tax rate of twenty percent on capital gains plus four percent health cess.",
+      "expected": "flat_rate_plus_cess",
+      "predicted_top1": "flat_rate_plus_cess",
+      "predicted_top3": [
+        "flat_rate_plus_cess",
+        "slab_ladder",
+        "capital_gain_ledger"
+      ],
+      "score_top1": 126,
+      "hit": true
+    },
+    {
+      "id": "eval_36",
+      "text": "Applying statutory flat tax percentage on capital gain amount followed by surcharge and cess addition.",
+      "expected": "flat_rate_plus_cess",
+      "predicted_top1": "flat_rate_plus_cess",
+      "predicted_top3": [
+        "flat_rate_plus_cess",
+        "capital_gain_ledger",
+        "capital_contribution_to_firm"
+      ],
+      "score_top1": 70,
+      "hit": true
+    },
+    {
+      "id": "eval_37",
+      "text": "Long term capital gains on listed shares partitioned against statutory exempt threshold buffer.",
+      "expected": "exemption_threshold_waterfall",
+      "predicted_top1": "exemption_threshold_waterfall",
+      "predicted_top3": [
+        "exemption_threshold_waterfall",
+        "capital_gain_ledger",
+        "huf_partition"
+      ],
+      "score_top1": 76,
+      "hit": true
+    },
+    {
+      "id": "eval_38",
+      "text": "Capital gain exceeding basic exempt threshold limit where only the taxable excess pays tax.",
+      "expected": "exemption_threshold_waterfall",
+      "predicted_top1": "exemption_threshold_waterfall",
+      "predicted_top3": [
+        "exemption_threshold_waterfall",
+        "capital_gain_ledger",
+        "flat_rate_plus_cess"
+      ],
+      "score_top1": 82,
+      "hit": true
+    },
+    {
+      "id": "eval_39",
+      "text": "Incurred capital loss pool absorbed sequentially by eligible capital gain income heads in priority order.",
+      "expected": "loss_set_off_waterfall",
+      "predicted_top1": "loss_set_off_waterfall",
+      "predicted_top3": [
+        "loss_set_off_waterfall",
+        "capital_gain_ledger",
+        "capital_contribution_to_firm"
+      ],
+      "score_top1": 62,
+      "hit": true
+    },
+    {
+      "id": "eval_40",
+      "text": "Waterfall absorption of capital losses against eligible profits with unabsorbed balance carried forward.",
+      "expected": "loss_set_off_waterfall",
+      "predicted_top1": "loss_set_off_waterfall",
+      "predicted_top3": [
+        "loss_set_off_waterfall",
+        "exchange_of_assets",
+        "capital_gain_ledger"
+      ],
+      "score_top1": 82,
+      "hit": true
+    }
+  ]
+}

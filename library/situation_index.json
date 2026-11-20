@@ -1,0 +1,604 @@
+{
+  "version": "1.0.0",
+  "total_active_animations": 30,
+  "situation_index": {
+    "transfer": [
+      "gift_of_asset",
+      "inheritance_by_will",
+      "huf_partition",
+      "amalgamation_of_companies",
+      "conversion_firm_to_company",
+      "exchange_of_assets",
+      "compulsory_acquisition",
+      "capital_contribution_to_firm",
+      "liquidation_distribution",
+      "previous_owner_cost",
+      "advance_forfeited"
+    ],
+    "gift": [
+      "gift_of_asset"
+    ],
+    "valuation": [
+      "stamp_value_substitution",
+      "lower_of_two_values",
+      "value_on_cutoff_date",
+      "higher_of_cost_or_fmv",
+      "indexed_cost",
+      "previous_owner_cost",
+      "holding_period_clock"
+    ],
+    "comparison": [
+      "stamp_value_substitution",
+      "higher_of_cost_or_fmv",
+      "two_taxpayers_side_by_side"
+    ],
+    "computation": [
+      "capital_gain_ledger",
+      "indexed_cost",
+      "two_taxpayers_side_by_side",
+      "improvement_cutoff_timeline",
+      "advance_forfeited",
+      "flat_rate_plus_cess",
+      "exemption_threshold_waterfall",
+      "loss_set_off_waterfall"
+    ],
+    "ledger": [
+      "capital_gain_ledger"
+    ],
+    "timeline": [
+      "reinvestment_window",
+      "value_on_cutoff_date",
+      "holding_period_clock",
+      "improvement_cutoff_timeline"
+    ],
+    "window": [
+      "reinvestment_window"
+    ],
+    "date_check": [
+      "reinvestment_window"
+    ],
+    "checklist": [
+      "conditions_checklist_gate"
+    ],
+    "decision_gate": [
+      "conditions_checklist_gate"
+    ],
+    "sale": [
+      "sale_of_asset"
+    ],
+    "conveyance": [
+      "sale_of_asset"
+    ],
+    "ladder": [
+      "slab_ladder"
+    ],
+    "progressive_tax": [
+      "slab_ladder"
+    ],
+    "flow": [
+      "tds_flow"
+    ],
+    "tax_split": [
+      "tds_flow"
+    ],
+    "stack": [
+      "salary_breakup"
+    ],
+    "aggregation": [
+      "salary_breakup"
+    ],
+    "case_law": [
+      "case_law_card"
+    ],
+    "summary_card": [
+      "case_law_card"
+    ],
+    "asset": [
+      "inheritance_by_will",
+      "huf_partition",
+      "amalgamation_of_companies",
+      "conversion_firm_to_company",
+      "exchange_of_assets",
+      "compulsory_acquisition",
+      "capital_contribution_to_firm",
+      "liquidation_distribution"
+    ],
+    "decision": [
+      "lower_of_two_values"
+    ],
+    "cutoff": [
+      "higher_of_cost_or_fmv",
+      "improvement_cutoff_timeline"
+    ],
+    "growth": [
+      "indexed_cost"
+    ],
+    "carryover": [
+      "previous_owner_cost"
+    ],
+    "classification": [
+      "holding_period_clock"
+    ],
+    "co_ownership": [
+      "two_taxpayers_side_by_side"
+    ],
+    "forfeiture": [
+      "advance_forfeited"
+    ],
+    "rate": [
+      "flat_rate_plus_cess"
+    ],
+    "tax_liability": [
+      "flat_rate_plus_cess"
+    ],
+    "threshold": [
+      "exemption_threshold_waterfall"
+    ],
+    "partition": [
+      "exemption_threshold_waterfall"
+    ],
+    "loss": [
+      "loss_set_off_waterfall"
+    ],
+    "absorption": [
+      "loss_set_off_waterfall"
+    ]
+  },
+  "asset_index": {
+    "house": [
+      "gift_of_asset",
+      "stamp_value_substitution",
+      "reinvestment_window",
+      "sale_of_asset",
+      "inheritance_by_will",
+      "huf_partition",
+      "exchange_of_assets",
+      "compulsory_acquisition",
+      "capital_contribution_to_firm",
+      "lower_of_two_values",
+      "value_on_cutoff_date",
+      "higher_of_cost_or_fmv",
+      "indexed_cost",
+      "previous_owner_cost",
+      "holding_period_clock",
+      "two_taxpayers_side_by_side",
+      "improvement_cutoff_timeline",
+      "advance_forfeited",
+      "flat_rate_plus_cess",
+      "loss_set_off_waterfall"
+    ],
+    "land": [
+      "gift_of_asset",
+      "stamp_value_substitution",
+      "sale_of_asset",
+      "inheritance_by_will",
+      "huf_partition",
+      "exchange_of_assets",
+      "compulsory_acquisition",
+      "capital_contribution_to_firm",
+      "lower_of_two_values",
+      "value_on_cutoff_date",
+      "higher_of_cost_or_fmv",
+      "indexed_cost",
+      "previous_owner_cost",
+      "holding_period_clock",
+      "two_taxpayers_side_by_side",
+      "improvement_cutoff_timeline",
+      "advance_forfeited",
+      "flat_rate_plus_cess"
+    ],
+    "shares": [
+      "gift_of_asset",
+      "sale_of_asset",
+      "inheritance_by_will",
+      "huf_partition",
+      "amalgamation_of_companies",
+      "conversion_firm_to_company",
+      "exchange_of_assets",
+      "liquidation_distribution",
+      "lower_of_two_values",
+      "higher_of_cost_or_fmv",
+      "previous_owner_cost",
+      "holding_period_clock",
+      "two_taxpayers_side_by_side",
+      "advance_forfeited",
+      "flat_rate_plus_cess",
+      "exemption_threshold_waterfall",
+      "loss_set_off_waterfall"
+    ],
+    "gold": [
+      "gift_of_asset",
+      "inheritance_by_will",
+      "huf_partition",
+      "exchange_of_assets",
+      "lower_of_two_values",
+      "value_on_cutoff_date",
+      "higher_of_cost_or_fmv",
+      "indexed_cost",
+      "previous_owner_cost",
+      "holding_period_clock"
+    ],
+    "all": [
+      "capital_gain_ledger",
+      "conditions_checklist_gate",
+      "slab_ladder",
+      "tds_flow",
+      "salary_breakup",
+      "case_law_card"
+    ],
+    "bonds": [
+      "reinvestment_window",
+      "flat_rate_plus_cess",
+      "exemption_threshold_waterfall"
+    ],
+    "business": [
+      "sale_of_asset",
+      "amalgamation_of_companies",
+      "conversion_firm_to_company",
+      "liquidation_distribution",
+      "two_taxpayers_side_by_side",
+      "loss_set_off_waterfall"
+    ],
+    "machinery": [
+      "capital_contribution_to_firm"
+    ],
+    "building": [
+      "improvement_cutoff_timeline"
+    ],
+    "mutual_fund": [
+      "exemption_threshold_waterfall"
+    ]
+  },
+  "topic_index": {
+    "previous owner cost": [
+      "gift_of_asset"
+    ],
+    "holding period": [
+      "gift_of_asset",
+      "inheritance_by_will",
+      "holding_period_clock"
+    ],
+    "benchmark value": [
+      "stamp_value_substitution"
+    ],
+    "limit": [
+      "stamp_value_substitution"
+    ],
+    "gross sale": [
+      "capital_gain_ledger"
+    ],
+    "cost base": [
+      "capital_gain_ledger"
+    ],
+    "gain": [
+      "capital_gain_ledger"
+    ],
+    "date window": [
+      "reinvestment_window"
+    ],
+    "cutoff": [
+      "reinvestment_window"
+    ],
+    "criteria gate": [
+      "conditions_checklist_gate"
+    ],
+    "decision": [
+      "conditions_checklist_gate",
+      "case_law_card"
+    ],
+    "sale price": [
+      "sale_of_asset"
+    ],
+    "payment": [
+      "sale_of_asset"
+    ],
+    "slab tiers": [
+      "slab_ladder"
+    ],
+    "tax rate": [
+      "slab_ladder",
+      "flat_rate_plus_cess"
+    ],
+    "tax deduction": [
+      "tds_flow"
+    ],
+    "net payment": [
+      "tds_flow"
+    ],
+    "stack blocks": [
+      "salary_breakup"
+    ],
+    "net result": [
+      "salary_breakup"
+    ],
+    "benchmark card": [
+      "case_law_card"
+    ],
+    "previous cost": [
+      "inheritance_by_will",
+      "previous_owner_cost"
+    ],
+    "split": [
+      "huf_partition"
+    ],
+    "share": [
+      "huf_partition"
+    ],
+    "amalgamation": [
+      "amalgamation_of_companies"
+    ],
+    "merger": [
+      "amalgamation_of_companies"
+    ],
+    "conversion": [
+      "conversion_firm_to_company"
+    ],
+    "corporate": [
+      "conversion_firm_to_company"
+    ],
+    "exchange": [
+      "exchange_of_assets"
+    ],
+    "balance": [
+      "exchange_of_assets"
+    ],
+    "acquisition": [
+      "compulsory_acquisition"
+    ],
+    "compensation": [
+      "compulsory_acquisition"
+    ],
+    "contribution": [
+      "capital_contribution_to_firm"
+    ],
+    "firm": [
+      "capital_contribution_to_firm"
+    ],
+    "liquidation": [
+      "liquidation_distribution"
+    ],
+    "distribution": [
+      "liquidation_distribution"
+    ],
+    "lower value": [
+      "lower_of_two_values"
+    ],
+    "benchmark": [
+      "lower_of_two_values"
+    ],
+    "cutoff date": [
+      "value_on_cutoff_date",
+      "improvement_cutoff_timeline"
+    ],
+    "fmv substitution": [
+      "value_on_cutoff_date"
+    ],
+    "market value": [
+      "higher_of_cost_or_fmv"
+    ],
+    "base cost": [
+      "higher_of_cost_or_fmv"
+    ],
+    "limit ceiling": [
+      "higher_of_cost_or_fmv"
+    ],
+    "indexed cost": [
+      "indexed_cost"
+    ],
+    "index ratio": [
+      "indexed_cost"
+    ],
+    "year multiplier": [
+      "indexed_cost"
+    ],
+    "chain transfer": [
+      "previous_owner_cost"
+    ],
+    "succession": [
+      "previous_owner_cost"
+    ],
+    "months counted": [
+      "holding_period_clock"
+    ],
+    "period threshold": [
+      "holding_period_clock"
+    ],
+    "parallel computation": [
+      "two_taxpayers_side_by_side"
+    ],
+    "two taxpayers": [
+      "two_taxpayers_side_by_side"
+    ],
+    "net comparison": [
+      "two_taxpayers_side_by_side"
+    ],
+    "improvement cost": [
+      "improvement_cutoff_timeline"
+    ],
+    "timeline evaluation": [
+      "improvement_cutoff_timeline"
+    ],
+    "advance money": [
+      "advance_forfeited"
+    ],
+    "deal cancelled": [
+      "advance_forfeited"
+    ],
+    "cost reduction": [
+      "advance_forfeited"
+    ],
+    "flat cess": [
+      "flat_rate_plus_cess"
+    ],
+    "total tax": [
+      "flat_rate_plus_cess"
+    ],
+    "threshold buffer": [
+      "exemption_threshold_waterfall"
+    ],
+    "exempt base": [
+      "exemption_threshold_waterfall"
+    ],
+    "taxable excess": [
+      "exemption_threshold_waterfall"
+    ],
+    "loss set off": [
+      "loss_set_off_waterfall"
+    ],
+    "priority absorption": [
+      "loss_set_off_waterfall"
+    ],
+    "carry forward": [
+      "loss_set_off_waterfall"
+    ]
+  },
+  "gap_report": {
+    "total_gap_situations": 20,
+    "pending_batches": [
+      "Batch C (10 situations)",
+      "Batch D (10 situations)"
+    ],
+    "situations": [
+      {
+        "id": "loss_carry_forward",
+        "title": "Loss Carry Forward Over Assessment Years",
+        "category": "C. Computation",
+        "priority": "Batch C",
+        "rule": "Section 72 / 74 business & capital loss carry forward limit 8 years"
+      },
+      {
+        "id": "lock_in_period",
+        "title": "Statutory Lock-in Period Verification",
+        "category": "D. Timelines and windows",
+        "priority": "Batch C",
+        "rule": "Section 54EC 5-year lock-in holding requirement"
+      },
+      {
+        "id": "deadline_calendar",
+        "title": "Capital Gains Account Scheme Deposit Deadline",
+        "category": "D. Timelines and windows",
+        "priority": "Batch C",
+        "rule": "Section 139(1) due date deposit for 54/54F reinvestment"
+      },
+      {
+        "id": "regime_change_cutoff",
+        "title": "Concessional vs Default Tax Regime Cutoff",
+        "category": "D. Timelines and windows",
+        "priority": "Batch C",
+        "rule": "Section 115BAC choice and timeline cutoff date"
+      },
+      {
+        "id": "installments_over_years",
+        "title": "Compensation Inflow in Multi-Year Installments",
+        "category": "D. Timelines and windows",
+        "priority": "Batch C",
+        "rule": "Section 45(5) enhanced compensation taxed in year of actual receipt"
+      },
+      {
+        "id": "year_mapping",
+        "title": "Previous Year to Assessment Year Mapping",
+        "category": "D. Timelines and windows",
+        "priority": "Batch C",
+        "rule": "Section 3 Previous Year financial period mapping to Assessment Year"
+      },
+      {
+        "id": "return_due_dates",
+        "title": "Tax Return Filing Due Dates & Fee Escalation",
+        "category": "D. Timelines and windows",
+        "priority": "Batch C",
+        "rule": "Section 139(1) and Section 234F fee after deadline"
+      },
+      {
+        "id": "decision_tree_two_branches",
+        "title": "Binary Statutory Condition Gate",
+        "category": "E. Conditions and decisions",
+        "priority": "Batch C",
+        "rule": "Section 54 ownership of only one residential house"
+      },
+      {
+        "id": "decision_tree_three_branches",
+        "title": "Multi-tier Statutory Exemption Classifier",
+        "category": "E. Conditions and decisions",
+        "priority": "Batch C",
+        "rule": "Agricultural land rural vs urban classification criteria"
+      },
+      {
+        "id": "either_or_choice",
+        "title": "Alternative Relief Scheme Selection",
+        "category": "E. Conditions and decisions",
+        "priority": "Batch C",
+        "rule": "Section 112 with indexation vs without indexation choice"
+      },
+      {
+        "id": "rule_with_exception",
+        "title": "General Statutory Rule with Specific Proviso Exception",
+        "category": "E. Conditions and decisions",
+        "priority": "Batch D",
+        "rule": "Section 50C safe harbor 110% tolerance exception"
+      },
+      {
+        "id": "residential_status_days",
+        "title": "Residential Status Physical Presence Days Count",
+        "category": "E. Conditions and decisions",
+        "priority": "Batch D",
+        "rule": "Section 6 182 days vs 60 days + 365 days test"
+      },
+      {
+        "id": "short_vs_long_classifier",
+        "title": "Holding Period Asset Class Threshold Classifier",
+        "category": "B. Valuation and deemed value",
+        "priority": "Batch D",
+        "rule": "12 vs 24 vs 36 months asset categorization"
+      },
+      {
+        "id": "advance_tax_instalments",
+        "title": "Advance Tax Quarterly Installment Schedule",
+        "category": "F. Flows and withholding",
+        "priority": "Batch D",
+        "rule": "Section 211 quarterly schedule: 15%, 45%, 75%, 100%"
+      },
+      {
+        "id": "payment_to_nonresident",
+        "title": "Tax Deducted at Source on Payment to Non-Resident",
+        "category": "F. Flows and withholding",
+        "priority": "Batch D",
+        "rule": "Section 195 withholding & grossing up obligation"
+      },
+      {
+        "id": "dividend_flow",
+        "title": "Corporate Dividend Distribution & TDS Flow",
+        "category": "F. Flows and withholding",
+        "priority": "Batch D",
+        "rule": "Section 194 dividend credit with TDS deduction"
+      },
+      {
+        "id": "interest_accrual",
+        "title": "Mandatory Statutory Interest Accrual Ladder",
+        "category": "C. Computation",
+        "priority": "Batch D",
+        "rule": "Section 234A/B/C statutory interest timeline"
+      },
+      {
+        "id": "house_property_income",
+        "title": "Income from House Property Standard Deductions",
+        "category": "G. Heads of income and business",
+        "priority": "Batch D",
+        "rule": "Section 24 30% statutory allowance and municipal tax deduction"
+      },
+      {
+        "id": "business_profit_adjustment",
+        "title": "PGBP Net Profit Inadmissible Expenses Add-Back",
+        "category": "G. Heads of income and business",
+        "priority": "Batch D",
+        "rule": "Section 40(a)(ia) 30% disallowance add-back to net book profit"
+      },
+      {
+        "id": "deduction_cap_gauge",
+        "title": "Chapter VI-A Maximum Allowable Deduction Gauge",
+        "category": "C. Computation",
+        "priority": "Batch D",
+        "rule": "Section 80C cap of ₹ 1,50,000 threshold gauge"
+      }
+    ]
+  }
+}

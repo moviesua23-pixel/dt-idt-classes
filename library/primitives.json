@@ -1,0 +1,644 @@
+{
+  "version": "1.0.0",
+  "timing_map_spec": {
+    "description": "Timing map specification for overriding default cue timestamps (produced by future voice-sync stage)",
+    "format": {
+      "<cue_id>": "number (seconds from animation start)"
+    },
+    "lead_seconds": 0.15,
+    "lead_description": "Optional lead-time in seconds before voice narration starts an event (default 0.15s)"
+  },
+  "tokens": {
+    "light": {
+      "--bg": "#F8FAFC",
+      "--surface": "#FFFFFF",
+      "--surface-card": "#FFFFFF",
+      "--ink": "#0F172A",
+      "--ink-muted": "#64748B",
+      "--line": "#E2E8F0",
+      "--accent": "#4F46E5",
+      "--accent-soft": "#EEF2FF",
+      "--ok": "#059669",
+      "--ok-soft": "#ECFDF5",
+      "--warn": "#DC2626",
+      "--warn-soft": "#FEF2F2",
+      "--gold": "#D97706",
+      "--gold-soft": "#FEF3C7",
+      "--shadow": "rgba(15, 23, 42, 0.08)"
+    },
+    "dark": {
+      "--bg": "#0B1120",
+      "--surface": "#1E293B",
+      "--surface-card": "#1E293B",
+      "--ink": "#F8FAFC",
+      "--ink-muted": "#94A3B8",
+      "--line": "#334155",
+      "--accent": "#818CF8",
+      "--accent-soft": "#1E1B4B",
+      "--ok": "#34D399",
+      "--ok-soft": "#064E3B",
+      "--warn": "#F87171",
+      "--warn-soft": "#7F1D1D",
+      "--gold": "#FBBF24",
+      "--gold-soft": "#78350F",
+      "--shadow": "rgba(0, 0, 0, 0.35)"
+    }
+  },
+  "primitives": [
+    {
+      "type": "person",
+      "group": "actors",
+      "is_container": false,
+      "is_badge": false,
+      "default_w": 100,
+      "default_h": 120,
+      "description": "Individual human taxpayer, buyer, seller, partner, or donor with label.",
+      "params": {
+        "label": "string",
+        "role": "string",
+        "avatar_style": "string"
+      }
+    },
+    {
+      "type": "group_huf",
+      "group": "actors",
+      "is_container": false,
+      "is_badge": false,
+      "default_w": 120,
+      "default_h": 120,
+      "description": "Family group or Hindu Undivided Family actor unit with plural silhouette.",
+      "params": {
+        "label": "string",
+        "members": "number"
+      }
+    },
+    {
+      "type": "company",
+      "group": "actors",
+      "is_container": false,
+      "is_badge": false,
+      "default_w": 110,
+      "default_h": 120,
+      "description": "Corporate body or enterprise entity with corporate tower emblem.",
+      "params": {
+        "label": "string",
+        "corp_type": "string"
+      }
+    },
+    {
+      "type": "firm",
+      "group": "actors",
+      "is_container": false,
+      "is_badge": false,
+      "default_w": 110,
+      "default_h": 120,
+      "description": "Partnership firm or LLP entity with handshake insignia.",
+      "params": {
+        "label": "string"
+      }
+    },
+    {
+      "type": "bank",
+      "group": "actors",
+      "is_container": false,
+      "is_badge": false,
+      "default_w": 110,
+      "default_h": 120,
+      "description": "Banking / financial institution with classical pillar facade.",
+      "params": {
+        "label": "string"
+      }
+    },
+    {
+      "type": "govt_dept",
+      "group": "actors",
+      "is_container": false,
+      "is_badge": false,
+      "default_w": 110,
+      "default_h": 120,
+      "description": "Government ministry or statutory authority with official seal crest.",
+      "params": {
+        "label": "string",
+        "dept_name": "string"
+      }
+    },
+    {
+      "type": "tax_office",
+      "group": "actors",
+      "is_container": false,
+      "is_badge": false,
+      "default_w": 110,
+      "default_h": 120,
+      "description": "Tax administration or revenue authority with balance scales insignia.",
+      "params": {
+        "label": "string"
+      }
+    },
+    {
+      "type": "house",
+      "group": "assets",
+      "is_container": false,
+      "is_badge": false,
+      "default_w": 110,
+      "default_h": 100,
+      "description": "Residential or commercial house property with roof & doorway.",
+      "params": {
+        "label": "string",
+        "cost": "number"
+      }
+    },
+    {
+      "type": "land",
+      "group": "assets",
+      "is_container": false,
+      "is_badge": false,
+      "default_w": 110,
+      "default_h": 90,
+      "description": "Plot of agricultural or commercial land with boundary marker pins.",
+      "params": {
+        "label": "string",
+        "area": "string"
+      }
+    },
+    {
+      "type": "shares",
+      "group": "assets",
+      "is_container": false,
+      "is_badge": false,
+      "default_w": 90,
+      "default_h": 90,
+      "description": "Equity shares or certificate stack with percentage yield.",
+      "params": {
+        "label": "string",
+        "quantity": "number"
+      }
+    },
+    {
+      "type": "mutual_fund",
+      "group": "assets",
+      "is_container": false,
+      "is_badge": false,
+      "default_w": 90,
+      "default_h": 90,
+      "description": "Mutual fund units or pooled investment portfolio.",
+      "params": {
+        "label": "string",
+        "nav": "number"
+      }
+    },
+    {
+      "type": "gold",
+      "group": "assets",
+      "is_container": false,
+      "is_badge": false,
+      "default_w": 90,
+      "default_h": 80,
+      "description": "Gold ingot or bullion bullion bar with lustrous reflection.",
+      "params": {
+        "label": "string",
+        "weight": "string"
+      }
+    },
+    {
+      "type": "machinery",
+      "group": "assets",
+      "is_container": false,
+      "is_badge": false,
+      "default_w": 100,
+      "default_h": 90,
+      "description": "Plant and industrial machinery with intermeshing cog gears.",
+      "params": {
+        "label": "string"
+      }
+    },
+    {
+      "type": "business",
+      "group": "assets",
+      "is_container": false,
+      "is_badge": false,
+      "default_w": 110,
+      "default_h": 100,
+      "description": "Commercial undertaking, factory, or business enterprise asset.",
+      "params": {
+        "label": "string"
+      }
+    },
+    {
+      "type": "bonds",
+      "group": "assets",
+      "is_container": false,
+      "is_badge": false,
+      "default_w": 90,
+      "default_h": 90,
+      "description": "Capital gain bonds or sovereign debentures with ribbon rosette.",
+      "params": {
+        "label": "string",
+        "interest": "number"
+      }
+    },
+    {
+      "type": "vehicle",
+      "group": "assets",
+      "is_container": false,
+      "is_badge": false,
+      "default_w": 110,
+      "default_h": 70,
+      "description": "Commercial or passenger motor vehicle asset.",
+      "params": {
+        "label": "string"
+      }
+    },
+    {
+      "type": "document",
+      "group": "instruments",
+      "is_container": false,
+      "is_badge": false,
+      "default_w": 80,
+      "default_h": 100,
+      "description": "Legal contract, agreement to sell, deed, or tax assessment order.",
+      "params": {
+        "title": "string",
+        "subtitle": "string"
+      }
+    },
+    {
+      "type": "money_bag",
+      "group": "instruments",
+      "is_container": false,
+      "is_badge": false,
+      "default_w": 90,
+      "default_h": 90,
+      "description": "Bag of monetary consideration or cash consideration with \u20b9 symbol.",
+      "params": {
+        "amount": "number",
+        "fmt": "string"
+      }
+    },
+    {
+      "type": "coin",
+      "group": "instruments",
+      "is_container": false,
+      "is_badge": false,
+      "default_w": 60,
+      "default_h": 60,
+      "description": "Individual monetary coin or dividend token.",
+      "params": {
+        "value": "number"
+      }
+    },
+    {
+      "type": "calendar",
+      "group": "indicators",
+      "is_container": false,
+      "is_badge": false,
+      "default_w": 90,
+      "default_h": 90,
+      "description": "Calendar block displaying due date, statutory cutoff, or tax year.",
+      "params": {
+        "date": "string",
+        "month": "string",
+        "year": "number"
+      }
+    },
+    {
+      "type": "clock",
+      "group": "indicators",
+      "is_container": false,
+      "is_badge": false,
+      "default_w": 80,
+      "default_h": 80,
+      "description": "Radial clock face tracking holding period in months or days.",
+      "params": {
+        "months": "number"
+      }
+    },
+    {
+      "type": "scale",
+      "group": "indicators",
+      "is_container": false,
+      "is_badge": false,
+      "default_w": 120,
+      "default_h": 100,
+      "description": "Justice balance scale weighing two competing values or claims.",
+      "params": {
+        "tilt": "number"
+      }
+    },
+    {
+      "type": "gavel",
+      "group": "indicators",
+      "is_container": false,
+      "is_badge": false,
+      "default_w": 80,
+      "default_h": 80,
+      "description": "Judicial gavel for court precedents, rulings, and decisions.",
+      "params": {
+        "strike_at": "number"
+      }
+    },
+    {
+      "type": "padlock",
+      "group": "indicators",
+      "is_container": false,
+      "is_badge": false,
+      "default_w": 70,
+      "default_h": 80,
+      "description": "Security padlock that opens (unlocked) or snaps shut (locked).",
+      "params": {
+        "locked": "boolean"
+      }
+    },
+    {
+      "type": "gate",
+      "group": "indicators",
+      "is_container": false,
+      "is_badge": false,
+      "default_w": 140,
+      "default_h": 100,
+      "description": "Security gate doors that swing open for qualified events or lock.",
+      "params": {
+        "open": "boolean"
+      }
+    },
+    {
+      "type": "tick",
+      "group": "indicators",
+      "is_container": false,
+      "is_badge": true,
+      "default_w": 40,
+      "default_h": 40,
+      "description": "Green approval checkmark badge confirming condition satisfaction.",
+      "params": {
+        "tone": "string"
+      }
+    },
+    {
+      "type": "cross",
+      "group": "indicators",
+      "is_container": false,
+      "is_badge": true,
+      "default_w": 40,
+      "default_h": 40,
+      "description": "Red rejection cross badge for failed condition or disallowance.",
+      "params": {
+        "tone": "string"
+      }
+    },
+    {
+      "type": "arrow",
+      "group": "indicators",
+      "is_container": false,
+      "is_badge": false,
+      "default_w": 100,
+      "default_h": 20,
+      "description": "Directional horizontal or vertical transfer flow arrow.",
+      "params": {
+        "direction": "string",
+        "label": "string"
+      }
+    },
+    {
+      "type": "curved_arrow",
+      "group": "indicators",
+      "is_container": false,
+      "is_badge": false,
+      "default_w": 120,
+      "default_h": 60,
+      "description": "Curved arching flow arrow for loops, transfers, and cycles.",
+      "params": {
+        "direction": "string"
+      }
+    },
+    {
+      "type": "line",
+      "group": "indicators",
+      "is_container": false,
+      "is_badge": false,
+      "default_w": 200,
+      "default_h": 4,
+      "description": "Horizontal or vertical separator or statutory threshold ceiling.",
+      "params": {
+        "dashed": "boolean",
+        "stroke": "string"
+      }
+    },
+    {
+      "type": "card",
+      "group": "containers",
+      "is_container": true,
+      "is_badge": false,
+      "default_w": 240,
+      "default_h": 160,
+      "description": "Primary rounded rectangular surface container holding text, badges, and icons.",
+      "params": {
+        "title": "string",
+        "subtitle": "string",
+        "tone": "string",
+        "rx": "number"
+      }
+    },
+    {
+      "type": "pill",
+      "group": "containers",
+      "is_container": false,
+      "is_badge": true,
+      "default_w": 120,
+      "default_h": 36,
+      "description": "Rounded status pill or category badge positioned on cards or standalone.",
+      "params": {
+        "text": "string",
+        "tone": "string"
+      }
+    },
+    {
+      "type": "text",
+      "group": "containers",
+      "is_container": false,
+      "is_badge": false,
+      "default_w": 200,
+      "default_h": 36,
+      "description": "High-legibility SVG typography node with auto-wrapping and auto-scaling.",
+      "params": {
+        "text": "string",
+        "font_size": "number",
+        "weight": "string",
+        "align": "string"
+      }
+    },
+    {
+      "type": "counter",
+      "group": "containers",
+      "is_container": false,
+      "is_badge": false,
+      "default_w": 200,
+      "default_h": 48,
+      "description": "Dynamic rolling numeric counter displaying formatted currency or values.",
+      "params": {
+        "value": "number",
+        "fmt": "string",
+        "prefix": "string"
+      }
+    },
+    {
+      "type": "ledger_row",
+      "group": "containers",
+      "is_container": true,
+      "is_badge": false,
+      "default_w": 600,
+      "default_h": 44,
+      "description": "Accounting computation row displaying sign (+/-/=), particulars, and amount.",
+      "params": {
+        "sign": "string",
+        "label": "string",
+        "value": "number",
+        "is_total": "boolean"
+      }
+    },
+    {
+      "type": "bar",
+      "group": "containers",
+      "is_container": false,
+      "is_badge": false,
+      "default_w": 300,
+      "default_h": 36,
+      "description": "Horizontal or vertical comparison bar filling up to a target value.",
+      "params": {
+        "value": "number",
+        "max": "number",
+        "fill_color": "string"
+      }
+    },
+    {
+      "type": "gauge",
+      "group": "containers",
+      "is_container": false,
+      "is_badge": false,
+      "default_w": 200,
+      "default_h": 120,
+      "description": "Radial or semi-circular speedometer gauge tracking utilization vs limit.",
+      "params": {
+        "value": "number",
+        "limit": "number",
+        "label": "string"
+      }
+    },
+    {
+      "type": "slab_step",
+      "group": "containers",
+      "is_container": false,
+      "is_badge": false,
+      "default_w": 320,
+      "default_h": 48,
+      "description": "Individual progressive tax slab tier with bracket range and tax rate.",
+      "params": {
+        "slab_range": "string",
+        "rate": "string",
+        "tax_val": "number"
+      }
+    },
+    {
+      "type": "timeline_axis",
+      "group": "containers",
+      "is_container": false,
+      "is_badge": false,
+      "default_w": 700,
+      "default_h": 60,
+      "description": "Chronological horizontal timeline with milestone dates and ticks.",
+      "params": {
+        "start_date": "string",
+        "end_date": "string",
+        "ticks": "list"
+      }
+    },
+    {
+      "type": "window_bar",
+      "group": "containers",
+      "is_container": false,
+      "is_badge": false,
+      "default_w": 300,
+      "default_h": 40,
+      "description": "Permitted statutory investment or relief window highlighted on a timeline.",
+      "params": {
+        "label": "string",
+        "valid": "boolean"
+      }
+    },
+    {
+      "type": "marker",
+      "group": "containers",
+      "is_container": false,
+      "is_badge": true,
+      "default_w": 40,
+      "default_h": 60,
+      "description": "Pinpoint milestone flag or date marker on timeline or chart.",
+      "params": {
+        "label": "string",
+        "date": "string",
+        "tone": "string"
+      }
+    },
+    {
+      "type": "strike",
+      "group": "containers",
+      "is_container": false,
+      "is_badge": true,
+      "default_w": 200,
+      "default_h": 10,
+      "description": "Red or gold animated strike-through line crossing out disallowed or replaced values.",
+      "params": {
+        "angle": "number",
+        "stroke_width": "number"
+      }
+    },
+    {
+      "type": "glow",
+      "group": "containers",
+      "is_container": false,
+      "is_badge": true,
+      "default_w": 100,
+      "default_h": 100,
+      "description": "Radial specular contour glow halo highlighting active element.",
+      "params": {
+        "radius": "number",
+        "tone": "string"
+      }
+    },
+    {
+      "type": "stack",
+      "group": "containers",
+      "is_container": true,
+      "is_badge": false,
+      "default_w": 220,
+      "default_h": 300,
+      "description": "Vertical stack container holding cumulative financial layers.",
+      "params": {
+        "layers": "list"
+      }
+    },
+    {
+      "type": "split",
+      "group": "containers",
+      "is_container": true,
+      "is_badge": false,
+      "default_w": 400,
+      "default_h": 200,
+      "description": "Bifurcation node dividing an input inflow into multiple outgoing streams.",
+      "params": {
+        "ratio": "string",
+        "branches": "number"
+      }
+    },
+    {
+      "type": "merge",
+      "group": "containers",
+      "is_container": true,
+      "is_badge": false,
+      "default_w": 400,
+      "default_h": 200,
+      "description": "Aggregation node combining multiple inflows into a single unified total.",
+      "params": {
+        "inputs": "number"
+      }
+    }
+  ]
+}

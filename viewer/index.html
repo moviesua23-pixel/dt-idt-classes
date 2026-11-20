@@ -1,0 +1,1439 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CA Study Board · Situation Animation Library & Gallery</title>
+  
+  <style>
+    :root {
+      --bg: #F8FAFC;
+      --surface: #FFFFFF;
+      --surface-2: #F1F5F9;
+      --surface-card: #FFFFFF;
+      --ink: #0F172A;
+      --ink-muted: #64748B;
+      --line: #E2E8F0;
+      --accent: #4F46E5;
+      --accent-soft: #EEF2FF;
+      --ok: #059669;
+      --ok-soft: #ECFDF5;
+      --warn: #DC2626;
+      --warn-soft: #FEF2F2;
+      --gold: #D97706;
+      --gold-soft: #FEF3C7;
+      --shadow: rgba(15, 23, 42, 0.08);
+      --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    }
+
+    [data-theme="dark"] {
+      --bg: #0B1120;
+      --surface: #1E293B;
+      --surface-2: #0F172A;
+      --surface-card: #1E293B;
+      --ink: #F8FAFC;
+      --ink-muted: #94A3B8;
+      --line: #334155;
+      --accent: #818CF8;
+      --accent-soft: #1E1B4B;
+      --ok: #34D399;
+      --ok-soft: #064E3B;
+      --warn: #F87171;
+      --warn-soft: #7F1D1D;
+      --gold: #FBBF24;
+      --gold-soft: #78350F;
+      --shadow: rgba(0, 0, 0, 0.4);
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      height: 100%;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      overflow-anchor: none;
+    }
+    body {
+      font-family: var(--font-family);
+      background: var(--bg);
+      color: var(--ink);
+      line-height: 1.4;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Top Bar */
+    .topbar {
+      height: 56px;
+      min-height: 56px;
+      max-height: 56px;
+      flex-shrink: 0;
+      background: var(--surface);
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
+      z-index: 50;
+    }
+    .topbar-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .brand-badge {
+      background: var(--ink);
+      color: var(--bg);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 4px 8px;
+      border-radius: 6px;
+    }
+    .brand-title {
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+    }
+    .topbar-actions {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .btn-top {
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      border: 1px solid var(--line);
+      background: var(--surface-2);
+      color: var(--ink);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.15s ease;
+    }
+    .btn-top:hover { background: var(--line); }
+
+    /* Main App Layout */
+    .app-layout {
+      flex: 1;
+      display: flex;
+      height: calc(100% - 56px);
+      min-height: 0;
+      overflow: hidden;
+    }
+
+    /* Left Sidebar: Animation List & Filters */
+    .sidebar {
+      width: 320px;
+      min-width: 280px;
+      height: 100%;
+      min-height: 0;
+      background: var(--surface);
+      border-right: 1px solid var(--line);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    .sidebar-header {
+      padding: 14px;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .search-input {
+      width: 100%;
+      padding: 8px 12px;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      background: var(--surface-2);
+      color: var(--ink);
+      font-size: 13px;
+    }
+    .search-input:focus {
+      outline: 2px solid var(--accent);
+      border-color: transparent;
+    }
+    .category-tabs {
+      display: flex;
+      gap: 6px;
+      overflow-x: auto;
+      padding-bottom: 2px;
+    }
+    .cat-tab {
+      padding: 4px 10px;
+      border-radius: 14px;
+      font-size: 11px;
+      font-weight: 700;
+      white-space: nowrap;
+      cursor: pointer;
+      border: 1px solid var(--line);
+      background: var(--surface-2);
+      color: var(--ink-muted);
+    }
+    .cat-tab.active {
+      background: var(--accent);
+      color: #FFFFFF;
+      border-color: var(--accent);
+    }
+    .anim-list {
+      flex: 1;
+      overflow-y: auto;
+      padding: 8px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .anim-item {
+      padding: 10px 12px;
+      border-radius: 10px;
+      border: 1px solid transparent;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      transition: all 0.15s ease;
+    }
+    .anim-item:hover {
+      background: var(--surface-2);
+    }
+    .anim-item.active {
+      background: var(--accent-soft);
+      border-color: var(--accent);
+    }
+    .anim-item-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--ink);
+    }
+    .anim-item-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 11px;
+      color: var(--ink-muted);
+    }
+    .review-status-badge {
+      font-size: 10px;
+      font-weight: 800;
+      padding: 2px 6px;
+      border-radius: 4px;
+      text-transform: uppercase;
+    }
+    .status-pending { background: var(--surface-2); color: var(--ink-muted); }
+    .status-approved { background: var(--ok-soft); color: var(--ok); }
+    .status-needs_change { background: var(--warn-soft); color: var(--warn); }
+
+    /* Center / Right Stage Content */
+    .main-view {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      min-height: 0;
+      overflow-y: auto;
+      scrollbar-gutter: stable;
+      background: var(--bg);
+      contain: layout;
+    }
+    .view-tabs-bar {
+      background: var(--surface);
+      border-bottom: 1px solid var(--line);
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      height: 44px;
+      flex-shrink: 0;
+    }
+    .view-tab {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--ink-muted);
+      cursor: pointer;
+      padding: 10px 0;
+      border-bottom: 2px solid transparent;
+    }
+    .view-tab.active {
+      color: var(--accent);
+      border-bottom-color: var(--accent);
+    }
+
+    /* Single Stage View Area */
+    .stage-area {
+      padding: 20px 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      max-width: 1280px;
+      margin: 0 auto;
+      width: 100%;
+    }
+    .canvas-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 16px;
+      box-shadow: 0 4px 20px var(--shadow);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      position: relative;
+      contain: layout;
+      transform: translateZ(0);
+    }
+    .stage-wrapper {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 1000 / 562;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: var(--bg);
+      contain: layout paint;
+      transform: translateZ(0);
+      will-change: transform;
+    }
+    #stageContainer {
+      width: 100%;
+      height: 100%;
+    }
+
+    /* Debug Overlays */
+    .debug-safe-area {
+      position: absolute;
+      top: 10.67%;
+      left: 5%;
+      width: 90%;
+      height: 81.85%;
+      border: 2px dashed rgba(239, 68, 68, 0.6);
+      pointer-events: none;
+      display: none;
+      z-index: 10;
+    }
+    .debug-safe-area::after {
+      content: "SAFE AREA (x: 50-950, y: 60-520)";
+      position: absolute;
+      bottom: 6px;
+      right: 8px;
+      font-size: 11px;
+      font-weight: 800;
+      color: #EF4444;
+      background: rgba(255, 255, 255, 0.85);
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+    .show-safe-area .debug-safe-area { display: block; }
+
+    /* Player Controls Toolbar */
+    .player-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 6px 4px;
+    }
+    .ctrl-left {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-ctrl {
+      padding: 8px 14px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      border: 1px solid var(--line);
+      background: var(--surface-2);
+      color: var(--ink);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .btn-ctrl.btn-primary {
+      background: var(--accent);
+      color: #fff;
+      border-color: var(--accent);
+    }
+    .timeline-scrubber-wrap {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      position: relative;
+    }
+    .timeline-range {
+      width: 100%;
+      cursor: pointer;
+    }
+    .cue-tick-marks {
+      position: relative;
+      width: 100%;
+      height: 14px;
+    }
+    .cue-tick {
+      position: absolute;
+      top: 0;
+      transform: translateX(-50%);
+      font-size: 9px;
+      font-weight: 800;
+      color: var(--ink-muted);
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .cue-tick::before {
+      content: "";
+      width: 2px;
+      height: 4px;
+      background: var(--accent);
+      margin-bottom: 2px;
+    }
+    .time-readout {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+      font-variant-numeric: tabular-nums;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--ink);
+      width: 125px;
+      min-width: 125px;
+      flex-shrink: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-align: right;
+    }
+
+    /* Panels Grid (Slot Form, Cues, Review) */
+    .panels-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .panel-box {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 16px;
+      box-shadow: 0 2px 10px var(--shadow);
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .panel-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 10px;
+    }
+    .panel-title {
+      font-size: 14px;
+      font-weight: 800;
+    }
+    .slot-row {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .slot-label {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--ink-muted);
+    }
+    .slot-input {
+      padding: 8px 10px;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      background: var(--surface-2);
+      color: var(--ink);
+      font-size: 13px;
+    }
+    .stress-btns-row {
+      display: flex;
+      gap: 8px;
+      margin-top: 6px;
+    }
+    .btn-stress {
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 700;
+      background: var(--surface-2);
+      border: 1px solid var(--line);
+      color: var(--accent);
+      cursor: pointer;
+    }
+
+    /* Cue Table */
+    .cue-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+    }
+    .cue-table th, .cue-table td {
+      padding: 6px 8px;
+      text-align: left;
+      border-bottom: 1px solid var(--line);
+    }
+    .cue-table input {
+      width: 60px;
+      padding: 3px 6px;
+      border-radius: 4px;
+      border: 1px solid var(--line);
+      background: var(--surface-2);
+      color: var(--ink);
+      font-family: monospace;
+    }
+
+    /* Review Card */
+    .review-action-row {
+      display: flex;
+      gap: 10px;
+    }
+    .btn-review-action {
+      flex: 1;
+      padding: 8px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 800;
+      cursor: pointer;
+      border: 1px solid var(--line);
+      text-align: center;
+    }
+    .btn-review-action.btn-appr.active {
+      background: var(--ok);
+      color: #fff;
+      border-color: var(--ok);
+    }
+    .btn-review-action.btn-needs.active {
+      background: var(--warn);
+      color: #fff;
+      border-color: var(--warn);
+    }
+    .review-notes {
+      width: 100%;
+      height: 70px;
+      padding: 8px;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      background: var(--surface-2);
+      color: var(--ink);
+      font-size: 12px;
+      resize: vertical;
+    }
+
+    /* Contact Sheet Page */
+    .contact-sheet-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      padding: 24px;
+    }
+    .cs-anim-block {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .cs-frames-row {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+    }
+    .cs-frame-cell {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .cs-frame-img {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border-radius: 8px;
+      border: 1px solid var(--line);
+      background: var(--bg);
+      overflow: hidden;
+    }
+
+    /* Grid View */
+    .grid-view-wrap {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
+      gap: 16px;
+      padding: 20px;
+    }
+    .grid-card {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      padding: 12px;
+      cursor: pointer;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      transition: all 0.2s ease;
+    }
+    .grid-card:hover {
+      box-shadow: 0 4px 14px var(--shadow);
+      transform: translateY(-2px);
+    }
+    .grid-thumb {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      border-radius: 8px;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      background: var(--bg);
+    }
+
+    /* Responsive Mobile Layout (844 x 390 and mobile portrait) */
+    @media (max-width: 900px) {
+      html, body { height: auto; min-height: 100%; overflow-y: auto; }
+      .app-layout { flex-direction: column; height: auto; min-height: calc(100vh - 56px); position: relative; overflow: visible; }
+      .main-view { height: auto; min-height: 0; overflow-y: visible; }
+      .sidebar {
+        position: fixed;
+        left: -320px;
+        top: 56px;
+        bottom: 0;
+        width: 300px;
+        z-index: 1000;
+        background: var(--surface);
+        box-shadow: 4px 0 20px var(--shadow);
+        transition: left 0.25s ease;
+      }
+      .sidebar.open {
+        left: 0;
+      }
+      .sidebar-backdrop {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.4);
+        z-index: 999;
+      }
+      .sidebar-backdrop.open {
+        display: block;
+      }
+      .btn-drawer-toggle {
+        display: inline-flex !important;
+      }
+      .panels-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body data-theme="light">
+
+  <!-- Top Bar -->
+  <header class="topbar">
+    <div class="topbar-brand">
+      <button class="btn-top btn-drawer-toggle" id="btnDrawerToggle" style="display:none;margin-right:8px;" onclick="toggleSidebarDrawer()">☰ Animations</button>
+      <span class="brand-badge">CA Study Board</span>
+      <h1 class="brand-title">Situation Animation Library</h1>
+    </div>
+    <div class="topbar-actions">
+      <button class="btn-top" id="btnThemeToggle" onclick="toggleTheme()">☀️ Light</button>
+      <button class="btn-top" id="btnExportReview" onclick="exportReviewJson()">📥 Export Review</button>
+    </div>
+  </header>
+
+  <!-- Mobile Sidebar Backdrop -->
+  <div class="sidebar-backdrop" id="sidebarBackdrop" onclick="toggleSidebarDrawer()"></div>
+
+  <!-- App Layout -->
+  <div class="app-layout">
+    
+    <!-- Sidebar: Search & Animation List -->
+    <aside class="sidebar" id="appSidebar">
+      <div class="sidebar-header">
+        <input type="text" class="search-input" id="searchBox" placeholder="Search animations, topics, tags..." oninput="handleSearch(this.value)">
+        <div class="category-tabs" id="categoryTabs">
+          <button class="cat-tab active" data-cat="all" onclick="filterCategory('all')">All (<span id="totalCount">0</span>)</button>
+        </div>
+      </div>
+      <div class="anim-list" id="animList">
+        <!-- Rendered dynamically -->
+      </div>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-view">
+      
+      <!-- View Switcher Tabs -->
+      <nav class="view-tabs-bar">
+        <span class="view-tab active" data-view="single" onclick="switchView('single')">Live Animation Stage</span>
+        <span class="view-tab" data-view="grid" onclick="switchView('grid')">Autoplaying Grid</span>
+        <span class="view-tab" data-view="contact" onclick="switchView('contact')">5-Frame Contact Sheets</span>
+        <span class="view-tab" data-view="primitives" onclick="switchView('primitives')">Primitives Catalog</span>
+        <span class="view-tab" data-view="json" onclick="switchView('json')">JSON Definition</span>
+      </nav>
+
+      <!-- View 1: Single Stage & Control Panels -->
+      <div id="viewSingle" class="stage-area">
+        
+        <!-- Canvas Card -->
+        <div class="canvas-card" id="canvasCard">
+          <div class="stage-wrapper" id="stageWrapper">
+            <div id="stageContainer"></div>
+            <div class="debug-safe-area"></div>
+          </div>
+
+          <!-- Player Toolbar -->
+          <div class="player-toolbar">
+            <div class="ctrl-left">
+              <button class="btn-ctrl btn-primary" id="btnPlayPause" onclick="togglePlay()">▶ Play</button>
+              <button class="btn-ctrl" onclick="replayAnimation()">↺ Replay</button>
+              <select class="btn-ctrl" id="speedSelect" onchange="changeSpeed(this.value)">
+                <option value="0.5">0.5x</option>
+                <option value="1.0" selected>1.0x</option>
+                <option value="2.0">2.0x</option>
+              </select>
+            </div>
+
+            <!-- Scrubber & Cue Ticks -->
+            <div class="timeline-scrubber-wrap">
+              <input type="range" class="timeline-range" id="timeScrubber" min="0" max="14" step="0.05" value="0" oninput="handleScrub(this.value)">
+              <div class="cue-tick-marks" id="cueTickMarks"></div>
+            </div>
+
+            <div class="time-readout" id="timeReadout">0.00s / 14.0s</div>
+          </div>
+
+          <!-- Debug Toggles Bar -->
+          <div style="display:flex;align-items:center;justify-content:space-between;padding-top:4px;border-top:1px solid var(--line);font-size:12px;">
+            <div style="display:flex;gap:14px;align-items:center;">
+              <label style="cursor:pointer;"><input type="checkbox" id="chkSafeArea" onchange="toggleSafeArea(this.checked)"> Safe Area (50-950, 60-520)</label>
+              <label style="cursor:pointer;"><input type="checkbox" id="chkReducedMotion" onchange="toggleReducedMotion(this.checked)"> Reduced Motion</label>
+            </div>
+            <div id="checkReportBadges" style="display:flex;gap:6px;">
+              <!-- Badges from library_report.json -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Panels Grid: Slot Editor & Cues / Review -->
+        <div class="panels-grid">
+          
+          <!-- Panel 1: Live Slot Form -->
+          <div class="panel-box">
+            <div class="panel-head">
+              <span class="panel-title">Dynamic Slot Form</span>
+              <div class="stress-btns-row">
+                <button class="btn-stress" onclick="applyStressValues('long')">Long Text</button>
+                <button class="btn-stress" onclick="applyStressValues('big')">Big ₹ Number</button>
+                <button class="btn-stress" onclick="applyStressValues('zero')">Zero / Neg</button>
+              </div>
+            </div>
+            <div id="slotFormFields" style="display:flex;flex-direction:column;gap:10px;">
+              <!-- Dynamically generated -->
+            </div>
+          </div>
+
+          <!-- Panel 2: Cue Retiming & Review -->
+          <div class="panel-box">
+            <div class="panel-head">
+              <span class="panel-title">Cues & Review Evaluation</span>
+              <button class="btn-stress" onclick="copyTimingMap()">Copy timingMap</button>
+            </div>
+
+            <!-- Cues Table -->
+            <table class="cue-table">
+              <thead>
+                <tr>
+                  <th>Cue ID</th>
+                  <th>Label</th>
+                  <th>Time (s)</th>
+                </tr>
+              </thead>
+              <tbody id="cueTableBody">
+                <!-- Dynamically generated -->
+              </tbody>
+            </table>
+
+            <!-- Review Actions -->
+            <div style="margin-top:10px;display:flex;flex-direction:column;gap:8px;">
+              <span style="font-size:12px;font-weight:700;">Owner Review & Approval:</span>
+              <div class="review-action-row">
+                <button class="btn-review-action btn-appr" id="btnApprove" onclick="setReviewStatus('approved')">✓ Approve</button>
+                <button class="btn-review-action btn-needs" id="btnNeedsChange" onclick="setReviewStatus('needs_change')">✕ Needs Change</button>
+              </div>
+              <textarea class="review-notes" id="reviewComment" placeholder="Write feedback notes or required changes..." oninput="saveReviewComment(this.value)"></textarea>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- View 2: Autoplaying Grid -->
+      <div id="viewGrid" class="grid-view-wrap" style="display:none;"></div>
+
+      <!-- View 3: 5-Frame Contact Sheets -->
+      <div id="viewContact" class="contact-sheet-grid" style="display:none;"></div>
+
+      <!-- View 4: JSON Definition -->
+      <div id="viewJson" style="padding:24px;display:none;">
+        <div style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px;">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
+            <span style="font-weight:800;font-size:14px;">Raw Animation JSON</span>
+            <button class="btn-stress" onclick="copyRawJson()">Copy JSON</button>
+          </div>
+          <pre id="jsonViewer" style="font-family:monospace;font-size:12px;color:var(--ink);overflow-x:auto;max-height:600px;background:var(--surface-2);padding:14px;border-radius:8px;"></pre>
+        </div>
+      </div>
+
+      <!-- View 5: Primitives Catalog -->
+      <div id="viewPrimitives" style="padding:24px;display:none;">
+        <div style="background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:20px;">
+          <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px;flex-wrap:wrap;gap:12px;">
+            <div>
+              <h2 style="font-size:18px;font-weight:900;color:var(--ink);margin:0;">Primitives Catalog (46 Total)</h2>
+              <p id="primitivesSummaryText" style="font-size:13px;color:var(--ink-muted);margin:4px 0 0 0;"></p>
+            </div>
+            <div style="display:flex;gap:8px;">
+              <button class="cat-tab active" id="primFilterAll" onclick="filterPrimitives('all')">All (<span id="primCountAll">0</span>)</button>
+              <button class="cat-tab" id="primFilterImpl" onclick="filterPrimitives('implemented')">Implemented (<span id="primCountImpl">0</span>)</button>
+              <button class="cat-tab" id="primFilterSpec" onclick="filterPrimitives('specified')">Specified Only (<span id="primCountSpec">0</span>)</button>
+            </div>
+          </div>
+          <div id="primitivesGrid" style="display:grid;grid-template-columns:repeat(auto-fill, minmax(280px, 1fr));gap:16px;"></div>
+        </div>
+      </div>
+
+    </main>
+
+  </div>
+
+  <!-- Frame Modal Dialog -->
+  <div id="frameModal" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,0.7);z-index:9999;align-items:center;justify-content:center;">
+    <div style="background:var(--surface);border:1px solid var(--line);border-radius:14px;max-width:900px;width:90%;padding:20px;position:relative;">
+      <button onclick="closeFrameModal()" style="position:absolute;top:14px;right:16px;font-size:18px;background:none;border:none;cursor:pointer;color:var(--ink);font-weight:900;">✕</button>
+      <h3 id="modalTitle" style="margin-top:0;font-size:16px;font-weight:800;color:var(--ink);">Audit Frame Detail</h3>
+      <p id="modalMsg" style="font-size:13px;color:var(--warn);margin:4px 0 12px 0;"></p>
+      <div style="width:100%;aspect-ratio:16/9;border-radius:8px;overflow:hidden;border:1px solid var(--line);background:var(--bg);">
+        <img id="modalImg" src="" style="width:100%;height:100%;object-fit:contain;display:block;">
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="data.js"></script>
+  <script src="../library/renderer.js"></script>
+  <script>
+    // Global Application State
+    window.currentAnimId = null;
+    window.activePlayer = null;
+    let currentCategory = "all";
+    let reviewData = JSON.parse(localStorage.getItem("ca_anim_reviews") || "{}");
+    let currentSlotsState = {};
+    let currentTimingMap = {};
+
+    const animListEl = document.getElementById("animList");
+    const categoryTabsEl = document.getElementById("categoryTabs");
+    const stageContainerEl = document.getElementById("stageContainer");
+    const timeScrubber = document.getElementById("timeScrubber");
+    const timeReadout = document.getElementById("timeReadout");
+    const btnPlayPause = document.getElementById("btnPlayPause");
+
+    // Initialize App
+    window.addEventListener("DOMContentLoaded", () => {
+      initCategories();
+      renderAnimationList();
+      if (window.ANIMATIONS_DATA?.animations?.length > 0) {
+        selectAnimation(window.ANIMATIONS_DATA.animations[0].id);
+      }
+    });
+
+    // Theme Toggle
+    function toggleTheme() {
+      const cur = document.body.getAttribute("data-theme") || "light";
+      const next = cur === "light" ? "dark" : "light";
+      document.body.setAttribute("data-theme", next);
+      document.getElementById("btnThemeToggle").textContent = next === "light" ? "☀️ Light" : "🌙 Dark";
+      if (activePlayer) activePlayer.setTheme(next);
+    }
+
+    // Category Tabs
+    function initCategories() {
+      categoryTabsEl.innerHTML = `<button class="cat-tab active" data-cat="all" onclick="filterCategory('all', this)">All (<span id="totalCount">0</span>)</button>`;
+      const catCounts = {};
+      (window.ANIMATIONS_DATA?.animations || []).forEach(a => {
+        catCounts[a.category] = (catCounts[a.category] || 0) + 1;
+      });
+      document.getElementById("totalCount").textContent = window.ANIMATIONS_DATA?.animations?.length || 0;
+      Object.keys(catCounts).sort().forEach(cat => {
+        const btn = document.createElement("button");
+        btn.className = "cat-tab";
+        btn.textContent = `${cat} (${catCounts[cat]})`;
+        btn.onclick = () => filterCategory(cat, btn);
+        categoryTabsEl.appendChild(btn);
+      });
+    }
+
+    function filterCategory(cat, btnEl) {
+      currentCategory = cat;
+      document.querySelectorAll(".cat-tab").forEach(b => b.classList.remove("active"));
+      if (btnEl) btnEl.classList.add("active");
+      else document.querySelector(".cat-tab[data-cat='all']").classList.add("active");
+      renderAnimationList();
+    }
+
+    // Render Left Sidebar List
+    function renderAnimationList(filterQuery = "") {
+      animListEl.innerHTML = "";
+      const q = filterQuery.toLowerCase().trim();
+      const list = (window.ANIMATIONS_DATA?.animations || []).filter(a => {
+        const matchCat = currentCategory === "all" || a.category === currentCategory;
+        const matchQ = !q || a.title.toLowerCase().includes(q) || a.id.toLowerCase().includes(q) || (a.selection?.topics || []).some(t => t.toLowerCase().includes(q));
+        return matchCat && matchQ;
+      });
+
+      const batchBIds = new Set([
+        "higher_of_cost_or_fmv", "indexed_cost", "previous_owner_cost", "holding_period_clock",
+        "two_taxpayers_side_by_side", "improvement_cutoff_timeline", "advance_forfeited",
+        "flat_rate_plus_cess", "exemption_threshold_waterfall", "loss_set_off_waterfall"
+      ]);
+
+      list.forEach(a => {
+        const item = document.createElement("div");
+        item.className = "anim-item" + (a.id === currentAnimId ? " active" : "");
+        const review = reviewData[a.id] || { status: "pending" };
+        const statusClass = "status-" + review.status;
+        const isNew = a.batch === "B" || batchBIds.has(a.id);
+        const newBadge = isNew ? `<span class="review-status-badge" style="background:#4F46E5;color:#fff;font-weight:800;margin-left:4px;">NEW</span>` : "";
+
+        item.innerHTML = `
+          <div class="anim-item-title">${a.title}</div>
+          <div class="anim-item-meta">
+            <span>${a.category.split(".")[0]} · ${a.duration}s</span>
+            <span style="display:flex;align-items:center;">
+              <span class="review-status-badge ${statusClass}">${review.status.replace("_", " ")}</span>
+              ${newBadge}
+            </span>
+          </div>
+        `;
+        item.onclick = () => selectAnimation(a.id);
+        animListEl.appendChild(item);
+      });
+    }
+
+    function handleSearch(val) {
+      renderAnimationList(val);
+    }
+
+    // Select & Render Single Animation
+    function selectAnimation(animId) {
+      window.currentAnimId = animId;
+      document.querySelectorAll(".anim-item").forEach(el => el.classList.remove("active"));
+      renderAnimationList(document.getElementById("searchBox").value);
+
+      const animDef = window.ANIMATIONS_DATA.animations.find(a => a.id === animId);
+      if (!animDef) return;
+
+      // Tear down previous player cleanly
+      if (window.activePlayer) {
+        window.activePlayer.destroy();
+        window.activePlayer = null;
+      }
+
+      currentSlotsState = {};
+      (animDef.slots || []).forEach(s => currentSlotsState[s.key] = s.default);
+      currentTimingMap = {};
+
+      // Initialize renderer
+      const currentTheme = document.body.getAttribute("data-theme") || "light";
+      window.activePlayer = window.Anim.create(stageContainerEl, animDef, currentSlotsState, {
+        theme: currentTheme,
+        timingMap: currentTimingMap
+      });
+      activePlayer = window.activePlayer;
+
+      timeScrubber.max = animDef.duration;
+
+      renderCueTickMarks(animDef);
+      renderSlotForm(animDef);
+      renderCueTable(animDef);
+      renderReviewPanel(animDef);
+      renderCheckBadges(animId);
+      renderRawJson(animDef);
+
+      // Attach callbacks for live scrubber sync
+      window.activePlayer.onTimeUpdate = (curr, total) => {
+        timeScrubber.value = curr;
+        updateTimeDisplay(curr, total);
+        if (curr >= total) {
+          btnPlayPause.textContent = "▶ Play";
+        }
+      };
+      window.activePlayer.onPause = () => {
+        btnPlayPause.textContent = "▶ Play";
+      };
+
+      // Autoplay or Reduced Motion:
+      // Requirement 6: "with prefers-reduced-motion, open at the final frame and do not autoplay."
+      // Requirement 3: "when an animation is selected, autoplay it once, and leave the scrubber at the final frame afterwards. Never show a blank stage on open."
+      const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches || document.getElementById("chkReducedMotion")?.checked;
+      if (prefersReduced) {
+        window.activePlayer.seek(animDef.duration);
+        timeScrubber.value = animDef.duration;
+        updateTimeDisplay(animDef.duration, animDef.duration);
+        btnPlayPause.textContent = "▶ Play";
+      } else {
+        window.activePlayer.seek(0);
+        timeScrubber.value = 0;
+        updateTimeDisplay(0, animDef.duration);
+        btnPlayPause.textContent = "⏸ Pause";
+        window.activePlayer.play();
+      }
+    }
+    window.selectAnimation = selectAnimation;
+
+    // Playback Controls
+    function togglePlay() {
+      if (!activePlayer) return;
+      if (activePlayer.isPlaying) {
+        activePlayer.pause();
+        btnPlayPause.textContent = "▶ Play";
+      } else {
+        activePlayer.play();
+        btnPlayPause.textContent = "⏸ Pause";
+      }
+    }
+
+    function replayAnimation() {
+      if (!activePlayer) return;
+      activePlayer.seek(0);
+      timeScrubber.value = 0;
+      activePlayer.play();
+      btnPlayPause.textContent = "⏸ Pause";
+    }
+
+    function handleScrub(val) {
+      if (!activePlayer) return;
+      activePlayer.seek(Number(val));
+      updateTimeDisplay(Number(val), activePlayer.duration);
+    }
+
+    function trackPlayProgress() {
+      function step() {
+        if (!activePlayer || !activePlayer.isPlaying) return;
+        timeScrubber.value = activePlayer.currentTime;
+        updateTimeDisplay(activePlayer.currentTime, activePlayer.duration);
+        requestAnimationFrame(step);
+      }
+      requestAnimationFrame(step);
+    }
+
+    function updateTimeDisplay(cur, dur) {
+      timeReadout.textContent = `${cur.toFixed(2)}s / ${dur.toFixed(1)}s`;
+    }
+
+    function changeSpeed(val) {
+      if (activePlayer) activePlayer.setSpeed(val);
+    }
+
+    function toggleSafeArea(show) {
+      const wrap = document.getElementById("canvasCard");
+      if (show) wrap.classList.add("show-safe-area");
+      else wrap.classList.remove("show-safe-area");
+    }
+
+    function toggleReducedMotion(reduced) {
+      if (activePlayer) {
+        activePlayer.reducedMotion = reduced;
+        if (reduced) activePlayer.seek(activePlayer.duration);
+      }
+    }
+
+    // Cue Ticks Rendering
+    function renderCueTickMarks(animDef) {
+      const container = document.getElementById("cueTickMarks");
+      container.innerHTML = "";
+      const dur = animDef.duration || 14.0;
+      (animDef.cues || []).forEach(c => {
+        const pct = (c.default_t / dur) * 100;
+        const tick = document.createElement("div");
+        tick.className = "cue-tick";
+        tick.style.left = `${pct}%`;
+        tick.textContent = `${c.default_t}s`;
+        tick.title = `${c.label} (${c.id})`;
+        tick.onclick = () => {
+          if (activePlayer) {
+            activePlayer.seek(c.default_t);
+            timeScrubber.value = c.default_t;
+            updateTimeDisplay(c.default_t, dur);
+          }
+        };
+        container.appendChild(tick);
+      });
+    }
+
+    // Dynamic Slot Form
+    function renderSlotForm(animDef) {
+      const container = document.getElementById("slotFormFields");
+      container.innerHTML = "";
+      (animDef.slots || []).forEach(slot => {
+        const row = document.createElement("div");
+        row.className = "slot-row";
+        const curVal = currentSlotsState[slot.key];
+
+        if (slot.type === "boolean") {
+          row.innerHTML = `
+            <label class="slot-label" style="display:flex;align-items:center;gap:6px;cursor:pointer;">
+              <input type="checkbox" ${curVal ? "checked" : ""} onchange="updateSingleSlot('${slot.key}', this.checked)">
+              ${slot.label}
+            </label>
+          `;
+        } else if (slot.type === "enum" && slot.options) {
+          row.innerHTML = `
+            <label class="slot-label">${slot.label}</label>
+            <select class="slot-input" onchange="updateSingleSlot('${slot.key}', this.value)">
+              ${slot.options.map(opt => `<option value="${opt}" ${opt === curVal ? "selected" : ""}>${opt}</option>`).join("")}
+            </select>
+          `;
+        } else {
+          const inputType = slot.type === "number" ? "number" : "text";
+          row.innerHTML = `
+            <label class="slot-label">${slot.label}</label>
+            <input type="${inputType}" class="slot-input" value="${curVal}" oninput="updateSingleSlot('${slot.key}', ${slot.type === 'number' ? 'Number(this.value)' : 'this.value'})" onchange="updateSingleSlot('${slot.key}', ${slot.type === 'number' ? 'Number(this.value)' : 'this.value'})">
+          `;
+        }
+        container.appendChild(row);
+      });
+    }
+
+    function updateSingleSlot(key, val) {
+      currentSlotsState[key] = val;
+      if (activePlayer) {
+        activePlayer.setSlots(currentSlotsState);
+        activePlayer.seek(activePlayer.currentTime);
+      }
+    }
+
+    // Stress Testing Values
+    function applyStressValues(kind) {
+      const animDef = window.ANIMATIONS_DATA.animations.find(a => a.id === currentAnimId);
+      if (!animDef) return;
+      (animDef.slots || []).forEach(s => {
+        if (s.type === "text") {
+          if (kind === "long") currentSlotsState[s.key] = "Exceptionally Long Stress Testing Entity Name Exceeding Standard Width Limits";
+          else if (kind === "zero") currentSlotsState[s.key] = "";
+        } else if (s.type === "number") {
+          if (kind === "big") currentSlotsState[s.key] = 999999999;
+          else if (kind === "zero") currentSlotsState[s.key] = 0;
+          else if (kind === "long") currentSlotsState[s.key] = 88888888;
+        } else if (s.type === "boolean") {
+          currentSlotsState[s.key] = !s.default;
+        }
+      });
+      renderSlotForm(animDef);
+      if (activePlayer) {
+        activePlayer.setSlots(currentSlotsState);
+        replayAnimation();
+      }
+    }
+
+    // Cue Table
+    function renderCueTable(animDef) {
+      const tbody = document.getElementById("cueTableBody");
+      tbody.innerHTML = "";
+      const cues = activePlayer ? activePlayer.getCues() : (animDef.cues || []);
+      cues.forEach(c => {
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+          <td><code>${c.id}</code></td>
+          <td>${c.label}</td>
+          <td><input type="number" step="0.1" value="${c.current_t}" onchange="updateCueTime('${c.id}', Number(this.value))"></td>
+        `;
+        tbody.appendChild(tr);
+      });
+    }
+
+    function updateCueTime(cueId, timeVal) {
+      currentTimingMap[cueId] = timeVal;
+      if (activePlayer) {
+        activePlayer.setTimingMap(currentTimingMap);
+        renderCueTickMarks(window.ANIMATIONS_DATA.animations.find(a => a.id === currentAnimId));
+      }
+    }
+
+    function copyTimingMap() {
+      navigator.clipboard.writeText(JSON.stringify(currentTimingMap, null, 2));
+      alert("timingMap copied to clipboard!");
+    }
+
+    // Review Mode Handling
+    function renderReviewPanel(animDef) {
+      const rev = reviewData[animDef.id] || { status: "pending", comment: "" };
+      document.getElementById("btnApprove").classList.toggle("active", rev.status === "approved");
+      document.getElementById("btnNeedsChange").classList.toggle("active", rev.status === "needs_change");
+      document.getElementById("reviewComment").value = rev.comment || "";
+    }
+
+    function setReviewStatus(status) {
+      if (!currentAnimId) return;
+      if (!reviewData[currentAnimId]) reviewData[currentAnimId] = {};
+      reviewData[currentAnimId].status = status;
+      localStorage.setItem("ca_anim_reviews", JSON.stringify(reviewData));
+      renderReviewPanel(window.ANIMATIONS_DATA.animations.find(a => a.id === currentAnimId));
+      renderAnimationList(document.getElementById("searchBox").value);
+    }
+
+    function saveReviewComment(comment) {
+      if (!currentAnimId) return;
+      if (!reviewData[currentAnimId]) reviewData[currentAnimId] = {};
+      reviewData[currentAnimId].comment = comment;
+      localStorage.setItem("ca_anim_reviews", JSON.stringify(reviewData));
+    }
+
+    function exportReviewJson() {
+      const blob = new Blob([JSON.stringify(reviewData, null, 2)], { type: "application/json" });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "review.json";
+      a.click();
+      URL.revokeObjectURL(url);
+    }
+
+    // Check Badges from library_report.json
+    function renderCheckBadges(animId) {
+      const container = document.getElementById("checkReportBadges");
+      container.innerHTML = "";
+      const report = window.LIBRARY_REPORT?.[animId];
+      if (!report) {
+        container.innerHTML = `<span style="color:var(--ink-muted);font-size:11px;">Awaiting Playwright check</span>`;
+        return;
+      }
+      const checks = [
+        { key: "no_overflow", label: "No Overflow" },
+        { key: "no_overlap", label: "No Overlap" },
+        { key: "font_size", label: "Font Size >=16" },
+        { key: "fill_ratio", label: "Fill Ratio >=70%" },
+        { key: "currency_format", label: "Indian Currency" },
+        { key: "determinism", label: "Deterministic" }
+      ];
+      checks.forEach(c => {
+        const passed = report[c.key] === true;
+        const badge = document.createElement("span");
+        badge.style.cssText = `font-size:10px;font-weight:800;padding:2px 6px;border-radius:4px;background:${passed ? 'var(--ok-soft)' : 'var(--warn-soft)'};color:${passed ? 'var(--ok)' : 'var(--warn)'};cursor:${passed ? 'default' : 'pointer'};`;
+        badge.textContent = `${passed ? '✓' : '✕'} ${c.label}`;
+        if (!passed) {
+          const violation = (report.violations || []).find(v => v.type === c.key || (c.key === "no_overflow" && v.type === "overflow"));
+          badge.title = violation ? violation.msg : "Click to view violation";
+          badge.onclick = () => {
+            openFrameModal(`Violation: ${c.label}`, violation?.msg || "Check violation detected.", violation?.frame || "");
+          };
+        }
+        container.appendChild(badge);
+      });
+    }
+
+    function openFrameModal(title, msg, framePath) {
+      document.getElementById("modalTitle").textContent = title;
+      document.getElementById("modalMsg").textContent = msg;
+      if (framePath) {
+        const fname = framePath.split(/[\\/]/).pop();
+        document.getElementById("modalImg").src = `../reports/frames/${fname}`;
+        document.getElementById("modalImg").style.display = "block";
+      } else {
+        document.getElementById("modalImg").style.display = "none";
+      }
+      document.getElementById("frameModal").style.display = "flex";
+    }
+
+    function closeFrameModal() {
+      document.getElementById("frameModal").style.display = "none";
+    }
+
+    function toggleSidebarDrawer() {
+      const sidebar = document.getElementById("appSidebar");
+      const backdrop = document.getElementById("sidebarBackdrop");
+      sidebar.classList.toggle("open");
+      backdrop.classList.toggle("open");
+    }
+
+    // Raw JSON Viewer
+    function renderRawJson(animDef) {
+      document.getElementById("jsonViewer").textContent = JSON.stringify(animDef, null, 2);
+    }
+
+    function copyRawJson() {
+      navigator.clipboard.writeText(document.getElementById("jsonViewer").textContent);
+      alert("JSON copied to clipboard!");
+    }
+
+    // View Switching
+    function switchView(viewName) {
+      document.querySelectorAll(".view-tab").forEach(t => t.classList.remove("active"));
+      document.querySelector(`.view-tab[data-view='${viewName}']`).classList.add("active");
+
+      document.getElementById("viewSingle").style.display = viewName === "single" ? "flex" : "none";
+      document.getElementById("viewGrid").style.display = viewName === "grid" ? "grid" : "none";
+      document.getElementById("viewContact").style.display = viewName === "contact" ? "flex" : "none";
+      document.getElementById("viewPrimitives").style.display = viewName === "primitives" ? "block" : "none";
+      document.getElementById("viewJson").style.display = viewName === "json" ? "block" : "none";
+
+      if (viewName === "grid") renderGridView();
+      if (viewName === "contact") renderContactSheets();
+      if (viewName === "primitives") renderPrimitivesCatalog();
+    }
+
+    // Grid View Render
+    function renderGridView() {
+      const grid = document.getElementById("viewGrid");
+      grid.innerHTML = "";
+      (window.ANIMATIONS_DATA?.animations || []).forEach(anim => {
+        const card = document.createElement("div");
+        card.className = "grid-card";
+        card.innerHTML = `
+          <div class="grid-thumb" id="thumb_${anim.id}"></div>
+          <div style="font-weight:800;font-size:13px;">${anim.title}</div>
+          <div style="font-size:11px;color:var(--ink-muted);">${anim.category} · ${anim.duration}s</div>
+        `;
+        card.onclick = () => {
+          switchView("single");
+          selectAnimation(anim.id);
+        };
+        grid.appendChild(card);
+
+        // Render preview instance at 85%
+        setTimeout(() => {
+          const thumbEl = document.getElementById(`thumb_${anim.id}`);
+          if (thumbEl && !thumbEl.hasChildNodes()) {
+            const preview = window.Anim.create(thumbEl, anim, {}, { theme: document.body.getAttribute("data-theme") });
+            preview.seek(anim.duration * 0.85);
+          }
+        }, 50);
+      });
+    }
+
+    // 5-Frame Contact Sheet Render (Requirement 2: 10%, 25%, 50%, 85%, 100%)
+    function renderContactSheets() {
+      const contact = document.getElementById("viewContact");
+      contact.innerHTML = "";
+      const timeFractions = [0.10, 0.25, 0.50, 0.85, 1.0];
+      const timeLabels = ["10% (Early)", "25% (Initial)", "50% (Midway)", "85% (Resolved)", "100% (Final)"];
+
+      (window.ANIMATIONS_DATA?.animations || []).forEach(anim => {
+        const block = document.createElement("div");
+        block.className = "cs-anim-block";
+        block.innerHTML = `
+          <div style="font-weight:900;font-size:16px;">${anim.title} <span style="font-size:12px;color:var(--ink-muted);font-weight:600;">(${anim.id})</span></div>
+          <div class="cs-frames-row" id="cs_row_${anim.id}"></div>
+        `;
+        contact.appendChild(block);
+
+        const row = block.querySelector(".cs-frames-row");
+        timeFractions.forEach((frac, idx) => {
+          const cell = document.createElement("div");
+          cell.className = "cs-frame-cell";
+          const cellId = `cs_${anim.id}_${Math.round(frac * 100)}`;
+          cell.innerHTML = `
+            <div style="font-size:11px;font-weight:700;color:var(--ink-muted);">${timeLabels[idx]}</div>
+            <div class="cs-frame-img" id="${cellId}"></div>
+          `;
+          row.appendChild(cell);
+
+          setTimeout(() => {
+            const frameBox = document.getElementById(cellId);
+            if (frameBox && !frameBox.hasChildNodes()) {
+              const framePlayer = window.Anim.create(frameBox, anim, {}, { theme: document.body.getAttribute("data-theme") });
+              framePlayer.seek(anim.duration * frac);
+            }
+          }, 30);
+        });
+      });
+    }
+
+    // Primitives Catalog Render
+    const IMPLEMENTED_PRIMITIVES = new Set([
+      'person', 'group_huf', 'company', 'firm', 'bank', 'govt_dept',
+      'tax_office', 'house', 'land', 'shares', 'gold', 'business',
+      'bonds', 'document', 'money_bag', 'coin', 'calendar', 'clock',
+      'scale', 'gavel', 'padlock', 'gate', 'tick', 'cross',
+      'arrow', 'curved_arrow', 'line', 'card', 'pill', 'text',
+      'counter', 'ledger_row', 'bar', 'slab_step', 'timeline_axis', 'window_bar',
+      'marker', 'strike', 'stack', 'split'
+    ]);
+
+    let currentPrimFilter = "all";
+
+    function filterPrimitives(f) {
+      currentPrimFilter = f;
+      document.querySelectorAll("#primFilterAll, #primFilterImpl, #primFilterSpec").forEach(b => b.classList.remove("active"));
+      if (f === "all") document.getElementById("primFilterAll").classList.add("active");
+      if (f === "implemented") document.getElementById("primFilterImpl").classList.add("active");
+      if (f === "specified") document.getElementById("primFilterSpec").classList.add("active");
+      renderPrimitivesCatalog();
+    }
+
+    function renderPrimitivesCatalog() {
+      const prims = window.PRIMITIVES_DATA?.primitives || [];
+      const implCount = prims.filter(p => IMPLEMENTED_PRIMITIVES.has(p.type)).length;
+      const specCount = prims.length - implCount;
+
+      const countAllEl = document.getElementById("primCountAll");
+      const countImplEl = document.getElementById("primCountImpl");
+      const countSpecEl = document.getElementById("primCountSpec");
+      const sumTextEl = document.getElementById("primitivesSummaryText");
+
+      if (countAllEl) countAllEl.textContent = prims.length;
+      if (countImplEl) countImplEl.textContent = implCount;
+      if (countSpecEl) countSpecEl.textContent = specCount;
+      if (sumTextEl) {
+        sumTextEl.textContent = `${prims.length} Primitives defined: ${implCount} Implemented in SVG renderer, ${specCount} Specified only in schema kit.`;
+      }
+
+      const grid = document.getElementById("primitivesGrid");
+      if (!grid) return;
+      grid.innerHTML = "";
+
+      const filtered = prims.filter(p => {
+        if (currentPrimFilter === "implemented") return IMPLEMENTED_PRIMITIVES.has(p.type);
+        if (currentPrimFilter === "specified") return !IMPLEMENTED_PRIMITIVES.has(p.type);
+        return true;
+      });
+
+      filtered.forEach(p => {
+        const isImpl = IMPLEMENTED_PRIMITIVES.has(p.type);
+        const card = document.createElement("div");
+        card.style.cssText = "background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:10px;";
+
+        const previewBox = document.createElement("div");
+        previewBox.style.cssText = "width:100%;height:100px;border-radius:8px;border:1px solid var(--line);background:var(--bg);display:flex;align-items:center;justify-content:center;overflow:hidden;";
+
+        if (isImpl) {
+          const mockElem = { id: `mock_${p.type}`, type: p.type, x: 0, y: 0, w: p.default_w || 100, h: p.default_h || 100, props: { label: p.type, name: "Sample", text: p.type, open: true, locked: true, sign: "+", is_total: false } };
+          const dummyAnim = { id: `preview_${p.type}`, duration: 1, scene: [mockElem] };
+          window.Anim.create(previewBox, dummyAnim, {}, { theme: document.body.getAttribute("data-theme") });
+        } else {
+          previewBox.innerHTML = `<span style="font-size:12px;color:var(--ink-muted);font-weight:700;">📐 Blueprint Spec</span>`;
+        }
+
+        const paramList = Object.keys(p.params || {}).join(", ") || "none";
+
+        card.appendChild(previewBox);
+        card.innerHTML += `
+          <div style="display:flex;justify-content:space-between;align-items:center;">
+            <span style="font-weight:900;font-size:15px;color:var(--ink);">${p.type}</span>
+            <span style="font-size:10px;font-weight:800;padding:2px 8px;border-radius:4px;background:${isImpl ? 'var(--ok-soft)' : 'var(--surface-2)'};color:${isImpl ? 'var(--ok)' : 'var(--ink-muted)'};">${isImpl ? '✓ Implemented' : '✎ Specified Only'}</span>
+          </div>
+          <div style="font-size:11px;color:var(--ink-muted);">Group: <strong>${p.group}</strong> · ${p.default_w || 100}×${p.default_h || 100}px</div>
+          <div style="font-size:11px;color:var(--ink);">${p.description}</div>
+          <div style="font-size:10px;color:var(--ink-muted);font-family:monospace;background:var(--surface-2);padding:4px 6px;border-radius:4px;">params: [${paramList}]</div>
+        `;
+        grid.appendChild(card);
+      });
+    }
+  </script>
+</body>
+</html>

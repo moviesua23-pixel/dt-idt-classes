@@ -1,0 +1,14620 @@
+// AUTO-GENERATED BUNDLE BY tools/build_viewer.py
+// DO NOT EDIT DIRECTLY. Enables double-click file:// execution without CORS.
+
+window.ANIMATIONS_DATA = {
+  "version": "1.0.0",
+  "animations": [
+    {
+      "id": "gift_of_asset",
+      "title": "Gift of Asset & Cost Transfer",
+      "category": "A. Transfers of assets",
+      "selection": {
+        "when_to_use": "When an asset is transferred without monetary payment by way of gift or settlement.",
+        "not_for": [
+          "commercial sale",
+          "exchange of unequal assets"
+        ],
+        "situation_types": [
+          "transfer",
+          "gift"
+        ],
+        "asset_types": [
+          "house",
+          "land",
+          "shares",
+          "gold"
+        ],
+        "topics": [
+          "previous owner cost",
+          "holding period"
+        ],
+        "required_slots": [
+          "donor_name",
+          "donee_name",
+          "asset_label",
+          "original_cost",
+          "acquisition_year",
+          "gift_variant"
+        ]
+      },
+      "slots": [
+        {
+          "key": "donor_name",
+          "label": "Party One",
+          "type": "text",
+          "default": "Sample Party One",
+          "max_len": 25
+        },
+        {
+          "key": "donee_name",
+          "label": "Party Two",
+          "type": "text",
+          "default": "Sample Party Two",
+          "max_len": 25
+        },
+        {
+          "key": "asset_label",
+          "label": "Asset Name",
+          "type": "text",
+          "default": "Sample Asset",
+          "max_len": 25
+        },
+        {
+          "key": "original_cost",
+          "label": "Base Cost",
+          "type": "number",
+          "default": 1500000,
+          "min": 10000,
+          "max": 100000000,
+          "format": "inr"
+        },
+        {
+          "key": "acquisition_year",
+          "label": "Date Year",
+          "type": "text",
+          "default": "Year One"
+        },
+        {
+          "key": "gift_variant",
+          "label": "Variant Mode",
+          "type": "enum",
+          "default": "Sample Full Pass",
+          "options": [
+            "Sample Full Pass",
+            "Sample Gate Locked"
+          ]
+        }
+      ],
+      "derived": [],
+      "duration": 14,
+      "cues": [
+        {
+          "id": "cue_parties",
+          "label": "Parties & Base Asset",
+          "default_t": 0.5
+        },
+        {
+          "id": "cue_transfer",
+          "label": "Asset Flow Transfer",
+          "default_t": 4.5
+        },
+        {
+          "id": "cue_carryover",
+          "label": "Cost Step Result",
+          "default_t": 8.5
+        }
+      ],
+      "scene": [
+        {
+          "id": "header_card",
+          "type": "card",
+          "x": 60,
+          "y": 70,
+          "w": 880,
+          "h": 70,
+          "is_container": true,
+          "props": {
+            "rx": 12,
+            "tone": "accent",
+            "top_bar": "accent"
+          }
+        },
+        {
+          "id": "header_title",
+          "type": "text",
+          "x": 90,
+          "y": 90,
+          "w": 600,
+          "h": 32,
+          "badge_on": "header_card",
+          "bind": {
+            "text": "{{anim_title}}"
+          },
+          "props": {
+            "font_size": 26,
+            "weight": "900",
+            "tone": "accent",
+            "is_title": true
+          }
+        },
+        {
+          "id": "header_sub",
+          "type": "text",
+          "x": 90,
+          "y": 120,
+          "w": 600,
+          "h": 20,
+          "badge_on": "header_card",
+          "bind": {
+            "text": "Cost: {{original_cost}} · Date: {{acquisition_year}}"
+          },
+          "props": {
+            "font_size": 16,
+            "weight": "600",
+            "tone": "ink-muted"
+          }
+        },
+        {
+          "id": "donor_card",
+          "type": "card",
+          "x": 60,
+          "y": 160,
+          "w": 360,
+          "h": 240,
+          "is_container": true,
+          "props": {
+            "rx": 14,
+            "tone": "surface"
+          }
+        },
+        {
+          "id": "avatar_donor",
+          "type": "person",
+          "x": 80,
+          "y": 180,
+          "w": 100,
+          "h": 120,
+          "badge_on": "donor_card",
+          "props": {
+            "name": "Party One"
+          }
+        },
+        {
+          "id": "pill_donor",
+          "type": "pill",
+          "x": 200,
+          "y": 195,
+          "w": 190,
+          "h": 32,
+          "badge_on": "donor_card",
+          "bind": {
+            "text": "{{donor_name}}"
+          },
+          "props": {
+            "tone": "accent"
+          }
+        },
+        {
+          "id": "cost_donor",
+          "type": "text",
+          "x": 200,
+          "y": 250,
+          "w": 190,
+          "h": 26,
+          "badge_on": "donor_card",
+          "bind": {
+            "text": "Cost: {{original_cost}}"
+          },
+          "props": {
+            "font_size": 18,
+            "weight": "800",
+            "tone": "ink"
+          }
+        },
+        {
+          "id": "year_donor",
+          "type": "text",
+          "x": 200,
+          "y": 290,
+          "w": 190,
+          "h": 24,
+          "badge_on": "donor_card",
+          "bind": {
+            "text": "Date: {{acquisition_year}}"
+          },
+          "props": {
+            "font_size": 16,
+            "weight": "600",
+            "tone": "ink-muted"
+          }
+        },
+        {
+          "id": "donee_card",
+          "type": "card",
+          "x": 580,
+          "y": 160,
+          "w": 360,
+          "h": 240,
+          "is_container": true,
+          "props": {
+            "rx": 14,
+            "tone": "surface"
+          }
+        },
+        {
+          "id": "avatar_donee",
+          "type": "person",
+          "x": 600,
+          "y": 180,
+          "w": 100,
+          "h": 120,
+          "badge_on": "donee_card",
+          "props": {
+            "name": "Party Two"
+          }
+        },
+        {
+          "id": "pill_donee",
+          "type": "pill",
+          "x": 720,
+          "y": 195,
+          "w": 190,
+          "h": 32,
+          "badge_on": "donee_card",
+          "bind": {
+            "text": "{{donee_name}}"
+          },
+          "props": {
+            "tone": "accent"
+          }
+        },
+        {
+          "id": "asset_transit",
+          "type": "house",
+          "x": 200,
+          "y": 330,
+          "w": 70,
+          "h": 70,
+          "cue": "cue_transfer",
+          "enter": "pop",
+          "motion": {
+            "type": "move_to",
+            "to_x": 720,
+            "to_y": 330,
+            "delay": 0.5,
+            "duration": 2.5
+          },
+          "props": {}
+        },
+        {
+          "id": "flow_arrow",
+          "type": "arrow",
+          "x": 420,
+          "y": 250,
+          "w": 150,
+          "h": 20,
+          "cue": "cue_transfer",
+          "enter": "fade",
+          "props": {
+            "tone": "accent",
+            "label": "Transfer"
+          }
+        },
+        {
+          "id": "panel_pass",
+          "type": "card",
+          "x": 60,
+          "y": 420,
+          "w": 880,
+          "h": 95,
+          "is_container": true,
+          "cue": "cue_carryover",
+          "enter": "slide_up",
+          "when": "gift_variant == 'Sample Full Pass'",
+          "props": {
+            "tone": "ok",
+            "rx": 12,
+            "top_bar": "ok"
+          }
+        },
+        {
+          "id": "pill_pass_cost",
+          "type": "pill",
+          "x": 85,
+          "y": 450,
+          "w": 230,
+          "h": 36,
+          "badge_on": "panel_pass",
+          "cue": "cue_carryover",
+          "enter": "pop",
+          "when": "gift_variant == 'Sample Full Pass'",
+          "bind": {
+            "text": "Cost: {{original_cost}}"
+          },
+          "props": {
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "pill_pass_date",
+          "type": "pill",
+          "x": 330,
+          "y": 450,
+          "w": 230,
+          "h": 36,
+          "badge_on": "panel_pass",
+          "cue": "cue_carryover",
+          "enter": "pop",
+          "when": "gift_variant == 'Sample Full Pass'",
+          "bind": {
+            "text": "Date: {{acquisition_year}}"
+          },
+          "props": {
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "status_pass",
+          "type": "pill",
+          "x": 580,
+          "y": 450,
+          "w": 250,
+          "h": 36,
+          "badge_on": "panel_pass",
+          "cue": "cue_carryover",
+          "enter": "pop",
+          "when": "gift_variant == 'Sample Full Pass'",
+          "props": {
+            "text": "Pass · Step Complete",
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "tick_pass",
+          "type": "tick",
+          "x": 860,
+          "y": 448,
+          "w": 40,
+          "h": 40,
+          "badge_on": "panel_pass",
+          "cue": "cue_carryover",
+          "enter": "pop",
+          "when": "gift_variant == 'Sample Full Pass'",
+          "props": {}
+        },
+        {
+          "id": "panel_fail",
+          "type": "card",
+          "x": 60,
+          "y": 420,
+          "w": 880,
+          "h": 95,
+          "is_container": true,
+          "cue": "cue_carryover",
+          "enter": "slide_up",
+          "when": "gift_variant == 'Sample Gate Locked'",
+          "props": {
+            "tone": "warn",
+            "rx": 12,
+            "top_bar": "warn"
+          }
+        },
+        {
+          "id": "pill_fail_cost",
+          "type": "pill",
+          "x": 85,
+          "y": 450,
+          "w": 230,
+          "h": 36,
+          "badge_on": "panel_fail",
+          "cue": "cue_carryover",
+          "enter": "pop",
+          "when": "gift_variant == 'Sample Gate Locked'",
+          "bind": {
+            "text": "Cost: {{original_cost}}"
+          },
+          "props": {
+            "tone": "warn"
+          }
+        },
+        {
+          "id": "strike_fail",
+          "type": "strike",
+          "x": 85,
+          "y": 468,
+          "w": 230,
+          "h": 10,
+          "badge_on": "panel_fail",
+          "cue": "cue_carryover",
+          "enter": "pop",
+          "when": "gift_variant == 'Sample Gate Locked'",
+          "props": {}
+        },
+        {
+          "id": "lock_icon",
+          "type": "padlock",
+          "x": 340,
+          "y": 435,
+          "w": 50,
+          "h": 65,
+          "badge_on": "panel_fail",
+          "cue": "cue_carryover",
+          "enter": "pop",
+          "when": "gift_variant == 'Sample Gate Locked'",
+          "props": {
+            "locked": true
+          }
+        },
+        {
+          "id": "status_fail",
+          "type": "pill",
+          "x": 420,
+          "y": 450,
+          "w": 250,
+          "h": 36,
+          "badge_on": "panel_fail",
+          "cue": "cue_carryover",
+          "enter": "pop",
+          "when": "gift_variant == 'Sample Gate Locked'",
+          "props": {
+            "text": "Fail · Gate Locked",
+            "tone": "warn"
+          }
+        },
+        {
+          "id": "cross_fail",
+          "type": "cross",
+          "x": 860,
+          "y": 448,
+          "w": 40,
+          "h": 40,
+          "badge_on": "panel_fail",
+          "cue": "cue_carryover",
+          "enter": "pop",
+          "when": "gift_variant == 'Sample Gate Locked'",
+          "props": {}
+        }
+      ]
+    },
+    {
+      "id": "stamp_value_substitution",
+      "title": "Value Comparison & Result",
+      "category": "B. Valuation and deemed value",
+      "selection": {
+        "when_to_use": "When comparing declared transfer value against standard benchmark value.",
+        "not_for": [
+          "pure cash transfers",
+          "gift transfers"
+        ],
+        "situation_types": [
+          "valuation",
+          "comparison"
+        ],
+        "asset_types": [
+          "land",
+          "house"
+        ],
+        "topics": [
+          "benchmark value",
+          "limit"
+        ],
+        "required_slots": [
+          "declared_label",
+          "benchmark_label",
+          "tolerance_label",
+          "agreed_value",
+          "benchmark_value",
+          "tolerance_rate",
+          "test_variant"
+        ]
+      },
+      "slots": [
+        {
+          "key": "declared_label",
+          "label": "Declared Label",
+          "type": "text",
+          "default": "Sample Declared Value",
+          "max_len": 25
+        },
+        {
+          "key": "benchmark_label",
+          "label": "Benchmark Label",
+          "type": "text",
+          "default": "Sample Standard Value",
+          "max_len": 25
+        },
+        {
+          "key": "tolerance_label",
+          "label": "Tolerance Label",
+          "type": "text",
+          "default": "Sample Rate Limit",
+          "max_len": 25
+        },
+        {
+          "key": "agreed_value",
+          "label": "Declared Amount",
+          "type": "number",
+          "default": 5000000,
+          "min": 100000,
+          "max": 100000000,
+          "format": "inr"
+        },
+        {
+          "key": "benchmark_value",
+          "label": "Standard Amount",
+          "type": "number",
+          "default": 6000000,
+          "min": 100000,
+          "max": 100000000,
+          "format": "inr"
+        },
+        {
+          "key": "tolerance_rate",
+          "label": "Tolerance Rate",
+          "type": "percent",
+          "default": 10,
+          "min": 0,
+          "max": 30
+        },
+        {
+          "key": "test_variant",
+          "label": "Variant Mode",
+          "type": "enum",
+          "default": "Sample Substituted",
+          "options": [
+            "Sample Substituted",
+            "Sample Accepted"
+          ]
+        }
+      ],
+      "derived": [
+        {
+          "key": "limit_amount",
+          "expr": "agreed_value * (1 + tolerance_rate / 100)"
+        }
+      ],
+      "duration": 14,
+      "cues": [
+        {
+          "id": "cue_compare",
+          "label": "Declared vs Benchmark",
+          "default_t": 0.5
+        },
+        {
+          "id": "cue_limit",
+          "label": "Tolerance Limit Check",
+          "default_t": 4.5
+        },
+        {
+          "id": "cue_outcome",
+          "label": "Adopted Value Result",
+          "default_t": 8.5
+        }
+      ],
+      "scene": [
+        {
+          "id": "val_header",
+          "type": "card",
+          "x": 60,
+          "y": 70,
+          "w": 880,
+          "h": 70,
+          "is_container": true,
+          "props": {
+            "rx": 12,
+            "tone": "accent",
+            "top_bar": "accent"
+          }
+        },
+        {
+          "id": "val_title",
+          "type": "text",
+          "x": 90,
+          "y": 90,
+          "w": 600,
+          "h": 32,
+          "badge_on": "val_header",
+          "bind": {
+            "text": "{{anim_title}}"
+          },
+          "props": {
+            "font_size": 26,
+            "weight": "900",
+            "tone": "accent",
+            "is_title": true
+          }
+        },
+        {
+          "id": "card_agreed",
+          "type": "card",
+          "x": 60,
+          "y": 160,
+          "w": 410,
+          "h": 220,
+          "is_container": true,
+          "cue": "cue_compare",
+          "enter": "pop",
+          "props": {
+            "rx": 14,
+            "tone": "surface"
+          }
+        },
+        {
+          "id": "pill_agreed",
+          "type": "pill",
+          "x": 85,
+          "y": 180,
+          "w": 180,
+          "h": 32,
+          "badge_on": "card_agreed",
+          "cue": "cue_compare",
+          "enter": "fade",
+          "props": {
+            "tone": "accent"
+          },
+          "bind": {
+            "text": "{{declared_label}}"
+          }
+        },
+        {
+          "id": "cnt_agreed",
+          "type": "counter",
+          "x": 85,
+          "y": 240,
+          "w": 360,
+          "h": 70,
+          "badge_on": "card_agreed",
+          "cue": "cue_compare",
+          "enter": "count_up",
+          "bind": {
+            "value": "{{agreed_value}}"
+          },
+          "props": {
+            "font_size": 38,
+            "format": "inr",
+            "tone": "ink"
+          }
+        },
+        {
+          "id": "card_benchmark",
+          "type": "card",
+          "x": 530,
+          "y": 160,
+          "w": 410,
+          "h": 220,
+          "is_container": true,
+          "cue": "cue_compare",
+          "enter": "pop",
+          "props": {
+            "rx": 14,
+            "tone": "surface"
+          }
+        },
+        {
+          "id": "pill_benchmark",
+          "type": "pill",
+          "x": 555,
+          "y": 180,
+          "w": 200,
+          "h": 32,
+          "badge_on": "card_benchmark",
+          "cue": "cue_compare",
+          "enter": "fade",
+          "props": {
+            "tone": "gold"
+          },
+          "bind": {
+            "text": "{{benchmark_label}}"
+          }
+        },
+        {
+          "id": "cnt_benchmark",
+          "type": "counter",
+          "x": 555,
+          "y": 240,
+          "w": 360,
+          "h": 70,
+          "badge_on": "card_benchmark",
+          "cue": "cue_compare",
+          "enter": "count_up",
+          "bind": {
+            "value": "{{benchmark_value}}"
+          },
+          "props": {
+            "font_size": 38,
+            "format": "inr",
+            "tone": "gold"
+          }
+        },
+        {
+          "id": "pill_limit",
+          "type": "pill",
+          "x": 360,
+          "y": 320,
+          "w": 280,
+          "h": 34,
+          "cue": "cue_limit",
+          "enter": "pop",
+          "bind": {
+            "text": "{{tolerance_label}}: {{limit_amount}}"
+          },
+          "props": {
+            "tone": "accent"
+          }
+        },
+        {
+          "id": "panel_subst",
+          "type": "card",
+          "x": 60,
+          "y": 405,
+          "w": 880,
+          "h": 110,
+          "is_container": true,
+          "cue": "cue_outcome",
+          "enter": "slide_up",
+          "when": "test_variant == 'Sample Substituted'",
+          "props": {
+            "tone": "warn",
+            "rx": 14,
+            "top_bar": "warn"
+          }
+        },
+        {
+          "id": "badge_subst",
+          "type": "pill",
+          "x": 85,
+          "y": 425,
+          "w": 240,
+          "h": 34,
+          "badge_on": "panel_subst",
+          "cue": "cue_outcome",
+          "enter": "pop",
+          "when": "test_variant == 'Sample Substituted'",
+          "props": {
+            "text": "Fail · Limit Exceeded",
+            "tone": "warn"
+          }
+        },
+        {
+          "id": "txt_subst_result",
+          "type": "text",
+          "x": 85,
+          "y": 475,
+          "w": 500,
+          "h": 28,
+          "badge_on": "panel_subst",
+          "cue": "cue_outcome",
+          "enter": "fade",
+          "when": "test_variant == 'Sample Substituted'",
+          "bind": {
+            "text": "Result Value: {{benchmark_value}}"
+          },
+          "props": {
+            "font_size": 22,
+            "weight": "900",
+            "tone": "warn"
+          }
+        },
+        {
+          "id": "cross_subst",
+          "type": "cross",
+          "x": 860,
+          "y": 435,
+          "w": 40,
+          "h": 40,
+          "badge_on": "panel_subst",
+          "cue": "cue_outcome",
+          "enter": "pop",
+          "when": "test_variant == 'Sample Substituted'",
+          "props": {}
+        },
+        {
+          "id": "panel_accepted",
+          "type": "card",
+          "x": 60,
+          "y": 405,
+          "w": 880,
+          "h": 110,
+          "is_container": true,
+          "cue": "cue_outcome",
+          "enter": "slide_up",
+          "when": "test_variant == 'Sample Accepted'",
+          "props": {
+            "tone": "ok",
+            "rx": 14,
+            "top_bar": "ok"
+          }
+        },
+        {
+          "id": "badge_accepted",
+          "type": "pill",
+          "x": 85,
+          "y": 425,
+          "w": 240,
+          "h": 34,
+          "badge_on": "panel_accepted",
+          "cue": "cue_outcome",
+          "enter": "pop",
+          "when": "test_variant == 'Sample Accepted'",
+          "props": {
+            "text": "Pass · Within Limit",
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "txt_acc_result",
+          "type": "text",
+          "x": 85,
+          "y": 475,
+          "w": 500,
+          "h": 28,
+          "badge_on": "panel_accepted",
+          "cue": "cue_outcome",
+          "enter": "fade",
+          "when": "test_variant == 'Sample Accepted'",
+          "bind": {
+            "text": "Result Value: {{agreed_value}}"
+          },
+          "props": {
+            "font_size": 22,
+            "weight": "900",
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "tick_accepted",
+          "type": "tick",
+          "x": 860,
+          "y": 435,
+          "w": 40,
+          "h": 40,
+          "badge_on": "panel_accepted",
+          "cue": "cue_outcome",
+          "enter": "pop",
+          "when": "test_variant == 'Sample Accepted'",
+          "props": {}
+        }
+      ]
+    },
+    {
+      "id": "capital_gain_ledger",
+      "title": "Gain & Cost Ledger",
+      "category": "C. Computation",
+      "selection": {
+        "when_to_use": "When computing net gain result from gross value less cost items.",
+        "not_for": [
+          "simple rate lookup",
+          "window timeline"
+        ],
+        "situation_types": [
+          "computation",
+          "ledger"
+        ],
+        "asset_types": [
+          "all"
+        ],
+        "topics": [
+          "gross sale",
+          "cost base",
+          "gain"
+        ],
+        "required_slots": [
+          "gross_label",
+          "gross_amount",
+          "exp_label",
+          "transfer_expenses",
+          "cost_label",
+          "cost_base",
+          "imp_label",
+          "improvement_cost",
+          "extra_label",
+          "extra_cost",
+          "net_label"
+        ]
+      },
+      "slots": [
+        {
+          "key": "gross_label",
+          "label": "Gross Label",
+          "type": "text",
+          "default": "Sample Gross Value",
+          "max_len": 25
+        },
+        {
+          "key": "gross_amount",
+          "label": "Gross Sale",
+          "type": "number",
+          "default": 8000000,
+          "min": 100000,
+          "max": 100000000,
+          "format": "inr"
+        },
+        {
+          "key": "exp_label",
+          "label": "Expense Label",
+          "type": "text",
+          "default": "Sample Transfer Cost",
+          "max_len": 25
+        },
+        {
+          "key": "transfer_expenses",
+          "label": "Transfer Cost",
+          "type": "number",
+          "default": 150000,
+          "min": 0,
+          "max": 10000000,
+          "format": "inr"
+        },
+        {
+          "key": "cost_label",
+          "label": "Cost Label",
+          "type": "text",
+          "default": "Sample Base Cost",
+          "max_len": 25
+        },
+        {
+          "key": "cost_base",
+          "label": "Base Cost",
+          "type": "number",
+          "default": 3500000,
+          "min": 10000,
+          "max": 100000000,
+          "format": "inr"
+        },
+        {
+          "key": "imp_label",
+          "label": "Improvement Label",
+          "type": "text",
+          "default": "Sample Cost Step",
+          "max_len": 25
+        },
+        {
+          "key": "improvement_cost",
+          "label": "Cost Step",
+          "type": "number",
+          "default": 500000,
+          "min": 0,
+          "max": 50000000,
+          "format": "inr"
+        },
+        {
+          "key": "extra_label",
+          "label": "Extra Label",
+          "type": "text",
+          "default": "Sample Extra Cost",
+          "max_len": 25
+        },
+        {
+          "key": "extra_cost",
+          "label": "Extra Cost",
+          "type": "number",
+          "default": 500000,
+          "min": 0,
+          "max": 50000000,
+          "format": "inr"
+        },
+        {
+          "key": "net_label",
+          "label": "Net Label",
+          "type": "text",
+          "default": "Sample Gain Result",
+          "max_len": 25
+        }
+      ],
+      "derived": [
+        {
+          "key": "net_gain",
+          "expr": "gross_amount - transfer_expenses - cost_base - improvement_cost - extra_cost"
+        }
+      ],
+      "duration": 14,
+      "cues": [
+        {
+          "id": "cue_gross",
+          "label": "Gross Sale Inflow",
+          "default_t": 0.5
+        },
+        {
+          "id": "cue_deductions",
+          "label": "Cost Item Deductions",
+          "default_t": 4.5
+        },
+        {
+          "id": "cue_net",
+          "label": "Total Net Result",
+          "default_t": 8.5
+        }
+      ],
+      "scene": [
+        {
+          "id": "ldg_header",
+          "type": "card",
+          "x": 60,
+          "y": 60,
+          "w": 880,
+          "h": 60,
+          "is_container": true,
+          "props": {
+            "rx": 12,
+            "tone": "accent",
+            "top_bar": "accent"
+          }
+        },
+        {
+          "id": "ldg_title",
+          "type": "text",
+          "x": 90,
+          "y": 80,
+          "w": 600,
+          "h": 30,
+          "badge_on": "ldg_header",
+          "bind": {
+            "text": "{{anim_title}}"
+          },
+          "props": {
+            "font_size": 24,
+            "weight": "900",
+            "tone": "accent",
+            "is_title": true
+          }
+        },
+        {
+          "id": "row_gross",
+          "type": "ledger_row",
+          "x": 140,
+          "y": 135,
+          "w": 720,
+          "h": 45,
+          "cue": "cue_gross",
+          "enter": "slide_right",
+          "bind": {
+            "value": "{{gross_amount}}",
+            "label": "{{gross_label}}"
+          },
+          "props": {
+            "sign": "+"
+          }
+        },
+        {
+          "id": "row_exp",
+          "type": "ledger_row",
+          "x": 140,
+          "y": 190,
+          "w": 720,
+          "h": 45,
+          "cue": "cue_deductions",
+          "enter": "slide_right",
+          "bind": {
+            "value": "{{transfer_expenses}}",
+            "label": "Less: {{exp_label}}"
+          },
+          "props": {
+            "sign": "-"
+          }
+        },
+        {
+          "id": "row_acq",
+          "type": "ledger_row",
+          "x": 140,
+          "y": 245,
+          "w": 720,
+          "h": 45,
+          "cue": "cue_deductions",
+          "enter": "slide_right",
+          "offset_t": 0.3,
+          "bind": {
+            "value": "{{cost_base}}",
+            "label": "Less: {{cost_label}}"
+          },
+          "props": {
+            "sign": "-"
+          }
+        },
+        {
+          "id": "row_imp",
+          "type": "ledger_row",
+          "x": 140,
+          "y": 300,
+          "w": 720,
+          "h": 45,
+          "cue": "cue_deductions",
+          "enter": "slide_right",
+          "offset_t": 0.6,
+          "bind": {
+            "value": "{{improvement_cost}}",
+            "label": "Less: {{imp_label}}"
+          },
+          "props": {
+            "sign": "-"
+          }
+        },
+        {
+          "id": "row_extra",
+          "type": "ledger_row",
+          "x": 140,
+          "y": 355,
+          "w": 720,
+          "h": 45,
+          "cue": "cue_deductions",
+          "enter": "slide_right",
+          "offset_t": 0.9,
+          "bind": {
+            "value": "{{extra_cost}}",
+            "label": "Less: {{extra_label}}"
+          },
+          "props": {
+            "sign": "-"
+          }
+        },
+        {
+          "id": "row_net",
+          "type": "ledger_row",
+          "x": 140,
+          "y": 415,
+          "w": 720,
+          "h": 55,
+          "cue": "cue_net",
+          "enter": "pop",
+          "bind": {
+            "value": "{{net_gain}}",
+            "label": "Total: {{net_label}}"
+          },
+          "props": {
+            "sign": "=",
+            "is_total": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "reinvestment_window",
+      "title": "Date & Window Timeline",
+      "category": "D. Timelines and windows",
+      "selection": {
+        "when_to_use": "When verifying date compliance within a permissible time window.",
+        "not_for": [
+          "routine ledger calculation",
+          "checklist"
+        ],
+        "situation_types": [
+          "timeline",
+          "window",
+          "date_check"
+        ],
+        "asset_types": [
+          "house",
+          "bonds"
+        ],
+        "topics": [
+          "date window",
+          "cutoff"
+        ],
+        "required_slots": [
+          "transfer_year",
+          "cutoff_year",
+          "purchase_year",
+          "window_label",
+          "window_variant"
+        ]
+      },
+      "slots": [
+        {
+          "key": "transfer_year",
+          "label": "Transfer Date",
+          "type": "text",
+          "default": "Sample Date One",
+          "max_len": 20
+        },
+        {
+          "key": "cutoff_year",
+          "label": "Cutoff Date",
+          "type": "text",
+          "default": "Sample Date Cutoff",
+          "max_len": 20
+        },
+        {
+          "key": "purchase_year",
+          "label": "Purchase Date",
+          "type": "text",
+          "default": "Sample Date Result",
+          "max_len": 20
+        },
+        {
+          "key": "window_label",
+          "label": "Window Name",
+          "type": "text",
+          "default": "Sample Window Period",
+          "max_len": 25
+        },
+        {
+          "key": "window_variant",
+          "label": "Variant Mode",
+          "type": "enum",
+          "default": "Sample Within Window",
+          "options": [
+            "Sample Within Window",
+            "Sample Outside Window"
+          ]
+        }
+      ],
+      "derived": [],
+      "duration": 14,
+      "cues": [
+        {
+          "id": "cue_axis",
+          "label": "Timeline Axis",
+          "default_t": 0.5
+        },
+        {
+          "id": "cue_window",
+          "label": "Window Definition",
+          "default_t": 4.5
+        },
+        {
+          "id": "cue_check",
+          "label": "Date Verification",
+          "default_t": 8.5
+        }
+      ],
+      "scene": [
+        {
+          "id": "win_header",
+          "type": "card",
+          "x": 60,
+          "y": 70,
+          "w": 880,
+          "h": 70,
+          "is_container": true,
+          "props": {
+            "rx": 12,
+            "tone": "accent",
+            "top_bar": "accent"
+          }
+        },
+        {
+          "id": "win_title",
+          "type": "text",
+          "x": 90,
+          "y": 90,
+          "w": 600,
+          "h": 32,
+          "badge_on": "win_header",
+          "bind": {
+            "text": "{{anim_title}}"
+          },
+          "props": {
+            "font_size": 26,
+            "weight": "900",
+            "tone": "accent",
+            "is_title": true
+          }
+        },
+        {
+          "id": "win_bar",
+          "type": "window_bar",
+          "x": 220,
+          "y": 165,
+          "w": 420,
+          "h": 36,
+          "cue": "cue_window",
+          "enter": "grow",
+          "bind": {
+            "label": "{{window_label}}"
+          },
+          "props": {
+            "tone": "accent"
+          }
+        },
+        {
+          "id": "time_axis",
+          "type": "timeline_axis",
+          "x": 100,
+          "y": 215,
+          "w": 800,
+          "h": 40,
+          "cue": "cue_axis",
+          "enter": "draw",
+          "props": {
+            "ticks": [
+              {
+                "pos": 0.13,
+                "label": "Transfer"
+              },
+              {
+                "pos": 0.68,
+                "label": "Cutoff"
+              }
+            ]
+          }
+        },
+        {
+          "id": "marker_transfer",
+          "type": "marker",
+          "x": 200,
+          "y": 285,
+          "w": 140,
+          "h": 60,
+          "badge_on": "time_axis",
+          "cue": "cue_axis",
+          "enter": "pop",
+          "bind": {
+            "label": "From: {{transfer_year}}"
+          },
+          "props": {
+            "tone": "accent"
+          }
+        },
+        {
+          "id": "marker_purchase",
+          "type": "marker",
+          "x": 410,
+          "y": 285,
+          "w": 140,
+          "h": 60,
+          "badge_on": "time_axis",
+          "cue": "cue_check",
+          "enter": "pop",
+          "when": "window_variant == 'Sample Within Window'",
+          "bind": {
+            "label": "Date: {{purchase_year}}"
+          },
+          "props": {
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "marker_cutoff",
+          "type": "marker",
+          "x": 620,
+          "y": 285,
+          "w": 140,
+          "h": 60,
+          "badge_on": "time_axis",
+          "cue": "cue_window",
+          "enter": "pop",
+          "bind": {
+            "label": "Cutoff: {{cutoff_year}}"
+          },
+          "props": {
+            "tone": "gold"
+          }
+        },
+        {
+          "id": "marker_purchase_out",
+          "type": "marker",
+          "x": 810,
+          "y": 285,
+          "w": 140,
+          "h": 60,
+          "badge_on": "time_axis",
+          "cue": "cue_check",
+          "enter": "pop",
+          "when": "window_variant == 'Sample Outside Window'",
+          "bind": {
+            "label": "Date: {{purchase_year}}"
+          },
+          "props": {
+            "tone": "warn"
+          }
+        },
+        {
+          "id": "panel_win_ok",
+          "type": "card",
+          "x": 60,
+          "y": 365,
+          "w": 880,
+          "h": 120,
+          "is_container": true,
+          "cue": "cue_check",
+          "enter": "slide_up",
+          "when": "window_variant == 'Sample Within Window'",
+          "props": {
+            "tone": "ok",
+            "rx": 14,
+            "top_bar": "ok"
+          }
+        },
+        {
+          "id": "badge_win_ok",
+          "type": "pill",
+          "x": 85,
+          "y": 385,
+          "w": 250,
+          "h": 34,
+          "badge_on": "panel_win_ok",
+          "cue": "cue_check",
+          "enter": "pop",
+          "when": "window_variant == 'Sample Within Window'",
+          "props": {
+            "text": "Pass · Within Window",
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "txt_win_ok",
+          "type": "text",
+          "x": 85,
+          "y": 435,
+          "w": 600,
+          "h": 26,
+          "badge_on": "panel_win_ok",
+          "cue": "cue_check",
+          "enter": "fade",
+          "when": "window_variant == 'Sample Within Window'",
+          "bind": {
+            "text": "Date Result: {{purchase_year}}"
+          },
+          "props": {
+            "font_size": 20,
+            "weight": "800",
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "tick_win_ok",
+          "type": "tick",
+          "x": 860,
+          "y": 405,
+          "w": 40,
+          "h": 40,
+          "badge_on": "panel_win_ok",
+          "cue": "cue_check",
+          "enter": "pop",
+          "when": "window_variant == 'Sample Within Window'",
+          "props": {}
+        },
+        {
+          "id": "panel_win_fail",
+          "type": "card",
+          "x": 60,
+          "y": 365,
+          "w": 880,
+          "h": 120,
+          "is_container": true,
+          "cue": "cue_check",
+          "enter": "slide_up",
+          "when": "window_variant == 'Sample Outside Window'",
+          "props": {
+            "tone": "warn",
+            "rx": 14,
+            "top_bar": "warn"
+          }
+        },
+        {
+          "id": "badge_win_fail",
+          "type": "pill",
+          "x": 85,
+          "y": 385,
+          "w": 250,
+          "h": 34,
+          "badge_on": "panel_win_fail",
+          "cue": "cue_check",
+          "enter": "pop",
+          "when": "window_variant == 'Sample Outside Window'",
+          "props": {
+            "text": "Fail · Outside Window",
+            "tone": "warn"
+          }
+        },
+        {
+          "id": "txt_win_fail",
+          "type": "text",
+          "x": 85,
+          "y": 435,
+          "w": 600,
+          "h": 26,
+          "badge_on": "panel_win_fail",
+          "cue": "cue_check",
+          "enter": "fade",
+          "when": "window_variant == 'Sample Outside Window'",
+          "bind": {
+            "text": "Date Result: {{purchase_year}}"
+          },
+          "props": {
+            "font_size": 20,
+            "weight": "800",
+            "tone": "warn"
+          }
+        },
+        {
+          "id": "cross_win_fail",
+          "type": "cross",
+          "x": 860,
+          "y": 405,
+          "w": 40,
+          "h": 40,
+          "badge_on": "panel_win_fail",
+          "cue": "cue_check",
+          "enter": "pop",
+          "when": "window_variant == 'Sample Outside Window'",
+          "props": {}
+        }
+      ]
+    },
+    {
+      "id": "conditions_checklist_gate",
+      "title": "Gate Checklist & Result",
+      "category": "E. Conditions and decisions",
+      "selection": {
+        "when_to_use": "When evaluating concurrent criteria to unlock a decision gate.",
+        "not_for": [
+          "numerical ledgers",
+          "pure timelines"
+        ],
+        "situation_types": [
+          "checklist",
+          "decision_gate"
+        ],
+        "asset_types": [
+          "all"
+        ],
+        "topics": [
+          "criteria gate",
+          "decision"
+        ],
+        "required_slots": [
+          "cond_1_label",
+          "cond_1_pass",
+          "cond_2_label",
+          "cond_2_pass",
+          "cond_3_label",
+          "cond_3_pass",
+          "cond_4_label",
+          "cond_4_pass"
+        ]
+      },
+      "slots": [
+        {
+          "key": "cond_1_label",
+          "label": "Condition One Label",
+          "type": "text",
+          "default": "Sample Condition One",
+          "max_len": 25
+        },
+        {
+          "key": "cond_1_pass",
+          "label": "Condition One Pass",
+          "type": "boolean",
+          "default": true
+        },
+        {
+          "key": "cond_2_label",
+          "label": "Condition Two Label",
+          "type": "text",
+          "default": "Sample Condition Two",
+          "max_len": 25
+        },
+        {
+          "key": "cond_2_pass",
+          "label": "Condition Two Pass",
+          "type": "boolean",
+          "default": true
+        },
+        {
+          "key": "cond_3_label",
+          "label": "Condition Three Label",
+          "type": "text",
+          "default": "Sample Condition Three",
+          "max_len": 25
+        },
+        {
+          "key": "cond_3_pass",
+          "label": "Condition Three Pass",
+          "type": "boolean",
+          "default": true
+        },
+        {
+          "key": "cond_4_label",
+          "label": "Condition Four Label",
+          "type": "text",
+          "default": "Sample Condition Four",
+          "max_len": 25
+        },
+        {
+          "key": "cond_4_pass",
+          "label": "Condition Four Pass",
+          "type": "boolean",
+          "default": true
+        }
+      ],
+      "derived": [
+        {
+          "key": "all_pass",
+          "expr": "cond_1_pass && cond_2_pass && cond_3_pass && cond_4_pass"
+        }
+      ],
+      "duration": 14,
+      "cues": [
+        {
+          "id": "cue_list",
+          "label": "Condition Evaluation",
+          "default_t": 0.5
+        },
+        {
+          "id": "cue_gate",
+          "label": "Gate Decision Result",
+          "default_t": 4.5
+        },
+        {
+          "id": "cue_final",
+          "label": "Final Access State",
+          "default_t": 8.5
+        }
+      ],
+      "scene": [
+        {
+          "id": "chk_header",
+          "type": "card",
+          "x": 60,
+          "y": 60,
+          "w": 880,
+          "h": 60,
+          "is_container": true,
+          "props": {
+            "rx": 12,
+            "tone": "accent",
+            "top_bar": "accent"
+          }
+        },
+        {
+          "id": "chk_title",
+          "type": "text",
+          "x": 90,
+          "y": 80,
+          "w": 600,
+          "h": 30,
+          "badge_on": "chk_header",
+          "bind": {
+            "text": "{{anim_title}}"
+          },
+          "props": {
+            "font_size": 24,
+            "weight": "900",
+            "tone": "accent",
+            "is_title": true
+          }
+        },
+        {
+          "id": "card_c1",
+          "type": "card",
+          "x": 60,
+          "y": 136,
+          "w": 460,
+          "h": 50,
+          "is_container": true,
+          "cue": "cue_list",
+          "enter": "pop",
+          "props": {
+            "rx": 10
+          }
+        },
+        {
+          "id": "tick_c1",
+          "type": "tick",
+          "x": 78,
+          "y": 147,
+          "w": 28,
+          "h": 28,
+          "badge_on": "card_c1",
+          "cue": "cue_list",
+          "enter": "pop",
+          "when": "cond_1_pass",
+          "props": {}
+        },
+        {
+          "id": "cross_c1",
+          "type": "cross",
+          "x": 78,
+          "y": 147,
+          "w": 28,
+          "h": 28,
+          "badge_on": "card_c1",
+          "cue": "cue_list",
+          "enter": "pop",
+          "when": "!cond_1_pass",
+          "props": {}
+        },
+        {
+          "id": "txt_c1",
+          "type": "text",
+          "x": 120,
+          "y": 151,
+          "w": 380,
+          "h": 20,
+          "badge_on": "card_c1",
+          "cue": "cue_list",
+          "enter": "fade",
+          "bind": {
+            "text": "{{cond_1_label}}"
+          },
+          "props": {
+            "font_size": 16,
+            "weight": "700"
+          }
+        },
+        {
+          "id": "card_c2",
+          "type": "card",
+          "x": 60,
+          "y": 194,
+          "w": 460,
+          "h": 50,
+          "is_container": true,
+          "cue": "cue_list",
+          "enter": "pop",
+          "offset_t": 0.3,
+          "props": {
+            "rx": 10
+          }
+        },
+        {
+          "id": "tick_c2",
+          "type": "tick",
+          "x": 78,
+          "y": 205,
+          "w": 28,
+          "h": 28,
+          "badge_on": "card_c2",
+          "cue": "cue_list",
+          "enter": "pop",
+          "offset_t": 0.3,
+          "when": "cond_2_pass",
+          "props": {}
+        },
+        {
+          "id": "cross_c2",
+          "type": "cross",
+          "x": 78,
+          "y": 205,
+          "w": 28,
+          "h": 28,
+          "badge_on": "card_c2",
+          "cue": "cue_list",
+          "enter": "pop",
+          "offset_t": 0.3,
+          "when": "!cond_2_pass",
+          "props": {}
+        },
+        {
+          "id": "txt_c2",
+          "type": "text",
+          "x": 120,
+          "y": 209,
+          "w": 380,
+          "h": 20,
+          "badge_on": "card_c2",
+          "cue": "cue_list",
+          "enter": "fade",
+          "offset_t": 0.3,
+          "bind": {
+            "text": "{{cond_2_label}}"
+          },
+          "props": {
+            "font_size": 16,
+            "weight": "700"
+          }
+        },
+        {
+          "id": "card_c3",
+          "type": "card",
+          "x": 60,
+          "y": 252,
+          "w": 460,
+          "h": 50,
+          "is_container": true,
+          "cue": "cue_list",
+          "enter": "pop",
+          "offset_t": 0.6,
+          "props": {
+            "rx": 10
+          }
+        },
+        {
+          "id": "tick_c3",
+          "type": "tick",
+          "x": 78,
+          "y": 263,
+          "w": 28,
+          "h": 28,
+          "badge_on": "card_c3",
+          "cue": "cue_list",
+          "enter": "pop",
+          "offset_t": 0.6,
+          "when": "cond_3_pass",
+          "props": {}
+        },
+        {
+          "id": "cross_c3",
+          "type": "cross",
+          "x": 78,
+          "y": 263,
+          "w": 28,
+          "h": 28,
+          "badge_on": "card_c3",
+          "cue": "cue_list",
+          "enter": "pop",
+          "offset_t": 0.6,
+          "when": "!cond_3_pass",
+          "props": {}
+        },
+        {
+          "id": "txt_c3",
+          "type": "text",
+          "x": 120,
+          "y": 267,
+          "w": 380,
+          "h": 20,
+          "badge_on": "card_c3",
+          "cue": "cue_list",
+          "enter": "fade",
+          "offset_t": 0.6,
+          "bind": {
+            "text": "{{cond_3_label}}"
+          },
+          "props": {
+            "font_size": 16,
+            "weight": "700"
+          }
+        },
+        {
+          "id": "card_c4",
+          "type": "card",
+          "x": 60,
+          "y": 310,
+          "w": 460,
+          "h": 50,
+          "is_container": true,
+          "cue": "cue_list",
+          "enter": "pop",
+          "offset_t": 0.9,
+          "props": {
+            "rx": 10
+          }
+        },
+        {
+          "id": "tick_c4",
+          "type": "tick",
+          "x": 78,
+          "y": 321,
+          "w": 28,
+          "h": 28,
+          "badge_on": "card_c4",
+          "cue": "cue_list",
+          "enter": "pop",
+          "offset_t": 0.9,
+          "when": "cond_4_pass",
+          "props": {}
+        },
+        {
+          "id": "cross_c4",
+          "type": "cross",
+          "x": 78,
+          "y": 321,
+          "w": 28,
+          "h": 28,
+          "badge_on": "card_c4",
+          "cue": "cue_list",
+          "enter": "pop",
+          "offset_t": 0.9,
+          "when": "!cond_4_pass",
+          "props": {}
+        },
+        {
+          "id": "txt_c4",
+          "type": "text",
+          "x": 120,
+          "y": 325,
+          "w": 380,
+          "h": 20,
+          "badge_on": "card_c4",
+          "cue": "cue_list",
+          "enter": "fade",
+          "offset_t": 0.9,
+          "bind": {
+            "text": "{{cond_4_label}}"
+          },
+          "props": {
+            "font_size": 16,
+            "weight": "700"
+          }
+        },
+        {
+          "id": "gate_ok",
+          "type": "gate",
+          "x": 560,
+          "y": 136,
+          "w": 380,
+          "h": 224,
+          "cue": "cue_gate",
+          "enter": "pop",
+          "when": "all_pass",
+          "props": {
+            "open": true
+          }
+        },
+        {
+          "id": "gate_locked",
+          "type": "gate",
+          "x": 560,
+          "y": 136,
+          "w": 380,
+          "h": 224,
+          "cue": "cue_gate",
+          "enter": "pop",
+          "when": "!all_pass",
+          "props": {
+            "open": false
+          }
+        },
+        {
+          "id": "panel_gate_ok",
+          "type": "card",
+          "x": 60,
+          "y": 385,
+          "w": 880,
+          "h": 110,
+          "is_container": true,
+          "cue": "cue_final",
+          "enter": "slide_up",
+          "when": "all_pass",
+          "props": {
+            "tone": "ok",
+            "rx": 12,
+            "top_bar": "ok"
+          }
+        },
+        {
+          "id": "pill_gate_ok",
+          "type": "pill",
+          "x": 85,
+          "y": 420,
+          "w": 250,
+          "h": 36,
+          "badge_on": "panel_gate_ok",
+          "cue": "cue_final",
+          "enter": "pop",
+          "when": "all_pass",
+          "props": {
+            "text": "Pass · Gate Open",
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "panel_gate_fail",
+          "type": "card",
+          "x": 60,
+          "y": 385,
+          "w": 880,
+          "h": 110,
+          "is_container": true,
+          "cue": "cue_final",
+          "enter": "slide_up",
+          "when": "!all_pass",
+          "props": {
+            "tone": "warn",
+            "rx": 12,
+            "top_bar": "warn"
+          }
+        },
+        {
+          "id": "pill_gate_fail",
+          "type": "pill",
+          "x": 85,
+          "y": 420,
+          "w": 250,
+          "h": 36,
+          "badge_on": "panel_gate_fail",
+          "cue": "cue_final",
+          "enter": "pop",
+          "when": "!all_pass",
+          "props": {
+            "text": "Fail · Gate Locked",
+            "tone": "warn"
+          }
+        }
+      ]
+    },
+    {
+      "id": "sale_of_asset",
+      "title": "Sale of Asset & Cost",
+      "category": "A. Transfers of assets",
+      "selection": {
+        "when_to_use": "When an asset is sold in exchange for monetary payment.",
+        "not_for": [
+          "gift without cost",
+          "window testing"
+        ],
+        "situation_types": [
+          "sale",
+          "conveyance"
+        ],
+        "asset_types": [
+          "house",
+          "land",
+          "shares",
+          "business"
+        ],
+        "topics": [
+          "sale price",
+          "payment"
+        ],
+        "required_slots": [
+          "seller_name",
+          "buyer_name",
+          "agreed_price",
+          "payment_mode"
+        ]
+      },
+      "slots": [
+        {
+          "key": "seller_name",
+          "label": "Party One",
+          "type": "text",
+          "default": "Sample Party One",
+          "max_len": 25
+        },
+        {
+          "key": "buyer_name",
+          "label": "Party Two",
+          "type": "text",
+          "default": "Sample Party Two",
+          "max_len": 25
+        },
+        {
+          "key": "agreed_price",
+          "label": "Sale Cost",
+          "type": "number",
+          "default": 4500000,
+          "min": 100000,
+          "max": 100000000,
+          "format": "inr"
+        },
+        {
+          "key": "payment_mode",
+          "label": "Payment Mode",
+          "type": "enum",
+          "default": "Sample Full Paid",
+          "options": [
+            "Sample Full Paid",
+            "Sample Partial Due"
+          ]
+        }
+      ],
+      "derived": [
+        {
+          "key": "paid_amount",
+          "expr": "payment_mode == 'Sample Partial Due' ? 3000000 : agreed_price"
+        },
+        {
+          "key": "due_amount",
+          "expr": "payment_mode == 'Sample Partial Due' ? 1500000 : 0"
+        }
+      ],
+      "duration": 14,
+      "cues": [
+        {
+          "id": "cue_exchange",
+          "label": "Asset & Cash Exchange",
+          "default_t": 0.5
+        },
+        {
+          "id": "cue_settle",
+          "label": "Settlement Transfer",
+          "default_t": 4.5
+        },
+        {
+          "id": "cue_result",
+          "label": "Conveyance Result",
+          "default_t": 8.5
+        }
+      ],
+      "scene": [
+        {
+          "id": "sale_header",
+          "type": "card",
+          "x": 60,
+          "y": 65,
+          "w": 880,
+          "h": 65,
+          "is_container": true,
+          "props": {
+            "rx": 12,
+            "tone": "accent",
+            "top_bar": "accent"
+          }
+        },
+        {
+          "id": "sale_title",
+          "type": "text",
+          "x": 90,
+          "y": 85,
+          "w": 600,
+          "h": 30,
+          "badge_on": "sale_header",
+          "bind": {
+            "text": "{{anim_title}}"
+          },
+          "props": {
+            "font_size": 24,
+            "weight": "900",
+            "tone": "accent",
+            "is_title": true
+          }
+        },
+        {
+          "id": "card_seller",
+          "type": "card",
+          "x": 60,
+          "y": 150,
+          "w": 360,
+          "h": 230,
+          "is_container": true,
+          "props": {
+            "rx": 14
+          }
+        },
+        {
+          "id": "avatar_seller",
+          "type": "person",
+          "x": 80,
+          "y": 170,
+          "w": 100,
+          "h": 120,
+          "badge_on": "card_seller",
+          "props": {
+            "name": "Party One"
+          }
+        },
+        {
+          "id": "pill_seller",
+          "type": "pill",
+          "x": 200,
+          "y": 185,
+          "w": 190,
+          "h": 32,
+          "badge_on": "card_seller",
+          "bind": {
+            "text": "{{seller_name}}"
+          },
+          "props": {
+            "tone": "accent"
+          }
+        },
+        {
+          "id": "card_buyer",
+          "type": "card",
+          "x": 580,
+          "y": 150,
+          "w": 360,
+          "h": 230,
+          "is_container": true,
+          "props": {
+            "rx": 14
+          }
+        },
+        {
+          "id": "avatar_buyer",
+          "type": "person",
+          "x": 600,
+          "y": 170,
+          "w": 100,
+          "h": 120,
+          "badge_on": "card_buyer",
+          "props": {
+            "name": "Party Two"
+          }
+        },
+        {
+          "id": "pill_buyer",
+          "type": "pill",
+          "x": 720,
+          "y": 185,
+          "w": 190,
+          "h": 32,
+          "badge_on": "card_buyer",
+          "bind": {
+            "text": "{{buyer_name}}"
+          },
+          "props": {
+            "tone": "accent"
+          }
+        },
+        {
+          "id": "asset_move",
+          "type": "house",
+          "x": 200,
+          "y": 300,
+          "w": 65,
+          "h": 65,
+          "cue": "cue_settle",
+          "enter": "pop",
+          "motion": {
+            "type": "move_to",
+            "to_x": 720,
+            "to_y": 300,
+            "delay": 0.5,
+            "duration": 2.5
+          },
+          "props": {}
+        },
+        {
+          "id": "money_move",
+          "type": "money_bag",
+          "x": 720,
+          "y": 240,
+          "w": 55,
+          "h": 55,
+          "cue": "cue_settle",
+          "enter": "pop",
+          "motion": {
+            "type": "move_to",
+            "to_x": 200,
+            "to_y": 240,
+            "delay": 0.5,
+            "duration": 2.5
+          },
+          "props": {}
+        },
+        {
+          "id": "panel_full",
+          "type": "card",
+          "x": 60,
+          "y": 405,
+          "w": 880,
+          "h": 105,
+          "is_container": true,
+          "cue": "cue_result",
+          "enter": "slide_up",
+          "when": "payment_mode == 'Sample Full Paid'",
+          "props": {
+            "tone": "ok",
+            "rx": 12,
+            "top_bar": "ok"
+          }
+        },
+        {
+          "id": "pill_full_cost",
+          "type": "pill",
+          "x": 85,
+          "y": 435,
+          "w": 260,
+          "h": 36,
+          "badge_on": "panel_full",
+          "cue": "cue_result",
+          "enter": "pop",
+          "when": "payment_mode == 'Sample Full Paid'",
+          "bind": {
+            "text": "Total Paid: {{agreed_price}}"
+          },
+          "props": {
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "pill_full_status",
+          "type": "pill",
+          "x": 380,
+          "y": 435,
+          "w": 260,
+          "h": 36,
+          "badge_on": "panel_full",
+          "cue": "cue_result",
+          "enter": "pop",
+          "when": "payment_mode == 'Sample Full Paid'",
+          "props": {
+            "text": "Pass · Sale Complete",
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "tick_full",
+          "type": "tick",
+          "x": 860,
+          "y": 435,
+          "w": 40,
+          "h": 40,
+          "badge_on": "panel_full",
+          "cue": "cue_result",
+          "enter": "pop",
+          "when": "payment_mode == 'Sample Full Paid'",
+          "props": {}
+        },
+        {
+          "id": "panel_part_left",
+          "type": "card",
+          "x": 60,
+          "y": 405,
+          "w": 420,
+          "h": 105,
+          "is_container": true,
+          "cue": "cue_result",
+          "enter": "slide_up",
+          "when": "payment_mode == 'Sample Partial Due'",
+          "props": {
+            "tone": "ok",
+            "rx": 12,
+            "top_bar": "ok"
+          }
+        },
+        {
+          "id": "pill_part_paid",
+          "type": "pill",
+          "x": 85,
+          "y": 435,
+          "w": 240,
+          "h": 36,
+          "badge_on": "panel_part_left",
+          "cue": "cue_result",
+          "enter": "pop",
+          "when": "payment_mode == 'Sample Partial Due'",
+          "bind": {
+            "text": "Paid: {{paid_amount}}"
+          },
+          "props": {
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "panel_part_right",
+          "type": "card",
+          "x": 520,
+          "y": 405,
+          "w": 420,
+          "h": 105,
+          "is_container": true,
+          "cue": "cue_result",
+          "enter": "slide_up",
+          "when": "payment_mode == 'Sample Partial Due'",
+          "props": {
+            "tone": "warn",
+            "rx": 12,
+            "top_bar": "warn"
+          }
+        },
+        {
+          "id": "pill_part_due",
+          "type": "pill",
+          "x": 545,
+          "y": 435,
+          "w": 220,
+          "h": 36,
+          "badge_on": "panel_part_right",
+          "cue": "cue_result",
+          "enter": "pop",
+          "when": "payment_mode == 'Sample Partial Due'",
+          "bind": {
+            "text": "Due: {{due_amount}}"
+          },
+          "props": {
+            "tone": "warn"
+          }
+        },
+        {
+          "id": "clock_icon",
+          "type": "clock",
+          "x": 850,
+          "y": 430,
+          "w": 45,
+          "h": 45,
+          "badge_on": "panel_part_right",
+          "cue": "cue_result",
+          "enter": "pop",
+          "when": "payment_mode == 'Sample Partial Due'",
+          "props": {}
+        }
+      ]
+    },
+    {
+      "id": "slab_ladder",
+      "title": "Tax Rate & Slab Ladder",
+      "category": "C. Computation",
+      "selection": {
+        "when_to_use": "When computing tiered rate steps on progressive bands.",
+        "not_for": [
+          "flat rate tax",
+          "window testing"
+        ],
+        "situation_types": [
+          "ladder",
+          "progressive_tax"
+        ],
+        "asset_types": [
+          "all"
+        ],
+        "topics": [
+          "slab tiers",
+          "tax rate"
+        ],
+        "required_slots": [
+          "tier_1_tax",
+          "tier_2_tax",
+          "tier_3_tax",
+          "tier_4_tax",
+          "rebate_eligible",
+          "tier_1_label",
+          "tier_2_label",
+          "tier_3_label",
+          "tier_4_label"
+        ]
+      },
+      "slots": [
+        {
+          "key": "tier_1_label",
+          "label": "Tier One Name",
+          "type": "text",
+          "default": "Sample Tier One",
+          "max_len": 20
+        },
+        {
+          "key": "tier_1_rate",
+          "label": "Tier One Rate",
+          "type": "text",
+          "default": "Nil Rate",
+          "max_len": 15
+        },
+        {
+          "key": "tier_1_tax",
+          "label": "Tier One Tax",
+          "type": "number",
+          "default": 0,
+          "min": 0,
+          "max": 10000000,
+          "format": "inr"
+        },
+        {
+          "key": "tier_2_label",
+          "label": "Tier Two Name",
+          "type": "text",
+          "default": "Sample Tier Two",
+          "max_len": 20
+        },
+        {
+          "key": "tier_2_rate",
+          "label": "Tier Two Rate",
+          "type": "text",
+          "default": "Rate Step",
+          "max_len": 15
+        },
+        {
+          "key": "tier_2_tax",
+          "label": "Tier Two Tax",
+          "type": "number",
+          "default": 50000,
+          "min": 0,
+          "max": 10000000,
+          "format": "inr"
+        },
+        {
+          "key": "tier_3_label",
+          "label": "Tier Three Name",
+          "type": "text",
+          "default": "Sample Tier Three",
+          "max_len": 20
+        },
+        {
+          "key": "tier_3_rate",
+          "label": "Tier Three Rate",
+          "type": "text",
+          "default": "Rate Tier",
+          "max_len": 15
+        },
+        {
+          "key": "tier_3_tax",
+          "label": "Tier Three Tax",
+          "type": "number",
+          "default": 100000,
+          "min": 0,
+          "max": 10000000,
+          "format": "inr"
+        },
+        {
+          "key": "tier_4_label",
+          "label": "Tier Four Name",
+          "type": "text",
+          "default": "Sample Tier Four",
+          "max_len": 20
+        },
+        {
+          "key": "tier_4_rate",
+          "label": "Tier Four Rate",
+          "type": "text",
+          "default": "Rate Step",
+          "max_len": 15
+        },
+        {
+          "key": "tier_4_tax",
+          "label": "Tier Four Tax",
+          "type": "number",
+          "default": 150000,
+          "min": 0,
+          "max": 10000000,
+          "format": "inr"
+        },
+        {
+          "key": "rebate_eligible",
+          "label": "Rebate Option",
+          "type": "boolean",
+          "default": false
+        }
+      ],
+      "derived": [
+        {
+          "key": "gross_tax",
+          "expr": "tier_1_tax + tier_2_tax + tier_3_tax + tier_4_tax"
+        },
+        {
+          "key": "net_tax",
+          "expr": "rebate_eligible ? 0 : gross_tax"
+        }
+      ],
+      "duration": 14,
+      "cues": [
+        {
+          "id": "cue_tiers",
+          "label": "Tier Bracket Steps",
+          "default_t": 0.5
+        },
+        {
+          "id": "cue_compute",
+          "label": "Step Tax Summation",
+          "default_t": 4.5
+        },
+        {
+          "id": "cue_final",
+          "label": "Total Tax Result",
+          "default_t": 8.5
+        }
+      ],
+      "scene": [
+        {
+          "id": "slab_header",
+          "type": "card",
+          "x": 60,
+          "y": 60,
+          "w": 880,
+          "h": 60,
+          "is_container": true,
+          "props": {
+            "rx": 12,
+            "tone": "accent",
+            "top_bar": "accent"
+          }
+        },
+        {
+          "id": "slab_title",
+          "type": "text",
+          "x": 90,
+          "y": 80,
+          "w": 600,
+          "h": 30,
+          "badge_on": "slab_header",
+          "bind": {
+            "text": "{{anim_title}}"
+          },
+          "props": {
+            "font_size": 24,
+            "weight": "900",
+            "tone": "accent",
+            "is_title": true
+          }
+        },
+        {
+          "id": "step_1",
+          "type": "slab_step",
+          "x": 60,
+          "y": 135,
+          "w": 880,
+          "h": 52,
+          "is_container": true,
+          "cue": "cue_tiers",
+          "enter": "pop",
+          "bind": {
+            "tax": "{{tier_1_tax}}",
+            "range": "{{tier_1_label}}",
+            "rate": "{{tier_1_rate}}"
+          },
+          "props": {
+            "tone": "accent"
+          }
+        },
+        {
+          "id": "step_2",
+          "type": "slab_step",
+          "x": 60,
+          "y": 195,
+          "w": 880,
+          "h": 52,
+          "is_container": true,
+          "cue": "cue_tiers",
+          "enter": "pop",
+          "offset_t": 0.3,
+          "bind": {
+            "tax": "{{tier_2_tax}}",
+            "range": "{{tier_2_label}}",
+            "rate": "{{tier_2_rate}}"
+          },
+          "props": {
+            "tone": "accent"
+          }
+        },
+        {
+          "id": "step_3",
+          "type": "slab_step",
+          "x": 60,
+          "y": 255,
+          "w": 880,
+          "h": 52,
+          "is_container": true,
+          "cue": "cue_tiers",
+          "enter": "pop",
+          "offset_t": 0.6,
+          "bind": {
+            "tax": "{{tier_3_tax}}",
+            "range": "{{tier_3_label}}",
+            "rate": "{{tier_3_rate}}"
+          },
+          "props": {
+            "tone": "gold"
+          }
+        },
+        {
+          "id": "step_4",
+          "type": "slab_step",
+          "x": 60,
+          "y": 315,
+          "w": 880,
+          "h": 52,
+          "is_container": true,
+          "cue": "cue_tiers",
+          "enter": "pop",
+          "offset_t": 0.9,
+          "bind": {
+            "tax": "{{tier_4_tax}}",
+            "range": "{{tier_4_label}}",
+            "rate": "{{tier_4_rate}}"
+          },
+          "props": {
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "panel_norm",
+          "type": "card",
+          "x": 60,
+          "y": 385,
+          "w": 880,
+          "h": 110,
+          "is_container": true,
+          "cue": "cue_final",
+          "enter": "slide_up",
+          "when": "!rebate_eligible",
+          "props": {
+            "tone": "accent",
+            "rx": 12,
+            "top_bar": "accent"
+          }
+        },
+        {
+          "id": "pill_norm",
+          "type": "pill",
+          "x": 85,
+          "y": 420,
+          "w": 260,
+          "h": 36,
+          "badge_on": "panel_norm",
+          "cue": "cue_final",
+          "enter": "pop",
+          "when": "!rebate_eligible",
+          "bind": {
+            "text": "Total Tax: {{gross_tax}}"
+          },
+          "props": {
+            "tone": "accent"
+          }
+        },
+        {
+          "id": "status_norm",
+          "type": "pill",
+          "x": 380,
+          "y": 420,
+          "w": 240,
+          "h": 36,
+          "badge_on": "panel_norm",
+          "cue": "cue_final",
+          "enter": "pop",
+          "when": "!rebate_eligible",
+          "props": {
+            "text": "Status · Standard Tax",
+            "tone": "accent"
+          }
+        },
+        {
+          "id": "panel_rebate",
+          "type": "card",
+          "x": 60,
+          "y": 385,
+          "w": 880,
+          "h": 110,
+          "is_container": true,
+          "cue": "cue_final",
+          "enter": "slide_up",
+          "when": "rebate_eligible",
+          "props": {
+            "tone": "ok",
+            "rx": 12,
+            "top_bar": "ok"
+          }
+        },
+        {
+          "id": "pill_reb_strike",
+          "type": "pill",
+          "x": 85,
+          "y": 420,
+          "w": 240,
+          "h": 36,
+          "badge_on": "panel_rebate",
+          "cue": "cue_final",
+          "enter": "pop",
+          "when": "rebate_eligible",
+          "bind": {
+            "text": "Tax: {{gross_tax}}"
+          },
+          "props": {
+            "tone": "warn"
+          }
+        },
+        {
+          "id": "strike_tax",
+          "type": "strike",
+          "x": 85,
+          "y": 433,
+          "w": 240,
+          "h": 10,
+          "badge_on": "panel_rebate",
+          "cue": "cue_final",
+          "enter": "pop",
+          "when": "rebate_eligible",
+          "props": {}
+        },
+        {
+          "id": "pill_reb_zero",
+          "type": "pill",
+          "x": 350,
+          "y": 420,
+          "w": 200,
+          "h": 36,
+          "badge_on": "panel_rebate",
+          "cue": "cue_final",
+          "enter": "pop",
+          "when": "rebate_eligible",
+          "bind": {
+            "text": "Total Tax: {{net_tax}}"
+          },
+          "props": {
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "stamp_rebate",
+          "type": "pill",
+          "x": 580,
+          "y": 420,
+          "w": 260,
+          "h": 36,
+          "badge_on": "panel_rebate",
+          "cue": "cue_final",
+          "enter": "stamp",
+          "when": "rebate_eligible",
+          "props": {
+            "text": "Pass · Nil Tax Result",
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "tick_rebate",
+          "type": "tick",
+          "x": 860,
+          "y": 420,
+          "w": 36,
+          "h": 36,
+          "badge_on": "panel_rebate",
+          "cue": "cue_final",
+          "enter": "pop",
+          "when": "rebate_eligible",
+          "props": {}
+        }
+      ]
+    },
+    {
+      "id": "tds_flow",
+      "title": "Tax & Amount Flow",
+      "category": "F. Flows and withholding",
+      "selection": {
+        "when_to_use": "When payment is split into direct remittance and tax deduction.",
+        "not_for": [
+          "reinvestment window",
+          "simple sale"
+        ],
+        "situation_types": [
+          "flow",
+          "tax_split"
+        ],
+        "asset_types": [
+          "all"
+        ],
+        "topics": [
+          "tax deduction",
+          "net payment"
+        ],
+        "required_slots": [
+          "payer_label",
+          "payee_label",
+          "gross_sum",
+          "tax_rate",
+          "flow_variant"
+        ]
+      },
+      "slots": [
+        {
+          "key": "payer_label",
+          "label": "Payer Name",
+          "type": "text",
+          "default": "Sample Party One",
+          "max_len": 25
+        },
+        {
+          "key": "payee_label",
+          "label": "Payee Name",
+          "type": "text",
+          "default": "Sample Party Two",
+          "max_len": 25
+        },
+        {
+          "key": "gross_sum",
+          "label": "Gross Amount",
+          "type": "number",
+          "default": 1000000,
+          "min": 10000,
+          "max": 100000000,
+          "format": "inr"
+        },
+        {
+          "key": "tax_rate",
+          "label": "Tax Rate",
+          "type": "enum",
+          "default": "10%",
+          "options": [
+            "1%",
+            "2%",
+            "5%",
+            "10%",
+            "20%",
+            "30%"
+          ]
+        },
+        {
+          "key": "flow_variant",
+          "label": "Flow Variant",
+          "type": "enum",
+          "default": "Sample Standard Rate",
+          "options": [
+            "Sample Standard Rate",
+            "Sample Nil Rate"
+          ]
+        }
+      ],
+      "derived": [
+        {
+          "key": "tax_percent",
+          "expr": "flow_variant == 'Sample Nil Rate' ? 0 : (tax_rate == '1%' ? 1 : (tax_rate == '2%' ? 2 : (tax_rate == '5%' ? 5 : (tax_rate == '10%' ? 10 : (tax_rate == '20%' ? 20 : 30)))))"
+        },
+        {
+          "key": "tax_cut",
+          "expr": "gross_sum * tax_percent / 100"
+        },
+        {
+          "key": "net_payout",
+          "expr": "gross_sum - tax_cut"
+        }
+      ],
+      "duration": 14,
+      "cues": [
+        {
+          "id": "cue_payer",
+          "label": "Gross Remittance Payer",
+          "default_t": 0.5
+        },
+        {
+          "id": "cue_split",
+          "label": "Tax Conduit Split",
+          "default_t": 4.5
+        },
+        {
+          "id": "cue_payee",
+          "label": "Net Beneficiary Credit",
+          "default_t": 8.5
+        }
+      ],
+      "scene": [
+        {
+          "id": "tds_header",
+          "type": "card",
+          "x": 60,
+          "y": 65,
+          "w": 880,
+          "h": 65,
+          "is_container": true,
+          "props": {
+            "rx": 12,
+            "tone": "accent",
+            "top_bar": "accent"
+          }
+        },
+        {
+          "id": "tds_title",
+          "type": "text",
+          "x": 90,
+          "y": 85,
+          "w": 600,
+          "h": 30,
+          "badge_on": "tds_header",
+          "bind": {
+            "text": "{{anim_title}}"
+          },
+          "props": {
+            "font_size": 24,
+            "weight": "900",
+            "tone": "accent",
+            "is_title": true
+          }
+        },
+        {
+          "id": "card_payer",
+          "type": "card",
+          "x": 60,
+          "y": 145,
+          "w": 310,
+          "h": 230,
+          "is_container": true,
+          "props": {
+            "rx": 14
+          }
+        },
+        {
+          "id": "avatar_payer",
+          "type": "person",
+          "x": 85,
+          "y": 160,
+          "w": 260,
+          "h": 110,
+          "badge_on": "card_payer",
+          "props": {
+            "name": "Party One"
+          },
+          "bind": {
+            "name": "{{payer_label}}"
+          }
+        },
+        {
+          "id": "pill_gross",
+          "type": "pill",
+          "x": 105,
+          "y": 280,
+          "w": 220,
+          "h": 32,
+          "badge_on": "card_payer",
+          "props": {
+            "text": "Gross Flow",
+            "tone": "accent"
+          }
+        },
+        {
+          "id": "txt_gross_val",
+          "type": "text",
+          "x": 85,
+          "y": 325,
+          "w": 260,
+          "h": 26,
+          "badge_on": "card_payer",
+          "bind": {
+            "text": "{{gross_sum}}"
+          },
+          "props": {
+            "font_size": 20,
+            "weight": "900",
+            "align": "center"
+          }
+        },
+        {
+          "id": "card_payee",
+          "type": "card",
+          "x": 630,
+          "y": 145,
+          "w": 310,
+          "h": 230,
+          "is_container": true,
+          "props": {
+            "rx": 14
+          }
+        },
+        {
+          "id": "avatar_payee",
+          "type": "person",
+          "x": 655,
+          "y": 160,
+          "w": 260,
+          "h": 110,
+          "badge_on": "card_payee",
+          "props": {
+            "name": "Party Two"
+          },
+          "bind": {
+            "name": "{{payee_label}}"
+          }
+        },
+        {
+          "id": "pill_net",
+          "type": "pill",
+          "x": 675,
+          "y": 280,
+          "w": 220,
+          "h": 32,
+          "badge_on": "card_payee",
+          "props": {
+            "text": "Net Flow",
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "txt_net_val",
+          "type": "text",
+          "x": 655,
+          "y": 325,
+          "w": 260,
+          "h": 26,
+          "badge_on": "card_payee",
+          "bind": {
+            "text": "{{net_payout}}"
+          },
+          "props": {
+            "font_size": 20,
+            "weight": "900",
+            "tone": "ok",
+            "align": "center"
+          }
+        },
+        {
+          "id": "card_tax_dep",
+          "type": "card",
+          "x": 390,
+          "y": 145,
+          "w": 220,
+          "h": 115,
+          "is_container": true,
+          "cue": "cue_split",
+          "enter": "pop",
+          "when": "flow_variant != 'Sample Nil Rate'",
+          "props": {
+            "tone": "gold",
+            "rx": 10
+          }
+        },
+        {
+          "id": "pill_tax_hdr",
+          "type": "pill",
+          "x": 405,
+          "y": 160,
+          "w": 190,
+          "h": 30,
+          "badge_on": "card_tax_dep",
+          "cue": "cue_split",
+          "enter": "fade",
+          "when": "flow_variant != 'Sample Nil Rate'",
+          "props": {
+            "text": "Tax Office",
+            "tone": "gold"
+          },
+          "bind": {
+            "text": "Tax ({{tax_rate}})"
+          }
+        },
+        {
+          "id": "txt_tax_val",
+          "type": "text",
+          "x": 405,
+          "y": 208,
+          "w": 190,
+          "h": 26,
+          "badge_on": "card_tax_dep",
+          "cue": "cue_split",
+          "enter": "fade",
+          "when": "flow_variant != 'Sample Nil Rate'",
+          "bind": {
+            "text": "Tax: {{tax_cut}}"
+          },
+          "props": {
+            "font_size": 18,
+            "weight": "800",
+            "tone": "gold",
+            "align": "center"
+          }
+        },
+        {
+          "id": "flow_split",
+          "type": "split",
+          "x": 370,
+          "y": 275,
+          "w": 260,
+          "h": 40,
+          "cue": "cue_split",
+          "enter": "draw",
+          "when": "flow_variant != 'Sample Nil Rate'",
+          "props": {}
+        },
+        {
+          "id": "direct_arrow",
+          "type": "arrow",
+          "x": 370,
+          "y": 260,
+          "w": 260,
+          "h": 20,
+          "cue": "cue_split",
+          "enter": "draw",
+          "when": "flow_variant == 'Sample Nil Rate'",
+          "props": {
+            "tone": "ok",
+            "label": "Direct Flow"
+          }
+        },
+        {
+          "id": "pill_nil_cert",
+          "type": "pill",
+          "x": 390,
+          "y": 180,
+          "w": 220,
+          "h": 36,
+          "cue": "cue_split",
+          "enter": "pop",
+          "when": "flow_variant == 'Sample Nil Rate'",
+          "props": {
+            "text": "Pass · Nil Tax Flow",
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "panel_tds_std",
+          "type": "card",
+          "x": 60,
+          "y": 390,
+          "w": 880,
+          "h": 105,
+          "is_container": true,
+          "cue": "cue_payee",
+          "enter": "slide_up",
+          "when": "flow_variant != 'Sample Nil Rate'",
+          "props": {
+            "tone": "accent",
+            "rx": 12,
+            "top_bar": "accent"
+          }
+        },
+        {
+          "id": "pill_std_res",
+          "type": "pill",
+          "x": 85,
+          "y": 425,
+          "w": 280,
+          "h": 36,
+          "badge_on": "panel_tds_std",
+          "cue": "cue_payee",
+          "enter": "pop",
+          "when": "flow_variant != 'Sample Nil Rate'",
+          "bind": {
+            "text": "Total Paid: {{net_payout}}"
+          },
+          "props": {
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "panel_tds_nil",
+          "type": "card",
+          "x": 60,
+          "y": 390,
+          "w": 880,
+          "h": 105,
+          "is_container": true,
+          "cue": "cue_payee",
+          "enter": "slide_up",
+          "when": "flow_variant == 'Sample Nil Rate'",
+          "props": {
+            "tone": "ok",
+            "rx": 12,
+            "top_bar": "ok"
+          }
+        },
+        {
+          "id": "pill_nil_res",
+          "type": "pill",
+          "x": 85,
+          "y": 425,
+          "w": 280,
+          "h": 36,
+          "badge_on": "panel_tds_nil",
+          "cue": "cue_payee",
+          "enter": "pop",
+          "when": "flow_variant == 'Sample Nil Rate'",
+          "bind": {
+            "text": "Total Paid: {{gross_sum}}"
+          },
+          "props": {
+            "tone": "ok"
+          }
+        }
+      ]
+    },
+    {
+      "id": "salary_breakup",
+      "title": "Amount & Tax Stack",
+      "category": "G. Heads of income and business",
+      "selection": {
+        "when_to_use": "When aggregating multiple earnings blocks and subtracting less items.",
+        "not_for": [
+          "timeline checking",
+          "deemed valuation"
+        ],
+        "situation_types": [
+          "stack",
+          "aggregation"
+        ],
+        "asset_types": [
+          "all"
+        ],
+        "topics": [
+          "stack blocks",
+          "net result"
+        ],
+        "required_slots": [
+          "base_label",
+          "base_amount",
+          "extra_label",
+          "extra_amount",
+          "extra_2_label",
+          "extra_2_amount",
+          "less_label",
+          "standard_less"
+        ]
+      },
+      "slots": [
+        {
+          "key": "base_label",
+          "label": "Base Label",
+          "type": "text",
+          "default": "Sample Base Amount",
+          "max_len": 25
+        },
+        {
+          "key": "base_amount",
+          "label": "Base Amount",
+          "type": "number",
+          "default": 1200000,
+          "min": 10000,
+          "max": 100000000,
+          "format": "inr"
+        },
+        {
+          "key": "extra_label",
+          "label": "Extra Label",
+          "type": "text",
+          "default": "Sample Extra Amount",
+          "max_len": 25
+        },
+        {
+          "key": "extra_amount",
+          "label": "Extra Amount",
+          "type": "number",
+          "default": 300000,
+          "min": 0,
+          "max": 50000000,
+          "format": "inr"
+        },
+        {
+          "key": "extra_2_label",
+          "label": "Extra Two Label",
+          "type": "text",
+          "default": "Sample Extra Two",
+          "max_len": 25
+        },
+        {
+          "key": "extra_2_amount",
+          "label": "Extra Two Amount",
+          "type": "number",
+          "default": 200000,
+          "min": 0,
+          "max": 50000000,
+          "format": "inr"
+        },
+        {
+          "key": "less_label",
+          "label": "Less Label",
+          "type": "text",
+          "default": "Sample Less Amount",
+          "max_len": 25
+        },
+        {
+          "key": "standard_less",
+          "label": "Less Amount",
+          "type": "number",
+          "default": 50000,
+          "min": 0,
+          "max": 10000000,
+          "format": "inr"
+        }
+      ],
+      "derived": [
+        {
+          "key": "total_stack",
+          "expr": "base_amount + extra_amount + extra_2_amount - standard_less"
+        }
+      ],
+      "duration": 14,
+      "cues": [
+        {
+          "id": "cue_base",
+          "label": "Base Earning Block",
+          "default_t": 0.5
+        },
+        {
+          "id": "cue_extra",
+          "label": "Extra Allowance Step",
+          "default_t": 4.5
+        },
+        {
+          "id": "cue_total",
+          "label": "Net Stack Summation",
+          "default_t": 8.5
+        }
+      ],
+      "scene": [
+        {
+          "id": "sal_header",
+          "type": "card",
+          "x": 60,
+          "y": 60,
+          "w": 880,
+          "h": 60,
+          "is_container": true,
+          "props": {
+            "rx": 12,
+            "tone": "accent",
+            "top_bar": "accent"
+          }
+        },
+        {
+          "id": "sal_title",
+          "type": "text",
+          "x": 90,
+          "y": 80,
+          "w": 600,
+          "h": 30,
+          "badge_on": "sal_header",
+          "bind": {
+            "text": "{{anim_title}}"
+          },
+          "props": {
+            "font_size": 24,
+            "weight": "900",
+            "tone": "accent",
+            "is_title": true
+          }
+        },
+        {
+          "id": "card_base",
+          "type": "card",
+          "x": 60,
+          "y": 136,
+          "w": 450,
+          "h": 50,
+          "is_container": true,
+          "cue": "cue_base",
+          "enter": "pop",
+          "props": {
+            "rx": 10
+          }
+        },
+        {
+          "id": "txt_base_lbl",
+          "type": "text",
+          "x": 80,
+          "y": 151,
+          "w": 230,
+          "h": 20,
+          "badge_on": "card_base",
+          "cue": "cue_base",
+          "enter": "fade",
+          "props": {
+            "font_size": 16,
+            "weight": "700",
+            "tone": "accent"
+          },
+          "bind": {
+            "text": "{{base_label}}"
+          }
+        },
+        {
+          "id": "txt_base_val",
+          "type": "text",
+          "x": 320,
+          "y": 151,
+          "w": 170,
+          "h": 20,
+          "badge_on": "card_base",
+          "cue": "cue_base",
+          "enter": "fade",
+          "bind": {
+            "text": "{{base_amount}}"
+          },
+          "props": {
+            "font_size": 18,
+            "weight": "800",
+            "align": "right"
+          }
+        },
+        {
+          "id": "card_extra",
+          "type": "card",
+          "x": 60,
+          "y": 194,
+          "w": 450,
+          "h": 50,
+          "is_container": true,
+          "cue": "cue_extra",
+          "enter": "pop",
+          "offset_t": 0.2,
+          "props": {
+            "rx": 10
+          }
+        },
+        {
+          "id": "txt_extra_lbl",
+          "type": "text",
+          "x": 80,
+          "y": 209,
+          "w": 230,
+          "h": 20,
+          "badge_on": "card_extra",
+          "cue": "cue_extra",
+          "enter": "fade",
+          "offset_t": 0.2,
+          "props": {
+            "font_size": 16,
+            "weight": "700",
+            "tone": "accent"
+          },
+          "bind": {
+            "text": "{{extra_label}}"
+          }
+        },
+        {
+          "id": "txt_extra_val",
+          "type": "text",
+          "x": 320,
+          "y": 209,
+          "w": 170,
+          "h": 20,
+          "badge_on": "card_extra",
+          "cue": "cue_extra",
+          "enter": "fade",
+          "offset_t": 0.2,
+          "bind": {
+            "text": "{{extra_amount}}"
+          },
+          "props": {
+            "font_size": 18,
+            "weight": "800",
+            "align": "right"
+          }
+        },
+        {
+          "id": "card_extra_2",
+          "type": "card",
+          "x": 60,
+          "y": 252,
+          "w": 450,
+          "h": 50,
+          "is_container": true,
+          "cue": "cue_extra",
+          "enter": "pop",
+          "offset_t": 0.5,
+          "props": {
+            "rx": 10
+          }
+        },
+        {
+          "id": "txt_extra_2_lbl",
+          "type": "text",
+          "x": 80,
+          "y": 267,
+          "w": 230,
+          "h": 20,
+          "badge_on": "card_extra_2",
+          "cue": "cue_extra",
+          "enter": "fade",
+          "offset_t": 0.5,
+          "props": {
+            "font_size": 16,
+            "weight": "700",
+            "tone": "accent"
+          },
+          "bind": {
+            "text": "{{extra_2_label}}"
+          }
+        },
+        {
+          "id": "txt_extra_2_val",
+          "type": "text",
+          "x": 320,
+          "y": 267,
+          "w": 170,
+          "h": 20,
+          "badge_on": "card_extra_2",
+          "cue": "cue_extra",
+          "enter": "fade",
+          "offset_t": 0.5,
+          "bind": {
+            "text": "{{extra_2_amount}}"
+          },
+          "props": {
+            "font_size": 18,
+            "weight": "800",
+            "align": "right"
+          }
+        },
+        {
+          "id": "card_less",
+          "type": "card",
+          "x": 60,
+          "y": 310,
+          "w": 450,
+          "h": 50,
+          "is_container": true,
+          "cue": "cue_extra",
+          "enter": "pop",
+          "offset_t": 0.8,
+          "props": {
+            "tone": "warn",
+            "rx": 10
+          }
+        },
+        {
+          "id": "txt_less_lbl",
+          "type": "text",
+          "x": 80,
+          "y": 325,
+          "w": 230,
+          "h": 20,
+          "badge_on": "card_less",
+          "cue": "cue_extra",
+          "enter": "fade",
+          "offset_t": 0.8,
+          "props": {
+            "font_size": 16,
+            "weight": "700",
+            "tone": "warn"
+          },
+          "bind": {
+            "text": "Less: {{less_label}}"
+          }
+        },
+        {
+          "id": "txt_less_val",
+          "type": "text",
+          "x": 320,
+          "y": 325,
+          "w": 170,
+          "h": 20,
+          "badge_on": "card_less",
+          "cue": "cue_extra",
+          "enter": "fade",
+          "offset_t": 0.8,
+          "bind": {
+            "text": "{{standard_less}}"
+          },
+          "props": {
+            "font_size": 18,
+            "weight": "800",
+            "tone": "warn",
+            "align": "right"
+          }
+        },
+        {
+          "id": "card_hero_stack",
+          "type": "card",
+          "x": 540,
+          "y": 136,
+          "w": 400,
+          "h": 224,
+          "is_container": true,
+          "cue": "cue_total",
+          "enter": "pop",
+          "props": {
+            "tone": "ok",
+            "rx": 14
+          }
+        },
+        {
+          "id": "pill_hero_stack",
+          "type": "pill",
+          "x": 570,
+          "y": 160,
+          "w": 200,
+          "h": 34,
+          "badge_on": "card_hero_stack",
+          "cue": "cue_total",
+          "enter": "fade",
+          "props": {
+            "text": "Total Result",
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "cnt_stack_total",
+          "type": "counter",
+          "x": 570,
+          "y": 240,
+          "w": 340,
+          "h": 70,
+          "badge_on": "card_hero_stack",
+          "cue": "cue_total",
+          "enter": "count_up",
+          "bind": {
+            "value": "{{total_stack}}"
+          },
+          "props": {
+            "font_size": 38,
+            "format": "inr",
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "panel_sal_res",
+          "type": "card",
+          "x": 60,
+          "y": 385,
+          "w": 880,
+          "h": 110,
+          "is_container": true,
+          "cue": "cue_total",
+          "enter": "slide_up",
+          "props": {
+            "tone": "ok",
+            "rx": 12,
+            "top_bar": "ok"
+          }
+        },
+        {
+          "id": "pill_sal_pass",
+          "type": "pill",
+          "x": 85,
+          "y": 420,
+          "w": 280,
+          "h": 36,
+          "badge_on": "panel_sal_res",
+          "cue": "cue_total",
+          "enter": "pop",
+          "props": {
+            "text": "Pass · Net Stack Result",
+            "tone": "ok"
+          }
+        }
+      ]
+    },
+    {
+      "id": "case_law_card",
+      "title": "Card Summary & Result",
+      "category": "E. Conditions and decisions",
+      "selection": {
+        "when_to_use": "When presenting a benchmark ruling card with issue and decision.",
+        "not_for": [
+          "numerical ledgers",
+          "pure timelines"
+        ],
+        "situation_types": [
+          "case_law",
+          "summary_card"
+        ],
+        "asset_types": [
+          "all"
+        ],
+        "topics": [
+          "benchmark card",
+          "decision"
+        ],
+        "required_slots": [
+          "case_label",
+          "court_name",
+          "year_text",
+          "issue_text",
+          "rule_label",
+          "ruling_text",
+          "decision_variant"
+        ]
+      },
+      "slots": [
+        {
+          "key": "case_label",
+          "label": "Case Title",
+          "type": "text",
+          "default": "Sample Case Title",
+          "max_len": 25
+        },
+        {
+          "key": "court_name",
+          "label": "Court Name",
+          "type": "text",
+          "default": "Sample Court Name",
+          "max_len": 25
+        },
+        {
+          "key": "year_text",
+          "label": "Decision Year",
+          "type": "text",
+          "default": "Sample Year One",
+          "max_len": 20
+        },
+        {
+          "key": "issue_text",
+          "label": "Issue Text",
+          "type": "text",
+          "default": "Sample Issue Question",
+          "max_len": 35
+        },
+        {
+          "key": "rule_label",
+          "label": "Rule Summary",
+          "type": "text",
+          "default": "Sample Rule Summary",
+          "max_len": 25
+        },
+        {
+          "key": "ruling_text",
+          "label": "Decision Text",
+          "type": "text",
+          "default": "Sample Court Decision",
+          "max_len": 35
+        },
+        {
+          "key": "decision_variant",
+          "label": "Decision Mode",
+          "type": "enum",
+          "default": "Sample Decision Pass",
+          "options": [
+            "Sample Decision Pass",
+            "Sample Decision Fail"
+          ]
+        }
+      ],
+      "derived": [],
+      "duration": 14,
+      "cues": [
+        {
+          "id": "cue_bench",
+          "label": "Court Bench Summary",
+          "default_t": 0.5
+        },
+        {
+          "id": "cue_issue",
+          "label": "Issue Question Card",
+          "default_t": 4.5
+        },
+        {
+          "id": "cue_ruling",
+          "label": "Decision Ruling Result",
+          "default_t": 8.5
+        }
+      ],
+      "scene": [
+        {
+          "id": "law_header",
+          "type": "card",
+          "x": 60,
+          "y": 60,
+          "w": 880,
+          "h": 60,
+          "is_container": true,
+          "props": {
+            "rx": 12,
+            "tone": "accent",
+            "top_bar": "accent"
+          }
+        },
+        {
+          "id": "law_title",
+          "type": "text",
+          "x": 90,
+          "y": 80,
+          "w": 600,
+          "h": 30,
+          "badge_on": "law_header",
+          "bind": {
+            "text": "{{anim_title}}"
+          },
+          "props": {
+            "font_size": 24,
+            "weight": "900",
+            "tone": "accent",
+            "is_title": true
+          }
+        },
+        {
+          "id": "card_court",
+          "type": "card",
+          "x": 60,
+          "y": 130,
+          "w": 880,
+          "h": 88,
+          "is_container": true,
+          "cue": "cue_bench",
+          "enter": "pop",
+          "props": {
+            "rx": 12,
+            "top_bar": "gold"
+          }
+        },
+        {
+          "id": "court_gavel",
+          "type": "gavel",
+          "x": 80,
+          "y": 140,
+          "w": 60,
+          "h": 60,
+          "badge_on": "card_court",
+          "cue": "cue_bench",
+          "enter": "pop",
+          "props": {}
+        },
+        {
+          "id": "pill_bench",
+          "type": "pill",
+          "x": 155,
+          "y": 142,
+          "w": 220,
+          "h": 30,
+          "badge_on": "card_court",
+          "cue": "cue_bench",
+          "enter": "fade",
+          "bind": {
+            "text": "{{court_name}}"
+          },
+          "props": {
+            "tone": "gold"
+          }
+        },
+        {
+          "id": "pill_year",
+          "type": "pill",
+          "x": 390,
+          "y": 142,
+          "w": 200,
+          "h": 30,
+          "badge_on": "card_court",
+          "cue": "cue_bench",
+          "enter": "fade",
+          "bind": {
+            "text": "Year: {{year_text}}"
+          },
+          "props": {
+            "tone": "accent"
+          }
+        },
+        {
+          "id": "txt_case_title",
+          "type": "text",
+          "x": 155,
+          "y": 182,
+          "w": 720,
+          "h": 26,
+          "badge_on": "card_court",
+          "cue": "cue_bench",
+          "enter": "fade",
+          "bind": {
+            "text": "{{case_label}}"
+          },
+          "props": {
+            "font_size": 20,
+            "weight": "900",
+            "tone": "ink"
+          }
+        },
+        {
+          "id": "card_issue",
+          "type": "card",
+          "x": 60,
+          "y": 228,
+          "w": 880,
+          "h": 92,
+          "is_container": true,
+          "cue": "cue_issue",
+          "enter": "slide_right",
+          "props": {
+            "rx": 12
+          }
+        },
+        {
+          "id": "pill_issue",
+          "type": "pill",
+          "x": 85,
+          "y": 240,
+          "w": 160,
+          "h": 30,
+          "badge_on": "card_issue",
+          "cue": "cue_issue",
+          "enter": "fade",
+          "props": {
+            "text": "Case Issue",
+            "tone": "accent"
+          }
+        },
+        {
+          "id": "txt_issue_body",
+          "type": "text",
+          "x": 85,
+          "y": 280,
+          "w": 820,
+          "h": 26,
+          "badge_on": "card_issue",
+          "cue": "cue_issue",
+          "enter": "fade",
+          "bind": {
+            "text": "{{issue_text}}"
+          },
+          "props": {
+            "font_size": 18,
+            "weight": "600",
+            "tone": "ink"
+          }
+        },
+        {
+          "id": "card_ratio_pass",
+          "type": "card",
+          "x": 60,
+          "y": 332,
+          "w": 880,
+          "h": 165,
+          "is_container": true,
+          "cue": "cue_ruling",
+          "enter": "slide_up",
+          "when": "decision_variant == 'Sample Decision Pass'",
+          "props": {
+            "tone": "ok",
+            "rx": 14,
+            "top_bar": "ok"
+          }
+        },
+        {
+          "id": "pill_ratio_pass",
+          "type": "pill",
+          "x": 85,
+          "y": 346,
+          "w": 240,
+          "h": 32,
+          "badge_on": "card_ratio_pass",
+          "cue": "cue_ruling",
+          "enter": "pop",
+          "when": "decision_variant == 'Sample Decision Pass'",
+          "props": {
+            "text": "Pass · Decision Result",
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "txt_rule_pass",
+          "type": "text",
+          "x": 85,
+          "y": 390,
+          "w": 750,
+          "h": 22,
+          "badge_on": "card_ratio_pass",
+          "cue": "cue_ruling",
+          "enter": "fade",
+          "when": "decision_variant == 'Sample Decision Pass'",
+          "bind": {
+            "text": "Rule: {{rule_label}}"
+          },
+          "props": {
+            "font_size": 16,
+            "weight": "700",
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "txt_ratio_pass",
+          "type": "text",
+          "x": 85,
+          "y": 422,
+          "w": 750,
+          "h": 50,
+          "badge_on": "card_ratio_pass",
+          "cue": "cue_ruling",
+          "enter": "fade",
+          "when": "decision_variant == 'Sample Decision Pass'",
+          "bind": {
+            "text": "{{ruling_text}}"
+          },
+          "props": {
+            "font_size": 19,
+            "weight": "800",
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "tick_ruling",
+          "type": "tick",
+          "x": 860,
+          "y": 355,
+          "w": 40,
+          "h": 40,
+          "badge_on": "card_ratio_pass",
+          "cue": "cue_ruling",
+          "enter": "pop",
+          "when": "decision_variant == 'Sample Decision Pass'",
+          "props": {}
+        },
+        {
+          "id": "card_ratio_fail",
+          "type": "card",
+          "x": 60,
+          "y": 332,
+          "w": 880,
+          "h": 165,
+          "is_container": true,
+          "cue": "cue_ruling",
+          "enter": "slide_up",
+          "when": "decision_variant == 'Sample Decision Fail'",
+          "props": {
+            "tone": "warn",
+            "rx": 14,
+            "top_bar": "warn"
+          }
+        },
+        {
+          "id": "pill_ratio_fail",
+          "type": "pill",
+          "x": 85,
+          "y": 346,
+          "w": 240,
+          "h": 32,
+          "badge_on": "card_ratio_fail",
+          "cue": "cue_ruling",
+          "enter": "pop",
+          "when": "decision_variant == 'Sample Decision Fail'",
+          "props": {
+            "text": "Fail · Case Result",
+            "tone": "warn"
+          }
+        },
+        {
+          "id": "txt_rule_fail",
+          "type": "text",
+          "x": 85,
+          "y": 390,
+          "w": 750,
+          "h": 22,
+          "badge_on": "card_ratio_fail",
+          "cue": "cue_ruling",
+          "enter": "fade",
+          "when": "decision_variant == 'Sample Decision Fail'",
+          "bind": {
+            "text": "Rule: {{rule_label}}"
+          },
+          "props": {
+            "font_size": 16,
+            "weight": "700",
+            "tone": "warn"
+          }
+        },
+        {
+          "id": "txt_ratio_fail",
+          "type": "text",
+          "x": 85,
+          "y": 422,
+          "w": 750,
+          "h": 50,
+          "badge_on": "card_ratio_fail",
+          "cue": "cue_ruling",
+          "enter": "fade",
+          "when": "decision_variant == 'Sample Decision Fail'",
+          "bind": {
+            "text": "{{ruling_text}}"
+          },
+          "props": {
+            "font_size": 19,
+            "weight": "800",
+            "tone": "warn"
+          }
+        },
+        {
+          "id": "cross_ruling",
+          "type": "cross",
+          "x": 860,
+          "y": 355,
+          "w": 40,
+          "h": 40,
+          "badge_on": "card_ratio_fail",
+          "cue": "cue_ruling",
+          "enter": "pop",
+          "when": "decision_variant == 'Sample Decision Fail'",
+          "props": {}
+        }
+      ]
+    },
+    {
+      "id": "inheritance_by_will",
+      "title": "Inheritance by Will & Asset Transfer",
+      "category": "A. Transfers of assets",
+      "selection": {
+        "when_to_use": "When an asset is transferred from a previous party to a successor party.",
+        "not_for": [
+          "commercial sale",
+          "market purchase"
+        ],
+        "situation_types": [
+          "transfer",
+          "asset"
+        ],
+        "asset_types": [
+          "house",
+          "land",
+          "shares",
+          "gold"
+        ],
+        "topics": [
+          "previous cost",
+          "holding period"
+        ],
+        "required_slots": [
+          "donor_name",
+          "donor_role",
+          "donee_name",
+          "donee_role",
+          "asset_label",
+          "base_cost",
+          "date_year",
+          "flow_label",
+          "status_label",
+          "rule_note",
+          "variant_mode"
+        ]
+      },
+      "slots": [
+        {
+          "key": "donor_name",
+          "label": "Party One",
+          "type": "text",
+          "default": "Sample Party One",
+          "max_len": 25
+        },
+        {
+          "key": "donor_role",
+          "label": "Party One Unit",
+          "type": "text",
+          "default": "Unit One",
+          "max_len": 25
+        },
+        {
+          "key": "donee_name",
+          "label": "Party Two",
+          "type": "text",
+          "default": "Sample Party Two",
+          "max_len": 25
+        },
+        {
+          "key": "donee_role",
+          "label": "Party Two Unit",
+          "type": "text",
+          "default": "Unit Two",
+          "max_len": 25
+        },
+        {
+          "key": "asset_label",
+          "label": "Asset Name",
+          "type": "text",
+          "default": "Sample Base Asset",
+          "max_len": 25
+        },
+        {
+          "key": "base_cost",
+          "label": "Base Cost",
+          "type": "number",
+          "default": 2500000,
+          "min": 10000,
+          "max": 100000000,
+          "format": "inr"
+        },
+        {
+          "key": "date_year",
+          "label": "Date Year",
+          "type": "text",
+          "default": "Year One"
+        },
+        {
+          "key": "flow_label",
+          "label": "Flow Label",
+          "type": "text",
+          "default": "Asset Transfer Flow",
+          "max_len": 25
+        },
+        {
+          "key": "status_label",
+          "label": "Status Label",
+          "type": "text",
+          "default": "Step Complete Result",
+          "max_len": 25
+        },
+        {
+          "key": "rule_note",
+          "label": "Rule Label",
+          "type": "text",
+          "default": "Base Cost Rule",
+          "max_len": 25
+        },
+        {
+          "key": "variant_mode",
+          "label": "Variant Mode",
+          "type": "enum",
+          "default": "Sample Full Pass",
+          "options": [
+            "Sample Full Pass",
+            "Sample Gate Locked"
+          ]
+        }
+      ],
+      "derived": [],
+      "duration": 14,
+      "cues": [
+        {
+          "id": "cue_parties",
+          "label": "Party Base Asset",
+          "default_t": 0.5
+        },
+        {
+          "id": "cue_transfer",
+          "label": "Asset Flow Transfer",
+          "default_t": 4.5
+        },
+        {
+          "id": "cue_result",
+          "label": "Cost Step Result",
+          "default_t": 8.5
+        }
+      ],
+      "scene": [
+        {
+          "id": "header_card",
+          "type": "card",
+          "x": 60,
+          "y": 70,
+          "w": 880,
+          "h": 70,
+          "is_container": true,
+          "props": {
+            "rx": 12,
+            "tone": "accent",
+            "top_bar": "accent"
+          }
+        },
+        {
+          "id": "header_title",
+          "type": "text",
+          "x": 90,
+          "y": 90,
+          "w": 600,
+          "h": 32,
+          "badge_on": "header_card",
+          "bind": {
+            "text": "{{anim_title}}"
+          },
+          "props": {
+            "font_size": 24,
+            "weight": "900",
+            "tone": "accent",
+            "is_title": true
+          }
+        },
+        {
+          "id": "header_sub",
+          "type": "text",
+          "x": 90,
+          "y": 120,
+          "w": 600,
+          "h": 20,
+          "badge_on": "header_card",
+          "bind": {
+            "text": "Cost: {{base_cost}} · Date: {{date_year}}"
+          },
+          "props": {
+            "font_size": 16,
+            "weight": "600",
+            "tone": "ink-muted"
+          }
+        },
+        {
+          "id": "card_donor",
+          "type": "card",
+          "x": 60,
+          "y": 155,
+          "w": 330,
+          "h": 235,
+          "is_container": true,
+          "props": {
+            "rx": 14,
+            "tone": "surface"
+          }
+        },
+        {
+          "id": "avatar_donor",
+          "type": "person",
+          "x": 75,
+          "y": 175,
+          "w": 100,
+          "h": 120,
+          "badge_on": "card_donor",
+          "bind": {
+            "role": "{{donor_role}}"
+          },
+          "props": {
+            "name": "Party",
+            "role": "Unit One"
+          }
+        },
+        {
+          "id": "pill_donor",
+          "type": "pill",
+          "x": 185,
+          "y": 190,
+          "w": 190,
+          "h": 34,
+          "badge_on": "card_donor",
+          "bind": {
+            "text": "{{donor_name}}"
+          },
+          "props": {
+            "tone": "accent"
+          }
+        },
+        {
+          "id": "txt_donor_cost",
+          "type": "text",
+          "x": 185,
+          "y": 245,
+          "w": 190,
+          "h": 26,
+          "badge_on": "card_donor",
+          "bind": {
+            "text": "Base: {{base_cost}}"
+          },
+          "props": {
+            "font_size": 17,
+            "weight": "700",
+            "tone": "ink"
+          }
+        },
+        {
+          "id": "txt_donor_date",
+          "type": "text",
+          "x": 185,
+          "y": 285,
+          "w": 190,
+          "h": 24,
+          "badge_on": "card_donor",
+          "bind": {
+            "text": "Date: {{date_year}}"
+          },
+          "props": {
+            "font_size": 16,
+            "weight": "600",
+            "tone": "ink-muted"
+          }
+        },
+        {
+          "id": "card_conduit",
+          "type": "card",
+          "x": 410,
+          "y": 155,
+          "w": 180,
+          "h": 235,
+          "is_container": true,
+          "props": {
+            "rx": 14,
+            "tone": "accent"
+          }
+        },
+        {
+          "id": "asset_icon",
+          "type": "house",
+          "x": 445,
+          "y": 175,
+          "w": 110,
+          "h": 90,
+          "badge_on": "card_conduit",
+          "cue": "cue_transfer",
+          "enter": "scale_in",
+          "props": {}
+        },
+        {
+          "id": "txt_asset",
+          "type": "text",
+          "x": 420,
+          "y": 275,
+          "w": 160,
+          "h": 24,
+          "badge_on": "card_conduit",
+          "bind": {
+            "text": "{{asset_label}}"
+          },
+          "props": {
+            "font_size": 16,
+            "weight": "800",
+            "tone": "accent",
+            "align": "middle"
+          }
+        },
+        {
+          "id": "flow_arrow",
+          "type": "arrow",
+          "x": 430,
+          "y": 320,
+          "w": 140,
+          "h": 20,
+          "badge_on": "card_conduit",
+          "cue": "cue_transfer",
+          "enter": "slide_right",
+          "bind": {
+            "label": "{{flow_label}}"
+          },
+          "props": {
+            "tone": "accent",
+            "label": "Flow"
+          }
+        },
+        {
+          "id": "card_donee",
+          "type": "card",
+          "x": 610,
+          "y": 155,
+          "w": 330,
+          "h": 235,
+          "is_container": true,
+          "props": {
+            "rx": 14,
+            "tone": "surface"
+          }
+        },
+        {
+          "id": "avatar_donee",
+          "type": "person",
+          "x": 625,
+          "y": 175,
+          "w": 100,
+          "h": 120,
+          "badge_on": "card_donee",
+          "bind": {
+            "role": "{{donee_role}}"
+          },
+          "props": {
+            "name": "Party",
+            "role": "Unit Two"
+          }
+        },
+        {
+          "id": "pill_donee",
+          "type": "pill",
+          "x": 735,
+          "y": 190,
+          "w": 190,
+          "h": 34,
+          "badge_on": "card_donee",
+          "bind": {
+            "text": "{{donee_name}}"
+          },
+          "props": {
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "txt_donee_cost",
+          "type": "text",
+          "x": 735,
+          "y": 245,
+          "w": 190,
+          "h": 26,
+          "badge_on": "card_donee",
+          "cue": "cue_result",
+          "enter": "fade_in",
+          "bind": {
+            "text": "Cost: {{base_cost}}"
+          },
+          "props": {
+            "font_size": 17,
+            "weight": "700",
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "txt_donee_status",
+          "type": "text",
+          "x": 735,
+          "y": 285,
+          "w": 190,
+          "h": 24,
+          "badge_on": "card_donee",
+          "bind": {
+            "text": "{{status_label}}"
+          },
+          "props": {
+            "font_size": 16,
+            "weight": "600",
+            "tone": "ink-muted"
+          }
+        },
+        {
+          "id": "panel_pass",
+          "type": "card",
+          "x": 60,
+          "y": 410,
+          "w": 880,
+          "h": 65,
+          "is_container": true,
+          "cue": "cue_result",
+          "enter": "slide_up",
+          "when": "variant_mode == 'Sample Full Pass'",
+          "props": {
+            "rx": 12,
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "pill_pass",
+          "type": "pill",
+          "x": 85,
+          "y": 425,
+          "w": 200,
+          "h": 36,
+          "badge_on": "panel_pass",
+          "when": "variant_mode == 'Sample Full Pass'",
+          "props": {
+            "text": "Pass · Transfer",
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "txt_pass",
+          "type": "text",
+          "x": 310,
+          "y": 432,
+          "w": 530,
+          "h": 24,
+          "badge_on": "panel_pass",
+          "when": "variant_mode == 'Sample Full Pass'",
+          "bind": {
+            "text": "Base Cost Result: {{base_cost}} · {{rule_note}}"
+          },
+          "props": {
+            "font_size": 17,
+            "weight": "700",
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "tick_pass",
+          "type": "tick",
+          "x": 860,
+          "y": 422,
+          "w": 40,
+          "h": 40,
+          "badge_on": "panel_pass",
+          "when": "variant_mode == 'Sample Full Pass'",
+          "props": {
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "panel_fail",
+          "type": "card",
+          "x": 60,
+          "y": 410,
+          "w": 880,
+          "h": 65,
+          "is_container": true,
+          "cue": "cue_result",
+          "enter": "slide_up",
+          "when": "variant_mode == 'Sample Gate Locked'",
+          "props": {
+            "rx": 12,
+            "tone": "warn"
+          }
+        },
+        {
+          "id": "pill_fail",
+          "type": "pill",
+          "x": 85,
+          "y": 425,
+          "w": 200,
+          "h": 36,
+          "badge_on": "panel_fail",
+          "when": "variant_mode == 'Sample Gate Locked'",
+          "props": {
+            "text": "Gate Locked",
+            "tone": "warn"
+          }
+        },
+        {
+          "id": "txt_fail",
+          "type": "text",
+          "x": 310,
+          "y": 432,
+          "w": 530,
+          "h": 24,
+          "badge_on": "panel_fail",
+          "when": "variant_mode == 'Sample Gate Locked'",
+          "props": {
+            "text": "Gate Locked · Outside Window Result",
+            "font_size": 17,
+            "weight": "700",
+            "tone": "warn"
+          }
+        },
+        {
+          "id": "cross_fail",
+          "type": "cross",
+          "x": 860,
+          "y": 422,
+          "w": 40,
+          "h": 40,
+          "badge_on": "panel_fail",
+          "when": "variant_mode == 'Sample Gate Locked'",
+          "props": {
+            "tone": "warn"
+          }
+        }
+      ]
+    },
+    {
+      "id": "huf_partition",
+      "title": "Family Unit Partition & Asset Split",
+      "category": "A. Transfers of assets",
+      "selection": {
+        "when_to_use": "When a family group unit partitions an estate and splits asset shares among members.",
+        "not_for": [
+          "commercial sale",
+          "market purchase"
+        ],
+        "situation_types": [
+          "transfer",
+          "asset"
+        ],
+        "asset_types": [
+          "house",
+          "land",
+          "shares",
+          "gold"
+        ],
+        "topics": [
+          "split",
+          "share"
+        ],
+        "required_slots": [
+          "count_mode",
+          "unit_label",
+          "party_1_label",
+          "unit_1_val",
+          "party_2_label",
+          "unit_2_val",
+          "party_3_label",
+          "unit_3_val",
+          "party_4_label",
+          "unit_4_val",
+          "variant_mode"
+        ]
+      },
+      "slots": [
+        {
+          "key": "count_mode",
+          "label": "Units Count",
+          "type": "enum",
+          "default": "Three Unit",
+          "options": [
+            "Two Unit",
+            "Three Unit",
+            "Four Unit"
+          ]
+        },
+        {
+          "key": "unit_label",
+          "label": "Group Unit",
+          "type": "text",
+          "default": "Sample Family Unit",
+          "max_len": 25
+        },
+        {
+          "key": "party_1_label",
+          "label": "Party One",
+          "type": "text",
+          "default": "Sample Party One",
+          "max_len": 25
+        },
+        {
+          "key": "unit_1_val",
+          "label": "Value One",
+          "type": "number",
+          "default": 3000000,
+          "min": 10000,
+          "max": 100000000,
+          "format": "inr"
+        },
+        {
+          "key": "party_2_label",
+          "label": "Party Two",
+          "type": "text",
+          "default": "Sample Party Two",
+          "max_len": 25
+        },
+        {
+          "key": "unit_2_val",
+          "label": "Value Two",
+          "type": "number",
+          "default": 3000000,
+          "min": 10000,
+          "max": 100000000,
+          "format": "inr"
+        },
+        {
+          "key": "party_3_label",
+          "label": "Party Three",
+          "type": "text",
+          "default": "Sample Party Three",
+          "max_len": 25
+        },
+        {
+          "key": "unit_3_val",
+          "label": "Value Three",
+          "type": "number",
+          "default": 3000000,
+          "min": 10000,
+          "max": 100000000,
+          "format": "inr"
+        },
+        {
+          "key": "party_4_label",
+          "label": "Party Four",
+          "type": "text",
+          "default": "Sample Party Four",
+          "max_len": 25
+        },
+        {
+          "key": "unit_4_val",
+          "label": "Value Four",
+          "type": "number",
+          "default": 2000000,
+          "min": 10000,
+          "max": 100000000,
+          "format": "inr"
+        },
+        {
+          "key": "variant_mode",
+          "label": "Variant Mode",
+          "type": "enum",
+          "default": "Sample Full Pass",
+          "options": [
+            "Sample Full Pass",
+            "Sample Partial Pass"
+          ]
+        }
+      ],
+      "derived": [
+        {
+          "key": "total_val",
+          "expr": "unit_1_val + unit_2_val + (count_mode == 'Two Unit' ? 0 : unit_3_val) + (count_mode == 'Four Unit' ? unit_4_val : 0)"
+        }
+      ],
+      "duration": 14,
+      "cues": [
+        {
+          "id": "cue_group",
+          "label": "Unit Joint Asset",
+          "default_t": 0.5
+        },
+        {
+          "id": "cue_split",
+          "label": "Asset Split Stream",
+          "default_t": 4.5
+        },
+        {
+          "id": "cue_shares",
+          "label": "Share Distribution Result",
+          "default_t": 8.5
+        }
+      ],
+      "scene": [
+        {
+          "id": "header_card",
+          "type": "card",
+          "x": 60,
+          "y": 70,
+          "w": 880,
+          "h": 70,
+          "is_container": true,
+          "props": {
+            "rx": 12,
+            "tone": "accent",
+            "top_bar": "accent"
+          }
+        },
+        {
+          "id": "header_title",
+          "type": "text",
+          "x": 90,
+          "y": 90,
+          "w": 600,
+          "h": 32,
+          "badge_on": "header_card",
+          "bind": {
+            "text": "{{anim_title}}"
+          },
+          "props": {
+            "font_size": 24,
+            "weight": "900",
+            "tone": "accent",
+            "is_title": true
+          }
+        },
+        {
+          "id": "header_sub",
+          "type": "text",
+          "x": 90,
+          "y": 120,
+          "w": 600,
+          "h": 20,
+          "badge_on": "header_card",
+          "bind": {
+            "text": "Total: {{total_val}} · Unit: {{unit_1_val}}"
+          },
+          "props": {
+            "font_size": 16,
+            "weight": "600",
+            "tone": "ink-muted"
+          }
+        },
+        {
+          "id": "card_unit",
+          "type": "card",
+          "x": 60,
+          "y": 155,
+          "w": 300,
+          "h": 235,
+          "is_container": true,
+          "props": {
+            "rx": 14,
+            "tone": "surface"
+          }
+        },
+        {
+          "id": "avatar_unit",
+          "type": "group_huf",
+          "x": 75,
+          "y": 175,
+          "w": 120,
+          "h": 120,
+          "badge_on": "card_unit",
+          "props": {
+            "name": "Party Unit",
+            "role": "Base Unit"
+          }
+        },
+        {
+          "id": "pill_unit",
+          "type": "pill",
+          "x": 75,
+          "y": 305,
+          "w": 270,
+          "h": 34,
+          "badge_on": "card_unit",
+          "bind": {
+            "text": "{{unit_label}}"
+          },
+          "props": {
+            "tone": "accent"
+          }
+        },
+        {
+          "id": "txt_unit_total",
+          "type": "text",
+          "x": 75,
+          "y": 350,
+          "w": 270,
+          "h": 24,
+          "badge_on": "card_unit",
+          "bind": {
+            "text": "Total Value: {{total_val}}"
+          },
+          "props": {
+            "font_size": 17,
+            "weight": "800",
+            "tone": "accent"
+          }
+        },
+        {
+          "id": "node_split",
+          "type": "split",
+          "x": 380,
+          "y": 235,
+          "w": 140,
+          "h": 75,
+          "cue": "cue_split",
+          "enter": "scale_in",
+          "props": {
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "card_members",
+          "type": "card",
+          "x": 540,
+          "y": 155,
+          "w": 400,
+          "h": 235,
+          "is_container": true,
+          "props": {
+            "rx": 14,
+            "tone": "surface"
+          }
+        },
+        {
+          "id": "pill_m1",
+          "type": "pill",
+          "x": 560,
+          "y": 170,
+          "w": 190,
+          "h": 28,
+          "badge_on": "card_members",
+          "bind": {
+            "text": "{{party_1_label}}"
+          },
+          "props": {
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "txt_m1_amt",
+          "type": "text",
+          "x": 770,
+          "y": 174,
+          "w": 150,
+          "h": 22,
+          "badge_on": "card_members",
+          "cue": "cue_shares",
+          "enter": "fade_in",
+          "bind": {
+            "text": "{{unit_1_val}}"
+          },
+          "props": {
+            "font_size": 17,
+            "weight": "800",
+            "tone": "ink"
+          }
+        },
+        {
+          "id": "pill_m2",
+          "type": "pill",
+          "x": 560,
+          "y": 205,
+          "w": 190,
+          "h": 28,
+          "badge_on": "card_members",
+          "bind": {
+            "text": "{{party_2_label}}"
+          },
+          "props": {
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "txt_m2_amt",
+          "type": "text",
+          "x": 770,
+          "y": 209,
+          "w": 150,
+          "h": 22,
+          "badge_on": "card_members",
+          "cue": "cue_shares",
+          "enter": "fade_in",
+          "bind": {
+            "text": "{{unit_2_val}}"
+          },
+          "props": {
+            "font_size": 17,
+            "weight": "800",
+            "tone": "ink"
+          }
+        },
+        {
+          "id": "pill_m3",
+          "type": "pill",
+          "x": 560,
+          "y": 240,
+          "w": 190,
+          "h": 28,
+          "badge_on": "card_members",
+          "when": "count_mode != 'Two Unit'",
+          "bind": {
+            "text": "{{party_3_label}}"
+          },
+          "props": {
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "txt_m3_amt",
+          "type": "text",
+          "x": 770,
+          "y": 244,
+          "w": 150,
+          "h": 22,
+          "badge_on": "card_members",
+          "when": "count_mode != 'Two Unit'",
+          "cue": "cue_shares",
+          "enter": "fade_in",
+          "bind": {
+            "text": "{{unit_3_val}}"
+          },
+          "props": {
+            "font_size": 17,
+            "weight": "800",
+            "tone": "ink"
+          }
+        },
+        {
+          "id": "pill_m4",
+          "type": "pill",
+          "x": 560,
+          "y": 275,
+          "w": 190,
+          "h": 28,
+          "badge_on": "card_members",
+          "when": "count_mode == 'Four Unit'",
+          "bind": {
+            "text": "{{party_4_label}}"
+          },
+          "props": {
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "txt_m4_amt",
+          "type": "text",
+          "x": 770,
+          "y": 279,
+          "w": 150,
+          "h": 22,
+          "badge_on": "card_members",
+          "when": "count_mode == 'Four Unit'",
+          "cue": "cue_shares",
+          "enter": "fade_in",
+          "bind": {
+            "text": "{{unit_4_val}}"
+          },
+          "props": {
+            "font_size": 17,
+            "weight": "800",
+            "tone": "ink"
+          }
+        },
+        {
+          "id": "txt_m_sum",
+          "type": "text",
+          "x": 560,
+          "y": 345,
+          "w": 360,
+          "h": 24,
+          "badge_on": "card_members",
+          "bind": {
+            "text": "Total Paid: {{total_val}}"
+          },
+          "props": {
+            "font_size": 17,
+            "weight": "800",
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "panel_pass",
+          "type": "card",
+          "x": 60,
+          "y": 410,
+          "w": 880,
+          "h": 65,
+          "is_container": true,
+          "cue": "cue_shares",
+          "enter": "slide_up",
+          "when": "variant_mode == 'Sample Full Pass'",
+          "props": {
+            "rx": 12,
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "pill_pass",
+          "type": "pill",
+          "x": 85,
+          "y": 425,
+          "w": 200,
+          "h": 36,
+          "badge_on": "panel_pass",
+          "when": "variant_mode == 'Sample Full Pass'",
+          "props": {
+            "text": "Pass · Complete",
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "txt_pass",
+          "type": "text",
+          "x": 310,
+          "y": 432,
+          "w": 530,
+          "h": 24,
+          "badge_on": "panel_pass",
+          "when": "variant_mode == 'Sample Full Pass'",
+          "props": {
+            "text": "Transfer Complete · Nil Tax Result",
+            "font_size": 17,
+            "weight": "700",
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "tick_pass",
+          "type": "tick",
+          "x": 860,
+          "y": 422,
+          "w": 40,
+          "h": 40,
+          "badge_on": "panel_pass",
+          "when": "variant_mode == 'Sample Full Pass'",
+          "props": {
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "panel_fail",
+          "type": "card",
+          "x": 60,
+          "y": 410,
+          "w": 880,
+          "h": 65,
+          "is_container": true,
+          "cue": "cue_shares",
+          "enter": "slide_up",
+          "when": "variant_mode == 'Sample Partial Pass'",
+          "props": {
+            "rx": 12,
+            "tone": "warn"
+          }
+        },
+        {
+          "id": "pill_fail",
+          "type": "pill",
+          "x": 85,
+          "y": 425,
+          "w": 200,
+          "h": 36,
+          "badge_on": "panel_fail",
+          "when": "variant_mode == 'Sample Partial Pass'",
+          "props": {
+            "text": "Partial · Step",
+            "tone": "warn"
+          }
+        },
+        {
+          "id": "txt_fail",
+          "type": "text",
+          "x": 310,
+          "y": 432,
+          "w": 530,
+          "h": 24,
+          "badge_on": "panel_fail",
+          "when": "variant_mode == 'Sample Partial Pass'",
+          "props": {
+            "text": "Partial Transfer · Pending Balance Due",
+            "font_size": 17,
+            "weight": "700",
+            "tone": "warn"
+          }
+        },
+        {
+          "id": "cross_fail",
+          "type": "cross",
+          "x": 860,
+          "y": 422,
+          "w": 40,
+          "h": 40,
+          "badge_on": "panel_fail",
+          "when": "variant_mode == 'Sample Partial Pass'",
+          "props": {
+            "tone": "warn"
+          }
+        }
+      ]
+    },
+    {
+      "id": "amalgamation_of_companies",
+      "title": "Company Amalgamation & Share Allotment",
+      "category": "A. Transfers of assets",
+      "selection": {
+        "when_to_use": "When two companies merge assets into a unified combined entity with share allotment.",
+        "not_for": [
+          "demerger",
+          "slump sale"
+        ],
+        "situation_types": [
+          "transfer",
+          "asset"
+        ],
+        "asset_types": [
+          "shares",
+          "business"
+        ],
+        "topics": [
+          "amalgamation",
+          "merger"
+        ],
+        "required_slots": [
+          "entity_a_label",
+          "entity_b_label",
+          "combined_label",
+          "shares_label",
+          "total_val",
+          "ratio_text",
+          "variant_mode"
+        ]
+      },
+      "slots": [
+        {
+          "key": "entity_a_label",
+          "label": "Entity One",
+          "type": "text",
+          "default": "Sample Entity One",
+          "max_len": 25
+        },
+        {
+          "key": "entity_b_label",
+          "label": "Entity Two",
+          "type": "text",
+          "default": "Sample Entity Two",
+          "max_len": 25
+        },
+        {
+          "key": "combined_label",
+          "label": "Combined Entity",
+          "type": "text",
+          "default": "Sample Combined Entity",
+          "max_len": 25
+        },
+        {
+          "key": "shares_label",
+          "label": "Allotted Shares",
+          "type": "text",
+          "default": "Sample Allotted Shares",
+          "max_len": 25
+        },
+        {
+          "key": "total_val",
+          "label": "Total Value",
+          "type": "number",
+          "default": 50000000,
+          "min": 10000,
+          "max": 1000000000,
+          "format": "inr"
+        },
+        {
+          "key": "ratio_text",
+          "label": "Allotment Scale",
+          "type": "text",
+          "default": "Scale: One To One"
+        },
+        {
+          "key": "variant_mode",
+          "label": "Variant Mode",
+          "type": "enum",
+          "default": "Sample Full Pass",
+          "options": [
+            "Sample Full Pass",
+            "Sample Gate Locked"
+          ]
+        }
+      ],
+      "derived": [],
+      "duration": 14,
+      "cues": [
+        {
+          "id": "cue_two_entities",
+          "label": "Two Corporate Units",
+          "default_t": 0.5
+        },
+        {
+          "id": "cue_merge",
+          "label": "Asset Merge Stream",
+          "default_t": 4.5
+        },
+        {
+          "id": "cue_allotment",
+          "label": "Share Allotment Result",
+          "default_t": 8.5
+        }
+      ],
+      "scene": [
+        {
+          "id": "header_card",
+          "type": "card",
+          "x": 60,
+          "y": 70,
+          "w": 880,
+          "h": 70,
+          "is_container": true,
+          "props": {
+            "rx": 12,
+            "tone": "accent",
+            "top_bar": "accent"
+          }
+        },
+        {
+          "id": "header_title",
+          "type": "text",
+          "x": 90,
+          "y": 90,
+          "w": 600,
+          "h": 32,
+          "badge_on": "header_card",
+          "bind": {
+            "text": "{{anim_title}}"
+          },
+          "props": {
+            "font_size": 24,
+            "weight": "900",
+            "tone": "accent",
+            "is_title": true
+          }
+        },
+        {
+          "id": "header_sub",
+          "type": "text",
+          "x": 90,
+          "y": 120,
+          "w": 600,
+          "h": 20,
+          "badge_on": "header_card",
+          "bind": {
+            "text": "Value: {{total_val}} · {{ratio_text}}"
+          },
+          "props": {
+            "font_size": 16,
+            "weight": "600",
+            "tone": "ink-muted"
+          }
+        },
+        {
+          "id": "card_ent_a",
+          "type": "card",
+          "x": 60,
+          "y": 155,
+          "w": 190,
+          "h": 235,
+          "is_container": true,
+          "props": {
+            "rx": 14,
+            "tone": "surface"
+          }
+        },
+        {
+          "id": "avatar_ent_a",
+          "type": "company",
+          "x": 75,
+          "y": 175,
+          "w": 100,
+          "h": 110,
+          "badge_on": "card_ent_a",
+          "props": {
+            "name": "Party One",
+            "role": "Unit One"
+          }
+        },
+        {
+          "id": "pill_ent_a",
+          "type": "pill",
+          "x": 75,
+          "y": 300,
+          "w": 160,
+          "h": 34,
+          "badge_on": "card_ent_a",
+          "bind": {
+            "text": "{{entity_a_label}}"
+          },
+          "props": {
+            "tone": "accent"
+          }
+        },
+        {
+          "id": "txt_ent_a_val",
+          "type": "text",
+          "x": 75,
+          "y": 345,
+          "w": 160,
+          "h": 24,
+          "badge_on": "card_ent_a",
+          "props": {
+            "text": "Unit One Asset",
+            "font_size": 16,
+            "weight": "700",
+            "tone": "ink"
+          }
+        },
+        {
+          "id": "card_ent_b",
+          "type": "card",
+          "x": 270,
+          "y": 155,
+          "w": 190,
+          "h": 235,
+          "is_container": true,
+          "props": {
+            "rx": 14,
+            "tone": "surface"
+          }
+        },
+        {
+          "id": "avatar_ent_b",
+          "type": "company",
+          "x": 285,
+          "y": 175,
+          "w": 100,
+          "h": 110,
+          "badge_on": "card_ent_b",
+          "props": {
+            "name": "Party Two",
+            "role": "Unit Two"
+          }
+        },
+        {
+          "id": "pill_ent_b",
+          "type": "pill",
+          "x": 285,
+          "y": 300,
+          "w": 160,
+          "h": 34,
+          "badge_on": "card_ent_b",
+          "bind": {
+            "text": "{{entity_b_label}}"
+          },
+          "props": {
+            "tone": "accent"
+          }
+        },
+        {
+          "id": "txt_ent_b_val",
+          "type": "text",
+          "x": 285,
+          "y": 345,
+          "w": 160,
+          "h": 24,
+          "badge_on": "card_ent_b",
+          "props": {
+            "text": "Unit Two Asset",
+            "font_size": 16,
+            "weight": "700",
+            "tone": "ink"
+          }
+        },
+        {
+          "id": "node_merge",
+          "type": "merge",
+          "x": 475,
+          "y": 240,
+          "w": 110,
+          "h": 60,
+          "cue": "cue_merge",
+          "enter": "scale_in",
+          "props": {
+            "tone": "accent"
+          }
+        },
+        {
+          "id": "card_combined",
+          "type": "card",
+          "x": 600,
+          "y": 155,
+          "w": 340,
+          "h": 235,
+          "is_container": true,
+          "props": {
+            "rx": 14,
+            "tone": "surface"
+          }
+        },
+        {
+          "id": "avatar_comb",
+          "type": "company",
+          "x": 615,
+          "y": 175,
+          "w": 100,
+          "h": 110,
+          "badge_on": "card_combined",
+          "cue": "cue_allotment",
+          "enter": "pop",
+          "props": {
+            "name": "Party Total",
+            "role": "Unit Three"
+          }
+        },
+        {
+          "id": "pill_comb",
+          "type": "pill",
+          "x": 725,
+          "y": 185,
+          "w": 200,
+          "h": 34,
+          "badge_on": "card_combined",
+          "bind": {
+            "text": "{{combined_label}}"
+          },
+          "props": {
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "icon_shares",
+          "type": "shares",
+          "x": 725,
+          "y": 230,
+          "w": 90,
+          "h": 70,
+          "badge_on": "card_combined",
+          "cue": "cue_allotment",
+          "enter": "fade_in",
+          "props": {}
+        },
+        {
+          "id": "pill_shares",
+          "type": "pill",
+          "x": 725,
+          "y": 305,
+          "w": 200,
+          "h": 32,
+          "badge_on": "card_combined",
+          "bind": {
+            "text": "{{shares_label}}"
+          },
+          "props": {
+            "tone": "accent"
+          }
+        },
+        {
+          "id": "txt_comb_val",
+          "type": "text",
+          "x": 615,
+          "y": 345,
+          "w": 310,
+          "h": 24,
+          "badge_on": "card_combined",
+          "bind": {
+            "text": "Total Value: {{total_val}}"
+          },
+          "props": {
+            "font_size": 17,
+            "weight": "800",
+            "tone": "ink"
+          }
+        },
+        {
+          "id": "panel_pass",
+          "type": "card",
+          "x": 60,
+          "y": 410,
+          "w": 880,
+          "h": 65,
+          "is_container": true,
+          "cue": "cue_allotment",
+          "enter": "slide_up",
+          "when": "variant_mode == 'Sample Full Pass'",
+          "props": {
+            "rx": 12,
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "pill_pass",
+          "type": "pill",
+          "x": 85,
+          "y": 425,
+          "w": 200,
+          "h": 36,
+          "badge_on": "panel_pass",
+          "when": "variant_mode == 'Sample Full Pass'",
+          "props": {
+            "text": "Pass · Complete",
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "txt_pass",
+          "type": "text",
+          "x": 310,
+          "y": 432,
+          "w": 530,
+          "h": 24,
+          "badge_on": "panel_pass",
+          "when": "variant_mode == 'Sample Full Pass'",
+          "props": {
+            "text": "Transfer Complete · Nil Tax Result",
+            "font_size": 17,
+            "weight": "700",
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "tick_pass",
+          "type": "tick",
+          "x": 860,
+          "y": 422,
+          "w": 40,
+          "h": 40,
+          "badge_on": "panel_pass",
+          "when": "variant_mode == 'Sample Full Pass'",
+          "props": {
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "panel_fail",
+          "type": "card",
+          "x": 60,
+          "y": 410,
+          "w": 880,
+          "h": 65,
+          "is_container": true,
+          "cue": "cue_allotment",
+          "enter": "slide_up",
+          "when": "variant_mode == 'Sample Gate Locked'",
+          "props": {
+            "rx": 12,
+            "tone": "warn"
+          }
+        },
+        {
+          "id": "pill_fail",
+          "type": "pill",
+          "x": 85,
+          "y": 425,
+          "w": 200,
+          "h": 36,
+          "badge_on": "panel_fail",
+          "when": "variant_mode == 'Sample Gate Locked'",
+          "props": {
+            "text": "Gate Locked",
+            "tone": "warn"
+          }
+        },
+        {
+          "id": "txt_fail",
+          "type": "text",
+          "x": 310,
+          "y": 432,
+          "w": 530,
+          "h": 24,
+          "badge_on": "panel_fail",
+          "when": "variant_mode == 'Sample Gate Locked'",
+          "props": {
+            "text": "Gate Locked · Outside Window Result",
+            "font_size": 17,
+            "weight": "700",
+            "tone": "warn"
+          }
+        },
+        {
+          "id": "cross_fail",
+          "type": "cross",
+          "x": 860,
+          "y": 422,
+          "w": 40,
+          "h": 40,
+          "badge_on": "panel_fail",
+          "when": "variant_mode == 'Sample Gate Locked'",
+          "props": {
+            "tone": "warn"
+          }
+        }
+      ]
+    },
+    {
+      "id": "conversion_firm_to_company",
+      "title": "Firm Conversion to Company & Shares",
+      "category": "A. Transfers of assets",
+      "selection": {
+        "when_to_use": "When a partnership firm converts into a corporate company and partners receive shares.",
+        "not_for": [
+          "amalgamation",
+          "liquidation"
+        ],
+        "situation_types": [
+          "transfer",
+          "asset"
+        ],
+        "asset_types": [
+          "business",
+          "shares"
+        ],
+        "topics": [
+          "conversion",
+          "corporate"
+        ],
+        "required_slots": [
+          "firm_label",
+          "company_label",
+          "partner_1_label",
+          "partner_2_label",
+          "capital_amt",
+          "variant_mode"
+        ]
+      },
+      "slots": [
+        {
+          "key": "firm_label",
+          "label": "Partnership Firm",
+          "type": "text",
+          "default": "Sample Partnership Firm",
+          "max_len": 25
+        },
+        {
+          "key": "company_label",
+          "label": "Corporate Unit",
+          "type": "text",
+          "default": "Sample Corporate Unit",
+          "max_len": 25
+        },
+        {
+          "key": "partner_1_label",
+          "label": "Partner One",
+          "type": "text",
+          "default": "Sample Partner One",
+          "max_len": 25
+        },
+        {
+          "key": "partner_2_label",
+          "label": "Partner Two",
+          "type": "text",
+          "default": "Sample Partner Two",
+          "max_len": 25
+        },
+        {
+          "key": "capital_amt",
+          "label": "Base Account",
+          "type": "number",
+          "default": 4000000,
+          "min": 10000,
+          "max": 100000000,
+          "format": "inr"
+        },
+        {
+          "key": "variant_mode",
+          "label": "Variant Mode",
+          "type": "enum",
+          "default": "Sample Full Pass",
+          "options": [
+            "Sample Full Pass",
+            "Sample Gate Locked"
+          ]
+        }
+      ],
+      "derived": [],
+      "duration": 14,
+      "cues": [
+        {
+          "id": "cue_firm",
+          "label": "Firm Base State",
+          "default_t": 0.5
+        },
+        {
+          "id": "cue_convert",
+          "label": "Conversion Flow Stream",
+          "default_t": 4.5
+        },
+        {
+          "id": "cue_corporate",
+          "label": "Corporate Shares Result",
+          "default_t": 8.5
+        }
+      ],
+      "scene": [
+        {
+          "id": "header_card",
+          "type": "card",
+          "x": 60,
+          "y": 70,
+          "w": 880,
+          "h": 70,
+          "is_container": true,
+          "props": {
+            "rx": 12,
+            "tone": "accent",
+            "top_bar": "accent"
+          }
+        },
+        {
+          "id": "header_title",
+          "type": "text",
+          "x": 90,
+          "y": 90,
+          "w": 600,
+          "h": 32,
+          "badge_on": "header_card",
+          "bind": {
+            "text": "{{anim_title}}"
+          },
+          "props": {
+            "font_size": 24,
+            "weight": "900",
+            "tone": "accent",
+            "is_title": true
+          }
+        },
+        {
+          "id": "header_sub",
+          "type": "text",
+          "x": 90,
+          "y": 120,
+          "w": 600,
+          "h": 20,
+          "badge_on": "header_card",
+          "bind": {
+            "text": "Account: {{capital_amt}} · Pass Result"
+          },
+          "props": {
+            "font_size": 16,
+            "weight": "600",
+            "tone": "ink-muted"
+          }
+        },
+        {
+          "id": "card_firm",
+          "type": "card",
+          "x": 60,
+          "y": 155,
+          "w": 340,
+          "h": 235,
+          "is_container": true,
+          "props": {
+            "rx": 14,
+            "tone": "surface"
+          }
+        },
+        {
+          "id": "avatar_firm",
+          "type": "firm",
+          "x": 75,
+          "y": 175,
+          "w": 100,
+          "h": 110,
+          "badge_on": "card_firm",
+          "props": {
+            "name": "Office Unit",
+            "role": "Unit One"
+          }
+        },
+        {
+          "id": "pill_p1",
+          "type": "pill",
+          "x": 185,
+          "y": 180,
+          "w": 195,
+          "h": 30,
+          "badge_on": "card_firm",
+          "bind": {
+            "text": "{{partner_1_label}}"
+          },
+          "props": {
+            "tone": "surface"
+          }
+        },
+        {
+          "id": "pill_p2",
+          "type": "pill",
+          "x": 185,
+          "y": 220,
+          "w": 195,
+          "h": 30,
+          "badge_on": "card_firm",
+          "bind": {
+            "text": "{{partner_2_label}}"
+          },
+          "props": {
+            "tone": "surface"
+          }
+        },
+        {
+          "id": "pill_firm",
+          "type": "pill",
+          "x": 75,
+          "y": 300,
+          "w": 310,
+          "h": 34,
+          "badge_on": "card_firm",
+          "bind": {
+            "text": "{{firm_label}}"
+          },
+          "props": {
+            "tone": "accent"
+          }
+        },
+        {
+          "id": "txt_firm_cap",
+          "type": "text",
+          "x": 75,
+          "y": 345,
+          "w": 310,
+          "h": 24,
+          "badge_on": "card_firm",
+          "bind": {
+            "text": "Total Account: {{capital_amt}}"
+          },
+          "props": {
+            "font_size": 17,
+            "weight": "800",
+            "tone": "ink"
+          }
+        },
+        {
+          "id": "card_conduit",
+          "type": "card",
+          "x": 415,
+          "y": 155,
+          "w": 170,
+          "h": 235,
+          "is_container": true,
+          "props": {
+            "rx": 14,
+            "tone": "accent"
+          }
+        },
+        {
+          "id": "gear_mach",
+          "type": "machinery",
+          "x": 460,
+          "y": 175,
+          "w": 80,
+          "h": 80,
+          "badge_on": "card_conduit",
+          "cue": "cue_convert",
+          "enter": "scale_in",
+          "props": {}
+        },
+        {
+          "id": "arrow_stream",
+          "type": "arrow",
+          "x": 435,
+          "y": 275,
+          "w": 130,
+          "h": 26,
+          "badge_on": "card_conduit",
+          "cue": "cue_convert",
+          "enter": "slide_right",
+          "props": {
+            "tone": "accent",
+            "label": "Transfer"
+          }
+        },
+        {
+          "id": "moving_token",
+          "type": "shares",
+          "x": 370,
+          "y": 225,
+          "w": 70,
+          "h": 60,
+          "cue": "cue_convert",
+          "motion": {
+            "type": "move_to",
+            "to_x": 615,
+            "to_y": 225,
+            "duration": 2.2
+          },
+          "props": {}
+        },
+        {
+          "id": "card_company",
+          "type": "card",
+          "x": 600,
+          "y": 155,
+          "w": 340,
+          "h": 235,
+          "is_container": true,
+          "props": {
+            "rx": 14,
+            "tone": "surface"
+          }
+        },
+        {
+          "id": "avatar_co",
+          "type": "company",
+          "x": 615,
+          "y": 175,
+          "w": 100,
+          "h": 110,
+          "badge_on": "card_company",
+          "cue": "cue_corporate",
+          "enter": "pop",
+          "props": {
+            "name": "Office Unit",
+            "role": "Unit Two"
+          }
+        },
+        {
+          "id": "pill_co",
+          "type": "pill",
+          "x": 725,
+          "y": 180,
+          "w": 200,
+          "h": 34,
+          "badge_on": "card_company",
+          "bind": {
+            "text": "{{company_label}}"
+          },
+          "props": {
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "pill_p1_sh",
+          "type": "pill",
+          "x": 725,
+          "y": 225,
+          "w": 200,
+          "h": 28,
+          "badge_on": "card_company",
+          "cue": "cue_corporate",
+          "enter": "fade_in",
+          "props": {
+            "text": "Unit One · Certificate",
+            "tone": "surface"
+          }
+        },
+        {
+          "id": "pill_p2_sh",
+          "type": "pill",
+          "x": 725,
+          "y": 260,
+          "w": 200,
+          "h": 28,
+          "badge_on": "card_company",
+          "cue": "cue_corporate",
+          "enter": "fade_in",
+          "props": {
+            "text": "Unit Two · Certificate",
+            "tone": "surface"
+          }
+        },
+        {
+          "id": "icon_shares_co",
+          "type": "shares",
+          "x": 625,
+          "y": 295,
+          "w": 80,
+          "h": 65,
+          "badge_on": "card_company",
+          "cue": "cue_corporate",
+          "enter": "fade_in",
+          "props": {}
+        },
+        {
+          "id": "txt_co_cap",
+          "type": "text",
+          "x": 715,
+          "y": 345,
+          "w": 210,
+          "h": 24,
+          "badge_on": "card_company",
+          "cue": "cue_corporate",
+          "enter": "fade_in",
+          "bind": {
+            "text": "Total Paid: {{capital_amt}}"
+          },
+          "props": {
+            "font_size": 17,
+            "weight": "800",
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "panel_pass",
+          "type": "card",
+          "x": 60,
+          "y": 410,
+          "w": 880,
+          "h": 65,
+          "is_container": true,
+          "cue": "cue_corporate",
+          "enter": "slide_up",
+          "when": "variant_mode == 'Sample Full Pass'",
+          "props": {
+            "rx": 12,
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "pill_pass",
+          "type": "pill",
+          "x": 85,
+          "y": 425,
+          "w": 200,
+          "h": 36,
+          "badge_on": "panel_pass",
+          "when": "variant_mode == 'Sample Full Pass'",
+          "props": {
+            "text": "Pass · Complete",
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "txt_pass",
+          "type": "text",
+          "x": 310,
+          "y": 432,
+          "w": 530,
+          "h": 24,
+          "badge_on": "panel_pass",
+          "when": "variant_mode == 'Sample Full Pass'",
+          "props": {
+            "text": "Transfer Complete · Nil Tax Result",
+            "font_size": 17,
+            "weight": "700",
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "tick_pass",
+          "type": "tick",
+          "x": 860,
+          "y": 422,
+          "w": 40,
+          "h": 40,
+          "badge_on": "panel_pass",
+          "when": "variant_mode == 'Sample Full Pass'",
+          "props": {
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "panel_fail",
+          "type": "card",
+          "x": 60,
+          "y": 410,
+          "w": 880,
+          "h": 65,
+          "is_container": true,
+          "cue": "cue_corporate",
+          "enter": "slide_up",
+          "when": "variant_mode == 'Sample Gate Locked'",
+          "props": {
+            "rx": 12,
+            "tone": "warn"
+          }
+        },
+        {
+          "id": "pill_fail",
+          "type": "pill",
+          "x": 85,
+          "y": 425,
+          "w": 200,
+          "h": 36,
+          "badge_on": "panel_fail",
+          "when": "variant_mode == 'Sample Gate Locked'",
+          "props": {
+            "text": "Gate Locked",
+            "tone": "warn"
+          }
+        },
+        {
+          "id": "txt_fail",
+          "type": "text",
+          "x": 310,
+          "y": 432,
+          "w": 530,
+          "h": 24,
+          "badge_on": "panel_fail",
+          "when": "variant_mode == 'Sample Gate Locked'",
+          "props": {
+            "text": "Gate Locked · Outside Window Result",
+            "font_size": 17,
+            "weight": "700",
+            "tone": "warn"
+          }
+        },
+        {
+          "id": "cross_fail",
+          "type": "cross",
+          "x": 860,
+          "y": 422,
+          "w": 40,
+          "h": 40,
+          "badge_on": "panel_fail",
+          "when": "variant_mode == 'Sample Gate Locked'",
+          "props": {
+            "tone": "warn"
+          }
+        }
+      ]
+    },
+    {
+      "id": "exchange_of_assets",
+      "title": "Asset Exchange & Balance Differential",
+      "category": "A. Transfers of assets",
+      "selection": {
+        "when_to_use": "When two parties swap distinct assets directly with cash differential balance.",
+        "not_for": [
+          "gift",
+          "inheritance"
+        ],
+        "situation_types": [
+          "transfer",
+          "asset"
+        ],
+        "asset_types": [
+          "house",
+          "land",
+          "shares",
+          "gold"
+        ],
+        "topics": [
+          "exchange",
+          "balance"
+        ],
+        "required_slots": [
+          "party_a_name",
+          "party_b_name",
+          "asset_a_label",
+          "asset_b_label",
+          "asset_a_val",
+          "asset_b_val",
+          "cash_diff_val"
+        ]
+      },
+      "slots": [
+        {
+          "key": "party_a_name",
+          "label": "Party One",
+          "type": "text",
+          "default": "Sample Party One",
+          "max_len": 25
+        },
+        {
+          "key": "party_b_name",
+          "label": "Party Two",
+          "type": "text",
+          "default": "Sample Party Two",
+          "max_len": 25
+        },
+        {
+          "key": "asset_a_label",
+          "label": "Asset One",
+          "type": "text",
+          "default": "Sample Asset One",
+          "max_len": 25
+        },
+        {
+          "key": "asset_b_label",
+          "label": "Asset Two",
+          "type": "text",
+          "default": "Sample Asset Two",
+          "max_len": 25
+        },
+        {
+          "key": "asset_a_val",
+          "label": "Value One",
+          "type": "number",
+          "default": 5000000,
+          "min": 10000,
+          "max": 100000000,
+          "format": "inr"
+        },
+        {
+          "key": "asset_b_val",
+          "label": "Value Two",
+          "type": "number",
+          "default": 4000000,
+          "min": 10000,
+          "max": 100000000,
+          "format": "inr"
+        },
+        {
+          "key": "cash_diff_val",
+          "label": "Cash Balance",
+          "type": "number",
+          "default": 1000000,
+          "min": 0,
+          "max": 100000000,
+          "format": "inr"
+        }
+      ],
+      "derived": [],
+      "duration": 14,
+      "cues": [
+        {
+          "id": "cue_assets",
+          "label": "Parties Base Assets",
+          "default_t": 0.5
+        },
+        {
+          "id": "cue_swap",
+          "label": "Exchange Flow Stream",
+          "default_t": 4.5
+        },
+        {
+          "id": "cue_balance",
+          "label": "Balance Step Result",
+          "default_t": 8.5
+        }
+      ],
+      "scene": [
+        {
+          "id": "header_card",
+          "type": "card",
+          "x": 60,
+          "y": 70,
+          "w": 880,
+          "h": 70,
+          "is_container": true,
+          "props": {
+            "rx": 12,
+            "tone": "accent",
+            "top_bar": "accent"
+          }
+        },
+        {
+          "id": "header_title",
+          "type": "text",
+          "x": 90,
+          "y": 90,
+          "w": 600,
+          "h": 32,
+          "badge_on": "header_card",
+          "bind": {
+            "text": "{{anim_title}}"
+          },
+          "props": {
+            "font_size": 24,
+            "weight": "900",
+            "tone": "accent",
+            "is_title": true
+          }
+        },
+        {
+          "id": "header_sub",
+          "type": "text",
+          "x": 90,
+          "y": 120,
+          "w": 600,
+          "h": 20,
+          "badge_on": "header_card",
+          "bind": {
+            "text": "Value: {{asset_a_val}} · Balance: {{cash_diff_val}}"
+          },
+          "props": {
+            "font_size": 16,
+            "weight": "600",
+            "tone": "ink-muted"
+          }
+        },
+        {
+          "id": "card_party_a",
+          "type": "card",
+          "x": 60,
+          "y": 155,
+          "w": 330,
+          "h": 235,
+          "is_container": true,
+          "props": {
+            "rx": 14,
+            "tone": "surface"
+          }
+        },
+        {
+          "id": "avatar_pa",
+          "type": "person",
+          "x": 75,
+          "y": 175,
+          "w": 100,
+          "h": 120,
+          "badge_on": "card_party_a",
+          "props": {
+            "name": "Party One",
+            "role": "Unit One"
+          }
+        },
+        {
+          "id": "pill_pa",
+          "type": "pill",
+          "x": 185,
+          "y": 185,
+          "w": 190,
+          "h": 34,
+          "badge_on": "card_party_a",
+          "bind": {
+            "text": "{{party_a_name}}"
+          },
+          "props": {
+            "tone": "accent"
+          }
+        },
+        {
+          "id": "icon_asset_a",
+          "type": "house",
+          "x": 185,
+          "y": 230,
+          "w": 110,
+          "h": 85,
+          "badge_on": "card_party_a",
+          "props": {}
+        },
+        {
+          "id": "txt_pa_val",
+          "type": "text",
+          "x": 75,
+          "y": 345,
+          "w": 300,
+          "h": 24,
+          "badge_on": "card_party_a",
+          "bind": {
+            "text": "{{asset_a_label}}: {{asset_a_val}}"
+          },
+          "props": {
+            "font_size": 17,
+            "weight": "800",
+            "tone": "ink"
+          }
+        },
+        {
+          "id": "card_conduit",
+          "type": "card",
+          "x": 410,
+          "y": 155,
+          "w": 180,
+          "h": 235,
+          "is_container": true,
+          "props": {
+            "rx": 14,
+            "tone": "accent"
+          }
+        },
+        {
+          "id": "arrow_top",
+          "type": "curved_arrow",
+          "x": 425,
+          "y": 170,
+          "w": 150,
+          "h": 50,
+          "badge_on": "card_conduit",
+          "cue": "cue_swap",
+          "enter": "slide_right",
+          "props": {
+            "tone": "accent"
+          }
+        },
+        {
+          "id": "bag_cash",
+          "type": "money_bag",
+          "x": 450,
+          "y": 225,
+          "w": 90,
+          "h": 90,
+          "badge_on": "card_conduit",
+          "cue": "cue_swap",
+          "enter": "pop",
+          "props": {
+            "amount": 1000000,
+            "show_label": false
+          }
+        },
+        {
+          "id": "arrow_bot",
+          "type": "curved_arrow",
+          "x": 425,
+          "y": 320,
+          "w": 150,
+          "h": 50,
+          "badge_on": "card_conduit",
+          "cue": "cue_swap",
+          "enter": "slide_left",
+          "props": {
+            "tone": "gold"
+          }
+        },
+        {
+          "id": "card_party_b",
+          "type": "card",
+          "x": 610,
+          "y": 155,
+          "w": 330,
+          "h": 235,
+          "is_container": true,
+          "props": {
+            "rx": 14,
+            "tone": "surface"
+          }
+        },
+        {
+          "id": "avatar_pb",
+          "type": "person",
+          "x": 625,
+          "y": 175,
+          "w": 100,
+          "h": 120,
+          "badge_on": "card_party_b",
+          "props": {
+            "name": "Party Two",
+            "role": "Unit Two"
+          }
+        },
+        {
+          "id": "pill_pb",
+          "type": "pill",
+          "x": 735,
+          "y": 185,
+          "w": 190,
+          "h": 34,
+          "badge_on": "card_party_b",
+          "bind": {
+            "text": "{{party_b_name}}"
+          },
+          "props": {
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "icon_asset_b",
+          "type": "land",
+          "x": 735,
+          "y": 230,
+          "w": 110,
+          "h": 85,
+          "badge_on": "card_party_b",
+          "props": {}
+        },
+        {
+          "id": "txt_pb_val",
+          "type": "text",
+          "x": 625,
+          "y": 345,
+          "w": 300,
+          "h": 24,
+          "badge_on": "card_party_b",
+          "bind": {
+            "text": "{{asset_b_label}}: {{asset_b_val}}"
+          },
+          "props": {
+            "font_size": 17,
+            "weight": "800",
+            "tone": "ink"
+          }
+        },
+        {
+          "id": "panel_balance",
+          "type": "card",
+          "x": 60,
+          "y": 410,
+          "w": 880,
+          "h": 65,
+          "is_container": true,
+          "cue": "cue_balance",
+          "enter": "slide_up",
+          "props": {
+            "rx": 12,
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "pill_balance",
+          "type": "pill",
+          "x": 85,
+          "y": 425,
+          "w": 200,
+          "h": 36,
+          "badge_on": "panel_balance",
+          "props": {
+            "text": "Complete · Balance",
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "txt_balance",
+          "type": "text",
+          "x": 310,
+          "y": 432,
+          "w": 530,
+          "h": 24,
+          "badge_on": "panel_balance",
+          "bind": {
+            "text": "Total Value: {{asset_a_val}} · Balance Paid: {{cash_diff_val}}"
+          },
+          "props": {
+            "font_size": 17,
+            "weight": "700",
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "tick_balance",
+          "type": "tick",
+          "x": 860,
+          "y": 422,
+          "w": 40,
+          "h": 40,
+          "badge_on": "panel_balance",
+          "props": {
+            "tone": "ok"
+          }
+        }
+      ]
+    },
+    {
+      "id": "compulsory_acquisition",
+      "title": "Compulsory Acquisition & Compensation Flow",
+      "category": "A. Transfers of assets",
+      "selection": {
+        "when_to_use": "When statutory authority compulsorily acquires an asset with compensation awards.",
+        "not_for": [
+          "commercial sale",
+          "gift"
+        ],
+        "situation_types": [
+          "transfer",
+          "asset"
+        ],
+        "asset_types": [
+          "land",
+          "house"
+        ],
+        "topics": [
+          "acquisition",
+          "compensation"
+        ],
+        "required_slots": [
+          "authority_label",
+          "owner_label",
+          "asset_label",
+          "initial_comp_amt",
+          "enhanced_comp_amt",
+          "receipt_year"
+        ]
+      },
+      "slots": [
+        {
+          "key": "authority_label",
+          "label": "Office Name",
+          "type": "text",
+          "default": "Sample Direct Office",
+          "max_len": 25
+        },
+        {
+          "key": "owner_label",
+          "label": "Asset Owner",
+          "type": "text",
+          "default": "Sample Asset Owner",
+          "max_len": 25
+        },
+        {
+          "key": "asset_label",
+          "label": "Acquired Asset",
+          "type": "text",
+          "default": "Sample Acquired Asset",
+          "max_len": 25
+        },
+        {
+          "key": "initial_comp_amt",
+          "label": "Base Amount",
+          "type": "number",
+          "default": 6000000,
+          "min": 10000,
+          "max": 100000000,
+          "format": "inr"
+        },
+        {
+          "key": "enhanced_comp_amt",
+          "label": "Extra Amount",
+          "type": "number",
+          "default": 2000000,
+          "min": 0,
+          "max": 100000000,
+          "format": "inr"
+        },
+        {
+          "key": "receipt_year",
+          "label": "Receipt Year",
+          "type": "text",
+          "default": "Year: Sample Year One"
+        }
+      ],
+      "derived": [
+        {
+          "key": "total_award",
+          "expr": "initial_comp_amt + enhanced_comp_amt"
+        }
+      ],
+      "duration": 14,
+      "cues": [
+        {
+          "id": "cue_order",
+          "label": "State Office Order",
+          "default_t": 0.5
+        },
+        {
+          "id": "cue_flow",
+          "label": "Asset Amount Flow",
+          "default_t": 4.5
+        },
+        {
+          "id": "cue_award",
+          "label": "Total Amount Result",
+          "default_t": 8.5
+        }
+      ],
+      "scene": [
+        {
+          "id": "header_card",
+          "type": "card",
+          "x": 60,
+          "y": 70,
+          "w": 880,
+          "h": 70,
+          "is_container": true,
+          "props": {
+            "rx": 12,
+            "tone": "accent",
+            "top_bar": "accent"
+          }
+        },
+        {
+          "id": "header_title",
+          "type": "text",
+          "x": 90,
+          "y": 90,
+          "w": 600,
+          "h": 32,
+          "badge_on": "header_card",
+          "bind": {
+            "text": "{{anim_title}}"
+          },
+          "props": {
+            "font_size": 24,
+            "weight": "900",
+            "tone": "accent",
+            "is_title": true
+          }
+        },
+        {
+          "id": "header_sub",
+          "type": "text",
+          "x": 90,
+          "y": 120,
+          "w": 600,
+          "h": 20,
+          "badge_on": "header_card",
+          "bind": {
+            "text": "Total: {{total_award}} · {{receipt_year}}"
+          },
+          "props": {
+            "font_size": 16,
+            "weight": "600",
+            "tone": "ink-muted"
+          }
+        },
+        {
+          "id": "card_auth",
+          "type": "card",
+          "x": 60,
+          "y": 155,
+          "w": 330,
+          "h": 235,
+          "is_container": true,
+          "props": {
+            "rx": 14,
+            "tone": "surface"
+          }
+        },
+        {
+          "id": "avatar_auth",
+          "type": "govt_dept",
+          "x": 75,
+          "y": 175,
+          "w": 110,
+          "h": 120,
+          "badge_on": "card_auth",
+          "props": {
+            "name": "Office",
+            "role": "Unit One"
+          }
+        },
+        {
+          "id": "pill_auth",
+          "type": "pill",
+          "x": 195,
+          "y": 185,
+          "w": 180,
+          "h": 34,
+          "badge_on": "card_auth",
+          "bind": {
+            "text": "{{authority_label}}"
+          },
+          "props": {
+            "tone": "gold"
+          }
+        },
+        {
+          "id": "icon_asset_auth",
+          "type": "land",
+          "x": 195,
+          "y": 230,
+          "w": 100,
+          "h": 80,
+          "badge_on": "card_auth",
+          "cue": "cue_flow",
+          "enter": "pop",
+          "props": {}
+        },
+        {
+          "id": "txt_auth_asset",
+          "type": "text",
+          "x": 75,
+          "y": 345,
+          "w": 300,
+          "h": 24,
+          "badge_on": "card_auth",
+          "bind": {
+            "text": "Asset: {{asset_label}}"
+          },
+          "props": {
+            "font_size": 17,
+            "weight": "800",
+            "tone": "ink"
+          }
+        },
+        {
+          "id": "arrow_conduit",
+          "type": "arrow",
+          "x": 415,
+          "y": 255,
+          "w": 160,
+          "h": 30,
+          "cue": "cue_flow",
+          "enter": "slide_right",
+          "props": {
+            "tone": "gold",
+            "label": "Flow"
+          }
+        },
+        {
+          "id": "card_owner",
+          "type": "card",
+          "x": 600,
+          "y": 155,
+          "w": 340,
+          "h": 235,
+          "is_container": true,
+          "props": {
+            "rx": 14,
+            "tone": "surface"
+          }
+        },
+        {
+          "id": "avatar_owner",
+          "type": "person",
+          "x": 615,
+          "y": 175,
+          "w": 100,
+          "h": 120,
+          "badge_on": "card_owner",
+          "props": {
+            "name": "Party",
+            "role": "Unit Two"
+          }
+        },
+        {
+          "id": "pill_owner",
+          "type": "pill",
+          "x": 725,
+          "y": 185,
+          "w": 200,
+          "h": 34,
+          "badge_on": "card_owner",
+          "bind": {
+            "text": "{{owner_label}}"
+          },
+          "props": {
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "txt_init_comp",
+          "type": "text",
+          "x": 725,
+          "y": 235,
+          "w": 200,
+          "h": 24,
+          "badge_on": "card_owner",
+          "bind": {
+            "text": "Base: {{initial_comp_amt}}"
+          },
+          "props": {
+            "font_size": 16,
+            "weight": "700",
+            "tone": "ink"
+          }
+        },
+        {
+          "id": "txt_extra_comp",
+          "type": "text",
+          "x": 725,
+          "y": 270,
+          "w": 200,
+          "h": 24,
+          "badge_on": "card_owner",
+          "bind": {
+            "text": "Extra: {{enhanced_comp_amt}}"
+          },
+          "props": {
+            "font_size": 16,
+            "weight": "700",
+            "tone": "accent"
+          }
+        },
+        {
+          "id": "txt_total_award",
+          "type": "text",
+          "x": 615,
+          "y": 345,
+          "w": 310,
+          "h": 24,
+          "badge_on": "card_owner",
+          "cue": "cue_award",
+          "enter": "fade_in",
+          "bind": {
+            "text": "Total Paid: {{total_award}}"
+          },
+          "props": {
+            "font_size": 17,
+            "weight": "800",
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "panel_award",
+          "type": "card",
+          "x": 60,
+          "y": 410,
+          "w": 880,
+          "h": 65,
+          "is_container": true,
+          "cue": "cue_award",
+          "enter": "slide_up",
+          "props": {
+            "rx": 12,
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "pill_award",
+          "type": "pill",
+          "x": 85,
+          "y": 425,
+          "w": 200,
+          "h": 36,
+          "badge_on": "panel_award",
+          "props": {
+            "text": "Pass · Complete",
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "txt_award",
+          "type": "text",
+          "x": 310,
+          "y": 432,
+          "w": 530,
+          "h": 24,
+          "badge_on": "panel_award",
+          "bind": {
+            "text": "Total Result: {{total_award}} · {{receipt_year}}"
+          },
+          "props": {
+            "font_size": 17,
+            "weight": "700",
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "tick_award",
+          "type": "tick",
+          "x": 860,
+          "y": 422,
+          "w": 40,
+          "h": 40,
+          "badge_on": "panel_award",
+          "props": {
+            "tone": "ok"
+          }
+        }
+      ]
+    },
+    {
+      "id": "capital_contribution_to_firm",
+      "title": "Capital Contribution to Partnership Firm",
+      "category": "A. Transfers of assets",
+      "selection": {
+        "when_to_use": "When a partner introduces an asset into a partnership firm recorded at book value.",
+        "not_for": [
+          "commercial sale",
+          "conversion"
+        ],
+        "situation_types": [
+          "transfer",
+          "asset"
+        ],
+        "asset_types": [
+          "machinery",
+          "house",
+          "land"
+        ],
+        "topics": [
+          "contribution",
+          "firm"
+        ],
+        "required_slots": [
+          "partner_label",
+          "firm_label",
+          "asset_label",
+          "cost_val",
+          "market_val",
+          "recorded_val"
+        ]
+      },
+      "slots": [
+        {
+          "key": "partner_label",
+          "label": "Partner Name",
+          "type": "text",
+          "default": "Sample Partner One",
+          "max_len": 25
+        },
+        {
+          "key": "firm_label",
+          "label": "Partnership Firm",
+          "type": "text",
+          "default": "Sample Partnership Firm",
+          "max_len": 25
+        },
+        {
+          "key": "asset_label",
+          "label": "Capital Asset",
+          "type": "text",
+          "default": "Sample Capital Asset",
+          "max_len": 25
+        },
+        {
+          "key": "cost_val",
+          "label": "Base Cost",
+          "type": "number",
+          "default": 2000000,
+          "min": 10000,
+          "max": 100000000,
+          "format": "inr"
+        },
+        {
+          "key": "market_val",
+          "label": "Declared Value",
+          "type": "number",
+          "default": 3500000,
+          "min": 10000,
+          "max": 100000000,
+          "format": "inr"
+        },
+        {
+          "key": "recorded_val",
+          "label": "Accepted Value",
+          "type": "number",
+          "default": 3000000,
+          "min": 10000,
+          "max": 100000000,
+          "format": "inr"
+        }
+      ],
+      "derived": [],
+      "duration": 14,
+      "cues": [
+        {
+          "id": "cue_partner",
+          "label": "Partner Base Asset",
+          "default_t": 0.5
+        },
+        {
+          "id": "cue_firm_transfer",
+          "label": "Firm Transfer Stream",
+          "default_t": 4.5
+        },
+        {
+          "id": "cue_recorded",
+          "label": "Accepted Value Result",
+          "default_t": 8.5
+        }
+      ],
+      "scene": [
+        {
+          "id": "header_card",
+          "type": "card",
+          "x": 60,
+          "y": 70,
+          "w": 880,
+          "h": 70,
+          "is_container": true,
+          "props": {
+            "rx": 12,
+            "tone": "accent",
+            "top_bar": "accent"
+          }
+        },
+        {
+          "id": "header_title",
+          "type": "text",
+          "x": 90,
+          "y": 90,
+          "w": 600,
+          "h": 32,
+          "badge_on": "header_card",
+          "bind": {
+            "text": "{{anim_title}}"
+          },
+          "props": {
+            "font_size": 24,
+            "weight": "900",
+            "tone": "accent",
+            "is_title": true
+          }
+        },
+        {
+          "id": "header_sub",
+          "type": "text",
+          "x": 90,
+          "y": 120,
+          "w": 600,
+          "h": 20,
+          "badge_on": "header_card",
+          "bind": {
+            "text": "Cost: {{cost_val}} · Value: {{recorded_val}}"
+          },
+          "props": {
+            "font_size": 16,
+            "weight": "600",
+            "tone": "ink-muted"
+          }
+        },
+        {
+          "id": "card_partner",
+          "type": "card",
+          "x": 60,
+          "y": 155,
+          "w": 330,
+          "h": 235,
+          "is_container": true,
+          "props": {
+            "rx": 14,
+            "tone": "surface"
+          }
+        },
+        {
+          "id": "avatar_p",
+          "type": "person",
+          "x": 75,
+          "y": 175,
+          "w": 100,
+          "h": 120,
+          "badge_on": "card_partner",
+          "props": {
+            "name": "Party One",
+            "role": "Unit One"
+          }
+        },
+        {
+          "id": "pill_p",
+          "type": "pill",
+          "x": 185,
+          "y": 185,
+          "w": 190,
+          "h": 34,
+          "badge_on": "card_partner",
+          "bind": {
+            "text": "{{partner_label}}"
+          },
+          "props": {
+            "tone": "accent"
+          }
+        },
+        {
+          "id": "txt_asset_name",
+          "type": "text",
+          "x": 185,
+          "y": 245,
+          "w": 190,
+          "h": 24,
+          "badge_on": "card_partner",
+          "bind": {
+            "text": "{{asset_label}}"
+          },
+          "props": {
+            "font_size": 16,
+            "weight": "700",
+            "tone": "ink"
+          }
+        },
+        {
+          "id": "txt_p_cost",
+          "type": "text",
+          "x": 75,
+          "y": 345,
+          "w": 300,
+          "h": 24,
+          "badge_on": "card_partner",
+          "bind": {
+            "text": "Cost: {{cost_val}}"
+          },
+          "props": {
+            "font_size": 17,
+            "weight": "800",
+            "tone": "ink"
+          }
+        },
+        {
+          "id": "card_conduit",
+          "type": "card",
+          "x": 410,
+          "y": 155,
+          "w": 170,
+          "h": 235,
+          "is_container": true,
+          "props": {
+            "rx": 14,
+            "tone": "accent"
+          }
+        },
+        {
+          "id": "track_flow",
+          "type": "arrow",
+          "x": 425,
+          "y": 265,
+          "w": 140,
+          "h": 26,
+          "badge_on": "card_conduit",
+          "cue": "cue_firm_transfer",
+          "enter": "slide_right",
+          "props": {
+            "tone": "accent",
+            "label": "Flow"
+          }
+        },
+        {
+          "id": "flowing_machinery",
+          "type": "machinery",
+          "x": 195,
+          "y": 215,
+          "w": 85,
+          "h": 80,
+          "cue": "cue_firm_transfer",
+          "motion": {
+            "type": "move_to",
+            "to_x": 625,
+            "to_y": 215,
+            "duration": 2.5
+          },
+          "props": {}
+        },
+        {
+          "id": "card_firm",
+          "type": "card",
+          "x": 600,
+          "y": 155,
+          "w": 340,
+          "h": 235,
+          "is_container": true,
+          "props": {
+            "rx": 14,
+            "tone": "surface"
+          }
+        },
+        {
+          "id": "avatar_firm",
+          "type": "firm",
+          "x": 615,
+          "y": 175,
+          "w": 100,
+          "h": 110,
+          "badge_on": "card_firm",
+          "props": {
+            "name": "Office Unit",
+            "role": "Unit Two"
+          }
+        },
+        {
+          "id": "pill_firm",
+          "type": "pill",
+          "x": 725,
+          "y": 185,
+          "w": 200,
+          "h": 34,
+          "badge_on": "card_firm",
+          "bind": {
+            "text": "{{firm_label}}"
+          },
+          "props": {
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "txt_firm_mv",
+          "type": "text",
+          "x": 725,
+          "y": 235,
+          "w": 200,
+          "h": 24,
+          "badge_on": "card_firm",
+          "bind": {
+            "text": "Gross: {{market_val}}"
+          },
+          "props": {
+            "font_size": 16,
+            "weight": "600",
+            "tone": "ink-muted"
+          }
+        },
+        {
+          "id": "txt_firm_rec",
+          "type": "text",
+          "x": 725,
+          "y": 270,
+          "w": 200,
+          "h": 26,
+          "badge_on": "card_firm",
+          "cue": "cue_recorded",
+          "enter": "pop",
+          "bind": {
+            "text": "Accepted: {{recorded_val}}"
+          },
+          "props": {
+            "font_size": 17,
+            "weight": "800",
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "txt_firm_status",
+          "type": "text",
+          "x": 615,
+          "y": 345,
+          "w": 310,
+          "h": 24,
+          "badge_on": "card_firm",
+          "props": {
+            "text": "Ledger Balance Complete",
+            "font_size": 17,
+            "weight": "800",
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "panel_rec",
+          "type": "card",
+          "x": 60,
+          "y": 410,
+          "w": 880,
+          "h": 65,
+          "is_container": true,
+          "cue": "cue_recorded",
+          "enter": "slide_up",
+          "props": {
+            "rx": 12,
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "pill_rec",
+          "type": "pill",
+          "x": 85,
+          "y": 425,
+          "w": 200,
+          "h": 36,
+          "badge_on": "panel_rec",
+          "props": {
+            "text": "Pass · Declared",
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "txt_rec",
+          "type": "text",
+          "x": 310,
+          "y": 432,
+          "w": 530,
+          "h": 24,
+          "badge_on": "panel_rec",
+          "bind": {
+            "text": "Declared Ledger Value: {{recorded_val}} · Accepted"
+          },
+          "props": {
+            "font_size": 17,
+            "weight": "700",
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "tick_rec",
+          "type": "tick",
+          "x": 860,
+          "y": 422,
+          "w": 40,
+          "h": 40,
+          "badge_on": "panel_rec",
+          "props": {
+            "tone": "ok"
+          }
+        }
+      ]
+    },
+    {
+      "id": "liquidation_distribution",
+      "title": "Company Liquidation & Asset Distribution",
+      "category": "A. Transfers of assets",
+      "selection": {
+        "when_to_use": "When a company in liquidation distributes assets and cash surplus to shareholders.",
+        "not_for": [
+          "amalgamation",
+          "gift"
+        ],
+        "situation_types": [
+          "transfer",
+          "asset"
+        ],
+        "asset_types": [
+          "business",
+          "shares"
+        ],
+        "topics": [
+          "liquidation",
+          "distribution"
+        ],
+        "required_slots": [
+          "company_label",
+          "holder_1_label",
+          "holder_2_label",
+          "asset_dist_val",
+          "cash_dist_val",
+          "total_dist_val"
+        ]
+      },
+      "slots": [
+        {
+          "key": "company_label",
+          "label": "Liquidated Unit",
+          "type": "text",
+          "default": "Sample Liquidated Company",
+          "max_len": 25
+        },
+        {
+          "key": "holder_1_label",
+          "label": "Shareholder One",
+          "type": "text",
+          "default": "Sample Shareholder One",
+          "max_len": 25
+        },
+        {
+          "key": "holder_2_label",
+          "label": "Shareholder Two",
+          "type": "text",
+          "default": "Sample Shareholder Two",
+          "max_len": 25
+        },
+        {
+          "key": "asset_dist_val",
+          "label": "Asset Amount",
+          "type": "number",
+          "default": 5000000,
+          "min": 10000,
+          "max": 100000000,
+          "format": "inr"
+        },
+        {
+          "key": "cash_dist_val",
+          "label": "Direct Paid Amount",
+          "type": "number",
+          "default": 2000000,
+          "min": 0,
+          "max": 100000000,
+          "format": "inr"
+        },
+        {
+          "key": "total_dist_val",
+          "label": "Total Amount",
+          "type": "number",
+          "default": 7000000,
+          "min": 10000,
+          "max": 100000000,
+          "format": "inr"
+        }
+      ],
+      "derived": [],
+      "duration": 14,
+      "cues": [
+        {
+          "id": "cue_co_state",
+          "label": "Company Liquidation State",
+          "default_t": 0.5
+        },
+        {
+          "id": "cue_split_dist",
+          "label": "Distribution Split Stream",
+          "default_t": 4.5
+        },
+        {
+          "id": "cue_holders",
+          "label": "Shareholder Receipt Result",
+          "default_t": 8.5
+        }
+      ],
+      "scene": [
+        {
+          "id": "header_card",
+          "type": "card",
+          "x": 60,
+          "y": 70,
+          "w": 880,
+          "h": 70,
+          "is_container": true,
+          "props": {
+            "rx": 12,
+            "tone": "accent",
+            "top_bar": "accent"
+          }
+        },
+        {
+          "id": "header_title",
+          "type": "text",
+          "x": 90,
+          "y": 90,
+          "w": 600,
+          "h": 32,
+          "badge_on": "header_card",
+          "bind": {
+            "text": "{{anim_title}}"
+          },
+          "props": {
+            "font_size": 24,
+            "weight": "900",
+            "tone": "accent",
+            "is_title": true
+          }
+        },
+        {
+          "id": "header_sub",
+          "type": "text",
+          "x": 90,
+          "y": 120,
+          "w": 600,
+          "h": 20,
+          "badge_on": "header_card",
+          "bind": {
+            "text": "Total: {{total_dist_val}} · Complete"
+          },
+          "props": {
+            "font_size": 16,
+            "weight": "600",
+            "tone": "ink-muted"
+          }
+        },
+        {
+          "id": "card_liq",
+          "type": "card",
+          "x": 60,
+          "y": 155,
+          "w": 340,
+          "h": 235,
+          "is_container": true,
+          "props": {
+            "rx": 14,
+            "tone": "surface"
+          }
+        },
+        {
+          "id": "avatar_liq",
+          "type": "company",
+          "x": 75,
+          "y": 175,
+          "w": 100,
+          "h": 110,
+          "badge_on": "card_liq",
+          "props": {
+            "name": "Office Unit",
+            "role": "Unit One"
+          }
+        },
+        {
+          "id": "txt_liq_asset",
+          "type": "text",
+          "x": 190,
+          "y": 195,
+          "w": 190,
+          "h": 24,
+          "badge_on": "card_liq",
+          "bind": {
+            "text": "Asset: {{asset_dist_val}}"
+          },
+          "props": {
+            "font_size": 16,
+            "weight": "700",
+            "tone": "ink"
+          }
+        },
+        {
+          "id": "txt_liq_cash",
+          "type": "text",
+          "x": 190,
+          "y": 235,
+          "w": 190,
+          "h": 24,
+          "badge_on": "card_liq",
+          "bind": {
+            "text": "Paid: {{cash_dist_val}}"
+          },
+          "props": {
+            "font_size": 16,
+            "weight": "700",
+            "tone": "gold"
+          }
+        },
+        {
+          "id": "pill_liq",
+          "type": "pill",
+          "x": 75,
+          "y": 300,
+          "w": 310,
+          "h": 34,
+          "badge_on": "card_liq",
+          "bind": {
+            "text": "{{company_label}}"
+          },
+          "props": {
+            "tone": "warn"
+          }
+        },
+        {
+          "id": "txt_liq_tot",
+          "type": "text",
+          "x": 75,
+          "y": 345,
+          "w": 310,
+          "h": 24,
+          "badge_on": "card_liq",
+          "bind": {
+            "text": "Total Transfer: {{total_dist_val}}"
+          },
+          "props": {
+            "font_size": 17,
+            "weight": "800",
+            "tone": "ink"
+          }
+        },
+        {
+          "id": "card_conduit",
+          "type": "card",
+          "x": 415,
+          "y": 155,
+          "w": 170,
+          "h": 235,
+          "is_container": true,
+          "props": {
+            "rx": 14,
+            "tone": "surface"
+          }
+        },
+        {
+          "id": "arrow_up",
+          "type": "curved_arrow",
+          "x": 425,
+          "y": 170,
+          "w": 150,
+          "h": 45,
+          "badge_on": "card_conduit",
+          "cue": "cue_split_dist",
+          "enter": "slide_right",
+          "props": {
+            "tone": "accent"
+          }
+        },
+        {
+          "id": "split_node",
+          "type": "split",
+          "x": 440,
+          "y": 235,
+          "w": 120,
+          "h": 65,
+          "badge_on": "card_conduit",
+          "cue": "cue_split_dist",
+          "enter": "scale_in",
+          "props": {
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "arrow_down",
+          "type": "curved_arrow",
+          "x": 425,
+          "y": 310,
+          "w": 150,
+          "h": 45,
+          "badge_on": "card_conduit",
+          "cue": "cue_split_dist",
+          "enter": "slide_left",
+          "props": {
+            "tone": "gold"
+          }
+        },
+        {
+          "id": "packet_asset",
+          "type": "house",
+          "x": 430,
+          "y": 165,
+          "w": 50,
+          "h": 45,
+          "badge_on": "card_conduit",
+          "cue": "cue_split_dist",
+          "motion": {
+            "type": "move_to",
+            "to_x": 485,
+            "to_y": 165,
+            "duration": 2.0
+          },
+          "props": {}
+        },
+        {
+          "id": "packet_cash",
+          "type": "money_bag",
+          "x": 430,
+          "y": 280,
+          "w": 50,
+          "h": 50,
+          "badge_on": "card_conduit",
+          "cue": "cue_split_dist",
+          "motion": {
+            "type": "move_to",
+            "to_x": 485,
+            "to_y": 280,
+            "duration": 2.0
+          },
+          "props": {
+            "show_label": false
+          }
+        },
+        {
+          "id": "card_holders",
+          "type": "card",
+          "x": 600,
+          "y": 155,
+          "w": 340,
+          "h": 235,
+          "is_container": true,
+          "props": {
+            "rx": 14,
+            "tone": "surface"
+          }
+        },
+        {
+          "id": "avatar_h1",
+          "type": "person",
+          "x": 615,
+          "y": 170,
+          "w": 70,
+          "h": 85,
+          "badge_on": "card_holders",
+          "props": {
+            "name": "Party",
+            "role": "One"
+          }
+        },
+        {
+          "id": "pill_h1",
+          "type": "pill",
+          "x": 695,
+          "y": 175,
+          "w": 230,
+          "h": 32,
+          "badge_on": "card_holders",
+          "bind": {
+            "text": "{{holder_1_label}}"
+          },
+          "props": {
+            "tone": "accent"
+          }
+        },
+        {
+          "id": "txt_h1_amt",
+          "type": "text",
+          "x": 695,
+          "y": 215,
+          "w": 230,
+          "h": 24,
+          "badge_on": "card_holders",
+          "cue": "cue_holders",
+          "enter": "pop",
+          "bind": {
+            "text": "Asset: {{asset_dist_val}}"
+          },
+          "props": {
+            "font_size": 17,
+            "weight": "800",
+            "tone": "ink"
+          }
+        },
+        {
+          "id": "avatar_h2",
+          "type": "person",
+          "x": 615,
+          "y": 265,
+          "w": 70,
+          "h": 85,
+          "badge_on": "card_holders",
+          "props": {
+            "name": "Party",
+            "role": "Two"
+          }
+        },
+        {
+          "id": "pill_h2",
+          "type": "pill",
+          "x": 695,
+          "y": 270,
+          "w": 230,
+          "h": 32,
+          "badge_on": "card_holders",
+          "bind": {
+            "text": "{{holder_2_label}}"
+          },
+          "props": {
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "txt_h2_amt",
+          "type": "text",
+          "x": 695,
+          "y": 310,
+          "w": 230,
+          "h": 24,
+          "badge_on": "card_holders",
+          "cue": "cue_holders",
+          "enter": "pop",
+          "bind": {
+            "text": "Paid: {{cash_dist_val}}"
+          },
+          "props": {
+            "font_size": 17,
+            "weight": "800",
+            "tone": "gold"
+          }
+        },
+        {
+          "id": "txt_h_sum",
+          "type": "text",
+          "x": 615,
+          "y": 355,
+          "w": 310,
+          "h": 24,
+          "badge_on": "card_holders",
+          "bind": {
+            "text": "Total Paid: {{total_dist_val}}"
+          },
+          "props": {
+            "font_size": 17,
+            "weight": "800",
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "panel_dist",
+          "type": "card",
+          "x": 60,
+          "y": 410,
+          "w": 880,
+          "h": 65,
+          "is_container": true,
+          "cue": "cue_holders",
+          "enter": "slide_up",
+          "props": {
+            "rx": 12,
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "pill_dist",
+          "type": "pill",
+          "x": 85,
+          "y": 425,
+          "w": 200,
+          "h": 36,
+          "badge_on": "panel_dist",
+          "props": {
+            "text": "Pass · Complete",
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "txt_dist",
+          "type": "text",
+          "x": 310,
+          "y": 432,
+          "w": 530,
+          "h": 24,
+          "badge_on": "panel_dist",
+          "bind": {
+            "text": "Transfer Complete · Total: {{total_dist_val}}"
+          },
+          "props": {
+            "font_size": 17,
+            "weight": "700",
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "tick_dist",
+          "type": "tick",
+          "x": 860,
+          "y": 422,
+          "w": 40,
+          "h": 40,
+          "badge_on": "panel_dist",
+          "props": {
+            "tone": "ok"
+          }
+        }
+      ]
+    },
+    {
+      "id": "lower_of_two_values",
+      "title": "Lower of Two Values Comparison",
+      "category": "B. Valuation and deemed value",
+      "selection": {
+        "when_to_use": "When comparing two alternative values to mechanically adopt the lower value.",
+        "not_for": [
+          "transfer",
+          "reinvestment"
+        ],
+        "situation_types": [
+          "valuation",
+          "decision"
+        ],
+        "asset_types": [
+          "house",
+          "land",
+          "shares",
+          "gold"
+        ],
+        "topics": [
+          "lower value",
+          "benchmark"
+        ],
+        "required_slots": [
+          "value_1_label",
+          "value_1_detail",
+          "value_1_amt",
+          "value_2_label",
+          "value_2_detail",
+          "value_2_amt",
+          "rule_label",
+          "decision_label"
+        ]
+      },
+      "slots": [
+        {
+          "key": "value_1_label",
+          "label": "Value One Name",
+          "type": "text",
+          "default": "Sample Value One",
+          "max_len": 25
+        },
+        {
+          "key": "value_1_detail",
+          "label": "Value One Details",
+          "type": "text",
+          "default": "Declared Cost Base",
+          "max_len": 25
+        },
+        {
+          "key": "value_1_amt",
+          "label": "Amount One",
+          "type": "number",
+          "default": 4500000,
+          "min": 10000,
+          "max": 100000000,
+          "format": "inr"
+        },
+        {
+          "key": "value_2_label",
+          "label": "Value Two Name",
+          "type": "text",
+          "default": "Sample Value Two",
+          "max_len": 25
+        },
+        {
+          "key": "value_2_detail",
+          "label": "Value Two Details",
+          "type": "text",
+          "default": "Standard Value Details",
+          "max_len": 25
+        },
+        {
+          "key": "value_2_amt",
+          "label": "Amount Two",
+          "type": "number",
+          "default": 3800000,
+          "min": 10000,
+          "max": 100000000,
+          "format": "inr"
+        },
+        {
+          "key": "rule_label",
+          "label": "Rule Label",
+          "type": "text",
+          "default": "Rule: Value Accepted",
+          "max_len": 30
+        },
+        {
+          "key": "decision_label",
+          "label": "Decision Label",
+          "type": "text",
+          "default": "Accepted Value Rule",
+          "max_len": 25
+        }
+      ],
+      "derived": [
+        {
+          "key": "diff_amt",
+          "expr": "value_1_amt - value_2_amt"
+        }
+      ],
+      "duration": 14,
+      "cues": [
+        {
+          "id": "cue_two_vals",
+          "label": "Two Competing Values",
+          "default_t": 0.5
+        },
+        {
+          "id": "cue_scale",
+          "label": "Scale Weigh Stream",
+          "default_t": 4.5
+        },
+        {
+          "id": "cue_selected",
+          "label": "Lower Value Result",
+          "default_t": 8.5
+        }
+      ],
+      "scene": [
+        {
+          "id": "header_card",
+          "type": "card",
+          "x": 60,
+          "y": 70,
+          "w": 880,
+          "h": 70,
+          "is_container": true,
+          "props": {
+            "rx": 12,
+            "tone": "accent",
+            "top_bar": "accent"
+          }
+        },
+        {
+          "id": "header_title",
+          "type": "text",
+          "x": 90,
+          "y": 90,
+          "w": 600,
+          "h": 32,
+          "badge_on": "header_card",
+          "bind": {
+            "text": "{{anim_title}}"
+          },
+          "props": {
+            "font_size": 24,
+            "weight": "900",
+            "tone": "accent",
+            "is_title": true
+          }
+        },
+        {
+          "id": "header_sub",
+          "type": "text",
+          "x": 90,
+          "y": 120,
+          "w": 600,
+          "h": 20,
+          "badge_on": "header_card",
+          "bind": {
+            "text": "{{rule_label}}"
+          },
+          "props": {
+            "font_size": 16,
+            "weight": "600",
+            "tone": "ink-muted"
+          }
+        },
+        {
+          "id": "card_val_1",
+          "type": "card",
+          "x": 60,
+          "y": 155,
+          "w": 275,
+          "h": 235,
+          "is_container": true,
+          "props": {
+            "rx": 14,
+            "tone": "surface"
+          }
+        },
+        {
+          "id": "pill_v1",
+          "type": "pill",
+          "x": 80,
+          "y": 175,
+          "w": 235,
+          "h": 34,
+          "badge_on": "card_val_1",
+          "bind": {
+            "text": "{{value_1_label}}"
+          },
+          "props": {
+            "tone": "accent"
+          }
+        },
+        {
+          "id": "txt_v1_det",
+          "type": "text",
+          "x": 80,
+          "y": 218,
+          "w": 235,
+          "h": 22,
+          "badge_on": "card_val_1",
+          "bind": {
+            "text": "{{value_1_detail}}"
+          },
+          "props": {
+            "font_size": 16,
+            "weight": "600",
+            "tone": "ink-muted"
+          }
+        },
+        {
+          "id": "cnt_v1",
+          "type": "counter",
+          "x": 80,
+          "y": 250,
+          "w": 235,
+          "h": 46,
+          "badge_on": "card_val_1",
+          "bind": {
+            "value": "{{value_1_amt}}"
+          },
+          "props": {
+            "format": "inr"
+          }
+        },
+        {
+          "id": "txt_v1_status",
+          "type": "text",
+          "x": 80,
+          "y": 335,
+          "w": 235,
+          "h": 24,
+          "badge_on": "card_val_1",
+          "props": {
+            "text": "Standard Declared",
+            "font_size": 16,
+            "weight": "600",
+            "tone": "ink-muted"
+          }
+        },
+        {
+          "id": "card_center",
+          "type": "card",
+          "x": 350,
+          "y": 155,
+          "w": 300,
+          "h": 235,
+          "is_container": true,
+          "props": {
+            "rx": 14,
+            "tone": "surface"
+          }
+        },
+        {
+          "id": "scale_prim",
+          "type": "scale",
+          "x": 440,
+          "y": 170,
+          "w": 120,
+          "h": 85,
+          "badge_on": "card_center",
+          "cue": "cue_scale",
+          "enter": "scale_in",
+          "props": {}
+        },
+        {
+          "id": "pill_diff",
+          "type": "pill",
+          "x": 370,
+          "y": 265,
+          "w": 260,
+          "h": 30,
+          "badge_on": "card_center",
+          "props": {
+            "text": "Balance Details",
+            "tone": "surface"
+          }
+        },
+        {
+          "id": "txt_diff",
+          "type": "text",
+          "x": 370,
+          "y": 305,
+          "w": 260,
+          "h": 24,
+          "badge_on": "card_center",
+          "bind": {
+            "text": "Less: ₹ {{diff_amt}}"
+          },
+          "props": {
+            "font_size": 16,
+            "weight": "700",
+            "tone": "ink",
+            "align": "middle"
+          }
+        },
+        {
+          "id": "arrow_lower",
+          "type": "arrow",
+          "x": 370,
+          "y": 345,
+          "w": 260,
+          "h": 26,
+          "badge_on": "card_center",
+          "cue": "cue_selected",
+          "enter": "slide_right",
+          "bind": {
+            "label": "{{decision_label}}"
+          },
+          "props": {
+            "tone": "ok",
+            "label": "Accepted"
+          }
+        },
+        {
+          "id": "card_val_2",
+          "type": "card",
+          "x": 665,
+          "y": 155,
+          "w": 275,
+          "h": 235,
+          "is_container": true,
+          "props": {
+            "rx": 14,
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "pill_v2",
+          "type": "pill",
+          "x": 685,
+          "y": 175,
+          "w": 235,
+          "h": 34,
+          "badge_on": "card_val_2",
+          "bind": {
+            "text": "{{value_2_label}}"
+          },
+          "props": {
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "txt_v2_det",
+          "type": "text",
+          "x": 685,
+          "y": 218,
+          "w": 235,
+          "h": 22,
+          "badge_on": "card_val_2",
+          "bind": {
+            "text": "{{value_2_detail}}"
+          },
+          "props": {
+            "font_size": 16,
+            "weight": "600",
+            "tone": "ink-muted"
+          }
+        },
+        {
+          "id": "cnt_v2",
+          "type": "counter",
+          "x": 685,
+          "y": 250,
+          "w": 235,
+          "h": 46,
+          "badge_on": "card_val_2",
+          "bind": {
+            "value": "{{value_2_amt}}"
+          },
+          "props": {
+            "format": "inr"
+          }
+        },
+        {
+          "id": "tick_v2",
+          "type": "tick",
+          "x": 685,
+          "y": 332,
+          "w": 32,
+          "h": 32,
+          "badge_on": "card_val_2",
+          "cue": "cue_selected",
+          "enter": "pop",
+          "props": {
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "txt_v2_status",
+          "type": "text",
+          "x": 725,
+          "y": 338,
+          "w": 195,
+          "h": 24,
+          "badge_on": "card_val_2",
+          "props": {
+            "text": "Accepted Value",
+            "font_size": 16,
+            "weight": "700",
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "panel_result",
+          "type": "card",
+          "x": 60,
+          "y": 410,
+          "w": 880,
+          "h": 65,
+          "is_container": true,
+          "cue": "cue_selected",
+          "enter": "slide_up",
+          "props": {
+            "rx": 12,
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "pill_res",
+          "type": "pill",
+          "x": 85,
+          "y": 425,
+          "w": 200,
+          "h": 36,
+          "badge_on": "panel_result",
+          "props": {
+            "text": "Accepted · Value",
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "txt_res",
+          "type": "text",
+          "x": 310,
+          "y": 432,
+          "w": 530,
+          "h": 24,
+          "badge_on": "panel_result",
+          "bind": {
+            "text": "Accepted Value Result: {{value_2_amt}} · Pass Result"
+          },
+          "props": {
+            "font_size": 17,
+            "weight": "700",
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "tick_res",
+          "type": "tick",
+          "x": 860,
+          "y": 422,
+          "w": 40,
+          "h": 40,
+          "badge_on": "panel_result",
+          "props": {
+            "tone": "ok"
+          }
+        }
+      ]
+    },
+    {
+      "id": "value_on_cutoff_date",
+      "title": "Cutoff Date Value Timeline & Comparison",
+      "category": "B. Valuation and deemed value",
+      "selection": {
+        "when_to_use": "When valuing an asset acquired prior to cutoff date with fair market value and limit ceiling.",
+        "not_for": [
+          "transfer",
+          "reinvestment"
+        ],
+        "situation_types": [
+          "valuation",
+          "timeline"
+        ],
+        "asset_types": [
+          "land",
+          "house",
+          "gold"
+        ],
+        "topics": [
+          "cutoff date",
+          "fmv substitution"
+        ],
+        "required_slots": [
+          "cutoff_label",
+          "pre_cutoff_label",
+          "post_cutoff_label",
+          "cost_amt",
+          "cutoff_val_amt",
+          "limit_val_amt"
+        ]
+      },
+      "slots": [
+        {
+          "key": "cutoff_label",
+          "label": "Cutoff Date Label",
+          "type": "text",
+          "default": "Sample Cutoff Date",
+          "max_len": 25
+        },
+        {
+          "key": "pre_cutoff_label",
+          "label": "Prior Date Label",
+          "type": "text",
+          "default": "Before Cutoff Date",
+          "max_len": 25
+        },
+        {
+          "key": "post_cutoff_label",
+          "label": "Limit Date Label",
+          "type": "text",
+          "default": "After Cutoff Date",
+          "max_len": 25
+        },
+        {
+          "key": "cost_amt",
+          "label": "Base Cost",
+          "type": "number",
+          "default": 800000,
+          "min": 10000,
+          "max": 100000000,
+          "format": "inr"
+        },
+        {
+          "key": "cutoff_val_amt",
+          "label": "Cutoff Value",
+          "type": "number",
+          "default": 2500000,
+          "min": 10000,
+          "max": 100000000,
+          "format": "inr"
+        },
+        {
+          "key": "limit_val_amt",
+          "label": "Limit Value",
+          "type": "number",
+          "default": 2800000,
+          "min": 10000,
+          "max": 100000000,
+          "format": "inr"
+        }
+      ],
+      "derived": [],
+      "duration": 14,
+      "cues": [
+        {
+          "id": "cue_timeline",
+          "label": "Cutoff Date Timeline",
+          "default_t": 0.5
+        },
+        {
+          "id": "cue_compare",
+          "label": "Cost Limit Compare",
+          "default_t": 4.5
+        },
+        {
+          "id": "cue_adopted",
+          "label": "Adopted Base Cost",
+          "default_t": 8.5
+        }
+      ],
+      "scene": [
+        {
+          "id": "header_card",
+          "type": "card",
+          "x": 60,
+          "y": 70,
+          "w": 880,
+          "h": 70,
+          "is_container": true,
+          "props": {
+            "rx": 12,
+            "tone": "accent",
+            "top_bar": "accent"
+          }
+        },
+        {
+          "id": "header_title",
+          "type": "text",
+          "x": 90,
+          "y": 90,
+          "w": 600,
+          "h": 32,
+          "badge_on": "header_card",
+          "bind": {
+            "text": "{{anim_title}}"
+          },
+          "props": {
+            "font_size": 24,
+            "weight": "900",
+            "tone": "accent",
+            "is_title": true
+          }
+        },
+        {
+          "id": "header_sub",
+          "type": "text",
+          "x": 90,
+          "y": 120,
+          "w": 600,
+          "h": 20,
+          "badge_on": "header_card",
+          "bind": {
+            "text": "Cost: {{cost_amt}} · Cutoff: {{cutoff_val_amt}}"
+          },
+          "props": {
+            "font_size": 16,
+            "weight": "600",
+            "tone": "ink-muted"
+          }
+        },
+        {
+          "id": "axis_timeline",
+          "type": "timeline_axis",
+          "x": 80,
+          "y": 155,
+          "w": 840,
+          "h": 65,
+          "props": {
+            "start_date": "Year One",
+            "end_date": "Year Ten"
+          }
+        },
+        {
+          "id": "marker_cutoff",
+          "type": "marker",
+          "x": 480,
+          "y": 145,
+          "w": 40,
+          "h": 60,
+          "cue": "cue_timeline",
+          "enter": "pop",
+          "props": {
+            "label": "Cutoff",
+            "tone": "gold"
+          }
+        },
+        {
+          "id": "card_pre",
+          "type": "card",
+          "x": 60,
+          "y": 230,
+          "w": 270,
+          "h": 160,
+          "is_container": true,
+          "props": {
+            "rx": 12,
+            "tone": "surface"
+          }
+        },
+        {
+          "id": "pill_pre",
+          "type": "pill",
+          "x": 75,
+          "y": 245,
+          "w": 240,
+          "h": 32,
+          "badge_on": "card_pre",
+          "bind": {
+            "text": "{{pre_cutoff_label}}"
+          },
+          "props": {
+            "tone": "accent"
+          }
+        },
+        {
+          "id": "txt_pre_cost",
+          "type": "text",
+          "x": 75,
+          "y": 305,
+          "w": 240,
+          "h": 26,
+          "badge_on": "card_pre",
+          "bind": {
+            "text": "Cost: {{cost_amt}}"
+          },
+          "props": {
+            "font_size": 17,
+            "weight": "800",
+            "tone": "ink"
+          }
+        },
+        {
+          "id": "txt_pre_sub",
+          "type": "text",
+          "x": 75,
+          "y": 345,
+          "w": 240,
+          "h": 22,
+          "badge_on": "card_pre",
+          "props": {
+            "text": "Base Cost Paid",
+            "font_size": 16,
+            "weight": "600",
+            "tone": "ink-muted"
+          }
+        },
+        {
+          "id": "card_cutoff",
+          "type": "card",
+          "x": 365,
+          "y": 230,
+          "w": 270,
+          "h": 160,
+          "is_container": true,
+          "props": {
+            "rx": 12,
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "pill_cutoff",
+          "type": "pill",
+          "x": 380,
+          "y": 245,
+          "w": 240,
+          "h": 32,
+          "badge_on": "card_cutoff",
+          "bind": {
+            "text": "{{cutoff_label}}"
+          },
+          "props": {
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "txt_cutoff_val",
+          "type": "text",
+          "x": 380,
+          "y": 305,
+          "w": 240,
+          "h": 26,
+          "badge_on": "card_cutoff",
+          "cue": "cue_compare",
+          "enter": "pop",
+          "bind": {
+            "text": "Value: {{cutoff_val_amt}}"
+          },
+          "props": {
+            "font_size": 17,
+            "weight": "800",
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "txt_cutoff_sub",
+          "type": "text",
+          "x": 380,
+          "y": 345,
+          "w": 240,
+          "h": 22,
+          "badge_on": "card_cutoff",
+          "props": {
+            "text": "Accepted Value Result",
+            "font_size": 16,
+            "weight": "700",
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "card_limit",
+          "type": "card",
+          "x": 670,
+          "y": 230,
+          "w": 270,
+          "h": 160,
+          "is_container": true,
+          "props": {
+            "rx": 12,
+            "tone": "surface"
+          }
+        },
+        {
+          "id": "pill_limit",
+          "type": "pill",
+          "x": 685,
+          "y": 245,
+          "w": 240,
+          "h": 32,
+          "badge_on": "card_limit",
+          "bind": {
+            "text": "{{post_cutoff_label}}"
+          },
+          "props": {
+            "tone": "gold"
+          }
+        },
+        {
+          "id": "txt_limit_val",
+          "type": "text",
+          "x": 685,
+          "y": 305,
+          "w": 240,
+          "h": 26,
+          "badge_on": "card_limit",
+          "bind": {
+            "text": "Limit: {{limit_val_amt}}"
+          },
+          "props": {
+            "font_size": 17,
+            "weight": "800",
+            "tone": "ink"
+          }
+        },
+        {
+          "id": "txt_limit_sub",
+          "type": "text",
+          "x": 685,
+          "y": 345,
+          "w": 240,
+          "h": 22,
+          "badge_on": "card_limit",
+          "props": {
+            "text": "Standard Limit Accepted",
+            "font_size": 16,
+            "weight": "600",
+            "tone": "ink-muted"
+          }
+        },
+        {
+          "id": "panel_cutoff_res",
+          "type": "card",
+          "x": 60,
+          "y": 410,
+          "w": 880,
+          "h": 65,
+          "is_container": true,
+          "cue": "cue_adopted",
+          "enter": "slide_up",
+          "props": {
+            "rx": 12,
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "pill_cut_res",
+          "type": "pill",
+          "x": 85,
+          "y": 425,
+          "w": 200,
+          "h": 36,
+          "badge_on": "panel_cutoff_res",
+          "props": {
+            "text": "Accepted · Value",
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "txt_cut_res",
+          "type": "text",
+          "x": 310,
+          "y": 432,
+          "w": 530,
+          "h": 24,
+          "badge_on": "panel_cutoff_res",
+          "bind": {
+            "text": "Accepted Base Cost: {{cutoff_val_amt}} · Cutoff Rule"
+          },
+          "props": {
+            "font_size": 17,
+            "weight": "700",
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "tick_cut_res",
+          "type": "tick",
+          "x": 860,
+          "y": 422,
+          "w": 40,
+          "h": 40,
+          "badge_on": "panel_cutoff_res",
+          "props": {
+            "tone": "ok"
+          }
+        }
+      ]
+    },
+    {
+      "id": "higher_of_cost_or_fmv",
+      "title": "Higher of Cost or Market Value",
+      "category": "B. Valuation and deemed value",
+      "batch": "B",
+      "selection": {
+        "when_to_use": "When two valuation benchmark values are compared and the higher value is adopted, with optional limit ceiling.",
+        "not_for": [
+          "lower of two values",
+          "cost indexation"
+        ],
+        "situation_types": [
+          "valuation",
+          "cutoff",
+          "comparison"
+        ],
+        "asset_types": [
+          "house",
+          "land",
+          "shares",
+          "gold"
+        ],
+        "topics": [
+          "market value",
+          "base cost",
+          "limit ceiling"
+        ],
+        "required_slots": [
+          "cost_label",
+          "cost_amt",
+          "fmv_label",
+          "fmv_amt",
+          "cap_label",
+          "cap_amt",
+          "rule_label",
+          "variant_mode"
+        ]
+      },
+      "slots": [
+        {
+          "key": "cost_label",
+          "label": "Cost Base Name",
+          "type": "text",
+          "default": "Sample Base Cost",
+          "max_len": 25
+        },
+        {
+          "key": "cost_amt",
+          "label": "Base Cost",
+          "type": "number",
+          "default": 1800000,
+          "min": 10000,
+          "max": 100000000,
+          "format": "inr"
+        },
+        {
+          "key": "fmv_label",
+          "label": "Declared Value Name",
+          "type": "text",
+          "default": "Sample Declared Value",
+          "max_len": 25
+        },
+        {
+          "key": "fmv_amt",
+          "label": "Declared Value",
+          "type": "number",
+          "default": 2500000,
+          "min": 10000,
+          "max": 100000000,
+          "format": "inr"
+        },
+        {
+          "key": "cap_label",
+          "label": "Value Limit Name",
+          "type": "text",
+          "default": "Sample Value Limit",
+          "max_len": 25
+        },
+        {
+          "key": "cap_amt",
+          "label": "Value Limit",
+          "type": "number",
+          "default": 2800000,
+          "min": 10000,
+          "max": 100000000,
+          "format": "inr"
+        },
+        {
+          "key": "rule_label",
+          "label": "Rule Label",
+          "type": "text",
+          "default": "Value Limit Rule",
+          "max_len": 25
+        },
+        {
+          "key": "variant_mode",
+          "label": "Variant Mode",
+          "type": "enum",
+          "default": "Sample Full Pass",
+          "options": [
+            "Sample Full Pass",
+            "Sample Value Limit"
+          ]
+        }
+      ],
+      "derived": [],
+      "duration": 14,
+      "cues": [
+        {
+          "id": "cue_intro",
+          "label": "Values Intro",
+          "default_t": 0.5
+        },
+        {
+          "id": "cue_compare",
+          "label": "Value Compare",
+          "default_t": 4.5
+        },
+        {
+          "id": "cue_result",
+          "label": "Result Complete",
+          "default_t": 8.5
+        }
+      ],
+      "scene": [
+        {
+          "id": "header_card",
+          "type": "card",
+          "x": 60,
+          "y": 70,
+          "w": 880,
+          "h": 70,
+          "is_container": true,
+          "props": {
+            "rx": 12,
+            "tone": "accent",
+            "top_bar": "accent"
+          }
+        },
+        {
+          "id": "header_title",
+          "type": "text",
+          "x": 90,
+          "y": 90,
+          "w": 600,
+          "h": 32,
+          "badge_on": "header_card",
+          "bind": {
+            "text": "{{anim_title}}"
+          },
+          "props": {
+            "font_size": 24,
+            "weight": "900",
+            "tone": "accent",
+            "is_title": true
+          }
+        },
+        {
+          "id": "header_sub",
+          "type": "text",
+          "x": 90,
+          "y": 120,
+          "w": 600,
+          "h": 20,
+          "badge_on": "header_card",
+          "bind": {
+            "text": "Cost: {{cost_amt}} · Limit: {{cap_amt}}"
+          },
+          "props": {
+            "font_size": 16,
+            "weight": "600",
+            "tone": "ink-muted"
+          }
+        },
+        {
+          "id": "card_cost",
+          "type": "card",
+          "x": 60,
+          "y": 155,
+          "w": 275,
+          "h": 235,
+          "is_container": true,
+          "props": {
+            "rx": 14,
+            "tone": "surface"
+          }
+        },
+        {
+          "id": "pill_cost",
+          "type": "pill",
+          "x": 85,
+          "y": 180,
+          "w": 225,
+          "h": 34,
+          "badge_on": "card_cost",
+          "bind": {
+            "text": "{{cost_label}}"
+          },
+          "props": {
+            "tone": "surface-2"
+          }
+        },
+        {
+          "id": "counter_cost",
+          "type": "counter",
+          "x": 85,
+          "y": 240,
+          "w": 225,
+          "h": 40,
+          "badge_on": "card_cost",
+          "bind": {
+            "text": "{{cost_amt}}"
+          },
+          "props": {
+            "format": "inr",
+            "font_size": 28,
+            "tone": "accent"
+          }
+        },
+        {
+          "id": "tag_cost_base",
+          "type": "text",
+          "x": 85,
+          "y": 305,
+          "w": 225,
+          "h": 22,
+          "badge_on": "card_cost",
+          "props": {
+            "text": "Declared Cost Base",
+            "font_size": 16,
+            "weight": "600",
+            "tone": "ink-muted"
+          }
+        },
+        {
+          "id": "tag_cost_step",
+          "type": "text",
+          "x": 85,
+          "y": 345,
+          "w": 225,
+          "h": 22,
+          "badge_on": "card_cost",
+          "props": {
+            "text": "Base Unit One",
+            "font_size": 16,
+            "weight": "700",
+            "tone": "ink"
+          }
+        },
+        {
+          "id": "card_compare",
+          "type": "card",
+          "x": 360,
+          "y": 155,
+          "w": 280,
+          "h": 235,
+          "is_container": true,
+          "props": {
+            "rx": 14,
+            "tone": "surface"
+          }
+        },
+        {
+          "id": "scale_comp",
+          "type": "scale",
+          "x": 460,
+          "y": 175,
+          "w": 80,
+          "h": 70,
+          "badge_on": "card_compare",
+          "props": {}
+        },
+        {
+          "id": "pill_compare",
+          "type": "pill",
+          "x": 385,
+          "y": 260,
+          "w": 230,
+          "h": 34,
+          "badge_on": "card_compare",
+          "props": {
+            "text": "Value Decision Step",
+            "tone": "gold"
+          }
+        },
+        {
+          "id": "tag_rule_note",
+          "type": "text",
+          "x": 385,
+          "y": 310,
+          "w": 230,
+          "h": 22,
+          "badge_on": "card_compare",
+          "bind": {
+            "text": "{{rule_label}}"
+          },
+          "props": {
+            "font_size": 16,
+            "weight": "700",
+            "tone": "ink"
+          }
+        },
+        {
+          "id": "tag_limit_ref",
+          "type": "text",
+          "x": 385,
+          "y": 345,
+          "w": 230,
+          "h": 22,
+          "badge_on": "card_compare",
+          "props": {
+            "text": "Limit Within Range",
+            "font_size": 16,
+            "weight": "600",
+            "tone": "ink-muted"
+          }
+        },
+        {
+          "id": "card_fmv",
+          "type": "card",
+          "x": 665,
+          "y": 155,
+          "w": 275,
+          "h": 235,
+          "is_container": true,
+          "props": {
+            "rx": 14,
+            "tone": "ok-soft"
+          }
+        },
+        {
+          "id": "pill_fmv",
+          "type": "pill",
+          "x": 690,
+          "y": 180,
+          "w": 225,
+          "h": 34,
+          "badge_on": "card_fmv",
+          "bind": {
+            "text": "{{fmv_label}}"
+          },
+          "props": {
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "counter_fmv",
+          "type": "counter",
+          "x": 690,
+          "y": 240,
+          "w": 225,
+          "h": 40,
+          "badge_on": "card_fmv",
+          "bind": {
+            "text": "{{fmv_amt}}"
+          },
+          "props": {
+            "format": "inr",
+            "font_size": 28,
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "tag_fmv_acc",
+          "type": "text",
+          "x": 690,
+          "y": 305,
+          "w": 225,
+          "h": 22,
+          "badge_on": "card_fmv",
+          "props": {
+            "text": "Accepted Value Result",
+            "font_size": 16,
+            "weight": "700",
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "tag_fmv_step",
+          "type": "text",
+          "x": 690,
+          "y": 345,
+          "w": 225,
+          "h": 22,
+          "badge_on": "card_fmv",
+          "props": {
+            "text": "Value Unit Two",
+            "font_size": 16,
+            "weight": "600",
+            "tone": "ink-muted"
+          }
+        },
+        {
+          "id": "pass_banner",
+          "type": "card",
+          "x": 60,
+          "y": 410,
+          "w": 880,
+          "h": 65,
+          "is_container": true,
+          "props": {
+            "rx": 12,
+            "tone": "ok-soft"
+          }
+        },
+        {
+          "id": "pass_pill",
+          "type": "pill",
+          "x": 85,
+          "y": 425,
+          "w": 170,
+          "h": 34,
+          "badge_on": "pass_banner",
+          "props": {
+            "text": "Accepted · Value",
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "pass_text",
+          "type": "text",
+          "x": 275,
+          "y": 432,
+          "w": 580,
+          "h": 24,
+          "badge_on": "pass_banner",
+          "bind": {
+            "text": "Accepted Value Result: {{fmv_amt}} · Complete"
+          },
+          "props": {
+            "font_size": 17,
+            "weight": "800",
+            "tone": "ink"
+          }
+        },
+        {
+          "id": "pass_tick",
+          "type": "tick",
+          "x": 900,
+          "y": 426,
+          "w": 32,
+          "h": 32,
+          "badge_on": "pass_banner",
+          "props": {
+            "tone": "ok"
+          }
+        }
+      ]
+    },
+    {
+      "id": "indexed_cost",
+      "title": "Cost Ratio Ladder & Value Growth",
+      "category": "B. Valuation and deemed value",
+      "batch": "B",
+      "selection": {
+        "when_to_use": "When an asset cost base grows across tax years via statutory index multiplier ratio.",
+        "not_for": [
+          "short period assets",
+          "depreciable assets"
+        ],
+        "situation_types": [
+          "computation",
+          "valuation",
+          "growth"
+        ],
+        "asset_types": [
+          "house",
+          "land",
+          "gold"
+        ],
+        "topics": [
+          "indexed cost",
+          "index ratio",
+          "year multiplier"
+        ],
+        "required_slots": [
+          "asset_label",
+          "cost_amt",
+          "acq_year_label",
+          "cii_acq_val",
+          "transfer_year_label",
+          "cii_transfer_val",
+          "growth_amt",
+          "indexed_amt"
+        ]
+      },
+      "slots": [
+        {
+          "key": "asset_label",
+          "label": "Asset Name",
+          "type": "text",
+          "default": "Sample Base Asset",
+          "max_len": 25
+        },
+        {
+          "key": "cost_amt",
+          "label": "Base Cost",
+          "type": "number",
+          "default": 1200000,
+          "min": 10000,
+          "max": 100000000,
+          "format": "inr"
+        },
+        {
+          "key": "acq_year_label",
+          "label": "Base Year Date",
+          "type": "text",
+          "default": "Year One Date"
+        },
+        {
+          "key": "cii_acq_val",
+          "label": "Base Year Rate",
+          "type": "number",
+          "default": 117
+        },
+        {
+          "key": "transfer_year_label",
+          "label": "Transfer Year Date",
+          "type": "text",
+          "default": "Year Ten Date"
+        },
+        {
+          "key": "cii_transfer_val",
+          "label": "Transfer Year Rate",
+          "type": "number",
+          "default": 363
+        },
+        {
+          "key": "growth_amt",
+          "label": "Extra Growth Amount",
+          "type": "number",
+          "default": 2523077,
+          "min": 0,
+          "max": 100000000,
+          "format": "inr"
+        },
+        {
+          "key": "indexed_amt",
+          "label": "Net Indexed Cost",
+          "type": "number",
+          "default": 3723077,
+          "min": 0,
+          "max": 100000000,
+          "format": "inr"
+        }
+      ],
+      "derived": [],
+      "duration": 14,
+      "cues": [
+        {
+          "id": "cue_base_cost",
+          "label": "Base Cost Unit",
+          "default_t": 0.5
+        },
+        {
+          "id": "cue_index_ladder",
+          "label": "Ratio Ladder Step",
+          "default_t": 4.5
+        },
+        {
+          "id": "cue_indexed_total",
+          "label": "Indexed Cost Total",
+          "default_t": 8.5
+        }
+      ],
+      "scene": [
+        {
+          "id": "header_card",
+          "type": "card",
+          "x": 60,
+          "y": 70,
+          "w": 880,
+          "h": 70,
+          "is_container": true,
+          "props": {
+            "rx": 12,
+            "tone": "accent",
+            "top_bar": "accent"
+          }
+        },
+        {
+          "id": "header_title",
+          "type": "text",
+          "x": 90,
+          "y": 90,
+          "w": 600,
+          "h": 32,
+          "badge_on": "header_card",
+          "bind": {
+            "text": "{{anim_title}}"
+          },
+          "props": {
+            "font_size": 24,
+            "weight": "900",
+            "tone": "accent",
+            "is_title": true
+          }
+        },
+        {
+          "id": "header_sub",
+          "type": "text",
+          "x": 90,
+          "y": 120,
+          "w": 600,
+          "h": 20,
+          "badge_on": "header_card",
+          "bind": {
+            "text": "Asset: {{asset_label}} · Base: {{cost_amt}}"
+          },
+          "props": {
+            "font_size": 16,
+            "weight": "600",
+            "tone": "ink-muted"
+          }
+        },
+        {
+          "id": "card_base",
+          "type": "card",
+          "x": 60,
+          "y": 155,
+          "w": 280,
+          "h": 235,
+          "is_container": true,
+          "props": {
+            "rx": 14,
+            "tone": "surface"
+          }
+        },
+        {
+          "id": "icon_base",
+          "type": "house",
+          "x": 80,
+          "y": 175,
+          "w": 50,
+          "h": 50,
+          "badge_on": "card_base",
+          "props": {}
+        },
+        {
+          "id": "pill_base",
+          "type": "pill",
+          "x": 140,
+          "y": 185,
+          "w": 180,
+          "h": 32,
+          "badge_on": "card_base",
+          "props": {
+            "text": "Base Cost Unit",
+            "tone": "accent"
+          }
+        },
+        {
+          "id": "counter_base",
+          "type": "counter",
+          "x": 80,
+          "y": 245,
+          "w": 240,
+          "h": 38,
+          "badge_on": "card_base",
+          "bind": {
+            "text": "{{cost_amt}}"
+          },
+          "props": {
+            "format": "inr",
+            "font_size": 26,
+            "tone": "accent"
+          }
+        },
+        {
+          "id": "tag_base_year",
+          "type": "text",
+          "x": 80,
+          "y": 300,
+          "w": 240,
+          "h": 22,
+          "badge_on": "card_base",
+          "bind": {
+            "text": "Date: {{acq_year_label}}"
+          },
+          "props": {
+            "font_size": 16,
+            "weight": "600",
+            "tone": "ink-muted"
+          }
+        },
+        {
+          "id": "tag_base_ratio",
+          "type": "text",
+          "x": 80,
+          "y": 335,
+          "w": 240,
+          "h": 22,
+          "badge_on": "card_base",
+          "bind": {
+            "text": "Base Rate: {{cii_acq_val}}"
+          },
+          "props": {
+            "font_size": 16,
+            "weight": "700",
+            "tone": "ink"
+          }
+        },
+        {
+          "id": "card_ladder",
+          "type": "card",
+          "x": 365,
+          "y": 155,
+          "w": 270,
+          "h": 235,
+          "is_container": true,
+          "props": {
+            "rx": 14,
+            "tone": "surface"
+          }
+        },
+        {
+          "id": "ladder_pill1",
+          "type": "pill",
+          "x": 385,
+          "y": 180,
+          "w": 230,
+          "h": 34,
+          "badge_on": "card_ladder",
+          "props": {
+            "text": "Ladder Step One",
+            "tone": "surface-2"
+          }
+        },
+        {
+          "id": "ladder_pill2",
+          "type": "pill",
+          "x": 385,
+          "y": 230,
+          "w": 230,
+          "h": 34,
+          "badge_on": "card_ladder",
+          "props": {
+            "text": "Ladder Tier Two",
+            "tone": "gold"
+          }
+        },
+        {
+          "id": "counter_growth",
+          "type": "counter",
+          "x": 385,
+          "y": 280,
+          "w": 230,
+          "h": 38,
+          "badge_on": "card_ladder",
+          "bind": {
+            "text": "{{growth_amt}}"
+          },
+          "props": {
+            "format": "inr",
+            "font_size": 24,
+            "tone": "gold"
+          }
+        },
+        {
+          "id": "tag_ladder_step",
+          "type": "text",
+          "x": 385,
+          "y": 335,
+          "w": 230,
+          "h": 22,
+          "badge_on": "card_ladder",
+          "props": {
+            "text": "Ladder Step Complete",
+            "font_size": 16,
+            "weight": "700",
+            "tone": "ink"
+          }
+        },
+        {
+          "id": "card_result",
+          "type": "card",
+          "x": 660,
+          "y": 155,
+          "w": 280,
+          "h": 235,
+          "is_container": true,
+          "props": {
+            "rx": 14,
+            "tone": "ok-soft"
+          }
+        },
+        {
+          "id": "pill_res",
+          "type": "pill",
+          "x": 685,
+          "y": 180,
+          "w": 230,
+          "h": 34,
+          "badge_on": "card_result",
+          "props": {
+            "text": "Total Cost Result",
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "counter_res",
+          "type": "counter",
+          "x": 685,
+          "y": 240,
+          "w": 230,
+          "h": 44,
+          "badge_on": "card_result",
+          "bind": {
+            "text": "{{indexed_amt}}"
+          },
+          "props": {
+            "format": "inr",
+            "font_size": 30,
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "tag_trans_year",
+          "type": "text",
+          "x": 685,
+          "y": 300,
+          "w": 230,
+          "h": 22,
+          "badge_on": "card_result",
+          "bind": {
+            "text": "Date: {{transfer_year_label}}"
+          },
+          "props": {
+            "font_size": 16,
+            "weight": "600",
+            "tone": "ink-muted"
+          }
+        },
+        {
+          "id": "tag_trans_ratio",
+          "type": "text",
+          "x": 685,
+          "y": 335,
+          "w": 230,
+          "h": 22,
+          "badge_on": "card_result",
+          "bind": {
+            "text": "Transfer Rate: {{cii_transfer_val}}"
+          },
+          "props": {
+            "font_size": 16,
+            "weight": "700",
+            "tone": "ink"
+          }
+        },
+        {
+          "id": "pass_banner",
+          "type": "card",
+          "x": 60,
+          "y": 410,
+          "w": 880,
+          "h": 65,
+          "is_container": true,
+          "props": {
+            "rx": 12,
+            "tone": "ok-soft"
+          }
+        },
+        {
+          "id": "pass_pill",
+          "type": "pill",
+          "x": 85,
+          "y": 425,
+          "w": 170,
+          "h": 34,
+          "badge_on": "pass_banner",
+          "props": {
+            "text": "Cost · Step",
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "pass_text",
+          "type": "text",
+          "x": 275,
+          "y": 432,
+          "w": 580,
+          "h": 24,
+          "badge_on": "pass_banner",
+          "bind": {
+            "text": "Total Cost Result: {{indexed_amt}} · Complete"
+          },
+          "props": {
+            "font_size": 17,
+            "weight": "800",
+            "tone": "ink"
+          }
+        },
+        {
+          "id": "pass_tick",
+          "type": "tick",
+          "x": 900,
+          "y": 426,
+          "w": 32,
+          "h": 32,
+          "badge_on": "pass_banner",
+          "props": {
+            "tone": "ok"
+          }
+        }
+      ]
+    },
+    {
+      "id": "previous_owner_cost",
+      "title": "Previous Owner Cost Carryover",
+      "category": "B. Valuation and deemed value",
+      "batch": "B",
+      "selection": {
+        "when_to_use": "When cost incurred by an original owner travels across a succession chain to become the current holder cost base.",
+        "not_for": [
+          "direct market purchase",
+          "corporate split"
+        ],
+        "situation_types": [
+          "transfer",
+          "valuation",
+          "carryover"
+        ],
+        "asset_types": [
+          "house",
+          "land",
+          "shares",
+          "gold"
+        ],
+        "topics": [
+          "previous cost",
+          "chain transfer",
+          "succession"
+        ],
+        "required_slots": [
+          "party_1_label",
+          "party_2_label",
+          "party_3_label",
+          "asset_label",
+          "cost_amt",
+          "transfer_year",
+          "result_label"
+        ]
+      },
+      "slots": [
+        {
+          "key": "party_1_label",
+          "label": "Party One Name",
+          "type": "text",
+          "default": "Sample Party One",
+          "max_len": 25
+        },
+        {
+          "key": "party_2_label",
+          "label": "Party Two Name",
+          "type": "text",
+          "default": "Sample Party Two",
+          "max_len": 25
+        },
+        {
+          "key": "party_3_label",
+          "label": "Party Three Name",
+          "type": "text",
+          "default": "Sample Party Three",
+          "max_len": 25
+        },
+        {
+          "key": "asset_label",
+          "label": "Asset Name",
+          "type": "text",
+          "default": "Sample Base Asset",
+          "max_len": 25
+        },
+        {
+          "key": "cost_amt",
+          "label": "Base Cost",
+          "type": "number",
+          "default": 1500000,
+          "min": 10000,
+          "max": 100000000,
+          "format": "inr"
+        },
+        {
+          "key": "transfer_year",
+          "label": "Transfer Date Year",
+          "type": "text",
+          "default": "Year One Date"
+        },
+        {
+          "key": "result_label",
+          "label": "Result Status",
+          "type": "text",
+          "default": "Cost Transfer Accepted",
+          "max_len": 25
+        }
+      ],
+      "derived": [],
+      "duration": 14,
+      "cues": [
+        {
+          "id": "cue_owner_cost",
+          "label": "Original Owner Cost",
+          "default_t": 0.5
+        },
+        {
+          "id": "cue_transfer_path",
+          "label": "Chain Flow Conduit",
+          "default_t": 4.5
+        },
+        {
+          "id": "cue_deemed_cost_lock",
+          "label": "Current Holder Locked",
+          "default_t": 8.5
+        }
+      ],
+      "scene": [
+        {
+          "id": "header_card",
+          "type": "card",
+          "x": 60,
+          "y": 70,
+          "w": 880,
+          "h": 70,
+          "is_container": true,
+          "props": {
+            "rx": 12,
+            "tone": "accent",
+            "top_bar": "accent"
+          }
+        },
+        {
+          "id": "header_title",
+          "type": "text",
+          "x": 90,
+          "y": 90,
+          "w": 600,
+          "h": 32,
+          "badge_on": "header_card",
+          "bind": {
+            "text": "{{anim_title}}"
+          },
+          "props": {
+            "font_size": 24,
+            "weight": "900",
+            "tone": "accent",
+            "is_title": true
+          }
+        },
+        {
+          "id": "header_sub",
+          "type": "text",
+          "x": 90,
+          "y": 120,
+          "w": 600,
+          "h": 20,
+          "badge_on": "header_card",
+          "bind": {
+            "text": "Asset: {{asset_label}} · Cost: {{cost_amt}}"
+          },
+          "props": {
+            "font_size": 16,
+            "weight": "600",
+            "tone": "ink-muted"
+          }
+        },
+        {
+          "id": "card_p1",
+          "type": "card",
+          "x": 60,
+          "y": 155,
+          "w": 260,
+          "h": 235,
+          "is_container": true,
+          "props": {
+            "rx": 14,
+            "tone": "surface"
+          }
+        },
+        {
+          "id": "avatar_p1",
+          "type": "person",
+          "x": 75,
+          "y": 175,
+          "w": 100,
+          "h": 120,
+          "badge_on": "card_p1",
+          "props": {
+            "name": "Party",
+            "role": "Unit One"
+          }
+        },
+        {
+          "id": "pill_p1",
+          "type": "pill",
+          "x": 180,
+          "y": 190,
+          "w": 130,
+          "h": 32,
+          "badge_on": "card_p1",
+          "bind": {
+            "text": "{{party_1_label}}"
+          },
+          "props": {
+            "tone": "surface-2"
+          }
+        },
+        {
+          "id": "p1_cost_tag",
+          "type": "text",
+          "x": 75,
+          "y": 310,
+          "w": 230,
+          "h": 22,
+          "badge_on": "card_p1",
+          "bind": {
+            "text": "Base: {{cost_amt}}"
+          },
+          "props": {
+            "font_size": 16,
+            "weight": "700",
+            "tone": "accent"
+          }
+        },
+        {
+          "id": "p1_step_tag",
+          "type": "text",
+          "x": 75,
+          "y": 345,
+          "w": 230,
+          "h": 22,
+          "badge_on": "card_p1",
+          "props": {
+            "text": "Base Cost Unit",
+            "font_size": 16,
+            "weight": "600",
+            "tone": "ink-muted"
+          }
+        },
+        {
+          "id": "card_chain",
+          "type": "card",
+          "x": 340,
+          "y": 155,
+          "w": 280,
+          "h": 235,
+          "is_container": true,
+          "props": {
+            "rx": 14,
+            "tone": "surface"
+          }
+        },
+        {
+          "id": "pill_mid",
+          "type": "pill",
+          "x": 365,
+          "y": 180,
+          "w": 230,
+          "h": 32,
+          "badge_on": "card_chain",
+          "bind": {
+            "text": "{{party_2_label}}"
+          },
+          "props": {
+            "tone": "gold"
+          }
+        },
+        {
+          "id": "arrow_mid1",
+          "type": "arrow",
+          "x": 360,
+          "y": 230,
+          "w": 90,
+          "h": 30,
+          "badge_on": "card_chain",
+          "props": {
+            "direction": "right",
+            "tone": "accent"
+          }
+        },
+        {
+          "id": "coin_token",
+          "type": "coin",
+          "x": 475,
+          "y": 225,
+          "w": 40,
+          "h": 40,
+          "badge_on": "card_chain",
+          "props": {}
+        },
+        {
+          "id": "arrow_mid2",
+          "type": "arrow",
+          "x": 530,
+          "y": 230,
+          "w": 80,
+          "h": 30,
+          "badge_on": "card_chain",
+          "props": {
+            "direction": "right",
+            "tone": "accent"
+          }
+        },
+        {
+          "id": "chain_tag",
+          "type": "text",
+          "x": 365,
+          "y": 295,
+          "w": 230,
+          "h": 22,
+          "badge_on": "card_chain",
+          "props": {
+            "text": "Gift Transfer Flow",
+            "font_size": 16,
+            "weight": "700",
+            "tone": "ink"
+          }
+        },
+        {
+          "id": "year_tag",
+          "type": "text",
+          "x": 365,
+          "y": 335,
+          "w": 230,
+          "h": 22,
+          "badge_on": "card_chain",
+          "bind": {
+            "text": "Date: {{transfer_year}}"
+          },
+          "props": {
+            "font_size": 16,
+            "weight": "600",
+            "tone": "ink-muted"
+          }
+        },
+        {
+          "id": "card_p3",
+          "type": "card",
+          "x": 640,
+          "y": 155,
+          "w": 300,
+          "h": 235,
+          "is_container": true,
+          "props": {
+            "rx": 14,
+            "tone": "ok-soft"
+          }
+        },
+        {
+          "id": "avatar_p3",
+          "type": "person",
+          "x": 655,
+          "y": 175,
+          "w": 100,
+          "h": 120,
+          "badge_on": "card_p3",
+          "props": {
+            "name": "Party",
+            "role": "Unit Two"
+          }
+        },
+        {
+          "id": "pill_p3",
+          "type": "pill",
+          "x": 760,
+          "y": 190,
+          "w": 160,
+          "h": 32,
+          "badge_on": "card_p3",
+          "bind": {
+            "text": "{{party_3_label}}"
+          },
+          "props": {
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "counter_deemed",
+          "type": "counter",
+          "x": 655,
+          "y": 305,
+          "w": 265,
+          "h": 38,
+          "badge_on": "card_p3",
+          "bind": {
+            "text": "{{cost_amt}}"
+          },
+          "props": {
+            "format": "inr",
+            "font_size": 26,
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "p3_lock_tag",
+          "type": "text",
+          "x": 655,
+          "y": 345,
+          "w": 265,
+          "h": 22,
+          "badge_on": "card_p3",
+          "props": {
+            "text": "Accepted Cost Base",
+            "font_size": 16,
+            "weight": "700",
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "cost_packet",
+          "type": "money_bag",
+          "x": 180,
+          "y": 240,
+          "w": 50,
+          "h": 50,
+          "props": {
+            "show_label": false
+          },
+          "motion": {
+            "type": "move_to",
+            "to_x": 780,
+            "to_y": 240,
+            "start_cue": "cue_transfer_path",
+            "end_cue": "cue_deemed_cost_lock"
+          }
+        },
+        {
+          "id": "pass_banner",
+          "type": "card",
+          "x": 60,
+          "y": 410,
+          "w": 880,
+          "h": 65,
+          "is_container": true,
+          "props": {
+            "rx": 12,
+            "tone": "ok-soft"
+          }
+        },
+        {
+          "id": "pass_pill",
+          "type": "pill",
+          "x": 85,
+          "y": 425,
+          "w": 170,
+          "h": 34,
+          "badge_on": "pass_banner",
+          "props": {
+            "text": "Pass · Cost",
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "pass_text",
+          "type": "text",
+          "x": 275,
+          "y": 432,
+          "w": 580,
+          "h": 24,
+          "badge_on": "pass_banner",
+          "bind": {
+            "text": "Accepted Cost Base: {{cost_amt}} · {{result_label}}"
+          },
+          "props": {
+            "font_size": 17,
+            "weight": "800",
+            "tone": "ink"
+          }
+        },
+        {
+          "id": "pass_tick",
+          "type": "tick",
+          "x": 900,
+          "y": 426,
+          "w": 32,
+          "h": 32,
+          "badge_on": "pass_banner",
+          "props": {
+            "tone": "ok"
+          }
+        }
+      ]
+    },
+    {
+      "id": "holding_period_clock",
+      "title": "Holding Period Clock & Months Stack",
+      "category": "B. Valuation and deemed value",
+      "batch": "B",
+      "selection": {
+        "when_to_use": "When months held by previous owner and current owner are combined to determine short or long status against statutory threshold.",
+        "not_for": [
+          "rate calculation",
+          "loss set off"
+        ],
+        "situation_types": [
+          "timeline",
+          "valuation",
+          "classification"
+        ],
+        "asset_types": [
+          "house",
+          "land",
+          "shares",
+          "gold"
+        ],
+        "topics": [
+          "holding period",
+          "months counted",
+          "period threshold"
+        ],
+        "required_slots": [
+          "threshold_months",
+          "months_prev",
+          "months_curr",
+          "asset_label",
+          "variant_mode"
+        ]
+      },
+      "slots": [
+        {
+          "key": "threshold_months",
+          "label": "Period Limit Months",
+          "type": "number",
+          "default": 24
+        },
+        {
+          "key": "months_prev",
+          "label": "Previous Months",
+          "type": "number",
+          "default": 18
+        },
+        {
+          "key": "months_curr",
+          "label": "Current Months",
+          "type": "number",
+          "default": 14
+        },
+        {
+          "key": "asset_label",
+          "label": "Asset Name",
+          "type": "text",
+          "default": "Sample Base Asset",
+          "max_len": 25
+        },
+        {
+          "key": "variant_mode",
+          "label": "Variant Mode",
+          "type": "enum",
+          "default": "Sample Full Pass",
+          "options": [
+            "Sample Full Pass",
+            "Sample Partial Range"
+          ]
+        }
+      ],
+      "derived": [],
+      "duration": 14,
+      "cues": [
+        {
+          "id": "cue_prev_months",
+          "label": "Previous Holding Months",
+          "default_t": 0.5
+        },
+        {
+          "id": "cue_current_months",
+          "label": "Current Holding Months",
+          "default_t": 4.5
+        },
+        {
+          "id": "cue_classify_result",
+          "label": "Period Decision Result",
+          "default_t": 8.5
+        }
+      ],
+      "scene": [
+        {
+          "id": "header_card",
+          "type": "card",
+          "x": 60,
+          "y": 70,
+          "w": 880,
+          "h": 70,
+          "is_container": true,
+          "props": {
+            "rx": 12,
+            "tone": "accent",
+            "top_bar": "accent"
+          }
+        },
+        {
+          "id": "header_title",
+          "type": "text",
+          "x": 90,
+          "y": 90,
+          "w": 600,
+          "h": 32,
+          "badge_on": "header_card",
+          "bind": {
+            "text": "{{anim_title}}"
+          },
+          "props": {
+            "font_size": 24,
+            "weight": "900",
+            "tone": "accent",
+            "is_title": true
+          }
+        },
+        {
+          "id": "header_sub",
+          "type": "text",
+          "x": 90,
+          "y": 120,
+          "w": 600,
+          "h": 20,
+          "badge_on": "header_card",
+          "bind": {
+            "text": "Asset: {{asset_label}} · Limit: {{threshold_months}} Months"
+          },
+          "props": {
+            "font_size": 16,
+            "weight": "600",
+            "tone": "ink-muted"
+          }
+        },
+        {
+          "id": "card_prev",
+          "type": "card",
+          "x": 60,
+          "y": 155,
+          "w": 280,
+          "h": 235,
+          "is_container": true,
+          "props": {
+            "rx": 14,
+            "tone": "surface"
+          }
+        },
+        {
+          "id": "clock_prev",
+          "type": "clock",
+          "x": 80,
+          "y": 175,
+          "w": 50,
+          "h": 50,
+          "badge_on": "card_prev",
+          "props": {}
+        },
+        {
+          "id": "pill_prev",
+          "type": "pill",
+          "x": 140,
+          "y": 185,
+          "w": 180,
+          "h": 32,
+          "badge_on": "card_prev",
+          "props": {
+            "text": "Before Period",
+            "tone": "surface-2"
+          }
+        },
+        {
+          "id": "counter_prev",
+          "type": "counter",
+          "x": 80,
+          "y": 245,
+          "w": 240,
+          "h": 40,
+          "badge_on": "card_prev",
+          "bind": {
+            "text": "{{months_prev}}"
+          },
+          "props": {
+            "format": "plain",
+            "font_size": 28,
+            "tone": "accent"
+          }
+        },
+        {
+          "id": "tag_prev_owner",
+          "type": "text",
+          "x": 80,
+          "y": 305,
+          "w": 240,
+          "h": 22,
+          "badge_on": "card_prev",
+          "props": {
+            "text": "Party One Period",
+            "font_size": 16,
+            "weight": "600",
+            "tone": "ink-muted"
+          }
+        },
+        {
+          "id": "tag_prev_step",
+          "type": "text",
+          "x": 80,
+          "y": 345,
+          "w": 240,
+          "h": 22,
+          "badge_on": "card_prev",
+          "props": {
+            "text": "Step One Complete",
+            "font_size": 16,
+            "weight": "700",
+            "tone": "ink"
+          }
+        },
+        {
+          "id": "card_stack",
+          "type": "card",
+          "x": 360,
+          "y": 155,
+          "w": 280,
+          "h": 235,
+          "is_container": true,
+          "props": {
+            "rx": 14,
+            "tone": "surface"
+          }
+        },
+        {
+          "id": "pill_curr",
+          "type": "pill",
+          "x": 385,
+          "y": 180,
+          "w": 230,
+          "h": 32,
+          "badge_on": "card_stack",
+          "props": {
+            "text": "Party Two Period",
+            "tone": "accent"
+          }
+        },
+        {
+          "id": "counter_curr",
+          "type": "counter",
+          "x": 385,
+          "y": 240,
+          "w": 230,
+          "h": 40,
+          "badge_on": "card_stack",
+          "bind": {
+            "text": "{{months_curr}}"
+          },
+          "props": {
+            "format": "plain",
+            "font_size": 28,
+            "tone": "accent"
+          }
+        },
+        {
+          "id": "tag_threshold_gate",
+          "type": "text",
+          "x": 385,
+          "y": 305,
+          "w": 230,
+          "h": 22,
+          "badge_on": "card_stack",
+          "bind": {
+            "text": "Limit Gate: {{threshold_months}} Months"
+          },
+          "props": {
+            "font_size": 16,
+            "weight": "700",
+            "tone": "ink"
+          }
+        },
+        {
+          "id": "tag_stack_step",
+          "type": "text",
+          "x": 385,
+          "y": 345,
+          "w": 230,
+          "h": 22,
+          "badge_on": "card_stack",
+          "props": {
+            "text": "Step Two Complete",
+            "font_size": 16,
+            "weight": "600",
+            "tone": "ink-muted"
+          }
+        },
+        {
+          "id": "card_decision",
+          "type": "card",
+          "x": 660,
+          "y": 155,
+          "w": 280,
+          "h": 235,
+          "is_container": true,
+          "props": {
+            "rx": 14,
+            "tone": "ok-soft"
+          }
+        },
+        {
+          "id": "pill_dec",
+          "type": "pill",
+          "x": 685,
+          "y": 180,
+          "w": 230,
+          "h": 34,
+          "badge_on": "card_decision",
+          "bind": {
+            "text": "{{variant_mode}}"
+          },
+          "props": {
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "gate_icon",
+          "type": "gate",
+          "x": 770,
+          "y": 230,
+          "w": 60,
+          "h": 60,
+          "badge_on": "card_decision",
+          "props": {
+            "state": "open"
+          }
+        },
+        {
+          "id": "res_status_tag",
+          "type": "text",
+          "x": 685,
+          "y": 305,
+          "w": 230,
+          "h": 22,
+          "badge_on": "card_decision",
+          "props": {
+            "text": "Period Within Range",
+            "font_size": 16,
+            "weight": "700",
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "res_rule_tag",
+          "type": "text",
+          "x": 685,
+          "y": 345,
+          "w": 230,
+          "h": 22,
+          "badge_on": "card_decision",
+          "props": {
+            "text": "Status: Accepted",
+            "font_size": 16,
+            "weight": "600",
+            "tone": "ink-muted"
+          }
+        },
+        {
+          "id": "pass_banner",
+          "type": "card",
+          "x": 60,
+          "y": 410,
+          "w": 880,
+          "h": 65,
+          "is_container": true,
+          "props": {
+            "rx": 12,
+            "tone": "ok-soft"
+          }
+        },
+        {
+          "id": "pass_pill",
+          "type": "pill",
+          "x": 85,
+          "y": 425,
+          "w": 170,
+          "h": 34,
+          "badge_on": "pass_banner",
+          "props": {
+            "text": "Period · Status",
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "pass_text",
+          "type": "text",
+          "x": 275,
+          "y": 432,
+          "w": 580,
+          "h": 24,
+          "badge_on": "pass_banner",
+          "bind": {
+            "text": "Period Status: {{variant_mode}} · Accepted"
+          },
+          "props": {
+            "font_size": 17,
+            "weight": "800",
+            "tone": "ink"
+          }
+        },
+        {
+          "id": "pass_tick",
+          "type": "tick",
+          "x": 900,
+          "y": 426,
+          "w": 32,
+          "h": 32,
+          "badge_on": "pass_banner",
+          "props": {
+            "tone": "ok"
+          }
+        }
+      ]
+    },
+    {
+      "id": "two_taxpayers_side_by_side",
+      "title": "Two Taxpayers Side by Side Computation",
+      "category": "C. Computation",
+      "batch": "B",
+      "selection": {
+        "when_to_use": "When two taxpayers, co-owners, or dual computation options are computed in parallel to compare net results.",
+        "not_for": [
+          "single taxpayer ledger",
+          "corporate liquidation"
+        ],
+        "situation_types": [
+          "computation",
+          "comparison",
+          "co_ownership"
+        ],
+        "asset_types": [
+          "house",
+          "land",
+          "shares",
+          "business"
+        ],
+        "topics": [
+          "parallel computation",
+          "two taxpayers",
+          "net comparison"
+        ],
+        "required_slots": [
+          "taxpayer_1_name",
+          "taxpayer_2_name",
+          "gross_1_val",
+          "cost_1_val",
+          "net_1_val",
+          "gross_2_val",
+          "cost_2_val",
+          "net_2_val",
+          "diff_val"
+        ]
+      },
+      "slots": [
+        {
+          "key": "taxpayer_1_name",
+          "label": "Party One Name",
+          "type": "text",
+          "default": "Sample Party One",
+          "max_len": 25
+        },
+        {
+          "key": "taxpayer_2_name",
+          "label": "Party Two Name",
+          "type": "text",
+          "default": "Sample Party Two",
+          "max_len": 25
+        },
+        {
+          "key": "gross_1_val",
+          "label": "Party One Gross Amount",
+          "type": "number",
+          "default": 6000000,
+          "min": 10000,
+          "max": 100000000,
+          "format": "inr"
+        },
+        {
+          "key": "cost_1_val",
+          "label": "Party One Cost Amount",
+          "type": "number",
+          "default": 2500000,
+          "min": 10000,
+          "max": 100000000,
+          "format": "inr"
+        },
+        {
+          "key": "net_1_val",
+          "label": "Party One Net Result",
+          "type": "number",
+          "default": 3500000,
+          "min": 10000,
+          "max": 100000000,
+          "format": "inr"
+        },
+        {
+          "key": "gross_2_val",
+          "label": "Party Two Gross Amount",
+          "type": "number",
+          "default": 4000000,
+          "min": 10000,
+          "max": 100000000,
+          "format": "inr"
+        },
+        {
+          "key": "cost_2_val",
+          "label": "Party Two Cost Amount",
+          "type": "number",
+          "default": 1800000,
+          "min": 10000,
+          "max": 100000000,
+          "format": "inr"
+        },
+        {
+          "key": "net_2_val",
+          "label": "Party Two Net Result",
+          "type": "number",
+          "default": 2200000,
+          "min": 10000,
+          "max": 100000000,
+          "format": "inr"
+        },
+        {
+          "key": "diff_val",
+          "label": "Net Difference Delta",
+          "type": "number",
+          "default": 1300000,
+          "min": 0,
+          "max": 100000000,
+          "format": "inr"
+        }
+      ],
+      "derived": [],
+      "duration": 14,
+      "cues": [
+        {
+          "id": "cue_intro_taxpayers",
+          "label": "Taxpayers Intro",
+          "default_t": 0.5
+        },
+        {
+          "id": "cue_compute_parallel",
+          "label": "Parallel Computation",
+          "default_t": 4.5
+        },
+        {
+          "id": "cue_compare_summary",
+          "label": "Compare Summary Result",
+          "default_t": 8.5
+        }
+      ],
+      "scene": [
+        {
+          "id": "header_card",
+          "type": "card",
+          "x": 60,
+          "y": 70,
+          "w": 880,
+          "h": 70,
+          "is_container": true,
+          "props": {
+            "rx": 12,
+            "tone": "accent",
+            "top_bar": "accent"
+          }
+        },
+        {
+          "id": "header_title",
+          "type": "text",
+          "x": 90,
+          "y": 90,
+          "w": 600,
+          "h": 32,
+          "badge_on": "header_card",
+          "bind": {
+            "text": "{{anim_title}}"
+          },
+          "props": {
+            "font_size": 24,
+            "weight": "900",
+            "tone": "accent",
+            "is_title": true
+          }
+        },
+        {
+          "id": "header_sub",
+          "type": "text",
+          "x": 90,
+          "y": 120,
+          "w": 600,
+          "h": 20,
+          "badge_on": "header_card",
+          "bind": {
+            "text": "Ledger: {{taxpayer_1_name}} · {{taxpayer_2_name}}"
+          },
+          "props": {
+            "font_size": 16,
+            "weight": "600",
+            "tone": "ink-muted"
+          }
+        },
+        {
+          "id": "card_t1",
+          "type": "card",
+          "x": 60,
+          "y": 155,
+          "w": 410,
+          "h": 235,
+          "is_container": true,
+          "props": {
+            "rx": 14,
+            "tone": "surface"
+          }
+        },
+        {
+          "id": "avatar_t1",
+          "type": "person",
+          "x": 75,
+          "y": 175,
+          "w": 100,
+          "h": 120,
+          "badge_on": "card_t1",
+          "props": {
+            "name": "Party",
+            "role": "Unit One"
+          }
+        },
+        {
+          "id": "pill_t1",
+          "type": "pill",
+          "x": 185,
+          "y": 180,
+          "w": 265,
+          "h": 32,
+          "badge_on": "card_t1",
+          "bind": {
+            "text": "{{taxpayer_1_name}}"
+          },
+          "props": {
+            "tone": "accent"
+          }
+        },
+        {
+          "id": "row1_gross",
+          "type": "ledger_row",
+          "x": 185,
+          "y": 220,
+          "w": 265,
+          "h": 30,
+          "badge_on": "card_t1",
+          "bind": {
+            "value": "{{gross_1_val}}"
+          },
+          "props": {
+            "label": "Gross",
+            "sign": "+"
+          }
+        },
+        {
+          "id": "row1_cost",
+          "type": "ledger_row",
+          "x": 185,
+          "y": 255,
+          "w": 265,
+          "h": 30,
+          "badge_on": "card_t1",
+          "bind": {
+            "value": "{{cost_1_val}}"
+          },
+          "props": {
+            "label": "Cost",
+            "sign": "-"
+          }
+        },
+        {
+          "id": "row1_net",
+          "type": "ledger_row",
+          "x": 185,
+          "y": 290,
+          "w": 265,
+          "h": 32,
+          "badge_on": "card_t1",
+          "bind": {
+            "value": "{{net_1_val}}"
+          },
+          "props": {
+            "label": "Net",
+            "sign": "+",
+            "is_total": true
+          }
+        },
+        {
+          "id": "tag_t1",
+          "type": "text",
+          "x": 75,
+          "y": 345,
+          "w": 375,
+          "h": 22,
+          "badge_on": "card_t1",
+          "props": {
+            "text": "Party One Ledger Complete",
+            "font_size": 16,
+            "weight": "700",
+            "tone": "ink"
+          }
+        },
+        {
+          "id": "card_t2",
+          "type": "card",
+          "x": 530,
+          "y": 155,
+          "w": 410,
+          "h": 235,
+          "is_container": true,
+          "props": {
+            "rx": 14,
+            "tone": "surface"
+          }
+        },
+        {
+          "id": "avatar_t2",
+          "type": "person",
+          "x": 545,
+          "y": 175,
+          "w": 100,
+          "h": 120,
+          "badge_on": "card_t2",
+          "props": {
+            "name": "Party",
+            "role": "Unit Two"
+          }
+        },
+        {
+          "id": "pill_t2",
+          "type": "pill",
+          "x": 655,
+          "y": 180,
+          "w": 265,
+          "h": 32,
+          "badge_on": "card_t2",
+          "bind": {
+            "text": "{{taxpayer_2_name}}"
+          },
+          "props": {
+            "tone": "gold"
+          }
+        },
+        {
+          "id": "row2_gross",
+          "type": "ledger_row",
+          "x": 655,
+          "y": 220,
+          "w": 265,
+          "h": 30,
+          "badge_on": "card_t2",
+          "bind": {
+            "value": "{{gross_2_val}}"
+          },
+          "props": {
+            "label": "Gross",
+            "sign": "+"
+          }
+        },
+        {
+          "id": "row2_cost",
+          "type": "ledger_row",
+          "x": 655,
+          "y": 255,
+          "w": 265,
+          "h": 30,
+          "badge_on": "card_t2",
+          "bind": {
+            "value": "{{cost_2_val}}"
+          },
+          "props": {
+            "label": "Cost",
+            "sign": "-"
+          }
+        },
+        {
+          "id": "row2_net",
+          "type": "ledger_row",
+          "x": 655,
+          "y": 290,
+          "w": 265,
+          "h": 32,
+          "badge_on": "card_t2",
+          "bind": {
+            "value": "{{net_2_val}}"
+          },
+          "props": {
+            "label": "Net",
+            "sign": "+",
+            "is_total": true
+          }
+        },
+        {
+          "id": "tag_t2",
+          "type": "text",
+          "x": 545,
+          "y": 345,
+          "w": 375,
+          "h": 22,
+          "badge_on": "card_t2",
+          "props": {
+            "text": "Party Two Ledger Complete",
+            "font_size": 16,
+            "weight": "700",
+            "tone": "ink"
+          }
+        },
+        {
+          "id": "line_div",
+          "type": "line",
+          "x": 495,
+          "y": 170,
+          "w": 10,
+          "h": 205,
+          "props": {
+            "tone": "line"
+          }
+        },
+        {
+          "id": "pass_banner",
+          "type": "card",
+          "x": 60,
+          "y": 410,
+          "w": 880,
+          "h": 65,
+          "is_container": true,
+          "props": {
+            "rx": 12,
+            "tone": "ok-soft"
+          }
+        },
+        {
+          "id": "pass_pill",
+          "type": "pill",
+          "x": 85,
+          "y": 425,
+          "w": 170,
+          "h": 34,
+          "badge_on": "pass_banner",
+          "props": {
+            "text": "Summary · Balance",
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "pass_text",
+          "type": "text",
+          "x": 275,
+          "y": 432,
+          "w": 580,
+          "h": 24,
+          "badge_on": "pass_banner",
+          "bind": {
+            "text": "Net Balance: {{diff_val}} · Ledger Complete"
+          },
+          "props": {
+            "font_size": 17,
+            "weight": "800",
+            "tone": "ink"
+          }
+        },
+        {
+          "id": "pass_tick",
+          "type": "tick",
+          "x": 900,
+          "y": 426,
+          "w": 32,
+          "h": 32,
+          "badge_on": "pass_banner",
+          "props": {
+            "tone": "ok"
+          }
+        }
+      ]
+    },
+    {
+      "id": "improvement_cutoff_timeline",
+      "title": "Improvement Cutoff Date Timeline",
+      "category": "C. Computation",
+      "batch": "B",
+      "selection": {
+        "when_to_use": "When multiple improvement expenditures occur and those incurred before statutory cutoff date are excluded while post-cutoff are accepted.",
+        "not_for": [
+          "acquisition cost substitution",
+          "salary breakup"
+        ],
+        "situation_types": [
+          "timeline",
+          "computation",
+          "cutoff"
+        ],
+        "asset_types": [
+          "house",
+          "land",
+          "building"
+        ],
+        "topics": [
+          "cutoff date",
+          "improvement cost",
+          "timeline evaluation"
+        ],
+        "required_slots": [
+          "cutoff_label",
+          "imp_1_date",
+          "imp_1_cost",
+          "imp_2_date",
+          "imp_2_cost",
+          "accepted_total",
+          "status_note"
+        ]
+      },
+      "slots": [
+        {
+          "key": "cutoff_label",
+          "label": "Cutoff Date Marker",
+          "type": "text",
+          "default": "Cutoff Date One"
+        },
+        {
+          "key": "imp_1_date",
+          "label": "Expenditure One Date",
+          "type": "text",
+          "default": "Before Cutoff Date"
+        },
+        {
+          "key": "imp_1_cost",
+          "label": "Expenditure One Amount",
+          "type": "number",
+          "default": 400000,
+          "min": 10000,
+          "max": 100000000,
+          "format": "inr"
+        },
+        {
+          "key": "imp_2_date",
+          "label": "Expenditure Two Date",
+          "type": "text",
+          "default": "After Cutoff Date"
+        },
+        {
+          "key": "imp_2_cost",
+          "label": "Expenditure Two Amount",
+          "type": "number",
+          "default": 900000,
+          "min": 10000,
+          "max": 100000000,
+          "format": "inr"
+        },
+        {
+          "key": "accepted_total",
+          "label": "Accepted Improvement Total",
+          "type": "number",
+          "default": 900000,
+          "min": 10000,
+          "max": 100000000,
+          "format": "inr"
+        },
+        {
+          "key": "status_note",
+          "label": "Status Label",
+          "type": "text",
+          "default": "Before Cutoff Nil Cost",
+          "max_len": 25
+        }
+      ],
+      "derived": [],
+      "duration": 14,
+      "cues": [
+        {
+          "id": "cue_timeline_init",
+          "label": "Timeline Axis Cutoff",
+          "default_t": 0.5
+        },
+        {
+          "id": "cue_evaluate_improvements",
+          "label": "Evaluate Expenditures",
+          "default_t": 4.5
+        },
+        {
+          "id": "cue_accepted_total",
+          "label": "Accepted Improvement Total",
+          "default_t": 8.5
+        }
+      ],
+      "scene": [
+        {
+          "id": "header_card",
+          "type": "card",
+          "x": 60,
+          "y": 70,
+          "w": 880,
+          "h": 70,
+          "is_container": true,
+          "props": {
+            "rx": 12,
+            "tone": "accent",
+            "top_bar": "accent"
+          }
+        },
+        {
+          "id": "header_title",
+          "type": "text",
+          "x": 90,
+          "y": 90,
+          "w": 600,
+          "h": 32,
+          "badge_on": "header_card",
+          "bind": {
+            "text": "{{anim_title}}"
+          },
+          "props": {
+            "font_size": 24,
+            "weight": "900",
+            "tone": "accent",
+            "is_title": true
+          }
+        },
+        {
+          "id": "header_sub",
+          "type": "text",
+          "x": 90,
+          "y": 120,
+          "w": 600,
+          "h": 20,
+          "badge_on": "header_card",
+          "bind": {
+            "text": "Cutoff: {{cutoff_label}} · Total: {{accepted_total}}"
+          },
+          "props": {
+            "font_size": 16,
+            "weight": "600",
+            "tone": "ink-muted"
+          }
+        },
+        {
+          "id": "timeline_axis",
+          "type": "timeline_axis",
+          "x": 80,
+          "y": 155,
+          "w": 840,
+          "h": 65,
+          "props": {
+            "w": 840,
+            "ticks": [
+              {
+                "pos": 0.5,
+                "label": "Cutoff"
+              }
+            ]
+          }
+        },
+        {
+          "id": "marker_cutoff",
+          "type": "marker",
+          "x": 485,
+          "y": 165,
+          "w": 30,
+          "h": 45,
+          "badge_on": "timeline_axis",
+          "props": {
+            "label": "Cutoff",
+            "tone": "gold"
+          }
+        },
+        {
+          "id": "card_imp1",
+          "type": "card",
+          "x": 60,
+          "y": 240,
+          "w": 275,
+          "h": 155,
+          "is_container": true,
+          "props": {
+            "rx": 14,
+            "tone": "warn-soft"
+          }
+        },
+        {
+          "id": "pill_imp1",
+          "type": "pill",
+          "x": 85,
+          "y": 255,
+          "w": 225,
+          "h": 30,
+          "badge_on": "card_imp1",
+          "bind": {
+            "text": "{{imp_1_date}}"
+          },
+          "props": {
+            "tone": "warn"
+          }
+        },
+        {
+          "id": "counter_imp1",
+          "type": "counter",
+          "x": 85,
+          "y": 295,
+          "w": 225,
+          "h": 34,
+          "badge_on": "card_imp1",
+          "bind": {
+            "text": "{{imp_1_cost}}"
+          },
+          "props": {
+            "format": "inr",
+            "font_size": 22,
+            "tone": "warn"
+          }
+        },
+        {
+          "id": "strike_imp1",
+          "type": "strike",
+          "x": 80,
+          "y": 310,
+          "w": 235,
+          "h": 10,
+          "badge_on": "card_imp1",
+          "props": {}
+        },
+        {
+          "id": "tag_imp1",
+          "type": "text",
+          "x": 85,
+          "y": 345,
+          "w": 225,
+          "h": 22,
+          "badge_on": "card_imp1",
+          "props": {
+            "text": "Nil · Cost Outside",
+            "font_size": 16,
+            "weight": "700",
+            "tone": "warn"
+          }
+        },
+        {
+          "id": "card_imp2",
+          "type": "card",
+          "x": 360,
+          "y": 240,
+          "w": 275,
+          "h": 155,
+          "is_container": true,
+          "props": {
+            "rx": 14,
+            "tone": "ok-soft"
+          }
+        },
+        {
+          "id": "pill_imp2",
+          "type": "pill",
+          "x": 385,
+          "y": 255,
+          "w": 225,
+          "h": 30,
+          "badge_on": "card_imp2",
+          "bind": {
+            "text": "{{imp_2_date}}"
+          },
+          "props": {
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "counter_imp2",
+          "type": "counter",
+          "x": 385,
+          "y": 295,
+          "w": 225,
+          "h": 34,
+          "badge_on": "card_imp2",
+          "bind": {
+            "text": "{{imp_2_cost}}"
+          },
+          "props": {
+            "format": "inr",
+            "font_size": 22,
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "tag_imp2",
+          "type": "text",
+          "x": 385,
+          "y": 345,
+          "w": 225,
+          "h": 22,
+          "badge_on": "card_imp2",
+          "props": {
+            "text": "Accepted Cost Within",
+            "font_size": 16,
+            "weight": "700",
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "card_total",
+          "type": "card",
+          "x": 660,
+          "y": 240,
+          "w": 280,
+          "h": 155,
+          "is_container": true,
+          "props": {
+            "rx": 14,
+            "tone": "surface"
+          }
+        },
+        {
+          "id": "pill_total",
+          "type": "pill",
+          "x": 685,
+          "y": 255,
+          "w": 230,
+          "h": 30,
+          "badge_on": "card_total",
+          "props": {
+            "text": "Total Cost Result",
+            "tone": "accent"
+          }
+        },
+        {
+          "id": "counter_tot",
+          "type": "counter",
+          "x": 685,
+          "y": 295,
+          "w": 230,
+          "h": 38,
+          "badge_on": "card_total",
+          "bind": {
+            "text": "{{accepted_total}}"
+          },
+          "props": {
+            "format": "inr",
+            "font_size": 26,
+            "tone": "accent"
+          }
+        },
+        {
+          "id": "tag_total",
+          "type": "text",
+          "x": 685,
+          "y": 345,
+          "w": 230,
+          "h": 22,
+          "badge_on": "card_total",
+          "props": {
+            "text": "Accepted Base Cost",
+            "font_size": 16,
+            "weight": "700",
+            "tone": "ink"
+          }
+        },
+        {
+          "id": "pass_banner",
+          "type": "card",
+          "x": 60,
+          "y": 410,
+          "w": 880,
+          "h": 65,
+          "is_container": true,
+          "props": {
+            "rx": 12,
+            "tone": "ok-soft"
+          }
+        },
+        {
+          "id": "pass_pill",
+          "type": "pill",
+          "x": 85,
+          "y": 425,
+          "w": 170,
+          "h": 34,
+          "badge_on": "pass_banner",
+          "props": {
+            "text": "Cutoff · Rule",
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "pass_text",
+          "type": "text",
+          "x": 275,
+          "y": 432,
+          "w": 580,
+          "h": 24,
+          "badge_on": "pass_banner",
+          "bind": {
+            "text": "Accepted Cost Result: {{accepted_total}} · Complete"
+          },
+          "props": {
+            "font_size": 17,
+            "weight": "800",
+            "tone": "ink"
+          }
+        },
+        {
+          "id": "pass_tick",
+          "type": "tick",
+          "x": 900,
+          "y": 426,
+          "w": 32,
+          "h": 32,
+          "badge_on": "pass_banner",
+          "props": {
+            "tone": "ok"
+          }
+        }
+      ]
+    },
+    {
+      "id": "advance_forfeited",
+      "title": "Advance Money Forfeited Treatment",
+      "category": "C. Computation",
+      "batch": "B",
+      "selection": {
+        "when_to_use": "When advance money is received during failed negotiations, retained upon deal cancellation, and treated as cost reduction or income.",
+        "not_for": [
+          "direct completed sale",
+          "gift"
+        ],
+        "situation_types": [
+          "transfer",
+          "computation",
+          "forfeiture"
+        ],
+        "asset_types": [
+          "house",
+          "land",
+          "shares"
+        ],
+        "topics": [
+          "advance money",
+          "deal cancelled",
+          "cost reduction"
+        ],
+        "required_slots": [
+          "buyer_name",
+          "seller_name",
+          "advance_amt",
+          "forfeit_year",
+          "original_cost",
+          "adjusted_cost",
+          "treatment_label",
+          "variant_mode"
+        ]
+      },
+      "slots": [
+        {
+          "key": "buyer_name",
+          "label": "Party One Name",
+          "type": "text",
+          "default": "Sample Party One",
+          "max_len": 25
+        },
+        {
+          "key": "seller_name",
+          "label": "Party Two Name",
+          "type": "text",
+          "default": "Sample Party Two",
+          "max_len": 25
+        },
+        {
+          "key": "advance_amt",
+          "label": "Advance Amount",
+          "type": "number",
+          "default": 600000,
+          "min": 10000,
+          "max": 100000000,
+          "format": "inr"
+        },
+        {
+          "key": "forfeit_year",
+          "label": "Date Year",
+          "type": "text",
+          "default": "Year One Date"
+        },
+        {
+          "key": "original_cost",
+          "label": "Base Cost",
+          "type": "number",
+          "default": 3000000,
+          "min": 10000,
+          "max": 100000000,
+          "format": "inr"
+        },
+        {
+          "key": "adjusted_cost",
+          "label": "Adjusted Cost",
+          "type": "number",
+          "default": 2400000,
+          "min": 10000,
+          "max": 100000000,
+          "format": "inr"
+        },
+        {
+          "key": "treatment_label",
+          "label": "Treatment Rule",
+          "type": "text",
+          "default": "Cost Less Amount",
+          "max_len": 25
+        },
+        {
+          "key": "variant_mode",
+          "label": "Variant Mode",
+          "type": "enum",
+          "default": "Sample Cost Less",
+          "options": [
+            "Sample Cost Less",
+            "Sample Direct Paid"
+          ]
+        }
+      ],
+      "derived": [],
+      "duration": 14,
+      "cues": [
+        {
+          "id": "cue_advance_given",
+          "label": "Advance Amount Paid",
+          "default_t": 0.5
+        },
+        {
+          "id": "cue_deal_cancelled",
+          "label": "Deal Closed Nil",
+          "default_t": 4.5
+        },
+        {
+          "id": "cue_forfeit_treatment",
+          "label": "Tax Result Complete",
+          "default_t": 8.5
+        }
+      ],
+      "scene": [
+        {
+          "id": "header_card",
+          "type": "card",
+          "x": 60,
+          "y": 70,
+          "w": 880,
+          "h": 70,
+          "is_container": true,
+          "props": {
+            "rx": 12,
+            "tone": "accent",
+            "top_bar": "accent"
+          }
+        },
+        {
+          "id": "header_title",
+          "type": "text",
+          "x": 90,
+          "y": 90,
+          "w": 600,
+          "h": 32,
+          "badge_on": "header_card",
+          "bind": {
+            "text": "{{anim_title}}"
+          },
+          "props": {
+            "font_size": 24,
+            "weight": "900",
+            "tone": "accent",
+            "is_title": true
+          }
+        },
+        {
+          "id": "header_sub",
+          "type": "text",
+          "x": 90,
+          "y": 120,
+          "w": 600,
+          "h": 20,
+          "badge_on": "header_card",
+          "bind": {
+            "text": "Status: {{variant_mode}} · Amount: {{advance_amt}}"
+          },
+          "props": {
+            "font_size": 16,
+            "weight": "600",
+            "tone": "ink-muted"
+          }
+        },
+        {
+          "id": "card_buyer",
+          "type": "card",
+          "x": 60,
+          "y": 155,
+          "w": 270,
+          "h": 235,
+          "is_container": true,
+          "props": {
+            "rx": 14,
+            "tone": "surface"
+          }
+        },
+        {
+          "id": "avatar_buyer",
+          "type": "person",
+          "x": 75,
+          "y": 175,
+          "w": 100,
+          "h": 120,
+          "badge_on": "card_buyer",
+          "props": {
+            "name": "Party",
+            "role": "Unit One"
+          }
+        },
+        {
+          "id": "pill_buyer",
+          "type": "pill",
+          "x": 180,
+          "y": 185,
+          "w": 135,
+          "h": 32,
+          "badge_on": "card_buyer",
+          "bind": {
+            "text": "{{buyer_name}}"
+          },
+          "props": {
+            "tone": "surface-2"
+          }
+        },
+        {
+          "id": "counter_adv",
+          "type": "counter",
+          "x": 75,
+          "y": 305,
+          "w": 240,
+          "h": 38,
+          "badge_on": "card_buyer",
+          "bind": {
+            "text": "{{advance_amt}}"
+          },
+          "props": {
+            "format": "inr",
+            "font_size": 26,
+            "tone": "accent"
+          }
+        },
+        {
+          "id": "tag_adv_paid",
+          "type": "text",
+          "x": 75,
+          "y": 345,
+          "w": 240,
+          "h": 22,
+          "badge_on": "card_buyer",
+          "props": {
+            "text": "Base Amount Paid",
+            "font_size": 16,
+            "weight": "600",
+            "tone": "ink-muted"
+          }
+        },
+        {
+          "id": "card_deal",
+          "type": "card",
+          "x": 350,
+          "y": 155,
+          "w": 300,
+          "h": 235,
+          "is_container": true,
+          "props": {
+            "rx": 14,
+            "tone": "surface"
+          }
+        },
+        {
+          "id": "doc_deal",
+          "type": "document",
+          "x": 465,
+          "y": 180,
+          "w": 70,
+          "h": 80,
+          "badge_on": "card_deal",
+          "props": {}
+        },
+        {
+          "id": "strike_deal",
+          "type": "strike",
+          "x": 455,
+          "y": 215,
+          "w": 90,
+          "h": 10,
+          "badge_on": "card_deal",
+          "props": {}
+        },
+        {
+          "id": "pill_cancel",
+          "type": "pill",
+          "x": 385,
+          "y": 275,
+          "w": 230,
+          "h": 34,
+          "badge_on": "card_deal",
+          "props": {
+            "text": "Status Locked · Nil",
+            "tone": "warn"
+          }
+        },
+        {
+          "id": "tag_deal_year",
+          "type": "text",
+          "x": 385,
+          "y": 320,
+          "w": 230,
+          "h": 22,
+          "badge_on": "card_deal",
+          "bind": {
+            "text": "Date: {{forfeit_year}}"
+          },
+          "props": {
+            "font_size": 16,
+            "weight": "600",
+            "tone": "ink-muted"
+          }
+        },
+        {
+          "id": "tag_deal_ret",
+          "type": "text",
+          "x": 385,
+          "y": 350,
+          "w": 230,
+          "h": 22,
+          "badge_on": "card_deal",
+          "props": {
+            "text": "Paid Amount Locked",
+            "font_size": 16,
+            "weight": "700",
+            "tone": "ink"
+          }
+        },
+        {
+          "id": "card_seller",
+          "type": "card",
+          "x": 670,
+          "y": 155,
+          "w": 270,
+          "h": 235,
+          "is_container": true,
+          "props": {
+            "rx": 14,
+            "tone": "ok-soft"
+          }
+        },
+        {
+          "id": "avatar_seller",
+          "type": "person",
+          "x": 685,
+          "y": 175,
+          "w": 100,
+          "h": 120,
+          "badge_on": "card_seller",
+          "props": {
+            "name": "Party",
+            "role": "Unit Two"
+          }
+        },
+        {
+          "id": "pill_seller",
+          "type": "pill",
+          "x": 790,
+          "y": 185,
+          "w": 135,
+          "h": 32,
+          "badge_on": "card_seller",
+          "bind": {
+            "text": "{{seller_name}}"
+          },
+          "props": {
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "counter_adj",
+          "type": "counter",
+          "x": 685,
+          "y": 305,
+          "w": 240,
+          "h": 38,
+          "badge_on": "card_seller",
+          "bind": {
+            "text": "{{adjusted_cost}}"
+          },
+          "props": {
+            "format": "inr",
+            "font_size": 26,
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "tag_adj_cost",
+          "type": "text",
+          "x": 685,
+          "y": 345,
+          "w": 240,
+          "h": 22,
+          "badge_on": "card_seller",
+          "props": {
+            "text": "Net Base Cost",
+            "font_size": 16,
+            "weight": "700",
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "pass_banner",
+          "type": "card",
+          "x": 60,
+          "y": 410,
+          "w": 880,
+          "h": 65,
+          "is_container": true,
+          "props": {
+            "rx": 12,
+            "tone": "ok-soft"
+          }
+        },
+        {
+          "id": "pass_pill",
+          "type": "pill",
+          "x": 85,
+          "y": 425,
+          "w": 170,
+          "h": 34,
+          "badge_on": "pass_banner",
+          "props": {
+            "text": "Status · Rule",
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "pass_text",
+          "type": "text",
+          "x": 275,
+          "y": 432,
+          "w": 580,
+          "h": 24,
+          "badge_on": "pass_banner",
+          "bind": {
+            "text": "Net Cost Result: {{adjusted_cost}} · {{variant_mode}}"
+          },
+          "props": {
+            "font_size": 17,
+            "weight": "800",
+            "tone": "ink"
+          }
+        },
+        {
+          "id": "pass_tick",
+          "type": "tick",
+          "x": 900,
+          "y": 426,
+          "w": 32,
+          "h": 32,
+          "badge_on": "pass_banner",
+          "props": {
+            "tone": "ok"
+          }
+        }
+      ]
+    },
+    {
+      "id": "flat_rate_plus_cess",
+      "title": "Flat Tax Rate & Extra Rate Total",
+      "category": "C. Computation",
+      "batch": "B",
+      "selection": {
+        "when_to_use": "When taxable gains are taxed at a flat statutory rate and health cess is added on top.",
+        "not_for": [
+          "slab ladder",
+          "exempt transfers"
+        ],
+        "situation_types": [
+          "computation",
+          "rate",
+          "tax_liability"
+        ],
+        "asset_types": [
+          "house",
+          "land",
+          "shares",
+          "bonds"
+        ],
+        "topics": [
+          "tax rate",
+          "flat cess",
+          "total tax"
+        ],
+        "required_slots": [
+          "gain_amt",
+          "tax_rate_pct",
+          "base_tax_amt",
+          "cess_rate_pct",
+          "cess_amt",
+          "total_tax_amt",
+          "effective_rate_label"
+        ]
+      },
+      "slots": [
+        {
+          "key": "gain_amt",
+          "label": "Tax Base Gain",
+          "type": "number",
+          "default": 4000000,
+          "min": 10000,
+          "max": 100000000,
+          "format": "inr"
+        },
+        {
+          "key": "tax_rate_pct",
+          "label": "Base Tax Rate",
+          "type": "number",
+          "default": 20
+        },
+        {
+          "key": "base_tax_amt",
+          "label": "Base Tax Amount",
+          "type": "number",
+          "default": 800000,
+          "min": 0,
+          "max": 100000000,
+          "format": "inr"
+        },
+        {
+          "key": "cess_rate_pct",
+          "label": "Extra Rate Percent",
+          "type": "number",
+          "default": 4
+        },
+        {
+          "key": "cess_amt",
+          "label": "Extra Rate Amount",
+          "type": "number",
+          "default": 32000,
+          "min": 0,
+          "max": 100000000,
+          "format": "inr"
+        },
+        {
+          "key": "total_tax_amt",
+          "label": "Total Tax Liability",
+          "type": "number",
+          "default": 832000,
+          "min": 0,
+          "max": 100000000,
+          "format": "inr"
+        },
+        {
+          "key": "effective_rate_label",
+          "label": "Effective Rate Label",
+          "type": "text",
+          "default": "Rate Standard Tier",
+          "max_len": 25
+        }
+      ],
+      "derived": [],
+      "duration": 14,
+      "cues": [
+        {
+          "id": "cue_gain_base",
+          "label": "Gain Base Amount",
+          "default_t": 0.5
+        },
+        {
+          "id": "cue_rate_and_cess",
+          "label": "Rate Plus Tier Two",
+          "default_t": 4.5
+        },
+        {
+          "id": "cue_final_liability",
+          "label": "Total Tax Complete",
+          "default_t": 8.5
+        }
+      ],
+      "scene": [
+        {
+          "id": "header_card",
+          "type": "card",
+          "x": 60,
+          "y": 70,
+          "w": 880,
+          "h": 70,
+          "is_container": true,
+          "props": {
+            "rx": 12,
+            "tone": "accent",
+            "top_bar": "accent"
+          }
+        },
+        {
+          "id": "header_title",
+          "type": "text",
+          "x": 90,
+          "y": 90,
+          "w": 600,
+          "h": 32,
+          "badge_on": "header_card",
+          "bind": {
+            "text": "{{anim_title}}"
+          },
+          "props": {
+            "font_size": 24,
+            "weight": "900",
+            "tone": "accent",
+            "is_title": true
+          }
+        },
+        {
+          "id": "header_sub",
+          "type": "text",
+          "x": 90,
+          "y": 120,
+          "w": 600,
+          "h": 20,
+          "badge_on": "header_card",
+          "bind": {
+            "text": "Base: {{gain_amt}} · Rate: {{tax_rate_pct}} · Tier Two: {{cess_rate_pct}}"
+          },
+          "props": {
+            "font_size": 16,
+            "weight": "600",
+            "tone": "ink-muted"
+          }
+        },
+        {
+          "id": "card_gain",
+          "type": "card",
+          "x": 60,
+          "y": 155,
+          "w": 275,
+          "h": 235,
+          "is_container": true,
+          "props": {
+            "rx": 14,
+            "tone": "surface"
+          }
+        },
+        {
+          "id": "money_gain",
+          "type": "money_bag",
+          "x": 80,
+          "y": 175,
+          "w": 50,
+          "h": 50,
+          "badge_on": "card_gain",
+          "props": {
+            "show_label": false
+          }
+        },
+        {
+          "id": "pill_gain",
+          "type": "pill",
+          "x": 140,
+          "y": 185,
+          "w": 180,
+          "h": 32,
+          "badge_on": "card_gain",
+          "props": {
+            "text": "Base Gain Amount",
+            "tone": "surface-2"
+          }
+        },
+        {
+          "id": "counter_gain",
+          "type": "counter",
+          "x": 80,
+          "y": 245,
+          "w": 235,
+          "h": 40,
+          "badge_on": "card_gain",
+          "bind": {
+            "text": "{{gain_amt}}"
+          },
+          "props": {
+            "format": "inr",
+            "font_size": 28,
+            "tone": "accent"
+          }
+        },
+        {
+          "id": "tag_gain_decl",
+          "type": "text",
+          "x": 80,
+          "y": 305,
+          "w": 235,
+          "h": 22,
+          "badge_on": "card_gain",
+          "props": {
+            "text": "Declared Gain Amount",
+            "font_size": 16,
+            "weight": "600",
+            "tone": "ink-muted"
+          }
+        },
+        {
+          "id": "tag_step1",
+          "type": "text",
+          "x": 80,
+          "y": 345,
+          "w": 235,
+          "h": 22,
+          "badge_on": "card_gain",
+          "props": {
+            "text": "Step One Base",
+            "font_size": 16,
+            "weight": "700",
+            "tone": "ink"
+          }
+        },
+        {
+          "id": "card_stack",
+          "type": "card",
+          "x": 355,
+          "y": 155,
+          "w": 290,
+          "h": 235,
+          "is_container": true,
+          "props": {
+            "rx": 14,
+            "tone": "surface"
+          }
+        },
+        {
+          "id": "tier1_pill",
+          "type": "pill",
+          "x": 380,
+          "y": 180,
+          "w": 240,
+          "h": 32,
+          "badge_on": "card_stack",
+          "props": {
+            "text": "Base Tax Rate Tier",
+            "tone": "accent"
+          }
+        },
+        {
+          "id": "counter_base_tax",
+          "type": "counter",
+          "x": 380,
+          "y": 220,
+          "w": 240,
+          "h": 34,
+          "badge_on": "card_stack",
+          "bind": {
+            "text": "{{base_tax_amt}}"
+          },
+          "props": {
+            "format": "inr",
+            "font_size": 22,
+            "tone": "accent"
+          }
+        },
+        {
+          "id": "tier2_pill",
+          "type": "pill",
+          "x": 380,
+          "y": 265,
+          "w": 240,
+          "h": 32,
+          "badge_on": "card_stack",
+          "props": {
+            "text": "Extra Rate Tier Two",
+            "tone": "gold"
+          }
+        },
+        {
+          "id": "counter_cess",
+          "type": "counter",
+          "x": 380,
+          "y": 305,
+          "w": 240,
+          "h": 34,
+          "badge_on": "card_stack",
+          "bind": {
+            "text": "{{cess_amt}}"
+          },
+          "props": {
+            "format": "inr",
+            "font_size": 22,
+            "tone": "gold"
+          }
+        },
+        {
+          "id": "tag_calc_step",
+          "type": "text",
+          "x": 380,
+          "y": 350,
+          "w": 240,
+          "h": 20,
+          "badge_on": "card_stack",
+          "props": {
+            "text": "Step Two Tax Total",
+            "font_size": 16,
+            "weight": "700",
+            "tone": "ink"
+          }
+        },
+        {
+          "id": "card_total",
+          "type": "card",
+          "x": 665,
+          "y": 155,
+          "w": 275,
+          "h": 235,
+          "is_container": true,
+          "props": {
+            "rx": 14,
+            "tone": "ok-soft"
+          }
+        },
+        {
+          "id": "pill_total",
+          "type": "pill",
+          "x": 690,
+          "y": 180,
+          "w": 225,
+          "h": 34,
+          "badge_on": "card_total",
+          "props": {
+            "text": "Total Tax Due",
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "counter_total_tax",
+          "type": "counter",
+          "x": 690,
+          "y": 235,
+          "w": 225,
+          "h": 44,
+          "badge_on": "card_total",
+          "bind": {
+            "text": "{{total_tax_amt}}"
+          },
+          "props": {
+            "format": "inr",
+            "font_size": 30,
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "pill_eff_rate",
+          "type": "pill",
+          "x": 690,
+          "y": 295,
+          "w": 225,
+          "h": 32,
+          "badge_on": "card_total",
+          "bind": {
+            "text": "{{effective_rate_label}}"
+          },
+          "props": {
+            "tone": "surface-2"
+          }
+        },
+        {
+          "id": "tag_final",
+          "type": "text",
+          "x": 690,
+          "y": 345,
+          "w": 225,
+          "h": 22,
+          "badge_on": "card_total",
+          "props": {
+            "text": "Tax Due Complete",
+            "font_size": 16,
+            "weight": "700",
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "pass_banner",
+          "type": "card",
+          "x": 60,
+          "y": 410,
+          "w": 880,
+          "h": 65,
+          "is_container": true,
+          "props": {
+            "rx": 12,
+            "tone": "ok-soft"
+          }
+        },
+        {
+          "id": "pass_pill",
+          "type": "pill",
+          "x": 85,
+          "y": 425,
+          "w": 170,
+          "h": 34,
+          "badge_on": "pass_banner",
+          "props": {
+            "text": "Tax · Paid",
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "pass_text",
+          "type": "text",
+          "x": 275,
+          "y": 432,
+          "w": 580,
+          "h": 24,
+          "badge_on": "pass_banner",
+          "bind": {
+            "text": "Total Tax Due: {{total_tax_amt}} · Complete"
+          },
+          "props": {
+            "font_size": 17,
+            "weight": "800",
+            "tone": "ink"
+          }
+        },
+        {
+          "id": "pass_tick",
+          "type": "tick",
+          "x": 900,
+          "y": 426,
+          "w": 32,
+          "h": 32,
+          "badge_on": "pass_banner",
+          "props": {
+            "tone": "ok"
+          }
+        }
+      ]
+    },
+    {
+      "id": "exemption_threshold_waterfall",
+      "title": "Exemption Threshold Partition & Excess",
+      "category": "C. Computation",
+      "batch": "B",
+      "selection": {
+        "when_to_use": "When total capital gains are partitioned against an exempt threshold buffer, with only the excess above threshold subject to tax.",
+        "not_for": [
+          "flat tax without threshold",
+          "reinvestment full shelter"
+        ],
+        "situation_types": [
+          "computation",
+          "threshold",
+          "partition"
+        ],
+        "asset_types": [
+          "shares",
+          "mutual_fund",
+          "bonds"
+        ],
+        "topics": [
+          "threshold buffer",
+          "exempt base",
+          "taxable excess"
+        ],
+        "required_slots": [
+          "asset_label",
+          "total_gain_amt",
+          "threshold_label",
+          "threshold_amt",
+          "taxable_excess_amt",
+          "rule_label"
+        ]
+      },
+      "slots": [
+        {
+          "key": "asset_label",
+          "label": "Asset Name",
+          "type": "text",
+          "default": "Sample Base Asset",
+          "max_len": 25
+        },
+        {
+          "key": "total_gain_amt",
+          "label": "Total Gain Base",
+          "type": "number",
+          "default": 500000,
+          "min": 10000,
+          "max": 100000000,
+          "format": "inr"
+        },
+        {
+          "key": "threshold_label",
+          "label": "Limit Gate Label",
+          "type": "text",
+          "default": "Limit Base Gate",
+          "max_len": 25
+        },
+        {
+          "key": "threshold_amt",
+          "label": "Limit Amount",
+          "type": "number",
+          "default": 125000,
+          "min": 0,
+          "max": 100000000,
+          "format": "inr"
+        },
+        {
+          "key": "taxable_excess_amt",
+          "label": "Amount Exceeded",
+          "type": "number",
+          "default": 375000,
+          "min": 0,
+          "max": 100000000,
+          "format": "inr"
+        },
+        {
+          "key": "rule_label",
+          "label": "Rule Label",
+          "type": "text",
+          "default": "Limit Base Rule",
+          "max_len": 25
+        }
+      ],
+      "derived": [],
+      "duration": 14,
+      "cues": [
+        {
+          "id": "cue_total_gain",
+          "label": "Total Gain Base",
+          "default_t": 0.5
+        },
+        {
+          "id": "cue_apply_threshold",
+          "label": "Apply Limit Gate",
+          "default_t": 4.5
+        },
+        {
+          "id": "cue_taxable_excess",
+          "label": "Amount Exceeded Result",
+          "default_t": 8.5
+        }
+      ],
+      "scene": [
+        {
+          "id": "header_card",
+          "type": "card",
+          "x": 60,
+          "y": 70,
+          "w": 880,
+          "h": 70,
+          "is_container": true,
+          "props": {
+            "rx": 12,
+            "tone": "accent",
+            "top_bar": "accent"
+          }
+        },
+        {
+          "id": "header_title",
+          "type": "text",
+          "x": 90,
+          "y": 90,
+          "w": 600,
+          "h": 32,
+          "badge_on": "header_card",
+          "bind": {
+            "text": "{{anim_title}}"
+          },
+          "props": {
+            "font_size": 24,
+            "weight": "900",
+            "tone": "accent",
+            "is_title": true
+          }
+        },
+        {
+          "id": "header_sub",
+          "type": "text",
+          "x": 90,
+          "y": 120,
+          "w": 600,
+          "h": 20,
+          "badge_on": "header_card",
+          "bind": {
+            "text": "Asset: {{asset_label}} · Limit: {{threshold_amt}}"
+          },
+          "props": {
+            "font_size": 16,
+            "weight": "600",
+            "tone": "ink-muted"
+          }
+        },
+        {
+          "id": "card_total",
+          "type": "card",
+          "x": 60,
+          "y": 155,
+          "w": 275,
+          "h": 235,
+          "is_container": true,
+          "props": {
+            "rx": 14,
+            "tone": "surface"
+          }
+        },
+        {
+          "id": "pill_tot",
+          "type": "pill",
+          "x": 85,
+          "y": 180,
+          "w": 225,
+          "h": 32,
+          "badge_on": "card_total",
+          "props": {
+            "text": "Total Gain Base",
+            "tone": "surface-2"
+          }
+        },
+        {
+          "id": "counter_tot",
+          "type": "counter",
+          "x": 85,
+          "y": 240,
+          "w": 225,
+          "h": 40,
+          "badge_on": "card_total",
+          "bind": {
+            "text": "{{total_gain_amt}}"
+          },
+          "props": {
+            "format": "inr",
+            "font_size": 28,
+            "tone": "accent"
+          }
+        },
+        {
+          "id": "tag_tot",
+          "type": "text",
+          "x": 85,
+          "y": 305,
+          "w": 225,
+          "h": 22,
+          "badge_on": "card_total",
+          "props": {
+            "text": "Declared Gain Base",
+            "font_size": 16,
+            "weight": "600",
+            "tone": "ink-muted"
+          }
+        },
+        {
+          "id": "tag_tot_step",
+          "type": "text",
+          "x": 85,
+          "y": 345,
+          "w": 225,
+          "h": 22,
+          "badge_on": "card_total",
+          "props": {
+            "text": "Step One Gain",
+            "font_size": 16,
+            "weight": "700",
+            "tone": "ink"
+          }
+        },
+        {
+          "id": "card_buffer",
+          "type": "card",
+          "x": 360,
+          "y": 155,
+          "w": 280,
+          "h": 235,
+          "is_container": true,
+          "props": {
+            "rx": 14,
+            "tone": "ok-soft"
+          }
+        },
+        {
+          "id": "pill_buf",
+          "type": "pill",
+          "x": 385,
+          "y": 180,
+          "w": 230,
+          "h": 32,
+          "badge_on": "card_buffer",
+          "bind": {
+            "text": "{{threshold_label}}"
+          },
+          "props": {
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "counter_buf",
+          "type": "counter",
+          "x": 385,
+          "y": 240,
+          "w": 230,
+          "h": 40,
+          "badge_on": "card_buffer",
+          "bind": {
+            "text": "{{threshold_amt}}"
+          },
+          "props": {
+            "format": "inr",
+            "font_size": 28,
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "tag_buf",
+          "type": "text",
+          "x": 385,
+          "y": 305,
+          "w": 230,
+          "h": 22,
+          "badge_on": "card_buffer",
+          "props": {
+            "text": "Within Limit Nil Tax",
+            "font_size": 16,
+            "weight": "700",
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "tag_buf_step",
+          "type": "text",
+          "x": 385,
+          "y": 345,
+          "w": 230,
+          "h": 22,
+          "badge_on": "card_buffer",
+          "props": {
+            "text": "Step Two Limit Gate",
+            "font_size": 16,
+            "weight": "600",
+            "tone": "ink-muted"
+          }
+        },
+        {
+          "id": "card_excess",
+          "type": "card",
+          "x": 665,
+          "y": 155,
+          "w": 275,
+          "h": 235,
+          "is_container": true,
+          "props": {
+            "rx": 14,
+            "tone": "warn-soft"
+          }
+        },
+        {
+          "id": "pill_exc",
+          "type": "pill",
+          "x": 690,
+          "y": 180,
+          "w": 225,
+          "h": 32,
+          "badge_on": "card_excess",
+          "props": {
+            "text": "Amount Exceeded",
+            "tone": "warn"
+          }
+        },
+        {
+          "id": "counter_exc",
+          "type": "counter",
+          "x": 690,
+          "y": 240,
+          "w": 225,
+          "h": 40,
+          "badge_on": "card_excess",
+          "bind": {
+            "text": "{{taxable_excess_amt}}"
+          },
+          "props": {
+            "format": "inr",
+            "font_size": 28,
+            "tone": "warn"
+          }
+        },
+        {
+          "id": "tag_exc",
+          "type": "text",
+          "x": 690,
+          "y": 305,
+          "w": 225,
+          "h": 22,
+          "badge_on": "card_excess",
+          "props": {
+            "text": "Exceeded Tax Rate",
+            "font_size": 16,
+            "weight": "700",
+            "tone": "warn"
+          }
+        },
+        {
+          "id": "tag_exc_step",
+          "type": "text",
+          "x": 690,
+          "y": 345,
+          "w": 225,
+          "h": 22,
+          "badge_on": "card_excess",
+          "props": {
+            "text": "Step Three Complete",
+            "font_size": 16,
+            "weight": "600",
+            "tone": "ink-muted"
+          }
+        },
+        {
+          "id": "pass_banner",
+          "type": "card",
+          "x": 60,
+          "y": 410,
+          "w": 880,
+          "h": 65,
+          "is_container": true,
+          "props": {
+            "rx": 12,
+            "tone": "ok-soft"
+          }
+        },
+        {
+          "id": "pass_pill",
+          "type": "pill",
+          "x": 85,
+          "y": 425,
+          "w": 170,
+          "h": 34,
+          "badge_on": "pass_banner",
+          "props": {
+            "text": "Limit · Result",
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "pass_text",
+          "type": "text",
+          "x": 275,
+          "y": 432,
+          "w": 580,
+          "h": 24,
+          "badge_on": "pass_banner",
+          "bind": {
+            "text": "Amount Exceeded: {{taxable_excess_amt}} · Limit: {{threshold_amt}}"
+          },
+          "props": {
+            "font_size": 17,
+            "weight": "800",
+            "tone": "ink"
+          }
+        },
+        {
+          "id": "pass_tick",
+          "type": "tick",
+          "x": 900,
+          "y": 426,
+          "w": 32,
+          "h": 32,
+          "badge_on": "pass_banner",
+          "props": {
+            "tone": "ok"
+          }
+        }
+      ]
+    },
+    {
+      "id": "loss_set_off_waterfall",
+      "title": "Loss Set Off Waterfall Hierarchy",
+      "category": "C. Computation",
+      "batch": "B",
+      "selection": {
+        "when_to_use": "When an incurred capital loss pool is absorbed sequentially against eligible income heads in priority order.",
+        "not_for": [
+          "gain without loss",
+          "single head ledger"
+        ],
+        "situation_types": [
+          "computation",
+          "loss",
+          "absorption"
+        ],
+        "asset_types": [
+          "shares",
+          "house",
+          "business"
+        ],
+        "topics": [
+          "loss set off",
+          "priority absorption",
+          "carry forward"
+        ],
+        "required_slots": [
+          "loss_label",
+          "loss_amt",
+          "head_1_label",
+          "absorbed_1_amt",
+          "head_2_label",
+          "absorbed_2_amt",
+          "total_absorbed_amt",
+          "unabsorbed_amt",
+          "status_note"
+        ]
+      },
+      "slots": [
+        {
+          "key": "loss_label",
+          "label": "Loss Name",
+          "type": "text",
+          "default": "Sample Base Loss",
+          "max_len": 25
+        },
+        {
+          "key": "loss_amt",
+          "label": "Loss Amount",
+          "type": "number",
+          "default": 800000,
+          "min": 10000,
+          "max": 100000000,
+          "format": "inr"
+        },
+        {
+          "key": "head_1_label",
+          "label": "Tier One Unit",
+          "type": "text",
+          "default": "Tier One Unit",
+          "max_len": 25
+        },
+        {
+          "key": "absorbed_1_amt",
+          "label": "Tier One Amount",
+          "type": "number",
+          "default": 500000,
+          "min": 0,
+          "max": 100000000,
+          "format": "inr"
+        },
+        {
+          "key": "head_2_label",
+          "label": "Tier Two Unit",
+          "type": "text",
+          "default": "Tier Two Unit",
+          "max_len": 25
+        },
+        {
+          "key": "absorbed_2_amt",
+          "label": "Tier Two Amount",
+          "type": "number",
+          "default": 200000,
+          "min": 0,
+          "max": 100000000,
+          "format": "inr"
+        },
+        {
+          "key": "total_absorbed_amt",
+          "label": "Total Absorbed Loss",
+          "type": "number",
+          "default": 700000,
+          "min": 0,
+          "max": 100000000,
+          "format": "inr"
+        },
+        {
+          "key": "unabsorbed_amt",
+          "label": "Pending Balance Loss",
+          "type": "number",
+          "default": 100000,
+          "min": 0,
+          "max": 100000000,
+          "format": "inr"
+        },
+        {
+          "key": "status_note",
+          "label": "Status Rule",
+          "type": "text",
+          "default": "Balance Pending Due",
+          "max_len": 25
+        }
+      ],
+      "derived": [],
+      "duration": 14,
+      "cues": [
+        {
+          "id": "cue_loss_pool",
+          "label": "Loss Pool Base",
+          "default_t": 0.5
+        },
+        {
+          "id": "cue_absorption_steps",
+          "label": "Tier Absorption Steps",
+          "default_t": 4.5
+        },
+        {
+          "id": "cue_carry_forward_balance",
+          "label": "Net Balance Due",
+          "default_t": 8.5
+        }
+      ],
+      "scene": [
+        {
+          "id": "header_card",
+          "type": "card",
+          "x": 60,
+          "y": 70,
+          "w": 880,
+          "h": 70,
+          "is_container": true,
+          "props": {
+            "rx": 12,
+            "tone": "accent",
+            "top_bar": "accent"
+          }
+        },
+        {
+          "id": "header_title",
+          "type": "text",
+          "x": 90,
+          "y": 90,
+          "w": 600,
+          "h": 32,
+          "badge_on": "header_card",
+          "bind": {
+            "text": "{{anim_title}}"
+          },
+          "props": {
+            "font_size": 24,
+            "weight": "900",
+            "tone": "accent",
+            "is_title": true
+          }
+        },
+        {
+          "id": "header_sub",
+          "type": "text",
+          "x": 90,
+          "y": 120,
+          "w": 600,
+          "h": 20,
+          "badge_on": "header_card",
+          "bind": {
+            "text": "Loss: {{loss_amt}} · Paid: {{total_absorbed_amt}}"
+          },
+          "props": {
+            "font_size": 16,
+            "weight": "600",
+            "tone": "ink-muted"
+          }
+        },
+        {
+          "id": "card_loss",
+          "type": "card",
+          "x": 60,
+          "y": 155,
+          "w": 275,
+          "h": 235,
+          "is_container": true,
+          "props": {
+            "rx": 14,
+            "tone": "warn-soft"
+          }
+        },
+        {
+          "id": "pill_loss",
+          "type": "pill",
+          "x": 85,
+          "y": 180,
+          "w": 225,
+          "h": 32,
+          "badge_on": "card_loss",
+          "props": {
+            "text": "Total Loss Amount",
+            "tone": "warn"
+          }
+        },
+        {
+          "id": "counter_loss",
+          "type": "counter",
+          "x": 85,
+          "y": 240,
+          "w": 225,
+          "h": 40,
+          "badge_on": "card_loss",
+          "bind": {
+            "text": "{{loss_amt}}"
+          },
+          "props": {
+            "format": "inr",
+            "font_size": 28,
+            "tone": "warn"
+          }
+        },
+        {
+          "id": "tag_loss_type",
+          "type": "text",
+          "x": 85,
+          "y": 305,
+          "w": 225,
+          "h": 22,
+          "badge_on": "card_loss",
+          "bind": {
+            "text": "{{loss_label}}"
+          },
+          "props": {
+            "font_size": 16,
+            "weight": "600",
+            "tone": "ink-muted"
+          }
+        },
+        {
+          "id": "tag_loss_step",
+          "type": "text",
+          "x": 85,
+          "y": 345,
+          "w": 225,
+          "h": 22,
+          "badge_on": "card_loss",
+          "props": {
+            "text": "Step One Open",
+            "font_size": 16,
+            "weight": "700",
+            "tone": "ink"
+          }
+        },
+        {
+          "id": "card_conduit",
+          "type": "card",
+          "x": 360,
+          "y": 155,
+          "w": 280,
+          "h": 235,
+          "is_container": true,
+          "props": {
+            "rx": 14,
+            "tone": "surface"
+          }
+        },
+        {
+          "id": "pill_head1",
+          "type": "pill",
+          "x": 385,
+          "y": 180,
+          "w": 230,
+          "h": 32,
+          "badge_on": "card_conduit",
+          "bind": {
+            "text": "{{head_1_label}}"
+          },
+          "props": {
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "counter_abs1",
+          "type": "counter",
+          "x": 385,
+          "y": 220,
+          "w": 230,
+          "h": 34,
+          "badge_on": "card_conduit",
+          "bind": {
+            "text": "{{absorbed_1_amt}}"
+          },
+          "props": {
+            "format": "inr",
+            "font_size": 22,
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "pill_head2",
+          "type": "pill",
+          "x": 385,
+          "y": 265,
+          "w": 230,
+          "h": 32,
+          "badge_on": "card_conduit",
+          "bind": {
+            "text": "{{head_2_label}}"
+          },
+          "props": {
+            "tone": "gold"
+          }
+        },
+        {
+          "id": "counter_abs2",
+          "type": "counter",
+          "x": 385,
+          "y": 305,
+          "w": 230,
+          "h": 34,
+          "badge_on": "card_conduit",
+          "bind": {
+            "text": "{{absorbed_2_amt}}"
+          },
+          "props": {
+            "format": "inr",
+            "font_size": 22,
+            "tone": "gold"
+          }
+        },
+        {
+          "id": "tag_priority",
+          "type": "text",
+          "x": 385,
+          "y": 350,
+          "w": 230,
+          "h": 20,
+          "badge_on": "card_conduit",
+          "props": {
+            "text": "Tier Step Complete",
+            "font_size": 16,
+            "weight": "700",
+            "tone": "ink"
+          }
+        },
+        {
+          "id": "card_results",
+          "type": "card",
+          "x": 665,
+          "y": 155,
+          "w": 275,
+          "h": 235,
+          "is_container": true,
+          "props": {
+            "rx": 14,
+            "tone": "ok-soft"
+          }
+        },
+        {
+          "id": "pill_abs_tot",
+          "type": "pill",
+          "x": 690,
+          "y": 180,
+          "w": 225,
+          "h": 32,
+          "badge_on": "card_results",
+          "props": {
+            "text": "Total Loss Paid",
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "counter_abs_tot",
+          "type": "counter",
+          "x": 690,
+          "y": 220,
+          "w": 225,
+          "h": 36,
+          "badge_on": "card_results",
+          "bind": {
+            "text": "{{total_absorbed_amt}}"
+          },
+          "props": {
+            "format": "inr",
+            "font_size": 24,
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "pill_unabs",
+          "type": "pill",
+          "x": 690,
+          "y": 270,
+          "w": 225,
+          "h": 32,
+          "badge_on": "card_results",
+          "props": {
+            "text": "Pending Due Balance",
+            "tone": "warn"
+          }
+        },
+        {
+          "id": "counter_unabs",
+          "type": "counter",
+          "x": 690,
+          "y": 310,
+          "w": 225,
+          "h": 36,
+          "badge_on": "card_results",
+          "bind": {
+            "text": "{{unabsorbed_amt}}"
+          },
+          "props": {
+            "format": "inr",
+            "font_size": 24,
+            "tone": "warn"
+          }
+        },
+        {
+          "id": "tag_cf",
+          "type": "text",
+          "x": 690,
+          "y": 355,
+          "w": 225,
+          "h": 20,
+          "badge_on": "card_results",
+          "bind": {
+            "text": "{{status_note}}"
+          },
+          "props": {
+            "font_size": 16,
+            "weight": "700",
+            "tone": "ink"
+          }
+        },
+        {
+          "id": "pass_banner",
+          "type": "card",
+          "x": 60,
+          "y": 410,
+          "w": 880,
+          "h": 65,
+          "is_container": true,
+          "props": {
+            "rx": 12,
+            "tone": "ok-soft"
+          }
+        },
+        {
+          "id": "pass_pill",
+          "type": "pill",
+          "x": 85,
+          "y": 425,
+          "w": 170,
+          "h": 34,
+          "badge_on": "pass_banner",
+          "props": {
+            "text": "Loss · Result",
+            "tone": "ok"
+          }
+        },
+        {
+          "id": "pass_text",
+          "type": "text",
+          "x": 275,
+          "y": 432,
+          "w": 580,
+          "h": 24,
+          "badge_on": "pass_banner",
+          "bind": {
+            "text": "Total Loss Paid: {{total_absorbed_amt}} · Pending: {{unabsorbed_amt}}"
+          },
+          "props": {
+            "font_size": 17,
+            "weight": "800",
+            "tone": "ink"
+          }
+        },
+        {
+          "id": "pass_tick",
+          "type": "tick",
+          "x": 900,
+          "y": 426,
+          "w": 32,
+          "h": 32,
+          "badge_on": "pass_banner",
+          "props": {
+            "tone": "ok"
+          }
+        }
+      ]
+    }
+  ]
+};
+
+window.PRIMITIVES_DATA = {
+  "version": "1.0.0",
+  "timing_map_spec": {
+    "description": "Timing map specification for overriding default cue timestamps (produced by future voice-sync stage)",
+    "format": {
+      "<cue_id>": "number (seconds from animation start)"
+    },
+    "lead_seconds": 0.15,
+    "lead_description": "Optional lead-time in seconds before voice narration starts an event (default 0.15s)"
+  },
+  "tokens": {
+    "light": {
+      "--bg": "#F8FAFC",
+      "--surface": "#FFFFFF",
+      "--surface-card": "#FFFFFF",
+      "--ink": "#0F172A",
+      "--ink-muted": "#64748B",
+      "--line": "#E2E8F0",
+      "--accent": "#4F46E5",
+      "--accent-soft": "#EEF2FF",
+      "--ok": "#059669",
+      "--ok-soft": "#ECFDF5",
+      "--warn": "#DC2626",
+      "--warn-soft": "#FEF2F2",
+      "--gold": "#D97706",
+      "--gold-soft": "#FEF3C7",
+      "--shadow": "rgba(15, 23, 42, 0.08)"
+    },
+    "dark": {
+      "--bg": "#0B1120",
+      "--surface": "#1E293B",
+      "--surface-card": "#1E293B",
+      "--ink": "#F8FAFC",
+      "--ink-muted": "#94A3B8",
+      "--line": "#334155",
+      "--accent": "#818CF8",
+      "--accent-soft": "#1E1B4B",
+      "--ok": "#34D399",
+      "--ok-soft": "#064E3B",
+      "--warn": "#F87171",
+      "--warn-soft": "#7F1D1D",
+      "--gold": "#FBBF24",
+      "--gold-soft": "#78350F",
+      "--shadow": "rgba(0, 0, 0, 0.35)"
+    }
+  },
+  "primitives": [
+    {
+      "type": "person",
+      "group": "actors",
+      "is_container": false,
+      "is_badge": false,
+      "default_w": 100,
+      "default_h": 120,
+      "description": "Individual human taxpayer, buyer, seller, partner, or donor with label.",
+      "params": {
+        "label": "string",
+        "role": "string",
+        "avatar_style": "string"
+      }
+    },
+    {
+      "type": "group_huf",
+      "group": "actors",
+      "is_container": false,
+      "is_badge": false,
+      "default_w": 120,
+      "default_h": 120,
+      "description": "Family group or Hindu Undivided Family actor unit with plural silhouette.",
+      "params": {
+        "label": "string",
+        "members": "number"
+      }
+    },
+    {
+      "type": "company",
+      "group": "actors",
+      "is_container": false,
+      "is_badge": false,
+      "default_w": 110,
+      "default_h": 120,
+      "description": "Corporate body or enterprise entity with corporate tower emblem.",
+      "params": {
+        "label": "string",
+        "corp_type": "string"
+      }
+    },
+    {
+      "type": "firm",
+      "group": "actors",
+      "is_container": false,
+      "is_badge": false,
+      "default_w": 110,
+      "default_h": 120,
+      "description": "Partnership firm or LLP entity with handshake insignia.",
+      "params": {
+        "label": "string"
+      }
+    },
+    {
+      "type": "bank",
+      "group": "actors",
+      "is_container": false,
+      "is_badge": false,
+      "default_w": 110,
+      "default_h": 120,
+      "description": "Banking / financial institution with classical pillar facade.",
+      "params": {
+        "label": "string"
+      }
+    },
+    {
+      "type": "govt_dept",
+      "group": "actors",
+      "is_container": false,
+      "is_badge": false,
+      "default_w": 110,
+      "default_h": 120,
+      "description": "Government ministry or statutory authority with official seal crest.",
+      "params": {
+        "label": "string",
+        "dept_name": "string"
+      }
+    },
+    {
+      "type": "tax_office",
+      "group": "actors",
+      "is_container": false,
+      "is_badge": false,
+      "default_w": 110,
+      "default_h": 120,
+      "description": "Tax administration or revenue authority with balance scales insignia.",
+      "params": {
+        "label": "string"
+      }
+    },
+    {
+      "type": "house",
+      "group": "assets",
+      "is_container": false,
+      "is_badge": false,
+      "default_w": 110,
+      "default_h": 100,
+      "description": "Residential or commercial house property with roof & doorway.",
+      "params": {
+        "label": "string",
+        "cost": "number"
+      }
+    },
+    {
+      "type": "land",
+      "group": "assets",
+      "is_container": false,
+      "is_badge": false,
+      "default_w": 110,
+      "default_h": 90,
+      "description": "Plot of agricultural or commercial land with boundary marker pins.",
+      "params": {
+        "label": "string",
+        "area": "string"
+      }
+    },
+    {
+      "type": "shares",
+      "group": "assets",
+      "is_container": false,
+      "is_badge": false,
+      "default_w": 90,
+      "default_h": 90,
+      "description": "Equity shares or certificate stack with percentage yield.",
+      "params": {
+        "label": "string",
+        "quantity": "number"
+      }
+    },
+    {
+      "type": "mutual_fund",
+      "group": "assets",
+      "is_container": false,
+      "is_badge": false,
+      "default_w": 90,
+      "default_h": 90,
+      "description": "Mutual fund units or pooled investment portfolio.",
+      "params": {
+        "label": "string",
+        "nav": "number"
+      }
+    },
+    {
+      "type": "gold",
+      "group": "assets",
+      "is_container": false,
+      "is_badge": false,
+      "default_w": 90,
+      "default_h": 80,
+      "description": "Gold ingot or bullion bullion bar with lustrous reflection.",
+      "params": {
+        "label": "string",
+        "weight": "string"
+      }
+    },
+    {
+      "type": "machinery",
+      "group": "assets",
+      "is_container": false,
+      "is_badge": false,
+      "default_w": 100,
+      "default_h": 90,
+      "description": "Plant and industrial machinery with intermeshing cog gears.",
+      "params": {
+        "label": "string"
+      }
+    },
+    {
+      "type": "business",
+      "group": "assets",
+      "is_container": false,
+      "is_badge": false,
+      "default_w": 110,
+      "default_h": 100,
+      "description": "Commercial undertaking, factory, or business enterprise asset.",
+      "params": {
+        "label": "string"
+      }
+    },
+    {
+      "type": "bonds",
+      "group": "assets",
+      "is_container": false,
+      "is_badge": false,
+      "default_w": 90,
+      "default_h": 90,
+      "description": "Capital gain bonds or sovereign debentures with ribbon rosette.",
+      "params": {
+        "label": "string",
+        "interest": "number"
+      }
+    },
+    {
+      "type": "vehicle",
+      "group": "assets",
+      "is_container": false,
+      "is_badge": false,
+      "default_w": 110,
+      "default_h": 70,
+      "description": "Commercial or passenger motor vehicle asset.",
+      "params": {
+        "label": "string"
+      }
+    },
+    {
+      "type": "document",
+      "group": "instruments",
+      "is_container": false,
+      "is_badge": false,
+      "default_w": 80,
+      "default_h": 100,
+      "description": "Legal contract, agreement to sell, deed, or tax assessment order.",
+      "params": {
+        "title": "string",
+        "subtitle": "string"
+      }
+    },
+    {
+      "type": "money_bag",
+      "group": "instruments",
+      "is_container": false,
+      "is_badge": false,
+      "default_w": 90,
+      "default_h": 90,
+      "description": "Bag of monetary consideration or cash consideration with ₹ symbol.",
+      "params": {
+        "amount": "number",
+        "fmt": "string"
+      }
+    },
+    {
+      "type": "coin",
+      "group": "instruments",
+      "is_container": false,
+      "is_badge": false,
+      "default_w": 60,
+      "default_h": 60,
+      "description": "Individual monetary coin or dividend token.",
+      "params": {
+        "value": "number"
+      }
+    },
+    {
+      "type": "calendar",
+      "group": "indicators",
+      "is_container": false,
+      "is_badge": false,
+      "default_w": 90,
+      "default_h": 90,
+      "description": "Calendar block displaying due date, statutory cutoff, or tax year.",
+      "params": {
+        "date": "string",
+        "month": "string",
+        "year": "number"
+      }
+    },
+    {
+      "type": "clock",
+      "group": "indicators",
+      "is_container": false,
+      "is_badge": false,
+      "default_w": 80,
+      "default_h": 80,
+      "description": "Radial clock face tracking holding period in months or days.",
+      "params": {
+        "months": "number"
+      }
+    },
+    {
+      "type": "scale",
+      "group": "indicators",
+      "is_container": false,
+      "is_badge": false,
+      "default_w": 120,
+      "default_h": 100,
+      "description": "Justice balance scale weighing two competing values or claims.",
+      "params": {
+        "tilt": "number"
+      }
+    },
+    {
+      "type": "gavel",
+      "group": "indicators",
+      "is_container": false,
+      "is_badge": false,
+      "default_w": 80,
+      "default_h": 80,
+      "description": "Judicial gavel for court precedents, rulings, and decisions.",
+      "params": {
+        "strike_at": "number"
+      }
+    },
+    {
+      "type": "padlock",
+      "group": "indicators",
+      "is_container": false,
+      "is_badge": false,
+      "default_w": 70,
+      "default_h": 80,
+      "description": "Security padlock that opens (unlocked) or snaps shut (locked).",
+      "params": {
+        "locked": "boolean"
+      }
+    },
+    {
+      "type": "gate",
+      "group": "indicators",
+      "is_container": false,
+      "is_badge": false,
+      "default_w": 140,
+      "default_h": 100,
+      "description": "Security gate doors that swing open for qualified events or lock.",
+      "params": {
+        "open": "boolean"
+      }
+    },
+    {
+      "type": "tick",
+      "group": "indicators",
+      "is_container": false,
+      "is_badge": true,
+      "default_w": 40,
+      "default_h": 40,
+      "description": "Green approval checkmark badge confirming condition satisfaction.",
+      "params": {
+        "tone": "string"
+      }
+    },
+    {
+      "type": "cross",
+      "group": "indicators",
+      "is_container": false,
+      "is_badge": true,
+      "default_w": 40,
+      "default_h": 40,
+      "description": "Red rejection cross badge for failed condition or disallowance.",
+      "params": {
+        "tone": "string"
+      }
+    },
+    {
+      "type": "arrow",
+      "group": "indicators",
+      "is_container": false,
+      "is_badge": false,
+      "default_w": 100,
+      "default_h": 20,
+      "description": "Directional horizontal or vertical transfer flow arrow.",
+      "params": {
+        "direction": "string",
+        "label": "string"
+      }
+    },
+    {
+      "type": "curved_arrow",
+      "group": "indicators",
+      "is_container": false,
+      "is_badge": false,
+      "default_w": 120,
+      "default_h": 60,
+      "description": "Curved arching flow arrow for loops, transfers, and cycles.",
+      "params": {
+        "direction": "string"
+      }
+    },
+    {
+      "type": "line",
+      "group": "indicators",
+      "is_container": false,
+      "is_badge": false,
+      "default_w": 200,
+      "default_h": 4,
+      "description": "Horizontal or vertical separator or statutory threshold ceiling.",
+      "params": {
+        "dashed": "boolean",
+        "stroke": "string"
+      }
+    },
+    {
+      "type": "card",
+      "group": "containers",
+      "is_container": true,
+      "is_badge": false,
+      "default_w": 240,
+      "default_h": 160,
+      "description": "Primary rounded rectangular surface container holding text, badges, and icons.",
+      "params": {
+        "title": "string",
+        "subtitle": "string",
+        "tone": "string",
+        "rx": "number"
+      }
+    },
+    {
+      "type": "pill",
+      "group": "containers",
+      "is_container": false,
+      "is_badge": true,
+      "default_w": 120,
+      "default_h": 36,
+      "description": "Rounded status pill or category badge positioned on cards or standalone.",
+      "params": {
+        "text": "string",
+        "tone": "string"
+      }
+    },
+    {
+      "type": "text",
+      "group": "containers",
+      "is_container": false,
+      "is_badge": false,
+      "default_w": 200,
+      "default_h": 36,
+      "description": "High-legibility SVG typography node with auto-wrapping and auto-scaling.",
+      "params": {
+        "text": "string",
+        "font_size": "number",
+        "weight": "string",
+        "align": "string"
+      }
+    },
+    {
+      "type": "counter",
+      "group": "containers",
+      "is_container": false,
+      "is_badge": false,
+      "default_w": 200,
+      "default_h": 48,
+      "description": "Dynamic rolling numeric counter displaying formatted currency or values.",
+      "params": {
+        "value": "number",
+        "fmt": "string",
+        "prefix": "string"
+      }
+    },
+    {
+      "type": "ledger_row",
+      "group": "containers",
+      "is_container": true,
+      "is_badge": false,
+      "default_w": 600,
+      "default_h": 44,
+      "description": "Accounting computation row displaying sign (+/-/=), particulars, and amount.",
+      "params": {
+        "sign": "string",
+        "label": "string",
+        "value": "number",
+        "is_total": "boolean"
+      }
+    },
+    {
+      "type": "bar",
+      "group": "containers",
+      "is_container": false,
+      "is_badge": false,
+      "default_w": 300,
+      "default_h": 36,
+      "description": "Horizontal or vertical comparison bar filling up to a target value.",
+      "params": {
+        "value": "number",
+        "max": "number",
+        "fill_color": "string"
+      }
+    },
+    {
+      "type": "gauge",
+      "group": "containers",
+      "is_container": false,
+      "is_badge": false,
+      "default_w": 200,
+      "default_h": 120,
+      "description": "Radial or semi-circular speedometer gauge tracking utilization vs limit.",
+      "params": {
+        "value": "number",
+        "limit": "number",
+        "label": "string"
+      }
+    },
+    {
+      "type": "slab_step",
+      "group": "containers",
+      "is_container": false,
+      "is_badge": false,
+      "default_w": 320,
+      "default_h": 48,
+      "description": "Individual progressive tax slab tier with bracket range and tax rate.",
+      "params": {
+        "slab_range": "string",
+        "rate": "string",
+        "tax_val": "number"
+      }
+    },
+    {
+      "type": "timeline_axis",
+      "group": "containers",
+      "is_container": false,
+      "is_badge": false,
+      "default_w": 700,
+      "default_h": 60,
+      "description": "Chronological horizontal timeline with milestone dates and ticks.",
+      "params": {
+        "start_date": "string",
+        "end_date": "string",
+        "ticks": "list"
+      }
+    },
+    {
+      "type": "window_bar",
+      "group": "containers",
+      "is_container": false,
+      "is_badge": false,
+      "default_w": 300,
+      "default_h": 40,
+      "description": "Permitted statutory investment or relief window highlighted on a timeline.",
+      "params": {
+        "label": "string",
+        "valid": "boolean"
+      }
+    },
+    {
+      "type": "marker",
+      "group": "containers",
+      "is_container": false,
+      "is_badge": true,
+      "default_w": 40,
+      "default_h": 60,
+      "description": "Pinpoint milestone flag or date marker on timeline or chart.",
+      "params": {
+        "label": "string",
+        "date": "string",
+        "tone": "string"
+      }
+    },
+    {
+      "type": "strike",
+      "group": "containers",
+      "is_container": false,
+      "is_badge": true,
+      "default_w": 200,
+      "default_h": 10,
+      "description": "Red or gold animated strike-through line crossing out disallowed or replaced values.",
+      "params": {
+        "angle": "number",
+        "stroke_width": "number"
+      }
+    },
+    {
+      "type": "glow",
+      "group": "containers",
+      "is_container": false,
+      "is_badge": true,
+      "default_w": 100,
+      "default_h": 100,
+      "description": "Radial specular contour glow halo highlighting active element.",
+      "params": {
+        "radius": "number",
+        "tone": "string"
+      }
+    },
+    {
+      "type": "stack",
+      "group": "containers",
+      "is_container": true,
+      "is_badge": false,
+      "default_w": 220,
+      "default_h": 300,
+      "description": "Vertical stack container holding cumulative financial layers.",
+      "params": {
+        "layers": "list"
+      }
+    },
+    {
+      "type": "split",
+      "group": "containers",
+      "is_container": true,
+      "is_badge": false,
+      "default_w": 400,
+      "default_h": 200,
+      "description": "Bifurcation node dividing an input inflow into multiple outgoing streams.",
+      "params": {
+        "ratio": "string",
+        "branches": "number"
+      }
+    },
+    {
+      "type": "merge",
+      "group": "containers",
+      "is_container": true,
+      "is_badge": false,
+      "default_w": 400,
+      "default_h": 200,
+      "description": "Aggregation node combining multiple inflows into a single unified total.",
+      "params": {
+        "inputs": "number"
+      }
+    }
+  ]
+};
+
+window.LIBRARY_REPORT = {
+  "gift_of_asset": {
+    "id": "gift_of_asset",
+    "title": "Gift of Asset & Cost Transfer",
+    "category": "A. Transfers of assets",
+    "no_overflow": true,
+    "no_overlap": true,
+    "font_size": true,
+    "fill_ratio": true,
+    "currency_format": true,
+    "determinism": true,
+    "retime": true,
+    "teardown": true,
+    "distinctness": true,
+    "origin_text": true,
+    "slot_defaults": true,
+    "console_errors": true,
+    "violations": []
+  },
+  "stamp_value_substitution": {
+    "id": "stamp_value_substitution",
+    "title": "Value Comparison & Result",
+    "category": "B. Valuation and deemed value",
+    "no_overflow": true,
+    "no_overlap": true,
+    "font_size": true,
+    "fill_ratio": true,
+    "currency_format": true,
+    "determinism": true,
+    "retime": true,
+    "teardown": true,
+    "distinctness": true,
+    "origin_text": true,
+    "slot_defaults": true,
+    "console_errors": true,
+    "violations": []
+  },
+  "capital_gain_ledger": {
+    "id": "capital_gain_ledger",
+    "title": "Gain & Cost Ledger",
+    "category": "C. Computation",
+    "no_overflow": true,
+    "no_overlap": true,
+    "font_size": true,
+    "fill_ratio": true,
+    "currency_format": true,
+    "determinism": true,
+    "retime": true,
+    "teardown": true,
+    "distinctness": true,
+    "origin_text": true,
+    "slot_defaults": true,
+    "console_errors": true,
+    "violations": []
+  },
+  "reinvestment_window": {
+    "id": "reinvestment_window",
+    "title": "Date & Window Timeline",
+    "category": "D. Timelines and windows",
+    "no_overflow": true,
+    "no_overlap": true,
+    "font_size": true,
+    "fill_ratio": true,
+    "currency_format": true,
+    "determinism": true,
+    "retime": true,
+    "teardown": true,
+    "distinctness": true,
+    "origin_text": true,
+    "slot_defaults": true,
+    "console_errors": true,
+    "violations": []
+  },
+  "conditions_checklist_gate": {
+    "id": "conditions_checklist_gate",
+    "title": "Gate Checklist & Result",
+    "category": "E. Conditions and decisions",
+    "no_overflow": true,
+    "no_overlap": true,
+    "font_size": true,
+    "fill_ratio": true,
+    "currency_format": true,
+    "determinism": true,
+    "retime": true,
+    "teardown": true,
+    "distinctness": true,
+    "origin_text": true,
+    "slot_defaults": true,
+    "console_errors": true,
+    "violations": []
+  },
+  "sale_of_asset": {
+    "id": "sale_of_asset",
+    "title": "Sale of Asset & Cost",
+    "category": "A. Transfers of assets",
+    "no_overflow": true,
+    "no_overlap": true,
+    "font_size": true,
+    "fill_ratio": true,
+    "currency_format": true,
+    "determinism": true,
+    "retime": true,
+    "teardown": true,
+    "distinctness": true,
+    "origin_text": true,
+    "slot_defaults": true,
+    "console_errors": true,
+    "violations": []
+  },
+  "slab_ladder": {
+    "id": "slab_ladder",
+    "title": "Tax Rate & Slab Ladder",
+    "category": "C. Computation",
+    "no_overflow": true,
+    "no_overlap": true,
+    "font_size": true,
+    "fill_ratio": true,
+    "currency_format": true,
+    "determinism": true,
+    "retime": true,
+    "teardown": true,
+    "distinctness": true,
+    "origin_text": true,
+    "slot_defaults": true,
+    "console_errors": true,
+    "violations": []
+  },
+  "tds_flow": {
+    "id": "tds_flow",
+    "title": "Tax & Amount Flow",
+    "category": "F. Flows and withholding",
+    "no_overflow": true,
+    "no_overlap": true,
+    "font_size": true,
+    "fill_ratio": true,
+    "currency_format": true,
+    "determinism": true,
+    "retime": true,
+    "teardown": true,
+    "distinctness": true,
+    "origin_text": true,
+    "slot_defaults": true,
+    "console_errors": true,
+    "violations": []
+  },
+  "salary_breakup": {
+    "id": "salary_breakup",
+    "title": "Amount & Tax Stack",
+    "category": "G. Heads of income and business",
+    "no_overflow": true,
+    "no_overlap": true,
+    "font_size": true,
+    "fill_ratio": true,
+    "currency_format": true,
+    "determinism": true,
+    "retime": true,
+    "teardown": true,
+    "distinctness": true,
+    "origin_text": true,
+    "slot_defaults": true,
+    "console_errors": true,
+    "violations": []
+  },
+  "case_law_card": {
+    "id": "case_law_card",
+    "title": "Card Summary & Result",
+    "category": "E. Conditions and decisions",
+    "no_overflow": true,
+    "no_overlap": true,
+    "font_size": true,
+    "fill_ratio": true,
+    "currency_format": true,
+    "determinism": true,
+    "retime": true,
+    "teardown": true,
+    "distinctness": true,
+    "origin_text": true,
+    "slot_defaults": true,
+    "console_errors": true,
+    "violations": []
+  },
+  "inheritance_by_will": {
+    "id": "inheritance_by_will",
+    "title": "Inheritance by Will & Asset Transfer",
+    "category": "A. Transfers of assets",
+    "no_overflow": true,
+    "no_overlap": true,
+    "font_size": true,
+    "fill_ratio": true,
+    "currency_format": true,
+    "determinism": true,
+    "retime": true,
+    "teardown": true,
+    "distinctness": true,
+    "origin_text": true,
+    "slot_defaults": true,
+    "console_errors": true,
+    "violations": []
+  },
+  "huf_partition": {
+    "id": "huf_partition",
+    "title": "Family Unit Partition & Asset Split",
+    "category": "A. Transfers of assets",
+    "no_overflow": true,
+    "no_overlap": true,
+    "font_size": true,
+    "fill_ratio": true,
+    "currency_format": true,
+    "determinism": true,
+    "retime": true,
+    "teardown": true,
+    "distinctness": true,
+    "origin_text": true,
+    "slot_defaults": true,
+    "console_errors": true,
+    "violations": []
+  },
+  "amalgamation_of_companies": {
+    "id": "amalgamation_of_companies",
+    "title": "Company Amalgamation & Share Allotment",
+    "category": "A. Transfers of assets",
+    "no_overflow": true,
+    "no_overlap": true,
+    "font_size": true,
+    "fill_ratio": true,
+    "currency_format": true,
+    "determinism": true,
+    "retime": true,
+    "teardown": true,
+    "distinctness": true,
+    "origin_text": true,
+    "slot_defaults": true,
+    "console_errors": true,
+    "violations": []
+  },
+  "conversion_firm_to_company": {
+    "id": "conversion_firm_to_company",
+    "title": "Firm Conversion to Company & Shares",
+    "category": "A. Transfers of assets",
+    "no_overflow": true,
+    "no_overlap": true,
+    "font_size": true,
+    "fill_ratio": true,
+    "currency_format": true,
+    "determinism": true,
+    "retime": true,
+    "teardown": true,
+    "distinctness": true,
+    "origin_text": true,
+    "slot_defaults": true,
+    "console_errors": true,
+    "violations": []
+  },
+  "exchange_of_assets": {
+    "id": "exchange_of_assets",
+    "title": "Asset Exchange & Balance Differential",
+    "category": "A. Transfers of assets",
+    "no_overflow": true,
+    "no_overlap": true,
+    "font_size": true,
+    "fill_ratio": true,
+    "currency_format": true,
+    "determinism": true,
+    "retime": true,
+    "teardown": true,
+    "distinctness": true,
+    "origin_text": true,
+    "slot_defaults": true,
+    "console_errors": true,
+    "violations": []
+  },
+  "compulsory_acquisition": {
+    "id": "compulsory_acquisition",
+    "title": "Compulsory Acquisition & Compensation Flow",
+    "category": "A. Transfers of assets",
+    "no_overflow": true,
+    "no_overlap": true,
+    "font_size": true,
+    "fill_ratio": true,
+    "currency_format": true,
+    "determinism": true,
+    "retime": true,
+    "teardown": true,
+    "distinctness": true,
+    "origin_text": true,
+    "slot_defaults": true,
+    "console_errors": true,
+    "violations": []
+  },
+  "capital_contribution_to_firm": {
+    "id": "capital_contribution_to_firm",
+    "title": "Capital Contribution to Partnership Firm",
+    "category": "A. Transfers of assets",
+    "no_overflow": true,
+    "no_overlap": true,
+    "font_size": true,
+    "fill_ratio": true,
+    "currency_format": true,
+    "determinism": true,
+    "retime": true,
+    "teardown": true,
+    "distinctness": true,
+    "origin_text": true,
+    "slot_defaults": true,
+    "console_errors": true,
+    "violations": []
+  },
+  "liquidation_distribution": {
+    "id": "liquidation_distribution",
+    "title": "Company Liquidation & Asset Distribution",
+    "category": "A. Transfers of assets",
+    "no_overflow": true,
+    "no_overlap": true,
+    "font_size": true,
+    "fill_ratio": true,
+    "currency_format": true,
+    "determinism": true,
+    "retime": true,
+    "teardown": true,
+    "distinctness": true,
+    "origin_text": true,
+    "slot_defaults": true,
+    "console_errors": true,
+    "violations": []
+  },
+  "lower_of_two_values": {
+    "id": "lower_of_two_values",
+    "title": "Lower of Two Values Comparison",
+    "category": "B. Valuation and deemed value",
+    "no_overflow": true,
+    "no_overlap": true,
+    "font_size": true,
+    "fill_ratio": true,
+    "currency_format": true,
+    "determinism": true,
+    "retime": true,
+    "teardown": true,
+    "distinctness": true,
+    "origin_text": true,
+    "slot_defaults": true,
+    "console_errors": true,
+    "violations": []
+  },
+  "value_on_cutoff_date": {
+    "id": "value_on_cutoff_date",
+    "title": "Cutoff Date Value Timeline & Comparison",
+    "category": "B. Valuation and deemed value",
+    "no_overflow": true,
+    "no_overlap": true,
+    "font_size": true,
+    "fill_ratio": true,
+    "currency_format": true,
+    "determinism": true,
+    "retime": true,
+    "teardown": true,
+    "distinctness": true,
+    "origin_text": true,
+    "slot_defaults": true,
+    "console_errors": true,
+    "violations": []
+  },
+  "higher_of_cost_or_fmv": {
+    "id": "higher_of_cost_or_fmv",
+    "title": "Higher of Cost or Market Value",
+    "category": "B. Valuation and deemed value",
+    "no_overflow": true,
+    "no_overlap": true,
+    "font_size": true,
+    "fill_ratio": true,
+    "currency_format": true,
+    "determinism": true,
+    "retime": true,
+    "teardown": true,
+    "distinctness": true,
+    "origin_text": true,
+    "slot_defaults": true,
+    "console_errors": true,
+    "violations": []
+  },
+  "indexed_cost": {
+    "id": "indexed_cost",
+    "title": "Cost Ratio Ladder & Value Growth",
+    "category": "B. Valuation and deemed value",
+    "no_overflow": true,
+    "no_overlap": true,
+    "font_size": true,
+    "fill_ratio": true,
+    "currency_format": true,
+    "determinism": true,
+    "retime": true,
+    "teardown": true,
+    "distinctness": true,
+    "origin_text": true,
+    "slot_defaults": true,
+    "console_errors": true,
+    "violations": []
+  },
+  "previous_owner_cost": {
+    "id": "previous_owner_cost",
+    "title": "Previous Owner Cost Carryover",
+    "category": "B. Valuation and deemed value",
+    "no_overflow": true,
+    "no_overlap": true,
+    "font_size": true,
+    "fill_ratio": true,
+    "currency_format": true,
+    "determinism": true,
+    "retime": true,
+    "teardown": true,
+    "distinctness": true,
+    "origin_text": true,
+    "slot_defaults": true,
+    "console_errors": true,
+    "violations": []
+  },
+  "holding_period_clock": {
+    "id": "holding_period_clock",
+    "title": "Holding Period Clock & Months Stack",
+    "category": "B. Valuation and deemed value",
+    "no_overflow": true,
+    "no_overlap": true,
+    "font_size": true,
+    "fill_ratio": true,
+    "currency_format": true,
+    "determinism": true,
+    "retime": true,
+    "teardown": true,
+    "distinctness": true,
+    "origin_text": true,
+    "slot_defaults": true,
+    "console_errors": true,
+    "violations": []
+  },
+  "two_taxpayers_side_by_side": {
+    "id": "two_taxpayers_side_by_side",
+    "title": "Two Taxpayers Side by Side Computation",
+    "category": "C. Computation",
+    "no_overflow": true,
+    "no_overlap": true,
+    "font_size": true,
+    "fill_ratio": true,
+    "currency_format": true,
+    "determinism": true,
+    "retime": true,
+    "teardown": true,
+    "distinctness": true,
+    "origin_text": true,
+    "slot_defaults": true,
+    "console_errors": true,
+    "violations": []
+  },
+  "improvement_cutoff_timeline": {
+    "id": "improvement_cutoff_timeline",
+    "title": "Improvement Cutoff Date Timeline",
+    "category": "C. Computation",
+    "no_overflow": true,
+    "no_overlap": true,
+    "font_size": true,
+    "fill_ratio": true,
+    "currency_format": true,
+    "determinism": true,
+    "retime": true,
+    "teardown": true,
+    "distinctness": true,
+    "origin_text": true,
+    "slot_defaults": true,
+    "console_errors": true,
+    "violations": []
+  },
+  "advance_forfeited": {
+    "id": "advance_forfeited",
+    "title": "Advance Money Forfeited Treatment",
+    "category": "C. Computation",
+    "no_overflow": true,
+    "no_overlap": true,
+    "font_size": true,
+    "fill_ratio": true,
+    "currency_format": true,
+    "determinism": true,
+    "retime": true,
+    "teardown": true,
+    "distinctness": true,
+    "origin_text": true,
+    "slot_defaults": true,
+    "console_errors": true,
+    "violations": []
+  },
+  "flat_rate_plus_cess": {
+    "id": "flat_rate_plus_cess",
+    "title": "Flat Tax Rate & Extra Rate Total",
+    "category": "C. Computation",
+    "no_overflow": true,
+    "no_overlap": true,
+    "font_size": true,
+    "fill_ratio": true,
+    "currency_format": true,
+    "determinism": true,
+    "retime": true,
+    "teardown": true,
+    "distinctness": true,
+    "origin_text": true,
+    "slot_defaults": true,
+    "console_errors": true,
+    "violations": []
+  },
+  "exemption_threshold_waterfall": {
+    "id": "exemption_threshold_waterfall",
+    "title": "Exemption Threshold Partition & Excess",
+    "category": "C. Computation",
+    "no_overflow": true,
+    "no_overlap": true,
+    "font_size": true,
+    "fill_ratio": true,
+    "currency_format": true,
+    "determinism": true,
+    "retime": true,
+    "teardown": true,
+    "distinctness": true,
+    "origin_text": true,
+    "slot_defaults": true,
+    "console_errors": true,
+    "violations": []
+  },
+  "loss_set_off_waterfall": {
+    "id": "loss_set_off_waterfall",
+    "title": "Loss Set Off Waterfall Hierarchy",
+    "category": "C. Computation",
+    "no_overflow": true,
+    "no_overlap": true,
+    "font_size": true,
+    "fill_ratio": true,
+    "currency_format": true,
+    "determinism": true,
+    "retime": true,
+    "teardown": true,
+    "distinctness": true,
+    "origin_text": true,
+    "slot_defaults": true,
+    "console_errors": true,
+    "violations": []
+  }
+};
