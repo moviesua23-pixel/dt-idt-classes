@@ -1,155 +1,192 @@
 window.LATEST_PRESENTATION = {
-  "id": "dt-section_54_capital_gains_exemption_",
-  "title": "Section 54 Capital Gains Exemption & Proviso Masterclass",
+  "id": "dt-mastering_sec_51__56_2__ix____sec_5",
+  "title": "Mastering Sec 51, 56(2)(ix) & Sec 54 Capital Gains Exemption",
   "subject": "DT",
   "domain": "Real Estate",
-  "provision_raw": "Section 54: Purchase/construction of residential house. Exempt = Lower of Capital Gain or Cost of New Asset. Purchase: 1 yr before or 2 yrs after transfer; Construction: 3 yrs after. Section 54 Proviso: Capital Gain <= 2 Crore (Once-in-a-lifetime) Exemption available for Two residential houses in India.",
-  "story_summary": "Mr. Rajesh sells his residential house in Ernakulam for ₹3 Crore, earning a Long-Term Capital Gain (LTCG) of ₹1.5 Crore. Since his LTCG is under ₹2 Crore, he utilizes the Section 54 Proviso to invest in two new apartments in Kochi. The presentation breaks down the statutory eligibility, timelines, lower-of benchmark rule, and final taxable gain.",
-  "total_slides": 5,
-  "total_duration": 133.9,
+  "provision_raw": "Section 54 & Section 51: Capital Gains Exemption & Forfeiture of Advance Money\nProvision / Section\tStatutory Trigger / Condition\tTax Treatment / Formula\tJudicial Benchmark / Landmark Rule\nSection 51\tAdvance money forfeited prior to 01/04/2014\tReduced from Cost of Acquisition\tReduces base cost before applying indexation\nSection 56(2)(ix)\tAdvance money forfeited on or after 01/04/2014\tTaxed under Income from Other Sources\tDoes NOT reduce Cost of Acquisition\nSection 54\tPurchase/construction of residential house\tExempt = Lower of Capital Gain or Cost of New Asset\tPurchase: 1 yr before or 2 yrs after transfer; Construction: 3 yrs after\nSection 54 Proviso\tCapital Gain ≤ ₹ 2 Crore (Once-in-a-lifetime)\tExemption available for Two residential houses in India\tAggregate investment across both houses is eligible",
+  "story_summary": "Mr. Rajesh sells his residential house in Ernakulam after forfeiting advance money in two different tax regimes (2011 and 2016). He calculates his net capital gain of ₹1.5 Crores and strategically reinvests it into two smaller residential properties under the Section 54 Proviso once-in-a-lifetime rule.",
+  "total_slides": 6,
+  "total_duration": 282.2,
   "slides": [
     {
       "slide_number": 1,
-      "slide_title": "Original Transfer & Capital Gain",
-      "scene_purpose": "Setup: Rajesh transfers his old residential house to Suresh and computes LTCG",
-      "archetype_id": "give_and_receive",
-      "dialogue_manglish": "Nammalude Rajesh Kochi-yil ulla thante old residential house Suresh-nu 3 Crore Rupees-nu sell cheyyukayaan. Direct Tax computation nadathiyappol, idhil ninnum Rajesh-nu Total Long-Term Capital Gain (LTCG) aayi 1.5 Crore Rupees generate aayi. Ini ee LTCG tax liability nannayi reduce cheyyan Section 54 engane help cheyyum ennu nokkam.",
-      "audio_file": "data/audio/presentations/dt-section_54_capital_gains_exemption_/slide_1.mp3",
-      "audio_duration": 23.7,
-      "duration": 24.7,
+      "slide_title": "Pre-2014 Advance Forfeiture: Reduction from Cost (Sec 51)",
+      "scene_purpose": "Explain how advance money forfeited prior to 01/04/2014 reduces the original Cost of Acquisition (COA).",
+      "archetype_id": "take_away",
+      "dialogue_manglish": "Friends, look at Rajesh's case. 2005-ൽ Rajesh 10 Lakhs-ന് buy ചെയ്ത residential house 2011-ൽ sell ചെയ്യാൻ ഒരു deal ആക്കി. Buyer deal cancel ചെയ്തപ്പോൾ 2 Lakhs advance money forfeit ചെയ്തു. Section 51 പ്രകാരം 01/04/2014-ന് മുമ്പ് forfeit ചെയ്ത advance money, property-യുടെ original Cost of Acquisition-ൽ നിന്ന് deduct ചെയ്യണം. So base cost ₹10L ൽ നിന്ന് ₹2L കുറഞ്ഞ് net ₹8L ആയി മാറും!",
+      "audio_file": "data/audio/presentations/dt-mastering_sec_51__56_2__ix____sec_5/slide_1.mp3",
+      "audio_duration": 57.2,
+      "duration": 58.2,
       "cues": {
         "cue_start": 0.5,
-        "cue_action": 9.5,
-        "cue_conclusion": 19.0
+        "cue_action": 22.9,
+        "cue_conclusion": 45.8
       },
       "slots": {
-        "title": "Transfer of Old Residential House",
-        "giver": "Mr. Rajesh",
-        "receiver": "Mr. Suresh",
-        "item_label": "Old Residential House",
-        "item_icon": "house",
-        "item_value": 30000000,
-        "payment_amount": 30000000,
-        "tag_text": "LTCG Generated: ₹1.5 Crore",
-        "note": "Transfer of Long-Term Capital Asset under Sec 45"
+        "title": "Sec 51: Pre-2014 Advance Money Forfeiture",
+        "whole_label": "Original Purchase Cost (2005)",
+        "whole_val": 1000000,
+        "chunks": [
+          {
+            "label": "Forfeited Advance (2011 - Pre 01/04/2014)",
+            "val": 200000
+          }
+        ],
+        "result_label": "Adjusted Cost of Acquisition (COA)",
+        "note": "Under Sec 51, advance forfeited prior to 01-04-2014 is deducted from COA before indexation."
       }
     },
     {
       "slide_number": 2,
-      "slide_title": "Section 54 Reinvestment Timeline Window",
-      "scene_purpose": "Timeline check: Statutory window of 1 year before or 2 years after for purchase",
-      "archetype_id": "time_range",
-      "dialogue_manglish": "Section 54-il exemption claim cheyyan statutory timeline paalichirikkanam. New house purchase aanenghil transfer date-nu 1 year before-o atho 2 years after-o nadannirikkanam. Construction aanenghil 3 years window labhikkum. Rajesh transfer date-nu 18 months after aayi new property buy cheythathinal event exactly statutory window-il inside aanu.",
-      "audio_file": "data/audio/presentations/dt-section_54_capital_gains_exemption_/slide_2.mp3",
-      "audio_duration": 26.1,
-      "duration": 27.1,
+      "slide_title": "Post-2014 Advance Forfeiture: Taxed as IFOS (Sec 56(2)(ix))",
+      "scene_purpose": "Demonstrate that advance money forfeited on/after 01/04/2014 does not touch COA and is taxed under Income from Other Sources.",
+      "archetype_id": "key_statement",
+      "dialogue_manglish": "2016-ൽ Rajesh വീണ്ടും 5 Lakhs advance received & forfeited. Dynamic change in tax law! Section 56(2)(ix) പ്രകാരം 01/04/2014-ന് ശേഷം forfeit ചെയ്യുന്ന advance money 'Income from Other Sources'-ൽ അതാത് വർഷം fully taxable ആണ്. It will NEVER reduce the Cost of Acquisition!",
+      "audio_file": "data/audio/presentations/dt-mastering_sec_51__56_2__ix____sec_5/slide_2.mp3",
+      "audio_duration": 47.8,
+      "duration": 48.8,
       "cues": {
         "cue_start": 0.5,
-        "cue_action": 10.4,
-        "cue_conclusion": 20.9
+        "cue_action": 19.1,
+        "cue_conclusion": 38.2
       },
       "slots": {
-        "title": "Purchase Window (1 Yr Before / 2 Yrs After)",
-        "start_label": "Date of Sale",
-        "span_length": 2,
-        "span_unit": "Years",
-        "span_label": "Statutory Purchase Limit",
-        "event_label": "New House Purchased",
-        "event_offset": 1.5,
-        "is_inside": true,
-        "note": "Reinvestment inside 2-year post-sale limit is valid"
+        "title": "Sec 56(2)(ix): Post-2014 Advance Forfeiture",
+        "statement": "Advance money forfeited on or after 01/04/2014 is directly taxable under Income from Other Sources.",
+        "highlight_phrase": "Taxable under IFOS (No COA Reduction)",
+        "support_line": "Taxed in the year of forfeiture; Cost of Acquisition remains completely unaffected.",
+        "icon_type": "house"
       }
     },
     {
       "slide_number": 3,
-      "slide_title": "Section 54 Proviso: Two House Exemption Gate",
-      "scene_purpose": "Conditions check: Verifying once-in-a-lifetime option to buy 2 houses if LTCG <= 2 Crore",
-      "archetype_id": "conditions_gate",
-      "dialogue_manglish": "General rule-il 1 residential house-il maathrame reinvestment allowed ullu. Pakshe Section 54 Proviso prakaaram, Capital Gain <= ₹2 Crore aanenghil, Assessee-kku once-in-a-lifetime option aayi TWO residential houses in India-yil invest cheyyam. Rajesh-inte LTCG ₹1.5 Crore maathram aaya kond Portal Gate swing open aakunnu!",
-      "audio_file": "data/audio/presentations/dt-section_54_capital_gains_exemption_/slide_3.mp3",
-      "audio_duration": 26.0,
-      "duration": 27.0,
+      "slide_title": "Net Long Term Capital Gain (LTCG) Calculation",
+      "scene_purpose": "Show the calculation of net Capital Gain after applying indexed cost to the adjusted base cost.",
+      "archetype_id": "formula_builder",
+      "dialogue_manglish": "2023-ൽ Rajesh ഈ house ₹2.10 Crores-ന് sell ചെയ്യുന്നു. Adjusted base cost ₹8 Lakhs index ചെയ്ത് Deduct ചെയ്തപ്പോൾ Net Long-Term Capital Gain ₹1.50 Crores ലഭിക്കുന്നു. Let's see how Rajesh can save tax on this ₹1.50 Crores!",
+      "audio_file": "data/audio/presentations/dt-mastering_sec_51__56_2__ix____sec_5/slide_3.mp3",
+      "audio_duration": 21.3,
+      "duration": 22.3,
       "cues": {
         "cue_start": 0.5,
-        "cue_action": 10.4,
-        "cue_conclusion": 20.8
+        "cue_action": 8.5,
+        "cue_conclusion": 17.0
       },
       "slots": {
-        "title": "Section 54 Proviso Checklist (2 Houses Option)",
-        "door_label": "2 Houses Exemption Unlocked",
-        "all_required": true,
-        "conditions": [
+        "title": "Net LTCG Computation for FY 2023-24",
+        "chips": [
           {
-            "text": "Asset Sold is Long-Term Residential House",
-            "met": true
+            "label": "Full Value of Consideration",
+            "val": 21000000,
+            "op": "+",
+            "is_total": false
           },
           {
-            "text": "Capital Gain <= ₹2 Crore (Rajesh has ₹1.5 Cr)",
-            "met": true
+            "label": "Indexed Cost of Acquisition (Base ₹8L)",
+            "val": 6000000,
+            "op": "-",
+            "is_total": false
           },
           {
-            "text": "New Assets are Residential Houses in India",
-            "met": true
-          },
-          {
-            "text": "Once-in-a-Lifetime Option Exercised",
-            "met": true
+            "label": "Net Taxable LTCG (Before Exemption)",
+            "val": 15000000,
+            "op": "=",
+            "is_total": true
           }
         ],
-        "note": "Proviso to Sec 54(1) allows 2 houses when LTCG <= ₹2 Cr"
+        "note": "Net LTCG comes out to ₹ 1.50 Crores."
       }
     },
     {
       "slide_number": 4,
-      "slide_title": "Exemption Quantum: Lower of Rule",
-      "scene_purpose": "Benchmark comparison: Lower of Capital Gain vs Cost of New Assets",
-      "archetype_id": "compare_two",
-      "dialogue_manglish": "Statutory provision clear aayi parayunnu: Exemption Amount = Lower of Capital Gain OR Cost of New Assets. Rajesh buy cheytha 2 apartments-inte combined cost ₹1.3 Crore aanu (₹80L + ₹50L). Scale check cheyyumbo, LTCG ₹1.5 Cr-um Cost ₹1.3 Cr-um thammil compare cheydal, lower amount aaya ₹1.3 Crore aanu exemption aayi finalise cheyyuka.",
-      "audio_file": "data/audio/presentations/dt-section_54_capital_gains_exemption_/slide_4.mp3",
-      "audio_duration": 28.1,
-      "duration": 29.1,
+      "slide_title": "Section 54 Proviso: Qualification Gate for 2 Houses",
+      "scene_purpose": "Check whether Rajesh meets the criteria for investing in TWO residential houses under the Sec 54 Proviso.",
+      "archetype_id": "conditions_gate",
+      "dialogue_manglish": "Section 54 പ്രകാരം normally 1 residential house-ൽ മാത്രമേ exemption കിട്ടു. But look at the Special Proviso! Capital gain ₹2 Crores-ൽ താഴെ ആണെങ്കിൽ, Assessee-ക്ക് once-in-a-lifetime offer ആയി INDIA-യിൽ 2 residential houses buy ചെയ്യാം. Here LTCG ₹1.5 Cr ≤ ₹2 Cr, test passed!",
+      "audio_file": "data/audio/presentations/dt-mastering_sec_51__56_2__ix____sec_5/slide_4.mp3",
+      "audio_duration": 51.2,
+      "duration": 52.2,
       "cues": {
         "cue_start": 0.5,
-        "cue_action": 11.2,
-        "cue_conclusion": 22.5
+        "cue_action": 20.5,
+        "cue_conclusion": 41.0
       },
       "slots": {
-        "title": "Exemption Quantum Benchmark",
-        "label_a": "Capital Gain Generated",
-        "val_a": 15000000,
-        "label_b": "Cost of 2 New Houses",
-        "val_b": 13000000,
-        "mode": "lower",
-        "cap_amount": 13000000,
-        "note": "Exemption = Lower of Capital Gain or Investment"
+        "title": "Sec 54 Proviso: Two Residential Houses Benefit Gate",
+        "door_label": "Eligible for 2 Houses Exemption",
+        "all_required": true,
+        "conditions": [
+          {
+            "text": "Transfer of Long Term Residential House Property",
+            "met": true
+          },
+          {
+            "text": "Net Capital Gain does NOT exceed ₹ 2 Crores (Actual: ₹ 1.5 Cr)",
+            "met": true
+          },
+          {
+            "text": "Option exercised ONCE in a lifetime",
+            "met": true
+          }
+        ],
+        "note": "All conditions satisfied! Rajesh can invest in two residential properties in India."
       }
     },
     {
       "slide_number": 5,
-      "slide_title": "Net Taxable Capital Gain Computation",
-      "scene_purpose": "Deduction slicing: Deducting Sec 54 exemption from Gross LTCG to compute Net Taxable LTCG",
-      "archetype_id": "take_away",
-      "dialogue_manglish": "Finally, Rajesh ethra thoga tax adakkanam ennu nokkam. Total Gross LTCG aaya 1.5 Crore Rupees-il ninnum Section 54 Exemption chunk aaya 1.3 Crore Rupees slice cheydal, Net Taxable LTCG aayi 20 Lakhs Rupees maathrame baaki varoo. Idhinaanu 20% Special Rate-il tax Calculate cheyendath.",
-      "audio_file": "data/audio/presentations/dt-section_54_capital_gains_exemption_/slide_5.mp3",
-      "audio_duration": 25.0,
-      "duration": 26.0,
+      "slide_title": "Reinvestment Consolidation into Two Properties",
+      "scene_purpose": "Demonstrate the aggregation of investment across two new residential houses.",
+      "archetype_id": "merge_into_one",
+      "dialogue_manglish": "Rajesh 2 years-നുള്ളിൽ Kakkanad-ൽ ₹80 Lakhs-ൻ്റെ ഒരു apartment-ഉം Aluva-യിൽ ₹60 Lakhs-ൻ്റെ ഒരു house-ഉം buy ചെയ്തു. Sec 54 Proviso അനുവദിക്കുന്നതുപോലെ ഈ രണ്ട് residential houses-ൻ്റെയും total investment ₹1.40 Crores എലിജിബിൾ reinvestment ആയി മാറും!",
+      "audio_file": "data/audio/presentations/dt-mastering_sec_51__56_2__ix____sec_5/slide_5.mp3",
+      "audio_duration": 48.7,
+      "duration": 49.7,
       "cues": {
         "cue_start": 0.5,
-        "cue_action": 10.0,
-        "cue_conclusion": 20.0
+        "cue_action": 19.5,
+        "cue_conclusion": 39.0
       },
       "slots": {
-        "title": "Final Taxable LTCG Computation",
-        "whole_label": "Gross Long-Term Capital Gain",
-        "whole_val": 15000000,
-        "chunks": [
+        "title": "Consolidation of Reinvestment in Two Houses",
+        "streams": [
           {
-            "label": "Sec 54 Exemption (2 Houses)",
-            "val": 13000000
+            "label": "Kakkanad Apartment (Purchase)",
+            "val": 8000000,
+            "tone": "positive"
+          },
+          {
+            "label": "Aluva Villa (Purchase)",
+            "val": 6000000,
+            "tone": "positive"
           }
         ],
-        "result_label": "Net Taxable LTCG",
-        "note": "Net Taxable LTCG taxed @ 20% u/s 112"
+        "merged_label": "Total Reinvestment Eligible for Sec 54 (₹ 1.40 Cr)",
+        "note": "Aggregate cost of both residential houses purchased within 2 years."
+      }
+    },
+    {
+      "slide_number": 6,
+      "slide_title": "Final Section 54 Exemption & Taxable LTCG",
+      "scene_purpose": "Compare Capital Gain vs Cost of New Assets to calculate final exemption (Lower of the two).",
+      "archetype_id": "compare_two",
+      "dialogue_manglish": "Final Exemption benchmark! Sec 54 പ്രകാരം Exemption = Lower of Capital Gain (₹1.50 Cr) OR Cost of New Assets (₹1.40 Cr). So Rajesh-ന് ₹1.40 Crores full exemption ആയി ലഭിക്കും! Remaining Taxable LTCG represents just ₹10 Lakhs. Brilliant tax planning!",
+      "audio_file": "data/audio/presentations/dt-mastering_sec_51__56_2__ix____sec_5/slide_6.mp3",
+      "audio_duration": 50.0,
+      "duration": 51.0,
+      "cues": {
+        "cue_start": 0.5,
+        "cue_action": 20.0,
+        "cue_conclusion": 40.0
+      },
+      "slots": {
+        "title": "Sec 54 Final Exemption Benchmark",
+        "label_a": "Capital Gain Available",
+        "val_a": 15000000,
+        "label_b": "Cost of 2 New Houses",
+        "val_b": 14000000,
+        "mode": "lower",
+        "cap_amount": 14000000,
+        "note": "Exemption allowed is LOWER of Capital Gain or Investment in New Assets. Final Taxable LTCG = ₹ 10 Lakhs."
       }
     }
   ]
