@@ -1,20 +1,136 @@
 window.LATEST_PRESENTATION = {
-  "id": "dt-section_54___proviso__exemption_for",
-  "title": "Section 54 & Proviso: Exemption for Two Residential Houses",
+  "id": "dt-section_54_capital_gains_exemption_",
+  "title": "Section 54 Capital Gains Exemption & Proviso Masterclass",
   "subject": "DT",
   "domain": "Real Estate",
-  "provision_raw": "Section 54: Purchase/construction of residential house. Exempt = Lower of Capital Gain or Cost of New Asset. Purchase: 1 yr before or 2 yrs after transfer; Construction: 3 yrs after. Section 54 Proviso: Capital Gain <= 2 Crore (Once-in-a-lifetime) Exemption available for Two residential houses in India. Aggregate investment across both houses is eligible.",
-  "story_summary": "Ramesh sells his ancestral residential villa in Kochi, making a Long-Term Capital Gain of ₹1.8 Crore. Since his capital gain does not exceed ₹2 Crore, he avails the special once-in-a-lifetime proviso under Section 54 to reinvest in two smaller residential apartments (₹90 Lakhs & ₹70 Lakhs). We analyze his timeline, aggregate cost aggregation, exemption computation, and final taxable capital gain.",
-  "total_slides": 7,
-  "total_duration": 153.3,
+  "provision_raw": "Section 54: Purchase/construction of residential house. Exempt = Lower of Capital Gain or Cost of New Asset. Purchase: 1 yr before or 2 yrs after transfer; Construction: 3 yrs after. Section 54 Proviso: Capital Gain <= 2 Crore (Once-in-a-lifetime) Exemption available for Two residential houses in India.",
+  "story_summary": "Mr. Rajesh sells his residential house in Ernakulam for ₹3 Crore, earning a Long-Term Capital Gain (LTCG) of ₹1.5 Crore. Since his LTCG is under ₹2 Crore, he utilizes the Section 54 Proviso to invest in two new apartments in Kochi. The presentation breaks down the statutory eligibility, timelines, lower-of benchmark rule, and final taxable gain.",
+  "total_slides": 5,
+  "total_duration": 133.9,
   "slides": [
     {
       "slide_number": 1,
-      "slide_title": "Original Transfer: Sale of Residential Property",
-      "scene_purpose": "Establish the initial transfer of the original long-term residential house property.",
+      "slide_title": "Original Transfer & Capital Gain",
+      "scene_purpose": "Setup: Rajesh transfers his old residential house to Suresh and computes LTCG",
       "archetype_id": "give_and_receive",
-      "dialogue_manglish": "Namaskaram students! Section 54 study cheyyumpol first step asset identity aanu. Nammude Ramesh Kochiyilulla ttante ancestral residential house sale cheythu. Buyer Anithayude kayyil ninnu ₹3.5 Crore Sale Consideration received. Cost of acquisition after indexation deduct cheythal Net Long Term Capital Gain varunnath ₹1.8 Crore aanu.",
-      "audio_file": "data/audio/presentations/dt-section_54___proviso__exemption_for/slide_1.mp3",
+      "dialogue_manglish": "Nammalude Rajesh Kochi-yil ulla thante old residential house Suresh-nu 3 Crore Rupees-nu sell cheyyukayaan. Direct Tax computation nadathiyappol, idhil ninnum Rajesh-nu Total Long-Term Capital Gain (LTCG) aayi 1.5 Crore Rupees generate aayi. Ini ee LTCG tax liability nannayi reduce cheyyan Section 54 engane help cheyyum ennu nokkam.",
+      "audio_file": "data/audio/presentations/dt-section_54_capital_gains_exemption_/slide_1.mp3",
+      "audio_duration": 23.7,
+      "duration": 24.7,
+      "cues": {
+        "cue_start": 0.5,
+        "cue_action": 9.5,
+        "cue_conclusion": 19.0
+      },
+      "slots": {
+        "title": "Transfer of Old Residential House",
+        "giver": "Mr. Rajesh",
+        "receiver": "Mr. Suresh",
+        "item_label": "Old Residential House",
+        "item_icon": "house",
+        "item_value": 30000000,
+        "payment_amount": 30000000,
+        "tag_text": "LTCG Generated: ₹1.5 Crore",
+        "note": "Transfer of Long-Term Capital Asset under Sec 45"
+      }
+    },
+    {
+      "slide_number": 2,
+      "slide_title": "Section 54 Reinvestment Timeline Window",
+      "scene_purpose": "Timeline check: Statutory window of 1 year before or 2 years after for purchase",
+      "archetype_id": "time_range",
+      "dialogue_manglish": "Section 54-il exemption claim cheyyan statutory timeline paalichirikkanam. New house purchase aanenghil transfer date-nu 1 year before-o atho 2 years after-o nadannirikkanam. Construction aanenghil 3 years window labhikkum. Rajesh transfer date-nu 18 months after aayi new property buy cheythathinal event exactly statutory window-il inside aanu.",
+      "audio_file": "data/audio/presentations/dt-section_54_capital_gains_exemption_/slide_2.mp3",
+      "audio_duration": 26.1,
+      "duration": 27.1,
+      "cues": {
+        "cue_start": 0.5,
+        "cue_action": 10.4,
+        "cue_conclusion": 20.9
+      },
+      "slots": {
+        "title": "Purchase Window (1 Yr Before / 2 Yrs After)",
+        "start_label": "Date of Sale",
+        "span_length": 2,
+        "span_unit": "Years",
+        "span_label": "Statutory Purchase Limit",
+        "event_label": "New House Purchased",
+        "event_offset": 1.5,
+        "is_inside": true,
+        "note": "Reinvestment inside 2-year post-sale limit is valid"
+      }
+    },
+    {
+      "slide_number": 3,
+      "slide_title": "Section 54 Proviso: Two House Exemption Gate",
+      "scene_purpose": "Conditions check: Verifying once-in-a-lifetime option to buy 2 houses if LTCG <= 2 Crore",
+      "archetype_id": "conditions_gate",
+      "dialogue_manglish": "General rule-il 1 residential house-il maathrame reinvestment allowed ullu. Pakshe Section 54 Proviso prakaaram, Capital Gain <= ₹2 Crore aanenghil, Assessee-kku once-in-a-lifetime option aayi TWO residential houses in India-yil invest cheyyam. Rajesh-inte LTCG ₹1.5 Crore maathram aaya kond Portal Gate swing open aakunnu!",
+      "audio_file": "data/audio/presentations/dt-section_54_capital_gains_exemption_/slide_3.mp3",
+      "audio_duration": 26.0,
+      "duration": 27.0,
+      "cues": {
+        "cue_start": 0.5,
+        "cue_action": 10.4,
+        "cue_conclusion": 20.8
+      },
+      "slots": {
+        "title": "Section 54 Proviso Checklist (2 Houses Option)",
+        "door_label": "2 Houses Exemption Unlocked",
+        "all_required": true,
+        "conditions": [
+          {
+            "text": "Asset Sold is Long-Term Residential House",
+            "met": true
+          },
+          {
+            "text": "Capital Gain <= ₹2 Crore (Rajesh has ₹1.5 Cr)",
+            "met": true
+          },
+          {
+            "text": "New Assets are Residential Houses in India",
+            "met": true
+          },
+          {
+            "text": "Once-in-a-Lifetime Option Exercised",
+            "met": true
+          }
+        ],
+        "note": "Proviso to Sec 54(1) allows 2 houses when LTCG <= ₹2 Cr"
+      }
+    },
+    {
+      "slide_number": 4,
+      "slide_title": "Exemption Quantum: Lower of Rule",
+      "scene_purpose": "Benchmark comparison: Lower of Capital Gain vs Cost of New Assets",
+      "archetype_id": "compare_two",
+      "dialogue_manglish": "Statutory provision clear aayi parayunnu: Exemption Amount = Lower of Capital Gain OR Cost of New Assets. Rajesh buy cheytha 2 apartments-inte combined cost ₹1.3 Crore aanu (₹80L + ₹50L). Scale check cheyyumbo, LTCG ₹1.5 Cr-um Cost ₹1.3 Cr-um thammil compare cheydal, lower amount aaya ₹1.3 Crore aanu exemption aayi finalise cheyyuka.",
+      "audio_file": "data/audio/presentations/dt-section_54_capital_gains_exemption_/slide_4.mp3",
+      "audio_duration": 28.1,
+      "duration": 29.1,
+      "cues": {
+        "cue_start": 0.5,
+        "cue_action": 11.2,
+        "cue_conclusion": 22.5
+      },
+      "slots": {
+        "title": "Exemption Quantum Benchmark",
+        "label_a": "Capital Gain Generated",
+        "val_a": 15000000,
+        "label_b": "Cost of 2 New Houses",
+        "val_b": 13000000,
+        "mode": "lower",
+        "cap_amount": 13000000,
+        "note": "Exemption = Lower of Capital Gain or Investment"
+      }
+    },
+    {
+      "slide_number": 5,
+      "slide_title": "Net Taxable Capital Gain Computation",
+      "scene_purpose": "Deduction slicing: Deducting Sec 54 exemption from Gross LTCG to compute Net Taxable LTCG",
+      "archetype_id": "take_away",
+      "dialogue_manglish": "Finally, Rajesh ethra thoga tax adakkanam ennu nokkam. Total Gross LTCG aaya 1.5 Crore Rupees-il ninnum Section 54 Exemption chunk aaya 1.3 Crore Rupees slice cheydal, Net Taxable LTCG aayi 20 Lakhs Rupees maathrame baaki varoo. Idhinaanu 20% Special Rate-il tax Calculate cheyendath.",
+      "audio_file": "data/audio/presentations/dt-section_54_capital_gains_exemption_/slide_5.mp3",
       "audio_duration": 25.0,
       "duration": 26.0,
       "cues": {
@@ -23,183 +139,17 @@ window.LATEST_PRESENTATION = {
         "cue_conclusion": 20.0
       },
       "slots": {
-        "title": "Transfer of Original Asset (Sec 54)",
-        "giver": "Ramesh (Assessee)",
-        "receiver": "Anitha (Buyer)",
-        "item_label": "Residential House (Kochi)",
-        "item_icon": "house",
-        "item_value": 35000000,
-        "payment_amount": 18000000,
-        "tag_text": "Net LTCG Arrived",
-        "note": "Section 54 applies only when the original asset transferred is a long-term residential house property."
-      }
-    },
-    {
-      "slide_number": 2,
-      "slide_title": "Section 54 Proviso: Gate Criteria Check",
-      "scene_purpose": "Verify if Ramesh qualifies for the once-in-a-lifetime concession of investing in TWO residential houses.",
-      "archetype_id": "conditions_gate",
-      "dialogue_manglish": "Normally Section 54 ill ORE ORO residential house-il investment mathramayirunnu allowed. Pakshe Section 54 proviso nokiye! Transfer cheytha property-yude Net Capital Gain ₹2 Crore-il thazheyaaneil, assessee-ku 2 residential houses-il investment cheyanullha once-in-a-lifetime option und. Nammude Ramesh-inte gain ₹1.8 Crore ayathukond door swing open aayi!",
-      "audio_file": "data/audio/presentations/dt-section_54___proviso__exemption_for/slide_2.mp3",
-      "audio_duration": 25.8,
-      "duration": 26.8,
-      "cues": {
-        "cue_start": 0.5,
-        "cue_action": 10.3,
-        "cue_conclusion": 20.6
-      },
-      "slots": {
-        "title": "Proviso Eligibility: Two Houses Option",
-        "door_label": "Two-House Scheme Gate",
-        "all_required": true,
-        "conditions": [
-          {
-            "text": "Original Asset is a Long-Term Residential House",
-            "met": true
-          },
-          {
-            "text": "Capital Gain <= ₹2 Crore (Ramesh has ₹1.8 Cr)",
-            "met": true
-          },
-          {
-            "text": "Option exercised ONCE in a lifetime",
-            "met": true
-          }
-        ],
-        "note": "Proviso to Sec 54 allows investment in 2 residential houses in India if Capital Gain <= ₹2 Crore."
-      }
-    },
-    {
-      "slide_number": 3,
-      "slide_title": "Statutory Reinvestment Window Check",
-      "scene_purpose": "Check whether the new houses are purchased within the statutory timeline (1 yr before or 2 yrs after transfer).",
-      "archetype_id": "time_range",
-      "dialogue_manglish": "Timeline correct aano? Transfer date ninnu 2 years-innullil purchase cheyyanam, le? Ramesh transfer cheythu 14 months-innullil 2 new residential apartments buy cheythu. 2-year statutory limit-innu ullil thanne transaction complete ayathukond timeline test completely passed!",
-      "audio_file": "data/audio/presentations/dt-section_54___proviso__exemption_for/slide_3.mp3",
-      "audio_duration": 18.8,
-      "duration": 19.8,
-      "cues": {
-        "cue_start": 0.5,
-        "cue_action": 7.5,
-        "cue_conclusion": 15.0
-      },
-      "slots": {
-        "title": "Purchase Timeline Window (Sec 54)",
-        "start_label": "Date of House Transfer",
-        "span_length": 2,
-        "span_unit": "Years",
-        "span_label": "Statutory Purchase Limit",
-        "event_label": "Purchased 2 Flats (14 Months)",
-        "event_offset": 1.16,
-        "is_inside": true,
-        "note": "For purchase: 1 year before or 2 years after transfer date. Construction: 3 years after."
-      }
-    },
-    {
-      "slide_number": 4,
-      "slide_title": "Aggregation of New Assets Investment",
-      "scene_purpose": "Fuse the cost of Flat A and Flat B into one combined aggregate investment value under the proviso.",
-      "archetype_id": "merge_into_one",
-      "dialogue_manglish": "Section 54 proviso prakaram Ramesh 2 residential houses-il invest cheythu. Apartment A cost ₹90 Lakhs and Apartment B cost ₹70 Lakhs. Ernakulathilulla ee 2 flats-inte cost merge cheythu Aggregate Investment in New Assets ₹1.6 Crore aayi calculate cheyyunnu.",
-      "audio_file": "data/audio/presentations/dt-section_54___proviso__exemption_for/slide_4.mp3",
-      "audio_duration": 19.5,
-      "duration": 20.5,
-      "cues": {
-        "cue_start": 0.5,
-        "cue_action": 7.8,
-        "cue_conclusion": 15.6
-      },
-      "slots": {
-        "title": "Aggregate Investment in Two Houses",
-        "streams": [
-          {
-            "label": "Apartment A (Marine Drive)",
-            "val": 9000000,
-            "tone": "positive"
-          },
-          {
-            "label": "Apartment B (Kakkanad)",
-            "val": 7000000,
-            "tone": "positive"
-          }
-        ],
-        "merged_label": "Total New Assets Cost: ₹1.60 Crore",
-        "note": "Under the Sec 54 proviso, aggregate cost of both residential houses in India is eligible."
-      }
-    },
-    {
-      "slide_number": 5,
-      "slide_title": "Exemption Benchmark Comparison",
-      "scene_purpose": "Apply the core statutory benchmark rule: Exemption = Lower of Capital Gain vs Cost of New Asset(s).",
-      "archetype_id": "compare_two",
-      "dialogue_manglish": "Ini Section 54 Exemption Amount ethrayaane thirichariyanam. Statute plain english-il parayunnu: Lower of Capital Gain OR Cost of New Assets. Nammude Capital Gain ₹1.8 Crore, Total Cost of 2 New Houses ₹1.6 Crore. Evide LOWER amount aaya ₹1.6 Crore aanu exemption aayi claim cheyyan pattukayu!",
-      "audio_file": "data/audio/presentations/dt-section_54___proviso__exemption_for/slide_5.mp3",
-      "audio_duration": 22.3,
-      "duration": 23.3,
-      "cues": {
-        "cue_start": 0.5,
-        "cue_action": 8.9,
-        "cue_conclusion": 17.8
-      },
-      "slots": {
-        "title": "Quantum of Exemption (Sec 54)",
-        "label_a": "Total LTCG Arrived",
-        "val_a": 18000000,
-        "label_b": "Cost of 2 New Houses",
-        "val_b": 16000000,
-        "mode": "lower",
-        "cap_amount": 16000000,
-        "note": "Exemption is strictly capped at the lower of Capital Gain or aggregate investment cost."
-      }
-    },
-    {
-      "slide_number": 6,
-      "slide_title": "Final Taxable Capital Gain Computation",
-      "scene_purpose": "Deduct the Section 54 exemption from original LTCG to determine final taxable income.",
-      "archetype_id": "take_away",
-      "dialogue_manglish": "Final calculation nokoo! Net LTCG of ₹1.8 Crore ninnu Section 54 Exemption of ₹1.6 Crore subtract cheyumbol, Ramesh taxable LTCG aayi pay cheyyendath verum ₹20 Lakhs mathram aanu. Huge tax relief!",
-      "audio_file": "data/audio/presentations/dt-section_54___proviso__exemption_for/slide_6.mp3",
-      "audio_duration": 16.7,
-      "duration": 17.7,
-      "cues": {
-        "cue_start": 0.5,
-        "cue_action": 6.7,
-        "cue_conclusion": 13.4
-      },
-      "slots": {
-        "title": "Net Taxable Capital Gain Result",
-        "whole_label": "Original LTCG",
-        "whole_val": 18000000,
+        "title": "Final Taxable LTCG Computation",
+        "whole_label": "Gross Long-Term Capital Gain",
+        "whole_val": 15000000,
         "chunks": [
           {
             "label": "Sec 54 Exemption (2 Houses)",
-            "val": 16000000
+            "val": 13000000
           }
         ],
-        "result_label": "Taxable LTCG",
-        "note": "Taxable LTCG = Original LTCG - Sec 54 Exemption = ₹20,00,000."
-      }
-    },
-    {
-      "slide_number": 7,
-      "slide_title": "Key Statutory Takeaway: Section 54 Proviso",
-      "scene_purpose": "Summarize the critical legal rules of Section 54 Proviso for exam recall.",
-      "archetype_id": "key_statement",
-      "dialogue_manglish": "Exam-innu mindil vekkenda core statutory point ithaanu: Section 54 proviso prakaram Capital Gain ₹2 Crore-il thazheyanengil assessee-ku 2 Residential Houses-il invest cheythu exemption claim cheyyam — pakshe ee option life-il ONCE mathrame labhickoo!",
-      "audio_file": "data/audio/presentations/dt-section_54___proviso__exemption_for/slide_7.mp3",
-      "audio_duration": 18.2,
-      "duration": 19.2,
-      "cues": {
-        "cue_start": 0.5,
-        "cue_action": 7.3,
-        "cue_conclusion": 14.6
-      },
-      "slots": {
-        "title": "Section 54 Proviso Core Principle",
-        "statement": "If Capital Gain does not exceed ₹2 Crore, assessee can claim Sec 54 exemption for TWO residential houses in India once in a lifetime.",
-        "highlight_phrase": "TWO residential houses in India",
-        "support_line": "Aggregate investment eligible | Purchase: 1 yr before / 2 yrs after | Construction: 3 yrs",
-        "icon_type": "house"
+        "result_label": "Net Taxable LTCG",
+        "note": "Net Taxable LTCG taxed @ 20% u/s 112"
       }
     }
   ]
