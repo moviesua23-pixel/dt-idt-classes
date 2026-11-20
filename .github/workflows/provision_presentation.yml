@@ -82,7 +82,12 @@ jobs:
           echo "- **Domain**: \`${{ github.event.inputs.domain }}\`" >> $GITHUB_STEP_SUMMARY
           echo "- **Provision Length**: \`${{ github.event.inputs.provision_text }}\` characters" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "### Latest Generated Screenplays" >> $GITHUB_STEP_SUMMARY
+          echo "### 📄 Latest Generated Screenplays" >> $GITHUB_STEP_SUMMARY
           echo "\`\`\`bash" >> $GITHUB_STEP_SUMMARY
           ls -lt redesign_demo/data/screenplays/ | head -n 5 >> $GITHUB_STEP_SUMMARY
+          echo "\`\`\`" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### 🔊 Generated Malayalam Audio Voiceover Files (.mp3)" >> $GITHUB_STEP_SUMMARY
+          echo "\`\`\`bash" >> $GITHUB_STEP_SUMMARY
+          ls -lh redesign_demo/data/audio/presentations/*/*.mp3 | tail -n 10 >> $GITHUB_STEP_SUMMARY
           echo "\`\`\`" >> $GITHUB_STEP_SUMMARY

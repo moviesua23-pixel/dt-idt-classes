@@ -497,26 +497,50 @@
       opacity: 0.75;
     }
 
-    /* Teacher Narration Subtitle Box */
+    /* Teacher Narration Subtitle Box & Audio Player */
     .teacher-narration-box {
       display: none;
+      flex-direction: column;
       margin: 0 24px 10px;
       padding: 12px 18px;
       border-radius: 10px;
       background: rgba(245, 158, 11, 0.08);
       border: 1px solid rgba(245, 158, 11, 0.3);
-      align-items: flex-start;
-      gap: 12px;
+      gap: 10px;
     }
     .teacher-narration-box.show {
       display: flex;
     }
+    .narration-header-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      width: 100%;
+    }
+    .audio-badge {
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 12px;
+      background: rgba(34, 197, 94, 0.15);
+      color: var(--ok);
+      border: 1px solid rgba(34, 197, 94, 0.3);
+      display: inline-flex;
+      align-items: center;
+      gap: 4px;
+    }
+    .visible-audio-player {
+      height: 32px;
+      max-width: 320px;
+      outline: none;
+    }
     .voice-icon {
-      width: 24px;
-      height: 24px;
+      width: 20px;
+      height: 20px;
       color: var(--gold);
       flex-shrink: 0;
-      margin-top: 2px;
     }
     .narration-content {
       flex: 1;
@@ -751,9 +775,6 @@
       </div>
     </div>
 
-    <!-- Hidden / Synced Audio Player -->
-    <audio id="slide_audio_player" preload="auto"></audio>
-
     <!-- Stage Container -->
     <div class="stage-container">
       <div class="stage-card" id="stage_container">
@@ -767,14 +788,20 @@
       </div>
     </div>
 
-    <!-- Teacher Dialogue Subtitle Bar (Hidden until presentation loaded) -->
+    <!-- Teacher Dialogue Subtitle Bar & Visible Audio Player -->
     <div class="teacher-narration-box" id="teacher_narration_box">
-      <svg class="voice-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
-        <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
-      </svg>
+      <div class="narration-header-row">
+        <div style="display:flex;align-items:center;gap:8px;">
+          <svg class="voice-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"></polygon>
+            <path d="M19.07 4.93a10 10 0 0 1 0 14.14M15.54 8.46a5 5 0 0 1 0 7.07"></path>
+          </svg>
+          <span class="narration-label" style="margin:0;">Teacher Narration (Malayalam / English Legal Terms)</span>
+          <span class="audio-badge" id="audio_status_badge">🔊 Audio Ready</span>
+        </div>
+        <audio id="slide_audio_player" controls preload="auto" class="visible-audio-player"></audio>
+      </div>
       <div class="narration-content">
-        <div class="narration-label">Teacher Narration (Malayalam / English Legal Terms)</div>
         <div class="narration-text" id="teacher_dialogue_text">Dialogue will appear here during presentation playback...</div>
       </div>
     </div>
@@ -926,12 +953,42 @@
 
       // Prepare audio
       const audioEl = document.getElementById("slide_audio_player");
+      const statusBadge = document.getElementById("audio_status_badge");
       pause();
+
       if (sl.audio_file) {
+        const owner = localStorage.getItem("dt_github_owner") || "moviesua23-pixel";
+        const repo = localStorage.getItem("dt_github_repo") || "dt-idt-classes";
+        const remoteAudioUrl = `https://raw.githubusercontent.com/${owner}/${repo}/main/redesign_demo/${sl.audio_file}`;
+
+        audioEl.onerror = () => {
+          if (audioEl.src !== remoteAudioUrl) {
+            console.log("Local audio not found, streaming from GitHub Cloud:", remoteAudioUrl);
+            audioEl.src = remoteAudioUrl;
+            audioEl.load();
+            if (statusBadge) {
+              statusBadge.textContent = `☁️ Streaming from GitHub (${sl.audio_duration ? sl.audio_duration.toFixed(1) + 's' : ''})`;
+              statusBadge.style.color = "var(--accent)";
+            }
+          }
+        };
+
+        audioEl.onplay = () => {
+          if (!isPlaying) play();
+        };
+        audioEl.onpause = () => {
+          if (isPlaying) pause();
+        };
+
         audioEl.src = `../redesign_demo/${sl.audio_file}`;
         audioEl.load();
+        if (statusBadge) {
+          statusBadge.textContent = `🔊 Malayalam Voice (${sl.audio_duration ? sl.audio_duration.toFixed(1) + 's' : 'Ready'})`;
+          statusBadge.style.color = "var(--ok)";
+        }
       } else {
         audioEl.removeAttribute("src");
+        if (statusBadge) statusBadge.textContent = "No Audio";
       }
 
       // Configure animation archetype & slots
