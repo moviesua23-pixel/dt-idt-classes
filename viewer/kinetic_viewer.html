@@ -1276,7 +1276,7 @@
     }
 
     function loadGitHubConfig() {
-      const pat = localStorage.getItem("dt_github_pat") || "";
+      const pat = localStorage.getItem("dt_github_pat") || "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";
       const owner = localStorage.getItem("dt_github_owner") || "umvishnu";
       const repo = localStorage.getItem("dt_github_repo") || "dt-idt-classes";
       const wf = localStorage.getItem("dt_github_workflow") || "provision_presentation.yml";
@@ -1300,7 +1300,7 @@
     // Trigger GitHub Workflow for Pasted Provision
     // -------------------------------------------------------------------------
     async function triggerGitHubWorkflow(provisionText, subject, domain) {
-      const pat = document.getElementById("gh_pat_input").value.trim() || localStorage.getItem("dt_github_pat");
+      const pat = document.getElementById("gh_pat_input").value.trim() || localStorage.getItem("dt_github_pat") || "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";
       const owner = document.getElementById("gh_owner_input").value.trim() || "umvishnu";
       const repo = document.getElementById("gh_repo_input").value.trim() || "dt-idt-classes";
       const wf = document.getElementById("gh_workflow_input").value.trim() || "provision_presentation.yml";
