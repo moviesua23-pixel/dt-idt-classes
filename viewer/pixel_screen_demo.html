@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1000x500 Monochrome Pixel Screen Demo (Option A)</title>
+  <style>
+    :root {
+      --bg-desk: #f4f5f7;
+      --card-bg: #ffffff;
+      --ink: #000000;
+      --ink-muted: #555555;
+      --border: #d0d4dc;
+      --accent: #000000;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+      background: var(--bg-desk);
+      color: var(--ink);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      padding: 24px;
+    }
+
+    .demo-header {
+      width: 100%;
+      max-width: 1040px;
+      margin-bottom: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .demo-title-group h1 {
+      font-size: 20px;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .demo-title-group p {
+      font-size: 13px;
+      color: var(--ink-muted);
+      margin-top: 2px;
+    }
+    .badge-mono {
+      background: #000000;
+      color: #ffffff;
+      font-size: 11px;
+      font-weight: 800;
+      padding: 3px 8px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* Scene Switcher Tabs */
+    .scene-tabs-bar {
+      width: 100%;
+      max-width: 1040px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+    .scene-tab-btn {
+      padding: 6px 14px;
+      border-radius: 6px;
+      border: 2px solid #000000;
+      background: #ffffff;
+      color: #000000;
+      font-size: 11.5px;
+      font-weight: 800;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+      transition: all 0.15s ease;
+    }
+    .scene-tab-btn:hover {
+      background: #f0f0f0;
+    }
+    .scene-tab-btn.active {
+      background: #000000;
+      color: #ffffff;
+    }
+
+    /* 1000x500 Pixel Screen Stage Container */
+    .screen-wrapper {
+      position: relative;
+      background: #ffffff;
+      border: 3px solid #000000;
+      box-shadow: 0 16px 36px rgba(0,0,0,0.12), 0 2px 6px rgba(0,0,0,0.08);
+      border-radius: 4px;
+      overflow: hidden;
+      width: 1000px;
+      height: 500px;
+      margin-bottom: 14px;
+      flex-shrink: 0;
+    }
+
+    #pixel_canvas {
+      display: block;
+      width: 1000px;
+      height: 500px;
+      background-color: #ffffff;
+      image-rendering: pixelated;
+    }
+
+    /* Dimension Indicator Overlay */
+    .dim-tag {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      background: rgba(255, 255, 255, 0.92);
+      border: 1px solid #000000;
+      padding: 3px 8px;
+      font-size: 11px;
+      font-family: monospace;
+      font-weight: 800;
+      color: #000000;
+      border-radius: 3px;
+      pointer-events: none;
+    }
+
+    /* Narration Box */
+    .narration-panel {
+      width: 1000px;
+      background: #ffffff;
+      border: 2px solid #000000;
+      border-radius: 6px;
+      padding: 12px 18px;
+      margin-bottom: 12px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+    .narration-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .narration-label {
+      font-size: 11px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #000000;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .narration-label::before {
+      content: "";
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      background: #000000;
+      border-radius: 50%;
+    }
+    .narration-text {
+      font-size: 14px;
+      line-height: 1.5;
+      font-weight: 600;
+      color: #000000;
+    }
+
+    /* Transport Controls */
+    .controls-panel {
+      width: 1000px;
+      background: #ffffff;
+      border: 2px solid #000000;
+      border-radius: 6px;
+      padding: 12px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .scrubber-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .timeline-slider {
+      flex: 1;
+      height: 8px;
+      accent-color: #000000;
+      cursor: pointer;
+    }
+    .time-label {
+      font-family: monospace;
+      font-size: 13px;
+      font-weight: 800;
+      width: 110px;
+      text-align: right;
+    }
+
+    .buttons-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .ctrl-group {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .btn-action {
+      background: #ffffff;
+      color: #000000;
+      border: 2px solid #000000;
+      padding: 6px 14px;
+      border-radius: 4px;
+      font-size: 12px;
+      font-weight: 800;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.1s ease;
+    }
+    .btn-action:hover {
+      background: #000000;
+      color: #ffffff;
+    }
+    .btn-action.active-toggle {
+      background: #000000;
+      color: #ffffff;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Title -->
+  <div class="demo-header">
+    <div class="demo-title-group">
+      <h1>
+        Monochrome Pixel Screen (Option A)
+        <span class="badge-mono">1000 × 500 Pure Pixel Canvas</span>
+      </h1>
+      <p>White Background (#FFFFFF) • All Explanations & Motion in Pure Black Pixels (#000000)</p>
+    </div>
+    <div>
+      <span style="font-size:12px; font-weight:700;">Zero Gradients • Zero Colors • Pure High-Contrast Legal Mechanics</span>
+    </div>
+  </div>
+
+  <!-- Scene Switcher -->
+  <div class="scene-tabs-bar">
+    <button class="scene-tab-btn active" onclick="switchScene(0)">
+      <span>1</span> Section 54D: Compulsory Acquisition & Compensation
+    </button>
+    <button class="scene-tab-btn" onclick="switchScene(1)">
+      <span>2</span> Section 54D: 3-Part Gatekeeper Portal (Unlocked)
+    </button>
+    <button class="scene-tab-btn" onclick="switchScene(2)">
+      <span>3</span> Section 51: Advance Money Pixel Dissolve & Remainder
+    </button>
+    <button class="scene-tab-btn" onclick="switchScene(3)">
+      <span>4</span> Sec 54: Pixel Arithmetic & Exemption Meter
+    </button>
+  </div>
+
+  <!-- The 1000x500 Pixel Screen -->
+  <div class="screen-wrapper">
+    <canvas id="pixel_canvas" width="1000" height="500"></canvas>
+    <div class="dim-tag" id="dim_indicator">1000 × 500 px • (0,0) to (1000,500)</div>
+  </div>
+
+  <!-- Teacher Narration Bar -->
+  <div class="narration-panel">
+    <div class="narration-meta">
+      <div class="narration-label" id="scene_tag_label">SCENE 1: STATUTORY SETUP</div>
+      <span style="font-size:11px; font-weight:700; color:#555;">Teacher Explanation (Malayalam / English Statutory Terms)</span>
+    </div>
+    <div class="narration-text" id="narration_text">
+      Loading scene narration...
+    </div>
+  </div>
+
+  <!-- Transport Controls -->
+  <div class="controls-panel">
+    <div class="scrubber-row">
+      <input type="range" class="timeline-slider" id="timeline_slider" min="0" max="14" step="0.05" value="0">
+      <div class="time-label" id="time_display">00:00.0 / 00:14.0</div>
+    </div>
+    <div class="buttons-row">
+      <div class="ctrl-group">
+        <button class="btn-action" id="btn_play_pause" onclick="togglePlay()">▶ Play Animation</button>
+        <button class="btn-action" onclick="seekTo(0)">⏮ Reset</button>
+        <button class="btn-action" onclick="seekRelative(-2)">⏪ -2s</button>
+        <button class="btn-action" onclick="seekRelative(2)">⏩ +2s</button>
+      </div>
+      <div class="ctrl-group">
+        <button class="btn-action" id="btn_grid_toggle" onclick="toggleGrid()">▦ Show Pixel Grid</button>
+        <button class="btn-action" id="btn_dither_toggle" onclick="toggleDither()">░ Dither Shading Mode</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const canvas = document.getElementById("pixel_canvas");
+    const ctx = canvas.getContext("2d");
+
+    let currentTime = 0.0;
+    const duration = 14.0;
+    let isPlaying = false;
+    let lastTimestamp = null;
+    let activeSceneIdx = 0;
+    let showGrid = false;
+    let useDither = true;
+
+    // 1-Bit Dither Patterns (Pure Black & White Checkerboards)
+    function createDitherPattern(density = 0.5) {
+      const pCanvas = document.createElement("canvas");
+      pCanvas.width = 4;
+      pCanvas.height = 4;
+      const pCtx = pCanvas.getContext("2d");
+      pCtx.fillStyle = "#ffffff";
+      pCtx.fillRect(0, 0, 4, 4);
+      pCtx.fillStyle = "#000000";
+
+      if (density >= 0.5) {
+        // 50% 2x2 checkerboard
+        pCtx.fillRect(0, 0, 2, 2);
+        pCtx.fillRect(2, 2, 2, 2);
+      } else if (density >= 0.25) {
+        // 25% single dots
+        pCtx.fillRect(0, 0, 1, 1);
+        pCtx.fillRect(2, 2, 1, 1);
+      } else {
+        // 12.5% sparse dots
+        pCtx.fillRect(0, 0, 1, 1);
+      }
+      return ctx.createPattern(pCanvas, "repeat");
+    }
+
+    let pattern50, pattern25;
+    window.addEventListener("load", () => {
+      pattern50 = createDitherPattern(0.5);
+      pattern25 = createDitherPattern(0.25);
+      seekTo(0);
+    });
+
+    function clearScreen() {
+      ctx.fillStyle = "#ffffff";
+      ctx.fillRect(0, 0, 1000, 500);
+
+      if (showGrid) {
+        ctx.strokeStyle = "#e2e4e8";
+        ctx.lineWidth = 1;
+        for (let x = 0; x <= 1000; x += 50) {
+          ctx.beginPath();
+          ctx.moveTo(x + 0.5, 0);
+          ctx.lineTo(x + 0.5, 500);
+          ctx.stroke();
+        }
+        for (let y = 0; y <= 500; y += 50) {
+          ctx.beginPath();
+          ctx.moveTo(0, y + 0.5);
+          ctx.lineTo(1000, y + 0.5);
+          ctx.stroke();
+        }
+        ctx.fillStyle = "#aaaaaa";
+        ctx.font = "9px monospace";
+        ctx.fillText("50px GRID", 10, 490);
+      }
+    }
+
+    function drawHeaderBanner(title, sectionCode) {
+      // Outer black frame box
+      ctx.strokeStyle = "#000000";
+      ctx.lineWidth = 2.5;
+      ctx.strokeRect(40, 20, 920, 46);
+
+      // Black badge tag on left
+      ctx.fillStyle = "#000000";
+      ctx.fillRect(44, 24, 170, 38);
+      ctx.fillStyle = "#ffffff";
+      ctx.font = "900 14px monospace";
+      ctx.textAlign = "center";
+      ctx.fillText(sectionCode || "STATUTE", 129, 48);
+
+      // Black Title text
+      ctx.fillStyle = "#000000";
+      ctx.font = "900 18px -apple-system, BlinkMacSystemFont, sans-serif";
+      ctx.textAlign = "left";
+      ctx.fillText(title, 230, 49);
+    }
+
+    function drawActorBox(x, y, w, h, name, subtitle, isDithered = false) {
+      ctx.strokeStyle = "#000000";
+      ctx.lineWidth = 2;
+      ctx.strokeRect(x, y, w, h);
+
+      if (isDithered && useDither && pattern25) {
+        ctx.fillStyle = pattern25;
+        ctx.fillRect(x, y, w, h);
+      }
+
+      ctx.beginPath();
+      ctx.arc(x + 38, y + h / 2, 22, 0, Math.PI * 2);
+      ctx.fillStyle = "#000000";
+      ctx.fill();
+      ctx.beginPath();
+      ctx.arc(x + 38, y + h / 2, 22, 0, Math.PI * 2);
+      ctx.strokeStyle = "#000000";
+      ctx.lineWidth = 2;
+      ctx.stroke();
+
+      ctx.fillStyle = "#ffffff";
+      ctx.beginPath();
+      ctx.arc(x + 38, y + h / 2 - 4, 8, 0, Math.PI * 2);
+      ctx.fill();
+      ctx.beginPath();
+      ctx.arc(x + 38, y + h / 2 + 15, 12, Math.PI, 0);
+      ctx.fill();
+
+      ctx.fillStyle = "#000000";
+      ctx.font = "800 16px -apple-system, BlinkMacSystemFont, sans-serif";
+      ctx.textAlign = "left";
+      ctx.fillText(name, x + 72, y + 36);
+
+      ctx.fillStyle = "#555555";
+      ctx.font = "700 12px monospace";
+      ctx.fillText(subtitle, x + 72, y + 58);
+    }
+
+    function drawPixelFactory(x, y, w, h, progress = 1.0) {
+      ctx.strokeStyle = "#000000";
+      ctx.lineWidth = 2;
+
+      ctx.beginPath();
+      ctx.moveTo(x, y + 40);
+      ctx.lineTo(x + w * 0.33, y);
+      ctx.lineTo(x + w * 0.33, y + 40);
+      ctx.lineTo(x + w * 0.66, y);
+      ctx.lineTo(x + w * 0.66, y + 40);
+      ctx.lineTo(x + w, y);
+      ctx.lineTo(x + w, y + h);
+      ctx.lineTo(x, y + h);
+      ctx.closePath();
+      ctx.stroke();
+
+      if (useDither && pattern25) {
+        ctx.fillStyle = pattern25;
+        ctx.fill();
+      }
+
+      ctx.strokeRect(x + w * 0.15, y - 25, 20, 35);
+      ctx.fillStyle = "#000000";
+      ctx.fillRect(x + w * 0.15, y - 25, 20, 8);
+
+      for (let r = 0; r < 2; r++) {
+        for (let c = 0; c < 3; c++) {
+          ctx.strokeRect(x + 20 + c * 38, y + 55 + r * 30, 24, 18);
+        }
+      }
+
+      ctx.fillStyle = "#ffffff";
+      ctx.fillRect(x + 15, y + h - 35, w - 30, 24);
+      ctx.strokeStyle = "#000000";
+      ctx.lineWidth = 1.5;
+      ctx.strokeRect(x + 15, y + h - 35, w - 30, 24);
+      ctx.fillStyle = "#000000";
+      ctx.font = "900 12px monospace";
+      ctx.textAlign = "center";
+      ctx.fillText("INDUSTRIAL UNDERTAKING", x + w/2, y + h - 19);
+    }
+
+    const SCENES = [
+      {
+        tag: "SCENE 1: STATUTORY COMPULSORY ACQUISITION",
+        dialogue: "Rajesh owns an industrial undertaking manufacturing engineering parts. Under statutory developmental authority, the land and building are compulsory acquired. Monetary compensation of ₹40 Lakhs is awarded.",
+        render: (t) => {
+          drawHeaderBanner("Section 54D: Compulsory Acquisition of Industrial Land & Building", "SEC 54D(1)");
+
+          drawActorBox(50, 95, 280, 80, "Rajesh (Assessee)", "Industrial Undertaking Owner");
+          drawActorBox(670, 95, 280, 80, "State Authority", "Acquiring Government Body");
+
+          drawPixelFactory(100, 210, 180, 150);
+
+          ctx.strokeStyle = "#000000";
+          ctx.lineWidth = 2;
+          ctx.setLineDash([6, 6]);
+          ctx.beginPath();
+          ctx.moveTo(280, 270);
+          ctx.quadraticCurveTo(500, 160, 680, 220);
+          ctx.stroke();
+
+          ctx.beginPath();
+          ctx.moveTo(680, 310);
+          ctx.quadraticCurveTo(500, 420, 280, 340);
+          ctx.stroke();
+          ctx.setLineDash([]);
+
+          if (t >= 1.5) {
+            const p1 = Math.min(1.0, (t - 1.5) / 2.5);
+            const ease1 = p1 * p1 * (3 - 2 * p1);
+            const curX = 680 + (280 - 680) * ease1;
+            const curY = 220 + (270 - 220) * ease1 - Math.sin(p1 * Math.PI) * 60;
+
+            ctx.fillStyle = "#ffffff";
+            ctx.fillRect(curX - 85, curY - 24, 170, 48);
+            ctx.strokeStyle = "#000000";
+            ctx.lineWidth = 2.5;
+            ctx.strokeRect(curX - 85, curY - 24, 170, 48);
+            ctx.fillStyle = "#000000";
+            ctx.font = "900 12px monospace";
+            ctx.textAlign = "center";
+            ctx.fillText("COMPULSORY ACQUISITION", curX, curY - 4);
+            ctx.font = "800 11px sans-serif";
+            ctx.fillText("Under Statutory Law", curX, curY + 14);
+          }
+
+          if (t >= 5.5) {
+            const p2 = Math.min(1.0, (t - 5.5) / 2.5);
+            const ease2 = p2 * p2 * (3 - 2 * p2);
+            const curX = 680 + (280 - 680) * ease2;
+            const curY = 310 + (340 - 310) * ease2 + Math.sin(p2 * Math.PI) * 60;
+
+            ctx.fillStyle = "#000000";
+            ctx.fillRect(curX - 95, curY - 24, 190, 48);
+            ctx.fillStyle = "#ffffff";
+            ctx.font = "900 15px -apple-system, BlinkMacSystemFont, sans-serif";
+            ctx.textAlign = "center";
+            ctx.fillText("₹ 40,00,000", curX, curY - 3);
+            ctx.font = "700 11px monospace";
+            ctx.fillText("COMPENSATION PAID", curX, curY + 14);
+
+            for (let i = 0; i < 8; i++) {
+              const lag = Math.max(0, p2 - i * 0.04);
+              const tx = 680 + (280 - 680) * lag;
+              const ty = 310 + (340 - 310) * lag + Math.sin(lag * Math.PI) * 60;
+              ctx.fillStyle = "#000000";
+              ctx.fillRect(tx - 3, ty - 3, 6, 6);
+            }
+          }
+
+          if (t >= 10.0) {
+            ctx.fillStyle = "#ffffff";
+            ctx.fillRect(50, 410, 900, 60);
+            ctx.strokeStyle = "#000000";
+            ctx.lineWidth = 2.5;
+            ctx.strokeRect(50, 410, 900, 60);
+
+            ctx.fillStyle = "#000000";
+            ctx.fillRect(60, 420, 140, 40);
+            ctx.fillStyle = "#ffffff";
+            ctx.font = "900 12px monospace";
+            ctx.textAlign = "center";
+            ctx.fillText("STEP 1 CONCLUDED", 130, 444);
+
+            ctx.fillStyle = "#000000";
+            ctx.font = "800 15px -apple-system, BlinkMacSystemFont, sans-serif";
+            ctx.textAlign = "left";
+            ctx.fillText("Vesting in Govt Complete • Full Consideration Deemed as ₹40 Lakhs Compensation", 215, 445);
+          }
+        }
+      },
+
+      {
+        tag: "SCENE 2: STATUTORY GATEKEEPER CHECKLIST",
+        dialogue: "Section 54D unlocks full Capital Gain exemption ONLY IF 3 conditions are fulfilled: compulsory acquisition of industrial land/building, 2+ years of prior industrial use, and reinvestment within 3 years. All conditions met · GATE UNLOCKED!",
+        render: (t) => {
+          drawHeaderBanner("Section 54D Statutory Gatekeeper Portal (Checklist Audit)", "SEC 54D CRITERIA");
+
+          const conditions = [
+            { label: "1. Compulsory Acquisition of Land or Building", cue: 1.0 },
+            { label: "2. Used for Industrial Undertaking >= 2 Years", cue: 4.0 },
+            { label: "3. Reinvestment in New Industrial Asset <= 3 Years", cue: 7.0 }
+          ];
+
+          conditions.forEach((c, idx) => {
+            const cardY = 95 + idx * 95;
+            const pEnter = Math.min(1.0, Math.max(0, (t - c.cue) / 0.8));
+            if (pEnter <= 0) return;
+
+            const curX = 40 + (1 - pEnter) * -60;
+
+            ctx.fillStyle = "#ffffff";
+            ctx.fillRect(curX, cardY, 460, 75);
+            ctx.strokeStyle = "#000000";
+            ctx.lineWidth = 2;
+            ctx.strokeRect(curX, cardY, 460, 75);
+
+            ctx.fillStyle = "#000000";
+            ctx.font = "800 13px -apple-system, BlinkMacSystemFont, sans-serif";
+            ctx.textAlign = "left";
+            ctx.fillText(c.label, curX + 16, cardY + 32);
+
+            ctx.fillStyle = "#555555";
+            ctx.font = "700 11px monospace";
+            ctx.fillText("Statutory Prerequisite Rule", curX + 16, cardY + 54);
+
+            if (t >= c.cue + 1.2) {
+              const pStamp = Math.min(1.0, (t - (c.cue + 1.2)) / 0.4);
+              const stampScale = 1.0 + (1 - pStamp) * 0.8;
+
+              ctx.save();
+              ctx.translate(curX + 425, cardY + 37);
+              ctx.scale(stampScale, stampScale);
+
+              ctx.fillStyle = "#000000";
+              ctx.beginPath();
+              ctx.arc(0, 0, 18, 0, Math.PI * 2);
+              ctx.fill();
+
+              ctx.strokeStyle = "#ffffff";
+              ctx.lineWidth = 3;
+              ctx.beginPath();
+              ctx.moveTo(-7, 0);
+              ctx.lineTo(-2, 6);
+              ctx.lineTo(8, -5);
+              ctx.stroke();
+              ctx.restore();
+            }
+          });
+
+          const gateX = 540, gateY = 95, gateW = 410, gateH = 360;
+
+          ctx.strokeStyle = "#000000";
+          ctx.lineWidth = 3.5;
+          ctx.strokeRect(gateX, gateY, gateW, gateH);
+
+          ctx.fillStyle = "#000000";
+          ctx.fillRect(gateX + 20, gateY + 15, gateW - 40, 36);
+          ctx.fillStyle = "#ffffff";
+          ctx.font = "900 13px monospace";
+          ctx.textAlign = "center";
+          ctx.fillText("SECTION 54D RELIEF PORTAL", gateX + gateW / 2, gateY + 38);
+
+          const cueGate = 9.5;
+          const doorW = (gateW - 60) / 2;
+
+          if (t < cueGate) {
+            ctx.fillStyle = "#ffffff";
+            ctx.fillRect(gateX + 30, gateY + 65, doorW, gateH - 85);
+            ctx.fillRect(gateX + 30 + doorW, gateY + 65, doorW, gateH - 85);
+            ctx.strokeStyle = "#000000";
+            ctx.lineWidth = 2.5;
+            ctx.strokeRect(gateX + 30, gateY + 65, doorW, gateH - 85);
+            ctx.strokeRect(gateX + 30 + doorW, gateY + 65, doorW, gateH - 85);
+
+            for (let i = 0; i < doorW; i += 16) {
+              ctx.beginPath();
+              ctx.moveTo(gateX + 30 + i, gateY + 65);
+              ctx.lineTo(gateX + 30 + i, gateY + gateH - 20);
+              ctx.stroke();
+              ctx.beginPath();
+              ctx.moveTo(gateX + 30 + doorW + i, gateY + 65);
+              ctx.lineTo(gateX + 30 + doorW + i, gateY + gateH - 20);
+              ctx.stroke();
+            }
+
+            ctx.fillStyle = "#000000";
+            ctx.fillRect(gateX + gateW/2 - 25, gateY + 160, 50, 45);
+            ctx.strokeStyle = "#000000";
+            ctx.lineWidth = 4;
+            ctx.beginPath();
+            ctx.arc(gateX + gateW/2, gateY + 155, 18, Math.PI, 0);
+            ctx.stroke();
+
+            ctx.fillStyle = "#ffffff";
+            ctx.font = "900 13px monospace";
+            ctx.fillText("EVALUATING", gateX + gateW/2, gateY + 187);
+          } else {
+            const pOpen = Math.min(1.0, (t - cueGate) / 2.0);
+            const easeOpen = pOpen * pOpen * (3 - 2 * pOpen);
+            const currentDoorW = Math.max(16, doorW * (1 - easeOpen * 0.88));
+
+            ctx.fillStyle = "#ffffff";
+            ctx.fillRect(gateX + 30, gateY + 65, gateW - 60, gateH - 85);
+
+            ctx.strokeStyle = "#000000";
+            ctx.lineWidth = 2.5;
+            ctx.strokeRect(gateX + 30, gateY + 65, currentDoorW, gateH - 85);
+            ctx.strokeRect(gateX + 30 + (gateW - 60) - currentDoorW, gateY + 65, currentDoorW, gateH - 85);
+
+            ctx.save();
+            ctx.beginPath();
+            ctx.rect(gateX + 30 + currentDoorW, gateY + 65, (gateW - 60) - 2 * currentDoorW, gateH - 85);
+            ctx.clip();
+            for (let a = 0; a < Math.PI; a += 0.15) {
+              ctx.beginPath();
+              ctx.moveTo(gateX + gateW/2, gateY + 180);
+              ctx.lineTo(gateX + gateW/2 + Math.cos(a) * 300, gateY + 180 + Math.sin(a) * 300);
+              ctx.strokeStyle = "#dddddd";
+              ctx.lineWidth = 1.5;
+              ctx.stroke();
+            }
+            ctx.restore();
+
+            ctx.fillStyle = "#000000";
+            ctx.font = "900 24px -apple-system, BlinkMacSystemFont, sans-serif";
+            ctx.textAlign = "center";
+            ctx.fillText("GATE UNLOCKED", gateX + gateW / 2, gateY + 170);
+
+            ctx.fillStyle = "#000000";
+            ctx.fillRect(gateX + 60, gateY + 205, gateW - 120, 36);
+            ctx.fillStyle = "#ffffff";
+            ctx.font = "900 13px monospace";
+            ctx.fillText("ALL 3 CONDITIONS MET", gateX + gateW / 2, gateY + 228);
+
+            ctx.fillStyle = "#000000";
+            ctx.font = "800 13px sans-serif";
+            ctx.fillText("Section 54D Relief Admissible", gateX + gateW / 2, gateY + 270);
+          }
+        }
+      },
+
+      {
+        tag: "SCENE 3: STATUTORY SUBTRACTION & DISINTEGRATION",
+        dialogue: "Vikram purchased commercial land for ₹30 Lakhs. Prior to 1st April 2014, he forfeited ₹5 Lakhs advance money. Under Section 51, that advance money is subtracted, leaving an Adjusted Cost of ₹25 Lakhs.",
+        render: (t) => {
+          drawHeaderBanner("Section 51: Pre-2014 Advance Money Forfeiture from Cost of Acquisition", "SEC 51 REDUCTION");
+
+          const startAmt = 3000000;
+          const forfeitedAmt = 500000;
+          const adjustedAmt = 2500000;
+
+          const barX = 70, barY = 95, barW = 260, barH = 370;
+
+          ctx.strokeStyle = "#000000";
+          ctx.lineWidth = 2.5;
+          ctx.strokeRect(barX, barY, barW, barH);
+
+          ctx.fillStyle = "#000000";
+          ctx.font = "900 16px -apple-system, BlinkMacSystemFont, sans-serif";
+          ctx.textAlign = "center";
+          ctx.fillText("Original Purchase Cost", barX + barW / 2, barY + 34);
+
+          const pStart = Math.min(1.0, t / 1.5);
+          const curVal = Math.round(startAmt * pStart);
+          ctx.font = "900 22px monospace";
+          ctx.fillText("₹ " + curVal.toLocaleString('en-IN'), barX + barW / 2, barY + 68);
+
+          const maxH = 240;
+          const baseH = barY + 340;
+          const barFillW = barW - 60;
+
+          ctx.strokeRect(barX + 30, baseH - maxH, barFillW, maxH);
+
+          const cueSlice = 3.5;
+          const sliceH = (forfeitedAmt / startAmt) * maxH;
+          const netH = maxH - sliceH;
+
+          if (t < cueSlice) {
+            ctx.fillStyle = "#000000";
+            ctx.fillRect(barX + 30, baseH - maxH, barFillW, maxH);
+          } else {
+            const pSlice = Math.min(1.0, (t - cueSlice) / 1.5);
+            const easeSlice = pSlice * pSlice * (3 - 2 * pSlice);
+
+            ctx.fillStyle = "#000000";
+            ctx.fillRect(barX + 30, baseH - netH, barFillW, netH);
+
+            const liftY = (baseH - maxH) - easeSlice * 50;
+            const driftX = (barX + 30) + easeSlice * 80;
+
+            ctx.save();
+            ctx.globalAlpha = Math.max(0, 1.0 - easeSlice * 0.9);
+            ctx.fillStyle = useDither && pattern50 ? pattern50 : "#000000";
+            ctx.fillRect(driftX, liftY, barFillW, sliceH);
+            ctx.strokeStyle = "#000000";
+            ctx.lineWidth = 2;
+            ctx.setLineDash([4, 4]);
+            ctx.strokeRect(driftX, liftY, barFillW, sliceH);
+            ctx.restore();
+
+            const cardX = 380, cardY = 110;
+            ctx.fillStyle = "#ffffff";
+            ctx.fillRect(cardX, cardY, 560, 80);
+            ctx.strokeStyle = "#000000";
+            ctx.lineWidth = 2.5;
+            ctx.strokeRect(cardX, cardY, 560, 80);
+
+            ctx.fillStyle = "#000000";
+            ctx.beginPath();
+            ctx.arc(cardX + 45, cardY + 40, 22, 0, Math.PI * 2);
+            ctx.fill();
+            ctx.fillStyle = "#ffffff";
+            ctx.font = "900 24px monospace";
+            ctx.textAlign = "center";
+            ctx.fillText("−", cardX + 45, cardY + 47);
+
+            ctx.fillStyle = "#000000";
+            ctx.font = "900 16px -apple-system, BlinkMacSystemFont, sans-serif";
+            ctx.textAlign = "left";
+            ctx.fillText("Pre-2014 Advance Forfeited (Sec 51)", cardX + 80, cardY + 34);
+
+            ctx.fillStyle = "#555555";
+            ctx.font = "700 11px monospace";
+            ctx.fillText("Subtracted directly from base cost of acquisition", cardX + 80, cardY + 56);
+
+            ctx.fillStyle = "#000000";
+            ctx.font = "900 22px monospace";
+            ctx.textAlign = "right";
+            ctx.fillText("₹ 5,00,000", cardX + 540, cardY + 48);
+          }
+
+          if (t >= 8.0) {
+            const pRes = Math.min(1.0, (t - 8.0) / 1.0);
+            const resX = 380, resY = 220;
+
+            ctx.fillStyle = "#ffffff";
+            ctx.fillRect(resX, resY, 560, 110);
+            ctx.strokeStyle = "#000000";
+            ctx.lineWidth = 3;
+            ctx.strokeRect(resX, resY, 560, 110);
+
+            ctx.fillStyle = "#000000";
+            ctx.font = "900 18px -apple-system, BlinkMacSystemFont, sans-serif";
+            ctx.textAlign = "left";
+            ctx.fillText("Adjusted Cost of Acquisition", resX + 30, resY + 40);
+
+            ctx.font = "900 32px monospace";
+            ctx.fillText("₹ 25,00,000", resX + 30, resY + 84);
+
+            ctx.fillStyle = "#000000";
+            ctx.fillRect(resX + 360, resY + 36, 170, 44);
+            ctx.fillStyle = "#ffffff";
+            ctx.font = "900 13px monospace";
+            ctx.textAlign = "center";
+            ctx.fillText("NET COA VERIFIED", resX + 445, resY + 63);
+
+            ctx.fillStyle = "#000000";
+            ctx.strokeRect(380, 355, 560, 70);
+            ctx.font = "700 13px -apple-system, BlinkMacSystemFont, sans-serif";
+            ctx.textAlign = "left";
+            ctx.fillText("Notice: If forfeited on/after 01/04/2014, Section 56(2)(ix) applies:", 395, 380);
+            ctx.font = "900 13px monospace";
+            ctx.fillText("Taxed under IFOS • COA remains unreduced at ₹30,00,000!", 395, 404);
+          }
+        }
+      },
+
+      {
+        tag: "SCENE 4: STATUTORY CAPITAL GAIN ARITHMETIC",
+        dialogue: "When Vikram sells the property for ₹1 Crore in 2023, Capital Gain is computed as: Sale Consideration ₹1 Crore minus Adjusted Cost ₹25 Lakhs equals Taxable Gain of ₹75 Lakhs.",
+        render: (t) => {
+          drawHeaderBanner("Capital Gain Computation Equation Chips", "TAX COMPUTATION");
+
+          const chips = [
+            { label: "Full Consideration", val: 10000000, cue: 1.0 },
+            { op: "−", cue: 3.5 },
+            { label: "Adjusted COA", val: 2500000, cue: 4.5 },
+            { op: "=", cue: 7.0 },
+            { label: "Taxable Capital Gain", val: 7500000, isTotal: true, cue: 8.0 }
+          ];
+
+          const startX = 60, chipY = 120;
+          let curX = startX;
+
+          chips.forEach((c) => {
+            const p = Math.min(1.0, Math.max(0, (t - c.cue) / 0.8));
+            if (p <= 0) return;
+
+            if (c.op) {
+              ctx.strokeStyle = "#000000";
+              ctx.lineWidth = 2.5;
+              ctx.beginPath();
+              ctx.arc(curX + 22, chipY + 45, 22, 0, Math.PI * 2);
+              ctx.stroke();
+
+              ctx.fillStyle = "#000000";
+              ctx.font = "900 24px monospace";
+              ctx.textAlign = "center";
+              ctx.fillText(c.op, curX + 22, chipY + 53);
+
+              curX += 60;
+            } else {
+              const chipW = c.isTotal ? 250 : 210;
+              const chipH = 90;
+
+              ctx.fillStyle = c.isTotal ? "#000000" : "#ffffff";
+              ctx.fillRect(curX, chipY, chipW, chipH);
+              ctx.strokeStyle = "#000000";
+              ctx.lineWidth = c.isTotal ? 3.5 : 2;
+              ctx.strokeRect(curX, chipY, chipW, chipH);
+
+              ctx.fillStyle = c.isTotal ? "#ffffff" : "#000000";
+              ctx.font = "800 13px -apple-system, BlinkMacSystemFont, sans-serif";
+              ctx.textAlign = "center";
+              ctx.fillText(c.label, curX + chipW / 2, chipY + 32);
+
+              const countVal = Math.round(c.val * p);
+              ctx.font = (c.isTotal ? "900 22px" : "900 19px") + " monospace";
+              ctx.fillText("₹ " + countVal.toLocaleString('en-IN'), curX + chipW / 2, chipY + 65);
+
+              curX += chipW + 20;
+            }
+          });
+
+          if (t >= 9.5) {
+            const barW = 880, barH = 150;
+            const bx = 60, by = 260;
+
+            ctx.fillStyle = "#ffffff";
+            ctx.fillRect(bx, by, barW, barH);
+            ctx.strokeStyle = "#000000";
+            ctx.lineWidth = 3;
+            ctx.strokeRect(bx, by, barW, barH);
+
+            ctx.fillStyle = "#000000";
+            ctx.font = "900 18px -apple-system, BlinkMacSystemFont, sans-serif";
+            ctx.textAlign = "left";
+            ctx.fillText("Formula Arithmetic Verification & Legal Principle", bx + 30, by + 40);
+
+            ctx.font = "900 24px monospace";
+            ctx.fillText("₹ 1,00,00,000 − ₹ 25,00,000 = ₹ 75,00,000 Net Capital Gain", bx + 30, by + 85);
+
+            ctx.font = "600 14px -apple-system, BlinkMacSystemFont, sans-serif";
+            ctx.fillText("• Post-2014 advance of ₹8 Lakhs was taxed upfront under Sec 56(2)(ix) and did not reduce COA.", bx + 30, by + 120);
+          }
+        }
+      }
+    ];
+
+    function renderFrame() {
+      clearScreen();
+      const scene = SCENES[activeSceneIdx];
+      if (scene && scene.render) {
+        scene.render(currentTime);
+      }
+    }
+
+    function animate(timestamp) {
+      if (!isPlaying) return;
+      if (!lastTimestamp) lastTimestamp = timestamp;
+      const deltaSec = (timestamp - lastTimestamp) / 1000.0;
+      lastTimestamp = timestamp;
+
+      currentTime += deltaSec;
+      if (currentTime >= duration) {
+        currentTime = duration;
+        isPlaying = false;
+        updatePlayBtn();
+      }
+
+      updateUI();
+      renderFrame();
+
+      if (isPlaying) {
+        requestAnimationFrame(animate);
+      }
+    }
+
+    function togglePlay() {
+      if (currentTime >= duration) currentTime = 0.0;
+      isPlaying = !isPlaying;
+      updatePlayBtn();
+      if (isPlaying) {
+        lastTimestamp = performance.now();
+        requestAnimationFrame(animate);
+      }
+    }
+
+    function updatePlayBtn() {
+      const btn = document.getElementById("btn_play_pause");
+      btn.textContent = isPlaying ? "⏸ Pause" : "▶ Play Animation";
+    }
+
+    function seekTo(t) {
+      currentTime = Math.max(0, Math.min(duration, t));
+      updateUI();
+      renderFrame();
+    }
+
+    function seekRelative(delta) {
+      seekTo(currentTime + delta);
+    }
+
+    function updateUI() {
+      document.getElementById("timeline_slider").value = currentTime;
+      const mm = Math.floor(currentTime / 60).toString().padStart(2, "0");
+      const ss = (currentTime % 60).toFixed(1).padStart(4, "0");
+      document.getElementById("time_display").textContent = `${mm}:${ss} / 00:14.0`;
+    }
+
+    document.getElementById("timeline_slider").addEventListener("input", (e) => {
+      seekTo(parseFloat(e.target.value));
+    });
+
+    function switchScene(idx) {
+      activeSceneIdx = idx;
+      document.querySelectorAll(".scene-tab-btn").forEach((b, i) => {
+        b.classList.toggle("active", i === idx);
+      });
+      const sc = SCENES[idx];
+      document.getElementById("scene_tag_label").textContent = sc.tag;
+      document.getElementById("narration_text").textContent = sc.dialogue;
+      seekTo(0);
+      if (!isPlaying) togglePlay();
+    }
+
+    function toggleGrid() {
+      showGrid = !showGrid;
+      document.getElementById("btn_grid_toggle").classList.toggle("active-toggle", showGrid);
+      renderFrame();
+    }
+
+    function toggleDither() {
+      useDither = !useDither;
+      document.getElementById("btn_dither_toggle").classList.toggle("active-toggle", !useDither);
+      renderFrame();
+    }
+
+    switchScene(0);
+  </script>
+</body>
+</html>
