@@ -26,13 +26,14 @@ on:
           - Goods & Logistics
           - General Business
       voice:
-        description: 'Malayalam Teacher Voice'
+        description: 'Gemini Expressive Voice'
         required: false
-        default: 'ml-IN-MidhunNeural'
+        default: 'Aoede'
         type: choice
         options:
-          - ml-IN-MidhunNeural
-          - ml-IN-SobhanaNeural
+          - Aoede
+          - Kore
+          - Puck
 
 permissions:
   contents: write
@@ -74,7 +75,7 @@ jobs:
             --provision "${{ github.event.inputs.provision_text }}" \
             --subject "${{ github.event.inputs.subject }}" \
             --domain "${{ github.event.inputs.domain }}" \
-            --voice "${{ github.event.inputs.voice || 'ml-IN-MidhunNeural' }}"
+            --voice "${{ github.event.inputs.voice || 'Aoede' }}"
 
       - name: Commit & Push Presentation Screenplay
         run: |

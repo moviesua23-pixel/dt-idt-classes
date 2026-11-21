@@ -77,73 +77,26 @@ def normalize_script_for_clarity(text: str) -> str:
     return t
 
 
-def synthesize_malayalam_voice(script: str, output_mp3_path: str, voice_name: str = "ml-IN-MidhunNeural") -> float:
+def synthesize_malayalam_voice(script: str, output_mp3_path: str, voice_name: str = "Aoede") -> float:
     """
-    Synthesizes authentic, crystal-clear Malayalam teacher narration audio for a presentation slide.
-    Applies phonetic text normalization, EdgeTTS neural synthesis, and FFmpeg studio clarity EQ.
+    Synthesizes studio-grade expressive Malayalam teacher narration audio for a presentation slide
+    strictly using Gemini Expressive Voice TTS (gemini-3.1-flash-tts-preview) with automatic KeyRotator.
+    Zero robotic fallback.
     Returns the exact audio duration in seconds.
     """
     os.makedirs(os.path.dirname(os.path.abspath(output_mp3_path)), exist_ok=True)
     clean_text = normalize_script_for_clarity(script)
     
-    # Select voice (Midhun for deeper, clearer male teacher voice; Sobhana for female)
-    edge_voice = "ml-IN-MidhunNeural" if "sobhana" not in voice_name.lower() else "ml-IN-SobhanaNeural"
-    raw_temp = output_mp3_path + ".raw.mp3"
+    # Supported expressive Gemini voices: Aoede (default, warm & clear), Kore, Puck
+    selected_voice = voice_name if voice_name in ["Aoede", "Kore", "Puck", "Fenrir", "Charon"] else "Aoede"
     
-    # 1. Primary: Authentic Malayalam Neural TTS (EdgeTTS) with Clarity EQ
-    try:
-        import edge_tts
+    from pipeline.phase3_audio import generate_gemini_audio
+    dur, engine = generate_gemini_audio(clean_text, output_mp3_path, voice_name=selected_voice)
+    if os.path.exists(output_mp3_path) and os.path.getsize(output_mp3_path) > 1000:
+        print(f"   [Gemini Expressive Voice] Synthesized via {engine}: {dur:.1f}s")
+        return dur
         
-        async def _edge_gen():
-            # rate='-3%' provides relaxed, clear teacher pacing with crisp syllable enunciation
-            comm = edge_tts.Communicate(clean_text, edge_voice, rate="-3%")
-            await comm.save(raw_temp)
-            
-        asyncio.run(_edge_gen())
-        
-        # Audio Clarity Engineering with FFmpeg:
-        # - volume=1.25: optimal vocal loudness
-        # - equalizer 3.2kHz (+4dB): brings out consonant definitions (k, t, p, s, ch)
-        # - equalizer 250Hz (-2dB): clears muddy low-mid resonance
-        # - acompressor: smooths out syllable levels
-        # - 128k MP3 encoding
-        subprocess.run([
-            'ffmpeg', '-y', '-i', raw_temp,
-            '-af', 'volume=1.25,equalizer=f=3200:width_type=h:width=1200:g=4,equalizer=f=250:width_type=h:width=150:g=-2,acompressor=threshold=-16dB:ratio=3:attack=5:release=50',
-            '-b:a', '128k', output_mp3_path
-        ], check=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-        
-        if os.path.exists(raw_temp):
-            try:
-                os.remove(raw_temp)
-            except Exception:
-                pass
-                
-        # Measure duration with ffprobe
-        res = subprocess.run(
-            ['ffprobe', '-v', 'error', '-show_entries', 'format=duration', '-of', 'default=noprint_wrappers=1:nokey=1', output_mp3_path],
-            capture_output=True, text=True
-        )
-        dur = float(res.stdout.strip()) if res.stdout.strip() else 10.0
-        if os.path.exists(output_mp3_path) and os.path.getsize(output_mp3_path) > 1000:
-            print(f"   [TTS Clarity Engine] Synthesized via {edge_voice} (Studio 128k): {dur:.1f}s")
-            return dur
-    except Exception as e:
-        print(f"   [TTS] EdgeTTS error ({e}), trying Gemini Voice fallback...")
-        if os.path.exists(raw_temp) and not os.path.exists(output_mp3_path):
-            os.rename(raw_temp, output_mp3_path)
-
-    # 2. Fallback: Gemini Voice (with strict verbatim reading instruction)
-    try:
-        from pipeline.phase3_audio import generate_gemini_audio
-        verbatim_script = f"Read the following teacher explanation aloud verbatim in Malayalam with English tax terminology. Speak ONLY this text and nothing else:\n\n{clean_text}"
-        dur, engine = generate_gemini_audio(verbatim_script, output_mp3_path, voice_name="Aoede")
-        if os.path.exists(output_mp3_path) and os.path.getsize(output_mp3_path) > 2000:
-            print(f"   [TTS] Synthesized via {engine}: {dur:.1f}s")
-            return dur
-    except Exception as e:
-        print(f"   [TTS Error] All voice synthesis options failed: {e}")
-        return 8.0
+    raise RuntimeError(f"Gemini Expressive Voice generation failed for: {output_mp3_path}")
 
 
 # -------------------------------------------------------------------------
@@ -468,7 +421,8 @@ STRICT INSTRUCTIONS:
      - Check the 10 Specific templates first. If a physical transaction or action occurs, use the matching specific template.
      - If the slide explains a general rule, formula, sequence, or classification, choose from the 5 General templates.
    - Fill customized slots adapted to this exact story (custom names, amounts, labels, icons, notes). DO NOT use generic placeholder names!
-   - Write conversational teacher narration in Malayalam with English legal/statutory terminology (Manglish code-switching standard in Kerala CA education: Malayalam connectives + English sections, amounts, dates, and legal concepts).
+   - Write conversational teacher narration in natural Manglish (spoken Malayalam explanation written in English Latin script with English tax terminology, sections, amounts, dates, and legal concepts).
+      Example: "Namukku aadyathe scene nokkaam. 2012-il Vikram thante commercial plot Mr. A-kku sell cheyyaan agreement undaakki. Mr. A 5 Lakhs advance aayi nalki..."
 
 Return a strict JSON object with this format:
 {{
@@ -518,7 +472,7 @@ def main():
     parser.add_argument("--provision", required=True, help="Statutory provision text")
     parser.add_argument("--subject", default="DT", help="Subject (DT or IDT)")
     parser.add_argument("--domain", default="Real Estate", help="Real-life domain (Real Estate, Shares, Goods)")
-    parser.add_argument("--voice", default="ml-IN-MidhunNeural", help="Malayalam TTS voice name (ml-IN-MidhunNeural or ml-IN-SobhanaNeural)")
+    parser.add_argument("--voice", default="Aoede", help="Gemini Expressive Voice name (Aoede, Kore, Puck)")
     parser.add_argument("--output", default=None, help="Output path for presentation screenplay JSON")
     args = parser.parse_args()
 

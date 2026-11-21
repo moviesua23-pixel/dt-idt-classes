@@ -701,9 +701,10 @@
             <option value="Goods & Logistics">Goods & Logistics</option>
             <option value="General Business">General Business</option>
           </select>
-          <select id="voice_select" class="select-input" title="Malayalam Teacher Voice">
-            <option value="ml-IN-MidhunNeural" selected>🎙️ Midhun (Male Teacher - Deep & Clear)</option>
-            <option value="ml-IN-SobhanaNeural">🎙️ Sobhana (Female Teacher)</option>
+          <select id="voice_select" class="select-input" title="Gemini Expressive Voice">
+            <option value="Aoede" selected>✨ Aoede (Expressive Gemini Teacher)</option>
+            <option value="Kore">✨ Kore (Calm Gemini Teacher)</option>
+            <option value="Puck">✨ Puck (Lively Gemini Teacher)</option>
           </select>
         </div>
 
@@ -987,7 +988,7 @@
         audioEl.src = `../redesign_demo/${sl.audio_file}`;
         audioEl.load();
         if (statusBadge) {
-          statusBadge.textContent = `🔊 Malayalam Voice (${sl.audio_duration ? sl.audio_duration.toFixed(1) + 's' : 'Ready'})`;
+          statusBadge.textContent = `✨ Gemini Voice (${sl.audio_duration ? sl.audio_duration.toFixed(1) + 's' : 'Ready'})`;
           statusBadge.style.color = "var(--ok)";
         }
       } else {
@@ -1320,7 +1321,7 @@
         }
         const subject = document.getElementById("subject_select").value;
         const domain = document.getElementById("domain_select").value;
-        const voice = document.getElementById("voice_select") ? document.getElementById("voice_select").value : "ml-IN-MidhunNeural";
+        const voice = document.getElementById("voice_select") ? document.getElementById("voice_select").value : "Aoede";
         triggerGitHubWorkflow(text, subject, domain, voice);
       };
 
@@ -1361,7 +1362,7 @@
     // -------------------------------------------------------------------------
     // Trigger GitHub Workflow for Pasted Provision
     // -------------------------------------------------------------------------
-    async function triggerGitHubWorkflow(provisionText, subject, domain, voice = "ml-IN-MidhunNeural") {
+    async function triggerGitHubWorkflow(provisionText, subject, domain, voice = "Aoede") {
       const pat = document.getElementById("gh_pat_input").value.trim() || localStorage.getItem("dt_github_pat");
       const owner = document.getElementById("gh_owner_input").value.trim() || "moviesua23-pixel";
       const repo = document.getElementById("gh_repo_input").value.trim() || "dt-idt-classes";

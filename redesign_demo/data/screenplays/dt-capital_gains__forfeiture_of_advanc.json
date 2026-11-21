@@ -6,21 +6,21 @@
   "provision_raw": "Section 54 & Section 51: Capital Gains Exemption & Forfeiture of Advance Money. Section 51: Advance money forfeited prior to 01/04/2014 reduced from Cost of Acquisition. Section 56(2)(ix): Advance money forfeited on or after 01/04/2014 taxed under Income from Other Sources, does not reduce COA. Section 54: Reinvestment in residential house.",
   "story_summary": "Vikram purchased a property in Kochi for ₹30 Lakhs. He forfeited an advance of ₹5 Lakhs in 2012 (pre-2014) and ₹8 Lakhs in 2018 (post-2014), before finally selling the property for ₹1 Crore in 2023 and reinvesting in a residential house.",
   "total_slides": 6,
-  "total_duration": 146.7,
+  "total_duration": 130.4,
   "slides": [
     {
       "slide_number": 1,
       "slide_title": "Pre-2014 Advance Forfeiture",
       "scene_purpose": "Demonstrate the receipt and forfeiture of advance money prior to 01/04/2014 under Section 51.",
       "archetype_id": "give_and_receive",
-      "dialogue_manglish": "First scene-ൽ, 2012-ൽ Vikram magnetic plot sell ചെയ്യാൻ Mr. A ആയിട്ട് agreement ഉണ്ടാക്കി. Mr. A 5 Lakhs advance ആയി നൽകി, പക്ഷെ transaction complete ചെയ്യാൻ പറ്റിയില്ല. So Vikram 5 Lakhs forfeit ചെയ്തു. Since this forfeiture happened prior to 01/04/2014, Section 51 പ്രകാരം dynamic asset-ന്റെ Cost of Acquisition-ൽ നിന്ന് ഇത് reduce ചെയ്യണം.",
+      "dialogue_manglish": "First sceneil, 2012-il Vikram thante commercial plot Mr. A-kku sell cheyyaan agreement undaakki. Mr. A 5 Lakhs advance aayi nalki, pakshe transaction complete cheyyaan pattiyilla. So Vikram 5 Lakhs forfeit cheythu. Since this forfeiture happened prior to 1st April 2014, Section 51 prakaaram Cost of Acquisition-il ninnu ithu reduce cheyyanam.",
       "audio_file": "data/audio/presentations/dt-capital_gains__forfeiture_of_advanc/slide_1.mp3",
-      "audio_duration": 28.704,
-      "duration": 29.7,
+      "audio_duration": 24.8,
+      "duration": 25.8,
       "cues": {
         "cue_start": 0.5,
-        "cue_action": 11.5,
-        "cue_conclusion": 23.0
+        "cue_action": 9.9,
+        "cue_conclusion": 19.8
       },
       "slots": {
         "title": "2012: Advance Forfeited (Pre-01/04/2014)",
@@ -39,14 +39,14 @@
       "slide_title": "Adjustment to Cost of Acquisition (Section 51)",
       "scene_purpose": "Show the reduction of original Cost of Acquisition due to pre-2014 forfeiture.",
       "archetype_id": "take_away",
-      "dialogue_manglish": "ഇവിടെ Vikram-ന്റെ original Cost of Acquisition 30 Lakhs ആയിരുന്നു. Section 51 പ്രകാരം pre-2014 forfeit ചെയ്ത 5 Lakhs match ചെയ്ത് deduct ചെയ്യുമ്പോൾ, adjusted Cost of Acquisition 25 Lakhs ആയി മാറും.",
+      "dialogue_manglish": "Ivide Vikram-inte original Cost of Acquisition 30 Lakhs aayirunnu. Section 51 prakaaram pre-2014 forfeit cheytha 5 Lakhs deduct cheyyumpol, adjusted Cost of Acquisition 25 Lakhs aayi maarum.",
       "audio_file": "data/audio/presentations/dt-capital_gains__forfeiture_of_advanc/slide_2.mp3",
-      "audio_duration": 17.808,
-      "duration": 18.8,
+      "audio_duration": 13.8,
+      "duration": 14.8,
       "cues": {
         "cue_start": 0.5,
-        "cue_action": 7.1,
-        "cue_conclusion": 14.2
+        "cue_action": 5.5,
+        "cue_conclusion": 11.0
       },
       "slots": {
         "title": "Impact of Sec 51 on Cost of Acquisition",
@@ -67,14 +67,14 @@
       "slide_title": "Post-2014 Advance Forfeiture",
       "scene_purpose": "Demonstrate forfeiture of advance money on/after 01/04/2014 governed by Section 56(2)(ix).",
       "archetype_id": "give_and_receive",
-      "dialogue_manglish": "Next, 2018-ൽ Mr. B ആയിട്ട് ഉണ്ടാക്കിയ agreement-ൽ Vikram 8 Lakhs advance വാങ്ങുകയും forfeit ചെയ്യുകയും ചെയ്തു. But remember, 01/04/2014-ന് ശേഷം നടക്കുന്ന forfeiture Section 56(2)(ix) പ്രകാരം Income from Other Sources (IFOS) ആയി full tax ചെയ്യപ്പെടും. Cost of Acquisition-ൽ ഒരു reduction-ഉം വരില്ല!",
+      "dialogue_manglish": "Next, 2018-il Mr. B aayittu undaakkiya agreement-il Vikram 8 Lakhs advance vaangukayum forfeit cheyyukayum cheythu. But remember, 1st April 2014-nu sesham nadakkunna forfeiture Section 56(2)(ix) prakaaram Income from Other Sources aayi full tax cheyyappedum. Cost of Acquisition-il oru reduction-um varilla!",
       "audio_file": "data/audio/presentations/dt-capital_gains__forfeiture_of_advanc/slide_3.mp3",
-      "audio_duration": 26.808,
-      "duration": 27.8,
+      "audio_duration": 22.9,
+      "duration": 23.9,
       "cues": {
         "cue_start": 0.5,
-        "cue_action": 10.7,
-        "cue_conclusion": 21.4
+        "cue_action": 9.2,
+        "cue_conclusion": 18.3
       },
       "slots": {
         "title": "2018: Advance Forfeited (Post-01/04/2014)",
@@ -93,14 +93,14 @@
       "slide_title": "Comparative Tax Matrix: Sec 51 vs Sec 56(2)(ix)",
       "scene_purpose": "Summarize the statutory distinction based on the cutoff date of 1st April 2014.",
       "archetype_id": "table_reveal",
-      "dialogue_manglish": "Exam point of view-ൽ ഈ cutoff date വളരെ crucial ആണ്. Cutoff line: 01/04/2014! ഇതിന് മുൻപുള്ള forfeiture Cost of Acquisition-ൽ നിന്ന് reduce ചെയ്യണം. 01/04/2014-ലോ അതിനു ശേഷമോ ഉള്ള forfeiture IFOS-ൽ Tax ചെയ്യും, COA-ൽ no change!",
+      "dialogue_manglish": "Exam point of view-il ee cutoff date valare crucial aanu. Cutoff line: 1st April 2014! Ithinu munpullaa forfeiture Cost of Acquisition-il ninnu reduce cheyyanam. 1st April 2014-lo athinu seshamo ulla forfeiture Income from Other Sources-il tax cheyyum, Cost of Acquisition-il no change!",
       "audio_file": "data/audio/presentations/dt-capital_gains__forfeiture_of_advanc/slide_4.mp3",
-      "audio_duration": 21.768,
-      "duration": 22.8,
+      "audio_duration": 21.0,
+      "duration": 22.0,
       "cues": {
         "cue_start": 0.5,
-        "cue_action": 8.7,
-        "cue_conclusion": 17.4
+        "cue_action": 8.4,
+        "cue_conclusion": 16.8
       },
       "slots": {
         "title": "Statutory Comparison Matrix",
@@ -130,14 +130,14 @@
       "slide_title": "Final Sale & Capital Gain Computation",
       "scene_purpose": "Calculate the final Capital Gain when property is sold in 2023.",
       "archetype_id": "formula_builder",
-      "dialogue_manglish": "2023-ൽ Vikram ഈ property 1 Crore-ന് വിറ്റു. Capital Gain calculate ചെയ്യുമ്പോൾ Sale Consideration 1 Crore-ൽ നിന്ന് Adjusted COA 25 Lakhs മാത്രം subtract ചെയ്യുക. 2018-ലെ 8 Lakhs already IFOS-ൽ tax ആയതുകൊണ്ട് COA 25 Lakhs തന്നെയായിരിക്കും. Total Capital Gain: 75 Lakhs!",
+      "dialogue_manglish": "2023-il Vikram ee property 1 Crore-nu vittu. Capital Gain calculate cheyyumpol Sale Consideration 1 Crore-il ninnu Adjusted Cost of Acquisition 25 Lakhs maathram subtract cheyyuka. 2018-le 8 Lakhs already Income from Other Sources-il tax aayathukondu COA 25 Lakhs thanne aayirikkum. Total Capital Gain: 75 Lakhs!",
       "audio_file": "data/audio/presentations/dt-capital_gains__forfeiture_of_advanc/slide_5.mp3",
-      "audio_duration": 25.632,
-      "duration": 26.6,
+      "audio_duration": 24.5,
+      "duration": 25.5,
       "cues": {
         "cue_start": 0.5,
-        "cue_action": 10.3,
-        "cue_conclusion": 20.5
+        "cue_action": 9.8,
+        "cue_conclusion": 19.6
       },
       "slots": {
         "title": "Capital Gain Computation (2023)",
@@ -169,14 +169,14 @@
       "slide_title": "Section 54 Reinvestment Timeline Check",
       "scene_purpose": "Verify if the reinvestment in a residential house satisfies Section 54 timeline criteria.",
       "archetype_id": "time_range",
-      "dialogue_manglish": "ഇനി final step! Vikram 75 Lakhs Capital Gain ലഭിച്ച ശേഷം 1 year-നുള്ളിൽ പുതിയൊരു Residential House purchase ചെയ്തു. Section 54 പ്രകാരം sale തീയതി മുതൽ 2 years-നുള്ളിൽ new house purchase ചെയ്താൽ full Capital Gain Exemption എലിജിബിൾ ആണ്!",
+      "dialogue_manglish": "Ini final step! Vikram 75 Lakhs Capital Gain labhicha sesham 1 year-inullil puthiyoru Residential House purchase cheythu. Section 54 prakaaram sale date muthal 2 years-inullil new house purchase cheythaal full Capital Gain Exemption eligible aanu!",
       "audio_file": "data/audio/presentations/dt-capital_gains__forfeiture_of_advanc/slide_6.mp3",
-      "audio_duration": 20.04,
-      "duration": 21.0,
+      "audio_duration": 17.4,
+      "duration": 18.4,
       "cues": {
         "cue_start": 0.5,
-        "cue_action": 8.0,
-        "cue_conclusion": 16.0
+        "cue_action": 7.0,
+        "cue_conclusion": 13.9
       },
       "slots": {
         "title": "Sec 54 Reinvestment Window",
