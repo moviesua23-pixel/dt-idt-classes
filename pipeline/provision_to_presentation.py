@@ -121,6 +121,145 @@ def parse_val_to_num(v: Any) -> int:
         return int(nums[0])
     return 0
 
+def normalize_slide_slots(archetype_id: str, raw_slots: Dict[str, Any]) -> Dict[str, Any]:
+    """
+    Normalizes slide slots from Gemini or heuristic outputs into canonical kinetic schemas:
+    - Normalizes alias keys ('chunks' -> 'steps', 'streams' -> 'inputs', 'whole_val' -> 'start_amount')
+    - Standardizes conditions ([{ label, passed }]) to prevent gate lockouts or placeholder displays
+    - Strictly coerces numeric strings ('₹ 5 Lakhs', '3000000') into pure integers
+    """
+    slots = dict(raw_slots or {})
+    
+    if archetype_id == "conditions_gate":
+        conds = slots.get("conditions") or slots.get("checklist") or slots.get("criteria") or []
+        norm_conds = []
+        for idx, c in enumerate(conds):
+            if isinstance(c, dict):
+                label = c.get("label") or c.get("text") or c.get("title") or c.get("criterion") or f"Criterion {idx+1}"
+                passed = c.get("passed") if "passed" in c else (c.get("met") if "met" in c else (c.get("is_met") if "is_met" in c else True))
+                norm_conds.append({"label": str(label), "passed": bool(passed)})
+            elif isinstance(c, str):
+                norm_conds.append({"label": c, "passed": True})
+        if norm_conds:
+            slots["conditions"] = norm_conds
+            
+    elif archetype_id == "take_away":
+        start_amt = slots.get("start_amount") if "start_amount" in slots else (slots.get("whole_val") if "whole_val" in slots else slots.get("whole_amount"))
+        if start_amt is not None:
+            slots["start_amount"] = parse_val_to_num(start_amt)
+        if "whole_label" in slots and "start_label" not in slots:
+            slots["start_label"] = slots["whole_label"]
+        raw_steps = slots.get("steps") or slots.get("chunks") or slots.get("deductions") or []
+        norm_steps = []
+        for s in raw_steps:
+            if isinstance(s, dict):
+                lbl = s.get("label") or s.get("title") or s.get("text") or "Deduction Step"
+                amt = parse_val_to_num(s.get("amount") if "amount" in s else s.get("val", 0))
+                norm_steps.append({"label": str(lbl), "amount": amt})
+        if norm_steps:
+            slots["steps"] = norm_steps
+            
+    elif archetype_id == "split_into_parts":
+        whole = slots.get("whole_amount") if "whole_amount" in slots else slots.get("whole_val")
+        if whole is not None:
+            slots["whole_amount"] = parse_val_to_num(whole)
+        raw_parts = slots.get("parts") or slots.get("chunks") or slots.get("branches") or []
+        norm_parts = []
+        for p in raw_parts:
+            if isinstance(p, dict):
+                lbl = p.get("label") or p.get("title") or p.get("text") or "Allocation Branch"
+                amt = parse_val_to_num(p.get("amount") if "amount" in p else p.get("val", 0))
+                norm_parts.append({"label": str(lbl), "amount": amt})
+        if norm_parts:
+            slots["parts"] = norm_parts
+
+    elif archetype_id == "merge_into_one":
+        raw_inputs = slots.get("inputs") or slots.get("streams") or slots.get("items") or []
+        norm_inputs = []
+        for i in raw_inputs:
+            if isinstance(i, dict):
+                lbl = i.get("label") or i.get("title") or i.get("text") or "Input Stream"
+                amt = parse_val_to_num(i.get("amount") if "amount" in i else i.get("val", 0))
+                norm_inputs.append({"label": str(lbl), "amount": amt})
+        if norm_inputs:
+            slots["inputs"] = norm_inputs
+        if "merged_label" in slots and "result_label" not in slots:
+            slots["result_label"] = slots["merged_label"]
+
+    elif archetype_id == "add_up":
+        raw_items = slots.get("items") or slots.get("rows") or slots.get("steps") or []
+        norm_items = []
+        for it in raw_items:
+            if isinstance(it, dict):
+                lbl = it.get("label") or it.get("title") or it.get("text") or "Component"
+                amt = parse_val_to_num(it.get("amount") if "amount" in it else it.get("val", 0))
+                norm_items.append({"label": str(lbl), "amount": amt})
+        if norm_items:
+            slots["items"] = norm_items
+
+    elif archetype_id == "compare_two":
+        if "val_a" in slots:
+            slots["val_a"] = parse_val_to_num(slots["val_a"])
+        elif "val_1" in slots:
+            slots["val_a"] = parse_val_to_num(slots["val_1"])
+        if "val_b" in slots:
+            slots["val_b"] = parse_val_to_num(slots["val_b"])
+        elif "val_2" in slots:
+            slots["val_b"] = parse_val_to_num(slots["val_2"])
+        if "cap_amount" in slots and slots["cap_amount"]:
+            slots["cap_amount"] = parse_val_to_num(slots["cap_amount"])
+
+    elif archetype_id == "give_and_receive":
+        if "item_value" in slots:
+            slots["item_value"] = parse_val_to_num(slots["item_value"])
+        if "payment_amount" in slots:
+            slots["payment_amount"] = parse_val_to_num(slots["payment_amount"])
+
+    elif archetype_id == "chain_passing":
+        if "tag_value" in slots:
+            slots["tag_value"] = parse_val_to_num(slots["tag_value"])
+        elif "item_value" in slots:
+            slots["tag_value"] = parse_val_to_num(slots["item_value"])
+
+    elif archetype_id == "formula_builder":
+        raw_chips = slots.get("chips") or slots.get("items") or []
+        norm_chips = []
+        for idx, ch in enumerate(raw_chips):
+            if isinstance(ch, dict):
+                has_val = ("val" in ch or "amount" in ch)
+                has_label = bool(ch.get("label") or ch.get("title"))
+                op = ch.get("op")
+                
+                if op and not has_val and not has_label:
+                    norm_chips.append({"op": "−" if op == "-" else op})
+                elif op and (has_val or has_label):
+                    if op != "+" or idx > 0:
+                        norm_chips.append({"op": "−" if op == "-" else op})
+                    norm_chips.append({
+                        "label": ch.get("label") or ch.get("title") or "",
+                        "val": parse_val_to_num(ch.get("val") or ch.get("amount", 0)),
+                        "is_total": bool(ch.get("is_total", False))
+                    })
+                else:
+                    norm_chips.append({
+                        "label": ch.get("label") or ch.get("title") or "",
+                        "val": parse_val_to_num(ch.get("val") or ch.get("amount", 0)),
+                        "is_total": bool(ch.get("is_total", False))
+                    })
+        if norm_chips:
+            slots["chips"] = norm_chips
+
+    elif archetype_id == "time_range":
+        if "span_length" in slots:
+            slots["span_length"] = parse_val_to_num(slots["span_length"])
+        if "event_offset" in slots:
+            slots["event_offset"] = parse_val_to_num(slots["event_offset"])
+        if "is_inside" in slots:
+            slots["is_inside"] = bool(slots["is_inside"])
+
+    return slots
+
+
 def generate_multi_slide_heuristic(provision_text: str, subject: str = "DT", domain: str = "Real Estate") -> Dict[str, Any]:
     """Generates a complete 3-slide pedagogical screenplay using rule-based analysis."""
     text_lower = provision_text.lower()
@@ -280,10 +419,10 @@ def generate_multi_slide_heuristic(provision_text: str, subject: str = "DT", dom
                         "door_label": "Input Tax Credit Portal",
                         "all_required": True,
                         "conditions": [
-                            {"text": "Possession of Tax Invoice", "met": True},
-                            {"text": "Physical Receipt of Goods", "met": True},
-                            {"text": "Supplier Tax Payment Confirmed", "met": True},
-                            {"text": "Return under Section 39 Furnished", "met": True}
+                            {"label": "Possession of Tax Invoice", "passed": True},
+                            {"label": "Physical Receipt of Goods", "passed": True},
+                            {"label": "Supplier Tax Payment Confirmed", "passed": True},
+                            {"label": "Return under Section 39 Furnished", "passed": True}
                         ],
                         "note": "All 4 statutory checklist criteria verified."
                     }
@@ -381,25 +520,25 @@ Domain: {domain} (e.g. Real Estate, Shares & Securities, Goods & Logistics, Gene
 Available 15 Kinetic Animation Templates:
 --- 10 SPECIFIC REAL-LIFE ACTION TEMPLATES ---
 1. give_and_receive: Handover of an asset between two parties with monetary payment or unilateral transfer/gift.
-   Slots: title, giver, receiver, item_label, item_icon ('house'|'shares'|'goods'), item_value (num), payment_amount (num), tag_text, note.
+   Slots: title, giver, receiver, item_label, item_icon ('house'|'shares'|'goods'), item_value (num e.g. 5000000), payment_amount (num e.g. 5000000), tag_text, note.
 2. swap: Two parties exchanging different assets with crossing paths.
-   Slots: title, party_a, party_b, item_a (label, icon, val), item_b (label, icon, val), note.
+   Slots: title, party_a, party_b, item_a_label, item_a_val (num), item_a_icon, item_b_label, item_b_val (num), item_b_icon, note.
 3. split_into_parts: A single whole entity cracking and dividing into 2 to 5 branch cards.
-   Slots: title, whole_label, whole_val (num), parts ([{{label, pct, val, tone}}]), note.
+   Slots: title, whole_label, whole_amount (num e.g. 6000000), parts ([{{"label": "Branch 1", "amount": 2500000}}]), note.
 4. merge_into_one: Multiple input streams sliding inward and fusing into one consolidated entity.
-   Slots: title, streams ([{{label, val, tone}}]), merged_label, note.
+   Slots: title, inputs ([{{"label": "Stream 1", "amount": 2800000}}]), result_label, note.
 5. add_up: Sequential dropping rows with a live running odometer total.
-   Slots: title, rows ([{{label, val, tone}}]), note.
+   Slots: title, items ([{{"label": "Component 1", "amount": 1200000}}]), note.
 6. take_away: Slicing deduction chunks from a gross revenue/income pool to leave a net remainder.
-   Slots: title, whole_label, whole_val (num), chunks ([{{label, val}}]), result_label, note.
+   Slots: title, start_label, start_amount (num e.g. 3000000), steps ([{{"label": "Pre-2014 Advance Forfeited (Sec 51)", "amount": 500000}}]), result_label, note.
 7. compare_two: Tilting balance scale comparing agreed/declared value against standard statutory benchmark.
-   Slots: title, label_a, val_a (num), label_b, val_b (num), mode ('higher'|'lower'), cap_amount, note.
+   Slots: title, label_a, val_a (num), label_b, val_b (num), mode ('higher'|'lower'), cap_amount (num or null), note.
 8. time_range: Timeline horizontal axis checking whether a reinvestment or action occurred within a statutory window.
    Slots: title, start_label, span_length (num), span_unit ('Days'|'Months'|'Years'), span_label, event_label, event_offset (num), is_inside (bool), note.
 9. conditions_gate: Multi-criteria checklist cards with a mechanical portal gate swinging open (met) or locking (failed).
-   Slots: title, door_label, all_required (bool), conditions ([{{text, met}}]), note.
+   Slots: title, conditions ([{{"label": "Explicit statutory condition (e.g. Compulsory Acquisition of Industrial Undertaking)", "passed": true}}]), open_caption, closed_caption, note.
 10. chain_passing: Succession chain of 3 to 4 owners where an asset hops along and base cost is carried over.
-   Slots: title, item_label, tag_label, tag_value (num), owners ([{{name, year}}]), note.
+   Slots: title, item_label, tag_label, tag_value (num), owners ([{{"name": "Owner Name", "year": "YYYY"}}]), note.
 
 --- 5 GENERAL CATCH-ALL TEMPLATES (Use when no specific real-life action fits) ---
 G1. key_statement: Central bold headline with yellow highlighter marker sweep across the critical legal takeaway.
@@ -414,7 +553,13 @@ G5. concept_map: Central hub circle branching out into 2-4 sub-rules or legal cr
    Slots: title, hub_label, branches ([{{label, desc, highlight}}]), note.
 
 STRICT INSTRUCTIONS:
-1. First, create a relatable, simple real-life story explaining this statutory rule in plain English (e.g. Rahul selling land in Kochi, Grandfather's succession gift, or ITC 4-part conditions checklist).
+CRITICAL REQUIREMENT FOR AMOUNTS, ENTITY NAMES AND CHECKLIST CRITERIA:
+- The presentation MUST be dynamically customized to the EXACT situation and statutory provision!
+- In `conditions_gate`: Each item in `conditions` MUST describe the real statutory condition from the situation (e.g. "Compulsory Acquisition of Industrial Land/Building", "Used for Industrial Purpose >= 2 Years", "Reinvestment in New Industrial Asset within 3 Years") and set `passed: true` if satisfied by the taxpayer or `passed: false` if breached. NEVER output generic placeholders like "Criterion 1"!
+- In `take_away`: `start_amount` and `steps[].amount` MUST use the real amounts from the situation (e.g. start_amount: 3000000, steps: [{"label": "Pre-2014 Advance Forfeited", "amount": 500000}]). NEVER fallback to default ₹50 Lakhs!
+- In all archetypes: Use real names (e.g. Rajesh, Vikram, Anita, Rahul), real amounts (in numbers e.g. 4500000), and specific asset descriptions!
+
+1. First, create a relatable, simple real-life story explaining this statutory rule in plain English (e.g. Rajesh and compulsory acquisition of industrial land, Vikram forfeiting advance money in Kochi, etc.).
 2. Determine the exact number of slides needed to thoroughly and clearly explain this complete story from setup to statutory conclusion. DO NOT artificially limit the number of slides—create as many slides as the pedagogical explanation naturally requires (e.g. 3, 4, 5, 6, 7 or more depending on the complexity of the provision). Every key event, calculation, statutory condition, benchmark comparison, or legal consequence should have its own dedicated slide.
 3. For EACH slide:
    - Choose the best archetype out of the 15:
@@ -528,9 +673,10 @@ def main():
             "cue_conclusion": round(max(2.0, audio_duration * 0.8), 1)
         }
         
-        # Clean slot values
-        clean_slots = dict(slide.get("slots", {}))
-        clean_slots["title"] = clean_slots.get("title") or slide.get("slide_title")
+        # Clean and normalize slot values to canonical kinetic schemas
+        raw_slots = dict(slide.get("slots", {}))
+        raw_slots["title"] = raw_slots.get("title") or slide.get("slide_title")
+        clean_slots = normalize_slide_slots(arch_id, raw_slots)
         
         processed_slides.append({
             "slide_number": slide_num,

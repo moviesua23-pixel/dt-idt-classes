@@ -60,6 +60,24 @@
     return (n < 0 ? "-" : "") + formattedRest + "," + lastThree;
   }
 
+  function parseAmount(v, defaultVal = 0) {
+    if (v === null || v === undefined) return defaultVal;
+    if (typeof v === "number") return isNaN(v) ? defaultVal : v;
+    const s = String(v).toLowerCase().replace(/,/g, '').replace(/₹/g, '').trim();
+    if (!s) return defaultVal;
+    if (s.includes('crore') || s.includes('cr')) {
+      const m = s.match(/[\d.]+/);
+      if (m) return Math.round(parseFloat(m[0]) * 10000000);
+    }
+    if (s.includes('lakh') || s.includes('lac') || s.includes('l')) {
+      const m = s.match(/[\d.]+/);
+      if (m) return Math.round(parseFloat(m[0]) * 100000);
+    }
+    const m = s.match(/[\d.]+/);
+    if (m) return Math.round(parseFloat(m[0]));
+    return defaultVal;
+  }
+
   function svgEl(tag, attrs = {}, children = []) {
     const el = document.createElementNS("http://www.w3.org/2000/svg", tag);
     for (const [k, v] of Object.entries(attrs)) {
@@ -261,7 +279,7 @@
       if (t >= cueItem) {
         const pItem = clamp01((t - cueItem) / 1.5);
         const easeItem = Easing.easeInOut(pItem);
-        const targetVal = slots.item_value || 0;
+        const targetVal = parseAmount(slots.item_value ?? slots.val ?? slots.amount, 0);
         const curVal = Math.round(targetVal * easeItem);
         stage.appendChild(renderTravelingItem(
           itemStartX, itemStartY, itemEndX, itemEndY,
@@ -276,7 +294,7 @@
       if (t >= cueReturn) {
         const pReturn = clamp01((t - cueReturn) / 1.5);
         const easeReturn = Easing.easeInOut(pReturn);
-        const paymentAmt = slots.payment_amount || 0;
+        const paymentAmt = parseAmount(slots.payment_amount ?? slots.payment_val ?? slots.payment, 0);
 
         if (paymentAmt > 0) {
           const curPayVal = Math.round(paymentAmt * easeReturn);
@@ -355,8 +373,8 @@
       const bEndX = partyAX + partyW, bEndY = partyAY + 75;
       stage.appendChild(renderTrajectoryGuide(bStartX, bStartY, bEndX, bEndY, -75, "ok"));
 
-      const valA = slots.item_a_val || 3200000;
-      const valB = slots.item_b_val || 2700000;
+      const valA = parseAmount(slots.item_a_val ?? (slots.item_a ? (slots.item_a.val ?? slots.item_a.amount) : null), 3200000);
+      const valB = parseAmount(slots.item_b_val ?? (slots.item_b ? (slots.item_b.val ?? slots.item_b.amount) : null), 2700000);
 
       if (t >= cueCrossing) {
         const pCross = clamp01((t - cueCrossing) / 1.8);
@@ -366,9 +384,9 @@
         const itemANode = renderTravelingItem(
           aStartX, aStartY, aEndX, aEndY,
           easeCross, 75,
-          slots.item_a_label || "Asset Alpha",
+          slots.item_a_label || (slots.item_a ? slots.item_a.label : null) || "Asset Alpha",
           curValA,
-          slots.item_a_icon || "goods",
+          slots.item_a_icon || (slots.item_a ? slots.item_a.icon : null) || "goods",
           "accent"
         );
         stage.appendChild(itemANode);
@@ -377,9 +395,9 @@
         const itemBNode = renderTravelingItem(
           bStartX, bStartY, bEndX, bEndY,
           easeCross, -75,
-          slots.item_b_label || "Asset Beta",
+          slots.item_b_label || (slots.item_b ? slots.item_b.label : null) || "Asset Beta",
           curValB,
-          slots.item_b_icon || "shares",
+          slots.item_b_icon || (slots.item_b ? slots.item_b.icon : null) || "shares",
           "ok"
         );
         stage.appendChild(itemBNode);
@@ -423,12 +441,16 @@
 
       stage.appendChild(renderHeaderBanner(slots.title || "Entity Partition & Allocation", "accent"));
 
-      const parts = slots.parts || [
+      const rawParts = slots.parts || slots.chunks || slots.branches || [];
+      const parts = rawParts.length > 0 ? rawParts.map(p => ({
+        label: p.label || p.title || p.text || "Allocation Branch",
+        amount: parseAmount(p.amount ?? p.val ?? p.value, 0)
+      })) : [
         { label: "Allocation Branch One", amount: 2500000 },
         { label: "Allocation Branch Two", amount: 2000000 },
         { label: "Residual Allocation", amount: 1500000 }
       ];
-      const wholeAmt = slots.whole_amount || 6000000;
+      const wholeAmt = parseAmount(slots.whole_amount ?? slots.whole_val, 6000000);
       const numParts = Math.max(2, Math.min(5, parts.length));
 
       // Upper Whole Block
@@ -527,7 +549,11 @@
 
       stage.appendChild(renderHeaderBanner(slots.title || "Stream Convergence & Fusion", "accent"));
 
-      const inputs = slots.inputs || [
+      const rawInputs = slots.inputs || slots.streams || slots.items || [];
+      const inputs = rawInputs.length > 0 ? rawInputs.map(i => ({
+        label: i.label || i.title || i.text || "Input Entity",
+        amount: parseAmount(i.amount ?? i.val ?? i.value, 0)
+      })) : [
         { label: "Input Entity Alpha", amount: 2800000 },
         { label: "Input Entity Beta", amount: 3200000 }
       ];
@@ -583,7 +609,7 @@
         mergedCard.appendChild(svgEl("rect", { x: -4, y: -4, width: mergedW + 8, height: mergedH + 8, rx: 24, fill: "none", stroke: "var(--ok-soft)", "stroke-width": 4, opacity: 0.6 }));
 
         // Content
-        mergedCard.appendChild(svgEl("text", { x: mergedW/2, y: 48, "text-anchor": "middle", "font-size": 22, "font-weight": "900", fill: "var(--ink)" }, [slots.result_label || "Combined Unified Whole"]));
+        mergedCard.appendChild(svgEl("text", { x: mergedW/2, y: 48, "text-anchor": "middle", "font-size": 22, "font-weight": "900", fill: "var(--ink)" }, [slots.result_label || slots.merged_label || "Combined Unified Whole"]));
 
         const pCount = t >= cueTotal ? 1.0 : clamp01((t - cueFuse) / (cueTotal - cueFuse));
         const curMergedVal = Math.round(totalSum * pCount);
@@ -609,7 +635,11 @@
     // =========================================================================
     add_up: (slots, t, duration, cues) => {
       const stage = svgEl("g");
-      const items = slots.items || [
+      const rawItems = slots.items || slots.rows || slots.steps || [];
+      const items = rawItems.length > 0 ? rawItems.map(it => ({
+        label: it.label || it.title || it.text || "Component",
+        amount: parseAmount(it.amount ?? it.val ?? it.value, 0)
+      })) : [
         { label: "Base Component One", amount: 1200000 },
         { label: "Secondary Component Two", amount: 450000 },
         { label: "Supplemental Addition", amount: 250000 }
@@ -681,8 +711,12 @@
 
       stage.appendChild(renderHeaderBanner(slots.title || "Sequential Subtraction & Remainder", "accent"));
 
-      const startAmt = slots.start_amount || 5000000;
-      const steps = slots.steps || [
+      const startAmt = parseAmount(slots.start_amount ?? slots.whole_val ?? slots.whole_amount ?? slots.start_val, 5000000);
+      const rawSteps = slots.steps || slots.chunks || slots.deductions || slots.slices || [];
+      const steps = rawSteps.length > 0 ? rawSteps.map(s => ({
+        label: s.label || s.title || s.text || "Outflow Step",
+        amount: parseAmount(s.amount ?? s.val ?? s.value, 0)
+      })) : [
         { label: "Primary Outflow Step", amount: 1200000 },
         { label: "Secondary Outflow Step", amount: 1500000 }
       ];
@@ -694,7 +728,7 @@
       const colX = 70, colY = 110, colW = 260, colH = 390;
       const leftCol = svgEl("g", { transform: `translate(${colX}, ${colY})` });
       leftCol.appendChild(svgEl("rect", { x: 0, y: 0, width: colW, height: colH, rx: 16, fill: "var(--surface)", stroke: "var(--accent)", "stroke-width": 2 }));
-      leftCol.appendChild(svgEl("text", { x: colW/2, y: 35, "text-anchor": "middle", "font-size": 18, "font-weight": "800", fill: "var(--ink)" }, [slots.start_label || "Initial Gross Value"]));
+      leftCol.appendChild(svgEl("text", { x: colW/2, y: 35, "text-anchor": "middle", "font-size": 18, "font-weight": "800", fill: "var(--ink)" }, [slots.start_label || slots.whole_label || "Initial Gross Value"]));
       const curGross = Math.round(startAmt * easeStart);
       leftCol.appendChild(svgEl("text", { x: colW/2, y: 65, "text-anchor": "middle", "font-size": 22, "font-weight": "900", fill: "var(--accent)" }, [formatIndianRupee(curGross)]));
 
@@ -776,10 +810,10 @@
       const cueScale = cues.cue_scale || 4.5;
       const cueWinner = cues.cue_winner || 8.5;
 
-      const valA = slots.val_a || 1800000;
-      const valB = slots.val_b || 2500000;
+      const valA = parseAmount(slots.val_a ?? slots.val_1 ?? slots.amount_a, 1800000);
+      const valB = parseAmount(slots.val_b ?? slots.val_2 ?? slots.amount_b, 2500000);
       const mode = (slots.mode || "higher").toLowerCase();
-      const capVal = slots.cap_amount || null;
+      const capVal = slots.cap_amount ? parseAmount(slots.cap_amount) : null;
 
       let winnerIsA = mode === "higher" ? (valA > valB) : (valA < valB);
       const isTie = valA === valB;
@@ -889,10 +923,10 @@
 
       stage.appendChild(renderHeaderBanner(slots.title || "Prescribed Window & Event Timing", "accent"));
 
-      const spanLen = slots.span_length || 24;
+      const spanLen = parseAmount(slots.span_length, 24);
       const spanUnit = slots.span_unit || "Months";
-      const eventOffset = slots.event_offset !== undefined ? slots.event_offset : 16;
-      const isInside = slots.is_inside !== undefined ? slots.is_inside : (eventOffset <= spanLen);
+      const eventOffset = slots.event_offset !== undefined ? parseAmount(slots.event_offset, 16) : 16;
+      const isInside = slots.is_inside !== undefined ? Boolean(slots.is_inside) : (eventOffset <= spanLen);
 
       // Timeline axis baseline (x: 100 to 900, y: 240)
       const axisStartX = 100, axisEndX = 900, axisY = 240;
@@ -998,7 +1032,11 @@
 
       stage.appendChild(renderHeaderBanner(slots.title || "Prescribed Gatekeeper Checklist", "accent"));
 
-      const conditions = slots.conditions || [
+      const rawConds = slots.conditions || slots.checklist || slots.criteria || [];
+      const conditions = rawConds.length > 0 ? rawConds.map((cond, idx) => ({
+        label: cond.label || cond.text || cond.title || cond.criterion || cond.name || `Criterion ${idx+1}`,
+        passed: cond.passed !== undefined ? Boolean(cond.passed) : (cond.met !== undefined ? Boolean(cond.met) : (cond.is_met !== undefined ? Boolean(cond.is_met) : true))
+      })) : [
         { label: "Initial Eligibility Condition", passed: true },
         { label: "Secondary Compliance Standard", passed: true },
         { label: "Eligibility Window Fulfillment", passed: true }
@@ -1113,7 +1151,11 @@
 
       stage.appendChild(renderHeaderBanner(slots.title || "Succession Cost Base Carryover", "accent"));
 
-      const owners = slots.owners || [
+      const rawOwners = slots.owners || [];
+      const owners = rawOwners.length > 0 ? rawOwners.map((ow, idx) => ({
+        name: ow.name || `Owner ${idx+1}`,
+        year: String(ow.year || "")
+      })) : [
         { name: "Predecessor One", year: "Year One" },
         { name: "Intermediary Owner", year: "Year Five" },
         { name: "Current Beneficiary", year: "Year Ten" }
@@ -1151,7 +1193,7 @@
 
       if (t < cueHop1) {
         // Resting at Owner 1
-        const itemNode = renderTravelingItem(nodeCoords[0], curItemY, nodeCoords[0], curItemY, 0, 0, slots.item_label || "Capital Asset", slots.tag_value || 1800000, "house", "accent");
+        const itemNode = renderTravelingItem(nodeCoords[0], curItemY, nodeCoords[0], curItemY, 0, 0, slots.item_label || "Capital Asset", parseAmount(slots.tag_value ?? slots.item_value ?? slots.val, 1800000), "house", "accent");
         stage.appendChild(itemNode);
       } else if (t >= cueHop1 && t < cueHop2) {
         const pHop = clamp01((t - cueHop1) / 1.8);
@@ -1160,7 +1202,7 @@
           nodeCoords[0], curItemY, nodeCoords[1], curItemY,
           easeHop, 80,
           slots.item_label || "Capital Asset",
-          slots.tag_value || 1800000,
+          parseAmount(slots.tag_value ?? slots.item_value ?? slots.val, 1800000),
           "house",
           "accent"
         );
@@ -1172,7 +1214,7 @@
           nodeCoords[1], curItemY, nodeCoords[2], curItemY,
           easeHop2, 80,
           slots.item_label || "Capital Asset",
-          slots.tag_value || 1800000,
+          parseAmount(slots.tag_value ?? slots.item_value ?? slots.val, 1800000),
           "house",
           "accent"
         );
@@ -1194,7 +1236,7 @@
         const carriedTag = svgEl("g", { transform: `translate(${tagX - tagW/2}, ${tagY})` });
         carriedTag.appendChild(svgEl("rect", { x: 0, y: 0, width: tagW, height: 44, rx: 22, fill: "var(--gold)", stroke: "var(--ink)", "stroke-width": 2 }));
         carriedTag.appendChild(svgEl("text", { x: tagW/2, y: 20, "text-anchor": "middle", "font-size": 13, "font-weight": "800", fill: "#ffffff" }, [slots.tag_label || "Original Base Cost"]));
-        carriedTag.appendChild(svgEl("text", { x: tagW/2, y: 37, "text-anchor": "middle", "font-size": 15, "font-weight": "900", fill: "#ffffff" }, [formatIndianRupee(slots.tag_value || 1800000)]));
+        carriedTag.appendChild(svgEl("text", { x: tagW/2, y: 37, "text-anchor": "middle", "font-size": 15, "font-weight": "900", fill: "#ffffff" }, [formatIndianRupee(parseAmount(slots.tag_value ?? slots.item_value ?? slots.val, 1800000))]));
         stage.appendChild(carriedTag);
 
         const noteCard = svgEl("g", { transform: "translate(60, 440)", opacity: pCar });
@@ -1385,7 +1427,15 @@
       const stage = svgEl("g");
       stage.appendChild(renderHeaderBanner(slots.title || "Arithmetic Formula Construction", "accent"));
 
-      const chips = slots.chips || [
+      const rawChips = slots.chips || slots.items || [];
+      const chips = rawChips.length > 0 ? rawChips.map(c => {
+        if (c.op) return { op: c.op };
+        return {
+          label: c.label || c.title || c.name || "",
+          val: parseAmount(c.val ?? c.amount ?? 0),
+          is_total: Boolean(c.is_total)
+        };
+      }) : [
         { label: "Primary Base Component", val: 5000000 },
         { op: "−" },
         { label: "Prescribed Outflow Base", val: 1800000 },
@@ -1618,11 +1668,130 @@
   // -------------------------------------------------------------------------
   // KineticAnimationInstance Class (Pure Function of Time t)
   // -------------------------------------------------------------------------
+  function normalizeSlots(archId, rawSlots) {
+    if (!rawSlots) return {};
+    const slots = Object.assign({}, rawSlots);
+
+    if (archId === "take_away") {
+      if (slots.start_amount === undefined) {
+        if (slots.whole_val !== undefined) slots.start_amount = parseAmount(slots.whole_val);
+        else if (slots.whole_amount !== undefined) slots.start_amount = parseAmount(slots.whole_amount);
+        else if (slots.start_val !== undefined) slots.start_amount = parseAmount(slots.start_val);
+      } else {
+        slots.start_amount = parseAmount(slots.start_amount);
+      }
+      if (slots.start_label === undefined && slots.whole_label !== undefined) {
+        slots.start_label = slots.whole_label;
+      }
+      const rawSteps = slots.steps || slots.chunks || slots.deductions || slots.slices;
+      if (rawSteps && Array.isArray(rawSteps)) {
+        slots.steps = rawSteps.map((s, idx) => ({
+          label: s.label || s.title || s.text || `Outflow Step ${idx+1}`,
+          amount: parseAmount(s.amount !== undefined ? s.amount : s.val)
+        }));
+      }
+    } else if (archId === "conditions_gate") {
+      const rawConds = slots.conditions || slots.checklist || slots.criteria;
+      if (rawConds && Array.isArray(rawConds)) {
+        slots.conditions = rawConds.map((c, idx) => ({
+          label: c.label || c.text || c.title || c.criterion || c.name || `Criterion ${idx+1}`,
+          passed: c.passed !== undefined ? Boolean(c.passed) : (c.met !== undefined ? Boolean(c.met) : (c.is_met !== undefined ? Boolean(c.is_met) : true))
+        }));
+      }
+    } else if (archId === "split_into_parts") {
+      if (slots.whole_amount === undefined && slots.whole_val !== undefined) {
+        slots.whole_amount = parseAmount(slots.whole_val);
+      } else if (slots.whole_amount !== undefined) {
+        slots.whole_amount = parseAmount(slots.whole_amount);
+      }
+      const rawParts = slots.parts || slots.chunks || slots.branches;
+      if (rawParts && Array.isArray(rawParts)) {
+        slots.parts = rawParts.map(p => ({
+          label: p.label || p.title || p.text || "Allocation Branch",
+          amount: parseAmount(p.amount !== undefined ? p.amount : p.val)
+        }));
+      }
+    } else if (archId === "merge_into_one") {
+      const rawInputs = slots.inputs || slots.streams || slots.items;
+      if (rawInputs && Array.isArray(rawInputs)) {
+        slots.inputs = rawInputs.map(i => ({
+          label: i.label || i.title || i.text || "Input Stream",
+          amount: parseAmount(i.amount !== undefined ? i.amount : i.val)
+        }));
+      }
+      if (slots.result_label === undefined && slots.merged_label !== undefined) {
+        slots.result_label = slots.merged_label;
+      }
+    } else if (archId === "add_up") {
+      const rawItems = slots.items || slots.rows || slots.steps;
+      if (rawItems && Array.isArray(rawItems)) {
+        slots.items = rawItems.map(it => ({
+          label: it.label || it.title || it.text || "Component",
+          amount: parseAmount(it.amount !== undefined ? it.amount : it.val)
+        }));
+      }
+    } else if (archId === "compare_two") {
+      if (slots.val_a !== undefined) slots.val_a = parseAmount(slots.val_a);
+      else if (slots.val_1 !== undefined) slots.val_a = parseAmount(slots.val_1);
+      if (slots.val_b !== undefined) slots.val_b = parseAmount(slots.val_b);
+      else if (slots.val_2 !== undefined) slots.val_b = parseAmount(slots.val_2);
+      if (slots.cap_amount !== undefined && slots.cap_amount) slots.cap_amount = parseAmount(slots.cap_amount);
+    } else if (archId === "swap") {
+      if (slots.item_a && typeof slots.item_a === "object") {
+        if (slots.item_a_val === undefined) slots.item_a_val = parseAmount(slots.item_a.val || slots.item_a.amount);
+        if (slots.item_a_label === undefined) slots.item_a_label = slots.item_a.label;
+        if (slots.item_a_icon === undefined) slots.item_a_icon = slots.item_a.icon;
+      }
+      if (slots.item_b && typeof slots.item_b === "object") {
+        if (slots.item_b_val === undefined) slots.item_b_val = parseAmount(slots.item_b.val || slots.item_b.amount);
+        if (slots.item_b_label === undefined) slots.item_b_label = slots.item_b.label;
+        if (slots.item_b_icon === undefined) slots.item_b_icon = slots.item_b.icon;
+      }
+    } else if (archId === "give_and_receive") {
+      if (slots.item_value !== undefined) slots.item_value = parseAmount(slots.item_value);
+      if (slots.payment_amount !== undefined) slots.payment_amount = parseAmount(slots.payment_amount);
+    } else if (archId === "chain_passing") {
+      if (slots.tag_value !== undefined) slots.tag_value = parseAmount(slots.tag_value);
+      else if (slots.item_value !== undefined) slots.tag_value = parseAmount(slots.item_value);
+    } else if (archId === "formula_builder") {
+      const rawChips = slots.chips || slots.items;
+      if (rawChips && Array.isArray(rawChips)) {
+        const expandedChips = [];
+        rawChips.forEach((c, idx) => {
+          const hasVal = (c.val !== undefined || c.amount !== undefined);
+          const hasLabel = Boolean(c.label || c.title);
+          const op = c.op ? (c.op === "-" ? "−" : c.op) : null;
+          
+          if (op && !hasVal && !hasLabel) {
+            expandedChips.push({ op: op });
+          } else if (op && (hasVal || hasLabel)) {
+            if (op !== "+" || idx > 0) {
+              expandedChips.push({ op: op });
+            }
+            expandedChips.push({
+              label: c.label || c.title || c.name || "",
+              val: parseAmount(c.val !== undefined ? c.val : c.amount),
+              is_total: Boolean(c.is_total)
+            });
+          } else {
+            expandedChips.push({
+              label: c.label || c.title || c.name || "",
+              val: parseAmount(c.val !== undefined ? c.val : c.amount),
+              is_total: Boolean(c.is_total)
+            });
+          }
+        });
+        slots.chips = expandedChips;
+      }
+    }
+    return slots;
+  }
   class KineticAnimationInstance {
-    constructor(container, def, slots = {}, options = {}) {
+    constructor(container, def, rawSlots = {}, options = {}) {
       this.container = container;
       this.def = def;
-      this.slots = Object.assign({}, def.slots_default || {}, slots);
+      const normalizedSlots = normalizeSlots(def.id, rawSlots);
+      this.slots = Object.assign({}, def.slots_default || {}, normalizedSlots);
       this.cues = Object.assign({}, def.cues_default || {}, options.cues || {});
       this.duration = def.duration || 14.0;
       this.theme = options.theme || "light";
@@ -1698,7 +1867,8 @@
     }
 
     updateSlots(newSlots) {
-      this.slots = Object.assign({}, this.slots, newSlots);
+      const normalizedNew = normalizeSlots(this.def.id, newSlots);
+      this.slots = Object.assign({}, this.slots, normalizedNew);
       this.seek(this.currentTime);
     }
 
@@ -1716,6 +1886,8 @@
   global.KineticRenderer = {
     AnimationInstance: KineticAnimationInstance,
     ANIMATIONS,
+    normalizeSlots,
+    parseAmount,
     formatIndianRupee,
     formatNumber,
     Easing
