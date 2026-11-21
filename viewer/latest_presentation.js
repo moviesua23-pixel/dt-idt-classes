@@ -1,193 +1,144 @@
 window.LATEST_PRESENTATION = {
-  "id": "dt-capital_gains__forfeiture_of_advanc",
-  "title": "Capital Gains: Forfeiture of Advance Money & Sec 54 Exemption",
+  "id": "dt-capital_gains_on_compulsory_acquisi",
+  "title": "Capital Gains on Compulsory Acquisition of Industrial Asset: Section 45(5) & Section 54D",
   "subject": "DT",
   "domain": "Real Estate",
-  "provision_raw": "Section 54 & Section 51: Capital Gains Exemption & Forfeiture of Advance Money. Section 51: Advance money forfeited prior to 01/04/2014 reduced from Cost of Acquisition. Section 56(2)(ix): Advance money forfeited on or after 01/04/2014 taxed under Income from Other Sources, does not reduce COA. Section 54: Reinvestment in residential house.",
-  "story_summary": "Vikram purchased a property in Kochi for ₹30 Lakhs. He forfeited an advance of ₹5 Lakhs in 2012 (pre-2014) and ₹8 Lakhs in 2018 (post-2014), before finally selling the property for ₹1 Crore in 2023 and reinvesting in a residential house.",
-  "total_slides": 6,
-  "total_duration": 130.4,
+  "provision_raw": "Section 45(5) & Section 54D: Capital Gains on Compulsory Acquisition of Industrial Asset\nStatutory Provision\tEligibility Criteria / Pre-condition\tStatutory Window\tExemption / Tax Treatment\nSection 45(5)\tCompulsory acquisition of capital asset under any statutory law\tYear of initial receipt\tChargeable to tax in the Financial Year in which compensation is first received\nSection 54D\tLand or building used for industrial undertaking for ≥ 2 years prior to transfer\t3 years after transfer date\tExempt to the extent of cost of new industrial land or building",
+  "story_summary": "Mr. Rajesh's chemical factory land in Palakkad is compulsorily acquired by the government for highway expansion. After receiving the compensation, he learns that under Section 45(5), tax is payable only in the year of actual receipt, and he can claim Section 54D exemption by reinvesting in a new industrial plot within 3 years.",
+  "total_slides": 5,
+  "total_duration": 108.2,
   "slides": [
     {
       "slide_number": 1,
-      "slide_title": "Pre-2014 Advance Forfeiture",
-      "scene_purpose": "Demonstrate the receipt and forfeiture of advance money prior to 01/04/2014 under Section 51.",
+      "slide_title": "Compulsory Acquisition Event",
+      "scene_purpose": "Setup: Government acquires Rajesh's industrial factory land and pays initial compensation.",
       "archetype_id": "give_and_receive",
-      "dialogue_manglish": "First sceneil, 2012-il Vikram thante commercial plot Mr. A-kku sell cheyyaan agreement undaakki. Mr. A 5 Lakhs advance aayi nalki, pakshe transaction complete cheyyaan pattiyilla. So Vikram 5 Lakhs forfeit cheythu. Since this forfeiture happened prior to 1st April 2014, Section 51 prakaaram Cost of Acquisition-il ninnu ithu reduce cheyyanam.",
-      "audio_file": "data/audio/presentations/dt-capital_gains__forfeiture_of_advanc/slide_1.mp3",
-      "audio_duration": 24.8,
-      "duration": 25.8,
+      "dialogue_manglish": "Namukku aadyam Mr. Rajesh-inte case nokkaam. Palakkad-il 'Rajesh Chemicals' enna industrial factory running aayirunnu. 2023-il National Highway expansion-u vendi Government eyaalude industrial land compulsorily acquire cheythu ₹100 Lakhs compensation nalki.",
+      "audio_file": "data/audio/presentations/dt-capital_gains_on_compulsory_acquisi/slide_1.mp3",
+      "audio_duration": 21.7,
+      "duration": 22.7,
       "cues": {
         "cue_start": 0.5,
-        "cue_action": 9.9,
-        "cue_conclusion": 19.8
+        "cue_action": 8.7,
+        "cue_conclusion": 17.4
       },
       "slots": {
-        "title": "2012: Advance Forfeited (Pre-01/04/2014)",
-        "giver": "Mr. A (Buyer 1)",
-        "receiver": "Vikram (Owner)",
-        "item_label": "Advance Forfeited",
+        "title": "Compulsory Acquisition of Industrial Land",
+        "giver": "Mr. Rajesh (Factory Owner)",
+        "receiver": "Government / NHAI",
+        "item_label": "Industrial Factory Land",
         "item_icon": "house",
-        "item_value": 500000,
-        "payment_amount": 500000,
-        "tag_text": "Section 51 Applicable",
-        "note": "Advance forfeited prior to 01/04/2014 reduces Cost of Acquisition."
+        "item_value": 10000000,
+        "payment_amount": 10000000,
+        "tag_text": "Section 45(5) Trigger",
+        "note": "Compulsory acquisition under statutory law triggers capital gains rules under Sec 45(5)."
       }
     },
     {
       "slide_number": 2,
-      "slide_title": "Adjustment to Cost of Acquisition (Section 51)",
-      "scene_purpose": "Show the reduction of original Cost of Acquisition due to pre-2014 forfeiture.",
-      "archetype_id": "take_away",
-      "dialogue_manglish": "Ivide Vikram-inte original Cost of Acquisition 30 Lakhs aayirunnu. Section 51 prakaaram pre-2014 forfeit cheytha 5 Lakhs deduct cheyyumpol, adjusted Cost of Acquisition 25 Lakhs aayi maarum.",
-      "audio_file": "data/audio/presentations/dt-capital_gains__forfeiture_of_advanc/slide_2.mp3",
-      "audio_duration": 13.8,
-      "duration": 14.8,
+      "slide_title": "Section 54D Eligibility Gate",
+      "scene_purpose": "Checking basic pre-conditions for Section 54D exemption eligibility.",
+      "archetype_id": "conditions_gate",
+      "dialogue_manglish": "Section 54D exemption claim cheyyaan multi-criteria conditions pass aaganamanu. Aadyathethu, transfer compulsory acquisition aayirikkanam. Randaamatheedhu, aa land/building minimum 2 years industrial undertaking-nu vendi use cheythirikkanam. Rajesh 3 years use cheythathukondu gate open aayi!",
+      "audio_file": "data/audio/presentations/dt-capital_gains_on_compulsory_acquisi/slide_2.mp3",
+      "audio_duration": 21.7,
+      "duration": 22.7,
       "cues": {
         "cue_start": 0.5,
-        "cue_action": 5.5,
-        "cue_conclusion": 11.0
+        "cue_action": 8.7,
+        "cue_conclusion": 17.4
       },
       "slots": {
-        "title": "Impact of Sec 51 on Cost of Acquisition",
-        "whole_label": "Original Purchase Price",
-        "whole_val": 3000000,
-        "chunks": [
+        "title": "Section 54D Pre-Condition Checklist",
+        "door_label": "Section 54D Exemption Portal",
+        "all_required": true,
+        "conditions": [
           {
-            "label": "Pre-2014 Advance Forfeited (Sec 51)",
-            "val": 500000
+            "text": "Transfer is by way of Compulsory Acquisition under statutory law",
+            "met": true
+          },
+          {
+            "text": "Asset used for Industrial Undertaking for >= 2 years prior to transfer",
+            "met": true
           }
         ],
-        "result_label": "Adjusted Cost of Acquisition",
-        "note": "Original COA ₹30L - Pre-2014 Advance ₹5L = Adjusted COA ₹25L."
+        "note": "Both conditions must be satisfied to qualify for Section 54D roll-over relief."
       }
     },
     {
       "slide_number": 3,
-      "slide_title": "Post-2014 Advance Forfeiture",
-      "scene_purpose": "Demonstrate forfeiture of advance money on/after 01/04/2014 governed by Section 56(2)(ix).",
-      "archetype_id": "give_and_receive",
-      "dialogue_manglish": "Next, 2018-il Mr. B aayittu undaakkiya agreement-il Vikram 8 Lakhs advance vaangukayum forfeit cheyyukayum cheythu. But remember, 1st April 2014-nu sesham nadakkunna forfeiture Section 56(2)(ix) prakaaram Income from Other Sources aayi full tax cheyyappedum. Cost of Acquisition-il oru reduction-um varilla!",
-      "audio_file": "data/audio/presentations/dt-capital_gains__forfeiture_of_advanc/slide_3.mp3",
-      "audio_duration": 22.9,
-      "duration": 23.9,
+      "slide_title": "Year of Taxability: Section 45(5)",
+      "scene_purpose": "Highlighting the special timing rule for compulsory acquisition taxability.",
+      "archetype_id": "key_statement",
+      "dialogue_manglish": "Ivide oru important tax point undu! Section 45(5) prakaram capital gain taxable aagunnadhu acquisition order vanna year-il alla, initial compensation actual aayi receive cheyyunna Financial Year-ilaanu.",
+      "audio_file": "data/audio/presentations/dt-capital_gains_on_compulsory_acquisi/slide_3.mp3",
+      "audio_duration": 15.4,
+      "duration": 16.4,
       "cues": {
         "cue_start": 0.5,
-        "cue_action": 9.2,
-        "cue_conclusion": 18.3
+        "cue_action": 6.2,
+        "cue_conclusion": 12.3
       },
       "slots": {
-        "title": "2018: Advance Forfeited (Post-01/04/2014)",
-        "giver": "Mr. B (Buyer 2)",
-        "receiver": "Vikram (Owner)",
-        "item_label": "Advance Forfeited",
-        "item_icon": "house",
-        "item_value": 800000,
-        "payment_amount": 800000,
-        "tag_text": "Section 56(2)(ix) Applicable",
-        "note": "Taxable under IFOS in the year of forfeiture. COA remains unchanged!"
+        "title": "Statutory Timing Rule - Section 45(5)",
+        "statement": "Capital Gains on Compulsory Acquisition are chargeable to tax in the Financial Year in which initial compensation is FIRST RECEIVED.",
+        "highlight_phrase": "FIRST RECEIVED",
+        "support_line": "Not in the year of acquisition order or transfer date.",
+        "icon_type": "scale"
       }
     },
     {
       "slide_number": 4,
-      "slide_title": "Comparative Tax Matrix: Sec 51 vs Sec 56(2)(ix)",
-      "scene_purpose": "Summarize the statutory distinction based on the cutoff date of 1st April 2014.",
-      "archetype_id": "table_reveal",
-      "dialogue_manglish": "Exam point of view-il ee cutoff date valare crucial aanu. Cutoff line: 1st April 2014! Ithinu munpullaa forfeiture Cost of Acquisition-il ninnu reduce cheyyanam. 1st April 2014-lo athinu seshamo ulla forfeiture Income from Other Sources-il tax cheyyum, Cost of Acquisition-il no change!",
-      "audio_file": "data/audio/presentations/dt-capital_gains__forfeiture_of_advanc/slide_4.mp3",
-      "audio_duration": 21.0,
-      "duration": 22.0,
+      "slide_title": "Reinvestment Window: Section 54D",
+      "scene_purpose": "Timeline check for purchasing or constructing new industrial land/building.",
+      "archetype_id": "time_range",
+      "dialogue_manglish": "Section 54D exemption kinna 3-year statutory window undu. Acquisition transfer date muthal 3 years-nu ullil puthiya industrial land or building purchase cheyyuka-yo construct cheyyuka-yo venam. Rajesh 1.5 years-il puthiya plot vangiyathinaal timing perfectly inside the window!",
+      "audio_file": "data/audio/presentations/dt-capital_gains_on_compulsory_acquisi/slide_4.mp3",
+      "audio_duration": 22.6,
+      "duration": 23.6,
       "cues": {
         "cue_start": 0.5,
-        "cue_action": 8.4,
-        "cue_conclusion": 16.8
+        "cue_action": 9.0,
+        "cue_conclusion": 18.1
       },
       "slots": {
-        "title": "Statutory Comparison Matrix",
-        "headers": [
-          "Period of Forfeiture",
-          "Taxability at Forfeiture",
-          "Effect on COA"
-        ],
-        "rows": [
-          [
-            "Prior to 01/04/2014",
-            "Not Taxed immediately",
-            "Deducted from COA (Sec 51)"
-          ],
-          [
-            "On or after 01/04/2014",
-            "Taxed under IFOS (Sec 56(2)(ix))",
-            "No Reduction from COA"
-          ]
-        ],
-        "spotlight_row": 1,
-        "note": "Crucial distinction: Post-2014 advance is taxed upfront as revenue income."
+        "title": "Statutory Window for Reinvestment",
+        "start_label": "Transfer Date (Acquisition)",
+        "span_length": 3,
+        "span_unit": "Years",
+        "span_label": "Section 54D Allowed Time Frame",
+        "event_label": "Rajesh Buys New Industrial Plot",
+        "event_offset": 1.5,
+        "is_inside": true,
+        "note": "Reinvestment must occur within 3 years after the date of transfer."
       }
     },
     {
       "slide_number": 5,
-      "slide_title": "Final Sale & Capital Gain Computation",
-      "scene_purpose": "Calculate the final Capital Gain when property is sold in 2023.",
-      "archetype_id": "formula_builder",
-      "dialogue_manglish": "2023-il Vikram ee property 1 Crore-nu vittu. Capital Gain calculate cheyyumpol Sale Consideration 1 Crore-il ninnu Adjusted Cost of Acquisition 25 Lakhs maathram subtract cheyyuka. 2018-le 8 Lakhs already Income from Other Sources-il tax aayathukondu COA 25 Lakhs thanne aayirikkum. Total Capital Gain: 75 Lakhs!",
-      "audio_file": "data/audio/presentations/dt-capital_gains__forfeiture_of_advanc/slide_5.mp3",
-      "audio_duration": 24.5,
-      "duration": 25.5,
+      "slide_title": "Net Taxable Capital Gain Calculation",
+      "scene_purpose": "Computing final capital gain after deducting Section 54D exemption.",
+      "archetype_id": "take_away",
+      "dialogue_manglish": "Inni final tax calculation nokkaam. Rajesh-nte Total Capital Gain ₹60 Lakhs aayirunnu. Eeyal puthiya industrial land-il ₹50 Lakhs reinvest cheythathinaal, Sec 54D prakaram full ₹50 Lakhs exempt aagum. Remainder ₹10 Lakhs maathramaanu taxable LTCG!",
+      "audio_file": "data/audio/presentations/dt-capital_gains_on_compulsory_acquisi/slide_5.mp3",
+      "audio_duration": 21.8,
+      "duration": 22.8,
       "cues": {
         "cue_start": 0.5,
-        "cue_action": 9.8,
-        "cue_conclusion": 19.6
+        "cue_action": 8.7,
+        "cue_conclusion": 17.4
       },
       "slots": {
-        "title": "Capital Gain Computation (2023)",
-        "chips": [
+        "title": "Computation of Taxable Capital Gain",
+        "whole_label": "Gross Capital Gain on Acquisition",
+        "whole_val": 6000000,
+        "chunks": [
           {
-            "label": "Full Value of Consideration",
-            "val": 10000000,
-            "op": "+",
-            "is_total": false
-          },
-          {
-            "label": "Adjusted COA (30L - 5L)",
-            "val": 2500000,
-            "op": "-",
-            "is_total": false
-          },
-          {
-            "label": "Taxable Capital Gain",
-            "val": 7500000,
-            "op": "=",
-            "is_total": true
+            "label": "Exemption u/s 54D (Cost of New Industrial Asset)",
+            "val": 5000000
           }
         ],
-        "note": "Post-2014 advance of ₹8L did not alter the COA of ₹25L."
-      }
-    },
-    {
-      "slide_number": 6,
-      "slide_title": "Section 54 Reinvestment Timeline Check",
-      "scene_purpose": "Verify if the reinvestment in a residential house satisfies Section 54 timeline criteria.",
-      "archetype_id": "time_range",
-      "dialogue_manglish": "Ini final step! Vikram 75 Lakhs Capital Gain labhicha sesham 1 year-inullil puthiyoru Residential House purchase cheythu. Section 54 prakaaram sale date muthal 2 years-inullil new house purchase cheythaal full Capital Gain Exemption eligible aanu!",
-      "audio_file": "data/audio/presentations/dt-capital_gains__forfeiture_of_advanc/slide_6.mp3",
-      "audio_duration": 17.4,
-      "duration": 18.4,
-      "cues": {
-        "cue_start": 0.5,
-        "cue_action": 7.0,
-        "cue_conclusion": 13.9
-      },
-      "slots": {
-        "title": "Sec 54 Reinvestment Window",
-        "start_label": "Date of Sale",
-        "span_length": 2,
-        "span_unit": "Years",
-        "span_label": "2 Years Purchase Window",
-        "event_label": "Purchased New House",
-        "event_offset": 1,
-        "is_inside": true,
-        "note": "Reinvestment made within statutory 2-year window. Full Sec 54 exemption granted!"
+        "result_label": "Net Taxable Capital Gain",
+        "note": "Exemption is limited to the lower of Capital Gain or Cost of New Asset."
       }
     }
   ]

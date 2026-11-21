@@ -1,0 +1,145 @@
+{
+  "id": "dt-capital_gains_on_compulsory_acquisi",
+  "title": "Capital Gains on Compulsory Acquisition of Industrial Asset: Section 45(5) & Section 54D",
+  "subject": "DT",
+  "domain": "Real Estate",
+  "provision_raw": "Section 45(5) & Section 54D: Capital Gains on Compulsory Acquisition of Industrial Asset\nStatutory Provision\tEligibility Criteria / Pre-condition\tStatutory Window\tExemption / Tax Treatment\nSection 45(5)\tCompulsory acquisition of capital asset under any statutory law\tYear of initial receipt\tChargeable to tax in the Financial Year in which compensation is first received\nSection 54D\tLand or building used for industrial undertaking for ≥ 2 years prior to transfer\t3 years after transfer date\tExempt to the extent of cost of new industrial land or building",
+  "story_summary": "Mr. Rajesh's chemical factory land in Palakkad is compulsorily acquired by the government for highway expansion. After receiving the compensation, he learns that under Section 45(5), tax is payable only in the year of actual receipt, and he can claim Section 54D exemption by reinvesting in a new industrial plot within 3 years.",
+  "total_slides": 5,
+  "total_duration": 108.2,
+  "slides": [
+    {
+      "slide_number": 1,
+      "slide_title": "Compulsory Acquisition Event",
+      "scene_purpose": "Setup: Government acquires Rajesh's industrial factory land and pays initial compensation.",
+      "archetype_id": "give_and_receive",
+      "dialogue_manglish": "Namukku aadyam Mr. Rajesh-inte case nokkaam. Palakkad-il 'Rajesh Chemicals' enna industrial factory running aayirunnu. 2023-il National Highway expansion-u vendi Government eyaalude industrial land compulsorily acquire cheythu ₹100 Lakhs compensation nalki.",
+      "audio_file": "data/audio/presentations/dt-capital_gains_on_compulsory_acquisi/slide_1.mp3",
+      "audio_duration": 21.7,
+      "duration": 22.7,
+      "cues": {
+        "cue_start": 0.5,
+        "cue_action": 8.7,
+        "cue_conclusion": 17.4
+      },
+      "slots": {
+        "title": "Compulsory Acquisition of Industrial Land",
+        "giver": "Mr. Rajesh (Factory Owner)",
+        "receiver": "Government / NHAI",
+        "item_label": "Industrial Factory Land",
+        "item_icon": "house",
+        "item_value": 10000000,
+        "payment_amount": 10000000,
+        "tag_text": "Section 45(5) Trigger",
+        "note": "Compulsory acquisition under statutory law triggers capital gains rules under Sec 45(5)."
+      }
+    },
+    {
+      "slide_number": 2,
+      "slide_title": "Section 54D Eligibility Gate",
+      "scene_purpose": "Checking basic pre-conditions for Section 54D exemption eligibility.",
+      "archetype_id": "conditions_gate",
+      "dialogue_manglish": "Section 54D exemption claim cheyyaan multi-criteria conditions pass aaganamanu. Aadyathethu, transfer compulsory acquisition aayirikkanam. Randaamatheedhu, aa land/building minimum 2 years industrial undertaking-nu vendi use cheythirikkanam. Rajesh 3 years use cheythathukondu gate open aayi!",
+      "audio_file": "data/audio/presentations/dt-capital_gains_on_compulsory_acquisi/slide_2.mp3",
+      "audio_duration": 21.7,
+      "duration": 22.7,
+      "cues": {
+        "cue_start": 0.5,
+        "cue_action": 8.7,
+        "cue_conclusion": 17.4
+      },
+      "slots": {
+        "title": "Section 54D Pre-Condition Checklist",
+        "door_label": "Section 54D Exemption Portal",
+        "all_required": true,
+        "conditions": [
+          {
+            "text": "Transfer is by way of Compulsory Acquisition under statutory law",
+            "met": true
+          },
+          {
+            "text": "Asset used for Industrial Undertaking for >= 2 years prior to transfer",
+            "met": true
+          }
+        ],
+        "note": "Both conditions must be satisfied to qualify for Section 54D roll-over relief."
+      }
+    },
+    {
+      "slide_number": 3,
+      "slide_title": "Year of Taxability: Section 45(5)",
+      "scene_purpose": "Highlighting the special timing rule for compulsory acquisition taxability.",
+      "archetype_id": "key_statement",
+      "dialogue_manglish": "Ivide oru important tax point undu! Section 45(5) prakaram capital gain taxable aagunnadhu acquisition order vanna year-il alla, initial compensation actual aayi receive cheyyunna Financial Year-ilaanu.",
+      "audio_file": "data/audio/presentations/dt-capital_gains_on_compulsory_acquisi/slide_3.mp3",
+      "audio_duration": 15.4,
+      "duration": 16.4,
+      "cues": {
+        "cue_start": 0.5,
+        "cue_action": 6.2,
+        "cue_conclusion": 12.3
+      },
+      "slots": {
+        "title": "Statutory Timing Rule - Section 45(5)",
+        "statement": "Capital Gains on Compulsory Acquisition are chargeable to tax in the Financial Year in which initial compensation is FIRST RECEIVED.",
+        "highlight_phrase": "FIRST RECEIVED",
+        "support_line": "Not in the year of acquisition order or transfer date.",
+        "icon_type": "scale"
+      }
+    },
+    {
+      "slide_number": 4,
+      "slide_title": "Reinvestment Window: Section 54D",
+      "scene_purpose": "Timeline check for purchasing or constructing new industrial land/building.",
+      "archetype_id": "time_range",
+      "dialogue_manglish": "Section 54D exemption kinna 3-year statutory window undu. Acquisition transfer date muthal 3 years-nu ullil puthiya industrial land or building purchase cheyyuka-yo construct cheyyuka-yo venam. Rajesh 1.5 years-il puthiya plot vangiyathinaal timing perfectly inside the window!",
+      "audio_file": "data/audio/presentations/dt-capital_gains_on_compulsory_acquisi/slide_4.mp3",
+      "audio_duration": 22.6,
+      "duration": 23.6,
+      "cues": {
+        "cue_start": 0.5,
+        "cue_action": 9.0,
+        "cue_conclusion": 18.1
+      },
+      "slots": {
+        "title": "Statutory Window for Reinvestment",
+        "start_label": "Transfer Date (Acquisition)",
+        "span_length": 3,
+        "span_unit": "Years",
+        "span_label": "Section 54D Allowed Time Frame",
+        "event_label": "Rajesh Buys New Industrial Plot",
+        "event_offset": 1.5,
+        "is_inside": true,
+        "note": "Reinvestment must occur within 3 years after the date of transfer."
+      }
+    },
+    {
+      "slide_number": 5,
+      "slide_title": "Net Taxable Capital Gain Calculation",
+      "scene_purpose": "Computing final capital gain after deducting Section 54D exemption.",
+      "archetype_id": "take_away",
+      "dialogue_manglish": "Inni final tax calculation nokkaam. Rajesh-nte Total Capital Gain ₹60 Lakhs aayirunnu. Eeyal puthiya industrial land-il ₹50 Lakhs reinvest cheythathinaal, Sec 54D prakaram full ₹50 Lakhs exempt aagum. Remainder ₹10 Lakhs maathramaanu taxable LTCG!",
+      "audio_file": "data/audio/presentations/dt-capital_gains_on_compulsory_acquisi/slide_5.mp3",
+      "audio_duration": 21.8,
+      "duration": 22.8,
+      "cues": {
+        "cue_start": 0.5,
+        "cue_action": 8.7,
+        "cue_conclusion": 17.4
+      },
+      "slots": {
+        "title": "Computation of Taxable Capital Gain",
+        "whole_label": "Gross Capital Gain on Acquisition",
+        "whole_val": 6000000,
+        "chunks": [
+          {
+            "label": "Exemption u/s 54D (Cost of New Industrial Asset)",
+            "val": 5000000
+          }
+        ],
+        "result_label": "Net Taxable Capital Gain",
+        "note": "Exemption is limited to the lower of Capital Gain or Cost of New Asset."
+      }
+    }
+  ]
+}
