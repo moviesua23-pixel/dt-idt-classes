@@ -30,20 +30,22 @@ PHASE 1: INVENT A UNIQUE TEACHING STORY
 - DO NOT use generic placeholders. Invent unique characters, real assets, and specific Indian Rupee numbers.
 - Write the teacher explanation in natural, engaging Malayalam teacher style with STRICT ENGLISH legal, statutory, and computation terms (Manglish CA education standard per Universal Domain Principle).
 
-PHASE 2: CHOREOGRAPH THE 1000x500 HIGH-DETAIL MONOCHROME PIXEL SCREEN
-- You have complete freedom over the 1000x500 pixel canvas (0,0 to 1000,500). Pure white background (#FFFFFF) with crisp black pixels (#000000).
-- CRITICAL STAGE BOUNDS:
-  * Top header banner occupies y: 20 to 75. NEVER place anything above y: 90!
-  * ALL stage elements MUST be strictly placed within: x: 50 to 950, and y: 90 to 470.
-- 4-ZONE STAGE ARCHITECTURE (RECOMMENDED FOR HIGH VISUAL DENSITY):
-  * Zone 1 (Left: x: 60 to 280, y: 95 to 280): Input / Source Asset (e.g. "asset_node" for original property, commercial plot, or gross receipts).
-  * Zone 2 (Center: x: 320 to 660, y: 90 to 300): The Kinetic Physical Metaphor Engine (e.g. "funnel", "scale", "tank", "clock", or "barrier").
-  * Zone 3 (Right: x: 700 to 940, y: 95 to 280): Output / Target Asset (e.g. "asset_node" for net consideration, new house, or TDS deposit).
-  * Zone 4 (Bottom: x: 60 to 940, y: 310 to 460): Statutory Accounting Ledger ("breakdown_card" with multi-line calculations and total verdict badge).
-- CRITICAL ZERO-COLLISION RULES:
+PHASE 2: CHOREOGRAPH 4 TO 5 SPACIOUS SLIDES ON THE 1000x500 PIXEL SCREEN
+- CRITICAL ARCHITECTURAL RULE: DO NOT cram the entire section into 1 or 2 dense slides! You MUST generate 4 to 5 sequential, focused slides.
+- RULE: Maximum 2 or 3 primary elements per slide! Keep generous white space (at least 60px to 80px padding between elements).
+- Stage bounds: ALL elements must be placed strictly within x: 60 to 940, and y: 90 to 460. NEVER place elements above y: 90!
+- RECOMMENDED 4-TO-5 SLIDE PROGRESSION:
+  * Slide 1 (The Transaction & Asset): Show the parties and original asset (e.g. 2 spacious "asset_node" cards connected by a "flow_pipe").
+  * Slide 2 (The Statutory Challenge / Mechanism): Focus purely on the kinetic physical engine (e.g. "funnel" for brokerage sieve, or "scale" for circle rate tolerance, or "clock" for deadline).
+  * Slide 3 (The Intermediate Statutory Base or Ledger): Show the verified statutory base (e.g. Net Consideration node, or Section 48 audit "breakdown_card").
+  * Slide 4 (The Reinvestment / New Asset Target): Show the new asset acquired (e.g. "split_valve" and new house "asset_node").
+  * Slide 5 (The Final Tax Liability & Formula): Show the formula "equation_chips" and final statutory computation "breakdown_card".
+
+- ZERO-COLLISION RULES:
   * NEVER place text or counters on top of each other.
-  * For any asset that has an icon, title, and Rupee amount, ALWAYS use "asset_node" (which automatically encapsulates the icon, labels, and framed counter tray with guaranteed zero collision).
-  * Do NOT leave the canvas sparse or empty. Fill the stage with the mechanical metaphor, connecting pipes/lines, and the statutory ledger card below!
+  * ALWAYS use "asset_node" for cards with an icon, title, and amount (which guarantees zero text collision).
+  * Fill percentage ("fill_pct") for tank and funnel must always be a decimal between 0.0 and 1.0 (e.g. 0.85 for 85%).
+  * Never let lines or pipes strike through text labels.
 
 You MUST return valid JSON matching this exact schema:
 {
@@ -54,71 +56,62 @@ You MUST return valid JSON matching this exact schema:
   "scenes": [
     {
       "id": 1,
-      "tab_title": "1 Net Consideration Funnel",
-      "tag": "SCENE 1: THE NET CONSIDERATION FUNNEL",
-      "duration_ms": 12000,
+      "tab_title": "1 The Commercial Land Sale",
+      "tag": "SLIDE 1: THE TRANSACTION",
+      "duration_ms": 9000,
       "dialogue": "Natural Malayalam teacher explanation with strict English statutory terms.",
       "elements": [
         {
-          "id": "source_asset",
+          "id": "seller",
           "type": "asset_node",
-          "x": 60,
-          "y": 95,
-          "w": 220,
-          "h": 180,
-          "icon": "warehouse",
-          "label": "Commercial Plot",
-          "subtitle": "Gross Consideration",
+          "x": 90,
+          "y": 110,
+          "w": 260,
+          "h": 220,
+          "icon": "person",
+          "label": "Mr. Murali (Transferor)",
+          "subtitle": "Seller of Capital Asset",
           "amount_val": 10000000,
           "timeline": [
-            { "start_ms": 500, "end_ms": 2000, "action": "fade_in" }
+            { "start_ms": 500, "end_ms": 1800, "action": "fade_in" }
           ]
         },
         {
-          "id": "funnel_engine",
-          "type": "funnel",
-          "x": 330,
-          "y": 90,
-          "w": 320,
-          "h": 220,
-          "deduct_val": 200000,
-          "deduct_label": "2% Transfer Brokerage",
+          "id": "pipe1",
+          "type": "flow_pipe",
+          "x1": 350,
+          "y1": 220,
+          "x2": 650,
+          "y2": 220,
+          "label": "GROSS CONSIDERATION",
           "timeline": [
-            { "start_ms": 1000, "end_ms": 3000, "action": "fade_in" },
-            { "start_ms": 3500, "end_ms": 8000, "action": "fill_progress", "to_pct": 0.85 }
+            { "start_ms": 1500, "end_ms": 3000, "action": "draw_stroke" }
           ]
         },
         {
-          "id": "dest_asset",
+          "id": "land",
           "type": "asset_node",
-          "x": 700,
-          "y": 95,
-          "w": 240,
-          "h": 180,
-          "icon": "document",
-          "label": "Net Consideration (Sec 48)",
-          "subtitle": "Basis for 54F Audit",
-          "amount_val": 9800000,
+          "x": 650,
+          "y": 110,
+          "w": 260,
+          "h": 220,
+          "icon": "warehouse",
+          "label": "Commercial Land",
+          "subtitle": "Full Value of Consideration",
+          "amount_val": 10000000,
           "timeline": [
-            { "start_ms": 4500, "end_ms": 6500, "action": "fade_in" }
+            { "start_ms": 2200, "end_ms": 3500, "action": "fade_in" }
           ]
         },
         {
-          "id": "ledger_card",
-          "type": "breakdown_card",
-          "x": 60,
-          "y": 315,
-          "w": 880,
-          "h": 140,
-          "verdict_badge": "SEC 48 QUALIFYING BASE VERIFIED",
-          "rows": [
-            { "label": "Full Value of Consideration (Gross Sale Price)", "val": 10000000 },
-            { "label": "LESS: Expenses on transfer (Sec 48(i))", "val": 200000, "isDeduction": true, "prefix": "(-) " },
-            { "label": "NET CONSIDERATION (Qualifying base for Sec 54F)", "val": 9800000, "isTotal": true }
-          ],
-          "timeline": [
-            { "start_ms": 6000, "end_ms": 7500, "action": "fade_in" }
-          ]
+          "id": "note1",
+          "type": "box",
+          "x": 90,
+          "y": 365,
+          "w": 820,
+          "h": 75,
+          "title": "SECTION 48 STEP 1: FULL VALUE OF CONSIDERATION",
+          "subtitle": "Gross consideration received or accruing as a result of the transfer = ₹ 1,00,00,000."
         }
       ]
     }
@@ -128,16 +121,17 @@ You MUST return valid JSON matching this exact schema:
 SUPPORTED ELEMENT TYPES:
 - "asset_node": { x, y, w, h, icon, label, subtitle?, amount_val? } -> Encapsulated card with icon, title, subtitle, and bottom counter tray. Zero text collision!
 - "funnel": { x, y, w, h, deduct_val?, deduct_label?, fill_pct? } -> Mechanical conical funnel, sieve filter, side deduction jar, and bottom collection flask.
-- "breakdown_card": { x, y, w, h, rows: [{ label, val, isDeduction?, isTotal?, prefix? }], verdict_badge? } -> Statutory multi-line accounting calculation card with dotted lines.
-- "scale": { x, y, arm_length?, left_label?, right_label?, tilt_angle? } -> Tilting mechanical balance scale with central pillar and pans.
-- "tank": { x, y, w, h, fill_pct?, cap_pct?, cap_label?, overflow_label? } -> Liquid capacity tank with statutory cap threshold line.
+- "split_valve": { x, y, w, h, val1, val2 } -> Dual branch proportional diversion chamber.
+- "breakdown_card": { x, y, w, h, rows: [{ label, val, isDeduction?, isTotal?, prefix? }], verdict_badge?, title? } -> Full accounting ledger table with solid black header.
+- "flow_pipe": { x1, y1, x2, y2, label? } -> Directional flow pipe with chevrons and white cutout pill label.
+- "scale": { x, y, arm_length?, left_label?, right_label?, tilt_angle? } -> Tilting mechanical balance scale with pans.
+- "tank": { x, y, w, h, fill_pct?, cap_pct?, cap_label? } -> Liquid capacity tank with threshold line.
 - "equation_chips": { x, y, chips: [ { "label": "...", "val": 100 }, { "op": "−" }, { "label": "...", "val": 50, "isTotal": true } ] }
-- "icon": { icon: "house"|"factory"|"warehouse"|"scale"|"vault"|"document"|"bonds"|"coins"|"calendar"|"clock"|"car"|"ship"|"barrier"|"pipe_split"|"person", x, y, w, h, label?, angle? }
-- "box": { x, y, w, h, title?, subtitle?, fill_dither? }
+- "icon": { icon: "house"|"factory"|"warehouse"|"scale"|"vault"|"document"|"bonds"|"coins"|"calendar"|"clock"|"car"|"ship"|"person", x, y, w, h, label? }
+- "box": { x, y, w, h, title?, subtitle? }
 - "text": { x, y, text, font_size?, align?, font_weight? }
-- "counter": { x, y, from_val, to_val, prefix?, suffix?, font_size? }
+- "counter": { x, y, from_val, to_val, prefix?, suffix? }
 - "badge": { x, y, w, h, text, inverted? }
-- "line": { x1, y1, x2, y2, dashed?, label? }
 - "stamp": { x, y, w, h, text }
 
 SUPPORTED ACTIONS:
@@ -146,9 +140,8 @@ SUPPORTED ACTIONS:
 - "move": translates element smoothly to { to_x, to_y }
 - "count_up": animates numeric counter from from_val to to_val
 - "stamp": scales down with impact bounce to lock in place
-- "tilt": smoothly tilts element by { to_angle } degrees (for scales/gauges)
-- "fill_progress": fills liquid/meter to { to_pct }
-- "strike": draws an audit strike-through line across element
+- "tilt": smoothly tilts element by { to_angle } degrees (for scales)
+- "fill_progress": fills liquid/meter to { to_pct } (0.0 to 1.0)
 """
 
 rotator = None

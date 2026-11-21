@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>High-Detail Monochrome Pixel Screen Studio (Option A + Gemini)</title>
+  <title>Multi-Slide Monochrome Pixel Screen Studio (Option A + Gemini)</title>
   <style>
     :root {
       --bg-desk: #f4f5f7;
@@ -181,14 +181,14 @@
       width: 100%;
       max-width: 1040px;
       display: flex;
-      gap: 8px;
+      gap: 6px;
       margin-bottom: 8px;
       overflow-x: auto;
     }
     .scene-tab-btn {
       flex: 1;
-      padding: 8px 12px;
-      font-size: 12px;
+      padding: 8px 10px;
+      font-size: 11.5px;
       font-weight: 800;
       background: #ffffff;
       color: #000000;
@@ -198,7 +198,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 6px;
+      gap: 5px;
       white-space: nowrap;
       transition: all 0.15s;
     }
@@ -352,13 +352,13 @@
   <div class="demo-header">
     <div class="demo-title-group">
       <h1>
-        High-Detail Monochrome Pixel Screen
+        Multi-Slide Monochrome Pixel Screen
         <span class="badge-mono">1000 × 500 Pure Pixel Canvas</span>
       </h1>
-      <p>White Background (#FFFFFF) • Architectural Engineering Linework • Rich Mechanical Metaphors</p>
+      <p>White Background (#FFFFFF) • Smooth Multi-Slide Storytelling • Zero Pixel Collisions</p>
     </div>
     <div>
-      <span style="font-size:12px; font-weight:700;">Zero Hardcoded Layouts • Full Stage Kinetic Simulation</span>
+      <span style="font-size:12px; font-weight:700;">Spacious 4-5 Slide Pacing • Real Kinetic Metaphors</span>
     </div>
   </div>
 
@@ -366,26 +366,26 @@
   <div class="gemini-studio-bar">
     <div class="gemini-top-row">
       <div class="gemini-label">
-        <span>✨ Gemini Millisecond Choreographer</span>
-        <span style="font-size:10px; color:#666; font-weight:700;">(Original Story + High-Detail Pixel Metaphors)</span>
+        <span>✨ Gemini Multi-Slide Choreographer</span>
+        <span style="font-size:10px; color:#666; font-weight:700;">(Original Story + 4-5 Distinct Spacious Slides)</span>
       </div>
       <div class="gemini-status" id="gemini_status_badge">API Ready • 5 Active Keys</div>
     </div>
     <div class="gemini-input-group">
       <input type="text" class="gemini-input" id="gemini_topic_input" 
-        placeholder="Enter any statutory section or case study (e.g. Section 48 net consideration funnel & 54F, Section 50C scale, Section 54EC)..."
+        placeholder="Enter any statutory section or case study (e.g. Section 48 & 54F, Section 50C, Section 54EC)..."
         value="Section 48 & 54F: Gross consideration ₹1 Crore, less 2% transfer expenses (₹2 Lakhs) through Net Consideration Funnel to get ₹98 Lakhs, then 50% house investment">
       <button class="btn-gemini-gen" id="btn_gemini_generate" onclick="generateFromGemini()">
         <span>✨ Choreograph Live</span>
       </button>
     </div>
     <div class="preset-pills-row">
-      <span class="preset-pill-label">Detailed Mechanical Metaphors:</span>
-      <button class="preset-pill" onclick="loadPreset('48_54F')">Sec 48 & 54F: Net Consideration Funnel & Sieve</button>
-      <button class="preset-pill" onclick="loadPreset('50C')">Sec 50C: Kozhikode 110% Tilting Safe Harbor Scale</button>
-      <button class="preset-pill" onclick="loadPreset('54EC')">Sec 54EC: 6M Countdown Clock & ₹50L Overflow Stopper</button>
-      <button class="preset-pill" onclick="loadPreset('194C')">Sec 194C: Contractor TDS Diversion Splitter Pipe</button>
-      <button class="preset-pill" onclick="loadPreset('45(4)')">Sec 45(4): Malabar Firm Partner Exit & Asset Pool</button>
+      <span class="preset-pill-label">Spacious Multi-Slide Presets:</span>
+      <button class="preset-pill" onclick="loadPreset('48_54F')">Sec 48 & 54F (5 Slides: Net Consideration Sieve & House)</button>
+      <button class="preset-pill" onclick="loadPreset('50C')">Sec 50C (4 Slides: Kozhikode 110% Tilting Scale)</button>
+      <button class="preset-pill" onclick="loadPreset('54EC')">Sec 54EC (4 Slides: 6M Clock & ₹50L Overflow Tank)</button>
+      <button class="preset-pill" onclick="loadPreset('194C')">Sec 194C (4 Slides: Contractor TDS Diversion Splitter)</button>
+      <button class="preset-pill" onclick="loadPreset('45(4)')">Sec 45(4) (4 Slides: Malabar Firm Partner Exit)</button>
     </div>
   </div>
 
@@ -403,30 +403,30 @@
   <!-- Teacher Narration Bar -->
   <div class="narration-panel">
     <div class="narration-meta">
-      <div class="narration-label" id="scene_tag_label">SCENE 1: THE NET CONSIDERATION FUNNEL</div>
+      <div class="narration-label" id="scene_tag_label">SLIDE 1: THE TRANSACTION</div>
       <span style="font-size:11px; font-weight:700; color:#555;">Teacher Explanation (Malayalam / English Statutory Terms)</span>
     </div>
     <div class="narration-text" id="narration_text">
-      Loading scene narration...
+      Loading slide narration...
     </div>
   </div>
 
   <!-- Transport Controls -->
   <div class="controls-panel">
     <div class="scrubber-row">
-      <input type="range" class="timeline-slider" id="timeline_slider" min="0" max="12000" step="50" value="0">
-      <div class="time-label" id="time_display">00:00.0 / 00:12.0</div>
+      <input type="range" class="timeline-slider" id="timeline_slider" min="0" max="10000" step="50" value="0">
+      <div class="time-label" id="time_display">00:00.0 / 00:10.0</div>
     </div>
     <div class="buttons-row">
       <div class="ctrl-group">
+        <button class="btn-action" onclick="prevSlide()">◀ Prev Slide</button>
         <button class="btn-action" id="btn_play_pause" onclick="togglePlay()">▶ Play Animation</button>
-        <button class="btn-action" onclick="seekTo(0)">⏮ Reset</button>
-        <button class="btn-action" onclick="seekRelative(-2000)">⏪ -2s</button>
-        <button class="btn-action" onclick="seekRelative(2000)">⏩ +2s</button>
+        <button class="btn-action" onclick="nextSlide()">Next Slide ▶</button>
+        <button class="btn-action" onclick="seekTo(0)">⏮ Restart Slide</button>
       </div>
       <div class="ctrl-group">
+        <button class="btn-action active-toggle" id="btn_autoadvance" onclick="toggleAutoAdvance()">⏩ Auto-Advance: ON</button>
         <button class="btn-action" id="btn_grid_toggle" onclick="toggleGrid()">▦ Show Pixel Grid</button>
-        <button class="btn-action active-toggle" id="btn_dither_toggle" onclick="toggleDither()">░ Dither Shading Mode</button>
       </div>
     </div>
   </div>
@@ -442,29 +442,7 @@
     let isPlaying = true;
     let lastAnimTime = 0;
     let showGrid = false;
-    let useDither = true;
-
-    let pattern50 = null;
-    let pattern25 = null;
-
-    function createDitherPattern(density) {
-      const pCanvas = document.createElement("canvas");
-      pCanvas.width = 4;
-      pCanvas.height = 4;
-      const pCtx = pCanvas.getContext("2d");
-      pCtx.fillStyle = "#ffffff";
-      pCtx.fillRect(0, 0, 4, 4);
-      pCtx.fillStyle = "#000000";
-
-      if (density === 0.5) {
-        pCtx.fillRect(0, 0, 2, 2);
-        pCtx.fillRect(2, 2, 2, 2);
-      } else if (density === 0.25) {
-        pCtx.fillRect(0, 0, 1, 1);
-        pCtx.fillRect(2, 2, 1, 1);
-      }
-      return ctx.createPattern(pCanvas, "repeat");
-    }
+    let autoAdvance = true;
 
     function clearScreen() {
       ctx.fillStyle = "#ffffff";
@@ -630,21 +608,23 @@
 
     // ==========================================
     // MECHANICAL FUNNEL RENDERER (Section 48 Sieve)
-    // Guaranteed Zero-Collision Geometry
+    // 100% Zero-Collision, Solid White Backgrounds
     // ==========================================
     function drawMechanicalFunnel(x, y, w, h, fillPct = 0, deductVal = 0, deductLabel = "2% Transfer Brokerage") {
       ctx.save();
       ctx.strokeStyle = "#000000";
       ctx.lineWidth = 2.5;
 
-      const hopperW = 190;
-      const hopperH = 14;
+      const hopperW = 200;
+      const hopperH = 16;
       const hx = x + (w - hopperW) / 2; // centered
+      ctx.fillStyle = "#ffffff";
+      ctx.fillRect(hx, y, hopperW, hopperH);
       ctx.strokeRect(hx, y, hopperW, hopperH);
 
-      const neckW = 44;
-      const coneH = 65;
-      const spoutH = 26;
+      const neckW = 46;
+      const coneH = 75;
+      const spoutH = 30;
       const neckX = x + (w - neckW) / 2;
 
       // Conical Funnel Body
@@ -661,69 +641,70 @@
       const sieveY = y + hopperH + coneH - 12;
       ctx.setLineDash([3, 3]);
       ctx.beginPath();
-      ctx.moveTo(neckX - 10, sieveY);
-      ctx.lineTo(neckX + neckW + 10, sieveY);
+      ctx.moveTo(neckX - 12, sieveY);
+      ctx.lineTo(neckX + neckW + 12, sieveY);
       ctx.stroke();
       ctx.setLineDash([]);
 
-      ctx.fillStyle = "#555555";
+      // Label in clean white cutout - positioned strictly clear of side jar
+      const labelW = 92, labelH = 16;
+      ctx.fillStyle = "#ffffff";
+      ctx.fillRect(x + w / 2 - labelW / 2 - 25, sieveY - 24, labelW, labelH);
+      ctx.fillStyle = "#000000";
       ctx.font = "800 9.5px monospace";
       ctx.textAlign = "center";
-      ctx.fillText("SEC 48(i) EXPENSE FILTER", x + w / 2, sieveY - 6);
+      ctx.fillText("SEC 48(i) SIEVE", x + w / 2 - 25, sieveY - 12);
 
       // Side Deduction Extraction Pipe
       const pipeStartX = neckX + neckW;
       const pipeStartY = sieveY - 2;
       ctx.beginPath();
       ctx.moveTo(pipeStartX, pipeStartY);
-      ctx.lineTo(pipeStartX + 26, pipeStartY - 8);
-      ctx.lineTo(pipeStartX + 26, pipeStartY + 14);
+      ctx.lineTo(pipeStartX + 30, pipeStartY - 8);
+      ctx.lineTo(pipeStartX + 30, pipeStartY + 14);
       ctx.lineTo(pipeStartX, pipeStartY + 8);
       ctx.stroke();
 
-      // Side Expense Dropping Jar (ends comfortably before right box)
-      const jarX = pipeStartX + 26;
+      // Side Expense Dropping Jar - Clean solid white background
+      const jarX = pipeStartX + 30;
       const jarY = pipeStartY - 24;
-      const jarW = 145;
-      const jarH = 58;
+      const jarW = 160;
+      const jarH = 64;
 
+      ctx.fillStyle = "#ffffff";
+      ctx.fillRect(jarX, jarY, jarW, jarH);
       ctx.strokeRect(jarX, jarY, jarW, jarH);
-      if (useDither && pattern25) {
-        ctx.fillStyle = pattern25;
-        ctx.fillRect(jarX, jarY, jarW, jarH);
-      }
+
       ctx.fillStyle = "#000000";
-      ctx.font = "900 10px monospace";
+      ctx.font = "900 10.5px monospace";
       ctx.textAlign = "center";
       ctx.fillText("LESS: EXPENSES (Sec 48)", jarX + jarW / 2, jarY + 18);
-      ctx.font = "900 15px monospace";
-      ctx.fillText("- ₹ " + (deductVal || 200000).toLocaleString("en-IN"), jarX + jarW / 2, jarY + 37);
-      ctx.font = "700 9px sans-serif";
-      ctx.fillText(deductLabel, jarX + jarW / 2, jarY + 50);
+      ctx.font = "900 16px monospace";
+      ctx.fillText("- ₹ " + (deductVal || 200000).toLocaleString("en-IN"), jarX + jarW / 2, jarY + 40);
+      ctx.font = "700 9.5px sans-serif";
+      ctx.fillText(deductLabel, jarX + jarW / 2, jarY + 54);
 
       // Bottom Collector Vessel (Net Consideration Flask)
-      const flaskW = 160;
-      const flaskH = 70;
+      const flaskW = 180;
+      const flaskH = 75;
       const flaskX = x + (w - flaskW) / 2;
-      const flaskY = y + hopperH + coneH + spoutH + 6;
+      const flaskY = y + hopperH + coneH + spoutH + 8;
 
+      ctx.fillStyle = "#ffffff";
+      ctx.fillRect(flaskX, flaskY, flaskW, flaskH);
       ctx.strokeRect(flaskX, flaskY, flaskW, flaskH);
 
-      if (fillPct > 0) {
-        const liquidH = (flaskH - 6) * fillPct;
+      const clampedFill = Math.max(0, Math.min(1.0, fillPct > 1.0 ? fillPct / 100.0 : fillPct));
+      if (clampedFill > 0) {
+        const liquidH = (flaskH - 6) * clampedFill;
         ctx.fillStyle = "#000000";
         ctx.fillRect(flaskX + 3, flaskY + flaskH - liquidH - 3, flaskW - 6, liquidH);
       }
 
-      ctx.fillStyle = fillPct > 0.5 ? "#ffffff" : "#000000";
-      ctx.font = "900 10.5px monospace";
+      ctx.fillStyle = clampedFill > 0.5 ? "#ffffff" : "#000000";
+      ctx.font = "900 11px monospace";
       ctx.textAlign = "center";
-      ctx.fillText("NET CONSIDERATION VESSEL", flaskX + flaskW / 2, flaskY + 22);
-
-      // Connecting Industrial Flanges
-      ctx.strokeStyle = "#000000";
-      ctx.lineWidth = 1.5;
-      ctx.strokeRect(hx + 10, y - 4, hopperW - 20, 4);
+      ctx.fillText("NET CONSIDERATION VESSEL", flaskX + flaskW / 2, flaskY + 24);
 
       ctx.restore();
     }
@@ -737,60 +718,68 @@
       ctx.lineWidth = 2.5;
 
       // Outer Container Box
+      ctx.fillStyle = "#ffffff";
+      ctx.fillRect(x, y, w, h);
       ctx.strokeRect(x, y, w, h);
 
-      // Header Bar
-      if (useDither && pattern25) {
-        ctx.fillStyle = pattern25;
-        ctx.fillRect(x, y, w, 26);
-      }
-      ctx.strokeRect(x, y, w, 26);
-
+      // Solid black header
       ctx.fillStyle = "#000000";
-      ctx.font = "900 11px monospace";
+      ctx.fillRect(x, y, w, 28);
+      ctx.fillStyle = "#ffffff";
+      ctx.font = "900 11.5px monospace";
       ctx.textAlign = "center";
-      ctx.fillText("PROPORTIONAL DIVERSION VALVE (SEC 54F)", x + w / 2, y + 18);
+      ctx.fillText("PROPORTIONAL DIVERSION VALVE (SEC 54F)", x + w / 2, y + 19);
 
       // Internal Split Chamber
-      const chamberX = x + 40;
-      const chamberY = y + 45;
-      const chamberW = w - 80;
-      const chamberH = h - 60;
+      const chamberX = x + 35;
+      const chamberY = y + 42;
+      const chamberW = w - 70;
 
       // Intake pipe from left
-      ctx.strokeRect(x, y + h / 2 - 14, 40, 28);
       ctx.fillStyle = "#000000";
-      ctx.font = "900 10px monospace";
+      ctx.fillRect(x, y + h / 2 - 14, 35, 28);
+      ctx.fillStyle = "#ffffff";
+      ctx.font = "900 10.5px monospace";
       ctx.textAlign = "center";
-      ctx.fillText("IN", x + 20, y + h / 2 + 4);
+      ctx.fillText("IN", x + 17, y + h / 2 + 4);
 
       // Branch 1: Top Stream (Reinvested in New House)
-      ctx.strokeRect(chamberX + 20, chamberY + 8, chamberW - 40, 46);
+      ctx.fillStyle = "#ffffff";
+      ctx.fillRect(chamberX + 15, chamberY + 6, chamberW - 30, 48);
+      ctx.strokeStyle = "#000000";
+      ctx.lineWidth = 2;
+      ctx.strokeRect(chamberX + 15, chamberY + 6, chamberW - 30, 48);
+
       ctx.fillStyle = "#000000";
       ctx.font = "800 11px -apple-system, BlinkMacSystemFont, sans-serif";
       ctx.textAlign = "left";
-      ctx.fillText("➡ 50% REINVESTED IN NEW HOUSE", chamberX + 30, chamberY + 26);
+      ctx.fillText("➡ 50% TO NEW HOUSE", chamberX + 22, chamberY + 24);
       ctx.font = "900 14px monospace";
       ctx.textAlign = "right";
-      ctx.fillText("₹ " + val1.toLocaleString("en-IN"), chamberX + chamberW - 30, chamberY + 44);
+      ctx.fillText("₹ " + val1.toLocaleString("en-IN"), chamberX + chamberW - 25, chamberY + 44);
 
       // Branch 2: Bottom Stream (Uninvested / Taxable)
-      ctx.strokeRect(chamberX + 20, chamberY + 64, chamberW - 40, 46);
-      if (useDither && pattern25) {
-        ctx.fillStyle = pattern25;
-        ctx.fillRect(chamberX + 20, chamberY + 64, chamberW - 40, 46);
-      }
+      ctx.fillStyle = "#ffffff";
+      ctx.fillRect(chamberX + 15, chamberY + 64, chamberW - 30, 48);
+      ctx.strokeRect(chamberX + 15, chamberY + 64, chamberW - 30, 48);
+
       ctx.fillStyle = "#000000";
       ctx.font = "800 11px -apple-system, BlinkMacSystemFont, sans-serif";
       ctx.textAlign = "left";
-      ctx.fillText("➡ 50% UNINVESTED / TAXABLE GAIN", chamberX + 30, chamberY + 82);
+      ctx.fillText("➡ 50% UNINVESTED / TAXABLE", chamberX + 22, chamberY + 82);
       ctx.font = "900 14px monospace";
       ctx.textAlign = "right";
-      ctx.fillText("₹ " + val2.toLocaleString("en-IN"), chamberX + chamberW - 30, chamberY + 100);
+      ctx.fillText("₹ " + val2.toLocaleString("en-IN"), chamberX + chamberW - 25, chamberY + 102);
 
       // Outtake Flanges on right
-      ctx.strokeRect(x + w - 40, chamberY + 16, 40, 28);
-      ctx.strokeRect(x + w - 40, chamberY + 72, 40, 28);
+      ctx.fillStyle = "#000000";
+      ctx.fillRect(x + w - 35, chamberY + 16, 35, 28);
+      ctx.fillRect(x + w - 35, chamberY + 74, 35, 28);
+      ctx.fillStyle = "#ffffff";
+      ctx.font = "900 10.5px monospace";
+      ctx.textAlign = "center";
+      ctx.fillText("OUT", x + w - 17, chamberY + 34);
+      ctx.fillText("OUT", x + w - 17, chamberY + 92);
 
       ctx.restore();
     }
@@ -800,6 +789,8 @@
     // ==========================================
     function drawAssetNode(x, y, w, h, iconType, label, amountVal, subtitle) {
       ctx.save();
+      ctx.fillStyle = "#ffffff";
+      ctx.fillRect(x, y, w, h);
       ctx.strokeStyle = "#000000";
       ctx.lineWidth = 2.5;
       ctx.strokeRect(x, y, w, h);
@@ -810,35 +801,35 @@
       ctx.strokeRect(x + w - 12, y + 4, 8, 8);
 
       // Icon on top
-      const iconSize = 52;
-      drawPixelIcon(iconType, x + (w - iconSize) / 2, y + 14, iconSize, iconSize);
+      const iconSize = 54;
+      drawPixelIcon(iconType, x + (w - iconSize) / 2, y + 16, iconSize, iconSize);
 
       // Label in middle
       ctx.fillStyle = "#000000";
       ctx.font = "800 13px -apple-system, BlinkMacSystemFont, sans-serif";
       ctx.textAlign = "center";
-      ctx.fillText(label, x + w / 2, y + 88);
+      ctx.fillText(label, x + w / 2, y + 96);
 
       if (subtitle) {
         ctx.fillStyle = "#666666";
-        ctx.font = "700 10.5px monospace";
-        ctx.fillText(subtitle, x + w / 2, y + 104);
+        ctx.font = "700 11px monospace";
+        ctx.fillText(subtitle, x + w / 2, y + 114);
       }
 
-      // Border line for counter tray
+      // Solid black counter tray at bottom
       if (amountVal !== undefined) {
         ctx.beginPath();
-        ctx.moveTo(x, y + h - 38);
-        ctx.lineTo(x + w, y + h - 38);
+        ctx.moveTo(x, y + h - 42);
+        ctx.lineTo(x + w, y + h - 42);
         ctx.stroke();
 
         ctx.fillStyle = "#000000";
-        ctx.fillRect(x, y + h - 38, w, 38);
+        ctx.fillRect(x, y + h - 42, w, 42);
 
         ctx.fillStyle = "#ffffff";
-        ctx.font = "900 16px monospace";
+        ctx.font = "900 17px monospace";
         ctx.textAlign = "center";
-        ctx.fillText("₹ " + (amountVal || 0).toLocaleString("en-IN"), x + w / 2, y + h - 14);
+        ctx.fillText("₹ " + (amountVal || 0).toLocaleString("en-IN"), x + w / 2, y + h - 15);
       }
 
       ctx.restore();
@@ -846,33 +837,50 @@
 
     // ==========================================
     // DETAILED ACCOUNTING BREAKDOWN CARD
+    // Solid Black Header with Crisp White Text
     // ==========================================
     function drawBreakdownCard(x, y, w, h, rows, verdictBadge, title) {
       ctx.save();
+      ctx.fillStyle = "#ffffff";
+      ctx.fillRect(x, y, w, h);
       ctx.strokeStyle = "#000000";
       ctx.lineWidth = 2.5;
       ctx.strokeRect(x, y, w, h);
 
-      if (useDither && pattern25) {
-        ctx.fillStyle = pattern25;
-        ctx.fillRect(x, y, w, 28);
-      }
-      ctx.strokeRect(x, y, w, 28);
-
+      // Solid black header
       ctx.fillStyle = "#000000";
-      ctx.font = "900 11.5px monospace";
+      ctx.fillRect(x, y, w, 32);
+
+      ctx.fillStyle = "#ffffff";
+      ctx.font = "900 12px monospace";
       ctx.textAlign = "left";
       const cardTitle = title || (ACTIVE_DATA?.section_code ? (ACTIVE_DATA.section_code + " STATUTORY AUDIT BREAKDOWN") : "STATUTORY COMPUTATION BREAKDOWN");
-      ctx.fillText(cardTitle, x + 16, y + 19);
+      ctx.fillText(cardTitle, x + 16, y + 21);
 
-      let curY = y + 54;
+      // White pill badge on the black header
+      if (verdictBadge) {
+        ctx.font = "900 10.5px monospace";
+        const badgeW = ctx.measureText(verdictBadge).width + 24;
+        const badgeH = 22;
+        const bx = x + w - badgeW - 8;
+        const by = y + 5;
+        ctx.fillStyle = "#ffffff";
+        ctx.fillRect(bx, by, badgeW, badgeH);
+        ctx.strokeStyle = "#ffffff";
+        ctx.strokeRect(bx, by, badgeW, badgeH);
+        ctx.fillStyle = "#000000";
+        ctx.textAlign = "center";
+        ctx.fillText(verdictBadge, bx + badgeW / 2, by + 15);
+      }
+
+      let curY = y + 60;
       rows.forEach((r, idx) => {
-        ctx.fillStyle = r.isTotal ? "#000000" : (r.isDeduction ? "#333333" : "#000000");
-        ctx.font = (r.isTotal ? "900 13px" : "700 12px") + " -apple-system, BlinkMacSystemFont, sans-serif";
+        ctx.fillStyle = r.isTotal ? "#000000" : (r.isDeduction ? "#444444" : "#000000");
+        ctx.font = (r.isTotal ? "900 13.5px" : "700 12.5px") + " -apple-system, BlinkMacSystemFont, sans-serif";
         ctx.textAlign = "left";
         ctx.fillText(r.label, x + 20, curY);
 
-        ctx.font = (r.isTotal ? "900 15px" : "800 13.5px") + " monospace";
+        ctx.font = (r.isTotal ? "900 16px" : "800 14px") + " monospace";
         ctx.textAlign = "right";
         ctx.fillText((r.prefix || "") + "₹ " + (r.val || 0).toLocaleString("en-IN"), x + w - 24, curY);
 
@@ -881,54 +889,57 @@
           ctx.moveTo(x + 16, curY + 10);
           ctx.lineTo(x + w - 16, curY + 10);
           ctx.stroke();
-          curY += 24;
+          curY += 26;
         } else {
-          curY += 25;
+          curY += 28;
         }
       });
-
-      if (verdictBadge) {
-        const badgeW = 270, badgeH = 22;
-        const bx = x + w - badgeW - 4;
-        const by = y + 3;
-        ctx.fillStyle = "#000000";
-        ctx.fillRect(bx, by, badgeW, badgeH);
-        ctx.fillStyle = "#ffffff";
-        ctx.font = "900 10.5px monospace";
-        ctx.textAlign = "center";
-        ctx.fillText(verdictBadge, bx + badgeW / 2, by + 15);
-      }
 
       ctx.restore();
     }
 
     // ==========================================
     // INDUSTRIAL CONNECTING FLOW PIPES
+    // Clean Cutout Box So Line Never Crosses Text
     // ==========================================
     function drawFlowPipe(x1, y1, x2, y2, label) {
       ctx.save();
       ctx.strokeStyle = "#000000";
-      ctx.lineWidth = 3;
+      ctx.lineWidth = 2.5;
       ctx.beginPath();
       ctx.moveTo(x1, y1);
       ctx.lineTo(x2, y2);
       ctx.stroke();
 
-      // Chevrons
       const midX = (x1 + x2) / 2;
       const midY = (y1 + y2) / 2;
-      ctx.fillStyle = "#000000";
-      ctx.font = "900 12px monospace";
-      ctx.textAlign = "center";
-      ctx.fillText("▶▶", midX, midY - 6);
 
       if (label) {
+        ctx.font = "800 10.5px monospace";
+        const textW = ctx.measureText(label).width;
+        const pillW = textW + 32;
+        const pillH = 22;
+
         ctx.fillStyle = "#ffffff";
-        ctx.fillRect(midX - 35, midY + 4, 70, 16);
-        ctx.strokeRect(midX - 35, midY + 4, 70, 16);
+        ctx.fillRect(midX - pillW / 2, midY - pillH / 2, pillW, pillH);
+        ctx.strokeStyle = "#000000";
+        ctx.lineWidth = 1.5;
+        ctx.strokeRect(midX - pillW / 2, midY - pillH / 2, pillW, pillH);
+
         ctx.fillStyle = "#000000";
-        ctx.font = "800 9px monospace";
-        ctx.fillText(label, midX, midY + 15);
+        ctx.textAlign = "center";
+        ctx.fillText(label + " ▶▶", midX, midY + 4);
+      } else {
+        ctx.fillStyle = "#ffffff";
+        ctx.fillRect(midX - 18, midY - 11, 36, 22);
+        ctx.strokeStyle = "#000000";
+        ctx.lineWidth = 1.5;
+        ctx.strokeRect(midX - 18, midY - 11, 36, 22);
+
+        ctx.fillStyle = "#000000";
+        ctx.font = "900 12px monospace";
+        ctx.textAlign = "center";
+        ctx.fillText("▶▶", midX, midY + 4);
       }
       ctx.restore();
     }
@@ -1042,25 +1053,23 @@
 
       // 6. Box Element
       else if (elem.type === "box") {
+        ctx.fillStyle = "#ffffff";
+        ctx.fillRect(x, y, w, h);
         ctx.strokeStyle = "#000000";
         ctx.lineWidth = 2.5;
         ctx.strokeRect(x, y, w, h);
 
-        if (elem.fill_dither && useDither && pattern25) {
-          ctx.fillStyle = pattern25;
-          ctx.fillRect(x, y, w, h);
-        }
-
         if (elem.title) {
           ctx.fillStyle = "#000000";
-          ctx.font = "900 14px -apple-system, BlinkMacSystemFont, sans-serif";
+          ctx.font = "900 13.5px -apple-system, BlinkMacSystemFont, sans-serif";
           ctx.textAlign = "left";
           ctx.fillText(elem.title, x + 16, y + 26);
         }
         if (elem.subtitle) {
           ctx.fillStyle = "#555555";
-          ctx.font = "700 11px monospace";
-          ctx.fillText(elem.subtitle, x + 16, y + 46);
+          ctx.font = "600 11.5px -apple-system, BlinkMacSystemFont, sans-serif";
+          ctx.textAlign = "left";
+          ctx.fillText(elem.subtitle, x + 16, y + 48);
         }
       }
 
@@ -1187,8 +1196,10 @@
         }
       }
 
-      // 13. Tank Element (Guaranteed Clamping & Normalization)
+      // 13. Tank Element
       else if (elem.type === "tank") {
+        ctx.fillStyle = "#ffffff";
+        ctx.fillRect(x, y, w, h);
         ctx.strokeStyle = "#000000";
         ctx.lineWidth = 2.5;
         ctx.strokeRect(x, y, w, h);
@@ -1209,32 +1220,41 @@
         ctx.setLineDash([]);
 
         if (elem.cap_label) {
-          ctx.fillStyle = "#000000";
           ctx.font = "900 11px monospace";
-          ctx.textAlign = "left";
-          ctx.fillText(elem.cap_label, x + w + 16, capY + 4);
+          const labelW = ctx.measureText(elem.cap_label).width + 16;
+          ctx.fillStyle = "#ffffff";
+          ctx.fillRect(x + w + 16, capY - 10, labelW, 20);
+          ctx.strokeStyle = "#000000";
+          ctx.lineWidth = 1;
+          ctx.strokeRect(x + w + 16, capY - 10, labelW, 20);
+          ctx.fillStyle = "#000000";
+          ctx.textAlign = "center";
+          ctx.fillText(elem.cap_label, x + w + 16 + labelW / 2, capY + 4);
         }
       }
 
-      // 13. Equation Chips
+      // 14. Equation Chips
       else if (elem.type === "equation_chips") {
         let curX = x;
         const chips = elem.chips || [];
         chips.forEach((c) => {
           if (c.op) {
+            ctx.fillStyle = "#ffffff";
+            ctx.beginPath();
+            ctx.arc(curX + 22, y + 36, 22, 0, Math.PI * 2);
+            ctx.fill();
             ctx.strokeStyle = "#000000";
             ctx.lineWidth = 2.5;
-            ctx.beginPath();
-            ctx.arc(curX + 20, y + 35, 20, 0, Math.PI * 2);
             ctx.stroke();
+
             ctx.fillStyle = "#000000";
-            ctx.font = "900 22px monospace";
+            ctx.font = "900 24px monospace";
             ctx.textAlign = "center";
-            ctx.fillText(c.op, curX + 20, y + 43);
-            curX += 55;
+            ctx.fillText(c.op, curX + 22, y + 44);
+            curX += 60;
           } else {
-            const chipW = c.isTotal ? 240 : 200;
-            const chipH = 75;
+            const chipW = c.isTotal ? 230 : 190;
+            const chipH = 72;
             ctx.fillStyle = c.isTotal ? "#000000" : "#ffffff";
             ctx.fillRect(curX, y, chipW, chipH);
             ctx.strokeStyle = "#000000";
@@ -1242,40 +1262,22 @@
             ctx.strokeRect(curX, y, chipW, chipH);
 
             ctx.fillStyle = c.isTotal ? "#ffffff" : "#000000";
-            ctx.font = "800 12px -apple-system, BlinkMacSystemFont, sans-serif";
+            ctx.font = "800 11.5px -apple-system, BlinkMacSystemFont, sans-serif";
             ctx.textAlign = "center";
-            ctx.fillText(c.label || "", curX + chipW / 2, y + 26);
+            ctx.fillText(c.label || "", curX + chipW / 2, y + 25);
 
-            ctx.font = "900 18px monospace";
-            ctx.fillText("₹ " + (c.val || 0).toLocaleString("en-IN"), curX + chipW / 2, y + 54);
+            ctx.font = "900 17px monospace";
+            ctx.fillText("₹ " + (c.val || 0).toLocaleString("en-IN"), curX + chipW / 2, y + 52);
             curX += chipW + 16;
           }
         });
-      }
-
-      // 14. Line Element
-      else if (elem.type === "line") {
-        ctx.strokeStyle = "#000000";
-        ctx.lineWidth = 2;
-        if (elem.dashed) ctx.setLineDash([6, 6]);
-        ctx.beginPath();
-        ctx.moveTo(elem.x1 || 0, elem.y1 || 0);
-        ctx.lineTo(elem.x2 || 100, elem.y2 || 100);
-        ctx.stroke();
-        ctx.setLineDash([]);
-        if (elem.label) {
-          ctx.fillStyle = "#000000";
-          ctx.font = "700 11px monospace";
-          ctx.textAlign = "center";
-          ctx.fillText(elem.label, (elem.x1 + elem.x2) / 2, (elem.y1 + elem.y2) / 2 - 8);
-        }
       }
 
       ctx.restore();
     }
 
     // ==========================================
-    // PRESETS: 5 HIGH-DETAIL PROVISIONS
+    // MULTI-SLIDE PRESETS: 4-5 SPACIOUS SLIDES PER PROVISION
     // ==========================================
     const PRESETS = {
       '48_54F': {
@@ -1284,107 +1286,108 @@
         concept_metaphor: "The Net Consideration Funnel & Sieve",
         story_summary: "Mr. Murali sells commercial land for ₹1 Crore. Expenses on transfer (2% brokerage = ₹2 Lakhs) are filtered out via Section 48 to determine Net Consideration of ₹98 Lakhs.",
         scenes: [
+          // Slide 1: Transaction & Parties
           {
             id: 1,
-            tab_title: "1 Net Consideration Funnel",
-            tag: "SCENE 1: THE NET CONSIDERATION FUNNEL",
-            duration_ms: 12000,
-            dialogue: "Namukk ee scenario nokkam. Mr. Murali commercial land sell cheyyunnath 1 Crore-inaanu. Pakshe section 48 parayunnath, Gross Sale Consideration-il ninnu 'Expenses on Transfer' kuraikkanam. 2% brokerage (₹2 Lakhs) kuraichal namukku kittunnathaanu 'Net Consideration' of ₹98 Lakhs.",
+            tab_title: "1 Transaction & Asset",
+            tag: "SLIDE 1: THE COMMERCIAL LAND SALE",
+            duration_ms: 9000,
+            dialogue: "Namukk ee scenario nokkam. Mr. Murali thante commercial plot Suresh-nu sell cheyyunnu. Declared Full Value of Consideration ₹1,00,00,000 aanu. Ee transaction-il ninnu Section 48 prakaram capital gains compute cheyyan thudangaam.",
             elements: [
-              // Left: Source Asset Node
-              { id: "land_node", type: "asset_node", x: 45, y: 85, w: 220, h: 180, icon: "warehouse", label: "Commercial Land", subtitle: "Gross Consideration", amount_val: 10000000, timeline: [
-                { start_ms: 500, end_ms: 2000, action: "fade_in" },
-                { start_ms: 1500, end_ms: 3500, action: "count_up" }
+              { id: "murali", type: "asset_node", x: 90, y: 110, w: 260, h: 220, icon: "person", label: "Mr. Murali (Transferor)", subtitle: "Seller of Capital Asset", amount_val: 10000000, timeline: [
+                { start_ms: 500, end_ms: 1800, action: "fade_in" }
               ]},
-
-              // Flow Pipe 1: Left Node to Funnel Hopper
-              { id: "pipe1", type: "flow_pipe", x1: 265, y1: 92, x2: 395, y2: 92, label: "GROSS FLOW" },
-
-              // Center: Mechanical Funnel with Brokerage Sieve
-              { id: "funnel", type: "funnel", x: 310, y: 85, w: 360, h: 185, deduct_val: 200000, deduct_label: "2% Transfer Brokerage", timeline: [
-                { start_ms: 1000, end_ms: 2500, action: "fade_in" },
-                { start_ms: 3000, end_ms: 7000, action: "fill_progress", to_pct: 0.85 }
+              { id: "pipe_sale", type: "flow_pipe", x1: 350, y1: 220, x2: 650, y2: 220, label: "GROSS CONSIDERATION", timeline: [
+                { start_ms: 1500, end_ms: 3000, action: "draw_stroke" }
               ]},
-
-              // Flow Pipe 2: Flask to Right Node
-              { id: "pipe2", type: "flow_pipe", x1: 570, y1: 231, x2: 735, y2: 231, label: "NET CONSIDERATION" },
-
-              // Right: Destination Asset Node (Net Consideration)
-              { id: "net_node", type: "asset_node", x: 735, y: 85, w: 220, h: 180, icon: "document", label: "Net Consideration (Sec 48)", subtitle: "Basis for 54F Audit", amount_val: 9800000, timeline: [
-                { start_ms: 4000, end_ms: 5500, action: "fade_in" },
-                { start_ms: 4500, end_ms: 6500, action: "count_up" }
+              { id: "land", type: "asset_node", x: 650, y: 110, w: 260, h: 220, icon: "warehouse", label: "Commercial Land", subtitle: "Full Value of Consideration", amount_val: 10000000, timeline: [
+                { start_ms: 2200, end_ms: 3500, action: "fade_in" }
               ]},
-
-              // Bottom: Accounting Breakdown Card
-              { id: "breakdown", type: "breakdown_card", x: 45, y: 290, w: 910, h: 165, title: "STATUTORY COMPUTATION BREAKDOWN (SECTION 48 AUDIT)", verdict_badge: "SEC 48 QUALIFYING BASE VERIFIED", rows: [
-                { label: "Full Value of Consideration (Gross Sale Price of Land)", val: 10000000 },
-                { label: "LESS: Expenses wholly & exclusively incurred on transfer - 2% Brokerage (Sec 48(i))", val: 200000, isDeduction: true, prefix: "(-) " },
-                { label: "NET CONSIDERATION (Qualifying statutory base for Section 54F Proportional Exemption)", val: 9800000, isTotal: true }
-              ], timeline: [
-                { start_ms: 6000, end_ms: 7500, action: "fade_in" }
-              ]}
+              { id: "note1", type: "box", x: 90, y: 365, w: 820, h: 75, title: "SECTION 48 STEP 1: FULL VALUE OF CONSIDERATION", subtitle: "Gross consideration received or accruing as a result of the transfer of the capital asset = ₹ 1,00,00,000." }
             ]
           },
+
+          // Slide 2: Section 48 Sieve Funnel
           {
             id: 2,
-            tab_title: "2 Proportional Reinvestment Split",
-            tag: "SCENE 2: RESIDENTIAL HOUSE TARGET",
-            duration_ms: 12000,
-            dialogue: "Section 54F qualify cheyyan Net Consideration oru new residential house-il invest cheyyanam. Murali ₹49 Lakhs (exact 50% of Net Consideration) new house-nu vendi invest cheythu. Athukondu capital gain-nte 50% mathram exempt aakum.",
+            tab_title: "2 Transfer Expense Sieve",
+            tag: "SLIDE 2: EXPENSES ON TRANSFER (SEC 48(i))",
+            duration_ms: 9000,
+            dialogue: "Section 48 parayunnath, Gross Consideration-il ninnu transfer-nu vendi exclusive aayi cheytha expenses kuraikkanam. 2% brokerage aaya ₹2,00,000 filter out cheythu kazhinjal namukku kittunnathaanu 'Net Consideration' of ₹98,00,000.",
             elements: [
-              // Left: Net Consideration Input Node
-              { id: "net_node2", type: "asset_node", x: 45, y: 85, w: 220, h: 180, icon: "vault", label: "Net Consideration (Sec 48)", subtitle: "Exemption Base", amount_val: 9800000, timeline: [
-                { start_ms: 500, end_ms: 2000, action: "fade_in" }
+              { id: "funnel", type: "funnel", x: 280, y: 95, w: 440, h: 240, deduct_val: 200000, deduct_label: "2% Transfer Brokerage", timeline: [
+                { start_ms: 500, end_ms: 2000, action: "fade_in" },
+                { start_ms: 2500, end_ms: 6500, action: "fill_progress", to_pct: 0.85 }
               ]},
+              { id: "note2", type: "box", x: 90, y: 365, w: 820, h: 75, title: "SECTION 48(i) EXPENSE DEDUCTION CRITERION", subtitle: "Expenses wholly and exclusively in connection with transfer: Gross (₹1.00 Cr) − 2% Brokerage (₹2 Lakhs) = Net Consideration (₹98 Lakhs)." }
+            ]
+          },
 
-              // Center: Proportional Split Valve
-              { id: "valve", type: "split_valve", x: 300, y: 85, w: 395, h: 180, val1: 4900000, val2: 4900000, timeline: [
-                { start_ms: 1500, end_ms: 3000, action: "fade_in" }
-              ]},
-
-              // Right: Target Residential House Node
-              { id: "house_node", type: "asset_node", x: 735, y: 85, w: 220, h: 180, icon: "house", label: "New Residential House", subtitle: "Reinvested Asset u/s 54F", amount_val: 4900000, timeline: [
-                { start_ms: 3000, end_ms: 4500, action: "fade_in" },
-                { start_ms: 3500, end_ms: 5500, action: "count_up" }
-              ]},
-
-              // Bottom: Reinvestment Breakdown Card
-              { id: "breakdown_split", type: "breakdown_card", x: 45, y: 290, w: 910, h: 165, title: "SECTION 54F PROPORTIONAL REINVESTMENT AUDIT", verdict_badge: "50% STATUTORY EXEMPTION RATIO", rows: [
-                { label: "Net Consideration available from Commercial Land transfer", val: 9800000 },
-                { label: "Amount invested in New Residential House within statutory period", val: 4900000 },
-                { label: "Proportion Reinvested [₹ 49,00,000 ÷ ₹ 98,00,000]", val: 500000, prefix: "50.00% = " },
-                { label: "RESULT: Exactly 50.00% of Long-Term Capital Gain qualifies for exemption u/s 54F", val: 3000000, isTotal: true }
+          // Slide 3: Section 48 Statutory Computation
+          {
+            id: 3,
+            tab_title: "3 Sec 48 Capital Gain Audit",
+            tag: "SLIDE 3: LONG-TERM CAPITAL GAIN COMPUTATION",
+            duration_ms: 9000,
+            dialogue: "Ippo namukku Section 48 computation nokkaam. Gross ₹1 Crore, less transfer expenses ₹2 Lakhs, so Net Consideration ₹98 Lakhs. Athil ninnu Indexed Cost of Acquisition ₹38 Lakhs kuraichaal LTCG ₹60,00,000 kittunnu.",
+            elements: [
+              { id: "ledger48", type: "breakdown_card", x: 90, y: 100, w: 820, h: 290, title: "SECTION 48 STATUTORY CAPITAL GAIN AUDIT", verdict_badge: "NET CONSIDERATION BASE CONFIRMED", rows: [
+                { label: "Full Value of Consideration (Gross Sale Price of Land)", val: 10000000 },
+                { label: "LESS: Expenses wholly & exclusively incurred on transfer - 2% Brokerage (Sec 48(i))", val: 200000, isDeduction: true, prefix: "(-) " },
+                { label: "NET CONSIDERATION (Qualifying statutory base for Section 54F)", val: 9800000, isTotal: true },
+                { label: "LESS: Indexed Cost of Acquisition (COA)", val: 3800000, isDeduction: true, prefix: "(-) " },
+                { label: "LONG-TERM CAPITAL GAIN (LTCG) before Section 54F Exemption", val: 6000000, isTotal: true }
               ], timeline: [
-                { start_ms: 5500, end_ms: 7000, action: "fade_in" }
+                { start_ms: 500, end_ms: 2000, action: "fade_in" }
               ]}
             ]
           },
+
+          // Slide 4: Section 54F Proportional Reinvestment Split
           {
-            id: 3,
-            tab_title: "3 Proportional Exemption Math",
-            tag: "SCENE 3: STATUTORY FORMULA MATH",
-            duration_ms: 12000,
-            dialogue: "Murali thante Net Consideration-nte 50% mathrame invest cheythollu. Athukondu Capital Gain ₹60 Lakhs-nte 50% aaya ₹30 Lakhs mathrame Section 54F exemption aayi labhikkukayullu!",
+            id: 4,
+            tab_title: "4 Reinvestment Diversion",
+            tag: "SLIDE 4: SECTION 54F PROPORTIONAL SPLIT",
+            duration_ms: 9000,
+            dialogue: "Section 54F exemption kittan Net Consideration oru new residential house-il invest cheyyanam. Murali Net Consideration-nte 50% aaya ₹49 Lakhs mathrame new house-il invest cheythu. Athukondu exemption proportional aayirikkum.",
             elements: [
-              { id: "eq", type: "equation_chips", x: 60, y: 95, chips: [
+              { id: "net_node", type: "asset_node", x: 70, y: 110, w: 240, h: 220, icon: "vault", label: "Net Consideration", subtitle: "Sec 48 Qualifying Base", amount_val: 9800000, timeline: [
+                { start_ms: 500, end_ms: 1800, action: "fade_in" }
+              ]},
+              { id: "valve", type: "split_valve", x: 345, y: 110, w: 310, h: 220, val1: 4900000, val2: 4900000, timeline: [
+                { start_ms: 1500, end_ms: 3000, action: "fade_in" }
+              ]},
+              { id: "house_node", type: "asset_node", x: 690, y: 110, w: 240, h: 220, icon: "house", label: "New Residential House", subtitle: "Reinvested Asset u/s 54F", amount_val: 4900000, timeline: [
+                { start_ms: 2500, end_ms: 4000, action: "fade_in" }
+              ]},
+              { id: "note4", type: "box", x: 70, y: 365, w: 860, h: 75, title: "SECTION 54F PROPORTIONAL REINVESTMENT CRITERION", subtitle: "Net Consideration ₹98L-nte exact 50% (₹49L) mathram invest cheythathinal, LTCG-nte 50% mathrame exempt aavoo." }
+            ]
+          },
+
+          // Slide 5: Section 54F Statutory Math & Final Tax Liability
+          {
+            id: 5,
+            tab_title: "5 Final Tax Computation",
+            tag: "SLIDE 5: FINAL STATUTORY TAX LIABILITY",
+            duration_ms: 9000,
+            dialogue: "Final mathematical computation: Exemption = Capital Gain × [Cost of New House ÷ Net Consideration]. Athayath ₹60 Lakhs × 50% = ₹30 Lakhs Exemption. Baaki ₹30 Lakhs Net Taxable Long-Term Capital Gain aayi tax cheyyapedum!",
+            elements: [
+              { id: "eq", type: "equation_chips", x: 80, y: 95, chips: [
                 { label: "Original Capital Gain", val: 6000000 },
                 { op: "−" },
                 { label: "Sec 54F Exemption (50%)", val: 3000000 },
                 { op: "=" },
                 { label: "Net Taxable LTCG", val: 3000000, isTotal: true }
               ], timeline: [
-                { start_ms: 500, end_ms: 2000, action: "fade_in" }
+                { start_ms: 500, end_ms: 1800, action: "fade_in" }
               ]},
-              { id: "breakdown2", type: "breakdown_card", x: 45, y: 200, w: 910, h: 255, title: "FINAL STATUTORY TAX COMPUTATION (SECTION 48 & 54F AUDIT)", verdict_badge: "TAX AUDIT COMPLETE", rows: [
-                { label: "Full Value of Consideration (Gross Sale Price)", val: 10000000 },
-                { label: "LESS: Transfer Expenses u/s 48(i) (2% Brokerage)", val: 200000, isDeduction: true, prefix: "(-) " },
-                { label: "Net Consideration u/s 48", val: 9800000 },
-                { label: "LESS: Indexed Cost of Acquisition (COA)", val: 3800000, isDeduction: true, prefix: "(-) " },
-                { label: "Long-Term Capital Gain (LTCG) before Exemption", val: 6000000 },
-                { label: "LESS: Exemption u/s 54F = [₹60,00,000 × ₹49,00,000 ÷ ₹98,00,000]", val: 3000000, isDeduction: true, prefix: "(-) " },
-                { label: "NET TAXABLE CAPITAL GAIN (Taxable at special rates)", val: 3000000, isTotal: true }
+              { id: "ledger_final", type: "breakdown_card", x: 80, y: 195, w: 840, h: 245, title: "FINAL TAX LIABILITY (SECTION 48 & 54F AUDIT)", verdict_badge: "50% STATUTORY RELIEF APPLIED", rows: [
+                { label: "Original Long-Term Capital Gain before exemption", val: 6000000 },
+                { label: "LESS: Section 54F Exemption = [₹60,00,000 × (₹49,00,000 ÷ ₹98,00,000)]", val: 3000000, isDeduction: true, prefix: "(-) " },
+                { label: "NET TAXABLE LONG-TERM CAPITAL GAIN", val: 3000000, isTotal: true },
+                { label: "Tax on LTCG u/s 112 @ 12.5% (effective FY 2024-25 onwards)", val: 375000, prefix: "Tax @ 12.5% = " }
               ], timeline: [
-                { start_ms: 2500, end_ms: 4500, action: "fade_in" }
+                { start_ms: 2000, end_ms: 3500, action: "fade_in" }
               ]}
             ]
           }
@@ -1397,42 +1400,64 @@
         concept_metaphor: "The Tilting Safe Harbor Scale",
         story_summary: "Mr. Sajan sells a commercial plot in Kozhikode for ₹1.00 Crore. Sub-Registrar assesses SDV at ₹1.18 Crore, breaching 110% tolerance.",
         scenes: [
+          // Slide 1: Agreement
           {
             id: 1,
-            tab_title: "1 Transaction & Agreement",
-            tag: "SCENE 1: THE REGISTERED AGREEMENT",
-            duration_ms: 12000,
-            dialogue: "Mr. Sajan Kozhikode-il ulla commercial plot Suresh-nu sell cheyyan agreement vechu. Declared Consideration ₹1.00 Crore aanu. Ennal Sub-Registrar Stamp Duty Value assess cheythu nokkumbozhanu discrepancy varunnathu.",
+            tab_title: "1 Sale Agreement",
+            tag: "SLIDE 1: REGISTERED SALE AGREEMENT",
+            duration_ms: 9000,
+            dialogue: "Mr. Sajan Kozhikode-il ulla commercial plot Suresh-nu sell cheyyan agreement vechu. Declared Consideration ₹1.00 Crore aanu.",
             elements: [
-              { id: "seller", type: "asset_node", x: 50, y: 85, w: 220, h: 180, icon: "person", label: "Mr. Sajan (Seller)", subtitle: "Declared Consideration", amount_val: 10000000 },
-              { id: "deed", type: "asset_node", x: 390, y: 85, w: 220, h: 180, icon: "document", label: "Registered Deed", subtitle: "Circle Rate Review", amount_val: 10000000 },
-              { id: "buyer", type: "asset_node", x: 730, y: 85, w: 220, h: 180, icon: "person", label: "Suresh (Buyer)", subtitle: "Transferee Party", amount_val: 10000000 },
-              { id: "breakdown_50c", type: "breakdown_card", x: 50, y: 290, w: 900, h: 165, title: "TRANSACTION REGISTRATION AUDIT (SECTION 50C)", verdict_badge: "SUB-REGISTRAR VALUATION PENDING", rows: [
-                { label: "Declared Sale Consideration in Registered Agreement", val: 10000000 },
-                { label: "110% Statutory Safe Harbor Tolerance Threshold [₹1,00,00,000 × 110%]", val: 11000000 },
-                { label: "Sub-Registrar Stamp Duty Value (Circle Rate)", val: 11800000, isTotal: true }
+              { id: "seller", type: "asset_node", x: 90, y: 110, w: 260, h: 220, icon: "person", label: "Mr. Sajan (Seller)", subtitle: "Declared Consideration", amount_val: 10000000 },
+              { id: "pipe1", type: "flow_pipe", x1: 350, y1: 220, x2: 650, y2: 220, label: "REGISTERED AGREEMENT" },
+              { id: "buyer", type: "asset_node", x: 650, y: 110, w: 260, h: 220, icon: "person", label: "Suresh (Buyer)", subtitle: "Declared Consideration", amount_val: 10000000 },
+              { id: "b1", type: "box", x: 90, y: 365, w: 820, h: 75, title: "SECTION 50C STEP 1: DECLARED CONSIDERATION", subtitle: "Agreement value entered between parties = ₹ 1,00,00,000. Subject to Sub-Registrar circle rate audit." }
+            ]
+          },
+          // Slide 2: Sub-Registrar SDV
+          {
+            id: 2,
+            tab_title: "2 Circle Rate Valuation",
+            tag: "SLIDE 2: SUB-REGISTRAR VALUATION",
+            duration_ms: 9000,
+            dialogue: "Sub-Registrar circle rate prakaram property-ude Stamp Duty Value assess cheythu: ₹1.18 Crore. Declared price-inekkal ₹18 Lakhs kooduthal aanu!",
+            elements: [
+              { id: "sdv_node", type: "asset_node", x: 370, y: 100, w: 260, h: 220, icon: "document", label: "Sub-Registrar Circle Rate", subtitle: "Stamp Duty Value (SDV)", amount_val: 11800000, timeline: [
+                { start_ms: 500, end_ms: 1800, action: "fade_in" }
+              ]},
+              { id: "b2", type: "box", x: 90, y: 355, w: 820, h: 85, title: "VALUATION DISCREPANCY DETECTED", subtitle: "Declared Consideration: ₹ 1,00,00,000 vs Stamp Duty Value (SDV): ₹ 1,18,00,000. Now test 110% Safe Harbor tolerance!" }
+            ]
+          },
+          // Slide 3: Safe Harbor Scale
+          {
+            id: 3,
+            tab_title: "3 Safe Harbor Scale",
+            tag: "SLIDE 3: 110% SAFE HARBOR AUDIT SCALE",
+            duration_ms: 9000,
+            dialogue: "Section 50C 3rd Proviso 110% safe harbor allowance nalkunnu. ₹1.00 Cr × 110% = ₹1.10 Cr. Ennal SDV ₹1.18 Cr aanu. Scale tilt aavunnu, safe harbor limit breach aavunnu!",
+            elements: [
+              { id: "scale", type: "scale", x: 500, y: 110, left_label: "Agreement (₹1.00 Cr)", right_label: "Stamp Duty (₹1.18 Cr)", timeline: [
+                { start_ms: 500, end_ms: 2000, action: "draw_stroke" },
+                { start_ms: 2500, end_ms: 5500, action: "tilt", to_angle: 18 }
+              ]},
+              { id: "breach_stamp", type: "stamp", x: 300, y: 340, w: 400, h: 50, text: "110% SAFE HARBOR BREACHED", timeline: [
+                { start_ms: 5500, end_ms: 6500, action: "stamp" }
               ]}
             ]
           },
+          // Slide 4: Final Deemed Consideration Audit
           {
-            id: 2,
-            tab_title: "2 The 110% Tolerance Scale",
-            tag: "SCENE 2: THE SAFE HARBOR AUDIT SCALE",
-            duration_ms: 12000,
-            dialogue: "Section 50C 3rd Proviso oru 110% Safe Harbor limit tharunnu. Declared consideration ₹1.00 Crore-nte 110% ennal ₹1.10 Crore aanu. Ennal Sub-Registrar assess cheytha SDV ₹1.18 Crore aanu. Scale Stamp Duty-yilekku tilt aavunnu!",
+            id: 4,
+            tab_title: "4 Deemed Consideration",
+            tag: "SLIDE 4: SECTION 50C FINAL DEEMED VALUE",
+            duration_ms: 9000,
+            dialogue: "SDV 110% safe harbor limit exceed cheythathinal, Section 50C prakaram Stamp Duty Value aaya ₹1,18,00,000 capital gain calculation-il Full Value of Consideration aayi deem cheyyapedunnu!",
             elements: [
-              { id: "scale", type: "scale", x: 500, y: 105, left_label: "Agreement (₹1.00 Cr)", right_label: "Stamp Duty (₹1.18 Cr)", timeline: [
-                { start_ms: 500, end_ms: 2000, action: "draw_stroke" },
-                { start_ms: 3500, end_ms: 6500, action: "tilt", to_angle: 18 }
-              ]},
-              { id: "breakdown_scale", type: "breakdown_card", x: 50, y: 285, w: 900, h: 170, title: "SECTION 50C SAFE HARBOR BENCHMARK AUDIT", verdict_badge: "DEEMED CONSIDERATION = ₹ 1,18,00,000", rows: [
-                { label: "Declared Sale Consideration (A)", val: 10000000 },
-                { label: "110% Permissible Safe Harbor Cap [A × 110%]", val: 11000000 },
+              { id: "ledger_50c", type: "breakdown_card", x: 90, y: 110, w: 820, h: 290, title: "SECTION 50C FINAL STATUTORY VERDICT", verdict_badge: "DEEMED VALUE = ₹ 1,18,00,000", rows: [
+                { label: "Declared Sale Consideration in Agreement (A)", val: 10000000 },
+                { label: "110% Safe Harbor Permissible Threshold [A × 110%]", val: 11000000 },
                 { label: "Stamp Duty Value assessed by Sub-Registrar (SDV)", val: 11800000 },
-                { label: "STATUTORY VERDICT: SDV exceeds 110% tolerance -> Full SDV deemed as Full Value of Consideration", val: 11800000, isTotal: true }
-              ]},
-              { id: "breach_stamp", type: "stamp", x: 300, y: 200, w: 400, h: 48, text: "110% TOLERANCE BREACHED", timeline: [
-                { start_ms: 6500, end_ms: 7500, action: "stamp" }
+                { label: "STATUTORY VERDICT: SDV exceeds 110% -> Adopt SDV as Full Value of Consideration", val: 11800000, isTotal: true }
               ]}
             ]
           }
@@ -1445,23 +1470,60 @@
         concept_metaphor: "The Overflow Tank & 6-Month Clock",
         story_summary: "A property sale generates ₹85 Lakhs capital gains. Only ₹50 Lakhs can fit into NHAI/REC specified bonds.",
         scenes: [
+          // Slide 1: Gain Inflow
           {
             id: 1,
-            tab_title: "1 Capital Gain Investment",
-            tag: "SCENE 1: NHAI/REC SPECIFIED BONDS TANK",
-            duration_ms: 12000,
-            dialogue: "Section 54EC prakaram capital gain NHAI athallenkil REC bonds-il invest cheyyam. Pakshe financial year-il maximum limit ₹50 Lakhs aanu. Extra ₹35 Lakhs overflow aayi taxable aakum!",
+            tab_title: "1 Capital Gain Inflow",
+            tag: "SLIDE 1: REAL ESTATE CAPITAL GAIN",
+            duration_ms: 9000,
+            dialogue: "Kochi-il ulla commercial studio sell cheythu. Total Long-Term Capital Gain labhichath ₹85,00,000 aanu.",
             elements: [
-              { id: "tank", type: "tank", x: 380, y: 95, w: 240, h: 165, cap_pct: 0.588, cap_label: "₹50L CAP (Sec 54EC)", overflow_label: "OVERFLOW TAXABLE", timeline: [
-                { start_ms: 1000, end_ms: 2500, action: "fade_in" },
-                { start_ms: 3000, end_ms: 7000, action: "fill_progress", to_pct: 1.0 }
+              { id: "gain_node", type: "asset_node", x: 370, y: 100, w: 260, h: 220, icon: "warehouse", label: "Kochi Commercial Studio", subtitle: "LTCG Inflow", amount_val: 8500000 },
+              { id: "box1", type: "box", x: 90, y: 355, w: 820, h: 85, title: "TRANSFER OF LONG-TERM CAPITAL ASSET (LAND OR BUILDING)", subtitle: "LTCG of ₹85,00,000 eligible for investment in Section 54EC Specified Bonds (NHAI / REC / PFC / IRFC)." }
+            ]
+          },
+          // Slide 2: 6M Clock
+          {
+            id: 2,
+            tab_title: "2 Statutory 6M Deadline",
+            tag: "SLIDE 2: 6-MONTH INVESTMENT WINDOW",
+            duration_ms: 9000,
+            dialogue: "Section 54EC prakaram capital asset transfer cheytha date muthal 6 months-inuLLil specified bonds-il invest cheyyanam.",
+            elements: [
+              { id: "clock_node", type: "asset_node", x: 370, y: 100, w: 260, h: 220, icon: "clock", label: "6-Month Deadline Clock", subtitle: "Statutory Time Limit", amount_val: 6 },
+              { id: "box2", type: "box", x: 90, y: 355, w: 820, h: 85, title: "SECTION 54EC TIME LIMIT AUDIT", subtitle: "Investment must be made strictly within 6 months from the date of transfer of the original asset." }
+            ]
+          },
+          // Slide 3: Overflow Tank
+          {
+            id: 3,
+            tab_title: "3 ₹50L Overflow Tank",
+            tag: "SLIDE 3: STATUTORY BOND CAP TANK",
+            duration_ms: 9000,
+            dialogue: "Specified bonds-il oru financial year-il maximum invest cheyyan pattunnath ₹50 Lakhs mathram aanu. Baaki ₹35 Lakhs tank overflow aayi taxable aakum!",
+            elements: [
+              { id: "tank", type: "tank", x: 370, y: 95, w: 260, h: 220, fill_pct: 1.0, cap_pct: 0.588, cap_label: "₹50L STATUTORY CAP", timeline: [
+                { start_ms: 500, end_ms: 1800, action: "fade_in" },
+                { start_ms: 2000, end_ms: 6000, action: "fill_progress", to_pct: 1.0 }
               ]},
-              { id: "bonds_node", type: "asset_node", x: 60, y: 85, w: 220, h: 180, icon: "bonds", label: "Capital Gain Inflow", subtitle: "Total Gain", amount_val: 8500000 },
-              { id: "clock_node", type: "asset_node", x: 720, y: 85, w: 220, h: 180, icon: "clock", label: "6-Month Deadline", subtitle: "From Transfer Date", amount_val: 5000000 },
-              { id: "breakdown_54ec", type: "breakdown_card", x: 50, y: 290, w: 900, h: 165, title: "SECTION 54EC STATUTORY BOND LIMIT AUDIT", verdict_badge: "₹ 50,00,000 STATUTORY CAP APPLIED", rows: [
+              { id: "cap_stamp", type: "stamp", x: 300, y: 345, w: 400, h: 50, text: "₹50 LAKHS STATUTORY CAP REACHED", timeline: [
+                { start_ms: 6000, end_ms: 7000, action: "stamp" }
+              ]}
+            ]
+          },
+          // Slide 4: Final Tax Computation
+          {
+            id: 4,
+            tab_title: "4 Final Tax Liability",
+            tag: "SLIDE 4: SECTION 54EC TAX AUDIT",
+            duration_ms: 9000,
+            dialogue: "Section 54EC audit summary: Total LTCG ₹85L. ₹50L bonds-il invest cheythu exemption labhichu. Balance ₹35L taxable capital gain aayi maari.",
+            elements: [
+              { id: "ledger_54ec", type: "breakdown_card", x: 90, y: 110, w: 820, h: 290, title: "SECTION 54EC STATUTORY BOND AUDIT", verdict_badge: "₹ 50,00,000 STATUTORY RELIEF APPLIED", rows: [
                 { label: "Total Long-Term Capital Gain arising from Real Estate transfer", val: 8500000 },
-                { label: "Maximum allowable investment in NHAI / REC / PFC / IRFC Bonds", val: 5000000, isDeduction: true, prefix: "(-) " },
-                { label: "REMAINING TAXABLE CAPITAL GAIN (Statutory Overflow)", val: 3500000, isTotal: true }
+                { label: "LESS: Maximum permissible deduction u/s 54EC (NHAI / REC Bonds)", val: 5000000, isDeduction: true, prefix: "(-) " },
+                { label: "NET TAXABLE LONG-TERM CAPITAL GAIN (Statutory Overflow)", val: 3500000, isTotal: true },
+                { label: "Tax on taxable LTCG u/s 112 @ 12.5% / 20%", val: 437500, prefix: "Tax @ 12.5% = " }
               ]}
             ]
           }
@@ -1474,20 +1536,57 @@
         concept_metaphor: "Contractor TDS Diversion Splitter Pipe",
         story_summary: "Evergreen Cafe pays ₹2,50,000 catering contractor bill to Mr. Das. 1% TDS (₹2,500) diverted to Govt, ₹2,47,500 net paid.",
         scenes: [
+          // Slide 1: Contract Bill
           {
             id: 1,
-            tab_title: "1 Invoice & TDS Deduction",
-            tag: "SCENE 1: CONTRACT PAYMENT AUDIT",
-            duration_ms: 12000,
-            dialogue: "Evergreen Cafe contractor Das-nu ₹2,50,000 payment cheyyunnu. Single contract ₹30,000 threshold exceed cheythathinal Individual contractor aaya Das-nte bill-il ninnu 1% TDS (₹2,500) kuraichu Government-il deposit cheyyanam.",
+            tab_title: "1 Contract & Invoice",
+            tag: "SLIDE 1: CONTRACT PAYMENT BILL",
+            duration_ms: 9000,
+            dialogue: "Evergreen Cafe contractor Das-nu cafe renovation-nu vendi ₹2,50,000 payment cheyyunnu.",
             elements: [
-              { id: "cafe", type: "asset_node", x: 50, y: 85, w: 220, h: 180, icon: "warehouse", label: "Evergreen Cafe", subtitle: "Deductor (Payer)", amount_val: 250000 },
-              { id: "invoice", type: "asset_node", x: 390, y: 85, w: 220, h: 180, icon: "document", label: "Contractor Bill", subtitle: "Threshold > ₹30,000", amount_val: 250000 },
-              { id: "das", type: "asset_node", x: 730, y: 85, w: 220, h: 180, icon: "person", label: "Mr. Das (Contractor)", subtitle: "Deductee Payee (Indiv)", amount_val: 247500 },
-              { id: "breakdown_194c", type: "breakdown_card", x: 50, y: 290, w: 900, h: 165, title: "SECTION 194C CONTRACT PAYMENT & TDS AUDIT", verdict_badge: "1% TDS DEDUCTED (INDIVIDUAL RATE)", rows: [
-                { label: "Gross Contract Billing Value", val: 250000 },
+              { id: "cafe", type: "asset_node", x: 90, y: 110, w: 260, h: 220, icon: "warehouse", label: "Evergreen Cafe", subtitle: "Deductor (Payer)", amount_val: 250000 },
+              { id: "pipe_inv", type: "flow_pipe", x1: 350, y1: 220, x2: 650, y2: 220, label: "CONTRACT INVOICE" },
+              { id: "das", type: "asset_node", x: 650, y: 110, w: 260, h: 220, icon: "person", label: "Mr. Das (Contractor)", subtitle: "Deductee Payee (Indiv)", amount_val: 250000 },
+              { id: "box_c1", type: "box", x: 90, y: 365, w: 820, h: 75, title: "SECTION 194C CONTRACT PAYMENT", subtitle: "Contractual work executed by individual civil contractor. Gross billing: ₹ 2,50,000." }
+            ]
+          },
+          // Slide 2: Threshold Check
+          {
+            id: 2,
+            tab_title: "2 Threshold Check",
+            tag: "SLIDE 2: STATUTORY THRESHOLD AUDIT",
+            duration_ms: 9000,
+            dialogue: "Section 194C single contract threshold ₹30,000 aanu. Ee bill ₹2,50,000 aayathinal threshold exceed cheythu, TDS mandatory aanu!",
+            elements: [
+              { id: "doc_node", type: "asset_node", x: 370, y: 100, w: 260, h: 220, icon: "document", label: "Threshold Verification", subtitle: "Single Contract > ₹30,000", amount_val: 250000 },
+              { id: "thresh_stamp", type: "stamp", x: 300, y: 345, w: 400, h: 50, text: "₹30,000 THRESHOLD EXCEEDED - TDS MANDATORY" }
+            ]
+          },
+          // Slide 3: TDS Splitter
+          {
+            id: 3,
+            tab_title: "3 TDS Diversion Split",
+            tag: "SLIDE 3: 1% TDS DIVERSION PIPE",
+            duration_ms: 9000,
+            dialogue: "Individual contractor aayathinal 1% TDS (₹2,500) kuraichu Government credit-il deposit cheyyanam. Baaki 99% (₹2,47,500) contractor-ku nalkunnu.",
+            elements: [
+              { id: "split_valve", type: "split_valve", x: 300, y: 100, w: 400, h: 230, val1: 247500, val2: 2500 },
+              { id: "box_c3", type: "box", x: 90, y: 365, w: 820, h: 75, title: "STATUTORY TDS DIVERSION (SECTION 194C)", subtitle: "1% TDS deducted for Individual/HUF contractors • Deposited via Challan ITNS 281 by 7th of next month." }
+            ]
+          },
+          // Slide 4: Final Summary Ledger
+          {
+            id: 4,
+            tab_title: "4 Final Payment Audit",
+            tag: "SLIDE 4: SECTION 194C TAX AUDIT LEDGER",
+            duration_ms: 9000,
+            dialogue: "Section 194C audit complete: Gross bill ₹2,50,000, less 1% TDS ₹2,500, Net payment disbursed to Mr. Das ₹2,47,500.",
+            elements: [
+              { id: "ledger_194c", type: "breakdown_card", x: 90, y: 110, w: 820, h: 290, title: "SECTION 194C STATUTORY PAYMENT LEDGER", verdict_badge: "1% TDS COMPLIANCE VERIFIED", rows: [
+                { label: "Gross Billing Value of Contract", val: 250000 },
                 { label: "LESS: TDS u/s 194C @ 1% for Individual / HUF Contractor", val: 2500, isDeduction: true, prefix: "(-) " },
-                { label: "NET PAYMENT DISBURSED TO CONTRACTOR", val: 247500, isTotal: true }
+                { label: "NET PAYMENT DISBURSED TO CONTRACTOR", val: 247500, isTotal: true },
+                { label: "TDS Credit reflected in Form 26AS of Deductee", val: 2500, prefix: "Form 26AS = " }
               ]}
             ]
           }
@@ -1500,19 +1599,45 @@
         concept_metaphor: "Firm Asset Pool & Partner Withdrawal",
         story_summary: "Retiring partner from Malabar Engineering firm receives commercial land. Firm pays capital gains on FMV excess.",
         scenes: [
+          // Slide 1: Firm Pool
           {
             id: 1,
-            tab_title: "1 Partner Withdrawal from Firm",
-            tag: "SCENE 1: RECONSTITUTION OF FIRM",
-            duration_ms: 12000,
-            dialogue: "Malabar Engineering Firm-il ninnum partner retire aavunnu. Reconstitution samayathu firm thante capital asset aaya commercial plot partner-ku settlement aayi nalkunnu.",
+            tab_title: "1 Firm Asset Pool",
+            tag: "SLIDE 1: RECONSTITUTION OF FIRM",
+            duration_ms: 9000,
+            dialogue: "Malabar Engineering Firm-il ninnum partner retire aavunnu. Firm thante capital asset aaya commercial plot partner-ku settlement aayi nalkunnu.",
             elements: [
-              { id: "firm", type: "asset_node", x: 80, y: 85, w: 240, h: 180, icon: "vault", label: "Malabar Firm", subtitle: "Firm Asset Pool", amount_val: 12000000 },
-              { id: "partner", type: "asset_node", x: 680, y: 85, w: 240, h: 180, icon: "person", label: "Retiring Partner", subtitle: "Capital Account Balance", amount_val: 5000000 },
-              { id: "tax_card", type: "breakdown_card", x: 50, y: 290, w: 900, h: 165, title: "SECTION 45(4) PARTNERSHIP DISSOLUTION AUDIT", verdict_badge: "TAXABLE IN HANDS OF FIRM", rows: [
+              { id: "firm", type: "asset_node", x: 370, y: 100, w: 260, h: 220, icon: "vault", label: "Malabar Engineering Firm", subtitle: "Firm Asset Pool", amount_val: 12000000 },
+              { id: "box_f1", type: "box", x: 90, y: 355, w: 820, h: 85, title: "RECONSTITUTION OF SPECIFIED ENTITY (SECTION 45(4))", subtitle: "Partner receives capital asset at the time of dissolution or reconstitution of the firm." }
+            ]
+          },
+          // Slide 2: Partner Settlement
+          {
+            id: 2,
+            tab_title: "2 Partner Settlement",
+            tag: "SLIDE 2: ASSET DISTRIBUTION TO RETIRING PARTNER",
+            duration_ms: 9000,
+            dialogue: "Retiring partner-nte Capital Account balance ₹50 Lakhs aanu. Ennal partner-ku nalkiya land-nte Fair Market Value ₹1.20 Crore aanu.",
+            elements: [
+              { id: "partner", type: "asset_node", x: 100, y: 110, w: 260, h: 220, icon: "person", label: "Retiring Partner", subtitle: "Capital Account Balance", amount_val: 5000000 },
+              { id: "flow_p", type: "flow_pipe", x1: 360, y1: 220, x2: 640, y2: 220, label: "LAND SETTLEMENT" },
+              { id: "land_p", type: "asset_node", x: 640, y: 110, w: 260, h: 220, icon: "warehouse", label: "Commercial Land", subtitle: "Fair Market Value (FMV)", amount_val: 12000000 },
+              { id: "box_f2", type: "box", x: 90, y: 365, w: 820, h: 75, title: "SECTION 45(4) STATUTORY FORMULA: A = B + C - D", subtitle: "Excess of Fair Market Value of asset over partner's capital account balance is taxable in hands of the firm." }
+            ]
+          },
+          // Slide 3: Final Tax Liability in Hands of Firm
+          {
+            id: 3,
+            tab_title: "3 Taxable Gain in Firm",
+            tag: "SLIDE 3: STATUTORY CAPITAL GAIN IN HANDS OF FIRM",
+            duration_ms: 9000,
+            dialogue: "Section 45(4) prakaram Fair Market Value ₹1.20 Crore-il ninnum Partner Capital Account ₹50 Lakhs kuraichaal bakki ₹70,00,000 firm-inte capital gain aayi tax cheyyapedum!",
+            elements: [
+              { id: "ledger_45", type: "breakdown_card", x: 90, y: 110, w: 820, h: 290, title: "SECTION 45(4) PARTNERSHIP DISSOLUTION AUDIT", verdict_badge: "TAXABLE IN HANDS OF FIRM", rows: [
                 { label: "Fair Market Value (FMV) of Land distributed to retiring partner", val: 12000000 },
                 { label: "LESS: Partner Capital Account balance at retirement date", val: 5000000, isDeduction: true, prefix: "(-) " },
-                { label: "CAPITAL GAIN TAXABLE IN HANDS OF THE FIRM (Section 45(4))", val: 7000000, isTotal: true }
+                { label: "CAPITAL GAIN TAXABLE IN HANDS OF THE FIRM (Section 45(4))", val: 7000000, isTotal: true },
+                { label: "Tax Liability payable by the Partnership Firm", val: 2184000, prefix: "Tax @ 31.2% = " }
               ]}
             ]
           }
@@ -1536,7 +1661,7 @@
         ctx.fillStyle = "#ffffff";
         ctx.font = "900 16px monospace";
         ctx.textAlign = "center";
-        ctx.fillText("GEMINI: INVENTING UNIQUE STORY & HIGH-DETAIL CHOREOGRAPHY...", 500, 148);
+        ctx.fillText("GEMINI: INVENTING UNIQUE STORY & 4-5 SLIDE CHOREOGRAPHY...", 500, 148);
 
         const radarX = 500, radarY = 260;
         ctx.strokeStyle = "#000000";
@@ -1554,7 +1679,7 @@
 
         ctx.fillStyle = "#000000";
         ctx.font = "800 14px -apple-system, BlinkMacSystemFont, sans-serif";
-        ctx.fillText("Composing high-density mechanical linework across 1000 × 500 stage", 500, 355);
+        ctx.fillText("Pacing multi-slide scenes with zero collisions across 1000 × 500 stage", 500, 355);
         return;
       }
 
@@ -1569,7 +1694,7 @@
         });
       }
 
-      document.getElementById("scene_tag_label").textContent = curScene.tag || ("SCENE " + (currentSceneIdx + 1));
+      document.getElementById("scene_tag_label").textContent = curScene.tag || ("SLIDE " + (currentSceneIdx + 1));
       document.getElementById("narration_text").textContent = curScene.dialogue || "";
     }
 
@@ -1580,13 +1705,17 @@
 
       if (isPlaying && !isGenerating) {
         const curScene = ACTIVE_DATA?.scenes?.[currentSceneIdx];
-        const maxMs = curScene?.duration_ms || 12000;
+        const maxMs = curScene?.duration_ms || 9000;
 
         currentTimeMs += deltaMs;
-        if (currentTimeMs > maxMs) {
-          currentTimeMs = maxMs;
-          isPlaying = false;
-          updatePlayBtn();
+        if (currentTimeMs >= maxMs) {
+          if (autoAdvance && ACTIVE_DATA?.scenes && currentSceneIdx < ACTIVE_DATA.scenes.length - 1) {
+            nextSlide();
+          } else {
+            currentTimeMs = maxMs;
+            isPlaying = false;
+            updatePlayBtn();
+          }
         }
         updateScrubberUI();
       }
@@ -1597,7 +1726,7 @@
 
     function updateScrubberUI() {
       const curScene = ACTIVE_DATA?.scenes?.[currentSceneIdx];
-      const maxMs = curScene?.duration_ms || 12000;
+      const maxMs = curScene?.duration_ms || 9000;
 
       const slider = document.getElementById("timeline_slider");
       slider.max = maxMs;
@@ -1622,10 +1751,40 @@
       });
     }
 
+    function nextSlide() {
+      if (!ACTIVE_DATA || !ACTIVE_DATA.scenes) return;
+      if (currentSceneIdx < ACTIVE_DATA.scenes.length - 1) {
+        switchScene(currentSceneIdx + 1);
+      } else {
+        switchScene(0);
+      }
+    }
+
+    function prevSlide() {
+      if (!ACTIVE_DATA || !ACTIVE_DATA.scenes) return;
+      if (currentSceneIdx > 0) {
+        switchScene(currentSceneIdx - 1);
+      } else {
+        switchScene(ACTIVE_DATA.scenes.length - 1);
+      }
+    }
+
+    function toggleAutoAdvance() {
+      autoAdvance = !autoAdvance;
+      const btn = document.getElementById("btn_autoadvance");
+      if (autoAdvance) {
+        btn.classList.add("active-toggle");
+        btn.textContent = "⏩ Auto-Advance: ON";
+      } else {
+        btn.classList.remove("active-toggle");
+        btn.textContent = "⏩ Auto-Advance: OFF";
+      }
+    }
+
     function togglePlay() {
       isPlaying = !isPlaying;
       const curScene = ACTIVE_DATA?.scenes?.[currentSceneIdx];
-      const maxMs = curScene?.duration_ms || 12000;
+      const maxMs = curScene?.duration_ms || 9000;
       if (isPlaying && currentTimeMs >= maxMs) {
         currentTimeMs = 0;
       }
@@ -1643,26 +1802,10 @@
       render(currentTimeMs);
     }
 
-    function seekRelative(deltaMs) {
-      const curScene = ACTIVE_DATA?.scenes?.[currentSceneIdx];
-      const maxMs = curScene?.duration_ms || 12000;
-      currentTimeMs = Math.max(0, Math.min(currentTimeMs + deltaMs, maxMs));
-      updateScrubberUI();
-      render(currentTimeMs);
-    }
-
     function toggleGrid() {
       showGrid = !showGrid;
       const btn = document.getElementById("btn_grid_toggle");
       if (showGrid) btn.classList.add("active-toggle");
-      else btn.classList.remove("active-toggle");
-      render(currentTimeMs);
-    }
-
-    function toggleDither() {
-      useDither = !useDither;
-      const btn = document.getElementById("btn_dither_toggle");
-      if (useDither) btn.classList.add("active-toggle");
       else btn.classList.remove("active-toggle");
       render(currentTimeMs);
     }
@@ -1676,7 +1819,7 @@
       ACTIVE_DATA.scenes.forEach((sc, idx) => {
         const btn = document.createElement("button");
         btn.className = "scene-tab-btn" + (idx === currentSceneIdx ? " active" : "");
-        btn.innerHTML = `<span>🎬 ${sc.tab_title || ("Scene " + (idx + 1))}</span>`;
+        btn.innerHTML = `<span>🎬 ${sc.tab_title || ("Slide " + (idx + 1))}</span>`;
         btn.onclick = () => switchScene(idx);
         container.appendChild(btn);
       });
@@ -1707,7 +1850,7 @@
       isGenerating = true;
       btn.disabled = true;
       btn.innerHTML = "<span>⏳ Thinking...</span>";
-      statusBadge.textContent = "Choreographing Story & Milliseconds...";
+      statusBadge.textContent = "Choreographing 4-5 Slides Live...";
       statusBadge.style.color = "#d97706";
       statusBadge.style.background = "#fef3c7";
       statusBadge.style.borderColor = "#d97706";
@@ -1733,7 +1876,7 @@
         isPlaying = true;
         setupSceneTabs();
 
-        statusBadge.textContent = "Success • Rendered Live!";
+        statusBadge.textContent = `Success • ${data.scenes?.length || 0} Slides Rendered Live!`;
         statusBadge.style.color = "#107c10";
         statusBadge.style.background = "#eefbee";
         statusBadge.style.borderColor = "#107c10";
@@ -1756,9 +1899,6 @@
       seekTo(parseFloat(e.target.value));
     });
 
-    // Initialize Patterns & Start Loop
-    pattern50 = createDitherPattern(0.5);
-    pattern25 = createDitherPattern(0.25);
     setupSceneTabs();
     requestAnimationFrame(animate);
   </script>
