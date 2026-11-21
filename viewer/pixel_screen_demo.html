@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>1000x500 Monochrome Pixel Screen Demo (Option A)</title>
+  <title>1000x500 Monochrome Pixel Screen Demo (Option A) + Live Gemini Studio</title>
   <style>
     :root {
       --bg-desk: #f4f5f7;
@@ -22,13 +22,13 @@
       flex-direction: column;
       align-items: center;
       min-height: 100vh;
-      padding: 24px;
+      padding: 20px 24px 40px 24px;
     }
 
     .demo-header {
       width: 100%;
       max-width: 1040px;
-      margin-bottom: 16px;
+      margin-bottom: 14px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -57,6 +57,115 @@
       border-radius: 4px;
       text-transform: uppercase;
       letter-spacing: 0.5px;
+    }
+
+    /* Live Gemini Studio Bar */
+    .gemini-studio-bar {
+      width: 100%;
+      max-width: 1040px;
+      background: #ffffff;
+      border: 3px solid #000000;
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin-bottom: 14px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.06);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .gemini-top-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .gemini-label {
+      font-size: 12px;
+      font-weight: 900;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .gemini-status {
+      font-family: monospace;
+      font-size: 11px;
+      font-weight: 700;
+      color: #444;
+      background: #f0f0f0;
+      padding: 3px 8px;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+    .gemini-input-group {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+    }
+    .gemini-input {
+      flex: 1;
+      padding: 10px 14px;
+      font-size: 13px;
+      font-weight: 600;
+      border: 2px solid #000000;
+      border-radius: 6px;
+      outline: none;
+      background: #ffffff;
+    }
+    .gemini-input:focus {
+      border-color: #000000;
+      box-shadow: 0 0 0 2px rgba(0,0,0,0.15);
+    }
+    .btn-gemini-gen {
+      padding: 10px 18px;
+      font-size: 13px;
+      font-weight: 900;
+      color: #ffffff;
+      background: #000000;
+      border: 2px solid #000000;
+      border-radius: 6px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+      transition: all 0.15s ease;
+    }
+    .btn-gemini-gen:hover {
+      background: #333333;
+    }
+    .btn-gemini-gen:disabled {
+      background: #888888;
+      border-color: #888888;
+      cursor: not-allowed;
+    }
+    .preset-pills-row {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+    .preset-pill-label {
+      font-size: 11px;
+      font-weight: 800;
+      color: #666;
+      margin-right: 2px;
+    }
+    .preset-pill {
+      font-size: 11px;
+      font-weight: 700;
+      background: #ffffff;
+      border: 1.5px solid #000000;
+      border-radius: 4px;
+      padding: 3px 10px;
+      cursor: pointer;
+      transition: all 0.12s ease;
+    }
+    .preset-pill:hover {
+      background: #000000;
+      color: #ffffff;
     }
 
     /* Scene Switcher Tabs */
@@ -97,46 +206,38 @@
       background: #ffffff;
       border: 3px solid #000000;
       box-shadow: 0 16px 36px rgba(0,0,0,0.12), 0 2px 6px rgba(0,0,0,0.08);
+      margin-bottom: 14px;
       border-radius: 4px;
       overflow: hidden;
-      width: 1000px;
-      height: 500px;
-      margin-bottom: 14px;
-      flex-shrink: 0;
     }
-
     #pixel_canvas {
       display: block;
       width: 1000px;
       height: 500px;
-      background-color: #ffffff;
-      image-rendering: pixelated;
+      background: #ffffff;
     }
 
-    /* Dimension Indicator Overlay */
     .dim-tag {
       position: absolute;
-      top: 8px;
+      top: 6px;
       right: 8px;
-      background: rgba(255, 255, 255, 0.92);
+      background: #ffffff;
       border: 1px solid #000000;
-      padding: 3px 8px;
-      font-size: 11px;
       font-family: monospace;
-      font-weight: 800;
-      color: #000000;
-      border-radius: 3px;
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 6px;
       pointer-events: none;
     }
 
-    /* Narration Box */
+    /* Narration Bar */
     .narration-panel {
       width: 1000px;
       background: #ffffff;
       border: 2px solid #000000;
       border-radius: 6px;
       padding: 12px 18px;
-      margin-bottom: 12px;
+      margin-bottom: 14px;
       display: flex;
       flex-direction: column;
       gap: 6px;
@@ -165,7 +266,7 @@
       border-radius: 50%;
     }
     .narration-text {
-      font-size: 14px;
+      font-size: 13.5px;
       line-height: 1.5;
       font-weight: 600;
       color: #000000;
@@ -253,20 +354,36 @@
     </div>
   </div>
 
+  <!-- Live Gemini Studio Prompt Bar -->
+  <div class="gemini-studio-bar">
+    <div class="gemini-top-row">
+      <div class="gemini-label">
+        <span>✨ Live Statutory Pixel Generator</span>
+        <span style="font-size:10px; color:#666; font-weight:700;">(Powered by Gemini 3.8 Flash)</span>
+      </div>
+      <div class="gemini-status" id="gemini_status_badge">API Ready • 5 Active Keys</div>
+    </div>
+    <div class="gemini-input-group">
+      <input type="text" class="gemini-input" id="gemini_topic_input" 
+        placeholder="Enter any tax provision or scenario (e.g. Section 54EC REC bonds capped at ₹50 Lakhs)..."
+        value="Section 54EC: Capital gain on land or building invested in REC or NHAI bonds within 6 months, capped at maximum ₹50 Lakhs">
+      <button class="btn-gemini-gen" id="btn_gemini_generate" onclick="generateFromGemini()">
+        <span>✨ Generate Live</span>
+      </button>
+    </div>
+    <div class="preset-pills-row">
+      <span class="preset-pill-label">Quick Presets:</span>
+      <button class="preset-pill" onclick="loadPreset('54D')">Sec 54D Industrial Undertaking</button>
+      <button class="preset-pill" onclick="loadPreset('54EC')">Sec 54EC REC/NHAI Bonds ₹50L Cap</button>
+      <button class="preset-pill" onclick="loadPreset('50C')">Sec 50C Stamp Duty 110% Safe Harbor</button>
+      <button class="preset-pill" onclick="loadPreset('54F')">Sec 54F Residential House Investment</button>
+      <button class="preset-pill" onclick="loadPreset('45(4)')">Sec 45(4) Partnership Asset Distribution</button>
+    </div>
+  </div>
+
   <!-- Scene Switcher -->
-  <div class="scene-tabs-bar">
-    <button class="scene-tab-btn active" onclick="switchScene(0)">
-      <span>1</span> Section 54D: Compulsory Acquisition & Compensation
-    </button>
-    <button class="scene-tab-btn" onclick="switchScene(1)">
-      <span>2</span> Section 54D: 3-Part Gatekeeper Portal (Unlocked)
-    </button>
-    <button class="scene-tab-btn" onclick="switchScene(2)">
-      <span>3</span> Section 51: Advance Money Pixel Dissolve & Remainder
-    </button>
-    <button class="scene-tab-btn" onclick="switchScene(3)">
-      <span>4</span> Sec 54: Pixel Arithmetic & Exemption Meter
-    </button>
+  <div class="scene-tabs-bar" id="scene_tabs_container">
+    <!-- Populated dynamically -->
   </div>
 
   <!-- The 1000x500 Pixel Screen -->
@@ -301,25 +418,30 @@
       </div>
       <div class="ctrl-group">
         <button class="btn-action" id="btn_grid_toggle" onclick="toggleGrid()">▦ Show Pixel Grid</button>
-        <button class="btn-action" id="btn_dither_toggle" onclick="toggleDither()">░ Dither Shading Mode</button>
+        <button class="btn-action active-toggle" id="btn_dither_toggle" onclick="toggleDither()">░ Dither Shading Mode</button>
       </div>
     </div>
   </div>
 
   <script>
+    // 1000x500 Fixed Pixel Screen State
     const canvas = document.getElementById("pixel_canvas");
     const ctx = canvas.getContext("2d");
 
-    let currentTime = 0.0;
-    const duration = 14.0;
-    let isPlaying = false;
-    let lastTimestamp = null;
-    let activeSceneIdx = 0;
+    let isGenerating = false;
+    let currentTopicData = null;
+    let currentSceneIdx = 0;
+    let currentTime = 0;
+    let isPlaying = true;
+    let lastAnimTime = 0;
     let showGrid = false;
     let useDither = true;
+    const SCENE_DURATION = 14.0;
 
-    // 1-Bit Dither Patterns (Pure Black & White Checkerboards)
-    function createDitherPattern(density = 0.5) {
+    let pattern50 = null;
+    let pattern25 = null;
+
+    function createDitherPattern(density) {
       const pCanvas = document.createElement("canvas");
       pCanvas.width = 4;
       pCanvas.height = 4;
@@ -328,27 +450,15 @@
       pCtx.fillRect(0, 0, 4, 4);
       pCtx.fillStyle = "#000000";
 
-      if (density >= 0.5) {
-        // 50% 2x2 checkerboard
+      if (density === 0.5) {
         pCtx.fillRect(0, 0, 2, 2);
         pCtx.fillRect(2, 2, 2, 2);
-      } else if (density >= 0.25) {
-        // 25% single dots
+      } else if (density === 0.25) {
         pCtx.fillRect(0, 0, 1, 1);
         pCtx.fillRect(2, 2, 1, 1);
-      } else {
-        // 12.5% sparse dots
-        pCtx.fillRect(0, 0, 1, 1);
       }
       return ctx.createPattern(pCanvas, "repeat");
     }
-
-    let pattern50, pattern25;
-    window.addEventListener("load", () => {
-      pattern50 = createDitherPattern(0.5);
-      pattern25 = createDitherPattern(0.25);
-      seekTo(0);
-    });
 
     function clearScreen() {
       ctx.fillStyle = "#ffffff";
@@ -376,12 +486,10 @@
     }
 
     function drawHeaderBanner(title, sectionCode) {
-      // Outer black frame box
       ctx.strokeStyle = "#000000";
       ctx.lineWidth = 2.5;
       ctx.strokeRect(40, 20, 920, 46);
 
-      // Black badge tag on left
       ctx.fillStyle = "#000000";
       ctx.fillRect(44, 24, 170, 38);
       ctx.fillStyle = "#ffffff";
@@ -389,9 +497,8 @@
       ctx.textAlign = "center";
       ctx.fillText(sectionCode || "STATUTE", 129, 48);
 
-      // Black Title text
       ctx.fillStyle = "#000000";
-      ctx.font = "900 18px -apple-system, BlinkMacSystemFont, sans-serif";
+      ctx.font = "900 17px -apple-system, BlinkMacSystemFont, sans-serif";
       ctx.textAlign = "left";
       ctx.fillText(title, 230, 49);
     }
@@ -425,28 +532,28 @@
       ctx.fill();
 
       ctx.fillStyle = "#000000";
-      ctx.font = "800 16px -apple-system, BlinkMacSystemFont, sans-serif";
+      ctx.font = "800 15px -apple-system, BlinkMacSystemFont, sans-serif";
       ctx.textAlign = "left";
-      ctx.fillText(name, x + 72, y + 36);
+      ctx.fillText(name, x + 72, y + h / 2 - 4);
 
       ctx.fillStyle = "#555555";
-      ctx.font = "700 12px monospace";
-      ctx.fillText(subtitle, x + 72, y + 58);
+      ctx.font = "700 11px monospace";
+      ctx.fillText(subtitle, x + 72, y + h / 2 + 15);
     }
 
-    function drawPixelFactory(x, y, w, h, progress = 1.0) {
+    function drawPixelFactory(x, y, w, h) {
       ctx.strokeStyle = "#000000";
-      ctx.lineWidth = 2;
+      ctx.lineWidth = 2.5;
 
       ctx.beginPath();
-      ctx.moveTo(x, y + 40);
-      ctx.lineTo(x + w * 0.33, y);
-      ctx.lineTo(x + w * 0.33, y + 40);
-      ctx.lineTo(x + w * 0.66, y);
-      ctx.lineTo(x + w * 0.66, y + 40);
-      ctx.lineTo(x + w, y);
+      ctx.moveTo(x, y + h);
+      ctx.lineTo(x, y + 40);
+      ctx.lineTo(x + w * 0.35, y);
+      ctx.lineTo(x + w * 0.35, y + 25);
+      ctx.lineTo(x + w * 0.7, y);
+      ctx.lineTo(x + w * 0.7, y + 25);
+      ctx.lineTo(x + w, y + 10);
       ctx.lineTo(x + w, y + h);
-      ctx.lineTo(x, y + h);
       ctx.closePath();
       ctx.stroke();
 
@@ -476,492 +583,629 @@
       ctx.fillText("INDUSTRIAL UNDERTAKING", x + w/2, y + h - 19);
     }
 
-    const SCENES = [
-      {
-        tag: "SCENE 1: STATUTORY COMPULSORY ACQUISITION",
-        dialogue: "Rajesh owns an industrial undertaking manufacturing engineering parts. Under statutory developmental authority, the land and building are compulsory acquired. Monetary compensation of ₹40 Lakhs is awarded.",
-        render: (t) => {
-          drawHeaderBanner("Section 54D: Compulsory Acquisition of Industrial Land & Building", "SEC 54D(1)");
-
-          drawActorBox(50, 95, 280, 80, "Rajesh (Assessee)", "Industrial Undertaking Owner");
-          drawActorBox(670, 95, 280, 80, "State Authority", "Acquiring Government Body");
-
-          drawPixelFactory(100, 210, 180, 150);
-
-          ctx.strokeStyle = "#000000";
-          ctx.lineWidth = 2;
-          ctx.setLineDash([6, 6]);
-          ctx.beginPath();
-          ctx.moveTo(280, 270);
-          ctx.quadraticCurveTo(500, 160, 680, 220);
-          ctx.stroke();
-
-          ctx.beginPath();
-          ctx.moveTo(680, 310);
-          ctx.quadraticCurveTo(500, 420, 280, 340);
-          ctx.stroke();
-          ctx.setLineDash([]);
-
-          if (t >= 1.5) {
-            const p1 = Math.min(1.0, (t - 1.5) / 2.5);
-            const ease1 = p1 * p1 * (3 - 2 * p1);
-            const curX = 680 + (280 - 680) * ease1;
-            const curY = 220 + (270 - 220) * ease1 - Math.sin(p1 * Math.PI) * 60;
-
-            ctx.fillStyle = "#ffffff";
-            ctx.fillRect(curX - 85, curY - 24, 170, 48);
-            ctx.strokeStyle = "#000000";
-            ctx.lineWidth = 2.5;
-            ctx.strokeRect(curX - 85, curY - 24, 170, 48);
-            ctx.fillStyle = "#000000";
-            ctx.font = "900 12px monospace";
-            ctx.textAlign = "center";
-            ctx.fillText("COMPULSORY ACQUISITION", curX, curY - 4);
-            ctx.font = "800 11px sans-serif";
-            ctx.fillText("Under Statutory Law", curX, curY + 14);
-          }
-
-          if (t >= 5.5) {
-            const p2 = Math.min(1.0, (t - 5.5) / 2.5);
-            const ease2 = p2 * p2 * (3 - 2 * p2);
-            const curX = 680 + (280 - 680) * ease2;
-            const curY = 310 + (340 - 310) * ease2 + Math.sin(p2 * Math.PI) * 60;
-
-            ctx.fillStyle = "#000000";
-            ctx.fillRect(curX - 95, curY - 24, 190, 48);
-            ctx.fillStyle = "#ffffff";
-            ctx.font = "900 15px -apple-system, BlinkMacSystemFont, sans-serif";
-            ctx.textAlign = "center";
-            ctx.fillText("₹ 40,00,000", curX, curY - 3);
-            ctx.font = "700 11px monospace";
-            ctx.fillText("COMPENSATION PAID", curX, curY + 14);
-
-            for (let i = 0; i < 8; i++) {
-              const lag = Math.max(0, p2 - i * 0.04);
-              const tx = 680 + (280 - 680) * lag;
-              const ty = 310 + (340 - 310) * lag + Math.sin(lag * Math.PI) * 60;
-              ctx.fillStyle = "#000000";
-              ctx.fillRect(tx - 3, ty - 3, 6, 6);
-            }
-          }
-
-          if (t >= 10.0) {
-            ctx.fillStyle = "#ffffff";
-            ctx.fillRect(50, 410, 900, 60);
-            ctx.strokeStyle = "#000000";
-            ctx.lineWidth = 2.5;
-            ctx.strokeRect(50, 410, 900, 60);
-
-            ctx.fillStyle = "#000000";
-            ctx.fillRect(60, 420, 140, 40);
-            ctx.fillStyle = "#ffffff";
-            ctx.font = "900 12px monospace";
-            ctx.textAlign = "center";
-            ctx.fillText("STEP 1 CONCLUDED", 130, 444);
-
-            ctx.fillStyle = "#000000";
-            ctx.font = "800 15px -apple-system, BlinkMacSystemFont, sans-serif";
-            ctx.textAlign = "left";
-            ctx.fillText("Vesting in Govt Complete • Full Consideration Deemed as ₹40 Lakhs Compensation", 215, 445);
-          }
-        }
-      },
-
-      {
-        tag: "SCENE 2: STATUTORY GATEKEEPER CHECKLIST",
-        dialogue: "Section 54D unlocks full Capital Gain exemption ONLY IF 3 conditions are fulfilled: compulsory acquisition of industrial land/building, 2+ years of prior industrial use, and reinvestment within 3 years. All conditions met · GATE UNLOCKED!",
-        render: (t) => {
-          drawHeaderBanner("Section 54D Statutory Gatekeeper Portal (Checklist Audit)", "SEC 54D CRITERIA");
-
-          const conditions = [
+    // Default Section 54D Built-in Preset
+    const DEFAULT_54D_DATA = {
+      section_code: "SEC 54D",
+      title: "Section 54D: Compulsory Acquisition of Industrial Land & Building",
+      summary: "Capital gain exemption on compulsory acquisition of land or building used for industrial undertaking.",
+      scenes: [
+        {
+          id: 1,
+          tab_title: "1 Section 54D: Compulsory Acquisition & Compensation",
+          tag: "SCENE 1: STATUTORY COMPULSORY ACQUISITION",
+          type: "transfer",
+          dialogue: "Rajesh owns an industrial undertaking manufacturing engineering parts. Under statutory developmental authority, the land and building are compulsory acquired. Monetary compensation of ₹40 Lakhs is awarded.",
+          actor_left: { name: "Rajesh (Assessee)", role: "Industrial Undertaking Owner" },
+          actor_right: { name: "State Authority", role: "Acquiring Government Body" },
+          asset: { name: "Industrial Land & Building", type: "industrial_factory" },
+          transfer_label: "COMPULSORY ACQUISITION",
+          amount_badge: "₹ 40,00,000",
+          amount_val: 4000000,
+          amount_label: "COMPENSATION PAID"
+        },
+        {
+          id: 2,
+          tab_title: "2 Section 54D: 3-Part Gatekeeper Portal (Unlocked)",
+          tag: "SCENE 2: STATUTORY GATEKEEPER CHECKLIST",
+          dialogue: "Section 54D unlocks full Capital Gain exemption ONLY IF 3 conditions are fulfilled: compulsory acquisition of industrial land/building, 2+ years of prior industrial use, and reinvestment within 3 years. All conditions met · GATE UNLOCKED!",
+          type: "gatekeeper",
+          portal_title: "SECTION 54D RELIEF PORTAL",
+          conditions: [
             { label: "1. Compulsory Acquisition of Land or Building", cue: 1.0 },
             { label: "2. Used for Industrial Undertaking >= 2 Years", cue: 4.0 },
             { label: "3. Reinvestment in New Industrial Asset <= 3 Years", cue: 7.0 }
-          ];
-
-          conditions.forEach((c, idx) => {
-            const cardY = 95 + idx * 95;
-            const pEnter = Math.min(1.0, Math.max(0, (t - c.cue) / 0.8));
-            if (pEnter <= 0) return;
-
-            const curX = 40 + (1 - pEnter) * -60;
-
-            ctx.fillStyle = "#ffffff";
-            ctx.fillRect(curX, cardY, 460, 75);
-            ctx.strokeStyle = "#000000";
-            ctx.lineWidth = 2;
-            ctx.strokeRect(curX, cardY, 460, 75);
-
-            ctx.fillStyle = "#000000";
-            ctx.font = "800 13px -apple-system, BlinkMacSystemFont, sans-serif";
-            ctx.textAlign = "left";
-            ctx.fillText(c.label, curX + 16, cardY + 32);
-
-            ctx.fillStyle = "#555555";
-            ctx.font = "700 11px monospace";
-            ctx.fillText("Statutory Prerequisite Rule", curX + 16, cardY + 54);
-
-            if (t >= c.cue + 1.2) {
-              const pStamp = Math.min(1.0, (t - (c.cue + 1.2)) / 0.4);
-              const stampScale = 1.0 + (1 - pStamp) * 0.8;
-
-              ctx.save();
-              ctx.translate(curX + 425, cardY + 37);
-              ctx.scale(stampScale, stampScale);
-
-              ctx.fillStyle = "#000000";
-              ctx.beginPath();
-              ctx.arc(0, 0, 18, 0, Math.PI * 2);
-              ctx.fill();
-
-              ctx.strokeStyle = "#ffffff";
-              ctx.lineWidth = 3;
-              ctx.beginPath();
-              ctx.moveTo(-7, 0);
-              ctx.lineTo(-2, 6);
-              ctx.lineTo(8, -5);
-              ctx.stroke();
-              ctx.restore();
-            }
-          });
-
-          const gateX = 540, gateY = 95, gateW = 410, gateH = 360;
-
-          ctx.strokeStyle = "#000000";
-          ctx.lineWidth = 3.5;
-          ctx.strokeRect(gateX, gateY, gateW, gateH);
-
-          ctx.fillStyle = "#000000";
-          ctx.fillRect(gateX + 20, gateY + 15, gateW - 40, 36);
-          ctx.fillStyle = "#ffffff";
-          ctx.font = "900 13px monospace";
-          ctx.textAlign = "center";
-          ctx.fillText("SECTION 54D RELIEF PORTAL", gateX + gateW / 2, gateY + 38);
-
-          const cueGate = 9.5;
-          const doorW = (gateW - 60) / 2;
-
-          if (t < cueGate) {
-            ctx.fillStyle = "#ffffff";
-            ctx.fillRect(gateX + 30, gateY + 65, doorW, gateH - 85);
-            ctx.fillRect(gateX + 30 + doorW, gateY + 65, doorW, gateH - 85);
-            ctx.strokeStyle = "#000000";
-            ctx.lineWidth = 2.5;
-            ctx.strokeRect(gateX + 30, gateY + 65, doorW, gateH - 85);
-            ctx.strokeRect(gateX + 30 + doorW, gateY + 65, doorW, gateH - 85);
-
-            for (let i = 0; i < doorW; i += 16) {
-              ctx.beginPath();
-              ctx.moveTo(gateX + 30 + i, gateY + 65);
-              ctx.lineTo(gateX + 30 + i, gateY + gateH - 20);
-              ctx.stroke();
-              ctx.beginPath();
-              ctx.moveTo(gateX + 30 + doorW + i, gateY + 65);
-              ctx.lineTo(gateX + 30 + doorW + i, gateY + gateH - 20);
-              ctx.stroke();
-            }
-
-            ctx.fillStyle = "#000000";
-            ctx.fillRect(gateX + gateW/2 - 25, gateY + 160, 50, 45);
-            ctx.strokeStyle = "#000000";
-            ctx.lineWidth = 4;
-            ctx.beginPath();
-            ctx.arc(gateX + gateW/2, gateY + 155, 18, Math.PI, 0);
-            ctx.stroke();
-
-            ctx.fillStyle = "#ffffff";
-            ctx.font = "900 13px monospace";
-            ctx.fillText("EVALUATING", gateX + gateW/2, gateY + 187);
-          } else {
-            const pOpen = Math.min(1.0, (t - cueGate) / 2.0);
-            const easeOpen = pOpen * pOpen * (3 - 2 * pOpen);
-            const currentDoorW = Math.max(16, doorW * (1 - easeOpen * 0.88));
-
-            ctx.fillStyle = "#ffffff";
-            ctx.fillRect(gateX + 30, gateY + 65, gateW - 60, gateH - 85);
-
-            ctx.strokeStyle = "#000000";
-            ctx.lineWidth = 2.5;
-            ctx.strokeRect(gateX + 30, gateY + 65, currentDoorW, gateH - 85);
-            ctx.strokeRect(gateX + 30 + (gateW - 60) - currentDoorW, gateY + 65, currentDoorW, gateH - 85);
-
-            ctx.save();
-            ctx.beginPath();
-            ctx.rect(gateX + 30 + currentDoorW, gateY + 65, (gateW - 60) - 2 * currentDoorW, gateH - 85);
-            ctx.clip();
-            for (let a = 0; a < Math.PI; a += 0.15) {
-              ctx.beginPath();
-              ctx.moveTo(gateX + gateW/2, gateY + 180);
-              ctx.lineTo(gateX + gateW/2 + Math.cos(a) * 300, gateY + 180 + Math.sin(a) * 300);
-              ctx.strokeStyle = "#dddddd";
-              ctx.lineWidth = 1.5;
-              ctx.stroke();
-            }
-            ctx.restore();
-
-            ctx.fillStyle = "#000000";
-            ctx.font = "900 24px -apple-system, BlinkMacSystemFont, sans-serif";
-            ctx.textAlign = "center";
-            ctx.fillText("GATE UNLOCKED", gateX + gateW / 2, gateY + 170);
-
-            ctx.fillStyle = "#000000";
-            ctx.fillRect(gateX + 60, gateY + 205, gateW - 120, 36);
-            ctx.fillStyle = "#ffffff";
-            ctx.font = "900 13px monospace";
-            ctx.fillText("ALL 3 CONDITIONS MET", gateX + gateW / 2, gateY + 228);
-
-            ctx.fillStyle = "#000000";
-            ctx.font = "800 13px sans-serif";
-            ctx.fillText("Section 54D Relief Admissible", gateX + gateW / 2, gateY + 270);
-          }
-        }
-      },
-
-      {
-        tag: "SCENE 3: STATUTORY SUBTRACTION & DISINTEGRATION",
-        dialogue: "Vikram purchased commercial land for ₹30 Lakhs. Prior to 1st April 2014, he forfeited ₹5 Lakhs advance money. Under Section 51, that advance money is subtracted, leaving an Adjusted Cost of ₹25 Lakhs.",
-        render: (t) => {
-          drawHeaderBanner("Section 51: Pre-2014 Advance Money Forfeiture from Cost of Acquisition", "SEC 51 REDUCTION");
-
-          const startAmt = 3000000;
-          const forfeitedAmt = 500000;
-          const adjustedAmt = 2500000;
-
-          const barX = 70, barY = 95, barW = 260, barH = 370;
-
-          ctx.strokeStyle = "#000000";
-          ctx.lineWidth = 2.5;
-          ctx.strokeRect(barX, barY, barW, barH);
-
-          ctx.fillStyle = "#000000";
-          ctx.font = "900 16px -apple-system, BlinkMacSystemFont, sans-serif";
-          ctx.textAlign = "center";
-          ctx.fillText("Original Purchase Cost", barX + barW / 2, barY + 34);
-
-          const pStart = Math.min(1.0, t / 1.5);
-          const curVal = Math.round(startAmt * pStart);
-          ctx.font = "900 22px monospace";
-          ctx.fillText("₹ " + curVal.toLocaleString('en-IN'), barX + barW / 2, barY + 68);
-
-          const maxH = 240;
-          const baseH = barY + 340;
-          const barFillW = barW - 60;
-
-          ctx.strokeRect(barX + 30, baseH - maxH, barFillW, maxH);
-
-          const cueSlice = 3.5;
-          const sliceH = (forfeitedAmt / startAmt) * maxH;
-          const netH = maxH - sliceH;
-
-          if (t < cueSlice) {
-            ctx.fillStyle = "#000000";
-            ctx.fillRect(barX + 30, baseH - maxH, barFillW, maxH);
-          } else {
-            const pSlice = Math.min(1.0, (t - cueSlice) / 1.5);
-            const easeSlice = pSlice * pSlice * (3 - 2 * pSlice);
-
-            ctx.fillStyle = "#000000";
-            ctx.fillRect(barX + 30, baseH - netH, barFillW, netH);
-
-            const liftY = (baseH - maxH) - easeSlice * 50;
-            const driftX = (barX + 30) + easeSlice * 80;
-
-            ctx.save();
-            ctx.globalAlpha = Math.max(0, 1.0 - easeSlice * 0.9);
-            ctx.fillStyle = useDither && pattern50 ? pattern50 : "#000000";
-            ctx.fillRect(driftX, liftY, barFillW, sliceH);
-            ctx.strokeStyle = "#000000";
-            ctx.lineWidth = 2;
-            ctx.setLineDash([4, 4]);
-            ctx.strokeRect(driftX, liftY, barFillW, sliceH);
-            ctx.restore();
-
-            const cardX = 380, cardY = 110;
-            ctx.fillStyle = "#ffffff";
-            ctx.fillRect(cardX, cardY, 560, 80);
-            ctx.strokeStyle = "#000000";
-            ctx.lineWidth = 2.5;
-            ctx.strokeRect(cardX, cardY, 560, 80);
-
-            ctx.fillStyle = "#000000";
-            ctx.beginPath();
-            ctx.arc(cardX + 45, cardY + 40, 22, 0, Math.PI * 2);
-            ctx.fill();
-            ctx.fillStyle = "#ffffff";
-            ctx.font = "900 24px monospace";
-            ctx.textAlign = "center";
-            ctx.fillText("−", cardX + 45, cardY + 47);
-
-            ctx.fillStyle = "#000000";
-            ctx.font = "900 16px -apple-system, BlinkMacSystemFont, sans-serif";
-            ctx.textAlign = "left";
-            ctx.fillText("Pre-2014 Advance Forfeited (Sec 51)", cardX + 80, cardY + 34);
-
-            ctx.fillStyle = "#555555";
-            ctx.font = "700 11px monospace";
-            ctx.fillText("Subtracted directly from base cost of acquisition", cardX + 80, cardY + 56);
-
-            ctx.fillStyle = "#000000";
-            ctx.font = "900 22px monospace";
-            ctx.textAlign = "right";
-            ctx.fillText("₹ 5,00,000", cardX + 540, cardY + 48);
-          }
-
-          if (t >= 8.0) {
-            const pRes = Math.min(1.0, (t - 8.0) / 1.0);
-            const resX = 380, resY = 220;
-
-            ctx.fillStyle = "#ffffff";
-            ctx.fillRect(resX, resY, 560, 110);
-            ctx.strokeStyle = "#000000";
-            ctx.lineWidth = 3;
-            ctx.strokeRect(resX, resY, 560, 110);
-
-            ctx.fillStyle = "#000000";
-            ctx.font = "900 18px -apple-system, BlinkMacSystemFont, sans-serif";
-            ctx.textAlign = "left";
-            ctx.fillText("Adjusted Cost of Acquisition", resX + 30, resY + 40);
-
-            ctx.font = "900 32px monospace";
-            ctx.fillText("₹ 25,00,000", resX + 30, resY + 84);
-
-            ctx.fillStyle = "#000000";
-            ctx.fillRect(resX + 360, resY + 36, 170, 44);
-            ctx.fillStyle = "#ffffff";
-            ctx.font = "900 13px monospace";
-            ctx.textAlign = "center";
-            ctx.fillText("NET COA VERIFIED", resX + 445, resY + 63);
-
-            ctx.fillStyle = "#000000";
-            ctx.strokeRect(380, 355, 560, 70);
-            ctx.font = "700 13px -apple-system, BlinkMacSystemFont, sans-serif";
-            ctx.textAlign = "left";
-            ctx.fillText("Notice: If forfeited on/after 01/04/2014, Section 56(2)(ix) applies:", 395, 380);
-            ctx.font = "900 13px monospace";
-            ctx.fillText("Taxed under IFOS • COA remains unreduced at ₹30,00,000!", 395, 404);
-          }
-        }
-      },
-
-      {
-        tag: "SCENE 4: STATUTORY CAPITAL GAIN ARITHMETIC",
-        dialogue: "When Vikram sells the property for ₹1 Crore in 2023, Capital Gain is computed as: Sale Consideration ₹1 Crore minus Adjusted Cost ₹25 Lakhs equals Taxable Gain of ₹75 Lakhs.",
-        render: (t) => {
-          drawHeaderBanner("Capital Gain Computation Equation Chips", "TAX COMPUTATION");
-
-          const chips = [
+          ],
+          unlock_badge: "ALL 3 CONDITIONS MET",
+          unlock_subtitle: "Section 54D Relief Admissible"
+        },
+        {
+          id: 3,
+          tab_title: "3 Section 51: Advance Money Pixel Dissolve & Remainder",
+          tag: "SCENE 3: STATUTORY SUBTRACTION & DISINTEGRATION",
+          dialogue: "Vikram purchased commercial land for ₹30 Lakhs. Prior to 1st April 2014, he forfeited ₹5 Lakhs advance money. Under Section 51, that advance money is subtracted, leaving an Adjusted Cost of ₹25 Lakhs.",
+          type: "deduction_slice",
+          base_title: "Original Purchase Cost",
+          base_val: 3000000,
+          deduct_title: "Pre-2014 Advance Forfeited (Sec 51)",
+          deduct_val: 500000,
+          deduct_subtitle: "Subtracted directly from base cost of acquisition",
+          result_title: "Adjusted Cost of Acquisition",
+          result_val: 2500000,
+          result_badge: "NET COA VERIFIED",
+          statutory_note_title: "Notice: If forfeited on/after 01/04/2014, Section 56(2)(ix) applies:",
+          statutory_note_text: "Taxed under IFOS • COA remains unreduced at ₹30,00,000!"
+        },
+        {
+          id: 4,
+          tab_title: "4 Sec 54: Pixel Arithmetic & Exemption Meter",
+          tag: "SCENE 4: STATUTORY CAPITAL GAIN ARITHMETIC",
+          dialogue: "When Vikram sells the property for ₹1 Crore in 2023, Capital Gain is computed as: Sale Consideration ₹1 Crore minus Adjusted Cost ₹25 Lakhs equals Taxable Gain of ₹75 Lakhs.",
+          type: "formula",
+          chips: [
             { label: "Full Consideration", val: 10000000, cue: 1.0 },
             { op: "−", cue: 3.5 },
             { label: "Adjusted COA", val: 2500000, cue: 4.5 },
             { op: "=", cue: 7.0 },
             { label: "Taxable Capital Gain", val: 7500000, isTotal: true, cue: 8.0 }
-          ];
+          ],
+          verification_title: "Formula Arithmetic Verification & Legal Principle",
+          verification_equation: "₹ 1,00,00,000 − ₹ 25,00,000 = ₹ 75,00,000 Net Capital Gain",
+          verification_note: "• Post-2014 advance of ₹8 Lakhs was taxed upfront under Sec 56(2)(ix) and did not reduce COA."
+        }
+      ]
+    };
 
-          const startX = 60, chipY = 120;
-          let curX = startX;
+    let ACTIVE_DATA = DEFAULT_54D_DATA;
 
-          chips.forEach((c) => {
-            const p = Math.min(1.0, Math.max(0, (t - c.cue) / 0.8));
-            if (p <= 0) return;
+    // Render Scenes dynamically based on structured JSON schema
+    function renderDynamicScene(scene, t) {
+      const secCode = ACTIVE_DATA.section_code || "TAX LAW";
+      const title = ACTIVE_DATA.title || "Statutory Presentation";
 
-            if (c.op) {
-              ctx.strokeStyle = "#000000";
-              ctx.lineWidth = 2.5;
-              ctx.beginPath();
-              ctx.arc(curX + 22, chipY + 45, 22, 0, Math.PI * 2);
-              ctx.stroke();
+      // 1. Transfer Scene
+      if (scene.type === "transfer") {
+        drawHeaderBanner(title, secCode);
 
-              ctx.fillStyle = "#000000";
-              ctx.font = "900 24px monospace";
-              ctx.textAlign = "center";
-              ctx.fillText(c.op, curX + 22, chipY + 53);
+        const aLeft = scene.actor_left || { name: "Assessee", role: "Transferor" };
+        const aRight = scene.actor_right || { name: "Transferee Authority", role: "Receiver" };
+        drawActorBox(50, 95, 280, 80, aLeft.name, aLeft.role);
+        drawActorBox(670, 95, 280, 80, aRight.name, aRight.role);
 
-              curX += 60;
-            } else {
-              const chipW = c.isTotal ? 250 : 210;
-              const chipH = 90;
+        // Asset drawing
+        drawPixelFactory(100, 210, 180, 150);
 
-              ctx.fillStyle = c.isTotal ? "#000000" : "#ffffff";
-              ctx.fillRect(curX, chipY, chipW, chipH);
-              ctx.strokeStyle = "#000000";
-              ctx.lineWidth = c.isTotal ? 3.5 : 2;
-              ctx.strokeRect(curX, chipY, chipW, chipH);
+        ctx.strokeStyle = "#000000";
+        ctx.lineWidth = 2;
+        ctx.setLineDash([6, 6]);
+        ctx.beginPath();
+        ctx.moveTo(280, 270);
+        ctx.quadraticCurveTo(500, 160, 680, 220);
+        ctx.stroke();
 
-              ctx.fillStyle = c.isTotal ? "#ffffff" : "#000000";
-              ctx.font = "800 13px -apple-system, BlinkMacSystemFont, sans-serif";
-              ctx.textAlign = "center";
-              ctx.fillText(c.label, curX + chipW / 2, chipY + 32);
+        ctx.beginPath();
+        ctx.moveTo(680, 310);
+        ctx.quadraticCurveTo(500, 420, 280, 340);
+        ctx.stroke();
+        ctx.setLineDash([]);
 
-              const countVal = Math.round(c.val * p);
-              ctx.font = (c.isTotal ? "900 22px" : "900 19px") + " monospace";
-              ctx.fillText("₹ " + countVal.toLocaleString('en-IN'), curX + chipW / 2, chipY + 65);
+        if (t >= 1.5) {
+          const p1 = Math.min(1.0, (t - 1.5) / 2.5);
+          const ease1 = p1 * p1 * (3 - 2 * p1);
+          const curX = 680 + (280 - 680) * ease1;
+          const curY = 220 + (270 - 220) * ease1 - Math.sin(p1 * Math.PI) * 60;
 
-              curX += chipW + 20;
-            }
-          });
+          ctx.fillStyle = "#ffffff";
+          ctx.fillRect(curX - 85, curY - 24, 170, 48);
+          ctx.strokeStyle = "#000000";
+          ctx.lineWidth = 2.5;
+          ctx.strokeRect(curX - 85, curY - 24, 170, 48);
+          ctx.fillStyle = "#000000";
+          ctx.font = "900 12px monospace";
+          ctx.textAlign = "center";
+          ctx.fillText(scene.transfer_label || "STATUTORY TRANSFER", curX, curY - 4);
+          ctx.font = "800 11px sans-serif";
+          ctx.fillText("Under Statutory Law", curX, curY + 14);
+        }
 
-          if (t >= 9.5) {
-            const barW = 880, barH = 150;
-            const bx = 60, by = 260;
+        if (t >= 5.5) {
+          const p2 = Math.min(1.0, (t - 5.5) / 2.5);
+          const ease2 = p2 * p2 * (3 - 2 * p2);
+          const curX = 680 + (280 - 680) * ease2;
+          const curY = 310 + (340 - 310) * ease2 + Math.sin(p2 * Math.PI) * 60;
 
-            ctx.fillStyle = "#ffffff";
-            ctx.fillRect(bx, by, barW, barH);
-            ctx.strokeStyle = "#000000";
-            ctx.lineWidth = 3;
-            ctx.strokeRect(bx, by, barW, barH);
+          ctx.fillStyle = "#000000";
+          ctx.fillRect(curX - 95, curY - 24, 190, 48);
+          ctx.fillStyle = "#ffffff";
+          ctx.font = "900 15px -apple-system, BlinkMacSystemFont, sans-serif";
+          ctx.textAlign = "center";
+          ctx.fillText(scene.amount_badge || ("₹ " + (scene.amount_val || 0).toLocaleString('en-IN')), curX, curY - 3);
+          ctx.font = "700 11px monospace";
+          ctx.fillText(scene.amount_label || "CONSIDERATION PAID", curX, curY + 14);
 
+          for (let i = 0; i < 8; i++) {
+            const lag = Math.max(0, p2 - i * 0.04);
+            const tx = 680 + (280 - 680) * lag;
+            const ty = 310 + (340 - 310) * lag + Math.sin(lag * Math.PI) * 60;
             ctx.fillStyle = "#000000";
-            ctx.font = "900 18px -apple-system, BlinkMacSystemFont, sans-serif";
-            ctx.textAlign = "left";
-            ctx.fillText("Formula Arithmetic Verification & Legal Principle", bx + 30, by + 40);
-
-            ctx.font = "900 24px monospace";
-            ctx.fillText("₹ 1,00,00,000 − ₹ 25,00,000 = ₹ 75,00,000 Net Capital Gain", bx + 30, by + 85);
-
-            ctx.font = "600 14px -apple-system, BlinkMacSystemFont, sans-serif";
-            ctx.fillText("• Post-2014 advance of ₹8 Lakhs was taxed upfront under Sec 56(2)(ix) and did not reduce COA.", bx + 30, by + 120);
+            ctx.fillRect(tx - 3, ty - 3, 6, 6);
           }
         }
-      }
-    ];
 
-    function renderFrame() {
-      clearScreen();
-      const scene = SCENES[activeSceneIdx];
-      if (scene && scene.render) {
-        scene.render(currentTime);
+        if (t >= 10.0) {
+          ctx.fillStyle = "#ffffff";
+          ctx.fillRect(50, 410, 900, 60);
+          ctx.strokeStyle = "#000000";
+          ctx.lineWidth = 2.5;
+          ctx.strokeRect(50, 410, 900, 60);
+
+          ctx.fillStyle = "#000000";
+          ctx.fillRect(60, 420, 140, 40);
+          ctx.fillStyle = "#ffffff";
+          ctx.font = "900 12px monospace";
+          ctx.textAlign = "center";
+          ctx.fillText("STEP 1 CONCLUDED", 130, 444);
+
+          ctx.fillStyle = "#000000";
+          ctx.font = "800 14px -apple-system, BlinkMacSystemFont, sans-serif";
+          ctx.textAlign = "left";
+          ctx.fillText("Vesting in Transferee Complete • Consideration Deemed as " + (scene.amount_badge || ("₹ " + (scene.amount_val || 0).toLocaleString('en-IN'))), 215, 445);
+        }
       }
+
+      // 2. Gatekeeper Scene
+      else if (scene.type === "gatekeeper") {
+        drawHeaderBanner((ACTIVE_DATA.title || "Statutory") + " Gatekeeper Portal", secCode + " CRITERIA");
+
+        const conditions = scene.conditions || [
+          { label: "1. Statutory Condition Met", cue: 1.0 },
+          { label: "2. Second Prerequisite Rule Met", cue: 4.0 },
+          { label: "3. Reinvestment / Filing Completed", cue: 7.0 }
+        ];
+
+        conditions.forEach((c, idx) => {
+          const cardY = 95 + idx * 95;
+          const pEnter = Math.min(1.0, Math.max(0, (t - (c.cue || (1.0 + idx * 3.0))) / 0.8));
+          if (pEnter <= 0) return;
+
+          const curX = 40 + (1 - pEnter) * -60;
+
+          ctx.fillStyle = "#ffffff";
+          ctx.fillRect(curX, cardY, 460, 75);
+          ctx.strokeStyle = "#000000";
+          ctx.lineWidth = 2;
+          ctx.strokeRect(curX, cardY, 460, 75);
+
+          ctx.fillStyle = "#000000";
+          ctx.font = "800 13px -apple-system, BlinkMacSystemFont, sans-serif";
+          ctx.textAlign = "left";
+          ctx.fillText(c.label, curX + 16, cardY + 32);
+
+          ctx.fillStyle = "#555555";
+          ctx.font = "700 11px monospace";
+          ctx.fillText("Statutory Prerequisite Rule", curX + 16, cardY + 54);
+
+          const cue = c.cue || (1.0 + idx * 3.0);
+          if (t >= cue + 1.2) {
+            const pStamp = Math.min(1.0, (t - (cue + 1.2)) / 0.4);
+            const stampScale = 1.0 + (1 - pStamp) * 0.8;
+
+            ctx.save();
+            ctx.translate(curX + 425, cardY + 37);
+            ctx.scale(stampScale, stampScale);
+
+            ctx.fillStyle = "#000000";
+            ctx.beginPath();
+            ctx.arc(0, 0, 18, 0, Math.PI * 2);
+            ctx.fill();
+
+            ctx.strokeStyle = "#ffffff";
+            ctx.lineWidth = 3;
+            ctx.beginPath();
+            ctx.moveTo(-7, 0);
+            ctx.lineTo(-2, 6);
+            ctx.lineTo(8, -5);
+            ctx.stroke();
+            ctx.restore();
+          }
+        });
+
+        const gateX = 540, gateY = 95, gateW = 410, gateH = 360;
+        ctx.strokeStyle = "#000000";
+        ctx.lineWidth = 3.5;
+        ctx.strokeRect(gateX, gateY, gateW, gateH);
+
+        ctx.fillStyle = "#000000";
+        ctx.fillRect(gateX + 20, gateY + 15, gateW - 40, 36);
+        ctx.fillStyle = "#ffffff";
+        ctx.font = "900 13px monospace";
+        ctx.textAlign = "center";
+        ctx.fillText(scene.portal_title || (secCode + " RELIEF PORTAL"), gateX + gateW / 2, gateY + 38);
+
+        const cueGate = 9.5;
+        const doorW = (gateW - 60) / 2;
+
+        if (t < cueGate) {
+          ctx.fillStyle = "#ffffff";
+          ctx.fillRect(gateX + 30, gateY + 65, doorW, gateH - 85);
+          ctx.fillRect(gateX + 30 + doorW, gateY + 65, doorW, gateH - 85);
+          ctx.strokeStyle = "#000000";
+          ctx.lineWidth = 2.5;
+          ctx.strokeRect(gateX + 30, gateY + 65, doorW, gateH - 85);
+          ctx.strokeRect(gateX + 30 + doorW, gateY + 65, doorW, gateH - 85);
+
+          for (let i = 0; i < doorW; i += 16) {
+            ctx.beginPath();
+            ctx.moveTo(gateX + 30 + i, gateY + 65);
+            ctx.lineTo(gateX + 30 + i, gateY + gateH - 20);
+            ctx.stroke();
+            ctx.beginPath();
+            ctx.moveTo(gateX + 30 + doorW + i, gateY + 65);
+            ctx.lineTo(gateX + 30 + doorW + i, gateY + gateH - 20);
+            ctx.stroke();
+          }
+
+          ctx.fillStyle = "#000000";
+          ctx.fillRect(gateX + gateW/2 - 35, gateY + 160, 70, 45);
+          ctx.strokeStyle = "#000000";
+          ctx.lineWidth = 4;
+          ctx.beginPath();
+          ctx.arc(gateX + gateW/2, gateY + 155, 18, Math.PI, 0);
+          ctx.stroke();
+
+          ctx.fillStyle = "#ffffff";
+          ctx.font = "900 11px monospace";
+          ctx.fillText("EVALUATING", gateX + gateW/2, gateY + 187);
+        } else {
+          const pOpen = Math.min(1.0, (t - cueGate) / 2.0);
+          const easeOpen = pOpen * pOpen * (3 - 2 * pOpen);
+          const currentDoorW = Math.max(16, doorW * (1 - easeOpen * 0.88));
+
+          ctx.fillStyle = "#ffffff";
+          ctx.fillRect(gateX + 30, gateY + 65, gateW - 60, gateH - 85);
+
+          ctx.strokeStyle = "#000000";
+          ctx.lineWidth = 2.5;
+          ctx.strokeRect(gateX + 30, gateY + 65, currentDoorW, gateH - 85);
+          ctx.strokeRect(gateX + 30 + (gateW - 60) - currentDoorW, gateY + 65, currentDoorW, gateH - 85);
+
+          ctx.save();
+          ctx.beginPath();
+          ctx.rect(gateX + 30 + currentDoorW, gateY + 65, (gateW - 60) - 2 * currentDoorW, gateH - 85);
+          ctx.clip();
+          for (let a = 0; a < Math.PI; a += 0.15) {
+            ctx.beginPath();
+            ctx.moveTo(gateX + gateW/2, gateY + 180);
+            ctx.lineTo(gateX + gateW/2 + Math.cos(a) * 300, gateY + 180 + Math.sin(a) * 300);
+            ctx.strokeStyle = "#dddddd";
+            ctx.lineWidth = 1.5;
+            ctx.stroke();
+          }
+          ctx.restore();
+
+          ctx.fillStyle = "#000000";
+          ctx.font = "900 24px -apple-system, BlinkMacSystemFont, sans-serif";
+          ctx.textAlign = "center";
+          ctx.fillText("GATE UNLOCKED", gateX + gateW / 2, gateY + 170);
+
+          ctx.fillStyle = "#000000";
+          ctx.fillRect(gateX + 60, gateY + 205, gateW - 120, 36);
+          ctx.fillStyle = "#ffffff";
+          ctx.font = "900 13px monospace";
+          ctx.fillText(scene.unlock_badge || "ALL CONDITIONS MET", gateX + gateW / 2, gateY + 228);
+
+          ctx.fillStyle = "#000000";
+          ctx.font = "800 13px sans-serif";
+          ctx.fillText(scene.unlock_subtitle || (secCode + " Relief Admissible"), gateX + gateW / 2, gateY + 270);
+        }
+      }
+
+      // 3. Deduction Slice Scene
+      else if (scene.type === "deduction_slice") {
+        drawHeaderBanner(scene.tag || "Statutory Deduction & Base Adjustment", secCode + " ADJUSTMENT");
+
+        const startAmt = scene.base_val || 3000000;
+        const deductedAmt = scene.deduct_val || 500000;
+        const resultAmt = scene.result_val || (startAmt - deductedAmt);
+
+        const barX = 70, barY = 95, barW = 260, barH = 370;
+
+        ctx.strokeStyle = "#000000";
+        ctx.lineWidth = 2.5;
+        ctx.strokeRect(barX, barY, barW, barH);
+
+        ctx.fillStyle = "#000000";
+        ctx.font = "900 15px -apple-system, BlinkMacSystemFont, sans-serif";
+        ctx.textAlign = "center";
+        ctx.fillText(scene.base_title || "Original Base / Inflow", barX + barW / 2, barY + 34);
+
+        const pStart = Math.min(1.0, t / 1.5);
+        const curVal = Math.round(startAmt * pStart);
+        ctx.font = "900 20px monospace";
+        ctx.fillText("₹ " + curVal.toLocaleString('en-IN'), barX + barW / 2, barY + 68);
+
+        const barFillX = barX + 25;
+        const barFillY = barY + 90;
+        const barFillW = barW - 50;
+        const barFillH = barH - 110;
+
+        ctx.strokeRect(barFillX, barFillY, barFillW, barFillH);
+        ctx.fillStyle = "#000000";
+        ctx.fillRect(barFillX, barFillY, barFillW, barFillH);
+
+        if (t >= 3.0) {
+          const sliceFraction = deductedAmt / startAmt;
+          const sliceH = barFillH * sliceFraction;
+          const pSlice = Math.min(1.0, (t - 3.0) / 2.0);
+          const easeSlice = pSlice * pSlice * (3 - 2 * pSlice);
+
+          const driftX = barFillX + easeSlice * 240;
+          const liftY = barFillY - easeSlice * 20;
+
+          ctx.fillStyle = "#ffffff";
+          ctx.fillRect(barFillX, barFillY, barFillW, sliceH);
+
+          if (useDither && pattern25) {
+            ctx.fillStyle = pattern25;
+            ctx.fillRect(barFillX, barFillY, barFillW, sliceH);
+          }
+
+          ctx.save();
+          ctx.fillStyle = "#ffffff";
+          ctx.fillRect(driftX, liftY, barFillW, sliceH);
+          ctx.strokeStyle = "#000000";
+          ctx.lineWidth = 2;
+          ctx.setLineDash([4, 4]);
+          ctx.strokeRect(driftX, liftY, barFillW, sliceH);
+          ctx.restore();
+
+          const cardX = 380, cardY = 110;
+          ctx.fillStyle = "#ffffff";
+          ctx.fillRect(cardX, cardY, 560, 80);
+          ctx.strokeStyle = "#000000";
+          ctx.lineWidth = 2.5;
+          ctx.strokeRect(cardX, cardY, 560, 80);
+
+          ctx.fillStyle = "#000000";
+          ctx.beginPath();
+          ctx.arc(cardX + 45, cardY + 40, 22, 0, Math.PI * 2);
+          ctx.fill();
+          ctx.fillStyle = "#ffffff";
+          ctx.font = "900 24px monospace";
+          ctx.textAlign = "center";
+          ctx.fillText("−", cardX + 45, cardY + 47);
+
+          ctx.fillStyle = "#000000";
+          ctx.font = "900 16px -apple-system, BlinkMacSystemFont, sans-serif";
+          ctx.textAlign = "left";
+          ctx.fillText(scene.deduct_title || "Statutory Deduction", cardX + 80, cardY + 34);
+
+          ctx.fillStyle = "#555555";
+          ctx.font = "700 11px monospace";
+          ctx.fillText(scene.deduct_subtitle || "Applied according to statutory ceiling limit", cardX + 80, cardY + 56);
+
+          ctx.fillStyle = "#000000";
+          ctx.font = "900 22px monospace";
+          ctx.textAlign = "right";
+          ctx.fillText("₹ " + deductedAmt.toLocaleString('en-IN'), cardX + 540, cardY + 48);
+        }
+
+        if (t >= 8.0) {
+          const resX = 380, resY = 220;
+
+          ctx.fillStyle = "#ffffff";
+          ctx.fillRect(resX, resY, 560, 110);
+          ctx.strokeStyle = "#000000";
+          ctx.lineWidth = 3;
+          ctx.strokeRect(resX, resY, 560, 110);
+
+          ctx.fillStyle = "#000000";
+          ctx.font = "900 18px -apple-system, BlinkMacSystemFont, sans-serif";
+          ctx.textAlign = "left";
+          ctx.fillText(scene.result_title || "Net Adjusted Base", resX + 30, resY + 40);
+
+          ctx.font = "900 32px monospace";
+          ctx.fillText("₹ " + resultAmt.toLocaleString('en-IN'), resX + 30, resY + 84);
+
+          ctx.fillStyle = "#000000";
+          ctx.fillRect(resX + 360, resY + 36, 170, 44);
+          ctx.fillStyle = "#ffffff";
+          ctx.font = "900 12px monospace";
+          ctx.textAlign = "center";
+          ctx.fillText(scene.result_badge || "AUDIT VERIFIED", resX + 445, resY + 63);
+
+          ctx.fillStyle = "#000000";
+          ctx.strokeRect(380, 355, 560, 70);
+          ctx.font = "700 13px -apple-system, BlinkMacSystemFont, sans-serif";
+          ctx.textAlign = "left";
+          ctx.fillText(scene.statutory_note_title || "Statutory Rule Note:", 395, 380);
+          ctx.font = "900 12.5px monospace";
+          ctx.fillText(scene.statutory_note_text || "Proviso applies strictly per statutory limits.", 395, 404);
+        }
+      }
+
+      // 4. Formula Chips Scene
+      else if (scene.type === "formula") {
+        drawHeaderBanner(scene.tag || "Capital Gain Computation Chips", "TAX ARITHMETIC");
+
+        const chips = scene.chips || [
+          { label: "Full Consideration", val: 10000000, cue: 1.0 },
+          { op: "−", cue: 3.5 },
+          { label: "Exemption", val: 5000000, cue: 4.5 },
+          { op: "=", cue: 7.0 },
+          { label: "Net Taxable Gain", val: 5000000, isTotal: true, cue: 8.0 }
+        ];
+
+        const startX = 60, chipY = 120;
+        let curX = startX;
+
+        chips.forEach((c) => {
+          const p = Math.min(1.0, Math.max(0, (t - c.cue) / 0.8));
+          if (p <= 0) return;
+
+          if (c.op) {
+            ctx.strokeStyle = "#000000";
+            ctx.lineWidth = 2.5;
+            ctx.beginPath();
+            ctx.arc(curX + 22, chipY + 45, 22, 0, Math.PI * 2);
+            ctx.stroke();
+
+            ctx.fillStyle = "#000000";
+            ctx.font = "900 24px monospace";
+            ctx.textAlign = "center";
+            ctx.fillText(c.op, curX + 22, chipY + 53);
+
+            curX += 60;
+          } else {
+            const chipW = c.isTotal ? 250 : 210;
+            const chipH = 90;
+
+            ctx.fillStyle = c.isTotal ? "#000000" : "#ffffff";
+            ctx.fillRect(curX, chipY, chipW, chipH);
+            ctx.strokeStyle = "#000000";
+            ctx.lineWidth = c.isTotal ? 3.5 : 2;
+            ctx.strokeRect(curX, chipY, chipW, chipH);
+
+            ctx.fillStyle = c.isTotal ? "#ffffff" : "#000000";
+            ctx.font = "800 13px -apple-system, BlinkMacSystemFont, sans-serif";
+            ctx.textAlign = "center";
+            ctx.fillText(c.label, curX + chipW / 2, chipY + 32);
+
+            const countVal = Math.round(c.val * p);
+            ctx.font = (c.isTotal ? "900 22px" : "900 19px") + " monospace";
+            ctx.fillText("₹ " + countVal.toLocaleString('en-IN'), curX + chipW / 2, chipY + 65);
+
+            curX += chipW + 20;
+          }
+        });
+
+        if (t >= 9.5) {
+          const barW = 880, barH = 150;
+          const bx = 60, by = 260;
+
+          ctx.fillStyle = "#ffffff";
+          ctx.fillRect(bx, by, barW, barH);
+          ctx.strokeStyle = "#000000";
+          ctx.lineWidth = 3;
+          ctx.strokeRect(bx, by, barW, barH);
+
+          ctx.fillStyle = "#000000";
+          ctx.font = "900 18px -apple-system, BlinkMacSystemFont, sans-serif";
+          ctx.textAlign = "left";
+          ctx.fillText(scene.verification_title || "Formula Arithmetic Verification & Statutory Principle", bx + 30, by + 40);
+
+          ctx.font = "900 22px monospace";
+          ctx.fillText(scene.verification_equation || "Arithmetic Result Verified", bx + 30, by + 85);
+
+          ctx.font = "600 13px -apple-system, BlinkMacSystemFont, sans-serif";
+          ctx.fillText(scene.verification_note || "• Provisions applied accurately as per current Finance Act.", bx + 30, by + 120);
+        }
+      }
+    }
+
+    // Render loop
+    function render(timeSec) {
+      clearScreen();
+
+      if (isGenerating) {
+        // Draw Animated Pixel Radar & Synthesis Screen
+        ctx.strokeStyle = "#000000";
+        ctx.lineWidth = 2.5;
+        ctx.strokeRect(100, 100, 800, 300);
+
+        ctx.fillStyle = "#000000";
+        ctx.fillRect(120, 120, 760, 44);
+        ctx.fillStyle = "#ffffff";
+        ctx.font = "900 16px monospace";
+        ctx.textAlign = "center";
+        ctx.fillText("GEMINI 3.8 FLASH: SYNTHESIZING STATUTORY PIXELS...", 500, 148);
+
+        const radarX = 500, radarY = 260;
+        ctx.strokeStyle = "#000000";
+        ctx.lineWidth = 2;
+        ctx.beginPath();
+        ctx.arc(radarX, radarY, 60, 0, Math.PI * 2);
+        ctx.stroke();
+
+        ctx.beginPath();
+        ctx.arc(radarX, radarY, 30, 0, Math.PI * 2);
+        ctx.stroke();
+
+        const angle = (Date.now() / 300) % (Math.PI * 2);
+        ctx.beginPath();
+        ctx.moveTo(radarX, radarY);
+        ctx.lineTo(radarX + Math.cos(angle) * 60, radarY + Math.sin(angle) * 60);
+        ctx.lineWidth = 3;
+        ctx.stroke();
+
+        ctx.fillStyle = "#000000";
+        ctx.font = "800 14px -apple-system, BlinkMacSystemFont, sans-serif";
+        ctx.fillText("Decomposing legal rules into 1000 × 500 coordinate mechanics", 500, 360);
+        return;
+      }
+
+      if (!ACTIVE_DATA || !ACTIVE_DATA.scenes || !ACTIVE_DATA.scenes[currentSceneIdx]) return;
+      const curScene = ACTIVE_DATA.scenes[currentSceneIdx];
+
+      renderDynamicScene(curScene, timeSec);
+
+      // Update Narration Box
+      document.getElementById("scene_tag_label").textContent = curScene.tag || ("SCENE " + (currentSceneIdx + 1));
+      document.getElementById("narration_text").textContent = curScene.dialogue || "";
     }
 
     function animate(timestamp) {
-      if (!isPlaying) return;
-      if (!lastTimestamp) lastTimestamp = timestamp;
-      const deltaSec = (timestamp - lastTimestamp) / 1000.0;
-      lastTimestamp = timestamp;
+      if (!lastAnimTime) lastAnimTime = timestamp;
+      const delta = (timestamp - lastAnimTime) / 1000.0;
+      lastAnimTime = timestamp;
 
-      currentTime += deltaSec;
-      if (currentTime >= duration) {
-        currentTime = duration;
-        isPlaying = false;
-        updatePlayBtn();
+      if (isPlaying && !isGenerating) {
+        currentTime += delta;
+        if (currentTime > SCENE_DURATION) {
+          currentTime = SCENE_DURATION;
+          isPlaying = false;
+          updatePlayBtn();
+        }
+        updateScrubberUI();
       }
 
-      updateUI();
-      renderFrame();
+      render(currentTime);
+      requestAnimationFrame(animate);
+    }
 
-      if (isPlaying) {
-        requestAnimationFrame(animate);
-      }
+    function updateScrubberUI() {
+      const slider = document.getElementById("timeline_slider");
+      slider.value = currentTime.toFixed(2);
+
+      const curM = Math.floor(currentTime / 60);
+      const curS = (currentTime % 60).toFixed(1);
+      const totM = Math.floor(SCENE_DURATION / 60);
+      const totS = (SCENE_DURATION % 60).toFixed(1);
+
+      const pad = (n) => (n < 10 ? "0" + n : n);
+      document.getElementById("time_display").textContent =
+        `${pad(curM)}:${curS < 10 ? "0" + curS : curS} / ${pad(totM)}:${totS < 10 ? "0" + totS : totS}`;
+    }
+
+    function switchScene(idx) {
+      if (!ACTIVE_DATA || !ACTIVE_DATA.scenes) return;
+      currentSceneIdx = Math.max(0, Math.min(idx, ACTIVE_DATA.scenes.length - 1));
+      currentTime = 0;
+      isPlaying = true;
+      updatePlayBtn();
+
+      const tabs = document.querySelectorAll(".scene-tab-btn");
+      tabs.forEach((btn, i) => {
+        if (i === currentSceneIdx) btn.classList.add("active");
+        else btn.classList.remove("active");
+      });
     }
 
     function togglePlay() {
-      if (currentTime >= duration) currentTime = 0.0;
       isPlaying = !isPlaying;
-      updatePlayBtn();
-      if (isPlaying) {
-        lastTimestamp = performance.now();
-        requestAnimationFrame(animate);
+      if (isPlaying && currentTime >= SCENE_DURATION) {
+        currentTime = 0;
       }
+      updatePlayBtn();
     }
 
     function updatePlayBtn() {
@@ -969,52 +1213,274 @@
       btn.textContent = isPlaying ? "⏸ Pause" : "▶ Play Animation";
     }
 
-    function seekTo(t) {
-      currentTime = Math.max(0, Math.min(duration, t));
-      updateUI();
-      renderFrame();
+    function seekTo(sec) {
+      currentTime = Math.max(0, Math.min(SCENE_DURATION, sec));
+      updateScrubberUI();
     }
 
     function seekRelative(delta) {
       seekTo(currentTime + delta);
     }
 
-    function updateUI() {
-      document.getElementById("timeline_slider").value = currentTime;
-      const mm = Math.floor(currentTime / 60).toString().padStart(2, "0");
-      const ss = (currentTime % 60).toFixed(1).padStart(4, "0");
-      document.getElementById("time_display").textContent = `${mm}:${ss} / 00:14.0`;
-    }
-
-    document.getElementById("timeline_slider").addEventListener("input", (e) => {
-      seekTo(parseFloat(e.target.value));
-    });
-
-    function switchScene(idx) {
-      activeSceneIdx = idx;
-      document.querySelectorAll(".scene-tab-btn").forEach((b, i) => {
-        b.classList.toggle("active", i === idx);
-      });
-      const sc = SCENES[idx];
-      document.getElementById("scene_tag_label").textContent = sc.tag;
-      document.getElementById("narration_text").textContent = sc.dialogue;
-      seekTo(0);
-      if (!isPlaying) togglePlay();
-    }
-
     function toggleGrid() {
       showGrid = !showGrid;
-      document.getElementById("btn_grid_toggle").classList.toggle("active-toggle", showGrid);
-      renderFrame();
+      const btn = document.getElementById("btn_grid_toggle");
+      if (showGrid) btn.classList.add("active-toggle");
+      else btn.classList.remove("active-toggle");
     }
 
     function toggleDither() {
       useDither = !useDither;
-      document.getElementById("btn_dither_toggle").classList.toggle("active-toggle", !useDither);
-      renderFrame();
+      const btn = document.getElementById("btn_dither_toggle");
+      if (useDither) btn.classList.add("active-toggle");
+      else btn.classList.remove("active-toggle");
     }
 
-    switchScene(0);
+    function updateTabsUI() {
+      const container = document.getElementById("scene_tabs_container");
+      container.innerHTML = "";
+
+      if (!ACTIVE_DATA || !ACTIVE_DATA.scenes) return;
+
+      ACTIVE_DATA.scenes.forEach((s, idx) => {
+        const btn = document.createElement("button");
+        btn.className = "scene-tab-btn" + (idx === currentSceneIdx ? " active" : "");
+        btn.onclick = () => switchScene(idx);
+        btn.innerHTML = `<span>${idx + 1}</span> ${s.tab_title || s.tag || ("Scene " + (idx + 1))}`;
+        container.appendChild(btn);
+      });
+    }
+
+    // Call Gemini to generate Presentation live
+    async function generateFromGemini() {
+      const input = document.getElementById("gemini_topic_input");
+      const topic = input.value.trim();
+      if (!topic) {
+        alert("Please enter a tax section or provision scenario!");
+        return;
+      }
+
+      const btn = document.getElementById("btn_gemini_generate");
+      const statusBadge = document.getElementById("gemini_status_badge");
+
+      btn.disabled = true;
+      btn.textContent = "⏳ Gemini Thinking...";
+      statusBadge.textContent = "Synthesizing 1000x500 pixels...";
+      isGenerating = true;
+
+      try {
+        // Try local server endpoint first
+        let res = await fetch("/api/generate_pixel_presentation", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ topic: topic })
+        });
+
+        if (!res.ok) {
+          throw new Error("Server responded with status " + res.status);
+        }
+
+        const data = await res.json();
+        if (data.error) {
+          throw new Error(data.error);
+        }
+
+        console.log("Gemini Generation Success:", data);
+        ACTIVE_DATA = data;
+        currentSceneIdx = 0;
+        currentTime = 0;
+        isPlaying = true;
+        updatePlayBtn();
+        updateTabsUI();
+        statusBadge.textContent = `Generated: ${data.section_code || "OK"} (${data.scenes?.length || 0} scenes)`;
+      } catch (err) {
+        console.error("Gemini Generation Error:", err);
+        statusBadge.textContent = "Error: " + err.message;
+        alert("Could not generate from Gemini: " + err.message + "\n\nMake sure 'python viewer/pixel_server.py' is running!");
+      } finally {
+        isGenerating = false;
+        btn.disabled = false;
+        btn.textContent = "✨ Generate Live";
+      }
+    }
+
+    // Quick presets
+    const PRESETS = {
+      '54D': DEFAULT_54D_DATA,
+      '54EC': {
+        section_code: "SEC 54EC",
+        title: "Section 54EC: Capital Gain Exemption in REC / NHAI Bonds",
+        summary: "Investment in specified bonds within 6 months of transfer up to ₹50 Lakhs limit.",
+        scenes: [
+          {
+            id: 1,
+            tab_title: "1 Transfer of Commercial Land & Gain",
+            tag: "SCENE 1: STATUTORY TRANSACTION",
+            type: "transfer",
+            dialogue: "Rajesh transfers long-term commercial land generating a Capital Gain of ₹75 Lakhs. Under Section 54EC, he can invest in long-term specified bonds like NHAI, REC, PFC, or IRFC.",
+            actor_left: { name: "Rajesh (Assessee)", role: "Commercial Land Transferor" },
+            actor_right: { name: "Specified Issuer", role: "REC / NHAI Bond Authority" },
+            asset: { name: "Commercial Land & Building", type: "industrial_factory" },
+            transfer_label: "CAPITAL ASSET TRANSFER",
+            amount_badge: "₹ 75,00,000",
+            amount_val: 7500000,
+            amount_label: "TOTAL CAPITAL GAIN"
+          },
+          {
+            id: 2,
+            tab_title: "2 Section 54EC Gatekeeper Criteria",
+            tag: "SCENE 2: STATUTORY PREREQUISITES",
+            type: "gatekeeper",
+            dialogue: "Section 54EC applies ONLY IF 3 conditions are fulfilled: Asset must be land or building, investment must be made within 6 months, and bonds must be redeemable after 5 years. All conditions met · GATE UNLOCKED!",
+            portal_title: "SECTION 54EC RELIEF PORTAL",
+            conditions: [
+              { label: "1. Asset transferred is Land or Building (or both)", cue: 1.0 },
+              { label: "2. Investment made within 6 Months from transfer date", cue: 4.0 },
+              { label: "3. Reinvestment in REC, NHAI, PFC or IRFC Bonds", cue: 7.0 }
+            ],
+            unlock_badge: "ALL 3 CONDITIONS MET",
+            unlock_subtitle: "Section 54EC Exemption Admissible"
+          },
+          {
+            id: 3,
+            tab_title: "3 ₹50 Lakhs Ceiling Limit Proviso",
+            tag: "SCENE 3: STATUTORY CEILING CAP",
+            type: "deduction_slice",
+            dialogue: "Rajesh invested ₹60 Lakhs in REC bonds. However, the proviso to Section 54EC caps the maximum exemption at ₹50 Lakhs in any financial year. Only ₹50 Lakhs qualifies for exemption.",
+            base_title: "Investment in Bonds",
+            base_val: 6000000,
+            deduct_title: "Statutory Cap (Sec 54EC Proviso)",
+            deduct_val: 5000000,
+            deduct_subtitle: "Maximum exemption permitted per financial year",
+            result_title: "Exempt Capital Gain under Section 54EC",
+            result_val: 5000000,
+            result_badge: "MAX EXEMPTION CAPPED",
+            statutory_note_title: "Statutory Limit Note (Finance Act Proviso):",
+            statutory_note_text: "Aggregate investment in specified bonds cannot exceed ₹50,00,000 during the FY of transfer and subsequent FY!"
+          },
+          {
+            id: 4,
+            tab_title: "4 Final Taxable Capital Gain Equation",
+            tag: "SCENE 4: FINAL TAX COMPUTATION",
+            type: "formula",
+            dialogue: "Total Capital Gain ₹75 Lakhs minus Section 54EC Exemption ₹50 Lakhs equals Net Taxable Capital Gain of ₹25 Lakhs.",
+            chips: [
+              { label: "Total Capital Gain", val: 7500000, cue: 1.0 },
+              { op: "−", cue: 3.5 },
+              { label: "Sec 54EC Exemption", val: 5000000, cue: 4.5 },
+              { op: "=", cue: 7.0 },
+              { label: "Net Taxable Gain", val: 2500000, isTotal: true, cue: 8.0 }
+            ],
+            verification_title: "Statutory Arithmetic Verification & Result",
+            verification_equation: "₹ 75,00,000 − ₹ 50,00,000 = ₹ 25,00,000 Net Taxable Capital Gain",
+            verification_note: "• Excess investment of ₹10 Lakhs does not qualify for Section 54EC exemption."
+          }
+        ]
+      },
+      '50C': {
+        section_code: "SEC 50C",
+        title: "Section 50C: Stamp Duty Value & 110% Safe Harbor Tolerance",
+        summary: "Special provision for full value of consideration in transfer of land or building.",
+        scenes: [
+          {
+            id: 1,
+            tab_title: "1 Property Agreement & Consideration",
+            tag: "SCENE 1: STATUTORY TRANSACTION",
+            type: "transfer",
+            dialogue: "Anand agrees to sell commercial plot to Suresh for ₹1,00,00,000 agreement value. However, the Sub-Registrar Stamp Duty Value is assessed at ₹1,15,00,000.",
+            actor_left: { name: "Anand (Seller)", role: "Assessee Landlord" },
+            actor_right: { name: "Suresh (Buyer)", role: "Property Transferee" },
+            asset: { name: "Commercial Land Plot", type: "industrial_factory" },
+            transfer_label: "SALE AGREEMENT REGISTERED",
+            amount_badge: "₹ 1,00,00,000",
+            amount_val: 10000000,
+            amount_label: "AGREEMENT CONSIDERATION"
+          },
+          {
+            id: 2,
+            tab_title: "2 Section 50C 110% Tolerance Audit",
+            tag: "SCENE 2: STATUTORY PREREQUISITES",
+            type: "gatekeeper",
+            dialogue: "Under Section 50C 3rd Proviso, if Stamp Duty Value does not exceed 110% of declared consideration, agreement value is accepted. Here SDV ₹1.15 Cr exceeds 110% (₹1.10 Cr)! Tolerance exceeded!",
+            portal_title: "SECTION 50C VALUATION PORTAL",
+            conditions: [
+              { label: "1. Asset transferred is Land or Building (or both)", cue: 1.0 },
+              { label: "2. Declared Consideration: ₹ 1,00,00,000", cue: 4.0 },
+              { label: "3. Stamp Duty Value ₹1,15,00,000 exceeds 110% (₹1,10,00,000)", cue: 7.0 }
+            ],
+            unlock_badge: "SDV DEEMED AS FVC",
+            unlock_subtitle: "Stamp Duty Value ₹1,15,00,000 Substituted as Consideration"
+          },
+          {
+            id: 3,
+            tab_title: "3 Deemed Consideration Substitution",
+            tag: "SCENE 3: STATUTORY SUBSTITUTION",
+            type: "deduction_slice",
+            dialogue: "Since SDV exceeds 110% of declared consideration, Section 50C deems ₹1,15,00,000 as the Full Value of Consideration. The declared ₹1 Crore is replaced.",
+            base_title: "Deemed Full Value of Consideration",
+            base_val: 11500000,
+            deduct_title: "Indexed Cost of Acquisition",
+            deduct_val: 4500000,
+            deduct_subtitle: "Base cost adjusted with CII indexation",
+            result_title: "Net Capital Gain under Section 50C",
+            result_val: 7000000,
+            result_badge: "DEEMED FVC VERIFIED",
+            statutory_note_title: "Section 50C Safe Harbor Proviso:",
+            statutory_note_text: "Tolerance limit increased to 110% by Finance Act. Stamp Duty Valuation becomes deemed consideration!"
+          },
+          {
+            id: 4,
+            tab_title: "4 Final Capital Gain Computation",
+            tag: "SCENE 4: FINAL TAX COMPUTATION",
+            type: "formula",
+            dialogue: "Deemed Consideration ₹1,15,00,000 minus Indexed Cost ₹45,00,000 equals Taxable Capital Gain of ₹70,00,000.",
+            chips: [
+              { label: "Deemed FVC (SDV)", val: 11500000, cue: 1.0 },
+              { op: "−", cue: 3.5 },
+              { label: "Indexed Cost (ICOA)", val: 4500000, cue: 4.5 },
+              { op: "=", cue: 7.0 },
+              { label: "Taxable Capital Gain", val: 7000000, isTotal: true, cue: 8.0 }
+            ],
+            verification_title: "Section 50C Statutory Arithmetic Verification",
+            verification_equation: "₹ 1,15,00,000 (SDV) − ₹ 45,00,000 = ₹ 70,00,000 Net Taxable Capital Gain",
+            verification_note: "• Agreement consideration of ₹1 Crore was rejected because SDV exceeded 110% tolerance."
+          }
+        ]
+      }
+    };
+
+    function loadPreset(key) {
+      if (PRESETS[key]) {
+        ACTIVE_DATA = PRESETS[key];
+        currentSceneIdx = 0;
+        currentTime = 0;
+        isPlaying = true;
+        updatePlayBtn();
+        updateTabsUI();
+        document.getElementById("gemini_status_badge").textContent = `Loaded Preset: ${ACTIVE_DATA.section_code}`;
+        document.getElementById("gemini_topic_input").value = ACTIVE_DATA.title + ": " + ACTIVE_DATA.summary;
+      }
+    }
+
+    // Init
+    window.addEventListener("DOMContentLoaded", () => {
+      pattern50 = createDitherPattern(0.5);
+      pattern25 = createDitherPattern(0.25);
+      updateTabsUI();
+      seekTo(0);
+
+      document.getElementById("timeline_slider").addEventListener("input", (e) => {
+        seekTo(parseFloat(e.target.value));
+      });
+
+      document.getElementById("gemini_topic_input").addEventListener("keydown", (e) => {
+        if (e.key === "Enter") {
+          generateFromGemini();
+        }
+      });
+
+      requestAnimationFrame(animate);
+    });
   </script>
 </body>
 </html>
