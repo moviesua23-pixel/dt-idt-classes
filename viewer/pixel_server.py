@@ -20,90 +20,104 @@ except Exception:
 from pipeline.key_rotator import KeyRotator
 from google.genai import types
 
-CHOREOGRAPHY_SYSTEM_PROMPT = """You are an expert Direct Tax & Indirect Tax CA Faculty and Creative Kinetic Choreographer.
+CHOREOGRAPHY_SYSTEM_PROMPT = """You are an expert Direct Tax & Indirect Tax CA Faculty and Architectural Kinetic Choreographer.
 The user will give you a tax section, statutory provision, or case study.
 
 YOUR TASK HAS TWO MANDATORY PHASES:
 
 PHASE 1: INVENT A UNIQUE TEACHING STORY
 - Create an original, specific, realistic educational scenario (e.g. an architect in Kochi selling shares to build a house; a tech company forfeiting an office lease deposit; a real estate agreement with circle rate discrepancy in Kozhikode; a partner retiring from a firm in Ernakulam).
-- DO NOT use the same generic scenario. Invent unique characters, real assets, and specific Indian Rupee numbers.
+- DO NOT use generic placeholders. Invent unique characters, real assets, and specific Indian Rupee numbers.
 - Write the teacher explanation in natural, engaging Malayalam teacher style with STRICT ENGLISH legal, statutory, and computation terms (Manglish CA education standard per Universal Domain Principle).
 
-PHASE 2: CHOREOGRAPH THE 1000x500 MONOCHROME PIXEL SCREEN
-- You have complete freedom over the 1000x500 pixel canvas (0,0 to 1000,500). Pure white background (#FFFFFF) with black pixels (#000000).
-- CRITICAL STAGE BOUNDS: The top header banner occupies y: 20 to 75. ALL elements must be placed strictly between y: 90 and y: 470, and x: 50 and x: 950.
-- DO NOT use fixed templates or the same layout for every section.
-- Design 3 to 4 sequential scenes where EVERY visual object and EVERY pixel movement matches the specific concept of this provision!
-  * If the concept is valuation dispute / tolerance -> Choreograph a balancing scale tilting or comparison towers.
-  * If the concept is deadline / time limit -> Choreograph a ticking countdown clock or milestone timeline.
-  * If the concept is a statutory cap / overflow -> Choreograph an overflow tank or physical barrier stopper.
-  * If the concept is proportional deduction -> Choreograph a ratio balance or asset being built brick-by-brick.
-  * If the concept is diversion / TDS -> Choreograph a split diversion pipe.
+PHASE 2: CHOREOGRAPH THE 1000x500 HIGH-DETAIL MONOCHROME PIXEL SCREEN
+- You have complete freedom over the 1000x500 pixel canvas (0,0 to 1000,500). Pure white background (#FFFFFF) with crisp black pixels (#000000).
+- CRITICAL STAGE BOUNDS:
+  * Top header banner occupies y: 20 to 75. NEVER place anything above y: 90!
+  * ALL stage elements MUST be strictly placed within: x: 50 to 950, and y: 90 to 470.
+- 4-ZONE STAGE ARCHITECTURE (RECOMMENDED FOR HIGH VISUAL DENSITY):
+  * Zone 1 (Left: x: 60 to 280, y: 95 to 280): Input / Source Asset (e.g. "asset_node" for original property, commercial plot, or gross receipts).
+  * Zone 2 (Center: x: 320 to 660, y: 90 to 300): The Kinetic Physical Metaphor Engine (e.g. "funnel", "scale", "tank", "clock", or "barrier").
+  * Zone 3 (Right: x: 700 to 940, y: 95 to 280): Output / Target Asset (e.g. "asset_node" for net consideration, new house, or TDS deposit).
+  * Zone 4 (Bottom: x: 60 to 940, y: 310 to 460): Statutory Accounting Ledger ("breakdown_card" with multi-line calculations and total verdict badge).
+- CRITICAL ZERO-COLLISION RULES:
+  * NEVER place text or counters on top of each other.
+  * For any asset that has an icon, title, and Rupee amount, ALWAYS use "asset_node" (which automatically encapsulates the icon, labels, and framed counter tray with guaranteed zero collision).
+  * Do NOT leave the canvas sparse or empty. Fill the stage with the mechanical metaphor, connecting pipes/lines, and the statutory ledger card below!
 
 You MUST return valid JSON matching this exact schema:
 {
-  "section_code": "SEC 50C",
+  "section_code": "SEC 48 & 54F",
   "title": "Descriptive provision title",
-  "concept_metaphor": "e.g. The Safe Harbor Breach Scale",
+  "concept_metaphor": "The Net Consideration Funnel & Sieve",
   "story_summary": "1-sentence summary of the scenario",
   "scenes": [
     {
       "id": 1,
-      "tab_title": "1 Transaction & Agreement",
-      "tag": "SCENE 1: THE TRANSACTION",
+      "tab_title": "1 Net Consideration Funnel",
+      "tag": "SCENE 1: THE NET CONSIDERATION FUNNEL",
       "duration_ms": 12000,
       "dialogue": "Natural Malayalam teacher explanation with strict English statutory terms.",
       "elements": [
         {
-          "id": "elem1",
-          "type": "icon",
+          "id": "source_asset",
+          "type": "asset_node",
+          "x": 60,
+          "y": 95,
+          "w": 220,
+          "h": 180,
+          "icon": "warehouse",
+          "label": "Commercial Plot",
+          "subtitle": "Gross Consideration",
+          "amount_val": 10000000,
+          "timeline": [
+            { "start_ms": 500, "end_ms": 2000, "action": "fade_in" }
+          ]
+        },
+        {
+          "id": "funnel_engine",
+          "type": "funnel",
+          "x": 330,
+          "y": 90,
+          "w": 320,
+          "h": 220,
+          "deduct_val": 200000,
+          "deduct_label": "2% Transfer Brokerage",
+          "timeline": [
+            { "start_ms": 1000, "end_ms": 3000, "action": "fade_in" },
+            { "start_ms": 3500, "end_ms": 8000, "action": "fill_progress", "to_pct": 0.85 }
+          ]
+        },
+        {
+          "id": "dest_asset",
+          "type": "asset_node",
+          "x": 700,
+          "y": 95,
+          "w": 240,
+          "h": 180,
           "icon": "document",
-          "x": 200,
-          "y": 180,
-          "w": 90,
-          "h": 110,
-          "label": "Sale Agreement",
+          "label": "Net Consideration (Sec 48)",
+          "subtitle": "Basis for 54F Audit",
+          "amount_val": 9800000,
           "timeline": [
-            { "start_ms": 500, "end_ms": 1500, "action": "draw_stroke" },
-            { "start_ms": 3000, "end_ms": 4500, "action": "move", "to_x": 450, "to_y": 180 }
+            { "start_ms": 4500, "end_ms": 6500, "action": "fade_in" }
           ]
         },
         {
-          "id": "elem2",
-          "type": "box",
-          "x": 650,
-          "y": 160,
-          "w": 250,
-          "h": 120,
-          "title": "Stamp Duty Value",
-          "subtitle": "Sub-Registrar Circle Rate",
+          "id": "ledger_card",
+          "type": "breakdown_card",
+          "x": 60,
+          "y": 315,
+          "w": 880,
+          "h": 140,
+          "verdict_badge": "SEC 48 QUALIFYING BASE VERIFIED",
+          "rows": [
+            { "label": "Full Value of Consideration (Gross Sale Price)", "val": 10000000 },
+            { "label": "LESS: Expenses on transfer (Sec 48(i))", "val": 200000, "isDeduction": true, "prefix": "(-) " },
+            { "label": "NET CONSIDERATION (Qualifying base for Sec 54F)", "val": 9800000, "isTotal": true }
+          ],
           "timeline": [
-            { "start_ms": 2000, "end_ms": 3000, "action": "fade_in" }
-          ]
-        },
-        {
-          "id": "elem3",
-          "type": "counter",
-          "x": 670,
-          "y": 240,
-          "from_val": 0,
-          "to_val": 11500000,
-          "prefix": "₹ ",
-          "timeline": [
-            { "start_ms": 2500, "end_ms": 4000, "action": "count_up" }
-          ]
-        },
-        {
-          "id": "elem4",
-          "type": "stamp",
-          "x": 500,
-          "y": 380,
-          "w": 400,
-          "h": 46,
-          "text": "110% SAFE HARBOR EXCEEDED",
-          "timeline": [
-            { "start_ms": 7500, "end_ms": 8200, "action": "stamp" }
+            { "start_ms": 6000, "end_ms": 7500, "action": "fade_in" }
           ]
         }
       ]
@@ -112,26 +126,26 @@ You MUST return valid JSON matching this exact schema:
 }
 
 SUPPORTED ELEMENT TYPES:
-- "icon": { icon: "house"|"factory"|"warehouse"|"scale"|"vault"|"document"|"bonds"|"coins"|"calendar"|"clock"|"car"|"ship"|"barrier"|"pipe_split"|"person"|"firm_circle", x, y, w, h, label, angle? }
-- "box": { x, y, w, h, title, subtitle, fill_dither? }
+- "asset_node": { x, y, w, h, icon, label, subtitle?, amount_val? } -> Encapsulated card with icon, title, subtitle, and bottom counter tray. Zero text collision!
+- "funnel": { x, y, w, h, deduct_val?, deduct_label?, fill_pct? } -> Mechanical conical funnel, sieve filter, side deduction jar, and bottom collection flask.
+- "breakdown_card": { x, y, w, h, rows: [{ label, val, isDeduction?, isTotal?, prefix? }], verdict_badge? } -> Statutory multi-line accounting calculation card with dotted lines.
+- "scale": { x, y, arm_length?, left_label?, right_label?, tilt_angle? } -> Tilting mechanical balance scale with central pillar and pans.
+- "tank": { x, y, w, h, fill_pct?, cap_pct?, cap_label?, overflow_label? } -> Liquid capacity tank with statutory cap threshold line.
+- "equation_chips": { x, y, chips: [ { "label": "...", "val": 100 }, { "op": "−" }, { "label": "...", "val": 50, "isTotal": true } ] }
+- "icon": { icon: "house"|"factory"|"warehouse"|"scale"|"vault"|"document"|"bonds"|"coins"|"calendar"|"clock"|"car"|"ship"|"barrier"|"pipe_split"|"person", x, y, w, h, label?, angle? }
+- "box": { x, y, w, h, title?, subtitle?, fill_dither? }
 - "text": { x, y, text, font_size?, align?, font_weight? }
-- "counter": { x, y, from_val, to_val, prefix, suffix, font_size? }
+- "counter": { x, y, from_val, to_val, prefix?, suffix?, font_size? }
 - "badge": { x, y, w, h, text, inverted? }
 - "line": { x1, y1, x2, y2, dashed?, label? }
-- "scale": { x, y, pivot_y, left_val, right_val, left_label, right_label, tilt_angle, threshold_line? }
-- "tank": { x, y, w, h, fill_pct, cap_pct, cap_label, overflow_label? }
-- "equation_chips": { x, y, chips: [ { "label": "...", "val": 100 }, { "op": "−" }, ... ] }
 - "stamp": { x, y, w, h, text }
-- "polygon": { points: [[x1, y1], [x2, y2], ...], label? }
 
 SUPPORTED ACTIONS:
 - "draw_stroke": outlines the element from 0% to 100%
-- "fade_in": element appears
+- "fade_in": element appears smoothly
 - "move": translates element smoothly to { to_x, to_y }
 - "count_up": animates numeric counter from from_val to to_val
 - "stamp": scales down with impact bounce to lock in place
-- "dissolve": breaks region into scattering pixel dots
-- "particle_stream": streams dots from { from_x, from_y } to { to_x, to_y }
 - "tilt": smoothly tilts element by { to_angle } degrees (for scales/gauges)
 - "fill_progress": fills liquid/meter to { to_pct }
 - "strike": draws an audit strike-through line across element
@@ -163,8 +177,20 @@ def generate_pixel_presentation(topic: str):
                         response_mime_type="application/json"
                     )
                 )
+                raw_result = json.loads(resp.text)
+                if isinstance(raw_result, list):
+                    if len(raw_result) > 0 and isinstance(raw_result[0], dict) and "scenes" in raw_result[0]:
+                        raw_result = raw_result[0]
+                    else:
+                        raw_result = {
+                            "section_code": "STATUTE",
+                            "title": topic[:60],
+                            "concept_metaphor": "Kinetic Tax Engine",
+                            "story_summary": "Choreographed statutory scenario",
+                            "scenes": raw_result
+                        }
                 print(f"  [MODEL] Choreography generated successfully using {m} in {round(time.time()-t0, 2)}s", flush=True)
-                return json.loads(resp.text)
+                return raw_result
             except Exception as e:
                 last_err = e
                 print(f"  [MODEL] {m} failed: {e}. Trying next fast model...", flush=True)
@@ -210,6 +236,14 @@ class PixelScreenHandler(http.server.SimpleHTTPRequestHandler):
 
                 print(f"\n[PIXEL SERVER] Choreographing presentation for topic: {topic}", flush=True)
                 result = generate_pixel_presentation(topic)
+                if not isinstance(result, dict):
+                    result = {
+                        "section_code": "STATUTE",
+                        "title": topic[:60],
+                        "concept_metaphor": "Kinetic Tax Engine",
+                        "story_summary": "Choreographed statutory scenario",
+                        "scenes": result if isinstance(result, list) else []
+                    }
                 print(f"[PIXEL SERVER] Choreography complete: {result.get('section_code')} - {result.get('title')} ({result.get('concept_metaphor')})", flush=True)
 
                 resp_bytes = json.dumps(result, ensure_ascii=False).encode('utf-8')

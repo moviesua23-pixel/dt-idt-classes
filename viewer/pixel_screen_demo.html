@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Universal Millisecond Pixel Choreography Studio (Option A + Gemini)</title>
+  <title>High-Detail Monochrome Pixel Screen Studio (Option A + Gemini)</title>
   <style>
     :root {
       --bg-desk: #f4f5f7;
@@ -22,13 +22,13 @@
       flex-direction: column;
       align-items: center;
       min-height: 100vh;
-      padding: 20px 24px 40px 24px;
+      padding: 16px 24px 40px 24px;
     }
 
     .demo-header {
       width: 100%;
       max-width: 1040px;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -36,7 +36,7 @@
       gap: 12px;
     }
     .demo-title-group h1 {
-      font-size: 20px;
+      font-size: 19px;
       font-weight: 900;
       letter-spacing: -0.5px;
       display: flex;
@@ -44,7 +44,7 @@
       gap: 8px;
     }
     .demo-title-group p {
-      font-size: 13px;
+      font-size: 12.5px;
       color: var(--ink-muted);
       margin-top: 2px;
     }
@@ -66,12 +66,12 @@
       background: #ffffff;
       border: 3px solid #000000;
       border-radius: 8px;
-      padding: 14px 18px;
-      margin-bottom: 12px;
+      padding: 12px 16px;
+      margin-bottom: 10px;
       box-shadow: 0 4px 14px rgba(0,0,0,0.06);
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 8px;
     }
     .gemini-top-row {
       display: flex;
@@ -93,16 +93,16 @@
       font-family: monospace;
       font-size: 11px;
       font-weight: 700;
-      color: #444;
-      background: #f0f0f0;
-      padding: 3px 8px;
+      color: #107c10;
+      background: #eefbee;
+      padding: 2px 8px;
+      border: 1px solid #107c10;
       border-radius: 4px;
-      border: 1px solid #ccc;
     }
     .gemini-input-group {
       display: flex;
       gap: 8px;
-      align-items: center;
+      width: 100%;
     }
     .gemini-input {
       flex: 1;
@@ -111,182 +111,191 @@
       font-weight: 600;
       border: 2px solid #000000;
       border-radius: 6px;
+      background: #fafbfc;
+      color: #000000;
       outline: none;
-      background: #ffffff;
     }
     .gemini-input:focus {
-      border-color: #000000;
-      box-shadow: 0 0 0 2px rgba(0,0,0,0.15);
+      background: #ffffff;
+      box-shadow: 0 0 0 2px #000000;
     }
     .btn-gemini-gen {
-      padding: 10px 18px;
-      font-size: 13px;
-      font-weight: 900;
-      color: #ffffff;
       background: #000000;
+      color: #ffffff;
       border: 2px solid #000000;
       border-radius: 6px;
+      padding: 0 20px;
+      font-size: 13px;
+      font-weight: 800;
       cursor: pointer;
-      display: inline-flex;
+      display: flex;
       align-items: center;
       gap: 6px;
       white-space: nowrap;
-      transition: all 0.15s ease;
+      transition: background 0.15s, transform 0.1s;
     }
     .btn-gemini-gen:hover {
       background: #333333;
+    }
+    .btn-gemini-gen:active {
+      transform: scale(0.98);
     }
     .btn-gemini-gen:disabled {
       background: #888888;
       border-color: #888888;
       cursor: not-allowed;
     }
+
     .preset-pills-row {
       display: flex;
       align-items: center;
-      gap: 6px;
       flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 4px;
     }
     .preset-pill-label {
       font-size: 11px;
       font-weight: 800;
-      color: #666;
-      margin-right: 2px;
+      color: #555555;
+      text-transform: uppercase;
+      letter-spacing: 0.3px;
     }
     .preset-pill {
-      font-size: 11px;
-      font-weight: 700;
-      background: #ffffff;
+      background: #f0f2f5;
       border: 1.5px solid #000000;
       border-radius: 4px;
-      padding: 3px 10px;
+      padding: 4px 9px;
+      font-size: 11px;
+      font-weight: 700;
       cursor: pointer;
-      transition: all 0.12s ease;
+      color: #000000;
+      transition: all 0.12s;
     }
     .preset-pill:hover {
       background: #000000;
       color: #ffffff;
     }
 
-    /* Scene Switcher Tabs */
+    /* Scene Tabs Bar */
     .scene-tabs-bar {
       width: 100%;
       max-width: 1040px;
       display: flex;
-      flex-wrap: wrap;
       gap: 8px;
-      margin-bottom: 12px;
+      margin-bottom: 8px;
+      overflow-x: auto;
     }
     .scene-tab-btn {
-      padding: 6px 14px;
-      border-radius: 6px;
-      border: 2px solid #000000;
+      flex: 1;
+      padding: 8px 12px;
+      font-size: 12px;
+      font-weight: 800;
       background: #ffffff;
       color: #000000;
-      font-size: 11.5px;
-      font-weight: 800;
+      border: 2px solid #000000;
+      border-radius: 6px;
       cursor: pointer;
       display: flex;
       align-items: center;
+      justify-content: center;
       gap: 6px;
       white-space: nowrap;
-      transition: all 0.15s ease;
+      transition: all 0.15s;
     }
     .scene-tab-btn:hover {
-      background: #f0f0f0;
+      background: #f0f2f5;
     }
     .scene-tab-btn.active {
       background: #000000;
       color: #ffffff;
+      box-shadow: 0 3px 0 rgba(0,0,0,0.3);
     }
 
-    /* 1000x500 Pixel Screen Stage Container */
+    /* Fixed 1000x500 Pixel Canvas Wrapper */
     .screen-wrapper {
       position: relative;
       background: #ffffff;
-      border: 3px solid #000000;
-      box-shadow: 0 16px 36px rgba(0,0,0,0.12), 0 2px 6px rgba(0,0,0,0.08);
-      margin-bottom: 12px;
-      border-radius: 4px;
+      border: 4px solid #000000;
+      border-radius: 10px;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.14);
+      line-height: 0;
       overflow: hidden;
     }
-    #pixel_canvas {
+    canvas {
       display: block;
       width: 1000px;
       height: 500px;
+      image-rendering: pixelated;
       background: #ffffff;
     }
-
     .dim-tag {
       position: absolute;
-      top: 6px;
-      right: 8px;
-      background: #ffffff;
-      border: 1px solid #000000;
+      bottom: 8px;
+      right: 12px;
       font-family: monospace;
       font-size: 10px;
       font-weight: 700;
+      color: #888888;
+      background: rgba(255,255,255,0.9);
       padding: 2px 6px;
+      border: 1px solid #cccccc;
+      border-radius: 3px;
       pointer-events: none;
     }
 
-    /* Narration Bar */
+    /* Teacher Narration Panel */
     .narration-panel {
-      width: 1000px;
+      width: 100%;
+      max-width: 1040px;
       background: #ffffff;
-      border: 2px solid #000000;
-      border-radius: 6px;
+      border: 2.5px solid #000000;
+      border-radius: 8px;
       padding: 12px 18px;
-      margin-bottom: 12px;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
+      margin-top: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     }
     .narration-meta {
       display: flex;
       justify-content: space-between;
       align-items: center;
+      margin-bottom: 6px;
     }
     .narration-label {
       font-size: 11px;
       font-weight: 900;
       text-transform: uppercase;
       letter-spacing: 0.5px;
-      color: #000000;
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
-    .narration-label::before {
-      content: "";
-      display: inline-block;
-      width: 8px;
-      height: 8px;
       background: #000000;
-      border-radius: 50%;
+      color: #ffffff;
+      padding: 2px 6px;
+      border-radius: 3px;
     }
     .narration-text {
-      font-size: 13.5px;
+      font-size: 14px;
       line-height: 1.5;
       font-weight: 600;
-      color: #000000;
+      color: #111111;
     }
 
-    /* Transport Controls */
+    /* Controls Panel */
     .controls-panel {
-      width: 1000px;
+      width: 100%;
+      max-width: 1040px;
       background: #ffffff;
-      border: 2px solid #000000;
-      border-radius: 6px;
-      padding: 12px 20px;
+      border: 2.5px solid #000000;
+      border-radius: 8px;
+      padding: 10px 18px;
+      margin-top: 8px;
       display: flex;
       flex-direction: column;
-      gap: 10px;
+      gap: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
     }
     .scrubber-row {
       display: flex;
       align-items: center;
-      gap: 14px;
+      gap: 12px;
+      width: 100%;
     }
     .timeline-slider {
       flex: 1;
@@ -298,35 +307,34 @@
       font-family: monospace;
       font-size: 13px;
       font-weight: 800;
-      width: 130px;
+      min-width: 90px;
       text-align: right;
     }
-
     .buttons-row {
       display: flex;
       justify-content: space-between;
       align-items: center;
       flex-wrap: wrap;
-      gap: 10px;
+      gap: 8px;
     }
     .ctrl-group {
       display: flex;
+      gap: 6px;
       align-items: center;
-      gap: 8px;
     }
     .btn-action {
       background: #ffffff;
       color: #000000;
       border: 2px solid #000000;
+      border-radius: 6px;
       padding: 6px 14px;
-      border-radius: 4px;
       font-size: 12px;
       font-weight: 800;
       cursor: pointer;
-      display: inline-flex;
+      display: flex;
       align-items: center;
       gap: 6px;
-      transition: all 0.1s ease;
+      transition: all 0.12s;
     }
     .btn-action:hover {
       background: #000000;
@@ -344,13 +352,13 @@
   <div class="demo-header">
     <div class="demo-title-group">
       <h1>
-        Universal Pixel Choreography Studio
+        High-Detail Monochrome Pixel Screen
         <span class="badge-mono">1000 × 500 Pure Pixel Canvas</span>
       </h1>
-      <p>White Background (#FFFFFF) • Every Pixel Moved Dynamically via Millisecond Choreography</p>
+      <p>White Background (#FFFFFF) • Architectural Engineering Linework • Rich Mechanical Metaphors</p>
     </div>
     <div>
-      <span style="font-size:12px; font-weight:700;">Zero Fixed Templates • Unique Story & Metaphor per Provision</span>
+      <span style="font-size:12px; font-weight:700;">Zero Hardcoded Layouts • Full Stage Kinetic Simulation</span>
     </div>
   </div>
 
@@ -359,25 +367,25 @@
     <div class="gemini-top-row">
       <div class="gemini-label">
         <span>✨ Gemini Millisecond Choreographer</span>
-        <span style="font-size:10px; color:#666; font-weight:700;">(Original Story + Custom Pixel Physics)</span>
+        <span style="font-size:10px; color:#666; font-weight:700;">(Original Story + High-Detail Pixel Metaphors)</span>
       </div>
       <div class="gemini-status" id="gemini_status_badge">API Ready • 5 Active Keys</div>
     </div>
     <div class="gemini-input-group">
       <input type="text" class="gemini-input" id="gemini_topic_input" 
-        placeholder="Enter any statutory section or case study (e.g. Section 50C Stamp Duty 110% safe harbor, Section 54EC bonds cap)..."
-        value="Section 50C: Stamp duty value comparison with 110% safe harbor limit when selling commercial plot">
+        placeholder="Enter any statutory section or case study (e.g. Section 48 net consideration funnel & 54F, Section 50C scale, Section 54EC)..."
+        value="Section 48 & 54F: Gross consideration ₹1 Crore, less 2% transfer expenses (₹2 Lakhs) through Net Consideration Funnel to get ₹98 Lakhs, then 50% house investment">
       <button class="btn-gemini-gen" id="btn_gemini_generate" onclick="generateFromGemini()">
         <span>✨ Choreograph Live</span>
       </button>
     </div>
     <div class="preset-pills-row">
-      <span class="preset-pill-label">Original Provision Stories:</span>
-      <button class="preset-pill" onclick="loadPreset('50C')">Sec 50C: Kozhikode Land Valuation & Scale Tilt</button>
-      <button class="preset-pill" onclick="loadPreset('54EC')">Sec 54EC: Kochi Warehouse, 6M Clock & ₹50L Overflow</button>
-      <button class="preset-pill" onclick="loadPreset('54F')">Sec 54F: Doctor's Shares & Brick-by-Brick House Build</button>
+      <span class="preset-pill-label">Detailed Mechanical Metaphors:</span>
+      <button class="preset-pill" onclick="loadPreset('48_54F')">Sec 48 & 54F: Net Consideration Funnel & Sieve</button>
+      <button class="preset-pill" onclick="loadPreset('50C')">Sec 50C: Kozhikode 110% Tilting Safe Harbor Scale</button>
+      <button class="preset-pill" onclick="loadPreset('54EC')">Sec 54EC: 6M Countdown Clock & ₹50L Overflow Stopper</button>
+      <button class="preset-pill" onclick="loadPreset('194C')">Sec 194C: Contractor TDS Diversion Splitter Pipe</button>
       <button class="preset-pill" onclick="loadPreset('45(4)')">Sec 45(4): Malabar Firm Partner Exit & Asset Pool</button>
-      <button class="preset-pill" onclick="loadPreset('54D')">Sec 54D: Compulsory Acquisition & Gate Unlock</button>
     </div>
   </div>
 
@@ -395,7 +403,7 @@
   <!-- Teacher Narration Bar -->
   <div class="narration-panel">
     <div class="narration-meta">
-      <div class="narration-label" id="scene_tag_label">SCENE 1: STATUTORY CONFLICT</div>
+      <div class="narration-label" id="scene_tag_label">SCENE 1: THE NET CONSIDERATION FUNNEL</div>
       <span style="font-size:11px; font-weight:700; color:#555;">Teacher Explanation (Malayalam / English Statutory Terms)</span>
     </div>
     <div class="narration-text" id="narration_text">
@@ -486,19 +494,19 @@
     function drawHeaderBanner(title, sectionCode, metaphor) {
       ctx.strokeStyle = "#000000";
       ctx.lineWidth = 2.5;
-      ctx.strokeRect(40, 20, 920, 46);
+      ctx.strokeRect(40, 18, 920, 48);
 
       ctx.fillStyle = "#000000";
-      ctx.fillRect(44, 24, 160, 38);
+      ctx.fillRect(44, 22, 160, 40);
       ctx.fillStyle = "#ffffff";
       ctx.font = "900 13px monospace";
       ctx.textAlign = "center";
-      ctx.fillText(sectionCode || "STATUTE", 124, 48);
+      ctx.fillText(sectionCode || "STATUTE", 124, 46);
 
       ctx.fillStyle = "#000000";
       ctx.font = "900 16px -apple-system, BlinkMacSystemFont, sans-serif";
       ctx.textAlign = "left";
-      ctx.fillText(title, 220, 44);
+      ctx.fillText(title, 220, 42);
 
       if (metaphor) {
         ctx.fillStyle = "#555555";
@@ -508,7 +516,7 @@
     }
 
     // ==========================================
-    // RICH 1-BIT PIXEL ICON LIBRARY
+    // DETAILED 1-BIT PIXEL ICON LIBRARY
     // ==========================================
     function drawPixelIcon(type, x, y, w, h, strokePct = 1.0, angle = 0) {
       ctx.save();
@@ -520,19 +528,14 @@
       ctx.lineWidth = 2.5;
 
       if (type === "house") {
-        // Roof
         ctx.beginPath();
         ctx.moveTo(w * 0.1, h * 0.45);
         ctx.lineTo(w * 0.5, h * 0.1);
         ctx.lineTo(w * 0.9, h * 0.45);
         ctx.stroke();
-        // Chimney
         ctx.strokeRect(w * 0.68, h * 0.12, w * 0.12, h * 0.2);
-        // Walls
         ctx.strokeRect(w * 0.18, h * 0.45, w * 0.64, h * 0.45);
-        // Door
         ctx.strokeRect(w * 0.42, h * 0.6, w * 0.16, h * 0.3);
-        // Window
         ctx.strokeRect(w * 0.24, h * 0.52, w * 0.12, h * 0.15);
       } 
       else if (type === "warehouse" || type === "factory") {
@@ -603,38 +606,6 @@
         ctx.lineTo(w * 0.75, h * 0.5);
         ctx.stroke();
       }
-      else if (type === "scale") {
-        // Base & Pillar
-        ctx.beginPath();
-        ctx.moveTo(w * 0.2, h * 0.9);
-        ctx.lineTo(w * 0.8, h * 0.9);
-        ctx.moveTo(w * 0.5, h * 0.9);
-        ctx.lineTo(w * 0.5, h * 0.25);
-        ctx.stroke();
-        // Crossbar
-        ctx.beginPath();
-        ctx.moveTo(w * 0.1, h * 0.25);
-        ctx.lineTo(w * 0.9, h * 0.25);
-        ctx.stroke();
-        // Left Pan Strings & Pan
-        ctx.beginPath();
-        ctx.moveTo(w * 0.1, h * 0.25);
-        ctx.lineTo(w * 0.05, h * 0.6);
-        ctx.moveTo(w * 0.1, h * 0.25);
-        ctx.lineTo(w * 0.3, h * 0.6);
-        ctx.moveTo(w * 0.02, h * 0.6);
-        ctx.lineTo(w * 0.33, h * 0.6);
-        ctx.stroke();
-        // Right Pan Strings & Pan
-        ctx.beginPath();
-        ctx.moveTo(w * 0.9, h * 0.25);
-        ctx.lineTo(w * 0.7, h * 0.6);
-        ctx.moveTo(w * 0.9, h * 0.25);
-        ctx.lineTo(w * 0.95, h * 0.6);
-        ctx.moveTo(w * 0.67, h * 0.6);
-        ctx.lineTo(w * 0.98, h * 0.6);
-        ctx.stroke();
-      }
       else if (type === "person") {
         ctx.beginPath();
         ctx.arc(w * 0.5, h * 0.32, w * 0.2, 0, Math.PI * 2);
@@ -642,15 +613,6 @@
         ctx.beginPath();
         ctx.arc(w * 0.5, h * 0.9, w * 0.35, Math.PI, 0);
         ctx.stroke();
-      }
-      else if (type === "barrier") {
-        ctx.strokeRect(0, 0, w, h);
-        for (let i = -h; i < w + h; i += 16) {
-          ctx.beginPath();
-          ctx.moveTo(Math.max(0, i), 0);
-          ctx.lineTo(Math.min(w, i + h), h);
-          ctx.stroke();
-        }
       }
       else if (type === "coins") {
         for (let i = 0; i < 4; i++) {
@@ -667,10 +629,314 @@
     }
 
     // ==========================================
+    // MECHANICAL FUNNEL RENDERER (Section 48 Sieve)
+    // Guaranteed Zero-Collision Geometry
+    // ==========================================
+    function drawMechanicalFunnel(x, y, w, h, fillPct = 0, deductVal = 0, deductLabel = "2% Transfer Brokerage") {
+      ctx.save();
+      ctx.strokeStyle = "#000000";
+      ctx.lineWidth = 2.5;
+
+      const hopperW = 190;
+      const hopperH = 14;
+      const hx = x + (w - hopperW) / 2; // centered
+      ctx.strokeRect(hx, y, hopperW, hopperH);
+
+      const neckW = 44;
+      const coneH = 65;
+      const spoutH = 26;
+      const neckX = x + (w - neckW) / 2;
+
+      // Conical Funnel Body
+      ctx.beginPath();
+      ctx.moveTo(hx, y + hopperH);
+      ctx.lineTo(neckX, y + hopperH + coneH);
+      ctx.lineTo(neckX, y + hopperH + coneH + spoutH);
+      ctx.lineTo(neckX + neckW, y + hopperH + coneH + spoutH);
+      ctx.lineTo(neckX + neckW, y + hopperH + coneH);
+      ctx.lineTo(hx + hopperW, y + hopperH);
+      ctx.stroke();
+
+      // Internal Sieve Mesh Filter
+      const sieveY = y + hopperH + coneH - 12;
+      ctx.setLineDash([3, 3]);
+      ctx.beginPath();
+      ctx.moveTo(neckX - 10, sieveY);
+      ctx.lineTo(neckX + neckW + 10, sieveY);
+      ctx.stroke();
+      ctx.setLineDash([]);
+
+      ctx.fillStyle = "#555555";
+      ctx.font = "800 9.5px monospace";
+      ctx.textAlign = "center";
+      ctx.fillText("SEC 48(i) EXPENSE FILTER", x + w / 2, sieveY - 6);
+
+      // Side Deduction Extraction Pipe
+      const pipeStartX = neckX + neckW;
+      const pipeStartY = sieveY - 2;
+      ctx.beginPath();
+      ctx.moveTo(pipeStartX, pipeStartY);
+      ctx.lineTo(pipeStartX + 26, pipeStartY - 8);
+      ctx.lineTo(pipeStartX + 26, pipeStartY + 14);
+      ctx.lineTo(pipeStartX, pipeStartY + 8);
+      ctx.stroke();
+
+      // Side Expense Dropping Jar (ends comfortably before right box)
+      const jarX = pipeStartX + 26;
+      const jarY = pipeStartY - 24;
+      const jarW = 145;
+      const jarH = 58;
+
+      ctx.strokeRect(jarX, jarY, jarW, jarH);
+      if (useDither && pattern25) {
+        ctx.fillStyle = pattern25;
+        ctx.fillRect(jarX, jarY, jarW, jarH);
+      }
+      ctx.fillStyle = "#000000";
+      ctx.font = "900 10px monospace";
+      ctx.textAlign = "center";
+      ctx.fillText("LESS: EXPENSES (Sec 48)", jarX + jarW / 2, jarY + 18);
+      ctx.font = "900 15px monospace";
+      ctx.fillText("- ₹ " + (deductVal || 200000).toLocaleString("en-IN"), jarX + jarW / 2, jarY + 37);
+      ctx.font = "700 9px sans-serif";
+      ctx.fillText(deductLabel, jarX + jarW / 2, jarY + 50);
+
+      // Bottom Collector Vessel (Net Consideration Flask)
+      const flaskW = 160;
+      const flaskH = 70;
+      const flaskX = x + (w - flaskW) / 2;
+      const flaskY = y + hopperH + coneH + spoutH + 6;
+
+      ctx.strokeRect(flaskX, flaskY, flaskW, flaskH);
+
+      if (fillPct > 0) {
+        const liquidH = (flaskH - 6) * fillPct;
+        ctx.fillStyle = "#000000";
+        ctx.fillRect(flaskX + 3, flaskY + flaskH - liquidH - 3, flaskW - 6, liquidH);
+      }
+
+      ctx.fillStyle = fillPct > 0.5 ? "#ffffff" : "#000000";
+      ctx.font = "900 10.5px monospace";
+      ctx.textAlign = "center";
+      ctx.fillText("NET CONSIDERATION VESSEL", flaskX + flaskW / 2, flaskY + 22);
+
+      // Connecting Industrial Flanges
+      ctx.strokeStyle = "#000000";
+      ctx.lineWidth = 1.5;
+      ctx.strokeRect(hx + 10, y - 4, hopperW - 20, 4);
+
+      ctx.restore();
+    }
+
+    // ==========================================
+    // MECHANICAL PROPORTIONAL SPLIT VALVE
+    // ==========================================
+    function drawSplitValve(x, y, w, h, ratio1 = 0.5, ratio2 = 0.5, val1 = 4900000, val2 = 4900000) {
+      ctx.save();
+      ctx.strokeStyle = "#000000";
+      ctx.lineWidth = 2.5;
+
+      // Outer Container Box
+      ctx.strokeRect(x, y, w, h);
+
+      // Header Bar
+      if (useDither && pattern25) {
+        ctx.fillStyle = pattern25;
+        ctx.fillRect(x, y, w, 26);
+      }
+      ctx.strokeRect(x, y, w, 26);
+
+      ctx.fillStyle = "#000000";
+      ctx.font = "900 11px monospace";
+      ctx.textAlign = "center";
+      ctx.fillText("PROPORTIONAL DIVERSION VALVE (SEC 54F)", x + w / 2, y + 18);
+
+      // Internal Split Chamber
+      const chamberX = x + 40;
+      const chamberY = y + 45;
+      const chamberW = w - 80;
+      const chamberH = h - 60;
+
+      // Intake pipe from left
+      ctx.strokeRect(x, y + h / 2 - 14, 40, 28);
+      ctx.fillStyle = "#000000";
+      ctx.font = "900 10px monospace";
+      ctx.textAlign = "center";
+      ctx.fillText("IN", x + 20, y + h / 2 + 4);
+
+      // Branch 1: Top Stream (Reinvested in New House)
+      ctx.strokeRect(chamberX + 20, chamberY + 8, chamberW - 40, 46);
+      ctx.fillStyle = "#000000";
+      ctx.font = "800 11px -apple-system, BlinkMacSystemFont, sans-serif";
+      ctx.textAlign = "left";
+      ctx.fillText("➡ 50% REINVESTED IN NEW HOUSE", chamberX + 30, chamberY + 26);
+      ctx.font = "900 14px monospace";
+      ctx.textAlign = "right";
+      ctx.fillText("₹ " + val1.toLocaleString("en-IN"), chamberX + chamberW - 30, chamberY + 44);
+
+      // Branch 2: Bottom Stream (Uninvested / Taxable)
+      ctx.strokeRect(chamberX + 20, chamberY + 64, chamberW - 40, 46);
+      if (useDither && pattern25) {
+        ctx.fillStyle = pattern25;
+        ctx.fillRect(chamberX + 20, chamberY + 64, chamberW - 40, 46);
+      }
+      ctx.fillStyle = "#000000";
+      ctx.font = "800 11px -apple-system, BlinkMacSystemFont, sans-serif";
+      ctx.textAlign = "left";
+      ctx.fillText("➡ 50% UNINVESTED / TAXABLE GAIN", chamberX + 30, chamberY + 82);
+      ctx.font = "900 14px monospace";
+      ctx.textAlign = "right";
+      ctx.fillText("₹ " + val2.toLocaleString("en-IN"), chamberX + chamberW - 30, chamberY + 100);
+
+      // Outtake Flanges on right
+      ctx.strokeRect(x + w - 40, chamberY + 16, 40, 28);
+      ctx.strokeRect(x + w - 40, chamberY + 72, 40, 28);
+
+      ctx.restore();
+    }
+
+    // ==========================================
+    // UNIFIED ASSET NODE (Guaranteed Zero Overlap)
+    // ==========================================
+    function drawAssetNode(x, y, w, h, iconType, label, amountVal, subtitle) {
+      ctx.save();
+      ctx.strokeStyle = "#000000";
+      ctx.lineWidth = 2.5;
+      ctx.strokeRect(x, y, w, h);
+
+      // Architectural Corner Registration Ticks
+      ctx.lineWidth = 1.5;
+      ctx.strokeRect(x + 4, y + 4, 8, 8);
+      ctx.strokeRect(x + w - 12, y + 4, 8, 8);
+
+      // Icon on top
+      const iconSize = 52;
+      drawPixelIcon(iconType, x + (w - iconSize) / 2, y + 14, iconSize, iconSize);
+
+      // Label in middle
+      ctx.fillStyle = "#000000";
+      ctx.font = "800 13px -apple-system, BlinkMacSystemFont, sans-serif";
+      ctx.textAlign = "center";
+      ctx.fillText(label, x + w / 2, y + 88);
+
+      if (subtitle) {
+        ctx.fillStyle = "#666666";
+        ctx.font = "700 10.5px monospace";
+        ctx.fillText(subtitle, x + w / 2, y + 104);
+      }
+
+      // Border line for counter tray
+      if (amountVal !== undefined) {
+        ctx.beginPath();
+        ctx.moveTo(x, y + h - 38);
+        ctx.lineTo(x + w, y + h - 38);
+        ctx.stroke();
+
+        ctx.fillStyle = "#000000";
+        ctx.fillRect(x, y + h - 38, w, 38);
+
+        ctx.fillStyle = "#ffffff";
+        ctx.font = "900 16px monospace";
+        ctx.textAlign = "center";
+        ctx.fillText("₹ " + (amountVal || 0).toLocaleString("en-IN"), x + w / 2, y + h - 14);
+      }
+
+      ctx.restore();
+    }
+
+    // ==========================================
+    // DETAILED ACCOUNTING BREAKDOWN CARD
+    // ==========================================
+    function drawBreakdownCard(x, y, w, h, rows, verdictBadge, title) {
+      ctx.save();
+      ctx.strokeStyle = "#000000";
+      ctx.lineWidth = 2.5;
+      ctx.strokeRect(x, y, w, h);
+
+      if (useDither && pattern25) {
+        ctx.fillStyle = pattern25;
+        ctx.fillRect(x, y, w, 28);
+      }
+      ctx.strokeRect(x, y, w, 28);
+
+      ctx.fillStyle = "#000000";
+      ctx.font = "900 11.5px monospace";
+      ctx.textAlign = "left";
+      const cardTitle = title || (ACTIVE_DATA?.section_code ? (ACTIVE_DATA.section_code + " STATUTORY AUDIT BREAKDOWN") : "STATUTORY COMPUTATION BREAKDOWN");
+      ctx.fillText(cardTitle, x + 16, y + 19);
+
+      let curY = y + 54;
+      rows.forEach((r, idx) => {
+        ctx.fillStyle = r.isTotal ? "#000000" : (r.isDeduction ? "#333333" : "#000000");
+        ctx.font = (r.isTotal ? "900 13px" : "700 12px") + " -apple-system, BlinkMacSystemFont, sans-serif";
+        ctx.textAlign = "left";
+        ctx.fillText(r.label, x + 20, curY);
+
+        ctx.font = (r.isTotal ? "900 15px" : "800 13.5px") + " monospace";
+        ctx.textAlign = "right";
+        ctx.fillText((r.prefix || "") + "₹ " + (r.val || 0).toLocaleString("en-IN"), x + w - 24, curY);
+
+        if (idx === rows.length - 2) {
+          ctx.beginPath();
+          ctx.moveTo(x + 16, curY + 10);
+          ctx.lineTo(x + w - 16, curY + 10);
+          ctx.stroke();
+          curY += 24;
+        } else {
+          curY += 25;
+        }
+      });
+
+      if (verdictBadge) {
+        const badgeW = 270, badgeH = 22;
+        const bx = x + w - badgeW - 4;
+        const by = y + 3;
+        ctx.fillStyle = "#000000";
+        ctx.fillRect(bx, by, badgeW, badgeH);
+        ctx.fillStyle = "#ffffff";
+        ctx.font = "900 10.5px monospace";
+        ctx.textAlign = "center";
+        ctx.fillText(verdictBadge, bx + badgeW / 2, by + 15);
+      }
+
+      ctx.restore();
+    }
+
+    // ==========================================
+    // INDUSTRIAL CONNECTING FLOW PIPES
+    // ==========================================
+    function drawFlowPipe(x1, y1, x2, y2, label) {
+      ctx.save();
+      ctx.strokeStyle = "#000000";
+      ctx.lineWidth = 3;
+      ctx.beginPath();
+      ctx.moveTo(x1, y1);
+      ctx.lineTo(x2, y2);
+      ctx.stroke();
+
+      // Chevrons
+      const midX = (x1 + x2) / 2;
+      const midY = (y1 + y2) / 2;
+      ctx.fillStyle = "#000000";
+      ctx.font = "900 12px monospace";
+      ctx.textAlign = "center";
+      ctx.fillText("▶▶", midX, midY - 6);
+
+      if (label) {
+        ctx.fillStyle = "#ffffff";
+        ctx.fillRect(midX - 35, midY + 4, 70, 16);
+        ctx.strokeRect(midX - 35, midY + 4, 70, 16);
+        ctx.fillStyle = "#000000";
+        ctx.font = "800 9px monospace";
+        ctx.fillText(label, midX, midY + 15);
+      }
+      ctx.restore();
+    }
+
+    // ==========================================
     // UNIVERSAL MILLISECOND ELEMENT RENDERER
     // ==========================================
     function renderUniversalElement(elem, t_ms) {
-      // Default state
       let x = elem.x || 0;
       let y = elem.y || 0;
       let w = elem.w || 100;
@@ -679,7 +945,7 @@
       let strokePct = 1.0;
       let angle = elem.angle || 0;
       let scale = 1.0;
-      let countVal = elem.from_val || 0;
+      let countVal = elem.amount_val !== undefined ? elem.amount_val : (elem.from_val !== undefined ? elem.from_val : 0);
       let fillPct = elem.fill_pct || 0;
       let strikePct = 0;
 
@@ -689,7 +955,7 @@
           const s = kf.start_ms || 0;
           const e = kf.end_ms || (s + 1000);
           const p = Math.max(0, Math.min(1.0, (t_ms - s) / Math.max(1, (e - s))));
-          const ease = p * p * (3 - 2 * p); // smooth step
+          const ease = p * p * (3 - 2 * p);
 
           if (kf.action === "draw_stroke") {
             if (t_ms < s) strokePct = 0;
@@ -710,9 +976,11 @@
             }
           }
           else if (kf.action === "count_up") {
-            if (t_ms < s) countVal = elem.from_val || 0;
-            else if (t_ms < e) countVal = Math.round((elem.from_val || 0) + ((elem.to_val || 0) - (elem.from_val || 0)) * ease);
-            else countVal = elem.to_val || 0;
+            const startVal = elem.from_val !== undefined ? elem.from_val : 0;
+            const endVal = elem.to_val !== undefined ? elem.to_val : (elem.amount_val !== undefined ? elem.amount_val : 0);
+            if (t_ms < s) countVal = startVal;
+            else if (t_ms < e) countVal = Math.round(startVal + (endVal - startVal) * ease);
+            else countVal = endVal;
           }
           else if (kf.action === "stamp") {
             if (t_ms < s) {
@@ -747,8 +1015,33 @@
       ctx.save();
       ctx.globalAlpha = opacity;
 
-      // 1. Box Element
-      if (elem.type === "box") {
+      // 1. Mechanical Funnel
+      if (elem.type === "funnel") {
+        drawMechanicalFunnel(x, y, w, h, fillPct, elem.deduct_val, elem.deduct_label);
+      }
+
+      // 2. Proportional Split Valve
+      else if (elem.type === "split_valve") {
+        drawSplitValve(x, y, w, h, elem.ratio1, elem.ratio2, elem.val1, elem.val2);
+      }
+
+      // 3. Asset Node (Unified Box with Zero Overlap)
+      else if (elem.type === "asset_node") {
+        drawAssetNode(x, y, w, h, elem.icon || "house", elem.label || "Asset", countVal, elem.subtitle);
+      }
+
+      // 4. Breakdown Card
+      else if (elem.type === "breakdown_card") {
+        drawBreakdownCard(x, y, w, h, elem.rows || [], elem.verdict_badge, elem.title);
+      }
+
+      // 5. Flow Pipe
+      else if (elem.type === "flow_pipe") {
+        drawFlowPipe(elem.x1 || x, elem.y1 || y, elem.x2 || (x + w), elem.y2 || (y + h), elem.label);
+      }
+
+      // 6. Box Element
+      else if (elem.type === "box") {
         ctx.strokeStyle = "#000000";
         ctx.lineWidth = 2.5;
         ctx.strokeRect(x, y, w, h);
@@ -760,18 +1053,18 @@
 
         if (elem.title) {
           ctx.fillStyle = "#000000";
-          ctx.font = "900 15px -apple-system, BlinkMacSystemFont, sans-serif";
+          ctx.font = "900 14px -apple-system, BlinkMacSystemFont, sans-serif";
           ctx.textAlign = "left";
-          ctx.fillText(elem.title, x + 16, y + 28);
+          ctx.fillText(elem.title, x + 16, y + 26);
         }
         if (elem.subtitle) {
           ctx.fillStyle = "#555555";
           ctx.font = "700 11px monospace";
-          ctx.fillText(elem.subtitle, x + 16, y + 48);
+          ctx.fillText(elem.subtitle, x + 16, y + 46);
         }
       }
 
-      // 2. Icon Element
+      // 7. Icon Element
       else if (elem.type === "icon") {
         drawPixelIcon(elem.icon || "document", x, y, w, h, strokePct, angle);
         if (elem.label) {
@@ -782,17 +1075,17 @@
         }
       }
 
-      // 3. Counter Element
+      // 8. Counter Element
       else if (elem.type === "counter") {
         ctx.fillStyle = "#000000";
-        const fSize = elem.font_size || 24;
+        const fSize = elem.font_size || 22;
         ctx.font = `900 ${fSize}px monospace`;
         ctx.textAlign = "left";
         const txt = (elem.prefix || "") + countVal.toLocaleString("en-IN") + (elem.suffix || "");
         ctx.fillText(txt, x, y);
       }
 
-      // 4. Stamp Element
+      // 9. Stamp Element
       else if (elem.type === "stamp") {
         ctx.translate(x + w / 2, y + h / 2);
         ctx.scale(scale, scale);
@@ -808,12 +1101,26 @@
         ctx.fillRect(8, 8, w - 16, h - 16);
 
         ctx.fillStyle = "#ffffff";
-        ctx.font = "900 14px monospace";
+        ctx.font = "900 13px monospace";
         ctx.textAlign = "center";
         ctx.fillText(elem.text || "VERIFIED", w / 2, h / 2 + 5);
       }
 
-      // 5. Text Element
+      // 10. Badge Element
+      else if (elem.type === "badge") {
+        ctx.strokeStyle = "#000000";
+        ctx.lineWidth = 2.5;
+        ctx.fillStyle = elem.inverted ? "#000000" : "#ffffff";
+        ctx.fillRect(x, y, w, h);
+        ctx.strokeRect(x, y, w, h);
+
+        ctx.fillStyle = elem.inverted ? "#ffffff" : "#000000";
+        ctx.font = "900 12px monospace";
+        ctx.textAlign = "center";
+        ctx.fillText(elem.text || "", x + w / 2, y + h / 2 + 4);
+      }
+
+      // 11. Text Element
       else if (elem.type === "text") {
         ctx.fillStyle = "#000000";
         ctx.font = `${elem.font_weight || "800"} ${elem.font_size || 14}px -apple-system, BlinkMacSystemFont, sans-serif`;
@@ -821,13 +1128,12 @@
         ctx.fillText(elem.text || "", x, y);
       }
 
-      // 6. Scale Element (Tilting Balance)
+      // 12. Scale Element (Tilting Balance)
       else if (elem.type === "scale") {
         const pivotX = x;
         const pivotY = y;
         const armLen = elem.arm_length || 180;
 
-        // Pillar & Base
         ctx.strokeStyle = "#000000";
         ctx.lineWidth = 3;
         ctx.beginPath();
@@ -837,7 +1143,6 @@
         ctx.lineTo(pivotX, pivotY);
         ctx.stroke();
 
-        // Tilting Crossbeam
         ctx.save();
         ctx.translate(pivotX, pivotY);
         ctx.rotate(angle * Math.PI / 180);
@@ -868,7 +1173,6 @@
         ctx.stroke();
         ctx.restore();
 
-        // Labels
         if (elem.left_label) {
           ctx.fillStyle = "#000000";
           ctx.font = "800 13px -apple-system, BlinkMacSystemFont, sans-serif";
@@ -883,18 +1187,19 @@
         }
       }
 
-      // 7. Tank Element (Overflow Reservoir)
+      // 13. Tank Element (Guaranteed Clamping & Normalization)
       else if (elem.type === "tank") {
         ctx.strokeStyle = "#000000";
         ctx.lineWidth = 2.5;
         ctx.strokeRect(x, y, w, h);
 
-        const currentFillH = h * fillPct;
+        const clampedPct = Math.max(0, Math.min(1.0, fillPct > 1.0 ? fillPct / 100.0 : fillPct));
+        const currentFillH = (h - 8) * clampedPct;
         ctx.fillStyle = "#000000";
-        ctx.fillRect(x + 4, y + h - currentFillH, w - 8, currentFillH);
+        ctx.fillRect(x + 4, y + h - currentFillH - 4, w - 8, currentFillH);
 
-        // Cap Line
-        const capPct = elem.cap_pct || 0.7;
+        let capPct = elem.cap_pct || 0.65;
+        if (capPct > 1.0) capPct = capPct / 100.0;
         const capY = y + h * (1 - capPct);
         ctx.setLineDash([4, 4]);
         ctx.beginPath();
@@ -907,11 +1212,11 @@
           ctx.fillStyle = "#000000";
           ctx.font = "900 11px monospace";
           ctx.textAlign = "left";
-          ctx.fillText(elem.cap_label, x + w + 26, capY + 4);
+          ctx.fillText(elem.cap_label, x + w + 16, capY + 4);
         }
       }
 
-      // 8. Equation Chips
+      // 13. Equation Chips
       else if (elem.type === "equation_chips") {
         let curX = x;
         const chips = elem.chips || [];
@@ -948,7 +1253,7 @@
         });
       }
 
-      // 9. Line
+      // 14. Line Element
       else if (elem.type === "line") {
         ctx.strokeStyle = "#000000";
         ctx.lineWidth = 2;
@@ -966,28 +1271,131 @@
         }
       }
 
-      // Strike-through line if active
-      if (strikePct > 0) {
-        ctx.strokeStyle = "#000000";
-        ctx.lineWidth = 4;
-        ctx.beginPath();
-        ctx.moveTo(x - 10, y + h + 10);
-        ctx.lineTo(x - 10 + (w + 20) * strikePct, y - 10 + (-h - 20) * -strikePct);
-        ctx.stroke();
-      }
-
       ctx.restore();
     }
 
     // ==========================================
-    // PRESETS: 5 UNIQUE PROVISIONS & CHOREOGRAPHIES
+    // PRESETS: 5 HIGH-DETAIL PROVISIONS
     // ==========================================
     const PRESETS = {
+      '48_54F': {
+        section_code: "SEC 48 & 54F",
+        title: "Section 48 Net Consideration & 54F Proportional Exemption",
+        concept_metaphor: "The Net Consideration Funnel & Sieve",
+        story_summary: "Mr. Murali sells commercial land for ₹1 Crore. Expenses on transfer (2% brokerage = ₹2 Lakhs) are filtered out via Section 48 to determine Net Consideration of ₹98 Lakhs.",
+        scenes: [
+          {
+            id: 1,
+            tab_title: "1 Net Consideration Funnel",
+            tag: "SCENE 1: THE NET CONSIDERATION FUNNEL",
+            duration_ms: 12000,
+            dialogue: "Namukk ee scenario nokkam. Mr. Murali commercial land sell cheyyunnath 1 Crore-inaanu. Pakshe section 48 parayunnath, Gross Sale Consideration-il ninnu 'Expenses on Transfer' kuraikkanam. 2% brokerage (₹2 Lakhs) kuraichal namukku kittunnathaanu 'Net Consideration' of ₹98 Lakhs.",
+            elements: [
+              // Left: Source Asset Node
+              { id: "land_node", type: "asset_node", x: 45, y: 85, w: 220, h: 180, icon: "warehouse", label: "Commercial Land", subtitle: "Gross Consideration", amount_val: 10000000, timeline: [
+                { start_ms: 500, end_ms: 2000, action: "fade_in" },
+                { start_ms: 1500, end_ms: 3500, action: "count_up" }
+              ]},
+
+              // Flow Pipe 1: Left Node to Funnel Hopper
+              { id: "pipe1", type: "flow_pipe", x1: 265, y1: 92, x2: 395, y2: 92, label: "GROSS FLOW" },
+
+              // Center: Mechanical Funnel with Brokerage Sieve
+              { id: "funnel", type: "funnel", x: 310, y: 85, w: 360, h: 185, deduct_val: 200000, deduct_label: "2% Transfer Brokerage", timeline: [
+                { start_ms: 1000, end_ms: 2500, action: "fade_in" },
+                { start_ms: 3000, end_ms: 7000, action: "fill_progress", to_pct: 0.85 }
+              ]},
+
+              // Flow Pipe 2: Flask to Right Node
+              { id: "pipe2", type: "flow_pipe", x1: 570, y1: 231, x2: 735, y2: 231, label: "NET CONSIDERATION" },
+
+              // Right: Destination Asset Node (Net Consideration)
+              { id: "net_node", type: "asset_node", x: 735, y: 85, w: 220, h: 180, icon: "document", label: "Net Consideration (Sec 48)", subtitle: "Basis for 54F Audit", amount_val: 9800000, timeline: [
+                { start_ms: 4000, end_ms: 5500, action: "fade_in" },
+                { start_ms: 4500, end_ms: 6500, action: "count_up" }
+              ]},
+
+              // Bottom: Accounting Breakdown Card
+              { id: "breakdown", type: "breakdown_card", x: 45, y: 290, w: 910, h: 165, title: "STATUTORY COMPUTATION BREAKDOWN (SECTION 48 AUDIT)", verdict_badge: "SEC 48 QUALIFYING BASE VERIFIED", rows: [
+                { label: "Full Value of Consideration (Gross Sale Price of Land)", val: 10000000 },
+                { label: "LESS: Expenses wholly & exclusively incurred on transfer - 2% Brokerage (Sec 48(i))", val: 200000, isDeduction: true, prefix: "(-) " },
+                { label: "NET CONSIDERATION (Qualifying statutory base for Section 54F Proportional Exemption)", val: 9800000, isTotal: true }
+              ], timeline: [
+                { start_ms: 6000, end_ms: 7500, action: "fade_in" }
+              ]}
+            ]
+          },
+          {
+            id: 2,
+            tab_title: "2 Proportional Reinvestment Split",
+            tag: "SCENE 2: RESIDENTIAL HOUSE TARGET",
+            duration_ms: 12000,
+            dialogue: "Section 54F qualify cheyyan Net Consideration oru new residential house-il invest cheyyanam. Murali ₹49 Lakhs (exact 50% of Net Consideration) new house-nu vendi invest cheythu. Athukondu capital gain-nte 50% mathram exempt aakum.",
+            elements: [
+              // Left: Net Consideration Input Node
+              { id: "net_node2", type: "asset_node", x: 45, y: 85, w: 220, h: 180, icon: "vault", label: "Net Consideration (Sec 48)", subtitle: "Exemption Base", amount_val: 9800000, timeline: [
+                { start_ms: 500, end_ms: 2000, action: "fade_in" }
+              ]},
+
+              // Center: Proportional Split Valve
+              { id: "valve", type: "split_valve", x: 300, y: 85, w: 395, h: 180, val1: 4900000, val2: 4900000, timeline: [
+                { start_ms: 1500, end_ms: 3000, action: "fade_in" }
+              ]},
+
+              // Right: Target Residential House Node
+              { id: "house_node", type: "asset_node", x: 735, y: 85, w: 220, h: 180, icon: "house", label: "New Residential House", subtitle: "Reinvested Asset u/s 54F", amount_val: 4900000, timeline: [
+                { start_ms: 3000, end_ms: 4500, action: "fade_in" },
+                { start_ms: 3500, end_ms: 5500, action: "count_up" }
+              ]},
+
+              // Bottom: Reinvestment Breakdown Card
+              { id: "breakdown_split", type: "breakdown_card", x: 45, y: 290, w: 910, h: 165, title: "SECTION 54F PROPORTIONAL REINVESTMENT AUDIT", verdict_badge: "50% STATUTORY EXEMPTION RATIO", rows: [
+                { label: "Net Consideration available from Commercial Land transfer", val: 9800000 },
+                { label: "Amount invested in New Residential House within statutory period", val: 4900000 },
+                { label: "Proportion Reinvested [₹ 49,00,000 ÷ ₹ 98,00,000]", val: 500000, prefix: "50.00% = " },
+                { label: "RESULT: Exactly 50.00% of Long-Term Capital Gain qualifies for exemption u/s 54F", val: 3000000, isTotal: true }
+              ], timeline: [
+                { start_ms: 5500, end_ms: 7000, action: "fade_in" }
+              ]}
+            ]
+          },
+          {
+            id: 3,
+            tab_title: "3 Proportional Exemption Math",
+            tag: "SCENE 3: STATUTORY FORMULA MATH",
+            duration_ms: 12000,
+            dialogue: "Murali thante Net Consideration-nte 50% mathrame invest cheythollu. Athukondu Capital Gain ₹60 Lakhs-nte 50% aaya ₹30 Lakhs mathrame Section 54F exemption aayi labhikkukayullu!",
+            elements: [
+              { id: "eq", type: "equation_chips", x: 60, y: 95, chips: [
+                { label: "Original Capital Gain", val: 6000000 },
+                { op: "−" },
+                { label: "Sec 54F Exemption (50%)", val: 3000000 },
+                { op: "=" },
+                { label: "Net Taxable LTCG", val: 3000000, isTotal: true }
+              ], timeline: [
+                { start_ms: 500, end_ms: 2000, action: "fade_in" }
+              ]},
+              { id: "breakdown2", type: "breakdown_card", x: 45, y: 200, w: 910, h: 255, title: "FINAL STATUTORY TAX COMPUTATION (SECTION 48 & 54F AUDIT)", verdict_badge: "TAX AUDIT COMPLETE", rows: [
+                { label: "Full Value of Consideration (Gross Sale Price)", val: 10000000 },
+                { label: "LESS: Transfer Expenses u/s 48(i) (2% Brokerage)", val: 200000, isDeduction: true, prefix: "(-) " },
+                { label: "Net Consideration u/s 48", val: 9800000 },
+                { label: "LESS: Indexed Cost of Acquisition (COA)", val: 3800000, isDeduction: true, prefix: "(-) " },
+                { label: "Long-Term Capital Gain (LTCG) before Exemption", val: 6000000 },
+                { label: "LESS: Exemption u/s 54F = [₹60,00,000 × ₹49,00,000 ÷ ₹98,00,000]", val: 3000000, isDeduction: true, prefix: "(-) " },
+                { label: "NET TAXABLE CAPITAL GAIN (Taxable at special rates)", val: 3000000, isTotal: true }
+              ], timeline: [
+                { start_ms: 2500, end_ms: 4500, action: "fade_in" }
+              ]}
+            ]
+          }
+        ]
+      },
+
       '50C': {
         section_code: "SEC 50C",
         title: "Section 50C: Stamp Duty Value & 110% Safe Harbor Breach",
         concept_metaphor: "The Tilting Safe Harbor Scale",
-        story_summary: "Mr. Sajan sells a commercial plot in Kozhikode for ₹1.00 Crore. The Sub-Registrar assesses Stamp Duty Value at ₹1.18 Crore, breaching the 110% tolerance limit.",
+        story_summary: "Mr. Sajan sells a commercial plot in Kozhikode for ₹1.00 Crore. Sub-Registrar assesses SDV at ₹1.18 Crore, breaching 110% tolerance.",
         scenes: [
           {
             id: 1,
@@ -996,14 +1404,13 @@
             duration_ms: 12000,
             dialogue: "Mr. Sajan Kozhikode-il ulla commercial plot Suresh-nu sell cheyyan agreement vechu. Declared Consideration ₹1.00 Crore aanu. Ennal Sub-Registrar Stamp Duty Value assess cheythu nokkumbozhanu discrepancy varunnathu.",
             elements: [
-              { id: "sajan", type: "icon", icon: "person", x: 120, y: 140, w: 90, h: 100, label: "Mr. Sajan (Seller)" },
-              { id: "suresh", type: "icon", icon: "person", x: 790, y: 140, w: 90, h: 100, label: "Suresh (Buyer)" },
-              { id: "doc", type: "icon", icon: "document", x: 450, y: 130, w: 100, h: 120, label: "Sale Agreement Deed", timeline: [
-                { start_ms: 500, end_ms: 1800, action: "draw_stroke" }
-              ]},
-              { id: "val_box", type: "box", x: 330, y: 300, w: 340, h: 90, title: "Agreement Sale Consideration", subtitle: "Declared value in registered deed" },
-              { id: "val_counter", type: "counter", x: 350, y: 364, from_val: 0, to_val: 10000000, prefix: "₹ ", timeline: [
-                { start_ms: 1500, end_ms: 3500, action: "count_up" }
+              { id: "seller", type: "asset_node", x: 50, y: 85, w: 220, h: 180, icon: "person", label: "Mr. Sajan (Seller)", subtitle: "Declared Consideration", amount_val: 10000000 },
+              { id: "deed", type: "asset_node", x: 390, y: 85, w: 220, h: 180, icon: "document", label: "Registered Deed", subtitle: "Circle Rate Review", amount_val: 10000000 },
+              { id: "buyer", type: "asset_node", x: 730, y: 85, w: 220, h: 180, icon: "person", label: "Suresh (Buyer)", subtitle: "Transferee Party", amount_val: 10000000 },
+              { id: "breakdown_50c", type: "breakdown_card", x: 50, y: 290, w: 900, h: 165, title: "TRANSACTION REGISTRATION AUDIT (SECTION 50C)", verdict_badge: "SUB-REGISTRAR VALUATION PENDING", rows: [
+                { label: "Declared Sale Consideration in Registered Agreement", val: 10000000 },
+                { label: "110% Statutory Safe Harbor Tolerance Threshold [₹1,00,00,000 × 110%]", val: 11000000 },
+                { label: "Sub-Registrar Stamp Duty Value (Circle Rate)", val: 11800000, isTotal: true }
               ]}
             ]
           },
@@ -1014,34 +1421,19 @@
             duration_ms: 12000,
             dialogue: "Section 50C 3rd Proviso oru 110% Safe Harbor limit tharunnu. Declared consideration ₹1.00 Crore-nte 110% ennal ₹1.10 Crore aanu. Ennal Sub-Registrar assess cheytha SDV ₹1.18 Crore aanu. Scale Stamp Duty-yilekku tilt aavunnu!",
             elements: [
-              { id: "scale", type: "scale", x: 500, y: 130, left_label: "Agreement (₹1.00 Cr)", right_label: "Stamp Duty (₹1.18 Cr)", timeline: [
-                { start_ms: 1000, end_ms: 2200, action: "draw_stroke" },
-                { start_ms: 4500, end_ms: 7000, action: "tilt", to_angle: 18 }
+              { id: "scale", type: "scale", x: 500, y: 105, left_label: "Agreement (₹1.00 Cr)", right_label: "Stamp Duty (₹1.18 Cr)", timeline: [
+                { start_ms: 500, end_ms: 2000, action: "draw_stroke" },
+                { start_ms: 3500, end_ms: 6500, action: "tilt", to_angle: 18 }
               ]},
-              { id: "safe_badge", type: "box", x: 100, y: 320, w: 350, h: 90, title: "110% Safe Harbor Ceiling", subtitle: "₹1,00,00,000 × 110% = ₹1,10,00,000", fill_dither: true },
-              { id: "sdv_badge", type: "box", x: 550, y: 320, w: 350, h: 90, title: "Sub-Registrar Circle Rate", subtitle: "SDV ₹1,18,00,000 Exceeds 110%!", fill_dither: false },
-              { id: "breach_stamp", type: "stamp", x: 320, y: 425, w: 360, h: 48, text: "110% TOLERANCE BREACHED", timeline: [
-                { start_ms: 7500, end_ms: 8400, action: "stamp" }
+              { id: "breakdown_scale", type: "breakdown_card", x: 50, y: 285, w: 900, h: 170, title: "SECTION 50C SAFE HARBOR BENCHMARK AUDIT", verdict_badge: "DEEMED CONSIDERATION = ₹ 1,18,00,000", rows: [
+                { label: "Declared Sale Consideration (A)", val: 10000000 },
+                { label: "110% Permissible Safe Harbor Cap [A × 110%]", val: 11000000 },
+                { label: "Stamp Duty Value assessed by Sub-Registrar (SDV)", val: 11800000 },
+                { label: "STATUTORY VERDICT: SDV exceeds 110% tolerance -> Full SDV deemed as Full Value of Consideration", val: 11800000, isTotal: true }
+              ]},
+              { id: "breach_stamp", type: "stamp", x: 300, y: 200, w: 400, h: 48, text: "110% TOLERANCE BREACHED", timeline: [
+                { start_ms: 6500, end_ms: 7500, action: "stamp" }
               ]}
-            ]
-          },
-          {
-            id: 3,
-            tab_title: "3 Deemed Consideration & Tax",
-            tag: "SCENE 3: STATUTORY SUBSTITUTION & GAIN",
-            duration_ms: 12000,
-            dialogue: "Tolerance limit breach aayathukondu, declared agreement value reject cheythittu, SDV ₹1.18 Crore Full Value of Consideration aayi deem cheyyum. Athil ninnum Indexed Cost ₹45 Lakhs kurachaal Taxable LTCG ₹73 Lakhs!",
-            elements: [
-              { id: "eq", type: "equation_chips", x: 60, y: 130, chips: [
-                { label: "Deemed FVC (SDV)", val: 11800000 },
-                { op: "−" },
-                { label: "Indexed Cost (ICOA)", val: 4500000 },
-                { op: "=" },
-                { label: "Taxable LTCG", val: 7300000, isTotal: true }
-              ]},
-              { id: "summary_box", type: "box", x: 60, y: 260, w: 880, h: 140, title: "Section 50C Statutory Conclusion", subtitle: "Agreement consideration overridden by Stamp Duty Valuation", fill_dither: true },
-              { id: "txt1", type: "text", x: 90, y: 330, text: "• Actual Consideration Received: ₹ 1,00,00,000", font_size: 14, font_weight: "700" },
-              { id: "txt2", type: "text", x: 90, y: 360, text: "• Taxed on Deemed Consideration: ₹ 1,18,00,000 (SDV adopted under Section 50C)", font_size: 14, font_weight: "900" }
             ]
           }
         ]
@@ -1049,122 +1441,53 @@
 
       '54EC': {
         section_code: "SEC 54EC",
-        title: "Section 54EC: REC/NHAI Bonds ₹50L Cap & 6M Clock",
-        concept_metaphor: "The 6-Month Countdown & Overflow Tank",
-        story_summary: "Architect Ananya in Kochi sells a commercial studio generating ₹80 Lakhs LTCG. She invests in NHAI bonds within 6 months, but Section 54EC caps exemption at ₹50 Lakhs.",
+        title: "Section 54EC: ₹50 Lakh Statutory Overflow Tank",
+        concept_metaphor: "The Overflow Tank & 6-Month Clock",
+        story_summary: "A property sale generates ₹85 Lakhs capital gains. Only ₹50 Lakhs can fit into NHAI/REC specified bonds.",
         scenes: [
           {
             id: 1,
-            tab_title: "1 Studio Sale & Capital Gain",
-            tag: "SCENE 1: STUDIO ASSET SALE",
+            tab_title: "1 Capital Gain Investment",
+            tag: "SCENE 1: NHAI/REC SPECIFIED BONDS TANK",
             duration_ms: 12000,
-            dialogue: "Architect Ananya Kochi-il ulla commercial studio sell cheythu ₹80 Lakhs Long Term Capital Gain labhichu. Ee gain tax cheyyathirikkan Section 54EC Specified Bonds-il reinvest cheyyam.",
+            dialogue: "Section 54EC prakaram capital gain NHAI athallenkil REC bonds-il invest cheyyam. Pakshe financial year-il maximum limit ₹50 Lakhs aanu. Extra ₹35 Lakhs overflow aayi taxable aakum!",
             elements: [
-              { id: "studio", type: "icon", icon: "warehouse", x: 150, y: 130, w: 120, h: 110, label: "Commercial Studio" },
-              { id: "bonds", type: "icon", icon: "bonds", x: 730, y: 130, w: 120, h: 110, label: "NHAI / REC Bonds" },
-              { id: "clock", type: "icon", icon: "clock", x: 440, y: 110, w: 120, h: 120, label: "6 Months Deadline", timeline: [
-                { start_ms: 500, end_ms: 2000, action: "draw_stroke" },
-                { start_ms: 3000, end_ms: 8000, action: "tilt", to_angle: 180 }
+              { id: "tank", type: "tank", x: 380, y: 95, w: 240, h: 165, cap_pct: 0.588, cap_label: "₹50L CAP (Sec 54EC)", overflow_label: "OVERFLOW TAXABLE", timeline: [
+                { start_ms: 1000, end_ms: 2500, action: "fade_in" },
+                { start_ms: 3000, end_ms: 7000, action: "fill_progress", to_pct: 1.0 }
               ]},
-              { id: "gain_box", type: "box", x: 300, y: 290, w: 400, h: 100, title: "Total Capital Gain to Protect", subtitle: "Must be invested within 6 months of transfer" },
-              { id: "gain_counter", type: "counter", x: 330, y: 355, from_val: 0, to_val: 8000000, prefix: "₹ ", timeline: [
-                { start_ms: 1500, end_ms: 3500, action: "count_up" }
+              { id: "bonds_node", type: "asset_node", x: 60, y: 85, w: 220, h: 180, icon: "bonds", label: "Capital Gain Inflow", subtitle: "Total Gain", amount_val: 8500000 },
+              { id: "clock_node", type: "asset_node", x: 720, y: 85, w: 220, h: 180, icon: "clock", label: "6-Month Deadline", subtitle: "From Transfer Date", amount_val: 5000000 },
+              { id: "breakdown_54ec", type: "breakdown_card", x: 50, y: 290, w: 900, h: 165, title: "SECTION 54EC STATUTORY BOND LIMIT AUDIT", verdict_badge: "₹ 50,00,000 STATUTORY CAP APPLIED", rows: [
+                { label: "Total Long-Term Capital Gain arising from Real Estate transfer", val: 8500000 },
+                { label: "Maximum allowable investment in NHAI / REC / PFC / IRFC Bonds", val: 5000000, isDeduction: true, prefix: "(-) " },
+                { label: "REMAINING TAXABLE CAPITAL GAIN (Statutory Overflow)", val: 3500000, isTotal: true }
               ]}
-            ]
-          },
-          {
-            id: 2,
-            tab_title: "2 The ₹50 Lakhs Overflow Tank",
-            tag: "SCENE 2: STATUTORY CEILING CAP TANK",
-            duration_ms: 12000,
-            dialogue: "Ananya ₹70 Lakhs invest cheythalum, Section 54EC proviso oru financial year-il maximum ₹50 Lakhs vare mathrame exempt aakkoo. Tank fill aayi balance ₹20L taxable bucket-il overflow aavunnu!",
-            elements: [
-              { id: "tank", type: "tank", x: 340, y: 110, w: 180, h: 260, cap_pct: 0.65, cap_label: "₹50L MAX CAP BARRIER", timeline: [
-                { start_ms: 1000, end_ms: 6000, action: "fill_progress", to_pct: 0.9 }
-              ]},
-              { id: "taxable_bucket", type: "box", x: 620, y: 230, w: 280, h: 120, title: "Taxable Overflow Bucket", subtitle: "Excess investment above ₹50L cap", fill_dither: true },
-              { id: "overflow_counter", type: "counter", x: 640, y: 310, from_val: 0, to_val: 2000000, prefix: "₹ ", timeline: [
-                { start_ms: 4500, end_ms: 6500, action: "count_up" }
-              ]},
-              { id: "cap_stamp", type: "stamp", x: 310, y: 395, w: 380, h: 48, text: "EXEMPTION CAPPED AT ₹50 LAKHS", timeline: [
-                { start_ms: 7000, end_ms: 8000, action: "stamp" }
-              ]}
-            ]
-          },
-          {
-            id: 3,
-            tab_title: "3 Final Tax Equation",
-            tag: "SCENE 3: FINAL TAXABLE COMPUTATION",
-            duration_ms: 12000,
-            dialogue: "Total Gain ₹80 Lakhs minus Section 54EC capped exemption ₹50 Lakhs equals Net Taxable Capital Gain of ₹30 Lakhs. 5 years lock-in period-il bonds redeem cheyyan padilla.",
-            elements: [
-              { id: "eq", type: "equation_chips", x: 60, y: 130, chips: [
-                { label: "Total Capital Gain", val: 8000000 },
-                { op: "−" },
-                { label: "Sec 54EC Exemption (Cap)", val: 5000000 },
-                { op: "=" },
-                { label: "Net Taxable Gain", val: 3000000, isTotal: true }
-              ]},
-              { id: "note_box", type: "box", x: 60, y: 260, w: 880, h: 140, title: "Statutory 5-Year Lock-In Proviso", subtitle: "Finance Act Condition on Specified Bonds", fill_dither: false },
-              { id: "n1", type: "text", x: 90, y: 325, text: "• Minimum Lock-In: 5 Years for REC, NHAI, PFC, IRFC Bonds.", font_size: 14, font_weight: "700" },
-              { id: "n2", type: "text", x: 90, y: 355, text: "• If converted into money or advance taken against bonds within 5 years, exemption is revoked!", font_size: 14, font_weight: "800" }
             ]
           }
         ]
       },
 
-      '54F': {
-        section_code: "SEC 54F",
-        title: "Section 54F: Listed Shares Sale & Brick-by-Brick House Build",
-        concept_metaphor: "Proportional Fraction & House Construction",
-        story_summary: "Dr. Mathew sells listed shares for ₹2 Crores with ₹1.2 Cr LTCG, investing ₹1.5 Cr to build a residential house in Thrissur.",
+      '194C': {
+        section_code: "SEC 194C",
+        title: "Section 194C: TDS on Payments to Contractors",
+        concept_metaphor: "Contractor TDS Diversion Splitter Pipe",
+        story_summary: "Evergreen Cafe pays ₹2,50,000 catering contractor bill to Mr. Das. 1% TDS (₹2,500) diverted to Govt, ₹2,47,500 net paid.",
         scenes: [
           {
             id: 1,
-            tab_title: "1 Share Liquidation",
-            tag: "SCENE 1: TRANSFER OF NON-RESIDENTIAL ASSET",
+            tab_title: "1 Invoice & TDS Deduction",
+            tag: "SCENE 1: CONTRACT PAYMENT AUDIT",
             duration_ms: 12000,
-            dialogue: "Dr. Mathew thante portfolio shares ₹2 Crores-nu sell cheythu. Capital Gain ₹1.2 Crores aanu. Section 54F prakaaram net consideration oru residential house-il invest cheythaal proportional exemption labhikkum.",
+            dialogue: "Evergreen Cafe contractor Das-nu ₹2,50,000 payment cheyyunnu. Single contract ₹30,000 threshold exceed cheythathinal Individual contractor aaya Das-nte bill-il ninnu 1% TDS (₹2,500) kuraichu Government-il deposit cheyyanam.",
             elements: [
-              { id: "doc_shares", type: "icon", icon: "bonds", x: 180, y: 130, w: 110, h: 120, label: "Listed Equity Shares" },
-              { id: "house_plan", type: "icon", icon: "house", x: 700, y: 130, w: 120, h: 120, label: "Residential House Target" },
-              { id: "share_box", type: "box", x: 310, y: 290, w: 380, h: 90, title: "Net Consideration Received", subtitle: "Full net sales realization" },
-              { id: "share_cnt", type: "counter", x: 330, y: 350, from_val: 0, to_val: 20000000, prefix: "₹ ", timeline: [
-                { start_ms: 1000, end_ms: 3000, action: "count_up" }
-              ]}
-            ]
-          },
-          {
-            id: 2,
-            tab_title: "2 House Construction Build",
-            tag: "SCENE 2: BRICK-BY-BRICK REINVESTMENT",
-            duration_ms: 12000,
-            dialogue: "Thrissur-il new residential house build cheyyan ₹1.5 Crores invest cheythu. Entire ₹2 Crores invest cheyyanathukondu, exemption proportional aayirikkum.",
-            elements: [
-              { id: "house_build", type: "icon", icon: "house", x: 420, y: 100, w: 160, h: 160, label: "New Residential House", timeline: [
-                { start_ms: 1000, end_ms: 5000, action: "draw_stroke" }
-              ]},
-              { id: "invest_box", type: "box", x: 310, y: 290, w: 380, h: 105, title: "Amount Reinvested in House", subtitle: "₹1.5 Cr out of ₹2.0 Cr Net Consideration" },
-              { id: "invest_cnt", type: "counter", x: 330, y: 375, from_val: 0, to_val: 15000000, prefix: "₹ ", timeline: [
-                { start_ms: 2000, end_ms: 4500, action: "count_up" }
-              ]}
-            ]
-          },
-          {
-            id: 3,
-            tab_title: "3 Proportional Formula Math",
-            tag: "SCENE 3: STATUTORY PROPORTIONAL FRACTION",
-            duration_ms: 12000,
-            dialogue: "Section 54F Formula: Capital Gain ₹1.2 Cr × Cost of House ₹1.5 Cr ÷ Net Consideration ₹2.0 Cr = Exemption ₹90 Lakhs! Balance ₹30 Lakhs taxable.",
-            elements: [
-              { id: "formula_box", type: "box", x: 60, y: 110, w: 880, h: 130, title: "Section 54F Proportional Exemption Formula", subtitle: "[Capital Gain × Cost of New House] ÷ Net Consideration", fill_dither: true },
-              { id: "eq_txt", type: "text", x: 90, y: 190, text: "₹ 1,20,00,000 × ₹ 1,50,00,000 ÷ ₹ 2,00,00,000 = ₹ 90,00,000 Exemption", font_size: 20, font_weight: "900" },
-              { id: "eq2", type: "equation_chips", x: 60, y: 260, chips: [
-                { label: "Total Capital Gain", val: 12000000 },
-                { op: "−" },
-                { label: "Sec 54F Exemption", val: 9000000 },
-                { op: "=" },
-                { label: "Net Taxable Gain", val: 3000000, isTotal: true }
+              { id: "cafe", type: "asset_node", x: 50, y: 85, w: 220, h: 180, icon: "warehouse", label: "Evergreen Cafe", subtitle: "Deductor (Payer)", amount_val: 250000 },
+              { id: "invoice", type: "asset_node", x: 390, y: 85, w: 220, h: 180, icon: "document", label: "Contractor Bill", subtitle: "Threshold > ₹30,000", amount_val: 250000 },
+              { id: "das", type: "asset_node", x: 730, y: 85, w: 220, h: 180, icon: "person", label: "Mr. Das (Contractor)", subtitle: "Deductee Payee (Indiv)", amount_val: 247500 },
+              { id: "breakdown_194c", type: "breakdown_card", x: 50, y: 290, w: 900, h: 165, title: "SECTION 194C CONTRACT PAYMENT & TDS AUDIT", verdict_badge: "1% TDS DEDUCTED (INDIVIDUAL RATE)", rows: [
+                { label: "Gross Contract Billing Value", val: 250000 },
+                { label: "LESS: TDS u/s 194C @ 1% for Individual / HUF Contractor", val: 2500, isDeduction: true, prefix: "(-) " },
+                { label: "NET PAYMENT DISBURSED TO CONTRACTOR", val: 247500, isTotal: true }
               ]}
             ]
           }
@@ -1175,7 +1498,7 @@
         section_code: "SEC 45(4)",
         title: "Section 45(4): Partnership Reconstitution & Partner Exit",
         concept_metaphor: "Firm Asset Pool & Partner Withdrawal",
-        story_summary: "A partner retires from Malabar Engineering firm. The firm transfers commercial land with FMV ₹1.2 Cr against capital balance of ₹50 Lakhs.",
+        story_summary: "Retiring partner from Malabar Engineering firm receives commercial land. Firm pays capital gains on FMV excess.",
         scenes: [
           {
             id: 1,
@@ -1184,75 +1507,12 @@
             duration_ms: 12000,
             dialogue: "Malabar Engineering Firm-il ninnum partner retire aavunnu. Reconstitution samayathu firm thante capital asset aaya commercial plot partner-ku settlement aayi nalkunnu.",
             elements: [
-              { id: "firm", type: "icon", icon: "vault", x: 300, y: 130, w: 120, h: 120, label: "Firm Asset Pool" },
-              { id: "partner", type: "icon", icon: "person", x: 650, y: 130, w: 100, h: 120, label: "Retiring Partner", timeline: [
-                { start_ms: 2000, end_ms: 5000, action: "move", to_x: 750, to_y: 130 }
-              ]},
-              { id: "cap_box", type: "box", x: 260, y: 290, w: 480, h: 105, title: "Partner Capital Account Balance", subtitle: "Settlement entitlement at date of retirement" },
-              { id: "cap_cnt", type: "counter", x: 290, y: 375, from_val: 0, to_val: 5000000, prefix: "₹ ", timeline: [
-                { start_ms: 1000, end_ms: 3000, action: "count_up" }
-              ]}
-            ]
-          },
-          {
-            id: 2,
-            tab_title: "2 FMV vs Capital Account",
-            tag: "SCENE 2: SECTION 45(4) FORMULA COMPUTATION",
-            duration_ms: 12000,
-            dialogue: "Section 45(4) prakaaram, Capital Gain A = B + C - D. FMV of land ₹1.2 Crores minus Capital Balance ₹50 Lakhs equals ₹70 Lakhs Taxable Capital Gain in the hands of the firm!",
-            elements: [
-              { id: "eq", type: "equation_chips", x: 60, y: 130, chips: [
-                { label: "Fair Market Value (FMV)", val: 12000000 },
-                { op: "−" },
-                { label: "Partner Capital Balance", val: 5000000 },
-                { op: "=" },
-                { label: "Firm's Taxable Gain", val: 7000000, isTotal: true }
-              ]},
-              { id: "verdict_box", type: "box", x: 60, y: 260, w: 880, h: 140, title: "Taxability in the Hands of the FIRM", subtitle: "Taxable as Capital Gain of the reconstituted firm under Section 45(4)", fill_dither: true },
-              { id: "tx1", type: "text", x: 90, y: 330, text: "• Deemed transfer of asset by the firm to the specified person.", font_size: 14, font_weight: "700" },
-              { id: "tx2", type: "text", x: 90, y: 360, text: "• Balance remaining partners' continuing assets get Section 48(iii) deduction benefit!", font_size: 14, font_weight: "900" }
-            ]
-          }
-        ]
-      },
-
-      '54D': {
-        section_code: "SEC 54D",
-        title: "Section 54D: Compulsory Acquisition of Industrial Land & Building",
-        concept_metaphor: "Compulsory Statutory Acquisition & Gatekeeper",
-        story_summary: "Rajesh owns an industrial undertaking acquired by statutory authority with ₹40L compensation.",
-        scenes: [
-          {
-            id: 1,
-            tab_title: "1 Industrial Factory Acquisition",
-            tag: "SCENE 1: STATUTORY COMPULSORY ACQUISITION",
-            duration_ms: 12000,
-            dialogue: "Rajesh owns an industrial undertaking manufacturing engineering parts. Under statutory developmental authority, land and building are compulsory acquired. Monetary compensation of ₹40 Lakhs is awarded.",
-            elements: [
-              { id: "factory", type: "icon", icon: "factory", x: 120, y: 130, w: 140, h: 130, label: "Industrial Undertaking" },
-              { id: "order", type: "icon", icon: "document", x: 440, y: 120, w: 110, h: 130, label: "Compulsory Acquisition Order", timeline: [
-                { start_ms: 1000, end_ms: 3000, action: "move", to_x: 200, to_y: 120 }
-              ]},
-              { id: "auth", type: "icon", icon: "person", x: 750, y: 130, w: 100, h: 110, label: "State Development Body" },
-              { id: "comp_box", type: "box", x: 300, y: 290, w: 400, h: 90, title: "Statutory Compensation Awarded", subtitle: "Full value of consideration deemed" },
-              { id: "comp_cnt", type: "counter", x: 330, y: 350, from_val: 0, to_val: 4000000, prefix: "₹ ", timeline: [
-                { start_ms: 2000, end_ms: 4500, action: "count_up" }
-              ]}
-            ]
-          },
-          {
-            id: 2,
-            tab_title: "2 Statutory 3-Part Gatekeeper",
-            tag: "SCENE 2: 3-PART STATUTORY CRITERIA AUDIT",
-            duration_ms: 12000,
-            dialogue: "Section 54D exemption labhikan 3 conditions vendathundu: Industrial undertaking land/building aayirikkanam, 2 years minimum use undayirikkanam, and 3 years-il new industrial asset vangikkuka. Gate unlocked!",
-            elements: [
-              { id: "c1", type: "box", x: 60, y: 110, w: 440, h: 70, title: "1. Land or Building of Industrial Undertaking", subtitle: "Compulsory acquired by statutory authority" },
-              { id: "c2", type: "box", x: 60, y: 195, w: 440, h: 70, title: "2. Used for Manufacturing for >= 2 Years", subtitle: "Prior industrial use verified in audit" },
-              { id: "c3", type: "box", x: 60, y: 280, w: 440, h: 70, title: "3. Reinvestment within 3 Years in New Asset", subtitle: "New industrial land/building acquired" },
-              { id: "vault", type: "icon", icon: "vault", x: 620, y: 110, w: 260, h: 240, label: "Section 54D Relief Portal" },
-              { id: "unlock_stamp", type: "stamp", x: 280, y: 380, w: 440, h: 48, text: "GATE UNLOCKED · ALL 3 CONDITIONS MET", timeline: [
-                { start_ms: 6000, end_ms: 7000, action: "stamp" }
+              { id: "firm", type: "asset_node", x: 80, y: 85, w: 240, h: 180, icon: "vault", label: "Malabar Firm", subtitle: "Firm Asset Pool", amount_val: 12000000 },
+              { id: "partner", type: "asset_node", x: 680, y: 85, w: 240, h: 180, icon: "person", label: "Retiring Partner", subtitle: "Capital Account Balance", amount_val: 5000000 },
+              { id: "tax_card", type: "breakdown_card", x: 50, y: 290, w: 900, h: 165, title: "SECTION 45(4) PARTNERSHIP DISSOLUTION AUDIT", verdict_badge: "TAXABLE IN HANDS OF FIRM", rows: [
+                { label: "Fair Market Value (FMV) of Land distributed to retiring partner", val: 12000000 },
+                { label: "LESS: Partner Capital Account balance at retirement date", val: 5000000, isDeduction: true, prefix: "(-) " },
+                { label: "CAPITAL GAIN TAXABLE IN HANDS OF THE FIRM (Section 45(4))", val: 7000000, isTotal: true }
               ]}
             ]
           }
@@ -1260,7 +1520,7 @@
       }
     };
 
-    let ACTIVE_DATA = PRESETS['50C'];
+    let ACTIVE_DATA = PRESETS['48_54F'];
 
     // Render loop
     function render(t_ms) {
@@ -1276,7 +1536,7 @@
         ctx.fillStyle = "#ffffff";
         ctx.font = "900 16px monospace";
         ctx.textAlign = "center";
-        ctx.fillText("GEMINI: INVENTING UNIQUE STORY & CHOREOGRAPHY...", 500, 148);
+        ctx.fillText("GEMINI: INVENTING UNIQUE STORY & HIGH-DETAIL CHOREOGRAPHY...", 500, 148);
 
         const radarX = 500, radarY = 260;
         ctx.strokeStyle = "#000000";
@@ -1294,24 +1554,21 @@
 
         ctx.fillStyle = "#000000";
         ctx.font = "800 14px -apple-system, BlinkMacSystemFont, sans-serif";
-        ctx.fillText("Composing unconstrained millisecond timeline for this provision", 500, 355);
+        ctx.fillText("Composing high-density mechanical linework across 1000 × 500 stage", 500, 355);
         return;
       }
 
       if (!ACTIVE_DATA || !ACTIVE_DATA.scenes || !ACTIVE_DATA.scenes[currentSceneIdx]) return;
       const curScene = ACTIVE_DATA.scenes[currentSceneIdx];
 
-      // Draw Header Banner with Concept Metaphor
       drawHeaderBanner(ACTIVE_DATA.title, ACTIVE_DATA.section_code, ACTIVE_DATA.concept_metaphor);
 
-      // Render every dynamic element
       if (curScene.elements) {
         curScene.elements.forEach((elem) => {
           renderUniversalElement(elem, t_ms);
         });
       }
 
-      // Update Narration Box
       document.getElementById("scene_tag_label").textContent = curScene.tag || ("SCENE " + (currentSceneIdx + 1));
       document.getElementById("narration_text").textContent = curScene.dialogue || "";
     }
@@ -1381,14 +1638,17 @@
     }
 
     function seekTo(ms) {
-      const curScene = ACTIVE_DATA?.scenes?.[currentSceneIdx];
-      const maxMs = curScene?.duration_ms || 12000;
-      currentTimeMs = Math.max(0, Math.min(maxMs, ms));
+      currentTimeMs = ms;
       updateScrubberUI();
+      render(currentTimeMs);
     }
 
     function seekRelative(deltaMs) {
-      seekTo(currentTimeMs + deltaMs);
+      const curScene = ACTIVE_DATA?.scenes?.[currentSceneIdx];
+      const maxMs = curScene?.duration_ms || 12000;
+      currentTimeMs = Math.max(0, Math.min(currentTimeMs + deltaMs, maxMs));
+      updateScrubberUI();
+      render(currentTimeMs);
     }
 
     function toggleGrid() {
@@ -1396,6 +1656,7 @@
       const btn = document.getElementById("btn_grid_toggle");
       if (showGrid) btn.classList.add("active-toggle");
       else btn.classList.remove("active-toggle");
+      render(currentTimeMs);
     }
 
     function toggleDither() {
@@ -1403,73 +1664,22 @@
       const btn = document.getElementById("btn_dither_toggle");
       if (useDither) btn.classList.add("active-toggle");
       else btn.classList.remove("active-toggle");
+      render(currentTimeMs);
     }
 
-    function updateTabsUI() {
+    function setupSceneTabs() {
       const container = document.getElementById("scene_tabs_container");
       container.innerHTML = "";
 
       if (!ACTIVE_DATA || !ACTIVE_DATA.scenes) return;
 
-      ACTIVE_DATA.scenes.forEach((s, idx) => {
+      ACTIVE_DATA.scenes.forEach((sc, idx) => {
         const btn = document.createElement("button");
         btn.className = "scene-tab-btn" + (idx === currentSceneIdx ? " active" : "");
+        btn.innerHTML = `<span>🎬 ${sc.tab_title || ("Scene " + (idx + 1))}</span>`;
         btn.onclick = () => switchScene(idx);
-        btn.innerHTML = `<span>${idx + 1}</span> ${s.tab_title || s.tag || ("Scene " + (idx + 1))}`;
         container.appendChild(btn);
       });
-    }
-
-    // Call Gemini to Choreograph Presentation live
-    async function generateFromGemini() {
-      const input = document.getElementById("gemini_topic_input");
-      const topic = input.value.trim();
-      if (!topic) {
-        alert("Please enter a tax section or scenario!");
-        return;
-      }
-
-      const btn = document.getElementById("btn_gemini_generate");
-      const statusBadge = document.getElementById("gemini_status_badge");
-
-      btn.disabled = true;
-      btn.textContent = "⏳ Choreographing...";
-      statusBadge.textContent = "Choreographing Story & Milliseconds...";
-      isGenerating = true;
-
-      try {
-        let res = await fetch("/api/generate_pixel_presentation", {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({ topic: topic })
-        });
-
-        if (!res.ok) {
-          throw new Error("Server responded with status " + res.status);
-        }
-
-        const data = await res.json();
-        if (data.error) {
-          throw new Error(data.error);
-        }
-
-        console.log("Gemini Choreography Success:", data);
-        ACTIVE_DATA = data;
-        currentSceneIdx = 0;
-        currentTimeMs = 0;
-        isPlaying = true;
-        updatePlayBtn();
-        updateTabsUI();
-        statusBadge.textContent = `Choreographed: ${data.section_code || "OK"} (${data.concept_metaphor || "Custom"})`;
-      } catch (err) {
-        console.error("Gemini Choreography Error:", err);
-        statusBadge.textContent = "Error: " + err.message;
-        alert("Could not choreograph: " + err.message + "\n\nMake sure 'python viewer/pixel_server.py' is running!");
-      } finally {
-        isGenerating = false;
-        btn.disabled = false;
-        btn.textContent = "✨ Choreograph Live";
-      }
     }
 
     function loadPreset(key) {
@@ -1479,31 +1689,78 @@
         currentTimeMs = 0;
         isPlaying = true;
         updatePlayBtn();
-        updateTabsUI();
-        document.getElementById("gemini_status_badge").textContent = `Loaded Metaphor: ${ACTIVE_DATA.concept_metaphor}`;
-        document.getElementById("gemini_topic_input").value = ACTIVE_DATA.title;
+        setupSceneTabs();
       }
     }
 
-    // Init
-    window.addEventListener("DOMContentLoaded", () => {
-      pattern50 = createDitherPattern(0.5);
-      pattern25 = createDitherPattern(0.25);
-      updateTabsUI();
-      seekTo(0);
+    // ==========================================
+    // GEMINI LIVE CHOREOGRAPHY API
+    // ==========================================
+    async function generateFromGemini() {
+      const input = document.getElementById("gemini_topic_input");
+      const btn = document.getElementById("btn_gemini_generate");
+      const statusBadge = document.getElementById("gemini_status_badge");
+      const topic = input.value.trim();
 
-      document.getElementById("timeline_slider").addEventListener("input", (e) => {
-        seekTo(parseFloat(e.target.value));
-      });
+      if (!topic) return;
 
-      document.getElementById("gemini_topic_input").addEventListener("keydown", (e) => {
-        if (e.key === "Enter") {
-          generateFromGemini();
+      isGenerating = true;
+      btn.disabled = true;
+      btn.innerHTML = "<span>⏳ Thinking...</span>";
+      statusBadge.textContent = "Choreographing Story & Milliseconds...";
+      statusBadge.style.color = "#d97706";
+      statusBadge.style.background = "#fef3c7";
+      statusBadge.style.borderColor = "#d97706";
+
+      try {
+        const resp = await fetch("/api/generate_pixel_presentation", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ topic: topic })
+        });
+
+        if (!resp.ok) {
+          const errData = await resp.json();
+          throw new Error(errData.error || "Generation failed");
         }
-      });
 
-      requestAnimationFrame(animate);
+        const data = await resp.json();
+        console.log("Gemini choreography received:", data);
+
+        ACTIVE_DATA = data;
+        currentSceneIdx = 0;
+        currentTimeMs = 0;
+        isPlaying = true;
+        setupSceneTabs();
+
+        statusBadge.textContent = "Success • Rendered Live!";
+        statusBadge.style.color = "#107c10";
+        statusBadge.style.background = "#eefbee";
+        statusBadge.style.borderColor = "#107c10";
+      } catch (err) {
+        console.error("Gemini choreography error:", err);
+        statusBadge.textContent = "Error: " + err.message;
+        statusBadge.style.color = "#b91c1c";
+        statusBadge.style.background = "#fee2e2";
+        statusBadge.style.borderColor = "#b91c1c";
+      } finally {
+        isGenerating = false;
+        btn.disabled = false;
+        btn.innerHTML = "<span>✨ Choreograph Live</span>";
+        updatePlayBtn();
+      }
+    }
+
+    // Timeline Slider listener
+    document.getElementById("timeline_slider").addEventListener("input", (e) => {
+      seekTo(parseFloat(e.target.value));
     });
+
+    // Initialize Patterns & Start Loop
+    pattern50 = createDitherPattern(0.5);
+    pattern25 = createDitherPattern(0.25);
+    setupSceneTabs();
+    requestAnimationFrame(animate);
   </script>
 </body>
 </html>
