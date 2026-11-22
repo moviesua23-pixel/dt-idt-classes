@@ -1,0 +1,421 @@
+{
+  "question_id": "dt-c1-q7",
+  "audio_url": "data/audio/dt-c1-q7.mp3",
+  "duration_sec": 86.04,
+  "sync_offset_sec": 0.0,
+  "context_pill": "Section 115BAC & Section 87A",
+  "example_summary": "Computation of tax liability for Mr. Mahesh under Section 115BAC for A.Y. 2026-27 with total income of ₹ 11,00,000 resulting in a tax liability of Nil after Section 87A rebate.",
+  "source_provision": "### Statutory Framework: Section 115BAC & Section 87A\n\n| Provision | Target Assessee | Operative Condition / Threshold | Tax Treatment / Benefit |\n| :--- | :--- | :--- | :--- |\n| **Section 115BAC** | Individual, HUF, AOP, BOI, AJP | Default Tax Regime for computation of total income | Concessional progressive slab rates |\n| **Section 87A** | Resident Individual | Total Income within prescribed statutory threshold | Rebate equal to 100% of Tax Payable (up to maximum limit) |\n| **Section 87A Proviso** | Resident Individual | Total Income slightly exceeds threshold | Marginal relief capped at Income exceeding threshold |\n\n#### Key Statutory Rules & Conditions\n\n* **Applicability of Default Regime**: Section 115BAC applies automatically unless the assessee exercises an option to shift to the normal regime under Section 115BAC(6).\n* **Eligibility for Rebate u/s 87A**: Available **only to Resident Individuals**; non-residents and non-individual assessees cannot claim this rebate.\n* **Quantum of Rebate**: Lower of actual Tax Payable or the statutory maximum limit (e.g., ₹ 60,000 / ₹ 25,000 depending on statutory ceiling).\n\n> [!IMPORTANT] Statutory Distinction\n> Section 87A rebate applies on net tax before Health and Education Cess. Non-resident individuals are strictly ineligible for Section 87A rebate regardless of their income level.",
+  "director": {
+    "archetype": "rate_slab_ladder",
+    "justification": "The tax computation involves applying progressive slab rates under Section 115BAC to Mr. Mahesh's income of ₹ 11,00,000 followed by applying the Section 87A rebate.",
+    "protagonist": "Mr. Mahesh",
+    "actors": [
+      "Mr. Mahesh"
+    ],
+    "key_numbers": [
+      "₹ 11,00,000",
+      "₹ 4,00,000",
+      "₹ 8,00,000",
+      "₹ 20,000",
+      "₹ 30,000",
+      "₹ 50,000",
+      "₹ 60,000",
+      "Nil"
+    ],
+    "key_dates": [
+      "A.Y. 2026-27"
+    ],
+    "visual_metaphor": "A step-ladder representing the 115BAC tax slabs leading up to total tax liability, which is then wiped clean by a Section 87A rebate shield.",
+    "beat_plan": [
+      {
+        "beat_goal": "Introduce Mr. Mahesh, a resident individual with ₹ 11,00,000 total income for Assessment Year 2026-27 evaluated under Section 115BAC.",
+        "layout": "example_scene",
+        "anchor_phrases": [
+          "Mr. Mahesh",
+          "₹ 11,00,000",
+          "A.Y. 2026-27",
+          "Section 115BAC"
+        ]
+      },
+      {
+        "beat_goal": "Ascend the Section 115BAC tax slabs to calculate tax on each slice of income.",
+        "layout": "slab_ladder",
+        "anchor_phrases": [
+          "First ₹ 4,00,000",
+          "₹ 4,00,001 to ₹ 8,00,000",
+          "₹ 8,00,001 to ₹ 11,00,000"
+        ]
+      },
+      {
+        "beat_goal": "Tally the slab amounts of ₹ 20,000 and ₹ 30,000 to arrive at total tax payable of ₹ 50,000 before rebate.",
+        "layout": "ledger",
+        "anchor_phrases": [
+          "₹ 20,000",
+          "₹ 30,000",
+          "₹ 50,000"
+        ]
+      },
+      {
+        "beat_goal": "Verify statutory conditions for claiming tax rebate under Section 87A.",
+        "layout": "checklist_gate",
+        "anchor_phrases": [
+          "Section 87A",
+          "Resident Individual",
+          "Tax Payable"
+        ]
+      },
+      {
+        "beat_goal": "Deduct Section 87A rebate equal to tax payable of ₹ 50,000 to compute final net tax liability of Nil.",
+        "layout": "takeaway",
+        "anchor_phrases": [
+          "Rebate u/s 87A",
+          "₹ 50,000",
+          "Nil"
+        ]
+      }
+    ]
+  },
+  "fallback": false,
+  "beats": [
+    {
+      "layout": "example_scene",
+      "title": {
+        "text": "Introduction of Mr. Mahesh",
+        "at": 0.3
+      },
+      "voice_sync_text": "നമുക്ക് Mr. Mahesh-ന്റെ കേസ് നോക്കാം. ഇദ്ദേഹം ഒരു resident individual ആണ്, A.Y. 2026-27-ൽ total income ₹ 11,00,000 ആണ്. ഇത് Section 115BAC പ്രകാരമുള്ള default tax regime-ൽ ആണ് evaluate ചെയ്യുന്നത്.",
+      "visual_data": {
+        "actors": [
+          {
+            "label": "Mr. Mahesh",
+            "detail": "Resident Individual",
+            "amount": 1100000,
+            "icon": "person",
+            "at": 3.86
+          }
+        ],
+        "transaction": "Tax computation under Section 115BAC for A.Y. 2026-27",
+        "facts": [
+          {
+            "label": "Total Income",
+            "amount": 1100000,
+            "at": 9.06
+          },
+          {
+            "label": "Assessment Year",
+            "date": "A.Y. 2026-27",
+            "at": 9.06
+          },
+          {
+            "label": "Regime",
+            "detail": "Section 115BAC",
+            "at": 13.28
+          }
+        ],
+        "spoken_amounts": [
+          "₹ 11,00,000",
+          "11,00,000"
+        ]
+      },
+      "start": 0.0,
+      "end": 19.2,
+      "id": "b1",
+      "director_goal": "Introduce Mr. Mahesh, a resident individual with ₹ 11,00,000 total income for Assessment Year 2026-27 evaluated under Section 115BAC.",
+      "anchor_phrases": [
+        "Mr. Mahesh",
+        "₹ 11,00,000",
+        "A.Y. 2026-27",
+        "Section 115BAC"
+      ],
+      "animation_role": "key_fact",
+      "anchor_alignment": [
+        {
+          "phrase": "Mr. Mahesh",
+          "at": 1.0,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "₹ 11,00,000",
+          "at": 10.7,
+          "matched": true,
+          "score": 0.484
+        },
+        {
+          "phrase": "A.Y. 2026-27",
+          "at": 7.31,
+          "matched": false,
+          "score": 0.25
+        },
+        {
+          "phrase": "Section 115BAC",
+          "at": 13.28,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 4
+      }
+    },
+    {
+      "layout": "slab_ladder",
+      "title": {
+        "text": "Section 115BAC Slab Ascending",
+        "at": 19.85
+      },
+      "voice_sync_text": "ഇനി Section 115BAC tax slabs വഴി ഓരോ slice income-നും tax compute ചെയ്യാം. First ₹ 4,00,000-ന് Nil ആണ്. അടുത്തதாக ₹ 4,00,001 to ₹ 8,00,000 വരെയുള്ള തുകയ്ക്ക് 5 percentage നിരക്കിൽ tax വരുന്നു. പിന്നെ Balance ആയ ₹ 8,00,001 to ₹ 11,00,000 വരെയുള്ള income-ന് 10 percentage rate apply ചെയ്യുന്നു.",
+      "visual_data": {
+        "tiers": [
+          {
+            "label": "First ₹ 4,00,000",
+            "value": "Nil",
+            "amount": 400000,
+            "at": 26.09
+          },
+          {
+            "label": "₹ 4,00,001 to ₹ 8,00,000",
+            "value": "5%",
+            "amount": 400000,
+            "at": 30.45
+          },
+          {
+            "label": "₹ 8,00,001 to ₹ 11,00,000",
+            "value": "10%",
+            "amount": 300000,
+            "at": 38.37
+          }
+        ]
+      },
+      "start": 19.55,
+      "end": 44.83,
+      "id": "b2",
+      "director_goal": "Ascend the Section 115BAC tax slabs to calculate tax on each slice of income.",
+      "anchor_phrases": [
+        "First ₹ 4,00,000",
+        "₹ 4,00,001 to ₹ 8,00,000",
+        "₹ 8,00,001 to ₹ 11,00,000"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "First ₹ 4,00,000",
+          "at": 26.09,
+          "matched": true,
+          "score": 0.653
+        },
+        {
+          "phrase": "₹ 4,00,001 to ₹ 8,00,000",
+          "at": 30.45,
+          "matched": true,
+          "score": 0.52
+        },
+        {
+          "phrase": "₹ 8,00,001 to ₹ 11,00,000",
+          "at": 38.37,
+          "matched": true,
+          "score": 0.546
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 3
+      }
+    },
+    {
+      "layout": "ledger",
+      "title": {
+        "text": "Tax Ledger Tally",
+        "at": 45.48
+      },
+      "voice_sync_text": "slab amounts ആയ ₹ 20,000 ഉം ₹ 30,000 ഉം കൂടി tally ചെയ്ത് total tax payable എത്രയെന്ന് നോക്കാം. Rebate-ന് മുൻപുള്ള total tax payable ഇവിടെ ₹ 50,000 ആയി ലഭിക്കുന്നു.",
+      "visual_data": {
+        "rows": [
+          {
+            "label": "Slab 1 Tax",
+            "amount": 20000,
+            "at": 45.6
+          },
+          {
+            "label": "Slab 2 Tax",
+            "amount": 30000,
+            "at": 45.6
+          }
+        ],
+        "total": "₹ 50,000",
+        "spoken_amounts": [
+          "₹ 20,000",
+          "₹ 30,000",
+          "20,000",
+          "30,000"
+        ]
+      },
+      "start": 45.18,
+      "end": 58.38,
+      "id": "b3",
+      "director_goal": "Tally the slab amounts of ₹ 20,000 and ₹ 30,000 to arrive at total tax payable of ₹ 50,000 before rebate.",
+      "anchor_phrases": [
+        "₹ 20,000",
+        "₹ 30,000",
+        "₹ 50,000"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "₹ 20,000",
+          "at": 47.3,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "₹ 30,000",
+          "at": 48.42,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "₹ 50,000",
+          "at": 56.14,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 3
+      }
+    },
+    {
+      "layout": "checklist_gate",
+      "title": {
+        "text": "Section 87A Conditions Gate",
+        "at": 59.03
+      },
+      "voice_sync_text": "അടുത്തതായി Section 87A tax rebate क्लेम ചെയ്യാനുള്ള statutory conditions verify ചെയ്യാം. ഇദ്ദേഹം ഒരു Resident Individual ആണ്, കൂടാതെ Tax Payable ഉം ഉണ്ട്. ആയതിനാൽ rebate കിട്ടാൻ അർഹതയുണ്ട്.",
+      "visual_data": {
+        "conditions": [
+          {
+            "label": "Resident Individual",
+            "pass": true,
+            "at": 66.33
+          },
+          {
+            "label": "Tax Payable",
+            "pass": true,
+            "at": 68.55
+          },
+          {
+            "label": "Section 87A Eligibility",
+            "pass": true,
+            "at": 68.55
+          }
+        ],
+        "outcome": "Eligible for Rebate"
+      },
+      "start": 58.73,
+      "end": 73.01,
+      "id": "b4",
+      "director_goal": "Verify statutory conditions for claiming tax rebate under Section 87A.",
+      "anchor_phrases": [
+        "Section 87A",
+        "Resident Individual",
+        "Tax Payable"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Section 87A",
+          "at": 60.09,
+          "matched": true,
+          "score": 0.5
+        },
+        {
+          "phrase": "Resident Individual",
+          "at": 66.33,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Tax Payable",
+          "at": 68.55,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 3
+      }
+    },
+    {
+      "layout": "takeaway",
+      "title": {
+        "text": "Final Net Tax Liability",
+        "at": 73.66
+      },
+      "voice_sync_text": "ഇപ്പോൾ Rebate u/s 87A പ്രകാരം വന്ന ₹ 50,000 tax payable-ൽ നിന്നും deduct ചെയ്യാം. അങ്ങനെ final net tax liability Nil ആയി മാറുന്നു.",
+      "visual_data": {
+        "rules": [
+          {
+            "label": "Rebate u/s 87A",
+            "amount": 50000,
+            "sign": "-",
+            "at": 80.64
+          },
+          {
+            "label": "Final Tax Liability",
+            "value": "Nil",
+            "sign": "=",
+            "at": 82.58
+          }
+        ],
+        "spoken_amounts": [
+          "₹ 50,000",
+          "50,000"
+        ]
+      },
+      "start": 73.36,
+      "end": 86.04,
+      "id": "b5",
+      "director_goal": "Deduct Section 87A rebate equal to tax payable of ₹ 50,000 to compute final net tax liability of Nil.",
+      "anchor_phrases": [
+        "Rebate u/s 87A",
+        "₹ 50,000",
+        "Nil"
+      ],
+      "animation_role": "key_fact",
+      "anchor_alignment": [
+        {
+          "phrase": "Rebate u/s 87A",
+          "at": 80.64,
+          "matched": true,
+          "score": 0.823
+        },
+        {
+          "phrase": "₹ 50,000",
+          "at": 76.77,
+          "matched": false,
+          "score": 0.154
+        },
+        {
+          "phrase": "Nil",
+          "at": 82.58,
+          "matched": true,
+          "score": 0.5
+        }
+      ],
+      "anchor_match": {
+        "matched": 2,
+        "total": 3
+      }
+    }
+  ],
+  "audio_duration_sec": 86.04,
+  "anchor_match": {
+    "matched": 14,
+    "total": 16,
+    "rate": 0.875
+  }
+}

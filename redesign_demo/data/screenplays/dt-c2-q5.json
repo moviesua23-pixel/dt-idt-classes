@@ -1,1511 +1,515 @@
 {
-  "qid": "dt-c2-q5",
   "question_id": "dt-c2-q5",
-  "layout": "story_stage",
-  "story_title": "The Legacy of Vikram's Land and the HUF Partition",
-  "timeline": {
-    "total_duration": 164.28,
-    "scene_count": 5
+  "audio_url": "data/audio/dt-c2-q5.mp3",
+  "duration_sec": 190.96,
+  "sync_offset_sec": 0.0,
+  "context_pill": "Capital Gains: HUF Partition & Improvement Cost",
+  "example_summary": "Land purchased by HUF in P.Y. 2002-03 for 1,20,000 was allotted to Mr. A in P.Y. 2006-07 partition (valued at 1,50,000). Mr. A spent 2,35,000 on fencing in P.Y. 2007-08 and sold it in June 2025 for 15,00,000 with 20,000 transfer expense.",
+  "source_provision": "| Statutory Area | Legal Provision | Core Rule |\n| :--- | :--- | :--- |\n| Cost Determination | Section 49(1) | COA = Cost to the previous owner |\n| Improvement Cost | Section 55(2) | Actual expenditure for capital improvement |\n| Transfer Expenses | Section 48 | Deductible from Full Value of Consideration |\n\n> [!IMPORTANT] Section 49(1) Scope: \nWhen a capital asset is acquired by the assessee by way of partition of HUF, the cost of acquisition is deemed to be the cost to the previous owner (the HUF), as adjusted by any cost of improvement incurred by the previous owner or the assessee.\n\n> [!WARNING] Expenditure Traps:\n- Expenses must be incurred exclusively for the transfer of the asset.\n- Cost of improvement must be capital in nature; revenue expenditure is ineligible for deduction under Section 48.\n\n### Computation Framework:\n1. Full Value of Consideration (-) Transfer Expenses = Net Consideration\n2. Net Consideration (-) Cost of Acquisition (u/s 49(1)) (-) Cost of Improvement = Capital Gain",
+  "director": {
+    "archetype": "computation_ledger",
+    "justification": "The question requires computing long-term capital gains on land received via HUF partition, applying Section 49(1) for cost to previous owner and Section 55(2) for improvement costs.",
+    "protagonist": "Mr. A",
+    "actors": [
+      "Mr. A",
+      "X & sons, HUF"
+    ],
+    "key_numbers": [
+      "1,20,000",
+      "1,50,000",
+      "2,35,000",
+      "15,00,000",
+      "20,000",
+      "14,80,000",
+      "11,25,000"
+    ],
+    "key_dates": [
+      "P.Y. 2002-03",
+      "P.Y. 2006-07",
+      "P.Y. 2007-08",
+      "June 2025",
+      "A.Y. 2026-27"
+    ],
+    "visual_metaphor": "A step-by-step financial balance ledger tracing land acquisition from HUF partition to final sale deduction steps",
+    "beat_plan": [
+      {
+        "beat_goal": "Establish the background of land purchase by HUF, partition allotment to Mr. A, fencing improvement, and sale in June 2025.",
+        "layout": "example_scene",
+        "anchor_phrases": [
+          "X & sons, HUF",
+          "Mr. A",
+          "June 2025",
+          "15,00,000"
+        ]
+      },
+      {
+        "beat_goal": "Apply Section 49(1) to substitute partition allotment value with actual cost to previous owner HUF.",
+        "layout": "deemed_value",
+        "anchor_phrases": [
+          "Section 49(1)",
+          "cost to the previous owner",
+          "1,20,000",
+          "1,50,000"
+        ]
+      },
+      {
+        "beat_goal": "Identify deductible improvement expenditure under Section 55(2) and transfer expenses under Section 48.",
+        "layout": "statute_quote",
+        "anchor_phrases": [
+          "Section 55(2)",
+          "Section 48",
+          "2,35,000",
+          "20,000"
+        ]
+      },
+      {
+        "beat_goal": "Execute the step-by-step capital gains computation ledger for A.Y. 2026-27.",
+        "layout": "ledger",
+        "anchor_phrases": [
+          "15,00,000",
+          "20,000",
+          "1,20,000",
+          "2,35,000",
+          "11,25,000"
+        ]
+      },
+      {
+        "beat_goal": "Summarize core principles of Section 49(1) cost substitution and capital expenditure deductions.",
+        "layout": "takeaway",
+        "anchor_phrases": [
+          "Section 49(1)",
+          "previous owner cost",
+          "Long term"
+        ]
+      }
+    ]
   },
-  "audio_file": "audio/dt-c2-q5_story.mp3",
-  "scenes": [
+  "fallback": false,
+  "beats": [
     {
-      "scene_id": "scene_1_net_consideration",
-      "scene_type": "story",
-      "teaching_step_ref": "1",
-      "title": "Vikram's Big Sale",
-      "actors": [
-        {
-          "id": "actor_vikram",
-          "name": "Vikram",
-          "role": "Seller",
-          "x": 150,
-          "y": 300
-        }
-      ],
-      "assets": [
-        {
-          "id": "asset_land",
-          "type": "land",
-          "label": "Ancestral Plot",
-          "x": 400,
-          "y": 250
-        }
-      ],
-      "events": [
-        {
-          "id": "evt_sale",
-          "type": "sale",
-          "date": "15th October 2024",
-          "amount": 2000000
-        }
-      ],
-      "facts": {
-        "sale_price": 2000000,
-        "brokerage_paid": 50000
+      "layout": "example_scene",
+      "title": {
+        "text": "Background of Property & Sale",
+        "at": 0.3
       },
-      "rule_applied": {
-        "section": "Section 48",
-        "condition": "Net Consideration is Sale Price minus Transfer Expenses",
-        "formula": "sale_price - brokerage_paid"
-      },
-      "calculation": {
-        "steps": [
+      "voice_sync_text": "ഇവിടെ X & sons, HUF P.Y. 2002-03-ൽ 1,20,000-ന് ഒരു land വാങ്ങുന്നു. P.Y. 2006-07-ലെ partition വഴി Mr. A-യ്ക്ക് 1,50,000 value ഉള്ള ഈ plot ലഭിക്കുന്നു. P.Y. 2007-08-ൽ Mr. A 2,35,000 fencing-നായി spend ചെയ്തു. June 2025-ൽ 20,000 transfer expense കഴിച്ച് 15,00,000-ന് plot വിൽക്കുന്നു.",
+      "visual_data": {
+        "actors": [
           {
-            "step_idx": 1,
-            "desc": "Subtracting brokerage ₹ 50,000 from sale price ₹ 20,00,000",
-            "value": 1950000,
-            "element_id": "calc_step_1"
+            "label": "X & sons, HUF",
+            "detail": "Original owner",
+            "value": "1,20,000",
+            "date": "P.Y. 2002-03",
+            "amount": 120000,
+            "icon": "house",
+            "at": 1.07
+          },
+          {
+            "label": "Mr. A",
+            "detail": "Coparcener / Owner",
+            "value": "15,00,000",
+            "date": "June 2025",
+            "amount": 1500000,
+            "icon": "person",
+            "at": 18.54
           }
         ],
-        "result_label": "Net Sale Consideration",
-        "result_value": 1950000,
-        "element_id": "result_badge"
+        "transaction": "HUF Partition to Individual Sale",
+        "facts": [
+          {
+            "label": "HUF Acquisition",
+            "detail": "Purchased plot",
+            "value": "1,20,000",
+            "date": "P.Y. 2002-03",
+            "amount": 120000,
+            "icon": "bank",
+            "at": 18.54
+          },
+          {
+            "label": "Partition Allotment",
+            "detail": "Valued at partition",
+            "value": "1,50,000",
+            "date": "P.Y. 2006-07",
+            "amount": 150000,
+            "icon": "document",
+            "at": 18.54
+          },
+          {
+            "label": "Fencing Expense",
+            "detail": "Cost of improvement",
+            "value": "2,35,000",
+            "date": "P.Y. 2007-08",
+            "amount": 235000,
+            "icon": "plot",
+            "at": 21.3
+          },
+          {
+            "label": "Sale Consideration",
+            "detail": "Sold in June 2025",
+            "value": "15,00,000",
+            "date": "June 2025",
+            "amount": 1500000,
+            "icon": "money_bag",
+            "at": 22.25
+          },
+          {
+            "label": "Transfer Expense",
+            "detail": "Incurred on transfer",
+            "value": "20,000",
+            "date": "June 2025",
+            "amount": 20000,
+            "icon": "money_bag",
+            "at": 26.38
+          }
+        ]
       },
-      "sentences": [
-        {
-          "sentence_id": "s1_sit",
-          "phase": "situation",
-          "text": "ഇവിടെ Vikram 15th October 2024-ൽ തന്റെ കൈവശമുള്ള ഒരു സ്ഥലം ₹ 20,00,000 എന്ന തുകയ്ക്ക് വിൽക്കാൻ തീരുമാനിച്ചു.",
-          "tied_element_ids": [
-            "actor_vikram",
-            "asset_land",
-            "evt_sale"
-          ]
-        },
-        {
-          "sentence_id": "s2_rule",
-          "phase": "rule",
-          "text": "Section 48 പ്രകാരം വിൽപന നടത്തുമ്പോൾ ഉണ്ടായ ചിലവുകൾ കുറച്ചാൽ മാത്രമേ നമുക്ക് ശരിക്കുള്ള Net Sale Consideration എത്രയാണെന്ന് കണ്ടെത്താൻ സാധിക്കൂ.",
-          "tied_element_ids": [
-            "rule_box"
-          ]
-        },
-        {
-          "sentence_id": "s3_calc_1",
-          "phase": "calculation",
-          "text": "അതുകൊണ്ട് വിൽപനയ്ക്കായി ചിലവായ brokerage തുകയായ ₹ 50,000 നമുക്ക് ആകെ ലഭിച്ച ₹ 20,00,000-ൽ നിന്നും കുറയ്ക്കാം.",
-          "tied_element_ids": [
-            "calc_step_1"
-          ]
-        },
-        {
-          "sentence_id": "s4_res",
-          "phase": "result",
-          "text": "ഇങ്ങനെ കുറച്ചു കഴിയുമ്പോൾ Vikram-ന് ലഭിക്കുന്ന Net Sale Consideration കൃത്യം ₹ 19,50,000 ആയിരിക്കും.",
-          "tied_element_ids": [
-            "result_badge"
-          ]
-        }
-      ],
       "start": 0.0,
-      "duration": 24.56,
-      "sentence_timings": [
+      "end": 30.16,
+      "id": "b1",
+      "director_goal": "Establish the background of land purchase by HUF, partition allotment to Mr. A, fencing improvement, and sale in June 2025.",
+      "anchor_phrases": [
+        "X & sons, HUF",
+        "Mr. A",
+        "June 2025",
+        "15,00,000"
+      ],
+      "animation_role": "key_fact",
+      "anchor_alignment": [
         {
-          "sentence_id": "s1_sit",
-          "phase": "situation",
-          "text": "ഇവിടെ Vikram 15th October 2024-ൽ തന്റെ കൈവശമുള്ള ഒരു സ്ഥലം ₹ 20,00,000 എന്ന തുകയ്ക്ക് വിൽക്കാൻ തീരുമാനിച്ചു.",
-          "cue": 0.0,
-          "start": 0.0,
-          "end": 5.754,
-          "method": "word_hit",
-          "tied_element_ids": [
-            "actor_vikram",
-            "asset_land",
-            "evt_sale"
-          ]
+          "phrase": "X & sons, HUF",
+          "at": 0.96,
+          "matched": true,
+          "score": 0.72
         },
         {
-          "sentence_id": "s2_rule",
-          "phase": "rule",
-          "text": "Section 48 പ്രകാരം വിൽപന നടത്തുമ്പോൾ ഉണ്ടായ ചിലവുകൾ കുറച്ചാൽ മാത്രമേ നമുക്ക് ശരിക്കുള്ള Net Sale Consideration എത്രയാണെന്ന് കണ്ടെത്താൻ സാധിക്കൂ.",
-          "cue": 5.852,
-          "start": 6.002,
-          "end": 13.425,
-          "method": "pause_detect",
-          "tied_element_ids": [
-            "rule_box"
-          ]
+          "phrase": "Mr. A",
+          "at": 18.54,
+          "matched": true,
+          "score": 1.0
         },
         {
-          "sentence_id": "s3_calc_1",
-          "phase": "calculation",
-          "text": "അതുകൊണ്ട് വിൽപനയ്ക്കായി ചിലവായ brokerage തുകയായ ₹ 50,000 നമുക്ക് ആകെ ലഭിച്ച ₹ 20,00,000-ൽ നിന്നും കുറയ്ക്കാം.",
-          "cue": 12.308,
-          "start": 12.458,
-          "end": 19.232,
-          "method": "pause_detect",
-          "tied_element_ids": [
-            "calc_step_1"
-          ]
+          "phrase": "June 2025",
+          "at": 22.74,
+          "matched": true,
+          "score": 0.995
         },
         {
-          "sentence_id": "s4_res",
-          "phase": "result",
-          "text": "ഇങ്ങനെ കുറച്ചു കഴിയുമ്പോൾ Vikram-ന് ലഭിക്കുന്ന Net Sale Consideration കൃത്യം ₹ 19,50,000 ആയിരിക്കും.",
-          "cue": 18.693,
-          "start": 18.843,
-          "end": 24.56,
-          "method": "pause_detect",
-          "tied_element_ids": [
-            "result_badge"
-          ]
+          "phrase": "15,00,000",
+          "at": 28.26,
+          "matched": true,
+          "score": 1.0
         }
       ],
-      "canvas_updates": [
-        {
-          "cue": 0.0,
-          "action": "actor_enter",
-          "entity_id": "actor_vikram",
-          "data": {
-            "id": "actor_vikram",
-            "name": "Vikram",
-            "role": "Seller",
-            "x": 150,
-            "y": 300
-          },
-          "anim_duration": 0.5
-        },
-        {
-          "cue": 0.0,
-          "action": "asset_enter",
-          "entity_id": "asset_land",
-          "data": {
-            "id": "asset_land",
-            "type": "land",
-            "label": "Ancestral Plot",
-            "x": 400,
-            "y": 250
-          },
-          "anim_duration": 0.5
-        },
-        {
-          "cue": 0.0,
-          "action": "event_trigger",
-          "entity_id": "evt_sale",
-          "data": {
-            "id": "evt_sale",
-            "type": "sale",
-            "date": "15th October 2024",
-            "amount": 2000000
-          },
-          "anim_duration": 0.5
-        },
-        {
-          "cue": 5.852,
-          "action": "rule_panel_enter",
-          "entity_id": "rule_panel",
-          "canvas_width_pct": 55,
-          "rule_panel_width_pct": 45,
-          "data": {
-            "section": "Section 48",
-            "condition": "Net Consideration is Sale Price minus Transfer Expenses",
-            "formula": "sale_price - brokerage_paid"
-          },
-          "anim_duration": 0.5
-        },
-        {
-          "cue": 12.308,
-          "action": "calc_step_show",
-          "entity_id": "calc_step_1",
-          "data": {
-            "step_idx": 1,
-            "desc": "Subtracting brokerage ₹ 50,000 from sale price ₹ 20,00,000",
-            "value": 1950000,
-            "element_id": "calc_step_1"
-          },
-          "anim_duration": 0.4
-        },
-        {
-          "cue": 18.693,
-          "action": "result_badge_highlight",
-          "entity_id": "result_badge",
-          "data": {
-            "label": "Net Sale Consideration",
-            "value": 1950000
-          },
-          "anim_duration": 0.4
-        }
-      ]
+      "anchor_match": {
+        "matched": 4,
+        "total": 4
+      }
     },
     {
-      "scene_id": "scene_2_coa_huf",
-      "scene_type": "story",
-      "teaching_step_ref": "2",
-      "title": "The HUF History",
-      "actors": [
-        {
-          "id": "actor_huf",
-          "name": "Vikram's HUF",
-          "role": "Previous Owner",
-          "x": 100,
-          "y": 200
-        }
-      ],
-      "assets": [
-        {
-          "id": "asset_land_huf",
-          "type": "land",
-          "label": "HUF Property",
-          "x": 350,
-          "y": 200
-        }
-      ],
-      "events": [
-        {
-          "id": "evt_huf_purchase",
-          "type": "purchase",
-          "date": "10th June 2010",
-          "amount": 500000
-        },
-        {
-          "id": "evt_partition",
-          "type": "partition",
-          "date": "20th August 2022",
-          "amount": 800000
-        }
-      ],
-      "facts": {
-        "huf_cost": 500000,
-        "partition_value": 800000
+      "layout": "deemed_value",
+      "title": {
+        "text": "Cost of Acquisition u/s 49(1)",
+        "at": 30.81
       },
-      "rule_applied": {
-        "section": "Section 49(1)(i)",
-        "condition": "Cost to previous owner is taken in case of HUF partition",
-        "formula": "huf_cost"
+      "voice_sync_text": "HUF partition വഴി asset ലഭിക്കുമ്പോൾ, Section 49(1) അനുസരിച്ച് cost of acquisition എന്നത് partition സമയത്തെ 1,50,000 അല്ല, പകരം cost to the previous owner ആയ 1,20,000 ആയിരിക്കും എടുക്കേണ്ടത്.",
+      "visual_data": {
+        "actual": {
+          "label": "Partition Allotment Value",
+          "detail": "Value at partition in P.Y. 2006-07",
+          "value": "1,50,000",
+          "amount": 150000,
+          "icon": "document",
+          "at": 66.01
+        },
+        "deemed": {
+          "label": "Deemed Cost of Acquisition",
+          "detail": "Cost to previous owner HUF in P.Y. 2002-03",
+          "value": "1,20,000",
+          "amount": 120000,
+          "icon": "bank",
+          "at": 66.01
+        },
+        "rule": "Section 49(1): Cost of Acquisition = cost to the previous owner (1,20,000)",
+        "at": 66.01
       },
-      "calculation": {
-        "steps": [
-          {
-            "step_idx": 1,
-            "desc": "Ignoring partition value ₹ 8,00,000 and taking HUF cost ₹ 5,00,000",
-            "value": 500000,
-            "element_id": "calc_step_1"
-          }
-        ],
-        "result_label": "Cost of Acquisition",
-        "result_value": 500000,
-        "element_id": "result_badge"
-      },
-      "sentences": [
+      "start": 30.51,
+      "end": 73.99,
+      "id": "b2",
+      "director_goal": "Apply Section 49(1) to substitute partition allotment value with actual cost to previous owner HUF.",
+      "anchor_phrases": [
+        "Section 49(1)",
+        "cost to the previous owner",
+        "1,20,000",
+        "1,50,000"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
         {
-          "sentence_id": "s2_sit",
-          "phase": "situation",
-          "text": "ഈ സ്ഥലം Vikram-ന് ലഭിച്ചത് 20th August 2022-ൽ നടന്ന ഒരു HUF partition വഴിയാണ്, എന്നാൽ HUF ഇത് 10th June 2010-ൽ ₹ 5,00,000-നാണ് വാങ്ങിയത്.",
-          "tied_element_ids": [
-            "actor_huf",
-            "asset_land_huf",
-            "evt_huf_purchase",
-            "evt_partition"
-          ]
+          "phrase": "Section 49(1)",
+          "at": 66.01,
+          "matched": true,
+          "score": 1.0
         },
         {
-          "sentence_id": "s2_rule",
-          "phase": "rule",
-          "text": "Section 49(1)(i) പ്രകാരം HUF partition വഴി ലഭിക്കുന്ന asset-ന്റെ വിലയായി മുൻപത്തെ ഉടമയായ HUF വാങ്ങിയ വില തന്നെ നാം കണക്കാക്കണം.",
-          "tied_element_ids": [
-            "rule_box"
-          ]
+          "phrase": "cost to the previous owner",
+          "at": 69.95,
+          "matched": true,
+          "score": 0.894
         },
         {
-          "sentence_id": "s2_calc_1",
-          "phase": "calculation",
-          "text": "അതുകൊണ്ട് partition സമയത്തെ മൂല്യമായ ₹ 8,00,000 ഒഴിവാക്കി HUF വാങ്ങിയ യഥാർത്ഥ വിലയായ ₹ 5,00,000 നമുക്ക് എടുക്കാം.",
-          "tied_element_ids": [
-            "calc_step_1"
-          ]
+          "phrase": "1,20,000",
+          "at": 66.48,
+          "matched": false,
+          "score": 0.091
         },
         {
-          "sentence_id": "s2_res",
-          "phase": "result",
-          "text": "അങ്ങനെ Vikram-ന്റെ Cost of Acquisition ആയി ₹ 5,00,000 നിശ്ചയിക്കപ്പെട്ടു.",
-          "tied_element_ids": [
-            "result_badge"
-          ]
+          "phrase": "1,50,000",
+          "at": 55.1,
+          "matched": false,
+          "score": 0.091
         }
       ],
-      "start": 24.91,
-      "duration": 34.9,
-      "sentence_timings": [
-        {
-          "sentence_id": "s2_sit",
-          "phase": "situation",
-          "text": "ഈ സ്ഥലം Vikram-ന് ലഭിച്ചത് 20th August 2022-ൽ നടന്ന ഒരു HUF partition വഴിയാണ്, എന്നാൽ HUF ഇത് 10th June 2010-ൽ ₹ 5,00,000-നാണ് വാങ്ങിയത്.",
-          "cue": 24.98,
-          "start": 25.13,
-          "end": 35.603,
-          "method": "pause_detect",
-          "tied_element_ids": [
-            "actor_huf",
-            "asset_land_huf",
-            "evt_huf_purchase",
-            "evt_partition"
-          ]
-        },
-        {
-          "sentence_id": "s2_rule",
-          "phase": "rule",
-          "text": "Section 49(1)(i) പ്രകാരം HUF partition വഴി ലഭിക്കുന്ന asset-ന്റെ വിലയായി മുൻപത്തെ ഉടമയായ HUF വാങ്ങിയ വില തന്നെ നാം കണക്കാക്കണം.",
-          "cue": 34.896,
-          "start": 35.046,
-          "end": 45.311,
-          "method": "pause_detect",
-          "tied_element_ids": [
-            "rule_box"
-          ]
-        },
-        {
-          "sentence_id": "s2_calc_1",
-          "phase": "calculation",
-          "text": "അതുകൊണ്ട് partition സമയത്തെ മൂല്യമായ ₹ 8,00,000 ഒഴിവാക്കി HUF വാങ്ങിയ യഥാർത്ഥ വിലയായ ₹ 5,00,000 നമുക്ക് എടുക്കാം.",
-          "cue": 46.622,
-          "start": 46.772,
-          "end": 53.95,
-          "method": "pause_detect",
-          "tied_element_ids": [
-            "calc_step_1"
-          ]
-        },
-        {
-          "sentence_id": "s2_res",
-          "phase": "result",
-          "text": "അങ്ങനെ Vikram-ന്റെ Cost of Acquisition ആയി ₹ 5,00,000 നിശ്ചയിക്കപ്പെട്ടു.",
-          "cue": 54.992,
-          "start": 55.142,
-          "end": 59.53,
-          "method": "pause_detect",
-          "tied_element_ids": [
-            "result_badge"
-          ]
-        }
-      ],
-      "canvas_updates": [
-        {
-          "cue": 24.98,
-          "action": "actor_enter",
-          "entity_id": "actor_huf",
-          "data": {
-            "id": "actor_huf",
-            "name": "Vikram's HUF",
-            "role": "Previous Owner",
-            "x": 100,
-            "y": 200
-          },
-          "anim_duration": 0.5
-        },
-        {
-          "cue": 24.98,
-          "action": "asset_enter",
-          "entity_id": "asset_land_huf",
-          "data": {
-            "id": "asset_land_huf",
-            "type": "land",
-            "label": "HUF Property",
-            "x": 350,
-            "y": 200
-          },
-          "anim_duration": 0.5
-        },
-        {
-          "cue": 24.98,
-          "action": "event_trigger",
-          "entity_id": "evt_huf_purchase",
-          "data": {
-            "id": "evt_huf_purchase",
-            "type": "purchase",
-            "date": "10th June 2010",
-            "amount": 500000
-          },
-          "anim_duration": 0.5
-        },
-        {
-          "cue": 24.98,
-          "action": "event_trigger",
-          "entity_id": "evt_partition",
-          "data": {
-            "id": "evt_partition",
-            "type": "partition",
-            "date": "20th August 2022",
-            "amount": 800000
-          },
-          "anim_duration": 0.5
-        },
-        {
-          "cue": 34.896,
-          "action": "rule_panel_enter",
-          "entity_id": "rule_panel",
-          "canvas_width_pct": 55,
-          "rule_panel_width_pct": 45,
-          "data": {
-            "section": "Section 49(1)(i)",
-            "condition": "Cost to previous owner is taken in case of HUF partition",
-            "formula": "huf_cost"
-          },
-          "anim_duration": 0.5
-        },
-        {
-          "cue": 46.622,
-          "action": "calc_step_show",
-          "entity_id": "calc_step_1",
-          "data": {
-            "step_idx": 1,
-            "desc": "Ignoring partition value ₹ 8,00,000 and taking HUF cost ₹ 5,00,000",
-            "value": 500000,
-            "element_id": "calc_step_1"
-          },
-          "anim_duration": 0.4
-        },
-        {
-          "cue": 54.992,
-          "action": "result_badge_highlight",
-          "entity_id": "result_badge",
-          "data": {
-            "label": "Cost of Acquisition",
-            "value": 500000
-          },
-          "anim_duration": 0.4
-        }
-      ]
+      "anchor_match": {
+        "matched": 2,
+        "total": 4
+      }
     },
     {
-      "scene_id": "scene_3_coi",
-      "scene_type": "story",
-      "teaching_step_ref": "3",
-      "title": "Building the Boundary",
-      "actors": [
-        {
-          "id": "actor_vikram_2",
-          "name": "Vikram",
-          "role": "Owner",
-          "x": 150,
-          "y": 300
-        }
-      ],
-      "assets": [
-        {
-          "id": "asset_wall",
-          "type": "land",
-          "label": "Land with Wall",
-          "x": 400,
-          "y": 250
-        }
-      ],
-      "events": [
-        {
-          "id": "evt_improvement",
-          "type": "purchase",
-          "date": "12th January 2023",
-          "amount": 300000
-        }
-      ],
-      "facts": {
-        "wall_cost": 300000
+      "layout": "statute_quote",
+      "title": {
+        "text": "Deductions u/s 55(2) and Section 48",
+        "at": 74.64
       },
-      "rule_applied": {
-        "section": "Section 55(1)(b)",
-        "condition": "Capital expenditure for additions is Cost of Improvement",
-        "formula": "wall_cost"
+      "voice_sync_text": "അതുപോലെ, fencing-നായി ചിലവാക്കിയ 2,35,000 Section 55(2) പ്രകാരം improvement cost ആയി നൽകാം. കൂടാതെ Section 48 അനുസരിച്ച് transfer expense ആയ 20,000 കുറയ്ക്കാൻ അർഹതയുണ്ട്.",
+      "visual_data": {
+        "rule": "Deduction of Improvement & Transfer Expenses",
+        "citation": "Section 55(2) & Section 48",
+        "application": "Under Section 55(2), fencing expenditure of 2,35,000 is allowed as Cost of Improvement. Under Section 48, transfer expense of 20,000 is deductible.",
+        "at": 86.38
       },
-      "calculation": {
-        "steps": [
-          {
-            "step_idx": 1,
-            "desc": "Actual expenditure on wall construction",
-            "value": 300000,
-            "element_id": "calc_step_1"
-          }
-        ],
-        "result_label": "Cost of Improvement",
-        "result_value": 300000,
-        "element_id": "result_badge"
-      },
-      "sentences": [
+      "start": 74.34,
+      "end": 90.34,
+      "id": "b3",
+      "director_goal": "Identify deductible improvement expenditure under Section 55(2) and transfer expenses under Section 48.",
+      "anchor_phrases": [
+        "Section 55(2)",
+        "Section 48",
+        "2,35,000",
+        "20,000"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
         {
-          "sentence_id": "s3_sit",
-          "phase": "situation",
-          "text": "സ്ഥലം സ്വന്തമാക്കിയ ശേഷം Vikram 12th January 2023-ൽ അവിടെ ഒരു മതിൽ നിർമ്മിക്കാനായി ₹ 3,00,000 ചിലവാക്കി.",
-          "tied_element_ids": [
-            "actor_vikram_2",
-            "asset_wall",
-            "evt_improvement"
-          ]
+          "phrase": "Section 55(2)",
+          "at": 79.3,
+          "matched": true,
+          "score": 1.0
         },
         {
-          "sentence_id": "s3_rule",
-          "phase": "rule",
-          "text": "Section 55(1)(b) പ്രകാരം ഒരു asset-ന്റെ മൂല്യം വർദ്ധിപ്പിക്കാൻ നടത്തുന്ന ഇത്തരം capital expenditure നമുക്ക് Cost of Improvement ആയി കുറയ്ക്കാവുന്നതാണ്.",
-          "tied_element_ids": [
-            "rule_box"
-          ]
+          "phrase": "Section 48",
+          "at": 89.32,
+          "matched": true,
+          "score": 1.0
         },
         {
-          "sentence_id": "s3_calc_1",
-          "phase": "calculation",
-          "text": "മതിൽ നിർമ്മാണത്തിനായി Vikram ചിലവാക്കിയ ₹ 3,00,000 മുഴുവനായും നമുക്ക് ഇവിടെ ചിലവായി കണക്കാക്കാം.",
-          "tied_element_ids": [
-            "calc_step_1"
-          ]
+          "phrase": "2,35,000",
+          "at": 77.45,
+          "matched": false,
+          "score": 0.0
         },
         {
-          "sentence_id": "s3_res",
-          "phase": "result",
-          "text": "അതുകൊണ്ട് Vikram-ന്റെ ആകെ Cost of Improvement ₹ 3,00,000 ആയി നാം രേഖപ്പെടുത്തുന്നു.",
-          "tied_element_ids": [
-            "result_badge"
-          ]
+          "phrase": "20,000",
+          "at": 87.61,
+          "matched": false,
+          "score": 0.0
         }
       ],
-      "start": 60.16,
-      "duration": 31.4,
-      "sentence_timings": [
-        {
-          "sentence_id": "s3_sit",
-          "phase": "situation",
-          "text": "സ്ഥലം സ്വന്തമാക്കിയ ശേഷം Vikram 12th January 2023-ൽ അവിടെ ഒരു മതിൽ നിർമ്മിക്കാനായി ₹ 3,00,000 ചിലവാക്കി.",
-          "cue": 60.39,
-          "start": 60.54,
-          "end": 67.911,
-          "method": "pause_detect",
-          "tied_element_ids": [
-            "actor_vikram_2",
-            "asset_wall",
-            "evt_improvement"
-          ]
-        },
-        {
-          "sentence_id": "s3_rule",
-          "phase": "rule",
-          "text": "Section 55(1)(b) പ്രകാരം ഒരു asset-ന്റെ മൂല്യം വർദ്ധിപ്പിക്കാൻ നടത്തുന്ന ഇത്തരം capital expenditure നമുക്ക് Cost of Improvement ആയി കുറയ്ക്കാവുന്നതാണ്.",
-          "cue": 67.324,
-          "start": 67.474,
-          "end": 78.613,
-          "method": "pause_detect",
-          "tied_element_ids": [
-            "rule_box"
-          ]
-        },
-        {
-          "sentence_id": "s3_calc_1",
-          "phase": "calculation",
-          "text": "മതിൽ നിർമ്മാണത്തിനായി Vikram ചിലവാക്കിയ ₹ 3,00,000 മുഴുവനായും നമുക്ക് ഇവിടെ ചിലവായി കണക്കാക്കാം.",
-          "cue": 79.387,
-          "start": 79.537,
-          "end": 85.417,
-          "method": "pause_detect",
-          "tied_element_ids": [
-            "calc_step_1"
-          ]
-        },
-        {
-          "sentence_id": "s3_res",
-          "phase": "result",
-          "text": "അതുകൊണ്ട് Vikram-ന്റെ ആകെ Cost of Improvement ₹ 3,00,000 ആയി നാം രേഖപ്പെടുത്തുന്നു.",
-          "cue": 85.714,
-          "start": 85.864,
-          "end": 91.3,
-          "method": "pause_detect",
-          "tied_element_ids": [
-            "result_badge"
-          ]
-        }
-      ],
-      "canvas_updates": [
-        {
-          "cue": 60.39,
-          "action": "actor_enter",
-          "entity_id": "actor_vikram_2",
-          "data": {
-            "id": "actor_vikram_2",
-            "name": "Vikram",
-            "role": "Owner",
-            "x": 150,
-            "y": 300
-          },
-          "anim_duration": 0.5
-        },
-        {
-          "cue": 60.39,
-          "action": "asset_enter",
-          "entity_id": "asset_wall",
-          "data": {
-            "id": "asset_wall",
-            "type": "land",
-            "label": "Land with Wall",
-            "x": 400,
-            "y": 250
-          },
-          "anim_duration": 0.5
-        },
-        {
-          "cue": 60.39,
-          "action": "event_trigger",
-          "entity_id": "evt_improvement",
-          "data": {
-            "id": "evt_improvement",
-            "type": "purchase",
-            "date": "12th January 2023",
-            "amount": 300000
-          },
-          "anim_duration": 0.5
-        },
-        {
-          "cue": 67.324,
-          "action": "rule_panel_enter",
-          "entity_id": "rule_panel",
-          "canvas_width_pct": 55,
-          "rule_panel_width_pct": 45,
-          "data": {
-            "section": "Section 55(1)(b)",
-            "condition": "Capital expenditure for additions is Cost of Improvement",
-            "formula": "wall_cost"
-          },
-          "anim_duration": 0.5
-        },
-        {
-          "cue": 79.387,
-          "action": "calc_step_show",
-          "entity_id": "calc_step_1",
-          "data": {
-            "step_idx": 1,
-            "desc": "Actual expenditure on wall construction",
-            "value": 300000,
-            "element_id": "calc_step_1"
-          },
-          "anim_duration": 0.4
-        },
-        {
-          "cue": 85.714,
-          "action": "result_badge_highlight",
-          "entity_id": "result_badge",
-          "data": {
-            "label": "Cost of Improvement",
-            "value": 300000
-          },
-          "anim_duration": 0.4
-        }
-      ]
+      "anchor_match": {
+        "matched": 2,
+        "total": 4
+      }
     },
     {
-      "scene_id": "scene_4_ltcg_final",
-      "scene_type": "story",
-      "teaching_step_ref": "4",
-      "title": "The Final Gain",
-      "actors": [
-        {
-          "id": "actor_vikram_3",
-          "name": "Vikram",
-          "role": "Taxpayer",
-          "x": 150,
-          "y": 300
-        }
-      ],
-      "assets": [
-        {
-          "id": "asset_gain",
-          "type": "land",
-          "label": "Taxable Asset",
-          "x": 400,
-          "y": 250
-        }
-      ],
-      "events": [],
-      "facts": {
-        "net_consideration": 1950000,
-        "coa": 500000,
-        "coi": 300000
+      "layout": "ledger",
+      "title": {
+        "text": "Capital Gains Ledger A.Y. 2026-27",
+        "at": 90.99
       },
-      "rule_applied": {
-        "section": "Finance Act 2024",
-        "condition": "LTCG at 12.5% without indexation for property sold after 23rd July 2024",
-        "formula": "net_consideration - (coa + coi)"
-      },
-      "calculation": {
-        "steps": [
+      "voice_sync_text": "ഇനി A.Y. 2026-27-ലെ Capital Gain കണക്കാക്കാം. Sale consideration 15,00,000-ൽ നിന്ന് transfer expense 20,000 കുറച്ചാൽ Net Consideration 14,80,000 ലഭിക്കും. ഇതിൽ നിന്ന് Cost of Acquisition 1,20,000-ഉം Cost of Improvement 2,35,000-ഉം കുറച്ചാൽ taxable Long term Capital Gain 11,25,000 ആയി ലഭിക്കും.",
+      "visual_data": {
+        "rows": [
           {
-            "step_idx": 1,
-            "desc": "Subtracting COA ₹ 5,00,000 and COI ₹ 3,00,000 from Net Consideration ₹ 19,50,000",
-            "value": 1150000,
-            "element_id": "calc_step_1"
+            "label": "Full Value of Consideration",
+            "detail": "Sale price in June 2025",
+            "value": "15,00,000",
+            "amount": 1500000,
+            "sign": "+",
+            "icon": "money_bag",
+            "at": 131.49
+          },
+          {
+            "label": "Less: Transfer Expenses",
+            "detail": "Expenses incurred for transfer",
+            "value": "20,000",
+            "amount": 20000,
+            "sign": "-",
+            "icon": "money_bag",
+            "at": 131.49
+          },
+          {
+            "label": "Net Consideration",
+            "detail": "Consideration less transfer expense",
+            "value": "14,80,000",
+            "amount": 1480000,
+            "sign": "=",
+            "icon": "scales",
+            "at": 133.53
+          },
+          {
+            "label": "Less: Cost of Acquisition",
+            "detail": "u/s 49(1) Cost to previous owner",
+            "value": "1,20,000",
+            "amount": 120000,
+            "sign": "-",
+            "icon": "bank",
+            "at": 138.59
+          },
+          {
+            "label": "Less: Cost of Improvement",
+            "detail": "u/s 55(2) Fencing expense",
+            "value": "2,35,000",
+            "amount": 235000,
+            "sign": "-",
+            "icon": "plot",
+            "at": 140.15
           }
         ],
-        "result_label": "Long Term Capital Gain",
-        "result_value": 1150000,
-        "element_id": "result_badge"
+        "total": "Long term Capital Gain: 11,25,000",
+        "spoken_dates": [
+          "A.Y. 2026-27"
+        ]
       },
-      "sentences": [
+      "start": 90.69,
+      "end": 150.93,
+      "id": "b4",
+      "director_goal": "Execute the step-by-step capital gains computation ledger for A.Y. 2026-27.",
+      "anchor_phrases": [
+        "15,00,000",
+        "20,000",
+        "1,20,000",
+        "2,35,000",
+        "11,25,000"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
         {
-          "sentence_id": "s4_sit",
-          "phase": "situation",
-          "text": "ഇനി നമുക്ക് Vikram-ന്റെ ഈ ഇടപാടിൽ നിന്നും ഉണ്ടായ ആകെ ലാഭം അഥവാ Capital Gain എത്രയാണെന്ന് കണക്കാക്കാം.",
-          "tied_element_ids": [
-            "actor_vikram_3",
-            "asset_gain"
-          ]
+          "phrase": "15,00,000",
+          "at": 140.01,
+          "matched": true,
+          "score": 0.941
         },
         {
-          "sentence_id": "s4_rule",
-          "phase": "rule",
-          "text": "Finance Act 2024 പ്രകാരം 23rd July 2024-ന് ശേഷം വിൽക്കുന്ന ഭൂമിയുടെ ലാഭത്തിന് indexation ഇല്ലാതെ 12.5% നിരക്കിലാണ് നികുതി കണക്കാക്കേണ്ടത്.",
-          "tied_element_ids": [
-            "rule_box"
-          ]
+          "phrase": "20,000",
+          "at": 140.15,
+          "matched": true,
+          "score": 0.833
         },
         {
-          "sentence_id": "s4_calc_1",
-          "phase": "calculation",
-          "text": "Net Consideration ആയ ₹ 19,50,000-ൽ നിന്നും Cost of Acquisition ₹ 5,00,000-ഉം Cost of Improvement ₹ 3,00,000-ഉം നമുക്ക് കുറയ്ക്കേണ്ടതുണ്ട്.",
-          "tied_element_ids": [
-            "calc_step_1"
-          ]
+          "phrase": "1,20,000",
+          "at": 148.31,
+          "matched": true,
+          "score": 0.824
         },
         {
-          "sentence_id": "s4_res",
-          "phase": "result",
-          "text": "അവസാനം Vikram-ന് ലഭിക്കുന്ന Long Term Capital Gain ₹ 11,50,000 ആണെന്ന് നമുക്ക് കാണാം.",
-          "tied_element_ids": [
-            "result_badge"
-          ]
+          "phrase": "2,35,000",
+          "at": 149.19,
+          "matched": true,
+          "score": 0.857
+        },
+        {
+          "phrase": "11,25,000",
+          "at": 149.45,
+          "matched": true,
+          "score": 0.5
         }
       ],
-      "start": 91.91,
-      "duration": 36.3,
-      "sentence_timings": [
-        {
-          "sentence_id": "s4_sit",
-          "phase": "situation",
-          "text": "ഇനി നമുക്ക് Vikram-ന്റെ ഈ ഇടപാടിൽ നിന്നും ഉണ്ടായ ആകെ ലാഭം അഥവാ Capital Gain എത്രയാണെന്ന് കണക്കാക്കാം.",
-          "cue": 92.02,
-          "start": 92.17,
-          "end": 99.99,
-          "method": "pause_detect",
-          "tied_element_ids": [
-            "actor_vikram_3",
-            "asset_gain"
-          ]
-        },
-        {
-          "sentence_id": "s4_rule",
-          "phase": "rule",
-          "text": "Finance Act 2024 പ്രകാരം 23rd July 2024-ന് ശേഷം വിൽക്കുന്ന ഭൂമിയുടെ ലാഭത്തിന് indexation ഇല്ലാതെ 12.5% നിരക്കിലാണ് നികുതി കണക്കാക്കേണ്ടത്.",
-          "cue": 98.865,
-          "start": 99.015,
-          "end": 110.674,
-          "method": "pause_detect",
-          "tied_element_ids": [
-            "rule_box"
-          ]
-        },
-        {
-          "sentence_id": "s4_calc_1",
-          "phase": "calculation",
-          "text": "Net Consideration ആയ ₹ 19,50,000-ൽ നിന്നും Cost of Acquisition ₹ 5,00,000-ഉം Cost of Improvement ₹ 3,00,000-ഉം നമുക്ക് കുറയ്ക്കേണ്ടതുണ്ട്.",
-          "cue": 111.288,
-          "start": 111.438,
-          "end": 121.359,
-          "method": "pause_detect",
-          "tied_element_ids": [
-            "calc_step_1"
-          ]
-        },
-        {
-          "sentence_id": "s4_res",
-          "phase": "result",
-          "text": "അവസാനം Vikram-ന് ലഭിക്കുന്ന Long Term Capital Gain ₹ 11,50,000 ആണെന്ന് നമുക്ക് കാണാം.",
-          "cue": 121.691,
-          "start": 121.841,
-          "end": 127.94,
-          "method": "pause_detect",
-          "tied_element_ids": [
-            "result_badge"
-          ]
-        }
-      ],
-      "canvas_updates": [
-        {
-          "cue": 92.02,
-          "action": "actor_enter",
-          "entity_id": "actor_vikram_3",
-          "data": {
-            "id": "actor_vikram_3",
-            "name": "Vikram",
-            "role": "Taxpayer",
-            "x": 150,
-            "y": 300
-          },
-          "anim_duration": 0.5
-        },
-        {
-          "cue": 92.02,
-          "action": "asset_enter",
-          "entity_id": "asset_gain",
-          "data": {
-            "id": "asset_gain",
-            "type": "land",
-            "label": "Taxable Asset",
-            "x": 400,
-            "y": 250
-          },
-          "anim_duration": 0.5
-        },
-        {
-          "cue": 98.865,
-          "action": "rule_panel_enter",
-          "entity_id": "rule_panel",
-          "canvas_width_pct": 55,
-          "rule_panel_width_pct": 45,
-          "data": {
-            "section": "Finance Act 2024",
-            "condition": "LTCG at 12.5% without indexation for property sold after 23rd July 2024",
-            "formula": "net_consideration - (coa + coi)"
-          },
-          "anim_duration": 0.5
-        },
-        {
-          "cue": 111.288,
-          "action": "calc_step_show",
-          "entity_id": "calc_step_1",
-          "data": {
-            "step_idx": 1,
-            "desc": "Subtracting COA ₹ 5,00,000 and COI ₹ 3,00,000 from Net Consideration ₹ 19,50,000",
-            "value": 1150000,
-            "element_id": "calc_step_1"
-          },
-          "anim_duration": 0.4
-        },
-        {
-          "cue": 121.691,
-          "action": "result_badge_highlight",
-          "entity_id": "result_badge",
-          "data": {
-            "label": "Long Term Capital Gain",
-            "value": 1150000
-          },
-          "anim_duration": 0.4
-        }
-      ]
+      "anchor_match": {
+        "matched": 5,
+        "total": 5
+      }
     },
     {
-      "scene_id": "scene_5_bridge",
-      "scene_type": "bridge",
-      "teaching_step_ref": [
-        1,
-        2,
-        3,
-        4
-      ],
-      "title": "ICAI Exam Solution",
-      "actors": [
-        {
-          "id": "actor_mr_a",
-          "name": "Mr. A",
-          "role": "Assessee",
-          "x": 150,
-          "y": 300
-        }
-      ],
-      "assets": [
-        {
-          "id": "asset_icai_land",
-          "type": "land",
-          "label": "ICAI Question Land",
-          "x": 400,
-          "y": 250
-        }
-      ],
-      "events": [
-        {
-          "id": "evt_icai_sale",
-          "type": "sale",
-          "date": "15th October 2024",
-          "amount": 1500000
-        }
-      ],
-      "facts": {
-        "sale_price": 1500000,
-        "transfer_expenses": 20000,
-        "huf_cost": 120000,
-        "fencing_cost": 235000,
-        "net_consideration": 1480000
+      "layout": "takeaway",
+      "title": {
+        "text": "Key Tax Takeaway",
+        "at": 151.58
       },
-      "rule_applied": {
-        "section": "Section 49(1) & Section 48",
-        "condition": "LTCG calculation for HUF partition asset post-July 2024",
-        "formula": "net_consideration - (huf_cost + fencing_cost)"
-      },
-      "calculation": {
-        "steps": [
+      "voice_sync_text": "ഓർക്കുക, Section 49(1) പ്രകാരം HUF partition-ൽ ലഭിക്കുന്ന asset-ന് previous owner cost ആണ് cost of acquisition. Capital expenditure കഴിച്ച് വരുന്നത് Long term capital gain ആയിരിക്കും.",
+      "visual_data": {
+        "rules": [
           {
-            "step_idx": 1,
-            "desc": "14,80,000 - (1,20,000 + 2,35,000)",
-            "value": 1125000,
-            "element_id": "calc_step_1"
+            "label": "Section 49(1) Cost Rule",
+            "detail": "Asset acquired on partition takes previous owner cost as acquisition cost",
+            "value": "Section 49(1)",
+            "icon": "gavel",
+            "at": 180.1
+          },
+          {
+            "label": "Previous Owner Cost",
+            "detail": "Substitute partition valuation with actual HUF acquisition cost",
+            "value": "previous owner cost",
+            "icon": "bank",
+            "at": 183.54
+          },
+          {
+            "label": "Gain Classification",
+            "detail": "Asset held for more than 24 months gives Long term capital gain",
+            "value": "Long term",
+            "icon": "scales",
+            "at": 186.36
           }
-        ],
-        "result_label": "Long Term Capital Gain",
-        "result_value": 1125000,
-        "element_id": "result_badge"
+        ]
       },
-      "sentences": [
+      "start": 151.28,
+      "end": 190.96,
+      "id": "b5",
+      "director_goal": "Summarize core principles of Section 49(1) cost substitution and capital expenditure deductions.",
+      "anchor_phrases": [
+        "Section 49(1)",
+        "previous owner cost",
+        "Long term"
+      ],
+      "animation_role": "key_fact",
+      "anchor_alignment": [
         {
-          "sentence_id": "s5_sit",
-          "phase": "situation",
-          "text": "ഇനി നമുക്ക് പരീക്ഷാ ചോദ്യത്തിലെ Mr. A-യുടെ കണക്കുകൾ കൃത്യമായി ഒന്ന് പരിശോധിച്ചു നോക്കാം.",
-          "tied_element_ids": [
-            "actor_mr_a",
-            "asset_icai_land",
-            "evt_icai_sale"
-          ]
+          "phrase": "Section 49(1)",
+          "at": 180.1,
+          "matched": true,
+          "score": 1.0
         },
         {
-          "sentence_id": "s5_rule",
-          "phase": "rule",
-          "text": "Section 49(1) പ്രകാരം HUF വാങ്ങിയ വിലയായ ₹ 1,20,000 ആണ് നാം ഇവിടെ Cost of Acquisition ആയി കണക്കിലെടുക്കേണ്ടത്.",
-          "tied_element_ids": [
-            "rule_box"
-          ]
+          "phrase": "previous owner cost",
+          "at": 183.54,
+          "matched": true,
+          "score": 1.0
         },
         {
-          "sentence_id": "s5_calc_1",
-          "phase": "calculation",
-          "text": "Net Consideration ആയ ₹ 14,80,000-ൽ നിന്നും COA ₹ 1,20,000-ഉം fencing ചിലവായ ₹ 2,35,000-ഉം കുറയ്ക്കുമ്പോൾ നമുക്ക് ഉത്തരം ലഭിക്കും.",
-          "tied_element_ids": [
-            "calc_step_1"
-          ]
-        },
-        {
-          "sentence_id": "s5_res",
-          "phase": "result",
-          "text": "അങ്ങനെ Mr. A-യുടെ ആകെ Long Term Capital Gain ₹ 11,25,000 എന്ന് നമുക്ക് കൃത്യമായി ലഭിക്കുന്നു.",
-          "tied_element_ids": [
-            "result_badge"
-          ]
+          "phrase": "Long term",
+          "at": 188.7,
+          "matched": true,
+          "score": 1.0
         }
       ],
-      "start": 128.56,
-      "duration": 35.8,
-      "sentence_timings": [
-        {
-          "sentence_id": "s5_sit",
-          "phase": "situation",
-          "text": "ഇനി നമുക്ക് പരീക്ഷാ ചോദ്യത്തിലെ Mr. A-യുടെ കണക്കുകൾ കൃത്യമായി ഒന്ന് പരിശോധിച്ചു നോക്കാം.",
-          "cue": 128.67,
-          "start": 128.82,
-          "end": 136.195,
-          "method": "pause_detect",
-          "tied_element_ids": [
-            "actor_mr_a",
-            "asset_icai_land",
-            "evt_icai_sale"
-          ]
-        },
-        {
-          "sentence_id": "s5_rule",
-          "phase": "rule",
-          "text": "Section 49(1) പ്രകാരം HUF വാങ്ങിയ വിലയായ ₹ 1,20,000 ആണ് നാം ഇവിടെ Cost of Acquisition ആയി കണക്കിലെടുക്കേണ്ടത്.",
-          "cue": 136.804,
-          "start": 136.954,
-          "end": 145.414,
-          "method": "pause_detect",
-          "tied_element_ids": [
-            "rule_box"
-          ]
-        },
-        {
-          "sentence_id": "s5_calc_1",
-          "phase": "calculation",
-          "text": "Net Consideration ആയ ₹ 14,80,000-ൽ നിന്നും COA ₹ 1,20,000-ഉം fencing ചിലവായ ₹ 2,35,000-ഉം കുറയ്ക്കുമ്പോൾ നമുക്ക് ഉത്തരം ലഭിക്കും.",
-          "cue": 144.51,
-          "start": 144.66,
-          "end": 156.226,
-          "method": "word_hit",
-          "tied_element_ids": [
-            "calc_step_1"
-          ]
-        },
-        {
-          "sentence_id": "s5_res",
-          "phase": "result",
-          "text": "അങ്ങനെ Mr. A-യുടെ ആകെ Long Term Capital Gain ₹ 11,25,000 എന്ന് നമുക്ക് കൃത്യമായി ലഭിക്കുന്നു.",
-          "cue": 156.158,
-          "start": 156.308,
-          "end": 164.02,
-          "method": "pause_detect",
-          "tied_element_ids": [
-            "result_badge"
-          ]
-        }
-      ],
-      "canvas_updates": [
-        {
-          "cue": 128.67,
-          "action": "actor_enter",
-          "entity_id": "actor_mr_a",
-          "data": {
-            "id": "actor_mr_a",
-            "name": "Mr. A",
-            "role": "Assessee",
-            "x": 150,
-            "y": 300
-          },
-          "anim_duration": 0.5
-        },
-        {
-          "cue": 128.67,
-          "action": "asset_enter",
-          "entity_id": "asset_icai_land",
-          "data": {
-            "id": "asset_icai_land",
-            "type": "land",
-            "label": "ICAI Question Land",
-            "x": 400,
-            "y": 250
-          },
-          "anim_duration": 0.5
-        },
-        {
-          "cue": 128.67,
-          "action": "event_trigger",
-          "entity_id": "evt_icai_sale",
-          "data": {
-            "id": "evt_icai_sale",
-            "type": "sale",
-            "date": "15th October 2024",
-            "amount": 1500000
-          },
-          "anim_duration": 0.5
-        },
-        {
-          "cue": 136.804,
-          "action": "rule_panel_enter",
-          "entity_id": "rule_panel",
-          "canvas_width_pct": 55,
-          "rule_panel_width_pct": 45,
-          "data": {
-            "section": "Section 49(1) & Section 48",
-            "condition": "LTCG calculation for HUF partition asset post-July 2024",
-            "formula": "net_consideration - (huf_cost + fencing_cost)"
-          },
-          "anim_duration": 0.5
-        },
-        {
-          "cue": 144.51,
-          "action": "calc_step_show",
-          "entity_id": "calc_step_1",
-          "data": {
-            "step_idx": 1,
-            "desc": "14,80,000 - (1,20,000 + 2,35,000)",
-            "value": 1125000,
-            "element_id": "calc_step_1"
-          },
-          "anim_duration": 0.4
-        },
-        {
-          "cue": 156.158,
-          "action": "result_badge_highlight",
-          "entity_id": "result_badge",
-          "data": {
-            "label": "Long Term Capital Gain",
-            "value": 1125000
-          },
-          "anim_duration": 0.4
-        }
-      ]
+      "anchor_match": {
+        "matched": 3,
+        "total": 3
+      }
     }
   ],
-  "canvas_updates": [
-    {
-      "cue": 0.0,
-      "action": "actor_enter",
-      "entity_id": "actor_vikram",
-      "data": {
-        "id": "actor_vikram",
-        "name": "Vikram",
-        "role": "Seller",
-        "x": 150,
-        "y": 300
-      },
-      "anim_duration": 0.5
-    },
-    {
-      "cue": 0.0,
-      "action": "asset_enter",
-      "entity_id": "asset_land",
-      "data": {
-        "id": "asset_land",
-        "type": "land",
-        "label": "Ancestral Plot",
-        "x": 400,
-        "y": 250
-      },
-      "anim_duration": 0.5
-    },
-    {
-      "cue": 0.0,
-      "action": "event_trigger",
-      "entity_id": "evt_sale",
-      "data": {
-        "id": "evt_sale",
-        "type": "sale",
-        "date": "15th October 2024",
-        "amount": 2000000
-      },
-      "anim_duration": 0.5
-    },
-    {
-      "cue": 5.852,
-      "action": "rule_panel_enter",
-      "entity_id": "rule_panel",
-      "canvas_width_pct": 55,
-      "rule_panel_width_pct": 45,
-      "data": {
-        "section": "Section 48",
-        "condition": "Net Consideration is Sale Price minus Transfer Expenses",
-        "formula": "sale_price - brokerage_paid"
-      },
-      "anim_duration": 0.5
-    },
-    {
-      "cue": 12.308,
-      "action": "calc_step_show",
-      "entity_id": "calc_step_1",
-      "data": {
-        "step_idx": 1,
-        "desc": "Subtracting brokerage ₹ 50,000 from sale price ₹ 20,00,000",
-        "value": 1950000,
-        "element_id": "calc_step_1"
-      },
-      "anim_duration": 0.4
-    },
-    {
-      "cue": 18.693,
-      "action": "result_badge_highlight",
-      "entity_id": "result_badge",
-      "data": {
-        "label": "Net Sale Consideration",
-        "value": 1950000
-      },
-      "anim_duration": 0.4
-    },
-    {
-      "cue": 24.98,
-      "action": "actor_enter",
-      "entity_id": "actor_huf",
-      "data": {
-        "id": "actor_huf",
-        "name": "Vikram's HUF",
-        "role": "Previous Owner",
-        "x": 100,
-        "y": 200
-      },
-      "anim_duration": 0.5
-    },
-    {
-      "cue": 24.98,
-      "action": "asset_enter",
-      "entity_id": "asset_land_huf",
-      "data": {
-        "id": "asset_land_huf",
-        "type": "land",
-        "label": "HUF Property",
-        "x": 350,
-        "y": 200
-      },
-      "anim_duration": 0.5
-    },
-    {
-      "cue": 24.98,
-      "action": "event_trigger",
-      "entity_id": "evt_huf_purchase",
-      "data": {
-        "id": "evt_huf_purchase",
-        "type": "purchase",
-        "date": "10th June 2010",
-        "amount": 500000
-      },
-      "anim_duration": 0.5
-    },
-    {
-      "cue": 24.98,
-      "action": "event_trigger",
-      "entity_id": "evt_partition",
-      "data": {
-        "id": "evt_partition",
-        "type": "partition",
-        "date": "20th August 2022",
-        "amount": 800000
-      },
-      "anim_duration": 0.5
-    },
-    {
-      "cue": 34.896,
-      "action": "rule_panel_enter",
-      "entity_id": "rule_panel",
-      "canvas_width_pct": 55,
-      "rule_panel_width_pct": 45,
-      "data": {
-        "section": "Section 49(1)(i)",
-        "condition": "Cost to previous owner is taken in case of HUF partition",
-        "formula": "huf_cost"
-      },
-      "anim_duration": 0.5
-    },
-    {
-      "cue": 46.622,
-      "action": "calc_step_show",
-      "entity_id": "calc_step_1",
-      "data": {
-        "step_idx": 1,
-        "desc": "Ignoring partition value ₹ 8,00,000 and taking HUF cost ₹ 5,00,000",
-        "value": 500000,
-        "element_id": "calc_step_1"
-      },
-      "anim_duration": 0.4
-    },
-    {
-      "cue": 54.992,
-      "action": "result_badge_highlight",
-      "entity_id": "result_badge",
-      "data": {
-        "label": "Cost of Acquisition",
-        "value": 500000
-      },
-      "anim_duration": 0.4
-    },
-    {
-      "cue": 60.39,
-      "action": "actor_enter",
-      "entity_id": "actor_vikram_2",
-      "data": {
-        "id": "actor_vikram_2",
-        "name": "Vikram",
-        "role": "Owner",
-        "x": 150,
-        "y": 300
-      },
-      "anim_duration": 0.5
-    },
-    {
-      "cue": 60.39,
-      "action": "asset_enter",
-      "entity_id": "asset_wall",
-      "data": {
-        "id": "asset_wall",
-        "type": "land",
-        "label": "Land with Wall",
-        "x": 400,
-        "y": 250
-      },
-      "anim_duration": 0.5
-    },
-    {
-      "cue": 60.39,
-      "action": "event_trigger",
-      "entity_id": "evt_improvement",
-      "data": {
-        "id": "evt_improvement",
-        "type": "purchase",
-        "date": "12th January 2023",
-        "amount": 300000
-      },
-      "anim_duration": 0.5
-    },
-    {
-      "cue": 67.324,
-      "action": "rule_panel_enter",
-      "entity_id": "rule_panel",
-      "canvas_width_pct": 55,
-      "rule_panel_width_pct": 45,
-      "data": {
-        "section": "Section 55(1)(b)",
-        "condition": "Capital expenditure for additions is Cost of Improvement",
-        "formula": "wall_cost"
-      },
-      "anim_duration": 0.5
-    },
-    {
-      "cue": 79.387,
-      "action": "calc_step_show",
-      "entity_id": "calc_step_1",
-      "data": {
-        "step_idx": 1,
-        "desc": "Actual expenditure on wall construction",
-        "value": 300000,
-        "element_id": "calc_step_1"
-      },
-      "anim_duration": 0.4
-    },
-    {
-      "cue": 85.714,
-      "action": "result_badge_highlight",
-      "entity_id": "result_badge",
-      "data": {
-        "label": "Cost of Improvement",
-        "value": 300000
-      },
-      "anim_duration": 0.4
-    },
-    {
-      "cue": 92.02,
-      "action": "actor_enter",
-      "entity_id": "actor_vikram_3",
-      "data": {
-        "id": "actor_vikram_3",
-        "name": "Vikram",
-        "role": "Taxpayer",
-        "x": 150,
-        "y": 300
-      },
-      "anim_duration": 0.5
-    },
-    {
-      "cue": 92.02,
-      "action": "asset_enter",
-      "entity_id": "asset_gain",
-      "data": {
-        "id": "asset_gain",
-        "type": "land",
-        "label": "Taxable Asset",
-        "x": 400,
-        "y": 250
-      },
-      "anim_duration": 0.5
-    },
-    {
-      "cue": 98.865,
-      "action": "rule_panel_enter",
-      "entity_id": "rule_panel",
-      "canvas_width_pct": 55,
-      "rule_panel_width_pct": 45,
-      "data": {
-        "section": "Finance Act 2024",
-        "condition": "LTCG at 12.5% without indexation for property sold after 23rd July 2024",
-        "formula": "net_consideration - (coa + coi)"
-      },
-      "anim_duration": 0.5
-    },
-    {
-      "cue": 111.288,
-      "action": "calc_step_show",
-      "entity_id": "calc_step_1",
-      "data": {
-        "step_idx": 1,
-        "desc": "Subtracting COA ₹ 5,00,000 and COI ₹ 3,00,000 from Net Consideration ₹ 19,50,000",
-        "value": 1150000,
-        "element_id": "calc_step_1"
-      },
-      "anim_duration": 0.4
-    },
-    {
-      "cue": 121.691,
-      "action": "result_badge_highlight",
-      "entity_id": "result_badge",
-      "data": {
-        "label": "Long Term Capital Gain",
-        "value": 1150000
-      },
-      "anim_duration": 0.4
-    },
-    {
-      "cue": 128.67,
-      "action": "actor_enter",
-      "entity_id": "actor_mr_a",
-      "data": {
-        "id": "actor_mr_a",
-        "name": "Mr. A",
-        "role": "Assessee",
-        "x": 150,
-        "y": 300
-      },
-      "anim_duration": 0.5
-    },
-    {
-      "cue": 128.67,
-      "action": "asset_enter",
-      "entity_id": "asset_icai_land",
-      "data": {
-        "id": "asset_icai_land",
-        "type": "land",
-        "label": "ICAI Question Land",
-        "x": 400,
-        "y": 250
-      },
-      "anim_duration": 0.5
-    },
-    {
-      "cue": 128.67,
-      "action": "event_trigger",
-      "entity_id": "evt_icai_sale",
-      "data": {
-        "id": "evt_icai_sale",
-        "type": "sale",
-        "date": "15th October 2024",
-        "amount": 1500000
-      },
-      "anim_duration": 0.5
-    },
-    {
-      "cue": 136.804,
-      "action": "rule_panel_enter",
-      "entity_id": "rule_panel",
-      "canvas_width_pct": 55,
-      "rule_panel_width_pct": 45,
-      "data": {
-        "section": "Section 49(1) & Section 48",
-        "condition": "LTCG calculation for HUF partition asset post-July 2024",
-        "formula": "net_consideration - (huf_cost + fencing_cost)"
-      },
-      "anim_duration": 0.5
-    },
-    {
-      "cue": 144.51,
-      "action": "calc_step_show",
-      "entity_id": "calc_step_1",
-      "data": {
-        "step_idx": 1,
-        "desc": "14,80,000 - (1,20,000 + 2,35,000)",
-        "value": 1125000,
-        "element_id": "calc_step_1"
-      },
-      "anim_duration": 0.4
-    },
-    {
-      "cue": 156.158,
-      "action": "result_badge_highlight",
-      "entity_id": "result_badge",
-      "data": {
-        "label": "Long Term Capital Gain",
-        "value": 1125000
-      },
-      "anim_duration": 0.4
-    }
-  ],
-  "sync_report": {
-    "sync_passed": true,
-    "stitched_duration": 164.28,
-    "timeline_duration": 164.36,
-    "duration_diff": 0.08,
-    "duration_diff_ok": true,
-    "total_scenes": 5,
-    "total_sentences": 20,
-    "method_counts": {
-      "pause_detect": 18,
-      "word_hits": 2,
-      "proportional_fallback": 1
-    },
-    "fallback_rate": 0.05,
-    "fallback_rate_ok": true,
-    "independent_offset_median": 0.26,
-    "independent_offset_sample_count": 17,
-    "independent_offset_ok": true,
-    "pause_whisper_agreement_rate": 0.647,
-    "total_canvas_updates": 30
-  },
-  "validation_result": {
-    "passed": true,
-    "issues": []
-  },
-  "approved": false,
-  "review_status": "unreviewed",
-  "audio_url": "data/audio/dt-c2-q5_story.mp3",
-  "duration_sec": 164.28
+  "audio_duration_sec": 190.96,
+  "anchor_match": {
+    "matched": 16,
+    "total": 20,
+    "rate": 0.8
+  }
 }

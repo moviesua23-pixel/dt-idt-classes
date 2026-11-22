@@ -1,0 +1,551 @@
+{
+  "question_id": "dt-c1-q4",
+  "audio_url": "data/audio/dt-c1-q4.mp3",
+  "duration_sec": 113.95,
+  "sync_offset_sec": 0.0,
+  "context_pill": "Tax Liability Calculation (Old Regime)",
+  "example_summary": "Mr. Arjun's tax liability at different ages (52, 64, 83) for a total income of ₹ 16,00,000 under the regular regime for A.Y. 2026-27.",
+  "source_provision": "| Category | Age Threshold | Basic Exemption Limit |\n| :--- | :--- | :--- |\n| Resident Individual | Below 60 Years | ₹ 2,50,000 |\n| Senior Citizen | 60 - 80 Years | ₹ 3,00,000 |\n| Super Senior Citizen | Above 80 Years | ₹ 5,00,000 |\n\n\n### Progressive Tax Slab Rates (Regular Regime)\n* **0 - 2.5/3/5 Lakhs**: Nil rate.\n* **Next Slab (up to 5 Lakhs)**: 5% (Not applicable for Super Senior Citizens).\n* **5 Lakhs to 10 Lakhs**: 20%.\n* **Above 10 Lakhs**: 30%.\n\n\n> [!NOTE] Health and Education Cess: A mandatory surcharge of 4% is levied on the total income tax computed, applicable to all categories regardless of age.\n\n\n> [!IMPORTANT] Opt-out Clause: Taxpayers choosing to shift out of the default tax regime u/s 115BAC must compute tax liability based on these traditional slab structures.",
+  "director": {
+    "archetype": "rate_slab_ladder",
+    "justification": "The tax liability for a fixed total income of ₹ 16,00,000 is determined by applying age-dependent progressive tax slab ladders under the regular regime.",
+    "protagonist": "Mr. Arjun",
+    "actors": [
+      "Mr. Arjun (Age 52)",
+      "Mr. Arjun (Age 64)",
+      "Mr. Arjun (Age 83)"
+    ],
+    "key_numbers": [
+      "₹ 16,00,000",
+      "₹ 2,50,000",
+      "₹ 3,00,000",
+      "₹ 5,00,000",
+      "5%",
+      "20%",
+      "30%",
+      "4%",
+      "₹ 3,04,200",
+      "₹ 3,01,600",
+      "₹ 2,91,200"
+    ],
+    "key_dates": [
+      "A.Y. 2026-27"
+    ],
+    "visual_metaphor": "A multi-tiered tax ladder with shifting basic exemption base platforms corresponding to three age thresholds.",
+    "beat_plan": [
+      {
+        "beat_goal": "Introduce Mr. Arjun, his income sources, total income, and his choice to opt out of Section 115BAC for A.Y. 2026-27.",
+        "layout": "example_scene",
+        "anchor_phrases": [
+          "Mr. Arjun",
+          "₹ 16,00,000",
+          "A.Y. 2026-27",
+          "Section 115BAC"
+        ]
+      },
+      {
+        "beat_goal": "Classify the basic exemption limit criteria based on age brackets for resident individuals under the old regime.",
+        "layout": "decision_tree",
+        "anchor_phrases": [
+          "Below 60 Years",
+          "Senior Citizen",
+          "Super Senior Citizen",
+          "Basic Exemption Limit"
+        ]
+      },
+      {
+        "beat_goal": "Calculate the progressive slab tax for Mr. Arjun at age 52 with basic exemption of ₹ 2,50,000.",
+        "layout": "slab_ladder",
+        "anchor_phrases": [
+          "Age 52",
+          "First ₹ 2,50,000",
+          "5%",
+          "20%",
+          "30%"
+        ]
+      },
+      {
+        "beat_goal": "Compute final tax liability for Age 52 by adding 4% Health and Education Cess to tax before cess.",
+        "layout": "ledger",
+        "anchor_phrases": [
+          "₹ 2,92,500",
+          "4% Health and Education Cess",
+          "₹ 3,04,200"
+        ]
+      },
+      {
+        "beat_goal": "Compare the slab tax structures and total liabilities for Age 64 (Senior Citizen) and Age 83 (Super Senior Citizen).",
+        "layout": "compare_regimes",
+        "anchor_phrases": [
+          "Age 64",
+          "Age 83",
+          "₹ 3,00,000",
+          "₹ 5,00,000",
+          "₹ 3,01,600",
+          "₹ 2,91,200"
+        ]
+      },
+      {
+        "beat_goal": "Summarize how age-based exemption limits impact tax liability with universal 4% cess addition.",
+        "layout": "takeaway",
+        "anchor_phrases": [
+          "Basic Exemption Limit",
+          "4% Cess",
+          "Tax liability"
+        ]
+      }
+    ]
+  },
+  "fallback": false,
+  "beats": [
+    {
+      "layout": "example_scene",
+      "title": {
+        "text": "Mr. Arjun's Income Profile",
+        "at": 0.3
+      },
+      "voice_sync_text": "Mr. Arjun-ന്റെ കാര്യം നോക്കാം. അദ്ദേഹത്തിന് house property-യിൽ നിന്നും fixed deposit interest-ൽ നിന്നുമായി ₹ 16,00,000 total income ഉണ്ട്. A.Y. 2026-27-ൽ അദ്ദേഹം Section 115BAC opt-out ചെയ്ത് regular regime ആണ് തിരഞ്ഞെടുത്തിരിക്കുന്നത്.",
+      "visual_data": {
+        "actors": [
+          {
+            "label": "Mr. Arjun",
+            "icon": "person",
+            "detail": "Resident Individual",
+            "at": 0.68
+          }
+        ],
+        "transaction": "Tax Computation",
+        "facts": [
+          {
+            "label": "Total Income",
+            "amount": 1600000,
+            "icon": "money_bag",
+            "at": 3.38
+          },
+          {
+            "label": "Assessment Year",
+            "value": "A.Y. 2026-27",
+            "icon": "calendar",
+            "at": 10.52
+          },
+          {
+            "label": "Tax Regime",
+            "detail": "Opted out of Section 115BAC",
+            "icon": "document",
+            "at": 10.52
+          }
+        ],
+        "spoken_amounts": [
+          "₹ 16,00,000",
+          "16,00,000"
+        ]
+      },
+      "start": 0.0,
+      "end": 18.56,
+      "id": "b1",
+      "director_goal": "Introduce Mr. Arjun, his income sources, total income, and his choice to opt out of Section 115BAC for A.Y. 2026-27.",
+      "anchor_phrases": [
+        "Mr. Arjun",
+        "₹ 16,00,000",
+        "A.Y. 2026-27",
+        "Section 115BAC"
+      ],
+      "animation_role": "key_fact",
+      "anchor_alignment": [
+        {
+          "phrase": "Mr. Arjun",
+          "at": 0.68,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "₹ 16,00,000",
+          "at": 3.38,
+          "matched": true,
+          "score": 0.484
+        },
+        {
+          "phrase": "A.Y. 2026-27",
+          "at": 10.52,
+          "matched": true,
+          "score": 0.952
+        },
+        {
+          "phrase": "Section 115BAC",
+          "at": 12.74,
+          "matched": false,
+          "score": 0.333
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 4
+      }
+    },
+    {
+      "layout": "decision_tree",
+      "title": {
+        "text": "Age-Based Exemption Limits",
+        "at": 19.21
+      },
+      "voice_sync_text": "Regular regime-ൽ resident individuals-ന് അവരുടെ പ്രായം അനുസരിച്ചാണ് Basic Exemption Limit നിശ്ചയിക്കുന്നത്. Below 60 Years ഉള്ളവർക്ക് ഒരു പരിധി, Senior Citizen-ന് മറ്റൊരു പരിധി, Super Senior Citizen-ന് അതിലും ഉയർന്ന പരിധി എന്നിങ്ങനെയാണ് ഇത് വരുന്നത്.",
+      "visual_data": {
+        "root": "Resident Individual",
+        "branches": [
+          {
+            "label": "Below 60 Years",
+            "value": "Basic Exemption Limit: ₹ 2,50,000",
+            "at": 19.85
+          },
+          {
+            "label": "Senior Citizen",
+            "detail": "60 to 80 Years",
+            "value": "Basic Exemption Limit: ₹ 3,00,000",
+            "at": 33.45
+          },
+          {
+            "label": "Super Senior Citizen",
+            "detail": "Above 80 Years",
+            "value": "Basic Exemption Limit: ₹ 5,00,000",
+            "at": 33.45
+          }
+        ]
+      },
+      "start": 18.91,
+      "end": 38.03,
+      "id": "b2",
+      "director_goal": "Classify the basic exemption limit criteria based on age brackets for resident individuals under the old regime.",
+      "anchor_phrases": [
+        "Below 60 Years",
+        "Senior Citizen",
+        "Super Senior Citizen",
+        "Basic Exemption Limit"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Below 60 Years",
+          "at": 27.95,
+          "matched": true,
+          "score": 0.727
+        },
+        {
+          "phrase": "Senior Citizen",
+          "at": 30.61,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Super Senior Citizen",
+          "at": 33.07,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Basic Exemption Limit",
+          "at": 24.11,
+          "matched": false,
+          "score": 0.409
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 4
+      }
+    },
+    {
+      "layout": "slab_ladder",
+      "title": {
+        "text": "Tax Slabs for Age 52",
+        "at": 38.68
+      },
+      "voice_sync_text": "ആദ്യം നമുക്ക് Age 52 ഉള്ള അർജുന്റെ ടാക്സ് നോക്കാം. ഇവിടെ First ₹ 2,50,000-ന് ടാക്സ് ഇല്ല. അടുത്ത സ്ലാബുകളിൽ 5%, 20%, പിന്നെ 30% എന്നിങ്ങനെയാണ് ടാക്സ് കണക്കാക്കുന്നത്.",
+      "visual_data": {
+        "tiers": [
+          {
+            "label": "First ₹ 2,50,000",
+            "value": "Nil",
+            "amount": 0,
+            "at": 44.46
+          },
+          {
+            "label": "₹ 2,50,001 - ₹ 5,00,000",
+            "detail": "5%",
+            "amount": 12500,
+            "at": 44.8
+          },
+          {
+            "label": "₹ 5,00,001 - ₹ 10,00,000",
+            "detail": "20%",
+            "amount": 100000,
+            "at": 45.25
+          },
+          {
+            "label": "Above ₹ 10,00,000",
+            "detail": "30% on ₹ 6,00,000",
+            "amount": 180000,
+            "at": 45.25
+          }
+        ]
+      },
+      "start": 38.38,
+      "end": 54.66,
+      "id": "b3",
+      "director_goal": "Calculate the progressive slab tax for Mr. Arjun at age 52 with basic exemption of ₹ 2,50,000.",
+      "anchor_phrases": [
+        "Age 52",
+        "First ₹ 2,50,000",
+        "5%",
+        "20%",
+        "30%"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Age 52",
+          "at": 42.6,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "First ₹ 2,50,000",
+          "at": 44.46,
+          "matched": true,
+          "score": 0.88
+        },
+        {
+          "phrase": "5%",
+          "at": 48.96,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "20%",
+          "at": 49.58,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "30%",
+          "at": 51.14,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 5,
+        "total": 5
+      }
+    },
+    {
+      "layout": "ledger",
+      "title": {
+        "text": "Final Liability for Age 52",
+        "at": 55.31
+      },
+      "voice_sync_text": "സ്ലാബ് റേറ്റ് പ്രകാരം കിട്ടിയ ₹ 2,92,500-ന്റെ കൂടെ 4% Health and Education Cess കൂടി ചേർക്കണം. അങ്ങനെ വരുമ്പോൾ Age 52-ൽ അദ്ദേഹത്തിന്റെ ഫൈനൽ ടാക്സ് ₹ 3,04,200 ആയിരിക്കും.",
+      "visual_data": {
+        "rows": [
+          {
+            "label": "Tax before Cess",
+            "amount": 292500,
+            "at": 65.31
+          },
+          {
+            "label": "4% Health and Education Cess",
+            "amount": 11700,
+            "sign": "+",
+            "at": 65.31
+          }
+        ],
+        "total": "₹ 3,04,200",
+        "spoken_amounts": [
+          "₹ 2,92,500",
+          "2,92,500"
+        ]
+      },
+      "start": 55.01,
+      "end": 71.41,
+      "id": "b4",
+      "director_goal": "Compute final tax liability for Age 52 by adding 4% Health and Education Cess to tax before cess.",
+      "anchor_phrases": [
+        "₹ 2,92,500",
+        "4% Health and Education Cess",
+        "₹ 3,04,200"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "₹ 2,92,500",
+          "at": 57.47,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "4% Health and Education Cess",
+          "at": 59.89,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "₹ 3,04,200",
+          "at": 68.75,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 3
+      }
+    },
+    {
+      "layout": "compare_regimes",
+      "title": {
+        "text": "Senior vs Super Senior Comparison",
+        "at": 72.06
+      },
+      "voice_sync_text": "ഇനി നമുക്ക് Age 64-ഉം Age 83-ഉം തമ്മിൽ ഒന്ന് താരതമ്യം ചെയ്യാം. Age 64-ൽ Basic Exemption Limit ₹ 3,00,000 ആയതുകൊണ്ട് ടാക്സ് ₹ 3,01,600 ആയി കുറയുന്നു. എന്നാൽ Age 83-ൽ exemption ₹ 5,00,000 ആയി കൂടുന്നതിനാൽ ടാക്സ് ₹ 2,91,200 മാത്രമാണ് വരുന്നത്.",
+      "visual_data": {
+        "regimes": [
+          {
+            "label": "Age 64",
+            "detail": "Senior Citizen (₹ 3,00,000 Exemption)",
+            "value": "₹ 3,01,600",
+            "amount": 301600,
+            "at": 77.94
+          },
+          {
+            "label": "Age 83",
+            "detail": "Super Senior Citizen (₹ 5,00,000 Exemption)",
+            "value": "₹ 2,91,200",
+            "amount": 291200,
+            "at": 77.94
+          }
+        ]
+      },
+      "start": 71.76,
+      "end": 97.04,
+      "id": "b5",
+      "director_goal": "Compare the slab tax structures and total liabilities for Age 64 (Senior Citizen) and Age 83 (Super Senior Citizen).",
+      "anchor_phrases": [
+        "Age 64",
+        "Age 83",
+        "₹ 3,00,000",
+        "₹ 5,00,000",
+        "₹ 3,01,600",
+        "₹ 2,91,200"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Age 64",
+          "at": 73.06,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Age 83",
+          "at": 74.46,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "₹ 3,00,000",
+          "at": 83.66,
+          "matched": true,
+          "score": 0.484
+        },
+        {
+          "phrase": "₹ 5,00,000",
+          "at": 93.6,
+          "matched": true,
+          "score": 0.471
+        },
+        {
+          "phrase": "₹ 3,01,600",
+          "at": 84.72,
+          "matched": false,
+          "score": 0.286
+        },
+        {
+          "phrase": "₹ 2,91,200",
+          "at": 93.88,
+          "matched": false,
+          "score": 0.429
+        }
+      ],
+      "anchor_match": {
+        "matched": 4,
+        "total": 6
+      }
+    },
+    {
+      "layout": "takeaway",
+      "title": {
+        "text": "Key Takeaways",
+        "at": 97.69
+      },
+      "voice_sync_text": "ചുരുക്കത്തിൽ, പ്രായം കൂടുന്തോറും Basic Exemption Limit കൂടുകയും അത് Tax liability കുറയ്ക്കാൻ സഹായിക്കുകയും ചെയ്യുന്നു. എന്നാൽ എല്ലാ സാഹചര്യത്തിലും ടാക്സിന് മേൽ 4% Cess നിർബന്ധമായും നൽകണം.",
+      "visual_data": {
+        "rules": [
+          {
+            "label": "Basic Exemption Limit",
+            "detail": "Increases with age (2.5L / 3L / 5L)",
+            "at": 99.87
+          },
+          {
+            "label": "4% Cess",
+            "detail": "Mandatory on tax for all age groups",
+            "at": 103.41
+          },
+          {
+            "label": "Tax liability",
+            "detail": "Decreases as the exemption limit rises",
+            "at": 103.41
+          }
+        ]
+      },
+      "start": 97.39,
+      "end": 113.95,
+      "id": "b6",
+      "director_goal": "Summarize how age-based exemption limits impact tax liability with universal 4% cess addition.",
+      "anchor_phrases": [
+        "Basic Exemption Limit",
+        "4% Cess",
+        "Tax liability"
+      ],
+      "animation_role": "key_fact",
+      "anchor_alignment": [
+        {
+          "phrase": "Basic Exemption Limit",
+          "at": 99.87,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "4% Cess",
+          "at": 108.09,
+          "matched": true,
+          "score": 0.545
+        },
+        {
+          "phrase": "Tax liability",
+          "at": 111.85,
+          "matched": true,
+          "score": 0.847
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 3
+      }
+    }
+  ],
+  "audio_duration_sec": 113.95,
+  "anchor_match": {
+    "matched": 21,
+    "total": 25,
+    "rate": 0.84
+  }
+}

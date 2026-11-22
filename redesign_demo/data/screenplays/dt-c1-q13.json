@@ -1,0 +1,453 @@
+{
+  "question_id": "dt-c1-q13",
+  "audio_url": "data/audio/dt-c1-q13.mp3",
+  "duration_sec": 134.52,
+  "sync_offset_sec": 0.0,
+  "context_pill": "Exempt Income under Section 10 & 2(1A)",
+  "example_summary": "Taxability of house rent on agricultural land, nursery seedling income, and Sikkimese individual income.",
+  "source_provision": "| Category / Source | Statutory Section | Core Condition / Test | Tax Treatment / Legal Consequence |\n| :--- | :--- | :--- | :--- |\n| Agricultural Income | Section 10(1) r.w.s. 2(1A) | Derived from land used for agricultural operations | **Exempt** from tax |\n| Building Rent on Agricultural Land | Section 2(1A) Explanation 2 | Building used for non-agricultural letting (e.g. residential/business) | **Taxable** under appropriate head |\n| Nursery Seedlings | Section 2(1A) Explanation 3 | Income from saplings or seedlings grown in a nursery | Deemed **Agricultural Income** and Exempt |\n| Sikkimese Individual Income | Section 10(26AAA) | Income from any source in Sikkim or dividend/interest on securities | **Exempt** from tax |\n\n\n> [!NOTE]\n> Basic Operations Test: As per Section 2(1A) Explanation 3, carrying out basic operations on land is not mandatory for nursery seedlings.\n\n\n> [!WARNING]\n> Regional Exemption Limits: Section 10(26AAA) protects individuals domiciled in Sikkim from tax on local sources and specific financial interest.",
+  "director": {
+    "archetype": "conditions_checklist",
+    "justification": "Evaluates three distinct income receipts against specific statutory exemption tests under Section 10 and Section 2(1A).",
+    "protagonist": "Mr. Gaitonde",
+    "actors": [
+      "Anand Nursery",
+      "Tenants (Industrial Workers)"
+    ],
+    "key_numbers": [
+      "₹60,000",
+      "₹75,000",
+      "₹2,25,000",
+      "₹55,000"
+    ],
+    "key_dates": [],
+    "visual_metaphor": "Statutory Exemption Gateways",
+    "beat_plan": [
+      {
+        "beat_goal": "Establish the three income evaluation scenarios under tax exemption provisions.",
+        "layout": "example_scene",
+        "anchor_phrases": [
+          "Section 10(1)",
+          "Section 2(1A)",
+          "Section 10(26AAA)",
+          "₹60,000"
+        ]
+      },
+      {
+        "beat_goal": "Evaluate rent from houses on agricultural land used for non-agricultural residential purposes.",
+        "layout": "checklist_gate",
+        "anchor_phrases": [
+          "₹60,000",
+          "Explanation 2 to Section 2(1A)",
+          "residential purposes"
+        ]
+      },
+      {
+        "beat_goal": "Examine Anand Nursery seedling sales income under deemed agricultural provision.",
+        "layout": "deemed_value",
+        "anchor_phrases": [
+          "Anand Nursery",
+          "₹75,000",
+          "Explanation 3 to Section 2(1A)"
+        ]
+      },
+      {
+        "beat_goal": "Verify Mr. Gaitonde's Sikkim business income and Rajasthan bond interest exemption.",
+        "layout": "checklist_gate",
+        "anchor_phrases": [
+          "Mr. Gaitonde",
+          "Section 10(26AAA)",
+          "₹2,25,000",
+          "₹55,000"
+        ]
+      },
+      {
+        "beat_goal": "Summarize key legal rules for agricultural deeming and regional tax exemptions.",
+        "layout": "takeaway",
+        "anchor_phrases": [
+          "Agricultural Income",
+          "Section 10 Exemptions",
+          "Deemed Agricultural Income"
+        ]
+      }
+    ]
+  },
+  "fallback": false,
+  "beats": [
+    {
+      "layout": "example_scene",
+      "title": {
+        "text": "Three Tax Exemption Scenarios",
+        "at": 0.3
+      },
+      "voice_sync_text": "ഇവിടെ നമ്മൾ പഠിക്കുന്നത് Section 10(1), Section 2(1A) അതുപോലെ Section 10(26AAA) പറയുന്ന പ്രധാനപ്പെട്ട നിയമങ്ങളാണ്. Agricultural income ന്റെ exemptions ഉം regional incomes ഉം എങ്ങനെ treat ചെയ്യണമെന്ന് നോക്കാം. ആദ്യമായി house rent ₹60,000 പരിശോധിക്കാം.",
+      "visual_data": {
+        "actors": [
+          {
+            "label": "Industrial Worker Tenants",
+            "detail": "Renting houses on agricultural land",
+            "value": "₹60,000",
+            "icon": "house",
+            "at": 15.76
+          },
+          {
+            "label": "Anand Nursery",
+            "detail": "Sale of seedlings grown without basic land operations",
+            "value": "₹75,000",
+            "icon": "plot",
+            "at": 22.18
+          },
+          {
+            "label": "Mr. Gaitonde",
+            "detail": "Sikkimese resident with local business & bond interest",
+            "value": "₹2,25,000 + ₹55,000",
+            "icon": "person",
+            "at": 22.18
+          }
+        ],
+        "transaction": "Evaluating taxability of three distinct receipts under statutory exemption provisions",
+        "facts": [
+          {
+            "label": "Exempt Income Scope",
+            "detail": "Governed by Section 10(1) and Section 2(1A)",
+            "value": "Agricultural Rules",
+            "icon": "document",
+            "at": 22.18
+          },
+          {
+            "label": "Sikkim Exemption",
+            "detail": "Governed by Section 10(26AAA)",
+            "value": "Regional Exemption",
+            "icon": "scales",
+            "at": 22.18
+          }
+        ]
+      },
+      "start": 0.0,
+      "end": 23.8,
+      "id": "b1",
+      "director_goal": "Establish the three income evaluation scenarios under tax exemption provisions.",
+      "anchor_phrases": [
+        "Section 10(1)",
+        "Section 2(1A)",
+        "Section 10(26AAA)",
+        "₹60,000"
+      ],
+      "animation_role": "key_fact",
+      "anchor_alignment": [
+        {
+          "phrase": "Section 10(1)",
+          "at": 1.46,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Section 2(1A)",
+          "at": 4.3,
+          "matched": true,
+          "score": 0.977
+        },
+        {
+          "phrase": "Section 10(26AAA)",
+          "at": 7.7,
+          "matched": true,
+          "score": 0.889
+        },
+        {
+          "phrase": "₹60,000",
+          "at": 21.98,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 4,
+        "total": 4
+      }
+    },
+    {
+      "layout": "checklist_gate",
+      "title": {
+        "text": "House Rent on Agricultural Land",
+        "at": 24.45
+      },
+      "voice_sync_text": "Section 10(1) പ്രകാരം agricultural income exempt ആണ്. എന്നാൽ Explanation 2 to Section 2(1A) അനുസരിച്ച്, agricultural land ൽ ഉള്ള building residential purposes ന് വിട്ടുകൊടുത്താൽ കിട്ടുന്ന rent ₹60,000 agricultural income ആയി കണക്കാക്കില്ല. അതിനാൽ ഇത് fully taxable ആണ്.",
+      "visual_data": {
+        "conditions": [
+          {
+            "label": "Agricultural Land Location",
+            "detail": "Houses constructed on agricultural land in India",
+            "value": "Yes",
+            "pass": true,
+            "icon": "plot",
+            "at": 40.93
+          },
+          {
+            "label": "Purpose of Building Use",
+            "detail": "Let out for residential purposes of industrial workers",
+            "value": "residential purposes",
+            "pass": false,
+            "icon": "house",
+            "at": 40.93
+          },
+          {
+            "label": "Statutory Exclusion Test",
+            "detail": "Explanation 2 to Section 2(1A) excludes non-agricultural building use",
+            "value": "Not Agricultural",
+            "pass": false,
+            "icon": "gavel",
+            "at": 40.93
+          }
+        ],
+        "outcome": "Rent of ₹60,000 is Taxable Income"
+      },
+      "start": 24.15,
+      "end": 46.15,
+      "id": "b2",
+      "director_goal": "Evaluate rent from houses on agricultural land used for non-agricultural residential purposes.",
+      "anchor_phrases": [
+        "₹60,000",
+        "Explanation 2 to Section 2(1A)",
+        "residential purposes"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "₹60,000",
+          "at": 39.17,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Explanation 2 to Section 2(1A)",
+          "at": 29.14,
+          "matched": false,
+          "score": 0.324
+        },
+        {
+          "phrase": "residential purposes",
+          "at": 35.44,
+          "matched": false,
+          "score": 0.435
+        }
+      ],
+      "anchor_match": {
+        "matched": 1,
+        "total": 3
+      }
+    },
+    {
+      "layout": "deemed_value",
+      "title": {
+        "text": "Nursery Seedling Income",
+        "at": 46.8
+      },
+      "voice_sync_text": "അടുത്തതായി Anand Nursery വിറ്റ seedlings വഴി ലഭിച്ച ₹75,000 ആണ്. Explanation 3 to Section 2(1A) അനുസരിച്ച്, nursery യിൽ seedlings grow ചെയ്ത് ഉണ്ടാക്കുന്ന income, basic land operations നടത്തിയില്ലെങ്കിലും, deemed agricultural income ആയി കണക്കാക്കും.",
+      "visual_data": {
+        "actual": {
+          "label": "Anand Nursery Seedling Sale",
+          "detail": "Seedlings grown without basic operations on land",
+          "value": "₹75,000",
+          "amount": 75000,
+          "icon": "money_bag",
+          "at": 85.16
+        },
+        "deemed": {
+          "label": "Deemed Agricultural Income",
+          "detail": "Exempt from tax under Section 10(1)",
+          "value": "Exempt Income",
+          "amount": 75000,
+          "icon": "plot",
+          "at": 92.1
+        },
+        "rule": "As per Explanation 3 to Section 2(1A), nursery seedling income is deemed agricultural income regardless of basic land operations.",
+        "at": 85.16
+      },
+      "start": 46.5,
+      "end": 94.94,
+      "id": "b3",
+      "director_goal": "Examine Anand Nursery seedling sales income under deemed agricultural provision.",
+      "anchor_phrases": [
+        "Anand Nursery",
+        "₹75,000",
+        "Explanation 3 to Section 2(1A)"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Anand Nursery",
+          "at": 78.22,
+          "matched": true,
+          "score": 0.897
+        },
+        {
+          "phrase": "₹75,000",
+          "at": 80.34,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Explanation 3 to Section 2(1A)",
+          "at": 82.68,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 3
+      }
+    },
+    {
+      "layout": "checklist_gate",
+      "title": {
+        "text": "Exemption for Sikkimese Resident",
+        "at": 95.59
+      },
+      "voice_sync_text": "ഇനി Mr. Gaitonde യെ കുറിച്ച് നോക്കാം. Section 10(26AAA) പ്രകാരം Sikkim ലെ individual ന് അവിടത്തെ Sikkim business ൽ നിന്ന് ലഭിച്ച net profit ₹2,25,000 വും Rajasthan government bonds ലെ interest income ₹55,000 വും tax ൽ നിന്ന് fully exempt ആണ്.",
+      "visual_data": {
+        "conditions": [
+          {
+            "label": "Sikkimese Individual Domicile",
+            "detail": "Mr. Gaitonde born and brought up in Sikkim",
+            "value": "Qualifies",
+            "pass": true,
+            "icon": "person",
+            "at": 100.42
+          },
+          {
+            "label": "Sikkim Business Net Profit",
+            "detail": "Income derived from source in Sikkim",
+            "value": "₹2,25,000",
+            "pass": true,
+            "icon": "factory",
+            "at": 102.13
+          },
+          {
+            "label": "Government Bond Interest",
+            "detail": "Interest on securities exempt under Section 10(26AAA)",
+            "value": "₹55,000",
+            "pass": true,
+            "icon": "bank",
+            "at": 109.51
+          }
+        ],
+        "outcome": "Both receipts totaling ₹2,80,000 are Exempt from Tax"
+      },
+      "start": 95.29,
+      "end": 114.69,
+      "id": "b4",
+      "director_goal": "Verify Mr. Gaitonde's Sikkim business income and Rajasthan bond interest exemption.",
+      "anchor_phrases": [
+        "Mr. Gaitonde",
+        "Section 10(26AAA)",
+        "₹2,25,000",
+        "₹55,000"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Mr. Gaitonde",
+          "at": 95.79,
+          "matched": true,
+          "score": 0.92
+        },
+        {
+          "phrase": "Section 10(26AAA)",
+          "at": 97.57,
+          "matched": true,
+          "score": 0.889
+        },
+        {
+          "phrase": "₹2,25,000",
+          "at": 106.45,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "₹55,000",
+          "at": 111.47,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 4,
+        "total": 4
+      }
+    },
+    {
+      "layout": "takeaway",
+      "title": {
+        "text": "Key Tax Exemption Rules",
+        "at": 115.34
+      },
+      "voice_sync_text": "ചുരുക്കത്തിൽ, Agricultural Income exempt ആവാൻ land ഉപയോഗിക്കുന്ന ഉദ്ദേശ്യം പ്രധാനമാണ്. Nursery seedlings ൽ വരുന്ന Deemed Agricultural Income ന് basic land operations നിർബന്ധമില്ല. കൂടാതെ, Sikkimese individuals ന് Section 10 Exemptions പൂർണ്ണ സംരക്ഷണം നൽകുന്നു.",
+      "visual_data": {
+        "rules": [
+          {
+            "label": "Agricultural Income & Rent",
+            "detail": "Section 10(1) & Section 2(1A) Explanation 2 - Non-agricultural residential letting is taxable",
+            "value": "Taxable if Non-Agri Use",
+            "icon": "house",
+            "at": 121.22
+          },
+          {
+            "label": "Deemed Agricultural Income",
+            "detail": "Section 2(1A) Explanation 3 - Nursery seedlings exempt without basic land operations",
+            "value": "Fully Exempt",
+            "icon": "plot",
+            "at": 123.74
+          },
+          {
+            "label": "Section 10 Exemptions (Sikkim)",
+            "detail": "Section 10(26AAA) - Sikkimese individual's local income & securities interest are exempt",
+            "value": "Exempt",
+            "icon": "gavel",
+            "at": 129.52
+          }
+        ]
+      },
+      "start": 115.04,
+      "end": 134.52,
+      "id": "b5",
+      "director_goal": "Summarize key legal rules for agricultural deeming and regional tax exemptions.",
+      "anchor_phrases": [
+        "Agricultural Income",
+        "Section 10 Exemptions",
+        "Deemed Agricultural Income"
+      ],
+      "animation_role": "key_fact",
+      "anchor_alignment": [
+        {
+          "phrase": "Agricultural Income",
+          "at": 121.22,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Section 10 Exemptions",
+          "at": 129.52,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Deemed Agricultural Income",
+          "at": 123.58,
+          "matched": false,
+          "score": 0.34
+        }
+      ],
+      "anchor_match": {
+        "matched": 2,
+        "total": 3
+      }
+    }
+  ],
+  "audio_duration_sec": 134.52,
+  "anchor_match": {
+    "matched": 14,
+    "total": 17,
+    "rate": 0.824
+  }
+}
