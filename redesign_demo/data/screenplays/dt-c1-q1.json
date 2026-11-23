@@ -1,69 +1,60 @@
 {
   "question_id": "dt-c1-q1",
   "audio_url": "data/audio/dt-c1-q1.mp3",
-  "duration_sec": 48.96,
+  "duration_sec": 86.65,
   "sync_offset_sec": 0.0,
   "context_pill": "Diversion vs Application of Income",
-  "example_summary": "Mr. Bhargava received a ₹ 5 lacs professional fee to create a trust; the Supreme Court held this as an application of income, making it fully taxable under Section 28.",
-  "source_provision": "### Statutory Matrix: Diversion vs. Application of Income\n\n| Characterization | Pre-existing Legal Obligation | Reaches Assessee First? | Tax Treatment | Benchmark Precedent |\n| :--- | :--- | :--- | :--- | :--- |\n| **Diversion of Income** | Yes (Overriding Title at Source) | No | **Exempt** (Not Income of Assessee) | *CIT v. Sitaldas Tirathdas (SC)* |\n| **Application of Income** | No (Obligation created after receipt/accrual) | Yes | **Fully Taxable** under applicable Head | *CIT v. Thakar Das Bhargava (SC)* |\n\n\n### Statutory Judicial Tests\n\n* **Test of Diversion (Overriding Title):** An obligation must directly bind the **source of income** before it accrues to or is received by the assessee, diverting the revenue stream to a third party.\n* **Test of Application:** Income first accrues to or is received by the assessee as their legal entitlement. Any subsequent transfer, charity, or payment—even under a binding personal contract or self-imposed obligation—is a mere application of income.\n\n\n> [!IMPORTANT]\n> **PGBP Impact u/s 28:** Professional fees or business earnings received by an assessee are taxable under Profits and Gains of Business or Profession upon accrual or receipt. The creation of a trust or charitable obligation by the assessee out of earned income does not convert an application into a diversion.",
+  "example_summary": "Mr. Bhargava's professional fee of ₹ 5 lacs used for a self-created trust is taxable as application of income.",
+  "source_provision": "### Statutory Summary Matrix: Diversion vs Application of Income\n\n| Doctrine Aspect | Statutory Basis | Legal Condition & Benchmark | Tax Consequence |\n| :--- | :--- | :--- | :--- |\n| **Diversion of Income** | Section 4 / Section 5 | Creation of a prior charge by overriding title before the income reaches the assessee. | Excluded from the total income of the recipient. |\n| **Application of Income** | Section 4 / Section 28 | Income reaches the assessee first as taxable receipts, and is voluntarily utilized thereafter. | Fully taxable under respective head of income. |\n| **Professional Receipts** | Section 28(iv) | Fees received by a professional on condition of voluntary charity creation. | Assessed as Profits and Gains of Business or Profession. |\n\n\n\n> [!IMPORTANT]\n> **Judicial Precedent Benchmark**: The Supreme Court test dictates that where the obligation is self-imposed out of income already earned or received, it is merely an application of income. True diversion requires an overriding legal charge existing at the very source of receipt.\n\n\n\n- **Source of Receipt**: Professional fees or remuneration received for services rendered vest entirely in the hands of the professional.\n- **Voluntary Trust Creation**: Subsequent execution of a trust deed out of received sums represents personal discretion and application, not statutory exemption.",
   "director": {
-    "archetype": "case_law_precedent",
-    "justification": "The core question turns on whether professional fees received by Mr. Bhargava to create a trust represent a diversion of income by overriding title or a mere application of income under Section 28.",
+    "archetype": "two_regime_comparison",
+    "justification": "The issue hinges on distinguishing whether the fee of ₹ 5 lacs received by Mr. Bhargava is an excludable Diversion of Income by overriding title or a taxable Application of Income under Section 28.",
     "protagonist": "Mr. Bhargava",
     "actors": [
       "Mr. Bhargava",
-      "Company",
-      "Public Charitable Trust"
+      "Corporate Client"
     ],
     "key_numbers": [
       "₹ 5 lacs"
     ],
     "key_dates": [],
-    "visual_metaphor": "A river channel flowing directly into a reservoir before being piped out to a charitable garden, representing application of income rather than diversion at the source.",
+    "visual_metaphor": "A dual-channel pipeline showing income diverted by an overriding legal gate prior to receipt versus income landing in the professional hand before voluntary outlay.",
     "beat_plan": [
       {
-        "beat_goal": "Establish Mr. Bhargava's appearance in Supreme Court and the condition to receive ₹ 5 lacs for creating a charitable trust.",
+        "beat_goal": "Introduce Mr. Bhargava defending a company in the Supreme Court on condition of receiving ₹ 5 lacs for creating a charitable trust.",
         "layout": "example_scene",
         "anchor_phrases": [
           "Mr. Bhargava",
-          "Supreme Court",
-          "₹ 5 lacs"
+          "₹ 5 lacs",
+          "Supreme Court"
         ]
       },
       {
-        "beat_goal": "Trace the movement of fee payment from the company to Mr. Bhargava and his subsequent creation of the trust deed.",
-        "layout": "flow_actors",
-        "anchor_phrases": [
-          "Company",
-          "Mr. Bhargava",
-          "Trust Deed"
-        ]
-      },
-      {
-        "beat_goal": "Compare the legal distinction between Diversion of Income by Overriding Title and Application of Income under Section 28.",
+        "beat_goal": "Contrast the doctrine of Diversion of Income by overriding title against Application of Income.",
         "layout": "compare_regimes",
         "anchor_phrases": [
+          "Section 4",
+          "Section 5",
           "Diversion of Income",
-          "Overriding Title",
-          "Application of Income",
-          "Section 28"
+          "Application of Income"
         ]
       },
       {
-        "beat_goal": "Examine judicial benchmarks defining source obligations versus post-receipt self-imposed obligations.",
-        "layout": "case_card",
+        "beat_goal": "Examine the source of obligation to determine if the client created an overriding legal charge before receipt.",
+        "layout": "decision_tree",
         "anchor_phrases": [
-          "CIT v. Sitaldas Tirathdas",
-          "CIT v. Thakar Das Bhargava"
+          "overriding title",
+          "self-imposed",
+          "professional income"
         ]
       },
       {
-        "beat_goal": "Conclude that the ₹ 5 lacs is fully taxable under Profits and Gains of Business or Profession as an application of income.",
+        "beat_goal": "Conclude that the amount is an application of professional income fully assessable under Section 28.",
         "layout": "takeaway",
         "anchor_phrases": [
+          "Section 28",
           "Profits and gains of business or profession",
-          "Application of Income",
-          "Fully Taxable"
+          "₹ 5 lacs"
         ]
       }
     ]
@@ -73,59 +64,70 @@
     {
       "layout": "example_scene",
       "title": {
-        "text": "Brief Fee for Charitable Trust",
+        "text": "The Professional Engagement",
         "at": 0.3
       },
-      "voice_sync_text": "Mr. Bhargava agreed to appear before the Supreme Court for a brief, on the condition of receiving ₹ 5 lacs to create a trust.",
+      "voice_sync_text": "Mr. Bhargava ഒരു leading advocate ആണ്. അദ്ദേഹം Supreme Court-ൽ ഒരു company-യെ defend ചെയ്യാൻ സമ്മതിച്ചു. പക്ഷേ ഒരു കണ്ടീഷൻ വെച്ചു, തന്റെ പേരിൽ തുടങ്ങാൻ പോകുന്ന ഒരു charitable trust-ലേക്ക് ₹ 5 lacs നൽകണം. Company ആ തുക നൽകുകയും അദ്ദേഹം trust രൂപീകരിക്കുകയും ചെയ്തു.",
       "visual_data": {
         "actors": [
           {
             "label": "Mr. Bhargava",
-            "detail": "Corporate Advocate",
+            "detail": "Leading Advocate",
             "icon": "person",
-            "at": 0.0
+            "at": 0.76
+          },
+          {
+            "label": "Corporate Client",
+            "detail": "Company",
+            "icon": "factory",
+            "at": 16.02
           }
         ],
-        "transaction": "Supreme Court Brief Appearance",
+        "transaction": "Professional Brief",
         "facts": [
           {
-            "label": "Professional Fee",
-            "value": "₹ 5 lacs",
+            "label": "Venue",
+            "value": "Supreme Court",
+            "icon": "gavel",
+            "at": 16.02
+          },
+          {
+            "label": "Condition Fee",
             "amount": 500000,
-            "detail": "Condition to create trust",
+            "value": "₹ 5 lacs",
             "icon": "money_bag",
-            "at": 4.08
+            "at": 16.02
           }
         ]
       },
       "start": 0.0,
-      "end": 9.44,
+      "end": 21.12,
       "id": "b1",
-      "director_goal": "Establish Mr. Bhargava's appearance in Supreme Court and the condition to receive ₹ 5 lacs for creating a charitable trust.",
+      "director_goal": "Introduce Mr. Bhargava defending a company in the Supreme Court on condition of receiving ₹ 5 lacs for creating a charitable trust.",
       "anchor_phrases": [
         "Mr. Bhargava",
-        "Supreme Court",
-        "₹ 5 lacs"
+        "₹ 5 lacs",
+        "Supreme Court"
       ],
       "animation_role": "key_fact",
       "anchor_alignment": [
         {
           "phrase": "Mr. Bhargava",
-          "at": 0.6,
+          "at": 0.76,
           "matched": true,
           "score": 0.842
         },
         {
-          "phrase": "Supreme Court",
-          "at": 3.04,
-          "matched": true,
-          "score": 1.0
-        },
-        {
           "phrase": "₹ 5 lacs",
-          "at": 6.34,
+          "at": 12.56,
           "matched": true,
           "score": 0.787
+        },
+        {
+          "phrase": "Supreme Court",
+          "at": 15.14,
+          "matched": true,
+          "score": 0.545
         }
       ],
       "anchor_match": {
@@ -134,148 +136,65 @@
       }
     },
     {
-      "layout": "flow_actors",
-      "title": {
-        "text": "Flow of Professional Income",
-        "at": 10.09
-      },
-      "voice_sync_text": "The Company paid the fee directly to Mr. Bhargava, who then executed a Trust Deed to set up the trust.",
-      "visual_data": {
-        "actors": [
-          {
-            "label": "Company",
-            "detail": "Client paying fee",
-            "icon": "factory",
-            "at": 10.23
-          },
-          {
-            "label": "Mr. Bhargava",
-            "detail": "Receives fee of ₹ 5 lacs",
-            "value": "₹ 5 lacs",
-            "icon": "person",
-            "at": 12.45
-          },
-          {
-            "label": "Public Charitable Trust",
-            "detail": "Created via Trust Deed",
-            "icon": "house",
-            "at": 12.73
-          }
-        ],
-        "edges": [
-          {
-            "from": "Company",
-            "to": "Mr. Bhargava",
-            "label": "Fee Payment",
-            "value": "₹ 5 lacs",
-            "amount": 500000,
-            "icon": "money_bag",
-            "at": 12.73
-          },
-          {
-            "from": "Mr. Bhargava",
-            "to": "Public Charitable Trust",
-            "label": "Trust Deed Execution",
-            "icon": "document",
-            "at": 15.03
-          }
-        ]
-      },
-      "start": 9.79,
-      "end": 17.23,
-      "id": "b2",
-      "director_goal": "Trace the movement of fee payment from the company to Mr. Bhargava and his subsequent creation of the trust deed.",
-      "anchor_phrases": [
-        "Company",
-        "Mr. Bhargava",
-        "Trust Deed"
-      ],
-      "animation_role": "explanation",
-      "anchor_alignment": [
-        {
-          "phrase": "Company",
-          "at": 10.08,
-          "matched": false,
-          "score": 0.364
-        },
-        {
-          "phrase": "Mr. Bhargava",
-          "at": 12.45,
-          "matched": true,
-          "score": 1.0
-        },
-        {
-          "phrase": "Trust Deed",
-          "at": 15.03,
-          "matched": true,
-          "score": 1.0
-        }
-      ],
-      "anchor_match": {
-        "matched": 2,
-        "total": 3
-      }
-    },
-    {
       "layout": "compare_regimes",
       "title": {
-        "text": "Diversion vs Application of Income",
-        "at": 17.88
+        "text": "Diversion vs. Application",
+        "at": 21.77
       },
-      "voice_sync_text": "Here we examine Diversion of Income by Overriding Title versus Application of Income under Section 28.",
+      "voice_sync_text": "ഇവിടെ നമ്മൾ Section 4-ഉം Section 5-ഉം പ്രകാരം Diversion of Income-ഉം Application of Income-ഉം തമ്മിലുള്ള വ്യത്യാസമാണ് പഠിക്കുന്നത്. Income ഒരു assessee-യുടെ കൈകളിൽ എത്തുന്നതിന് മുൻപ് തന്നെ ആ തുകയ്ക്ക്മേൽ legal charge ഉണ്ടെങ്കിൽ അത് diversion ആകുന്നു. എന്നാൽ തുക കിട്ടിയതിനു ശേഷം voluntary ആയി apply ചെയ്താൽ അത് application of income ആണ്.",
       "visual_data": {
         "regimes": [
           {
             "label": "Diversion of Income",
-            "detail": "Overriding Title before accrual; exempt from tax",
+            "detail": "Section 4 / Section 5: Prior legal charge",
+            "pass": false,
             "icon": "scales",
-            "status": "Exempt",
-            "at": 19.3
+            "at": 29.53
           },
           {
             "label": "Application of Income",
-            "detail": "Income reaches assessee first; taxable under Section 28",
+            "detail": "Section 4: Voluntary use after receipt",
+            "pass": true,
             "icon": "money_bag",
-            "status": "Taxable",
-            "at": 23.4
+            "at": 29.53
           }
         ]
       },
-      "start": 17.58,
-      "end": 26.82,
-      "id": "b3",
-      "director_goal": "Compare the legal distinction between Diversion of Income by Overriding Title and Application of Income under Section 28.",
+      "start": 21.47,
+      "end": 45.79,
+      "id": "b2",
+      "director_goal": "Contrast the doctrine of Diversion of Income by overriding title against Application of Income.",
       "anchor_phrases": [
+        "Section 4",
+        "Section 5",
         "Diversion of Income",
-        "Overriding Title",
-        "Application of Income",
-        "Section 28"
+        "Application of Income"
       ],
       "animation_role": "explanation",
       "anchor_alignment": [
         {
-          "phrase": "Diversion of Income",
-          "at": 19.3,
+          "phrase": "Section 4",
+          "at": 29.53,
           "matched": true,
           "score": 1.0
         },
         {
-          "phrase": "Overriding Title",
-          "at": 21.26,
+          "phrase": "Section 5",
+          "at": 37.37,
           "matched": true,
-          "score": 1.0
+          "score": 0.545
+        },
+        {
+          "phrase": "Diversion of Income",
+          "at": 38.13,
+          "matched": true,
+          "score": 0.863
         },
         {
           "phrase": "Application of Income",
-          "at": 23.4,
+          "at": 44.11,
           "matched": true,
-          "score": 1.0
-        },
-        {
-          "phrase": "Section 28",
-          "at": 25.56,
-          "matched": true,
-          "score": 1.0
+          "score": 0.977
         }
       ],
       "anchor_match": {
@@ -284,120 +203,138 @@
       }
     },
     {
-      "layout": "case_card",
+      "layout": "decision_tree",
       "title": {
-        "text": "Judicial Precedents",
-        "at": 27.47
+        "text": "Source of Obligation",
+        "at": 46.44
       },
-      "voice_sync_text": "The benchmark tests from CIT v. Sitaldas Tirathdas and CIT v. Thakar Das Bhargava clarify source obligations versus post-receipt applications.",
+      "voice_sync_text": "Income generate ചെയ്യുന്ന source-ൽ തന്നെ വേറൊരു ആൾക്ക് legal right അല്ലെങ്കിൽ overriding title ഉണ്ടെങ്കിൽ, ആ തുക assessee-യുടെ income ആയി കണക്കാക്കാൻ പറ്റില്ല. എന്നാൽ ഇവിടെ Mr. Bhargava സ്വയം ഉണ്ടാക്കിയ self-imposed obligation ആയതിനാൽ ഇത് അദ്ദേഹത്തിന്റെ professional income തന്നെയാണ്.",
       "visual_data": {
-        "case_name": "CIT v. Thakar Das Bhargava",
-        "court": "Supreme Court",
-        "principle": "Obligation self-imposed post-receipt is Application of Income, contrasting CIT v. Sitaldas Tirathdas.",
-        "application": "Client did not create trust; obligation arose after receipt by advocate, making ₹ 5 lacs taxable.",
-        "at": 36.23
+        "root": "Is there an Overriding Title?",
+        "branches": [
+          {
+            "label": "Client Created",
+            "detail": "Prior Charge",
+            "pass": false,
+            "status": "Diversion",
+            "at": 46.14
+          },
+          {
+            "label": "Self-imposed",
+            "detail": "By Mr. Bhargava",
+            "pass": true,
+            "status": "Application",
+            "value": "professional income",
+            "at": 59.66
+          }
+        ]
       },
-      "start": 27.17,
-      "end": 40.05,
-      "id": "b4",
-      "director_goal": "Examine judicial benchmarks defining source obligations versus post-receipt self-imposed obligations.",
+      "start": 46.14,
+      "end": 65.78,
+      "id": "b3",
+      "director_goal": "Examine the source of obligation to determine if the client created an overriding legal charge before receipt.",
       "anchor_phrases": [
-        "CIT v. Sitaldas Tirathdas",
-        "CIT v. Thakar Das Bhargava"
+        "overriding title",
+        "self-imposed",
+        "professional income"
       ],
       "animation_role": "explanation",
       "anchor_alignment": [
         {
-          "phrase": "CIT v. Sitaldas Tirathdas",
-          "at": 29.25,
+          "phrase": "overriding title",
+          "at": 51.64,
           "matched": true,
-          "score": 0.944
+          "score": 1.0
         },
         {
-          "phrase": "CIT v. Thakar Das Bhargava",
-          "at": 32.31,
+          "phrase": "self-imposed",
+          "at": 59.66,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "professional income",
+          "at": 63.82,
           "matched": true,
           "score": 1.0
         }
       ],
       "anchor_match": {
-        "matched": 2,
-        "total": 2
+        "matched": 3,
+        "total": 3
       }
     },
     {
       "layout": "takeaway",
       "title": {
-        "text": "Taxability Conclusion",
-        "at": 40.7
+        "text": "Final Taxability",
+        "at": 66.43
       },
-      "voice_sync_text": "The ₹ 5 lacs is an Application of Income and is Fully Taxable under Profits and gains of business or profession.",
+      "voice_sync_text": "Professional fees ആയി ലഭിക്കുന്ന തുക എപ്പോഴും Section 28 പ്രകാരം Profits and gains of business or profession എന്ന head-ൽ ആണ് charge ചെയ്യപ്പെടുന്നത്. അതുകൊണ്ട് ഈ ₹ 5 lacs പൂർണ്ണമായും taxable ആണ്. തുക കിട്ടിയ ശേഷം ആര് trust ഉണ്ടാക്കി എന്നതുകൊണ്ട് professional income-ന്റെ taxability മാറില്ല.",
       "visual_data": {
         "rules": [
           {
-            "label": "Profits and gains of business or profession",
-            "detail": "Fee received is professional income under Section 28",
-            "value": "₹ 5 lacs",
-            "amount": 500000,
-            "icon": "gavel",
-            "at": 45.78
-          },
-          {
-            "label": "Application of Income",
-            "detail": "Creation of trust is post-receipt spending, not diversion",
+            "label": "Tax Head",
+            "value": "Section 28",
+            "detail": "Profits and gains of business or profession",
             "icon": "document",
-            "at": 45.78
+            "at": 68.53
           },
           {
-            "label": "Fully Taxable",
-            "detail": "Entire sum of ₹ 5 lacs is assessable in hands of Mr. Bhargava",
-            "value": "₹ 5 lacs",
+            "label": "Taxable Amount",
             "amount": 500000,
+            "value": "₹ 5 lacs",
             "icon": "money_bag",
-            "at": 45.78
+            "at": 79.07
+          },
+          {
+            "label": "Nature",
+            "value": "Application of Income",
+            "status": "Taxable",
+            "at": 83.95
           }
         ]
       },
-      "start": 40.4,
-      "end": 48.96,
-      "id": "b5",
-      "director_goal": "Conclude that the ₹ 5 lacs is fully taxable under Profits and Gains of Business or Profession as an application of income.",
+      "start": 66.13,
+      "end": 86.65,
+      "id": "b4",
+      "director_goal": "Conclude that the amount is an application of professional income fully assessable under Section 28.",
       "anchor_phrases": [
+        "Section 28",
         "Profits and gains of business or profession",
-        "Application of Income",
-        "Fully Taxable"
+        "₹ 5 lacs"
       ],
       "animation_role": "key_fact",
       "anchor_alignment": [
         {
-          "phrase": "Profits and gains of business or profession",
-          "at": 45.78,
+          "phrase": "Section 28",
+          "at": 69.59,
           "matched": true,
           "score": 1.0
         },
         {
-          "phrase": "Application of Income",
-          "at": 46.78,
+          "phrase": "Profits and gains of business or profession",
+          "at": 70.81,
           "matched": true,
-          "score": 0.526
+          "score": 1.0
         },
         {
-          "phrase": "Fully Taxable",
-          "at": 44.07,
-          "matched": false,
-          "score": 0.25
+          "phrase": "₹ 5 lacs",
+          "at": 77.65,
+          "matched": true,
+          "score": 0.889
         }
       ],
       "anchor_match": {
-        "matched": 2,
+        "matched": 3,
         "total": 3
       }
     }
   ],
-  "audio_duration_sec": 48.96,
+  "audio_duration_sec": 86.65,
   "anchor_match": {
     "matched": 13,
-    "total": 15,
-    "rate": 0.867
+    "total": 13,
+    "rate": 1.0
   }
 }

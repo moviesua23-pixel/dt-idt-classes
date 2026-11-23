@@ -3,15 +3,16 @@
   "audio_url": "data/audio/dt-c1-q5.mp3",
   "duration_sec": 117.44,
   "sync_offset_sec": 0.0,
-  "context_pill": "Tax Liability & Section 87A Rebate",
-  "example_summary": "Computes the tax liability for Mr. Manish (age 47) under the Old Tax Regime, demonstrating the application of the ₹ 2,50,000 basic exemption and the Section 87A rebate for a total income of ₹ 4,15,000.",
-  "source_provision": "| Total Income Range | Applicable Tax Rate (Old Regime: < 60 Years) |\n| :--- | :--- |\n| Up to ₹ 2,50,000 | **Nil** (Basic Exemption Limit) |\n| ₹ 2,50,001 to ₹ 5,00,000 | **5%** of income exceeding ₹ 2,50,000 |\n| ₹ 5,00,001 to ₹ 10,00,000 | **₹ 12,500 + 20%** of income exceeding ₹ 5,00,000 |\n| Above ₹ 10,00,000 | **₹ 1,12,500 + 30%** of income exceeding ₹ 10,00,000 |\n\n\n| Provision Aspect | Statutory Rule under Section 87A (Old Tax Regime) |\n| :--- | :--- |\n| **Eligible Assessee** | **Resident Individual** only (Non-residents not eligible) |\n| **Total Income Threshold** | Total Income after Chapter VI-A deductions $\\le$ **₹ 5,00,000** |\n| **Maximum Rebate Amount** | **Lower of 100% of tax liability** or **₹ 12,500** |\n\n\n**Key Statutory Conditions & Mechanics:**\n\n* **Opt-out Mechanism u/s 115BAC(6):** Assessee must exercise the option to shift out of the default tax regime on or before the due date u/s 139(1) for the relevant Assessment Year.\n\n* **Sequence of Computation:** Tax Liability before Cess $\\rightarrow$ Deduct Rebate u/s 87A $\\rightarrow$ Apply Health & Education Cess @ 4% on net tax liability.\n\n\n> [!IMPORTANT] Section 87A Exemption Limit Difference: Under the New Tax Regime (Section 115BAC), the Rebate u/s 87A threshold is higher (Total Income up to ₹ 7,00,000 with max rebate ₹ 25,000), whereas under the Old Tax Regime, the threshold remains strictly ₹ 5,00,000 with max rebate ₹ 12,500.",
+  "context_pill": "Opting Out u/s 115BAC(6) & Section 87A Rebate",
+  "example_summary": "Computation of tax liability for Mr. Manish (age 47, resident) with income of ₹ 4,15,000 opting out of default regime.",
+  "source_provision": "### Statutory Framework: Old Tax Regime & Section 87A Rebate\n\n| Provision / Section | Operative Condition / Criteria | Tax Rate / Rebate Quantum |\n| :--- | :--- | :--- |\n| **Section 115BAC(6)** | Opting out of Default Tax Regime | Normal Slab Rates applicable |\n| **Basic Exemption Limit** | Resident Individual aged < 60 years | Income up to ₹ 2,50,000 is Exempt |\n| **First Slab (₹ 2,50,001 - ₹ 5,00,000)** | Income exceeding Basic Exemption | Taxed @ 5% |\n| **Section 87A Rebate** | Resident Individual with Total Income ≤ ₹ 5,00,000 | Lower of Tax Payable or ₹ 12,500 |\n\n#### Key Statutory Checklists\n\n- **Regime Shift Option u/s 115BAC(6)**\n  - Assessee must explicitly exercise option to shift out of default regime on or before due date u/s 139(1).\n  - Switching back rules depend on whether the individual has Income from Business or Profession.\n\n- **Section 87A Rebate Conditions (Old Tax Regime)**\n  - Assessee MUST be a **Resident Individual** (Non-residents and non-individuals cannot claim).\n  - Total Income after all deductions under Chapter VI-A must **not exceed ₹ 5,00,000**.\n  - Rebate equals **100% of tax liability** or **₹ 12,500**, whichever is lower, reducing final tax to Nil.\n\n> [!IMPORTANT] Section 87A Distinction\n> Under the Old Tax Regime, Rebate u/s 87A is capped at ₹ 12,500 for Total Income up to ₹ 5,00,000. Under the Default Tax Regime u/s 115BAC, the threshold is higher (Total Income up to ₹ 7,00,000 with maximum rebate of ₹ 25,000).",
   "director": {
     "archetype": "computation_ledger",
-    "justification": "Computes the step-by-step tax liability under the old regime for a resident individual with income of ₹ 4,15,000, applying basic exemption slab and Section 87A rebate to arrive at Nil tax.",
+    "justification": "Tax liability calculation for Mr. Manish under the old regime requires applying basic exemption, slab rate computation, and subtracting Section 87A rebate in a step-by-step ledger structure.",
     "protagonist": "Mr. Manish",
     "actors": [
-      "Mr. Manish"
+      "Mr. Manish",
+      "Assessing Officer"
     ],
     "key_numbers": [
       "₹ 4,15,000",
@@ -19,62 +20,60 @@
       "₹ 1,65,000",
       "5%",
       "₹ 8,250",
-      "₹ 12,500"
+      "₹ 12,500",
+      "Nil"
     ],
     "key_dates": [
-      "A.Y.2026-27"
+      "A.Y. 2026-27"
     ],
-    "visual_metaphor": "A step-by-step financial computation ledger balancing income slabs and deducting Section 87A rebate shield to yield zero net liability.",
+    "visual_metaphor": "Tax ledger balance sheet balancing slab tax against Section 87A rebate to reach zero liability",
     "beat_plan": [
       {
-        "beat_goal": "Introduce Mr. Manish (age 47, resident) opting out of default regime with total income of ₹ 4,15,000 for A.Y. 2026-27.",
+        "beat_goal": "Introduce Mr. Manish and his total income of ₹ 4,15,000 opting out of the default tax regime u/s 115BAC(6).",
         "layout": "example_scene",
         "anchor_phrases": [
           "Mr. Manish",
           "₹ 4,15,000",
-          "A.Y.2026-27",
-          "Section 115BAC(6)"
+          "Section 115BAC(6)",
+          "A.Y. 2026-27"
         ]
       },
       {
-        "beat_goal": "Illustrate Old Tax Regime slab rate of 5% on income exceeding the basic exemption limit of ₹ 2,50,000.",
-        "layout": "slab_ladder",
+        "beat_goal": "Verify residency and total income thresholds required for basic exemption and Section 87A rebate.",
+        "layout": "checklist_gate",
         "anchor_phrases": [
+          "Resident Individual",
           "Basic Exemption Limit",
           "₹ 2,50,000",
-          "5%",
+          "Total Income ≤ ₹ 5,00,000"
+        ]
+      },
+      {
+        "beat_goal": "Calculate tax on income exceeding the basic exemption limit at the 5% slab rate.",
+        "layout": "slab_ladder",
+        "anchor_phrases": [
           "₹ 1,65,000",
+          "5%",
           "₹ 8,250"
         ]
       },
       {
-        "beat_goal": "Check Section 87A rebate criteria for resident individual with total income not exceeding ₹ 5,00,000.",
-        "layout": "checklist_gate",
-        "anchor_phrases": [
-          "Section 87A",
-          "Resident Individual",
-          "₹ 5,00,000",
-          "₹ 12,500"
-        ]
-      },
-      {
-        "beat_goal": "Deduct Section 87A rebate from computed tax liability in a computation ledger format to reach Nil liability.",
+        "beat_goal": "Subtract Section 87A rebate from tax payable to arrive at the final tax liability.",
         "layout": "ledger",
         "anchor_phrases": [
-          "Tax @ 5%",
+          "Section 87A",
+          "₹ 12,500",
           "₹ 8,250",
-          "Rebate u/s 87A",
           "Nil"
         ]
       },
       {
-        "beat_goal": "Summarize the key statutory takeaway for claiming Section 87A rebate when opting out of default regime.",
+        "beat_goal": "Summarize key rules for claiming Section 87A rebate under the old tax regime.",
         "layout": "takeaway",
         "anchor_phrases": [
-          "Section 87A",
-          "Section 115BAC(6)",
-          "Tax Liability",
-          "Nil"
+          "Section 87A Rebate",
+          "Lower of tax payable or ₹ 12,500",
+          "Nil Tax Liability"
         ]
       }
     ]
@@ -84,54 +83,52 @@
     {
       "layout": "example_scene",
       "title": {
-        "text": "Introduction to Mr. Manish's Case",
+        "text": "Assessee Profile & Regime Choice",
         "at": 0.3
       },
-      "voice_sync_text": "Welcome back! നാം ഇവിടെ പഠിക്കുന്നത്, Section 115BAC(6) പ്രകാരം default tax regime-ൽ നിന്ന് shift out ചെയ്ത് Old Tax Regime തിരഞ്ഞെടുക്കുന്ന ഒരു resident individual-ന്റെ tax computation and Section 87A rebate rules ആണ്. ഇവിടെ Mr. Manish, age 47, ഒരു resident individual ആണ്. അദ്ദേഹത്തിന്റെ Total Income ₹ 4,15,000 ആണ് for A.Y.2026-27.",
+      "voice_sync_text": "Mr. Manish, aged 47 years, has a total income of ₹ 4,15,000 for A.Y. 2026-27 and opts out of the default regime under Section 115BAC(6).",
       "visual_data": {
         "actors": [
           {
             "label": "Mr. Manish",
-            "detail": "Resident Individual (Age 47)",
+            "detail": "Resident Individual, aged 47 years",
             "icon": "person",
-            "at": 21.4
+            "at": 19.78
           }
         ],
-        "transaction": "Opting out of Default Regime",
+        "transaction": "Opting out of Default Tax Regime u/s 115BAC(6)",
         "facts": [
           {
             "label": "Total Income",
-            "amount": 415000,
+            "value": "₹ 4,15,000",
+            "detail": "Salary & FD Interest",
             "icon": "money_bag",
             "at": 24.98
           },
           {
-            "label": "Assessment Year",
-            "value": "A.Y.2026-27",
-            "icon": "calendar",
-            "at": 28.36
+            "label": "Tax Regime",
+            "value": "Section 115BAC(6)",
+            "detail": "Opted out of Default Regime",
+            "icon": "document",
+            "at": 24.98
           },
           {
-            "label": "Opt-out Provision",
-            "value": "Section 115BAC(6)",
-            "icon": "document",
+            "label": "Assessment Year",
+            "value": "A.Y. 2026-27",
+            "icon": "calendar",
             "at": 28.36
           }
-        ],
-        "spoken_amounts": [
-          "₹ 4,15,000",
-          "4,15,000"
         ]
       },
       "start": 0.0,
       "end": 31.44,
       "id": "b1",
-      "director_goal": "Introduce Mr. Manish (age 47, resident) opting out of default regime with total income of ₹ 4,15,000 for A.Y. 2026-27.",
+      "director_goal": "Introduce Mr. Manish and his total income of ₹ 4,15,000 opting out of the default tax regime u/s 115BAC(6).",
       "anchor_phrases": [
         "Mr. Manish",
         "₹ 4,15,000",
-        "A.Y.2026-27",
-        "Section 115BAC(6)"
+        "Section 115BAC(6)",
+        "A.Y. 2026-27"
       ],
       "animation_role": "key_fact",
       "anchor_alignment": [
@@ -148,16 +145,16 @@
           "score": 0.933
         },
         {
-          "phrase": "A.Y.2026-27",
+          "phrase": "Section 115BAC(6)",
+          "at": 27.28,
+          "matched": false,
+          "score": 0.37
+        },
+        {
+          "phrase": "A.Y. 2026-27",
           "at": 28.96,
           "matched": true,
           "score": 0.952
-        },
-        {
-          "phrase": "Section 115BAC(6)",
-          "at": 3.58,
-          "matched": false,
-          "score": 0.087
         }
       ],
       "anchor_match": {
@@ -166,54 +163,58 @@
       }
     },
     {
-      "layout": "slab_ladder",
+      "layout": "checklist_gate",
       "title": {
-        "text": "Old Regime Slab Rates",
+        "text": "Eligibility & Threshold Verification",
         "at": 32.09
       },
-      "voice_sync_text": "Old Tax Regime-ൽ, 60 വയസ്സിന് താഴെയുള്ള resident individual-ന് Basic Exemption Limit ₹ 2,50,000 ആണ്. Mr. Manish-ന്റെ കാര്യത്തിൽ, ₹ 2,50,000-ൽ കൂടുതൽ വരുന്ന ₹ 1,65,000-ന് Tax rate of 5% പ്രകാരം ₹ 8,250 ആണ് tax വരുന്നത്.",
+      "voice_sync_text": "As a Resident Individual, his Basic Exemption Limit is ₹ 2,50,000, and we verify that Total Income ≤ ₹ 5,00,000.",
       "visual_data": {
-        "tiers": [
+        "conditions": [
+          {
+            "label": "Resident Individual",
+            "detail": "Age 47 (< 60 years)",
+            "pass": true,
+            "icon": "person",
+            "at": 34.45
+          },
           {
             "label": "Basic Exemption Limit",
-            "amount": 250000,
-            "status": "Nil Tax",
+            "detail": "Exempt up to ₹ 2,50,000",
+            "value": "₹ 2,50,000",
+            "pass": true,
+            "icon": "bank",
             "at": 36.71
           },
           {
-            "label": "Income Exceeding Limit",
-            "amount": 165000,
-            "detail": "₹ 4,15,000 - ₹ 2,50,000",
-            "at": 36.71
-          },
-          {
-            "label": "Tax Rate",
-            "value": "5%",
-            "amount": 8250,
-            "sign": "=",
-            "at": 40.77
+            "label": "Total Income Threshold",
+            "detail": "Total Income ≤ ₹ 5,00,000",
+            "value": "₹ 4,15,000",
+            "pass": true,
+            "icon": "scales",
+            "at": 43.44
           }
         ],
-        "spoken_amounts": [
-          "₹ 1,65,000",
-          "₹ 8,250",
-          "1,65,000",
-          "8,250"
-        ]
+        "outcome": "Eligible for Old Regime Slabs & Section 87A Rebate"
       },
       "start": 31.79,
       "end": 52.83,
       "id": "b2",
-      "director_goal": "Illustrate Old Tax Regime slab rate of 5% on income exceeding the basic exemption limit of ₹ 2,50,000.",
+      "director_goal": "Verify residency and total income thresholds required for basic exemption and Section 87A rebate.",
       "anchor_phrases": [
+        "Resident Individual",
         "Basic Exemption Limit",
         "₹ 2,50,000",
-        "5%",
-        "₹ 1,65,000",
-        "₹ 8,250"
+        "Total Income ≤ ₹ 5,00,000"
       ],
       "animation_role": "explanation",
       "anchor_alignment": [
+        {
+          "phrase": "Resident Individual",
+          "at": 34.45,
+          "matched": true,
+          "score": 1.0
+        },
         {
           "phrase": "Basic Exemption Limit",
           "at": 36.71,
@@ -227,153 +228,136 @@
           "score": 1.0
         },
         {
-          "phrase": "5%",
-          "at": 41.87,
+          "phrase": "Total Income ≤ ₹ 5,00,000",
+          "at": 41.93,
           "matched": true,
-          "score": 0.667
-        },
-        {
-          "phrase": "₹ 1,65,000",
-          "at": 42.59,
-          "matched": true,
-          "score": 0.706
-        },
-        {
-          "phrase": "₹ 8,250",
-          "at": 49.95,
-          "matched": true,
-          "score": 1.0
+          "score": 0.579
         }
       ],
       "anchor_match": {
-        "matched": 5,
-        "total": 5
+        "matched": 4,
+        "total": 4
       }
     },
     {
-      "layout": "checklist_gate",
+      "layout": "slab_ladder",
       "title": {
-        "text": "Section 87A Eligibility Check",
+        "text": "Slab Rate Computation",
         "at": 53.48
       },
-      "voice_sync_text": "Old Tax Regime-ൽ Section 87A rebate ലഭിക്കണമെങ്കിൽ assessee ഒരു Resident Individual ആയിരിക്കണം, കൂടാതെ Total Income not exceeding ₹ 5,00,000 ആയിരിക്കണം. Mr. Manish ഈ കണ്ടീഷൻ പാലിക്കുന്നു. ഇവിടെ maximum rebate amount ₹ 12,500 ആണ്.",
+      "voice_sync_text": "Tax on income above basic exemption of ₹ 1,65,000 at 5% rate comes to ₹ 8,250.",
       "visual_data": {
-        "conditions": [
+        "tiers": [
           {
-            "label": "Resident Individual",
-            "pass": true,
-            "icon": "person",
-            "at": 59.32
+            "label": "Up to ₹ 2,50,000",
+            "detail": "Basic Exemption Limit",
+            "value": "Nil",
+            "icon": "bank",
+            "at": 58.68
           },
           {
-            "label": "Total Income <= ₹ 5,00,000",
-            "amount": 415000,
-            "pass": true,
-            "icon": "scales",
-            "at": 62.52
+            "label": "₹ 2,50,001 to ₹ 4,15,000",
+            "detail": "Tax on ₹ 1,65,000 (₹ 4,15,000 - ₹ 2,50,000) @ 5%",
+            "value": "₹ 8,250",
+            "amount": 8250,
+            "icon": "money_bag",
+            "at": 58.68
           }
-        ],
-        "outcome": "Eligible for Rebate u/s 87A (Max ₹ 12,500)"
+        ]
       },
       "start": 53.18,
       "end": 74.62,
       "id": "b3",
-      "director_goal": "Check Section 87A rebate criteria for resident individual with total income not exceeding ₹ 5,00,000.",
+      "director_goal": "Calculate tax on income exceeding the basic exemption limit at the 5% slab rate.",
       "anchor_phrases": [
-        "Section 87A",
-        "Resident Individual",
-        "₹ 5,00,000",
-        "₹ 12,500"
+        "₹ 1,65,000",
+        "5%",
+        "₹ 8,250"
       ],
       "animation_role": "explanation",
       "anchor_alignment": [
         {
-          "phrase": "Section 87A",
-          "at": 54.72,
-          "matched": true,
-          "score": 1.0
-        },
-        {
-          "phrase": "Resident Individual",
-          "at": 59.32,
-          "matched": true,
-          "score": 1.0
-        },
-        {
-          "phrase": "₹ 5,00,000",
+          "phrase": "₹ 1,65,000",
           "at": 72.94,
           "matched": true,
-          "score": 0.545
+          "score": 0.714
         },
         {
-          "phrase": "₹ 12,500",
-          "at": 73.4,
+          "phrase": "5%",
+          "at": 67.75,
+          "matched": false,
+          "score": 0.0
+        },
+        {
+          "phrase": "₹ 8,250",
+          "at": 72.42,
           "matched": false,
           "score": 0.0
         }
       ],
       "anchor_match": {
-        "matched": 3,
-        "total": 4
+        "matched": 1,
+        "total": 3
       }
     },
     {
       "layout": "ledger",
       "title": {
-        "text": "Computation of Tax Liability",
+        "text": "Tax Liability Ledger & Rebate",
         "at": 75.27
       },
-      "voice_sync_text": "ഇനി നമുക്ക് tax computation നോക്കാം. Tax @ 5% കണക്കാക്കിയപ്പോൾ ₹ 8,250 ലഭിച്ചു. Section 87A പ്രകാരം lower of tax payable or ₹ 12,500 ആണ് rebate. അതുകൊണ്ട് ₹ 8,250 മുഴുവനായി കുറയ്ക്കാം. അപ്പോൾ final Tax Liability Nil ആയി മാറുന്നു.",
+      "voice_sync_text": "Under Section 87A, rebate is lower of tax payable or ₹ 12,500, so subtracting ₹ 8,250 leaves Nil tax liability.",
       "visual_data": {
         "rows": [
           {
-            "label": "Tax @ 5% on ₹ 1,65,000",
+            "label": "Tax @ 5% of ₹ 1,65,000",
+            "detail": "Gross Tax Payable",
+            "value": "₹ 8,250",
             "amount": 8250,
-            "at": 87.31
+            "icon": "money_bag",
+            "at": 86.69
           },
           {
-            "label": "Rebate u/s 87A",
-            "amount": 8250,
+            "label": "Less: Rebate u/s Section 87A",
+            "detail": "Lower of tax payable (₹ 8,250) or ₹ 12,500",
+            "value": "₹ 8,250",
             "sign": "-",
-            "detail": "Lower of tax or ₹ 12,500",
-            "at": 87.31
+            "amount": 8250,
+            "icon": "scales",
+            "at": 86.69
           }
         ],
-        "total": "Nil",
-        "spoken_amounts": [
-          "₹ 8,250",
-          "8,250"
-        ]
+        "total": "Nil"
       },
       "start": 74.97,
       "end": 99.81,
       "id": "b4",
-      "director_goal": "Deduct Section 87A rebate from computed tax liability in a computation ledger format to reach Nil liability.",
+      "director_goal": "Subtract Section 87A rebate from tax payable to arrive at the final tax liability.",
       "anchor_phrases": [
-        "Tax @ 5%",
+        "Section 87A",
+        "₹ 12,500",
         "₹ 8,250",
-        "Rebate u/s 87A",
         "Nil"
       ],
       "animation_role": "explanation",
       "anchor_alignment": [
         {
-          "phrase": "Tax @ 5%",
-          "at": 76.13,
-          "matched": true,
-          "score": 0.87
-        },
-        {
-          "phrase": "₹ 8,250",
-          "at": 81.29,
+          "phrase": "Section 87A",
+          "at": 84.31,
           "matched": true,
           "score": 1.0
         },
         {
-          "phrase": "Rebate u/s 87A",
-          "at": 90.69,
+          "phrase": "₹ 12,500",
+          "at": 89.11,
           "matched": true,
-          "score": 0.787
+          "score": 1.0
+        },
+        {
+          "phrase": "₹ 8,250",
+          "at": 92.67,
+          "matched": true,
+          "score": 1.0
         },
         {
           "phrase": "Nil",
@@ -390,77 +374,74 @@
     {
       "layout": "takeaway",
       "title": {
-        "text": "Statutory Takeaway",
+        "text": "Key Statutory Takeaway",
         "at": 100.46
       },
-      "voice_sync_text": "ചുരുക്കത്തിൽ, Section 115BAC(6) പ്രകാരം opt out ചെയ്യുമ്പോൾ, Total Income ₹ 5,00,000-ൽ താഴെയാണെങ്കിൽ Section 87A rebate വഴി Tax Liability Nil ആക്കാം. ഇത് Old Tax Regime-ലെ പ്രധാനപ്പെട്ട ഒരു ആനുകൂല്യമാണ്.",
+      "voice_sync_text": "Thus, claiming Section 87A Rebate gives relief equal to Lower of tax payable or ₹ 12,500, resulting in Nil Tax Liability.",
       "visual_data": {
         "rules": [
           {
-            "label": "Section 115BAC(6)",
-            "detail": "Option to shift out of default regime",
-            "at": 101.42
-          },
-          {
             "label": "Section 87A Rebate",
-            "detail": "Available if Total Income <= ₹ 5,00,000 (Old Regime)",
+            "detail": "Lower of tax payable or ₹ 12,500 under Old Regime",
+            "value": "Max ₹ 12,500",
+            "icon": "document",
             "at": 101.42
           },
           {
-            "label": "Tax Liability",
+            "label": "Income Limit",
+            "detail": "Available only if Total Income ≤ ₹ 5,00,000",
+            "icon": "scales",
+            "at": 101.42
+          },
+          {
+            "label": "Net Tax Payable",
+            "detail": "Full rebate reduces liability to Nil Tax Liability",
             "value": "Nil",
-            "detail": "When tax is less than or equal to ₹ 12,500",
-            "at": 109.4
+            "icon": "money_bag",
+            "at": 107.73
           }
         ]
       },
       "start": 100.16,
       "end": 117.44,
       "id": "b5",
-      "director_goal": "Summarize the key statutory takeaway for claiming Section 87A rebate when opting out of default regime.",
+      "director_goal": "Summarize key rules for claiming Section 87A rebate under the old tax regime.",
       "anchor_phrases": [
-        "Section 87A",
-        "Section 115BAC(6)",
-        "Tax Liability",
-        "Nil"
+        "Section 87A Rebate",
+        "Lower of tax payable or ₹ 12,500",
+        "Nil Tax Liability"
       ],
       "animation_role": "key_fact",
       "anchor_alignment": [
         {
-          "phrase": "Section 87A",
+          "phrase": "Section 87A Rebate",
           "at": 101.42,
           "matched": true,
-          "score": 0.898
+          "score": 0.787
         },
         {
-          "phrase": "Section 115BAC(6)",
-          "at": 101.88,
-          "matched": true,
-          "score": 0.64
+          "phrase": "Lower of tax payable or ₹ 12,500",
+          "at": 108.16,
+          "matched": false,
+          "score": 0.406
         },
         {
-          "phrase": "Tax Liability",
+          "phrase": "Nil Tax Liability",
           "at": 109.4,
           "matched": true,
-          "score": 1.0
-        },
-        {
-          "phrase": "Nil",
-          "at": 111.91,
-          "matched": false,
-          "score": 0.4
+          "score": 0.867
         }
       ],
       "anchor_match": {
-        "matched": 3,
-        "total": 4
+        "matched": 2,
+        "total": 3
       }
     }
   ],
   "audio_duration_sec": 117.44,
   "anchor_match": {
-    "matched": 18,
-    "total": 21,
-    "rate": 0.857
+    "matched": 14,
+    "total": 18,
+    "rate": 0.778
   }
 }

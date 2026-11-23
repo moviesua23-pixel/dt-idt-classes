@@ -1,14 +1,14 @@
 {
   "question_id": "dt-c1-q2",
   "audio_url": "data/audio/dt-c1-q2.mp3",
-  "duration_sec": 53.0,
+  "duration_sec": 109.4,
   "sync_offset_sec": 0.0,
-  "context_pill": "Diversion of Income vs Application of Income",
-  "example_summary": "XYZ Ltd. purchased a sole-proprietorship subject to a sale deed condition to pay ₹ 15,000 p.a. to the proprietor's wife, which constitutes a diversion of income by overriding title.",
-  "source_provision": "| Parameter | Diversion of Income by Overriding Title | Application of Income |\n| :--- | :--- | :--- |\n| **Stage of Obligation** | Obligation attaches **before** income reaches or accrues to the assessee. | Obligation arises **after** income has reached or accrued to the assessee. |\n| **Attachment Point** | Directly attached to the **source of income** or condition of title transfer. | Attached to the **assessee personally** or post-taxable profit application. |\n| **Legal Consequence** | Income never forms part of assessee's Total Income (**Excluded**). | Income forms part of assessee's Total Income (**Fully Taxable**). |\n| **Judicial Test** | Does the third party have an independent, enforceable paramount title on source? | Is the assessee merely applying their accrued net profit to discharge a liability? |\n\n\n**Key Statutory Benchmarks for Diversion of Income**\n\n* **Paramount Obligation at Acquisition**: Where an obligation to pay a third party is incorporated as an integral condition in the deed of transfer/purchase of a business or asset, it creates an overriding charge at source.\n\n* **Charge on Source vs Personal Covenant**: If the payment obligation is secured directly against the income-generating source or net profits as a prerequisite condition of ownership, it constitutes a valid diversion by overriding title.\n\n\n> [!IMPORTANT] Judicial Precedent Benchmark: Jit & Pal X-Rays (P.) Ltd. v. CIT (2004)\n> When a business undertaking is acquired subject to a pre-existing charge or an overriding obligation stipulated in the acquisition deed itself, the amount diverted to the beneficiary under such overriding charge is diverted before it reaches the transferee. Consequently, it cannot be taxed in the hands of the transferee company.",
+  "context_pill": "Diversion vs Application of Income",
+  "example_summary": "Takeover of sole-proprietorship business by XYZ Ltd. with a sale deed clause to pay ₹ 15,000 p.a. to the sole-proprietor's wife, charged on net profits.",
+  "source_provision": "### Master Doctrine Matrix: Diversion vs. Application of Income\n\n| Parameter | Diversion of Income by Overriding Charge | Application of Income |\n| :--- | :--- | :--- |\n| **Stage of Accrual** | Income is diverted **before** reaching the assessee at the source. | Income **reaches** the assessee first, and is then applied/spent. |\n| **Nature of Obligation** | Enforceable **overriding legal obligation** attached to the source. | Voluntary or post-receipt legal obligation (personal charge). |\n| **Condition of Acquisition** | Obligation accepted as a condition for acquiring the income-generating asset. | Obligation created after acquiring the asset or independently. |\n| **Tax Treatment** | Not taxable in the hands of the assessee (**Deductible / Excluded**). | Fully taxable in the hands of the assessee (**No deduction**). |\n\n\n#### Statutory & Judicial Test Checklist\n\n- **The Source Test (*Sitaldas Tirathdas* Benchmark)**: Is the obligation attached to the source of income itself, creating an overriding title in favour of a third party?\n- **Condition of Acquisition Test (*Jit & Pal X-Rays* Benchmark)**: If an obligation is created under a transfer deed as an essential condition to acquire a going concern or asset, it constitutes an overriding charge diverting the income at source.\n\n\n> [!IMPORTANT]\n> **Judicial Precedent Trap**: A charge created on net profits as a prerequisite condition of purchasing a business entity is an **overriding legal charge** (Diversion), whereas a charge created voluntarily post-acquisition for family maintenance or debt repayment is an **application of income**.",
   "director": {
     "archetype": "case_law_precedent",
-    "justification": "The question hinges on applying judicial precedent from Jit & Pal X-Rays (P.) Ltd. to determine whether an obligation under a sale deed is a diversion of income by overriding title or an application of income.",
+    "justification": "The question evaluates whether a contractual payment under a sale deed constitutes diversion or application of income by applying the precedent established in Jit & Pal X-Rays (P.) Ltd. v. CIT.",
     "protagonist": "XYZ Ltd.",
     "actors": [
       "XYZ Ltd.",
@@ -21,52 +21,51 @@
     "key_dates": [
       "2004"
     ],
-    "visual_metaphor": "A main income stream diverted at the source gate before reaching the company's central reservoir.",
+    "visual_metaphor": "A diversion pipe diverting water at the source spring versus a bucket used to scoop water after it reaches the reservoir.",
     "beat_plan": [
       {
-        "beat_goal": "Illustrate XYZ Ltd. purchasing a going concern under a sale deed with an obligation to pay ₹ 15,000 p.a. to the proprietor's wife.",
+        "beat_goal": "Establish the takeover of sole-proprietorship by XYZ Ltd. with the annual payment obligation attached to the sale deed.",
         "layout": "example_scene",
         "anchor_phrases": [
           "XYZ Ltd.",
-          "Sole-proprietor",
-          "₹ 15,000 p.a.",
-          "Wife of sole-proprietor"
+          "sole-proprietor",
+          "₹ 15,000 p.a."
         ]
       },
       {
-        "beat_goal": "Compare the core legal distinctions between Diversion of Income by Overriding Title and Application of Income.",
+        "beat_goal": "Contrast the doctrine of Diversion of Income by Overriding Charge against Application of Income.",
         "layout": "compare_regimes",
         "anchor_phrases": [
           "Diversion of Income",
           "Application of Income",
-          "Overriding Title",
-          "Total Income"
+          "overriding legal obligation"
         ]
       },
       {
-        "beat_goal": "Trace how the obligation attaches to the source of income as a condition of purchase in the sale deed.",
-        "layout": "flow_actors",
+        "beat_goal": "Check statutory and judicial test conditions regarding obligation attached to source and purchase prerequisite.",
+        "layout": "checklist_gate",
         "anchor_phrases": [
-          "Condition of Purchase",
-          "Source of Income",
-          "Net Profits"
+          "attached to the source",
+          "condition of purchase",
+          "Sitaldas Tirathdas"
         ]
       },
       {
-        "beat_goal": "Examine the judicial ruling in Jit & Pal X-Rays (P.) Ltd. v. CIT regarding pre-existing overriding charges.",
+        "beat_goal": "Present the Allahabad High Court ruling in Jit & Pal X-Rays (P.) Ltd. v. CIT.",
         "layout": "case_card",
         "anchor_phrases": [
           "Jit & Pal X-Rays (P.) Ltd. v. CIT",
-          "2004",
-          "Overriding Charge"
+          "267 ITR 370",
+          "net profits"
         ]
       },
       {
-        "beat_goal": "Summarize the final conclusion that the payment is excluded from the total income of XYZ Ltd.",
+        "beat_goal": "Summarize the key takeaway on tax deductibility for overriding charges created upon acquisition.",
         "layout": "takeaway",
         "anchor_phrases": [
-          "Diversion of Income by Overriding Title",
-          "Excluded"
+          "diversion of income",
+          "overriding charge",
+          "not taxable in the hands of assessee"
         ]
       }
     ]
@@ -76,227 +75,77 @@
     {
       "layout": "example_scene",
       "title": {
-        "text": "Acquisition of Going Concern with Charge",
+        "text": "Takeover of Business with Annual Obligation",
         "at": 0.3
       },
-      "voice_sync_text": "XYZ Ltd. acquired a sole-proprietor business under a sale deed, taking on an obligation to pay ₹ 15,000 p.a. to the wife of sole-proprietor.",
+      "voice_sync_text": "Welcome back, students. Today നമ്മൾ ഒരു പ്രായോഗിക ഉദാഹരണം നോക്കാം. XYZ Ltd. ഒരു sole-proprietor-ന്റെ ബിസിനസ്സ് ഒരു sale deed വഴി takeover ചെയ്തു. Sale deed പ്രകാരം, XYZ Ltd. sole-proprietor-ന്റെ ഭാര്യയ്ക്ക് പ്രതിവർഷം ₹ 15,000 p.a. നൽകാൻ നിയമപരമായി ബാധ്യസ്ഥരായി.",
       "visual_data": {
         "actors": [
           {
             "label": "XYZ Ltd.",
             "detail": "Purchaser Company",
             "icon": "factory",
-            "at": 0.0
+            "at": 13.32
           },
           {
             "label": "Sole-proprietor",
-            "detail": "Vendor of Business",
+            "detail": "Vendor of Going Concern",
             "icon": "person",
-            "at": 2.62
+            "at": 13.32
           },
           {
             "label": "Wife of sole-proprietor",
-            "detail": "Beneficiary of Charge",
-            "amount": 15000,
+            "detail": "Beneficiary of Overriding Charge",
             "value": "₹ 15,000 p.a.",
+            "amount": 15000,
             "icon": "person",
-            "at": 9.48
+            "at": 19.96
           }
         ],
-        "transaction": "Acquisition of Going Concern",
+        "transaction": "Takeover of Sole-proprietorship via Sale Deed",
         "facts": [
+          {
+            "label": "Acquisition Mechanism",
+            "detail": "Transfer of going concern via Sale Deed",
+            "at": 19.96
+          },
           {
             "label": "Annual Obligation",
             "value": "₹ 15,000 p.a.",
             "amount": 15000,
-            "detail": "Stipulated in Sale Deed",
-            "icon": "money_bag",
-            "at": 9.48
+            "detail": "Overriding charge payable to wife",
+            "at": 19.96
           }
         ]
       },
       "start": 0.0,
-      "end": 11.36,
+      "end": 22.36,
       "id": "b1",
-      "director_goal": "Illustrate XYZ Ltd. purchasing a going concern under a sale deed with an obligation to pay ₹ 15,000 p.a. to the proprietor's wife.",
+      "director_goal": "Establish the takeover of sole-proprietorship by XYZ Ltd. with the annual payment obligation attached to the sale deed.",
       "anchor_phrases": [
         "XYZ Ltd.",
-        "Sole-proprietor",
-        "₹ 15,000 p.a.",
-        "Wife of sole-proprietor"
+        "sole-proprietor",
+        "₹ 15,000 p.a."
       ],
       "animation_role": "key_fact",
       "anchor_alignment": [
         {
           "phrase": "XYZ Ltd.",
-          "at": 1.2,
+          "at": 5.42,
           "matched": true,
-          "score": 0.6
+          "score": 0.898
         },
         {
-          "phrase": "Sole-proprietor",
-          "at": 2.62,
+          "phrase": "sole-proprietor",
+          "at": 7.12,
           "matched": true,
           "score": 1.0
         },
         {
           "phrase": "₹ 15,000 p.a.",
-          "at": 7.54,
+          "at": 15.56,
           "matched": true,
-          "score": 0.92
-        },
-        {
-          "phrase": "Wife of sole-proprietor",
-          "at": 9.48,
-          "matched": true,
-          "score": 1.0
-        }
-      ],
-      "anchor_match": {
-        "matched": 4,
-        "total": 4
-      }
-    },
-    {
-      "layout": "compare_regimes",
-      "title": {
-        "text": "Diversion vs Application of Income",
-        "at": 12.01
-      },
-      "voice_sync_text": "We contrast Diversion of Income, where Overriding Title attaches prior to accrual and is excluded from Total Income, with Application of Income.",
-      "visual_data": {
-        "regimes": [
-          {
-            "label": "Diversion of Income",
-            "detail": "Obligation attaches to source prior to accrual via Overriding Title.",
-            "status": "Excluded",
-            "icon": "padlock",
-            "at": 12.89
-          },
-          {
-            "label": "Application of Income",
-            "detail": "Obligation arises after income reaches assessee. Included in Total Income.",
-            "status": "Taxable",
-            "icon": "money_bag",
-            "at": 19.23
-          }
-        ]
-      },
-      "start": 11.71,
-      "end": 22.23,
-      "id": "b2",
-      "director_goal": "Compare the core legal distinctions between Diversion of Income by Overriding Title and Application of Income.",
-      "anchor_phrases": [
-        "Diversion of Income",
-        "Application of Income",
-        "Overriding Title",
-        "Total Income"
-      ],
-      "animation_role": "explanation",
-      "anchor_alignment": [
-        {
-          "phrase": "Diversion of Income",
-          "at": 12.89,
-          "matched": true,
-          "score": 1.0
-        },
-        {
-          "phrase": "Application of Income",
-          "at": 20.41,
-          "matched": true,
-          "score": 1.0
-        },
-        {
-          "phrase": "Overriding Title",
-          "at": 14.56,
-          "matched": false,
-          "score": 0.32
-        },
-        {
-          "phrase": "Total Income",
-          "at": 21.11,
-          "matched": true,
-          "score": 0.762
-        }
-      ],
-      "anchor_match": {
-        "matched": 3,
-        "total": 4
-      }
-    },
-    {
-      "layout": "flow_actors",
-      "title": {
-        "text": "Attachment to Source of Income",
-        "at": 22.88
-      },
-      "voice_sync_text": "The obligation was accepted as a Condition of Purchase. It directly attached to the Source of Income and was charged on Net Profits.",
-      "visual_data": {
-        "actors": [
-          {
-            "label": "Source of Income",
-            "detail": "Going Concern Business",
-            "icon": "factory",
-            "at": 28.38
-          },
-          {
-            "label": "XYZ Ltd.",
-            "detail": "Purchaser",
-            "icon": "bank",
-            "at": 28.38
-          },
-          {
-            "label": "Wife of Sole-proprietor",
-            "detail": "Paramount Charge Holder",
-            "icon": "person",
-            "at": 28.38
-          }
-        ],
-        "edges": [
-          {
-            "from": "Source of Income",
-            "to": "XYZ Ltd.",
-            "label": "Transfer of Business",
-            "detail": "Condition of Purchase",
-            "at": 28.38
-          },
-          {
-            "from": "Source of Income",
-            "to": "Wife of Sole-proprietor",
-            "label": "Charged on Net Profits",
-            "detail": "Overriding Charge at Source",
-            "at": 29.9
-          }
-        ]
-      },
-      "start": 22.58,
-      "end": 31.82,
-      "id": "b3",
-      "director_goal": "Trace how the obligation attaches to the source of income as a condition of purchase in the sale deed.",
-      "anchor_phrases": [
-        "Condition of Purchase",
-        "Source of Income",
-        "Net Profits"
-      ],
-      "animation_role": "explanation",
-      "anchor_alignment": [
-        {
-          "phrase": "Condition of Purchase",
-          "at": 25.02,
-          "matched": true,
-          "score": 1.0
-        },
-        {
-          "phrase": "Source of Income",
-          "at": 28.38,
-          "matched": true,
-          "score": 1.0
-        },
-        {
-          "phrase": "Net Profits",
-          "at": 30.54,
-          "matched": true,
-          "score": 1.0
+          "score": 0.816
         }
       ],
       "anchor_match": {
@@ -305,45 +154,168 @@
       }
     },
     {
+      "layout": "compare_regimes",
+      "title": {
+        "text": "Diversion vs Application of Income",
+        "at": 23.01
+      },
+      "voice_sync_text": "ഇനി ഈ തുകയുടെ Tax Treatment മനസ്സിലാക്കാൻ രണ്ട് Doctrines താരതമ്യം ചെയ്യാം. Diversion of Income എന്നത് overriding legal obligation വഴി വരുമാനം അസ്സസ്സീയിലേക്ക് എത്തുന്നതിന് മുൻപേ വഴിതിരിച്ചുവിടുന്നതാണ്. എന്നാൽ Application of Income-ൽ വരുമാനം ആദ്യം അസ്സസ്സീയുടെ കയ്യിൽ എത്തുകയും, പിന്നീട് അത് ഉപയോഗിക്കുകയും ചെയ്യുന്നു.",
+      "visual_data": {
+        "regimes": [
+          {
+            "label": "Diversion of Income",
+            "detail": "Income diverted at source by overriding legal obligation before accrual",
+            "status": "Not Taxable / Deductible",
+            "pass": true,
+            "icon": "padlock",
+            "at": 29.35
+          },
+          {
+            "label": "Application of Income",
+            "detail": "Income reaches assessee first, then applied or spent",
+            "status": "Fully Taxable",
+            "pass": false,
+            "icon": "money_bag",
+            "at": 39.33
+          }
+        ]
+      },
+      "start": 22.71,
+      "end": 45.99,
+      "id": "b2",
+      "director_goal": "Contrast the doctrine of Diversion of Income by Overriding Charge against Application of Income.",
+      "anchor_phrases": [
+        "Diversion of Income",
+        "Application of Income",
+        "overriding legal obligation"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Diversion of Income",
+          "at": 29.35,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Application of Income",
+          "at": 39.33,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "overriding legal obligation",
+          "at": 30.25,
+          "matched": false,
+          "score": 0.383
+        }
+      ],
+      "anchor_match": {
+        "matched": 2,
+        "total": 3
+      }
+    },
+    {
+      "layout": "checklist_gate",
+      "title": {
+        "text": "Judicial Tests for Overriding Charge",
+        "at": 46.64
+      },
+      "voice_sync_text": "ഒരു പണം കൊടുക്കൽ Diversion ആകണമെങ്കിൽ ചില പരീക്ഷണങ്ങൾ വിജയിക്കണം. Sitaldas Tirathdas കേസിലെ benchmark പ്രകാരം legal obligation വരുമാനത്തിന്റെ കളിത്തൊട്ടിലായ attached to the source ആയിരിക്കണം. കൂടാതെ, ബിസിനസ്സ് വാങ്ങാനുള്ള ഒരു condition of purchase ആയി ഈ ബാധ്യത നിലനിൽക്കണം.",
+      "visual_data": {
+        "conditions": [
+          {
+            "label": "Attached to the source",
+            "detail": "Sitaldas Tirathdas benchmark: Charge attached directly to income generator",
+            "pass": true,
+            "icon": "scales",
+            "at": 59.38
+          },
+          {
+            "label": "Condition of purchase",
+            "detail": "Obligation accepted as essential prerequisite for takeover",
+            "pass": true,
+            "icon": "document",
+            "at": 63.92
+          }
+        ],
+        "outcome": "Qualifies as Diversion of Income by Overriding Charge"
+      },
+      "start": 46.34,
+      "end": 67.38,
+      "id": "b3",
+      "director_goal": "Check statutory and judicial test conditions regarding obligation attached to source and purchase prerequisite.",
+      "anchor_phrases": [
+        "attached to the source",
+        "condition of purchase",
+        "Sitaldas Tirathdas"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "attached to the source",
+          "at": 59.38,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "condition of purchase",
+          "at": 63.92,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Sitaldas Tirathdas",
+          "at": 51.43,
+          "matched": false,
+          "score": 0.308
+        }
+      ],
+      "anchor_match": {
+        "matched": 2,
+        "total": 3
+      }
+    },
+    {
       "layout": "case_card",
       "title": {
-        "text": "Judicial Precedent Benchmark",
-        "at": 32.47
+        "text": "Judicial Precedent: Jit & Pal X-Rays",
+        "at": 68.03
       },
-      "voice_sync_text": "In Jit & Pal X-Rays (P.) Ltd. v. CIT in 2004, the court held that a condition in the transfer deed creates an Overriding Charge.",
+      "voice_sync_text": "ഈ വിഷയം വ്യക്തമായി വിശദീകരിക്കുന്നത് Allahabad High Court-ന്റെ Jit & Pal X-Rays (P.) Ltd. v. CIT (2004) 267 ITR 370 വിധിയിലാണ്. ബിസിനസ് വാങ്ങിയ Sale Deed-ൽ തന്നെ net profits-ന്മേൽ ചാർജ് ചെയ്ത് നൽകുന്ന തുക അസ്സസ്സീയുടെ കൈകളിൽ എത്തുന്നതിന് മുൻപുള്ള Diversion ഓഫ് ഇൻകം ആണ് എന്ന് കോടതി വിധിച്ചു.",
       "visual_data": {
-        "case_name": "Jit & Pal X-Rays (P.) Ltd. v. CIT",
-        "court": "Allahabad High Court (2004)",
-        "principle": "Pre-existing charge created in acquisition deed attaches directly to source of income.",
-        "application": "Payment mandated by sale deed condition is an Overriding Charge diverting income before it reaches the company.",
-        "at": 32.17
+        "case_name": "Jit & Pal X-Rays (P.) Ltd. v. CIT (2004) 267 ITR 370",
+        "court": "Allahabad High Court",
+        "principle": "Payment attached as condition of purchase in sale deed charged on net profits is a diversion of income.",
+        "application": "XYZ Ltd.'s payment to sole-proprietor's wife is diverted at source, hence not taxable in company's hands.",
+        "at": 74.05
       },
-      "start": 32.17,
-      "end": 43.61,
+      "start": 67.73,
+      "end": 93.17,
       "id": "b4",
-      "director_goal": "Examine the judicial ruling in Jit & Pal X-Rays (P.) Ltd. v. CIT regarding pre-existing overriding charges.",
+      "director_goal": "Present the Allahabad High Court ruling in Jit & Pal X-Rays (P.) Ltd. v. CIT.",
       "anchor_phrases": [
         "Jit & Pal X-Rays (P.) Ltd. v. CIT",
-        "2004",
-        "Overriding Charge"
+        "267 ITR 370",
+        "net profits"
       ],
       "animation_role": "explanation",
       "anchor_alignment": [
         {
           "phrase": "Jit & Pal X-Rays (P.) Ltd. v. CIT",
-          "at": 32.71,
+          "at": 72.27,
           "matched": true,
-          "score": 0.796
+          "score": 0.852
         },
         {
-          "phrase": "2004",
-          "at": 36.69,
+          "phrase": "267 ITR 370",
+          "at": 77.71,
           "matched": true,
           "score": 1.0
         },
         {
-          "phrase": "Overriding Charge",
-          "at": 42.13,
+          "phrase": "net profits",
+          "at": 84.13,
           "matched": true,
           "score": 1.0
         }
@@ -356,62 +328,70 @@
     {
       "layout": "takeaway",
       "title": {
-        "text": "Final Tax Position",
-        "at": 44.26
+        "text": "Final Conclusion & Summary",
+        "at": 93.82
       },
-      "voice_sync_text": "Consequently, this is a Diversion of Income by Overriding Title, so the amount paid is Excluded from total income.",
+      "voice_sync_text": "അപ്പോൾ ഓർക്കുക, ബിസിനസ്സ് വാങ്ങുമ്പോൾ വെയ്ക്കുന്ന legal obligation മൂലം സംഭവിക്കുന്ന നൽകലുകൾ diversion of income ആയി മാറും. An overriding charge created at the time of acquisition is not taxable in the hands of assessee.",
       "visual_data": {
         "rules": [
           {
-            "label": "Diversion of Income by Overriding Title",
-            "detail": "Payment obligation attached to source as condition of sale deed.",
-            "status": "Excluded",
-            "icon": "padlock",
-            "at": 45.72
+            "label": "Diversion of Income Established",
+            "detail": "Payment under overriding charge attached to source of acquisition",
+            "status": "Valid Diversion",
+            "pass": true,
+            "icon": "gavel",
+            "at": 95.18
           },
           {
-            "label": "Tax Impact on XYZ Ltd.",
-            "detail": "₹ 15,000 p.a. is excluded from taxable profits.",
-            "value": "₹ 15,000 p.a.",
-            "amount": 15000,
-            "icon": "scales",
-            "at": 45.72
+            "label": "Tax Impact",
+            "detail": "The amount is not taxable in the hands of assessee company",
+            "status": "Excluded from Total Income",
+            "pass": true,
+            "icon": "padlock",
+            "at": 105.44
           }
         ]
       },
-      "start": 43.96,
-      "end": 53.0,
+      "start": 93.52,
+      "end": 109.4,
       "id": "b5",
-      "director_goal": "Summarize the final conclusion that the payment is excluded from the total income of XYZ Ltd.",
+      "director_goal": "Summarize the key takeaway on tax deductibility for overriding charges created upon acquisition.",
       "anchor_phrases": [
-        "Diversion of Income by Overriding Title",
-        "Excluded"
+        "diversion of income",
+        "overriding charge",
+        "not taxable in the hands of assessee"
       ],
       "animation_role": "key_fact",
       "anchor_alignment": [
         {
-          "phrase": "Diversion of Income by Overriding Title",
-          "at": 45.72,
+          "phrase": "diversion of income",
+          "at": 95.18,
           "matched": true,
           "score": 1.0
         },
         {
-          "phrase": "Excluded",
-          "at": 50.64,
+          "phrase": "overriding charge",
+          "at": 103.22,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "not taxable in the hands of assessee",
+          "at": 107.04,
           "matched": true,
           "score": 1.0
         }
       ],
       "anchor_match": {
-        "matched": 2,
-        "total": 2
+        "matched": 3,
+        "total": 3
       }
     }
   ],
-  "audio_duration_sec": 53.0,
+  "audio_duration_sec": 109.4,
   "anchor_match": {
-    "matched": 15,
-    "total": 16,
-    "rate": 0.938
+    "matched": 13,
+    "total": 15,
+    "rate": 0.867
   }
 }

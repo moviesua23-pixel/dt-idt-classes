@@ -1,17 +1,16 @@
 {
   "question_id": "dt-c1-q9",
   "audio_url": "data/audio/dt-c1-q9.mp3",
-  "duration_sec": 58.52,
+  "duration_sec": 72.35,
   "sync_offset_sec": 0.0,
-  "context_pill": "Direct Tax / Marginal Relief",
-  "example_summary": "Marginal relief calculation for X Ltd. for A.Y. 2026-27",
-  "source_provision": "| Category / Parameter | Statutory Condition / Benchmark | Tax Rate / Legal Consequence |\n| :--- | :--- | :--- |\n| **Domestic Company Basic Rate (Concessional Turnover)** | Gross receipts/turnover in PY ≤ ₹ 400 Crore | **25%** of Total Income |\n| **Domestic Company Basic Rate (Standard)** | Gross receipts/turnover in PY > ₹ 400 Crore | **30%** of Total Income |\n| **Surcharge Slab 1** | Total Income > ₹ 1 Crore but ≤ ₹ 10 Crore | **7%** of Basic Tax |\n| **Surcharge Slab 2** | Total Income > ₹ 10 Crore | **12%** of Basic Tax |\n| **Health & Education Cess** | Levied on (Basic Tax + Surcharge - Marginal Relief) | **4%** |\n\n### Core Statutory Checklist\n\n* **Marginal Relief Applicability**: Available whenever total income exceeds the surcharge threshold limit of ₹ 1 Crore or ₹ 10 Crore.\n\n* **Statutory Formula for Marginal Relief**:\n  $$\\text{Marginal Relief} = (\\text{Tax} + \\text{Surcharge on Total Income}) - [\\text{Tax on Threshold Limit} + (\\text{Total Income} - \\text{Threshold Limit})]$$\n\n> [!IMPORTANT]\n> **Statutory Cap on Incremental Tax**: The tax payable (including surcharge) on income exceeding ₹ 1 Crore shall NOT exceed the tax payable on ₹ 1 Crore PLUS the amount of total income that exceeds ₹ 1 Crore.",
+  "context_pill": "Marginal Relief for Domestic Companies",
+  "example_summary": "Calculating the tax liability and marginal relief for X Ltd., a domestic company whose income slightly exceeds the ₹ 1 Crore surcharge threshold.",
+  "source_provision": "### Statutory Summary Matrix\n\n| Particulars | Domestic Company (< ₹ 400 Crore Turnover) | Domestic Company (> ₹ 400 Crore Turnover) |\n| :--- | :--- | :--- |\n| **Base Tax Rate** | 25% | 30% |\n| **Surcharge @ Total Income > ₹ 1 Crore to ₹ 10 Crore** | 7% | 7% |\n| **Surcharge @ Total Income > ₹ 10 Crore** | 12% | 12% |\n\n\n> [!IMPORTANT] Marginal Relief Rule:\n> Tax liability including surcharge on total income exceeding ₹ 1 Crore or ₹ 10 Crore shall not exceed the tax payable on total income at the respective threshold plus the amount of income exceeding that threshold.\n\n\n- **Incremental Tax Cap:** Excess tax payable due to higher surcharge cannot be greater than the actual incremental income earned above the threshold limit.\n\n\n- **Non-applicability:** Provisions of Section 115BAA or Section 115BAB offer concessional tax rates with different surcharge dynamics.",
   "director": {
     "archetype": "threshold_test",
-    "justification": "The question requires calculating marginal relief for a domestic company whose income crosses the surcharge threshold of ₹ 1 crore, necessitating a comparison between actual tax liability and the statutory cap.",
+    "justification": "The scenario evaluates whether the tax increase caused by crossing the ₹ 1 Crore threshold exceeds the incremental income, necessitating a marginal relief calculation.",
     "protagonist": "X Ltd.",
     "actors": [
-      "X Ltd.",
       "Income Tax Department"
     ],
     "key_numbers": [
@@ -19,6 +18,7 @@
       "₹ 402 crore",
       "30%",
       "7%",
+      "₹ 32,42,100",
       "₹ 31,00,000",
       "₹ 1,42,100"
     ],
@@ -26,48 +26,57 @@
       "A.Y. 2026-27",
       "P.Y. 2023-24"
     ],
-    "visual_metaphor": "A bridge crossing a toll gate where the toll cannot exceed the distance traveled beyond the gate.",
+    "visual_metaphor": "A pressure valve that releases excess tax when the income barely crosses the threshold pipe.",
     "beat_plan": [
       {
-        "beat_goal": "Introduce X Ltd. and the tax computation scenario for A.Y. 2026-27.",
+        "beat_goal": "Establish the profile of X Ltd. and its total income for the assessment year.",
         "layout": "example_scene",
         "anchor_phrases": [
           "X Ltd.",
-          "A.Y. 2026-27",
-          "₹ 1,01,00,000"
+          "Total Income ₹ 1,01,00,000",
+          "A.Y. 2026-27"
         ]
       },
       {
-        "beat_goal": "Determine the applicable basic tax rate based on P.Y. 2023-24 turnover.",
-        "layout": "flow_actors",
+        "beat_goal": "Determine the applicable base tax rate based on historical turnover.",
+        "layout": "decision_tree",
         "anchor_phrases": [
-          "₹ 402 crore",
-          "30% basic rate"
+          "P.Y. 2023-24 Turnover ₹ 402 crore",
+          "Base Rate 30%"
         ]
       },
       {
-        "beat_goal": "Calculate the tax liability including the 7% surcharge.",
-        "layout": "ledger",
+        "beat_goal": "Calculate the initial tax liability including the surcharge for exceeding the threshold.",
+        "layout": "slab_ladder",
         "anchor_phrases": [
-          "7% surcharge",
+          "Surcharge @ 7%",
+          "Tax @ 32.1%",
           "₹ 32,42,100"
         ]
       },
       {
-        "beat_goal": "Apply the statutory cap rule for marginal relief.",
-        "layout": "waterfall",
+        "beat_goal": "Calculate the statutory cap on tax liability at the threshold limit.",
+        "layout": "compare_regimes",
         "anchor_phrases": [
-          "Statutory cap",
-          "₹ 1 crore threshold",
-          "₹ 31,00,000"
+          "Tax on ₹ 1 Crore",
+          "Excess Income ₹ 1,00,000",
+          "Cap ₹ 31,00,000"
         ]
       },
       {
-        "beat_goal": "Finalize the marginal relief amount.",
+        "beat_goal": "Compute the marginal relief by finding the difference between actual tax and the cap.",
+        "layout": "ledger",
+        "anchor_phrases": [
+          "₹ 32,42,100 minus ₹ 31,00,000",
+          "Marginal Relief ₹ 1,42,100"
+        ]
+      },
+      {
+        "beat_goal": "State the final tax payable after applying marginal relief.",
         "layout": "takeaway",
         "anchor_phrases": [
-          "Marginal relief",
-          "₹ 1,42,100"
+          "Tax Payable ₹ 31,00,000",
+          "Marginal Relief Rule"
         ]
       }
     ]
@@ -77,65 +86,67 @@
     {
       "layout": "example_scene",
       "title": {
-        "text": "Assessee Profile & Income",
+        "text": "Profile of X Ltd.",
         "at": 0.3
       },
-      "voice_sync_text": "A.Y. 2026-27-ൽ X Ltd. എന്ന domestic company-യുടെ Total Income ₹ 1,01,00,000 ആയി സാമ്പിൾ കേസ് പരിശോധിക്കാം.",
+      "voice_sync_text": "നമുക്ക് X Ltd. എന്ന ഒരു domestic company-യുടെ കേസ് നോക്കാം. A.Y. 2026-27 വർഷത്തിൽ ഇവരുടെ Total Income ₹ 1,01,00,000 ആണ്. ഈ ഇൻകം ഒരു കോടി രൂപയുടെ ലിമിറ്റ് ജസ്റ്റ് ഒന്ന് ക്രോസ്സ് ചെയ്തിരിക്കുകയാണ്.",
       "visual_data": {
         "actors": [
           {
             "label": "X Ltd.",
-            "detail": "Domestic Company",
-            "value": "₹ 1,01,00,000",
             "icon": "factory",
-            "at": 3.72
-          }
-        ],
-        "transaction": "Tax Computation for A.Y. 2026-27",
-        "facts": [
-          {
-            "label": "Assessment Year",
-            "value": "A.Y. 2026-27",
-            "icon": "calendar",
-            "at": 3.72
+            "detail": "Domestic Company",
+            "at": 3.2
           },
           {
-            "label": "Total Income",
-            "value": "₹ 1,01,00,000",
+            "label": "Income Tax Department",
+            "icon": "gavel",
+            "at": 6.24
+          }
+        ],
+        "transaction": "Assessment of Total Income",
+        "facts": [
+          {
+            "label": "Total Income ₹ 1,01,00,000",
             "amount": 10100000,
             "icon": "money_bag",
-            "at": 3.72
+            "at": 6.24
+          },
+          {
+            "label": "A.Y. 2026-27",
+            "icon": "calendar",
+            "at": 6.24
           }
         ]
       },
       "start": 0.0,
       "end": 10.24,
       "id": "b1",
-      "director_goal": "Introduce X Ltd. and the tax computation scenario for A.Y. 2026-27.",
+      "director_goal": "Establish the profile of X Ltd. and its total income for the assessment year.",
       "anchor_phrases": [
         "X Ltd.",
-        "A.Y. 2026-27",
-        "₹ 1,01,00,000"
+        "Total Income ₹ 1,01,00,000",
+        "A.Y. 2026-27"
       ],
       "animation_role": "key_fact",
       "anchor_alignment": [
         {
           "phrase": "X Ltd.",
-          "at": 3.72,
+          "at": 3.2,
           "matched": true,
           "score": 0.834
         },
         {
-          "phrase": "A.Y. 2026-27",
-          "at": 0.0,
-          "matched": false,
-          "score": 0.37
+          "phrase": "Total Income ₹ 1,01,00,000",
+          "at": 5.86,
+          "matched": true,
+          "score": 0.773
         },
         {
-          "phrase": "₹ 1,01,00,000",
-          "at": 7.84,
-          "matched": true,
-          "score": 0.484
+          "phrase": "A.Y. 2026-27",
+          "at": 3.15,
+          "matched": false,
+          "score": 0.261
         }
       ],
       "anchor_match": {
@@ -144,59 +155,50 @@
       }
     },
     {
-      "layout": "flow_actors",
+      "layout": "decision_tree",
       "title": {
-        "text": "Applicable Basic Tax Rate",
+        "text": "Determining Base Tax Rate",
         "at": 10.89
       },
-      "voice_sync_text": "P.Y. 2023-24-ലെ turnover ₹ 402 crore ആയതിനാൽ, ₹ 400 crore പരിധി കടന്നതുകൊണ്ട് 30% basic rate ആണ് ഇവിടെ ബാധകമാകുന്നത്.",
+      "voice_sync_text": "ഒരു കമ്പനിയുടെ ടാക്സ് റേറ്റ് തീരുമാനിക്കുന്നത് അവരുടെ പ്രീവിയസ് ഇയറിലെ ടേൺ ഓവർ വെച്ചാണ്. ഇവിടെ P.Y. 2023-24 Turnover ₹ 402 crore ആയതുകൊണ്ട്, 400 കോടിക്ക് മുകളിൽ ആയതിനാൽ Base Rate 30% ആയിരിക്കും ബാധകം.",
       "visual_data": {
-        "actors": [
+        "root": "Turnover Check for Tax Rate",
+        "branches": [
           {
-            "label": "P.Y. 2023-24 Turnover",
-            "value": "₹ 402 crore",
-            "detail": "Exceeds ₹ 400 crore limit",
-            "icon": "factory",
+            "label": "P.Y. 2023-24 Turnover ₹ 402 crore",
+            "amount": 4020000000,
+            "status": "Above 400 Cr",
             "at": 10.87
           },
           {
-            "label": "Applicable Tax Rate",
-            "value": "30% basic rate",
-            "detail": "Standard Domestic Rate",
-            "icon": "scales",
-            "at": 15.45
-          }
-        ],
-        "edges": [
-          {
-            "from": "P.Y. 2023-24 Turnover",
-            "to": "Applicable Tax Rate",
-            "label": "Turnover > ₹ 400 crore",
-            "at": 15.45
+            "label": "Base Rate 30%",
+            "value": "Applicable Rate",
+            "pass": true,
+            "at": 19.47
           }
         ]
       },
       "start": 10.59,
       "end": 22.79,
       "id": "b2",
-      "director_goal": "Determine the applicable basic tax rate based on P.Y. 2023-24 turnover.",
+      "director_goal": "Determine the applicable base tax rate based on historical turnover.",
       "anchor_phrases": [
-        "₹ 402 crore",
-        "30% basic rate"
+        "P.Y. 2023-24 Turnover ₹ 402 crore",
+        "Base Rate 30%"
       ],
       "animation_role": "explanation",
       "anchor_alignment": [
         {
-          "phrase": "₹ 402 crore",
-          "at": 14.35,
+          "phrase": "P.Y. 2023-24 Turnover ₹ 402 crore",
+          "at": 11.27,
           "matched": true,
-          "score": 1.0
+          "score": 0.704
         },
         {
-          "phrase": "30% basic rate",
-          "at": 19.27,
+          "phrase": "Base Rate 30%",
+          "at": 19.47,
           "matched": true,
-          "score": 1.0
+          "score": 0.727
         }
       ],
       "anchor_match": {
@@ -205,44 +207,59 @@
       }
     },
     {
-      "layout": "ledger",
+      "layout": "slab_ladder",
       "title": {
-        "text": "Calculated Tax & Surcharge",
+        "text": "Initial Tax Calculation",
         "at": 23.44
       },
-      "voice_sync_text": "Total Income ₹ 1 crore-ന് മുകളിലായതിനാൽ 7% surcharge ചേർത്ത് calculated tax ₹ 32,42,100 ആയി വരുന്നു.",
+      "voice_sync_text": "ഇനി ടാക്സ് കണക്കാക്കാം. ഇൻകം ഒരു കോടി കഴിഞ്ഞാൽ Surcharge @ 7% വരും. അപ്പോൾ ടോട്ടൽ Tax @ 32.1% വരും, അതായത് ₹ 32,42,100 ആണ് പ്രൈമറി ടാക്സ് ലയബിലിറ്റി.",
       "visual_data": {
-        "rows": [
+        "tiers": [
           {
-            "label": "Total Income",
-            "value": "₹ 1,01,00,000",
-            "detail": "Exceeds ₹ 1 crore threshold",
-            "at": 23.48
+            "label": "Base Tax (30% of 1.01 Cr)",
+            "amount": 3030000,
+            "at": 28.26
           },
           {
-            "label": "Surcharge Rate",
-            "value": "7% surcharge",
-            "detail": "Applicable rate",
-            "at": 26.76
+            "label": "Surcharge @ 7%",
+            "amount": 212100,
+            "at": 28.26
+          },
+          {
+            "label": "Tax @ 32.1%",
+            "amount": 3242100,
+            "detail": "Total before Relief",
+            "icon": "money_bag",
+            "at": 28.94
           }
         ],
-        "total": "₹ 32,42,100"
+        "spoken_amounts": [
+          "₹ 32,42,100",
+          "32,42,100"
+        ]
       },
       "start": 23.14,
       "end": 33.14,
       "id": "b3",
-      "director_goal": "Calculate the tax liability including the 7% surcharge.",
+      "director_goal": "Calculate the initial tax liability including the surcharge for exceeding the threshold.",
       "anchor_phrases": [
-        "7% surcharge",
+        "Surcharge @ 7%",
+        "Tax @ 32.1%",
         "₹ 32,42,100"
       ],
       "animation_role": "explanation",
       "anchor_alignment": [
         {
-          "phrase": "7% surcharge",
-          "at": 25.62,
+          "phrase": "Surcharge @ 7%",
+          "at": 26.34,
           "matched": true,
           "score": 1.0
+        },
+        {
+          "phrase": "Tax @ 32.1%",
+          "at": 28.94,
+          "matched": true,
+          "score": 0.72
         },
         {
           "phrase": "₹ 32,42,100",
@@ -252,140 +269,185 @@
         }
       ],
       "anchor_match": {
-        "matched": 2,
-        "total": 2
+        "matched": 3,
+        "total": 3
       }
     },
     {
-      "layout": "waterfall",
+      "layout": "compare_regimes",
       "title": {
-        "text": "Statutory Cap Calculation",
+        "text": "Statutory Tax Cap",
         "at": 33.79
       },
-      "voice_sync_text": "Statutory cap പ്രകാരം, ₹ 1 crore threshold-ലെ tax ₹ 30,00,000-ഓടൊപ്പം excess income ₹ 1,00,000 കൂട്ടി maximum tax ₹ 31,00,000 ആയി നിശ്ചയിക്കുന്നു.",
+      "voice_sync_text": "പക്ഷേ ഇവിടെ ഒരു ആശ്വാസമുണ്ട്. Tax on ₹ 1 Crore അതായത് 30 ലക്ഷം രൂപയും, പിന്നെ ഒരു കോടിക്ക് മുകളിലുള്ള Excess Income ₹ 1,00,000-ഉം കൂടി ചേർത്താൽ കിട്ടുന്ന Cap ₹ 31,00,000-ൽ കൂടുതൽ ടാക്സ് വരാൻ പാടില്ല.",
       "visual_data": {
-        "stages": [
+        "regimes": [
           {
-            "label": "Tax on ₹ 1 crore threshold",
-            "value": "₹ 30,00,000",
+            "label": "Tax on ₹ 1 Crore",
             "amount": 3000000,
-            "icon": "bank",
             "at": 35.93
           },
           {
-            "label": "Excess Income above ₹ 1 crore",
-            "value": "₹ 1,00,000",
+            "label": "Excess Income ₹ 1,00,000",
             "amount": 100000,
-            "icon": "money_bag",
-            "at": 37.57
+            "sign": "+",
+            "at": 39.05
           },
           {
-            "label": "Statutory cap on Tax Payable",
-            "value": "₹ 31,00,000",
+            "label": "Cap ₹ 31,00,000",
             "amount": 3100000,
-            "icon": "padlock",
-            "at": 37.57
+            "status": "Maximum Limit",
+            "at": 39.05
           }
         ]
       },
       "start": 33.49,
       "end": 44.33,
       "id": "b4",
-      "director_goal": "Apply the statutory cap rule for marginal relief.",
+      "director_goal": "Calculate the statutory cap on tax liability at the threshold limit.",
       "anchor_phrases": [
-        "Statutory cap",
-        "₹ 1 crore threshold",
-        "₹ 31,00,000"
+        "Tax on ₹ 1 Crore",
+        "Excess Income ₹ 1,00,000",
+        "Cap ₹ 31,00,000"
       ],
       "animation_role": "explanation",
       "anchor_alignment": [
         {
-          "phrase": "Statutory cap",
-          "at": 34.55,
-          "matched": true,
-          "score": 1.0
-        },
-        {
-          "phrase": "₹ 1 crore threshold",
+          "phrase": "Tax on ₹ 1 Crore",
           "at": 35.93,
           "matched": true,
           "score": 1.0
         },
         {
-          "phrase": "₹ 31,00,000",
-          "at": 42.71,
-          "matched": true,
-          "score": 0.473
+          "phrase": "Excess Income ₹ 1,00,000",
+          "at": 39.05,
+          "matched": false,
+          "score": 0.304
+        },
+        {
+          "phrase": "Cap ₹ 31,00,000",
+          "at": 41.88,
+          "matched": false,
+          "score": 0.333
         }
       ],
       "anchor_match": {
-        "matched": 3,
+        "matched": 1,
         "total": 3
       }
     },
     {
-      "layout": "takeaway",
+      "layout": "ledger",
       "title": {
-        "text": "Final Marginal Relief",
+        "text": "Computing Marginal Relief",
         "at": 44.98
       },
-      "voice_sync_text": "അതുകൊണ്ട് calculated tax ₹ 32,42,100-ൽ നിന്ന് cap amount ₹ 31,00,000 കുറച്ച് Marginal relief ₹ 1,42,100 ലഭിക്കുന്നു.",
+      "voice_sync_text": "അതുകൊണ്ട്, നമ്മൾ ആദ്യം കണ്ടുപിടിച്ച ₹ 32,42,100 minus ₹ 31,00,000 ചെയ്താൽ കിട്ടുന്ന തുകയായ Marginal Relief ₹ 1,42,100 കമ്പനിക്ക് ക്ലെയിം ചെയ്യാം.",
       "visual_data": {
-        "rules": [
+        "rows": [
           {
-            "label": "Calculated Tax Liability",
-            "value": "₹ 32,42,100",
-            "detail": "Tax including 7% surcharge",
-            "at": 45.84
+            "label": "Initial Tax with Surcharge",
+            "amount": 3242100,
+            "at": 44.68
           },
           {
-            "label": "Statutory Cap Limit",
-            "value": "₹ 31,00,000",
-            "detail": "Tax on ₹ 1 crore + Excess Income",
-            "at": 47.19
-          },
-          {
-            "label": "Marginal relief",
-            "value": "₹ 1,42,100",
-            "detail": "₹ 32,42,100 - ₹ 31,00,000",
-            "icon": "scales",
-            "at": 53.76
+            "label": "Maximum Tax Cap",
+            "amount": 3100000,
+            "sign": "-",
+            "at": 44.68
           }
+        ],
+        "total": "Marginal Relief ₹ 1,42,100",
+        "spoken_amounts": [
+          "₹ 32,42,100",
+          "₹ 31,00,000",
+          "32,42,100",
+          "31,00,000"
         ]
       },
       "start": 44.68,
       "end": 58.52,
       "id": "b5",
-      "director_goal": "Finalize the marginal relief amount.",
+      "director_goal": "Compute the marginal relief by finding the difference between actual tax and the cap.",
       "anchor_phrases": [
-        "Marginal relief",
-        "₹ 1,42,100"
+        "₹ 32,42,100 minus ₹ 31,00,000",
+        "Marginal Relief ₹ 1,42,100"
       ],
-      "animation_role": "key_fact",
+      "animation_role": "explanation",
       "anchor_alignment": [
         {
-          "phrase": "Marginal relief",
-          "at": 53.76,
+          "phrase": "₹ 32,42,100 minus ₹ 31,00,000",
+          "at": 47.84,
           "matched": true,
-          "score": 1.0
+          "score": 0.64
         },
         {
-          "phrase": "₹ 1,42,100",
-          "at": 55.12,
+          "phrase": "Marginal Relief ₹ 1,42,100",
+          "at": 53.76,
           "matched": true,
-          "score": 1.0
+          "score": 0.929
         }
       ],
       "anchor_match": {
         "matched": 2,
         "total": 2
       }
+    },
+    {
+      "layout": "takeaway",
+      "title": {
+        "text": "Final Tax Liability",
+        "at": 59.17
+      },
+      "voice_sync_text": "അവസാനമായി, Marginal Relief Rule പ്രകാരം X Ltd. അടയ്ക്കേണ്ട Tax Payable ₹ 31,00,000 ആണ്. ഇൻകം കൂടിയതിനേക്കാൾ കൂടുതൽ ടാക്സ് അടയ്ക്കേണ്ടി വരില്ല എന്ന് ഇത് ഉറപ്പാക്കുന്നു.",
+      "visual_data": {
+        "rules": [
+          {
+            "label": "Marginal Relief Rule",
+            "detail": "Tax cannot exceed (Tax at threshold + Excess Income)",
+            "at": 60.51
+          },
+          {
+            "label": "Tax Payable ₹ 31,00,000",
+            "amount": 3100000,
+            "icon": "scales",
+            "at": 62.71
+          }
+        ]
+      },
+      "start": 58.87,
+      "end": 72.35,
+      "id": "b6",
+      "director_goal": "State the final tax payable after applying marginal relief.",
+      "anchor_phrases": [
+        "Tax Payable ₹ 31,00,000",
+        "Marginal Relief Rule"
+      ],
+      "animation_role": "key_fact",
+      "anchor_alignment": [
+        {
+          "phrase": "Tax Payable ₹ 31,00,000",
+          "at": 62.71,
+          "matched": true,
+          "score": 0.804
+        },
+        {
+          "phrase": "Marginal Relief Rule",
+          "at": 59.76,
+          "matched": false,
+          "score": 0.333
+        }
+      ],
+      "anchor_match": {
+        "matched": 1,
+        "total": 2
+      }
     }
   ],
-  "audio_duration_sec": 58.52,
+  "audio_duration_sec": 72.35,
   "anchor_match": {
     "matched": 11,
-    "total": 12,
-    "rate": 0.917
+    "total": 15,
+    "rate": 0.733
   }
 }
