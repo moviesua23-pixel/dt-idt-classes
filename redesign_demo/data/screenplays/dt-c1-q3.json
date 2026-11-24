@@ -3,12 +3,12 @@
   "audio_url": "data/audio/dt-c1-q3.mp3",
   "duration_sec": 127.11,
   "sync_offset_sec": 0.0,
-  "context_pill": "Diversion vs Application of Income",
-  "example_summary": "MKG Agency partnership deed requires paying 20% of profits to mother after father's death; reconstituted firm paid ₹ 1 lakh in PY 2025-26 and claimed exclusion as diversion of income by overriding title.",
-  "source_provision": "### Statutory Summary Matrix: Diversion vs Application of Income\n\n| Doctrine / Concept | Statutory Provision | Core Legal Test / Condition | Tax Treatment & Judicial Precedent |\n| :--- | :--- | :--- | :--- |\n| **Diversion of Income by Overriding Title** | Section 4 | Creation of a legal charge or obligation prior to receipt where income never reaches the assessee's hands as beneficial owner | Excluded from the total income of the recipient entity; treated as income of the rightful holder (CIT vs. Nariman B. Bharucha & Sons) |\n| **Application of Income** | Section 4 | Disposing of income after it has already accrued or been received by the assessee pursuant to a voluntary obligation | Included in the total income of the assessee; no deduction allowed for such application |\n\n\n> [!IMPORTANT]\n> **Core Statutory Test**: The fundamental distinction rests on whether the obligation diverts the source of income itself or merely applies the income after it is received.\n\n\n> [!WARNING]\n> **Judicial Precedent**: As established in *CIT vs. Nariman B. Bharucha & Sons (1981)*, overriding statutory or contractual charges created prior to receipt successfully divert income at source.",
+  "context_pill": "Diversion of Income by Overriding Title",
+  "example_summary": "MKG Agency partnership firm makes a payment of 20% of profits amounting to ₹ 1 lakh to the mother in March 2025 following the father's death, claiming it as a deduction for 2025-26.",
+  "source_provision": "### Statutory Framework: Diversion vs Application of Income\n\n| Feature | Diversion of Income by Overriding Title | Application of Income |\n| :--- | :--- | :--- |\n| **Point of Legal Transfer** | Diverted at source **before** reaching the assessee. | Applied **after** reaching/accruing to the assessee. |\n| **Nature of Obligation** | Pre-existing enforceable charge attached to the income source. | Voluntary or contractual obligation created post-accrual. |\n| **Title to Income** | Third party holds a superior legal title to the income. | Assessee holds full title before applying the funds. |\n| **Tax Consequence** | Excluded from the Total Income of the assessee. | Included in Total Income; no deduction allowed. |\n\n\n#### Key Statutory Criteria for Overriding Title\n\n* **Enforceable Legal Instrument:** The obligation must be created by a statute, court decree, or binding contract (e.g., Partnership Deed).\n* **Charge on Source:** The obligation must bind the income at its source, preventing it from legally accruing as the assessee's income.\n\n\n> [!IMPORTANT] Supreme Court & High Court Benchmarks\n> * **CIT v. Sitaldas Tirathdas (1961) 41 ITR 367 (SC):** True test is whether the obligation diverts income before it reaches the assessee, or whether it is an obligation to apply income after it has accrued.\n> * **CIT v. Nariman B. Bharucha & Sons (1981) 130 ITR 863 (Bom):** Payments made to third parties pursuant to a charge created on profits by a partnership deed constitute diversion of income by overriding title and are excluded from the firm's total income.",
   "director": {
     "archetype": "classification_decision_tree",
-    "justification": "The core legal issue is classifying the payment as either a 'Diversion of Income by Overriding Title' or an 'Application of Income' to determine its taxability in the hands of the firm.",
+    "justification": "The core legal issue is classifying the payment as either a diversion of income by overriding title or a mere application of income based on the partnership deed's terms.",
     "protagonist": "MKG Agency",
     "actors": [
       "Father",
@@ -21,48 +21,39 @@
     ],
     "key_dates": [
       "March 2025",
-      "PY 2025-26"
+      "2025-26"
     ],
-    "visual_metaphor": "A pipeline junction where a 'Legal Charge' valve diverts 20% of the flow into a separate tank before it reaches the main meter.",
+    "visual_metaphor": "A river with a pre-built canal that redirects 20% of the water before it ever reaches the main reservoir.",
     "beat_plan": [
       {
-        "beat_goal": "Establish the MKG Agency partnership structure and the specific profit-sharing condition triggered by the father's death.",
+        "beat_goal": "Establish the partnership structure and the specific profit-sharing condition triggered by the father's death.",
         "layout": "example_scene",
         "anchor_phrases": [
           "MKG Agency",
-          "March 2025",
-          "20% of the profits to the mother"
+          "20% of the profits",
+          "March 2025"
         ]
       },
       {
-        "beat_goal": "Visualize the movement of the ₹ 1 lakh payment from the firm to the mother in PY 2025-26.",
-        "layout": "flow_actors",
-        "anchor_phrases": [
-          "PY 2025-26",
-          "₹ 1 lakh",
-          "reconstituted firm"
-        ]
-      },
-      {
-        "beat_goal": "Contrast the two legal doctrines: Diversion vs. Application of Income.",
-        "layout": "compare_regimes",
-        "anchor_phrases": [
-          "Section 4",
-          "Diversion of Income",
-          "Application of Income"
-        ]
-      },
-      {
-        "beat_goal": "Apply the 'Overriding Title' test to determine if the income reached the assessee as a beneficial owner.",
+        "beat_goal": "Determine if the obligation to pay the mother constitutes a diversion at source or an application of income.",
         "layout": "decision_tree",
         "anchor_phrases": [
+          "Diverted at source",
           "Overriding Title",
-          "diverted at source",
-          "legal charge"
+          "Pre-existing legal charge"
         ]
       },
       {
-        "beat_goal": "Cite the judicial precedent that validates the exclusion of such diverted income.",
+        "beat_goal": "Visualize the flow of the ₹ 1 lakh directly to the mother, bypassing the firm's taxable income.",
+        "layout": "flow_actors",
+        "anchor_phrases": [
+          "₹ 1 lakh",
+          "Mother",
+          "Assessee-firm"
+        ]
+      },
+      {
+        "beat_goal": "Cite the judicial precedent that validates the exclusion of such payments from the firm's income.",
         "layout": "case_card",
         "anchor_phrases": [
           "CIT vs. Nariman B. Bharucha & Sons",
@@ -70,11 +61,20 @@
         ]
       },
       {
-        "beat_goal": "Conclude on the correctness of the firm's claim to exclude the amount from its income.",
+        "beat_goal": "Contrast the tax treatment of diversion versus application of income.",
+        "layout": "compare_regimes",
+        "anchor_phrases": [
+          "Diversion of Income",
+          "Application of Income",
+          "Excluded from Total Income"
+        ]
+      },
+      {
+        "beat_goal": "Conclude on the validity of the firm's claim for deduction/exclusion.",
         "layout": "takeaway",
         "anchor_phrases": [
-          "excluded from the income",
-          "claim of the firm is correct"
+          "Claim of the firm is correct",
+          "Excluded from the income"
         ]
       }
     ]
@@ -84,52 +84,49 @@
     {
       "layout": "example_scene",
       "title": {
-        "text": "MKG Agency Partnership Terms",
+        "text": "MKG Agency Structure",
         "at": 0.3
       },
-      "voice_sync_text": "നമുക്ക് MKG Agency എന്ന partnership firm-ന്റെ കേസ് നോക്കാം. Father and three sons ആയിരുന്നു partners. Deed പ്രകാരം father-ന്റെ മരണശേഷം business 3 മക്കൾ തുടരുമ്പോൾ, 20% of the profits to the mother നൽകണം എന്ന വ്യവസ്ഥയുണ്ടായിരുന്നു. Father died in March 2025.",
+      "voice_sync_text": "Section 4-ൽ Income-ന്റെ taxability പഠിക്കുമ്പോൾ, MKG Agency എന്ന partnership firm-ന്റെ കേസ് നോക്കാം. Partnership deed പ്രകാരം father-ന്റെ മരണശേഷം business sons തുടരണം, ഒപ്പം 20% of the profits mother-ന് നൽകണം എന്ന شرط ഉണ്ട്. March 2025-ൽ father അന്തരിച്ചു.",
       "visual_data": {
         "actors": [
           {
             "label": "MKG Agency",
-            "detail": "Partnership Firm",
+            "detail": "Partnership firm",
             "icon": "factory",
             "at": 0.0
           },
           {
-            "label": "Father",
-            "detail": "Deceased Partner",
-            "date": "March 2025",
+            "label": "Father & Sons",
+            "detail": "Partners",
             "icon": "person",
-            "at": 4.48
-          },
-          {
-            "label": "Mother",
-            "detail": "Beneficiary of 20% profits",
-            "value": "20%",
-            "icon": "person",
-            "at": 17.68
+            "at": 11.98
           }
         ],
-        "transaction": "Partnership Deed Provision",
+        "transaction": "Partnership profit sharing obligation",
         "facts": [
           {
-            "label": "Deed Obligation",
-            "detail": "20% of the profits to the mother upon father's death",
+            "label": "Share",
+            "value": "20% of the profits",
+            "icon": "money_bag",
+            "at": 15.28
+          },
+          {
+            "label": "Event Date",
             "date": "March 2025",
-            "value": "20%",
-            "at": 26.42
+            "icon": "calendar",
+            "at": 15.28
           }
         ]
       },
       "start": 0.0,
       "end": 30.32,
       "id": "b1",
-      "director_goal": "Establish the MKG Agency partnership structure and the specific profit-sharing condition triggered by the father's death.",
+      "director_goal": "Establish the partnership structure and the specific profit-sharing condition triggered by the father's death.",
       "anchor_phrases": [
         "MKG Agency",
-        "March 2025",
-        "20% of the profits to the mother"
+        "20% of the profits",
+        "March 2025"
       ],
       "animation_role": "key_fact",
       "anchor_alignment": [
@@ -140,147 +137,16 @@
           "score": 0.75
         },
         {
+          "phrase": "20% of the profits",
+          "at": 15.7,
+          "matched": true,
+          "score": 1.0
+        },
+        {
           "phrase": "March 2025",
-          "at": 6.82,
-          "matched": true,
-          "score": 1.0
-        },
-        {
-          "phrase": "20% of the profits to the mother",
-          "at": 26.42,
-          "matched": true,
-          "score": 0.987
-        }
-      ],
-      "anchor_match": {
-        "matched": 3,
-        "total": 3
-      }
-    },
-    {
-      "layout": "flow_actors",
-      "title": {
-        "text": "Payment Flow in PY 2025-26",
-        "at": 30.97
-      },
-      "voice_sync_text": "In PY 2025-26, reconstituted firm ₹ 1 lakh mother-ന് നൽകി. 20% of profits-ന് തുല്യമായ ഈ ₹ 1 lakh income-ൽ നിന്ന് deduction ആയി reconstituted firm അവകാശപ്പെട്ടു.",
-      "visual_data": {
-        "actors": [
-          {
-            "label": "reconstituted firm",
-            "detail": "MKG Agency (Sons)",
-            "icon": "factory",
-            "at": 43.21
-          },
-          {
-            "label": "Mother",
-            "detail": "Beneficiary",
-            "icon": "person",
-            "at": 43.21
-          }
-        ],
-        "edges": [
-          {
-            "label": "Profit Payment",
-            "detail": "20% profit share paid",
-            "value": "₹ 1 lakh",
-            "amount": 100000,
-            "date": "PY 2025-26",
-            "from": "reconstituted firm",
-            "to": "Mother",
-            "icon": "money_bag",
-            "at": 43.21
-          }
-        ]
-      },
-      "start": 30.67,
-      "end": 47.83,
-      "id": "b2",
-      "director_goal": "Visualize the movement of the ₹ 1 lakh payment from the firm to the mother in PY 2025-26.",
-      "anchor_phrases": [
-        "PY 2025-26",
-        "₹ 1 lakh",
-        "reconstituted firm"
-      ],
-      "animation_role": "explanation",
-      "anchor_alignment": [
-        {
-          "phrase": "PY 2025-26",
-          "at": 30.99,
-          "matched": false,
-          "score": 0.273
-        },
-        {
-          "phrase": "₹ 1 lakh",
-          "at": 33.67,
-          "matched": true,
-          "score": 0.462
-        },
-        {
-          "phrase": "reconstituted firm",
-          "at": 37.47,
-          "matched": true,
-          "score": 0.647
-        }
-      ],
-      "anchor_match": {
-        "matched": 2,
-        "total": 3
-      }
-    },
-    {
-      "layout": "compare_regimes",
-      "title": {
-        "text": "Section 4: Legal Framework",
-        "at": 48.48
-      },
-      "voice_sync_text": "ഇവിടെ നമ്മൾ Section 4 പ്രകാരമുള്ള Diversion of Income-ഉം Application of Income-ഉം തമ്മിലുള്ള വ്യത്യാസമാണ് മനസ്സിലാക്കേണ്ടത്. Income കൈപ്പറ്റിയ ശേഷം ചിലവഴിച്ചാൽ അത് Application of Income ആണ്.",
-      "visual_data": {
-        "regimes": [
-          {
-            "label": "Diversion of Income",
-            "detail": "Overriding obligation diverts income before receipt under Section 4",
-            "status": "Excluded",
-            "icon": "scales",
-            "at": 64.18
-          },
-          {
-            "label": "Application of Income",
-            "detail": "Assessee receives income first and applies it voluntarily under Section 4",
-            "status": "Taxable",
-            "icon": "money_bag",
-            "at": 67.0
-          }
-        ]
-      },
-      "start": 48.18,
-      "end": 74.62,
-      "id": "b3",
-      "director_goal": "Contrast the two legal doctrines: Diversion vs. Application of Income.",
-      "anchor_phrases": [
-        "Section 4",
-        "Diversion of Income",
-        "Application of Income"
-      ],
-      "animation_role": "explanation",
-      "anchor_alignment": [
-        {
-          "phrase": "Section 4",
-          "at": 49.44,
-          "matched": true,
-          "score": 1.0
-        },
-        {
-          "phrase": "Diversion of Income",
-          "at": 67.0,
+          "at": 20.14,
           "matched": true,
           "score": 0.636
-        },
-        {
-          "phrase": "Application of Income",
-          "at": 68.06,
-          "matched": true,
-          "score": 0.529
         }
       ],
       "anchor_match": {
@@ -291,57 +157,127 @@
     {
       "layout": "decision_tree",
       "title": {
-        "text": "Overriding Title Analysis",
-        "at": 75.27
+        "text": "Diversion vs Application",
+        "at": 30.97
       },
-      "voice_sync_text": "എന്നാൽ ഇവിടെ partnership deed പ്രകാരമുള്ള legal charge മൂലം income receipt-ന് മുൻപ് തന്നെ overriding title കാരണം diverted at source ആവുകയാണ് ചെയ്യുന്നത്. Firm ഈ തുക സ്വീകരിച്ചത് അമ്മയ്ക്ക് വേണ്ടിയാണ്.",
+      "voice_sync_text": "Diversion of Income എന്ന് പറഞ്ഞാൽ, Assessee-ക്ക് Income accrues ചെയ്യുന്നതിന് മുൻപ് തന്നെ അത് Diverted at source ആയി മാറുന്നു. ഇത് ഒരു Pre-existing legal charge ആണ്, അത് Overriding Title വഴി third party-ക്ക് അവകാശപ്പെട്ടതാണ്.",
       "visual_data": {
-        "root": "Nature of Income Obligation",
+        "root": "Income Tax Characterization",
         "branches": [
           {
-            "label": "Overriding Title",
-            "detail": "Income diverted at source by prior legal charge before reaching assessee",
-            "status": "Diverted at Source",
-            "icon": "padlock",
-            "at": 82.55
+            "label": "Diverted at source",
+            "detail": "Overriding Title creates a pre-existing legal charge",
+            "icon": "scales",
+            "at": 41.81
           },
           {
-            "label": "Voluntary Disposition",
-            "detail": "Assessee receives income as beneficial owner first",
-            "status": "Application",
+            "label": "Application of Income",
+            "detail": "Applied after reaching assessee",
             "icon": "document",
-            "at": 82.55
+            "at": 41.81
           }
         ]
       },
-      "start": 74.97,
-      "end": 100.25,
-      "id": "b4",
-      "director_goal": "Apply the 'Overriding Title' test to determine if the income reached the assessee as a beneficial owner.",
+      "start": 30.67,
+      "end": 47.83,
+      "id": "b2",
+      "director_goal": "Determine if the obligation to pay the mother constitutes a diversion at source or an application of income.",
       "anchor_phrases": [
+        "Diverted at source",
         "Overriding Title",
-        "diverted at source",
-        "legal charge"
+        "Pre-existing legal charge"
       ],
       "animation_role": "explanation",
       "anchor_alignment": [
         {
-          "phrase": "Overriding Title",
-          "at": 86.05,
+          "phrase": "Diverted at source",
+          "at": 41.81,
           "matched": true,
-          "score": 0.485
+          "score": 0.811
         },
         {
-          "phrase": "diverted at source",
-          "at": 89.25,
-          "matched": false,
-          "score": 0.412
-        },
-        {
-          "phrase": "legal charge",
-          "at": 89.53,
+          "phrase": "Overriding Title",
+          "at": 43.05,
           "matched": true,
           "score": 0.5
+        },
+        {
+          "phrase": "Pre-existing legal charge",
+          "at": 46.85,
+          "matched": true,
+          "score": 0.512
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 3
+      }
+    },
+    {
+      "layout": "flow_actors",
+      "title": {
+        "text": "Flow of ₹ 1 lakh to Mother",
+        "at": 48.48
+      },
+      "voice_sync_text": "In the previous year 2025-26, the reconstituted firm paid ₹ 1 lakh to the mother, bypassing the Assessee-firm's taxable income because she possesses a superior legal title.",
+      "visual_data": {
+        "actors": [
+          {
+            "label": "Assessee-firm",
+            "detail": "MKG Agency",
+            "icon": "factory",
+            "at": 62.94
+          },
+          {
+            "label": "Mother",
+            "detail": "Recipient with overriding title",
+            "icon": "person",
+            "at": 62.94
+          }
+        ],
+        "edges": [
+          {
+            "label": "Profit payment for 2025-26",
+            "amount": 100000,
+            "date": "2025-26",
+            "from": "Assessee-firm",
+            "to": "Mother",
+            "icon": "money_bag",
+            "at": 62.94
+          }
+        ],
+        "spoken_amounts": [
+          "₹ 1 lakh"
+        ]
+      },
+      "start": 48.18,
+      "end": 74.62,
+      "id": "b3",
+      "director_goal": "Visualize the flow of the ₹ 1 lakh directly to the mother, bypassing the firm's taxable income.",
+      "anchor_phrases": [
+        "₹ 1 lakh",
+        "Mother",
+        "Assessee-firm"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "₹ 1 lakh",
+          "at": 57.1,
+          "matched": false,
+          "score": 0.4
+        },
+        {
+          "phrase": "Mother",
+          "at": 64.1,
+          "matched": true,
+          "score": 0.667
+        },
+        {
+          "phrase": "Assessee-firm",
+          "at": 69.5,
+          "matched": true,
+          "score": 0.483
         }
       ],
       "anchor_match": {
@@ -353,20 +289,20 @@
       "layout": "case_card",
       "title": {
         "text": "Judicial Precedent",
-        "at": 100.9
+        "at": 75.27
       },
-      "voice_sync_text": "ഈ നിയമതത്വം ബോംബെ ഹൈക്കോടതിയുടെ landmark judgment ആയ CIT vs. Nariman B. Bharucha & Sons, 130 ITR 863 കേസിൽ വ്യക്തമാക്കിയിട്ടുണ്ട്.",
+      "voice_sync_text": "CIT vs. Nariman B. Bharucha & Sons കേസിൽ (130 ITR 863) Bombay High Court വ്യക്തമാക്കിയത് പോലെ, partnership deed വഴിയുള്ള charge മൂലം നൽകുന്ന തുക diversion of income ആണ്.",
       "visual_data": {
         "case_name": "CIT vs. Nariman B. Bharucha & Sons",
-        "court": "Bombay High Court (1981)",
-        "principle": "Prior overriding contractual charge diverts income at source before receipt.",
-        "application": "Reported in 130 ITR 863; confirms exclusion of diverted amounts from firm income.",
-        "at": 100.6
+        "court": "Bombay High Court",
+        "principle": "Payments made pursuant to a charge created on profits by partnership deed constitute diversion of income by overriding title",
+        "application": "The ₹ 1 lakh paid to the mother is excluded from the firm's total income.",
+        "at": 74.97
       },
-      "start": 100.6,
-      "end": 115.64,
-      "id": "b5",
-      "director_goal": "Cite the judicial precedent that validates the exclusion of such diverted income.",
+      "start": 74.97,
+      "end": 100.25,
+      "id": "b4",
+      "director_goal": "Cite the judicial precedent that validates the exclusion of such payments from the firm's income.",
       "anchor_phrases": [
         "CIT vs. Nariman B. Bharucha & Sons",
         "130 ITR 863"
@@ -375,72 +311,128 @@
       "anchor_alignment": [
         {
           "phrase": "CIT vs. Nariman B. Bharucha & Sons",
-          "at": 106.73,
-          "matched": false,
-          "score": 0.37
+          "at": 90.33,
+          "matched": true,
+          "score": 1.0
         },
         {
           "phrase": "130 ITR 863",
-          "at": 110.9,
+          "at": 81.25,
           "matched": false,
-          "score": 0.316
+          "score": 0.261
         }
       ],
       "anchor_match": {
-        "matched": 0,
+        "matched": 1,
         "total": 2
+      }
+    },
+    {
+      "layout": "compare_regimes",
+      "title": {
+        "text": "Comparing Tax Regimes",
+        "at": 100.9
+      },
+      "voice_sync_text": "Diversion of Income ആയാൽ അത് Excluded from Total Income ആയിരിക്കും. എന്നാൽ Application of Income ആണെങ്കിൽ no deduction is allowable, അത് fully taxable ആണ്.",
+      "visual_data": {
+        "regimes": [
+          {
+            "label": "Diversion of Income",
+            "detail": "Excluded from Total Income",
+            "icon": "scales",
+            "at": 112.74
+          },
+          {
+            "label": "Application of Income",
+            "detail": "Taxable with no deduction",
+            "icon": "document",
+            "at": 112.74
+          }
+        ]
+      },
+      "start": 100.6,
+      "end": 115.64,
+      "id": "b5",
+      "director_goal": "Contrast the tax treatment of diversion versus application of income.",
+      "anchor_phrases": [
+        "Diversion of Income",
+        "Application of Income",
+        "Excluded from Total Income"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Diversion of Income",
+          "at": 106.56,
+          "matched": true,
+          "score": 0.579
+        },
+        {
+          "phrase": "Application of Income",
+          "at": 114.12,
+          "matched": true,
+          "score": 0.545
+        },
+        {
+          "phrase": "Excluded from Total Income",
+          "at": 103.41,
+          "matched": false,
+          "score": 0.308
+        }
+      ],
+      "anchor_match": {
+        "matched": 2,
+        "total": 3
       }
     },
     {
       "layout": "takeaway",
       "title": {
-        "text": "Final Conclusion",
+        "text": "Final Takeaway",
         "at": 116.29
       },
-      "voice_sync_text": "അതുകൊണ്ട്, അമ്മയ്ക്ക് നൽകിയ ₹ 1 lakh firm-ന്റെ മൊത്തം വരുമാനത്തിൽ നിന്ന് excluded from the income ആയിരിക്കണം. Hence, the claim of the firm is correct.",
+      "voice_sync_text": "അതുകൊണ്ട്, Claim of the firm is correct ആണ്. ആ തുക firm-ന്റെ income-ൽ നിന്ന് Excluded from the income ആയി കണക്കാക്കണം.",
       "visual_data": {
         "rules": [
           {
-            "label": "Deduction Status",
-            "detail": "₹ 1 lakh paid to mother is excluded from the income of the firm",
-            "value": "₹ 1 lakh",
+            "label": "Claim of the firm is correct",
+            "detail": "Payment is diverted at source by overriding title",
             "icon": "scales",
-            "at": 117.85
+            "at": 125.21
           },
           {
-            "label": "Firm's Position",
-            "detail": "The claim of the firm is correct under the doctrine of overriding title",
-            "status": "Valid",
-            "icon": "gavel",
-            "at": 120.23
+            "label": "Excluded from the income",
+            "detail": "Not taxable in the hands of the assessee-firm",
+            "icon": "money_bag",
+            "at": 125.21
           }
         ]
       },
       "start": 115.99,
       "end": 127.11,
       "id": "b6",
-      "director_goal": "Conclude on the correctness of the firm's claim to exclude the amount from its income.",
+      "director_goal": "Conclude on the validity of the firm's claim for deduction/exclusion.",
       "anchor_phrases": [
-        "excluded from the income",
-        "claim of the firm is correct"
+        "Claim of the firm is correct",
+        "Excluded from the income"
       ],
       "animation_role": "key_fact",
       "anchor_alignment": [
         {
-          "phrase": "excluded from the income",
-          "at": 119.01,
-          "matched": true,
-          "score": 0.99
-        },
-        {
-          "phrase": "claim of the firm is correct",
+          "phrase": "Claim of the firm is correct",
           "at": 125.21,
           "matched": true,
           "score": 1.0
+        },
+        {
+          "phrase": "Excluded from the income",
+          "at": 123.25,
+          "matched": false,
+          "score": 0.457
         }
       ],
       "anchor_match": {
-        "matched": 2,
+        "matched": 1,
         "total": 2
       }
     }
