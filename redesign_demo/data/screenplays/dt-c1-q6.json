@@ -1,18 +1,17 @@
 {
   "question_id": "dt-c1-q6",
   "audio_url": "data/audio/dt-c1-q6.mp3",
-  "duration_sec": 81.45,
+  "duration_sec": 76.32,
   "sync_offset_sec": 0.0,
-  "context_pill": "Tax Liability Calculation (Default Regime)",
-  "example_summary": "Mr. X has a total income of ₹ 16,00,000 for A.Y. 2026-27. We need to calculate his tax liability under the default regime of Section 115BAC.",
-  "source_provision": "### Statutory Matrix: Default Tax Regime Slabs u/s 115BAC\n\n| Income Slab (₹) | Applicable Tax Rate |\n| :--- | :--- |\n| **Up to ₹ 4,00,000** | Nil |\n| **₹ 4,00,001 to ₹ 8,00,000** | 5% |\n| **₹ 8,00,001 to ₹ 12,00,000** | 10% |\n| **₹ 12,00,001 to ₹ 16,00,000** | 15% |\n| **₹ 16,00,001 to ₹ 20,00,000** | 20% |\n| **₹ 20,00,001 to ₹ 24,00,000** | 25% |\n| **Above ₹ 24,00,000** | 30% |\n\n### Core Statutory Checklist\n\n* **Default Application:** Section 115BAC is the default tax regime for Individuals, HUFs, AOPs, BOIs, and AJPs unless specifically opted out.\n* **Rebate u/s 87A:** Resident individuals with Total Income up to ₹ 7,00,000 are eligible for a maximum rebate of ₹ 25,000 (with marginal relief for income slightly exceeding ₹ 7,00,000).\n* **Health and Education Cess:** A mandatory levy of 4% applies to the total Income Tax computed before cess.\n\n> [!IMPORTANT] Opting Out Mechanism u/s 115BAC(6): Assessees without business income can opt out on a year-to-year basis at the time of filing return u/s 139(1). However, assessees with business/professional income get only one lifetime option to opt out and one option to re-enter.",
+  "context_pill": "Section 115BAC Tax Computation",
+  "example_summary": "Computing tax liability for Mr. X with ₹ 16,00,000 income under the default regime for A.Y. 2026-27.",
+  "source_provision": "### **Section 115BAC Concessional Tax Slab Rates**\n\n| Total Income Slab (₹) | Applicable Tax Rate (%) |\n| :--- | :--- |\n| Up to ₹ 4,00,000 | Nil |\n| ₹ 4,00,001 to ₹ 8,00,000 | 5% |\n| ₹ 8,00,001 to ₹ 12,00,000 | 10% |\n| ₹ 12,00,001 to ₹ 16,00,000 | 15% |\n| ₹ 16,00,001 to ₹ 20,00,000 | 20% |\n| ₹ 20,00,001 to ₹ 24,00,000 | 25% |\n| Above ₹ 24,00,000 | 30% |\n\n\n### **Statutory Conditions & Mechanism**\n\n* **Default Application**: Section 115BAC(1A) operates as the default tax regime for eligible assessees unless explicitly opted out.\n* **Statutory Surcharge & Cess**: Basic tax computed under slab rates is increased by applicable Surcharge and mandatory 4% Health and Education Cess.\n\n\n> [!IMPORTANT] Health and Education Cess Statutory Levy\n> Health and Education Cess at the rate of 4% is levied on the total basic income tax plus surcharge across all income slabs.",
   "director": {
     "archetype": "rate_slab_ladder",
-    "justification": "The core of the problem involves calculating tax liability by applying progressive tax rates across specific income brackets under the default regime of Section 115BAC.",
+    "justification": "Section 115BAC computes tax liability using progressive rate slabs across block increments of income for Mr. X in A.Y. 2026-27.",
     "protagonist": "Mr. X",
     "actors": [
-      "Mr. X",
-      "Income Tax Department"
+      "Mr. X"
     ],
     "key_numbers": [
       "₹ 16,00,000",
@@ -20,54 +19,52 @@
       "5%",
       "10%",
       "15%",
+      "₹ 20,000",
+      "₹ 40,000",
+      "₹ 60,000",
       "₹ 1,20,000",
       "4%",
+      "₹ 4,800",
       "₹ 1,24,800"
     ],
     "key_dates": [
       "A.Y. 2026-27"
     ],
-    "visual_metaphor": "A multi-tiered staircase where each step represents a 4 lakh income bracket with an increasing tax percentage sign on each riser.",
+    "visual_metaphor": "Stepped progressive ladder where each ₹ 4,00,000 elevation applies a higher tax percentage rate",
     "beat_plan": [
       {
-        "beat_goal": "Introduce Mr. X and his total income for the assessment year.",
+        "beat_goal": "Establish Mr. X's total income of ₹ 16,00,000 under the default regime Section 115BAC for A.Y. 2026-27",
         "layout": "example_scene",
         "anchor_phrases": [
           "Mr. X",
           "₹ 16,00,000",
+          "Section 115BAC",
           "A.Y. 2026-27"
         ]
       },
       {
-        "beat_goal": "Establish Section 115BAC as the default tax regime.",
-        "layout": "statute_quote",
-        "anchor_phrases": [
-          "Section 115BAC",
-          "Default Tax Regime"
-        ]
-      },
-      {
-        "beat_goal": "Apply the first three tax slabs from 0 to 12 lakhs.",
+        "beat_goal": "Display the progressive slab rate structure under Section 115BAC applicable up to ₹ 16,00,000",
         "layout": "slab_ladder",
         "anchor_phrases": [
-          "First ₹ 4,00,000",
-          "Nil",
+          "Up to ₹ 4,00,000",
           "5%",
-          "10%"
+          "10%",
+          "15%"
         ]
       },
       {
-        "beat_goal": "Apply the 15% slab for the remaining income up to 16 lakhs.",
-        "layout": "slab_ladder",
+        "beat_goal": "Compute the step-by-step tax on each slab block to arrive at total basic tax of ₹ 1,20,000",
+        "layout": "ledger",
         "anchor_phrases": [
-          "₹ 12,00,001 - ₹ 16,00,000",
-          "15%",
+          "₹ 20,000",
+          "₹ 40,000",
+          "₹ 60,000",
           "₹ 1,20,000"
         ]
       },
       {
-        "beat_goal": "Calculate and add the Health and Education Cess.",
-        "layout": "ledger",
+        "beat_goal": "Apply the statutory 4% Health and Education Cess on basic tax",
+        "layout": "deemed_value",
         "anchor_phrases": [
           "Health and Education Cess",
           "4%",
@@ -75,28 +72,12 @@
         ]
       },
       {
-        "beat_goal": "Present the final total tax liability.",
-        "layout": "ledger",
-        "anchor_phrases": [
-          "Tax liability",
-          "₹ 1,24,800"
-        ]
-      },
-      {
-        "beat_goal": "Explain the opt-out mechanism based on business income status.",
-        "layout": "decision_tree",
-        "anchor_phrases": [
-          "Business Income",
-          "Opt out",
-          "Section 115BAC(6)"
-        ]
-      },
-      {
-        "beat_goal": "Summarize the progressive nature of the default regime.",
+        "beat_goal": "Summarize the final net tax liability of ₹ 1,24,800 for Mr. X",
         "layout": "takeaway",
         "anchor_phrases": [
-          "Default Regime",
-          "Progressive Slabs"
+          "Tax liability",
+          "₹ 1,24,800",
+          "Section 115BAC"
         ]
       }
     ]
@@ -106,179 +87,76 @@
     {
       "layout": "example_scene",
       "title": {
-        "text": "Income Profile of Mr. X",
+        "text": "Mr. X's Total Income",
         "at": 0.3
       },
-      "voice_sync_text": "നമുക്ക് Mr. X-ന്റെ കേസ് നോക്കാം. ഇദ്ദേഹത്തിന് A.Y. 2026-27-ൽ ടോട്ടൽ ഇൻകം ആയി ₹ 16,00,000 ഉണ്ട്.",
+      "voice_sync_text": "നമുക്ക് Mr. X-ന്റെ കേസ് നോക്കാം. അദ്ദേഹത്തിന് A.Y. 2026-27-ൽ ₹ 16,00,000 Total Income ഉണ്ട്. default tax regime ആയ Section 115BAC പ്രകാരമാണ് നമ്മൾ ടാക്സ് കണക്കാക്കുന്നത്.",
       "visual_data": {
         "actors": [
           {
             "label": "Mr. X",
             "icon": "person",
-            "detail": "Individual Assessee",
-            "at": 0.92
+            "amount": 1600000,
+            "at": 0.9
           }
         ],
-        "transaction": "Total Income Assessment",
+        "transaction": "Tax Computation",
         "facts": [
           {
             "label": "Total Income",
-            "amount": 1600000,
+            "value": "₹ 16,00,000",
             "icon": "money_bag",
-            "at": 3.34
+            "at": 3.28
+          },
+          {
+            "label": "Regime",
+            "value": "Section 115BAC",
+            "icon": "document",
+            "at": 11.74
           },
           {
             "label": "Assessment Year",
             "value": "A.Y. 2026-27",
             "icon": "calendar",
-            "at": 5.73
+            "at": 11.74
           }
-        ],
-        "spoken_amounts": [
-          "₹ 16,00,000",
-          "16,00,000"
         ]
       },
       "start": 0.0,
-      "end": 10.68,
+      "end": 15.56,
       "id": "b1",
-      "director_goal": "Introduce Mr. X and his total income for the assessment year.",
+      "director_goal": "Establish Mr. X's total income of ₹ 16,00,000 under the default regime Section 115BAC for A.Y. 2026-27",
       "anchor_phrases": [
         "Mr. X",
         "₹ 16,00,000",
+        "Section 115BAC",
         "A.Y. 2026-27"
       ],
       "animation_role": "key_fact",
       "anchor_alignment": [
         {
           "phrase": "Mr. X",
-          "at": 0.92,
+          "at": 0.9,
           "matched": true,
           "score": 0.92
         },
         {
           "phrase": "₹ 16,00,000",
-          "at": 8.62,
+          "at": 3.86,
           "matched": true,
-          "score": 0.473
+          "score": 0.52
+        },
+        {
+          "phrase": "Section 115BAC",
+          "at": 11.74,
+          "matched": true,
+          "score": 1.0
         },
         {
           "phrase": "A.Y. 2026-27",
-          "at": 5.17,
+          "at": 4.21,
           "matched": false,
-          "score": 0.125
-        }
-      ],
-      "anchor_match": {
-        "matched": 2,
-        "total": 3
-      }
-    },
-    {
-      "layout": "statute_quote",
-      "title": {
-        "text": "Applicable Tax Regime",
-        "at": 11.33
-      },
-      "voice_sync_text": "ഇവിടെ സ്പെസിഫിക് ആയി ഒന്നും പറയാത്തതുകൊണ്ട് Section 115BAC പ്രകാരമുള്ള Default Tax Regime ആണ് നമ്മൾ അപ്ലൈ ചെയ്യുന്നത്.",
-      "visual_data": {
-        "rule": "Default Tax Regime for Individuals, HUFs, AOPs, BOIs, and AJPs",
-        "citation": "Section 115BAC",
-        "application": "Mandatory unless opted out under Section 115BAC(6)",
-        "at": 14.25
-      },
-      "start": 11.03,
-      "end": 19.87,
-      "id": "b2",
-      "director_goal": "Establish Section 115BAC as the default tax regime.",
-      "anchor_phrases": [
-        "Section 115BAC",
-        "Default Tax Regime"
-      ],
-      "animation_role": "explanation",
-      "anchor_alignment": [
-        {
-          "phrase": "Section 115BAC",
-          "at": 14.25,
-          "matched": true,
-          "score": 1.0
-        },
-        {
-          "phrase": "Default Tax Regime",
-          "at": 16.35,
-          "matched": false,
-          "score": 0.083
-        }
-      ],
-      "anchor_match": {
-        "matched": 1,
-        "total": 2
-      }
-    },
-    {
-      "layout": "slab_ladder",
-      "title": {
-        "text": "Tax Slabs: 0 to 12 Lakhs",
-        "at": 20.52
-      },
-      "voice_sync_text": "ഇനി ടാക്സ് കാൽക്കുലേറ്റ് ചെയ്യാം. First ₹ 4,00,000-ന് ടാക്സ് Nil ആണ്. അടുത്ത സ്ലാബിൽ 5% റേറ്റും, അതിനുശേഷം 10% റേറ്റും വരുന്നു.",
-      "visual_data": {
-        "tiers": [
-          {
-            "label": "First ₹ 4,00,000",
-            "value": "Nil",
-            "amount": 0,
-            "at": 22.12
-          },
-          {
-            "label": "₹ 4,00,001 - ₹ 8,00,000",
-            "detail": "5%",
-            "amount": 20000,
-            "at": 24.42
-          },
-          {
-            "label": "₹ 8,00,001 - ₹ 12,00,000",
-            "detail": "10%",
-            "amount": 40000,
-            "at": 24.42
-          }
-        ]
-      },
-      "start": 20.22,
-      "end": 32.34,
-      "id": "b3",
-      "director_goal": "Apply the first three tax slabs from 0 to 12 lakhs.",
-      "anchor_phrases": [
-        "First ₹ 4,00,000",
-        "Nil",
-        "5%",
-        "10%"
-      ],
-      "animation_role": "explanation",
-      "anchor_alignment": [
-        {
-          "phrase": "First ₹ 4,00,000",
-          "at": 22.12,
-          "matched": true,
-          "score": 0.522
-        },
-        {
-          "phrase": "Nil",
-          "at": 26.04,
-          "matched": false,
-          "score": 0.333
-        },
-        {
-          "phrase": "5%",
-          "at": 27.84,
-          "matched": true,
-          "score": 1.0
-        },
-        {
-          "phrase": "10%",
-          "at": 30.54,
-          "matched": true,
-          "score": 1.0
+          "score": 0.0
         }
       ],
       "anchor_match": {
@@ -289,93 +167,176 @@
     {
       "layout": "slab_ladder",
       "title": {
-        "text": "Tax Slabs: 12 to 16 Lakhs",
-        "at": 32.99
+        "text": "Section 115BAC Slab Rates",
+        "at": 16.21
       },
-      "voice_sync_text": "അടുത്ത സ്ലാബ് ആയ ₹ 12,00,001 - ₹ 16,00,000-ന് 15% ടാക്സ് ആണ്. അങ്ങനെ ടോട്ടൽ ടാക്സ് ₹ 1,20,000 ആയി മാറുന്നു.",
+      "voice_sync_text": "Section 115BAC പ്രകാരം ഇൻകം സ്ലാബുകൾ എങ്ങനെയാണെന്ന് നോക്കാം. Up to ₹ 4,00,000 വരെ ടാക്സ് ഒന്നുമില്ല. അടുത്ത സ്ലാബുകളിൽ 5%, 10%, 15% എന്നിങ്ങനെയാണ് നിരക്കുകൾ.",
       "visual_data": {
         "tiers": [
           {
-            "label": "₹ 12,00,001 - ₹ 16,00,000",
-            "detail": "15%",
-            "amount": 60000,
-            "at": 34.57
+            "label": "Up to ₹ 4,00,000",
+            "value": "Nil",
+            "icon": "scales",
+            "at": 21.37
           },
           {
-            "label": "Total Basic Tax",
-            "value": "₹ 1,20,000",
-            "sign": "=",
-            "at": 34.57
+            "label": "₹ 4,00,001 - ₹ 8,00,000",
+            "value": "5%",
+            "icon": "scales",
+            "at": 23.15
+          },
+          {
+            "label": "₹ 8,00,001 - ₹ 12,00,000",
+            "value": "10%",
+            "icon": "scales",
+            "at": 23.15
+          },
+          {
+            "label": "₹ 12,00,001 - ₹ 16,00,000",
+            "value": "15%",
+            "icon": "scales",
+            "at": 23.15
           }
         ]
       },
-      "start": 32.69,
-      "end": 43.25,
-      "id": "b4",
-      "director_goal": "Apply the 15% slab for the remaining income up to 16 lakhs.",
+      "start": 15.91,
+      "end": 31.91,
+      "id": "b2",
+      "director_goal": "Display the progressive slab rate structure under Section 115BAC applicable up to ₹ 16,00,000",
       "anchor_phrases": [
-        "₹ 12,00,001 - ₹ 16,00,000",
-        "15%",
-        "₹ 1,20,000"
+        "Up to ₹ 4,00,000",
+        "5%",
+        "10%",
+        "15%"
       ],
       "animation_role": "explanation",
       "anchor_alignment": [
         {
-          "phrase": "₹ 12,00,001 - ₹ 16,00,000",
-          "at": 34.57,
+          "phrase": "Up to ₹ 4,00,000",
+          "at": 21.37,
           "matched": true,
-          "score": 0.957
+          "score": 0.703
         },
         {
-          "phrase": "15%",
-          "at": 37.33,
+          "phrase": "5%",
+          "at": 26.75,
           "matched": true,
           "score": 1.0
         },
         {
-          "phrase": "₹ 1,20,000",
-          "at": 40.89,
+          "phrase": "10%",
+          "at": 27.37,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "15%",
+          "at": 28.79,
           "matched": true,
           "score": 1.0
         }
       ],
       "anchor_match": {
-        "matched": 3,
-        "total": 3
+        "matched": 4,
+        "total": 4
       }
     },
     {
       "layout": "ledger",
       "title": {
-        "text": "Adding Statutory Cess",
-        "at": 43.9
+        "text": "Step-by-Step Tax Computation",
+        "at": 32.56
       },
-      "voice_sync_text": "ഈ ടാക്സ് എമൗണ്ടിന്റെ കൂടെ 4% Health and Education Cess കൂടി ആഡ് ചെയ്യണം. അതായത് ₹ 4,800.",
+      "voice_sync_text": "ഇനി ഓരോ സ്ലാബിലെയും ടാക്സ് കണക്കാക്കാം. ആദ്യത്തെ സ്ലാബിൽ ₹ 20,000, രണ്ടാമത്തേതിൽ ₹ 40,000, മൂന്നാമത്തേതിൽ ₹ 60,000. അങ്ങനെ ടോട്ടൽ ബേസിക് ടാക്സ് ₹ 1,20,000 വരുന്നു.",
       "visual_data": {
         "rows": [
           {
-            "label": "Tax on Total Income",
-            "amount": 120000,
-            "at": 44.06
+            "label": "Tax on ₹ 4L - ₹ 8L @ 5%",
+            "value": "₹ 20,000",
+            "at": 46.46
           },
           {
-            "label": "Health and Education Cess",
-            "detail": "4%",
-            "amount": 4800,
-            "sign": "+",
-            "at": 46.14
+            "label": "Tax on ₹ 8L - ₹ 12L @ 10%",
+            "value": "₹ 40,000",
+            "at": 46.46
+          },
+          {
+            "label": "Tax on ₹ 12L - ₹ 16L @ 15%",
+            "value": "₹ 60,000",
+            "at": 46.46
           }
         ],
-        "total": "₹ 1,24,800",
-        "spoken_amounts": [
-          "₹ 4,800",
-          "4,800"
-        ]
+        "total": "₹ 1,20,000"
       },
-      "start": 43.6,
-      "end": 51.92,
-      "id": "b5",
-      "director_goal": "Calculate and add the Health and Education Cess.",
+      "start": 32.26,
+      "end": 49.78,
+      "id": "b3",
+      "director_goal": "Compute the step-by-step tax on each slab block to arrive at total basic tax of ₹ 1,20,000",
+      "anchor_phrases": [
+        "₹ 20,000",
+        "₹ 40,000",
+        "₹ 60,000",
+        "₹ 1,20,000"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "₹ 20,000",
+          "at": 37.4,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "₹ 40,000",
+          "at": 40.02,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "₹ 60,000",
+          "at": 42.82,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "₹ 1,20,000",
+          "at": 47.44,
+          "matched": true,
+          "score": 0.995
+        }
+      ],
+      "anchor_match": {
+        "matched": 4,
+        "total": 4
+      }
+    },
+    {
+      "layout": "deemed_value",
+      "title": {
+        "text": "Statutory Cess Addition",
+        "at": 50.43
+      },
+      "voice_sync_text": "ഈ ബേസിക് ടാക്സിനോടൊപ്പം 4% Health and Education Cess കൂടി ചേർക്കണം. ₹ 1,20,000-ന്റെ നാല് ശതമാനം എന്നാൽ ₹ 4,800 ആണ്.",
+      "visual_data": {
+        "actual": {
+          "label": "Basic Tax",
+          "value": "₹ 1,20,000",
+          "icon": "money_bag",
+          "at": 56.51
+        },
+        "deemed": {
+          "label": "Cess Amount",
+          "value": "₹ 4,800",
+          "icon": "document",
+          "at": 59.91
+        },
+        "rule": "Add Health and Education Cess @ 4%",
+        "at": 52.43
+      },
+      "start": 50.13,
+      "end": 62.29,
+      "id": "b4",
+      "director_goal": "Apply the statutory 4% Health and Education Cess on basic tax",
       "anchor_phrases": [
         "Health and Education Cess",
         "4%",
@@ -385,126 +346,19 @@
       "anchor_alignment": [
         {
           "phrase": "Health and Education Cess",
-          "at": 46.14,
+          "at": 52.71,
           "matched": true,
           "score": 1.0
         },
         {
           "phrase": "4%",
-          "at": 50.28,
+          "at": 56.51,
           "matched": true,
           "score": 1.0
         },
         {
           "phrase": "₹ 4,800",
-          "at": 50.54,
-          "matched": true,
-          "score": 0.75
-        }
-      ],
-      "anchor_match": {
-        "matched": 3,
-        "total": 3
-      }
-    },
-    {
-      "layout": "ledger",
-      "title": {
-        "text": "Final Tax Liability",
-        "at": 52.57
-      },
-      "voice_sync_text": "അപ്പോൾ മിസ്റ്റർ എക്സിന്റെ ഫൈനൽ Tax liability ₹ 1,24,800 ആണ്.",
-      "visual_data": {
-        "rows": [
-          {
-            "label": "Basic Tax",
-            "amount": 120000,
-            "at": 54.21
-          },
-          {
-            "label": "Cess",
-            "amount": 4800,
-            "at": 54.21
-          }
-        ],
-        "total": "₹ 1,24,800"
-      },
-      "start": 52.27,
-      "end": 59.31,
-      "id": "b6",
-      "director_goal": "Present the final total tax liability.",
-      "anchor_phrases": [
-        "Tax liability",
-        "₹ 1,24,800"
-      ],
-      "animation_role": "explanation",
-      "anchor_alignment": [
-        {
-          "phrase": "Tax liability",
-          "at": 54.61,
-          "matched": true,
-          "score": 1.0
-        },
-        {
-          "phrase": "₹ 1,24,800",
-          "at": 56.23,
-          "matched": true,
-          "score": 1.0
-        }
-      ],
-      "anchor_match": {
-        "matched": 2,
-        "total": 2
-      }
-    },
-    {
-      "layout": "decision_tree",
-      "title": {
-        "text": "Opting Out of Default Regime",
-        "at": 59.96
-      },
-      "voice_sync_text": "മിസ്റ്റർ എക്സിന് Business Income ഇല്ലാത്തതുകൊണ്ട് വേണമെങ്കിൽ ഓരോ വർഷവും ഈ റെജീമിൽ നിന്ന് Opt out ചെയ്യാം. എന്നാൽ ബിസിനസ് ഉള്ളവർക്ക് Section 115BAC(6) പ്രകാരം ലിമിറ്റഡ് ഓപ്ഷൻസേ ഉള്ളൂ.",
-      "visual_data": {
-        "root": "Does Assessee have Business Income?",
-        "branches": [
-          {
-            "label": "No Business Income",
-            "detail": "Can Opt out every year u/s 139(1)",
-            "at": 61.08
-          },
-          {
-            "label": "Has Business Income",
-            "detail": "One-time exit option under Section 115BAC(6)",
-            "at": 67.56
-          }
-        ]
-      },
-      "start": 59.66,
-      "end": 73.26,
-      "id": "b7",
-      "director_goal": "Explain the opt-out mechanism based on business income status.",
-      "anchor_phrases": [
-        "Business Income",
-        "Opt out",
-        "Section 115BAC(6)"
-      ],
-      "animation_role": "explanation",
-      "anchor_alignment": [
-        {
-          "phrase": "Business Income",
-          "at": 61.32,
-          "matched": true,
-          "score": 1.0
-        },
-        {
-          "phrase": "Opt out",
-          "at": 63.58,
-          "matched": true,
-          "score": 1.0
-        },
-        {
-          "phrase": "Section 115BAC(6)",
-          "at": 68.86,
+          "at": 59.91,
           "matched": true,
           "score": 1.0
         }
@@ -517,62 +371,72 @@
     {
       "layout": "takeaway",
       "title": {
-        "text": "Summary of Default Regime",
-        "at": 73.91
+        "text": "Final Tax Liability",
+        "at": 62.94
       },
-      "voice_sync_text": "ഓർക്കുക, Default Regime-ൽ Progressive Slabs ആണ് ഉള്ളത്. ഇൻകം കൂടുന്നതിനനുസരിച്ച് ടാക്സ് റേറ്റും കൂടും.",
+      "voice_sync_text": "അവസാനമായി, Mr. X നൽകേണ്ട ആകെ Tax liability ₹ 1,24,800 ആണ്. Section 115BAC പ്രകാരമുള്ള ഈ കണക്കുകൂട്ടൽ ശ്രദ്ധിക്കുമല്ലോ.",
       "visual_data": {
         "rules": [
           {
-            "label": "Default Regime",
-            "detail": "Section 115BAC is the standard choice",
-            "at": 77.73
+            "label": "Total Tax Liability",
+            "value": "₹ 1,24,800",
+            "icon": "scales",
+            "at": 66.22
           },
           {
-            "label": "Progressive Slabs",
-            "detail": "Rates increase from 5% to 30% every 4 Lakhs",
-            "at": 77.73
+            "label": "Tax Regime",
+            "value": "Section 115BAC",
+            "icon": "padlock",
+            "at": 71.52
           },
           {
-            "label": "Cess",
-            "detail": "4% mandatory on tax amount",
-            "at": 77.73
+            "label": "Status",
+            "value": "Default Regime",
+            "icon": "gavel",
+            "at": 71.52
           }
         ]
       },
-      "start": 73.61,
-      "end": 81.45,
-      "id": "b8",
-      "director_goal": "Summarize the progressive nature of the default regime.",
+      "start": 62.64,
+      "end": 76.32,
+      "id": "b5",
+      "director_goal": "Summarize the final net tax liability of ₹ 1,24,800 for Mr. X",
       "anchor_phrases": [
-        "Default Regime",
-        "Progressive Slabs"
+        "Tax liability",
+        "₹ 1,24,800",
+        "Section 115BAC"
       ],
       "animation_role": "key_fact",
       "anchor_alignment": [
         {
-          "phrase": "Default Regime",
-          "at": 77.73,
+          "phrase": "Tax liability",
+          "at": 66.22,
           "matched": true,
           "score": 1.0
         },
         {
-          "phrase": "Progressive Slabs",
-          "at": 75.61,
-          "matched": false,
-          "score": 0.429
+          "phrase": "₹ 1,24,800",
+          "at": 67.94,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Section 115BAC",
+          "at": 71.52,
+          "matched": true,
+          "score": 1.0
         }
       ],
       "anchor_match": {
-        "matched": 1,
-        "total": 2
+        "matched": 3,
+        "total": 3
       }
     }
   ],
-  "audio_duration_sec": 81.45,
+  "audio_duration_sec": 76.32,
   "anchor_match": {
-    "matched": 18,
-    "total": 22,
-    "rate": 0.818
+    "matched": 17,
+    "total": 18,
+    "rate": 0.944
   }
 }

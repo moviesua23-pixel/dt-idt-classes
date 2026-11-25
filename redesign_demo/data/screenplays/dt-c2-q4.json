@@ -1,90 +1,89 @@
 {
   "question_id": "dt-c2-q4",
   "audio_url": "data/audio/dt-c2-q4.mp3",
-  "duration_sec": 242.64,
+  "duration_sec": 196.1,
   "sync_offset_sec": 0.0,
-  "context_pill": "Capital Gains: Deemed Value & Improvement Rules",
-  "example_summary": "Mr. C's property sale involves substituting the 1975 cost with the 2001 FMV (capped by SDV) and filtering out pre-2001 improvement costs.",
-  "source_provision": "### Statutory Summary Matrix: Capital Gains Computation\n\n| Provision / Element | Statutory Section | Legal Rule & Threshold | Statutory Treatment / Restriction |\n| :--- | :--- | :--- | :--- |\n| **Full Value of Consideration** | Section 48 | Actual sale price realized upon transfer of capital asset | Reduced by actual expenses incurred exclusively in connection with transfer. |\n| **Cost of Acquisition (Pre-2001)** | Section 55(2)(b) | Option for assessee to take Fair Market Value as on 1st April 2001 | Cannot exceed the Stamp Duty Value of the asset as on 1st April 2001. |\n| **Cost of Improvement** | Section 55(1)(b) | Capital expenditure incurred by assessee in making additions or alterations | Strictly restricted to improvements incurred on or after 1st April 2001. |\n\n\n> [!IMPORTANT] Pre-2001 Improvement Restriction: Any capital expenditure incurred towards additions, alterations, or reconstruction of a capital asset prior to 1st April 2001 is completely ignored for the purpose of computing cost of improvement under Section 55(1)(b).\n\n\n> [!WARNING] Stamp Duty Value Cap: When substituting the Fair Market Value of a capital asset acquired before 1st April 2001, the adopted cost of acquisition cannot exceed the stamp duty value of that asset as on 1st April 2001, if available.",
+  "context_pill": "Capital Gains - Pre-2001 Asset COA & COI Rules",
+  "example_summary": "Computation of Long-Term Capital Gain for Mr. C on sale of property acquired prior to April 1, 2001.",
+  "source_provision": "### Statutory Framework: Assets Acquired Prior to 1st April 2001\n\n| Statutory Element | Relevant Provision | Statutory Determination Rule | Statutory Cap / Limitation |\n| :--- | :--- | :--- | :--- |\n| **Cost of Acquisition (COA)** | Section 55(2)(b) | Higher of **Actual Cost** OR **FMV as on 1st April 2001** | FMV cannot exceed **Stamp Duty Value (SDV)** as on 1st April 2001 |\n| **Cost of Improvement (COI)** | Section 55(1)(b) | Expenses incurred **on or after 1st April 2001** only | Expenses incurred **prior to 1st April 2001** are strictly **NIL** |\n| **Transfer Expenses** | Section 48 | Deductible from Gross Consideration | Expenses incurred wholly & exclusively for transfer |\n\n\n#### Key Statutory Conditions Checklist\n\n* **COA Benchmark Rule:** If an asset was acquired before 1st April 2001, the assessee has the option to adopt Fair Market Value (FMV) as on 1st April 2001 if FMV is higher than actual cost.\n* **Stamp Duty Value Cap:** Proviso to Section 55(2)(b) mandates that FMV as on 1st April 2001 shall not exceed the Stamp Duty Value (SDV) of the property as on 1st April 2001.\n* **Pre-2001 Improvement Treatment:** Any cost incurred for additions or alterations prior to 1st April 2001 is completely ignored, as FMV as on 1st April 2001 factors in the upgraded condition of the asset.\n\n\n> [!WARNING] Mandatory SDV Cap on Pre-2001 FMV: Where Stamp Duty Value (SDV) as on 1st April 2001 is available, the Fair Market Value (FMV) adopted for Cost of Acquisition cannot exceed such SDV. Hence, Cost of Acquisition = Higher of Actual Cost OR Min(FMV, SDV).",
   "director": {
     "archetype": "deemed_value_substitution",
-    "justification": "The problem centers on substituting the 1975 purchase price with the 2001 Fair Market Value capped by Stamp Duty Value and filtering improvement costs based on the 2001 statutory cutoff.",
+    "justification": "The provision requires determining the Cost of Acquisition for pre-2001 assets by substituting actual purchase price with Fair Market Value, capped strictly by the Stamp Duty Value as on April 1, 2001 under Section 55(2)(b).",
     "protagonist": "Mr. C",
     "actors": [
-      "Income Tax Department",
-      "Stamp Valuation Authority"
+      "Mr. C"
     ],
     "key_numbers": [
-      "₹ 1,06,000",
-      "₹ 8,50,000",
-      "₹ 8,10,000",
-      "₹ 78,00,000",
-      "₹ 50,000",
-      "₹ 56,55,000"
+      "1,06,000",
+      "3,10,000",
+      "7,35,000",
+      "5,50,000",
+      "8,50,000",
+      "8,10,000",
+      "78,00,000",
+      "50,000",
+      "77,50,000",
+      "12,85,000",
+      "56,55,000"
     ],
     "key_dates": [
       "May 15, 1975",
       "April 1, 2001",
+      "1982-83",
+      "2002-03",
+      "2012-13",
       "July 10, 2025"
     ],
-    "visual_metaphor": "A statutory filter that blocks pre-2001 improvements and caps the 2001 valuation at the stamp duty ceiling.",
+    "visual_metaphor": "A capped scale comparing actual acquisition cost against FMV, clamped shut by the Stamp Duty Value ceiling, alongside a cutoff filter discarding pre-2001 improvements.",
     "beat_plan": [
       {
-        "beat_goal": "Establish Mr. C's property acquisition and sale timeline",
+        "beat_goal": "Establish full overview of Mr. C purchasing property in 1975 and selling it in 2025.",
         "layout": "example_scene",
         "anchor_phrases": [
           "Mr. C",
           "May 15, 1975",
-          "July 10, 2025",
-          "₹ 78,00,000"
+          "78,00,000",
+          "July 10, 2025"
         ]
       },
       {
-        "beat_goal": "Calculate Net Sale Consideration under Section 48",
-        "layout": "flow_actors",
-        "anchor_phrases": [
-          "Section 48",
-          "Gross sale consideration",
-          "Expenses on transfer ₹ 50,000",
-          "Net sale consideration ₹ 77,50,000"
-        ]
-      },
-      {
-        "beat_goal": "Determine Cost of Acquisition using the SDV cap",
+        "beat_goal": "Determine deemed Cost of Acquisition under Section 55(2)(b) applying the Stamp Duty Value cap.",
         "layout": "deemed_value",
         "anchor_phrases": [
           "Section 55(2)(b)",
-          "FMV ₹ 8,50,000",
-          "SDV ₹ 8,10,000",
-          "Cost of acquisition ₹ 8,10,000"
+          "8,50,000",
+          "8,10,000",
+          "April 1, 2001"
         ]
       },
       {
-        "beat_goal": "Filter Cost of Improvement based on the 2001 cutoff",
+        "beat_goal": "Filter pre-2001 improvement costs versus post-2001 additions under Section 55(1)(b).",
         "layout": "timeline_windows",
         "anchor_phrases": [
           "Section 55(1)(b)",
-          "April 1, 2001",
-          "1982-83 Nil",
-          "₹ 12,85,000"
+          "1982-83",
+          "3,10,000",
+          "12,85,000"
         ]
       },
       {
-        "beat_goal": "Final computation of Long-term Capital Gain",
+        "beat_goal": "Build the capital gains ledger deducting COA and COI from net consideration to derive taxable LTCG.",
         "layout": "ledger",
         "anchor_phrases": [
-          "Long-term capital gain",
-          "₹ 56,55,000",
-          "AY 2026-27"
+          "77,50,000",
+          "8,10,000",
+          "12,85,000",
+          "56,55,000"
         ]
       },
       {
-        "beat_goal": "Summarize the SDV cap and pre-2001 improvement rules",
+        "beat_goal": "Summarize the legal rule for pre-2001 acquisitions, SDV cap, and improvement disallowances.",
         "layout": "takeaway",
         "anchor_phrases": [
-          "SDV Cap",
-          "Pre-2001 Improvement Restriction",
-          "Section 55"
+          "Section 55(2)(b)",
+          "Stamp Duty Value",
+          "April 1, 2001",
+          "Section 48"
         ]
       }
     ]
@@ -94,162 +93,81 @@
     {
       "layout": "example_scene",
       "title": {
-        "text": "Property Acquisition & Sale",
+        "text": "Property Sale Overview",
         "at": 0.3
       },
-      "voice_sync_text": "നമസ്കാരം, നമുക്ക് Mr. C-യുടെ ഒരു property transaction നോക്കാം. അദ്ദേഹം May 15, 1975-ൽ ആണ് ഈ വീട് വാങ്ങിയത്. വർഷങ്ങൾക്ക് ശേഷം July 10, 2025-ൽ ₹ 78,00,000-ന് അദ്ദേഹം അത് വിൽക്കുന്നു.",
+      "voice_sync_text": "Mr. C തന്റെ house property May 15, 1975-ൽ 1,06,000 രൂപയ്ക്കാണ് വാങ്ങിയത്. പിന്നീട് July 10, 2025-ൽ ഈ പ്രോപ്പർട്ടി 78,00,000 രൂപയ്ക്ക് വിൽക്കുകയും 50,000 രൂപ transfer expenses ആയി നൽകുകയും ചെയ്തു.",
       "visual_data": {
         "actors": [
           {
             "label": "Mr. C",
+            "detail": "Assessee / Seller",
             "icon": "person",
-            "at": 5.08
+            "at": 25.48
           }
         ],
-        "transaction": "Property Sale Timeline",
+        "transaction": "Sale of House Property",
         "facts": [
           {
-            "label": "Purchase Date",
+            "label": "Original Acquisition",
             "date": "May 15, 1975",
             "amount": 106000,
-            "icon": "calendar",
-            "at": 5.08
+            "value": "₹ 1,06,000",
+            "icon": "house",
+            "at": 25.48
           },
           {
-            "label": "Sale Date",
+            "label": "Gross Sale Consideration",
             "date": "July 10, 2025",
-            "icon": "calendar",
-            "at": 13.88
+            "amount": 7800000,
+            "value": "₹ 78,00,000",
+            "icon": "money_bag",
+            "at": 34.92
           },
           {
-            "label": "Sale Price",
-            "amount": 7800000,
-            "icon": "money_bag",
-            "at": 13.88
+            "label": "Transfer Expenses",
+            "amount": 50000,
+            "value": "₹ 50,000",
+            "icon": "document",
+            "at": 38.62
           }
-        ],
-        "spoken_amounts": [
-          "₹ 78,00,000",
-          "78,00,000"
         ]
       },
       "start": 0.0,
-      "end": 23.8,
+      "end": 40.82,
       "id": "b1",
-      "director_goal": "Establish Mr. C's property acquisition and sale timeline",
+      "director_goal": "Establish full overview of Mr. C purchasing property in 1975 and selling it in 2025.",
       "anchor_phrases": [
         "Mr. C",
         "May 15, 1975",
-        "July 10, 2025",
-        "₹ 78,00,000"
+        "78,00,000",
+        "July 10, 2025"
       ],
       "animation_role": "key_fact",
       "anchor_alignment": [
         {
           "phrase": "Mr. C",
-          "at": 5.08,
+          "at": 25.48,
           "matched": true,
           "score": 1.0
         },
         {
           "phrase": "May 15, 1975",
-          "at": 6.1,
+          "at": 27.32,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "78,00,000",
+          "at": 35.48,
           "matched": true,
           "score": 1.0
         },
         {
           "phrase": "July 10, 2025",
-          "at": 13.94,
-          "matched": true,
-          "score": 1.0
-        },
-        {
-          "phrase": "₹ 78,00,000",
-          "at": 17.84,
-          "matched": true,
-          "score": 1.0
-        }
-      ],
-      "anchor_match": {
-        "matched": 4,
-        "total": 4
-      }
-    },
-    {
-      "layout": "flow_actors",
-      "title": {
-        "text": "Net Sale Consideration",
-        "at": 24.45
-      },
-      "voice_sync_text": "ഇനി Capital Gain കണക്കാക്കാൻ Section 48 പ്രകാരം നമുക്ക് Net sale consideration വേണം. Gross sale consideration ₹ 78,00,000-ൽ നിന്നും transfer-ന് വേണ്ടി വന്ന Expenses on transfer ₹ 50,000 കുറച്ചാൽ Net sale consideration ₹ 77,50,000 എന്ന് ലഭിക്കും.",
-      "visual_data": {
-        "actors": [
-          {
-            "label": "Mr. C",
-            "icon": "person",
-            "at": 67.89
-          }
-        ],
-        "edges": [
-          {
-            "label": "Gross sale consideration",
-            "amount": 7800000,
-            "sign": "+",
-            "at": 67.89
-          },
-          {
-            "label": "Expenses on transfer ₹ 50,000",
-            "amount": 50000,
-            "sign": "-",
-            "at": 67.89
-          },
-          {
-            "label": "Net sale consideration ₹ 77,50,000",
-            "amount": 7750000,
-            "sign": "=",
-            "at": 67.89
-          }
-        ],
-        "spoken_amounts": [
-          "₹ 78,00,000",
-          "78,00,000"
-        ]
-      },
-      "start": 24.15,
-      "end": 77.67,
-      "id": "b2",
-      "director_goal": "Calculate Net Sale Consideration under Section 48",
-      "anchor_phrases": [
-        "Section 48",
-        "Gross sale consideration",
-        "Expenses on transfer ₹ 50,000",
-        "Net sale consideration ₹ 77,50,000"
-      ],
-      "animation_role": "explanation",
-      "anchor_alignment": [
-        {
-          "phrase": "Section 48",
-          "at": 33.61,
-          "matched": true,
-          "score": 0.944
-        },
-        {
-          "phrase": "Gross sale consideration",
-          "at": 40.59,
-          "matched": true,
-          "score": 0.596
-        },
-        {
-          "phrase": "Expenses on transfer ₹ 50,000",
-          "at": 48.25,
-          "matched": true,
-          "score": 0.471
-        },
-        {
-          "phrase": "Net sale consideration ₹ 77,50,000",
-          "at": 66.75,
+          "at": 17.37,
           "matched": false,
-          "score": 0.419
+          "score": 0.348
         }
       ],
       "anchor_match": {
@@ -260,139 +178,66 @@
     {
       "layout": "deemed_value",
       "title": {
-        "text": "Cost of Acquisition (SDV Cap)",
-        "at": 78.32
+        "text": "Cost of Acquisition under Section 55(2)(b)",
+        "at": 41.47
       },
-      "voice_sync_text": "അടുത്ത സ്റ്റെപ്പ് Cost of acquisition കണ്ടെത്തുകയാണ്. Section 55(2)(b) പ്രകാരം, property 2001-ന് മുൻപ് വാങ്ങിയതുകൊണ്ട് FMV ₹ 8,50,000 നമുക്ക് പരിഗണിക്കാം. എന്നാൽ നിയമപ്രകാരം ഇത് SDV ₹ 8,10,000-ൽ കൂടാൻ പാടില്ല. അതിനാൽ നമ്മുടെ Cost of acquisition ₹ 8,10,000 ആയിരിക്കും.",
+      "voice_sync_text": "Section 55(2)(b) പ്രകാരം April 1, 2001-ലെ Fair Market Value 8,50,000 രൂപയാണെങ്കിലും, അന്നത്തെ Stamp Duty Value ആയ 8,10,000 രൂപയേക്കാൾ FMV കൂട്ടാൻ പാടില്ല. അതിനാൽ Deemed Cost of Acquisition 8,10,000 രൂപയായി നിശ്ചയിക്കുന്നു.",
       "visual_data": {
         "actual": {
-          "label": "FMV ₹ 8,50,000",
-          "amount": 850000,
-          "date": "April 1, 2001",
-          "at": 112.16
+          "label": "Actual Purchase Cost",
+          "date": "May 15, 1975",
+          "amount": 106000,
+          "value": "₹ 1,06,000",
+          "icon": "money_bag",
+          "at": 75.87
         },
         "deemed": {
-          "label": "SDV ₹ 8,10,000",
-          "amount": 810000,
+          "label": "Deemed COA (Capped at SDV)",
           "date": "April 1, 2001",
-          "at": 115.64
+          "amount": 810000,
+          "value": "₹ 8,10,000",
+          "detail": "FMV ₹ 8,50,000 capped at SDV ₹ 8,10,000",
+          "icon": "gavel",
+          "at": 82.41
         },
-        "rule": "Section 55(2)(b): Cost of acquisition ₹ 8,10,000 (Capped at SDV)",
-        "at": 105.62
+        "rule": "Section 55(2)(b): FMV as on April 1, 2001 cannot exceed Stamp Duty Value (SDV).",
+        "at": 68.83
       },
-      "start": 78.02,
-      "end": 123.46,
-      "id": "b3",
-      "director_goal": "Determine Cost of Acquisition using the SDV cap",
+      "start": 41.17,
+      "end": 86.75,
+      "id": "b2",
+      "director_goal": "Determine deemed Cost of Acquisition under Section 55(2)(b) applying the Stamp Duty Value cap.",
       "anchor_phrases": [
         "Section 55(2)(b)",
-        "FMV ₹ 8,50,000",
-        "SDV ₹ 8,10,000",
-        "Cost of acquisition ₹ 8,10,000"
+        "8,50,000",
+        "8,10,000",
+        "April 1, 2001"
       ],
       "animation_role": "explanation",
       "anchor_alignment": [
         {
           "phrase": "Section 55(2)(b)",
-          "at": 105.62,
+          "at": 68.83,
           "matched": true,
           "score": 1.0
         },
         {
-          "phrase": "FMV ₹ 8,50,000",
-          "at": 112.16,
+          "phrase": "8,50,000",
+          "at": 74.11,
           "matched": true,
-          "score": 1.0
+          "score": 0.665
         },
         {
-          "phrase": "SDV ₹ 8,10,000",
-          "at": 115.64,
+          "phrase": "8,10,000",
+          "at": 78.17,
           "matched": true,
-          "score": 1.0
-        },
-        {
-          "phrase": "Cost of acquisition ₹ 8,10,000",
-          "at": 119.3,
-          "matched": true,
-          "score": 0.884
-        }
-      ],
-      "anchor_match": {
-        "matched": 4,
-        "total": 4
-      }
-    },
-    {
-      "layout": "timeline_windows",
-      "title": {
-        "text": "Cost of Improvement Filter",
-        "at": 124.11
-      },
-      "voice_sync_text": "ഇനി Cost of improvement നോക്കാം. Section 55(1)(b) അനുസരിച്ച് April 1, 2001-ന് മുൻപുള്ള ചിലവുകൾ നമ്മൾ എടുക്കില്ല. അതുകൊണ്ട് 1982-83 Nil ആയി മാറും. 2001-ന് ശേഷമുള്ള രണ്ട് ചിലവുകൾ കൂട്ടുമ്പോൾ ആകെ ₹ 12,85,000 വരും.",
-      "visual_data": {
-        "events": [
-          {
-            "label": "1982-83 Nil",
-            "amount": 310000,
-            "status": "Ignored (Pre-2001)",
-            "at": 163.05
-          },
-          {
-            "label": "2002-03",
-            "amount": 735000,
-            "status": "Included",
-            "at": 167.45
-          },
-          {
-            "label": "2012-13",
-            "amount": 550000,
-            "status": "Included",
-            "at": 167.45
-          },
-          {
-            "label": "Total COI",
-            "amount": 1285000,
-            "value": "₹ 12,85,000",
-            "at": 167.45
-          }
-        ],
-        "window_label": "Section 55(1)(b) Cutoff: April 1, 2001"
-      },
-      "start": 123.81,
-      "end": 179.25,
-      "id": "b4",
-      "director_goal": "Filter Cost of Improvement based on the 2001 cutoff",
-      "anchor_phrases": [
-        "Section 55(1)(b)",
-        "April 1, 2001",
-        "1982-83 Nil",
-        "₹ 12,85,000"
-      ],
-      "animation_role": "explanation",
-      "anchor_alignment": [
-        {
-          "phrase": "Section 55(1)(b)",
-          "at": 154.69,
-          "matched": true,
-          "score": 1.0
+          "score": 0.787
         },
         {
           "phrase": "April 1, 2001",
-          "at": 167.45,
-          "matched": true,
-          "score": 0.526
-        },
-        {
-          "phrase": "1982-83 Nil",
-          "at": 173.39,
-          "matched": true,
-          "score": 0.545
-        },
-        {
-          "phrase": "₹ 12,85,000",
-          "at": 174.76,
+          "at": 46.3,
           "matched": false,
-          "score": 0.353
+          "score": 0.421
         }
       ],
       "anchor_match": {
@@ -401,142 +246,269 @@
       }
     },
     {
-      "layout": "ledger",
+      "layout": "timeline_windows",
       "title": {
-        "text": "Final LTCG Computation",
-        "at": 179.9
+        "text": "Cost of Improvement Breakdown",
+        "at": 87.4
       },
-      "voice_sync_text": "അവസാനമായി computation പൂർത്തിയാക്കാം. Net sale consideration-ൽ നിന്നും COA-യും COI-യും കുറച്ചാൽ AY 2026-27 വർഷത്തേക്ക് Mr. C നൽകേണ്ട Long-term capital gain ₹ 56,55,000 ആണ്.",
+      "voice_sync_text": "Section 55(1)(b) അനുസരിച്ച് 1982-83 കാലയളവിൽ നിർമ്മിച്ച ഒന്നാം നിലയുടെ 3,10,000 രൂപ ignore ചെയ്യും. പിന്നീട് 2002-03, 2012-13 കാലയളവിലെ ചിലവുകൾ ചേർത്ത് Total Cost of Improvement 12,85,000 രൂപ ലഭിക്കുന്നു.",
       "visual_data": {
-        "rows": [
+        "window_label": "Cut-off Date: April 1, 2001",
+        "events": [
           {
-            "label": "Net sale consideration",
-            "amount": 7750000,
-            "at": 211.92
+            "label": "First Floor Construction",
+            "date": "1982-83",
+            "amount": 310000,
+            "value": "₹ 3,10,000",
+            "status": "Disallowed (NIL)",
+            "pass": false,
+            "detail": "Prior to April 1, 2001 under Section 55(1)(b)",
+            "icon": "house",
+            "at": 87.1
           },
           {
-            "label": "Cost of acquisition",
-            "amount": 810000,
-            "sign": "-",
-            "at": 211.92
+            "label": "Second Floor Construction",
+            "date": "2002-03",
+            "amount": 735000,
+            "value": "₹ 7,35,000",
+            "status": "Allowed",
+            "pass": true,
+            "icon": "house",
+            "at": 114.08
           },
           {
-            "label": "Cost of improvement",
+            "label": "Reconstruction Cost",
+            "date": "2012-13",
+            "amount": 550000,
+            "value": "₹ 5,50,000",
+            "status": "Allowed",
+            "pass": true,
+            "icon": "house",
+            "at": 116.31
+          },
+          {
+            "label": "Total Allowed COI",
             "amount": 1285000,
-            "sign": "-",
-            "at": 219.18
-          },
-          {
-            "label": "Long-term capital gain",
-            "amount": 5655000,
-            "sign": "=",
-            "detail": "AY 2026-27",
-            "at": 219.18
+            "value": "₹ 12,85,000",
+            "status": "Allowed",
+            "pass": true,
+            "icon": "money_bag",
+            "at": 131.66
           }
-        ],
-        "total": "₹ 56,55,000"
+        ]
       },
-      "start": 179.6,
-      "end": 225.2,
-      "id": "b5",
-      "director_goal": "Final computation of Long-term Capital Gain",
+      "start": 87.1,
+      "end": 137.6,
+      "id": "b3",
+      "director_goal": "Filter pre-2001 improvement costs versus post-2001 additions under Section 55(1)(b).",
       "anchor_phrases": [
-        "Long-term capital gain",
-        "₹ 56,55,000",
-        "AY 2026-27"
+        "Section 55(1)(b)",
+        "1982-83",
+        "3,10,000",
+        "12,85,000"
       ],
       "animation_role": "explanation",
       "anchor_alignment": [
         {
-          "phrase": "Long-term capital gain",
-          "at": 191.84,
+          "phrase": "Section 55(1)(b)",
+          "at": 116.92,
           "matched": true,
-          "score": 0.524
+          "score": 1.0
         },
         {
-          "phrase": "₹ 56,55,000",
-          "at": 217.46,
+          "phrase": "1982-83",
+          "at": 120.12,
           "matched": true,
-          "score": 0.667
+          "score": 0.727
         },
         {
-          "phrase": "AY 2026-27",
-          "at": 205.05,
-          "matched": false,
-          "score": 0.286
+          "phrase": "3,10,000",
+          "at": 124.74,
+          "matched": true,
+          "score": 0.995
+        },
+        {
+          "phrase": "12,85,000",
+          "at": 134.78,
+          "matched": true,
+          "score": 0.898
         }
       ],
       "anchor_match": {
-        "matched": 2,
-        "total": 3
+        "matched": 4,
+        "total": 4
+      }
+    },
+    {
+      "layout": "ledger",
+      "title": {
+        "text": "Capital Gains Computation Ledger",
+        "at": 138.25
+      },
+      "voice_sync_text": "Net Consideration ആയ 77,50,000 രൂപയിൽ നിന്ന് Cost of Acquisition 8,10,000 രൂപയും Cost of Improvement 12,85,000 രൂപയും കുറയ്ക്കുമ്പോൾ 56,55,000 രൂപ Long-term Capital Gain ആയി ലഭിക്കും.",
+      "visual_data": {
+        "rows": [
+          {
+            "label": "Gross Sale Consideration",
+            "value": "₹ 78,00,000",
+            "amount": 7800000,
+            "sign": "+",
+            "icon": "money_bag",
+            "at": 164.95
+          },
+          {
+            "label": "Less: Expenses on Transfer",
+            "value": "₹ 50,000",
+            "amount": 50000,
+            "sign": "-",
+            "icon": "document",
+            "at": 164.95
+          },
+          {
+            "label": "Net Sale Consideration",
+            "value": "₹ 77,50,000",
+            "amount": 7750000,
+            "sign": "=",
+            "icon": "money_bag",
+            "at": 164.95
+          },
+          {
+            "label": "Less: Cost of Acquisition",
+            "value": "₹ 8,10,000",
+            "amount": 810000,
+            "sign": "-",
+            "icon": "bank",
+            "at": 169.57
+          },
+          {
+            "label": "Less: Cost of Improvement",
+            "value": "₹ 12,85,000",
+            "amount": 1285000,
+            "sign": "-",
+            "icon": "house",
+            "at": 172.51
+          }
+        ],
+        "total": "Long-Term Capital Gain: ₹ 56,55,000"
+      },
+      "start": 137.95,
+      "end": 181.15,
+      "id": "b4",
+      "director_goal": "Build the capital gains ledger deducting COA and COI from net consideration to derive taxable LTCG.",
+      "anchor_phrases": [
+        "77,50,000",
+        "8,10,000",
+        "12,85,000",
+        "56,55,000"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "77,50,000",
+          "at": 166.57,
+          "matched": true,
+          "score": 0.903
+        },
+        {
+          "phrase": "8,10,000",
+          "at": 170.59,
+          "matched": true,
+          "score": 0.882
+        },
+        {
+          "phrase": "12,85,000",
+          "at": 173.75,
+          "matched": true,
+          "score": 0.903
+        },
+        {
+          "phrase": "56,55,000",
+          "at": 176.23,
+          "matched": true,
+          "score": 0.903
+        }
+      ],
+      "anchor_match": {
+        "matched": 4,
+        "total": 4
       }
     },
     {
       "layout": "takeaway",
       "title": {
-        "text": "Statutory Summary",
-        "at": 225.85
+        "text": "Key Statutory Takeaways",
+        "at": 181.8
       },
-      "voice_sync_text": "ചുരുക്കത്തിൽ, Section 55 പ്രകാരം FMV എടുക്കുമ്പോൾ SDV Cap ശ്രദ്ധിക്കണം. അതുപോലെ Pre-2001 Improvement Restriction ഉള്ളതിനാൽ 2001-ന് മുൻപുള്ള മെച്ചപ്പെടുത്തലുകൾക്ക് ഡിഡക്ഷൻ ലഭിക്കില്ല.",
+      "voice_sync_text": "Section 55(2)(b) പ്രകാരം April 1, 2001-ലെ FMV എപ്പോഴും Stamp Duty Value-ക്ക് വിധേയമാണ്, കൂടാതെ Section 48 വഴി taxable capital gain കണക്കാക്കാം.",
       "visual_data": {
         "rules": [
           {
-            "label": "SDV Cap",
-            "detail": "FMV substitution cannot exceed Stamp Duty Value as on 1.4.2001",
-            "at": 228.65
+            "label": "Pre-2001 COA Cap",
+            "detail": "Under Section 55(2)(b), FMV as on April 1, 2001 cannot exceed Stamp Duty Value.",
+            "icon": "scales",
+            "at": 182.24
           },
           {
-            "label": "Pre-2001 Improvement Restriction",
-            "detail": "All improvements before 1.4.2001 are ignored per Section 55",
-            "at": 228.65
+            "label": "Pre-2001 Improvement",
+            "detail": "All improvement costs incurred before April 1, 2001 are strictly ignored.",
+            "icon": "padlock",
+            "at": 184.05
           },
           {
-            "label": "Section 55",
-            "detail": "Defines Cost of Acquisition and Improvement for Capital Gains",
-            "at": 228.65
+            "label": "Taxable LTCG",
+            "detail": "Section 48 allows deduction of COA, COI, and transfer expenses to arrive at net taxable gain.",
+            "icon": "gavel",
+            "at": 191.2
           }
         ]
       },
-      "start": 225.55,
-      "end": 242.64,
-      "id": "b6",
-      "director_goal": "Summarize the SDV cap and pre-2001 improvement rules",
+      "start": 181.5,
+      "end": 196.1,
+      "id": "b5",
+      "director_goal": "Summarize the legal rule for pre-2001 acquisitions, SDV cap, and improvement disallowances.",
       "anchor_phrases": [
-        "SDV Cap",
-        "Pre-2001 Improvement Restriction",
-        "Section 55"
+        "Section 55(2)(b)",
+        "Stamp Duty Value",
+        "April 1, 2001",
+        "Section 48"
       ],
       "animation_role": "key_fact",
       "anchor_alignment": [
         {
-          "phrase": "SDV Cap",
-          "at": 230.25,
-          "matched": false,
-          "score": 0.444
+          "phrase": "Section 55(2)(b)",
+          "at": 183.54,
+          "matched": true,
+          "score": 1.0
         },
         {
-          "phrase": "Pre-2001 Improvement Restriction",
-          "at": 233.06,
-          "matched": false,
-          "score": 0.32
+          "phrase": "Stamp Duty Value",
+          "at": 189.92,
+          "matched": true,
+          "score": 1.0
         },
         {
-          "phrase": "Section 55",
-          "at": 226.86,
+          "phrase": "April 1, 2001",
+          "at": 184.05,
           "matched": false,
-          "score": 0.345
+          "score": 0.417
+        },
+        {
+          "phrase": "Section 48",
+          "at": 192.54,
+          "matched": true,
+          "score": 1.0
         }
       ],
       "anchor_match": {
-        "matched": 0,
-        "total": 3
+        "matched": 3,
+        "total": 4
       }
     }
   ],
-  "audio_duration_sec": 242.64,
+  "audio_duration_sec": 196.1,
   "anchor_match": {
-    "matched": 16,
-    "total": 22,
-    "rate": 0.727
+    "matched": 17,
+    "total": 20,
+    "rate": 0.85
   }
 }

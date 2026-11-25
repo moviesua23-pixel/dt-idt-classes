@@ -1,94 +1,77 @@
 {
   "question_id": "dt-c1-q12",
   "audio_url": "data/audio/dt-c1-q12.mp3",
-  "duration_sec": 118.18,
+  "duration_sec": 141.96,
   "sync_offset_sec": 0.0,
-  "context_pill": "Agricultural Income Exemption",
-  "example_summary": "Ankur received ₹ 5 lacs as rent for film shooting on his Kerala farmland and claimed it as exempt agricultural income.",
-  "source_provision": "| Statutory Provision | Core Condition / Nexus Requirement | Tax Treatment & Exemption Rule |\n| :--- | :--- | :--- |\n| **Section 10(1)** | Complete exemption for agricultural income | Fully exempt from total income under the Act |\n| **Section 2(1A)(a)** | Rent or revenue derived from land situated in India and used for agricultural operations | Qualifies as agricultural income only when tied to cultivation |\n| **Section 2(1A)(b)** | Income derived from agricultural produce by agricultural operations | Requires actual agricultural produce or processing for marketability |\n| **Section 2(1A)(c)** | Income from farm house buildings situated on or near the agricultural land | Subject to structural, jurisdictional, and occupancy conditions |\n\n\n\n> [!IMPORTANT]\n> Nexus Test: Income derived from allowing film shooting or non-agricultural commercial usage of land has no direct nexus with agricultural operations and is fully taxable as income from other sources or PGBP.\n\n\n\n> [!WARNING]\n> Judicial Benchmark: As established by the Supreme Court in CIT v. Raja Benoy Kumar Sahas Roy and reaffirmed by High Courts, mere physical presence of land used for non-agricultural commercial activities does not convert commercial receipts into agricultural income.",
+  "context_pill": "Section 10(1) & Section 2(1A) • Agricultural Income Exemption",
+  "example_summary": "Ankur received ₹ 5 lacs as rent from Yahoo Movies Ltd. for film shooting on his agricultural land in Kerala and claimed exemption u/s 10(1).",
+  "source_provision": "### **Statutory Framework: Agricultural Income & Exemption Test**\n\n| Provision / Judicial Precedent | Core Statutory Condition | Legal Characterization | Tax Treatment / Head |\n| :--- | :--- | :--- | :--- |\n| **Section 10(1) r.w.s. 2(1A)(a)** | Rent/revenue derived from land situated in India & used for agricultural purposes | Exempt Agricultural Income | Fully Exempt u/s 10(1) |\n| **CIT v. Raja Benoy Kumar Sahas Roy (SC)** | Must involve basic operations (tilling, sowing, planting) requiring human skill & labor | Core Agricultural Activity Benchmark | Qualifies for Sec 10(1) Exemption |\n| **B. Nagi Reddi v. CIT (Mad HC)** | Commercial use (e.g., film shooting) on agricultural land without nexus to agricultural operations | Non-Agricultural Revenue | Taxable u/s 56 (IFOS) |\n\n\n### **Statutory Conditions Checklist u/s 2(1A)**\n\n* **Land & Location:** Land must be situated in India and actively used for agricultural purposes.\n* **Direct Nexus Rule:** Income must be directly derived from agricultural operations, sale of agricultural produce, or qualifying farm building.\n\n\n> [!WARNING] Judicial Benchmark on Use of Land: Mere ownership or physical presence of agricultural land is insufficient. If land is put to commercial use like film shooting, the revenue has no direct nexus with agricultural operations and fails the test of Section 2(1A).",
   "director": {
-    "archetype": "classification_decision_tree",
-    "justification": "The core issue is classifying whether film shooting rent qualifies as agricultural income by testing it against the statutory definition and the nexus requirement established by case law.",
+    "archetype": "conditions_checklist",
+    "justification": "The question evaluates whether film shooting rent received by Ankur fulfills the statutory conditions under Section 2(1A) to qualify for tax exemption under Section 10(1).",
     "protagonist": "Ankur",
     "actors": [
-      "Yahoo Movies Ltd",
-      "Madras High Court",
-      "Supreme Court"
+      "Yahoo Movies Ltd."
     ],
     "key_numbers": [
       "₹ 5 lacs",
       "Section 10(1)",
       "Section 2(1A)",
-      "258 ITR 719",
-      "32 ITR 466"
+      "Section 56",
+      "(1957) 32 ITR 466",
+      "(2002) 258 ITR 719"
     ],
     "key_dates": [
-      "2002",
-      "1957"
+      "1957",
+      "2002"
     ],
-    "visual_metaphor": "A Nexus Bridge where only income carrying the 'Agricultural Operation' passport can cross into the 'Exempt Zone'.",
+    "visual_metaphor": "A film camera crew setup on a Kerala paddy field with a split visual between agricultural tilling operations and commercial studio filming.",
     "beat_plan": [
       {
-        "beat_goal": "Establish the scenario of Ankur receiving film shooting rent on his Kerala farmland.",
+        "beat_goal": "Establish Ankur's scenario of receiving rent for film shooting on his agricultural land and claiming exemption under Section 10(1).",
         "layout": "example_scene",
         "anchor_phrases": [
           "Ankur",
-          "Kerala",
-          "Yahoo Movies Ltd",
-          "₹ 5 lacs"
+          "₹ 5 lacs",
+          "Yahoo Movies Ltd.",
+          "Section 10(1)"
         ]
       },
       {
-        "beat_goal": "Introduce the statutory framework for agricultural income exemption.",
-        "layout": "statute_quote",
-        "anchor_phrases": [
-          "Section 10(1)",
-          "Section 2(1A)"
-        ]
-      },
-      {
-        "beat_goal": "Outline the three-part definition of agricultural income under the Act.",
+        "beat_goal": "Examine the statutory conditions under Section 2(1A) required for exemption.",
         "layout": "checklist_gate",
         "anchor_phrases": [
-          "Rent or revenue",
-          "Agricultural operations",
-          "Land situated in India"
+          "Section 2(1A)",
+          "Land situated in India",
+          "Agricultural Purposes",
+          "Direct Nexus"
         ]
       },
       {
-        "beat_goal": "Present the foundational Supreme Court precedent on agricultural nexus.",
+        "beat_goal": "Highlight the Supreme Court precedent defining basic agricultural operations.",
         "layout": "case_card",
         "anchor_phrases": [
-          "CIT v Raja Benoy Kumar Sahas Roy",
-          "1957",
-          "32 ITR 466"
+          "CIT v. Raja Benoy Kumar Sahas Roy",
+          "Basic Operations",
+          "Human Skill and Labor"
         ]
       },
       {
-        "beat_goal": "Apply the specific Madras High Court ruling regarding film shooting.",
+        "beat_goal": "Apply the High Court precedent specifically covering film shooting rent on agricultural land.",
         "layout": "case_card",
         "anchor_phrases": [
           "B. Nagi Reddi v. CIT",
-          "2002",
-          "258 ITR 719"
+          "Commercial Exploitation",
+          "No Direct Nexus"
         ]
       },
       {
-        "beat_goal": "Test the film shooting income against the 'Agricultural Nexus' requirement.",
-        "layout": "decision_tree",
-        "anchor_phrases": [
-          "Nexus Test",
-          "No direct connection",
-          "Commercial usage"
-        ]
-      },
-      {
-        "beat_goal": "Conclude that the income is taxable and not exempt under Section 10(1).",
+        "beat_goal": "Conclude on the taxability of the ₹ 5 lacs rent under Income from Other Sources.",
         "layout": "takeaway",
         "anchor_phrases": [
-          "Not agricultural income",
-          "Fully taxable",
-          "Exemption denied"
+          "Not Agricultural Income",
+          "Section 56",
+          "Income from Other Sources"
         ]
       }
     ]
@@ -98,234 +81,203 @@
     {
       "layout": "example_scene",
       "title": {
-        "text": "Ankur's Film Shooting Rent",
+        "text": "Film Shooting Rent Claimed Exempt",
         "at": 0.3
       },
-      "voice_sync_text": "Ankur-ന് Kerala-യിൽ ഒരു farmland ഉണ്ട്. അവിടെ fruits, paddy, vegetables ഒക്കെ കൃഷി ചെയ്യുന്നുണ്ട്. ഒരിക്കൽ Yahoo Movies Ltd എന്ന കമ്പനി film shooting-നായി ഈ land ഉപയോഗിച്ചു. ഇതിന് പ്രതിഫലമായി Ankur-ന് ₹ 5 lacs rent ലഭിച്ചു.",
+      "voice_sync_text": "Kerala-യിൽ agricultural land ഉള്ള Ankur, തൻ്റെ ഭൂമി സിനിമ ചിത്രീകരണത്തിനായി Yahoo Movies Ltd.-ന് നൽകിയപ്പോൾ ₹ 5 lacs rent ആയി ലഭിച്ചു. ഈ തുക Section 10(1) പ്രകാരം exempt ആണെന്നാണ് Ankur വാദിക്കുന്നത്.",
       "visual_data": {
         "actors": [
           {
-            "label": "Ankur",
-            "detail": "Landowner",
+            "detail": "Landowner in Kerala",
             "icon": "person",
-            "at": 2.02
+            "label": "Ankur",
+            "at": 30.6
           },
           {
-            "label": "Yahoo Movies Ltd",
-            "detail": "Film Production House",
+            "amount": 500000,
+            "detail": "Film production company",
             "icon": "factory",
-            "at": 9.32
+            "label": "Yahoo Movies Ltd.",
+            "value": "₹ 5 lacs",
+            "at": 30.6
           }
         ],
-        "transaction": "Rent for Film Shooting",
         "facts": [
           {
-            "label": "Location",
-            "value": "Kerala",
-            "icon": "plot",
-            "at": 9.32
-          },
-          {
-            "label": "Rent Amount",
             "amount": 500000,
             "icon": "money_bag",
-            "at": 17.28
+            "label": "Rent Received",
+            "value": "₹ 5 lacs",
+            "at": 35.84
+          },
+          {
+            "icon": "document",
+            "label": "Exemption Claimed",
+            "value": "Section 10(1)",
+            "at": 40.74
           }
         ],
-        "spoken_amounts": [
-          "₹ 5 lacs"
-        ]
+        "transaction": "Film shooting rent received on agricultural land"
       },
       "start": 0.0,
-      "end": 18.32,
+      "end": 44.49,
       "id": "b1",
-      "director_goal": "Establish the scenario of Ankur receiving film shooting rent on his Kerala farmland.",
+      "director_goal": "Establish Ankur's scenario of receiving rent for film shooting on his agricultural land and claiming exemption under Section 10(1).",
       "anchor_phrases": [
         "Ankur",
-        "Kerala",
-        "Yahoo Movies Ltd",
-        "₹ 5 lacs"
+        "₹ 5 lacs",
+        "Yahoo Movies Ltd.",
+        "Section 10(1)"
       ],
       "animation_role": "key_fact",
       "anchor_alignment": [
         {
           "phrase": "Ankur",
-          "at": 5.66,
+          "at": 31.88,
           "matched": true,
-          "score": 0.5
-        },
-        {
-          "phrase": "Kerala",
-          "at": 0.74,
-          "matched": false,
-          "score": 0.4
-        },
-        {
-          "phrase": "Yahoo Movies Ltd",
-          "at": 9.32,
-          "matched": true,
-          "score": 1.0
+          "score": 0.727
         },
         {
           "phrase": "₹ 5 lacs",
-          "at": 15.52,
+          "at": 37.76,
           "matched": true,
-          "score": 0.889
-        }
-      ],
-      "anchor_match": {
-        "matched": 3,
-        "total": 4
-      }
-    },
-    {
-      "layout": "statute_quote",
-      "title": {
-        "text": "Statutory Framework",
-        "at": 18.97
-      },
-      "voice_sync_text": "Income Tax Act-ലെ Section 10(1) പ്രകാരം agricultural income പൂർണ്ണമായും exempt ആണ്. എന്നാൽ എന്താണ് agricultural income എന്ന് Section 2(1A) കൃത്യമായി നിർവചിക്കുന്നുണ്ട്.",
-      "visual_data": {
-        "rule": "Agricultural income is exempt from total income.",
-        "citation": "Section 10(1) read with Section 2(1A)",
-        "application": "Exemption applies only if the income meets the specific statutory definition.",
-        "at": 22.89
-      },
-      "start": 18.67,
-      "end": 33.23,
-      "id": "b2",
-      "director_goal": "Introduce the statutory framework for agricultural income exemption.",
-      "anchor_phrases": [
-        "Section 10(1)",
-        "Section 2(1A)"
-      ],
-      "animation_role": "explanation",
-      "anchor_alignment": [
-        {
-          "phrase": "Section 10(1)",
-          "at": 20.47,
-          "matched": true,
-          "score": 1.0
+          "score": 0.787
         },
         {
-          "phrase": "Section 2(1A)",
-          "at": 29.5,
-          "matched": false,
-          "score": 0.476
+          "phrase": "Yahoo Movies Ltd.",
+          "at": 39.4,
+          "matched": true,
+          "score": 0.71
+        },
+        {
+          "phrase": "Section 10(1)",
+          "at": 40.74,
+          "matched": true,
+          "score": 1.0
         }
       ],
       "anchor_match": {
-        "matched": 1,
-        "total": 2
+        "matched": 4,
+        "total": 4
       }
     },
     {
       "layout": "checklist_gate",
       "title": {
-        "text": "Definition of Agricultural Income",
-        "at": 33.88
+        "text": "Statutory Conditions Test u/s 2(1A)",
+        "at": 45.14
       },
-      "voice_sync_text": "Section 2(1A) പ്രകാരം മൂന്ന് പ്രധാന കാര്യങ്ങളാണ് നോക്കേണ്ടത്. ഒന്ന്, അത് Rent or revenue ആയിരിക്കണം. രണ്ട്, അത് Agricultural operations-ൽ നിന്ന് ലഭിക്കുന്നതാകണം. മൂന്ന്, ആ Land situated in India ആയിരിക്കണം.",
+      "voice_sync_text": "എന്നാൽ ഒരു income exempt ആകണമെങ്കിൽ Section 2(1A) നിഷ്കർഷിക്കുന്ന statutory conditions തൃപ്തിപ്പെടുത്തണം. Land situated in India ആയിരിക്കണം, Land used for Agricultural Purposes ആയിരിക്കണം, കൂടാതെ ലഭിക്കുന്ന വരുമാനത്തിന് agricultural operations-മായി Direct Nexus ഉണ്ടായിരിക്കണം.",
       "visual_data": {
         "conditions": [
           {
-            "label": "Rent or revenue",
-            "detail": "Derived from land",
-            "pass": true,
-            "at": 40.04
-          },
-          {
-            "label": "Agricultural operations",
-            "detail": "Cultivation/Processing",
-            "pass": false,
-            "at": 43.48
-          },
-          {
+            "detail": "Land located in Kerala, India",
+            "icon": "plot",
             "label": "Land situated in India",
-            "detail": "Geographic requirement",
             "pass": true,
-            "at": 47.92
+            "at": 51.4
+          },
+          {
+            "detail": "Land used for fruits, paddy, vegetables",
+            "icon": "plot",
+            "label": "Agricultural Purposes",
+            "pass": true,
+            "at": 55.14
+          },
+          {
+            "detail": "Income derived from agricultural operations",
+            "icon": "scales",
+            "label": "Direct Nexus",
+            "pass": false,
+            "at": 55.14
           }
         ],
-        "outcome": "Must satisfy all conditions to qualify."
+        "outcome": "Failed statutory test under Section 2(1A)"
       },
-      "start": 33.58,
-      "end": 50.98,
-      "id": "b3",
-      "director_goal": "Outline the three-part definition of agricultural income under the Act.",
+      "start": 44.84,
+      "end": 64.12,
+      "id": "b2",
+      "director_goal": "Examine the statutory conditions under Section 2(1A) required for exemption.",
       "anchor_phrases": [
-        "Rent or revenue",
-        "Agricultural operations",
-        "Land situated in India"
+        "Section 2(1A)",
+        "Land situated in India",
+        "Agricultural Purposes",
+        "Direct Nexus"
       ],
       "animation_role": "explanation",
       "anchor_alignment": [
         {
-          "phrase": "Rent or revenue",
-          "at": 40.04,
-          "matched": true,
-          "score": 1.0
-        },
-        {
-          "phrase": "Agricultural operations",
-          "at": 43.48,
+          "phrase": "Section 2(1A)",
+          "at": 46.4,
           "matched": true,
           "score": 1.0
         },
         {
           "phrase": "Land situated in India",
-          "at": 48.54,
+          "at": 52.7,
           "matched": true,
           "score": 0.872
+        },
+        {
+          "phrase": "Agricultural Purposes",
+          "at": 55.14,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Direct Nexus",
+          "at": 61.24,
+          "matched": true,
+          "score": 1.0
         }
       ],
       "anchor_match": {
-        "matched": 3,
-        "total": 3
+        "matched": 4,
+        "total": 4
       }
     },
     {
       "layout": "case_card",
       "title": {
-        "text": "The Nexus Requirement",
-        "at": 51.63
+        "text": "Basic Operations Benchmark",
+        "at": 64.77
       },
-      "voice_sync_text": "1957-ലെ CIT v Raja Benoy Kumar Sahas Roy എന്ന കേസിൽ Supreme Court ഒരു പ്രധാന കാര്യം പറഞ്ഞു. 32 ITR 466-ൽ വ്യക്തമാക്കിയത് പോലെ, വരുമാനത്തിന് കൃഷിപ്പണിയുമായി നേരിട്ട് ഒരു ബന്ധം അഥവാ nexus ഉണ്ടായിരിക്കണം.",
+      "voice_sync_text": "CIT v. Raja Benoy Kumar Sahas Roy കേസിൽ Supreme Court വ്യക്തമാക്കിയത്, tilling, sowing പോലുള്ള Basic Operations മനുഷ്യന്റെ Human Skill and Labor ഉപയോഗിച്ച് നടത്തിയാൽ മാത്രമേ അത് agricultural activity ആയി പരിഗണിക്കാൻ കഴിയൂ എന്നാണ്.",
       "visual_data": {
-        "case_name": "CIT v Raja Benoy Kumar Sahas Roy",
-        "court": "Supreme Court (1957)",
-        "principle": "Nexus with agricultural operations is essential.",
-        "application": "32 ITR 466",
-        "at": 51.33
+        "application": "Requires active tilling, sowing, and cultivation on the land.",
+        "case_name": "CIT v. Raja Benoy Kumar Sahas Roy",
+        "court": "Supreme Court of India (1957) 32 ITR 466",
+        "principle": "Basic Operations requiring Human Skill and Labor are essential for agricultural income.",
+        "at": 77.95
       },
-      "start": 51.33,
-      "end": 70.41,
-      "id": "b4",
-      "director_goal": "Present the foundational Supreme Court precedent on agricultural nexus.",
+      "start": 64.47,
+      "end": 82.91,
+      "id": "b3",
+      "director_goal": "Highlight the Supreme Court precedent defining basic agricultural operations.",
       "anchor_phrases": [
-        "CIT v Raja Benoy Kumar Sahas Roy",
-        "1957",
-        "32 ITR 466"
+        "CIT v. Raja Benoy Kumar Sahas Roy",
+        "Basic Operations",
+        "Human Skill and Labor"
       ],
       "animation_role": "explanation",
       "anchor_alignment": [
         {
-          "phrase": "CIT v Raja Benoy Kumar Sahas Roy",
-          "at": 54.07,
+          "phrase": "CIT v. Raja Benoy Kumar Sahas Roy",
+          "at": 65.39,
+          "matched": true,
+          "score": 0.8
+        },
+        {
+          "phrase": "Basic Operations",
+          "at": 77.95,
           "matched": true,
           "score": 1.0
         },
         {
-          "phrase": "1957",
-          "at": 51.33,
+          "phrase": "Human Skill and Labor",
+          "at": 74.33,
           "matched": false,
-          "score": 0.0
-        },
-        {
-          "phrase": "32 ITR 466",
-          "at": 61.11,
-          "matched": true,
-          "score": 1.0
+          "score": 0.375
         }
       ],
       "anchor_match": {
@@ -336,111 +288,43 @@
     {
       "layout": "case_card",
       "title": {
-        "text": "Film Shooting Precedent",
-        "at": 71.06
+        "text": "Film Shooting Rent Precedent",
+        "at": 83.56
       },
-      "voice_sync_text": "ഇതേ കാര്യം തന്നെ 2002-ൽ Madras High Court, B. Nagi Reddi v. CIT കേസിൽ ആവർത്തിച്ചു. 258 ITR 719 പ്രകാരം, film shooting-ന് വേണ്ടി സ്ഥലം വിട്ടുനൽകി കിട്ടുന്ന വരുമാനം agricultural income ആയി കണക്കാക്കാൻ കഴിയില്ല.",
+      "voice_sync_text": "B. Nagi Reddi v. CIT കേസിൽ Madras High Court വിധിച്ചത്, agricultural land സിനിമ ചിത്രീകരണത്തിന് നൽകുന്നത് Commercial Exploitation ആണ്. ഇതിൽ agricultural activity ഇല്ലാത്തതിനാൽ No Direct Nexus എന്ന തത്വം ബാധകമാകുന്നു.",
       "visual_data": {
+        "application": "Rent received for film shooting does not qualify as agricultural income.",
         "case_name": "B. Nagi Reddi v. CIT",
-        "court": "Madras High Court (2002)",
-        "principle": "Income from film shooting on agricultural land is not agricultural income.",
-        "application": "258 ITR 719",
-        "at": 82.22
+        "court": "Madras High Court (2002) 258 ITR 719",
+        "principle": "Commercial Exploitation of agricultural land for film shooting has No Direct Nexus to agricultural operations.",
+        "at": 121.12
       },
-      "start": 70.76,
-      "end": 88.52,
-      "id": "b5",
-      "director_goal": "Apply the specific Madras High Court ruling regarding film shooting.",
+      "start": 83.26,
+      "end": 128.97,
+      "id": "b4",
+      "director_goal": "Apply the High Court precedent specifically covering film shooting rent on agricultural land.",
       "anchor_phrases": [
         "B. Nagi Reddi v. CIT",
-        "2002",
-        "258 ITR 719"
+        "Commercial Exploitation",
+        "No Direct Nexus"
       ],
       "animation_role": "explanation",
       "anchor_alignment": [
         {
           "phrase": "B. Nagi Reddi v. CIT",
-          "at": 75.22,
+          "at": 114.24,
+          "matched": true,
+          "score": 0.698
+        },
+        {
+          "phrase": "Commercial Exploitation",
+          "at": 121.12,
           "matched": true,
           "score": 1.0
         },
         {
-          "phrase": "2002",
-          "at": 72.21,
-          "matched": false,
-          "score": 0.286
-        },
-        {
-          "phrase": "258 ITR 719",
-          "at": 78.96,
-          "matched": true,
-          "score": 0.82
-        }
-      ],
-      "anchor_match": {
-        "matched": 2,
-        "total": 3
-      }
-    },
-    {
-      "layout": "decision_tree",
-      "title": {
-        "text": "The Nexus Test",
-        "at": 89.17
-      },
-      "voice_sync_text": "ഇവിടെ നമുക്ക് ഒരു Nexus Test നടത്തി നോക്കാം. ഈ വരുമാനത്തിന് കൃഷിപ്പണിയുമായി വല്ല ബന്ധവുമുണ്ടോ? No direct connection. ഇത് വെറുമൊരു Commercial usage മാത്രമാണ്. അതുകൊണ്ട് തന്നെ ഇതിനെ agricultural income എന്ന് വിളിക്കാൻ പറ്റില്ല.",
-      "visual_data": {
-        "root": "Nexus Test for Film Rent",
-        "branches": [
-          {
-            "label": "Agricultural Operation?",
-            "value": "No",
-            "pass": false,
-            "icon": "scales",
-            "at": 103.45
-          },
-          {
-            "label": "Commercial usage?",
-            "value": "Yes",
-            "pass": true,
-            "icon": "money_bag",
-            "at": 103.45
-          },
-          {
-            "label": "No direct connection",
-            "detail": "To land cultivation",
-            "status": "Failed",
-            "icon": "padlock",
-            "at": 103.45
-          }
-        ]
-      },
-      "start": 88.87,
-      "end": 105.87,
-      "id": "b6",
-      "director_goal": "Test the film shooting income against the 'Agricultural Nexus' requirement.",
-      "anchor_phrases": [
-        "Nexus Test",
-        "No direct connection",
-        "Commercial usage"
-      ],
-      "animation_role": "explanation",
-      "anchor_alignment": [
-        {
-          "phrase": "Nexus Test",
-          "at": 90.45,
-          "matched": true,
-          "score": 1.0
-        },
-        {
-          "phrase": "No direct connection",
-          "at": 96.57,
-          "matched": true,
-          "score": 1.0
-        },
-        {
-          "phrase": "Commercial usage",
-          "at": 99.63,
+          "phrase": "No Direct Nexus",
+          "at": 126.08,
           "matched": true,
           "score": 1.0
         }
@@ -453,76 +337,69 @@
     {
       "layout": "takeaway",
       "title": {
-        "text": "Final Conclusion",
-        "at": 106.52
+        "text": "Taxability under Income from Other Sources",
+        "at": 129.62
       },
-      "voice_sync_text": "ചുരുക്കത്തിൽ, Ankur-ന് ലഭിച്ച ₹ 5 lacs എന്നത് Not agricultural income ആണ്. ഇത് Fully taxable ആണ്. Section 10(1) പ്രകാരമുള്ള Exemption denied ചെയ്യപ്പെടും.",
+      "voice_sync_text": "അതുകൊണ്ട് Ankur-ന് ലഭിച്ച ഈ 5 ലക്ഷം രൂപ Not Agricultural Income ആണ്. ഇത് Section 56 പ്രകാരം Income from Other Sources എന്ന ഹെഡിൽ fully taxable ആയിരിക്കും.",
       "visual_data": {
         "rules": [
           {
-            "label": "Classification",
-            "detail": "Not agricultural income",
-            "icon": "document",
-            "at": 109.56
-          },
-          {
-            "label": "Taxability",
-            "detail": "Fully taxable",
-            "amount": 500000,
-            "icon": "money_bag",
-            "at": 111.9
-          },
-          {
-            "label": "Exemption Status",
-            "detail": "Exemption denied under Section 10(1)",
+            "detail": "Film shooting rent lacks direct nexus with agricultural operations",
             "icon": "gavel",
-            "at": 113.88
+            "label": "Not Agricultural Income",
+            "pass": false,
+            "at": 133.32
+          },
+          {
+            "amount": 500000,
+            "detail": "Taxable u/s 56 on amount of ₹ 5 lacs",
+            "icon": "money_bag",
+            "label": "Income from Other Sources",
+            "value": "₹ 5 lacs",
+            "at": 135.8
           }
-        ],
-        "spoken_amounts": [
-          "₹ 5 lacs"
         ]
       },
-      "start": 106.22,
-      "end": 118.18,
-      "id": "b7",
-      "director_goal": "Conclude that the income is taxable and not exempt under Section 10(1).",
+      "start": 129.32,
+      "end": 141.96,
+      "id": "b5",
+      "director_goal": "Conclude on the taxability of the ₹ 5 lacs rent under Income from Other Sources.",
       "anchor_phrases": [
-        "Not agricultural income",
-        "Fully taxable",
-        "Exemption denied"
+        "Not Agricultural Income",
+        "Section 56",
+        "Income from Other Sources"
       ],
       "animation_role": "key_fact",
       "anchor_alignment": [
         {
-          "phrase": "Not agricultural income",
-          "at": 109.56,
+          "phrase": "Not Agricultural Income",
+          "at": 133.32,
+          "matched": true,
+          "score": 0.851
+        },
+        {
+          "phrase": "Section 56",
+          "at": 141.56,
           "matched": true,
           "score": 1.0
         },
         {
-          "phrase": "Fully taxable",
-          "at": 112.26,
-          "matched": true,
-          "score": 1.0
-        },
-        {
-          "phrase": "Exemption denied",
-          "at": 113.88,
-          "matched": true,
-          "score": 0.84
+          "phrase": "Income from Other Sources",
+          "at": 136.87,
+          "matched": false,
+          "score": 0.0
         }
       ],
       "anchor_match": {
-        "matched": 3,
+        "matched": 2,
         "total": 3
       }
     }
   ],
-  "audio_duration_sec": 118.18,
+  "audio_duration_sec": 141.96,
   "anchor_match": {
-    "matched": 17,
-    "total": 21,
-    "rate": 0.81
+    "matched": 15,
+    "total": 17,
+    "rate": 0.882
   }
 }

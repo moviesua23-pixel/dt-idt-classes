@@ -1,19 +1,19 @@
 {
   "question_id": "dt-c1-q13",
   "audio_url": "data/audio/dt-c1-q13.mp3",
-  "duration_sec": 134.52,
+  "duration_sec": 169.69,
   "sync_offset_sec": 0.0,
-  "context_pill": "Agricultural Income & Exemptions",
-  "example_summary": "This case study examines the taxability of rent from agricultural buildings used for residential purposes, nursery income without basic land operations, and the specific regional exemptions available to Sikkimese individuals.",
-  "source_provision": "| Statutory Area | Section / Rule | Core Statutory Condition / Test | Tax Treatment & Legal Consequence |\n|---|---|---|---|\n| **General Agricultural Income** | Section 10(1) r/w Sec 2(1A) | Revenue derived from land situated in India and used for agricultural operations. | **Exempt** from total income. |\n| **Building on Agricultural Land** | Explanation 2 to Section 2(1A) | Income from buildings used for non-agricultural purposes (e.g. residential/industrial letting). | **Taxable** as non-agricultural income. |\n| **Nursery Operations** | Explanation 3 to Section 2(1A) | Income from saplings or seedlings grown in a nursery, irrespective of basic land operations. | **Exempt** as deemed agricultural income. |\n| **Sikkimese Regional Exemption** | Section 10(26AA) | Income accruing to a Sikkimese individual from any source in Sikkim or via interest/dividends. | **Exempt** from income tax. |\n\n\n\n> [!IMPORTANT]\n> Statutory Trap on Agricultural Buildings: Letting out houses constructed on agricultural land to industrial workers for residential purposes fails the test under Explanation 2 to Section 2(1A) and is fully chargeable to tax.\n\n\n\n> [!NOTE]\n> Nursery Exception: By virtue of Explanation 3 to Section 2(1A), carrying out basic operations on land is not mandatory for income derived from saplings or seedlings grown in a nursery.",
+  "context_pill": "Taxability of Agricultural and Sikkimese Income",
+  "example_summary": "Analyzing the tax status of residential rent from farm land, nursery income, and Sikkimese individual earnings under the Income Tax Act.",
+  "source_provision": "| Aspect / Receipt | Statutory Section | Legal Basis / Statutory Rule | Tax Treatment / Legal Consequence |\n| :--- | :--- | :--- | :--- |\n| **Farm Building Letting** | Section 2(1A) Explanation 2 | Rent derived from letting out a building on agricultural land for non-agricultural purposes (e.g. residential/business) | **Taxable** (Excluded from Agricultural Income) |\n| **Nursery Seedling Sales** | Section 2(1A) Explanation 3 | Income derived from saplings or seedlings grown in a nursery | **Exempt u/s 10(1)** (Deemed Agricultural Income regardless of basic land operations) |\n| **Sikkimese Individual Income** | Section 10(26AAA) | Income accruing/arising from within the State or dividend/interest on securities | **Exempt u/s 10(26AAA)** (Fully exempt from tax) |\n\n> [!IMPORTANT] Scope of Section 2(1A) Explanation 2\n> Any building income derived from use for any purpose other than agriculture (such as residential accommodation for workers or commercial use) fails the agricultural test and is treated as standard taxable income.\n\n> [!NOTE] Scope of Section 2(1A) Explanation 3\n> Carrying out basic operations on land (ploughing, tilling, sowing) is NOT a prerequisite for nursery seedling income to qualify as exempt Agricultural Income.\n\n> [!WARNING] Scope of Section 10(26AAA)\n> Exemption for a Sikkimese individual covers income arising from within the State and global dividend/interest on securities, provided the individual qualifies as a Sikkimese resident under statutory criteria.",
   "director": {
     "archetype": "classification_decision_tree",
-    "justification": "The scenario requires classifying three distinct income streams—building rent, nursery sales, and regional earnings—against specific statutory exclusions and inclusions to determine taxability.",
-    "protagonist": "The Taxpayer",
+    "justification": "The problem requires classifying three distinct receipts into taxable or exempt status based on statutory tests under Sections 2(1A) and 10(26AAA).",
+    "protagonist": "Assessee Taxpayers",
     "actors": [
-      "Industrial Tenants",
       "Anand Nursery",
-      "Mr. Gaitonde"
+      "Mr. Gaitonde",
+      "Industrial Worker Tenants"
     ],
     "key_numbers": [
       "₹ 60,000",
@@ -22,56 +22,59 @@
       "₹ 55,000"
     ],
     "key_dates": [],
-    "visual_metaphor": "A tax-filtering station with three specialized scanners for building rent, nursery sales, and regional status.",
+    "visual_metaphor": "A tax sorting gate with three evaluation lanes for farm building rent, nursery saplings, and Sikkimese resident income.",
     "beat_plan": [
       {
-        "beat_goal": "Establish the three distinct income scenarios being tested for exemption.",
+        "beat_goal": "Introduce the three receipt classification cases under Income Tax Act exemptions.",
         "layout": "example_scene",
         "anchor_phrases": [
           "Section 10(1)",
           "Section 2(1A)",
-          "Section 10(26AA)",
-          "₹ 60,000"
+          "Section 10(26AAA)",
+          "₹ 60,000",
+          "₹ 75,000"
         ]
       },
       {
-        "beat_goal": "Analyze the rent from agricultural buildings used for non-agricultural residential purposes.",
+        "beat_goal": "Examine the chargeability of ₹ 60,000 house rent under Section 2(1A) Explanation 2.",
         "layout": "decision_tree",
         "anchor_phrases": [
+          "Section 2(1A) Explanation 2",
           "₹ 60,000",
-          "Explanation 2",
-          "Residential purposes",
-          "Chargeable to tax"
+          "residential purposes",
+          "Taxable"
         ]
       },
       {
-        "beat_goal": "Apply the nursery exception regardless of basic land operations.",
+        "beat_goal": "Analyze Anand Nursery's ₹ 75,000 seedling sales under Section 2(1A) Explanation 3.",
         "layout": "deemed_value",
         "anchor_phrases": [
-          "₹ 75,000",
           "Anand Nursery",
-          "Explanation 3",
-          "Deemed agricultural income"
+          "Section 2(1A) Explanation 3",
+          "₹ 75,000",
+          "Deemed Agricultural Income",
+          "Exempt u/s 10(1)"
         ]
       },
       {
-        "beat_goal": "Verify the Sikkimese regional exemption for business and interest income.",
+        "beat_goal": "Evaluate Mr. Gaitonde's Sikkimese business and interest income under Section 10(26AAA).",
         "layout": "checklist_gate",
         "anchor_phrases": [
           "Mr. Gaitonde",
-          "Sikkimese individual",
+          "Section 10(26AAA)",
           "₹ 2,25,000",
           "₹ 55,000",
-          "Exempt from tax"
+          "Sikkimese Individual"
         ]
       },
       {
-        "beat_goal": "Summarize the tax treatment for all three scenarios.",
+        "beat_goal": "Summarize the tax outcome for all three receipts in a final key takeaway.",
         "layout": "takeaway",
         "anchor_phrases": [
           "Agricultural Income",
-          "Regional Exemption",
-          "Statutory Trap"
+          "Section 10(1)",
+          "Section 10(26AAA)",
+          "Taxability Summary"
         ]
       }
     ]
@@ -81,236 +84,148 @@
     {
       "layout": "example_scene",
       "title": {
-        "text": "The Tax-Filtering Station",
+        "text": "Classification of Receipts",
         "at": 0.3
       },
-      "voice_sync_text": "നമ്മൾ ഇവിടെ പഠിക്കാൻ പോകുന്നത് Section 10(1) പ്രകാരമുള്ള agricultural income exemptions ഉം, Section 2(1A) ന്റെ definitions ഉം, അതുപോലെ Section 10(26AA) പ്രകാരമുള്ള special regional exemptions നെക്കുറിച്ചാണ്. ഇവിടെ മൂന്ന് വ്യത്യസ്ത വരുമാനങ്ങളുണ്ട്: industrial workers-ൽ നിന്ന് ലഭിക്കുന്ന ₹ 60,000 rent, Anand Nursery-യുടെ വരുമാനം, പിന്നെ Mr. Gaitonde-യുടെ വരുമാനം.",
+      "voice_sync_text": "നമസ്കാരം! ഇന്ന് നമ്മൾ Section 10(1) r.w.s Section 2(1A) പ്രകാരമുള്ള Agricultural Income-ന്റെ പരിധിയും Section 10(26AAA) പ്രകാരമുള്ള Sikkimese Individual Exemption-ഉം ആണ് ചർച്ച ചെയ്യുന്നത്. ഇതിനായി ₹ 60,000 rent, ₹ 75,000 nursery income, എന്നിവ പരിശോധിക്കാം.",
       "visual_data": {
         "actors": [
           {
-            "label": "Industrial Tenants",
-            "detail": "Residential use",
-            "amount": 60000,
-            "icon": "person",
-            "at": 16.26
+            "label": "Industrial Worker Tenants",
+            "value": "₹ 60,000",
+            "icon": "house",
+            "at": 39.7
           },
           {
             "label": "Anand Nursery",
-            "detail": "Seedling sales",
-            "amount": 75000,
+            "value": "₹ 75,000",
             "icon": "plot",
-            "at": 16.26
-          },
-          {
-            "label": "Mr. Gaitonde",
-            "detail": "Sikkimese individual",
-            "icon": "person",
-            "at": 22.1
+            "at": 41.36
           }
         ],
-        "transaction": "Taxability Assessment",
+        "transaction": "Classification of Receipts",
         "facts": [
           {
             "label": "Section 10(1)",
-            "detail": "Agricultural Exemption",
-            "at": 22.1
+            "detail": "Agricultural Income Exemption",
+            "at": 41.36
           },
           {
             "label": "Section 2(1A)",
-            "detail": "Definition",
-            "at": 22.1
+            "detail": "Definition of Agricultural Income",
+            "at": 41.36
           },
           {
-            "label": "Section 10(26AA)",
-            "detail": "Sikkimese Exemption",
-            "at": 22.1
+            "label": "Section 10(26AAA)",
+            "detail": "Sikkimese Individual Exemption",
+            "at": 41.36
           }
-        ],
-        "spoken_amounts": [
-          "₹ 60,000",
-          "60,000"
         ]
       },
       "start": 0.0,
-      "end": 23.8,
+      "end": 45.24,
       "id": "b1",
-      "director_goal": "Establish the three distinct income scenarios being tested for exemption.",
+      "director_goal": "Introduce the three receipt classification cases under Income Tax Act exemptions.",
       "anchor_phrases": [
         "Section 10(1)",
         "Section 2(1A)",
-        "Section 10(26AA)",
-        "₹ 60,000"
+        "Section 10(26AAA)",
+        "₹ 60,000",
+        "₹ 75,000"
       ],
       "animation_role": "key_fact",
       "anchor_alignment": [
         {
           "phrase": "Section 10(1)",
-          "at": 1.46,
+          "at": 27.46,
           "matched": true,
           "score": 1.0
         },
         {
           "phrase": "Section 2(1A)",
-          "at": 4.3,
+          "at": 29.62,
           "matched": true,
           "score": 0.977
         },
         {
-          "phrase": "Section 10(26AA)",
-          "at": 7.7,
+          "phrase": "Section 10(26AAA)",
+          "at": 34.24,
           "matched": true,
-          "score": 0.92
+          "score": 1.0
         },
         {
           "phrase": "₹ 60,000",
-          "at": 21.98,
+          "at": 40.48,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "₹ 75,000",
+          "at": 42.14,
           "matched": true,
           "score": 1.0
         }
       ],
       "anchor_match": {
-        "matched": 4,
-        "total": 4
+        "matched": 5,
+        "total": 5
       }
     },
     {
       "layout": "decision_tree",
       "title": {
-        "text": "Agricultural Building Rent",
-        "at": 24.45
+        "text": "Farm Building Rent Analysis",
+        "at": 45.89
       },
-      "voice_sync_text": "Explanation 2 to Section 2(1A) പ്രകാരം, agricultural land ലെ building ൽ നിന്നും ലഭിക്കുന്ന rent അത്തരം ആവശ്യങ്ങൾക്കല്ലെങ്കിൽ, അതായത് industrial workers നു residential purpose നു നൽകിയാൽ, അത് agricultural income ആയി കണക്കാക്കില്ല. അതിനാൽ ഈ ₹ 60,000 is chargeable to tax.",
+      "voice_sync_text": "Section 2(1A) Explanation 2 പ്രകാരം, agricultural land-ൽ ഉള്ള ഒരു building residential purposes-ന് വേണ്ടി let out ചെയ്താൽ ലഭിക്കുന്ന ₹ 60,000 rent Agricultural Income അല്ല. Therefore, ഇത് Taxable ആണ്.",
       "visual_data": {
-        "root": "Rent of ₹ 60,000",
+        "root": "Rent from Farm Building",
         "branches": [
           {
-            "label": "Purpose",
+            "label": "Section 2(1A) Explanation 2",
             "detail": "Residential purposes",
-            "pass": false,
-            "icon": "house",
-            "at": 36.39
-          },
-          {
-            "label": "Statute",
-            "detail": "Explanation 2",
-            "icon": "document",
-            "at": 36.39
-          },
-          {
-            "label": "Status",
-            "detail": "Chargeable to tax",
+            "value": "₹ 60,000",
             "status": "Taxable",
-            "icon": "money_bag",
-            "at": 43.41
+            "icon": "house",
+            "at": 75.15
           }
         ]
       },
-      "start": 24.15,
-      "end": 46.15,
+      "start": 45.59,
+      "end": 88.67,
       "id": "b2",
-      "director_goal": "Analyze the rent from agricultural buildings used for non-agricultural residential purposes.",
+      "director_goal": "Examine the chargeability of ₹ 60,000 house rent under Section 2(1A) Explanation 2.",
       "anchor_phrases": [
+        "Section 2(1A) Explanation 2",
         "₹ 60,000",
-        "Explanation 2",
-        "Residential purposes",
-        "Chargeable to tax"
+        "residential purposes",
+        "Taxable"
       ],
       "animation_role": "explanation",
       "anchor_alignment": [
+        {
+          "phrase": "Section 2(1A) Explanation 2",
+          "at": 75.15,
+          "matched": true,
+          "score": 1.0
+        },
         {
           "phrase": "₹ 60,000",
-          "at": 39.17,
+          "at": 83.71,
           "matched": true,
           "score": 1.0
         },
         {
-          "phrase": "Explanation 2",
-          "at": 24.15,
+          "phrase": "residential purposes",
+          "at": 61.75,
           "matched": false,
-          "score": 0.3
+          "score": 0.455
         },
         {
-          "phrase": "Residential purposes",
-          "at": 36.83,
-          "matched": false,
-          "score": 0.435
-        },
-        {
-          "phrase": "Chargeable to tax",
-          "at": 44.68,
-          "matched": false,
-          "score": 0.417
-        }
-      ],
-      "anchor_match": {
-        "matched": 1,
-        "total": 4
-      }
-    },
-    {
-      "layout": "deemed_value",
-      "title": {
-        "text": "Nursery Income Exception",
-        "at": 46.8
-      },
-      "voice_sync_text": "ഇനി Explanation 3 പ്രകാരം, Anand Nursery ൽ വളർത്തുന്ന seedlings അല്ലെങ്കിൽ saplings ന്റെ വിൽപ്പനയിലൂടെ ലഭിക്കുന്ന ₹ 75,000 വരുമാനം, basic operations on land നടത്തിയിട്ടില്ലെങ്കിലും, agricultural income ആയി deemed agricultural income ആയി കണക്കാക്കപ്പെടും.",
-      "visual_data": {
-        "actual": {
-          "label": "Nursery Sales",
-          "detail": "No basic operations",
-          "amount": 75000,
-          "icon": "plot",
-          "at": 86.72
-        },
-        "deemed": {
-          "label": "Agricultural Income",
-          "detail": "Exempt u/s 10(1)",
-          "status": "Exempt",
-          "icon": "scales",
-          "at": 92.68
-        },
-        "rule": "Explanation 3 to Section 2(1A)",
-        "spoken_amounts": [
-          "₹ 75,000",
-          "75,000"
-        ],
-        "at": 82.68
-      },
-      "start": 46.5,
-      "end": 94.94,
-      "id": "b3",
-      "director_goal": "Apply the nursery exception regardless of basic land operations.",
-      "anchor_phrases": [
-        "₹ 75,000",
-        "Anand Nursery",
-        "Explanation 3",
-        "Deemed agricultural income"
-      ],
-      "animation_role": "explanation",
-      "anchor_alignment": [
-        {
-          "phrase": "₹ 75,000",
-          "at": 80.34,
+          "phrase": "Taxable",
+          "at": 87.57,
           "matched": true,
           "score": 1.0
-        },
-        {
-          "phrase": "Anand Nursery",
-          "at": 86.72,
-          "matched": true,
-          "score": 0.7
-        },
-        {
-          "phrase": "Explanation 3",
-          "at": 94.58,
-          "matched": true,
-          "score": 0.571
-        },
-        {
-          "phrase": "Deemed agricultural income",
-          "at": 85.79,
-          "matched": false,
-          "score": 0.0
         }
       ],
       "anchor_match": {
@@ -319,90 +234,147 @@
       }
     },
     {
+      "layout": "deemed_value",
+      "title": {
+        "text": "Nursery Income Treatment",
+        "at": 89.32
+      },
+      "voice_sync_text": "Section 2(1A) Explanation 3 പ്രകാരം, Anand Nursery-യിൽ saplings അല്ലെങ്കിൽ seedlings വളർത്തി വിൽക്കുമ്പോൾ ലഭിക്കുന്ന ₹ 75,000 income Deemed Agricultural Income ആണ്. ഇത് Section 10(1) പ്രകാരം Exempt u/s 10(1) ആണ്.",
+      "visual_data": {
+        "actual": {
+          "label": "Anand Nursery Sales",
+          "value": "₹ 75,000",
+          "icon": "plot",
+          "at": 93.0
+        },
+        "deemed": {
+          "label": "Agricultural Income",
+          "value": "Exempt",
+          "icon": "money_bag",
+          "at": 100.74
+        },
+        "rule": "Section 2(1A) Explanation 3",
+        "at": 89.02
+      },
+      "start": 89.02,
+      "end": 107.78,
+      "id": "b3",
+      "director_goal": "Analyze Anand Nursery's ₹ 75,000 seedling sales under Section 2(1A) Explanation 3.",
+      "anchor_phrases": [
+        "Anand Nursery",
+        "Section 2(1A) Explanation 3",
+        "₹ 75,000",
+        "Deemed Agricultural Income",
+        "Exempt u/s 10(1)"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Anand Nursery",
+          "at": 93.0,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Section 2(1A) Explanation 3",
+          "at": 103.22,
+          "matched": true,
+          "score": 0.713
+        },
+        {
+          "phrase": "₹ 75,000",
+          "at": 99.37,
+          "matched": false,
+          "score": 0.25
+        },
+        {
+          "phrase": "Deemed Agricultural Income",
+          "at": 100.79,
+          "matched": false,
+          "score": 0.333
+        },
+        {
+          "phrase": "Exempt u/s 10(1)",
+          "at": 104.96,
+          "matched": true,
+          "score": 0.87
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 5
+      }
+    },
+    {
       "layout": "checklist_gate",
       "title": {
         "text": "Sikkimese Individual Exemption",
-        "at": 95.59
+        "at": 108.43
       },
-      "voice_sync_text": "Section 10(26AA) പ്രകാരം, Mr. Gaitonde എന്ന ഒരു Sikkimese individual ന് Sikkim state ലെ business-ൽ നിന്ന് ലഭിക്കുന്ന ₹ 2,25,000 ലാഭവും, Rajasthan Government-ന്റെ securities-ൽ നിന്നുള്ള ₹ 55,000 interest income-ഉം പൂർണ്ണമായും exempt from tax ആണ്.",
+      "voice_sync_text": "Section 10(26AAA) പ്രകാരം, Mr. Gaitonde എന്ന Sikkimese Individual-ന് ആ State-ൽ നിന്നുള്ള ₹ 2,25,000 business income-ഉം, ₹ 55,000 interest on securities-ഉം completely exempt ആണ്.",
       "visual_data": {
         "conditions": [
           {
-            "label": "Individual Status",
-            "detail": "Sikkimese individual",
-            "pass": true,
-            "icon": "person",
-            "at": 102.29
-          },
-          {
-            "label": "Sikkim Business",
-            "amount": 225000,
-            "pass": true,
+            "label": "Business Income",
+            "value": "₹ 2,25,000",
             "icon": "factory",
-            "at": 103.83
+            "at": 118.05
           },
           {
             "label": "Interest Income",
-            "amount": 55000,
-            "pass": true,
+            "value": "₹ 55,000",
             "icon": "bank",
-            "at": 108.91
+            "at": 118.05
           }
         ],
-        "outcome": "Exempt from tax",
-        "spoken_amounts": [
-          "₹ 2,25,000",
-          "₹ 55,000",
-          "2,25,000",
-          "55,000"
-        ]
+        "outcome": "Exempt u/s 10(26AAA)"
       },
-      "start": 95.29,
-      "end": 114.69,
+      "start": 108.13,
+      "end": 123.81,
       "id": "b4",
-      "director_goal": "Verify the Sikkimese regional exemption for business and interest income.",
+      "director_goal": "Evaluate Mr. Gaitonde's Sikkimese business and interest income under Section 10(26AAA).",
       "anchor_phrases": [
         "Mr. Gaitonde",
-        "Sikkimese individual",
+        "Section 10(26AAA)",
         "₹ 2,25,000",
         "₹ 55,000",
-        "Exempt from tax"
+        "Sikkimese Individual"
       ],
       "animation_role": "explanation",
       "anchor_alignment": [
         {
           "phrase": "Mr. Gaitonde",
-          "at": 97.35,
-          "matched": false,
-          "score": 0.444
+          "at": 112.07,
+          "matched": true,
+          "score": 1.0
         },
         {
-          "phrase": "Sikkimese individual",
-          "at": 102.23,
-          "matched": true,
-          "score": 0.8
+          "phrase": "Section 10(26AAA)",
+          "at": 108.13,
+          "matched": false,
+          "score": 0.467
         },
         {
           "phrase": "₹ 2,25,000",
-          "at": 106.47,
+          "at": 116.07,
           "matched": true,
           "score": 1.0
         },
         {
           "phrase": "₹ 55,000",
-          "at": 111.47,
+          "at": 119.03,
           "matched": true,
           "score": 1.0
         },
         {
-          "phrase": "Exempt from tax",
-          "at": 113.45,
-          "matched": true,
-          "score": 0.691
+          "phrase": "Sikkimese Individual",
+          "at": 112.12,
+          "matched": false,
+          "score": 0.356
         }
       ],
       "anchor_match": {
-        "matched": 4,
+        "matched": 3,
         "total": 5
       }
     },
@@ -410,74 +382,76 @@
       "layout": "takeaway",
       "title": {
         "text": "Taxability Summary",
-        "at": 115.34
+        "at": 124.46
       },
-      "voice_sync_text": "ചുരുക്കത്തിൽ, agricultural land-ലെ കെട്ടിടം residential ആവശ്യത്തിന് നൽകുന്നത് ഒരു statutory trap ആണ്. എന്നാൽ nursery income എപ്പോഴും agricultural income ആയിരിക്കും. Sikkimese വ്യക്തികൾക്ക് അവരുടെ regional exemption പ്രകാരം Sikkim-ലെ വരുമാനത്തിനും interest-നും നികുതി നൽകേണ്ടതില്ല.",
+      "voice_sync_text": "ചുരുക്കത്തിൽ, Agricultural Income Section 10(1) പ്രകാരവും, Sikkimese Individual-ന്റെ വരുമാനം Section 10(26AAA) പ്രകാരവും നികുതിയിൽ നിന്ന് ഒഴിവാക്കിയിരിക്കുന്നു. ഇതാണ് ഇന്നത്തെ Taxability Summary.",
       "visual_data": {
         "rules": [
           {
-            "label": "Building Rent",
-            "detail": "Non-agri use = Taxable",
-            "status": "Statutory Trap",
-            "icon": "gavel",
-            "at": 115.04
-          },
-          {
-            "label": "Nursery Income",
-            "detail": "Always Agricultural Income",
-            "status": "Exempt",
+            "label": "Agricultural Income",
+            "detail": "Exempt u/s 10(1)",
             "icon": "plot",
-            "at": 121.22
+            "at": 155.1
           },
           {
             "label": "Sikkimese Income",
-            "detail": "Regional Exemption",
-            "status": "Exempt",
-            "icon": "scales",
-            "at": 132.76
+            "detail": "Exempt u/s 10(26AAA)",
+            "icon": "person",
+            "at": 159.26
           }
         ]
       },
-      "start": 115.04,
-      "end": 134.52,
+      "start": 124.16,
+      "end": 169.69,
       "id": "b5",
-      "director_goal": "Summarize the tax treatment for all three scenarios.",
+      "director_goal": "Summarize the tax outcome for all three receipts in a final key takeaway.",
       "anchor_phrases": [
         "Agricultural Income",
-        "Regional Exemption",
-        "Statutory Trap"
+        "Section 10(1)",
+        "Section 10(26AAA)",
+        "Taxability Summary"
       ],
       "animation_role": "key_fact",
       "anchor_alignment": [
         {
           "phrase": "Agricultural Income",
-          "at": 121.22,
+          "at": 155.1,
           "matched": true,
           "score": 1.0
         },
         {
-          "phrase": "Regional Exemption",
-          "at": 129.52,
+          "phrase": "Section 10(1)",
+          "at": 156.84,
           "matched": true,
-          "score": 0.718
+          "score": 1.0
         },
         {
-          "phrase": "Statutory Trap",
-          "at": 120.74,
-          "matched": false,
-          "score": 0.381
+          "phrase": "Section 10(26AAA)",
+          "at": 161.52,
+          "matched": true,
+          "score": 0.889
+        },
+        {
+          "phrase": "Taxability Summary",
+          "at": 168.12,
+          "matched": true,
+          "score": 1.0
         }
       ],
       "anchor_match": {
-        "matched": 2,
-        "total": 3
+        "matched": 4,
+        "total": 4
       }
     }
   ],
-  "audio_duration_sec": 134.52,
+  "needs_review": true,
+  "quality_issues": [
+    "unsupported director protagonist: Assessee Taxpayers"
+  ],
+  "audio_duration_sec": 169.69,
   "anchor_match": {
-    "matched": 14,
-    "total": 20,
-    "rate": 0.7
+    "matched": 18,
+    "total": 23,
+    "rate": 0.783
   }
 }

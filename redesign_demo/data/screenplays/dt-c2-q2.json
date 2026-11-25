@@ -1,22 +1,19 @@
 {
   "question_id": "dt-c2-q2",
   "audio_url": "data/audio/dt-c2-q2.mp3",
-  "duration_sec": 178.91,
+  "duration_sec": 215.05,
   "sync_offset_sec": 0.0,
-  "context_pill": "Capital Gains Tax Exclusions",
-  "example_summary": "Analysis of asset transactions under Section 47 exempting gifts, HUF partition distributions, and debenture conversions from capital gains tax.",
-  "source_provision": "### Statutory Summary Matrix: Section 47 Exclusions\n\n| Statutory Section | Transaction Category | Statutory Condition / Trigger | Tax Treatment / Legal Consequence |\n| :--- | :--- | :--- | :--- |\n| **Section 47(iii)** | Gift, Will, or Irrevocable Trust | Transfer of a capital asset by an individual or HUF under a gift, will, or irrevocable trust | **Not Regarded as Transfer**: Capital gains tax liability does not arise |\n| **Section 47(i)** | Partition of HUF | Transfer of a capital asset (in kind) on total or partial partition of a Hindu Undivided Family | **Not Regarded as Transfer**: Capital gains tax liability does not arise |\n| **Section 47(x)** | Conversion of Debentures / Bonds | Conversion of bonds, debentures, or deposit certificates into shares or debentures of that company | **Not Regarded as Transfer**: Capital gains tax liability does not arise |\n\n\n> [!IMPORTANT] Scope of Section 45(1): Charging Section\n> Capital gains tax under Section 45(1) applies cumulatively only when there is a valid 'transfer' of a 'capital asset' resulting in 'profits or gains' during the relevant previous year.\n\n\n> [!WARNING] Statutory Overrides\n> Even if a transaction involves the extinguishment of rights or relinquishment of an asset, if it falls squarely within any clause of Section 47, it overrides the general definition of transfer under Section 2(47).",
+  "context_pill": "Section 47 Exclusions from Transfer",
+  "example_summary": "Analyzing scenarios under Section 47 where asset transfers do not attract Capital Gains tax liability.",
+  "source_provision": "### Statutory Summary Matrix: Transactions Not Regarded as Transfer\n\n| Statutory Provision | Qualifying Asset / Transaction | Statutory Condition | Tax Consequence |\n|---|---|---|---|\n| **Section 47(i)** | Asset distributed on partition of HUF | Total or partial partition of Hindu Undivided Family (in kind) | Not regarded as a transfer; No Capital Gains tax liability |\n| **Section 47(iii)** | Asset transferred under a gift, will, or trust | Transfer of capital asset under a gift or will or irrevocable trust | Not regarded as a transfer; Exempt from Capital Gains tax |\n| **Section 47(x)** | Conversion of bonds/debentures into shares | Conversion of debentures or bonds of a company into shares/debentures of that company | Not regarded as a transfer; Tax liability deferred until ultimate sale |\n\n\n### Core Statutory Rules & Micro-Checklists\n\n- **Section 47(i) — Partition of Hindu Undivided Family (HUF)**\n  - Covers distribution of capital assets in kind upon total or partial partition of an HUF.\n  - Cost of acquisition to the member is determined under **Section 49(1)** (Cost to previous owner/HUF).\n\n- **Section 47(iii) — Gift, Will, or Irrevocable Trust**\n  - Covers any transfer of capital assets under a gift or will or an irrevocable trust.\n  - **Exception**: Gift of shares under Employee Stock Option Plans (ESOPs) to employees does not enjoy this statutory exemption.\n\n- **Section 47(x) — Conversion of Convertible Debentures/Bonds**\n  - Covers conversion of convertible bonds or debentures into shares or debentures of the **same company**.\n  - Cost of converted shares is determined under **Section 49(2A)** (Cost of original debentures).\n  - Period of holding of converted shares includes the period of holding of original debentures under **Section 2(42A)**.\n\n\n> [!IMPORTANT] Fundamental Legal Doctrine:\n> Under **Section 45**, Capital Gains tax is attracted only when there is a **transfer** of a Capital Asset within the meaning of **Section 2(47)**. If a transaction falls strictly within any clause of **Section 47**, it is excluded from the definition of transfer ab initio, and no tax liability can be computed.",
   "director": {
     "archetype": "conditions_checklist",
-    "justification": "The scenarios evaluate whether specific asset movements meet the statutory criteria under Section 47 to be excluded from the definition of 'transfer' for capital gains purposes.",
-    "protagonist": "Taxpayer",
+    "justification": "The provision identifies specific transactions that are excluded from the definition of 'transfer' under Section 47, requiring a checklist approach to verify if each scenario qualifies for the exemption.",
+    "protagonist": "The Assessee",
     "actors": [
-      "Mr. A",
-      "Son",
-      "HUF",
-      "Family Members",
-      "Mr. B",
-      "Company"
+      "Mr. A's Son",
+      "HUF Members",
+      "The Issuing Company"
     ],
     "key_numbers": [
       "₹ 25,000",
@@ -24,8 +21,8 @@
       "₹ 20,000",
       "₹ 12,00,000",
       "50 debentures",
-      "₹ 40,000",
       "500 shares",
+      "₹ 40,000",
       "₹ 85,000"
     ],
     "key_dates": [
@@ -35,61 +32,56 @@
       "1995",
       "November 2025"
     ],
-    "visual_metaphor": "A 'Safe Passage' corridor where specific transactions bypass the tax collector's booth because they are not recognized as transfers.",
+    "visual_metaphor": "A 'Tax-Free Transit Gate' where specific asset movements are flagged as 'Not a Transfer' by the Section 47 sensor.",
     "beat_plan": [
       {
-        "beat_goal": "Introduce the three scenarios involving gold gifts, HUF partition, and debenture conversion.",
+        "beat_goal": "Establish the three scenarios where capital assets are moving but tax liability is questioned.",
         "layout": "example_scene",
         "anchor_phrases": [
-          "Mr. A",
-          "HUF",
-          "Mr. B",
-          "Capital Gains Tax Liability",
+          "Section 2(47)",
+          "Section 45",
+          "Capital Asset",
+          "transfer",
           "₹ 25,000"
         ]
       },
       {
-        "beat_goal": "Establish the legal foundation that Section 47 overrides the general charging section.",
-        "layout": "statute_quote",
-        "anchor_phrases": [
-          "Section 45(1)",
-          "Section 47",
-          "Not Regarded as Transfer"
-        ]
-      },
-      {
-        "beat_goal": "Analyze Scenario (i) regarding the gift of gold to a son.",
+        "beat_goal": "Analyze Mr. A's gift of gold under the gift exemption rule.",
         "layout": "checklist_gate",
         "anchor_phrases": [
           "Section 47(iii)",
-          "Gift",
+          "gift",
+          "₹ 25,000",
           "₹ 1,00,000"
         ]
       },
       {
-        "beat_goal": "Analyze Scenario (ii) regarding the distribution of property on HUF partition.",
-        "layout": "flow_actors",
+        "beat_goal": "Examine the HUF house property distribution during partition.",
+        "layout": "statute_quote",
         "anchor_phrases": [
           "Section 47(i)",
-          "HUF Partition",
+          "partition of Hindu Undivided Family",
+          "₹ 20,000",
           "₹ 12,00,000"
         ]
       },
       {
-        "beat_goal": "Analyze Scenario (iii) regarding the conversion of debentures into shares.",
-        "layout": "deemed_value",
+        "beat_goal": "Illustrate the conversion of Mr. B's debentures into shares within the same company.",
+        "layout": "flow_actors",
         "anchor_phrases": [
           "Section 47(x)",
-          "Convertible Debentures",
+          "conversion of bonds or debentures",
+          "50 convertible debentures",
           "500 shares"
         ]
       },
       {
-        "beat_goal": "Conclude that no tax liability arises in any of the three cases.",
+        "beat_goal": "Conclude that all three scenarios are excluded from 'transfer' and thus have no tax liability.",
         "layout": "takeaway",
         "anchor_phrases": [
-          "No Capital Gains Tax Liability",
-          "Exempted Transactions"
+          "Not regarded as transfer",
+          "No Capital Gains tax liability",
+          "Section 47"
         ]
       }
     ]
@@ -99,85 +91,96 @@
     {
       "layout": "example_scene",
       "title": {
-        "text": "Capital Asset Movements & Tax Liability",
+        "text": "Establishing the Scenarios",
         "at": 0.3
       },
-      "voice_sync_text": "ഇവിടെ നമ്മൾ പഠിക്കുന്നത് capital gains chapter-ലെ വളരെ important ആയ ഒരു statutory concept ആണ്. Mr. A purchased gold for ₹ 25,000 and gifted it, HUF distributed property, and Mr. B converted debentures. We evaluate the Capital Gains Tax Liability in these scenarios.",
+      "voice_sync_text": "Income Tax Act-il Capital Gains charge akanamenkil Section 2(47) prakaram oru transfer undayirikkanam. Section 45-il tax liability parayunnu, pakshe Section 47-il parayunna specific transactions-ne law oru transfer ayi kanakakkunnilla. Mr. A 1970-il vangiya ₹ 25,000 gold gift cheyyunnu.",
       "visual_data": {
         "actors": [
           {
             "label": "Mr. A",
-            "detail": "Purchased gold for ₹ 25,000 in 1970",
+            "detail": "Purchased Capital Asset in 1970",
             "value": "₹ 25,000",
+            "date": "1970",
+            "amount": 25000,
             "icon": "person",
-            "at": 34.16
+            "at": 49.84
           },
           {
-            "label": "HUF",
-            "detail": "Distributed house property",
-            "icon": "house",
-            "at": 38.92
-          },
-          {
-            "label": "Mr. B",
-            "detail": "Converted debentures to shares",
+            "label": "Mr. A's Son",
+            "detail": "Recipient of gold gift",
+            "value": "₹ 1,00,000",
+            "date": "P.Y. 2025-26",
+            "amount": 100000,
             "icon": "person",
-            "at": 40.96
+            "at": 49.84
           }
         ],
-        "transaction": "Evaluating Capital Gains Tax Liability for asset movements",
+        "transaction": "Asset transfer under Section 2(47) and Section 45",
         "facts": [
           {
-            "label": "Capital Gains Tax Liability",
-            "detail": "Evaluating tax applicability",
-            "value": "₹ 25,000",
-            "icon": "scales",
-            "at": 43.8
+            "label": "Section 2(47)",
+            "detail": "Definition of transfer",
+            "icon": "document",
+            "at": 49.84
+          },
+          {
+            "label": "Section 45",
+            "detail": "Capital gains charge",
+            "icon": "gavel",
+            "at": 49.84
+          },
+          {
+            "label": "Capital Asset",
+            "detail": "Gold and Property",
+            "amount": 25000,
+            "icon": "money_bag",
+            "at": 49.84
           }
         ]
       },
       "start": 0.0,
-      "end": 46.88,
+      "end": 56.14,
       "id": "b1",
-      "director_goal": "Introduce the three scenarios involving gold gifts, HUF partition, and debenture conversion.",
+      "director_goal": "Establish the three scenarios where capital assets are moving but tax liability is questioned.",
       "anchor_phrases": [
-        "Mr. A",
-        "HUF",
-        "Mr. B",
-        "Capital Gains Tax Liability",
+        "Section 2(47)",
+        "Section 45",
+        "Capital Asset",
+        "transfer",
         "₹ 25,000"
       ],
       "animation_role": "key_fact",
       "anchor_alignment": [
         {
-          "phrase": "Mr. A",
-          "at": 34.16,
+          "phrase": "Section 2(47)",
+          "at": 36.44,
           "matched": true,
           "score": 1.0
         },
         {
-          "phrase": "HUF",
-          "at": 38.92,
+          "phrase": "Section 45",
+          "at": 40.32,
           "matched": true,
           "score": 1.0
         },
         {
-          "phrase": "Mr. B",
-          "at": 40.96,
-          "matched": true,
-          "score": 1.0
+          "phrase": "Capital Asset",
+          "at": 3.52,
+          "matched": false,
+          "score": 0.435
         },
         {
-          "phrase": "Capital Gains Tax Liability",
-          "at": 43.8,
+          "phrase": "transfer",
+          "at": 47.86,
           "matched": true,
           "score": 1.0
         },
         {
           "phrase": "₹ 25,000",
-          "at": 21.23,
-          "matched": false,
-          "score": 0.143
+          "at": 53.36,
+          "matched": true,
+          "score": 1.0
         }
       ],
       "anchor_match": {
@@ -186,236 +189,292 @@
       }
     },
     {
-      "layout": "statute_quote",
-      "title": {
-        "text": "Section 47 Overrides Section 45(1)",
-        "at": 47.53
-      },
-      "voice_sync_text": "Capital gains tax under Section 45(1) applies cumulatively only when there is a valid transfer. However, Section 47 lists transactions that are Not Regarded as Transfer for tax purposes.",
-      "visual_data": {
-        "rule": "Transactions listed under Section 47 override the charging provisions of Section 45(1).",
-        "citation": "Section 45(1) & Section 47",
-        "application": "Not Regarded as Transfer: Specific asset movements bypass capital gains tax liability.",
-        "at": 47.23
-      },
-      "start": 47.23,
-      "end": 87.03,
-      "id": "b2",
-      "director_goal": "Establish the legal foundation that Section 47 overrides the general charging section.",
-      "anchor_phrases": [
-        "Section 45(1)",
-        "Section 47",
-        "Not Regarded as Transfer"
-      ],
-      "animation_role": "explanation",
-      "anchor_alignment": [
-        {
-          "phrase": "Section 45(1)",
-          "at": 76.33,
-          "matched": true,
-          "score": 1.0
-        },
-        {
-          "phrase": "Section 47",
-          "at": 81.91,
-          "matched": true,
-          "score": 1.0
-        },
-        {
-          "phrase": "Not Regarded as Transfer",
-          "at": 84.21,
-          "matched": true,
-          "score": 1.0
-        }
-      ],
-      "anchor_match": {
-        "matched": 3,
-        "total": 3
-      }
-    },
-    {
       "layout": "checklist_gate",
       "title": {
-        "text": "Scenario (i): Gift of Capital Asset",
-        "at": 87.68
+        "text": "Mr. A's Gift of Gold",
+        "at": 56.79
       },
-      "voice_sync_text": "Section 47(iii) അനുസരിച്ച് ഒരു individual അല്ലെങ്കിൽ HUF തങ്ങളുടെ capital asset Gift ആയിട്ടോ will ആയിട്ടോ transfer ചെയ്യുമ്പോൾ അത് transfer ആയി കണക്കാക്കില്ല. Though FMV was ₹ 1,00,000, no capital gains arise.",
+      "voice_sync_text": "Section 47(iii) prakaram oru assessee സ്വന്തം Capital Asset gift ayi kaikkamathm cheythal, athine transfer ayi kanakakkilla. Mr. A ₹ 25,000-nu vangiya gold ₹ 1,00,000 FMV-ll son-ninu kodukunnu. Athukondu ithinu Capital Gains tax liability varunnilla.",
       "visual_data": {
         "conditions": [
           {
-            "label": "Gift of Capital Asset",
-            "detail": "Transfer by individual under a Gift",
-            "value": "₹ 1,00,000",
+            "label": "Section 47(iii)",
+            "detail": "Transfer under gift, will or trust",
             "pass": true,
             "icon": "document",
-            "at": 92.78
+            "at": 81.01
           },
           {
-            "label": "Section 47(iii) Exclusion",
-            "detail": "Not regarded as a transfer",
+            "label": "Gift condition check",
+            "detail": "Valid personal gift at marriage",
             "pass": true,
+            "icon": "padlock",
+            "at": 81.01
+          },
+          {
+            "label": "Cost of gold",
+            "detail": "Purchased for ₹ 25,000",
+            "amount": 25000,
+            "icon": "money_bag",
+            "at": 81.01
+          },
+          {
+            "label": "Fair Market Value",
+            "detail": "FMV on day of gift was ₹ 1,00,000",
+            "amount": 100000,
             "icon": "scales",
-            "at": 92.78
+            "at": 81.01
           }
         ],
-        "outcome": "Exempted under Section 47(iii) - No Tax Liability"
+        "outcome": "Not regarded as transfer; No Capital Gains tax liability"
       },
-      "start": 87.38,
-      "end": 103.74,
-      "id": "b3",
-      "director_goal": "Analyze Scenario (i) regarding the gift of gold to a son.",
+      "start": 56.49,
+      "end": 98.48,
+      "id": "b2",
+      "director_goal": "Analyze Mr. A's gift of gold under the gift exemption rule.",
       "anchor_phrases": [
         "Section 47(iii)",
-        "Gift",
+        "gift",
+        "₹ 25,000",
         "₹ 1,00,000"
       ],
       "animation_role": "explanation",
       "anchor_alignment": [
         {
           "phrase": "Section 47(iii)",
-          "at": 87.88,
+          "at": 81.01,
           "matched": true,
-          "score": 0.92
+          "score": 0.966
         },
         {
-          "phrase": "Gift",
-          "at": 94.28,
+          "phrase": "gift",
+          "at": 85.35,
           "matched": true,
-          "score": 0.8
+          "score": 1.0
+        },
+        {
+          "phrase": "₹ 25,000",
+          "at": 89.77,
+          "matched": true,
+          "score": 1.0
         },
         {
           "phrase": "₹ 1,00,000",
-          "at": 101.0,
+          "at": 82.69,
           "matched": false,
           "score": 0.406
         }
       ],
       "anchor_match": {
-        "matched": 2,
-        "total": 3
+        "matched": 3,
+        "total": 4
       }
     },
     {
-      "layout": "flow_actors",
+      "layout": "statute_quote",
       "title": {
-        "text": "Scenario (ii): HUF Partition Distribution",
-        "at": 104.39
+        "text": "HUF Partition Distribution",
+        "at": 99.13
       },
-      "voice_sync_text": "ഇനി Hindu Undivided Family-യുടെ total അല്ലെങ്കിൽ partial partition നടക്കുമ്പോൾ assets members-ലേക്ക് distribute ചെയ്യുന്നത് Section 47(i) പ്രകാരം transfer ആയി treat ചെയ്യുന്നതല്ല. Even with FMV of ₹ 12,00,000 on HUF Partition, tax is not levied.",
+      "voice_sync_text": "Section 47(i) anusarich oru Hindu Undivided Family-ude total allengil partial partition nadakkumbol, family-ile members-nu nalkunna Capital Assets-nte distribution oru transfer alla. 1945-il ₹ 20,000-nu vangiya house property ₹ 12,00,000 FMV-ll partition-il nalkunnu. Ithinum Capital Gains tax ill.",
       "visual_data": {
-        "actors": [
-          {
-            "label": "HUF Partition",
-            "detail": "Distribution of property in kind",
-            "value": "₹ 12,00,000",
-            "icon": "house",
-            "at": 119.19
-          },
-          {
-            "label": "Family Members",
-            "detail": "Receives house property on partition",
-            "icon": "person",
-            "at": 119.19
-          }
-        ],
-        "edges": [
-          {
-            "label": "Section 47(i) Exclusion",
-            "detail": "Distribution on partition is not a transfer",
-            "from": "HUF Partition",
-            "to": "Family Members",
-            "pass": true,
-            "icon": "scales",
-            "at": 119.19
-          }
-        ]
+        "rule": "Transfer of a capital asset on total or partial partition of Hindu Undivided Family is not regarded as transfer.",
+        "citation": "Section 47(i)",
+        "application": "House property purchased in 1945 for ₹ 20,000 distributed during partition in P.Y. 2025-26 with FMV of ₹ 12,00,000 is exempt from capital gains tax.",
+        "at": 98.83
       },
-      "start": 104.09,
-      "end": 122.29,
-      "id": "b4",
-      "director_goal": "Analyze Scenario (ii) regarding the distribution of property on HUF partition.",
+      "start": 98.83,
+      "end": 146.03,
+      "id": "b3",
+      "director_goal": "Examine the HUF house property distribution during partition.",
       "anchor_phrases": [
         "Section 47(i)",
-        "HUF Partition",
+        "partition of Hindu Undivided Family",
+        "₹ 20,000",
         "₹ 12,00,000"
       ],
       "animation_role": "explanation",
       "anchor_alignment": [
         {
           "phrase": "Section 47(i)",
-          "at": 112.91,
+          "at": 124.37,
           "matched": true,
           "score": 1.0
         },
         {
-          "phrase": "HUF Partition",
-          "at": 119.19,
+          "phrase": "partition of Hindu Undivided Family",
+          "at": 126.11,
           "matched": true,
-          "score": 1.0
+          "score": 0.8
+        },
+        {
+          "phrase": "₹ 20,000",
+          "at": 138.69,
+          "matched": true,
+          "score": 0.62
         },
         {
           "phrase": "₹ 12,00,000",
-          "at": 118.72,
-          "matched": false,
-          "score": 0.211
+          "at": 141.17,
+          "matched": true,
+          "score": 0.52
         }
       ],
       "anchor_match": {
-        "matched": 2,
-        "total": 3
+        "matched": 4,
+        "total": 4
       }
     },
     {
-      "layout": "deemed_value",
+      "layout": "flow_actors",
       "title": {
-        "text": "Scenario (iii): Debenture Conversion",
-        "at": 122.94
+        "text": "Conversion of Debentures into Shares",
+        "at": 146.68
       },
-      "voice_sync_text": "മൂന്നാമത്തെ provision ആയ Section 47(x) പറയുന്നത്, Convertible Debentures കമ്പനിയുടെ 500 shares ആയി convert ചെയ്യുമ്പോൾ, ആ conversion transfer ആയി consider ചെയ്യപ്പെടില്ല എന്നാണ്.",
+      "voice_sync_text": "Section 47(x) prakaram oru company-ude convertible bonds allengil debentures athe company-ude shares aayi convert cheyyumbol nadakkunna conversion oru transfer alla. Mr. B 1995-il vangiya 50 convertible debentures for ₹ 40,000, November 2025-il 500 shares worth ₹ 85,000 aayi convert cheyyunnu. Conversion nadakkumbol tax liability varunnilla.",
       "visual_data": {
-        "actual": {
-          "label": "Convertible Debentures",
-          "detail": "Purchased 50 debentures",
-          "value": "₹ 40,000",
-          "icon": "document",
-          "at": 127.9
-        },
-        "deemed": {
-          "label": "500 shares",
-          "detail": "Received upon conversion",
-          "value": "₹ 85,000",
-          "icon": "shares",
-          "at": 129.96
-        },
-        "rule": "Section 47(x): Conversion into 500 shares is Not Regarded as Transfer.",
-        "at": 124.62
+        "actors": [
+          {
+            "label": "Mr. B",
+            "detail": "Debenture holder",
+            "value": "₹ 40,000",
+            "date": "1995",
+            "amount": 40000,
+            "icon": "person",
+            "at": 161.02
+          },
+          {
+            "label": "The Issuing Company",
+            "detail": "Converted debentures into shares",
+            "value": "₹ 85,000",
+            "date": "November 2025",
+            "amount": 85000,
+            "icon": "bank",
+            "at": 161.02
+          }
+        ],
+        "edges": [
+          {
+            "label": "Section 47(x)",
+            "detail": "Conversion of bonds or debentures",
+            "icon": "document",
+            "at": 161.02
+          },
+          {
+            "label": "50 convertible debentures",
+            "detail": "Original holding",
+            "amount": 50,
+            "icon": "shares",
+            "at": 161.02
+          },
+          {
+            "label": "500 shares",
+            "detail": "Converted holding",
+            "amount": 500,
+            "icon": "shares",
+            "at": 165.08
+          }
+        ]
       },
-      "start": 122.64,
-      "end": 137.04,
-      "id": "b5",
-      "director_goal": "Analyze Scenario (iii) regarding the conversion of debentures into shares.",
+      "start": 146.38,
+      "end": 172.23,
+      "id": "b4",
+      "director_goal": "Illustrate the conversion of Mr. B's debentures into shares within the same company.",
       "anchor_phrases": [
         "Section 47(x)",
-        "Convertible Debentures",
+        "conversion of bonds or debentures",
+        "50 convertible debentures",
         "500 shares"
       ],
       "animation_role": "explanation",
       "anchor_alignment": [
         {
           "phrase": "Section 47(x)",
-          "at": 124.62,
+          "at": 147.4,
           "matched": true,
           "score": 1.0
         },
         {
-          "phrase": "Convertible Debentures",
-          "at": 127.9,
+          "phrase": "conversion of bonds or debentures",
+          "at": 150.38,
+          "matched": true,
+          "score": 0.844
+        },
+        {
+          "phrase": "50 convertible debentures",
+          "at": 158.34,
           "matched": true,
           "score": 1.0
         },
         {
           "phrase": "500 shares",
-          "at": 129.96,
+          "at": 165.08,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 4,
+        "total": 4
+      }
+    },
+    {
+      "layout": "takeaway",
+      "title": {
+        "text": "Conclusion & Takeaway",
+        "at": 172.88
+      },
+      "voice_sync_text": "Ithrakaryangalil ninnu manassilakkam, ee three scenarios-um Section 47-nte கீழ் வரும் specific provisions-l varunnu. All three scenarios are Not regarded as transfer and therefore No Capital Gains tax liability arises under Section 47.",
+      "visual_data": {
+        "rules": [
+          {
+            "label": "Not regarded as transfer",
+            "detail": "Excluded ab initio under Section 47",
+            "pass": true,
+            "icon": "padlock",
+            "at": 208.64
+          },
+          {
+            "label": "No Capital Gains tax liability",
+            "detail": "Exempt from capital gains taxation in all three cases",
+            "pass": true,
+            "icon": "money_bag",
+            "at": 210.8
+          },
+          {
+            "label": "Section 47",
+            "detail": "Covers gifts, HUF partitions, and debenture conversions",
+            "icon": "document",
+            "at": 210.8
+          }
+        ]
+      },
+      "start": 172.58,
+      "end": 215.05,
+      "id": "b5",
+      "director_goal": "Conclude that all three scenarios are excluded from 'transfer' and thus have no tax liability.",
+      "anchor_phrases": [
+        "Not regarded as transfer",
+        "No Capital Gains tax liability",
+        "Section 47"
+      ],
+      "animation_role": "key_fact",
+      "anchor_alignment": [
+        {
+          "phrase": "Not regarded as transfer",
+          "at": 208.64,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "No Capital Gains tax liability",
+          "at": 210.8,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Section 47",
+          "at": 213.52,
           "matched": true,
           "score": 1.0
         }
@@ -424,65 +483,12 @@
         "matched": 3,
         "total": 3
       }
-    },
-    {
-      "layout": "takeaway",
-      "title": {
-        "text": "Exempted Transactions Summary",
-        "at": 137.69
-      },
-      "voice_sync_text": "അതുകൊണ്ട് ഈ മൂന്നു കേസുകളിലും No Capital Gains Tax Liability arise ചെയ്യുന്നില്ല. All three are Exempted Transactions under Section 47.",
-      "visual_data": {
-        "rules": [
-          {
-            "label": "No Capital Gains Tax Liability",
-            "detail": "Gifts, HUF partitions, and debenture conversions are excluded",
-            "pass": true,
-            "icon": "scales",
-            "at": 170.93
-          },
-          {
-            "label": "Exempted Transactions",
-            "detail": "Section 47 overrides general definition of transfer under Section 2(47)",
-            "pass": true,
-            "icon": "document",
-            "at": 175.65
-          }
-        ]
-      },
-      "start": 137.39,
-      "end": 178.91,
-      "id": "b6",
-      "director_goal": "Conclude that no tax liability arises in any of the three cases.",
-      "anchor_phrases": [
-        "No Capital Gains Tax Liability",
-        "Exempted Transactions"
-      ],
-      "animation_role": "key_fact",
-      "anchor_alignment": [
-        {
-          "phrase": "No Capital Gains Tax Liability",
-          "at": 170.93,
-          "matched": true,
-          "score": 1.0
-        },
-        {
-          "phrase": "Exempted Transactions",
-          "at": 175.65,
-          "matched": true,
-          "score": 1.0
-        }
-      ],
-      "anchor_match": {
-        "matched": 2,
-        "total": 2
-      }
     }
   ],
-  "audio_duration_sec": 178.91,
+  "audio_duration_sec": 215.05,
   "anchor_match": {
-    "matched": 16,
-    "total": 19,
-    "rate": 0.842
+    "matched": 18,
+    "total": 20,
+    "rate": 0.9
   }
 }

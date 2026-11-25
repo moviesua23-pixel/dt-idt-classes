@@ -1,17 +1,17 @@
 {
   "question_id": "dt-c1-q11",
   "audio_url": "data/audio/dt-c1-q11.mp3",
-  "duration_sec": 136.19,
+  "duration_sec": 113.52,
   "sync_offset_sec": 0.0,
-  "context_pill": "Basic Concepts, Tax Rates and Exempt Income",
-  "example_summary": "Comparing tax liability under partial integration scheme for Mr. X at age 40 versus age 75 under the old tax regime.",
-  "source_provision": "### Statutory Summary Matrix: Partial Integration Scheme\n\n| Provision / Section | Statutory Condition / Limit | Tax Treatment / Legal Consequence |\n| :--- | :--- | :--- |\n| **Section 10(1)** | Agricultural income as defined u/s 2(1A) | 100% Exempt from Income Tax |\n| **Net Agri Income Computation** | Gross Agricultural Receipts *less* Revenue Expenditure | Expenses incurred exclusively for agri income are deductible |\n| **Partial Integration Condition 1** | Net Agricultural Income exceeds **₹ 5,000 p.a.** | Mandatory trigger for partial integration |\n| **Partial Integration Condition 2** | Non-Agricultural Income exceeds **Basic Exemption Limit** | Mandatory trigger for partial integration |\n| **Basic Exemption Limit (Age < 60)** | Resident Individual aged below 60 years | **₹ 2,50,000** |\n| **Basic Exemption Limit (Age 60 to <80)** | Resident Senior Citizen | **₹ 3,00,000** |\n\n\n### Step-by-Step Partial Integration Computation Framework\n\n* **Step 1:** Calculate Income Tax on (**Total Non-Agricultural Income + Net Agricultural Income**) at standard slab rates.\n* **Step 2:** Calculate Income Tax on (**Basic Exemption Limit + Net Agricultural Income**) at standard slab rates.\n* **Step 3:** Subtract tax computed in **Step 2** from tax computed in **Step 1** ($Tax_{Step 1} - Tax_{Step 2}$).\n* **Step 4 & 5:** Add **Health and Education Cess @ 4%** on the resulting net tax payable to arrive at final tax liability.\n\n\n> [!IMPORTANT]\n> **Regime Applicability:** Partial integration applies when an Assessee opts out of the default tax regime u/s 115BAC and is assessed under the optional/old tax regime provisions.",
+  "context_pill": "Partial Integration of Agricultural Income",
+  "example_summary": "Tax liability computation under partial integration scheme for Mr. X across two age brackets: 40 years and 75 years",
+  "source_provision": "### Statutory Summary Matrix: Partial Integration Scheme\n\n| Head / Provision | Statutory Basis | Applicability Threshold / Test | Legal Tax Consequence |\n| :--- | :--- | :--- | :--- |\n| **Agricultural Exemption** | Section 10(1) | Income derived from land situated in India & used for agricultural purposes | Completely exempt from Total Income |\n| **Net Ag Income Computation** | Section 10(1) | Gross Agricultural Receipts *less* Expenses exclusively incurred | Only Net Agricultural Income is considered |\n| **Partial Integration Condition 1** | Finance Act Rules | Net Agricultural Income > ₹ 5,000 p.a. | Trigger condition for partial integration |\n| **Partial Integration Condition 2** | Finance Act Rules | Non-Agricultural Total Income > Basic Exemption Limit | Trigger condition for partial integration |\n\n\n### Step-by-Step Partial Integration Tax Formula\n\n* **Step 1:** Tax on (Non-Agricultural Total Income + Net Agricultural Income) at regular slab rates.\n* **Step 2:** Tax on (Basic Exemption Limit + Net Agricultural Income) at regular slab rates.\n* **Step 3:** Net Tax Before Cess = **Step 1 Tax** - **Step 2 Tax**.\n* **Step 4 & 5:** Add Health and Education Cess @ 4% on Net Tax Liability.\n\n\n> [!IMPORTANT] Basic Exemption Limits under Regular (Opt-Out) Tax Regime\n> * **Resident Individual (< 60 years):** Basic Exemption Limit is ₹ 2,50,000.\n> * **Resident Senior Citizen (60 years to < 80 years):** Basic Exemption Limit is ₹ 3,00,000.\n> * **Resident Super Senior Citizen (80 years or more):** Basic Exemption Limit is ₹ 5,00,000.",
   "director": {
     "archetype": "two_regime_comparison",
-    "justification": "Comparing tax liability under partial integration scheme for Mr. X at age 40 versus age 75 under the old tax regime.",
+    "justification": "The provision requires computing tax liability under the partial integration scheme across two distinct age categories with different basic exemption limits.",
     "protagonist": "Mr. X",
     "actors": [
-      "Assessing Officer"
+      "Mr. X"
     ],
     "key_numbers": [
       "₹ 4,00,000",
@@ -20,78 +20,68 @@
       "₹ 1,60,000",
       "₹ 2,90,000",
       "₹ 7,80,000",
+      "₹ 5,000",
       "₹ 2,50,000",
       "₹ 3,00,000",
-      "₹ 5,000",
       "₹ 1,17,520",
-      "₹ 1,07,120",
-      "4%"
+      "₹ 1,07,120"
     ],
     "key_dates": [
       "P.Y. 2025-26"
     ],
-    "visual_metaphor": "Dual-scale balance comparing partial integration tax calculations for a normal resident versus a senior citizen.",
+    "visual_metaphor": "A dual-track ledger balance scale comparing partial integration tax steps for non-senior vs senior citizen basic exemption thresholds",
     "beat_plan": [
       {
-        "beat_goal": "Introduce Mr. X's income streams and tax regime choice for P.Y. 2025-26.",
+        "beat_goal": "Introduce Mr. X's income details and exemption of agricultural income under Section 10(1).",
         "layout": "example_scene",
         "anchor_phrases": [
           "Mr. X",
           "P.Y. 2025-26",
           "Salary ₹ 4,00,000",
-          "House property ₹ 3,80,000"
+          "House Property ₹ 3,80,000",
+          "Agricultural Income ₹ 4,50,000"
         ]
       },
       {
-        "beat_goal": "Verify statutory conditions triggering mandatory partial integration.",
+        "beat_goal": "Validate the statutory eligibility conditions for triggering the Partial Integration scheme.",
         "layout": "checklist_gate",
         "anchor_phrases": [
           "Section 10(1)",
-          "Net Agricultural Income",
-          "₹ 5,000",
-          "Basic Exemption Limit"
+          "Net Agricultural Income ₹ 2,90,000",
+          "Exceeds ₹ 5,000",
+          "Total Income ₹ 7,80,000"
         ]
       },
       {
-        "beat_goal": "Calculate net agricultural income and total non-agricultural income.",
+        "beat_goal": "Compute step-by-step tax liability for Mr. X at age 40 under the standard exemption limit.",
         "layout": "ledger",
         "anchor_phrases": [
-          "Gross Agricultural Income ₹ 4,50,000",
-          "Expenses ₹ 1,60,000",
-          "Net Agricultural Income ₹ 2,90,000",
-          "Total Non-Agri Income ₹ 7,80,000"
-        ]
-      },
-      {
-        "beat_goal": "Execute 5-step partial integration calculation for age 40.",
-        "layout": "slab_ladder",
-        "anchor_phrases": [
           "Age 40 years",
-          "Basic Exemption Limit ₹ 2,50,000",
+          "Basic Exemption ₹ 2,50,000",
           "Step 1 Tax ₹ 1,33,500",
           "Step 2 Tax ₹ 20,500",
-          "Net Tax ₹ 1,17,520"
+          "Total Tax Payable ₹ 1,17,520"
         ]
       },
       {
-        "beat_goal": "Compare tax liability outcome between age 40 and age 75 senior citizen slab.",
+        "beat_goal": "Compare partial integration tax steps for Mr. X at age 75 with senior citizen exemption limits.",
         "layout": "compare_regimes",
         "anchor_phrases": [
           "Age 75 years",
-          "Basic Exemption Limit ₹ 3,00,000",
+          "Basic Exemption ₹ 3,00,000",
           "Step 1 Tax ₹ 1,31,000",
           "Step 2 Tax ₹ 28,000",
-          "Net Tax ₹ 1,07,120"
+          "Total Tax Payable ₹ 1,07,120"
         ]
       },
       {
-        "beat_goal": "Summarize key takeaways of partial integration tax rules.",
+        "beat_goal": "Summarize how basic exemption limits impact net tax under agricultural partial integration.",
         "layout": "takeaway",
         "anchor_phrases": [
-          "Partial Integration Scheme",
-          "4% Cess",
-          "₹ 1,17,520",
-          "₹ 1,07,120"
+          "Partial Integration",
+          "Section 10(1)",
+          "Basic Exemption Limit",
+          "Cess @ 4%"
         ]
       }
     ]
@@ -101,60 +91,57 @@
     {
       "layout": "example_scene",
       "title": {
-        "text": "Introduction to Mr. X's Income",
+        "text": "Assessee Profile & Income Breakdown",
         "at": 0.3
       },
-      "voice_sync_text": "Welcome students. Today നമ്മൾ Mr. X-ന്റെ P.Y. 2025-26-ലെ tax liability ആണ് നോക്കുന്നത്. അദ്ദേഹത്തിന് Salary ₹ 4,00,000-ഉം Income from house property ₹ 3,80,000-ഉം വരുമാനമുണ്ട്. അദ്ദേഹം optional tax regime ആണ് തിരഞ്ഞെടുത്തിരിക്കുന്നത്.",
+      "voice_sync_text": "Mr. X എന്ന resident assessee-യുടെ P.Y. 2025-26 ലെ വരുമാനം പരിശോധിക്കാം. ഇദ്ദേഹത്തിന് Salary ₹ 4,00,000, House Property ₹ 3,80,000, കൂടാതെ Agricultural Income ₹ 4,50,000 ഉണ്ട്. Agricultural expenses ₹ 1,60,000 ആണ്.",
       "visual_data": {
         "actors": [
           {
-            "label": "Mr. X",
-            "detail": "Resident Individual",
+            "label": "Assessee",
+            "detail": "Mr. X",
             "icon": "person",
-            "at": 2.8
-          },
-          {
-            "label": "Assessing Officer",
-            "icon": "gavel",
             "at": 2.8
           }
         ],
-        "transaction": "P.Y. 2025-26 Income Assessment",
+        "transaction": "P.Y. 2025-26 Income Details",
         "facts": [
           {
-            "label": "Salary",
-            "amount": 400000,
+            "label": "Salary ₹ 4,00,000",
+            "value": "₹ 4,00,000",
             "icon": "money_bag",
-            "at": 10.18
+            "at": 10.2
           },
           {
-            "label": "House property",
-            "amount": 380000,
+            "label": "House Property ₹ 3,80,000",
+            "value": "₹ 3,80,000",
             "icon": "house",
             "at": 13.46
           },
           {
-            "label": "P.Y. 2025-26",
-            "icon": "calendar",
-            "at": 13.46
+            "label": "Agricultural Income ₹ 4,50,000",
+            "value": "₹ 4,50,000",
+            "icon": "plot",
+            "at": 13.63
+          },
+          {
+            "label": "Agri Expenses",
+            "value": "₹ 1,60,000",
+            "icon": "document",
+            "at": 18.67
           }
-        ],
-        "spoken_amounts": [
-          "₹ 4,00,000",
-          "₹ 3,80,000",
-          "4,00,000",
-          "3,80,000"
         ]
       },
       "start": 0.0,
       "end": 21.04,
       "id": "b1",
-      "director_goal": "Introduce Mr. X's income streams and tax regime choice for P.Y. 2025-26.",
+      "director_goal": "Introduce Mr. X's income details and exemption of agricultural income under Section 10(1).",
       "anchor_phrases": [
         "Mr. X",
         "P.Y. 2025-26",
         "Salary ₹ 4,00,000",
-        "House property ₹ 3,80,000"
+        "House Property ₹ 3,80,000",
+        "Agricultural Income ₹ 4,50,000"
       ],
       "animation_role": "key_fact",
       "anchor_alignment": [
@@ -172,88 +159,89 @@
         },
         {
           "phrase": "Salary ₹ 4,00,000",
-          "at": 10.18,
+          "at": 10.2,
           "matched": true,
           "score": 0.713
         },
         {
-          "phrase": "House property ₹ 3,80,000",
+          "phrase": "House Property ₹ 3,80,000",
           "at": 13.46,
           "matched": true,
           "score": 0.912
+        },
+        {
+          "phrase": "Agricultural Income ₹ 4,50,000",
+          "at": 13.63,
+          "matched": false,
+          "score": 0.34
         }
       ],
       "anchor_match": {
         "matched": 4,
-        "total": 4
+        "total": 5
       }
     },
     {
       "layout": "checklist_gate",
       "title": {
-        "text": "Partial Integration Conditions",
+        "text": "Eligibility for Partial Integration",
         "at": 21.69
       },
-      "voice_sync_text": "Partial integration apply ചെയ്യണമെങ്കിൽ Section 10(1) പ്രകാരം Agricultural Income exempt ആണെങ്കിലും ചില conditions ഉണ്ട്. ഒന്നാമതായി Net Agricultural Income ₹ 5,000-ൽ കൂടുതൽ ആയിരിക്കണം. രണ്ടാമതായി, Non-agricultural income, Basic Exemption Limit-നേക്കാൾ കൂടുതൽ ആയിരിക്കണം.",
+      "voice_sync_text": "Section 10(1) പ്രകാരം agricultural income exempt ആണ്. Net Agricultural Income ₹ 2,90,000 Exceeds ₹ 5,000 limit, കൂടാതെ Non-agricultural Total Income ₹ 7,80,000 basic exemption limit കവിയുന്നതിനാൽ partial integration ബാധകമാണ്.",
       "visual_data": {
         "conditions": [
           {
-            "label": "Section 10(1)",
-            "detail": "Agricultural Income Exemption",
+            "label": "Section 10(1) Net Agricultural Income ₹ 2,90,000",
+            "detail": "Exceeds ₹ 5,000",
             "pass": true,
-            "at": 24.59
+            "icon": "plot",
+            "at": 24.87
           },
           {
-            "label": "Net Agricultural Income",
-            "detail": "Must exceed ₹ 5,000",
-            "amount": 5000,
+            "label": "Total Income ₹ 7,80,000",
+            "detail": "Exceeds Basic Exemption",
             "pass": true,
-            "at": 31.55
-          },
-          {
-            "label": "Basic Exemption Limit",
-            "detail": "Non-Agri Income must exceed BEL",
-            "pass": true,
-            "at": 38.79
+            "icon": "money_bag",
+            "at": 37.49
           }
         ],
-        "outcome": "Mandatory Partial Integration Triggered"
+        "outcome": "Partial Integration Scheme Applies"
       },
       "start": 21.39,
       "end": 41.95,
       "id": "b2",
-      "director_goal": "Verify statutory conditions triggering mandatory partial integration.",
+      "director_goal": "Validate the statutory eligibility conditions for triggering the Partial Integration scheme.",
       "anchor_phrases": [
         "Section 10(1)",
-        "Net Agricultural Income",
-        "₹ 5,000",
-        "Basic Exemption Limit"
+        "Net Agricultural Income ₹ 2,90,000",
+        "Exceeds ₹ 5,000",
+        "Total Income ₹ 7,80,000"
       ],
       "animation_role": "explanation",
       "anchor_alignment": [
         {
           "phrase": "Section 10(1)",
-          "at": 24.59,
+          "at": 24.87,
           "matched": true,
           "score": 1.0
         },
         {
-          "phrase": "Net Agricultural Income",
+          "phrase": "Net Agricultural Income ₹ 2,90,000",
           "at": 31.55,
           "matched": true,
-          "score": 1.0
+          "score": 0.889
         },
         {
-          "phrase": "₹ 5,000",
-          "at": 33.45,
+          "phrase": "Exceeds ₹ 5,000",
+          "at": 33.29,
           "matched": true,
-          "score": 1.0
+          "score": 0.667
         },
         {
-          "phrase": "Basic Exemption Limit",
-          "at": 38.79,
+          "phrase": "Total Income ₹ 7,80,000",
+          "at": 37.49,
           "matched": true,
-          "score": 1.0
+          "score": 0.48
         }
       ],
       "anchor_match": {
@@ -264,277 +252,180 @@
     {
       "layout": "ledger",
       "title": {
-        "text": "Income Computation",
+        "text": "Tax Liability Computation (Age 40 Years)",
         "at": 42.6
       },
-      "voice_sync_text": "ഇനി നമുക്ക് വരുമാനം കണക്കാക്കാം. Gross Agricultural Income ₹ 4,50,000-ൽ നിന്ന് Expenses ₹ 1,60,000 കുറച്ചാൽ Net Agricultural Income ₹ 2,90,000 ലഭിക്കും. ഇതും Salary, House Property എന്നിവ ചേർത്താൽ Total Non-Agri Income ₹ 7,80,000 വരും.",
+      "voice_sync_text": "Age 40 years ആണെങ്കിൽ Basic Exemption ₹ 2,50,000 ആണ്. Step 1 Tax ₹ 1,33,500, Step 2 Tax ₹ 20,500 ൽ നിന്ന് കുറച്ചാൽ net tax ₹ 1,13,000 ലഭിക്കും. ഇതിനോടൊപ്പം 4% cess ചേരുമ്പോൾ Total Tax Payable ₹ 1,17,520 ആകുന്നു.",
       "visual_data": {
         "rows": [
           {
-            "label": "Gross Agricultural Income",
-            "amount": 450000,
-            "sign": "+",
-            "at": 45.08
+            "label": "Age 40 years Assessee",
+            "detail": "Basic Exemption ₹ 2,50,000",
+            "value": "Non-Senior",
+            "icon": "person",
+            "at": 42.3
           },
           {
-            "label": "Expenses",
-            "amount": 160000,
-            "sign": "-",
-            "at": 48.92
+            "label": "Step 1 Tax ₹ 1,33,500",
+            "detail": "Tax on Aggregate ₹ 10,70,000",
+            "value": "₹ 1,33,500",
+            "icon": "scales",
+            "at": 46.74
           },
           {
-            "label": "Net Agricultural Income",
-            "amount": 290000,
-            "sign": "=",
-            "icon": "plot",
-            "at": 52.02
+            "label": "Step 2 Tax ₹ 20,500",
+            "detail": "Tax on Exempt + Agri ₹ 5,40,000",
+            "value": "₹ 20,500",
+            "icon": "scales",
+            "at": 46.74
           },
           {
-            "label": "Salary",
-            "amount": 400000,
-            "sign": "+",
-            "at": 56.28
+            "label": "Net Tax Liability",
+            "detail": "₹ 1,33,500 - ₹ 20,500",
+            "value": "₹ 1,13,000",
+            "icon": "money_bag",
+            "at": 52.0
           },
           {
-            "label": "House Property",
-            "amount": 380000,
-            "sign": "+",
-            "at": 56.28
+            "label": "Cess @ 4%",
+            "detail": "4% on ₹ 1,13,000",
+            "value": "₹ 4,520",
+            "icon": "document",
+            "at": 54.82
           }
         ],
-        "total": "Total Non-Agri Income ₹ 7,80,000",
-        "spoken_amounts": [
-          "₹ 4,50,000",
-          "₹ 1,60,000",
-          "₹ 2,90,000",
-          "4,50,000",
-          "1,60,000",
-          "2,90,000"
-        ]
+        "total": "Total Tax Payable ₹ 1,17,520"
       },
       "start": 42.3,
       "end": 63.1,
       "id": "b3",
-      "director_goal": "Calculate net agricultural income and total non-agricultural income.",
-      "anchor_phrases": [
-        "Gross Agricultural Income ₹ 4,50,000",
-        "Expenses ₹ 1,60,000",
-        "Net Agricultural Income ₹ 2,90,000",
-        "Total Non-Agri Income ₹ 7,80,000"
-      ],
-      "animation_role": "explanation",
-      "anchor_alignment": [
-        {
-          "phrase": "Gross Agricultural Income ₹ 4,50,000",
-          "at": 45.08,
-          "matched": true,
-          "score": 0.953
-        },
-        {
-          "phrase": "Expenses ₹ 1,60,000",
-          "at": 48.92,
-          "matched": true,
-          "score": 1.0
-        },
-        {
-          "phrase": "Net Agricultural Income ₹ 2,90,000",
-          "at": 52.02,
-          "matched": true,
-          "score": 0.968
-        },
-        {
-          "phrase": "Total Non-Agri Income ₹ 7,80,000",
-          "at": 56.72,
-          "matched": true,
-          "score": 0.874
-        }
-      ],
-      "anchor_match": {
-        "matched": 4,
-        "total": 4
-      }
-    },
-    {
-      "layout": "slab_ladder",
-      "title": {
-        "text": "Tax Liability: Age 40",
-        "at": 63.75
-      },
-      "voice_sync_text": "Case (a)-ൽ Mr. X-ന് Age 40 years ആണ്. ഇവിടെ Basic Exemption Limit ₹ 2,50,000 ആണ്. Step 1 Tax ₹ 1,33,500-ഉം, Step 2 Tax ₹ 20,500-ഉം ആണ്. ഇത് കുറച്ച് 4% cess ചേർത്താൽ Net Tax ₹ 1,17,520 ലഭിക്കും.",
-      "visual_data": {
-        "tiers": [
-          {
-            "label": "Age 40 years",
-            "detail": "Basic Exemption Limit ₹ 2,50,000",
-            "at": 66.11
-          },
-          {
-            "label": "Step 1 Tax",
-            "detail": "Tax on (Total + Agri)",
-            "amount": 133500,
-            "at": 73.13
-          },
-          {
-            "label": "Step 2 Tax",
-            "detail": "Tax on (BEL + Agri)",
-            "amount": 20500,
-            "at": 77.03
-          },
-          {
-            "label": "Net Tax",
-            "detail": "(Step 1 - Step 2) + 4% Cess",
-            "amount": 117520,
-            "at": 83.99
-          }
-        ],
-        "spoken_amounts": [
-          "₹ 1,33,500",
-          "₹ 20,500",
-          "₹ 1,17,520",
-          "1,33,500",
-          "20,500",
-          "1,17,520"
-        ]
-      },
-      "start": 63.45,
-      "end": 88.21,
-      "id": "b4",
-      "director_goal": "Execute 5-step partial integration calculation for age 40.",
+      "director_goal": "Compute step-by-step tax liability for Mr. X at age 40 under the standard exemption limit.",
       "anchor_phrases": [
         "Age 40 years",
-        "Basic Exemption Limit ₹ 2,50,000",
+        "Basic Exemption ₹ 2,50,000",
         "Step 1 Tax ₹ 1,33,500",
         "Step 2 Tax ₹ 20,500",
-        "Net Tax ₹ 1,17,520"
+        "Total Tax Payable ₹ 1,17,520"
       ],
       "animation_role": "explanation",
       "anchor_alignment": [
         {
           "phrase": "Age 40 years",
-          "at": 66.11,
-          "matched": true,
-          "score": 0.96
+          "at": 42.3,
+          "matched": false,
+          "score": 0.417
         },
         {
-          "phrase": "Basic Exemption Limit ₹ 2,50,000",
-          "at": 69.25,
+          "phrase": "Basic Exemption ₹ 2,50,000",
+          "at": 46.6,
           "matched": true,
-          "score": 0.959
+          "score": 0.514
         },
         {
           "phrase": "Step 1 Tax ₹ 1,33,500",
-          "at": 73.13,
-          "matched": true,
-          "score": 0.87
+          "at": 47.62,
+          "matched": false,
+          "score": 0.424
         },
         {
           "phrase": "Step 2 Tax ₹ 20,500",
-          "at": 77.03,
+          "at": 53.56,
           "matched": true,
-          "score": 0.853
+          "score": 0.571
         },
         {
-          "phrase": "Net Tax ₹ 1,17,520",
-          "at": 83.99,
+          "phrase": "Total Tax Payable ₹ 1,17,520",
+          "at": 56.72,
           "matched": true,
-          "score": 0.826
+          "score": 0.487
         }
       ],
       "anchor_match": {
-        "matched": 5,
+        "matched": 3,
         "total": 5
       }
     },
     {
       "layout": "compare_regimes",
       "title": {
-        "text": "Tax Liability: Age 75",
-        "at": 88.86
+        "text": "Tax Liability Computation (Age 75 Years)",
+        "at": 63.75
       },
-      "voice_sync_text": "Case (b)-ൽ Mr. X-ന് Age 75 years ആണ്, അതായത് ഒരു senior citizen. ഇവിടെ Basic Exemption Limit ₹ 3,00,000 ആയി ഉയരുന്നു. Step 1 Tax ₹ 1,31,000-ഉം, Step 2 Tax ₹ 28,000-ഉം ആണ്. ഫൈനൽ Net Tax ₹ 1,07,120 ആയി കുറയുന്നു.",
+      "voice_sync_text": "Age 75 years ഉള്ള Resident Senior Citizen-ന് Basic Exemption ₹ 3,00,000 ലഭിക്കും. Step 1 Tax ₹ 1,31,000-ൽ നിന്ന് Step 2 Tax ₹ 28,000 subtract ചെയ്യുമ്പോൾ ₹ 1,03,000 വരുന്നു. Cess കൂടി ചേർത്താൽ Total Tax Payable ₹ 1,07,120 ആണ്.",
       "visual_data": {
         "regimes": [
           {
-            "label": "Age 40 years",
-            "detail": "BEL ₹ 2,50,000",
-            "amount": 117520,
-            "status": "Normal Resident",
-            "at": 91.04
+            "label": "Age 75 years Senior Citizen",
+            "detail": "Basic Exemption ₹ 3,00,000",
+            "value": "Senior Threshold",
+            "icon": "person",
+            "at": 66.11
           },
           {
-            "label": "Age 75 years",
-            "detail": "Basic Exemption Limit ₹ 3,00,000",
-            "amount": 107120,
-            "status": "Senior Citizen",
-            "at": 91.04
+            "label": "Step 1 Tax ₹ 1,31,000",
+            "detail": "Tax on Aggregate ₹ 10,70,000",
+            "value": "₹ 1,31,000",
+            "icon": "scales",
+            "at": 73.13
           },
           {
-            "label": "Step 1 Tax",
-            "amount": 131000,
-            "at": 99.76
+            "label": "Step 2 Tax ₹ 28,000",
+            "detail": "Tax on Exempt + Agri ₹ 5,90,000",
+            "value": "₹ 28,000",
+            "icon": "scales",
+            "at": 77.03
           },
           {
-            "label": "Step 2 Tax",
-            "amount": 28000,
-            "at": 99.76
-          },
-          {
-            "label": "Net Tax",
-            "amount": 107120,
-            "at": 108.68
+            "label": "Total Tax Payable ₹ 1,07,120",
+            "detail": "Net Tax ₹ 1,03,000 + 4% Cess",
+            "value": "₹ 1,07,120",
+            "icon": "money_bag",
+            "at": 83.65
           }
-        ],
-        "spoken_amounts": [
-          "₹ 1,31,000",
-          "₹ 28,000",
-          "₹ 1,07,120",
-          "1,31,000",
-          "28,000",
-          "1,07,120"
         ]
       },
-      "start": 88.56,
-      "end": 113.52,
-      "id": "b5",
-      "director_goal": "Compare tax liability outcome between age 40 and age 75 senior citizen slab.",
+      "start": 63.45,
+      "end": 88.21,
+      "id": "b4",
+      "director_goal": "Compare partial integration tax steps for Mr. X at age 75 with senior citizen exemption limits.",
       "anchor_phrases": [
         "Age 75 years",
-        "Basic Exemption Limit ₹ 3,00,000",
+        "Basic Exemption ₹ 3,00,000",
         "Step 1 Tax ₹ 1,31,000",
         "Step 2 Tax ₹ 28,000",
-        "Net Tax ₹ 1,07,120"
+        "Total Tax Payable ₹ 1,07,120"
       ],
       "animation_role": "explanation",
       "anchor_alignment": [
         {
           "phrase": "Age 75 years",
-          "at": 91.04,
+          "at": 66.11,
           "matched": true,
-          "score": 1.0
+          "score": 0.8
         },
         {
-          "phrase": "Basic Exemption Limit ₹ 3,00,000",
-          "at": 95.9,
+          "phrase": "Basic Exemption ₹ 3,00,000",
+          "at": 69.25,
           "matched": true,
-          "score": 0.9
+          "score": 0.828
         },
         {
           "phrase": "Step 1 Tax ₹ 1,31,000",
-          "at": 99.76,
+          "at": 73.13,
           "matched": true,
-          "score": 1.0
+          "score": 0.82
         },
         {
           "phrase": "Step 2 Tax ₹ 28,000",
-          "at": 103.62,
+          "at": 77.03,
           "matched": true,
-          "score": 1.0
+          "score": 0.853
         },
         {
-          "phrase": "Net Tax ₹ 1,07,120",
-          "at": 108.68,
+          "phrase": "Total Tax Payable ₹ 1,07,120",
+          "at": 83.99,
           "matched": true,
-          "score": 1.0
+          "score": 0.542
         }
       ],
       "anchor_match": {
@@ -545,89 +436,85 @@
     {
       "layout": "takeaway",
       "title": {
-        "text": "Summary of Partial Integration",
-        "at": 114.17
+        "text": "Key Takeaways on Partial Integration",
+        "at": 88.86
       },
-      "voice_sync_text": "ചുരുക്കത്തിൽ, Partial Integration Scheme പ്രകാരം agricultural income ഉള്ളവർക്ക് slab rates മാറുമ്പോൾ tax liability-യിലും മാറ്റം വരും. 4% Cess ഉൾപ്പെടെ Age 40-ൽ ₹ 1,17,520-ഉം Age 75-ൽ ₹ 1,07,120-ഉം ആണ് ടാക്സ്.",
+      "voice_sync_text": "Section 10(1) പ്രകാരം agricultural income exempt ആണെങ്കിലും Partial Integration വഴി tax rate വർദ്ധിക്കുന്നു. Assessee-യുടെ Basic Exemption Limit മാറുന്നതിനനുസരിച്ച് Step 2 tax-ലും final tax-ലും വ്യത്യാസം വരുന്നു, ഇതിൽ final step-ൽ Cess @ 4% ആഡ് ചെയ്യുന്നു.",
       "visual_data": {
         "rules": [
           {
-            "label": "Partial Integration Scheme",
-            "detail": "Applies to optional tax regime",
-            "at": 115.87
+            "label": "Partial Integration",
+            "detail": "Determines applicable tax slab rate without taxing agri income directly",
+            "icon": "scales",
+            "at": 91.97
           },
           {
-            "label": "4% Cess",
-            "detail": "Health and Education Cess applied on net tax",
-            "at": 124.13
-          },
-          {
-            "label": "Age 40 Tax",
-            "amount": 117520,
+            "label": "Section 10(1)",
+            "detail": "Agri income remains statutory exempt from net taxable income",
             "icon": "document",
-            "at": 126.43
+            "at": 91.97
           },
           {
-            "label": "Age 75 Tax",
-            "amount": 107120,
-            "icon": "document",
-            "at": 130.35
+            "label": "Basic Exemption Limit",
+            "detail": "Higher exemption limit for senior citizens reduces Step 1 & increases Step 2 tax",
+            "icon": "bank",
+            "at": 95.9
+          },
+          {
+            "label": "Cess @ 4%",
+            "detail": "Health and Education Cess added on final net tax after integration steps",
+            "icon": "money_bag",
+            "at": 105.33
           }
-        ],
-        "spoken_amounts": [
-          "₹ 1,17,520",
-          "₹ 1,07,120",
-          "1,17,520",
-          "1,07,120"
         ]
       },
-      "start": 113.87,
-      "end": 136.19,
-      "id": "b6",
-      "director_goal": "Summarize key takeaways of partial integration tax rules.",
+      "start": 88.56,
+      "end": 113.52,
+      "id": "b5",
+      "director_goal": "Summarize how basic exemption limits impact net tax under agricultural partial integration.",
       "anchor_phrases": [
-        "Partial Integration Scheme",
-        "4% Cess",
-        "₹ 1,17,520",
-        "₹ 1,07,120"
+        "Partial Integration",
+        "Section 10(1)",
+        "Basic Exemption Limit",
+        "Cess @ 4%"
       ],
       "animation_role": "key_fact",
       "anchor_alignment": [
         {
-          "phrase": "Partial Integration Scheme",
-          "at": 115.87,
-          "matched": true,
-          "score": 1.0
+          "phrase": "Partial Integration",
+          "at": 94.41,
+          "matched": false,
+          "score": 0.438
         },
         {
-          "phrase": "4% Cess",
-          "at": 124.13,
+          "phrase": "Section 10(1)",
+          "at": 101.52,
           "matched": true,
-          "score": 0.52
+          "score": 0.526
         },
         {
-          "phrase": "₹ 1,17,520",
-          "at": 127.51,
-          "matched": true,
-          "score": 0.857
+          "phrase": "Basic Exemption Limit",
+          "at": 100.55,
+          "matched": false,
+          "score": 0.276
         },
         {
-          "phrase": "₹ 1,07,120",
-          "at": 132.81,
-          "matched": true,
-          "score": 1.0
+          "phrase": "Cess @ 4%",
+          "at": 111.08,
+          "matched": false,
+          "score": 0.4
         }
       ],
       "anchor_match": {
-        "matched": 4,
+        "matched": 1,
         "total": 4
       }
     }
   ],
-  "audio_duration_sec": 136.19,
+  "audio_duration_sec": 113.52,
   "anchor_match": {
-    "matched": 26,
-    "total": 26,
-    "rate": 1.0
+    "matched": 17,
+    "total": 23,
+    "rate": 0.739
   }
 }

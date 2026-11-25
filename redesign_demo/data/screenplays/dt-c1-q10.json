@@ -1,40 +1,42 @@
 {
   "question_id": "dt-c1-q10",
   "audio_url": "data/audio/dt-c1-q10.mp3",
-  "duration_sec": 240.18,
+  "duration_sec": 169.93,
   "sync_offset_sec": 0.0,
   "context_pill": "Marginal Relief for Domestic Companies",
-  "example_summary": "Calculating the statutory tax ceiling and marginal relief for Y Ltd. when total income slightly exceeds the ₹ 10 crore threshold.",
-  "source_provision": "### Statutory Tax Matrix for Domestic Companies\n\n| Total Income Threshold | Gross Receipts in P.Y. 2023-24 ≤ ₹ 400 Cr | Gross Receipts in P.Y. 2023-24 > ₹ 400 Cr | Surcharge Rate |\n| :--- | :--- | :--- | :--- |\n| **Up to ₹ 1 Crore** | 25% | 30% | **Nil** |\n| **> ₹ 1 Crore up to ₹ 10 Crore** | 25% + 7% Surcharge | 30% + 7% Surcharge | **7%** |\n| **Exceeding ₹ 10 Crore** | 25% + 12% Surcharge | 30% + 12% Surcharge | **12%** |\n\n\n#### Key Statutory Conditions & Thresholds\n\n* **Turnover Benchmark Test:** The basic tax rate of 25% applies only if gross receipts in the specified prior Financial Year (P.Y. 2023-24 for A.Y. 2026-27) do not exceed ₹ 400 Crore; otherwise, the standard rate of 30% applies (assuming special regimes u/s 115BAA / 115BAB are not opted).\n\n* **Marginal Relief Statutory Ceiling:** Where Total Income exceeds ₹ 1 Crore or ₹ 10 Crore, the total tax payable (including surcharge) shall not exceed:  \n  $$\\text{Tax on Threshold Limit (incl. lower Surcharge)} + (\\text{Total Income} - \\text{Threshold Limit})$$\n\n* **Cess Order of Computation:** Health and Education Cess of 4% is levied on the net tax amount derived **after** subtracting the statutory Marginal Relief.\n\n\n> [!IMPORTANT] Statutory Ceiling Rule for Marginal Relief\n> Marginal Relief = Tax Payable on Total Income (incl. Surcharge) − [Tax Payable on Threshold Limit + (Total Income − Threshold Limit)]. Always compute surcharge adjustment prior to levying 4% Health & Education Cess.",
+  "example_summary": "Computation of Marginal Relief for Y Ltd. for A.Y. 2026-27 when total income exceeds ₹ 10 crore.",
+  "source_provision": "| Total Income Threshold | Applicable Base Tax Rate | Surcharge Rate |\n| :--- | :--- | :--- |\n| Gross Receipts in Relevant PY ≤ ₹ 400 Crore | 25% | 0% (≤ ₹ 1 Cr) / 7% (> ₹ 1 Cr to ₹ 10 Cr) / 12% (> ₹ 10 Cr) |\n| Gross Receipts in Relevant PY > ₹ 400 Crore | 30% | 0% (≤ ₹ 1 Cr) / 7% (> ₹ 1 Cr to ₹ 10 Cr) / 12% (> ₹ 10 Cr) |\n\n**Statutory Conditions & Marginal Relief Steps:**\n\n* **Threshold Trigger:** Marginal Relief applies when Total Income slightly exceeds ₹ 1 Crore or ₹ 10 Crore, preventing higher surcharge from consuming excess income.\n* **Cap Rule:** Tax payable (including Surcharge) cannot exceed: `[Tax + Surcharge on ₹ 10 Crore] + [Total Income - ₹ 10 Crore]`.\n* **Relief Formula:** `Marginal Relief = Tax (incl. Surcharge) on Total Income - Maximum Permissible Tax before Cess`.\n* **Cess Application:** Health and Education Cess @ 4% is applied strictly *after* adjusting Marginal Relief.\n\n> [!IMPORTANT] Order of Computation Trap: Health and Education Cess @ 4% must ALWAYS be calculated on the net tax amount derived *after* granting Marginal Relief, never before.",
   "director": {
-    "archetype": "computation_ledger",
-    "justification": "The problem requires determining base tax rate, applying surcharge, and computing marginal relief via statutory cap arithmetic for Y Ltd.",
+    "archetype": "threshold_test",
+    "justification": "Calculates marginal relief for Y Ltd. whose total income of ₹ 10,01,00,000 slightly exceeds the ₹ 10 crore threshold, preventing excess surcharge from exceeding additional income.",
     "protagonist": "Y Ltd.",
     "actors": [
       "Y Ltd.",
-      "Assessing Officer"
+      "Income Tax Department"
     ],
     "key_numbers": [
-      "₹ 10,01,00,000",
       "₹ 410 crore",
+      "₹ 10,01,00,000",
+      "₹ 10,00,00,000",
       "30%",
       "12%",
-      "7%",
       "33.6%",
-      "32.1%",
       "₹ 3,36,33,600",
+      "32.1%",
+      "₹ 3,21,00,000",
+      "₹ 1,00,000",
       "₹ 3,22,00,000",
       "₹ 14,33,600",
-      "₹ 1,00,000"
+      "4%"
     ],
     "key_dates": [
       "A.Y. 2026-27",
       "P.Y. 2023-24"
     ],
-    "visual_metaphor": "A multi-stage financial ledger adjusting tax ceiling against incremental income",
+    "visual_metaphor": "A safety buffer balance scale that caps the tax jump at the excess income threshold.",
     "beat_plan": [
       {
-        "beat_goal": "Establish Y Ltd's income and assessment year overview",
+        "beat_goal": "Introduce Y Ltd. with total income of ₹ 10,01,00,000 for A.Y. 2026-27.",
         "layout": "example_scene",
         "anchor_phrases": [
           "Y Ltd.",
@@ -43,59 +45,40 @@
         ]
       },
       {
-        "beat_goal": "Determine basic tax rate using turnover benchmark test",
-        "layout": "decision_tree",
+        "beat_goal": "Determine base tax rate of 30% based on turnover exceeding ₹ 400 crore and apply 12% surcharge.",
+        "layout": "slab_ladder",
         "anchor_phrases": [
           "P.Y. 2023-24",
           "₹ 410 crore",
-          "₹ 400 Crore",
-          "30%"
+          "30%",
+          "12%"
         ]
       },
       {
-        "beat_goal": "Apply surcharge slab based on income exceeding threshold",
-        "layout": "slab_ladder",
-        "anchor_phrases": [
-          "Exceeding ₹ 10 Crore",
-          "12% Surcharge",
-          "33.6%"
-        ]
-      },
-      {
-        "beat_goal": "Calculate unadjusted tax payable on total income",
+        "beat_goal": "Compute initial tax liability including 12% surcharge resulting in ₹ 3,36,33,600.",
         "layout": "ledger",
         "anchor_phrases": [
-          "₹ 10,01,00,000",
+          "33.6%",
           "₹ 3,36,33,600"
         ]
       },
       {
-        "beat_goal": "Compute statutory tax ceiling at ₹ 10 crore threshold plus excess income",
-        "layout": "deemed_value",
+        "beat_goal": "Calculate capped maximum tax liability and derive Marginal Relief of ₹ 14,33,600.",
+        "layout": "waterfall",
         "anchor_phrases": [
-          "₹ 10 crore",
-          "32.1%",
           "₹ 3,21,00,000",
           "₹ 1,00,000",
-          "₹ 3,22,00,000"
+          "₹ 3,22,00,000",
+          "₹ 14,33,600"
         ]
       },
       {
-        "beat_goal": "Subtract statutory cap from unadjusted tax to derive marginal relief",
-        "layout": "ledger",
-        "anchor_phrases": [
-          "Marginal Relief",
-          "₹ 14,33,600",
-          "₹ 3,22,00,000"
-        ]
-      },
-      {
-        "beat_goal": "Highlight final order of computation before levying cess",
+        "beat_goal": "Highlight that 4% Health and Education Cess is applied only after deducting Marginal Relief.",
         "layout": "takeaway",
         "anchor_phrases": [
           "Marginal Relief",
-          "Health and Education Cess",
-          "4%"
+          "4% Health and Education Cess",
+          "Net Tax Amount"
         ]
       }
     ]
@@ -105,39 +88,40 @@
     {
       "layout": "example_scene",
       "title": {
-        "text": "Assessment Overview for Y Ltd.",
+        "text": "Assessee Profile & Assessment Year",
         "at": 0.3
       },
-      "voice_sync_text": "Welcome students. Today we are examining the tax liability for Y Ltd. for A.Y. 2026-27. The company has reported a total income of ₹ 10,01,00,000, which is just slightly over a major surcharge threshold.",
+      "voice_sync_text": "നമുക്ക് Y Ltd. എന്ന കമ്പനിയുടെ A.Y. 2026-27 ലെ കാര്യം നോക്കാം. ഇവിടെ കമ്പനിയുടെ Total Income ₹ 10,01,00,000 ആണ്.",
       "visual_data": {
         "actors": [
           {
             "label": "Y Ltd.",
-            "icon": "factory",
             "detail": "Domestic Company",
-            "at": 33.16
+            "icon": "factory",
+            "at": 38.96
           }
         ],
-        "transaction": "Tax Assessment",
+        "transaction": "Income Assessment for A.Y. 2026-27",
         "facts": [
           {
-            "label": "A.Y. 2026-27",
+            "label": "Assessment Year",
+            "value": "A.Y. 2026-27",
             "icon": "calendar",
-            "at": 34.1
+            "at": 38.96
           },
           {
             "label": "Total Income",
-            "amount": 100100000,
             "value": "₹ 10,01,00,000",
+            "amount": 100100000,
             "icon": "money_bag",
-            "at": 38.06
+            "at": 38.96
           }
         ]
       },
       "start": 0.0,
-      "end": 45.04,
+      "end": 42.17,
       "id": "b1",
-      "director_goal": "Establish Y Ltd's income and assessment year overview",
+      "director_goal": "Introduce Y Ltd. with total income of ₹ 10,01,00,000 for A.Y. 2026-27.",
       "anchor_phrases": [
         "Y Ltd.",
         "A.Y. 2026-27",
@@ -147,21 +131,21 @@
       "anchor_alignment": [
         {
           "phrase": "Y Ltd.",
-          "at": 33.16,
+          "at": 32.48,
           "matched": true,
-          "score": 0.834
+          "score": 0.787
         },
         {
           "phrase": "A.Y. 2026-27",
-          "at": 34.1,
+          "at": 32.86,
           "matched": true,
-          "score": 0.952
+          "score": 0.6
         },
         {
           "phrase": "₹ 10,01,00,000",
-          "at": 29.07,
+          "at": 35.02,
           "matched": false,
-          "score": 0.453
+          "score": 0.42
         }
       ],
       "anchor_match": {
@@ -170,72 +154,70 @@
       }
     },
     {
-      "layout": "decision_tree",
+      "layout": "slab_ladder",
       "title": {
-        "text": "Turnover Benchmark Test",
-        "at": 45.69
+        "text": "Applicable Base Tax & Surcharge Rates",
+        "at": 42.82
       },
-      "voice_sync_text": "Domestic company-യുടെ tax rate നിർണ്ണയിക്കുന്നത് previous year turnover നോക്കിയാണ്. For A.Y. 2026-27, we look at P.Y. 2023-24. Since the gross receipts were ₹ 410 crore, which is more than the ₹ 400 Crore benchmark, the applicable basic tax rate is 30%.",
+      "voice_sync_text": "P.Y. 2023-24-ൽ Y Ltd.-ന്റെ turnover ₹ 410 crore ആണ്, അതായത് ₹ 400 crore threshold-നേക്കാൾ കൂടുതൽ. അതിനാൽ Base Tax Rate 30% ആകും. Total Income ₹ 10 crore കവിഞ്ഞതിനാൽ 12% surcharge ബാധകമാണ്.",
       "visual_data": {
-        "root": "Basic Tax Rate",
-        "branches": [
+        "tiers": [
           {
             "label": "P.Y. 2023-24 Turnover",
-            "amount": 4100000000,
+            "detail": "Gross receipts exceed ₹ 400 crore threshold",
             "value": "₹ 410 crore",
-            "status": "Exceeds Limit",
-            "at": 54.45
+            "icon": "factory",
+            "at": 75.14
           },
           {
-            "label": "Benchmark Limit",
-            "amount": 4000000000,
-            "value": "₹ 400 Crore",
-            "at": 63.31
-          },
-          {
-            "label": "Applicable Rate",
+            "label": "Base Tax Rate",
+            "detail": "Applicable rate since turnover > ₹ 400 crore",
             "value": "30%",
             "icon": "scales",
-            "at": 64.43
+            "at": 81.22
+          },
+          {
+            "label": "Surcharge Rate",
+            "detail": "Applicable since Total Income > ₹ 10 crore",
+            "value": "12%",
+            "icon": "money_bag",
+            "at": 81.58
           }
-        ],
-        "spoken_dates": [
-          "A.Y. 2026-27"
         ]
       },
-      "start": 45.39,
-      "end": 67.71,
+      "start": 42.52,
+      "end": 88.38,
       "id": "b2",
-      "director_goal": "Determine basic tax rate using turnover benchmark test",
+      "director_goal": "Determine base tax rate of 30% based on turnover exceeding ₹ 400 crore and apply 12% surcharge.",
       "anchor_phrases": [
         "P.Y. 2023-24",
         "₹ 410 crore",
-        "₹ 400 Crore",
-        "30%"
+        "30%",
+        "12%"
       ],
       "animation_role": "explanation",
       "anchor_alignment": [
         {
           "phrase": "P.Y. 2023-24",
-          "at": 54.05,
+          "at": 71.78,
           "matched": true,
-          "score": 0.593
+          "score": 0.952
         },
         {
           "phrase": "₹ 410 crore",
-          "at": 59.39,
-          "matched": true,
-          "score": 1.0
-        },
-        {
-          "phrase": "₹ 400 Crore",
-          "at": 62.43,
+          "at": 76.26,
           "matched": true,
           "score": 1.0
         },
         {
           "phrase": "30%",
-          "at": 66.31,
+          "at": 82.38,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "12%",
+          "at": 85.76,
           "matched": true,
           "score": 1.0
         }
@@ -246,118 +228,60 @@
       }
     },
     {
-      "layout": "slab_ladder",
-      "title": {
-        "text": "Surcharge Slab Determination",
-        "at": 68.36
-      },
-      "voice_sync_text": "ഇനി surcharge നോക്കാം. Total Income ₹ 10 Crore കവിഞ്ഞാൽ surcharge rate 12% ആയി വർദ്ധിക്കും. Since Y Ltd. is Exceeding ₹ 10 Crore, we apply a 12% Surcharge, making the effective tax rate 33.6%.",
-      "visual_data": {
-        "tiers": [
-          {
-            "label": "Income > ₹ 10 Crore",
-            "amount": 100100000,
-            "pass": true,
-            "at": 71.36
-          },
-          {
-            "label": "Surcharge Rate",
-            "value": "12% Surcharge",
-            "at": 71.36
-          },
-          {
-            "label": "Effective Rate",
-            "value": "33.6%",
-            "detail": "30% + 12% Surcharge",
-            "at": 83.02
-          }
-        ]
-      },
-      "start": 68.06,
-      "end": 86.86,
-      "id": "b3",
-      "director_goal": "Apply surcharge slab based on income exceeding threshold",
-      "anchor_phrases": [
-        "Exceeding ₹ 10 Crore",
-        "12% Surcharge",
-        "33.6%"
-      ],
-      "animation_role": "explanation",
-      "anchor_alignment": [
-        {
-          "phrase": "Exceeding ₹ 10 Crore",
-          "at": 78.38,
-          "matched": true,
-          "score": 1.0
-        },
-        {
-          "phrase": "12% Surcharge",
-          "at": 80.62,
-          "matched": true,
-          "score": 1.0
-        },
-        {
-          "phrase": "33.6%",
-          "at": 84.18,
-          "matched": true,
-          "score": 1.0
-        }
-      ],
-      "anchor_match": {
-        "matched": 3,
-        "total": 3
-      }
-    },
-    {
       "layout": "ledger",
       "title": {
-        "text": "Unadjusted Tax Calculation",
-        "at": 87.51
+        "text": "Initial Tax Computation",
+        "at": 89.03
       },
-      "voice_sync_text": "Let's calculate the unadjusted tax. On a total income of ₹ 10,01,00,000, applying the 33.6% effective rate gives us a tax amount of ₹ 3,36,33,600.",
+      "voice_sync_text": "ഇവിടെ Base Tax Rate 30%-ഉം 12% surcharge-ഉം ചേർത്ത് effective tax rate 33.6% ആകും. ഇതിൻപ്രകാരം initial tax liability ₹ 3,36,33,600 ആയി ലഭിക്കും.",
       "visual_data": {
         "rows": [
           {
             "label": "Total Income",
-            "amount": 100100000,
+            "detail": "Assessed income of Y Ltd.",
             "value": "₹ 10,01,00,000",
-            "at": 90.89
+            "icon": "money_bag",
+            "at": 88.73
           },
           {
-            "label": "Basic Tax @ 30%",
-            "amount": 30030000,
-            "at": 97.81
+            "label": "Effective Tax Rate",
+            "detail": "30% Base Tax + 12% Surcharge",
+            "value": "33.6%",
+            "icon": "scales",
+            "at": 92.05
           },
           {
-            "label": "Surcharge @ 12%",
-            "amount": 3603600,
-            "sign": "+",
-            "at": 97.81
+            "label": "Tax Payable (incl. Surcharge)",
+            "detail": "33.6% on ₹ 10,01,00,000",
+            "value": "₹ 3,36,33,600",
+            "amount": 33633600,
+            "icon": "document",
+            "at": 99.49
           }
         ],
         "total": "₹ 3,36,33,600"
       },
-      "start": 87.21,
-      "end": 102.97,
-      "id": "b4",
-      "director_goal": "Calculate unadjusted tax payable on total income",
+      "start": 88.73,
+      "end": 105.73,
+      "id": "b3",
+      "director_goal": "Compute initial tax liability including 12% surcharge resulting in ₹ 3,36,33,600.",
       "anchor_phrases": [
-        "₹ 10,01,00,000",
+        "33.6%",
         "₹ 3,36,33,600"
       ],
       "animation_role": "explanation",
       "anchor_alignment": [
         {
-          "phrase": "₹ 10,01,00,000",
-          "at": 91.99,
+          "phrase": "33.6%",
+          "at": 95.09,
           "matched": true,
-          "score": 0.468
+          "score": 1.0
         },
         {
           "phrase": "₹ 3,36,33,600",
-          "at": 98.55,
+          "at": 103.27,
           "matched": true,
-          "score": 0.64
+          "score": 0.706
         }
       ],
       "anchor_match": {
@@ -366,188 +290,153 @@
       }
     },
     {
-      "layout": "deemed_value",
+      "layout": "waterfall",
       "title": {
-        "text": "Statutory Tax Ceiling",
-        "at": 103.62
+        "text": "Cap Test & Marginal Relief Derivation",
+        "at": 106.38
       },
-      "voice_sync_text": "Total Income threshold limit-നേക്കാൾ ചെറിയ തുക മാത്രം കൂടുമ്പോൾ extra tax ഒടുക്കേണ്ടി വരുന്നത് തടയാനാണ് Marginal Relief നൽകുന്നത്. We calculate the tax on the ₹ 10 crore threshold at a 32.1% effective rate, which is ₹ 3,21,00,000. Adding the excess income of ₹ 1,00,000, the statutory ceiling is ₹ 3,22,00,000.",
+      "voice_sync_text": "എന്നാൽ, ₹ 10 crore വരെ tax liability ₹ 3,21,00,000 ആണ്. ഇതിനോട് excess income ആയ ₹ 1,00,000 കൂട്ടിയാൽ maximum tax liability ₹ 3,22,00,000 മാത്രമേ വരാവൂ. അതിനാൽ Y Ltd.-ന് ₹ 14,33,600 Marginal Relief ലഭിക്കുന്നു.",
       "visual_data": {
-        "actual": {
-          "label": "Unadjusted Tax",
-          "amount": 33633600,
-          "at": 141.26
-        },
-        "deemed": {
-          "label": "Statutory Ceiling",
-          "amount": 32200000,
-          "value": "₹ 3,22,00,000",
-          "detail": "Tax on ₹ 10 crore + Excess",
-          "at": 151.08
-        },
-        "rule": "Tax on ₹ 10 crore (32.1%) = ₹ 3,21,00,000 plus Excess Income = ₹ 1,00,000",
-        "at": 141.26
+        "stages": [
+          {
+            "label": "Initial Tax at 33.6%",
+            "detail": "Tax + Surcharge on total income",
+            "value": "₹ 3,36,33,600",
+            "icon": "money_bag",
+            "at": 108.66
+          },
+          {
+            "label": "Tax on ₹ 10 crore",
+            "detail": "30% tax + 7% surcharge",
+            "value": "₹ 3,21,00,000",
+            "icon": "scales",
+            "at": 108.66
+          },
+          {
+            "label": "Excess Income Over ₹ 10 crore",
+            "detail": "₹ 10,01,00,000 minus ₹ 10 crore",
+            "value": "₹ 1,00,000",
+            "icon": "money_bag",
+            "at": 122.52
+          },
+          {
+            "label": "Maximum Tax Permissible",
+            "detail": "₹ 3,21,00,000 + ₹ 1,00,000",
+            "value": "₹ 3,22,00,000",
+            "icon": "padlock",
+            "at": 122.52
+          },
+          {
+            "label": "Marginal Relief",
+            "detail": "₹ 3,36,33,600 minus ₹ 3,22,00,000",
+            "value": "₹ 14,33,600",
+            "icon": "scales",
+            "at": 123.82
+          }
+        ]
       },
-      "start": 103.32,
-      "end": 154.4,
-      "id": "b5",
-      "director_goal": "Compute statutory tax ceiling at ₹ 10 crore threshold plus excess income",
+      "start": 106.08,
+      "end": 129.6,
+      "id": "b4",
+      "director_goal": "Calculate capped maximum tax liability and derive Marginal Relief of ₹ 14,33,600.",
       "anchor_phrases": [
-        "₹ 10 crore",
-        "32.1%",
         "₹ 3,21,00,000",
         "₹ 1,00,000",
-        "₹ 3,22,00,000"
+        "₹ 3,22,00,000",
+        "₹ 14,33,600"
       ],
       "animation_role": "explanation",
       "anchor_alignment": [
         {
-          "phrase": "₹ 10 crore",
-          "at": 141.92,
-          "matched": true,
-          "score": 1.0
-        },
-        {
-          "phrase": "32.1%",
-          "at": 143.42,
-          "matched": true,
-          "score": 1.0
-        },
-        {
           "phrase": "₹ 3,21,00,000",
-          "at": 146.04,
+          "at": 122.52,
           "matched": true,
-          "score": 0.505
+          "score": 0.842
         },
         {
           "phrase": "₹ 1,00,000",
-          "at": 146.0,
-          "matched": false,
-          "score": 0.406
+          "at": 124.22,
+          "matched": true,
+          "score": 0.471
         },
         {
           "phrase": "₹ 3,22,00,000",
-          "at": 152.26,
-          "matched": true,
-          "score": 0.505
-        }
-      ],
-      "anchor_match": {
-        "matched": 4,
-        "total": 5
-      }
-    },
-    {
-      "layout": "ledger",
-      "title": {
-        "text": "Marginal Relief Computation",
-        "at": 155.05
-      },
-      "voice_sync_text": "The difference between our unadjusted tax and the ceiling is the relief. Subtracting the statutory cap of ₹ 3,22,00,000 from our unadjusted tax, we find the Marginal Relief is ₹ 14,33,600.",
-      "visual_data": {
-        "rows": [
-          {
-            "label": "Unadjusted Tax",
-            "amount": 33633600,
-            "value": "₹ 3,36,33,600",
-            "at": 192.69
-          },
-          {
-            "label": "Statutory Ceiling",
-            "amount": 32200000,
-            "value": "₹ 3,22,00,000",
-            "sign": "-",
-            "at": 192.69
-          }
-        ],
-        "total": "Marginal Relief: ₹ 14,33,600"
-      },
-      "start": 154.75,
-      "end": 198.99,
-      "id": "b6",
-      "director_goal": "Subtract statutory cap from unadjusted tax to derive marginal relief",
-      "anchor_phrases": [
-        "Marginal Relief",
-        "₹ 14,33,600",
-        "₹ 3,22,00,000"
-      ],
-      "animation_role": "explanation",
-      "anchor_alignment": [
-        {
-          "phrase": "Marginal Relief",
-          "at": 194.85,
-          "matched": true,
-          "score": 1.0
+          "at": 119.97,
+          "matched": false,
+          "score": 0.455
         },
         {
           "phrase": "₹ 14,33,600",
-          "at": 195.89,
+          "at": 125.3,
           "matched": true,
-          "score": 1.0
-        },
-        {
-          "phrase": "₹ 3,22,00,000",
-          "at": 196.55,
-          "matched": true,
-          "score": 0.471
+          "score": 0.8
         }
       ],
       "anchor_match": {
         "matched": 3,
-        "total": 3
+        "total": 4
       }
     },
     {
       "layout": "takeaway",
       "title": {
-        "text": "Final Order of Computation",
-        "at": 199.64
+        "text": "Order of Cess Computation",
+        "at": 130.25
       },
-      "voice_sync_text": "ഇവിടെ ഏറ്റവും പ്രധാനപ്പെട്ട order of computation ഓർക്കണം. Basic Tax + Surcharge കണക്കാക്കി അതിൽ നിന്ന് Marginal Relief കുറച്ച ശേഷമുള്ള net tax-ൽ വേണം 4% Health and Education Cess ചേർക്കാൻ.",
+      "voice_sync_text": "ഇവിടെ പ്രധാനമായും ശ്രദ്ധിക്കേണ്ടത്, Marginal Relief കുറച്ചതിന് ശേഷം ലഭിക്കുന്ന Net Tax Amount-ൽ മാത്രമേ 4% Health and Education Cess കണക്കാക്കാവൂ എന്നതാണ്.",
       "visual_data": {
         "rules": [
           {
-            "label": "Marginal Relief",
-            "detail": "Apply before Cess",
-            "amount": 1433600,
-            "at": 233.48
+            "label": "Marginal Relief First",
+            "detail": "Relief of ₹ 14,33,600 is deducted from gross tax before applying cess",
+            "value": "Marginal Relief",
+            "icon": "scales",
+            "at": 139.24
           },
           {
-            "label": "Health and Education Cess",
-            "value": "4%",
-            "detail": "Levied on Net Tax",
-            "at": 237.8
+            "label": "Net Tax Amount",
+            "detail": "Tax payable after deducting Marginal Relief",
+            "value": "Net Tax Amount",
+            "icon": "document",
+            "at": 150.33
+          },
+          {
+            "label": "Cess Computation",
+            "detail": "4% Health and Education Cess applies ONLY after Marginal Relief",
+            "value": "4% Health and Education Cess",
+            "icon": "gavel",
+            "at": 157.55
           }
         ]
       },
-      "start": 199.34,
-      "end": 240.18,
-      "id": "b7",
-      "director_goal": "Highlight final order of computation before levying cess",
+      "start": 129.95,
+      "end": 169.93,
+      "id": "b5",
+      "director_goal": "Highlight that 4% Health and Education Cess is applied only after deducting Marginal Relief.",
       "anchor_phrases": [
         "Marginal Relief",
-        "Health and Education Cess",
-        "4%"
+        "4% Health and Education Cess",
+        "Net Tax Amount"
       ],
       "animation_role": "key_fact",
       "anchor_alignment": [
         {
           "phrase": "Marginal Relief",
-          "at": 233.48,
+          "at": 151.45,
           "matched": true,
-          "score": 1.0
+          "score": 0.5
         },
         {
-          "phrase": "Health and Education Cess",
-          "at": 237.8,
+          "phrase": "4% Health and Education Cess",
+          "at": 153.27,
           "matched": true,
-          "score": 1.0
+          "score": 0.483
         },
         {
-          "phrase": "4%",
-          "at": 231.93,
+          "phrase": "Net Tax Amount",
+          "at": 150.33,
           "matched": false,
-          "score": 0.0
+          "score": 0.424
         }
       ],
       "anchor_match": {
@@ -556,10 +445,10 @@
       }
     }
   ],
-  "audio_duration_sec": 240.18,
+  "audio_duration_sec": 169.93,
   "anchor_match": {
-    "matched": 20,
-    "total": 23,
-    "rate": 0.87
+    "matched": 13,
+    "total": 16,
+    "rate": 0.812
   }
 }

@@ -1,87 +1,81 @@
 {
   "question_id": "dt-c1-q8",
   "audio_url": "data/audio/dt-c1-q8.mp3",
-  "duration_sec": 86.02,
+  "duration_sec": 65.0,
   "sync_offset_sec": 0.0,
-  "context_pill": "Marginal Relief under Section 87A",
-  "example_summary": "Computation of tax liability of Mr. Nitin under default tax regime Section 115BAC for A.Y. 2026-27 featuring marginal relief.",
-  "source_provision": "| Statutory Provision | Eligibility / Benchmark | Operative Rule / Threshold | Legal & Tax Consequence |\n| :--- | :--- | :--- | :--- |\n| **Section 115BAC** | Individuals, HUFs, AOPs, BOIs, AJPs | Default Tax Regime with concessional slab rates | Tax computed as per statutory slab rates under Section 115BAC. |\n| **Section 87A (Full Rebate)** | Resident Individual under Section 115BAC | Total Income $\\le$ Statutory Threshold | 100% Tax Rebate up to maximum statutory limit (Tax becomes Nil). |\n| **Section 87A (Marginal Relief)** | Resident Individual under Section 115BAC | Total Income slightly exceeds Statutory Threshold | Tax before Cess limited to excess income over the statutory threshold. |\n| **Finance Act (Cess)** | All Assessees | Computed on net tax after rebate | Health and Education Cess @ 4% added to tax liability. |\n\n### Statutory Rule Checklist\n\n* **Section 115BAC Concessional Regime**: Applies by default unless the assessee validly opts out to the normal regime.\n\n* **Marginal Relief Formula under Section 87A**:\n  - Step 1: Calculate Incremental Income $(A) = \\text{Total Income} - \\text{Threshold Income}$\n  - Step 2: Calculate Tax on Total Income $(B)$ under Section 115BAC slab rates\n  - Step 3: If $B > A$, Marginal Rebate u/s 87A $= B - A$\n  - Step 4: Net Tax before Cess $= B - (B - A) = A$\n\n> [!IMPORTANT]\n> Mandatory Application of Marginal Relief: Marginal relief under Section 87A ensures that an assessee earning slightly above the rebate threshold is not penalized with a tax liability higher than the extra income earned.",
+  "context_pill": "Tax Liability Computation",
+  "example_summary": "Computing tax for Mr. Nitin under Section 115BAC with Section 87A marginal relief.",
+  "source_provision": "### Statutory Summary Matrix: Section 115BAC & Rebate u/s 87A\n\n| Statutory Provision | Applicability / Threshold | Core Tax Rate / Treatment | Legal Consequence / Relief Mechanism |\n| :--- | :--- | :--- | :--- |\n| **Section 115BAC** | Default tax regime for Individuals, HUF, AOP, BOI, Artificial Juridical Person | Concessional slab rates without specific exemptions and deductions | Option to opt out is generally not available for individuals with business income except under specified conditions |\n| **Section 87A** | Resident Individuals under Section 115BAC | Rebate up to ₹ 60,000 | Available if total income does not exceed ₹ 7,00,000, subject to marginal relief provisions for incomes crossing the threshold |\n\n\n> [!IMPORTANT] Marginal Relief Rule u/s 87A: When total income exceeds ₹ 12,00,000 under Section 115BAC, the income tax payable on total income exceeding ₹ 12,00,000 shall not exceed the amount of income exceeding ₹ 12,00,000.\n\n\n> [!WARNING] Health and Education Cess: A mandatory cess of 4% is levied on the aggregate of income tax and applicable surcharge after allowing for rebate u/s 87A.",
   "director": {
-    "archetype": "threshold_test",
-    "justification": "The core mechanism is the Section 87A threshold test which triggers marginal relief when tax on total income exceeds the income earned above the ₹ 12,00,000 limit.",
+    "archetype": "computation_ledger",
+    "justification": "The question requires a structured step-by-step tax liability computation for Mr. Nitin under section 115BAC incorporating section 87A marginal relief and health and education cess.",
     "protagonist": "Mr. Nitin",
     "actors": [
-      "Income Tax Department"
+      "Mr. Nitin"
     ],
     "key_numbers": [
       "₹ 12,50,000",
       "₹ 12,00,000",
-      "₹ 67,500",
       "₹ 50,000",
+      "₹ 67,500",
       "₹ 17,500",
       "4%",
+      "₹ 2,000",
       "₹ 52,000"
     ],
     "key_dates": [
       "A.Y. 2026-27"
     ],
-    "visual_metaphor": "A safety buffer zone between the ₹ 12,00,000 threshold and the actual tax calculated.",
+    "visual_metaphor": "A digital tax ledger scale balancing income over threshold against tax liability before and after marginal relief",
     "beat_plan": [
       {
-        "beat_goal": "Establish Mr. Nitin's profile and total income for the assessment year.",
+        "beat_goal": "Introduce Mr. Nitin and his total income profile under default regime Section 115BAC for Assessment Year 2026-27",
         "layout": "example_scene",
         "anchor_phrases": [
           "Mr. Nitin",
           "₹ 12,50,000",
-          "Resident Individual"
+          "Section 115BAC",
+          "A.Y. 2026-27"
         ]
       },
       {
-        "beat_goal": "Calculate the basic tax liability using the default regime slab rates.",
+        "beat_goal": "Compute basic income tax liability using default slab rates under Section 115BAC",
         "layout": "slab_ladder",
         "anchor_phrases": [
           "Section 115BAC",
+          "Tax @ 15%",
+          "₹ 60,000",
           "₹ 67,500"
         ]
       },
       {
-        "beat_goal": "Verify eligibility for Section 87A rebate based on residency and threshold.",
-        "layout": "checklist_gate",
+        "beat_goal": "Examine statutory marginal relief provision u/s 87A comparing tax payable against excess income over 12 lakhs",
+        "layout": "statute_quote",
         "anchor_phrases": [
           "Section 87A",
-          "₹ 12,00,000 threshold"
+          "Marginal Relief",
+          "₹ 12,00,000",
+          "₹ 50,000"
         ]
       },
       {
-        "beat_goal": "Determine the incremental income earned above the rebate threshold.",
-        "layout": "decision_tree",
-        "anchor_phrases": [
-          "Incremental Income",
-          "₹ 50,000 excess"
-        ]
-      },
-      {
-        "beat_goal": "Apply the marginal relief formula to reduce the tax burden.",
-        "layout": "waterfall",
-        "anchor_phrases": [
-          "Marginal Rebate",
-          "₹ 17,500"
-        ]
-      },
-      {
-        "beat_goal": "Compute the final tax liability including the mandatory cess.",
+        "beat_goal": "Deduct marginal relief rebate from basic tax and add Health and Education Cess to get final tax payable",
         "layout": "ledger",
         "anchor_phrases": [
+          "Rebate u/s 87A",
+          "₹ 17,500",
           "HEC @ 4%",
+          "₹ 2,000",
           "₹ 52,000"
         ]
       },
       {
-        "beat_goal": "Summarize the impact of marginal relief on the final tax payable.",
+        "beat_goal": "Summarize key takeaways for Section 115BAC default regime computation with Section 87A marginal relief",
         "layout": "takeaway",
         "anchor_phrases": [
-          "Tax limited to excess income",
-          "A.Y. 2026-27"
+          "Tax Liability",
+          "₹ 52,000",
+          "Section 87A"
         ]
       }
     ]
@@ -91,43 +85,47 @@
     {
       "layout": "example_scene",
       "title": {
-        "text": "Assessee Profile & Income",
+        "text": "Mr. Nitin's Income Profile",
         "at": 0.3
       },
-      "voice_sync_text": "നമുക്ക് Mr. Nitin എന്ന Resident Individual-ന്റെ Total Income ₹ 12,50,000 എങ്ങനെ tax ചെയ്യപ്പെടുന്നു എന്ന് പരിശോധിക്കാം.",
+      "voice_sync_text": "നമ്മുടെ Mr. Nitin-ന്റെ കേസ് നോക്കാം. 35 വയസ്സുള്ള ഒരു resident individual ആണ് അദ്ദേഹം. A.Y. 2026-27-ൽ അദ്ദേഹത്തിന്റെ total income ₹ 12,50,000 ആണ്. നമ്മൾ ഇത് compute ചെയ്യുന്നത് default regime ആയ Section 115BAC പ്രകാരമാണ്.",
       "visual_data": {
         "actors": [
           {
-            "label": "Assessee",
-            "detail": "Mr. Nitin",
-            "value": "Resident Individual",
+            "label": "Mr. Nitin",
+            "detail": "35 years, Resident",
             "icon": "person",
-            "at": 2.7
+            "at": 0.0
           }
         ],
-        "transaction": "Assessment for A.Y. 2026-27",
+        "transaction": "Tax Computation",
         "facts": [
-          {
-            "label": "Status",
-            "value": "Resident Individual",
-            "at": 3.5
-          },
           {
             "label": "Total Income",
             "value": "₹ 12,50,000",
-            "amount": 1250000,
             "at": 4.18
+          },
+          {
+            "label": "Regime",
+            "value": "Section 115BAC",
+            "at": 10.24
+          },
+          {
+            "label": "Assessment Year",
+            "value": "A.Y. 2026-27",
+            "at": 10.24
           }
         ]
       },
       "start": 0.0,
       "end": 12.72,
       "id": "b1",
-      "director_goal": "Establish Mr. Nitin's profile and total income for the assessment year.",
+      "director_goal": "Introduce Mr. Nitin and his total income profile under default regime Section 115BAC for Assessment Year 2026-27",
       "anchor_phrases": [
         "Mr. Nitin",
         "₹ 12,50,000",
-        "Resident Individual"
+        "Section 115BAC",
+        "A.Y. 2026-27"
       ],
       "animation_role": "key_fact",
       "anchor_alignment": [
@@ -139,51 +137,66 @@
         },
         {
           "phrase": "₹ 12,50,000",
-          "at": 5.52,
+          "at": 5.5,
           "matched": true,
           "score": 1.0
         },
         {
-          "phrase": "Resident Individual",
-          "at": 2.46,
+          "phrase": "Section 115BAC",
+          "at": 10.24,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "A.Y. 2026-27",
+          "at": 5.01,
           "matched": false,
-          "score": 0.294
+          "score": 0.143
         }
       ],
       "anchor_match": {
-        "matched": 2,
-        "total": 3
+        "matched": 3,
+        "total": 4
       }
     },
     {
       "layout": "slab_ladder",
       "title": {
-        "text": "Basic Tax Calculation",
+        "text": "Basic Tax Computation",
         "at": 13.37
       },
-      "voice_sync_text": "Default tax regime ആയ Section 115BAC അനുസരിച്ച് ₹ 12,50,000-ന് tax compute ചെയ്യുമ്പോൾ basic tax burden ₹ 67,500 വരുന്നു.",
+      "voice_sync_text": "Section 115BAC പ്രകാരം ₹ 12,50,000-ന് tax കാണുമ്പോൾ, ആദ്യ ₹ 12,00,000 വരെ ₹ 60,000 വരും. ബാക്കിയുള്ള ₹ 50,000-ന് Tax @ 15% അതായത് ₹ 7,500 കൂടി ചേർക്കുമ്പോൾ total basic tax ₹ 67,500 ആയി മാറുന്നു.",
       "visual_data": {
         "tiers": [
           {
-            "label": "Taxable Income",
-            "value": "₹ 12,50,000",
-            "amount": 1250000,
-            "at": 20.75
+            "label": "Tax on first ₹ 12,00,000",
+            "value": "₹ 60,000",
+            "at": 15.75
           },
           {
-            "label": "Section 115BAC Slab Tax",
+            "label": "Tax @ 15% on balance ₹ 50,000",
+            "value": "₹ 7,500",
+            "at": 19.59
+          },
+          {
+            "label": "Total Basic Tax",
             "value": "₹ 67,500",
-            "amount": 67500,
-            "at": 20.75
+            "at": 22.45
           }
+        ],
+        "spoken_amounts": [
+          "₹ 12,50,000",
+          "12,50,000"
         ]
       },
       "start": 13.07,
       "end": 25.71,
       "id": "b2",
-      "director_goal": "Calculate the basic tax liability using the default regime slab rates.",
+      "director_goal": "Compute basic income tax liability using default slab rates under Section 115BAC",
       "anchor_phrases": [
         "Section 115BAC",
+        "Tax @ 15%",
+        "₹ 60,000",
         "₹ 67,500"
       ],
       "animation_role": "explanation",
@@ -195,50 +208,51 @@
           "score": 1.0
         },
         {
+          "phrase": "Tax @ 15%",
+          "at": 15.75,
+          "matched": true,
+          "score": 0.787
+        },
+        {
+          "phrase": "₹ 60,000",
+          "at": 18.43,
+          "matched": true,
+          "score": 1.0
+        },
+        {
           "phrase": "₹ 67,500",
-          "at": 24.11,
+          "at": 24.15,
           "matched": true,
           "score": 1.0
         }
       ],
       "anchor_match": {
-        "matched": 2,
-        "total": 2
+        "matched": 4,
+        "total": 4
       }
     },
     {
-      "layout": "checklist_gate",
+      "layout": "statute_quote",
       "title": {
-        "text": "Section 87A Threshold Verification",
+        "text": "Section 87A Marginal Relief",
         "at": 26.36
       },
-      "voice_sync_text": "ഇനി Section 87A പ്രകാരം check ചെയ്യാം. Full rebate ലഭിക്കുന്ന limit ആയ ₹ 12,00,000 threshold Nitin മറികടന്നു.",
+      "voice_sync_text": "ഇവിടെയാണ് Section 87A-ലെ Marginal Relief വരുന്നത്. Income ₹ 12,00,000-ന് മുകളിൽ പോകുമ്പോൾ, അടയ്ക്കേണ്ട tax ആ excess income-ൽ കൂടുതൽ ആകാൻ പാടില്ല. ഇവിടെ excess income ₹ 50,000 മാത്രമാണ്.",
       "visual_data": {
-        "conditions": [
-          {
-            "label": "Residency",
-            "detail": "Resident Individual",
-            "pass": true,
-            "at": 26.06
-          },
-          {
-            "label": "Rebate Threshold",
-            "detail": "Section 87A threshold",
-            "value": "₹ 12,00,000",
-            "amount": 1200000,
-            "pass": false,
-            "at": 27.6
-          }
-        ],
-        "outcome": "Eligible for Marginal Relief under Section 87A"
+        "rule": "Tax on income > ₹ 12,00,000 cannot exceed excess income",
+        "citation": "Section 87A",
+        "application": "Excess income over ₹ 12,00,000 is ₹ 50,000",
+        "at": 26.06
       },
       "start": 26.06,
       "end": 35.66,
       "id": "b3",
-      "director_goal": "Verify eligibility for Section 87A rebate based on residency and threshold.",
+      "director_goal": "Examine statutory marginal relief provision u/s 87A comparing tax payable against excess income over 12 lakhs",
       "anchor_phrases": [
         "Section 87A",
-        "₹ 12,00,000 threshold"
+        "Marginal Relief",
+        "₹ 12,00,000",
+        "₹ 50,000"
       ],
       "animation_role": "explanation",
       "anchor_alignment": [
@@ -249,248 +263,175 @@
           "score": 1.0
         },
         {
-          "phrase": "₹ 12,00,000 threshold",
-          "at": 32.54,
-          "matched": true,
-          "score": 0.557
-        }
-      ],
-      "anchor_match": {
-        "matched": 2,
-        "total": 2
-      }
-    },
-    {
-      "layout": "decision_tree",
-      "title": {
-        "text": "Incremental Income Determination",
-        "at": 36.31
-      },
-      "voice_sync_text": "ഇവിടെ threshold-ന് മുകളിലുള്ള Incremental Income ₹ 50,000 excess മാത്രമാണ്.",
-      "visual_data": {
-        "root": "Threshold Comparison",
-        "branches": [
-          {
-            "label": "Total Income",
-            "value": "₹ 12,50,000",
-            "amount": 1250000,
-            "at": 43.71
-          },
-          {
-            "label": "Threshold Limit",
-            "value": "₹ 12,00,000",
-            "amount": 1200000,
-            "at": 43.71
-          },
-          {
-            "label": "Incremental Income",
-            "detail": "₹ 50,000 excess",
-            "value": "₹ 50,000",
-            "amount": 50000,
-            "at": 43.71
-          }
-        ]
-      },
-      "start": 36.01,
-      "end": 53.05,
-      "id": "b4",
-      "director_goal": "Determine the incremental income earned above the rebate threshold.",
-      "anchor_phrases": [
-        "Incremental Income",
-        "₹ 50,000 excess"
-      ],
-      "animation_role": "explanation",
-      "anchor_alignment": [
-        {
-          "phrase": "Incremental Income",
-          "at": 42.91,
-          "matched": true,
-          "score": 0.595
+          "phrase": "Marginal Relief",
+          "at": 27.36,
+          "matched": false,
+          "score": 0.348
         },
         {
-          "phrase": "₹ 50,000 excess",
-          "at": 51.27,
+          "phrase": "₹ 12,00,000",
+          "at": 33.84,
           "matched": true,
-          "score": 0.84
-        }
-      ],
-      "anchor_match": {
-        "matched": 2,
-        "total": 2
-      }
-    },
-    {
-      "layout": "waterfall",
-      "title": {
-        "text": "Marginal Relief Computation",
-        "at": 53.7
-      },
-      "voice_sync_text": "Tax amount ₹ 67,500 excess income ആയ ₹ 50,000-നേക്കാൾ കൂടുതലായതിനാൽ, Marginal Rebate ആയി ₹ 17,500 കുറയ്ക്കുന്നു.",
-      "visual_data": {
-        "stages": [
-          {
-            "label": "Tax on Total Income",
-            "value": "₹ 67,500",
-            "amount": 67500,
-            "sign": "+",
-            "at": 61.5
-          },
-          {
-            "label": "Excess Income over 12 Lakh",
-            "value": "₹ 50,000",
-            "amount": 50000,
-            "sign": "-",
-            "at": 61.5
-          },
-          {
-            "label": "Marginal Rebate u/s 87A",
-            "detail": "Marginal Rebate",
-            "value": "₹ 17,500",
-            "amount": 17500,
-            "sign": "=",
-            "at": 61.5
-          }
-        ]
-      },
-      "start": 53.4,
-      "end": 65.0,
-      "id": "b5",
-      "director_goal": "Apply the marginal relief formula to reduce the tax burden.",
-      "anchor_phrases": [
-        "Marginal Rebate",
-        "₹ 17,500"
-      ],
-      "animation_role": "explanation",
-      "anchor_alignment": [
-        {
-          "phrase": "Marginal Rebate",
-          "at": 61.1,
-          "matched": true,
-          "score": 0.5
+          "score": 0.667
         },
         {
-          "phrase": "₹ 17,500",
-          "at": 62.72,
+          "phrase": "₹ 50,000",
+          "at": 34.42,
           "matched": true,
-          "score": 0.533
+          "score": 1.0
         }
       ],
       "anchor_match": {
-        "matched": 2,
-        "total": 2
+        "matched": 3,
+        "total": 4
       }
     },
     {
       "layout": "ledger",
       "title": {
         "text": "Final Tax Liability",
-        "at": 65.65
+        "at": 36.31
       },
-      "voice_sync_text": "Net tax ₹ 50,000-നോടൊപ്പം HEC @ 4% ചേർക്കുമ്പോൾ final tax liability ₹ 52,000 ആകുന്നു.",
+      "voice_sync_text": "അതുകൊണ്ട് basic tax ആയ ₹ 67,500-ൽ നിന്നും excess income ആയ ₹ 50,000 കുറച്ചാൽ Rebate u/s 87A ആയി ₹ 17,500 ലഭിക്കും. അപ്പോൾ tax ₹ 50,000 ആയി കുറഞ്ഞു. ഇതിനോടൊപ്പം HEC @ 4% അതായത് ₹ 2,000 കൂടി ചേർത്താൽ final tax liability ₹ 52,000 എന്ന് കിട്ടും.",
       "visual_data": {
         "rows": [
           {
-            "label": "Tax after Marginal Relief",
-            "value": "₹ 50,000",
-            "amount": 50000,
-            "sign": "+",
-            "at": 71.91
+            "label": "Basic Tax",
+            "value": "₹ 67,500",
+            "at": 39.21
           },
           {
-            "label": "Health & Education Cess",
-            "detail": "HEC @ 4%",
+            "label": "Rebate u/s 87A",
+            "value": "₹ 17,500",
+            "sign": "-",
+            "at": 39.21
+          },
+          {
+            "label": "Tax before Cess",
+            "value": "₹ 50,000",
+            "sign": "=",
+            "at": 50.03
+          },
+          {
+            "label": "HEC @ 4%",
             "value": "₹ 2,000",
-            "amount": 2000,
             "sign": "+",
-            "at": 71.91
+            "at": 50.03
           }
         ],
         "total": "₹ 52,000"
       },
-      "start": 65.35,
-      "end": 75.71,
-      "id": "b6",
-      "director_goal": "Compute the final tax liability including the mandatory cess.",
+      "start": 36.01,
+      "end": 53.05,
+      "id": "b4",
+      "director_goal": "Deduct marginal relief rebate from basic tax and add Health and Education Cess to get final tax payable",
       "anchor_phrases": [
+        "Rebate u/s 87A",
+        "₹ 17,500",
         "HEC @ 4%",
+        "₹ 2,000",
         "₹ 52,000"
       ],
       "animation_role": "explanation",
       "anchor_alignment": [
         {
-          "phrase": "HEC @ 4%",
-          "at": 68.97,
+          "phrase": "Rebate u/s 87A",
+          "at": 36.69,
           "matched": true,
-          "score": 0.889
+          "score": 0.857
+        },
+        {
+          "phrase": "₹ 17,500",
+          "at": 46.67,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "HEC @ 4%",
+          "at": 47.32,
+          "matched": false,
+          "score": 0.267
+        },
+        {
+          "phrase": "₹ 2,000",
+          "at": 51.87,
+          "matched": true,
+          "score": 0.75
         },
         {
           "phrase": "₹ 52,000",
-          "at": 73.85,
-          "matched": true,
-          "score": 1.0
+          "at": 51.42,
+          "matched": false,
+          "score": 0.0
         }
       ],
       "anchor_match": {
-        "matched": 2,
-        "total": 2
+        "matched": 3,
+        "total": 5
       }
     },
     {
       "layout": "takeaway",
       "title": {
-        "text": "Key Takeaway",
-        "at": 76.36
+        "text": "Summary of Tax Relief",
+        "at": 53.7
       },
-      "voice_sync_text": "അങ്ങനെ A.Y. 2026-27-ൽ Section 87A marginal relief കാരണം Tax limited to excess income ആകുന്നു.",
+      "voice_sync_text": "ചുരുക്കത്തിൽ, Section 115BAC പ്രകാരം income ₹ 12,00,000 കടക്കുമ്പോൾ Section 87A വഴി marginal relief ലഭിക്കും. Mr. Nitin-ന്റെ കാര്യത്തിൽ final Tax Liability ₹ 52,000 ആണ്.",
       "visual_data": {
         "rules": [
           {
-            "label": "Section 87A Rule",
-            "detail": "Tax limited to excess income",
-            "value": "Tax before cess capped at income above ₹ 12,00,000",
-            "at": 79.66
+            "label": "Section 87A Marginal Relief",
+            "detail": "Applied for income > ₹ 12L",
+            "at": 58.07
           },
           {
-            "label": "Applicable Year",
-            "detail": "A.Y. 2026-27",
-            "value": "Default Regime u/s 115BAC",
-            "at": 79.66
+            "label": "Final Tax Liability",
+            "value": "₹ 52,000",
+            "icon": "scales",
+            "at": 61.1
           }
         ]
       },
-      "start": 76.06,
-      "end": 86.02,
-      "id": "b7",
-      "director_goal": "Summarize the impact of marginal relief on the final tax payable.",
+      "start": 53.4,
+      "end": 65.0,
+      "id": "b5",
+      "director_goal": "Summarize key takeaways for Section 115BAC default regime computation with Section 87A marginal relief",
       "anchor_phrases": [
-        "Tax limited to excess income",
-        "A.Y. 2026-27"
+        "Tax Liability",
+        "₹ 52,000",
+        "Section 87A"
       ],
       "animation_role": "key_fact",
       "anchor_alignment": [
         {
-          "phrase": "Tax limited to excess income",
-          "at": 83.16,
+          "phrase": "Tax Liability",
+          "at": 61.5,
           "matched": true,
           "score": 1.0
         },
         {
-          "phrase": "A.Y. 2026-27",
-          "at": 76.81,
+          "phrase": "₹ 52,000",
+          "at": 63.64,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Section 87A",
+          "at": 58.07,
           "matched": false,
-          "score": 0.171
+          "score": 0.0
         }
       ],
       "anchor_match": {
-        "matched": 1,
-        "total": 2
+        "matched": 2,
+        "total": 3
       }
     }
   ],
-  "audio_duration_sec": 86.02,
+  "audio_duration_sec": 65.0,
   "anchor_match": {
-    "matched": 13,
-    "total": 15,
-    "rate": 0.867
+    "matched": 15,
+    "total": 20,
+    "rate": 0.75
   }
 }
