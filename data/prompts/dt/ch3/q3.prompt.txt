@@ -1,0 +1,4 @@
+SLIDE 1: Statutory Framework of Section 32 Depreciation (Cards Design)
+theme (indigo)
+heading (Section 32 Income-tax Act, 1961) (Statutory Framework for Depreciation Allowance)
+shape (man) (CA Rajesh) (left center) (dialogue: "Welcome students! Section 32 study cheyyumbo main aayi nokk
