@@ -1,70 +1,67 @@
 {
   "question_id": "dt-c1-q1",
   "audio_url": "data/audio/dt-c1-q1.mp3",
-  "duration_sec": 95.56,
+  "duration_sec": 55.8,
   "sync_offset_sec": 0.0,
-  "context_pill": "Diversion vs Application of Income",
-  "example_summary": "Mr. Bhargava, an advocate, accepted a ₹ 5 lacs fee for a Supreme Court case on the condition that he would use it to create a charitable trust, which he subsequently did.",
-  "source_provision": "### Statutory Summary Matrix: Diversion vs Application of Income\n\n| Doctrine / Concept | Statutory Section | Core Legal Test / Condition | Tax Treatment / Legal Consequence |\n| :--- | :--- | :--- | :--- |\n| **Application of Income** | Section 4 & Section 5 | Income reaches the assessee first; subsequently utilized as per personal desire or voluntary obligation. | Fully taxable in the hands of the recipient assessee under the relevant head of income. |\n| **Diversion by Overriding Title** | Section 4 | Income is diverted at the source by an overriding legal obligation before it becomes the assessee's income. | Excluded from the total income of the assessee as it never accrued to them. |\n\n\n- **Professional Income Chargeability**: Fees received by an advocate or professional for services rendered directly accrue as income under Section 28 under the head Profits and Gains of Business or Profession.\n- **Voluntary Trust Creation**: Creating a charitable trust out of already received professional fees represents mere application of income and does not alter its taxability.\n\n\n> [!IMPORTANT]\n> **Judicial Distinction**: For diversion by overriding title to apply, the obligation must attach to the source of income itself, not to the destination or application of the income after it is received.",
+  "context_pill": "Diversion vs Application of Professional Income",
+  "example_summary": "Mr. Bhargava received professional income of 5 lacs and created a trust. The test of diversion by overriding title versus application of income determines whether the amount is taxable.",
+  "source_provision": "| Legal Concept | Statutory Basis | Tax Consequence |\n| :--- | :--- | :--- |\n| Diversion by Overriding Title | Section 4 | Income is diverted before accrual; not taxable in hands of recipient. |\n| Application of Income | Section 5 | Income is earned/accrued first; taxable in hands of recipient. |\n\n> [!IMPORTANT] Diversion by Overriding Title: The legal obligation must exist prior to the receipt of income, creating a charge on the income such that the assessee has no right to receive it.\n\n> [!WARNING] Application of Income: When an assessee receives income and subsequently decides to apply it for a specific purpose (charity, trust, personal debt), it remains assessable in their hands as professional or business income.",
   "director": {
-    "archetype": "classification_decision_tree",
-    "justification": "The case requires a classification between 'Diversion of Income' and 'Application of Income' based on whether the legal obligation existed at the source or after receipt.",
+    "archetype": "two_regime_comparison",
+    "justification": "The case hinges on distinguishing between diversion by overriding title and application of income to determine taxability of professional fees.",
     "protagonist": "Mr. Bhargava",
     "actors": [
-      "Mr. Bhargava",
-      "Company",
-      "Supreme Court",
+      "Corporate Client",
       "Public Charitable Trust"
     ],
     "key_numbers": [
-      "₹ 5 lacs",
-      "Section 28",
-      "Section 4"
+      "5 lacs"
     ],
     "key_dates": [],
-    "visual_metaphor": "A river fork where water is either diverted into a side canal before reaching the main gate (Diversion) or flows through the gate into a private reservoir before being pumped out (Application).",
+    "visual_metaphor": "A fork in the road where one path leads to a pre-existing legal obligation (diversion) and the other to a voluntary post-receipt decision (application).",
     "beat_plan": [
       {
-        "beat_goal": "Establish the professional engagement and the fee arrangement",
+        "beat_goal": "Introduce the professional fee scenario and the intent to donate.",
         "layout": "example_scene",
         "anchor_phrases": [
           "Mr. Bhargava",
-          "Supreme Court",
-          "₹ 5 lacs"
+          "5 lacs",
+          "professional income"
         ]
       },
       {
-        "beat_goal": "Trace the movement of funds from the client to the trust",
+        "beat_goal": "Define the legal test for diversion by overriding title.",
+        "layout": "case_card",
+        "anchor_phrases": [
+          "Diversion by overriding title",
+          "Section 4",
+          "legal obligation"
+        ]
+      },
+      {
+        "beat_goal": "Contrast with the application of income principle.",
+        "layout": "compare_regimes",
+        "anchor_phrases": [
+          "Application of income",
+          "Section 5",
+          "taxable income"
+        ]
+      },
+      {
+        "beat_goal": "Analyze the specific facts of the trust creation.",
         "layout": "flow_actors",
         "anchor_phrases": [
-          "Company",
-          "Mr. Bhargava",
-          "Public Charitable Trust"
+          "trust deed",
+          "professional income",
+          "client obligation"
         ]
       },
       {
-        "beat_goal": "Determine if the obligation was at the source or post-receipt",
-        "layout": "decision_tree",
-        "anchor_phrases": [
-          "Diversion by Overriding Title",
-          "Application of Income",
-          "Source of Income"
-        ]
-      },
-      {
-        "beat_goal": "Apply the statutory provision for professional income",
-        "layout": "statute_quote",
-        "anchor_phrases": [
-          "Section 28",
-          "Profits and gains of business or profession"
-        ]
-      },
-      {
-        "beat_goal": "Conclude on the taxability of the amount",
+        "beat_goal": "Summarize the tax liability outcome.",
         "layout": "takeaway",
         "anchor_phrases": [
-          "Assessable in his hands",
-          "Application of professional income"
+          "chargeable to tax",
+          "Profits and gains of business or profession"
         ]
       }
     ]
@@ -74,70 +71,170 @@
     {
       "layout": "example_scene",
       "title": {
-        "text": "The Professional Engagement",
+        "text": "Professional Fee & Charity Intent",
         "at": 0.3
       },
-      "voice_sync_text": "Mr. Bhargava ഒരു leading advocate ആണ്. അദ്ദേഹം Supreme Court-ൽ ഒരു Company-യെ പ്രതിനിധീകരിക്കാൻ ₹ 5 lacs ഫീസ് നിശ്ചയിച്ചു.",
+      "voice_sync_text": "നമസ്കാരം, Mr. Bhargava ഒരു leading advocate on corporate law ആണ്. അദ്ദേഹം professional income ആയി ലഭിക്കുന്ന 5 lacs വെച്ച് ചാരിറ്റി ചെയ്യാൻ തീരുമാനിക്കുന്നു.",
       "visual_data": {
         "actors": [
           {
             "label": "Mr. Bhargava",
+            "detail": "Leading Advocate",
             "icon": "person",
-            "detail": "Advocate",
-            "at": 0.0
+            "at": 2.14
           },
           {
-            "label": "Company",
-            "icon": "factory",
-            "detail": "Client",
-            "at": 5.9
+            "label": "Corporate Client",
+            "detail": "Paid professional fees",
+            "icon": "person",
+            "at": 4.7
           }
         ],
-        "transaction": "Legal Representation",
+        "transaction": "Professional Fee Payment",
         "facts": [
           {
-            "label": "Court",
-            "value": "Supreme Court",
-            "icon": "gavel",
-            "at": 7.7
-          },
-          {
-            "label": "Professional Fee",
+            "label": "5 lacs",
             "amount": 500000,
-            "value": "₹ 5 lacs",
             "icon": "money_bag",
-            "at": 17.31
+            "at": 8.5
           }
         ]
       },
       "start": 0.0,
-      "end": 21.12,
+      "end": 11.68,
       "id": "b1",
-      "director_goal": "Establish the professional engagement and the fee arrangement",
+      "director_goal": "Introduce the professional fee scenario and the intent to donate.",
       "anchor_phrases": [
         "Mr. Bhargava",
-        "Supreme Court",
-        "₹ 5 lacs"
+        "5 lacs",
+        "professional income"
       ],
       "animation_role": "key_fact",
       "anchor_alignment": [
         {
           "phrase": "Mr. Bhargava",
-          "at": 0.76,
-          "matched": true,
-          "score": 0.842
-        },
-        {
-          "phrase": "Supreme Court",
-          "at": 7.7,
+          "at": 1.68,
           "matched": true,
           "score": 1.0
         },
         {
-          "phrase": "₹ 5 lacs",
-          "at": 14.3,
+          "phrase": "5 lacs",
+          "at": 8.5,
           "matched": true,
-          "score": 0.787
+          "score": 0.889
+        },
+        {
+          "phrase": "professional income",
+          "at": 9.8,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 3
+      }
+    },
+    {
+      "layout": "case_card",
+      "title": {
+        "text": "Legal Test: Diversion",
+        "at": 12.33
+      },
+      "voice_sync_text": "Income Tax Act Section 4 പ്രകാരം Diversion by overriding title എന്താണെന്ന് നോക്കാം. ഇവിടെ ഒരു legal obligation മുൻകൂട്ടി ഉണ്ടായിരിക്കണം.",
+      "visual_data": {
+        "case_name": "Diversion by Overriding Title Principle",
+        "court": "Supreme Court",
+        "principle": "Legal obligation exists prior to the receipt of income, creating a charge so assessee has no right to receive it.",
+        "application": "Income is diverted before accrual; not taxable in hands of recipient.",
+        "at": 12.03
+      },
+      "start": 12.03,
+      "end": 22.75,
+      "id": "b2",
+      "director_goal": "Define the legal test for diversion by overriding title.",
+      "anchor_phrases": [
+        "Diversion by overriding title",
+        "Section 4",
+        "legal obligation"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Diversion by overriding title",
+          "at": 15.17,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Section 4",
+          "at": 13.21,
+          "matched": false,
+          "score": 0.421
+        },
+        {
+          "phrase": "legal obligation",
+          "at": 19.63,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 2,
+        "total": 3
+      }
+    },
+    {
+      "layout": "compare_regimes",
+      "title": {
+        "text": "Application of Income Principle",
+        "at": 23.4
+      },
+      "voice_sync_text": "മറിച്ച്, Section 5 പ്രകാരം Application of income വരുമ്പോൾ, income ആദ്യം തന്നിലേക്ക് അക്രൂ ആവുകയും പിന്നീട് അത് taxable income ആയി മാറുകയും ചെയ്യുന്നു.",
+      "visual_data": {
+        "regimes": [
+          {
+            "label": "Diversion by Overriding Title",
+            "detail": "Section 4",
+            "value": "Not Taxable",
+            "at": 31.74
+          },
+          {
+            "label": "Application of income",
+            "detail": "Section 5",
+            "value": "taxable income",
+            "at": 31.74
+          }
+        ]
+      },
+      "start": 23.1,
+      "end": 35.54,
+      "id": "b3",
+      "director_goal": "Contrast with the application of income principle.",
+      "anchor_phrases": [
+        "Application of income",
+        "Section 5",
+        "taxable income"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Application of income",
+          "at": 25.02,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Section 5",
+          "at": 28.76,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "taxable income",
+          "at": 33.12,
+          "matched": true,
+          "score": 1.0
         }
       ],
       "anchor_match": {
@@ -148,227 +245,128 @@
     {
       "layout": "flow_actors",
       "title": {
-        "text": "Movement of Funds",
-        "at": 21.77
+        "text": "Trust Creation Analysis",
+        "at": 36.19
       },
-      "voice_sync_text": "ഇവിടെ Company ആ തുക Mr. Bhargava-യ്ക്ക് നൽകുന്നു. അതിനുശേഷം അദ്ദേഹം ആ തുക ഉപയോഗിച്ച് ഒരു Public Charitable Trust രൂപീകരിക്കുന്നു.",
+      "voice_sync_text": "ഈ കേസിൽ client obligation ഒന്നും ഇല്ലാതിരുന്നതിനാൽ, trust deed വഴി professional income പിന്നീട് ട്രസ്റ്റ് ആക്കി മാറ്റിയത് application മാത്രമാണ്.",
       "visual_data": {
         "actors": [
           {
-            "label": "Company",
-            "icon": "factory",
-            "at": 43.99
+            "label": "Corporate Client",
+            "detail": "No client obligation",
+            "icon": "person",
+            "at": 37.31
           },
           {
             "label": "Mr. Bhargava",
+            "detail": "Received professional income",
             "icon": "person",
-            "at": 43.99
+            "at": 40.51
           },
           {
             "label": "Public Charitable Trust",
-            "icon": "house",
-            "at": 43.99
+            "detail": "Created via trust deed",
+            "icon": "document",
+            "at": 40.51
           }
         ],
         "edges": [
           {
-            "from": "Company",
+            "label": "5 lacs payment",
+            "from": "Corporate Client",
             "to": "Mr. Bhargava",
-            "label": "Fee Payment",
-            "amount": 500000,
-            "value": "₹ 5 lacs",
-            "at": 43.99
+            "at": 40.51
           },
           {
+            "label": "trust deed creation",
             "from": "Mr. Bhargava",
             "to": "Public Charitable Trust",
-            "label": "Trust Creation",
-            "amount": 500000,
-            "value": "₹ 5 lacs",
-            "at": 43.99
+            "at": 40.51
           }
         ]
       },
-      "start": 21.47,
-      "end": 45.79,
-      "id": "b2",
-      "director_goal": "Trace the movement of funds from the client to the trust",
-      "anchor_phrases": [
-        "Company",
-        "Mr. Bhargava",
-        "Public Charitable Trust"
-      ],
-      "animation_role": "explanation",
-      "anchor_alignment": [
-        {
-          "phrase": "Company",
-          "at": 43.99,
-          "matched": true,
-          "score": 0.588
-        },
-        {
-          "phrase": "Mr. Bhargava",
-          "at": 25.24,
-          "matched": false,
-          "score": 0.3
-        },
-        {
-          "phrase": "Public Charitable Trust",
-          "at": 38.25,
-          "matched": false,
-          "score": 0.207
-        }
-      ],
-      "anchor_match": {
-        "matched": 1,
-        "total": 3
-      }
-    },
-    {
-      "layout": "decision_tree",
-      "title": {
-        "text": "Diversion vs. Application",
-        "at": 46.44
-      },
-      "voice_sync_text": "ഇത് Diversion by Overriding Title ആണോ അതോ Application of Income ആണോ എന്ന് നോക്കാം. വരുമാനം ലഭിക്കുന്നതിന് മുൻപ് തന്നെ Source of Income-ൽ ഒരു legal obligation ഉണ്ടെങ്കിൽ മാത്രമേ അത് diversion ആകൂ. ഇവിടെ income കയ്യിൽ കിട്ടിയ ശേഷമാണ് trust ഉണ്ടാക്കുന്നത്.",
-      "visual_data": {
-        "root": "Timing of Obligation",
-        "branches": [
-          {
-            "label": "At Source",
-            "detail": "Diversion by Overriding Title",
-            "pass": false,
-            "value": "Source of Income",
-            "at": 50.46
-          },
-          {
-            "label": "Post-Receipt",
-            "detail": "Application of Income",
-            "pass": true,
-            "at": 61.02
-          }
-        ]
-      },
-      "start": 46.14,
-      "end": 65.78,
-      "id": "b3",
-      "director_goal": "Determine if the obligation was at the source or post-receipt",
-      "anchor_phrases": [
-        "Diversion by Overriding Title",
-        "Application of Income",
-        "Source of Income"
-      ],
-      "animation_role": "explanation",
-      "anchor_alignment": [
-        {
-          "phrase": "Diversion by Overriding Title",
-          "at": 51.3,
-          "matched": true,
-          "score": 0.75
-        },
-        {
-          "phrase": "Application of Income",
-          "at": 61.62,
-          "matched": true,
-          "score": 0.615
-        },
-        {
-          "phrase": "Source of Income",
-          "at": 62.72,
-          "matched": true,
-          "score": 0.667
-        }
-      ],
-      "anchor_match": {
-        "matched": 3,
-        "total": 3
-      }
-    },
-    {
-      "layout": "statute_quote",
-      "title": {
-        "text": "Statutory Provision",
-        "at": 66.43
-      },
-      "voice_sync_text": "Section 28 പ്രകാരം professional services-ന് ലഭിക്കുന്ന ഫീസ് Profits and gains of business or profession എന്ന head-ൽ taxable ആണ്.",
-      "visual_data": {
-        "rule": "Income from professional services is chargeable to tax.",
-        "citation": "Section 28",
-        "application": "Profits and gains of business or profession",
-        "at": 66.13
-      },
-      "start": 66.13,
-      "end": 86.65,
+      "start": 35.89,
+      "end": 46.25,
       "id": "b4",
-      "director_goal": "Apply the statutory provision for professional income",
+      "director_goal": "Analyze the specific facts of the trust creation.",
       "anchor_phrases": [
-        "Section 28",
-        "Profits and gains of business or profession"
+        "trust deed",
+        "professional income",
+        "client obligation"
       ],
       "animation_role": "explanation",
       "anchor_alignment": [
         {
-          "phrase": "Section 28",
-          "at": 69.59,
+          "phrase": "trust deed",
+          "at": 40.13,
+          "matched": true,
+          "score": 0.636
+        },
+        {
+          "phrase": "professional income",
+          "at": 40.75,
           "matched": true,
           "score": 1.0
         },
         {
-          "phrase": "Profits and gains of business or profession",
-          "at": 70.81,
-          "matched": true,
-          "score": 1.0
+          "phrase": "client obligation",
+          "at": 36.47,
+          "matched": false,
+          "score": 0.174
         }
       ],
       "anchor_match": {
         "matched": 2,
-        "total": 2
+        "total": 3
       }
     },
     {
       "layout": "takeaway",
       "title": {
-        "text": "Final Conclusion",
-        "at": 87.3
+        "text": "Tax Liability Outcome",
+        "at": 46.9
       },
-      "voice_sync_text": "ചുരുക്കത്തിൽ, ഇത് കേവലം Application of professional income മാത്രമാണ്. അതിനാൽ ഈ തുക Mr. Bhargava-യുടെ കയ്യിൽ Assessable in his hands ആണ്.",
+      "voice_sync_text": "അതുകൊണ്ട്, 5 lacs chargeable to tax under the head Profits and gains of business or profession ആയി മാറുന്നു.",
       "visual_data": {
         "rules": [
           {
-            "label": "Taxability",
-            "value": "Assessable in his hands",
-            "status": "Taxable",
-            "at": 93.8
+            "label": "chargeable to tax",
+            "detail": "Amount received by Mr. Bhargava is taxable",
+            "icon": "scales",
+            "at": 49.02
           },
           {
-            "label": "Classification",
-            "value": "Application of professional income",
-            "icon": "document",
-            "at": 93.8
+            "label": "Profits and gains of business or profession",
+            "detail": "Taxable under this specific head",
+            "icon": "money_bag",
+            "at": 51.74
           }
+        ],
+        "spoken_amounts": [
+          "5 lacs"
         ]
       },
-      "start": 87.0,
-      "end": 95.56,
+      "start": 46.6,
+      "end": 55.8,
       "id": "b5",
-      "director_goal": "Conclude on the taxability of the amount",
+      "director_goal": "Summarize the tax liability outcome.",
       "anchor_phrases": [
-        "Assessable in his hands",
-        "Application of professional income"
+        "chargeable to tax",
+        "Profits and gains of business or profession"
       ],
       "animation_role": "key_fact",
       "anchor_alignment": [
         {
-          "phrase": "Assessable in his hands",
-          "at": 91.48,
+          "phrase": "chargeable to tax",
+          "at": 49.02,
           "matched": true,
-          "score": 0.5
+          "score": 1.0
         },
         {
-          "phrase": "Application of professional income",
-          "at": 93.9,
+          "phrase": "Profits and gains of business or profession",
+          "at": 51.74,
           "matched": true,
-          "score": 0.536
+          "score": 1.0
         }
       ],
       "anchor_match": {
@@ -377,10 +375,10 @@
       }
     }
   ],
-  "audio_duration_sec": 95.56,
+  "audio_duration_sec": 55.8,
   "anchor_match": {
-    "matched": 11,
-    "total": 13,
-    "rate": 0.846
+    "matched": 12,
+    "total": 14,
+    "rate": 0.857
   }
 }
