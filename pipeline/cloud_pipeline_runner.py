@@ -141,12 +141,14 @@ def upsert_row_to_sheets(row_values):
                     target_row_idx = idx
                     break
 
-        body = {'values': [row_values]}
         num_cols = len(row_values)
-        col_letter = chr(ord('A') + num_cols - 1)
         if target_row_idx:
-            # In-place update of existing row
-            range_to_update = f'Sheet1!A{target_row_idx}:{col_letter}{target_row_idx}'
+            # In-place update of existing row: ensure full span up to column K is updated so legacy columns J & K are cleared
+            padded_row = list(row_values)
+            if len(padded_row) < 11:
+                padded_row.extend([''] * (11 - len(padded_row)))
+            body = {'values': [padded_row]}
+            range_to_update = f'Sheet1!A{target_row_idx}:K{target_row_idx}'
             sheets_service.spreadsheets().values().update(
                 spreadsheetId=SPREADSHEET_ID,
                 range=range_to_update,
@@ -155,7 +157,8 @@ def upsert_row_to_sheets(row_values):
             ).execute()
             print(f"  [SHEETS UPDATED] Row {target_row_idx} updated in-place for {subject} Ch{chapter_no} Q{q_num}!")
         else:
-            # Append new row
+            # Append new row (using the clean 9 columns A to I)
+            body = {'values': [row_values]}
             sheets_service.spreadsheets().values().append(
                 spreadsheetId=SPREADSHEET_ID,
                 range='Sheet1!A1',
@@ -411,37 +414,27 @@ def run_pipeline(limit=None, target_chapter=None, target_question=None, target_s
             topic = existing.get('topic', '')
             status_low = existing.get('status', '').lower()
             drive_id = existing.get('drive_id', '')
+            col7_val = existing.get('summary_json', '').strip()
+            # Under the new Universal Kinetic Presentation Studio schema, a question is complete ONLY if:
+            # 1. Col H (col7_val) is a clean kinetic DSL prompt (does NOT start with '{' or '[')
+            # 2. Col I (drive_id) has a valid Google Drive audio ID
+            is_kinetic_done = bool(col7_val and not col7_val.startswith('{') and not col7_val.startswith('[') and drive_id and is_audio_ready(drive_id))
 
             # If user requested only new questions, or batch running across question bank without target_question
-            if only_new or (not force and not target_question and not regenerate_legacy and topic and is_modern_studio_screenplay(existing.get('screenplay'))):
-                print(f"  [SKIP EXISTING] {subject} Ch{chapter_no} Q{q_num} already in Sheets database ('{topic}'). Skipping to brand new questions.")
+            if only_new or (not force and not target_question and not regenerate_legacy and is_kinetic_done):
+                print(f"  [SKIP EXISTING] {subject} Ch{chapter_no} Q{q_num} already complete with Kinetic Studio Prompt & Audio ('{topic}'). Skipping.")
                 continue
 
-            # If targeting a specific question without --force and it already has modern studio screenplay & audio complete
-            has_screenplay = is_modern_studio_screenplay(existing.get('screenplay'))
-            if not force and topic and ('complete' in status_low or is_audio_ready(drive_id)) and 'paused' not in status_low and has_screenplay and (not regenerate_legacy or is_director_authored_screenplay(existing.get('screenplay'))):
-                if regenerate_legacy:
-                    regeneration_results.append((f"{subject.lower()}-c{chapter_no}-q{q_num}", "already-modern", "screenplay passed director/layout/visual_data check"))
-                print(f"\n---> [{subject} Ch{chapter_no} Q{q_num} ({q_idx+1}/{total_questions})] Already 100% complete with modern Screenplay. Skipping!")
+            # If targeting a specific question without --force and it already has modern kinetic prompt & audio complete
+            if not force and is_kinetic_done:
+                print(f"\n---> [{subject} Ch{chapter_no} Q{q_num} ({q_idx+1}/{total_questions})] Already 100% complete with Kinetic Presentation Prompt & Audio. Skipping!")
                 continue
 
             if existing.get('summary_json'):
                 try:
                     parsed_mm = json.loads(existing['summary_json'])
                     if isinstance(parsed_mm, dict):
-                        ready_pts = count_ready_points(parsed_mm)
-                        total_pts = count_total_points(parsed_mm)
-                        is_partial = parsed_mm.get('is_partially_complete', False)
-                        if not force and total_pts > 0 and ready_pts >= total_pts and not is_partial and 'paused' not in status_low:
-                            if has_screenplay:
-                                print(f"\n---> [{subject} Ch{chapter_no} Q{q_num} ({q_idx+1}/{total_questions})] Already 100% complete with Screenplay. Skipping!")
-                                continue
-                            else:
-                                existing_mm = parsed_mm
-                                print(f"\n---> [{subject} Ch{chapter_no} Q{q_num} ({q_idx+1}/{total_questions})] Audio complete but missing modern Screenplay in Col K. Generating Screenplay...")
-                        elif not force and is_partial:
-                            existing_mm = parsed_mm
-                            print(f"\n---> [{subject} Ch{chapter_no} Q{q_num} ({q_idx+1}/{total_questions})] Found partial progress ({ready_pts}/{total_pts} points). Resuming...")
+                        existing_mm = parsed_mm
                 except Exception:
                     existing_mm = None
 
@@ -546,167 +539,51 @@ def run_pipeline(limit=None, target_chapter=None, target_question=None, target_s
                 current_prov_md = formatted_provision_matrix
                 print(f"  Canonical Doctrine: '{canonical_topic}'")
 
-            # Pedagogical Screenplay Architecture (Column K, Narration Column H, Timing Column J)
-            screenplay_obj = None
-            screenplay_json_str = ""
-            timing_status = ""
-            existing_sp_str = existing.get('screenplay', '') if existing else ''
+            # 1. Generate kinetic presentation prompt from Column 6 statutory provision summary
+            print(f"\n---> [{subject} Ch{chapter_no} Q{q_num}] Generating Universal Kinetic Studio Prompt (DSL)...")
+            presentation_prompt = generate_presentation_prompt(
+                canonical_topic=canonical_topic,
+                prov_summary_md=formatted_provision_matrix,
+                q_text=q_text,
+                ans_text=ans_text,
+                subject=subject
+            )
 
-            preserve_existing = is_modern_studio_screenplay(existing_sp_str) and (not regenerate_legacy or is_director_authored_screenplay(existing_sp_str))
-            if preserve_existing:
-                screenplay_json_str = existing_sp_str
-                timing_status = existing.get('status', 'Screenplay Cached')
-                try:
-                    screenplay_obj = json.loads(existing_sp_str) if isinstance(existing_sp_str, str) else existing_sp_str
-                except Exception:
-                    screenplay_obj = None
-                if regenerate_legacy:
-                    regeneration_results.append((f"{subject.lower()}-c{chapter_no}-q{q_num}", "already-modern", "existing screenplay preserved"))
-            else:
-                try:
-                    canonical_qid = f"{subject.lower()}-c{chapter_no}-q{q_num}"
-                    raw_sp_obj = generate_dynamic_screenplay(
-                        qid=canonical_qid,
-                        question=q_text,
-                        answer=ans_text,
-                        provision=formatted_provision_matrix,
-                        mindmap=mm_data if isinstance(mm_data, dict) else None,
-                    )
-                    if raw_sp_obj:
-                        preserve_fixture = canonical_qid in {"dt-c2-q14", "dt-c2-q25", "dt-c2-q30", "dt-c2-q32", "dt-c2-q34"}
-                        aligned_sp, timing_summary = synthesize_and_align_screenplay_audio(
-                            screenplay_obj=raw_sp_obj,
-                            subject=subject,
-                            chapter_no=chapter_no,
-                            q_num=q_num,
-                            force_tts=force or regenerate_legacy,
-                            save_files=not preserve_fixture
-                        )
-                        screenplay_obj = aligned_sp
-                        screenplay_json_str = json.dumps(aligned_sp, ensure_ascii=False)
-                        timing_status = timing_summary
-                        if aligned_sp.get("needs_review") is True:
-                            needs_review.append((canonical_qid, aligned_sp.get("quality_issues", [])))
-                        if regenerate_legacy:
-                            regeneration_results.append((canonical_qid, "success", f"{len(aligned_sp.get('beats', []))} beats; anchor match {aligned_sp.get('anchor_match', {}).get('rate', 1):.0%}"))
-                        print(f"  [SCREENPLAY & AUDIO READY] {subject} Ch{chapter_no} Q{q_num} synthesized and voice-aligned!")
-                except Exception as ex_sp:
-                    if regenerate_legacy:
-                        regeneration_results.append((f"{subject.lower()}-c{chapter_no}-q{q_num}", "fallback", str(ex_sp)))
-                    print(f"  [WARN] Screenplay generation/alignment error: {ex_sp}")
+            # 2. Synthesize Aoede expressive voice for prompt dialogues and upload to Google Drive
+            print(f"  [AUDIO SYNTHESIS] Synthesizing dialogues with Aoede voice & uploading to Google Drive...")
+            drive_audio_file_id = synthesize_and_upload_prompt_audio(
+                prompt_text=presentation_prompt,
+                subject=subject,
+                chapter_no=chapter_no,
+                q_num=q_num
+            )
 
-            # Check Topic Deduplication & Reuse
-            topic_cache_key = f"{subject}_{chapter_no}_{canonical_topic}"
-            if topic_cache_key in generated_topics_cache and not existing_mm:
-                cached = generated_topics_cache[topic_cache_key]
-                drive_folder_id = cached['folder_id']
-                summary_json_str = cached['summary_json']
-                formatted_provision_matrix = cached['prov_md']
-                print(f"  [REUSED TOPIC] '{canonical_topic}' already generated! Skipping duplicate TTS. Reusing Drive Folder: {drive_folder_id}")
-            elif screenplay_obj and screenplay_obj.get('beats') and screenplay_obj.get('audio_url'):
-                drive_folder_id = existing.get('drive_id', '') if existing else 'SCREENPLAY_BEAT_AUDIO_READY'
-                summary_json_str = json.dumps(mm_data, ensure_ascii=False)
-                print(f"  [AUDIO QUOTA] {subject} Ch{chapter_no} Q{q_num}: screenplay audio exists for {len(screenplay_obj['beats'])} beats; skipped discrete-point TTS.")
-            elif screenplay_obj and screenplay_obj.get('beats'):
-                print(f"  [AUDIO QUOTA] {subject} Ch{chapter_no} Q{q_num}: generated {len(screenplay_obj['beats'])} screenplay TTS clips; skipped discrete-point TTS.")
-                drive_folder_id = existing.get('drive_id', '') if existing else 'SCREENPLAY_BEAT_AUDIO_READY'
-                summary_json_str = json.dumps(mm_data, ensure_ascii=False)
-            else:
-                print(f"  [SYNTHESIZING AUDIO] Generating/Resuming Discrete Points for '{canonical_topic}' ({subject} Ch{chapter_no})...")
-                discrete_out_dir = os.path.join(PROJECT_ROOT, 'data', 'audio', subject.lower(), f'ch{chapter_no}', f'q{q_num}')
+            # 3. Build 9-column Row for Google Sheet (Cols A to I):
+            # Col A (idx 0): Subject
+            # Col B (idx 1): Chapter No
+            # Col C (idx 2): Question No
+            # Col D (idx 3): Canonical Topic
+            # Col E (idx 4): Question Facts Text
+            # Col F (idx 5): ICAI Answer Text
+            # Col G (idx 6): Provision Summary Markdown
+            # Col H (idx 7): Kinetic Presentation Prompt DSL
+            # Col I (idx 8): Drive Audio File ID
+            row = [
+                subject,                      # Col A (idx 0)
+                chapter_no,                   # Col B (idx 1)
+                q_num,                        # Col C (idx 2)
+                canonical_topic,              # Col D (idx 3)
+                q_text,                       # Col E (idx 4)
+                ans_text,                     # Col F (idx 5)
+                formatted_provision_matrix,   # Col G (idx 6) - Provision Summary
+                presentation_prompt,          # Col H (idx 7) - Presentation Prompt
+                drive_audio_file_id           # Col I (idx 8) - Drive Audio File ID
+            ]
 
-                mm_data = generate_discrete_voice_for_mindmap(
-                    q_num=q_num,
-                    mindmap=mm_data,
-                    output_dir=discrete_out_dir,
-                    upload_to_drive=True,
-                    subject=subject,
-                    chapter_no=chapter_no
-                )
-                current_mm_data = mm_data
-                drive_folder_id = mm_data.get('drive_folder_id', 'DRIVE_FOLDER_READY')
-                summary_json_str = json.dumps(mm_data, ensure_ascii=False)
-
-                generated_topics_cache[topic_cache_key] = {
-                    'folder_id': drive_folder_id,
-                    'summary_json': summary_json_str,
-                    'prov_md': formatted_provision_matrix
-                }
-
-            if not timing_status:
-                ready_count = count_ready_points(mm_data)
-                total_count = count_total_points(mm_data)
-                timing_status = f"{ready_count}/{total_count} Audio Points Complete"
-
-            col_h_narration_str = summary_json_str
-            if screenplay_obj and screenplay_obj.get('beats'):
-                narration_beats = []
-                for b in screenplay_obj.get('beats', []):
-                    narration_beats.append({
-                        'id': b.get('id'),
-                        'layout': b.get('layout'),
-                        'title': (b.get('title') or {}).get('text') or b.get('id'),
-                        'start': b.get('start', 0),
-                        'end': b.get('end', 0),
-                        'voice_sync_text': b.get('voice_sync_text', '')
-                    })
-                col_h_narration_str = json.dumps(narration_beats, ensure_ascii=False)
-
-            # Check if this question is one of the existing 83 legacy questions or an upcoming question
-            is_legacy_question = existing and existing.get('row_idx', 9999) <= 84
-
-            if not is_legacy_question:
-                print(f"  [UPCOMING QUESTION] Generating 9-column Kinetic Presentation Studio format...")
-                # 1. Generate kinetic presentation prompt from Column 6 provision summary
-                presentation_prompt = generate_presentation_prompt(
-                    canonical_topic=canonical_topic,
-                    prov_summary_md=formatted_provision_matrix,
-                    q_text=q_text,
-                    ans_text=ans_text,
-                    subject=subject
-                )
-
-                # 2. Synthesize Aoede expressive voice for prompt dialogues and upload to Google Drive
-                drive_audio_file_id = synthesize_and_upload_prompt_audio(
-                    prompt_text=presentation_prompt,
-                    subject=subject,
-                    chapter_no=chapter_no,
-                    q_num=q_num
-                )
-
-                # 3. Build 9-column Row for Google Sheet (Cols A to I, omitting Col 9 & Col 10)
-                row = [
-                    subject,                      # Col A (idx 0)
-                    chapter_no,                   # Col B (idx 1)
-                    q_num,                        # Col C (idx 2)
-                    canonical_topic,              # Col D (idx 3)
-                    q_text,                       # Col E (idx 4)
-                    ans_text,                     # Col F (idx 5)
-                    formatted_provision_matrix,   # Col G (idx 6) - Provision Summary
-                    presentation_prompt,          # Col H (idx 7) - Presentation Prompt
-                    drive_audio_file_id           # Col I (idx 8) - Drive Audio File ID
-                ]
-            else:
-                # Existing 83 questions: Preserve legacy 11-column format
-                row = [
-                    subject,
-                    chapter_no,
-                    q_num,
-                    canonical_topic,
-                    q_text,
-                    ans_text,
-                    formatted_provision_matrix,
-                    col_h_narration_str,
-                    drive_folder_id,
-                    timing_status,
-                    screenplay_json_str
-                ]
-
-            # Upsert to Google Sheet
+            # Upsert to Google Sheet (clearing any old legacy columns J & K if updating in-place)
             upsert_row_to_sheets(row)
             completed_in_run += 1
-            cols_desc = "9 columns with Kinetic Studio Prompt & Audio" if not is_legacy_question else "11 columns with Screenplay & Pedagogical Narration"
-            print(f"  [DONE] Successfully saved {subject} Ch{chapter_no} Q{q_num} ({cols_desc}) to Google Sheets.")
+            print(f"  [DONE] Successfully saved {subject} Ch{chapter_no} Q{q_num} (Kinetic Studio Prompt & Drive Audio) to Google Sheets.")
             print(f"  [GEMINI USAGE] {subject} Ch{chapter_no} Q{q_num}: {rotator.api_attempts - api_attempts_before} API attempts in this question (including retries).")
             export_sheets_to_local_cache()
 

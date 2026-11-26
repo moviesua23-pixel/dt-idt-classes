@@ -32,37 +32,55 @@ PROMPT_GENERATOR_SYSTEM_PROMPT = """You are an expert CA Final Direct Tax and In
 You convert statutory tax provision summaries into high-impact, visual presentation studio scripts for CA students.
 
 AUDIO & PRONUNCIATION RULES (STRICT):
-1. Universal Domain Principle: ANY and EVERY word or concept related to tax, law, statutory provisions, finance, accounting, computation, asset types, legal terms, sections, sub-sections, rules, dates, years, and assessment years MUST be in ENGLISH.
-   Examples of mandatory English: Section 48, Section 54EC, Assessment Year 2024-25, Financial Year 2023-24, Cost of Acquisition, Fair Market Value, Long Term Capital Gain, Full Value of Consideration, Indexed Cost, Deductions, Capital Asset, Transfer, Expenditure.
-2. Malayalam is used STRICTLY for friendly teacher explanations, conversational scaffolding, and connectives (Manglish code-switching standard in Kerala CA coaching).
-3. Never transliterate legal terms or section numbers into Malayalam characters.
+1. Universal Domain Principle: ANY and EVERY word or concept related to tax, law, statutory provisions, finance, accounting, computation, asset types, legal terms, sections, sub-sections, rules, dates, years, and assessment years MUST be in standard ENGLISH.
+   Examples of mandatory English: Section 48, Section 54, Section 143(2), Assessment Year 2026-27, Financial Year 2025-26, Cost of Acquisition, Fair Market Value, Long Term Capital Gain, Full Value of Consideration, Indexed Cost of Acquisition, Cost of Improvement, Transfer Expenses, Capital Gains Account Scheme, Deductions, Capital Asset, Transfer, Net Profit, Depreciation.
+2. Malayalam is used STRICTLY for friendly teacher explanations, conversational scaffolding, and connectives (Manglish code-switching standard in Kerala CA coaching, written in English alphabet).
+3. Never transliterate legal terms, sections, or dates into Malayalam characters.
 
 PRESENTATION SCRIPT SYNTAX RULES:
-Each script must contain 2 to 4 SLIDES.
-- Slide 1: High-level statutory doctrine & overview.
-  Must use: (heading, title: "Title in English", subtitle: "Section Ref in English", pos: center)
-  Must end with: DIALOGUE: <Teacher explanation in Manglish>
+The script MUST be organized into 2 to 4 SLIDES.
+Follow this exact DSL format:
 
-- Slide 2: Core entities / assets / provisions with vector shapes.
-  Must use:
-  shape (<shape_keyword>) (<Entity Label in English>) (<pos>) (<intro>)
-  Common valid shape keywords: land_property, factory, building, business_structure, audit_tax, tax_calculation, rupee_coin, cash_bundle, balance_sheet, document_verified, corporate_governance, car_automobile, transfer_ship.
-  Grid positions: left center, right center, center, left top, right top.
-  Intro animations: pop, fade, drop.
-  Must end with: DIALOGUE: <Teacher explanation in Manglish>
+SLIDE 1: <Descriptive Slide Title in English> (Cards Design)
+theme (<theme_color>)
+heading (<Statutory Section / Provision in English>) (<Statutory Framework / Subtitle in English>)
+shape (man) (CA Rajesh) (left center) (dialogue: "<Teacher explanation in Manglish introducing the doctrine>")
+shape (list, cards) (<List Title in English>) (right center) [
+  (<Item 1: Short summary in English>) (dialogue: "<Teacher explanation in Manglish>")
+  (<Item 2: Short summary in English>) (dialogue: "<Teacher explanation in Manglish>")
+  (<Item 3: Short summary in English>) (dialogue: "<Teacher explanation in Manglish>")
+  (<Item 4: Short summary in English>) (dialogue: "<Teacher explanation in Manglish>")
+]
 
-- Slide 3: Detailed clauses, permissible items, or step-by-step checklist.
-  Must use one of:
-  shape (list, cards) (<Title in English>) [ (<Item 1 in English>) (<Item 2 in English>) (<Item 3 in English>) ]
-  or
-  shape (list, timeline) (<Process Title in English>) [ (<Step 1>) (<Step 2>) (<Step 3>) ]
-  or
-  shape (list, clause) (<Clauses Title in English>) [ (<Clause 1>) (<Clause 2>) ]
-  or
-  (calculation, title: "<Computation Title in English>", items: ["<Term 1> = <Amount>", "<Term 2> = <Amount>"])
-  Must end with: DIALOGUE: <Teacher explanation in Manglish>
+SLIDE 2: <Descriptive Slide Title in English> (Timeline Design)
+theme (<theme_color>)
+heading (<Process Title in English>) (<Statutory Reference in English>)
+shape (woman) (Tax Officer) (left center) (dialogue: "<Teacher explanation in Manglish>")
+shape (list, timeline) (<Timeline Title in English>) (right center) [
+  (<Step 1: Description in English>) (dialogue: "<Teacher explanation in Manglish>")
+  (<Step 2: Description in English>) (dialogue: "<Teacher explanation in Manglish>")
+  (<Step 3: Description in English>) (dialogue: "<Teacher explanation in Manglish>")
+  (<Step 4: Description in English>) (dialogue: "<Teacher explanation in Manglish>")
+]
 
-Output ONLY the raw script text without markdown code blocks, backticks, or extra preambles.
+SLIDE 3: <Descriptive Slide Title in English> (Clause Design)
+theme (<theme_color>)
+heading (<Title in English>) (<Statutory Conditions & Provisos in English>)
+shape (list, clause) (<Eligibility / Conditions Title in English>) (center) [
+  (Clause A: <Condition in English>) (dialogue: "<Teacher explanation in Manglish>")
+  (Clause B: <Condition in English>) (dialogue: "<Teacher explanation in Manglish>")
+  (Clause C: <Condition in English>) (dialogue: "<Teacher explanation in Manglish>")
+  (Clause D: <Condition in English>) (dialogue: "<Teacher explanation in Manglish>")
+]
+
+SYNTAX GUIDELINES:
+- Valid theme colors: indigo, blue, amber, emerald, rose, purple, cyan, slate.
+- Valid positions: left center, right center, center, left top, right top.
+- Valid list designs: cards, timeline, clause, pills, obsidian.
+- Valid character shapes: shape (man) (<Name>), shape (woman) (<Name>).
+- Valid domain vector shapes if needed: shape (land_property), shape (factory), shape (building), shape (tax_calculation), shape (balance_sheet), shape (document_verified), shape (money_bag), shape (rupee_coin), shape (car_automobile).
+- Each list item inside [ ... ] MUST have its title and an inline (dialogue: "...") tag.
+- Output ONLY the raw script text. Do not wrap in markdown code fences (no ```).
 """
 
 def generate_presentation_prompt(
@@ -74,7 +92,7 @@ def generate_presentation_prompt(
 ) -> str:
     """
     Calls Gemini API via KeyRotator to generate a structured Kinetic Presentation Prompt
-    explaining the Column 6 Provision Summary.
+    explaining the Column 6 Provision Summary in the exact Studio DSL format.
     """
     user_content = f"""Subject: {subject}
 Statutory Topic: {canonical_topic}
@@ -88,9 +106,32 @@ Exam Question Context (if relevant):
 Exam Answer Context (if relevant):
 {ans_text[:600]}
 
-Generate the kinetic presentation studio script with 3 slides explaining this provision clearly and visually.
-Follow the exact syntax: SLIDE 1:, (heading, ...), DIALOGUE:, SLIDE 2:, shape (...), DIALOGUE:, SLIDE 3:, shape (list, cards) [ ... ], DIALOGUE:.
-Output only the script text.
+Generate the kinetic presentation studio script with 3 slides explaining this statutory provision clearly and visually.
+Follow the exact syntax:
+SLIDE 1: ... (Cards Design)
+theme (...)
+heading (...) (...)
+shape (man) (...) (left center) (dialogue: "...")
+shape (list, cards) (...) (right center) [
+  (...) (dialogue: "...")
+]
+
+SLIDE 2: ... (Timeline Design)
+theme (...)
+heading (...) (...)
+shape (woman) (...) (left center) (dialogue: "...")
+shape (list, timeline) (...) (right center) [
+  (...) (dialogue: "...")
+]
+
+SLIDE 3: ... (Clause Design)
+theme (...)
+heading (...) (...)
+shape (list, clause) (...) (center) [
+  (...) (dialogue: "...")
+]
+
+Output only the raw script text.
 """
 
     models_to_try = [
@@ -126,40 +167,59 @@ Output only the script text.
 
 def extract_dialogues_from_prompt(prompt_text: str) -> List[Dict[str, Any]]:
     """
-    Extracts all DIALOGUE lines from the prompt, grouped by slide.
+    Extracts all dialogues from the prompt grouped by slide, preserving reading order.
+    Extracts from both inline `(dialogue: "...")` tags (across shapes and list items)
+    and standalone `DIALOGUE: ...` lines.
     """
-    lines = prompt_text.splitlines()
+    slide_blocks = re.split(r'(?i)(?:^|\n)\s*(?:SLIDE|SCENE)\s*(\d+)?:?\s*', prompt_text)
     slides = []
     current_slide = 1
-    current_dialogue = []
 
-    for line in lines:
-        line_s = line.strip()
-        m_slide = re.match(r'^(?:SLIDE|SCENE)\s*(\d+)?\s*:?\s*(.*)$', line_s, re.IGNORECASE)
-        if m_slide:
-            if current_dialogue:
-                slides.append({
-                    "slide_idx": current_slide,
-                    "dialogue": " ".join(current_dialogue)
-                })
-                current_dialogue = []
-            if m_slide.group(1):
-                current_slide = int(m_slide.group(1))
-            else:
-                current_slide = len(slides) + 1
-            continue
+    i = 1
+    while i < len(slide_blocks):
+        s_num_str = slide_blocks[i]
+        content = slide_blocks[i+1] if i + 1 < len(slide_blocks) else ""
+        i += 2
 
-        m_diag = re.match(r'^(?:DIALOGUE|NARRATION|SPEECH|TEACHER)\s*:\s*["\']?(.*?)["\']?$', line_s, re.IGNORECASE)
-        if m_diag:
-            text = m_diag.group(1).strip()
+        slide_idx = int(s_num_str) if s_num_str and s_num_str.isdigit() else current_slide
+        current_slide = slide_idx + 1
+
+        dialogues = []
+        # 1. Matches (dialogue: "...") or (dialogue: '...')
+        for m in re.finditer(r'\(dialogue\s*:\s*["\']([\s\S]+?)["\']\)', content, re.IGNORECASE):
+            text = " ".join(m.group(1).split()).strip()
             if text:
-                current_dialogue.append(text)
+                dialogues.append(text)
 
-    if current_dialogue:
-        slides.append({
-            "slide_idx": current_slide,
-            "dialogue": " ".join(current_dialogue)
-        })
+        # 2. Standalone DIALOGUE: ... lines
+        for line in content.splitlines():
+            line_s = line.strip()
+            m_diag = re.match(r'^(?:DIALOGUE|NARRATION|SPEECH|TEACHER)\s*:\s*["\']?(.*?)["\']?$', line_s, re.IGNORECASE)
+            if m_diag:
+                text = " ".join(m_diag.group(1).split()).strip()
+                if text and text not in dialogues:
+                    dialogues.append(text)
+
+        if dialogues:
+            slides.append({
+                "slide_idx": slide_idx,
+                "dialogues": dialogues,
+                "combined": " ".join(dialogues)
+            })
+
+    # Fallback if no slide header was detected
+    if not slides:
+        all_inline = [
+            " ".join(m.group(1).split()).strip()
+            for m in re.finditer(r'\(dialogue\s*:\s*["\']([\s\S]+?)["\']\)', prompt_text, re.IGNORECASE)
+            if " ".join(m.group(1).split()).strip()
+        ]
+        if all_inline:
+            slides.append({
+                "slide_idx": 1,
+                "dialogues": all_inline,
+                "combined": " ".join(all_inline)
+            })
 
     return slides
 
@@ -171,7 +231,7 @@ def synthesize_and_upload_prompt_audio(
     output_dir: Optional[str] = None
 ) -> str:
     """
-    Synthesizes expressive Aoede voice for each slide's dialogue, concatenates them into
+    Synthesizes expressive Aoede voice for each slide's dialogues, concatenates them into
     a master presentation audio file, and uploads to Google Drive.
     Returns: Google Drive Audio File ID.
     """
@@ -179,26 +239,39 @@ def synthesize_and_upload_prompt_audio(
         output_dir = os.path.join(PROJECT_ROOT, 'data', 'audio', subject.lower(), f'ch{chapter_no}', f'q{q_num}')
     os.makedirs(output_dir, exist_ok=True)
 
-    dialogues = extract_dialogues_from_prompt(prompt_text)
-    if not dialogues:
+    slides = extract_dialogues_from_prompt(prompt_text)
+    if not slides:
         print(f"  [WARN] No dialogues found in prompt for Q{q_num}. Generating placeholder audio.")
-        dialogues = [{"slide_idx": 1, "dialogue": f"Statutory explanation for Chapter {chapter_no} Question {q_num} under {subject}."}]
+        slides = [{
+            "slide_idx": 1,
+            "dialogues": [f"Statutory explanation for Chapter {chapter_no} Question {q_num} under {subject}."],
+            "combined": f"Statutory explanation for Chapter {chapter_no} Question {q_num} under {subject}."
+        }]
 
     slide_audio_segments = []
-    pause = AudioSegment.silent(duration=450) # 450ms natural pause between slides
+    item_pause = AudioSegment.silent(duration=280)   # 280ms pause between list items / actors
+    slide_pause = AudioSegment.silent(duration=500)  # 500ms pause between slides
 
-    for item in dialogues:
-        s_idx = item['slide_idx']
-        d_text = item['dialogue']
-        clip_path = os.path.join(output_dir, f"slide_{s_idx}.mp3")
+    for s_info in slides:
+        s_idx = s_info['slide_idx']
+        dialogues = s_info['dialogues']
 
-        print(f"    [TTS Slide {s_idx}] Synthesizing Aoede voice ({len(d_text.split())} words)...")
-        synthesize_point_audio(d_text, clip_path)
+        current_slide_segs = []
+        for d_idx, d_text in enumerate(dialogues):
+            clip_path = os.path.join(output_dir, f"slide_{s_idx}_part_{d_idx+1}.mp3")
+            print(f"    [TTS Slide {s_idx} Part {d_idx+1}/{len(dialogues)}] Synthesizing Aoede voice ({len(d_text.split())} words)...")
+            synthesize_point_audio(d_text, clip_path)
+            if os.path.exists(clip_path):
+                seg = AudioSegment.from_mp3(clip_path)
+                current_slide_segs.append(seg)
+                current_slide_segs.append(item_pause)
 
-        if os.path.exists(clip_path):
-            seg = AudioSegment.from_mp3(clip_path)
-            slide_audio_segments.append(seg)
-            slide_audio_segments.append(pause)
+        if current_slide_segs:
+            slide_combined = current_slide_segs[0]
+            for seg in current_slide_segs[1:]:
+                slide_combined += seg
+            slide_audio_segments.append(slide_combined)
+            slide_audio_segments.append(slide_pause)
 
     if not slide_audio_segments:
         raise RuntimeError("Failed to generate any slide audio segments.")
