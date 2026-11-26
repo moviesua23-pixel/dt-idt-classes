@@ -1,70 +1,71 @@
 {
   "question_id": "dt-c1-q14",
   "audio_url": "data/audio/dt-c1-q14.mp3",
-  "duration_sec": 126.56,
+  "duration_sec": 99.99,
   "sync_offset_sec": 0.0,
-  "context_pill": "Section 10(10BC) Exemption on Disaster Compensation",
-  "example_summary": "Compensation of ₹ 5 lacs paid by Government of Chattisgarh to parents of Amit for Dantewada blast is fully exempt under Section 10(10BC).",
-  "source_provision": "### Section 10(10BC): Exemption of Disaster Compensation\n\n| Statutory Element | Statutory Requirement | Legal Consequence |\n| :--- | :--- | :--- |\n| **Eligible Payer** | Central Government, State Government, or Local Authority | Exemption Applicable |\n| **Eligible Recipient** | Individual assessee or Legal Heir of the individual | Exemption Applicable |\n| **Trigger Event** | Disaster as defined u/s 2(d) of Disaster Management Act, 2005 | Full Tax Immunity |\n| **Statutory Proviso** | Loss/damage previously allowed as a tax deduction | Exemption Denied to that extent |\n\n\n#### Core Statutory Requirements\n\n* **Definition of Disaster:** Any catastrophe, mishap, calamity, or grave occurrence arising from natural or man-made causes, or by accident/negligence, causing substantial loss of life, human suffering, or property damage beyond community coping capacity.\n* **Payer Restriction:** Compensation paid by private entities, employers, or non-governmental organizations does **not** qualify for exemption under Section 10(10BC).\n\n\n> [!WARNING] Statutory Proviso Exception: If the assessee has already claimed a deduction under the Income-tax Act for any loss or damage caused by the disaster, the compensation received to the extent of such claimed deduction shall **not** be exempt and will be chargeable to tax.",
+  "context_pill": "Section 10(10BC) - Disaster Compensation Exemption",
+  "example_summary": "Compensation of ₹ 5,00,000 paid by the Government of Chhattisgarh to Amit's parents following the Dantewada bus bomb blast is fully exempt under Section 10(10BC).",
+  "source_provision": "| Statutory Provision | Governing Authority | Eligible Payers | Tax Treatment |\n| :--- | :--- | :--- | :--- |\n| Section 10(10BC) | Disaster Management Act, 2005 | Central Government, State Government, Local Authority | 100% Exempt from Tax |\n\n\n> [!IMPORTANT]\n> Definition of Disaster: A catastrophe, mishap, calamity, or grave occurrence arising from natural or man-made causes, accident, or negligence, causing substantial loss of life or human suffering beyond the coping capacity of the affected community.\n\n\n> [!WARNING]\n> Exemption Limit: There is no upper monetary ceiling prescribed under Section 10(10BC); the entire compensation received from the specified governmental authorities is fully exempt.",
   "director": {
     "archetype": "conditions_checklist",
-    "justification": "The issue hinges on meeting specific statutory conditions under Section 10(10BC) to grant full tax exemption on compensation received by legal heirs.",
-    "protagonist": "Parents of Amit",
+    "justification": "The provision requires verifying if the event qualifies as a disaster under the 2005 Act and if the payer is a recognized government authority to grant the exemption.",
+    "protagonist": "Amit's Parents",
     "actors": [
-      "Parents of Amit",
-      "Government of Chattisgarh"
+      "Government of Chhattisgarh",
+      "Amit"
     ],
     "key_numbers": [
-      "₹ 5 lacs"
+      "₹ 5,00,000"
     ],
-    "key_dates": [],
-    "visual_metaphor": "A statutory gatekeeper shield verifying government source, disaster qualification, and legal heir status before granting full income tax immunity.",
+    "key_dates": [
+      "2005"
+    ],
+    "visual_metaphor": "A Disaster Relief Shield that filters government compensation into a tax-free zone.",
     "beat_plan": [
       {
-        "beat_goal": "Establish the factual scene of ₹ 5 lacs compensation paid by the Chattisgarh Government to Amit's parents following the Dantewada blast.",
+        "beat_goal": "Establish the scenario of Amit's parents receiving compensation for the Dantewada tragedy.",
         "layout": "example_scene",
         "anchor_phrases": [
-          "Amit",
-          "₹ 5 lacs",
-          "Government of Chattisgarh",
-          "Dantewada"
+          "Amit's parents",
+          "₹ 5,00,000",
+          "Government of Chhattisgarh",
+          "Dantewada bus bomb blast"
         ]
       },
       {
-        "beat_goal": "Verify eligible payer and eligible recipient requirements under Section 10(10BC).",
-        "layout": "checklist_gate",
-        "anchor_phrases": [
-          "Section 10(10BC)",
-          "State Government",
-          "Legal Heir"
-        ]
-      },
-      {
-        "beat_goal": "Analyze the statutory definition of disaster under Section 2(d) of Disaster Management Act, 2005.",
+        "beat_goal": "Introduce the governing statute and the specific exemption section.",
         "layout": "statute_quote",
         "anchor_phrases": [
-          "Disaster Management Act, 2005",
-          "Section 2(d)",
-          "manmade causes",
-          "catastrophe"
+          "Section 10(10BC)",
+          "Disaster Management Act, 2005"
         ]
       },
       {
-        "beat_goal": "Examine the statutory proviso regarding prior tax deduction claims.",
+        "beat_goal": "Define what constitutes a disaster to see if the bomb blast qualifies.",
         "layout": "checklist_gate",
         "anchor_phrases": [
-          "Statutory Proviso",
-          "tax deduction",
-          "Section 10(10BC)"
+          "catastrophe",
+          "mishap",
+          "natural or manmade causes",
+          "substantial loss of life"
         ]
       },
       {
-        "beat_goal": "Conclude that the ₹ 5 lacs compensation received by Amit's parents is fully exempt from tax.",
+        "beat_goal": "Identify the specific entities whose payments qualify for this exemption.",
+        "layout": "flow_actors",
+        "anchor_phrases": [
+          "Central Government",
+          "State Government",
+          "Local authority"
+        ]
+      },
+      {
+        "beat_goal": "Conclude on the taxability of the specific amount received by the family.",
         "layout": "takeaway",
         "anchor_phrases": [
-          "₹ 5 lacs",
           "exempt from tax",
-          "Section 10(10BC)"
+          "100% Exempt",
+          "no upper monetary ceiling"
         ]
       }
     ]
@@ -74,81 +75,76 @@
     {
       "layout": "example_scene",
       "title": {
-        "text": "Disaster Compensation Paid to Parents of Amit",
+        "text": "Dantewada Tragedy Compensation",
         "at": 0.3
       },
-      "voice_sync_text": "Dantewada -യിൽ നടന്ന bus blast-ൽ മരണപ്പെട്ട Amit -ന്റെ മാതാപിതാക്കൾക്ക് Government of Chattisgarh നൽകിയ ₹ 5 lacs compensation tax-ന്വിധേയമാണോ എന്ന് പരിശോധിക്കാം.",
+      "voice_sync_text": "നമ്മൾ ഇവിടെ പഠിക്കാൻ പോകുന്നത് Amit's parents നു ലഭിച്ച compensation നെക്കുറിച്ചാണ്. Dantewada bus bomb blast ൽ മകൻ നഷ്ടപ്പെട്ടതിന് Government of Chhattisgarh നൽകിയ compensation amount ആയ ₹ 5,00,000 chargeable to tax ആണോ എന്ന് പരിശോധിക്കാം.",
       "visual_data": {
         "actors": [
           {
-            "label": "Parents of Amit",
-            "detail": "Legal Heirs of deceased Amit",
+            "label": "Amit's parents",
+            "detail": "Recipients of compensation",
             "icon": "person",
-            "at": 16.0
+            "at": 2.18
           },
           {
-            "label": "Government of Chattisgarh",
-            "detail": "State Government Payer",
+            "label": "Government of Chhattisgarh",
+            "detail": "Payer of compensation",
             "icon": "bank",
-            "at": 16.0
+            "at": 7.68
           }
         ],
-        "transaction": "Compensation Payment for Dantewada Blast",
+        "transaction": "Compensation Payment",
         "facts": [
           {
-            "label": "Deceased Individual",
-            "value": "Amit",
-            "at": 16.0
-          },
-          {
-            "label": "Disaster Location",
-            "value": "Dantewada",
-            "at": 16.0
-          },
-          {
-            "label": "Compensation Amount",
-            "value": "₹ 5 lacs",
-            "amount": 500000,
+            "label": "Amount Received",
+            "value": "₹ 5,00,000",
             "icon": "money_bag",
-            "at": 18.3
+            "at": 10.96
+          },
+          {
+            "label": "Tragic Event",
+            "detail": "Dantewada bus bomb blast",
+            "icon": "gavel",
+            "at": 10.96
           }
         ]
       },
       "start": 0.0,
-      "end": 19.96,
+      "end": 15.8,
       "id": "b1",
-      "director_goal": "Establish the factual scene of ₹ 5 lacs compensation paid by the Chattisgarh Government to Amit's parents following the Dantewada blast.",
+      "director_goal": "Establish the scenario of Amit's parents receiving compensation for the Dantewada tragedy.",
       "anchor_phrases": [
-        "Amit",
-        "₹ 5 lacs",
-        "Government of Chattisgarh",
-        "Dantewada"
+        "Amit's parents",
+        "₹ 5,00,000",
+        "Government of Chhattisgarh",
+        "Dantewada bus bomb blast"
       ],
       "animation_role": "key_fact",
       "anchor_alignment": [
         {
-          "phrase": "Amit",
-          "at": 8.12,
+          "phrase": "Amit's parents",
+          "at": 2.18,
           "matched": true,
-          "score": 0.92
+          "score": 1.0
         },
         {
-          "phrase": "₹ 5 lacs",
-          "at": 16.94,
+          "phrase": "₹ 5,00,000",
+          "at": 12.3,
           "matched": true,
-          "score": 0.787
+          "score": 0.473
         },
         {
-          "phrase": "Government of Chattisgarh",
-          "at": 8.93,
+          "phrase": "Government of Chhattisgarh",
+          "at": 8.69,
           "matched": false,
-          "score": 0.4
+          "score": 0.343
         },
         {
-          "phrase": "Dantewada",
-          "at": 0.0,
+          "phrase": "Dantewada bus bomb blast",
+          "at": 5.6,
           "matched": false,
-          "score": 0.2
+          "score": 0.326
         }
       ],
       "anchor_match": {
@@ -157,171 +153,191 @@
       }
     },
     {
-      "layout": "checklist_gate",
+      "layout": "statute_quote",
       "title": {
-        "text": "Section 10(10BC) Gatekeeper: Payer & Recipient",
-        "at": 20.61
+        "text": "Governing Provision & Act",
+        "at": 16.45
       },
-      "voice_sync_text": "Section 10(10BC) പ്രകാരം compensation നൽകുന്നത് Central Government, State Government, അല്ലെങ്കിൽ Local Authority ആയിരിക്കണം. കൂടാതെ ഇതിന് അർഹതയുള്ളത് ഇരയായ വ്യക്തിക്കോ അവരുടെ Legal Heir -നോ ആയിരിക്കും.",
+      "voice_sync_text": "ഇതിനായി Section 10(10BC) പ്രകാരം disaster എന്നതിന്റെ അർത്ഥം Disaster Management Act, 2005 ൽ പറഞ്ഞിട്ടുള്ളതുപോലെയാണ് കണക്കാക്കുന്നത്.",
       "visual_data": {
-        "conditions": [
-          {
-            "label": "Eligible Payer",
-            "detail": "Government of Chattisgarh (State Government)",
-            "value": "Pass",
-            "pass": true,
-            "icon": "bank",
-            "at": 34.61
-          },
-          {
-            "label": "Eligible Recipient",
-            "detail": "Parents of Amit (Legal Heir)",
-            "value": "Pass",
-            "pass": true,
-            "icon": "person",
-            "at": 34.61
-          }
-        ],
-        "outcome": "Payer and Recipient meet Section 10(10BC) requirements"
+        "rule": "Exemption of disaster compensation received from specified authorities",
+        "citation": "Section 10(10BC)",
+        "application": "Definition derived from Disaster Management Act, 2005",
+        "at": 16.15
       },
-      "start": 20.31,
-      "end": 42.55,
+      "start": 16.15,
+      "end": 27.27,
       "id": "b2",
-      "director_goal": "Verify eligible payer and eligible recipient requirements under Section 10(10BC).",
+      "director_goal": "Introduce the governing statute and the specific exemption section.",
       "anchor_phrases": [
         "Section 10(10BC)",
-        "State Government",
-        "Legal Heir"
+        "Disaster Management Act, 2005"
       ],
       "animation_role": "explanation",
       "anchor_alignment": [
         {
           "phrase": "Section 10(10BC)",
-          "at": 21.67,
+          "at": 17.23,
           "matched": true,
-          "score": 0.812
+          "score": 0.959
         },
         {
-          "phrase": "State Government",
-          "at": 27.19,
+          "phrase": "Disaster Management Act, 2005",
+          "at": 19.59,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 2,
+        "total": 2
+      }
+    },
+    {
+      "layout": "checklist_gate",
+      "title": {
+        "text": "Definition of Disaster",
+        "at": 27.92
+      },
+      "voice_sync_text": "Disaster എന്നാൽ ഏതെങ്കിലും natural or manmade causes മൂലം ഉണ്ടാകുന്ന catastrophe, mishap, അല്ലെങ്കിൽ grave occurrence ആണ്. ഇത് substantial loss of life അല്ലെങ്കിൽ human suffering ഉണ്ടാക്കുന്നതും community യുടെ coping capacity ക്ക് അപ്പുറമുള്ളതും ആയിരിക്കണം.",
+      "visual_data": {
+        "conditions": [
+          {
+            "label": "Occurrence",
+            "detail": "catastrophe, mishap, or grave occurrence",
+            "status": "Met",
+            "pass": true,
+            "icon": "gavel",
+            "at": 32.94
+          },
+          {
+            "label": "Cause",
+            "detail": "natural or manmade causes",
+            "status": "Met",
+            "pass": true,
+            "icon": "document",
+            "at": 32.94
+          },
+          {
+            "label": "Impact",
+            "detail": "substantial loss of life or human suffering",
+            "status": "Met",
+            "pass": true,
+            "icon": "person",
+            "at": 37.86
+          }
+        ],
+        "outcome": "Qualifies as a Disaster under Disaster Management Act, 2005"
+      },
+      "start": 27.62,
+      "end": 46.14,
+      "id": "b3",
+      "director_goal": "Define what constitutes a disaster to see if the bomb blast qualifies.",
+      "anchor_phrases": [
+        "catastrophe",
+        "mishap",
+        "natural or manmade causes",
+        "substantial loss of life"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "catastrophe",
+          "at": 32.94,
           "matched": true,
           "score": 1.0
         },
         {
-          "phrase": "Legal Heir",
-          "at": 40.55,
+          "phrase": "mishap",
+          "at": 34.46,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "natural or manmade causes",
+          "at": 29.57,
+          "matched": false,
+          "score": 0.392
+        },
+        {
+          "phrase": "substantial loss of life",
+          "at": 37.96,
           "matched": true,
           "score": 1.0
         }
       ],
       "anchor_match": {
         "matched": 3,
-        "total": 3
-      }
-    },
-    {
-      "layout": "statute_quote",
-      "title": {
-        "text": "Definition of Disaster u/s 2(d) of DMA 2005",
-        "at": 43.2
-      },
-      "voice_sync_text": "ഇവിടെ disaster എന്നാൽ Disaster Management Act, 2005 -ലെ Section 2(d) പ്രകാരമുള്ള catastrophe അഥവാ natural അല്ലെങ്കിൽ manmade causes മൂലം ഉണ്ടാകുന്ന ദുരന്തങ്ങളാണ്.",
-      "visual_data": {
-        "rule": "Disaster includes catastrophe, mishap, or grave occurrence from natural or manmade causes under Disaster Management Act, 2005",
-        "citation": "Section 2(d) of Disaster Management Act, 2005",
-        "application": "Dantewada Maoist bus bomb blast qualifies as a manmade causes disaster",
-        "at": 50.84
-      },
-      "start": 42.9,
-      "end": 66.38,
-      "id": "b3",
-      "director_goal": "Analyze the statutory definition of disaster under Section 2(d) of Disaster Management Act, 2005.",
-      "anchor_phrases": [
-        "Disaster Management Act, 2005",
-        "Section 2(d)",
-        "manmade causes",
-        "catastrophe"
-      ],
-      "animation_role": "explanation",
-      "anchor_alignment": [
-        {
-          "phrase": "Disaster Management Act, 2005",
-          "at": 50.84,
-          "matched": true,
-          "score": 1.0
-        },
-        {
-          "phrase": "Section 2(d)",
-          "at": 51.02,
-          "matched": false,
-          "score": 0.421
-        },
-        {
-          "phrase": "manmade causes",
-          "at": 59.64,
-          "matched": true,
-          "score": 0.966
-        },
-        {
-          "phrase": "catastrophe",
-          "at": 54.64,
-          "matched": false,
-          "score": 0.471
-        }
-      ],
-      "anchor_match": {
-        "matched": 2,
         "total": 4
       }
     },
     {
-      "layout": "checklist_gate",
+      "layout": "flow_actors",
       "title": {
-        "text": "Statutory Proviso: Prior Tax Deduction Check",
-        "at": 67.03
+        "text": "Eligible Government Payers",
+        "at": 46.79
       },
-      "voice_sync_text": "Section 10(10BC) -ലെ Statutory Proviso പ്രകാരം ഈ നഷ്ടത്തിന് മുൻപ് tax deduction ഒന്നും ക്ലെയിം ചെയ്തിട്ടില്ലെങ്കിൽ മാത്രമേ full exemption ലഭിക്കൂ.",
+      "voice_sync_text": "ഈ വിധത്തിലുള്ള disaster നു Central Government, State Government, അല്ലെങ്കിൽ ഒരു Local authority Compensation നൽകിയാൽ ആ തുകയ്ക്ക് ഇളവ് ലഭിക്കും.",
       "visual_data": {
-        "conditions": [
+        "actors": [
           {
-            "label": "Statutory Proviso Check",
-            "detail": "No prior loss tax deduction claimed under Income-tax Act",
-            "value": "No Prior Claim",
-            "pass": true,
-            "icon": "padlock",
-            "at": 67.59
+            "label": "Central Government",
+            "detail": "Eligible Payer Authority",
+            "icon": "bank",
+            "at": 75.39
+          },
+          {
+            "label": "State Government",
+            "detail": "Eligible Payer Authority (Chhattisgarh)",
+            "icon": "bank",
+            "at": 76.85
+          },
+          {
+            "label": "Local authority",
+            "detail": "Eligible Payer Authority",
+            "icon": "bank",
+            "at": 78.07
           }
         ],
-        "outcome": "Exemption u/s 10(10BC) remains fully intact"
+        "edges": [
+          {
+            "label": "Disaster Compensation",
+            "from": "State Government",
+            "to": "Amit's parents",
+            "pass": true,
+            "icon": "money_bag",
+            "at": 78.07
+          }
+        ]
       },
-      "start": 66.73,
-      "end": 82.37,
+      "start": 46.49,
+      "end": 82.24,
       "id": "b4",
-      "director_goal": "Examine the statutory proviso regarding prior tax deduction claims.",
+      "director_goal": "Identify the specific entities whose payments qualify for this exemption.",
       "anchor_phrases": [
-        "Statutory Proviso",
-        "tax deduction",
-        "Section 10(10BC)"
+        "Central Government",
+        "State Government",
+        "Local authority"
       ],
       "animation_role": "explanation",
       "anchor_alignment": [
         {
-          "phrase": "Statutory Proviso",
-          "at": 67.59,
+          "phrase": "Central Government",
+          "at": 75.39,
           "matched": true,
           "score": 1.0
         },
         {
-          "phrase": "tax deduction",
-          "at": 75.23,
+          "phrase": "State Government",
+          "at": 76.85,
           "matched": true,
-          "score": 0.846
+          "score": 1.0
         },
         {
-          "phrase": "Section 10(10BC)",
-          "at": 75.33,
+          "phrase": "Local authority",
+          "at": 78.07,
           "matched": true,
-          "score": 0.519
+          "score": 1.0
         }
       ],
       "anchor_match": {
@@ -332,50 +348,57 @@
     {
       "layout": "takeaway",
       "title": {
-        "text": "Final Taxability Conclusion: Fully Exempt",
-        "at": 83.02
+        "text": "Taxability Conclusion",
+        "at": 82.89
       },
-      "voice_sync_text": "അതുകൊണ്ട് Amit -ന്റെ മാതാപിതാക്കൾക്ക് ലഭിച്ച ₹ 5 lacs compensation Section 10(10BC) പ്രകാരം fully exempt from tax ആണ്.",
+      "voice_sync_text": "അതുകൊണ്ട് Dantewada സംഭവത്തിൽ Government നൽകിയ ₹ 5,00,000 പൂർണ്ണമായും exempt from tax ആണ്. ഇതിന് 100% Exempt ആനുകൂല്യം ലഭിക്കും, കൂടാതെ no upper monetary ceiling പ്രകാരം മുഴുവൻ തുകയും നികുതിരഹിതമാണ്.",
       "visual_data": {
         "rules": [
           {
-            "label": "Tax Immunity Granted",
-            "detail": "Compensation of ₹ 5 lacs received by legal heirs for Dantewada disaster",
-            "value": "Exempt from tax u/s 10(10BC)",
+            "label": "Taxability Status",
+            "value": "100% Exempt",
+            "detail": "Entire ₹ 5,00,000 is exempt from tax",
+            "pass": true,
+            "icon": "padlock",
+            "at": 85.77
+          },
+          {
+            "label": "Monetary Ceiling",
+            "detail": "no upper monetary ceiling under Section 10(10BC)",
             "pass": true,
             "icon": "scales",
-            "at": 84.54
+            "at": 91.19
           }
         ]
       },
-      "start": 82.72,
-      "end": 126.56,
+      "start": 82.59,
+      "end": 99.99,
       "id": "b5",
-      "director_goal": "Conclude that the ₹ 5 lacs compensation received by Amit's parents is fully exempt from tax.",
+      "director_goal": "Conclude on the taxability of the specific amount received by the family.",
       "anchor_phrases": [
-        "₹ 5 lacs",
         "exempt from tax",
-        "Section 10(10BC)"
+        "100% Exempt",
+        "no upper monetary ceiling"
       ],
       "animation_role": "key_fact",
       "anchor_alignment": [
         {
-          "phrase": "₹ 5 lacs",
-          "at": 112.62,
-          "matched": true,
-          "score": 0.545
-        },
-        {
           "phrase": "exempt from tax",
-          "at": 118.44,
+          "at": 88.45,
           "matched": true,
-          "score": 0.763
+          "score": 1.0
         },
         {
-          "phrase": "Section 10(10BC)",
-          "at": 107.61,
+          "phrase": "100% Exempt",
+          "at": 97.27,
+          "matched": true,
+          "score": 0.75
+        },
+        {
+          "phrase": "no upper monetary ceiling",
+          "at": 94.48,
           "matched": false,
-          "score": 0.37
+          "score": 0.0
         }
       ],
       "anchor_match": {
@@ -384,10 +407,14 @@
       }
     }
   ],
-  "audio_duration_sec": 126.56,
+  "needs_review": true,
+  "quality_issues": [
+    "unsupported director protagonist: Amit's Parents"
+  ],
+  "audio_duration_sec": 99.99,
   "anchor_match": {
     "matched": 12,
-    "total": 17,
-    "rate": 0.706
+    "total": 16,
+    "rate": 0.75
   }
 }

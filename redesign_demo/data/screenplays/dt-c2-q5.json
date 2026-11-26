@@ -1,18 +1,17 @@
 {
   "question_id": "dt-c2-q5",
   "audio_url": "data/audio/dt-c2-q5.mp3",
-  "duration_sec": 261.42,
+  "duration_sec": 165.55,
   "sync_offset_sec": 0.0,
-  "context_pill": "Income Tax • Capital Gains on HUF Partition Asset",
-  "example_summary": "Computation of Long-Term Capital Gains on sale of land acquired by Mr. A upon partition of X & sons, HUF.",
-  "source_provision": "| Statutory Provision | Trigger Event / Condition | Operative Rule / Benchmark | Legal Tax Consequence |\n| :--- | :--- | :--- | :--- |\n| **Section 47(i)** | Total or partial partition of an HUF | Distribution of capital asset to member | **Not a Transfer** (No capital gains tax on partition) |\n| **Section 49(1)** | Sale of asset acquired on HUF partition | Cost to the **Previous Owner** (HUF) | Deemed **Cost of Acquisition** for member |\n| **Section 2(42A)** | Determination of nature of Capital Asset | Includes period held by previous owner | Tacked-on **Period of Holding** (STCA vs LTCA) |\n| **Section 55(1)(b)** | Capital expenditure incurred after 01-04-2001 | Incurred by member or previous owner | Deductible **Cost of Improvement** |\n| **Section 48** | Final computation of Capital Gain | FVC less Expenses less Cost less Improvement | **Taxable Capital Gain** |\n\n> [!IMPORTANT] Core Principles for Assets Received on HUF Partition\n\n- **No Transfer u/s 47(i):** Distribution of assets on total or partial partition of HUF does not attract capital gains tax.\n\n- **Cost & Holding Period Rule:** For subsequent sales by the member, the cost of acquisition is the cost incurred by the HUF u/s 49(1), and the holding period of the HUF is added u/s 2(42A).\n\n- **Cost of Improvement u/s 55(1)(b):** Includes capital expenses incurred by the HUF or member after 1st April 2001.\n\n> [!WARNING] Valuation Benchmark on Partition\n> The market valuation or allotment value assigned to the asset at the time of HUF partition is legally irrelevant for computing cost of acquisition. The statutory cost u/s 49(1) remains the actual cost paid by the HUF.",
+  "context_pill": "Capital Gains: HUF Partition & Cost Substitution",
+  "example_summary": "Mr. A sells a plot of land for ₹ 15,00,000 in June 2025, which he originally received through an HUF partition. We must determine the taxable Long Term Capital Gain by substituting the previous owner's cost and accounting for improvement expenses.",
+  "source_provision": "### Statutory Summary Matrix: Capital Gains Acquisition & Improvement\n\n| Statutory Provision | Governing Rule / Condition | Tax Treatment / Legal Consequence |\n| :--- | :--- | :--- |\n| **Section 49(1)** | Acquisition through HUF partition, gift, or succession | Cost to previous owner is adopted as the Cost of Acquisition. |\n| **Section 2(42A)** | Period of holding in specified modes u/s 49(1) | Includes the period for which the asset was held by the previous owner. |\n| **Section 55(2)(b)** | Cost of improvement for capital assets | Capital improvements incurred prior to 1st April 2001 are ignored. |\n\n\n> [!IMPORTANT]\n> Partition of HUF: Partition of a Hindu Undivided Family resulting in allotment of a capital asset to a coparcener does not constitute a transfer under Section 47, but adopts previous owner's cost under Section 49(1).\n\n\n> [!WARNING]\n> Cost of Improvement Trap: Any expenditure incurred towards improvement or capital addition prior to 1st April 2001 must be completely disregarded for capital gain computations.",
   "director": {
     "archetype": "computation_ledger",
-    "justification": "The case requires step-by-step computation of capital gains under Section 48 using deemed cost of acquisition to previous owner u/s 49(1) and cost of improvement u/s 55(1)(b).",
+    "justification": "The scenario requires a step-by-step calculation of Long Term Capital Gains by applying statutory rules for cost substitution from a previous owner and improvement costs.",
     "protagonist": "Mr. A",
     "actors": [
-      "Mr. A",
-      "X & sons, HUF"
+      "X & sons HUF"
     ],
     "key_numbers": [
       "₹ 1,20,000",
@@ -29,64 +28,64 @@
       "June 2025",
       "A.Y. 2026-27"
     ],
-    "visual_metaphor": "A transparent financial ledger overriding partition valuation with historical HUF cost.",
+    "visual_metaphor": "A relay race where the cost-basis baton is passed from the HUF to the coparcener to reach the final gain finish line.",
     "beat_plan": [
       {
-        "beat_goal": "Introduce the sale transaction of plot acquired via HUF partition",
+        "beat_goal": "Establish the sale of the asset by Mr. A and the initial acquisition by the HUF.",
         "layout": "example_scene",
         "anchor_phrases": [
+          "X & sons HUF",
           "Mr. A",
-          "X & sons, HUF",
-          "₹ 15,00,000",
-          "June 2025"
+          "June 2025",
+          "₹ 15,00,000"
         ]
       },
       {
-        "beat_goal": "Establish that distribution of asset on HUF partition is not a transfer",
-        "layout": "flow_actors",
-        "anchor_phrases": [
-          "Section 47(i)",
-          "HUF Partition",
-          "Not a Transfer"
-        ]
-      },
-      {
-        "beat_goal": "Substitute partition allotment valuation with statutory cost to previous owner",
+        "beat_goal": "Apply Section 49(1) to determine the cost of acquisition by ignoring the partition value.",
         "layout": "deemed_value",
         "anchor_phrases": [
           "Section 49(1)",
-          "Cost to Previous Owner",
+          "Cost to previous owner",
           "₹ 1,20,000",
-          "₹ 1,50,000"
+          "Ignore ₹ 1,50,000"
         ]
       },
       {
-        "beat_goal": "Determine period of holding by tacking on HUF holding period",
+        "beat_goal": "Determine the period of holding under Section 2(42A) to classify the gain as long-term.",
         "layout": "timeline_windows",
         "anchor_phrases": [
           "Section 2(42A)",
-          "Period of Holding",
           "P.Y. 2002-03",
-          "Long-Term Capital Asset"
+          "Long-term capital asset"
         ]
       },
       {
-        "beat_goal": "Compute taxable long-term capital gain using final ledger deduction steps",
+        "beat_goal": "Verify the cost of improvement under Section 55(2)(b) regarding the 2001 cutoff.",
+        "layout": "checklist_gate",
+        "anchor_phrases": [
+          "Section 55(2)(b)",
+          "Fencing expenses",
+          "₹ 2,35,000",
+          "After 1st April 2001"
+        ]
+      },
+      {
+        "beat_goal": "Perform the final ledger computation of the taxable capital gain.",
         "layout": "ledger",
         "anchor_phrases": [
-          "Section 48",
-          "Section 55(1)(b)",
-          "₹ 2,35,000",
+          "Full value of consideration",
+          "Transfer expenses ₹ 20,000",
+          "Net Sale Consideration",
           "₹ 11,25,000"
         ]
       },
       {
-        "beat_goal": "Summarize core takeaway for HUF partition asset sales",
+        "beat_goal": "Summarize the tax liability for the relevant assessment year.",
         "layout": "takeaway",
         "anchor_phrases": [
-          "Section 49(1)",
-          "Previous Owner Cost",
-          "Taxable Capital Gain"
+          "LTCG",
+          "A.Y. 2026-27",
+          "Taxable Particulars"
         ]
       }
     ]
@@ -96,79 +95,78 @@
     {
       "layout": "example_scene",
       "title": {
-        "text": "Sale of Land Acquired on HUF Partition",
+        "text": "Sale of Land by Mr. A",
         "at": 0.3
       },
-      "voice_sync_text": "Mr. A, a coparcener of X & sons, HUF, sold a plot of land for ₹ 15,00,000 in June 2025. ഒരു HUF Partition വഴിയോ Gift വഴിയോ ലഭിക്കുന്ന Capital Asset വിൽക്കുമ്പോൾ Capital Gains എങ്ങനെ കണക്കാക്കണം എന്നതിന്റെ Statutory Provisions പഠിക്കാം.",
+      "voice_sync_text": "X & sons HUF പണ്ട് വാങ്ങിയ ലാൻഡ് Mr. A June 2025-ൽ ₹ 15,00,000-ന് വിൽക്കുന്നു. ഈ ട്രാൻസാക്ഷനിലെ ക്യാപിറ്റൽ ഗെയിൻ എങ്ങനെ കണക്കാക്കാം എന്ന് നോക്കാം.",
       "visual_data": {
         "actors": [
           {
-            "label": "Mr. A",
-            "detail": "Coparcener / Assessee",
+            "label": "X & sons HUF",
             "icon": "person",
-            "at": 23.98
+            "detail": "Original Purchaser",
+            "at": 0.0
           },
           {
-            "label": "X & sons, HUF",
-            "detail": "Previous Owner",
-            "icon": "house",
-            "at": 25.74
+            "label": "Mr. A",
+            "icon": "person",
+            "detail": "Coparcener/Seller",
+            "at": 4.14
           }
         ],
-        "transaction": "Sale of Plot",
+        "transaction": "Sale of Land",
         "facts": [
           {
-            "label": "Sale Price",
-            "value": "₹ 15,00,000",
-            "amount": 1500000,
+            "label": "Sale Date",
             "date": "June 2025",
-            "icon": "money_bag",
-            "at": 28.24
+            "at": 4.4
           },
           {
-            "label": "Transfer Expense",
-            "value": "₹ 20,000",
-            "amount": 20000,
-            "icon": "document",
-            "at": 28.24
+            "label": "Sale Price",
+            "amount": 1500000,
+            "at": 7.04
           }
+        ],
+        "spoken_amounts": [
+          "₹ 15,00,000",
+          "15,00,000"
         ]
       },
       "start": 0.0,
-      "end": 40.25,
+      "end": 14.2,
       "id": "b1",
-      "director_goal": "Introduce the sale transaction of plot acquired via HUF partition",
+      "director_goal": "Establish the sale of the asset by Mr. A and the initial acquisition by the HUF.",
       "anchor_phrases": [
+        "X & sons HUF",
         "Mr. A",
-        "X & sons, HUF",
-        "₹ 15,00,000",
-        "June 2025"
+        "June 2025",
+        "₹ 15,00,000"
       ],
       "animation_role": "key_fact",
       "anchor_alignment": [
         {
+          "phrase": "X & sons HUF",
+          "at": 0.96,
+          "matched": true,
+          "score": 0.632
+        },
+        {
           "phrase": "Mr. A",
-          "at": 23.98,
+          "at": 4.14,
           "matched": true,
           "score": 1.0
-        },
-        {
-          "phrase": "X & sons, HUF",
-          "at": 26.1,
-          "matched": true,
-          "score": 0.778
-        },
-        {
-          "phrase": "₹ 15,00,000",
-          "at": 28.62,
-          "matched": true,
-          "score": 0.495
         },
         {
           "phrase": "June 2025",
-          "at": 29.92,
+          "at": 5.28,
           "matched": true,
           "score": 1.0
+        },
+        {
+          "phrase": "₹ 15,00,000",
+          "at": 7.4,
+          "matched": true,
+          "score": 0.473
         }
       ],
       "anchor_match": {
@@ -177,207 +175,287 @@
       }
     },
     {
-      "layout": "flow_actors",
-      "title": {
-        "text": "Tax Exemption on Partition",
-        "at": 40.9
-      },
-      "voice_sync_text": "Section 47(i) അനുസരിച്ച് ഒരു HUF Partition ചെയ്യുമ്പോൾ members-ന് ലഭിക്കുന്ന Capital Asset ഒരു Transfer ആയി കണക്കാക്കില്ല. So HUF Partition is Not a Transfer.",
-      "visual_data": {
-        "actors": [
-          {
-            "label": "X & sons, HUF",
-            "detail": "Distributes Asset",
-            "icon": "house",
-            "at": 47.51
-          },
-          {
-            "label": "Mr. A",
-            "detail": "Receives Plot",
-            "icon": "person",
-            "at": 47.51
-          }
-        ],
-        "edges": [
-          {
-            "label": "HUF Partition",
-            "detail": "Section 47(i) - Not a Transfer",
-            "status": "Exempt",
-            "icon": "gavel",
-            "at": 75.76
-          }
-        ]
-      },
-      "start": 40.6,
-      "end": 78.23,
-      "id": "b2",
-      "director_goal": "Establish that distribution of asset on HUF partition is not a transfer",
-      "anchor_phrases": [
-        "Section 47(i)",
-        "HUF Partition",
-        "Not a Transfer"
-      ],
-      "animation_role": "explanation",
-      "anchor_alignment": [
-        {
-          "phrase": "Section 47(i)",
-          "at": 67.56,
-          "matched": true,
-          "score": 0.99
-        },
-        {
-          "phrase": "HUF Partition",
-          "at": 69.92,
-          "matched": true,
-          "score": 1.0
-        },
-        {
-          "phrase": "Not a Transfer",
-          "at": 77.0,
-          "matched": true,
-          "score": 1.0
-        }
-      ],
-      "anchor_match": {
-        "matched": 3,
-        "total": 3
-      }
-    },
-    {
       "layout": "deemed_value",
       "title": {
-        "text": "Deemed Cost of Acquisition",
-        "at": 78.88
+        "text": "Cost of Acquisition",
+        "at": 14.85
       },
-      "voice_sync_text": "Section 49(1) പ്രകാരം, property വിൽക്കുമ്പോൾ cost calculation-നായി Cost to Previous Owner എന്ത് വിലയ്ക്കാണ് വാങ്ങിയിരുന്നത്, ആ തുകയാണ് Cost of Acquisition ആയി എടുക്കേണ്ടത്. Section 49(1) overrides the partition allotment valuation of ₹ 1,50,000 with the original HUF cost of ₹ 1,20,000.",
+      "voice_sync_text": "Section 49(1) പ്രകാരം, ഒരു HUF partition വഴി ലഭിച്ച അസറ്റിന്റെ കോസ്റ്റ് കണക്കാക്കുമ്പോൾ partition വാല്യൂ ആയ ₹ 1,50,000 നമ്മൾ ignore ചെയ്യണം. പകരം Cost to previous owner ആയ ₹ 1,20,000 ആണ് നമ്മൾ എടുക്കേണ്ടത്. അതായത് Ignore ₹ 1,50,000.",
       "visual_data": {
         "actual": {
-          "label": "Partition Allotment Value",
-          "value": "₹ 1,50,000",
+          "label": "Partition Value",
           "amount": 150000,
-          "detail": "Valuation at Partition",
-          "icon": "document",
-          "at": 114.38
+          "status": "Ignore",
+          "at": 25.51
         },
         "deemed": {
-          "label": "Cost to Previous Owner",
-          "value": "₹ 1,20,000",
+          "label": "Cost to previous owner",
           "amount": 120000,
-          "detail": "Actual Cost to HUF (P.Y. 2002-03)",
-          "icon": "money_bag",
-          "at": 114.38
+          "status": "Adopted",
+          "at": 31.63
         },
-        "rule": "Section 49(1): Ignore partition value; adopt Cost to Previous Owner (HUF).",
-        "at": 102.84
+        "rule": "Section 49(1)",
+        "spoken_amounts": [
+          "₹ 1,50,000",
+          "₹ 1,20,000",
+          "1,50,000",
+          "1,20,000"
+        ],
+        "at": 15.03
       },
-      "start": 78.58,
-      "end": 121.07,
-      "id": "b3",
-      "director_goal": "Substitute partition allotment valuation with statutory cost to previous owner",
+      "start": 14.55,
+      "end": 37.91,
+      "id": "b2",
+      "director_goal": "Apply Section 49(1) to determine the cost of acquisition by ignoring the partition value.",
       "anchor_phrases": [
         "Section 49(1)",
-        "Cost to Previous Owner",
+        "Cost to previous owner",
         "₹ 1,20,000",
-        "₹ 1,50,000"
+        "Ignore ₹ 1,50,000"
       ],
       "animation_role": "explanation",
       "anchor_alignment": [
         {
           "phrase": "Section 49(1)",
-          "at": 102.84,
+          "at": 15.25,
           "matched": true,
-          "score": 1.0
+          "score": 0.5
         },
         {
-          "phrase": "Cost to Previous Owner",
-          "at": 107.14,
+          "phrase": "Cost to previous owner",
+          "at": 31.63,
           "matched": true,
           "score": 1.0
         },
         {
           "phrase": "₹ 1,20,000",
-          "at": 119.5,
+          "at": 35.97,
           "matched": true,
-          "score": 0.787
+          "score": 1.0
         },
         {
-          "phrase": "₹ 1,50,000",
-          "at": 113.34,
-          "matched": false,
-          "score": 0.267
+          "phrase": "Ignore ₹ 1,50,000",
+          "at": 36.39,
+          "matched": true,
+          "score": 0.476
         }
       ],
       "anchor_match": {
-        "matched": 3,
+        "matched": 4,
         "total": 4
       }
     },
     {
       "layout": "timeline_windows",
       "title": {
-        "text": "Period of Holding Determination",
-        "at": 121.72
+        "text": "Period of Holding",
+        "at": 38.56
       },
-      "voice_sync_text": "Section 2(42A) Explanation 1(a)(i) പ്രകാരം, Previous Owner asset കൈവശം വെച്ചിരുന്ന കാലയളവ് കൂടെ ചേർത്ത് വേണം Total Period of Holding നിർണ്ണയിക്കാൻ. Holding started in P.Y. 2002-03, making it a Long-Term Capital Asset.",
+      "voice_sync_text": "Section 2(42A) അനുസരിച്ച്, previous owner ഈ അസറ്റ് കൈവശം വെച്ചിരുന്ന കാലയളവ് കൂടി നമ്മൾ പരിഗണിക്കണം. HUF ഇത് വാങ്ങിയ P.Y. 2002-03 മുതൽ കണക്കാക്കുമ്പോൾ ഇതൊരു Long-term capital asset ആണ്.",
       "visual_data": {
         "events": [
           {
-            "label": "HUF Acquisition",
+            "label": "HUF Purchase",
             "date": "P.Y. 2002-03",
-            "detail": "Purchased by HUF for ₹ 1,20,000",
             "icon": "calendar",
-            "at": 156.22
+            "at": 75.76
           },
           {
-            "label": "Partition Allotment",
+            "label": "Partition",
             "date": "P.Y. 2006-07",
-            "detail": "Allotted to Mr. A",
-            "icon": "house",
-            "at": 156.22
+            "icon": "gavel",
+            "at": 75.76
           },
           {
-            "label": "Sale by Mr. A",
+            "label": "Sale",
             "date": "June 2025",
-            "detail": "Sold for ₹ 15,00,000",
             "icon": "money_bag",
-            "at": 156.22
+            "at": 75.76
           }
         ],
-        "window_label": "Section 2(42A): Period of Holding includes HUF period -> Long-Term Capital Asset"
+        "window_label": "Long-term capital asset"
       },
-      "start": 121.42,
-      "end": 165.33,
-      "id": "b4",
-      "director_goal": "Determine period of holding by tacking on HUF holding period",
+      "start": 38.26,
+      "end": 81.4,
+      "id": "b3",
+      "director_goal": "Determine the period of holding under Section 2(42A) to classify the gain as long-term.",
       "anchor_phrases": [
         "Section 2(42A)",
-        "Period of Holding",
         "P.Y. 2002-03",
-        "Long-Term Capital Asset"
+        "Long-term capital asset"
       ],
       "animation_role": "explanation",
       "anchor_alignment": [
         {
           "phrase": "Section 2(42A)",
-          "at": 149.04,
+          "at": 66.54,
           "matched": true,
-          "score": 1.0
-        },
-        {
-          "phrase": "Period of Holding",
-          "at": 157.58,
-          "matched": true,
-          "score": 1.0
+          "score": 0.938
         },
         {
           "phrase": "P.Y. 2002-03",
-          "at": 160.74,
+          "at": 75.76,
           "matched": true,
-          "score": 0.87
+          "score": 0.818
         },
         {
-          "phrase": "Long-Term Capital Asset",
-          "at": 163.64,
+          "phrase": "Long-term capital asset",
+          "at": 74.87,
+          "matched": false,
+          "score": 0.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 2,
+        "total": 3
+      }
+    },
+    {
+      "layout": "checklist_gate",
+      "title": {
+        "text": "Cost of Improvement",
+        "at": 82.05
+      },
+      "voice_sync_text": "Section 55(2)(b) പ്രകാരം ഇംപ്രൂവ്‌മെന്റ് കോസ്റ്റ് അനുവദിക്കണമെങ്കിൽ അത് After 1st April 2001 ആയിരിക്കണം. ഇവിടെ ₹ 2,35,000 ചിലവാക്കി നടത്തിയ Fencing expenses നടന്നത് 2007-ൽ ആയതുകൊണ്ട് ഇത് പൂർണ്ണമായും അനുവദനീയമാണ്.",
+      "visual_data": {
+        "conditions": [
+          {
+            "label": "Fencing expenses",
+            "amount": 235000,
+            "date": "P.Y. 2007-08",
+            "pass": true,
+            "detail": "After 1st April 2001",
+            "at": 91.61
+          }
+        ],
+        "outcome": "Section 55(2)(b) satisfied",
+        "spoken_amounts": [
+          "₹ 2,35,000",
+          "2,35,000"
+        ]
+      },
+      "start": 81.75,
+      "end": 101.39,
+      "id": "b4",
+      "director_goal": "Verify the cost of improvement under Section 55(2)(b) regarding the 2001 cutoff.",
+      "anchor_phrases": [
+        "Section 55(2)(b)",
+        "Fencing expenses",
+        "₹ 2,35,000",
+        "After 1st April 2001"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Section 55(2)(b)",
+          "at": 81.75,
+          "matched": false,
+          "score": 0.462
+        },
+        {
+          "phrase": "Fencing expenses",
+          "at": 91.61,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "₹ 2,35,000",
+          "at": 91.75,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "After 1st April 2001",
+          "at": 88.42,
+          "matched": false,
+          "score": 0.429
+        }
+      ],
+      "anchor_match": {
+        "matched": 2,
+        "total": 4
+      }
+    },
+    {
+      "layout": "ledger",
+      "title": {
+        "text": "Computation of Capital Gains",
+        "at": 102.04
+      },
+      "voice_sync_text": "ഇനി നമുക്ക് ഫൈനൽ കമ്പ്യൂട്ടേഷൻ നോക്കാം. Full value of consideration ₹ 15,00,000-ൽ നിന്നും Transfer expenses ₹ 20,000 കുറച്ചാൽ Net Sale Consideration ലഭിക്കും. അതിൽ നിന്നും കോസ്റ്റുകൾ കുറച്ചാൽ നമുക്ക് കിട്ടുന്ന ഗെയിൻ ₹ 11,25,000 ആണ്.",
+      "visual_data": {
+        "rows": [
+          {
+            "label": "Full value of consideration",
+            "amount": 1500000,
+            "at": 105.32
+          },
+          {
+            "label": "Transfer expenses ₹ 20,000",
+            "amount": 20000,
+            "sign": "-",
+            "at": 108.34
+          },
+          {
+            "label": "Net Sale Consideration",
+            "amount": 1480000,
+            "sign": "=",
+            "at": 110.82
+          },
+          {
+            "label": "Cost of acquisition",
+            "amount": 120000,
+            "sign": "-",
+            "at": 110.82
+          },
+          {
+            "label": "Cost of improvement",
+            "amount": 235000,
+            "sign": "-",
+            "at": 113.86
+          }
+        ],
+        "total": "1125000",
+        "spoken_amounts": [
+          "₹ 15,00,000",
+          "₹ 11,25,000",
+          "15,00,000",
+          "11,25,000"
+        ]
+      },
+      "start": 101.74,
+      "end": 118.82,
+      "id": "b5",
+      "director_goal": "Perform the final ledger computation of the taxable capital gain.",
+      "anchor_phrases": [
+        "Full value of consideration",
+        "Transfer expenses ₹ 20,000",
+        "Net Sale Consideration",
+        "₹ 11,25,000"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Full value of consideration",
+          "at": 105.32,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Transfer expenses ₹ 20,000",
+          "at": 108.34,
+          "matched": true,
+          "score": 0.938
+        },
+        {
+          "phrase": "Net Sale Consideration",
+          "at": 110.82,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "₹ 11,25,000",
+          "at": 116.04,
           "matched": true,
           "score": 1.0
         }
@@ -388,174 +466,78 @@
       }
     },
     {
-      "layout": "ledger",
-      "title": {
-        "text": "Computation of Long-Term Capital Gain",
-        "at": 165.98
-      },
-      "voice_sync_text": "Section 55(1)(b) അനുസരിച്ച് Assesseeയോ അല്ലെങ്കിൽ Previous Ownerഓ വരുത്തിയ Capital Expenditure-കൾ Cost of Improvement ആയി claim ചെയ്യാം. Fencing cost of ₹ 2,35,000 is deductible. Section 48 പ്രകാരം Full Value of Consideration-ൽ നിന്ന് Transfer Expenses കുറച്ച് Net Consideration കാണാം. net amount-ൽ നിന്ന് deductions കഴിച്ചാൽ taxable capital gain ₹ 11,25,000 കിട്ടും.",
-      "visual_data": {
-        "rows": [
-          {
-            "label": "Full Value of Consideration",
-            "value": "₹ 15,00,000",
-            "amount": 1500000,
-            "sign": "+",
-            "icon": "money_bag",
-            "at": 208.82
-          },
-          {
-            "label": "Less: Transfer Expenses",
-            "value": "₹ 20,000",
-            "amount": 20000,
-            "sign": "-",
-            "icon": "document",
-            "at": 210.0
-          },
-          {
-            "label": "Net Consideration",
-            "value": "₹ 14,80,000",
-            "amount": 1480000,
-            "sign": "=",
-            "icon": "scales",
-            "at": 211.86
-          },
-          {
-            "label": "Less: Cost of Acquisition u/s 49(1)",
-            "value": "₹ 1,20,000",
-            "amount": 120000,
-            "sign": "-",
-            "icon": "money_bag",
-            "at": 211.86
-          },
-          {
-            "label": "Less: Cost of Improvement u/s 55(1)(b)",
-            "value": "₹ 2,35,000",
-            "amount": 235000,
-            "sign": "-",
-            "icon": "plot",
-            "at": 211.86
-          }
-        ],
-        "total": "Long-Term Capital Gain = ₹ 11,25,000"
-      },
-      "start": 165.68,
-      "end": 220.17,
-      "id": "b5",
-      "director_goal": "Compute taxable long-term capital gain using final ledger deduction steps",
-      "anchor_phrases": [
-        "Section 48",
-        "Section 55(1)(b)",
-        "₹ 2,35,000",
-        "₹ 11,25,000"
-      ],
-      "animation_role": "explanation",
-      "anchor_alignment": [
-        {
-          "phrase": "Section 48",
-          "at": 207.08,
-          "matched": true,
-          "score": 1.0
-        },
-        {
-          "phrase": "Section 55(1)(b)",
-          "at": 165.68,
-          "matched": false,
-          "score": 0.471
-        },
-        {
-          "phrase": "₹ 2,35,000",
-          "at": 218.36,
-          "matched": true,
-          "score": 0.857
-        },
-        {
-          "phrase": "₹ 11,25,000",
-          "at": 218.88,
-          "matched": true,
-          "score": 0.5
-        }
-      ],
-      "anchor_match": {
-        "matched": 3,
-        "total": 4
-      }
-    },
-    {
       "layout": "takeaway",
       "title": {
-        "text": "Key Takeaways",
-        "at": 220.82
+        "text": "Final Summary",
+        "at": 119.47
       },
-      "voice_sync_text": "Section 49(1) പ്രകാരം Previous Owner Cost ആണ് Cost of Acquisition ആകുന്നത്. HUF Partition-ൽ ലഭിക്കുന്ന സ്വത്ത് വിൽക്കുമ്പോൾ Taxable Capital Gain ഈ രീതിയിൽ കൃത്യമായി കണക്കാക്കാം.",
+      "voice_sync_text": "ചുരുക്കത്തിൽ, A.Y. 2026-27-ലേക്ക് LTCG കണക്കാക്കുമ്പോൾ Section 49(1) പ്രകാരമുള്ള കോസ്റ്റ് സബ്സ്റ്റിറ്റ്യൂഷൻ ശ്രദ്ധിക്കണം. Taxable Particulars പ്രകാരം ടാക്സബിൾ ഗെയിൻ ₹ 11,25,000 ആണ്.",
       "visual_data": {
         "rules": [
           {
-            "label": "HUF Partition Not a Transfer",
-            "detail": "Section 47(i): Distribution to members on partition does not attract tax.",
-            "icon": "gavel",
-            "at": 238.08
-          },
-          {
-            "label": "Previous Owner Cost",
-            "detail": "Section 49(1): Cost to HUF (₹ 1,20,000) is adopted, ignoring partition valuation.",
-            "icon": "money_bag",
-            "at": 251.86
-          },
-          {
-            "label": "Tacked-on Period of Holding",
-            "detail": "Section 2(42A): HUF holding period added, asset classified as Long-Term.",
-            "icon": "calendar",
-            "at": 251.86
-          },
-          {
-            "label": "Taxable Capital Gain",
-            "detail": "Section 48: Net consideration less cost & improvement yields ₹ 11,25,000.",
+            "label": "LTCG",
+            "value": "₹ 11,25,000",
             "icon": "scales",
-            "at": 257.96
+            "at": 163.45
+          },
+          {
+            "label": "Assessment Year",
+            "value": "A.Y. 2026-27",
+            "icon": "calendar",
+            "at": 163.45
+          },
+          {
+            "label": "Taxable Particulars",
+            "detail": "Computed u/s 45",
+            "icon": "document",
+            "at": 163.45
           }
         ]
       },
-      "start": 220.52,
-      "end": 261.42,
+      "start": 119.17,
+      "end": 165.55,
       "id": "b6",
-      "director_goal": "Summarize core takeaway for HUF partition asset sales",
+      "director_goal": "Summarize the tax liability for the relevant assessment year.",
       "anchor_phrases": [
-        "Section 49(1)",
-        "Previous Owner Cost",
-        "Taxable Capital Gain"
+        "LTCG",
+        "A.Y. 2026-27",
+        "Taxable Particulars"
       ],
       "animation_role": "key_fact",
       "anchor_alignment": [
         {
-          "phrase": "Section 49(1)",
-          "at": 249.66,
+          "phrase": "LTCG",
+          "at": 153.31,
           "matched": true,
           "score": 1.0
         },
         {
-          "phrase": "Previous Owner Cost",
-          "at": 251.86,
-          "matched": true,
-          "score": 1.0
+          "phrase": "A.Y. 2026-27",
+          "at": 122.76,
+          "matched": false,
+          "score": 0.357
         },
         {
-          "phrase": "Taxable Capital Gain",
-          "at": 257.96,
+          "phrase": "Taxable Particulars",
+          "at": 159.75,
           "matched": true,
           "score": 1.0
         }
       ],
       "anchor_match": {
-        "matched": 3,
+        "matched": 2,
         "total": 3
       }
     }
   ],
-  "audio_duration_sec": 261.42,
+  "needs_review": true,
+  "quality_issues": [
+    "unsupported section/rule: u/s 45"
+  ],
+  "audio_duration_sec": 165.55,
   "anchor_match": {
-    "matched": 20,
+    "matched": 18,
     "total": 22,
-    "rate": 0.909
+    "rate": 0.818
   }
 }

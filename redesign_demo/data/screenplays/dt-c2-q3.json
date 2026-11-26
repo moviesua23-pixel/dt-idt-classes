@@ -3,69 +3,70 @@
   "audio_url": "data/audio/dt-c2-q3.mp3",
   "duration_sec": 200.4,
   "sync_offset_sec": 0.0,
-  "context_pill": "Direct Tax | Capital Gains Exemption",
-  "example_summary": "Mr. Abhishek mortgaged his residential house under a notified reverse mortgage scheme. Under Section 47(xvi), mortgage creation is not a transfer. Section 10(43) exempts periodic loan installments, while Section 45 triggers capital gains tax when the bank alienates the property for recovery.",
-  "source_provision": "### Reverse Mortgage Scheme: Statutory Framework\n\n| Transaction Stage | Statutory Provision | Tax Treatment | Legal Impact |\n| :--- | :--- | :--- | :--- |\n| **1. Mortgaging Property** | Section 47(xvi) | Not a Transfer | No Capital Gains tax liability at the time of mortgage |\n| **2. Receipt of Loan** | Section 10(43) | Fully Exempt | Loan amounts (lump sum or installment) excluded from Total Income |\n| **3. Alienation by Bank** | Section 45 | Taxable Transfer | Capital Gains tax triggered upon sale of property for loan recovery |\n\n\n#### Key Statutory Rules\n\n* **Exemption from Definition of Transfer**: Any transfer of a Capital Asset in a transaction of reverse mortgage under a scheme notified by the Central Government is excluded from Section 2(47).\n* **Exemption of Loan Receipts**: Lump sum or periodic monthly disbursements received by an individual borrower under a notified Reverse Mortgage Scheme are completely exempt under Section 10(43).\n* **Eventual Alienation**: Taxability arises only when the lender bank alienates or sells the property to recover the outstanding loan and interest.\n\n\n> [!IMPORTANT]\n> **Statutory Distinction:** Mortgage creation and receipt of loan payments are completely tax-exempt during the owner's lifetime. Capital Gains tax liability is deferred until actual alienation of the property by the bank.",
+  "context_pill": "Reverse Mortgage & Capital Gains",
+  "example_summary": "Mr. Abhishek, a senior citizen, enters a reverse mortgage scheme for his residential house, receiving monthly installments, which leads to a tax analysis of the mortgage, the receipts, and the final alienation by the bank.",
+  "source_provision": "| Statutory Provision | Core Condition / Scheme Parameters | Tax Treatment & Legal Consequence |\n| :--- | :--- | :--- |\n| **Section 47(xvi)** | Transfer of a capital asset by a senior citizen under a Central Government notified reverse mortgage scheme. | **Not regarded as transfer**: No capital gains tax liability arises at the time of mortgaging or receiving loan installments. |\n| **Section 10(43)** | Amount received by a senior citizen as a loan, either as a lump sum or in monthly installments. | **Fully exempt**: Total loan proceeds received under the notified scheme are exempt from income tax. |\n| **Subsequent Alienation** | Event where the lending bank disposes of or alienates the mortgaged residential property to recover accumulated loan dues. | **Taxable Event**: Capital gains tax liability is triggered in the hands of the senior citizen or their estate at the stage of actual alienation by the bank. |\n\n> [!IMPORTANT]\n> Scope of Section 47(xvi): The exclusion from the definition of 'transfer' applies strictly to transactions executed under a scheme made and notified by the Central Government for senior citizens.\n\n> [!WARNING]\n> Deferred Tax Liability: While the periodic loan installments remain tax-free u/s 10(43), the ultimate sale of the property by the financial institution for loan recovery activates the dormant capital gains computation.",
   "director": {
-    "archetype": "exception_override",
-    "justification": "The tax mechanism excludes reverse mortgage transactions from transfer under Section 47(xvi) and exempts loan payments under Section 10(43), until property alienation triggers Section 45.",
+    "archetype": "classification_decision_tree",
+    "justification": "The scenario requires classifying specific financial events—mortgage, loan receipt, and alienation—as either taxable transfers or exempt receipts under specific statutory exclusions for senior citizens.",
     "protagonist": "Mr. Abhishek",
     "actors": [
-      "Mr. Abhishek",
-      "Lender Bank"
+      "Bank",
+      "Central Government"
     ],
     "key_numbers": [
       "Section 47(xvi)",
-      "Section 10(43)",
-      "Section 45",
-      "Section 2(47)"
+      "Section 10(43)"
     ],
-    "key_dates": [],
-    "visual_metaphor": "A three-stage tax shield timeline showing non-transfer mortgage creation, exempt installment stream, and ultimate bank recovery sale.",
+    "key_dates": [
+      "Monthly installments",
+      "Maturity"
+    ],
+    "visual_metaphor": "A protective safety net that shields the senior citizen during the loan phase but dissolves when the bank sells the property.",
     "beat_plan": [
       {
-        "beat_goal": "Introduce senior citizen Mr. Abhishek mortgaging his residential house under a reverse mortgage scheme",
+        "beat_goal": "Establish the reverse mortgage scenario between Mr. Abhishek and the bank",
         "layout": "example_scene",
         "anchor_phrases": [
           "Mr. Abhishek",
-          "reverse mortgage scheme",
-          "residential house"
+          "Senior citizen",
+          "Residential house",
+          "Reverse mortgage scheme"
         ]
       },
       {
-        "beat_goal": "Explain Section 47(xvi) excluding mortgage creation from definition of transfer",
-        "layout": "statute_quote",
+        "beat_goal": "Determine if the act of mortgaging is a taxable transfer",
+        "layout": "decision_tree",
         "anchor_phrases": [
           "Section 47(xvi)",
-          "Not a Transfer",
-          "Section 2(47)"
+          "Not regarded as transfer",
+          "No capital gain"
         ]
       },
       {
-        "beat_goal": "Illustrate Section 10(43) tax exemption on monthly loan installments received",
-        "layout": "flow_actors",
+        "beat_goal": "Classify the taxability of the monthly loan installments received",
+        "layout": "checklist_gate",
         "anchor_phrases": [
           "Section 10(43)",
-          "monthly installments",
-          "Fully Exempt"
+          "Monthly installments",
+          "Exempt from income-tax"
         ]
       },
       {
-        "beat_goal": "Demonstrate capital gains tax trigger upon alienation of property by bank for loan recovery",
-        "layout": "deemed_value",
+        "beat_goal": "Illustrate the shift in tax liability when the bank takes possession for recovery",
+        "layout": "flow_actors",
         "anchor_phrases": [
-          "Section 45",
-          "Alienation by Bank",
-          "loan recovery"
+          "Discharge his loan",
+          "Alienation of the mortgaged property",
+          "Recovering the loan"
         ]
       },
       {
-        "beat_goal": "Summarize tax-free status during owner lifetime versus taxability on ultimate bank sale",
+        "beat_goal": "Summarize the final tax consequence at the stage of alienation",
         "layout": "takeaway",
         "anchor_phrases": [
-          "Not a transfer",
-          "exempt from income-tax",
-          "Taxable Transfer"
+          "Taxable at the stage of alienation",
+          "Capital gains tax liability attracted"
         ]
       }
     ]
@@ -75,37 +76,50 @@
     {
       "layout": "example_scene",
       "title": {
-        "text": "Reverse Mortgage Scheme Overview",
+        "text": "The Reverse Mortgage Setup",
         "at": 0.3
       },
-      "voice_sync_text": "Reverse Mortgage Scheme-ലെ പ്രധാന Statutory Provisions ഏതൊക്കെയാണെന്നും Capital Gains എപ്പോഴാണ് attract ചെയ്യുന്നതെന്നും നമ്മൾ പഠിക്കാൻ പോവുകയാണ്. Mr. Abhishek എന്ന senior citizen തന്റെ residential house ഒരു notified reverse mortgage scheme അനുസരിച്ച് bank-ൽ mortgage ചെയ്തു.",
+      "voice_sync_text": "നമുക്ക് Mr. Abhishek എന്ന senior citizen-ന്റെ കേസ് നോക്കാം. അദ്ദേഹം തന്റെ residential house ഒരു bank-ൽ reverse mortgage scheme പ്രകാരം പണയപ്പെടുത്തിയിരിക്കുകയാണ്. ഇതിലൂടെ അദ്ദേഹത്തിന് ഒരു സ്ഥിരവരുമാനം ഉറപ്പാക്കാം.",
       "visual_data": {
         "actors": [
           {
             "label": "Mr. Abhishek",
-            "detail": "Senior Citizen Borrower",
+            "detail": "Senior citizen",
             "icon": "person",
             "at": 23.9
+          },
+          {
+            "label": "Bank",
+            "detail": "Lending Institution",
+            "icon": "bank",
+            "at": 28.16
           }
         ],
-        "transaction": "reverse mortgage scheme",
+        "transaction": "Reverse mortgage scheme",
         "facts": [
           {
-            "label": "residential house",
-            "detail": "Mortgaged Property",
+            "label": "Asset",
+            "detail": "Residential house",
             "icon": "house",
-            "at": 27.04
+            "at": 28.16
+          },
+          {
+            "label": "Status",
+            "detail": "Senior citizen",
+            "icon": "calendar",
+            "at": 28.16
           }
         ]
       },
       "start": 0.0,
       "end": 31.28,
       "id": "b1",
-      "director_goal": "Introduce senior citizen Mr. Abhishek mortgaging his residential house under a reverse mortgage scheme",
+      "director_goal": "Establish the reverse mortgage scenario between Mr. Abhishek and the bank",
       "anchor_phrases": [
         "Mr. Abhishek",
-        "reverse mortgage scheme",
-        "residential house"
+        "Senior citizen",
+        "Residential house",
+        "Reverse mortgage scheme"
       ],
       "animation_role": "key_fact",
       "anchor_alignment": [
@@ -116,44 +130,67 @@
           "score": 1.0
         },
         {
-          "phrase": "reverse mortgage scheme",
-          "at": 29.66,
+          "phrase": "Senior citizen",
+          "at": 25.22,
           "matched": true,
           "score": 1.0
         },
         {
-          "phrase": "residential house",
-          "at": 21.16,
-          "matched": false,
-          "score": 0.312
+          "phrase": "Residential house",
+          "at": 27.04,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Reverse mortgage scheme",
+          "at": 29.66,
+          "matched": true,
+          "score": 1.0
         }
       ],
       "anchor_match": {
-        "matched": 2,
-        "total": 3
+        "matched": 4,
+        "total": 4
       }
     },
     {
-      "layout": "statute_quote",
+      "layout": "decision_tree",
       "title": {
-        "text": "Mortgage Not a Transfer",
+        "text": "Is the Mortgage a Transfer?",
         "at": 31.93
       },
-      "voice_sync_text": "Section 47(xvi) പ്രകാരം, ഒരു Notified Reverse Mortgage Scheme-ൽ residential house ബാങ്കിന് mortgage ചെയ്യുന്നത് Section 2(47) പ്രകാരം Not a Transfer ആയി കണക്കാക്കും. അതുകൊണ്ട് mortgage ചെയ്യുന്ന സമയത്ത് Capital Gains tax liability ഉണ്ടാകുന്നില്ല.",
+      "voice_sync_text": "ആദ്യത്തെ ചോദ്യം, ഈ പണയപ്പെടുത്തൽ ഒരു transfer ആണോ എന്നതാണ്. Section 47(xvi) പ്രകാരം, notified reverse mortgage scheme വഴി ഒരു asset പണയപ്പെടുത്തുന്നത് not regarded as transfer ആണ്. അതുകൊണ്ട് തന്നെ ഈ ഘട്ടത്തിൽ no capital gain.",
       "visual_data": {
-        "rule": "Mortgage creation is excluded from transfer under Section 2(47)",
-        "citation": "Section 47(xvi)",
-        "application": "Not a Transfer - Excluded from capital gains tax at mortgage creation",
-        "at": 70.97
+        "root": "Mortgage Transaction",
+        "branches": [
+          {
+            "label": "Section 47(xvi)",
+            "detail": "Statutory Exclusion",
+            "pass": true,
+            "at": 59.01
+          },
+          {
+            "label": "Not regarded as transfer",
+            "detail": "Legal Status",
+            "icon": "scales",
+            "at": 70.97
+          },
+          {
+            "label": "No capital gain",
+            "detail": "Tax Impact",
+            "sign": "=",
+            "at": 75.19
+          }
+        ]
       },
       "start": 31.63,
       "end": 77.67,
       "id": "b2",
-      "director_goal": "Explain Section 47(xvi) excluding mortgage creation from definition of transfer",
+      "director_goal": "Determine if the act of mortgaging is a taxable transfer",
       "anchor_phrases": [
         "Section 47(xvi)",
-        "Not a Transfer",
-        "Section 2(47)"
+        "Not regarded as transfer",
+        "No capital gain"
       ],
       "animation_role": "explanation",
       "anchor_alignment": [
@@ -164,64 +201,55 @@
           "score": 1.0
         },
         {
-          "phrase": "Not a Transfer",
-          "at": 71.65,
+          "phrase": "Not regarded as transfer",
+          "at": 70.97,
           "matched": true,
-          "score": 0.741
+          "score": 0.604
         },
         {
-          "phrase": "Section 2(47)",
-          "at": 52.59,
-          "matched": false,
-          "score": 0.261
+          "phrase": "No capital gain",
+          "at": 75.19,
+          "matched": true,
+          "score": 0.875
         }
       ],
       "anchor_match": {
-        "matched": 2,
+        "matched": 3,
         "total": 3
       }
     },
     {
-      "layout": "flow_actors",
+      "layout": "checklist_gate",
       "title": {
-        "text": "Exemption of Loan Receipts",
+        "text": "Taxability of Loan Receipts",
         "at": 78.32
       },
-      "voice_sync_text": "Section 10(43) അനുസരിച്ച്, Reverse Mortgage വഴി ലഭിക്കുന്ന monthly installments - അത് lump sum ആയാലും - പൂർണ്ണമായും Fully Exempt ആണ്. ഇത് Total Income-ൽ വരികയേയില്ല.",
+      "voice_sync_text": "അടുത്തതായി, ബാങ്കിൽ നിന്നും ലഭിക്കുന്ന പണത്തിന്റെ കാര്യം നോക്കാം. Section 10(43) പ്രകാരം senior citizen-ന് ലഭിക്കുന്ന monthly installments ആയിട്ടുള്ള ലോൺ തുക പൂർണ്ണമായും exempt from income-tax ആണ്.",
       "visual_data": {
-        "actors": [
+        "conditions": [
           {
-            "label": "Lender Bank",
-            "detail": "Disbursing Bank",
-            "icon": "bank",
-            "at": 78.02
+            "label": "Section 10(43)",
+            "detail": "Exemption Clause",
+            "pass": true,
+            "at": 105.36
           },
           {
-            "label": "Mr. Abhishek",
-            "detail": "Senior Citizen Borrower",
-            "icon": "person",
-            "at": 78.02
-          }
-        ],
-        "edges": [
-          {
-            "from": "Lender Bank",
-            "to": "Mr. Abhishek",
-            "label": "monthly installments",
-            "detail": "Section 10(43) - Fully Exempt",
+            "label": "Monthly installments",
+            "detail": "Loan Receipt Mode",
             "icon": "money_bag",
             "at": 112.66
           }
-        ]
+        ],
+        "outcome": "Exempt from income-tax"
       },
       "start": 78.02,
       "end": 117.22,
       "id": "b3",
-      "director_goal": "Illustrate Section 10(43) tax exemption on monthly loan installments received",
+      "director_goal": "Classify the taxability of the monthly loan installments received",
       "anchor_phrases": [
         "Section 10(43)",
-        "monthly installments",
-        "Fully Exempt"
+        "Monthly installments",
+        "Exempt from income-tax"
       ],
       "animation_role": "explanation",
       "anchor_alignment": [
@@ -232,16 +260,16 @@
           "score": 0.99
         },
         {
-          "phrase": "monthly installments",
+          "phrase": "Monthly installments",
           "at": 112.66,
           "matched": true,
           "score": 1.0
         },
         {
-          "phrase": "Fully Exempt",
-          "at": 113.7,
+          "phrase": "Exempt from income-tax",
+          "at": 114.06,
           "matched": true,
-          "score": 1.0
+          "score": 0.571
         }
       ],
       "anchor_match": {
@@ -250,132 +278,137 @@
       }
     },
     {
-      "layout": "deemed_value",
+      "layout": "flow_actors",
       "title": {
-        "text": "Alienation & Tax Trigger",
+        "text": "Recovery and Alienation",
         "at": 117.87
       },
-      "voice_sync_text": "എന്നാൽ ബാങ്ക് loan recovery-ക്ക് വേണ്ടി property പിന്നീട് sell ചെയ്യുകയോ Alienation by Bank സംഭവിച്ച് കൈമാറുകയോ ചെയ്യുമ്പോൾ, Section 45 പ്രകാരം Capital Gains tax liability attract ആകും.",
+      "voice_sync_text": "എന്നാൽ Mr. Abhishek-ന് തന്റെ ബാധ്യത discharge his loan ചെയ്യാൻ സാധിച്ചില്ലെങ്കിൽ, ബാങ്ക് ആ വീട് ഏറ്റെടുക്കും. Recovering the loan എന്ന ലക്ഷ്യത്തോടെ ബാങ്ക് നടത്തുന്ന ഈ alienation of the mortgaged property ഒരു ടാക്സബിൾ ഇവന്റ് ആണ്.",
       "visual_data": {
-        "actual": {
-          "label": "Initial Mortgage Creation",
-          "detail": "No tax liability during owner lifetime",
-          "icon": "padlock",
-          "at": 149.44
-        },
-        "deemed": {
-          "label": "Alienation by Bank",
-          "detail": "Property sale for loan recovery",
-          "icon": "gavel",
-          "at": 151.07
-        },
-        "rule": "Section 45 triggers Capital Gains tax upon alienation by bank",
-        "at": 148.37
+        "actors": [
+          {
+            "label": "Bank",
+            "icon": "bank",
+            "at": 145.21
+          },
+          {
+            "label": "Mr. Abhishek",
+            "icon": "person",
+            "at": 145.21
+          }
+        ],
+        "edges": [
+          {
+            "label": "Discharge his loan",
+            "detail": "Repayment Failure",
+            "status": "failed",
+            "at": 145.21
+          },
+          {
+            "label": "Alienation of the mortgaged property",
+            "detail": "Bank takes possession",
+            "icon": "gavel",
+            "at": 151.07
+          },
+          {
+            "label": "Recovering the loan",
+            "detail": "Sale by Bank",
+            "icon": "money_bag",
+            "at": 151.07
+          }
+        ]
       },
       "start": 117.57,
       "end": 154.89,
       "id": "b4",
-      "director_goal": "Demonstrate capital gains tax trigger upon alienation of property by bank for loan recovery",
+      "director_goal": "Illustrate the shift in tax liability when the bank takes possession for recovery",
       "anchor_phrases": [
-        "Section 45",
-        "Alienation by Bank",
-        "loan recovery"
+        "Discharge his loan",
+        "Alienation of the mortgaged property",
+        "Recovering the loan"
       ],
       "animation_role": "explanation",
       "anchor_alignment": [
         {
-          "phrase": "Section 45",
-          "at": 126.93,
+          "phrase": "Discharge his loan",
+          "at": 136.25,
           "matched": true,
-          "score": 0.944
+          "score": 0.556
         },
         {
-          "phrase": "Alienation by Bank",
+          "phrase": "Alienation of the mortgaged property",
           "at": 151.07,
           "matched": true,
-          "score": 0.894
+          "score": 0.66
         },
         {
-          "phrase": "loan recovery",
-          "at": 120.39,
-          "matched": false,
-          "score": 0.462
+          "phrase": "Recovering the loan",
+          "at": 151.63,
+          "matched": true,
+          "score": 0.514
         }
       ],
       "anchor_match": {
-        "matched": 2,
+        "matched": 3,
         "total": 3
       }
     },
     {
       "layout": "takeaway",
       "title": {
-        "text": "Tax Treatment Summary",
+        "text": "Final Tax Consequence",
         "at": 155.54
       },
-      "voice_sync_text": "ചുരുക്കത്തിൽ, mortgage ചെയ്യുന്ന സമയത്ത് Not a transfer ആയതിനാൽ tax ഇല്ല. Loan payments are exempt from income-tax. എന്നാൽ ബാങ്ക് property sell ചെയ്യുമ്പോൾ അത് Taxable Transfer ആയി മാറുന്നു.",
+      "voice_sync_text": "ചുരുക്കത്തിൽ, ലോൺ ലഭിക്കുമ്പോൾ ടാക്സ് ഇല്ലെങ്കിലും, property വിൽക്കുന്ന taxable at the stage of alienation എന്ന ഘട്ടത്തിൽ capital gains tax liability attracted ആകും. ഇതാണ് reverse mortgage-ന്റെ ടാക്സ് ട്രീറ്റ്‌മെന്റ്.",
       "visual_data": {
         "rules": [
           {
-            "label": "Not a transfer",
-            "detail": "Section 47(xvi) excludes mortgage creation",
-            "icon": "house",
-            "at": 158.57
+            "label": "Taxable at the stage of alienation",
+            "detail": "When bank sells property",
+            "icon": "scales",
+            "at": 166.06
           },
           {
-            "label": "exempt from income-tax",
-            "detail": "Section 10(43) exempts loan installments",
-            "icon": "money_bag",
-            "at": 194.16
-          },
-          {
-            "label": "Taxable Transfer",
-            "detail": "Section 45 applies when bank alienates property",
-            "icon": "gavel",
-            "at": 194.16
+            "label": "Capital gains tax liability attracted",
+            "detail": "Final Tax Impact",
+            "sign": "+",
+            "at": 198.16
           }
         ]
       },
       "start": 155.24,
       "end": 200.4,
       "id": "b5",
-      "director_goal": "Summarize tax-free status during owner lifetime versus taxability on ultimate bank sale",
+      "director_goal": "Summarize the final tax consequence at the stage of alienation",
       "anchor_phrases": [
-        "Not a transfer",
-        "exempt from income-tax",
-        "Taxable Transfer"
+        "Taxable at the stage of alienation",
+        "Capital gains tax liability attracted"
       ],
       "animation_role": "key_fact",
       "anchor_alignment": [
         {
-          "phrase": "Not a transfer",
-          "at": 157.26,
+          "phrase": "Taxable at the stage of alienation",
+          "at": 183.62,
           "matched": true,
-          "score": 0.56
+          "score": 0.554
         },
         {
-          "phrase": "exempt from income-tax",
-          "at": 194.16,
+          "phrase": "Capital gains tax liability attracted",
+          "at": 190.28,
           "matched": true,
-          "score": 0.639
-        },
-        {
-          "phrase": "Taxable Transfer",
-          "at": 193.27,
-          "matched": false,
-          "score": 0.417
+          "score": 0.798
         }
       ],
       "anchor_match": {
         "matched": 2,
-        "total": 3
+        "total": 2
       }
     }
   ],
   "audio_duration_sec": 200.4,
   "anchor_match": {
-    "matched": 11,
+    "matched": 15,
     "total": 15,
-    "rate": 0.733
+    "rate": 1.0
   }
 }
