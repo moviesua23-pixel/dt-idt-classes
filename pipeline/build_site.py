@@ -14,7 +14,7 @@ DATA = ROOT / "redesign_demo" / "data"
 FRONTEND = ROOT / "redesign_demo" / "frontend"
 
 
-def canonical_qid(value: str, fallback: str | None = None) -> str:
+def canonical_qid(value: str, fallback: str | None = None) -> str | None:
     text = str(value or "").strip()
     match = re.search(r"(idt|dt)-?c(\d+)[-_]q(\d+)", text, re.I)
     if match:
@@ -25,15 +25,21 @@ def canonical_qid(value: str, fallback: str | None = None) -> str:
         return f"dt-c{int(match.group(1))}-q{int(match.group(2))}"
     if fallback:
         return canonical_qid(fallback)
-    raise ValueError(f"Not a canonical screenplay question id: {value!r}")
+    return None
 
 
 def bundle_screenplays() -> dict:
     source = DATA / "screenplays"
     records: dict[str, dict] = {}
     for path in sorted(source.glob("*.json")):
-        screenplay = json.loads(path.read_text(encoding="utf-8"))
+        try:
+            screenplay = json.loads(path.read_text(encoding="utf-8"))
+        except Exception:
+            continue
         qid = canonical_qid(screenplay.get("question_id", path.stem), path.stem)
+        if not qid:
+            print(f"Skipping non-canonical question file: {path.name}")
+            continue
         screenplay["question_id"] = qid
         audio_url = str(screenplay.get("audio_url") or "").strip()
         parsed_audio = urlsplit(audio_url)
@@ -58,6 +64,8 @@ def assemble_site(site_dir: Path) -> None:
         if item.is_file():
             target_name = "index.html" if item.name == "index_explainer_studio.html" else item.name
             shutil.copy2(item, site_dir / target_name)
+        elif item.is_dir():
+            shutil.copytree(item, site_dir / item.name, dirs_exist_ok=True)
     for relative in ("screenplays", "screenplays.bundle.json", "pipeline_questions.json", "mindmaps.json", "provisions.json", "catalog.json", "audio", "img"):
         source = DATA / relative
         if source.exists():
