@@ -633,6 +633,9 @@
   function computeListTimeline(actor) {
     if (!actor || !actor.isList) return;
     const items = actor.items || [];
+    if (items.length > 0 && items[0].startMs !== undefined && actor.totalTimelineMs) {
+      return;
+    }
     const baseOffsetMs = (actor.startMs !== undefined && actor.startMs !== null) ? actor.startMs : 350;
     let runningTimeMs = baseOffsetMs + 400; // card intro
 
@@ -5300,11 +5303,14 @@
     const items = actor.items || [];
     const N = Math.max(1, items.length);
     const design = actor.design || 1;
+    const listStartMs = (actor.startMs !== undefined && actor.startMs !== null) ? actor.startMs : 0;
+    if (timeMs < listStartMs) return;
 
-    // Card Intro animation
-    const cardIntroT = isSettle ? 1.0 : Math.min(1.0, Math.max(0.0, timeMs / 400));
+    // Card Intro animation relative to listStartMs
+    const timeSinceListStart = Math.max(0, timeMs - listStartMs);
+    const cardIntroT = Math.min(1.0, Math.max(0.0, timeSinceListStart / 400));
     const cardScale = isSettle ? 1.0 : window.TWEEN.ease.easeOutBack(cardIntroT);
-    const cardAlpha = isSettle ? 1.0 : Math.min(1.0, cardIntroT * 1.5);
+    const cardAlpha = Math.min(1.0, cardIntroT * 1.5);
     if (cardAlpha <= 0) return;
 
     ctx.save();
@@ -5433,7 +5439,7 @@
     // Items
     items.forEach((item, idx) => {
       const itStart = (item.startMs !== undefined && item.startMs !== null) ? item.startMs : (350 + idx * 500);
-      if (!isSettle && timeMs < itStart) return;
+      if (timeMs < itStart) return;
 
       const itT = isSettle ? 1.0 : Math.min(1.0, (timeMs - itStart) / 350);
       const easeX = isSettle ? 0 : (1.0 - window.TWEEN.ease.easeOutCubic(itT)) * -22;
@@ -5559,7 +5565,7 @@
     // Items
     items.forEach((item, idx) => {
       const itStart = (item.startMs !== undefined && item.startMs !== null) ? item.startMs : (350 + idx * 500);
-      if (!isSettle && timeMs < itStart) return;
+      if (timeMs < itStart) return;
 
       const itT = isSettle ? 1.0 : Math.min(1.0, (timeMs - itStart) / 350);
       const easeX = isSettle ? 0 : (1.0 - window.TWEEN.ease.easeOutCubic(itT)) * -20;
@@ -5694,7 +5700,7 @@
     // Items
     items.forEach((item, idx) => {
       const itStart = (item.startMs !== undefined && item.startMs !== null) ? item.startMs : (350 + idx * 500);
-      if (!isSettle && timeMs < itStart) return;
+      if (timeMs < itStart) return;
 
       const itT = isSettle ? 1.0 : Math.min(1.0, (timeMs - itStart) / 350);
       const easeX = isSettle ? 0 : (1.0 - window.TWEEN.ease.easeOutCubic(itT)) * -18;
@@ -5778,7 +5784,7 @@
     // Capsule Rows
     items.forEach((item, idx) => {
       const itStart = (item.startMs !== undefined && item.startMs !== null) ? item.startMs : (350 + idx * 500);
-      if (!isSettle && timeMs < itStart) return;
+      if (timeMs < itStart) return;
 
       const itT = isSettle ? 1.0 : Math.min(1.0, (timeMs - itStart) / 350);
       const easeX = isSettle ? 0 : (1.0 - window.TWEEN.ease.easeOutCubic(itT)) * -20;
@@ -5895,7 +5901,7 @@
     // Rows
     items.forEach((item, idx) => {
       const itStart = (item.startMs !== undefined && item.startMs !== null) ? item.startMs : (350 + idx * 500);
-      if (!isSettle && timeMs < itStart) return;
+      if (timeMs < itStart) return;
 
       const itT = isSettle ? 1.0 : Math.min(1.0, (timeMs - itStart) / 350);
       const easeX = isSettle ? 0 : (1.0 - window.TWEEN.ease.easeOutCubic(itT)) * -22;
@@ -6594,8 +6600,8 @@
   function renderCustomScriptEngine(ctx, payload = {}, bounds, phaseState, themeColors) {
     const actors = payload.actors || [];
     const p = phaseState.progress;
-    const isSettle = p >= 0.65;
-    const effectiveP = isSettle ? 1.0 : window.TWEEN.remap(p, 0.10, 0.65, 0, 1);
+    const isSettle = p >= 0.98;
+    const effectiveP = isSettle ? 1.0 : window.TWEEN.remap(p, 0.10, 0.98, 0, 1);
     const durationMs = payload.duration_ms || 5400;
     const timeMs = p * durationMs;
 

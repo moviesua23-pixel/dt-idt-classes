@@ -1,0 +1,166 @@
+[
+  {
+    "slide_idx": 1,
+    "start_ms": 0,
+    "end_ms": 58680,
+    "duration_ms": 58680,
+    "cues": [
+      {
+        "part": 1,
+        "file": "slide_1_part_1.mp3",
+        "duration_ms": 16840,
+        "slide_rel_start_ms": 0,
+        "slide_rel_end_ms": 16840,
+        "global_start_ms": 0,
+        "global_end_ms": 16840,
+        "text": "Makkale, CA Final Direct Tax padikkumbol block of assets-um section 32 depreciation-um romba important aanu! P & M block-il 15% and 40% rates engane work cheyyunnu, put to use days engane affect cheyyunnu ennathu nokkaam."
+      },
+      {
+        "part": 2,
+        "file": "slide_1_part_2.mp3",
+        "duration_ms": 10480,
+        "slide_rel_start_ms": 17120,
+        "slide_rel_end_ms": 27600,
+        "global_start_ms": 17120,
+        "global_end_ms": 27600,
+        "text": "Ithu full normal depreciation 15% kittum, pinne eligible manufacturing enterprise aanengil additional depreciation 20% koodi claim cheyyam!"
+      },
+      {
+        "part": 3,
+        "file": "slide_1_part_3.mp3",
+        "duration_ms": 12680,
+        "slide_rel_start_ms": 27880,
+        "slide_rel_end_ms": 40560,
+        "global_start_ms": 27880,
+        "global_end_ms": 40560,
+        "text": "Oru financial year-il 180 days-il kuravaanu asset put to use cheythathu enkil, normal depreciation 7.5% aayi restrict cheyyum, additional depreciation 10% aakum."
+      },
+      {
+        "part": 4,
+        "file": "slide_1_part_4.mp3",
+        "duration_ms": 9720,
+        "slide_rel_start_ms": 40840,
+        "slide_rel_end_ms": 50560,
+        "global_start_ms": 40840,
+        "global_end_ms": 50560,
+        "text": "Examples polulla Windmills 40% block-il varum. 180 days-il kooduthal use cheythal full 40% normal depreciation kittum."
+      },
+      {
+        "part": 5,
+        "file": "slide_1_part_5.mp3",
+        "duration_ms": 7840,
+        "slide_rel_start_ms": 50840,
+        "slide_rel_end_ms": 58680,
+        "global_start_ms": 50840,
+        "global_end_ms": 58680,
+        "text": "Computers or high-rate machinery 180 days-il kuravaanu use cheythathu enkil, rate 20% aayi reduce aavum!"
+      }
+    ]
+  },
+  {
+    "slide_idx": 2,
+    "start_ms": 59460,
+    "end_ms": 105380,
+    "duration_ms": 45920,
+    "cues": [
+      {
+        "part": 1,
+        "file": "slide_2_part_1.mp3",
+        "duration_ms": 11560,
+        "slide_rel_start_ms": 0,
+        "slide_rel_end_ms": 11560,
+        "global_start_ms": 59460,
+        "global_end_ms": 71020,
+        "text": "PQR Textile Ltd. poleulla manufacturing companies-kku pudhiya machinery install cheythal additional depreciation 20% kittum. Pakshe conditions strict aanu ketto."
+      },
+      {
+        "part": 2,
+        "file": "slide_2_part_2.mp3",
+        "duration_ms": 8400,
+        "slide_rel_start_ms": 11840,
+        "slide_rel_end_ms": 20240,
+        "global_start_ms": 71300,
+        "global_end_ms": 79700,
+        "text": "Company must be engaged in manufacture or production of articles or things to claim section 32(1)(iia)."
+      },
+      {
+        "part": 3,
+        "file": "slide_2_part_3.mp3",
+        "duration_ms": 5840,
+        "slide_rel_start_ms": 20520,
+        "slide_rel_end_ms": 26360,
+        "global_start_ms": 79980,
+        "global_end_ms": 85820,
+        "text": "180 days or more-o, atho 180 days-il kuravo ennathu check cheyyuka."
+      },
+      {
+        "part": 4,
+        "file": "slide_2_part_4.mp3",
+        "duration_ms": 11080,
+        "slide_rel_start_ms": 26640,
+        "slide_rel_end_ms": 37720,
+        "global_start_ms": 86100,
+        "global_end_ms": 97180,
+        "text": "180 days-il kooduthal enkil full 20%, kuravaanengil 50% mathram yaathoru thadassavum illathe 10% aayi restriction varum."
+      },
+      {
+        "part": 5,
+        "file": "slide_2_part_5.mp3",
+        "duration_ms": 7920,
+        "slide_rel_start_ms": 38000,
+        "slide_rel_end_ms": 45920,
+        "global_start_ms": 97460,
+        "global_end_ms": 105380,
+        "text": "Oru financial year-il asset acquire cheythittu put to use ey cheythillengil, oru depreciation-um claim cheyyan pattilla!"
+      }
+    ]
+  },
+  {
+    "slide_idx": 3,
+    "start_ms": 106160,
+    "end_ms": 144680,
+    "duration_ms": 38520,
+    "cues": [
+      {
+        "part": 1,
+        "file": "slide_3_part_1.mp3",
+        "duration_ms": 10600,
+        "slide_rel_start_ms": 0,
+        "slide_rel_end_ms": 10600,
+        "global_start_ms": 106160,
+        "global_end_ms": 116760,
+        "text": "PQR Textile Ltd. textile fabrics manufacture cheyyunnathu kondu avaru eligible manufacturing unit aanu, so additional depreciation conditions check cheyyanam."
+      },
+      {
+        "part": 2,
+        "file": "slide_3_part_2.mp3",
+        "duration_ms": 9320,
+        "slide_rel_start_ms": 10880,
+        "slide_rel_end_ms": 20200,
+        "global_start_ms": 117040,
+        "global_end_ms": 126360,
+        "text": "Acquisition cost-kku payment account payee cheque, ECS, or bank transfer vazhi cheyyanam, warna actual cost computation-il problem varum."
+      },
+      {
+        "part": 3,
+        "file": "slide_3_part_3.mp3",
+        "duration_ms": 9360,
+        "slide_rel_start_ms": 20480,
+        "slide_rel_end_ms": 29840,
+        "global_start_ms": 126640,
+        "global_end_ms": 136000,
+        "text": "Windmills 40% block-il varum, athupole lorries used for transporting goods to sales depots-um block calculation-il sradhikkuka."
+      },
+      {
+        "part": 4,
+        "file": "slide_3_part_4.mp3",
+        "duration_ms": 8400,
+        "slide_rel_start_ms": 30120,
+        "slide_rel_end_ms": 38520,
+        "global_start_ms": 136280,
+        "global_end_ms": 144680,
+        "text": "Fork-lift trucks used inside factory premises are part of plant and machinery, subject to 180-days threshold check."
+      }
+    ]
+  }
+]

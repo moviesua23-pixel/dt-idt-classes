@@ -251,6 +251,16 @@ def export_sheets_to_local_cache():
                 q_entry["is_kinetic_prompt"] = True
             if drive_folder:
                 q_entry["drive_audio_id"] = drive_folder
+            timings_file = os.path.join(PROJECT_ROOT, 'data', 'audio', subj.lower(), f"ch{ch}", f"q{qn}", 'timings.json')
+            if os.path.exists(timings_file):
+                try:
+                    with open(timings_file, 'r', encoding='utf-8') as tf:
+                        timings_obj = json.load(tf)
+                        q_entry["audio_timings"] = timings_obj
+                        p_entry["audio_timings"] = timings_obj
+                except Exception:
+                    pass
+
             export_data['questions'].append(q_entry)
 
             p_entry = {
@@ -265,6 +275,8 @@ def export_sheets_to_local_cache():
             if is_kinetic_prompt:
                 p_entry["presentation_prompt"] = presentation_prompt
                 p_entry["is_kinetic_prompt"] = True
+            if "audio_timings" in q_entry:
+                p_entry["audio_timings"] = q_entry["audio_timings"]
             export_data['provisions'].append(p_entry)
 
         paths = [

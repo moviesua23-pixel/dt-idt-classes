@@ -339,6 +339,48 @@ def synthesize_and_upload_prompt_audio(
     combined.export(master_mp3_path, format="mp3")
     print(f"  [MASTER AUDIO COMPILED] Duration: {len(combined)/1000.0:.1f}s -> {master_mp3_path}")
 
+    # Build and save exact millisecond timing manifest for shapes & dialogues
+    try:
+        slides_timings = []
+        c_time_ms = 0
+        item_pause_ms = 280
+        slide_pause_ms = 500
+        for s_info in slides:
+            s_idx = s_info['slide_idx']
+            diags = s_info['dialogues']
+            s_start_ms = c_time_ms
+            cues = []
+            for d_idx, d_text in enumerate(diags):
+                c_path = os.path.join(output_dir, f"slide_{s_idx}_part_{d_idx+1}.mp3")
+                c_dur = len(AudioSegment.from_mp3(c_path)) if os.path.exists(c_path) else 3000
+                cue_rel_start = c_time_ms - s_start_ms
+                cues.append({
+                    "part": d_idx + 1,
+                    "duration_ms": c_dur,
+                    "slide_rel_start_ms": cue_rel_start,
+                    "slide_rel_end_ms": cue_rel_start + c_dur,
+                    "global_start_ms": c_time_ms,
+                    "global_end_ms": c_time_ms + c_dur,
+                    "text": d_text
+                })
+                c_time_ms += c_dur + item_pause_ms
+            s_end_ms = c_time_ms - item_pause_ms
+            slides_timings.append({
+                "slide_idx": s_idx,
+                "start_ms": s_start_ms,
+                "end_ms": s_end_ms,
+                "duration_ms": s_end_ms - s_start_ms,
+                "cues": cues
+            })
+            c_time_ms += slide_pause_ms
+
+        timings_path = os.path.join(output_dir, "timings.json")
+        with open(timings_path, 'w', encoding='utf-8') as tf:
+            json.dump(slides_timings, tf, indent=2)
+        print(f"  [TIMINGS MANIFEST] Saved exact cue timestamps -> {timings_path}")
+    except Exception as ex:
+        print(f"  [WARN] Failed to save timings manifest: {ex}")
+
     # Upload to Google Drive
     parent_folder_id = VOICE_IDT_FOLDER_ID if subject.upper() == 'IDT' else VOICE_DT_FOLDER_ID
     file_name = f"{subject.upper()}_Ch{chapter_no}_Q{q_num}_Presentation.mp3"
