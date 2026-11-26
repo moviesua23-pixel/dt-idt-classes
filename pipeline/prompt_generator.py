@@ -106,7 +106,7 @@ def generate_presentation_prompt(
             try:
                 with open(prompt_cache_file, 'r', encoding='utf-8') as f:
                     cached_prompt = f.read().strip()
-                if cached_prompt and not cached_prompt.startswith('{') and not cached_prompt.startswith('['):
+                if cached_prompt and not cached_prompt.startswith('{') and not cached_prompt.startswith('[') and len(cached_prompt) >= 500 and ('SLIDE 2' in cached_prompt or 'SCENE 2' in cached_prompt):
                     print(f"  [PROMPT CACHE] Reusing cached Kinetic Studio prompt for {subject} Ch{chapter_no} Q{q_num}")
                     return cached_prompt
             except Exception:
@@ -154,8 +154,11 @@ Output only the raw script text.
 
     models_to_try = [
         'gemini-3.8-flash',
+        'gemini-3.7-flash',
         'gemini-3.5-flash',
-        'gemini-3.5-flash-lite'
+        'gemini-3.5-flash-lite',
+        'gemini-2.5-flash-lite',
+        'gemini-flash-lite-latest'
     ]
 
     def _call(client):
@@ -168,20 +171,27 @@ Output only the raw script text.
                     config=types.GenerateContentConfig(
                         system_instruction=PROMPT_GENERATOR_SYSTEM_PROMPT,
                         temperature=0.3,
-                        max_output_tokens=2048
+                        max_output_tokens=8192
                     )
                 )
-                return response.text.strip()
+                if not response.candidates:
+                    continue
+                cand = response.candidates[0]
+                text = response.text.strip() if response.text else ""
+                # Strip markdown code fences if wrapped
+                text = re.sub(r'^```[\w]*\s*', '', text)
+                text = re.sub(r'\s*```$', '', text).strip()
+                # Ensure the generated script is complete and not truncated
+                if len(text) >= 500 and ('SLIDE 2' in text or 'SCENE 2' in text):
+                    return text
+                elif text:
+                    print(f"  [WARN] Model {m} returned truncated script ({len(text)} chars). Trying next model...")
             except Exception as e:
                 last_err = e
                 continue
         raise last_err
 
-    raw_script = rotator.execute_with_retry(_call)
-    # Strip backticks if returned inside code blocks
-    raw_script = re.sub(r'^```[\w]*\s*', '', raw_script)
-    raw_script = re.sub(r'\s*```$', '', raw_script)
-    cleaned_prompt = raw_script.strip()
+    cleaned_prompt = rotator.execute_with_retry(_call)
 
     if prompt_cache_file and cleaned_prompt:
         try:
@@ -286,11 +296,25 @@ def synthesize_and_upload_prompt_audio(
         current_slide_segs = []
         for d_idx, d_text in enumerate(dialogues):
             clip_path = os.path.join(output_dir, f"slide_{s_idx}_part_{d_idx+1}.mp3")
-            if os.path.exists(clip_path) and os.path.getsize(clip_path) > 1000:
+            txt_path = os.path.join(output_dir, f"slide_{s_idx}_part_{d_idx+1}.txt")
+            text_matches = False
+            if os.path.exists(clip_path) and os.path.getsize(clip_path) > 1000 and os.path.exists(txt_path):
+                try:
+                    with open(txt_path, 'r', encoding='utf-8') as f:
+                        text_matches = (f.read().strip() == d_text.strip())
+                except Exception:
+                    text_matches = False
+
+            if text_matches:
                 print(f"    [TTS Slide {s_idx} Part {d_idx+1}/{len(dialogues)}] Reusing existing audio clip: {os.path.basename(clip_path)}")
             else:
                 print(f"    [TTS Slide {s_idx} Part {d_idx+1}/{len(dialogues)}] Synthesizing Aoede voice ({len(d_text.split())} words)...")
                 synthesize_point_audio(d_text, clip_path)
+                try:
+                    with open(txt_path, 'w', encoding='utf-8') as f:
+                        f.write(d_text.strip())
+                except Exception:
+                    pass
             if os.path.exists(clip_path):
                 seg = AudioSegment.from_mp3(clip_path)
                 current_slide_segs.append(seg)

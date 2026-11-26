@@ -1,4 +1,31 @@
-SLIDE 1: Statutory Framework of Section 32 Depreciation (Cards Design)
+SLIDE 1: Section 32 Depreciation Overview for Plant and Machinery (Cards Design)
 theme (indigo)
-heading (Section 32 Income-tax Act, 1961) (Statutory Framework for Depreciation Allowance)
-shape (man) (CA Rajesh) (left center) (dialogue: "Welcome students! Section 32 study cheyyumbo main aayi nokk
+heading (Section 32) (Depreciation Allowance & Block of Assets)
+shape (man) (CA Rajesh) (left center) (dialogue: "Makkale, CA Final Direct Tax padikkumbol block of assets-um section 32 depreciation-um romba important aanu! P & M block-il 15% and 40% rates engane work cheyyunnu, put to use days engane affect cheyyunnu ennathu nokkaam.")
+shape (list, cards) (Plant and Machinery Categories) (right center) [
+  (Plant & Machinery 15% Block Put to use for 180 days or more) (dialogue: "Ithu full normal depreciation 15% kittum, pinne eligible manufacturing enterprise aanengil additional depreciation 20% koodi claim cheyyam!")
+  (Plant & Machinery 15% Block Put to use for less than 180 days) (dialogue: "Oru financial year-il 180 days-il kuravaanu asset put to use cheythathu enkil, normal depreciation 7.5% aayi restrict cheyyum, additional depreciation 10% aakum.")
+  (Plant & Machinery 40% Block Put to use for 180 days or more) (dialogue: "Examples polulla Windmills 40% block-il varum. 180 days-il kooduthal use cheythal full 40% normal depreciation kittum.")
+  (Plant & Machinery 40% Block Put to use for less than 180 days) (dialogue: "Computers or high-rate machinery 180 days-il kuravaanu use cheythathu enkil, rate 20% aayi reduce aavum!")
+]
+
+SLIDE 2: Additional Depreciation & Operational Conditions (Timeline Design)
+theme (emerald)
+heading (Section 32(1)(iia) Additional Depreciation) (Manufacturing Enterprise Rules)
+shape (woman) (Tax Officer) (left center) (dialogue: "PQR Textile Ltd. poleulla manufacturing companies-kku pudhiya machinery install cheythal additional depreciation 20% kittum. Pakshe conditions strict aanu ketto.")
+shape (list, timeline) (Operational Steps and Conditions) (right center) [
+  (Acquisition of New Plant and Machinery by Eligible Enterprise) (dialogue: "Company must be engaged in manufacture or production of articles or things to claim section 32(1)(iia).")
+  (Check Put to Use Period in Previous Year) (dialogue: "180 days or more-o, atho 180 days-il kuravo ennathu check cheyyuka.")
+  (Computation at Full Rate @ 20% or Restricted Rate @ 10%) (dialogue: "180 days-il kooduthal enkil full 20%, kuravaanengil 50% mathram yaathoru thadassavum illathe 10% aayi restriction varum.")
+  (Zero Depreciation if Asset Not Put to Use at All) (dialogue: "Oru financial year-il asset acquire cheythittu put to use ey cheythillengil, oru depreciation-um claim cheyyan pattilla!")
+]
+
+SLIDE 3: Statutory Provisos and Exam Computation Logic (Clause Design)
+theme (amber)
+heading (Section 32 Exam Application) (PQR Textile Ltd. Computation Rules)
+shape (list, clause) (Key Statutory Conditions & Exclusions) (center) [
+  (Clause A: Eligibility for Manufacturing Units) (dialogue: "PQR Textile Ltd. textile fabrics manufacture cheyyunnathu kondu avaru eligible manufacturing unit aanu, so additional depreciation conditions check cheyyanam.")
+  (Clause B: Mode of Payment Restrictions) (dialogue: "Acquisition cost-kku payment account payee cheque, ECS, or bank transfer vazhi cheyyanam, warna actual cost computation-il problem varum.")
+  (Clause C: Windmills and Lorries Classification) (dialogue: "Windmills 40% block-il varum, athupole lorries used for transporting goods to sales depots-um block calculation-il sradhikkuka.")
+  (Clause D: Fork-lift Trucks Inside Factory) (dialogue: "Fork-lift trucks used inside factory premises are part of plant and machinery, subject to 180-days threshold check.")
+]

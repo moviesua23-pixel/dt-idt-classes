@@ -277,9 +277,10 @@ def export_sheets_to_local_cache():
                 json.dump(export_data, f, ensure_ascii=False, indent=2)
         print("  [CACHE EXPORTED] Saved latest pipeline questions to local cache JSON.")
 
-        # Embed latest snapshot into HTML files (strictly excluding untouched index.html)
+        # Embed latest snapshot into HTML files
         html_files = [
-            os.path.join(PROJECT_ROOT, 'redesign_demo', 'frontend', 'index_with_concept_video.html')
+            os.path.join(PROJECT_ROOT, 'redesign_demo', 'frontend', 'index_with_concept_video.html'),
+            os.path.join(PROJECT_ROOT, 'redesign_demo', 'frontend', 'index.html')
         ]
         pattern = r'(<script type="application/json" id="pipeline-data">)[\s\S]*?(</script>)'
         json_str = json.dumps(export_data, ensure_ascii=False)
@@ -418,9 +419,9 @@ def run_pipeline(limit=None, target_chapter=None, target_question=None, target_s
             drive_id = existing.get('drive_id', '')
             col7_val = existing.get('summary_json', '').strip()
             # Under the new Universal Kinetic Presentation Studio schema, a question is complete ONLY if:
-            # 1. Col H (col7_val) is a clean kinetic DSL prompt (does NOT start with '{' or '[')
+            # 1. Col H (col7_val) is a complete kinetic DSL prompt (does NOT start with '{' or '[', >= 500 chars)
             # 2. Col I (drive_id) has a valid Google Drive audio ID
-            is_kinetic_done = bool(col7_val and not col7_val.startswith('{') and not col7_val.startswith('[') and drive_id and is_audio_ready(drive_id))
+            is_kinetic_done = bool(col7_val and not col7_val.startswith('{') and not col7_val.startswith('[') and len(col7_val) >= 500 and drive_id and is_audio_ready(drive_id))
 
             # 1. Skip if already complete with modern Kinetic Presentation Prompt & Drive Audio
             if not force and is_kinetic_done:
@@ -450,7 +451,11 @@ def run_pipeline(limit=None, target_chapter=None, target_question=None, target_s
         pdf_file = get_pdf_path(subject)
         pdf_exists = os.path.exists(pdf_file)
 
-        if has_cached and (not force or not pdf_exists):
+        if existing and existing.get('q_text') and existing.get('ans_text'):
+            q_text = existing.get('q_text')
+            ans_text = existing.get('ans_text')
+            q_title = existing.get('topic', f"Ch{chapter_no} Question {q_num}")
+        elif has_cached and (not force or not pdf_exists):
             q_rec = extracted_map[map_key]
             q_text = q_rec.get('question_text', '')
             ans_text = q_rec.get('answer_text', '')
