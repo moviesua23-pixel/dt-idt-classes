@@ -25,7 +25,7 @@ on:
       only_new:
         description: 'Process strictly brand new questions not yet in Google Sheets (true/false)'
         required: false
-        default: 'true'
+        default: 'false'
       limit:
         description: 'Max new questions to process in this run (leave blank for unlimited)'
         required: false
@@ -81,7 +81,7 @@ jobs:
           fi
           if [ "${{ github.event.inputs.force }}" = "true" ]; then
             CLI_ARGS="$CLI_ARGS --force"
-          elif [ "${{ github.event.inputs.only_new }}" = "true" ] || [ -z "${{ github.event.inputs.question }}" ]; then
+          elif [ "${{ github.event.inputs.only_new }}" = "true" ]; then
             CLI_ARGS="$CLI_ARGS --only-new"
           fi
           if [ -n "${{ github.event.inputs.limit }}" ]; then

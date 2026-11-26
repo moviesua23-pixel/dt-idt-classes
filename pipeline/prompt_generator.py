@@ -88,12 +88,30 @@ def generate_presentation_prompt(
     prov_summary_md: str,
     q_text: str = "",
     ans_text: str = "",
-    subject: str = "DT"
+    subject: str = "DT",
+    chapter_no: Optional[int] = None,
+    q_num: Optional[int] = None
 ) -> str:
     """
     Calls Gemini API via KeyRotator to generate a structured Kinetic Presentation Prompt
     explaining the Column 6 Provision Summary in the exact Studio DSL format.
+    Caches prompts to disk to save quota across resumption runs.
     """
+    prompt_cache_file = None
+    if chapter_no is not None and q_num is not None:
+        cache_dir = os.path.join(PROJECT_ROOT, 'data', 'prompts', subject.lower(), f'ch{chapter_no}')
+        os.makedirs(cache_dir, exist_ok=True)
+        prompt_cache_file = os.path.join(cache_dir, f"q{q_num}.prompt.txt")
+        if os.path.exists(prompt_cache_file):
+            try:
+                with open(prompt_cache_file, 'r', encoding='utf-8') as f:
+                    cached_prompt = f.read().strip()
+                if cached_prompt and not cached_prompt.startswith('{') and not cached_prompt.startswith('['):
+                    print(f"  [PROMPT CACHE] Reusing cached Kinetic Studio prompt for {subject} Ch{chapter_no} Q{q_num}")
+                    return cached_prompt
+            except Exception:
+                pass
+
     user_content = f"""Subject: {subject}
 Statutory Topic: {canonical_topic}
 
@@ -163,7 +181,16 @@ Output only the raw script text.
     # Strip backticks if returned inside code blocks
     raw_script = re.sub(r'^```[\w]*\s*', '', raw_script)
     raw_script = re.sub(r'\s*```$', '', raw_script)
-    return raw_script.strip()
+    cleaned_prompt = raw_script.strip()
+
+    if prompt_cache_file and cleaned_prompt:
+        try:
+            with open(prompt_cache_file, 'w', encoding='utf-8') as f:
+                f.write(cleaned_prompt)
+        except Exception:
+            pass
+
+    return cleaned_prompt
 
 def extract_dialogues_from_prompt(prompt_text: str) -> List[Dict[str, Any]]:
     """
@@ -259,8 +286,11 @@ def synthesize_and_upload_prompt_audio(
         current_slide_segs = []
         for d_idx, d_text in enumerate(dialogues):
             clip_path = os.path.join(output_dir, f"slide_{s_idx}_part_{d_idx+1}.mp3")
-            print(f"    [TTS Slide {s_idx} Part {d_idx+1}/{len(dialogues)}] Synthesizing Aoede voice ({len(d_text.split())} words)...")
-            synthesize_point_audio(d_text, clip_path)
+            if os.path.exists(clip_path) and os.path.getsize(clip_path) > 1000:
+                print(f"    [TTS Slide {s_idx} Part {d_idx+1}/{len(dialogues)}] Reusing existing audio clip: {os.path.basename(clip_path)}")
+            else:
+                print(f"    [TTS Slide {s_idx} Part {d_idx+1}/{len(dialogues)}] Synthesizing Aoede voice ({len(d_text.split())} words)...")
+                synthesize_point_audio(d_text, clip_path)
             if os.path.exists(clip_path):
                 seg = AudioSegment.from_mp3(clip_path)
                 current_slide_segs.append(seg)

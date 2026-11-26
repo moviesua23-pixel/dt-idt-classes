@@ -249,6 +249,8 @@ def export_sheets_to_local_cache():
             if is_kinetic_prompt:
                 q_entry["presentation_prompt"] = presentation_prompt
                 q_entry["is_kinetic_prompt"] = True
+            if drive_folder:
+                q_entry["drive_audio_id"] = drive_folder
             export_data['questions'].append(q_entry)
 
             p_entry = {
@@ -420,14 +422,14 @@ def run_pipeline(limit=None, target_chapter=None, target_question=None, target_s
             # 2. Col I (drive_id) has a valid Google Drive audio ID
             is_kinetic_done = bool(col7_val and not col7_val.startswith('{') and not col7_val.startswith('[') and drive_id and is_audio_ready(drive_id))
 
-            # If user requested only new questions, or batch running across question bank without target_question
-            if only_new or (not force and not target_question and not regenerate_legacy and is_kinetic_done):
+            # 1. Skip if already complete with modern Kinetic Presentation Prompt & Drive Audio
+            if not force and is_kinetic_done:
                 print(f"  [SKIP EXISTING] {subject} Ch{chapter_no} Q{q_num} already complete with Kinetic Studio Prompt & Audio ('{topic}'). Skipping.")
                 continue
 
-            # If targeting a specific question without --force and it already has modern kinetic prompt & audio complete
-            if not force and is_kinetic_done:
-                print(f"\n---> [{subject} Ch{chapter_no} Q{q_num} ({q_idx+1}/{total_questions})] Already 100% complete with Kinetic Presentation Prompt & Audio. Skipping!")
+            # 2. If user explicitly requested strictly brand-new questions not yet present in Sheets
+            if only_new and existing:
+                print(f"  [SKIP ONLY-NEW] {subject} Ch{chapter_no} Q{q_num} already in Sheets ({'Kinetic Complete' if is_kinetic_done else 'Legacy Schema'}). Skipping.")
                 continue
 
             if existing.get('summary_json'):
@@ -546,7 +548,9 @@ def run_pipeline(limit=None, target_chapter=None, target_question=None, target_s
                 prov_summary_md=formatted_provision_matrix,
                 q_text=q_text,
                 ans_text=ans_text,
-                subject=subject
+                subject=subject,
+                chapter_no=chapter_no,
+                q_num=q_num
             )
 
             # 2. Synthesize Aoede expressive voice for prompt dialogues and upload to Google Drive
