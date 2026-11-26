@@ -82,7 +82,7 @@ def is_director_authored_screenplay(sp_data: Any) -> bool:
 
 # Configuration
 SERVICE_ACCOUNT_FILE = os.path.join(PROJECT_ROOT, 'credentials.json')
-SPREADSHEET_ID = os.environ.get('SPREADSHEET_ID', '14O9I8ZAjnIp8i4SFtM0xZX-y62f5BNtdh25ibSC7ChE')
+SPREADSHEET_ID = os.environ.get('SPREADSHEET_ID') or '14O9I8ZAjnIp8i4SFtM0xZX-y62f5BNtdh25ibSC7ChE'
 
 # Authenticate Google Services
 scopes = [
