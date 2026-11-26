@@ -1,0 +1,479 @@
+// -*- coding: utf-8 -*-
+// static/js/layouts/frames.js
+// Statutory Kinetic Studio - 5 Data-Driven Layout Archetype Frame Renderers
+// Renders dynamic, law-agnostic structural framing inside mainStageRegion (1184x480).
+
+(function() {
+  const FRAMES = {
+    /**
+     * 1. BILATERAL SPLIT
+     * Reads: left_label, right_label, left_role, right_role, status
+     * Leaves central corridor (w: 520, h: 480) strictly for kinetic action engine
+     */
+    layout_bilateral_split(ctx, payload = {}, rect, progress, themeColors) {
+      const enterT = window.TWEEN.ease.easeOutCubic(progress);
+      const isReduced = window.THEME.prefersReducedMotion();
+
+      const leftLabel = payload.left_label || "Party A (Promisor / Assessee)";
+      const leftRole = payload.left_role || "Transferor / Initiator";
+      const rightLabel = payload.right_label || "Party B (Promisee / Department)";
+      const rightRole = payload.right_role || "Transferee / Adjudicator";
+
+      const cardW = 280;
+      const cardH = 360;
+      const cardY = rect.y + (rect.h - cardH) / 2;
+
+      // Left Column
+      const leftX = rect.x + (isReduced ? 0 : (1 - enterT) * -20);
+      ctx.save();
+      ctx.globalAlpha = enterT;
+
+      // Card Background & Shadow
+      ctx.fillStyle = themeColors.bgCard;
+      ctx.strokeStyle = window.THEME.colors.accent.indigo.border;
+      ctx.lineWidth = window.THEME.strokeWidth;
+      ctx.beginPath();
+      ctx.roundRect(leftX, cardY, cardW, cardH, window.THEME.radii.lg);
+      ctx.fill();
+      ctx.stroke();
+
+      // Top Accent Header
+      ctx.fillStyle = window.THEME.colors.accent.indigo.light;
+      ctx.beginPath();
+      ctx.roundRect(leftX, cardY, cardW, 56, [window.THEME.radii.lg, window.THEME.radii.lg, 0, 0]);
+      ctx.fill();
+      ctx.stroke();
+
+      // Left Icon & Role Tag
+      window.ICONS.draw(ctx, "user", leftX + 32, cardY + 28, 22, window.THEME.colors.accent.indigo.main);
+      ctx.font = window.THEME.typography.monoBadge;
+      ctx.fillStyle = window.THEME.colors.accent.indigo.main;
+      ctx.textAlign = "left";
+      ctx.textBaseline = "middle";
+      ctx.fillText("FIRST PARTY", leftX + 54, cardY + 28);
+
+      function renderPartyMeta(text, role, startX, topY, maxW) {
+        ctx.font = window.THEME.typography.titleBold;
+        ctx.fillStyle = themeColors.textPrimary;
+        ctx.textBaseline = "top";
+        const words = (text || "").split(" ");
+        let l1 = "", l2 = "";
+        for (let w of words) {
+          let test = l1 ? (l1 + " " + w) : w;
+          if (ctx.measureText(test).width <= maxW) {
+            l1 = test;
+          } else if (!l2) {
+            l2 = w;
+          } else {
+            let test2 = l2 + " " + w;
+            if (ctx.measureText(test2).width <= maxW) {
+              l2 = test2;
+            } else {
+              while (l2.length > 3 && ctx.measureText(l2 + "…").width > maxW) {
+                l2 = l2.slice(0, -1);
+              }
+              l2 += "…";
+              break;
+            }
+          }
+        }
+        ctx.fillText(l1, startX, topY);
+        let nextY = topY + 22;
+        if (l2) {
+          ctx.fillText(l2, startX, nextY);
+          nextY += 24;
+        } else {
+          nextY += 8;
+        }
+
+        ctx.font = window.THEME.typography.body;
+        ctx.fillStyle = themeColors.textSecondary;
+        let dispRole = role || "";
+        if (ctx.measureText(dispRole).width > maxW) {
+          while (dispRole.length > 3 && ctx.measureText(dispRole + "…").width > maxW) {
+            dispRole = dispRole.slice(0, -1);
+          }
+          dispRole += "…";
+        }
+        ctx.fillText(dispRole, startX, nextY);
+
+        // Divider
+        ctx.strokeStyle = themeColors.border;
+        ctx.beginPath();
+        ctx.moveTo(startX, nextY + 24);
+        ctx.lineTo(startX + maxW, nextY + 24);
+        ctx.stroke();
+      }
+
+      // Party Label & Subtitle (Left)
+      renderPartyMeta(leftLabel, leftRole, leftX + 20, cardY + 80, cardW - 40);
+
+      // Right Column
+      const rightX = rect.x + rect.w - cardW + (isReduced ? 0 : (1 - enterT) * 20);
+      ctx.fillStyle = themeColors.bgCard;
+      ctx.strokeStyle = window.THEME.colors.accent.emerald.border;
+      ctx.beginPath();
+      ctx.roundRect(rightX, cardY, cardW, cardH, window.THEME.radii.lg);
+      ctx.fill();
+      ctx.stroke();
+
+      ctx.fillStyle = window.THEME.colors.accent.emerald.light;
+      ctx.beginPath();
+      ctx.roundRect(rightX, cardY, cardW, 56, [window.THEME.radii.lg, window.THEME.radii.lg, 0, 0]);
+      ctx.fill();
+      ctx.stroke();
+
+      window.ICONS.draw(ctx, "building", rightX + 32, cardY + 28, 22, window.THEME.colors.accent.emerald.main);
+      ctx.font = window.THEME.typography.monoBadge;
+      ctx.fillStyle = window.THEME.colors.accent.emerald.main;
+      ctx.fillText("SECOND PARTY", rightX + 54, cardY + 28);
+
+      // Party Label & Subtitle (Right)
+      renderPartyMeta(rightLabel, rightRole, rightX + 20, cardY + 80, cardW - 40);
+
+      ctx.restore();
+
+      // Return designated action sub-region
+      return {
+        x: leftX + cardW + 20,
+        y: rect.y,
+        w: rect.w - (cardW * 2) - 40,
+        h: rect.h
+      };
+    },
+
+    /**
+     * 2. SEQUENTIAL PIPELINE
+     * Reads: stages[] (array of 2-5 items: { label, detail, status })
+     * Highlights active stage matching activeLineIdx.
+     * Minimum font size 12px logical with 2-line word wrapping and >= 14px card edge padding.
+     */
+    layout_sequential_pipeline(ctx, payload = {}, rect, progress, themeColors, activeLineIdx = 0) {
+      const enterT = window.TWEEN.ease.easeOutCubic(progress);
+      const stages = payload.stages || [
+        { label: "1. Inception", detail: "Mutual Intention Formed" },
+        { label: "2. Execution", detail: "Consideration Exchanged" },
+        { label: "3. Satisfaction", detail: "Statutory Discharge" }
+      ];
+
+      const n = stages.length;
+      const stepW = Math.min(240, (rect.w - 100) / n);
+      const totalW = n * stepW + (n - 1) * 24;
+      const startX = rect.x + (rect.w - totalW) / 2;
+      const conduitY = rect.y + 60;
+      const activeStageIdx = Math.min(stages.length - 1, Math.max(0, activeLineIdx));
+
+      ctx.save();
+      ctx.globalAlpha = enterT;
+
+      // Horizontal Connecting Conduit Line
+      ctx.strokeStyle = themeColors.border;
+      ctx.lineWidth = 2;
+      ctx.beginPath();
+      ctx.moveTo(startX + stepW / 2, conduitY);
+      ctx.lineTo(startX + totalW - stepW / 2, conduitY);
+      ctx.stroke();
+
+      // Stages
+      stages.forEach((st, idx) => {
+        const x = startX + idx * (stepW + 24);
+        const cardH = 92;
+        const cardY = conduitY + 22;
+        const isActive = idx === activeStageIdx;
+        const isPast = idx < activeStageIdx;
+
+        // Node Circle on Conduit
+        ctx.beginPath();
+        ctx.arc(x + stepW / 2, conduitY, 13, 0, Math.PI * 2);
+        if (isActive) {
+          ctx.fillStyle = window.THEME.colors.accent.indigo.main;
+          ctx.fill();
+          ctx.strokeStyle = window.THEME.colors.accent.indigo.border;
+          ctx.lineWidth = 3;
+          ctx.stroke();
+        } else if (isPast) {
+          ctx.fillStyle = window.THEME.colors.accent.emerald.main;
+          ctx.fill();
+          ctx.strokeStyle = window.THEME.colors.accent.emerald.border;
+          ctx.lineWidth = 2;
+          ctx.stroke();
+        } else {
+          ctx.fillStyle = themeColors.bgCard;
+          ctx.fill();
+          ctx.strokeStyle = themeColors.border;
+          ctx.lineWidth = 2;
+          ctx.stroke();
+        }
+
+        ctx.font = window.THEME.typography.monoBadge;
+        ctx.fillStyle = (isActive || isPast) ? "#FFFFFF" : themeColors.textMuted;
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+        ctx.fillText(String(idx + 1), x + stepW / 2, conduitY);
+
+        // Stage Card
+        const isDark = window.THEME && window.THEME.mode === "dark";
+        const cardFill = isActive
+          ? (isDark ? "rgba(99, 102, 241, 0.14)" : "rgba(99, 102, 241, 0.06)")
+          : themeColors.bgCard;
+        const cardStroke = isActive
+          ? window.THEME.colors.accent.indigo.main
+          : (isPast ? window.THEME.colors.accent.emerald.border : themeColors.border);
+
+        ctx.fillStyle = cardFill;
+        ctx.strokeStyle = cardStroke;
+        ctx.lineWidth = isActive ? 2 : 1;
+        ctx.beginPath();
+        ctx.roundRect(x, cardY, stepW, cardH, window.THEME.radii.md);
+        ctx.fill();
+        ctx.stroke();
+
+        // Stage Label
+        ctx.font = isActive ? "700 13px 'Plus Jakarta Sans', sans-serif" : window.THEME.typography.bodyBold;
+        ctx.fillStyle = isActive ? window.THEME.colors.accent.indigo.main : themeColors.textPrimary;
+        ctx.textAlign = "center";
+        ctx.textBaseline = "middle";
+        const maxStageLabelW = stepW - 20;
+        const dispStageLabel = window.SHARED_DRAW.truncate(ctx, st.label || `Stage ${idx + 1}`, maxStageLabelW);
+        ctx.fillText(dispStageLabel, x + stepW / 2, cardY + 22);
+
+        // Stage Description - Padded by >= 14px on both sides, wrapped to max 2 lines, min 12px logical font
+        const maxTextW = stepW - 28;
+        ctx.font = "500 12px 'Plus Jakarta Sans', sans-serif";
+        ctx.fillStyle = isActive ? themeColors.textPrimary : themeColors.textSecondary;
+
+        const words = (st.detail || "").split(" ");
+        let l1 = "", l2 = "";
+        for (let w of words) {
+          let test1 = l1 ? (l1 + " " + w) : w;
+          if (ctx.measureText(test1).width <= maxTextW && !l2) {
+            l1 = test1;
+          } else {
+            let test2 = l2 ? (l2 + " " + w) : w;
+            if (ctx.measureText(test2).width <= maxTextW) {
+              l2 = test2;
+            } else {
+              while (l2.length > 3 && ctx.measureText(l2 + "…").width > maxTextW) {
+                l2 = l2.slice(0, -1);
+              }
+              l2 += "…";
+              break;
+            }
+          }
+        }
+
+        if (l2) {
+          ctx.fillText(l1, x + stepW / 2, cardY + 50);
+          ctx.fillText(l2, x + stepW / 2, cardY + 70);
+        } else {
+          ctx.fillText(l1, x + stepW / 2, cardY + 58);
+        }
+      });
+
+      ctx.restore();
+
+      // Return action stage below pipeline
+      return {
+        x: rect.x + 40,
+        y: conduitY + 128,
+        w: rect.w - 80,
+        h: rect.h - 176
+      };
+    },
+
+    /**
+     * 3. QUADRANT GRID
+     * Reads: quadrants[] (4 items: { title, body, accent })
+     */
+    layout_quadrant_grid(ctx, payload = {}, rect, progress, themeColors) {
+      const enterT = window.TWEEN.ease.easeOutCubic(progress);
+      const quads = payload.quadrants || [
+        { title: "Condition I", body: "Statutory Competence of Parties", accent: "indigo" },
+        { title: "Condition II", body: "Consensus ad Idem & Free Consent", accent: "emerald" },
+        { title: "Condition III", body: "Lawful Object & Public Policy", accent: "amber" },
+        { title: "Condition IV", body: "Lawful Real Consideration", accent: "crimson" }
+      ];
+
+      const gap = 24;
+      const qw = (rect.w - gap) / 2;
+      const qh = (rect.h - gap) / 2;
+
+      ctx.save();
+      ctx.globalAlpha = enterT;
+
+      quads.slice(0, 4).forEach((q, idx) => {
+        const col = idx % 2;
+        const row = Math.floor(idx / 2);
+        const qx = rect.x + col * (qw + gap);
+        const qy = rect.y + row * (qh + gap);
+
+        const accentName = q.accent || (idx === 0 ? "indigo" : idx === 1 ? "emerald" : idx === 2 ? "amber" : "crimson");
+        const accent = window.THEME.colors.accent[accentName] || window.THEME.colors.accent.indigo;
+
+        // Card
+        ctx.fillStyle = themeColors.bgCard;
+        ctx.strokeStyle = accent.border;
+        ctx.lineWidth = window.THEME.strokeWidth;
+        ctx.beginPath();
+        ctx.roundRect(qx, qy, qw, qh, window.THEME.radii.lg);
+        ctx.fill();
+        ctx.stroke();
+
+        // Left accent stripe
+        ctx.fillStyle = accent.main;
+        ctx.beginPath();
+        ctx.roundRect(qx, qy, 6, qh, [window.THEME.radii.lg, 0, 0, window.THEME.radii.lg]);
+        ctx.fill();
+
+        // Title
+        ctx.font = window.THEME.typography.titleBold;
+        ctx.fillStyle = themeColors.textPrimary;
+        ctx.textAlign = "left";
+        ctx.textBaseline = "middle";
+        const maxQTitleW = qw - 70;
+        const dispQTitle = window.SHARED_DRAW.truncate(ctx, q.title || `Ingredient ${idx + 1}`, maxQTitleW);
+        ctx.fillText(dispQTitle, qx + 24, qy + 40);
+
+        // Body (Multi-line word wrapped to max 3 lines)
+        ctx.font = window.THEME.typography.body;
+        ctx.fillStyle = themeColors.textSecondary;
+        ctx.textBaseline = "top";
+        const maxQBodyW = qw - 48;
+        window.SHARED_DRAW.wrapText(ctx, q.body || "", qx + 24, qy + 68, maxQBodyW, 20, 3, "left");
+
+        // Icon
+        const iconKey = idx === 0 ? "shield" : idx === 1 ? "checkCircle" : idx === 2 ? "scale" : "fileText";
+        window.ICONS.draw(ctx, iconKey, qx + qw - 36, qy + 40, 24, accent.main);
+      });
+
+      ctx.restore();
+
+      return rect;
+    },
+
+    /**
+     * 4. PRECEDENT PARCHMENT
+     * Reads: court, case_name, year, ratio_headline
+     */
+    layout_precedent_parchment(ctx, payload = {}, rect, progress, themeColors) {
+      const enterT = window.TWEEN.ease.easeOutCubic(progress);
+      const court = payload.court || "SUPREME COURT OF INDIA";
+      const caseName = payload.case_name || "Landmark Judicial Precedent";
+      const year = payload.year || "2024";
+      const ratio = payload.ratio_headline || "Settled Ratio Decidendi & Binding Interpretation";
+
+      const pw = Math.min(840, rect.w);
+      const ph = 400;
+      const px = rect.x + (rect.w - pw) / 2;
+      const py = rect.y + (rect.h - ph) / 2;
+
+      ctx.save();
+      ctx.globalAlpha = enterT;
+
+      // Parchment Card
+      ctx.fillStyle = themeColors.bgCard;
+      ctx.strokeStyle = window.THEME.colors.accent.amber.border;
+      ctx.lineWidth = window.THEME.strokeWidth;
+      ctx.beginPath();
+      ctx.roundRect(px, py, pw, ph, window.THEME.radii.lg);
+      ctx.fill();
+      ctx.stroke();
+
+      // Stately Gold Ribbon Header
+      ctx.fillStyle = window.THEME.colors.accent.amber.light;
+      ctx.beginPath();
+      ctx.roundRect(px, py, pw, 64, [window.THEME.radii.lg, window.THEME.radii.lg, 0, 0]);
+      ctx.fill();
+      ctx.stroke();
+
+      window.ICONS.draw(ctx, "award", px + 40, py + 32, 28, window.THEME.colors.accent.amber.main);
+
+      ctx.font = window.THEME.typography.monoBadge;
+      ctx.fillStyle = window.THEME.colors.accent.amber.dark;
+      ctx.textAlign = "left";
+      ctx.textBaseline = "middle";
+      const headerTitle = window.SHARED_DRAW.truncate(ctx, `${court.toUpperCase()} • ${year}`, pw - 100);
+      ctx.fillText(headerTitle, px + 68, py + 32);
+
+      // Case Name
+      ctx.font = window.THEME.typography.headline;
+      ctx.fillStyle = themeColors.textPrimary;
+      const dispCase = window.SHARED_DRAW.truncate(ctx, caseName, pw - 80);
+      ctx.fillText(dispCase, px + 40, py + 120);
+
+      // Ratio Subtitle
+      ctx.font = window.THEME.typography.title;
+      ctx.fillStyle = themeColors.textSecondary;
+      const dispRatio = window.SHARED_DRAW.truncate(ctx, ratio, pw - 80);
+      ctx.fillText(dispRatio, px + 40, py + 160);
+
+      // Horizontal separator
+      ctx.strokeStyle = themeColors.border;
+      ctx.beginPath();
+      ctx.moveTo(px + 40, py + 195);
+      ctx.lineTo(px + pw - 40, py + 195);
+      ctx.stroke();
+
+      ctx.restore();
+
+      // Return action stage inside lower parchment
+      return {
+        x: px + 40,
+        y: py + 210,
+        w: pw - 80,
+        h: ph - 230
+      };
+    },
+
+    /**
+     * 5. HERO STAGE
+     * Reads: hero_headline, focal_element
+     */
+    layout_hero_stage(ctx, payload = {}, rect, progress, themeColors) {
+      const enterT = window.TWEEN.ease.easeOutCubic(progress);
+      const headline = payload.hero_headline || "";
+
+      ctx.save();
+      ctx.globalAlpha = enterT;
+
+      if (headline) {
+        ctx.font = window.THEME.typography.titleBold;
+        ctx.fillStyle = themeColors.textMuted;
+        ctx.textAlign = "center";
+        ctx.textBaseline = "top";
+        const dispHeadline = window.SHARED_DRAW.truncate(ctx, headline.toUpperCase(), rect.w - 120);
+        ctx.fillText(dispHeadline, rect.x + rect.w / 2, rect.y + 12);
+      }
+
+      // Ground Pedestal Guideline (Flat/clean aesthetic)
+      const groundY = rect.y + rect.h - 40;
+      ctx.strokeStyle = themeColors.border;
+      ctx.lineWidth = 1;
+      ctx.setLineDash([4, 6]);
+      ctx.beginPath();
+      ctx.moveTo(rect.x + 80, groundY);
+      ctx.lineTo(rect.x + rect.w - 80, groundY);
+      ctx.stroke();
+      ctx.setLineDash([]);
+
+      ctx.restore();
+
+      return {
+        x: rect.x + 60,
+        y: rect.y + (headline ? 48 : 20),
+        w: rect.w - 120,
+        h: rect.h - (headline ? 88 : 60)
+      };
+    }
+  };
+
+  const LAYOUT_FRAMES = {
+    render(ctx, archetype, payload, mainStageRect, progress, themeColors, activeLineIdx = 0) {
+      const renderer = FRAMES[archetype] || FRAMES["layout_hero_stage"];
+      return renderer(ctx, payload, mainStageRect, progress, themeColors, activeLineIdx);
+    }
+  };
+
+  // Expose to window
+  window.LAYOUT_FRAMES = LAYOUT_FRAMES;
+})();

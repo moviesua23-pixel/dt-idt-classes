@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Universal Statutory Story &amp; Kinetic Animation Studio</title>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Malayalam:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="/static/css/studio.css">
+  
+  <!-- Design System, Motion Primitives & Data-Driven Layouts -->
+  <script src="/static/js/theme.js?v=chip_center_fix_20261125"></script>
+  <script src="/static/js/tween.js?v=chip_center_fix_20261125"></script>
+  <script src="/static/js/icons.js?v=chip_center_fix_20261125"></script>
+  <script src="/static/js/audio.js?v=chip_center_fix_20261125"></script>
+  <script src="/static/js/layouts/scaffold.js?v=chip_center_fix_20261125"></script>
+  <script src="/static/js/layouts/frames.js?v=chip_center_fix_20261125"></script>
+  <script src="/static/js/actions/shared.js?v=chip_center_fix_20261125"></script>
+  <script src="/static/js/actions/pilot_engines.js?v=chip_center_fix_20261125"></script>
+  <script src="/static/js/actions/batch1_engines.js?v=chip_center_fix_20261125"></script>
+  <script src="/static/js/actions/batch2_engines.js?v=chip_center_fix_20261125"></script>
+  <script src="/static/js/actions/batch3_engines.js?v=chip_center_fix_20261125"></script>
+  <script src="/static/js/actions/computation_engine.js?v=chip_center_fix_20261125"></script>
+  <script src="/static/js/actions/key_points.js?v=chip_center_fix_20261125"></script>
+  <script src="/static/js/actions/situational_engines.js?v=chip_center_fix_20261125"></script>
+  <script src="/static/js/player.js?v=composite_voice_gated_v1_20261126"></script>
+  <script src="/static/js/studio.js?v=chip_center_fix_20261125"></script>
+  <script src="/static/js/colorful_shapes_library.js?v=chip_center_fix_20261125"></script>
+  <script src="/static/js/shape_catalog.js?v=list_shape_5_designs_20261126"></script>
+  <script src="/static/js/script_studio.js?v=list_shape_5_designs_20261126"></script>
+</head>
+<body>
+
+  <div class="studio-container">
+
+    <!-- Top Studio Header -->
+    <header class="studio-header">
+      <div class="header-left">
+        <span class="logo-badge">UNIVERSAL LAW STUDIO</span>
+        <div>
+          <h1 class="studio-title">Universal Statutory Kinetic Studio</h1>
+          <p style="font-size:12.5px; font-weight:600; color:var(--text-muted); margin-top:2px;">
+            Paste ANY Legal Provision → Generate 2-Phase Story → Preview Kinetic Animation with Shapes &amp; Text
+          </p>
+        </div>
+      </div>
+      <div class="header-right">
+        <a href="https://github.com/moviesua23-pixel/statutory-kinetic-studio" target="_blank" class="btn-action" style="text-decoration:none; display:flex; align-items:center; gap:6px;">
+          <span>⭐</span> GitHub Repository
+        </a>
+      </div>
+    </header>
+
+    <!-- Studio Mode Switcher Tabs -->
+    <div class="nav-tab-bar">
+      <button id="tab_btn_law" class="nav-tab-btn active" onclick="SCRIPT_STUDIO.switchMode('law')">
+        <span>📖</span> Statutory Provision Studio
+      </button>
+      <button id="tab_btn_script" class="nav-tab-btn" onclick="SCRIPT_STUDIO.switchMode('script')">
+        <span>⚡</span> Prompt-to-Animation (Script Studio)
+      </button>
+    </div>
+
+    <!-- PROMPT-TO-ANIMATION SCRIPT STUDIO SECTION -->
+    <section class="section-panel" id="prompt_studio_section" style="display:none;">
+      <div class="panel-header">
+        <div class="panel-title">
+          <span>⚡</span> Prompt-to-Animation Studio (Custom Shapes &amp; Motion)
+        </div>
+        <div style="display:flex; align-items:center; gap:8px;">
+          <button class="btn-action" onclick="SCRIPT_STUDIO.loadSample()" title="Load Section 148 Bailment example prompt">
+            <span>✨</span> Load Sample Script
+          </button>
+          <button class="btn-action" onclick="SCRIPT_STUDIO.clear()" title="Clear text area">
+            <span>🧹</span> Clear
+          </button>
+        </div>
+      </div>
+
+      <!-- Syntax Helper Banner -->
+      <div class="syntax-helper-banner">
+        <div>
+          <strong>Command Syntax:</strong> 
+          <span class="syntax-badge">shape (Type) (Text) (Position) (Intro) (Motion, Start Time, End Position)</span>
+        </div>
+        <div style="font-size:11.5px; color:#475569;">
+          <span>19 Categories: <code style="color:#4F46E5;">People, Vehicles, Property, Goods, Documents, Finance, Law, Corporate, Hazards, Cyber, Tax, Banking, Tools...</code></span> | 
+          <span>Overlays: <code style="color:#DC2626;">[damaged], [locked], [stamped], [crossed], [warning], [paid]</code></span>
+        </div>
+      </div>
+
+      <!-- Shape Catalog Toggle & Drawer -->
+      <div style="margin-top: 8px; display:flex; justify-content:space-between; align-items:center;">
+        <button id="btn_toggle_catalog" class="btn-action" onclick="SCRIPT_STUDIO.toggleShapeCatalog()" style="font-size:12px; font-weight:700; color:var(--indigo); border-color:var(--indigo-ring); background:var(--indigo-tint);">
+          <span>🎨</span> Browse 19 Shape Categories (600+ Shapes &amp; Overlays)
+        </button>
+        <span style="font-size:11.5px; color:var(--text-muted);">
+          Example: <code style="color:var(--indigo);">shape (Cheque_Crossed) (₹50,000) (center) (drop) (stay)</code>
+        </span>
+      </div>
+
+      <div id="shape_catalog_drawer" class="shape-catalog-drawer">
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:12px; padding-bottom:8px; border-bottom:1px solid var(--border);">
+          <div>
+            <strong style="font-size:13px; color:var(--text);">Universal 19-Category Shape Library</strong>
+            <span style="font-size:11.5px; color:var(--text-muted); margin-left:8px;">Click any shape pill to insert into your prompt</span>
+          </div>
+          <button class="btn-action" onclick="SCRIPT_STUDIO.toggleShapeCatalog()" style="padding:2px 8px; font-size:11px;">✕ Close</button>
+        </div>
+        <div id="shape_catalog_grid" class="shape-cat-grid"></div>
+      </div>
+
+      <!-- Script Textarea -->
+      <textarea id="script_prompt_input" class="provision-textarea" rows="8" placeholder="Paste your shape animation lines here, e.g.:
+
+NARRATION: &quot;Under Section 54, the taxpayer computes net capital gains after claiming statutory rollover exemption.&quot;
+
+shape (Accountant) (Tax Advisor) (left center) (pop) (stay)
+shape (calculation (multiple)) (+) (Full Value of Consideration) (10,00,000) (right center)
+shape (calculation (multiple)) (-) (Cost of Acquisition) (4,00,000)
+shape (calculation (multiple)) (-) (Exemption under Section 54) (3,00,000)
+shape (calculation (multiple)) (=) (Taxable Capital Gain) (3,00,000)"></textarea>
+
+      <!-- Action Row -->
+      <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px; margin-top:2px;">
+        <span style="font-size:12px; font-weight:700; color:var(--text-muted);">
+          Multi-slide supported: Use <code style="color:var(--indigo);">SLIDE 1:</code> and <code style="color:var(--indigo);">SLIDE 2:</code> to separate scenes.
+        </span>
+        <button id="btn_run_script" class="btn-generate" onclick="SCRIPT_STUDIO.runPresentation()" style="background:linear-gradient(135deg, #059669, #047857); padding:12px 28px; font-size:14.5px; box-shadow:0 4px 14px rgba(5,150,105,0.3);">
+          <span>▶</span> Run Presentation
+        </button>
+      </div>
+    </section>
+
+    <!-- STEP 1 INPUT SECTION -->
+    <section class="section-panel" id="input_section">
+      <div class="panel-header">
+        <div class="panel-title">
+          <span>📋</span> 1. Paste Any Statutory Provision (Any Act or Law)
+        </div>
+        <span style="font-size:12px; font-weight:700; color:var(--indigo);">
+          Zero Presets • 100% Dynamic Legal Analysis
+        </span>
+      </div>
+
+      <!-- Textarea for Pasting Any Legal Provision -->
+      <textarea id="provision_input" class="provision-textarea" rows="7" placeholder="Paste ANY statutory provision, section text, rule, circular, or legal doctrine here (Contract Act, Companies Act, Criminal Law, Property Law, Tax, GST, Arbitration, etc.)..."></textarea>
+
+      <!-- Input Controls Row -->
+      <div class="inputs-row">
+        <input type="text" id="topic_input" class="input-field" placeholder="Optional hint or context (leave blank to let Gemini detect the Act and Section automatically)...">
+        
+        <button id="btn_generate" class="btn-generate" onclick="generateTwoPhaseStory()">
+          <span>⚡</span> Generate 2-Phase Story
+        </button>
+      </div>
+
+      <div id="loading_spinner" style="display:none; align-items:center; gap:10px; padding:12px 16px; background:var(--indigo-tint); border:1px solid var(--indigo-ring); border-radius:8px; color:var(--indigo); font-weight:700; font-size:13px;">
+        <span style="font-size:18px;">⏳</span> Gemini analyzing provision, detecting the Act &amp; choreographing the 2-Phase Pedagogical Story...
+      </div>
+    </section>
+
+    <!-- STEP 1 OUTPUT: 2-PHASE STORY REVIEW CONSOLE -->
+    <section class="section-panel" id="output_section" style="display:none;">
+      <div class="panel-header">
+        <div class="panel-title">
+          <span>📖</span> 2. Generated 2-Phase Pedagogical Screenplay
+        </div>
+        <div style="display:flex; align-items:center; gap:8px;">
+          <button class="btn-action" onclick="copyStoryJSON()">📋 Copy JSON</button>
+        </div>
+      </div>
+
+      <!-- Detected Statute Meta Header -->
+      <div style="background:#F1F5F9; border:1.5px solid var(--border-dark); border-radius:10px; padding:16px 20px; display:flex; flex-direction:column; gap:8px;">
+        <div style="display:flex; align-items:center; gap:10px; flex-wrap:wrap;">
+          <span id="detected_act_badge" class="badge-mono" style="background:#4F46E5; color:#FFFFFF; font-size:12px; padding:4px 10px;"></span>
+          <span id="detected_section_badge" class="badge-mono" style="background:#059669; color:#FFFFFF; font-size:12px; padding:4px 10px;"></span>
+          <span id="detected_slides_badge" class="badge-mono" style="background:#0284C7; color:#FFFFFF; font-size:12px; padding:4px 10px;"></span>
+        </div>
+        <h2 id="core_doctrine_title" style="font-size:17px; font-weight:800; color:#0F172A;"></h2>
+        <p id="story_summary_text" style="font-size:13.5px; font-weight:600; color:#475569; line-height:1.5;"></p>
+      </div>
+
+      <!-- Scenes Grid (Phase 1 Story vs Phase 2 Statute) -->
+      <div id="scenes_container" style="display:flex; flex-direction:column; gap:14px;">
+        <!-- Rendered dynamically -->
+      </div>
+
+      <!-- NEXT STEP ACTION BUTTON: CONVERT TO ANIMATION -->
+      <div style="display:flex; justify-content:center; padding:16px 0 6px; border-top:1.5px solid var(--border); margin-top:8px;">
+        <button id="btn_animate" class="btn-generate" onclick="startStoryAnimation()" style="background:linear-gradient(135deg, #059669, #047857); padding:14px 32px; font-size:15px; box-shadow:0 6px 18px rgba(5,150,105,0.35);">
+          <span>🎬</span> Preview Kinetic Animation with Text &amp; Shapes
+        </button>
+      </div>
+    </section>
+
+    <!-- STEP 2 OUTPUT: KINETIC ANIMATION CANVAS STAGE -->
+    <section class="section-panel" id="animation_section" style="display:none;">
+      <div class="panel-header">
+        <div class="panel-title">
+          <span>🎬</span> 3. Kinetic Animation Stage (Text &amp; Shapes)
+        </div>
+        <div style="display:flex; align-items:center; gap:4px; background:#F8FAFC; border:1.5px solid var(--border); padding:3px 8px; border-radius:8px;">
+          <span style="font-size:11.5px; font-weight:800; color:#475569; margin-right:2px;">🔠 Text:</span>
+          <button class="font-zoom-btn" onclick="PRESENTATION_PLAYER.setFontScale(1.0, this)" title="Standard Font">100%</button>
+          <button class="font-zoom-btn active" onclick="PRESENTATION_PLAYER.setFontScale(1.15, this)" title="15% Prominent Font">+15%</button>
+          <button class="font-zoom-btn" onclick="PRESENTATION_PLAYER.setFontScale(1.30, this)" title="30% Extra Large Font">+30%</button>
+        </div>
+      </div>
+
+      <!-- Scene Tabs Bar (Scene 1 .. N) -->
+      <div class="scene-tabs-bar" id="anim_scene_tabs">
+        <!-- Rendered dynamically based on generated scenes -->
+      </div>
+
+      <!-- Voice Notice Container (Injected if ml-IN voice missing) -->
+      <div id="voice_notice_banner" style="display:none;"></div>
+
+      <!-- 1280x720 16:9 Kinetic Stage Canvas -->
+      <div class="canvas-wrapper" style="position:relative; width:100%; max-width:1080px; aspect-ratio:16/9; margin:0 auto; overflow:hidden;">
+        <canvas id="stage_canvas" width="1280" height="720" onclick="PRESENTATION_PLAYER.togglePlay()" style="width:100%; height:100%; display:block;"></canvas>
+      </div>
+
+      <!-- Scene Narration Bar -->
+      <div class="narration-panel">
+        <div class="narration-meta">
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span id="anim_phase_badge" class="badge-mono" style="background:#D97706; color:#FFFFFF;">📖 PHASE 1: REAL-LIFE SITUATION EXAMPLE</span>
+            <span id="anim_tag_label" style="font-size:12px; font-weight:800; color:var(--text);">SCENE 1</span>
+            <span id="anim_layout_badge" class="badge-mono" style="background:#4F46E5; color:#FFFFFF; font-size:11px; padding:2px 8px;">🎭 HERO STAGE</span>
+            <span id="tag_illustrative_figures" style="font-size:11px; font-weight:700; color:#D97706; background:#FEF3C7; padding:2px 8px; border-radius:4px; border:1px solid #FDE68A;">📊 Illustrative figures</span>
+            <span id="tag_needs_verification" style="font-size:11px; font-weight:700; color:#DC2626; background:#FEE2E2; padding:2px 8px; border-radius:4px; border:1px solid #FECACA; display:none;">⚠️ Needs verification</span>
+          </div>
+          <div id="anim_story_ref" style="font-size:11.5px; font-weight:800; color:#B45309; display:none;"></div>
+          <span style="font-size:11px; font-weight:700; color:#1E40AF; background:#EFF6FF; padding:3px 8px; border-radius:4px; border:1px solid #BFDBFE;">
+            ✨ Broadcast-Quality Kinetic Motion Engine
+          </span>
+        </div>
+        <div class="narration-text" id="anim_narration_text">
+          Loading scene narrative...
+        </div>
+      </div>
+
+      <!-- Transport Controls -->
+      <div class="controls-panel">
+        <div class="scrubber-row">
+          <input type="range" class="timeline-slider" id="anim_timeline_slider" min="0" max="10000" step="50" value="0" oninput="PRESENTATION_PLAYER.seekTo(this.value)">
+          <div class="time-label" id="anim_time_display">00:00.0 / 00:10.0</div>
+        </div>
+        <div class="buttons-row">
+          <div style="display:flex; gap:6px; align-items:center; flex-wrap:wrap;">
+            <button class="btn-action" onclick="PRESENTATION_PLAYER.prevSlide()" title="Previous Slide (Arrow Left)">◀ Prev</button>
+            <button class="btn-action primary" id="btn_anim_play_pause" onclick="PRESENTATION_PLAYER.togglePlay()" title="Play / Pause (Spacebar)">⏸ Pause</button>
+            <button class="btn-action" onclick="PRESENTATION_PLAYER.nextSlide()" title="Next Slide (Arrow Right)">Next ▶</button>
+            <button class="btn-action" onclick="PRESENTATION_PLAYER.seekTo(0)" title="Restart Current Slide (Key R)">⏮ Restart</button>
+            <button class="btn-action" id="btn_voice_toggle" onclick="PRESENTATION_PLAYER.toggleVoice()" style="border-color:#10B981; color:#059669; font-weight:800;" title="Toggle Spoken Teacher Explanation">🔊 Voice: ON</button>
+            <button class="btn-action" id="btn_export_webm" onclick="if(window.PRESENTATION_PLAYER.exportWebM) window.PRESENTATION_PLAYER.exportWebM();" title="Export Canvas Animation as WebM (Visuals only)">📹 Export WebM</button>
+            <button class="btn-action" id="btn_export_png" onclick="if(window.PRESENTATION_PLAYER.exportSnapshot) window.PRESENTATION_PLAYER.exportSnapshot();" title="Download HiDPI PNG of current slide">📷 Snapshot</button>
+          </div>
+          <div style="display:flex; align-items:center; gap:8px;">
+            <span style="font-size:11px; font-weight:700; color:#64748B;">Speed:</span>
+            <button class="font-zoom-btn speed-btn" data-speed="0.75" onclick="PRESENTATION_PLAYER.setSpeed(0.75)">0.75x</button>
+            <button class="font-zoom-btn speed-btn active" data-speed="1.0" onclick="PRESENTATION_PLAYER.setSpeed(1.0)">1x</button>
+            <button class="font-zoom-btn speed-btn" data-speed="1.25" onclick="PRESENTATION_PLAYER.setSpeed(1.25)">1.25x</button>
+            <span style="font-size:11.5px; font-weight:700; color:#4F46E5; background:#EEF2FF; border:1px solid #C7D2FE; padding:2px 8px; border-radius:4px;" title="Neural Expressive Voice & Voice-Gated Transitions">
+              🎙️ Gemini Expressive Voice: Aoede
+            </span>
+            <span style="font-size:11.5px; font-weight:700; color:var(--emerald); margin-left:6px;" title="Slide changes only after voice completion">
+              ● Voice-Gated Auto-Advance
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+</body>
+</html>

@@ -12,6 +12,27 @@
 <script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
 
+<!-- Statutory Kinetic Presentation Studio Engine (19-Category Shapes & 5 List Designs) -->
+<link rel="stylesheet" href="kinetic_studio/css/studio.css?v=20261126">
+<script src="kinetic_studio/js/theme.js?v=20261126"></script>
+<script src="kinetic_studio/js/tween.js?v=20261126"></script>
+<script src="kinetic_studio/js/icons.js?v=20261126"></script>
+<script src="kinetic_studio/js/audio.js?v=20261126"></script>
+<script src="kinetic_studio/js/layouts/scaffold.js?v=20261126"></script>
+<script src="kinetic_studio/js/layouts/frames.js?v=20261126"></script>
+<script src="kinetic_studio/js/actions/shared.js?v=20261126"></script>
+<script src="kinetic_studio/js/actions/pilot_engines.js?v=20261126"></script>
+<script src="kinetic_studio/js/actions/batch1_engines.js?v=20261126"></script>
+<script src="kinetic_studio/js/actions/batch2_engines.js?v=20261126"></script>
+<script src="kinetic_studio/js/actions/batch3_engines.js?v=20261126"></script>
+<script src="kinetic_studio/js/actions/computation_engine.js?v=20261126"></script>
+<script src="kinetic_studio/js/actions/key_points.js?v=20261126"></script>
+<script src="kinetic_studio/js/actions/situational_engines.js?v=20261126"></script>
+<script src="kinetic_studio/js/player.js?v=20261126"></script>
+<script src="kinetic_studio/js/colorful_shapes_library.js?v=20261126"></script>
+<script src="kinetic_studio/js/shape_catalog.js?v=20261126"></script>
+<script src="kinetic_studio/js/script_studio.js?v=20261126"></script>
+
 <style>
 /* Layout: one calm column that changes shape per window. Home = two large subject doors,
    chapters = numbered catalog, questions = list with a sliding mode switch,
@@ -3346,9 +3367,57 @@ body:has(.studio-nav) .rail{top:18px!important}
 .vtd-speed-pill:hover{background:rgba(112,184,163,.16)!important;border-color:rgba(140,205,182,.38)!important}
 .vtd-close-pill{padding:6px 11px!important;border-radius:7px!important;background:rgba(193,91,77,.1)!important;border:1px solid rgba(220,144,128,.3)!important;color:#e5b7ac!important;font-size:.72rem!important;transition:background .18s,border-color .18s,color .18s!important}
 .vtd-close-pill:hover{background:#a94f46!important;border-color:#c96d5e!important;color:#fff!important;box-shadow:none!important}
-.vtb-close-btn:focus-visible,.vtd-nav-btn:focus-visible,.vtd-play:focus-visible,.vtd-speed-pill:focus-visible,.vtd-close-pill:focus-visible{outline:2px solid #90d2bd!important;outline-offset:2px!important}
-@media(max-width:700px){.vtheater-topbar{height:49px!important;min-height:49px!important;padding:6px 10px!important;gap:8px!important}.vtb-left{gap:8px!important}.vtb-badge{padding:4px 6px!important;font-size:7px!important}.vtb-title{font-size:.75rem!important}.vtb-close-btn{padding:6px 8px!important;font-size:.68rem!important}.vfullscreen-stage{padding:52px 9px 64px!important}.vtheater-dock{min-height:58px!important;padding:6px 8px!important;gap:6px!important}.vtd-nav-btn{width:29px!important;height:31px!important}.vtd-play{width:34px!important;height:34px!important}.vtd-info{min-width:80px!important;max-width:105px!important}.vtd-time{font-size:.67rem!important}.vtd-label{font-size:.57rem!important}.vtd-speed-pill,.vtd-close-pill{padding:5px 7px!important;font-size:.65rem!important}}
-@media(max-width:420px){.vtb-badge{display:none!important}.vtb-title{font-size:.7rem!important}.vtd-info{min-width:68px!important;max-width:82px!important}.vtd-nav-btn{width:26px!important}.vtd-close-pill{font-size:0!important}.vtd-close-pill::after{content:"×";font-size:15px!important}}
+/* Kinetic Presentation Tabs & Stage Viewport */
+.vtheater-mode-tabs {
+  display: inline-flex;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 3px;
+  border-radius: 10px;
+  gap: 4px;
+}
+.btn-theater-tab {
+  font-family: var(--f-sans, sans-serif);
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #94A3B8;
+  background: transparent;
+  border: none;
+  padding: 5px 13px;
+  border-radius: 7px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+.btn-theater-tab:hover {
+  color: #FFFFFF;
+  background: rgba(255, 255, 255, 0.08);
+}
+.btn-theater-tab.active {
+  color: #FFFFFF;
+  background: #3B82F6;
+  box-shadow: 0 2px 8px rgba(59, 130, 246, 0.4);
+}
+.kinetic-studio-stage {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #0B1120;
+  z-index: 10;
+}
+.kinetic-studio-stage .canvas-wrapper {
+  position: relative;
+  width: 90%;
+  max-width: 1120px;
+  aspect-ratio: 16 / 9;
+  background: #0F172A;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
 </style>
 <style id="presentation-bottom-gap-fix">
 /* The dock floats over the map, so the stage must not reserve a blank band beneath it. */
@@ -3759,7 +3828,9 @@ function buildModelFromPipeline(data) {
       secs: (p?.statutory_sections && p.statutory_sections.length) ? p.statutory_sections : (q.secs || ["Income Tax Act"]),
       question_text: q.question_text,
       q: [q.question_text],
-      rawAnswer: q.answer_text
+      rawAnswer: q.answer_text,
+      presentation_prompt: q.presentation_prompt || p?.presentation_prompt || "",
+      is_kinetic_prompt: !!(q.presentation_prompt || p?.presentation_prompt)
     };
   });
 
@@ -3781,7 +3852,9 @@ function buildModelFromPipeline(data) {
         ml: p.malayalam_audio_script || "",
         drive_file_id: p.drive_file_id || null,
         chapter_number: chNum,
-        question_number: qNum
+        question_number: qNum,
+        presentation_prompt: p.presentation_prompt || "",
+        is_kinetic_prompt: !!p.presentation_prompt
       };
     }
   });
@@ -3889,11 +3962,17 @@ window.handleGoogleSheetData = function(json) {
       let provSummary = "";
       let driveAudioId = "";
       let timingsStr = "";
+      let isPromptBased = false;
+      let presentationPrompt = "";
+
+      const rawCol7 = val(7).trim();
+      const rawCol6 = val(6).trim();
 
       // Smart auto-detection of Google Sheets schema:
-      // In 10-column schema:
-      // Col 0: Subject | Col 1: Chapter No | Col 2: Question No | Col 3: Topic Title | Col 4: Question Text | Col 5: Answer Text | Col 6: Provisions Markdown | Col 7: Mindmap JSON | Col 8: Drive ID | Col 9: Status
-      if (val(7).trim().startsWith("{") || val(7).includes('"doctrine"') || val(7).includes('"branches"')) {
+      // Case 1: Legacy 10/11-column with JSON Mindmap in Col 7
+      // Case 2: Legacy 8-column schema with JSON Mindmap in Col 6
+      // Case 3: New 9-column schema where Col 7 is the presentation script prompt!
+      if (rawCol7.startsWith("{") || rawCol7.includes('"doctrine"') || rawCol7.includes('"branches"')) {
         canonicalTopicFromSheet = val(3);
         qText = val(4);
         ansText = val(5);
@@ -3901,7 +3980,7 @@ window.handleGoogleSheetData = function(json) {
         provSummary = val(7);
         driveAudioId = val(8);
         timingsStr = val(9);
-      } else if (val(6).trim().startsWith("{") || val(6).includes('"doctrine"') || val(6).includes('"branches"')) {
+      } else if (rawCol6.startsWith("{") || rawCol6.includes('"doctrine"') || rawCol6.includes('"branches"')) {
         // Legacy 8-column schema: Col 3: Q | Col 4: Ans | Col 5: Prov MD | Col 6: Mindmap JSON
         canonicalTopicFromSheet = "";
         qText = val(3);
@@ -3910,8 +3989,17 @@ window.handleGoogleSheetData = function(json) {
         provSummary = val(6);
         driveAudioId = val(7);
         timingsStr = val(8);
+      } else if (rawCol7) {
+        // New 9-column Prompt Schema: Col 7 is the presentation prompt!
+        canonicalTopicFromSheet = val(3);
+        qText = val(4);
+        ansText = val(5);
+        provStatutes = val(6);
+        presentationPrompt = rawCol7;
+        driveAudioId = val(8);
+        isPromptBased = true;
       } else {
-        // Fallback: 10-column default
+        // Fallback default
         canonicalTopicFromSheet = val(3);
         qText = val(4);
         ansText = val(5);
@@ -3955,7 +4043,9 @@ window.handleGoogleSheetData = function(json) {
         question_text: qText,
         answer_text: ansText,
         topic_id: topicSlug,
-        secs: qSecs
+        secs: qSecs,
+        presentation_prompt: presentationPrompt,
+        is_kinetic_prompt: isPromptBased
       });
 
       const provItem = {
@@ -3970,7 +4060,9 @@ window.handleGoogleSheetData = function(json) {
         voice: "Gemini Voice (Aoede)",
         audio_file: chNum > 1 ? `ch${chNum}_q${qNum}.mp3` : `q${qNum}.mp3`,
         drive_file_id: driveAudioId || (mmObj && mmObj.drive_folder_id) || null,
-        dur: mmObj ? (mmObj.total_duration || 75) : 75
+        dur: mmObj ? (mmObj.total_duration || 75) : 75,
+        presentation_prompt: presentationPrompt,
+        is_kinetic_prompt: isPromptBased
       };
 
       liveProvisions.push(provItem);
@@ -4866,6 +4958,8 @@ function renderTheaterModalHtml(q, p){
   const hasSlides = sb && sb.slides && sb.slides.length > 0;
   const mm = getMindMapForQuestion(q, p);
   const badgeTitle = mm && mm.root ? `${mm.root.badge} · ${mm.doctrine}` : p.doctrine;
+  const promptText = (p.presentation_prompt || q.presentation_prompt || "").trim();
+  const hasPrompt = promptText.length > 0;
 
   return `
   <div class="vtheater" id="vtheater" role="dialog" aria-modal="true" aria-label="Statutory Presentation">
@@ -4876,9 +4970,16 @@ function renderTheaterModalHtml(q, p){
         <span class="vtb-title" title="${esc(badgeTitle)}">${esc(badgeTitle)}</span>
       </div>
 
-      <!-- Center: Presentation label -->
+      <!-- Center: Presentation Mode Selector / Label -->
       <div class="vtb-center">
-        <span class="vtb-badge">NESTED MIND MAP · SYNCED TO VOICE</span>
+        ${hasPrompt ? `
+          <div class="vtheater-mode-tabs" style="display:inline-flex; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); padding:3px; border-radius:10px; gap:4px;">
+            <button id="tab-btn-kinetic" class="btn-theater-tab active" onclick="window.switchTheaterMode('kinetic')">🎬 Kinetic Presentation</button>
+            <button id="tab-btn-mindmap" class="btn-theater-tab" onclick="window.switchTheaterMode('mindmap')">🌳 Statutory Tree</button>
+          </div>
+        ` : `
+          <span class="vtb-badge">NESTED MIND MAP · SYNCED TO VOICE</span>
+        `}
       </div>
 
       <!-- Right: Direct Close Button -->
@@ -4891,7 +4992,15 @@ function renderTheaterModalHtml(q, p){
 
       <!-- Presentation Stage -->
     <div id="vdiag" class="vfullscreen-stage">
-      <div class="ppt-mindmap-view" id="ppt-mindmap-view">
+      <!-- 1. Universal Kinetic Studio Broadcast Canvas Stage (1280x720) -->
+      <div class="kinetic-studio-stage" id="kinetic-studio-stage" style="${hasPrompt ? 'display:flex;' : 'display:none;'} width:100%; height:100%; align-items:center; justify-content:center; position:relative; background:#0B1120; padding:20px;">
+        <div class="canvas-wrapper" style="position:relative; width:100%; max-width:1120px; aspect-ratio:16/9; background:#0F172A; border-radius:16px; overflow:hidden; box-shadow:0 24px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.08); display:flex; justify-content:center; align-items:center;">
+          <canvas id="kinetic_stage_canvas" width="1280" height="720" style="width:100%; height:100%; aspect-ratio:16/9; display:block; cursor:pointer; background:#FFFFFF;"></canvas>
+        </div>
+      </div>
+
+      <!-- 2. Mindmap View -->
+      <div class="ppt-mindmap-view" id="ppt-mindmap-view" style="${hasPrompt ? 'display:none;' : 'display:block;'}">
         ${renderMindMapCanvasHtml(mm, q, p)}
       </div>
       <div class="sim-stage-container" id="sim-stage-container">
@@ -6765,6 +6874,33 @@ function makePlayer(p, q){
   });
  }
 
+ let activeTheaterMode = (p.presentation_prompt || q.presentation_prompt) ? "kinetic" : "mindmap";
+
+ window.switchTheaterMode = function(mode){
+  activeTheaterMode = mode;
+  const kineticStage = document.getElementById("kinetic-studio-stage");
+  const mmView = document.getElementById("ppt-mindmap-view");
+  const tabKinetic = document.getElementById("tab-btn-kinetic");
+  const tabMindmap = document.getElementById("tab-btn-mindmap");
+
+  if(mode === "kinetic"){
+   if(kineticStage) kineticStage.style.display = "flex";
+   if(mmView) mmView.style.display = "none";
+   if(tabKinetic) tabKinetic.classList.add("active");
+   if(tabMindmap) tabMindmap.classList.remove("active");
+   if(window.PRESENTATION_PLAYER && window.PRESENTATION_PLAYER.canvas){
+    window.PRESENTATION_PLAYER.handleResize();
+   }
+  } else {
+   if(kineticStage) kineticStage.style.display = "none";
+   if(mmView) mmView.style.display = "block";
+   if(tabKinetic) tabKinetic.classList.remove("active");
+   if(tabMindmap) tabMindmap.classList.add("active");
+   layoutMindMapTree(true);
+   syncMindMap(audio.currentTime||0);
+  }
+ };
+
  function openTheater(onReady){
   if(vtheater){
    vtheater.style.removeProperty("display");
@@ -6773,10 +6909,32 @@ function makePlayer(p, q){
   }
   document.body.style.overflow = "hidden";
   resetControlsTimer();
+
+  const promptText = (p.presentation_prompt || q.presentation_prompt || "").trim();
+  if(promptText && window.SCRIPT_STUDIO && window.PRESENTATION_PLAYER){
+   activeTheaterMode = "kinetic";
+   window.switchTheaterMode("kinetic");
+   const kCanvas = document.getElementById("kinetic_stage_canvas");
+   if(kCanvas){
+    window.PRESENTATION_PLAYER.init("kinetic_stage_canvas");
+    try {
+     const screenplay = window.SCRIPT_STUDIO.parse(promptText);
+     if(screenplay && screenplay.scenes && screenplay.scenes.length > 0){
+      window.PRESENTATION_PLAYER.loadPresentation(screenplay);
+     }
+    } catch(err){
+     console.error("Error parsing kinetic prompt:", err);
+    }
+   }
+  } else {
+   activeTheaterMode = "mindmap";
+   window.switchTheaterMode("mindmap");
+  }
+
   initializeTheaterMindMap(() => {
    if(typeof onReady === "function"){
     onReady();
-   } else if(isDiscreteMode){
+   } else if(isDiscreteMode && activeTheaterMode === "mindmap"){
     playPoint(currentPtIdx, true);
    } else {
     if(!playing) start();
@@ -6785,6 +6943,9 @@ function makePlayer(p, q){
  }
 
  function closeTheater(){
+  if(window.PRESENTATION_PLAYER){
+   window.PRESENTATION_PLAYER.pause();
+  }
   if (typeof exitConceptSimulation === "function") {
    exitConceptSimulation();
   }
@@ -6816,6 +6977,23 @@ function makePlayer(p, q){
   if(vtdSeek) vtdSeek.value = Math.round(f * 1000);
   const curVtdPlay = $("#vtd-play");
   if(curVtdPlay) curVtdPlay.innerHTML = playing ? I.pause : I.play;
+
+  if(activeTheaterMode === "kinetic" && window.PRESENTATION_PLAYER && window.PRESENTATION_PLAYER.canvas){
+   const curMs = cur * 1000;
+   if(playing && !window.PRESENTATION_PLAYER.isPlaying){
+    window.PRESENTATION_PLAYER.play();
+   } else if(!playing && window.PRESENTATION_PLAYER.isPlaying){
+    window.PRESENTATION_PLAYER.pause();
+   }
+   if(!window.PRESENTATION_PLAYER.isScrubbing){
+    window.PRESENTATION_PLAYER.seekTo(curMs);
+   }
+   const curSlide = window.PRESENTATION_PLAYER.getCurrentSlide();
+   const vtdLabel = $("#vtd-label");
+   if(vtdLabel && curSlide){
+    vtdLabel.textContent = `Slide ${window.PRESENTATION_PLAYER.currentSlideIdx + 1} of ${window.PRESENTATION_PLAYER.data?.scenes?.length || 1}: ${curSlide.tab_title || 'Kinetic Presentation'}`;
+   }
+  }
 
   syncMindMap(cur);
   syncFlowchart(cur);
@@ -6919,6 +7097,9 @@ function makePlayer(p, q){
    resetControlsTimer();
    vizOn();
    startMindMapDrawLoop();
+   if(window.PRESENTATION_PLAYER && window.PRESENTATION_PLAYER.isLoaded && !window.PRESENTATION_PLAYER.isPlaying){
+    window.PRESENTATION_PLAYER.play();
+   }
   } catch(err) {
    console.warn("audio.play() error:", err);
    note.textContent = "Tap play to start audio playback (" + (err.message || "User interaction required") + ")";
@@ -6945,6 +7126,9 @@ function makePlayer(p, q){
   playB.setAttribute("aria-label", "Play audio");
   if(vtheater) vtheater.classList.remove("controls-hidden");
   clearTimeout(controlsTimer);
+  if(window.PRESENTATION_PLAYER && window.PRESENTATION_PLAYER.isPlaying){
+   window.PRESENTATION_PLAYER.pause();
+  }
  }
 
  function finish(){
@@ -6991,6 +7175,9 @@ function makePlayer(p, q){
   const target = (val / 1000) * T;
   if(isFinite(target)){
    audio.currentTime = target;
+  }
+  if(window.PRESENTATION_PLAYER && window.PRESENTATION_PLAYER.isLoaded){
+   window.PRESENTATION_PLAYER.seekTo((audio.currentTime || 0) * 1000);
   }
   ui();
   const cur = audio.currentTime || 0;
@@ -7163,6 +7350,10 @@ function makePlayer(p, q){
  if(prevBtn){
   prevBtn.onclick = (e) => {
    e.stopPropagation();
+   if(window.PRESENTATION_PLAYER && window.PRESENTATION_PLAYER.isLoaded && activeTheaterMode === "kinetic"){
+    window.PRESENTATION_PLAYER.prevSlide();
+    return;
+   }
    if(isDiscreteMode){
     playPoint(currentPtIdx - 1, true);
     return;
@@ -7182,6 +7373,10 @@ function makePlayer(p, q){
  if(nextBtn){
   nextBtn.onclick = (e) => {
    e.stopPropagation();
+   if(window.PRESENTATION_PLAYER && window.PRESENTATION_PLAYER.isLoaded && activeTheaterMode === "kinetic"){
+    window.PRESENTATION_PLAYER.nextSlide();
+    return;
+   }
    if(isDiscreteMode){
     playPoint(currentPtIdx + 1, true);
     return;

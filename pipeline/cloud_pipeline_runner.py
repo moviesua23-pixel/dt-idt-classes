@@ -45,6 +45,10 @@ from pipeline.pdf_question_indexer import (
     get_pdf_path,
     sanitize_and_format_text
 )
+from pipeline.prompt_generator import (
+    generate_presentation_prompt,
+    synthesize_and_upload_prompt_audio
+)
 
 def is_modern_studio_screenplay(sp_data: Any) -> bool:
     """
@@ -138,9 +142,11 @@ def upsert_row_to_sheets(row_values):
                     break
 
         body = {'values': [row_values]}
+        num_cols = len(row_values)
+        col_letter = chr(ord('A') + num_cols - 1)
         if target_row_idx:
             # In-place update of existing row
-            range_to_update = f'Sheet1!A{target_row_idx}:K{target_row_idx}'
+            range_to_update = f'Sheet1!A{target_row_idx}:{col_letter}{target_row_idx}'
             sheets_service.spreadsheets().values().update(
                 spreadsheetId=SPREADSHEET_ID,
                 range=range_to_update,
@@ -201,18 +207,25 @@ def export_sheets_to_local_cache():
             q_text = str(r[4]) if len(r) > 4 else ""
             ans_text = str(r[5]) if len(r) > 5 else ""
             prov_md = str(r[6]) if len(r) > 6 else ""
-            mm_json_str = str(r[7]) if len(r) > 7 else ""
+            col7_str = str(r[7]) if len(r) > 7 else ""
             drive_folder = str(r[8]) if len(r) > 8 else ""
             screenplay_str = str(r[10]) if len(r) > 10 else ""
 
-            if mm_json_str and (mm_json_str.startswith('{') or '"branches"' in mm_json_str):
-                try:
-                    mm_obj = json.loads(mm_json_str)
-                    export_data['mindmaps'][f"ch{ch}_q{qn}"] = mm_obj
-                    if ch == 1:
-                        export_data['mindmaps'][f"q{qn}"] = mm_obj
-                except Exception:
-                    pass
+            is_kinetic_prompt = False
+            presentation_prompt = ""
+            if col7_str:
+                col7_trimmed = col7_str.strip()
+                if not col7_trimmed.startswith('{') and not col7_trimmed.startswith('['):
+                    is_kinetic_prompt = True
+                    presentation_prompt = col7_str
+                elif col7_str and (col7_str.startswith('{') or '"branches"' in col7_str):
+                    try:
+                        mm_obj = json.loads(col7_str)
+                        export_data['mindmaps'][f"ch{ch}_q{qn}"] = mm_obj
+                        if ch == 1:
+                            export_data['mindmaps'][f"q{qn}"] = mm_obj
+                    except Exception:
+                        pass
 
             if screenplay_str and screenplay_str.startswith('{'):
                 try:
@@ -221,7 +234,7 @@ def export_sheets_to_local_cache():
                 except Exception:
                     pass
 
-            export_data['questions'].append({
+            q_entry = {
                 "subject": subj.lower(),
                 "chapter_number": ch,
                 "question_number": qn,
@@ -229,8 +242,13 @@ def export_sheets_to_local_cache():
                 "question_text": q_text,
                 "answer_text": ans_text,
                 "topic_id": f"T_CH{ch}_Q{qn}"
-            })
-            export_data['provisions'].append({
+            }
+            if is_kinetic_prompt:
+                q_entry["presentation_prompt"] = presentation_prompt
+                q_entry["is_kinetic_prompt"] = True
+            export_data['questions'].append(q_entry)
+
+            p_entry = {
                 "subject": subj.lower(),
                 "chapter_number": ch,
                 "question_number": qn,
@@ -238,7 +256,11 @@ def export_sheets_to_local_cache():
                 "topic_title": topic,
                 "provision_presentation_markdown": prov_md,
                 "drive_folder_id": drive_folder
-            })
+            }
+            if is_kinetic_prompt:
+                p_entry["presentation_prompt"] = presentation_prompt
+                p_entry["is_kinetic_prompt"] = True
+            export_data['provisions'].append(p_entry)
 
         paths = [
             os.path.join(PROJECT_ROOT, 'data', 'pipeline_questions.json'),
@@ -630,25 +652,61 @@ def run_pipeline(limit=None, target_chapter=None, target_question=None, target_s
                     })
                 col_h_narration_str = json.dumps(narration_beats, ensure_ascii=False)
 
-            # Build 11-column Row for Google Sheet (Cols A to K)
-            row = [
-                subject,
-                chapter_no,
-                q_num,
-                canonical_topic,
-                q_text,
-                ans_text,
-                formatted_provision_matrix,
-                col_h_narration_str,
-                drive_folder_id,
-                timing_status,
-                screenplay_json_str
-            ]
+            # Check if this question is one of the existing 83 legacy questions or an upcoming question
+            is_legacy_question = existing and existing.get('row_idx', 9999) <= 84
+
+            if not is_legacy_question:
+                print(f"  [UPCOMING QUESTION] Generating 9-column Kinetic Presentation Studio format...")
+                # 1. Generate kinetic presentation prompt from Column 6 provision summary
+                presentation_prompt = generate_presentation_prompt(
+                    canonical_topic=canonical_topic,
+                    prov_summary_md=formatted_provision_matrix,
+                    q_text=q_text,
+                    ans_text=ans_text,
+                    subject=subject
+                )
+
+                # 2. Synthesize Aoede expressive voice for prompt dialogues and upload to Google Drive
+                drive_audio_file_id = synthesize_and_upload_prompt_audio(
+                    prompt_text=presentation_prompt,
+                    subject=subject,
+                    chapter_no=chapter_no,
+                    q_num=q_num
+                )
+
+                # 3. Build 9-column Row for Google Sheet (Cols A to I, omitting Col 9 & Col 10)
+                row = [
+                    subject,                      # Col A (idx 0)
+                    chapter_no,                   # Col B (idx 1)
+                    q_num,                        # Col C (idx 2)
+                    canonical_topic,              # Col D (idx 3)
+                    q_text,                       # Col E (idx 4)
+                    ans_text,                     # Col F (idx 5)
+                    formatted_provision_matrix,   # Col G (idx 6) - Provision Summary
+                    presentation_prompt,          # Col H (idx 7) - Presentation Prompt
+                    drive_audio_file_id           # Col I (idx 8) - Drive Audio File ID
+                ]
+            else:
+                # Existing 83 questions: Preserve legacy 11-column format
+                row = [
+                    subject,
+                    chapter_no,
+                    q_num,
+                    canonical_topic,
+                    q_text,
+                    ans_text,
+                    formatted_provision_matrix,
+                    col_h_narration_str,
+                    drive_folder_id,
+                    timing_status,
+                    screenplay_json_str
+                ]
 
             # Upsert to Google Sheet
             upsert_row_to_sheets(row)
             completed_in_run += 1
-            print(f"  [DONE] Successfully saved {subject} Ch{chapter_no} Q{q_num} (11 columns with Screenplay & Pedagogical Narration) to Google Sheets.")
+            cols_desc = "9 columns with Kinetic Studio Prompt & Audio" if not is_legacy_question else "11 columns with Screenplay & Pedagogical Narration"
+            print(f"  [DONE] Successfully saved {subject} Ch{chapter_no} Q{q_num} ({cols_desc}) to Google Sheets.")
             print(f"  [GEMINI USAGE] {subject} Ch{chapter_no} Q{q_num}: {rotator.api_attempts - api_attempts_before} API attempts in this question (including retries).")
             export_sheets_to_local_cache()
 

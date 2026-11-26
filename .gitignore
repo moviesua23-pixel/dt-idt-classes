@@ -17,3 +17,9 @@ test_pt.mp3
 data/audio/*.mp3
 !data/audio/dt/
 
+# Local test & build artifacts
+_site/
+test-results/
+redesign_demo/frontend/local_keys.js
+
+

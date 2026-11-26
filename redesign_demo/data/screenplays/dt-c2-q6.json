@@ -3,80 +3,78 @@
   "audio_url": "data/audio/dt-c2-q6.mp3",
   "duration_sec": 215.95,
   "sync_offset_sec": 0.0,
-  "context_pill": "Capital Gains - Cost of Acquisition of Inherited Property",
-  "example_summary": "Abraham inherited a property purchased by Xavier on 26.05.2002 for ₹ 5,00,000, cleared a mortgage of ₹ 15,00,000 on 12.02.2010, and sold it for ₹ 55,00,000 on 16.04.2025. Taxable LTCG for A.Y. 2026-27 is ₹ 35,00,000.",
-  "source_provision": "| Statutory Provision | Applicability / Trigger Event | Legal Consequence & Tax Treatment |\n| :--- | :--- | :--- |\n| **Section 49(1)(iiia)** | Property acquired under a Will or inheritance | Cost of acquisition shall be deemed to be the cost for which the previous owner acquired the property. |\n| **Section 48 & Section 55(2)** | Expenditure incurred for clearing a mortgage on inherited property | Amount paid by the successor to clear outstanding mortgage debt to obtain a clear title is added to the cost of acquisition. |\n\n\n> [!IMPORTANT]\n> Judicial Precedent: The Supreme Court in **RM. Arunachalam v. CIT [1997] 227 ITR 222** established that payment of an outstanding mortgage debt by a successor to secure absolute ownership and clear title constitutes an allowable cost of acquisition.\n\n\n> [!WARNING]\n> Statutory Trap: Do not index the predecessor's cost from the year of inheritance; indexation must be calculated starting from the Financial Year in which the asset was first held by the assessee or previous owner as per statutory indexing rules.",
+  "context_pill": "Capital Gains Computation for Inherited Property with Mortgage Clearance",
+  "example_summary": "Abraham inherited a house from Xavier, paid off the remaining mortgage debt for a clear title, and later sold the property for ₹ 55 lacs. We examine the computation of capital gains for A.Y. 2026-27.",
+  "source_provision": "### Master Statutory Summary Matrix\n\n| Statutory Provision | Core Condition / Applicability | Tax Treatment / Legal Consequence |\n| :--- | :--- | :--- |\n| **Section 49(1)(iiia)** | Acquisition of capital asset under a gift, will, or succession | Cost to previous owner is adopted as the cost of acquisition for the new owner |\n| **Section 48 & Section 55(2)** | Payment made by successor to clear outstanding mortgage debt for clear title | Expenditure incurred to remove encumbrance forms part of Cost of Acquisition |\n\n\n- **(i)** Under Section 49(1)(iiia), when a capital asset is acquired by way of inheritance or under a will, the cost of acquisition to the assessee shall be the cost for which the previous owner acquired it.\n- **(ii)** As settled by the Apex Court in RM. Arunachalam v. CIT, payments made by a successor to discharge a mortgage debt to obtain a clear title are treated as cost of acquisition.\n\n\n> [!IMPORTANT] Judicial Precedent Rule: The Supreme Court ruling in RM. Arunachalam v. CIT establishes that mortgage redemption expenses incurred by a legal heir constitute an integral part of the cost of acquisition under Section 48.",
   "director": {
     "archetype": "computation_ledger",
-    "justification": "Computes Abraham's taxable long-term capital gain from selling inherited property by ledgering cost to previous owner under Section 49(1)(iiia) and mortgage clearance cost per RM. Arunachalam v. CIT.",
+    "justification": "The problem requires calculating the final taxable capital gain by aggregating the cost to the previous owner and the mortgage redemption payment as per judicial precedent.",
     "protagonist": "Abraham",
     "actors": [
       "Xavier",
-      "Abraham"
+      "Abraham",
+      "Supreme Court"
     ],
     "key_numbers": [
       "₹ 5,00,000",
       "₹ 15,00,000",
       "₹ 55,00,000",
-      "₹ 20,00,000",
       "₹ 35,00,000"
     ],
     "key_dates": [
       "26.05.2002",
-      "FY 2009-10",
       "12.02.2010",
       "16.04.2025",
       "A.Y. 2026-27"
     ],
-    "visual_metaphor": "A multi-layered financial balance ledger adding original purchase cost and mortgage discharge cost to deduct from total sale consideration.",
+    "visual_metaphor": "A property ledger where a 'Mortgage Debt' stamp is replaced by a 'Cost of Acquisition' entry to clear the title.",
     "beat_plan": [
       {
-        "beat_goal": "Introduce Abraham's sale of inherited property and overall transaction overview",
+        "beat_goal": "Establish the timeline of the property from Xavier's purchase to Abraham's sale and mortgage clearance.",
         "layout": "example_scene",
         "anchor_phrases": [
-          "Abraham",
           "Xavier",
-          "16.04.2025",
-          "₹ 55,00,000"
+          "Abraham",
+          "Inherited",
+          "₹ 55 lacs"
         ]
       },
       {
-        "beat_goal": "Establish cost of acquisition for inherited property under Section 49(1)(iiia)",
-        "layout": "deemed_value",
+        "beat_goal": "Explain the cost of acquisition for inherited property under Section 49(1).",
+        "layout": "statute_quote",
         "anchor_phrases": [
           "Section 49(1)(iiia)",
           "Cost to previous owner",
-          "26.05.2002",
-          "₹ 5,00,000"
+          "₹ 5 lacs"
         ]
       },
       {
-        "beat_goal": "Apply judicial precedent for mortgage clearance expenditure under Section 48 and Section 55(2)",
+        "beat_goal": "Apply the judicial precedent for mortgage redemption as a cost component.",
         "layout": "case_card",
         "anchor_phrases": [
           "RM. Arunachalam v. CIT",
-          "12.02.2010",
-          "₹ 15,00,000",
-          "Clear Title"
+          "Clear title",
+          "Mortgage debt",
+          "₹ 15 lacs"
         ]
       },
       {
-        "beat_goal": "Present the structured computation ledger of capital gains for Abraham",
+        "beat_goal": "Compute the final taxable capital gain by subtracting total costs from sale consideration.",
         "layout": "ledger",
         "anchor_phrases": [
-          "Section 48",
-          "Section 55(2)",
+          "Sale consideration",
+          "Cost of acquisition",
           "₹ 20,00,000",
           "₹ 35,00,000"
         ]
       },
       {
-        "beat_goal": "Summarize key tax takeaway and final chargeable capital gain amount for A.Y. 2026-27",
+        "beat_goal": "State the final tax consequence for the relevant assessment year.",
         "layout": "takeaway",
         "anchor_phrases": [
           "A.Y. 2026-27",
-          "LTCG ₹ 35,00,000",
-          "Section 49(1)(iiia)"
+          "Long term capital gain",
+          "₹ 35,00,000"
         ]
       }
     ]
@@ -86,58 +84,60 @@
     {
       "layout": "example_scene",
       "title": {
-        "text": "Transaction Overview",
+        "text": "Property Timeline and Inheritance",
         "at": 0.3
       },
-      "voice_sync_text": "ഇവിടെ നമ്മൾ പഠിക്കുന്നത് inherited property-യുടെ capital gains computation ആണ്. Xavier 26.05.2002-ൽ വാങ്ങിയ property, FY 2009-10-ൽ Will വഴി Abraham-ന് ലഭിച്ചു. 16.04.2025-ൽ Abraham അത് ₹ 55,00,000-ന് വിറ്റു.",
+      "voice_sync_text": "இവിടെ നമ്മൾ പഠിക്കുന്നത് inherited capital asset-ന്റെ cost എങ്ങനെ compute ചെയ്യണമെന്നും, mortgage clear ചെയ്യാൻ successor നൽകുന്ന amount cost of acquisition ആയി claim ചെയ്യാൻ പറ്റുമോ എന്നുമാണ്. Let us look at Xavier and Abraham where the property was inherited and eventually sold for ₹ 55 lacs.",
       "visual_data": {
         "actors": [
           {
             "label": "Xavier",
-            "detail": "Original Owner",
+            "detail": "Purchased property",
+            "amount": 500000,
             "date": "26.05.2002",
             "icon": "person",
             "at": 32.74
           },
           {
             "label": "Abraham",
-            "detail": "Inherited via Will in FY 2009-10",
-            "window_start": "FY 2009-10",
+            "detail": "Inherited property",
+            "amount": 5500000,
+            "date": "16.04.2025",
             "icon": "person",
             "at": 38.9
           }
         ],
-        "transaction": "Sale of Inherited House Property",
+        "transaction": "Property Sale",
         "facts": [
           {
-            "label": "Sale Date",
-            "detail": "16.04.2025",
-            "date": "16.04.2025",
-            "icon": "calendar",
-            "at": 38.9
-          },
-          {
             "label": "Sale Consideration",
-            "detail": "₹ 55,00,000",
-            "value": "₹ 55,00,000",
             "amount": 5500000,
             "icon": "money_bag",
-            "at": 40.93
+            "at": 38.9
           }
+        ],
+        "spoken_amounts": [
+          "₹ 55 lacs"
         ]
       },
       "start": 0.0,
       "end": 45.31,
       "id": "b1",
-      "director_goal": "Introduce Abraham's sale of inherited property and overall transaction overview",
+      "director_goal": "Establish the timeline of the property from Xavier's purchase to Abraham's sale and mortgage clearance.",
       "anchor_phrases": [
-        "Abraham",
         "Xavier",
-        "16.04.2025",
-        "₹ 55,00,000"
+        "Abraham",
+        "Inherited",
+        "₹ 55 lacs"
       ],
       "animation_role": "key_fact",
       "anchor_alignment": [
+        {
+          "phrase": "Xavier",
+          "at": 32.74,
+          "matched": true,
+          "score": 1.0
+        },
         {
           "phrase": "Abraham",
           "at": 38.9,
@@ -145,22 +145,16 @@
           "score": 1.0
         },
         {
-          "phrase": "Xavier",
-          "at": 17.51,
+          "phrase": "Inherited",
+          "at": 44.52,
+          "matched": true,
+          "score": 0.556
+        },
+        {
+          "phrase": "₹ 55 lacs",
+          "at": 43.77,
           "matched": false,
-          "score": 0.364
-        },
-        {
-          "phrase": "16.04.2025",
-          "at": 40.24,
-          "matched": true,
-          "score": 1.0
-        },
-        {
-          "phrase": "₹ 55,00,000",
-          "at": 43.12,
-          "matched": true,
-          "score": 0.52
+          "score": 0.0
         }
       ],
       "anchor_match": {
@@ -169,42 +163,26 @@
       }
     },
     {
-      "layout": "deemed_value",
+      "layout": "statute_quote",
       "title": {
-        "text": "Cost of Acquisition to Heir",
+        "text": "Cost of Acquisition under Section 49(1)",
         "at": 45.96
       },
-      "voice_sync_text": "Section 49(1)(iiia)-ൽ പറയുന്ന പ്രധാന നിയമം ഇതാണ്. ഒരു property inheritance വഴിയോ Will വഴിയോ കിട്ടുമ്പോൾ, Cost to previous owner അതായത് 26.05.2002-ൽ father വാങ്ങിയ ₹ 5,00,000 ആണ് cost for new owner ആയി എടുക്കേണ്ടത്.",
+      "voice_sync_text": "Section 49(1)(iiia) പ്രകാരം inheritance വഴി കിട്ടുന്ന property-യുടെ cost of acquisition എന്നത് cost to previous owner ആയിരിക്കും, അതായത് ₹ 5 lacs.",
       "visual_data": {
-        "actual": {
-          "label": "Cost to Abraham",
-          "detail": "Acquired via Will",
-          "value": "₹ 0",
-          "amount": 0,
-          "icon": "person",
-          "at": 78.54
-        },
-        "deemed": {
-          "label": "Cost to previous owner",
-          "detail": "Purchased on 26.05.2002",
-          "value": "₹ 5,00,000",
-          "date": "26.05.2002",
-          "amount": 500000,
-          "icon": "house",
-          "at": 78.54
-        },
-        "rule": "Section 49(1)(iiia) - Deemed cost to heir is cost to previous owner",
-        "at": 75.5
+        "rule": "Cost of acquisition for inherited property",
+        "citation": "Section 49(1)(iiia)",
+        "application": "Cost to previous owner is ₹ 5 lacs",
+        "at": 84.68
       },
       "start": 45.66,
       "end": 87.62,
       "id": "b2",
-      "director_goal": "Establish cost of acquisition for inherited property under Section 49(1)(iiia)",
+      "director_goal": "Explain the cost of acquisition for inherited property under Section 49(1).",
       "anchor_phrases": [
         "Section 49(1)(iiia)",
         "Cost to previous owner",
-        "26.05.2002",
-        "₹ 5,00,000"
+        "₹ 5 lacs"
       ],
       "animation_role": "explanation",
       "anchor_alignment": [
@@ -221,16 +199,66 @@
           "score": 1.0
         },
         {
-          "phrase": "26.05.2002",
-          "at": 81.08,
+          "phrase": "₹ 5 lacs",
+          "at": 84.2,
           "matched": true,
-          "score": 0.889
+          "score": 0.826
+        }
+      ],
+      "anchor_match": {
+        "matched": 3,
+        "total": 3
+      }
+    },
+    {
+      "layout": "case_card",
+      "title": {
+        "text": "Judicial Precedent on Mortgage Debt",
+        "at": 88.27
+      },
+      "voice_sync_text": "സുപ്രീം കോടതി വിധിയായ RM. Arunachalam v. CIT പ്രകാരം, clear title കിട്ടാൻ successor അടയ്ക്കുന്ന mortgage debt amount ആയ ₹ 15 lacs cost of acquisition ആയി കണക്കാക്കാം.",
+      "visual_data": {
+        "case_name": "RM. Arunachalam v. CIT",
+        "court": "Supreme Court",
+        "principle": "Payment to clear mortgage debt for clear title is part of cost of acquisition",
+        "application": "Amount of ₹ 15 lacs paid by Abraham is added to cost",
+        "at": 87.97
+      },
+      "start": 87.97,
+      "end": 131.17,
+      "id": "b3",
+      "director_goal": "Apply the judicial precedent for mortgage redemption as a cost component.",
+      "anchor_phrases": [
+        "RM. Arunachalam v. CIT",
+        "Clear title",
+        "Mortgage debt",
+        "₹ 15 lacs"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "RM. Arunachalam v. CIT",
+          "at": 118.31,
+          "matched": true,
+          "score": 1.0
         },
         {
-          "phrase": "₹ 5,00,000",
-          "at": 77.62,
+          "phrase": "Clear title",
+          "at": 125.07,
+          "matched": true,
+          "score": 1.0
+        },
+        {
+          "phrase": "Mortgage debt",
+          "at": 112.95,
           "matched": false,
-          "score": 0.436
+          "score": 0.32
+        },
+        {
+          "phrase": "₹ 15 lacs",
+          "at": 128.63,
+          "matched": true,
+          "score": 0.92
         }
       ],
       "anchor_match": {
@@ -239,130 +267,56 @@
       }
     },
     {
-      "layout": "case_card",
-      "title": {
-        "text": "Judicial Precedent on Mortgage Clearance",
-        "at": 88.27
-      },
-      "voice_sync_text": "അടുത്തതായി നമ്മൾ ശ്രദ്ധിക്കേണ്ടത് mortgage clearance cost ആണ്. RM. Arunachalam v. CIT കേസിൽ Supreme Court വ്യക്തമാക്കിയതുപോലെ, 12.02.2010-ൽ Clear Title ലഭിക്കാൻ successor അടച്ച loan amount ₹ 15,00,000 cost of acquisition ആയി claim ചെയ്യാം.",
-      "visual_data": {
-        "case_name": "RM. Arunachalam v. CIT [1997] 227 ITR 222",
-        "court": "Supreme Court of India",
-        "principle": "Payment of outstanding mortgage loan on 12.02.2010 of ₹ 15,00,000 by successor to obtain Clear Title is allowable cost of acquisition.",
-        "application": "Abraham can include ₹ 15,00,000 spent for Clear Title on 12.02.2010 under Section 48 & 55(2).",
-        "at": 87.97
-      },
-      "start": 87.97,
-      "end": 131.17,
-      "id": "b3",
-      "director_goal": "Apply judicial precedent for mortgage clearance expenditure under Section 48 and Section 55(2)",
-      "anchor_phrases": [
-        "RM. Arunachalam v. CIT",
-        "12.02.2010",
-        "₹ 15,00,000",
-        "Clear Title"
-      ],
-      "animation_role": "explanation",
-      "anchor_alignment": [
-        {
-          "phrase": "RM. Arunachalam v. CIT",
-          "at": 118.37,
-          "matched": true,
-          "score": 1.0
-        },
-        {
-          "phrase": "12.02.2010",
-          "at": 122.97,
-          "matched": true,
-          "score": 1.0
-        },
-        {
-          "phrase": "₹ 15,00,000",
-          "at": 128.63,
-          "matched": true,
-          "score": 0.484
-        },
-        {
-          "phrase": "Clear Title",
-          "at": 130.21,
-          "matched": true,
-          "score": 0.5
-        }
-      ],
-      "anchor_match": {
-        "matched": 4,
-        "total": 4
-      }
-    },
-    {
       "layout": "ledger",
       "title": {
-        "text": "Capital Gains Computation",
+        "text": "Computation of Taxable Capital Gain",
         "at": 131.82
       },
-      "voice_sync_text": "ഇനി Section 48 ഉം Section 55(2) ഉം അനുസരിച്ച് computation നോക്കാം. Full value of consideration ₹ 55,00,000-ൽ നിന്ന് Total cost of acquisition ₹ 20,00,000 കുറയ്ക്കുമ്പോൾ, taxable capital gain ₹ 35,00,000 എന്ന് ലഭിക്കും.",
+      "voice_sync_text": "Computation ചെയ്യുമ്പോൾ sale consideration ₹ 55,00,000-ൽ നിന്ന് cost of acquisition ആയ total ₹ 20,00,000 കുറച്ചാൽ നമുക്ക് ലഭിക്കുന്നത് long term capital gain ஆகும்.",
       "visual_data": {
         "rows": [
           {
-            "label": "Full Value of Consideration",
-            "detail": "Sale price on 16.04.2025",
-            "value": "₹ 55,00,000",
+            "label": "Sale consideration",
             "amount": 5500000,
             "sign": "+",
-            "icon": "money_bag",
-            "at": 162.2
+            "at": 162.62
           },
           {
-            "label": "Cost to previous owner",
-            "detail": "Section 49(1)(iiia) cost",
-            "value": "₹ 5,00,000",
-            "amount": 500000,
-            "sign": "-",
-            "icon": "house",
-            "at": 165.76
-          },
-          {
-            "label": "Mortgage Loan Paid by Abraham",
-            "detail": "Section 48 & Section 55(2)",
-            "value": "₹ 15,00,000",
-            "amount": 1500000,
-            "sign": "-",
-            "icon": "padlock",
-            "at": 165.76
-          },
-          {
-            "label": "Total Cost of Acquisition",
-            "detail": "Deduction under Section 48",
-            "value": "₹ 20,00,000",
+            "label": "Cost of acquisition",
             "amount": 2000000,
-            "sign": "=",
-            "icon": "scales",
+            "sign": "-",
             "at": 165.76
           }
         ],
-        "total": "Long Term Capital Gain: ₹ 35,00,000"
+        "total": "₹ 35,00,000",
+        "spoken_amounts": [
+          "₹ 55,00,000",
+          "₹ 20,00,000",
+          "55,00,000",
+          "20,00,000"
+        ]
       },
       "start": 131.52,
       "end": 172.03,
       "id": "b4",
-      "director_goal": "Present the structured computation ledger of capital gains for Abraham",
+      "director_goal": "Compute the final taxable capital gain by subtracting total costs from sale consideration.",
       "anchor_phrases": [
-        "Section 48",
-        "Section 55(2)",
+        "Sale consideration",
+        "Cost of acquisition",
         "₹ 20,00,000",
         "₹ 35,00,000"
       ],
       "animation_role": "explanation",
       "anchor_alignment": [
         {
-          "phrase": "Section 48",
-          "at": 157.8,
+          "phrase": "Sale consideration",
+          "at": 162.62,
           "matched": true,
-          "score": 1.0
+          "score": 0.85
         },
         {
-          "phrase": "Section 55(2)",
-          "at": 158.98,
+          "phrase": "Cost of acquisition",
+          "at": 165.76,
           "matched": true,
           "score": 1.0
         },
@@ -387,52 +341,38 @@
     {
       "layout": "takeaway",
       "title": {
-        "text": "Tax Summary & Final Impact",
+        "text": "Final Assessment Summary",
         "at": 172.68
       },
-      "voice_sync_text": "സംഗ്രഹിച്ചാൽ, Section 49(1)(iiia) പ്രകാരം cost to previous owner-ഉം, mortgage clearance cost-ഉം ഉൾപ്പെടുത്തി A.Y. 2026-27-ൽ taxable LTCG ₹ 35,00,000 ആയി മാറും.",
+      "voice_sync_text": "Finally, for A.Y. 2026-27, the taxable long term capital gain is computed at ₹ 35,00,000 after factoring in the previous owner cost and mortgage redemption payment.",
       "visual_data": {
         "rules": [
           {
-            "label": "Section 49(1)(iiia)",
-            "detail": "Cost to previous owner (₹ 5,00,000) deemed as cost of acquisition.",
-            "value": "Section 49(1)(iiia)",
-            "icon": "document",
-            "at": 202.36
-          },
-          {
-            "label": "Clear Title Mortgage Payment",
-            "detail": "Loan clearance of ₹ 15,00,000 added to cost of acquisition.",
-            "value": "₹ 15,00,000",
-            "amount": 1500000,
-            "icon": "padlock",
-            "at": 202.36
-          },
-          {
-            "label": "Assessment Year",
-            "detail": "Applicable for A.Y. 2026-27",
-            "value": "A.Y. 2026-27",
+            "label": "A.Y. 2026-27",
+            "detail": "Assessment year for capital gains",
             "icon": "calendar",
-            "at": 203.62
+            "at": 174.77
           },
           {
-            "label": "Taxable Long Term Capital Gain",
-            "detail": "Chargeable LTCG ₹ 35,00,000",
-            "value": "LTCG ₹ 35,00,000",
+            "label": "Long term capital gain",
             "amount": 3500000,
             "icon": "money_bag",
-            "at": 212.2
+            "at": 185.84
           }
+        ],
+        "spoken_amounts": [
+          "₹ 35,00,000",
+          "35,00,000"
         ]
       },
       "start": 172.38,
       "end": 215.95,
       "id": "b5",
-      "director_goal": "Summarize key tax takeaway and final chargeable capital gain amount for A.Y. 2026-27",
+      "director_goal": "State the final tax consequence for the relevant assessment year.",
       "anchor_phrases": [
         "A.Y. 2026-27",
-        "LTCG ₹ 35,00,000",
-        "Section 49(1)(iiia)"
+        "Long term capital gain",
+        "₹ 35,00,000"
       ],
       "animation_role": "key_fact",
       "anchor_alignment": [
@@ -443,16 +383,16 @@
           "score": 0.621
         },
         {
-          "phrase": "LTCG ₹ 35,00,000",
-          "at": 212.8,
-          "matched": true,
-          "score": 0.735
+          "phrase": "Long term capital gain",
+          "at": 182.74,
+          "matched": false,
+          "score": 0.333
         },
         {
-          "phrase": "Section 49(1)(iiia)",
-          "at": 176.22,
-          "matched": false,
-          "score": 0.2
+          "phrase": "₹ 35,00,000",
+          "at": 213.96,
+          "matched": true,
+          "score": 0.495
         }
       ],
       "anchor_match": {
@@ -461,10 +401,14 @@
       }
     }
   ],
+  "needs_review": true,
+  "quality_issues": [
+    "unsupported section/rule: Section 49(1)"
+  ],
   "audio_duration_sec": 215.95,
   "anchor_match": {
-    "matched": 16,
-    "total": 19,
-    "rate": 0.842
+    "matched": 15,
+    "total": 18,
+    "rate": 0.833
   }
 }

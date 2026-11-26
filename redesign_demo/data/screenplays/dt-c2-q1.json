@@ -1,19 +1,19 @@
 {
   "question_id": "dt-c2-q1",
   "audio_url": "data/audio/dt-c2-q1.mp3",
-  "duration_sec": 234.7,
+  "duration_sec": 223.84,
   "sync_offset_sec": 0.0,
   "context_pill": "Capital Gains on Amalgamation",
-  "example_summary": "M's share swap in an amalgamation resulted in a ₹ 50,000 market value gain, which the AO wants to tax as an exchange.",
-  "source_provision": "### Master Statutory Summary Matrix\n\n| Section / Provision | Legal Trigger & Qualifying Conditions | Statutory Treatment & Tax Impact |\n| :--- | :--- | :--- |\n| **Section 47(vii)** | Shareholder transfers shares in Amalgamating Company in exchange for allotment of shares in Amalgamated Company (Must be an **Indian Company**). | **Not regarded as a Transfer**. Zero Capital Gains tax liability at the time of amalgamation. |\n| **Section 49(2)** | Determination of Cost of Acquisition of newly allotted shares in the Amalgamated Company. | Cost = **Cost of acquisition of original shares** in the amalgamating company. |\n| **Section 2(42A)(c)** | Determination of Period of Holding for newly allotted shares in the Amalgamated Company. | Period includes **period of holding of original shares** held in the amalgamating company. |\n\n\n**Statutory Checklist for Section 47(vii) Exemption:**\n\n* **Scheme of Amalgamation:** The transfer of original shares must be executed strictly pursuant to a court-approved scheme of amalgamation.\n\n* **Consideration Condition:** The consideration for transfer must consist **solely of the allotment of shares** in the amalgamated company.\n\n* **Residency Requirement:** The amalgamated company **must be an Indian company** for the exemption to apply.\n\n\n> [!IMPORTANT]\n> Irrelevance of Market Value Appreciation: Any higher market valuation or nominal increment in the value of shares allotted by the amalgamated company does NOT constitute a taxable exchange. Because Section 47(vii) explicitly states it is not a transfer, no Capital Gains can be levied u/s 45.",
+  "example_summary": "M's shares in ABC Ltd were replaced by shares in an amalgamated Indian company, resulting in a market value increase of ₹ 50,000 which the AO tried to tax.",
+  "source_provision": "| Statutory Provision | Core Condition / Eligibility | Tax Treatment & Legal Consequence |\n| :--- | :--- | :--- |\n| **Section 47(vii)** | Transfer of shares held in amalgamating company by a shareholder in consideration of allotment of shares in the amalgamated Indian company. | **Not regarded as transfer**, hence exempt from Capital Gains tax u/s 45. |\n| **Section 49(2)** | Cost of acquisition of shares in the amalgamated company shall be deemed to be the cost of acquisition of shares in the amalgamating company. | **Cost Carry Forward**: Cost and holding period of old shares are substituted into the new shares. |\n| **Section 2(42A)** | Period of holding of shares in the amalgamated company includes the period for which the shares in the amalgamating company were held. | **Holding Period Integration**: Determines whether capital gains are Long-Term (LTCG) or Short-Term (STCG). |\n\n> [!IMPORTANT]\n> Amalgamation Condition: The amalgamated company **must be an Indian company** for Section 47(vii) exemption to apply.\n\n> [!WARNING]\n> Assessing Officer Error: Treating the allotment of higher market value shares as a taxable **exchange** is legally incorrect when statutory conditions of amalgamation are satisfied.",
   "director": {
-    "archetype": "conditions_checklist",
-    "justification": "The case tests whether M's share swap during amalgamation meets Section 47(vii) statutory criteria to override the Assessing Officer's proposal to tax the ₹ 50,000 market value appreciation.",
+    "archetype": "exception_override",
+    "justification": "The scenario pits the Assessing Officer's attempt to tax an exchange against the specific statutory exemption for amalgamations under Section 47(vii).",
     "protagonist": "M",
     "actors": [
-      "Assessing Officer",
       "ABC Ltd",
-      "Amalgamated Company"
+      "Amalgamated Indian Company",
+      "Assessing Officer"
     ],
     "key_numbers": [
       "2000 shares",
@@ -23,72 +23,66 @@
     "key_dates": [
       "31.3.2026"
     ],
-    "visual_metaphor": "A statutory compliance gatekeeper verifying amalgamation credentials to block an illegal tax assessment shield.",
+    "visual_metaphor": "A legal barrier labeled Section 47(vii) blocking a tax invoice from the Assessing Officer.",
     "beat_plan": [
       {
-        "beat_goal": "Establish M's share swap transaction and the Assessing Officer's tax demand on excess market value.",
+        "beat_goal": "Establish the initial shareholding and the amalgamation event.",
         "layout": "example_scene",
         "anchor_phrases": [
           "M",
           "2000 shares",
           "ABC Ltd",
           "1000 shares",
-          "₹ 50,000 excess value",
-          "Assessing Officer"
+          "₹ 50,000"
         ]
       },
       {
-        "beat_goal": "Introduce Section 47(vii) core mandate excluding share exchanges in amalgamation from being treated as transfer.",
-        "layout": "statute_quote",
+        "beat_goal": "Show the Assessing Officer's attempt to tax the market value difference.",
+        "layout": "flow_actors",
         "anchor_phrases": [
-          "Section 47(vii)",
-          "Not regarded as a Transfer",
-          "Amalgamated Company"
+          "Assessing Officer",
+          "₹ 50,000",
+          "Exchange"
         ]
       },
       {
-        "beat_goal": "Verify statutory conditions required under Section 47(vii) for tax exemption.",
+        "beat_goal": "Verify the critical condition for the exemption.",
         "layout": "checklist_gate",
         "anchor_phrases": [
-          "Indian Company",
-          "Solely Share Consideration",
-          "Scheme of Amalgamation"
+          "Amalgamated Indian Company",
+          "Section 47(vii)"
         ]
       },
       {
-        "beat_goal": "Address the irrelevance of ₹ 50,000 market value increase and reject the AO proposal.",
+        "beat_goal": "Cite the provision that exempts the transaction from capital gains.",
+        "layout": "statute_quote",
+        "anchor_phrases": [
+          "Not regarded as transfer",
+          "Section 45"
+        ]
+      },
+      {
+        "beat_goal": "Explain how the cost of the old shares is carried forward.",
         "layout": "deemed_value",
         "anchor_phrases": [
-          "₹ 50,000 Market Value",
-          "Section 45",
-          "AO Proposal Not Justified"
-        ]
-      },
-      {
-        "beat_goal": "Detail Section 49(2) rule for cost of acquisition of newly allotted shares.",
-        "layout": "ledger",
-        "anchor_phrases": [
           "Section 49(2)",
-          "Cost of Acquisition",
-          "Original Shares Cost"
+          "Cost of acquisition"
         ]
       },
       {
-        "beat_goal": "Explain Section 2(42A)(c) rule for computing period of holding.",
+        "beat_goal": "Explain the integration of the holding period for future gains.",
         "layout": "timeline_windows",
         "anchor_phrases": [
-          "Section 2(42A)(c)",
-          "Period of Holding",
-          "31.3.2026"
+          "Section 2(42A)",
+          "Period of holding"
         ]
       },
       {
-        "beat_goal": "Summarize the final legal takeaway confirming zero tax liability and rejection of AO proposal.",
+        "beat_goal": "Conclude that the AO's proposal is legally incorrect.",
         "layout": "takeaway",
         "anchor_phrases": [
-          "Section 47(vii) Exemption",
-          "Zero Capital Gains",
-          "AO Proposal Rejected"
+          "Not justified",
+          "Exempt"
         ]
       }
     ]
@@ -98,216 +92,156 @@
     {
       "layout": "example_scene",
       "title": {
-        "text": "The Amalgamation Swap",
+        "text": "The Amalgamation Event",
         "at": 0.3
       },
-      "voice_sync_text": "Amalgamation സമയത്ത് shares exchange ചെയ്യുമ്പോൾ Capital Gains tax ബാധകമാണോ എന്ന് Section 47(vii), Section 49(2), Section 2(42A) എന്നിവ ഉപയോഗിച്ച് നമുക്ക് പഠിക്കാം. M എന്ന വ്യക്തിക്ക് ABC Ltd-ൽ 2000 shares ഉണ്ടായിരുന്നു. 31.3.2026-ൽ നടന്ന amalgamation വഴി M-ന് പുതിയ കമ്പനിയിൽ 1000 shares ലഭിച്ചു. ഇതിന്റെ market value പഴയതിനേക്കാൾ ₹ 50,000 excess value ഉള്ളതുകൊണ്ട് Assessing Officer ഇത് tax ചെയ്യാൻ ശ്രമിക്കുന്നു.",
+      "voice_sync_text": "M എന്ന വ്യക്തി ABC Ltd-ൽ 2000 shares കൈവശം വെച്ചിരുന്നു. 31.3.2026-ൽ ഈ കമ്പനി മറ്റൊരു കമ്പനിയുമായി amalgamate ചെയ്തു. ഇതിന്റെ ഭാഗമായി M-ന് പുതിയ കമ്പനിയിൽ 1000 shares ലഭിച്ചു. ഈ പുതിയ ഷെയറുകളുടെ market value പഴയതിനേക്കാൾ ₹ 50,000 കൂടുതലായിരുന്നു.",
       "visual_data": {
         "actors": [
           {
             "label": "M",
             "icon": "person",
-            "at": 0.36
+            "at": 27.54
           },
-          {
-            "label": "Assessing Officer",
-            "icon": "gavel",
-            "at": 20.62
-          }
-        ],
-        "transaction": "Share Exchange",
-        "facts": [
           {
             "label": "ABC Ltd",
-            "detail": "Original Holding",
-            "amount": 2000,
-            "icon": "shares",
-            "at": 20.62
-          },
-          {
-            "label": "Amalgamated Co",
-            "detail": "New Allotment",
-            "amount": 1000,
-            "icon": "shares",
-            "at": 20.62
-          },
-          {
-            "label": "₹ 50,000 excess value",
-            "status": "Proposed Gain",
-            "amount": 50000,
-            "icon": "money_bag",
-            "at": 20.62
-          },
-          {
-            "label": "Date",
-            "date": "31.3.2026",
-            "icon": "calendar",
-            "at": 20.62
+            "icon": "factory",
+            "at": 28.62
           }
+        ],
+        "transaction": "Amalgamation",
+        "facts": [
+          {
+            "label": "Old Holding",
+            "value": "2000 shares",
+            "icon": "shares",
+            "at": 38.88
+          },
+          {
+            "label": "New Allotment",
+            "value": "1000 shares",
+            "icon": "shares",
+            "at": 42.42
+          },
+          {
+            "label": "Value Increase",
+            "amount": 50000,
+            "date": "31.3.2026",
+            "icon": "money_bag",
+            "at": 42.42
+          }
+        ],
+        "spoken_amounts": [
+          "₹ 50,000",
+          "50,000"
         ]
       },
       "start": 0.0,
-      "end": 26.2,
+      "end": 45.41,
       "id": "b1",
-      "director_goal": "Establish M's share swap transaction and the Assessing Officer's tax demand on excess market value.",
+      "director_goal": "Establish the initial shareholding and the amalgamation event.",
       "anchor_phrases": [
         "M",
         "2000 shares",
         "ABC Ltd",
         "1000 shares",
-        "₹ 50,000 excess value",
-        "Assessing Officer"
+        "₹ 50,000"
       ],
       "animation_role": "key_fact",
       "anchor_alignment": [
         {
           "phrase": "M",
-          "at": 10.1,
+          "at": 27.54,
           "matched": true,
-          "score": 1.0
+          "score": 0.5
         },
         {
           "phrase": "2000 shares",
-          "at": 12.4,
+          "at": 29.64,
           "matched": true,
-          "score": 0.952
+          "score": 0.957
         },
         {
           "phrase": "ABC Ltd",
-          "at": 11.62,
+          "at": 2.77,
           "matched": false,
-          "score": 0.429
+          "score": 0.444
         },
         {
           "phrase": "1000 shares",
-          "at": 16.44,
+          "at": 39.04,
           "matched": true,
-          "score": 0.706
+          "score": 0.957
         },
         {
-          "phrase": "₹ 50,000 excess value",
-          "at": 18.28,
-          "matched": true,
-          "score": 0.691
-        },
-        {
-          "phrase": "Assessing Officer",
-          "at": 20.62,
+          "phrase": "₹ 50,000",
+          "at": 43.42,
           "matched": true,
           "score": 1.0
         }
       ],
       "anchor_match": {
-        "matched": 5,
-        "total": 6
+        "matched": 4,
+        "total": 5
       }
     },
     {
-      "layout": "statute_quote",
+      "layout": "flow_actors",
       "title": {
-        "text": "Statutory Exclusion",
-        "at": 26.85
+        "text": "The AO's Proposal",
+        "at": 46.06
       },
-      "voice_sync_text": "Section 47(vii) പ്രകാരം, ഒരു amalgamating company-യിലെ shares തന്ന് Amalgamated Company-യിലെ shares വാങ്ങുന്നത്, Income Tax Act-ന്റെ దృష్టిയിൽ Not regarded as a Transfer ആണ്.",
+      "voice_sync_text": "ഇവിടെ Assessing Officer പറയുന്നത് ഇതൊരു Exchange ആണെന്നാണ്. ഈ ₹ 50,000 ലാഭത്തിന്മേൽ capital gains tax അടയ്ക്കണമെന്ന് അദ്ദേഹം ആവശ്യപ്പെടുന്നു.",
       "visual_data": {
-        "rule": "Any transfer by a shareholder in a scheme of amalgamation of a capital asset being a share or shares held by him in the amalgamating company.",
-        "citation": "Section 47(vii)",
-        "application": "Not regarded as a Transfer",
-        "at": 26.55
-      },
-      "start": 26.55,
-      "end": 50.63,
-      "id": "b2",
-      "director_goal": "Introduce Section 47(vii) core mandate excluding share exchanges in amalgamation from being treated as transfer.",
-      "anchor_phrases": [
-        "Section 47(vii)",
-        "Not regarded as a Transfer",
-        "Amalgamated Company"
-      ],
-      "animation_role": "explanation",
-      "anchor_alignment": [
-        {
-          "phrase": "Section 47(vii)",
-          "at": 29.37,
-          "matched": true,
-          "score": 0.571
-        },
-        {
-          "phrase": "Not regarded as a Transfer",
-          "at": 30.21,
-          "matched": true,
-          "score": 0.898
-        },
-        {
-          "phrase": "Amalgamated Company",
-          "at": 40.45,
-          "matched": true,
-          "score": 1.0
-        }
-      ],
-      "anchor_match": {
-        "matched": 3,
-        "total": 3
-      }
-    },
-    {
-      "layout": "checklist_gate",
-      "title": {
-        "text": "Exemption Conditions",
-        "at": 51.28
-      },
-      "voice_sync_text": "ഇതിന് ചില നിബന്ധനകളുണ്ട്. Amalgamated company ഒരു Indian Company ആയിരിക്കണം. പ്രതിഫലം Solely Share Consideration ആയിരിക്കണം, കൂടാതെ ഇത് ഒരു Scheme of Amalgamation പ്രകാരം ആയിരിക്കണം.",
-      "visual_data": {
-        "conditions": [
+        "actors": [
           {
-            "label": "Indian Company",
-            "pass": true,
-            "icon": "bank",
-            "at": 52.44
-          },
-          {
-            "label": "Solely Share Consideration",
-            "pass": true,
-            "icon": "shares",
-            "at": 79.98
-          },
-          {
-            "label": "Scheme of Amalgamation",
-            "pass": true,
-            "icon": "document",
-            "at": 79.98
+            "label": "Assessing Officer",
+            "icon": "gavel",
+            "at": 74.62
           }
         ],
-        "outcome": "Exemption Qualified"
+        "edges": [
+          {
+            "label": "Exchange",
+            "detail": "Proposed Tax on Gain",
+            "amount": 50000,
+            "icon": "money_bag",
+            "at": 76.54
+          }
+        ],
+        "spoken_amounts": [
+          "₹ 50,000",
+          "50,000"
+        ]
       },
-      "start": 50.98,
-      "end": 96.26,
-      "id": "b3",
-      "director_goal": "Verify statutory conditions required under Section 47(vii) for tax exemption.",
+      "start": 45.76,
+      "end": 82.87,
+      "id": "b2",
+      "director_goal": "Show the Assessing Officer's attempt to tax the market value difference.",
       "anchor_phrases": [
-        "Indian Company",
-        "Solely Share Consideration",
-        "Scheme of Amalgamation"
+        "Assessing Officer",
+        "₹ 50,000",
+        "Exchange"
       ],
       "animation_role": "explanation",
       "anchor_alignment": [
         {
-          "phrase": "Indian Company",
-          "at": 52.44,
+          "phrase": "Assessing Officer",
+          "at": 74.62,
           "matched": true,
-          "score": 0.787
+          "score": 1.0
         },
         {
-          "phrase": "Solely Share Consideration",
-          "at": 79.98,
+          "phrase": "₹ 50,000",
+          "at": 81.78,
           "matched": true,
-          "score": 0.615
+          "score": 1.0
         },
         {
-          "phrase": "Scheme of Amalgamation",
-          "at": 85.81,
+          "phrase": "Exchange",
+          "at": 56.29,
           "matched": false,
-          "score": 0.412
+          "score": 0.286
         }
       ],
       "anchor_match": {
@@ -316,257 +250,255 @@
       }
     },
     {
-      "layout": "deemed_value",
+      "layout": "checklist_gate",
       "title": {
-        "text": "Market Value Irrelevance",
-        "at": 96.91
+        "text": "Statutory Conditions",
+        "at": 83.52
       },
-      "voice_sync_text": "പുതിയ shares-ന്റെ ₹ 50,000 Market Value കൂടുതൽ ആണെങ്കിൽ പോലും, Section 45 പ്രകാരം ഇതിനെ ഒരു transfer ആയി കാണാൻ കഴിയില്ല. അതുകൊണ്ട് AO Proposal Not Justified.",
+      "voice_sync_text": "എന്നാൽ നിയമം പരിശോധിക്കുമ്പോൾ, പുതിയ കമ്പനി ഒരു Amalgamated Indian Company ആണെങ്കിൽ Section 47(vii) പ്രകാരം ഇതിന് ഇളവ് ലഭിക്കും.",
       "visual_data": {
-        "actual": {
-          "label": "₹ 50,000 Market Value",
-          "amount": 50000,
-          "icon": "money_bag",
-          "at": 127.65
-        },
-        "deemed": {
-          "label": "Taxable Gain",
-          "value": "NIL",
-          "icon": "scales",
-          "at": 127.65
-        },
-        "rule": "Section 45 does not trigger as Section 47(vii) overrides it. AO Proposal Not Justified.",
-        "at": 127.65
+        "conditions": [
+          {
+            "label": "Amalgamated Indian Company",
+            "pass": true,
+            "icon": "bank",
+            "at": 87.2
+          },
+          {
+            "label": "Section 47(vii) Compliance",
+            "pass": true,
+            "icon": "document",
+            "at": 89.98
+          }
+        ],
+        "outcome": "Exempt Transaction"
       },
-      "start": 96.61,
-      "end": 139.73,
-      "id": "b4",
-      "director_goal": "Address the irrelevance of ₹ 50,000 market value increase and reject the AO proposal.",
+      "start": 83.22,
+      "end": 93.62,
+      "id": "b3",
+      "director_goal": "Verify the critical condition for the exemption.",
       "anchor_phrases": [
-        "₹ 50,000 Market Value",
-        "Section 45",
-        "AO Proposal Not Justified"
+        "Amalgamated Indian Company",
+        "Section 47(vii)"
       ],
       "animation_role": "explanation",
       "anchor_alignment": [
         {
-          "phrase": "₹ 50,000 Market Value",
-          "at": 101.55,
-          "matched": false,
-          "score": 0.421
-        },
-        {
-          "phrase": "Section 45",
-          "at": 128.51,
+          "phrase": "Amalgamated Indian Company",
+          "at": 87.2,
           "matched": true,
-          "score": 0.977
+          "score": 1.0
         },
         {
-          "phrase": "AO Proposal Not Justified",
-          "at": 132.59,
-          "matched": false,
-          "score": 0.409
+          "phrase": "Section 47(vii)",
+          "at": 89.98,
+          "matched": true,
+          "score": 0.953
         }
       ],
       "anchor_match": {
-        "matched": 1,
-        "total": 3
+        "matched": 2,
+        "total": 2
       }
     },
     {
-      "layout": "ledger",
+      "layout": "statute_quote",
       "title": {
-        "text": "Cost of Acquisition",
-        "at": 140.38
+        "text": "Exemption from Transfer",
+        "at": 94.27
       },
-      "voice_sync_text": "Section 49(2) അനുസരിച്ച്, amalgamated company-യിൽ ലഭിച്ച പുതിയ shares-ന്റെ Cost of Acquisition എന്നത് പഴയ Original Shares Cost തന്നെയായിരിക്കും.",
+      "voice_sync_text": "Section 47(vii) വ്യക്തമാക്കുന്നത് ഇത്തരം കൈമാറ്റങ്ങൾ Not regarded as transfer എന്നാണ്. അതുകൊണ്ട് തന്നെ Section 45 പ്രകാരം ഇതിന് നികുതി നൽകേണ്ടതില്ല.",
       "visual_data": {
-        "rows": [
-          {
-            "label": "Cost of New Shares",
-            "detail": "In Amalgamated Co",
-            "icon": "shares",
-            "at": 145.3
-          },
-          {
-            "label": "Original Shares Cost",
-            "detail": "In ABC Ltd",
-            "sign": "=",
-            "icon": "money_bag",
-            "at": 148.85
-          }
-        ],
-        "total": "Section 49(2) Carryover"
+        "rule": "Transfer of shares in amalgamation by a shareholder is not a transfer",
+        "citation": "Section 47(vii) & Section 45",
+        "application": "No Capital Gains Tax liability arises",
+        "at": 127.37
       },
-      "start": 140.08,
-      "end": 152.0,
+      "start": 93.97,
+      "end": 132.64,
+      "id": "b4",
+      "director_goal": "Cite the provision that exempts the transaction from capital gains.",
+      "anchor_phrases": [
+        "Not regarded as transfer",
+        "Section 45"
+      ],
+      "animation_role": "explanation",
+      "anchor_alignment": [
+        {
+          "phrase": "Not regarded as transfer",
+          "at": 124.67,
+          "matched": true,
+          "score": 0.958
+        },
+        {
+          "phrase": "Section 45",
+          "at": 129.43,
+          "matched": true,
+          "score": 1.0
+        }
+      ],
+      "anchor_match": {
+        "matched": 2,
+        "total": 2
+      }
+    },
+    {
+      "layout": "deemed_value",
+      "title": {
+        "text": "Cost Carry Forward",
+        "at": 133.29
+      },
+      "voice_sync_text": "ഇനി ഇതിന്റെ ചിലവ് എങ്ങനെ കണക്കാക്കും? Section 49(2) പ്രകാരം പുതിയ ഷെയറുകളുടെ Cost of acquisition എന്നത് പഴയ ABC Ltd ഷെയറുകൾ വാങ്ങിയ അതേ തുകയായിരിക്കും.",
+      "visual_data": {
+        "actual": {
+          "label": "ABC Ltd Shares",
+          "detail": "Original Purchase Price",
+          "icon": "money_bag",
+          "at": 142.63
+        },
+        "deemed": {
+          "label": "New Shares",
+          "detail": "Substituted Cost",
+          "icon": "shares",
+          "at": 142.63
+        },
+        "rule": "Section 49(2) Cost of acquisition",
+        "at": 136.65
+      },
+      "start": 132.99,
+      "end": 146.67,
       "id": "b5",
-      "director_goal": "Detail Section 49(2) rule for cost of acquisition of newly allotted shares.",
+      "director_goal": "Explain how the cost of the old shares is carried forward.",
       "anchor_phrases": [
         "Section 49(2)",
-        "Cost of Acquisition",
-        "Original Shares Cost"
+        "Cost of acquisition"
       ],
       "animation_role": "explanation",
       "anchor_alignment": [
         {
           "phrase": "Section 49(2)",
-          "at": 140.08,
-          "matched": false,
-          "score": 0.348
-        },
-        {
-          "phrase": "Cost of Acquisition",
-          "at": 146.29,
-          "matched": false,
-          "score": 0.37
-        },
-        {
-          "phrase": "Original Shares Cost",
-          "at": 150.86,
+          "at": 136.65,
           "matched": true,
-          "score": 0.5
+          "score": 1.0
+        },
+        {
+          "phrase": "Cost of acquisition",
+          "at": 139.21,
+          "matched": true,
+          "score": 1.0
         }
       ],
       "anchor_match": {
-        "matched": 1,
-        "total": 3
+        "matched": 2,
+        "total": 2
       }
     },
     {
       "layout": "timeline_windows",
       "title": {
-        "text": "Holding Period",
-        "at": 152.65
+        "text": "Holding Period Integration",
+        "at": 147.32
       },
-      "voice_sync_text": "Section 2(42A)(c) പ്രകാരം, പുതിയ shares short-term ആണോ long-term ആണോ എന്ന് നിർണ്ണയിക്കുമ്പോൾ, പഴയ company-യിൽ ആ shares എത്രകാലം കയ്യിൽ വെച്ചു എന്ന Period of Holding കൂടി കൂട്ടി ചേർക്കണം. 31.3.2026 വരെയുള്ള കാലയളവ് ഇതിൽ ഉൾപ്പെടും.",
+      "voice_sync_text": "അതുപോലെ തന്നെ, ഭാവിയിൽ ഈ ഷെയറുകൾ വിൽക്കുമ്പോൾ Period of holding കണക്കാക്കാൻ Section 2(42A) പ്രകാരം പഴയ ഷെയറുകൾ കൈവശം വെച്ചിരുന്ന കാലയളവ് കൂടി ചേർക്കാവുന്നതാണ്.",
       "visual_data": {
         "events": [
           {
-            "label": "Original Holding",
-            "detail": "ABC Ltd",
+            "label": "ABC Ltd Holding",
             "icon": "calendar",
-            "at": 190.31
+            "at": 176.36
           },
           {
-            "label": "Amalgamation",
-            "date": "31.3.2026",
-            "icon": "gavel",
-            "at": 191.51
-          },
-          {
-            "label": "New Holding",
-            "detail": "Amalgamated Co",
-            "icon": "shares",
-            "at": 191.51
+            "label": "New Shares Holding",
+            "icon": "calendar",
+            "at": 176.36
           }
         ],
-        "window_label": "Section 2(42A)(c) Period of Holding"
+        "window_label": "Section 2(42A) Total Period of holding"
       },
-      "start": 152.35,
-      "end": 196.55,
+      "start": 147.02,
+      "end": 183.92,
       "id": "b6",
-      "director_goal": "Explain Section 2(42A)(c) rule for computing period of holding.",
+      "director_goal": "Explain the integration of the holding period for future gains.",
       "anchor_phrases": [
-        "Section 2(42A)(c)",
-        "Period of Holding",
-        "31.3.2026"
+        "Section 2(42A)",
+        "Period of holding"
       ],
       "animation_role": "explanation",
       "anchor_alignment": [
         {
-          "phrase": "Section 2(42A)(c)",
-          "at": 178.71,
-          "matched": true,
-          "score": 0.863
-        },
-        {
-          "phrase": "Period of Holding",
-          "at": 189.97,
+          "phrase": "Section 2(42A)",
+          "at": 177.62,
           "matched": true,
           "score": 1.0
         },
         {
-          "phrase": "31.3.2026",
-          "at": 192.49,
-          "matched": true,
-          "score": 0.847
+          "phrase": "Period of holding",
+          "at": 157.7,
+          "matched": false,
+          "score": 0.308
         }
       ],
       "anchor_match": {
-        "matched": 3,
-        "total": 3
+        "matched": 1,
+        "total": 2
       }
     },
     {
       "layout": "takeaway",
       "title": {
         "text": "Final Verdict",
-        "at": 197.2
+        "at": 184.57
       },
-      "voice_sync_text": "ചുരുക്കത്തിൽ, Section 47(vii) Exemption ഉള്ളതിനാൽ ഇവിടെ Zero Capital Gains ആണ് വരുന്നത്. Assessing Officer-ന്റെ AO Proposal Rejected.",
+      "voice_sync_text": "ചുരുക്കത്തിൽ, ഈ ഇടപാടിന് നികുതി ചുമത്താനുള്ള Assessing Officer-ന്റെ തീരുമാനം Not justified ആണ്. ഇത് പൂർണ്ണമായും Exempt ആണ്.",
       "visual_data": {
         "rules": [
           {
-            "label": "Section 47(vii) Exemption",
-            "status": "Applied",
+            "label": "AO's Proposal",
+            "status": "Not justified",
+            "icon": "gavel",
+            "at": 184.27
+          },
+          {
+            "label": "Taxability",
+            "status": "Exempt",
             "icon": "padlock",
-            "at": 225.74
-          },
-          {
-            "label": "Zero Capital Gains",
-            "amount": 0,
-            "icon": "money_bag",
-            "at": 229.36
-          },
-          {
-            "label": "AO Proposal Rejected",
-            "status": "Final",
-            "icon": "scales",
-            "at": 232.48
+            "at": 184.27
           }
         ]
       },
-      "start": 196.9,
-      "end": 234.7,
+      "start": 184.27,
+      "end": 223.84,
       "id": "b7",
-      "director_goal": "Summarize the final legal takeaway confirming zero tax liability and rejection of AO proposal.",
+      "director_goal": "Conclude that the AO's proposal is legally incorrect.",
       "anchor_phrases": [
-        "Section 47(vii) Exemption",
-        "Zero Capital Gains",
-        "AO Proposal Rejected"
+        "Not justified",
+        "Exempt"
       ],
       "animation_role": "key_fact",
       "anchor_alignment": [
         {
-          "phrase": "Section 47(vii) Exemption",
-          "at": 225.74,
+          "phrase": "Not justified",
+          "at": 203.73,
           "matched": true,
-          "score": 1.0
+          "score": 0.48
         },
         {
-          "phrase": "Zero Capital Gains",
-          "at": 229.36,
+          "phrase": "Exempt",
+          "at": 211.99,
           "matched": true,
-          "score": 1.0
-        },
-        {
-          "phrase": "AO Proposal Rejected",
-          "at": 232.48,
-          "matched": true,
-          "score": 1.0
+          "score": 0.615
         }
       ],
       "anchor_match": {
-        "matched": 3,
-        "total": 3
+        "matched": 2,
+        "total": 2
       }
     }
   ],
-  "audio_duration_sec": 234.7,
+  "audio_duration_sec": 223.84,
   "anchor_match": {
-    "matched": 18,
-    "total": 24,
-    "rate": 0.75
+    "matched": 15,
+    "total": 18,
+    "rate": 0.833
   }
 }

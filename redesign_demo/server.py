@@ -41,6 +41,10 @@ AUDIO_V2_DIR = os.path.join(DATA_DIR, "audio_v2")
 os.makedirs(AUDIO_V2_DIR, exist_ok=True)
 app.mount("/data/audio_v2", StaticFiles(directory=AUDIO_V2_DIR), name="data_audio_v2")
 
+KINETIC_DIR = os.path.join(FRONTEND_DIR, "kinetic_studio")
+if os.path.exists(KINETIC_DIR):
+    app.mount("/kinetic_studio", StaticFiles(directory=KINETIC_DIR), name="kinetic_studio")
+
 @app.get("/api/data")
 def get_all_data():
     mm = load_json("mindmaps.json") or {}
