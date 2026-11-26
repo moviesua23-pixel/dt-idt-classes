@@ -3967,37 +3967,47 @@ window.handleGoogleSheetData = function(json) {
 
       const rawCol7 = val(7).trim();
       const rawCol6 = val(6).trim();
+      const rawCol8 = val(8).trim();
+      const rawCol9 = val(9).trim();
+      const rawCol10 = val(10).trim();
+
+      const isJson7 = rawCol7.startsWith("{") || rawCol7.startsWith("[");
+      const isJson6 = rawCol6.startsWith("{") || rawCol6.startsWith("[");
+      const isKineticPrompt = rawCol7 && !isJson7 && (rawCol7.includes("SLIDE") || rawCol7.includes("shape (") || rawCol7.includes("DIALOGUE:"));
+      const isRealDriveId = (id) => typeof id === "string" && id.length >= 20 && !id.includes(" ") && !id.includes("READY") && !id.includes("SCREENPLAY") && !id.includes("AUDIO");
 
       // Smart auto-detection of Google Sheets schema:
-      // Case 1: Legacy 10/11-column with JSON Mindmap in Col 7
-      // Case 2: Legacy 8-column schema with JSON Mindmap in Col 6
-      // Case 3: New 9-column schema where Col 7 is the presentation script prompt!
-      if (rawCol7.startsWith("{") || rawCol7.includes('"doctrine"') || rawCol7.includes('"branches"')) {
+      // Case 1: New 9-column Kinetic Presentation Studio prompt schema (Upcoming questions)
+      // Case 2: Legacy 10/11-column with JSON Mindmap/Narration in Col 7 (Existing 83 questions)
+      // Case 3: Legacy 8-column schema with JSON Mindmap in Col 6
+      if (isKineticPrompt) {
+        canonicalTopicFromSheet = val(3);
+        qText = val(4);
+        ansText = val(5);
+        provStatutes = val(6);
+        presentationPrompt = rawCol7;
+        driveAudioId = isRealDriveId(rawCol8) ? rawCol8 : "";
+        isPromptBased = true;
+      } else if (isJson7 || rawCol10.startsWith("{") || rawCol8.includes("READY") || rawCol8.includes("SCREENPLAY") || rawCol9) {
+        // Legacy 10/11-column schema: Col 6: Prov MD | Col 7: Narration/Mindmap JSON | Col 8: Audio Status | Col 10: Screenplay
         canonicalTopicFromSheet = val(3);
         qText = val(4);
         ansText = val(5);
         provStatutes = val(6);
         provSummary = val(7);
-        driveAudioId = val(8);
+        driveAudioId = isRealDriveId(rawCol8) ? rawCol8 : "";
         timingsStr = val(9);
-      } else if (rawCol6.startsWith("{") || rawCol6.includes('"doctrine"') || rawCol6.includes('"branches"')) {
+        isPromptBased = false;
+      } else if (isJson6) {
         // Legacy 8-column schema: Col 3: Q | Col 4: Ans | Col 5: Prov MD | Col 6: Mindmap JSON
         canonicalTopicFromSheet = "";
         qText = val(3);
         ansText = val(4);
         provStatutes = val(5);
         provSummary = val(6);
-        driveAudioId = val(7);
+        driveAudioId = isRealDriveId(rawCol7) ? rawCol7 : "";
         timingsStr = val(8);
-      } else if (rawCol7) {
-        // New 9-column Prompt Schema: Col 7 is the presentation prompt!
-        canonicalTopicFromSheet = val(3);
-        qText = val(4);
-        ansText = val(5);
-        provStatutes = val(6);
-        presentationPrompt = rawCol7;
-        driveAudioId = val(8);
-        isPromptBased = true;
+        isPromptBased = false;
       } else {
         // Fallback default
         canonicalTopicFromSheet = val(3);
@@ -4005,8 +4015,9 @@ window.handleGoogleSheetData = function(json) {
         ansText = val(5);
         provStatutes = val(6);
         provSummary = val(7);
-        driveAudioId = val(8);
+        driveAudioId = isRealDriveId(rawCol8) ? rawCol8 : "";
         timingsStr = val(9);
+        isPromptBased = false;
       }
 
       let mmObj = null;
@@ -4020,9 +4031,71 @@ window.handleGoogleSheetData = function(json) {
         console.warn("Failed to parse provision summary for ch", chNum, "q", qNum, err);
       }
 
+      let screenplayBeats = [];
+      if (rawCol10 && rawCol10.startsWith("{")) {
+        try {
+          const sp = JSON.parse(rawCol10);
+          if (Array.isArray(sp.beats) && sp.beats.length > 0) {
+            screenplayBeats = sp.beats;
+          }
+        } catch(e) {}
+      }
+      if (!screenplayBeats.length && provSummary && provSummary.startsWith("[")) {
+        try {
+          const beatsArr = JSON.parse(provSummary);
+          if (Array.isArray(beatsArr) && beatsArr.length > 0) {
+            screenplayBeats = beatsArr;
+          }
+        } catch(e) {}
+      }
+
       const canonicalTopic = canonicalTopicFromSheet || (mmObj && (mmObj.doctrine || mmObj.title || mmObj.root?.title)) || 
         (qText ? qText.split('\n')[0].replace(/^#+\s*|\*+/g, '').slice(0, 80) : ("Chapter " + chNum + " Question " + qNum));
       const topicSlug = "T_CH" + chNum + "_Q" + qNum;
+
+      if (!mmObj && screenplayBeats.length > 0) {
+        const branches = screenplayBeats.map((beat, bIdx) => {
+          const title = (beat.title && typeof beat.title === 'object' ? beat.title.text : beat.title) || `Step ${bIdx + 1}: Statutory Provision`;
+          const t0 = typeof beat.start === 'number' ? beat.start : bIdx * 35;
+          const t1 = typeof beat.end === 'number' ? beat.end : (t0 + 35);
+          const layoutName = (beat.layout || 'Statute').replace(/_/g, ' ').toUpperCase();
+          const bodyText = beat.voice_sync_text || (beat.visual_data && beat.visual_data.description) || "";
+          return {
+            branch_id: `branch_${bIdx + 1}`,
+            branch_title: title,
+            number: `1.${bIdx + 1}`,
+            badge: `STEP ${bIdx + 1}`,
+            icon: "scales",
+            t0: t0,
+            t1: t1,
+            points: [{
+              id: beat.id || `pt_${bIdx + 1}`,
+              title: title,
+              badge: layoutName,
+              t0: t0,
+              t1: t1,
+              body: bodyText ? [bodyText] : []
+            }],
+            flow_summary: []
+          };
+        });
+
+        const totalDur = branches.length > 0 ? branches[branches.length - 1].t1 : 75;
+        mmObj = {
+          doctrine: canonicalTopic,
+          total_duration: totalDur,
+          root: {
+            id: "root",
+            title: canonicalTopic,
+            badge: "§ STATUTORY ANALYSIS",
+            t0: 0,
+            t1: branches[0] ? branches[0].t0 : 3
+          },
+          branches: branches
+        };
+        liveMindmaps["ch" + chNum + "_q" + qNum] = mmObj;
+        if (chNum === 1) liveMindmaps["q" + qNum] = mmObj;
+      }
       if (mmObj) liveMindmaps[topicSlug] = mmObj;
 
       let qSecs = [];
@@ -4048,6 +4121,7 @@ window.handleGoogleSheetData = function(json) {
         is_kinetic_prompt: isPromptBased
       });
 
+      const canonicalAudioFile = `${subject.toLowerCase()}-c${chNum}-q${qNum}.mp3`;
       const provItem = {
         subject: subject.toLowerCase(),
         chapter_number: chNum,
@@ -4058,7 +4132,7 @@ window.handleGoogleSheetData = function(json) {
         core_principle: canonicalTopic,
         provision_presentation_markdown: provStatutes || (mmObj ? mmObj.doctrine : ""),
         voice: "Gemini Voice (Aoede)",
-        audio_file: chNum > 1 ? `ch${chNum}_q${qNum}.mp3` : `q${qNum}.mp3`,
+        audio_file: canonicalAudioFile,
         drive_file_id: driveAudioId || (mmObj && mmObj.drive_folder_id) || null,
         dur: mmObj ? (mmObj.total_duration || 75) : 75,
         presentation_prompt: presentationPrompt,
@@ -4958,8 +5032,9 @@ function renderTheaterModalHtml(q, p){
   const hasSlides = sb && sb.slides && sb.slides.length > 0;
   const mm = getMindMapForQuestion(q, p);
   const badgeTitle = mm && mm.root ? `${mm.root.badge} · ${mm.doctrine}` : p.doctrine;
-  const promptText = (p.presentation_prompt || q.presentation_prompt || "").trim();
-  const hasPrompt = promptText.length > 0;
+  const rawPrompt = (p.presentation_prompt || q.presentation_prompt || "").trim();
+  const isKineticText = rawPrompt.length > 0 && !rawPrompt.startsWith("{") && !rawPrompt.startsWith("[") && (rawPrompt.includes("SLIDE") || rawPrompt.includes("shape (") || rawPrompt.includes("DIALOGUE:"));
+  const hasPrompt = !!((q.is_kinetic_prompt || p.is_kinetic_prompt) && isKineticText);
 
   return `
   <div class="vtheater" id="vtheater" role="dialog" aria-modal="true" aria-label="Statutory Presentation">
@@ -5180,18 +5255,39 @@ function makePlayer(p, q){
  window.SYNC_LEAD_SEC = (typeof window.SYNC_LEAD_SEC === "number") ? window.SYNC_LEAD_SEC : 0.6;
  const mm = getMindMapForQuestion(q, p);
  const speeds=[0.5,0.75,1,1.25,1.5,2];let si=2,playing=false,vraf=0,mmRaf=0,dead=false;
- const audioFile = p.file || p.audio_file || "q1.mp3";
+ const chNum = p.chapter_number || q.chapter_number || 1;
+ const qNum = p.question_number || q.question_number || 1;
+ const subj = (p.subject || q.subject || "dt").toLowerCase();
+ const canonicalAudioName = `${subj}-c${chNum}-q${qNum}.mp3`;
+
+ const isRealDriveId = (id) => typeof id === "string" && id.length >= 20 && !id.includes(" ") && !id.includes("READY") && !id.includes("SCREENPLAY") && !id.includes("AUDIO");
+ const driveId = isRealDriveId(p.drive_file_id) ? p.drive_file_id : (isRealDriveId(p.drive_audio_id) ? p.drive_audio_id : null);
+
+ const localCandidates = [
+  canonicalAudioName,
+  (p.file ? p.file.split('/').pop() : null),
+  (p.audio_file ? p.audio_file.split('/').pop() : null),
+  `ch${chNum}_q${qNum}.mp3`,
+  `q${qNum}.mp3`
+ ].filter(Boolean);
+
+ let localAudioUrl = "";
+ if (window.location.protocol === "file:") {
+  localAudioUrl = new URL("../data/audio/" + encodeURIComponent(localCandidates[0]), window.location.href).href;
+ } else {
+  localAudioUrl = "/data/audio/" + encodeURIComponent(localCandidates[0]);
+ }
+
  // Support streaming directly from Google Drive as well as local fallback
  let audioUrl;
- if (p.drive_file_id) {
-  audioUrl = "https://drive.google.com/uc?export=download&id=" + p.drive_file_id;
+ if (window.location.protocol === "file:") {
+  audioUrl = localAudioUrl;
+ } else if (driveId) {
+  audioUrl = "https://drive.google.com/uc?export=download&id=" + driveId;
  } else if (p.audio_url && p.audio_url.startsWith("http")) {
   audioUrl = p.audio_url;
  } else {
-  const audioBase = window.location.protocol === "file:"
-   ? new URL("../data/audio/" + encodeURIComponent(audioFile.split('/').pop()), window.location.href).href
-   : (audioFile.startsWith('/') ? audioFile : "/audio/" + audioFile);
-  audioUrl = audioBase + "?v=card_clean_20261110_" + Math.round(p.dur || 1);
+  audioUrl = localAudioUrl;
  }
  
  // Discrete Point-by-Point Voice Engine
@@ -6874,7 +6970,15 @@ function makePlayer(p, q){
   });
  }
 
- let activeTheaterMode = (p.presentation_prompt || q.presentation_prompt) ? "kinetic" : "mindmap";
+ const rawPrompt = (p.presentation_prompt || q.presentation_prompt || "").trim();
+ const isKineticPromptText = (text) => {
+  if (!text || typeof text !== "string") return false;
+  const trimmed = text.trim();
+  if (trimmed.startsWith("{") || trimmed.startsWith("[")) return false;
+  return trimmed.includes("SLIDE") || trimmed.includes("shape (") || trimmed.includes("DIALOGUE:");
+ };
+ const promptText = ((q.is_kinetic_prompt || p.is_kinetic_prompt) && isKineticPromptText(rawPrompt)) ? rawPrompt : "";
+ let activeTheaterMode = promptText ? "kinetic" : "mindmap";
 
  window.switchTheaterMode = function(mode){
   activeTheaterMode = mode;
@@ -6910,7 +7014,6 @@ function makePlayer(p, q){
   document.body.style.overflow = "hidden";
   resetControlsTimer();
 
-  const promptText = (p.presentation_prompt || q.presentation_prompt || "").trim();
   if(promptText && window.SCRIPT_STUDIO && window.PRESENTATION_PLAYER){
    activeTheaterMode = "kinetic";
    window.switchTheaterMode("kinetic");
@@ -7499,6 +7602,14 @@ function makePlayer(p, q){
  audio.onerror = () => {
   // If audio is actively playing or has already played past t=0, ignore aborted switch events
   if (audio.currentTime > 0 && !audio.paused) return;
+  if (audio.src && audio.src.includes("drive.google.com") && localAudioUrl && audio.src !== localAudioUrl) {
+   console.log("Drive audio unavailable, falling back to local audio file:", localAudioUrl);
+   audio.src = localAudioUrl;
+   if (playing) {
+    audio.play().catch(e => console.warn("Fallback play error:", e));
+   }
+   return;
+  }
   if (isDiscreteMode) {
    const item = discretePlaylist[currentPtIdx];
    console.warn("Audio error on point:", item, "src:", audio.src);
