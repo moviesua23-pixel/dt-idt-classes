@@ -21,5 +21,6 @@ data/audio/*.mp3
 _site/
 test-results/
 redesign_demo/frontend/local_keys.js
+statutory-kinetic-studio/
 
 

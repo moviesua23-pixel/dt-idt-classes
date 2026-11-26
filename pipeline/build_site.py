@@ -53,6 +53,9 @@ def bundle_screenplays() -> dict:
         records[qid] = screenplay
     output = DATA / "screenplays.bundle.json"
     output.write_text(json.dumps({"version": 1, "screenplays": records}, ensure_ascii=False, separators=(",", ":")), encoding="utf-8")
+    js_output = FRONTEND / "kinetic_studio" / "js" / "screenplays_bundle.js"
+    js_output.parent.mkdir(parents=True, exist_ok=True)
+    js_output.write_text(f"window.SCREENPLAY_BUNDLE = {json.dumps(records, ensure_ascii=False, separators=(',', ':'))};\n", encoding="utf-8")
     return records
 
 

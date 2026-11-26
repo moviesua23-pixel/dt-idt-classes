@@ -32,6 +32,7 @@
 <script src="kinetic_studio/js/colorful_shapes_library.js?v=20261126"></script>
 <script src="kinetic_studio/js/shape_catalog.js?v=20261126"></script>
 <script src="kinetic_studio/js/script_studio.js?v=20261126"></script>
+<script src="kinetic_studio/js/screenplays_bundle.js?v=20261126"></script>
 
 <style>
 /* Layout: one calm column that changes shape per window. Home = two large subject doors,
@@ -3798,6 +3799,185 @@ const DEFAULT_DT_CHAPTERS = [
   { chapter_number: 25, title: "Overview of Model Tax Conventions", page_range: "25.1 - 25.6" }
 ];
 
+function mapIconToShape(icon) {
+  if (!icon) return "audit_tax";
+  const i = String(icon).toLowerCase();
+  if (i.includes("factory") || i.includes("plant") || i.includes("industry")) return "factory";
+  if (i.includes("money") || i.includes("cash") || i.includes("coin") || i.includes("rupee") || i.includes("currency") || i.includes("bag")) return "tax_calculation";
+  if (i.includes("car") || i.includes("vehicle") || i.includes("truck") || i.includes("auto")) return "car";
+  if (i.includes("building") || i.includes("house") || i.includes("property") || i.includes("premise") || i.includes("land")) return "building";
+  if (i.includes("store") || i.includes("shop")) return "store";
+  if (i.includes("bank")) return "bank";
+  if (i.includes("court") || i.includes("scale") || i.includes("law") || i.includes("gavel")) return "court";
+  if (i.includes("document") || i.includes("file") || i.includes("paper") || i.includes("deed") || i.includes("report")) return "document";
+  if (i.includes("user") || i.includes("person") || i.includes("man") || i.includes("taxpayer") || i.includes("assessee")) return "man";
+  if (i.includes("woman") || i.includes("female") || i.includes("officer")) return "woman";
+  if (i.includes("box") || i.includes("package") || i.includes("parcel") || i.includes("goods") || i.includes("cargo")) return "box";
+  if (i.includes("clothes") || i.includes("textile") || i.includes("garment")) return "clothes";
+  return "audit_tax";
+}
+
+function cleanScriptText(str) {
+  if (!str) return "";
+  return String(str).replace(/[()\[\]"]/g, "").replace(/\s+/g, " ").trim();
+}
+
+function getScreenplayForQuestion(q, p) {
+  const chNum = q?.ch || q?.chapter_number || p?.chapter_number || 1;
+  const qNum = q?.n || q?.question_number || p?.question_number || 1;
+  const canonicalKey = `dt-c${chNum}-q${qNum}`;
+  const shortKey = `q${qNum}`;
+
+  if (window.SCREENPLAY_BUNDLE) {
+    if (window.SCREENPLAY_BUNDLE[canonicalKey]) return window.SCREENPLAY_BUNDLE[canonicalKey];
+    if (window.SCREENPLAY_BUNDLE[shortKey]) return window.SCREENPLAY_BUNDLE[shortKey];
+  }
+  if (window.D && window.D.screenplays) {
+    if (window.D.screenplays[canonicalKey]) return window.D.screenplays[canonicalKey];
+    if (window.D.screenplays[shortKey]) return window.D.screenplays[shortKey];
+  }
+  if (p && p.screenplay) return p.screenplay;
+  if (q && q.screenplay) return q.screenplay;
+  return null;
+}
+
+function synthesizeKineticPrompt(q, p, sp) {
+  const canonicalTopic = cleanScriptText(p?.doctrine || q?.title || q?.question_title || "Statutory Provision Analysis");
+  const qSecs = (p?.secs && p.secs.length) ? p.secs : ((q?.secs && q.secs.length) ? q.secs : ["Income Tax Act"]);
+  const secsClean = qSecs.map(cleanScriptText).join(" · ");
+
+  // 1. If Screenplay exists, generate rich multi-slide story
+  const beats = sp?.beats || [];
+  if (beats.length > 0) {
+    const slides = [];
+    const firstBeat = beats[0];
+    const topicTitle = cleanScriptText(sp.context_pill || canonicalTopic);
+    slides.push(`SLIDE 1: ${topicTitle}
+(heading, title: "${topicTitle}", subtitle: "${secsClean}", pos: center)
+DIALOGUE: ${cleanScriptText(firstBeat.voice_sync_text || 'Welcome to this statutory tax explainer.')}`);
+
+    beats.forEach((b, idx) => {
+      const slideNum = idx + 2;
+      const bTitle = cleanScriptText((b.title && typeof b.title === 'object' ? b.title.text : b.title) || `Step ${idx + 1}`);
+      const dialogue = cleanScriptText(b.voice_sync_text || b.director_goal || bTitle);
+      const slideLines = [`SLIDE ${slideNum}: ${bTitle}`];
+      let hasShapes = false;
+
+      // Check ledger_rows (multi-line calculation)
+      if (b.ledger_rows && b.ledger_rows.length > 0) {
+        b.ledger_rows.slice(0, 4).forEach((r, rIdx) => {
+          const sign = (r.type === 'deduction' || r.type === 'expense') ? '(-)' : ((r.type === 'subtotal' || r.type === 'taxable') ? '(=)' : '(+)');
+          const amt = r.amount ? Number(Math.abs(r.amount)).toLocaleString('en-IN') : '0';
+          const pos = rIdx === 0 ? ' (center)' : '';
+          slideLines.push(`shape (calculation (multiple)) ${sign} (${cleanScriptText(r.label).slice(0, 38)}) (${amt})${pos}`);
+        });
+        hasShapes = true;
+      }
+      // Check rules (cards list)
+      else if (b.rules && b.rules.length > 0) {
+        const items = b.rules.map(r => `(${cleanScriptText(r.heading || r.body).slice(0, 48)})`).slice(0, 4);
+        slideLines.push(`shape (list, cards) (${bTitle}) [ ${items.join(" ")} ]`);
+        hasShapes = true;
+      }
+      // Check points (modern list)
+      else if (b.points && b.points.length > 0) {
+        const items = b.points.map(pt => `(${cleanScriptText(pt.text).slice(0, 48)})`).slice(0, 4);
+        slideLines.push(`shape (list, modern) (${bTitle}) [ ${items.join(" ")} ]`);
+        hasShapes = true;
+      }
+      // Check branches (cards list)
+      else if (b.branches && b.branches.length > 0) {
+        const items = b.branches.map(br => `(${cleanScriptText(br.label)}: ${cleanScriptText((br.facts && br.facts[0] && br.facts[0].text) || (br.outcome && br.outcome.text) || '').slice(0, 38)})`);
+        slideLines.push(`shape (list, cards) (${bTitle}) [ ${items.join(" ")} ]`);
+        hasShapes = true;
+      }
+      // Check visual_data actors & facts
+      else if (b.visual_data) {
+        const actors = b.visual_data.actors || [];
+        const facts = b.visual_data.facts || [];
+        if (actors.length > 0) {
+          const a = actors[0];
+          const shp = mapIconToShape(a.icon);
+          const lbl = cleanScriptText(a.label).slice(0, 38);
+          slideLines.push(`shape (${shp}) (${lbl}) (left center) (pop)`);
+          hasShapes = true;
+        }
+        if (facts.length > 0) {
+          const f = facts[0];
+          const shp = mapIconToShape(f.icon);
+          const amt = f.amount ? ` Rs ${Number(f.amount).toLocaleString('en-IN')}` : '';
+          const lbl = cleanScriptText(`${f.label}${amt}`).slice(0, 38);
+          slideLines.push(`shape (${shp}) (${lbl}) (right center) (drop)`);
+          hasShapes = true;
+        }
+      }
+
+      if (!hasShapes) {
+        slideLines.push(`shape (document) (${bTitle}) (left center) (pop)`);
+        slideLines.push(`shape (money) (Statutory Tax Compliance) (right center) (drop)`);
+      }
+
+      slideLines.push(`DIALOGUE: ${dialogue}`);
+      slides.push(slideLines.join("\n"));
+    });
+
+    return slides.join("\n\n");
+  }
+
+  // 2. Synthesize from Markdown / Provision Summary Matrix
+  const rawMd = p?.rawMarkdown || p?.provision_presentation_markdown || "";
+  const lines = rawMd.split(/\r?\n/);
+  const tableRows = [];
+  let inTable = false;
+
+  for (const line of lines) {
+    const trimmed = line.trim();
+    if (trimmed.startsWith("|") && trimmed.endsWith("|")) {
+      const cols = trimmed.split("|").slice(1, -1).map(c => c.trim());
+      if (cols.some(c => c.includes("---"))) {
+        inTable = true;
+        continue;
+      }
+      if (inTable && cols.length >= 2) {
+        tableRows.push(cols);
+      }
+    }
+  }
+
+  const slides = [];
+
+  // Slide 1: Doctrine & Overview
+  slides.push(`SLIDE 1: ${canonicalTopic}
+(heading, title: "${canonicalTopic}", subtitle: "${secsClean}", pos: center)
+shape (audit_tax) (Statutory Framework) (left center) (pop)
+shape (tax_calculation) (${secsClean}) (right center) (drop)
+DIALOGUE: ${canonicalTopic} സംബന്ധിച്ച നിയമവ്യവസ്ഥകളും എക്സാം പോയിന്റുകളും നമുക്ക് പരിശോധിക്കാം. നിയമത്തിലെ പ്രധാന പ്രൊവിഷനുകൾ ഇവിടെ കൃത്യമായി ഓർത്തു വെക്കുക.`);
+
+  // Slide 2: Rules & Conditions Table / List
+  if (tableRows.length > 0) {
+    const listItems = tableRows.slice(0, 4).map(cols => {
+      const area = cleanScriptText(cols[0] || "Provision");
+      const cond = cleanScriptText(cols[1] || cols[2] || "Rule");
+      return `(${area}: ${cond.slice(0, 40)})`;
+    });
+    slides.push(`SLIDE 2: Core Statutory Conditions
+shape (list, cards) (Key Statutory Rules) [ ${listItems.join(" ")} ]
+DIALOGUE: ഇതിലെ ഓരോ വ്യവസ്ഥകളും പരീക്ഷയിൽ ശ്രദ്ധിക്കേണ്ട പ്രധാന പോയിന്റുകളാണ്.`);
+  } else {
+    slides.push(`SLIDE 2: Statutory Conditions
+shape (list, cards) (${canonicalTopic}) [ (Applicability & Scope) (Statutory Thresholds) (Compliance Requirements) ]
+DIALOGUE: ഈ പ്രൊവിഷനിലെ പ്രധാനപ്പെട്ട കണ്ടീഷനുകൾ കൃത്യമായി പാലിക്കേണ്ടതുണ്ട്.`);
+  }
+
+  // Slide 3: Tax Treatment & Computation
+  slides.push(`SLIDE 3: Tax Consequences & Computation
+shape (audit_tax) (Legal Assessment) (left center) (pop)
+shape (tax_calculation) (Final Tax Impact) (right center) (drop)
+DIALOGUE: ഇതനുസരിച്ച് ടാക്സ് കംപ്യൂട്ടേഷൻ ചെയ്യുമ്പോൾ അലവൻസുകളും ഡിസലവൻസുകളും കൃത്യമായി കണക്കിലെടുക്കണം.`);
+
+  return slides.join("\n\n");
+}
+
 function buildModelFromPipeline(data) {
   const chaptersSource = (data?.catalog?.chapters && data.catalog.chapters.length >= 25)
     ? data.catalog.chapters
@@ -3809,6 +3989,8 @@ function buildModelFromPipeline(data) {
     return [c.chapter_number, c.title, parts[0].trim(), parts[1].trim()];
   });
 
+  const availableScreenplays = data?.screenplays || window.SCREENPLAY_BUNDLE || {};
+
   const realQna = (data?.questions || []).map(q => {
     const chNum = parseInt(q.chapter_number) || 1;
     const qNum = parseInt(q.question_number) || 1;
@@ -3818,6 +4000,15 @@ function buildModelFromPipeline(data) {
       (x.question_number === qNum || (q.topic_id && x.topic_id === q.topic_id))
     );
     const topicId = q.topic_id || p?.topic_id || ("T_CH" + chNum + "_Q" + qNum);
+    const spKey = `dt-c${chNum}-q${qNum}`;
+    const sp = availableScreenplays[spKey] || availableScreenplays[`q${qNum}`] || p?.screenplay || q.screenplay || null;
+    
+    let prompt = (q.presentation_prompt || p?.presentation_prompt || "").trim();
+    const isKinetic = prompt.length > 0 && !prompt.startsWith("{") && !prompt.startsWith("[") && (prompt.includes("SLIDE") || prompt.includes("shape (") || prompt.includes("DIALOGUE:"));
+    if (!isKinetic) {
+      prompt = synthesizeKineticPrompt(q, p, sp);
+    }
+
     return {
       id: `${subCode}-${chNum}-${qNum}`,
       sub: subCode,
@@ -3829,8 +4020,9 @@ function buildModelFromPipeline(data) {
       question_text: q.question_text,
       q: [q.question_text],
       rawAnswer: q.answer_text,
-      presentation_prompt: q.presentation_prompt || p?.presentation_prompt || "",
-      is_kinetic_prompt: !!(q.presentation_prompt || p?.presentation_prompt)
+      presentation_prompt: prompt,
+      is_kinetic_prompt: true,
+      screenplay: sp
     };
   });
 
@@ -3839,13 +4031,23 @@ function buildModelFromPipeline(data) {
     const chNum = parseInt(p.chapter_number) || 1;
     const qNum = parseInt(p.question_number) || 1;
     const tid = p.topic_id || ("T_CH" + chNum + "_Q" + qNum);
+    const matchingQ = realQna.find(x => x.topic === tid || (x.ch === chNum && x.n === qNum));
+    const spKey = `dt-c${chNum}-q${qNum}`;
+    const sp = availableScreenplays[spKey] || availableScreenplays[`q${qNum}`] || p.screenplay || matchingQ?.screenplay || null;
+
+    let prompt = (p.presentation_prompt || matchingQ?.presentation_prompt || "").trim();
+    const isKinetic = prompt.length > 0 && !prompt.startsWith("{") && !prompt.startsWith("[") && (prompt.includes("SLIDE") || prompt.includes("shape (") || prompt.includes("DIALOGUE:"));
+    if (!isKinetic) {
+      prompt = synthesizeKineticPrompt(matchingQ || { title: p.topic_title, secs: p.statutory_sections }, p, sp);
+    }
+
     if (!provMap[tid]) {
       provMap[tid] = {
         doctrine: p.topic_title || p.core_principle || ("Topic " + tid),
         principle: p.core_principle || p.topic_title || "",
         secs: p.statutory_sections || [],
         rawMarkdown: p.provision_presentation_markdown || "",
-        dur: p.dur || p.duration_seconds || 60,
+        dur: p.dur || p.duration_seconds || (sp ? sp.duration_sec : 60) || 60,
         voice: p.voice_engine || "Gemini Voice (Aoede)",
         file: p.audio_file || (chNum > 1 ? `ch${chNum}_q${qNum}.mp3` : `q${qNum}.mp3`),
         video: p.video_file || (chNum > 1 ? `ch${chNum}_q${qNum}.mp4` : `q${qNum}.mp4`),
@@ -3853,8 +4055,9 @@ function buildModelFromPipeline(data) {
         drive_file_id: p.drive_file_id || null,
         chapter_number: chNum,
         question_number: qNum,
-        presentation_prompt: p.presentation_prompt || "",
-        is_kinetic_prompt: !!p.presentation_prompt
+        presentation_prompt: prompt,
+        is_kinetic_prompt: true,
+        screenplay: sp
       };
     }
   });
@@ -3882,6 +4085,7 @@ function buildModelFromPipeline(data) {
     },
     qna: realQna,
     prov: provMap,
+    screenplays: availableScreenplays,
     storyboards: data?.storyboards || {},
     mindmaps: sourceMindmaps,
     presentationSummaries
@@ -4107,6 +4311,15 @@ window.handleGoogleSheetData = function(json) {
 
       const chTitle = chapterTitles[chNum] || ("Chapter " + chNum);
 
+      if (!presentationPrompt) {
+        const canonicalKey = `dt-c${chNum}-q${qNum}`;
+        const spObj = (screenplayBeats.length > 0) ? { beats: screenplayBeats, context_pill: canonicalTopic } : (window.SCREENPLAY_BUNDLE && (window.SCREENPLAY_BUNDLE[canonicalKey] || window.SCREENPLAY_BUNDLE['q' + qNum]));
+        const mockQ = { title: canonicalTopic, question_title: canonicalTopic, secs: qSecs, question_text: qText, answer_text: ansText };
+        const mockP = { doctrine: canonicalTopic, secs: qSecs, rawMarkdown: provStatutes };
+        presentationPrompt = synthesizeKineticPrompt(mockQ, mockP, spObj);
+        isPromptBased = true;
+      }
+
       liveQuestions.push({
         subject: subject.toLowerCase(),
         chapter_number: chNum,
@@ -4118,7 +4331,7 @@ window.handleGoogleSheetData = function(json) {
         topic_id: topicSlug,
         secs: qSecs,
         presentation_prompt: presentationPrompt,
-        is_kinetic_prompt: isPromptBased
+        is_kinetic_prompt: true
       });
 
       const canonicalAudioFile = `${subject.toLowerCase()}-c${chNum}-q${qNum}.mp3`;
@@ -4136,7 +4349,7 @@ window.handleGoogleSheetData = function(json) {
         drive_file_id: driveAudioId || (mmObj && mmObj.drive_folder_id) || null,
         dur: mmObj ? (mmObj.total_duration || 75) : 75,
         presentation_prompt: presentationPrompt,
-        is_kinetic_prompt: isPromptBased
+        is_kinetic_prompt: true
       };
 
       liveProvisions.push(provItem);
@@ -5032,29 +5245,32 @@ function renderTheaterModalHtml(q, p){
   const hasSlides = sb && sb.slides && sb.slides.length > 0;
   const mm = getMindMapForQuestion(q, p);
   const badgeTitle = mm && mm.root ? `${mm.root.badge} · ${mm.doctrine}` : p.doctrine;
-  const rawPrompt = (p.presentation_prompt || q.presentation_prompt || "").trim();
+  let rawPrompt = (p.presentation_prompt || q.presentation_prompt || "").trim();
   const isKineticText = rawPrompt.length > 0 && !rawPrompt.startsWith("{") && !rawPrompt.startsWith("[") && (rawPrompt.includes("SLIDE") || rawPrompt.includes("shape (") || rawPrompt.includes("DIALOGUE:"));
-  const hasPrompt = !!((q.is_kinetic_prompt || p.is_kinetic_prompt) && isKineticText);
+  if (!isKineticText) {
+    const sp = getScreenplayForQuestion(q, p);
+    rawPrompt = synthesizeKineticPrompt(q, p, sp);
+    p.presentation_prompt = rawPrompt;
+    q.presentation_prompt = rawPrompt;
+    p.is_kinetic_prompt = true;
+    q.is_kinetic_prompt = true;
+  }
 
   return `
   <div class="vtheater" id="vtheater" role="dialog" aria-modal="true" aria-label="Statutory Presentation">
     <!-- Top Navigation Bar -->
     <div class="vtheater-topbar">
       <div class="vtb-left">
-        <span class="vtb-badge">§ DIRECT TAX CONCEPT TREE</span>
+        <span class="vtb-badge">🎬 UNIVERSAL KINETIC ANIMATION STUDIO</span>
         <span class="vtb-title" title="${esc(badgeTitle)}">${esc(badgeTitle)}</span>
       </div>
 
-      <!-- Center: Presentation Mode Selector / Label -->
+      <!-- Center: Presentation Mode Selector / Tabs -->
       <div class="vtb-center">
-        ${hasPrompt ? `
-          <div class="vtheater-mode-tabs" style="display:inline-flex; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); padding:3px; border-radius:10px; gap:4px;">
-            <button id="tab-btn-kinetic" class="btn-theater-tab active" onclick="window.switchTheaterMode('kinetic')">🎬 Kinetic Presentation</button>
-            <button id="tab-btn-mindmap" class="btn-theater-tab" onclick="window.switchTheaterMode('mindmap')">🌳 Statutory Tree</button>
-          </div>
-        ` : `
-          <span class="vtb-badge">NESTED MIND MAP · SYNCED TO VOICE</span>
-        `}
+        <div class="vtheater-mode-tabs" style="display:inline-flex; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.15); padding:3px; border-radius:10px; gap:4px;">
+          <button id="tab-btn-kinetic" class="btn-theater-tab active" onclick="window.switchTheaterMode('kinetic')">🎬 Kinetic Presentation</button>
+          <button id="tab-btn-mindmap" class="btn-theater-tab" onclick="window.switchTheaterMode('mindmap')">🌳 Statutory Tree</button>
+        </div>
       </div>
 
       <!-- Right: Direct Close Button -->
@@ -5068,14 +5284,14 @@ function renderTheaterModalHtml(q, p){
       <!-- Presentation Stage -->
     <div id="vdiag" class="vfullscreen-stage">
       <!-- 1. Universal Kinetic Studio Broadcast Canvas Stage (1280x720) -->
-      <div class="kinetic-studio-stage" id="kinetic-studio-stage" style="${hasPrompt ? 'display:flex;' : 'display:none;'} width:100%; height:100%; align-items:center; justify-content:center; position:relative; background:#0B1120; padding:20px;">
+      <div class="kinetic-studio-stage" id="kinetic-studio-stage" style="display:flex; width:100%; height:100%; align-items:center; justify-content:center; position:relative; background:#0B1120; padding:20px;">
         <div class="canvas-wrapper" style="position:relative; width:100%; max-width:1120px; aspect-ratio:16/9; background:#0F172A; border-radius:16px; overflow:hidden; box-shadow:0 24px 60px rgba(0,0,0,0.5), 0 0 0 1px rgba(255,255,255,0.08); display:flex; justify-content:center; align-items:center;">
           <canvas id="kinetic_stage_canvas" width="1280" height="720" style="width:100%; height:100%; aspect-ratio:16/9; display:block; cursor:pointer; background:#FFFFFF;"></canvas>
         </div>
       </div>
 
       <!-- 2. Mindmap View -->
-      <div class="ppt-mindmap-view" id="ppt-mindmap-view" style="${hasPrompt ? 'display:none;' : 'display:block;'}">
+      <div class="ppt-mindmap-view" id="ppt-mindmap-view" style="display:none;">
         ${renderMindMapCanvasHtml(mm, q, p)}
       </div>
       <div class="sim-stage-container" id="sim-stage-container">
@@ -5187,14 +5403,14 @@ function vStudio(r){
 
     <!-- Launch Card for Fullscreen Presentation -->
     <div class="theater-launch-card" id="vtog" role="button" tabindex="0" title="Click to launch interactive fullscreen explainer">
-      <div class="tlc-badge">✨ FULLSCREEN MIND-MAP PRESENTATION</div>
+      <div class="tlc-badge">✨ UNIVERSAL KINETIC ANIMATION STUDIO</div>
       <div class="tlc-inner">
         <div class="tlc-icon">🎬</div>
         <div class="tlc-text">
-          <h4>Guided provision mind map</h4>
-          <p>Explore each rule in sequence with synchronized Malayalam narration.</p>
+          <h4>Universal Kinetic Presentation</h4>
+          <p>Watch vector shapes, statutory lists, and computations animated in sync with Malayalam teacher narration.</p>
         </div>
-        <button class="tlc-btn" id="vtog-btn">Start presentation</button>
+        <button class="tlc-btn" id="vtog-btn">Start Presentation</button>
       </div>
     </div>
 
@@ -6970,6 +7186,22 @@ function makePlayer(p, q){
   });
  }
 
+ const sp = getScreenplayForQuestion(q, p);
+ if (sp && sp.beats && sp.beats.length > 0) {
+  const firstBeatEnd = sp.beats[0]?.end || 20;
+  const introDur = Math.min(4.0, firstBeatEnd * 0.25);
+  window.__kineticSlideTimings = [
+   { start: 0, end: introDur }
+  ];
+  sp.beats.forEach((b, idx) => {
+   const start = (idx === 0) ? introDur : (typeof b.start === "number" ? b.start : 0);
+   const end = typeof b.end === "number" ? b.end : (start + 20);
+   window.__kineticSlideTimings.push({ start, end });
+  });
+ } else {
+  window.__kineticSlideTimings = null;
+ }
+
  const rawPrompt = (p.presentation_prompt || q.presentation_prompt || "").trim();
  const isKineticPromptText = (text) => {
   if (!text || typeof text !== "string") return false;
@@ -6977,8 +7209,15 @@ function makePlayer(p, q){
   if (trimmed.startsWith("{") || trimmed.startsWith("[")) return false;
   return trimmed.includes("SLIDE") || trimmed.includes("shape (") || trimmed.includes("DIALOGUE:");
  };
- const promptText = ((q.is_kinetic_prompt || p.is_kinetic_prompt) && isKineticPromptText(rawPrompt)) ? rawPrompt : "";
- let activeTheaterMode = promptText ? "kinetic" : "mindmap";
+ let promptText = ((q.is_kinetic_prompt || p.is_kinetic_prompt) && isKineticPromptText(rawPrompt)) ? rawPrompt : "";
+ if (!promptText) {
+  promptText = synthesizeKineticPrompt(q, p, sp);
+  p.presentation_prompt = promptText;
+  q.presentation_prompt = promptText;
+  p.is_kinetic_prompt = true;
+  q.is_kinetic_prompt = true;
+ }
+ let activeTheaterMode = "kinetic";
 
  window.switchTheaterMode = function(mode){
   activeTheaterMode = mode;
@@ -7024,6 +7263,10 @@ function makePlayer(p, q){
      const screenplay = window.SCRIPT_STUDIO.parse(promptText);
      if(screenplay && screenplay.scenes && screenplay.scenes.length > 0){
       window.PRESENTATION_PLAYER.loadPresentation(screenplay);
+      if(window.AUDIO_MANAGER){
+       window.AUDIO_MANAGER.isMuted = true;
+       window.AUDIO_MANAGER.enabled = false;
+      }
      }
     } catch(err){
      console.error("Error parsing kinetic prompt:", err);
@@ -7081,20 +7324,44 @@ function makePlayer(p, q){
   const curVtdPlay = $("#vtd-play");
   if(curVtdPlay) curVtdPlay.innerHTML = playing ? I.pause : I.play;
 
-  if(activeTheaterMode === "kinetic" && window.PRESENTATION_PLAYER && window.PRESENTATION_PLAYER.canvas){
-   const curMs = cur * 1000;
-   if(playing && !window.PRESENTATION_PLAYER.isPlaying){
-    window.PRESENTATION_PLAYER.play();
-   } else if(!playing && window.PRESENTATION_PLAYER.isPlaying){
-    window.PRESENTATION_PLAYER.pause();
-   }
-   if(!window.PRESENTATION_PLAYER.isScrubbing){
-    window.PRESENTATION_PLAYER.seekTo(curMs);
-   }
-   const curSlide = window.PRESENTATION_PLAYER.getCurrentSlide();
-   const vtdLabel = $("#vtd-label");
-   if(vtdLabel && curSlide){
-    vtdLabel.textContent = `Slide ${window.PRESENTATION_PLAYER.currentSlideIdx + 1} of ${window.PRESENTATION_PLAYER.data?.scenes?.length || 1}: ${curSlide.tab_title || 'Kinetic Presentation'}`;
+  if(activeTheaterMode === "kinetic" && window.PRESENTATION_PLAYER && window.PRESENTATION_PLAYER.canvas && window.PRESENTATION_PLAYER.data?.scenes){
+   const scenes = window.PRESENTATION_PLAYER.data.scenes;
+   const numScenes = scenes.length;
+   if(numScenes > 0){
+    const totalT = T > 0 ? T : (p.dur || 60);
+    const durPerSlide = totalT / numScenes;
+
+    let targetSlideIdx = Math.floor(cur / durPerSlide);
+    if(window.__kineticSlideTimings && window.__kineticSlideTimings.length === numScenes){
+     const foundIdx = window.__kineticSlideTimings.findIndex(tm => cur >= tm.start && cur < tm.end);
+     if(foundIdx !== -1) targetSlideIdx = foundIdx;
+     else if(cur >= window.__kineticSlideTimings[numScenes - 1].end) targetSlideIdx = numScenes - 1;
+    }
+    if(targetSlideIdx >= numScenes) targetSlideIdx = numScenes - 1;
+    if(targetSlideIdx < 0) targetSlideIdx = 0;
+
+    if(window.PRESENTATION_PLAYER.currentSlideIdx !== targetSlideIdx){
+     window.PRESENTATION_PLAYER.switchSlide(targetSlideIdx);
+    }
+
+    let slideStart = targetSlideIdx * durPerSlide;
+    let slideEnd = (targetSlideIdx + 1) * durPerSlide;
+    if(window.__kineticSlideTimings && window.__kineticSlideTimings[targetSlideIdx]){
+     slideStart = window.__kineticSlideTimings[targetSlideIdx].start;
+     slideEnd = window.__kineticSlideTimings[targetSlideIdx].end;
+    }
+    const slideDur = Math.max(0.1, slideEnd - slideStart);
+    const progress = Math.max(0, Math.min(1, (cur - slideStart) / slideDur));
+    const maxSlideMs = window.PRESENTATION_PLAYER.getSlideDurationMs(window.PRESENTATION_PLAYER.getCurrentSlide());
+
+    window.PRESENTATION_PLAYER.currentTimeMs = progress * maxSlideMs;
+    window.PRESENTATION_PLAYER.render();
+
+    const curSlide = window.PRESENTATION_PLAYER.getCurrentSlide();
+    const vtdLabel = $("#vtd-label");
+    if(vtdLabel && curSlide){
+     vtdLabel.textContent = `Slide ${targetSlideIdx + 1} of ${numScenes}: ${curSlide.tab_title || 'Kinetic Presentation'}`;
+    }
    }
   }
 
@@ -7453,8 +7720,18 @@ function makePlayer(p, q){
  if(prevBtn){
   prevBtn.onclick = (e) => {
    e.stopPropagation();
-   if(window.PRESENTATION_PLAYER && window.PRESENTATION_PLAYER.isLoaded && activeTheaterMode === "kinetic"){
-    window.PRESENTATION_PLAYER.prevSlide();
+   if(window.PRESENTATION_PLAYER && activeTheaterMode === "kinetic" && window.PRESENTATION_PLAYER.data?.scenes){
+    const numScenes = window.PRESENTATION_PLAYER.data.scenes.length;
+    const curIdx = window.PRESENTATION_PLAYER.currentSlideIdx;
+    const targetIdx = Math.max(0, curIdx - 1);
+    const totalT = total();
+    const durPerSlide = totalT / numScenes;
+    const targetTime = (window.__kineticSlideTimings && window.__kineticSlideTimings[targetIdx])
+      ? window.__kineticSlideTimings[targetIdx].start
+      : (targetIdx * durPerSlide);
+    audio.currentTime = targetTime;
+    if(!playing) start();
+    ui();
     return;
    }
    if(isDiscreteMode){
@@ -7476,8 +7753,18 @@ function makePlayer(p, q){
  if(nextBtn){
   nextBtn.onclick = (e) => {
    e.stopPropagation();
-   if(window.PRESENTATION_PLAYER && window.PRESENTATION_PLAYER.isLoaded && activeTheaterMode === "kinetic"){
-    window.PRESENTATION_PLAYER.nextSlide();
+   if(window.PRESENTATION_PLAYER && activeTheaterMode === "kinetic" && window.PRESENTATION_PLAYER.data?.scenes){
+    const numScenes = window.PRESENTATION_PLAYER.data.scenes.length;
+    const curIdx = window.PRESENTATION_PLAYER.currentSlideIdx;
+    const targetIdx = Math.min(numScenes - 1, curIdx + 1);
+    const totalT = total();
+    const durPerSlide = totalT / numScenes;
+    const targetTime = (window.__kineticSlideTimings && window.__kineticSlideTimings[targetIdx])
+      ? window.__kineticSlideTimings[targetIdx].start
+      : (targetIdx * durPerSlide);
+    audio.currentTime = targetTime;
+    if(!playing) start();
+    ui();
     return;
    }
    if(isDiscreteMode){
