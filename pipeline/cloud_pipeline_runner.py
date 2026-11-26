@@ -516,10 +516,10 @@ def run_pipeline(limit=None, target_chapter=None, target_question=None, target_s
         api_attempts_before = rotator.api_attempts
         try:
             # Legal Provision Architecture
-            if existing_mm and current_topic and current_prov_md:
+            if current_prov_md and current_topic:
                 canonical_topic = current_topic
                 formatted_provision_matrix = current_prov_md
-                mm_data = existing_mm
+                mm_data = existing_mm or {"doctrine": canonical_topic, "root": {}, "branches": []}
                 print(f"  Reusing existing legal provision framework: '{canonical_topic}'")
             else:
                 print(f"\n---> [{subject} Ch{chapter_no} Q{q_num} ({q_idx+1}/{total_questions})] Analyzing provision autonomously with Gemini...")
@@ -594,33 +594,9 @@ def run_pipeline(limit=None, target_chapter=None, target_question=None, target_s
         except AllKeysQuotaExhaustedError:
             print(f"  [GEMINI USAGE] {subject} Ch{chapter_no} Q{q_num}: {rotator.api_attempts - api_attempts_before} API attempts before quota pause.")
             print("\n" + "="*75)
-            print("[QUOTA PAUSE] Gemini API quota limit reached across all 3 keys.")
-            print("Saving checkpoint and exiting gracefully without errors (exit code 0).")
+            print("[QUOTA PAUSE] Gemini API quota limit reached across all active keys.")
+            print("Exiting gracefully without modifying sheet prompts (exit code 0).")
             print("="*75)
-
-            if current_mm_data and current_topic and current_prov_md:
-                ready_count = count_ready_points(current_mm_data)
-                total_count = count_total_points(current_mm_data)
-                partial_json_str = json.dumps(current_mm_data, ensure_ascii=False)
-                drive_folder_id = current_mm_data.get('drive_folder_id', 'DRIVE_FOLDER_READY')
-                status_str = f"{ready_count}/{total_count} Discrete Audio Points (Quota Paused)"
-
-                partial_row = [
-                    subject,
-                    chapter_no,
-                    q_num,
-                    current_topic,
-                    q_text,
-                    ans_text,
-                    current_prov_md,
-                    partial_json_str,
-                    drive_folder_id,
-                    status_str
-                ]
-                upsert_row_to_sheets(partial_row)
-                print(f"  [CHECKPOINT RECORDED] Saved {subject} Ch{chapter_no} Q{q_num} with {ready_count}/{total_count} points to Google Sheets.")
-
-            print("\nPartial batch saved successfully. The next run will resume from this exact point.")
             export_sheets_to_local_cache()
             sys.exit(0)
 
