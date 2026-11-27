@@ -1,0 +1,198 @@
+[
+  {
+    "slide_idx": 1,
+    "start_ms": 0,
+    "end_ms": 30771,
+    "duration_ms": 30771,
+    "cues": [
+      {
+        "part": 1,
+        "shape": "man",
+        "label": "CA Rajesh",
+        "file_slug": "slide1_01_man",
+        "text": "Welcome back students! Section 4 Total Income compute \u0d1a\u0d46\u0d2f\u0d4d\u0d2f\u0d41\u0d2e\u0d4d\u0d2a\u0d4b\u0d7e critical \u0d06\u0d2f\u0d3f \u0d2e\u0d28\u0d38\u0d3f\u0d32\u0d3e\u0d15\u0d4d\u0d15\u0d47\u0d23\u0d4d\u0d1f judicial doctrine \u0d06\u0d23\u0d4d Diversion of Income by Overriding Title versus Application of Income. CIT v. Sitaldas Tirathdas landmark ruling-\u0d32\u0d46 golden test \u0d28\u0d2e\u0d41\u0d15\u0d4d\u0d15\u0d4d \u0d35\u0d3f\u0d36\u0d26\u0d2e\u0d3e\u0d2f\u0d3f \u0d2a\u0d30\u0d3f\u0d36\u0d4b\u0d27\u0d3f\u0d15\u0d4d\u0d15\u0d3e\u0d02.",
+        "drive_file_id": "1GlGpLMu-0FmEwuYVb7F8RiAeyCR5t2uW",
+        "stream_url": "https://drive.google.com/uc?export=download&id=1GlGpLMu-0FmEwuYVb7F8RiAeyCR5t2uW",
+        "file_name": "slide1_01_man.mp3",
+        "audio_file": "dt/ch1/q2/slide1_01_man.mp3",
+        "duration_ms": 17651,
+        "slide_rel_start_ms": 0,
+        "slide_rel_end_ms": 17651,
+        "global_start_ms": 0,
+        "global_end_ms": 17651
+      },
+      {
+        "part": 2,
+        "shape": "card",
+        "label": "CIT v. Sitaldas Tirathdas Golden Rule",
+        "file_slug": "slide1_02_card1",
+        "text": "Supreme Court laid down the golden rule: Income assessee-\u0d2f\u0d41\u0d1f\u0d46 hands-\u0d7d reach \u0d1a\u0d46\u0d2f\u0d4d\u0d2f\u0d41\u0d28\u0d4d\u0d28\u0d24\u0d3f\u0d28\u0d4d \u0d2e\u0d41\u0d28\u0d4d\u0d28\u0d47 divert \u0d06\u0d15\u0d41\u0d28\u0d4d\u0d28\u0d41\u0d23\u0d4d\u0d1f\u0d4b, \u0d05\u0d24\u0d4b reached \u0d36\u0d47\u0d37\u0d02 apply \u0d1a\u0d46\u0d2f\u0d4d\u0d2f\u0d41\u0d15\u0d2f\u0d3e\u0d23\u0d4b \u0d0e\u0d28\u0d4d\u0d28\u0d3e\u0d23\u0d4d \u0d28\u0d4b\u0d15\u0d4d\u0d15\u0d47\u0d23\u0d4d\u0d1f\u0d24\u0d4d.",
+        "duration_ms": 3000,
+        "slide_rel_start_ms": 17931,
+        "slide_rel_end_ms": 20931,
+        "global_start_ms": 17931,
+        "global_end_ms": 20931
+      },
+      {
+        "part": 3,
+        "shape": "card",
+        "label": "Diversion by Overriding Title",
+        "file_slug": "slide1_03_card2",
+        "text": "If the obligation creates an enforceable charge on the source of income itself prior to accrual, \u0d24\u0d4d\u0d30\u0d42 overriding title income divert \u0d06\u0d15\u0d41\u0d28\u0d4d\u0d28\u0d41. This is not taxable in the hands of assessee.",
+        "duration_ms": 3000,
+        "slide_rel_start_ms": 21211,
+        "slide_rel_end_ms": 24211,
+        "global_start_ms": 21211,
+        "global_end_ms": 24211
+      },
+      {
+        "part": 4,
+        "shape": "card",
+        "label": "Application of Income",
+        "file_slug": "slide1_04_card3",
+        "text": "Income \u0d06\u0d26\u0d4d\u0d2f\u0d02 assessee-\u0d2f\u0d41\u0d1f\u0d46 hands-\u0d7d reach \u0d06\u0d35\u0d41\u0d15\u0d2f\u0d41\u0d02, \u0d2a\u0d3f\u0d28\u0d4d\u0d28\u0d40\u0d1f\u0d4d voluntary \u0d05\u0d32\u0d4d\u0d32\u0d46\u0d19\u0d4d\u0d15\u0d3f\u0d7d contractual obligation discharge \u0d1a\u0d46\u0d2f\u0d4d\u0d2f\u0d3e\u0d7b spend \u0d1a\u0d46\u0d2f\u0d4d\u0d2f\u0d41\u0d15\u0d2f\u0d41\u0d02 \u0d1a\u0d46\u0d2f\u0d4d\u0d24\u0d3e\u0d7d, it is Application of Income and fully taxable.",
+        "duration_ms": 3000,
+        "slide_rel_start_ms": 24491,
+        "slide_rel_end_ms": 27491,
+        "global_start_ms": 24491,
+        "global_end_ms": 27491
+      },
+      {
+        "part": 5,
+        "shape": "card",
+        "label": "Charge on Source vs Personal Obligation",
+        "file_slug": "slide1_05_card4",
+        "text": "Source of income-\u0d7d pre-existing legal charge \u0d09\u0d23\u0d4d\u0d1f\u0d46\u0d19\u0d4d\u0d15\u0d3f\u0d7d \u0d05\u0d24\u0d4d Diversion of Income \u0d06\u0d23\u0d4d. Mere personal obligation out of earned profits \u0d06\u0d23\u0d46\u0d19\u0d4d\u0d15\u0d3f\u0d7d strictly Application of Income \u0d06\u0d23\u0d4d.",
+        "duration_ms": 3000,
+        "slide_rel_start_ms": 27771,
+        "slide_rel_end_ms": 30771,
+        "global_start_ms": 27771,
+        "global_end_ms": 30771
+      }
+    ]
+  },
+  {
+    "slide_idx": 2,
+    "start_ms": 31551,
+    "end_ms": 47671,
+    "duration_ms": 16120,
+    "cues": [
+      {
+        "part": 1,
+        "shape": "woman",
+        "label": "Tax Officer",
+        "file_slug": "slide2_01_woman",
+        "text": "Allahabad High Court decision in Jit & Pal X-Rays Ltd. \u0d15\u0d47\u0d38\u0d3f\u0d7d going concern takeover \u0d1a\u0d46\u0d2f\u0d4d\u0d2f\u0d41\u0d2e\u0d4d\u0d2a\u0d4b\u0d7e overriding charge create \u0d1a\u0d46\u0d2f\u0d4d\u0d2f\u0d41\u0d28\u0d4d\u0d28\u0d24\u0d3f\u0d28\u0d4d\u0d31\u0d46 exact statutory effect \u0d35\u0d4d\u0d2f\u0d15\u0d4d\u0d24\u0d2e\u0d3e\u0d15\u0d4d\u0d15\u0d41\u0d28\u0d4d\u0d28\u0d41\u0d23\u0d4d\u0d1f\u0d4d.",
+        "duration_ms": 3000,
+        "slide_rel_start_ms": 0,
+        "slide_rel_end_ms": 3000,
+        "global_start_ms": 31551,
+        "global_end_ms": 34551
+      },
+      {
+        "part": 2,
+        "shape": "step",
+        "label": "Acquisition of Business via Sale Deed",
+        "file_slug": "slide2_02_step1",
+        "text": "Assessee company \u0d12\u0d30\u0d41 sole proprietor-\u0d7d \u0d28\u0d3f\u0d28\u0d4d\u0d28\u0d4d running business purchase \u0d1a\u0d46\u0d2f\u0d4d\u0d2f\u0d3e\u0d7b Sale Deed execute \u0d1a\u0d46\u0d2f\u0d4d\u0d2f\u0d41\u0d28\u0d4d\u0d28\u0d41.",
+        "duration_ms": 3000,
+        "slide_rel_start_ms": 3280,
+        "slide_rel_end_ms": 6280,
+        "global_start_ms": 34831,
+        "global_end_ms": 37831
+      },
+      {
+        "part": 3,
+        "shape": "step",
+        "label": "Integral Covenant in Sale Deed",
+        "file_slug": "slide2_03_step2",
+        "text": "Sale Deed-\u0d7d integrated condition \u0d06\u0d2f\u0d3f sole proprietor-\u0d28\u0d4d\u0d31\u0d46 wife-\u0d28\u0d4d \u20b9 15,000 p.a. pay \u0d1a\u0d46\u0d2f\u0d4d\u0d2f\u0d23\u0d2e\u0d46\u0d28\u0d4d\u0d28\u0d4d covenant insert \u0d1a\u0d46\u0d2f\u0d4d\u0d2f\u0d41\u0d28\u0d4d\u0d28\u0d41.",
+        "duration_ms": 3000,
+        "slide_rel_start_ms": 6560,
+        "slide_rel_end_ms": 9560,
+        "global_start_ms": 38111,
+        "global_end_ms": 41111
+      },
+      {
+        "part": 4,
+        "shape": "step",
+        "label": "Obligation Charged on Net Profits",
+        "file_slug": "slide2_04_step3",
+        "text": "Assessee company \u0d08 obligation condition of purchase \u0d06\u0d2f\u0d3f accept \u0d1a\u0d46\u0d2f\u0d4d\u0d2f\u0d41\u0d15\u0d2f\u0d41\u0d02 Net Profits-\u0d7d direct charge attach \u0d06\u0d35\u0d41\u0d15\u0d2f\u0d41\u0d02 \u0d1a\u0d46\u0d2f\u0d4d\u0d2f\u0d41\u0d28\u0d4d\u0d28\u0d41.",
+        "duration_ms": 3000,
+        "slide_rel_start_ms": 9840,
+        "slide_rel_end_ms": 12840,
+        "global_start_ms": 41391,
+        "global_end_ms": 44391
+      },
+      {
+        "part": 5,
+        "shape": "step",
+        "label": "Legal Ratio: Diversion by Overriding Title",
+        "file_slug": "slide2_05_step4",
+        "text": "High Court held that the obligation attached to the very source of income. Assessee-\u0d15\u0d4d\u0d15\u0d4d \u0d06 portion-\u0d28\u0d4d\u0d31\u0d46 income-\u0d7d right \u0d07\u0d32\u0d4d\u0d32\u0d3e\u0d2f\u0d3f\u0d30\u0d41\u0d28\u0d4d\u0d28\u0d41, so it is Diversion of Income!",
+        "duration_ms": 3000,
+        "slide_rel_start_ms": 13120,
+        "slide_rel_end_ms": 16120,
+        "global_start_ms": 44671,
+        "global_end_ms": 47671
+      }
+    ]
+  },
+  {
+    "slide_idx": 3,
+    "start_ms": 48451,
+    "end_ms": 61291,
+    "duration_ms": 12840,
+    "cues": [
+      {
+        "part": 1,
+        "shape": "clause",
+        "label": "Clause A: Pre-existing or Integrated Obligation",
+        "file_slug": "slide3_01_clause_a",
+        "text": "Obligation Sale Deed \u0d05\u0d32\u0d4d\u0d32\u0d46\u0d19\u0d4d\u0d15\u0d3f\u0d7d title deed-\u0d7d start \u0d2e\u0d41\u0d24\u0d32\u0d47 integrated condition \u0d06\u0d2f\u0d3f\u0d30\u0d3f\u0d15\u0d4d\u0d15\u0d23\u0d02. Asset acquire \u0d1a\u0d46\u0d2f\u0d4d\u0d2f\u0d41\u0d28\u0d4d\u0d28\u0d24\u0d3f\u0d28\u0d4d \u0d2e\u0d41\u0d28\u0d4d\u0d28\u0d47 \u0d24\u0d28\u0d4d\u0d28\u0d46\u0d2f\u0d4b \u0d05\u0d32\u0d4d\u0d32\u0d46\u0d19\u0d4d\u0d15\u0d3f\u0d7d acquisition-\u0d28\u0d4d\u0d31\u0d46 condition \u0d06\u0d2f\u0d3f\u0d1f\u0d4d\u0d1f\u0d4b charge exist \u0d1a\u0d46\u0d2f\u0d4d\u0d2f\u0d23\u0d02.",
+        "duration_ms": 3000,
+        "slide_rel_start_ms": 0,
+        "slide_rel_end_ms": 3000,
+        "global_start_ms": 48451,
+        "global_end_ms": 51451
+      },
+      {
+        "part": 2,
+        "shape": "clause",
+        "label": "Clause B: Charge Attached directly to Source of Income",
+        "file_slug": "slide3_02_clause_b",
+        "text": "Payment obligation direct \u0d06\u0d2f\u0d3f undertaking \u0d05\u0d32\u0d4d\u0d32\u0d46\u0d19\u0d4d\u0d15\u0d3f\u0d7d asset-\u0d28\u0d4d\u0d31\u0d46 source of income-\u0d7d attach \u0d06\u0d2f\u0d3f\u0d30\u0d3f\u0d15\u0d4d\u0d15\u0d23\u0d02. Transferor-\u0d28\u0d4d\u0d31\u0d46 paramount title override \u0d1a\u0d46\u0d2f\u0d4d\u0d2f\u0d41\u0d28\u0d4d\u0d28 charge \u0d06\u0d2f\u0d3f\u0d30\u0d3f\u0d15\u0d4d\u0d15\u0d23\u0d02 \u0d07\u0d24\u0d4d.",
+        "duration_ms": 3000,
+        "slide_rel_start_ms": 3280,
+        "slide_rel_end_ms": 6280,
+        "global_start_ms": 51731,
+        "global_end_ms": 54731
+      },
+      {
+        "part": 3,
+        "shape": "clause",
+        "label": "Clause C: Subsequent Voluntary Charges are Application",
+        "file_slug": "slide3_03_clause_c",
+        "text": "Business purchase \u0d1a\u0d46\u0d2f\u0d4d\u0d24\u0d24\u0d3f\u0d28\u0d4d \u0d36\u0d47\u0d37\u0d02 company voluntary \u0d06\u0d2f\u0d3f family members-\u0d28\u0d4d share directly pay \u0d1a\u0d46\u0d2f\u0d4d\u0d2f\u0d3e\u0d7b \u0d24\u0d40\u0d30\u0d41\u0d2e\u0d3e\u0d28\u0d3f\u0d1a\u0d4d\u0d1a\u0d3e\u0d7d, it is purely Application of Income.",
+        "duration_ms": 3000,
+        "slide_rel_start_ms": 6560,
+        "slide_rel_end_ms": 9560,
+        "global_start_ms": 55011,
+        "global_end_ms": 58011
+      },
+      {
+        "part": 4,
+        "shape": "clause",
+        "label": "Clause D: Allocation of Profits Post Audit",
+        "file_slug": "slide3_04_clause_d",
+        "text": "Annual audit-\u0d28\u0d4d \u0d36\u0d47\u0d37\u0d02 profits allocate \u0d1a\u0d46\u0d2f\u0d4d\u0d2f\u0d41\u0d28\u0d4d\u0d28\u0d24\u0d4d Application of Income \u0d06\u0d23\u0d4d. Direct pre-accrual charge on source of income \u0d2e\u0d3e\u0d24\u0d4d\u0d30\u0d2e\u0d3e\u0d23\u0d4d Diversion of Income-\u0d7d qualify \u0d1a\u0d46\u0d2f\u0d4d\u0d2f\u0d41\u0d28\u0d4d\u0d28\u0d24\u0d4d.",
+        "duration_ms": 3000,
+        "slide_rel_start_ms": 9840,
+        "slide_rel_end_ms": 12840,
+        "global_start_ms": 58291,
+        "global_end_ms": 61291
+      }
+    ]
+  }
+]

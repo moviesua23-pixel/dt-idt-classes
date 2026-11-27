@@ -1,0 +1,31 @@
+SLIDE 1: Core Principles of Income Diversion vs Application (Cards Design)
+theme (slate)
+heading (Section 4: Diversion of Income vs Application of Income) (Judicial Doctrine under Income-tax Act, 1961)
+shape (man) (CA Rajesh) (left center) (dialogue: "Welcome back students! Section 4 Total Income compute ചെയ്യുമ്പോൾ critical ആയി മനസിലാക്കേണ്ട judicial doctrine ആണ് Diversion of Income by Overriding Title versus Application of Income. CIT v. Sitaldas Tirathdas landmark ruling-ലെ golden test നമുക്ക് വിശദമായി പരിശോധിക്കാം.")
+shape (list, cards) (Core Legal Principles) (right center) [
+  (CIT v. Sitaldas Tirathdas Golden Rule) (dialogue: "Supreme Court laid down the golden rule: Income assessee-യുടെ hands-ൽ reach ചെയ്യുന്നതിന് മുന്നേ divert ആകുന്നുണ്ടോ, അതോ reached ശേഷം apply ചെയ്യുകയാണോ എന്നാണ് നോക്കേണ്ടത്.")
+  (Diversion by Overriding Title) (dialogue: "If the obligation creates an enforceable charge on the source of income itself prior to accrual, ത്രൂ overriding title income divert ആകുന്നു. This is not taxable in the hands of assessee.")
+  (Application of Income) (dialogue: "Income ആദ്യം assessee-യുടെ hands-ൽ reach ആവുകയും, പിന്നീട് voluntary അല്ലെങ്കിൽ contractual obligation discharge ചെയ്യാൻ spend ചെയ്യുകയും ചെയ്താൽ, it is Application of Income and fully taxable.")
+  (Charge on Source vs Personal Obligation) (dialogue: "Source of income-ൽ pre-existing legal charge ഉണ്ടെങ്കിൽ അത് Diversion of Income ആണ്. Mere personal obligation out of earned profits ആണെങ്കിൽ strictly Application of Income ആണ്.")
+]
+
+SLIDE 2: Judicial Landmark & Business Takeover Analysis (Timeline Design)
+theme (blue)
+heading (Business Takeover with Overriding Charge) (Jit & Pal X-Rays (P.) Ltd. v. CIT [2004] 267 ITR 370 (All))
+shape (woman) (Tax Officer) (left center) (dialogue: "Allahabad High Court decision in Jit & Pal X-Rays Ltd. കേസിൽ going concern takeover ചെയ്യുമ്പോൾ overriding charge create ചെയ്യുന്നതിന്റെ exact statutory effect വ്യക്തമാക്കുന്നുണ്ട്.")
+shape (list, timeline) (Sequence of Business Takeover & Overriding Charge) (right center) [
+  (Acquisition of Business via Sale Deed) (dialogue: "Assessee company ഒരു sole proprietor-ൽ നിന്ന് running business purchase ചെയ്യാൻ Sale Deed execute ചെയ്യുന്നു.")
+  (Integral Covenant in Sale Deed) (dialogue: "Sale Deed-ൽ integrated condition ആയി sole proprietor-ന്റെ wife-ന് ₹ 15,000 p.a. pay ചെയ്യണമെന്ന് covenant insert ചെയ്യുന്നു.")
+  (Obligation Charged on Net Profits) (dialogue: "Assessee company ഈ obligation condition of purchase ആയി accept ചെയ്യുകയും Net Profits-ൽ direct charge attach ആവുകയും ചെയ്യുന്നു.")
+  (Legal Ratio: Diversion by Overriding Title) (dialogue: "High Court held that the obligation attached to the very source of income. Assessee-ക്ക് ആ portion-ന്റെ income-ൽ right ഇല്ലായിരുന്നു, so it is Diversion of Income!")
+]
+
+SLIDE 3: Key Conditions & Exam Trap Distinctions (Clause Design)
+theme (amber)
+heading (Statutory Tests & Exam Traps) (Distinguishing Criteria for CA Final Problems)
+shape (list, clause) (Key Tests to Identify Diversion vs Application) (center) [
+  (Clause A: Pre-existing or Integrated Obligation) (dialogue: "Obligation Sale Deed അല്ലെങ്കിൽ title deed-ൽ start മുതലേ integrated condition ആയിരിക്കണം. Asset acquire ചെയ്യുന്നതിന് മുന്നേ തന്നെയോ അല്ലെങ്കിൽ acquisition-ന്റെ condition ആയിട്ടോ charge exist ചെയ്യണം.")
+  (Clause B: Charge Attached directly to Source of Income) (dialogue: "Payment obligation direct ആയി undertaking അല്ലെങ്കിൽ asset-ന്റെ source of income-ൽ attach ആയിരിക്കണം. Transferor-ന്റെ paramount title override ചെയ്യുന്ന charge ആയിരിക്കണം ഇത്.")
+  (Clause C: Subsequent Voluntary Charges are Application) (dialogue: "Business purchase ചെയ്തതിന് ശേഷം company voluntary ആയി family members-ന് share directly pay ചെയ്യാൻ തീരുമാനിച്ചാൽ, it is purely Application of Income.")
+  (Clause D: Allocation of Profits Post Audit) (dialogue: "Annual audit-ന് ശേഷം profits allocate ചെയ്യുന്നത് Application of Income ആണ്. Direct pre-accrual charge on source of income മാത്രമാണ് Diversion of Income-ൽ qualify ചെയ്യുന്നത്.")
+]

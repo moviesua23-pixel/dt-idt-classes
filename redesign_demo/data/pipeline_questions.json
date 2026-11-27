@@ -12,7 +12,259 @@
       "question_text": "Mr. Bhargava, a leading advocate on corporate law, decided to reduce his practice and to accept briefs only for paying his taxes and making charities with fees received on such briefs. In a particular case, he agreed to appear to defend one company in Supreme Court on the condition that he would be provided with ₹ 5 lacs for a public charitable trust that he would create. He defended the company and was paid the sum by company. He created a trust of that sum by executing a trust deed. Decide whether the amount received by Mr. Bhargava is assessable in his hands as income from profession.",
       "answer_text": "In the instant case, the trust was created by Mr. Bhargava himself out of his professional income. The client did not create the trust. The client did not impose any obligation in the nature of a trust binding on Mr. Bhargava. Thus, there is no diversion of the money to the trust before it became professional income in the hands of Mr. Bhargava. This case is one of application of professional income and not of diversion of income by overriding title.\n\nTherefore, the amount received by Mr. Bhargava is chargeable to tax under the head \"Profits and gains of business or profession\".",
       "topic_id": "T_CH1_Q1",
-      "drive_audio_id": "1OJE3VX5UcvnBEZSbBYcoiixVB8ag_AAX"
+      "presentation_prompt": "SLIDE 1: Comparative Matrix of Income Doctrines (Cards Design)\ntheme (indigo)\nheading (Section 4 Chargeability Framework) (Diversion vs Application of Income)\nshape (man) (CA Rajesh) (left center) (dialogue: \"Namaskaram CA Final students! Section 4 study cheyyumpol basic chargeability test cheyyunna leading doctrine aanu Diversion of Income by Overriding Title versus Application of Income. Income diversion aayal Excluded from Total Income, but mere application aayal Total Income-il fully taxable aakum!\")\nshape (list, cards) (Statutory Benchmark Matrix) (right center) [\n  (Diversion by Overriding Title: Obligation Attached at Source) (dialogue: \"Income assessee-kk reach cheyyunnathinu munp identical source-il thanne pre-existing legal obligation attach aayal, athu Diversion by Overriding Title aanu.\")\n  (Application of Income: Utilization Post Accrual) (dialogue: \"Income first assessee-kk receive or accrue aakum, athinu shesham charitable or personal purpose-inu utilize cheythal athu mere Application of Income aanu.\")\n  (Source Test: Inception Requirement) (dialogue: \"Source Test strict aanu! Overriding title must exist at the very inception of the income stream, before assessee acquires any legal right.\")\n  (Taxability Impact: Total Income Inclusion) (dialogue: \"Diversion aayal No Tax Liability in the hands of the earner. Application aayal Fully Taxable under Profits and Gains of Business or Profession or relevant head!\")\n]\n\nSLIDE 2: Judicial Application & Case Analysis (Timeline Design)\ntheme (slate)\nheading (Professional Income vs Charitable Trust Creation) (Mr. Bhargava Case Study)\nshape (woman) (Tax Officer) (left center) (dialogue: \"Exam perspective-il Mr. Bhargava-yude case prominent layout aanu. Transaction sequence trace cheythu continuous flow clear-aayi evaluate cheyyam.\")\nshape (list, timeline) (Sequence of Transactions & Statutory Conclusion) (right center) [\n  (Step 1: Legal Representation & Stipulation) (dialogue: \"Mr. Bhargava Supreme Court case defend cheyan agreed aayi on the condition that fee Public Charitable Trust-inu venam.\")\n  (Step 2: Direct Receipt of ₹ 5 Lakh Professional Fees) (dialogue: \"Company client ₹ 5 Lakhs professional fee Mr. Bhargava-ykk direct pay cheythu. Income right there Mr. Bhargava-yude hands-il accrue aayi.\")\n  (Step 3: Post-Receipt Trust Deed Execution) (dialogue: \"Amount receive cheytha shesham Mr. Bhargava voluntary-aayi Trust Deed execute cheythu public charitable trust-ilekk execute cheythu.\")\n  (Step 4: Assessment under Head PGBP) (dialogue: \"Client legal obligation impose cheyyathathukond, no overriding title exists at inception. Entire ₹ 5 Lakhs Profits and Gains of Business or Profession head-il taxable aanu!\")\n]\n\nSLIDE 3: Legal Tests for Taxability u/s 4 (Clause Design)\ntheme (amber)\nheading (Judicial Tests & Statutory Conditions) (Determining Diversion vs Application)\nshape (list, clause) (Statutory Evaluation Criteria) (center) [\n  (Clause A: Pre-Existing Obligation Test) (dialogue: \"Income source-il third-party entitlement or legal charge pre-exist cheythal mathrame overriding title claim cheyyan pattൂ.\")\n  (Clause B: Source Test at Inception) (dialogue: \"Assessee-kk legal right to receive accrue cheyyunnathinu MUNPU thanne income divert aayirikkanam.\")\n  (Clause C: Voluntary Disposition post Accrual) (dialogue: \"Assessee receipt-inu shesham voluntary-aayi legal trust create cheythal, athu pure Application of Income aayi red-flag cheyyum.\")\n  (Clause D: Taxability under Section 4 and Section 5) (dialogue: \"Application of Income aayathukond, professional earnings fully Total Income-il include cheythu Section 4 chargeability attract cheyyum.\")\n]",
+      "is_kinetic_prompt": true,
+      "drive_audio_id": "1IGzwLza8PPfnCZyFtGdPDhVZtxIOWKeE",
+      "audio_timings": [
+        {
+          "slide_idx": 1,
+          "start_ms": 0,
+          "end_ms": 51560,
+          "duration_ms": 51560,
+          "cues": [
+            {
+              "part": 1,
+              "shape": "man",
+              "label": "CA Rajesh",
+              "file_slug": "slide1_01_man",
+              "text": "Namaskaram CA Final students! Section 4 study cheyyumpol basic chargeability test cheyyunna leading doctrine aanu Diversion of Income by Overriding Title versus Application of Income. Income diversion aayal Excluded from Total Income, but mere application aayal Total Income-il fully taxable aakum!",
+              "drive_file_id": "12PaChE9sdXg6pdFfo2mvqpWoO1mlklxY",
+              "stream_url": "https://drive.google.com/uc?export=download&id=12PaChE9sdXg6pdFfo2mvqpWoO1mlklxY",
+              "file_name": "slide1_01_man.mp3",
+              "audio_file": "dt/ch1/q1/slide1_01_man.mp3",
+              "duration_ms": 10520,
+              "slide_rel_start_ms": 0,
+              "slide_rel_end_ms": 10520,
+              "global_start_ms": 0,
+              "global_end_ms": 10520
+            },
+            {
+              "part": 2,
+              "shape": "card",
+              "label": "Diversion by Overriding Title: Obligation Attached at Source",
+              "file_slug": "slide1_02_card1",
+              "text": "Income assessee-kk reach cheyyunnathinu munp identical source-il thanne pre-existing legal obligation attach aayal, athu Diversion by Overriding Title aanu.",
+              "duration_ms": 10480,
+              "slide_rel_start_ms": 10800,
+              "slide_rel_end_ms": 21280,
+              "global_start_ms": 10800,
+              "global_end_ms": 21280,
+              "drive_file_id": "19z7wLcO3nWgH1GfduMXIz_fu7Q_NeeDr",
+              "stream_url": "https://drive.google.com/uc?export=download&id=19z7wLcO3nWgH1GfduMXIz_fu7Q_NeeDr",
+              "file_name": "slide1_02_card1.mp3",
+              "audio_file": "dt/ch1/q1/slide1_02_card1.mp3"
+            },
+            {
+              "part": 3,
+              "shape": "card",
+              "label": "Application of Income: Utilization Post Accrual",
+              "file_slug": "slide1_03_card2",
+              "text": "Income first assessee-kk receive or accrue aakum, athinu shesham charitable or personal purpose-inu utilize cheythal athu mere Application of Income aanu.",
+              "duration_ms": 12800,
+              "slide_rel_start_ms": 21560,
+              "slide_rel_end_ms": 34360,
+              "global_start_ms": 21560,
+              "global_end_ms": 34360,
+              "drive_file_id": "19gciuj5p-qOmPISkU4JMFN7xL40jlcHp",
+              "stream_url": "https://drive.google.com/uc?export=download&id=19gciuj5p-qOmPISkU4JMFN7xL40jlcHp",
+              "file_name": "slide1_03_card2.mp3",
+              "audio_file": "dt/ch1/q1/slide1_03_card2.mp3"
+            },
+            {
+              "part": 4,
+              "shape": "card",
+              "label": "Source Test: Inception Requirement",
+              "file_slug": "slide1_04_card3",
+              "text": "Source Test strict aanu! Overriding title must exist at the very inception of the income stream, before assessee acquires any legal right.",
+              "duration_ms": 8480,
+              "slide_rel_start_ms": 34640,
+              "slide_rel_end_ms": 43120,
+              "global_start_ms": 34640,
+              "global_end_ms": 43120,
+              "drive_file_id": "1ViBOSDx_qGhxxVk8QSqf8rDwpzt871_m",
+              "stream_url": "https://drive.google.com/uc?export=download&id=1ViBOSDx_qGhxxVk8QSqf8rDwpzt871_m",
+              "file_name": "slide1_04_card3.mp3",
+              "audio_file": "dt/ch1/q1/slide1_04_card3.mp3"
+            },
+            {
+              "part": 5,
+              "shape": "card",
+              "label": "Taxability Impact: Total Income Inclusion",
+              "file_slug": "slide1_05_card4",
+              "text": "Diversion aayal No Tax Liability in the hands of the earner. Application aayal Fully Taxable under Profits and Gains of Business or Profession or relevant head!",
+              "duration_ms": 8160,
+              "slide_rel_start_ms": 43400,
+              "slide_rel_end_ms": 51560,
+              "global_start_ms": 43400,
+              "global_end_ms": 51560,
+              "drive_file_id": "1Ore61Ype4k3PlNynt22POwTrvd2UJ3fS",
+              "stream_url": "https://drive.google.com/uc?export=download&id=1Ore61Ype4k3PlNynt22POwTrvd2UJ3fS",
+              "file_name": "slide1_05_card4.mp3",
+              "audio_file": "dt/ch1/q1/slide1_05_card4.mp3"
+            }
+          ]
+        },
+        {
+          "slide_idx": 2,
+          "start_ms": 52340,
+          "end_ms": 95100,
+          "duration_ms": 42760,
+          "cues": [
+            {
+              "part": 1,
+              "shape": "woman",
+              "label": "Tax Officer",
+              "file_slug": "slide2_01_woman",
+              "text": "Exam perspective-il Mr. Bhargava-yude case prominent layout aanu. Transaction sequence trace cheythu continuous flow clear-aayi evaluate cheyyam.",
+              "duration_ms": 7400,
+              "slide_rel_start_ms": 0,
+              "slide_rel_end_ms": 7400,
+              "global_start_ms": 52340,
+              "global_end_ms": 59740,
+              "drive_file_id": "1OZjUmp-GNu4ahkE53kp4aoIQN5SMJ4gT",
+              "stream_url": "https://drive.google.com/uc?export=download&id=1OZjUmp-GNu4ahkE53kp4aoIQN5SMJ4gT",
+              "file_name": "slide2_01_woman.mp3",
+              "audio_file": "dt/ch1/q1/slide2_01_woman.mp3"
+            },
+            {
+              "part": 2,
+              "shape": "step",
+              "label": "Step 1: Legal Representation & Stipulation",
+              "file_slug": "slide2_02_step1",
+              "text": "Mr. Bhargava Supreme Court case defend cheyan agreed aayi on the condition that fee Public Charitable Trust-inu venam.",
+              "duration_ms": 6520,
+              "slide_rel_start_ms": 7680,
+              "slide_rel_end_ms": 14200,
+              "global_start_ms": 60020,
+              "global_end_ms": 66540,
+              "drive_file_id": "1TM_Vf16uQ8_km5wTS7vtWZ_MtqHDtZ7y",
+              "stream_url": "https://drive.google.com/uc?export=download&id=1TM_Vf16uQ8_km5wTS7vtWZ_MtqHDtZ7y",
+              "file_name": "slide2_02_step1.mp3",
+              "audio_file": "dt/ch1/q1/slide2_02_step1.mp3"
+            },
+            {
+              "part": 3,
+              "shape": "step",
+              "label": "Step 2: Direct Receipt of ₹ 5 Lakh Professional Fees",
+              "file_slug": "slide2_03_step2",
+              "text": "Company client ₹ 5 Lakhs professional fee Mr. Bhargava-ykk direct pay cheythu. Income right there Mr. Bhargava-yude hands-il accrue aayi.",
+              "duration_ms": 8400,
+              "slide_rel_start_ms": 14480,
+              "slide_rel_end_ms": 22880,
+              "global_start_ms": 66820,
+              "global_end_ms": 75220,
+              "drive_file_id": "1kwl_vHqZqqdYycnKBMOdrJ-glCUFnJsE",
+              "stream_url": "https://drive.google.com/uc?export=download&id=1kwl_vHqZqqdYycnKBMOdrJ-glCUFnJsE",
+              "file_name": "slide2_03_step2.mp3",
+              "audio_file": "dt/ch1/q1/slide2_03_step2.mp3"
+            },
+            {
+              "part": 4,
+              "shape": "step",
+              "label": "Step 3: Post-Receipt Trust Deed Execution",
+              "file_slug": "slide2_04_step3",
+              "text": "Amount receive cheytha shesham Mr. Bhargava voluntary-aayi Trust Deed execute cheythu public charitable trust-ilekk execute cheythu.",
+              "duration_ms": 8920,
+              "slide_rel_start_ms": 23160,
+              "slide_rel_end_ms": 32080,
+              "global_start_ms": 75500,
+              "global_end_ms": 84420,
+              "drive_file_id": "1mFI8S-WehnGDEkZNYepF7lsDHfoRtBKz",
+              "stream_url": "https://drive.google.com/uc?export=download&id=1mFI8S-WehnGDEkZNYepF7lsDHfoRtBKz",
+              "file_name": "slide2_04_step3.mp3",
+              "audio_file": "dt/ch1/q1/slide2_04_step3.mp3"
+            },
+            {
+              "part": 5,
+              "shape": "step",
+              "label": "Step 4: Assessment under Head PGBP",
+              "file_slug": "slide2_05_step4",
+              "text": "Client legal obligation impose cheyyathathukond, no overriding title exists at inception. Entire ₹ 5 Lakhs Profits and Gains of Business or Profession head-il taxable aanu!",
+              "duration_ms": 10400,
+              "slide_rel_start_ms": 32360,
+              "slide_rel_end_ms": 42760,
+              "global_start_ms": 84700,
+              "global_end_ms": 95100,
+              "drive_file_id": "1VmJICVioqis6B_AO_bYBOGErD9ZwROSE",
+              "stream_url": "https://drive.google.com/uc?export=download&id=1VmJICVioqis6B_AO_bYBOGErD9ZwROSE",
+              "file_name": "slide2_05_step4.mp3",
+              "audio_file": "dt/ch1/q1/slide2_05_step4.mp3"
+            }
+          ]
+        },
+        {
+          "slide_idx": 3,
+          "start_ms": 95880,
+          "end_ms": 136800,
+          "duration_ms": 40920,
+          "cues": [
+            {
+              "part": 1,
+              "shape": "clause",
+              "label": "Clause A: Pre-Existing Obligation Test",
+              "file_slug": "slide3_01_clause_a",
+              "text": "Income source-il third-party entitlement or legal charge pre-exist cheythal mathrame overriding title claim cheyyan pattൂ.",
+              "duration_ms": 9520,
+              "slide_rel_start_ms": 0,
+              "slide_rel_end_ms": 9520,
+              "global_start_ms": 95880,
+              "global_end_ms": 105400,
+              "drive_file_id": "1zb5fd9ngtiXVF6hhQSMHrkJ_VISSy_a4",
+              "stream_url": "https://drive.google.com/uc?export=download&id=1zb5fd9ngtiXVF6hhQSMHrkJ_VISSy_a4",
+              "file_name": "slide3_01_clause_a.mp3",
+              "audio_file": "dt/ch1/q1/slide3_01_clause_a.mp3"
+            },
+            {
+              "part": 2,
+              "shape": "clause",
+              "label": "Clause B: Source Test at Inception",
+              "file_slug": "slide3_02_clause_b",
+              "text": "Assessee-kk legal right to receive accrue cheyyunnathinu MUNPU thanne income divert aayirikkanam.",
+              "duration_ms": 9640,
+              "slide_rel_start_ms": 9800,
+              "slide_rel_end_ms": 19440,
+              "global_start_ms": 105680,
+              "global_end_ms": 115320,
+              "drive_file_id": "1alDouRBPyb_5imIkz2XwV0ps0D2cZ7Zs",
+              "stream_url": "https://drive.google.com/uc?export=download&id=1alDouRBPyb_5imIkz2XwV0ps0D2cZ7Zs",
+              "file_name": "slide3_02_clause_b.mp3",
+              "audio_file": "dt/ch1/q1/slide3_02_clause_b.mp3"
+            },
+            {
+              "part": 3,
+              "shape": "clause",
+              "label": "Clause C: Voluntary Disposition post Accrual",
+              "file_slug": "slide3_03_clause_c",
+              "text": "Assessee receipt-inu shesham voluntary-aayi legal trust create cheythal, athu pure Application of Income aayi red-flag cheyyum.",
+              "duration_ms": 8560,
+              "slide_rel_start_ms": 19720,
+              "slide_rel_end_ms": 28280,
+              "global_start_ms": 115600,
+              "global_end_ms": 124160,
+              "drive_file_id": "1KLqawlJIlHiAd1PTAPxq45wWNpj0k4z2",
+              "stream_url": "https://drive.google.com/uc?export=download&id=1KLqawlJIlHiAd1PTAPxq45wWNpj0k4z2",
+              "file_name": "slide3_03_clause_c.mp3",
+              "audio_file": "dt/ch1/q1/slide3_03_clause_c.mp3"
+            },
+            {
+              "part": 4,
+              "shape": "clause",
+              "label": "Clause D: Taxability under Section 4 and Section 5",
+              "file_slug": "slide3_04_clause_d",
+              "text": "Application of Income aayathukond, professional earnings fully Total Income-il include cheythu Section 4 chargeability attract cheyyum.",
+              "duration_ms": 12360,
+              "slide_rel_start_ms": 28560,
+              "slide_rel_end_ms": 40920,
+              "global_start_ms": 124440,
+              "global_end_ms": 136800,
+              "drive_file_id": "1Z97bVI89wdx_qRNCZSSroW4dJ-gcHixF",
+              "stream_url": "https://drive.google.com/uc?export=download&id=1Z97bVI89wdx_qRNCZSSroW4dJ-gcHixF",
+              "file_name": "slide3_04_clause_d.mp3",
+              "audio_file": "dt/ch1/q1/slide3_04_clause_d.mp3"
+            }
+          ]
+        }
+      ]
     },
     {
       "subject": "dt",
@@ -22,7 +274,207 @@
       "question_text": "XYZ Ltd. took over the running business of a sole-proprietor by a sale deed. As per the sale deed, XYZ Ltd. undertook to pay overriding charges of ₹ 15,000 p.a. to the wife of the sole-proprietor in addition to the sale consideration. The sale deed also specifically mentioned that the amount was charged on the net profits of XYZ Ltd., who had accepted that obligation as a condition of purchase of the going concern. Is the payment of overriding charges by XYZ Ltd. to the wife of the sole-proprietor in the nature of diversion of income or application of income? Discuss.",
       "answer_text": "This issue came up for consideration before the Allahabad High Court in Jit & Pal X-Rays (P.) Ltd. v. CIT (2004) 267 ITR 370 (All). The Allahabad High Court observed that the overriding charge which had been created in favour of the wife of the sole-proprietor was an integral part of the sale deed by which the going concern was transferred to the assessee. The obligation, therefore, was attached to the very source of income i.e. the going concern transferred to the assessee by the sale deed. The sale deed also specifically mentioned that the amount in question was charged on the net profits of the assessee-company and the assessee-company had accepted that obligation as a condition of purchase of the going concern. Hence, it is clearly a case of diversion of income by an overriding charge and not a mere application of income.",
       "topic_id": "T_CH1_Q2",
-      "drive_audio_id": "1U5kSCxHL4P4EdTtSBH_c8TCH3cWlzmQh"
+      "presentation_prompt": "SLIDE 1: Core Principles of Income Diversion vs Application (Cards Design)\ntheme (slate)\nheading (Section 4: Diversion of Income vs Application of Income) (Judicial Doctrine under Income-tax Act, 1961)\nshape (man) (CA Rajesh) (left center) (dialogue: \"Welcome back students! Section 4 Total Income compute ചെയ്യുമ്പോൾ critical ആയി മനസിലാക്കേണ്ട judicial doctrine ആണ് Diversion of Income by Overriding Title versus Application of Income. CIT v. Sitaldas Tirathdas landmark ruling-ലെ golden test നമുക്ക് വിശദമായി പരിശോധിക്കാം.\")\nshape (list, cards) (Core Legal Principles) (right center) [\n  (CIT v. Sitaldas Tirathdas Golden Rule) (dialogue: \"Supreme Court laid down the golden rule: Income assessee-യുടെ hands-ൽ reach ചെയ്യുന്നതിന് മുന്നേ divert ആകുന്നുണ്ടോ, അതോ reached ശേഷം apply ചെയ്യുകയാണോ എന്നാണ് നോക്കേണ്ടത്.\")\n  (Diversion by Overriding Title) (dialogue: \"If the obligation creates an enforceable charge on the source of income itself prior to accrual, ത്രൂ overriding title income divert ആകുന്നു. This is not taxable in the hands of assessee.\")\n  (Application of Income) (dialogue: \"Income ആദ്യം assessee-യുടെ hands-ൽ reach ആവുകയും, പിന്നീട് voluntary അല്ലെങ്കിൽ contractual obligation discharge ചെയ്യാൻ spend ചെയ്യുകയും ചെയ്താൽ, it is Application of Income and fully taxable.\")\n  (Charge on Source vs Personal Obligation) (dialogue: \"Source of income-ൽ pre-existing legal charge ഉണ്ടെങ്കിൽ അത് Diversion of Income ആണ്. Mere personal obligation out of earned profits ആണെങ്കിൽ strictly Application of Income ആണ്.\")\n]\n\nSLIDE 2: Judicial Landmark & Business Takeover Analysis (Timeline Design)\ntheme (blue)\nheading (Business Takeover with Overriding Charge) (Jit & Pal X-Rays (P.) Ltd. v. CIT [2004] 267 ITR 370 (All))\nshape (woman) (Tax Officer) (left center) (dialogue: \"Allahabad High Court decision in Jit & Pal X-Rays Ltd. കേസിൽ going concern takeover ചെയ്യുമ്പോൾ overriding charge create ചെയ്യുന്നതിന്റെ exact statutory effect വ്യക്തമാക്കുന്നുണ്ട്.\")\nshape (list, timeline) (Sequence of Business Takeover & Overriding Charge) (right center) [\n  (Acquisition of Business via Sale Deed) (dialogue: \"Assessee company ഒരു sole proprietor-ൽ നിന്ന് running business purchase ചെയ്യാൻ Sale Deed execute ചെയ്യുന്നു.\")\n  (Integral Covenant in Sale Deed) (dialogue: \"Sale Deed-ൽ integrated condition ആയി sole proprietor-ന്റെ wife-ന് ₹ 15,000 p.a. pay ചെയ്യണമെന്ന് covenant insert ചെയ്യുന്നു.\")\n  (Obligation Charged on Net Profits) (dialogue: \"Assessee company ഈ obligation condition of purchase ആയി accept ചെയ്യുകയും Net Profits-ൽ direct charge attach ആവുകയും ചെയ്യുന്നു.\")\n  (Legal Ratio: Diversion by Overriding Title) (dialogue: \"High Court held that the obligation attached to the very source of income. Assessee-ക്ക് ആ portion-ന്റെ income-ൽ right ഇല്ലായിരുന്നു, so it is Diversion of Income!\")\n]\n\nSLIDE 3: Key Conditions & Exam Trap Distinctions (Clause Design)\ntheme (amber)\nheading (Statutory Tests & Exam Traps) (Distinguishing Criteria for CA Final Problems)\nshape (list, clause) (Key Tests to Identify Diversion vs Application) (center) [\n  (Clause A: Pre-existing or Integrated Obligation) (dialogue: \"Obligation Sale Deed അല്ലെങ്കിൽ title deed-ൽ start മുതലേ integrated condition ആയിരിക്കണം. Asset acquire ചെയ്യുന്നതിന് മുന്നേ തന്നെയോ അല്ലെങ്കിൽ acquisition-ന്റെ condition ആയിട്ടോ charge exist ചെയ്യണം.\")\n  (Clause B: Charge Attached directly to Source of Income) (dialogue: \"Payment obligation direct ആയി undertaking അല്ലെങ്കിൽ asset-ന്റെ source of income-ൽ attach ആയിരിക്കണം. Transferor-ന്റെ paramount title override ചെയ്യുന്ന charge ആയിരിക്കണം ഇത്.\")\n  (Clause C: Subsequent Voluntary Charges are Application) (dialogue: \"Business purchase ചെയ്തതിന് ശേഷം company voluntary ആയി family members-ന് share directly pay ചെയ്യാൻ തീരുമാനിച്ചാൽ, it is purely Application of Income.\")\n  (Clause D: Allocation of Profits Post Audit) (dialogue: \"Annual audit-ന് ശേഷം profits allocate ചെയ്യുന്നത് Application of Income ആണ്. Direct pre-accrual charge on source of income മാത്രമാണ് Diversion of Income-ൽ qualify ചെയ്യുന്നത്.\")\n]",
+      "is_kinetic_prompt": true,
+      "drive_audio_id": "PARTIAL_VOICE",
+      "audio_timings": [
+        {
+          "slide_idx": 1,
+          "start_ms": 0,
+          "end_ms": 30771,
+          "duration_ms": 30771,
+          "cues": [
+            {
+              "part": 1,
+              "shape": "man",
+              "label": "CA Rajesh",
+              "file_slug": "slide1_01_man",
+              "text": "Welcome back students! Section 4 Total Income compute ചെയ്യുമ്പോൾ critical ആയി മനസിലാക്കേണ്ട judicial doctrine ആണ് Diversion of Income by Overriding Title versus Application of Income. CIT v. Sitaldas Tirathdas landmark ruling-ലെ golden test നമുക്ക് വിശദമായി പരിശോധിക്കാം.",
+              "drive_file_id": "1GlGpLMu-0FmEwuYVb7F8RiAeyCR5t2uW",
+              "stream_url": "https://drive.google.com/uc?export=download&id=1GlGpLMu-0FmEwuYVb7F8RiAeyCR5t2uW",
+              "file_name": "slide1_01_man.mp3",
+              "audio_file": "dt/ch1/q2/slide1_01_man.mp3",
+              "duration_ms": 17651,
+              "slide_rel_start_ms": 0,
+              "slide_rel_end_ms": 17651,
+              "global_start_ms": 0,
+              "global_end_ms": 17651
+            },
+            {
+              "part": 2,
+              "shape": "card",
+              "label": "CIT v. Sitaldas Tirathdas Golden Rule",
+              "file_slug": "slide1_02_card1",
+              "text": "Supreme Court laid down the golden rule: Income assessee-യുടെ hands-ൽ reach ചെയ്യുന്നതിന് മുന്നേ divert ആകുന്നുണ്ടോ, അതോ reached ശേഷം apply ചെയ്യുകയാണോ എന്നാണ് നോക്കേണ്ടത്.",
+              "duration_ms": 3000,
+              "slide_rel_start_ms": 17931,
+              "slide_rel_end_ms": 20931,
+              "global_start_ms": 17931,
+              "global_end_ms": 20931
+            },
+            {
+              "part": 3,
+              "shape": "card",
+              "label": "Diversion by Overriding Title",
+              "file_slug": "slide1_03_card2",
+              "text": "If the obligation creates an enforceable charge on the source of income itself prior to accrual, ത്രൂ overriding title income divert ആകുന്നു. This is not taxable in the hands of assessee.",
+              "duration_ms": 3000,
+              "slide_rel_start_ms": 21211,
+              "slide_rel_end_ms": 24211,
+              "global_start_ms": 21211,
+              "global_end_ms": 24211
+            },
+            {
+              "part": 4,
+              "shape": "card",
+              "label": "Application of Income",
+              "file_slug": "slide1_04_card3",
+              "text": "Income ആദ്യം assessee-യുടെ hands-ൽ reach ആവുകയും, പിന്നീട് voluntary അല്ലെങ്കിൽ contractual obligation discharge ചെയ്യാൻ spend ചെയ്യുകയും ചെയ്താൽ, it is Application of Income and fully taxable.",
+              "duration_ms": 3000,
+              "slide_rel_start_ms": 24491,
+              "slide_rel_end_ms": 27491,
+              "global_start_ms": 24491,
+              "global_end_ms": 27491
+            },
+            {
+              "part": 5,
+              "shape": "card",
+              "label": "Charge on Source vs Personal Obligation",
+              "file_slug": "slide1_05_card4",
+              "text": "Source of income-ൽ pre-existing legal charge ഉണ്ടെങ്കിൽ അത് Diversion of Income ആണ്. Mere personal obligation out of earned profits ആണെങ്കിൽ strictly Application of Income ആണ്.",
+              "duration_ms": 3000,
+              "slide_rel_start_ms": 27771,
+              "slide_rel_end_ms": 30771,
+              "global_start_ms": 27771,
+              "global_end_ms": 30771
+            }
+          ]
+        },
+        {
+          "slide_idx": 2,
+          "start_ms": 31551,
+          "end_ms": 47671,
+          "duration_ms": 16120,
+          "cues": [
+            {
+              "part": 1,
+              "shape": "woman",
+              "label": "Tax Officer",
+              "file_slug": "slide2_01_woman",
+              "text": "Allahabad High Court decision in Jit & Pal X-Rays Ltd. കേസിൽ going concern takeover ചെയ്യുമ്പോൾ overriding charge create ചെയ്യുന്നതിന്റെ exact statutory effect വ്യക്തമാക്കുന്നുണ്ട്.",
+              "duration_ms": 3000,
+              "slide_rel_start_ms": 0,
+              "slide_rel_end_ms": 3000,
+              "global_start_ms": 31551,
+              "global_end_ms": 34551
+            },
+            {
+              "part": 2,
+              "shape": "step",
+              "label": "Acquisition of Business via Sale Deed",
+              "file_slug": "slide2_02_step1",
+              "text": "Assessee company ഒരു sole proprietor-ൽ നിന്ന് running business purchase ചെയ്യാൻ Sale Deed execute ചെയ്യുന്നു.",
+              "duration_ms": 3000,
+              "slide_rel_start_ms": 3280,
+              "slide_rel_end_ms": 6280,
+              "global_start_ms": 34831,
+              "global_end_ms": 37831
+            },
+            {
+              "part": 3,
+              "shape": "step",
+              "label": "Integral Covenant in Sale Deed",
+              "file_slug": "slide2_03_step2",
+              "text": "Sale Deed-ൽ integrated condition ആയി sole proprietor-ന്റെ wife-ന് ₹ 15,000 p.a. pay ചെയ്യണമെന്ന് covenant insert ചെയ്യുന്നു.",
+              "duration_ms": 3000,
+              "slide_rel_start_ms": 6560,
+              "slide_rel_end_ms": 9560,
+              "global_start_ms": 38111,
+              "global_end_ms": 41111
+            },
+            {
+              "part": 4,
+              "shape": "step",
+              "label": "Obligation Charged on Net Profits",
+              "file_slug": "slide2_04_step3",
+              "text": "Assessee company ഈ obligation condition of purchase ആയി accept ചെയ്യുകയും Net Profits-ൽ direct charge attach ആവുകയും ചെയ്യുന്നു.",
+              "duration_ms": 3000,
+              "slide_rel_start_ms": 9840,
+              "slide_rel_end_ms": 12840,
+              "global_start_ms": 41391,
+              "global_end_ms": 44391
+            },
+            {
+              "part": 5,
+              "shape": "step",
+              "label": "Legal Ratio: Diversion by Overriding Title",
+              "file_slug": "slide2_05_step4",
+              "text": "High Court held that the obligation attached to the very source of income. Assessee-ക്ക് ആ portion-ന്റെ income-ൽ right ഇല്ലായിരുന്നു, so it is Diversion of Income!",
+              "duration_ms": 3000,
+              "slide_rel_start_ms": 13120,
+              "slide_rel_end_ms": 16120,
+              "global_start_ms": 44671,
+              "global_end_ms": 47671
+            }
+          ]
+        },
+        {
+          "slide_idx": 3,
+          "start_ms": 48451,
+          "end_ms": 61291,
+          "duration_ms": 12840,
+          "cues": [
+            {
+              "part": 1,
+              "shape": "clause",
+              "label": "Clause A: Pre-existing or Integrated Obligation",
+              "file_slug": "slide3_01_clause_a",
+              "text": "Obligation Sale Deed അല്ലെങ്കിൽ title deed-ൽ start മുതലേ integrated condition ആയിരിക്കണം. Asset acquire ചെയ്യുന്നതിന് മുന്നേ തന്നെയോ അല്ലെങ്കിൽ acquisition-ന്റെ condition ആയിട്ടോ charge exist ചെയ്യണം.",
+              "duration_ms": 3000,
+              "slide_rel_start_ms": 0,
+              "slide_rel_end_ms": 3000,
+              "global_start_ms": 48451,
+              "global_end_ms": 51451
+            },
+            {
+              "part": 2,
+              "shape": "clause",
+              "label": "Clause B: Charge Attached directly to Source of Income",
+              "file_slug": "slide3_02_clause_b",
+              "text": "Payment obligation direct ആയി undertaking അല്ലെങ്കിൽ asset-ന്റെ source of income-ൽ attach ആയിരിക്കണം. Transferor-ന്റെ paramount title override ചെയ്യുന്ന charge ആയിരിക്കണം ഇത്.",
+              "duration_ms": 3000,
+              "slide_rel_start_ms": 3280,
+              "slide_rel_end_ms": 6280,
+              "global_start_ms": 51731,
+              "global_end_ms": 54731
+            },
+            {
+              "part": 3,
+              "shape": "clause",
+              "label": "Clause C: Subsequent Voluntary Charges are Application",
+              "file_slug": "slide3_03_clause_c",
+              "text": "Business purchase ചെയ്തതിന് ശേഷം company voluntary ആയി family members-ന് share directly pay ചെയ്യാൻ തീരുമാനിച്ചാൽ, it is purely Application of Income.",
+              "duration_ms": 3000,
+              "slide_rel_start_ms": 6560,
+              "slide_rel_end_ms": 9560,
+              "global_start_ms": 55011,
+              "global_end_ms": 58011
+            },
+            {
+              "part": 4,
+              "shape": "clause",
+              "label": "Clause D: Allocation of Profits Post Audit",
+              "file_slug": "slide3_04_clause_d",
+              "text": "Annual audit-ന് ശേഷം profits allocate ചെയ്യുന്നത് Application of Income ആണ്. Direct pre-accrual charge on source of income മാത്രമാണ് Diversion of Income-ൽ qualify ചെയ്യുന്നത്.",
+              "duration_ms": 3000,
+              "slide_rel_start_ms": 9840,
+              "slide_rel_end_ms": 12840,
+              "global_start_ms": 58291,
+              "global_end_ms": 61291
+            }
+          ]
+        }
+      ]
     },
     {
       "subject": "dt",
@@ -774,7 +1226,7 @@
       "question_text": "Sai Ltd. has a block of assets carrying 15% rate of depreciation, whose written down value on 01.04.2025 was ₹ 40 lacs. It purchased another asset (second-hand plant and machinery) of the same block on 01.11.2025 for ₹ 14.40 lacs and put to use on the same day. Sai Ltd. was amalgamated with Shirdi Ltd.\n\nwith effect from 01.01.2026, You are required to compute the depreciation allowable to Sai Ltd. & Shirdi Ltd. for the previous year ended on 31.03.2026 assuming that the assets were transferred to Shirdi Ltd. at ₹ 60 lacs. Also assume that the plant and machinery were purchased by way of account payee cheque.",
       "answer_text": "Statement showing computation of depreciation allowable to Sai Ltd. & Shirdi Ltd.\n\n| Particulars | ₹ |\n| :--- | :---: |\n| Written down value (WDV) as on 1.4.2025 | 40,00,000 |\n| Addition during the year (used for less than 180 days) | 14,40,000 |\n| Total | 54,40,000 |\n| Depreciation on ₹ 40,00,000 @ 15₹ | 6,00,000 |\n| Depreciation on ₹ 14,40,000 @ 7.5₹ | 1,08,000 |\n| Total depreciation for the year | 7,08,000 |\n| Apportionment between two companies: | |\n\n- **(a)** Amalgamating company, Sai Ltd. ₹ 6,00,000 x 275/365 4,52,055 ₹ 1,08,000 x 61/151 43,629 4,95,684\n\n- **(b)** Amalgamated company, Shirdi Ltd. ₹ 6,00,000 x 90/365 1,47,945 ₹ 1,08,000 x 90/151 64,371 2,12,316 Notes:\n\n- **(i)** The aggregate deduction, in respect of depreciation allowable to the amalgamating company and amalgamated company in the case of amalgamation shall not exceed in any case, the eee Profits & Gains of Business or Profession ee ere ee iy deduction calculated at the prescribed rates as if the amalgamation had not taken place. Such deduction shall be apportioned between the amalgamating company and the amalgamated company in the ratio of the number of days for which the assets were used by them.\n\n- **(ii)** | The price at which the assets were transferred, i.e., ₹ 60 lacs, has no implication in computing eligible depreciation.",
       "topic_id": "T_CH3_Q4",
-      "presentation_prompt": "SLIDE 1: Core Principles of Amalgamation Depreciation (Cards Design)\ntheme (indigo)\nheading (Section 32(1) Fifth Proviso) (Apportionment of Depreciation in Amalgamation)\nshape (man) (CA Rajesh) (left center) (dialogue: \"Welcome back students! Amalgamation nadakumbo Section 32(1) Fifth Proviso engineyanu apply cheyyunnathennu namukku padikama. Business reorganization nadannalum total allowable Depreciation-il mathram aarum excess claim cheyyan padilla!\")\nshape (list, cards) (Key Statutory Provisions) (right center) [\n  (Fifth Proviso Cap on Depreciation) (dialogue: \"Amalgamation nadannittillekill etra Depreciation kittumo, athu mathramayirikkum aggregate Depreciation limit. Corporate restructuring vachitt extra benefit onnum kittilla.\")\n  (Apportionment in Ratio of Days) (dialogue: \"Total calculated Depreciation rendered assets use cheytha exact number of days basis-il split cheyyanam. Amalgamating Company-kum Amalgamated Company-kum idayil idhu apportion cheyyanam.\")\n  (Irrelevance of Actual Transfer Price) (dialogue: \"Assets transfer cheytha ₹60 Lakhs valiya consideration value onnum calculation-il edukilla! WDV as per Section 43(6) base cheythu mathramayirikkum calculation.\")\n  (50% Rate for Assets Used Less than 180 Days) (dialogue: \"Second Proviso prakaram Previous Year-il 180 days-il thazhe put to use cheytha assets-inu half depreciation rate i.e. 7.5% mathrame allow cheyyu.\")\n]\n\nSLIDE 2: Computation & Timeline Breakdown (Timeline Design)\ntheme (cyan)\nheading (Amalgamation Apportionment Process) (Case Study: Sai Ltd. & Shirdi Ltd.)\nshape (woman) (Tax Officer) (left center) (dialogue: \"Exam question-il Sai Ltd. 01.01.2026-il Shirdi Ltd. umayi amalgamate aayi. Timeline clear-ayi note cheythu step-by-step computation nokkam!\")\nshape (list, timeline) (Execution Timeline for FY 2025-26) (right center) [\n  (Step 1: Compute Standalone Total Depreciation) (dialogue: \"First, normal full year Depreciation kandupidikkuka. Old WDV ₹40 Lakhs @ 15% = ₹6.00 Lakhs. New Addition ₹14.40 Lakhs @ 7.5% = ₹1.08 Lakhs. Total = ₹7.08 Lakhs.\")\n  (Step 2: Existing Assets Days Breakdown) (dialogue: \"Existing asset 01.04.2025 thott 31.12.2025 vare Sai Ltd. 275 days use cheythu. Balance 90 days Shirdi Ltd. use cheythu (275:90 ratio out of 365 days).\")\n  (Step 3: New Addition Assets Days Breakdown) (dialogue: \"01.11.2025-nu vanga asset 31.12.2025 vare Sai Ltd. 61 days use cheythu. Balance 01.01.2026 to 31.03.2026 (90 days) Shirdi Ltd. use cheythu (Total 151 days used).\")\n  (Step 4: Final Tax Deduction Allocation) (dialogue: \"Sai Ltd. gets ₹4,52,055 + ₹43,629 = ₹4,95,684. Shirdi Ltd. gets remaining ₹1,47,945 + ₹64,371 = ₹2,12,316. Total equals ₹7.08 Lakhs perfectly!\")\n]\n\nSLIDE 3: Statutory Checklist & Core Rules (Clause Design)\ntheme (amber)\nheading (Statutory Checklist u/s 32(1)) (Mandatory Provisions for Assessment Year 2026-27)\nshape (list, clause) (Legal Conditions Checklist) (center) [\n  (Clause A: Cap Limit Principle) (dialogue: \"Aggregate Depreciation allowed to Amalgamating Company and Amalgamated Company shall not exceed the amount calculated at prescribed rates as if the Amalgamation had not taken place.\")\n  (Clause B: Day-wise Usage Apportionment) (dialogue: \"Depreciation shall be apportioned between Amalgamating and Amalgamated companies in the ratio of the number of days for which the assets were used by them in the Previous Year.\")\n  (Clause C: 180 Days Restricted Benefit Rule) (dialogue: \"If any asset acquired during the Previous Year is put to use for less than 180 days, Depreciation rate is restricted to 50% of the normal rate for the entire block calculation.\")\n  (Clause D: Non-Cognizance of Revaluation Value) (dialogue: \"The actual consideration or agreed price for transfer of assets during Amalgamation shall be completely ignored while determining Written Down Value under Section 43(6).\")\n]",
+      "presentation_prompt": "SLIDE 1: Core Principles of Amalgamation Depreciation (Entity & Proviso Framework)\ntheme (indigo)\nshape (man) (CA Rajesh — Tax Faculty) (left top) (fade) (stay) (dialogue: \"Welcome back students! Amalgamation nadakumbo Section 32(1) Fifth Proviso engineyanu apply cheyyunnathennu namukku padikama. Business reorganization nadannalum total allowable Depreciation-il mathram aarum excess claim cheyyan padilla!\")\nshape (building) (Shirdi Ltd. — Amalgamated Co. [Cap Limit]) (right center) (pop) (stay) (dialogue: \"Amalgamation nadannittillekill etra Depreciation kittumo, athu mathramayirikkum aggregate Depreciation limit. Corporate restructuring vachitt extra benefit onnum kittilla.\")\nshape (factory) (Sai Ltd. — Amalgamating Co. [Apportionment]) (left center) (pop) (stay) (dialogue: \"Total calculated Depreciation rendered assets use cheytha exact number of days basis-il split cheyyanam. Amalgamating Company-kum Amalgamated Company-kum idayil idhu apportion cheyyanam.\")\nshape (document) (Agreed Transfer Price: ₹60 Lakhs) (center bottom) (drop) [crossed] (dialogue: \"Assets transfer cheytha ₹60 Lakhs valiya consideration value onnum calculation-il edukilla! WDV as per Section 43(6) base cheythu mathramayirikkum calculation.\")\nshape (pill) (Second Proviso: 7.5% Rate for Assets < 180 Days) (center top) (drop) (stay) (dialogue: \"Second Proviso prakaram Previous Year-il 180 days-il thazhe put to use cheytha assets-inu half depreciation rate i.e. 7.5% mathrame allow cheyyu.\")\n\nSLIDE 2: Computation & Timeline Breakdown (Timeline Design)\ntheme (cyan)\nshape (woman) (Tax Officer — Assessing Authority) (left center) (fade) (stay) (dialogue: \"Exam question-il Sai Ltd. 01.01.2026-il Shirdi Ltd. umayi amalgamate aayi. Timeline clear-ayi note cheythu step-by-step computation nokkam!\")\nshape (list, timeline) (Execution Timeline for FY 2025-26) (right center) [\n  (Step 1: Compute Standalone Total Depreciation) (dialogue: \"First, normal full year Depreciation kandupidikkuka. Old WDV ₹40 Lakhs @ 15% = ₹6.00 Lakhs. New Addition ₹14.40 Lakhs @ 7.5% = ₹1.08 Lakhs. Total = ₹7.08 Lakhs.\")\n  (Step 2: Existing Assets Days Breakdown) (dialogue: \"Existing asset 01.04.2025 thott 31.12.2025 vare Sai Ltd. 275 days use cheythu. Balance 90 days Shirdi Ltd. use cheythu (275:90 ratio out of 365 days).\")\n  (Step 3: New Addition Assets Days Breakdown) (dialogue: \"01.11.2025-nu vanga asset 31.12.2025 vare Sai Ltd. 61 days use cheythu. Balance 01.01.2026 to 31.03.2026 (90 days) Shirdi Ltd. use cheythu (Total 151 days used).\")\n  (Step 4: Final Tax Deduction Allocation) (dialogue: \"Sai Ltd. gets ₹4,52,055 + ₹43,629 = ₹4,95,684. Shirdi Ltd. gets remaining ₹1,47,945 + ₹64,371 = ₹2,12,316. Total equals ₹7.08 Lakhs perfectly!\")\n]\n\nSLIDE 3: Statutory Checklist & Core Rules (Clause Design)\ntheme (amber)\nshape (list, clause) (Legal Conditions Checklist) (center) [\n  (Clause A: Cap Limit Principle) (dialogue: \"Aggregate Depreciation allowed to Amalgamating Company and Amalgamated Company shall not exceed the amount calculated at prescribed rates as if the Amalgamation had not taken place.\")\n  (Clause B: Day-wise Usage Apportionment) (dialogue: \"Depreciation shall be apportioned between Amalgamating and Amalgamated companies in the ratio of the number of days for which the assets were used by them in the Previous Year.\")\n  (Clause C: 180 Days Restricted Benefit Rule) (dialogue: \"If any asset acquired during the Previous Year is put to use for less than 180 days, Depreciation rate is restricted to 50% of the normal rate for the entire block calculation.\")\n  (Clause D: Non-Cognizance of Revaluation Value) (dialogue: \"The actual consideration or agreed price for transfer of assets during Amalgamation shall be completely ignored while determining Written Down Value under Section 43(6).\")\n]",
       "is_kinetic_prompt": true,
       "drive_audio_id": "PARTIAL_VOICE",
       "audio_timings": [
@@ -993,7 +1445,259 @@
       "topic_id": "T_CH1_Q1",
       "topic_title": "Section 4: Diversion of Income by Overriding Title vs Application of Income",
       "provision_presentation_markdown": "### Statutory Summary Matrix: Diversion vs Application\n\n| Doctrine Aspect | Legal Rule & Judicial Benchmark | Statutory Treatment u/s 4 & 5 | Tax Consequence |\n| :--- | :--- | :--- | :--- |\n| **Diversion by Overriding Title** | Obligation attached to the source of income before it reaches the assessee. | Excluded from the total income of the recipient. | **No Tax Liability** in the hands of the primary earner. |\n| **Application of Income** | Income reaches the assessee first; subsequently utilized for a charitable or personal purpose. | Included in total income under relevant head. | **Fully Taxable** under PGBP or other applicable heads. |\n\n\n> [!IMPORTANT]\n> Voluntary Trust Creation: When an assessee creates a charitable trust out of professional fees received, it represents post-receipt utilization, constituting a clear **application of income**.\n\n\n> [!WARNING]\n> Source Test: To qualify as diversion, the overriding title must exist at the very inception of the income stream, before the taxpayer acquires any legal right to receive the funds.",
-      "drive_folder_id": "1OJE3VX5UcvnBEZSbBYcoiixVB8ag_AAX"
+      "drive_folder_id": "1IGzwLza8PPfnCZyFtGdPDhVZtxIOWKeE",
+      "presentation_prompt": "SLIDE 1: Comparative Matrix of Income Doctrines (Cards Design)\ntheme (indigo)\nheading (Section 4 Chargeability Framework) (Diversion vs Application of Income)\nshape (man) (CA Rajesh) (left center) (dialogue: \"Namaskaram CA Final students! Section 4 study cheyyumpol basic chargeability test cheyyunna leading doctrine aanu Diversion of Income by Overriding Title versus Application of Income. Income diversion aayal Excluded from Total Income, but mere application aayal Total Income-il fully taxable aakum!\")\nshape (list, cards) (Statutory Benchmark Matrix) (right center) [\n  (Diversion by Overriding Title: Obligation Attached at Source) (dialogue: \"Income assessee-kk reach cheyyunnathinu munp identical source-il thanne pre-existing legal obligation attach aayal, athu Diversion by Overriding Title aanu.\")\n  (Application of Income: Utilization Post Accrual) (dialogue: \"Income first assessee-kk receive or accrue aakum, athinu shesham charitable or personal purpose-inu utilize cheythal athu mere Application of Income aanu.\")\n  (Source Test: Inception Requirement) (dialogue: \"Source Test strict aanu! Overriding title must exist at the very inception of the income stream, before assessee acquires any legal right.\")\n  (Taxability Impact: Total Income Inclusion) (dialogue: \"Diversion aayal No Tax Liability in the hands of the earner. Application aayal Fully Taxable under Profits and Gains of Business or Profession or relevant head!\")\n]\n\nSLIDE 2: Judicial Application & Case Analysis (Timeline Design)\ntheme (slate)\nheading (Professional Income vs Charitable Trust Creation) (Mr. Bhargava Case Study)\nshape (woman) (Tax Officer) (left center) (dialogue: \"Exam perspective-il Mr. Bhargava-yude case prominent layout aanu. Transaction sequence trace cheythu continuous flow clear-aayi evaluate cheyyam.\")\nshape (list, timeline) (Sequence of Transactions & Statutory Conclusion) (right center) [\n  (Step 1: Legal Representation & Stipulation) (dialogue: \"Mr. Bhargava Supreme Court case defend cheyan agreed aayi on the condition that fee Public Charitable Trust-inu venam.\")\n  (Step 2: Direct Receipt of ₹ 5 Lakh Professional Fees) (dialogue: \"Company client ₹ 5 Lakhs professional fee Mr. Bhargava-ykk direct pay cheythu. Income right there Mr. Bhargava-yude hands-il accrue aayi.\")\n  (Step 3: Post-Receipt Trust Deed Execution) (dialogue: \"Amount receive cheytha shesham Mr. Bhargava voluntary-aayi Trust Deed execute cheythu public charitable trust-ilekk execute cheythu.\")\n  (Step 4: Assessment under Head PGBP) (dialogue: \"Client legal obligation impose cheyyathathukond, no overriding title exists at inception. Entire ₹ 5 Lakhs Profits and Gains of Business or Profession head-il taxable aanu!\")\n]\n\nSLIDE 3: Legal Tests for Taxability u/s 4 (Clause Design)\ntheme (amber)\nheading (Judicial Tests & Statutory Conditions) (Determining Diversion vs Application)\nshape (list, clause) (Statutory Evaluation Criteria) (center) [\n  (Clause A: Pre-Existing Obligation Test) (dialogue: \"Income source-il third-party entitlement or legal charge pre-exist cheythal mathrame overriding title claim cheyyan pattൂ.\")\n  (Clause B: Source Test at Inception) (dialogue: \"Assessee-kk legal right to receive accrue cheyyunnathinu MUNPU thanne income divert aayirikkanam.\")\n  (Clause C: Voluntary Disposition post Accrual) (dialogue: \"Assessee receipt-inu shesham voluntary-aayi legal trust create cheythal, athu pure Application of Income aayi red-flag cheyyum.\")\n  (Clause D: Taxability under Section 4 and Section 5) (dialogue: \"Application of Income aayathukond, professional earnings fully Total Income-il include cheythu Section 4 chargeability attract cheyyum.\")\n]",
+      "is_kinetic_prompt": true,
+      "audio_timings": [
+        {
+          "slide_idx": 1,
+          "start_ms": 0,
+          "end_ms": 51560,
+          "duration_ms": 51560,
+          "cues": [
+            {
+              "part": 1,
+              "shape": "man",
+              "label": "CA Rajesh",
+              "file_slug": "slide1_01_man",
+              "text": "Namaskaram CA Final students! Section 4 study cheyyumpol basic chargeability test cheyyunna leading doctrine aanu Diversion of Income by Overriding Title versus Application of Income. Income diversion aayal Excluded from Total Income, but mere application aayal Total Income-il fully taxable aakum!",
+              "drive_file_id": "12PaChE9sdXg6pdFfo2mvqpWoO1mlklxY",
+              "stream_url": "https://drive.google.com/uc?export=download&id=12PaChE9sdXg6pdFfo2mvqpWoO1mlklxY",
+              "file_name": "slide1_01_man.mp3",
+              "audio_file": "dt/ch1/q1/slide1_01_man.mp3",
+              "duration_ms": 10520,
+              "slide_rel_start_ms": 0,
+              "slide_rel_end_ms": 10520,
+              "global_start_ms": 0,
+              "global_end_ms": 10520
+            },
+            {
+              "part": 2,
+              "shape": "card",
+              "label": "Diversion by Overriding Title: Obligation Attached at Source",
+              "file_slug": "slide1_02_card1",
+              "text": "Income assessee-kk reach cheyyunnathinu munp identical source-il thanne pre-existing legal obligation attach aayal, athu Diversion by Overriding Title aanu.",
+              "duration_ms": 10480,
+              "slide_rel_start_ms": 10800,
+              "slide_rel_end_ms": 21280,
+              "global_start_ms": 10800,
+              "global_end_ms": 21280,
+              "drive_file_id": "19z7wLcO3nWgH1GfduMXIz_fu7Q_NeeDr",
+              "stream_url": "https://drive.google.com/uc?export=download&id=19z7wLcO3nWgH1GfduMXIz_fu7Q_NeeDr",
+              "file_name": "slide1_02_card1.mp3",
+              "audio_file": "dt/ch1/q1/slide1_02_card1.mp3"
+            },
+            {
+              "part": 3,
+              "shape": "card",
+              "label": "Application of Income: Utilization Post Accrual",
+              "file_slug": "slide1_03_card2",
+              "text": "Income first assessee-kk receive or accrue aakum, athinu shesham charitable or personal purpose-inu utilize cheythal athu mere Application of Income aanu.",
+              "duration_ms": 12800,
+              "slide_rel_start_ms": 21560,
+              "slide_rel_end_ms": 34360,
+              "global_start_ms": 21560,
+              "global_end_ms": 34360,
+              "drive_file_id": "19gciuj5p-qOmPISkU4JMFN7xL40jlcHp",
+              "stream_url": "https://drive.google.com/uc?export=download&id=19gciuj5p-qOmPISkU4JMFN7xL40jlcHp",
+              "file_name": "slide1_03_card2.mp3",
+              "audio_file": "dt/ch1/q1/slide1_03_card2.mp3"
+            },
+            {
+              "part": 4,
+              "shape": "card",
+              "label": "Source Test: Inception Requirement",
+              "file_slug": "slide1_04_card3",
+              "text": "Source Test strict aanu! Overriding title must exist at the very inception of the income stream, before assessee acquires any legal right.",
+              "duration_ms": 8480,
+              "slide_rel_start_ms": 34640,
+              "slide_rel_end_ms": 43120,
+              "global_start_ms": 34640,
+              "global_end_ms": 43120,
+              "drive_file_id": "1ViBOSDx_qGhxxVk8QSqf8rDwpzt871_m",
+              "stream_url": "https://drive.google.com/uc?export=download&id=1ViBOSDx_qGhxxVk8QSqf8rDwpzt871_m",
+              "file_name": "slide1_04_card3.mp3",
+              "audio_file": "dt/ch1/q1/slide1_04_card3.mp3"
+            },
+            {
+              "part": 5,
+              "shape": "card",
+              "label": "Taxability Impact: Total Income Inclusion",
+              "file_slug": "slide1_05_card4",
+              "text": "Diversion aayal No Tax Liability in the hands of the earner. Application aayal Fully Taxable under Profits and Gains of Business or Profession or relevant head!",
+              "duration_ms": 8160,
+              "slide_rel_start_ms": 43400,
+              "slide_rel_end_ms": 51560,
+              "global_start_ms": 43400,
+              "global_end_ms": 51560,
+              "drive_file_id": "1Ore61Ype4k3PlNynt22POwTrvd2UJ3fS",
+              "stream_url": "https://drive.google.com/uc?export=download&id=1Ore61Ype4k3PlNynt22POwTrvd2UJ3fS",
+              "file_name": "slide1_05_card4.mp3",
+              "audio_file": "dt/ch1/q1/slide1_05_card4.mp3"
+            }
+          ]
+        },
+        {
+          "slide_idx": 2,
+          "start_ms": 52340,
+          "end_ms": 95100,
+          "duration_ms": 42760,
+          "cues": [
+            {
+              "part": 1,
+              "shape": "woman",
+              "label": "Tax Officer",
+              "file_slug": "slide2_01_woman",
+              "text": "Exam perspective-il Mr. Bhargava-yude case prominent layout aanu. Transaction sequence trace cheythu continuous flow clear-aayi evaluate cheyyam.",
+              "duration_ms": 7400,
+              "slide_rel_start_ms": 0,
+              "slide_rel_end_ms": 7400,
+              "global_start_ms": 52340,
+              "global_end_ms": 59740,
+              "drive_file_id": "1OZjUmp-GNu4ahkE53kp4aoIQN5SMJ4gT",
+              "stream_url": "https://drive.google.com/uc?export=download&id=1OZjUmp-GNu4ahkE53kp4aoIQN5SMJ4gT",
+              "file_name": "slide2_01_woman.mp3",
+              "audio_file": "dt/ch1/q1/slide2_01_woman.mp3"
+            },
+            {
+              "part": 2,
+              "shape": "step",
+              "label": "Step 1: Legal Representation & Stipulation",
+              "file_slug": "slide2_02_step1",
+              "text": "Mr. Bhargava Supreme Court case defend cheyan agreed aayi on the condition that fee Public Charitable Trust-inu venam.",
+              "duration_ms": 6520,
+              "slide_rel_start_ms": 7680,
+              "slide_rel_end_ms": 14200,
+              "global_start_ms": 60020,
+              "global_end_ms": 66540,
+              "drive_file_id": "1TM_Vf16uQ8_km5wTS7vtWZ_MtqHDtZ7y",
+              "stream_url": "https://drive.google.com/uc?export=download&id=1TM_Vf16uQ8_km5wTS7vtWZ_MtqHDtZ7y",
+              "file_name": "slide2_02_step1.mp3",
+              "audio_file": "dt/ch1/q1/slide2_02_step1.mp3"
+            },
+            {
+              "part": 3,
+              "shape": "step",
+              "label": "Step 2: Direct Receipt of ₹ 5 Lakh Professional Fees",
+              "file_slug": "slide2_03_step2",
+              "text": "Company client ₹ 5 Lakhs professional fee Mr. Bhargava-ykk direct pay cheythu. Income right there Mr. Bhargava-yude hands-il accrue aayi.",
+              "duration_ms": 8400,
+              "slide_rel_start_ms": 14480,
+              "slide_rel_end_ms": 22880,
+              "global_start_ms": 66820,
+              "global_end_ms": 75220,
+              "drive_file_id": "1kwl_vHqZqqdYycnKBMOdrJ-glCUFnJsE",
+              "stream_url": "https://drive.google.com/uc?export=download&id=1kwl_vHqZqqdYycnKBMOdrJ-glCUFnJsE",
+              "file_name": "slide2_03_step2.mp3",
+              "audio_file": "dt/ch1/q1/slide2_03_step2.mp3"
+            },
+            {
+              "part": 4,
+              "shape": "step",
+              "label": "Step 3: Post-Receipt Trust Deed Execution",
+              "file_slug": "slide2_04_step3",
+              "text": "Amount receive cheytha shesham Mr. Bhargava voluntary-aayi Trust Deed execute cheythu public charitable trust-ilekk execute cheythu.",
+              "duration_ms": 8920,
+              "slide_rel_start_ms": 23160,
+              "slide_rel_end_ms": 32080,
+              "global_start_ms": 75500,
+              "global_end_ms": 84420,
+              "drive_file_id": "1mFI8S-WehnGDEkZNYepF7lsDHfoRtBKz",
+              "stream_url": "https://drive.google.com/uc?export=download&id=1mFI8S-WehnGDEkZNYepF7lsDHfoRtBKz",
+              "file_name": "slide2_04_step3.mp3",
+              "audio_file": "dt/ch1/q1/slide2_04_step3.mp3"
+            },
+            {
+              "part": 5,
+              "shape": "step",
+              "label": "Step 4: Assessment under Head PGBP",
+              "file_slug": "slide2_05_step4",
+              "text": "Client legal obligation impose cheyyathathukond, no overriding title exists at inception. Entire ₹ 5 Lakhs Profits and Gains of Business or Profession head-il taxable aanu!",
+              "duration_ms": 10400,
+              "slide_rel_start_ms": 32360,
+              "slide_rel_end_ms": 42760,
+              "global_start_ms": 84700,
+              "global_end_ms": 95100,
+              "drive_file_id": "1VmJICVioqis6B_AO_bYBOGErD9ZwROSE",
+              "stream_url": "https://drive.google.com/uc?export=download&id=1VmJICVioqis6B_AO_bYBOGErD9ZwROSE",
+              "file_name": "slide2_05_step4.mp3",
+              "audio_file": "dt/ch1/q1/slide2_05_step4.mp3"
+            }
+          ]
+        },
+        {
+          "slide_idx": 3,
+          "start_ms": 95880,
+          "end_ms": 136800,
+          "duration_ms": 40920,
+          "cues": [
+            {
+              "part": 1,
+              "shape": "clause",
+              "label": "Clause A: Pre-Existing Obligation Test",
+              "file_slug": "slide3_01_clause_a",
+              "text": "Income source-il third-party entitlement or legal charge pre-exist cheythal mathrame overriding title claim cheyyan pattൂ.",
+              "duration_ms": 9520,
+              "slide_rel_start_ms": 0,
+              "slide_rel_end_ms": 9520,
+              "global_start_ms": 95880,
+              "global_end_ms": 105400,
+              "drive_file_id": "1zb5fd9ngtiXVF6hhQSMHrkJ_VISSy_a4",
+              "stream_url": "https://drive.google.com/uc?export=download&id=1zb5fd9ngtiXVF6hhQSMHrkJ_VISSy_a4",
+              "file_name": "slide3_01_clause_a.mp3",
+              "audio_file": "dt/ch1/q1/slide3_01_clause_a.mp3"
+            },
+            {
+              "part": 2,
+              "shape": "clause",
+              "label": "Clause B: Source Test at Inception",
+              "file_slug": "slide3_02_clause_b",
+              "text": "Assessee-kk legal right to receive accrue cheyyunnathinu MUNPU thanne income divert aayirikkanam.",
+              "duration_ms": 9640,
+              "slide_rel_start_ms": 9800,
+              "slide_rel_end_ms": 19440,
+              "global_start_ms": 105680,
+              "global_end_ms": 115320,
+              "drive_file_id": "1alDouRBPyb_5imIkz2XwV0ps0D2cZ7Zs",
+              "stream_url": "https://drive.google.com/uc?export=download&id=1alDouRBPyb_5imIkz2XwV0ps0D2cZ7Zs",
+              "file_name": "slide3_02_clause_b.mp3",
+              "audio_file": "dt/ch1/q1/slide3_02_clause_b.mp3"
+            },
+            {
+              "part": 3,
+              "shape": "clause",
+              "label": "Clause C: Voluntary Disposition post Accrual",
+              "file_slug": "slide3_03_clause_c",
+              "text": "Assessee receipt-inu shesham voluntary-aayi legal trust create cheythal, athu pure Application of Income aayi red-flag cheyyum.",
+              "duration_ms": 8560,
+              "slide_rel_start_ms": 19720,
+              "slide_rel_end_ms": 28280,
+              "global_start_ms": 115600,
+              "global_end_ms": 124160,
+              "drive_file_id": "1KLqawlJIlHiAd1PTAPxq45wWNpj0k4z2",
+              "stream_url": "https://drive.google.com/uc?export=download&id=1KLqawlJIlHiAd1PTAPxq45wWNpj0k4z2",
+              "file_name": "slide3_03_clause_c.mp3",
+              "audio_file": "dt/ch1/q1/slide3_03_clause_c.mp3"
+            },
+            {
+              "part": 4,
+              "shape": "clause",
+              "label": "Clause D: Taxability under Section 4 and Section 5",
+              "file_slug": "slide3_04_clause_d",
+              "text": "Application of Income aayathukond, professional earnings fully Total Income-il include cheythu Section 4 chargeability attract cheyyum.",
+              "duration_ms": 12360,
+              "slide_rel_start_ms": 28560,
+              "slide_rel_end_ms": 40920,
+              "global_start_ms": 124440,
+              "global_end_ms": 136800,
+              "drive_file_id": "1Z97bVI89wdx_qRNCZSSroW4dJ-gcHixF",
+              "stream_url": "https://drive.google.com/uc?export=download&id=1Z97bVI89wdx_qRNCZSSroW4dJ-gcHixF",
+              "file_name": "slide3_04_clause_d.mp3",
+              "audio_file": "dt/ch1/q1/slide3_04_clause_d.mp3"
+            }
+          ]
+        }
+      ]
     },
     {
       "subject": "dt",
@@ -1002,7 +1706,207 @@
       "topic_id": "T_CH1_Q2",
       "topic_title": "Section 4: Diversion of Income by Overriding Title vs. Application of Income",
       "provision_presentation_markdown": "# Diversion of Income by Overriding Title vs. Application of Income\n\nUnder **Section 4 of the Income-tax Act, 1961**, tax is charged on the total income of an assessee. A fundamental judicial doctrine determines whether a particular flow of funds constitutes taxable income in the hands of the recipient or if it was diverted at source by a paramount title.\n\n---\n\n## 1. The Core Legal Test (*CIT v. Sitaldas Tirathdas* [1961] 41 ITR 367 SC)\n\nThe Supreme Court laid down the golden rule to distinguish between Diversion and Application:\n\n> [!IMPORTANT]\n> **The Supreme Court Test:**  \n> - **Diversion by Overriding Title:** Is the amount diverted *before* it reaches the assessee? Does the obligation create an enforceable charge on the *source of income* itself?\n> - **Application of Income:** Does the income reach the assessee *first*, with the assessee subsequently applying it to discharge an obligation (voluntary or contractual)?\n\n---\n\n## 2. Comparative Distinction Matrix\n\n| Criteria | Diversion of Income by Overriding Title | Application of Income |\n| :--- | :--- | :--- |\n| **Point of Legal Obligation** | Attaches **prior** to the accrual/receipt of income at the source itself. | Attaches **after** the income has accrued to or been received by the assessee. |\n| **Flow of Income** | Income is diverted to a third party before reaching the assessee. | Income reaches the assessee's hands first and is then disbursed. |\n| **Taxability** | **Not taxable** in the hands of the assessee (deductible/excluded from total income). | **Fully taxable** in the hands of the assessee. |\n| **Nature of Charge** | Enforceable legal charge created on the asset or source of income. | Personal obligation or contract-based payment out of earned profits. |\n\n---\n\n## 3. Business Takeover with Overriding Charge (*Jit & Pal X-Rays (P.) Ltd. v. CIT*)\n\nWhen an assessee-company acquires a going concern subject to a pre-existing or integrated covenant charging net profits:\n\n1. **Integration in Covenant:** If the payment obligation (e.g., annuity/overriding charge to the vendor's spouse) is embedded as an **integral condition** of the sale deed for acquiring the business asset.\n2. **Charge on Source:** The obligation attaches to the very source of income (the undertaking acquired).\n3. **Legal Effect:** The payment constitutes a **diversion of income by overriding title** because the assessee never acquired the right to that portion of the income.\n\n> [!NOTE]\n> **Judicial Ratio (Jit & Pal X-Rays (P.) Ltd. v. CIT [2004] 267 ITR 370 (All)):**  \n> Where an overriding charge of ₹ 15,000 p.a. in favour of the sole-proprietor's wife was an integral part of the sale deed transferring the going concern to XYZ Ltd. and charged on net profits, XYZ Ltd. accepted it as a condition of purchase. Hence, the obligation attached to the source, making it a **diversion of income** and not a mere application.\n\n---\n\n## 4. Common Exam Traps & Pitfalls\n\n> [!WARNING]\n> **Watch out for these nuances in CA Final problems:**\n> - **Subsequent Voluntary Charge:** If the business is purchased first without any charge, and *later* the company voluntarily agrees to pay an amount to the vendor's family out of profits, it is **Application of Income**.\n> - **Charge on Net Profits vs. Allocation of Profits:** A charge embedded in the title deed before income accrues = Diversion. Allocating net profits after annual audit = Application.\n> - **Personal Debt Satisfaction:** Paying personal debts using business income is an **Application of Income**, even if bound by contract.",
-      "drive_folder_id": "1U5kSCxHL4P4EdTtSBH_c8TCH3cWlzmQh"
+      "drive_folder_id": "PARTIAL_VOICE",
+      "presentation_prompt": "SLIDE 1: Core Principles of Income Diversion vs Application (Cards Design)\ntheme (slate)\nheading (Section 4: Diversion of Income vs Application of Income) (Judicial Doctrine under Income-tax Act, 1961)\nshape (man) (CA Rajesh) (left center) (dialogue: \"Welcome back students! Section 4 Total Income compute ചെയ്യുമ്പോൾ critical ആയി മനസിലാക്കേണ്ട judicial doctrine ആണ് Diversion of Income by Overriding Title versus Application of Income. CIT v. Sitaldas Tirathdas landmark ruling-ലെ golden test നമുക്ക് വിശദമായി പരിശോധിക്കാം.\")\nshape (list, cards) (Core Legal Principles) (right center) [\n  (CIT v. Sitaldas Tirathdas Golden Rule) (dialogue: \"Supreme Court laid down the golden rule: Income assessee-യുടെ hands-ൽ reach ചെയ്യുന്നതിന് മുന്നേ divert ആകുന്നുണ്ടോ, അതോ reached ശേഷം apply ചെയ്യുകയാണോ എന്നാണ് നോക്കേണ്ടത്.\")\n  (Diversion by Overriding Title) (dialogue: \"If the obligation creates an enforceable charge on the source of income itself prior to accrual, ത്രൂ overriding title income divert ആകുന്നു. This is not taxable in the hands of assessee.\")\n  (Application of Income) (dialogue: \"Income ആദ്യം assessee-യുടെ hands-ൽ reach ആവുകയും, പിന്നീട് voluntary അല്ലെങ്കിൽ contractual obligation discharge ചെയ്യാൻ spend ചെയ്യുകയും ചെയ്താൽ, it is Application of Income and fully taxable.\")\n  (Charge on Source vs Personal Obligation) (dialogue: \"Source of income-ൽ pre-existing legal charge ഉണ്ടെങ്കിൽ അത് Diversion of Income ആണ്. Mere personal obligation out of earned profits ആണെങ്കിൽ strictly Application of Income ആണ്.\")\n]\n\nSLIDE 2: Judicial Landmark & Business Takeover Analysis (Timeline Design)\ntheme (blue)\nheading (Business Takeover with Overriding Charge) (Jit & Pal X-Rays (P.) Ltd. v. CIT [2004] 267 ITR 370 (All))\nshape (woman) (Tax Officer) (left center) (dialogue: \"Allahabad High Court decision in Jit & Pal X-Rays Ltd. കേസിൽ going concern takeover ചെയ്യുമ്പോൾ overriding charge create ചെയ്യുന്നതിന്റെ exact statutory effect വ്യക്തമാക്കുന്നുണ്ട്.\")\nshape (list, timeline) (Sequence of Business Takeover & Overriding Charge) (right center) [\n  (Acquisition of Business via Sale Deed) (dialogue: \"Assessee company ഒരു sole proprietor-ൽ നിന്ന് running business purchase ചെയ്യാൻ Sale Deed execute ചെയ്യുന്നു.\")\n  (Integral Covenant in Sale Deed) (dialogue: \"Sale Deed-ൽ integrated condition ആയി sole proprietor-ന്റെ wife-ന് ₹ 15,000 p.a. pay ചെയ്യണമെന്ന് covenant insert ചെയ്യുന്നു.\")\n  (Obligation Charged on Net Profits) (dialogue: \"Assessee company ഈ obligation condition of purchase ആയി accept ചെയ്യുകയും Net Profits-ൽ direct charge attach ആവുകയും ചെയ്യുന്നു.\")\n  (Legal Ratio: Diversion by Overriding Title) (dialogue: \"High Court held that the obligation attached to the very source of income. Assessee-ക്ക് ആ portion-ന്റെ income-ൽ right ഇല്ലായിരുന്നു, so it is Diversion of Income!\")\n]\n\nSLIDE 3: Key Conditions & Exam Trap Distinctions (Clause Design)\ntheme (amber)\nheading (Statutory Tests & Exam Traps) (Distinguishing Criteria for CA Final Problems)\nshape (list, clause) (Key Tests to Identify Diversion vs Application) (center) [\n  (Clause A: Pre-existing or Integrated Obligation) (dialogue: \"Obligation Sale Deed അല്ലെങ്കിൽ title deed-ൽ start മുതലേ integrated condition ആയിരിക്കണം. Asset acquire ചെയ്യുന്നതിന് മുന്നേ തന്നെയോ അല്ലെങ്കിൽ acquisition-ന്റെ condition ആയിട്ടോ charge exist ചെയ്യണം.\")\n  (Clause B: Charge Attached directly to Source of Income) (dialogue: \"Payment obligation direct ആയി undertaking അല്ലെങ്കിൽ asset-ന്റെ source of income-ൽ attach ആയിരിക്കണം. Transferor-ന്റെ paramount title override ചെയ്യുന്ന charge ആയിരിക്കണം ഇത്.\")\n  (Clause C: Subsequent Voluntary Charges are Application) (dialogue: \"Business purchase ചെയ്തതിന് ശേഷം company voluntary ആയി family members-ന് share directly pay ചെയ്യാൻ തീരുമാനിച്ചാൽ, it is purely Application of Income.\")\n  (Clause D: Allocation of Profits Post Audit) (dialogue: \"Annual audit-ന് ശേഷം profits allocate ചെയ്യുന്നത് Application of Income ആണ്. Direct pre-accrual charge on source of income മാത്രമാണ് Diversion of Income-ൽ qualify ചെയ്യുന്നത്.\")\n]",
+      "is_kinetic_prompt": true,
+      "audio_timings": [
+        {
+          "slide_idx": 1,
+          "start_ms": 0,
+          "end_ms": 30771,
+          "duration_ms": 30771,
+          "cues": [
+            {
+              "part": 1,
+              "shape": "man",
+              "label": "CA Rajesh",
+              "file_slug": "slide1_01_man",
+              "text": "Welcome back students! Section 4 Total Income compute ചെയ്യുമ്പോൾ critical ആയി മനസിലാക്കേണ്ട judicial doctrine ആണ് Diversion of Income by Overriding Title versus Application of Income. CIT v. Sitaldas Tirathdas landmark ruling-ലെ golden test നമുക്ക് വിശദമായി പരിശോധിക്കാം.",
+              "drive_file_id": "1GlGpLMu-0FmEwuYVb7F8RiAeyCR5t2uW",
+              "stream_url": "https://drive.google.com/uc?export=download&id=1GlGpLMu-0FmEwuYVb7F8RiAeyCR5t2uW",
+              "file_name": "slide1_01_man.mp3",
+              "audio_file": "dt/ch1/q2/slide1_01_man.mp3",
+              "duration_ms": 17651,
+              "slide_rel_start_ms": 0,
+              "slide_rel_end_ms": 17651,
+              "global_start_ms": 0,
+              "global_end_ms": 17651
+            },
+            {
+              "part": 2,
+              "shape": "card",
+              "label": "CIT v. Sitaldas Tirathdas Golden Rule",
+              "file_slug": "slide1_02_card1",
+              "text": "Supreme Court laid down the golden rule: Income assessee-യുടെ hands-ൽ reach ചെയ്യുന്നതിന് മുന്നേ divert ആകുന്നുണ്ടോ, അതോ reached ശേഷം apply ചെയ്യുകയാണോ എന്നാണ് നോക്കേണ്ടത്.",
+              "duration_ms": 3000,
+              "slide_rel_start_ms": 17931,
+              "slide_rel_end_ms": 20931,
+              "global_start_ms": 17931,
+              "global_end_ms": 20931
+            },
+            {
+              "part": 3,
+              "shape": "card",
+              "label": "Diversion by Overriding Title",
+              "file_slug": "slide1_03_card2",
+              "text": "If the obligation creates an enforceable charge on the source of income itself prior to accrual, ത്രൂ overriding title income divert ആകുന്നു. This is not taxable in the hands of assessee.",
+              "duration_ms": 3000,
+              "slide_rel_start_ms": 21211,
+              "slide_rel_end_ms": 24211,
+              "global_start_ms": 21211,
+              "global_end_ms": 24211
+            },
+            {
+              "part": 4,
+              "shape": "card",
+              "label": "Application of Income",
+              "file_slug": "slide1_04_card3",
+              "text": "Income ആദ്യം assessee-യുടെ hands-ൽ reach ആവുകയും, പിന്നീട് voluntary അല്ലെങ്കിൽ contractual obligation discharge ചെയ്യാൻ spend ചെയ്യുകയും ചെയ്താൽ, it is Application of Income and fully taxable.",
+              "duration_ms": 3000,
+              "slide_rel_start_ms": 24491,
+              "slide_rel_end_ms": 27491,
+              "global_start_ms": 24491,
+              "global_end_ms": 27491
+            },
+            {
+              "part": 5,
+              "shape": "card",
+              "label": "Charge on Source vs Personal Obligation",
+              "file_slug": "slide1_05_card4",
+              "text": "Source of income-ൽ pre-existing legal charge ഉണ്ടെങ്കിൽ അത് Diversion of Income ആണ്. Mere personal obligation out of earned profits ആണെങ്കിൽ strictly Application of Income ആണ്.",
+              "duration_ms": 3000,
+              "slide_rel_start_ms": 27771,
+              "slide_rel_end_ms": 30771,
+              "global_start_ms": 27771,
+              "global_end_ms": 30771
+            }
+          ]
+        },
+        {
+          "slide_idx": 2,
+          "start_ms": 31551,
+          "end_ms": 47671,
+          "duration_ms": 16120,
+          "cues": [
+            {
+              "part": 1,
+              "shape": "woman",
+              "label": "Tax Officer",
+              "file_slug": "slide2_01_woman",
+              "text": "Allahabad High Court decision in Jit & Pal X-Rays Ltd. കേസിൽ going concern takeover ചെയ്യുമ്പോൾ overriding charge create ചെയ്യുന്നതിന്റെ exact statutory effect വ്യക്തമാക്കുന്നുണ്ട്.",
+              "duration_ms": 3000,
+              "slide_rel_start_ms": 0,
+              "slide_rel_end_ms": 3000,
+              "global_start_ms": 31551,
+              "global_end_ms": 34551
+            },
+            {
+              "part": 2,
+              "shape": "step",
+              "label": "Acquisition of Business via Sale Deed",
+              "file_slug": "slide2_02_step1",
+              "text": "Assessee company ഒരു sole proprietor-ൽ നിന്ന് running business purchase ചെയ്യാൻ Sale Deed execute ചെയ്യുന്നു.",
+              "duration_ms": 3000,
+              "slide_rel_start_ms": 3280,
+              "slide_rel_end_ms": 6280,
+              "global_start_ms": 34831,
+              "global_end_ms": 37831
+            },
+            {
+              "part": 3,
+              "shape": "step",
+              "label": "Integral Covenant in Sale Deed",
+              "file_slug": "slide2_03_step2",
+              "text": "Sale Deed-ൽ integrated condition ആയി sole proprietor-ന്റെ wife-ന് ₹ 15,000 p.a. pay ചെയ്യണമെന്ന് covenant insert ചെയ്യുന്നു.",
+              "duration_ms": 3000,
+              "slide_rel_start_ms": 6560,
+              "slide_rel_end_ms": 9560,
+              "global_start_ms": 38111,
+              "global_end_ms": 41111
+            },
+            {
+              "part": 4,
+              "shape": "step",
+              "label": "Obligation Charged on Net Profits",
+              "file_slug": "slide2_04_step3",
+              "text": "Assessee company ഈ obligation condition of purchase ആയി accept ചെയ്യുകയും Net Profits-ൽ direct charge attach ആവുകയും ചെയ്യുന്നു.",
+              "duration_ms": 3000,
+              "slide_rel_start_ms": 9840,
+              "slide_rel_end_ms": 12840,
+              "global_start_ms": 41391,
+              "global_end_ms": 44391
+            },
+            {
+              "part": 5,
+              "shape": "step",
+              "label": "Legal Ratio: Diversion by Overriding Title",
+              "file_slug": "slide2_05_step4",
+              "text": "High Court held that the obligation attached to the very source of income. Assessee-ക്ക് ആ portion-ന്റെ income-ൽ right ഇല്ലായിരുന്നു, so it is Diversion of Income!",
+              "duration_ms": 3000,
+              "slide_rel_start_ms": 13120,
+              "slide_rel_end_ms": 16120,
+              "global_start_ms": 44671,
+              "global_end_ms": 47671
+            }
+          ]
+        },
+        {
+          "slide_idx": 3,
+          "start_ms": 48451,
+          "end_ms": 61291,
+          "duration_ms": 12840,
+          "cues": [
+            {
+              "part": 1,
+              "shape": "clause",
+              "label": "Clause A: Pre-existing or Integrated Obligation",
+              "file_slug": "slide3_01_clause_a",
+              "text": "Obligation Sale Deed അല്ലെങ്കിൽ title deed-ൽ start മുതലേ integrated condition ആയിരിക്കണം. Asset acquire ചെയ്യുന്നതിന് മുന്നേ തന്നെയോ അല്ലെങ്കിൽ acquisition-ന്റെ condition ആയിട്ടോ charge exist ചെയ്യണം.",
+              "duration_ms": 3000,
+              "slide_rel_start_ms": 0,
+              "slide_rel_end_ms": 3000,
+              "global_start_ms": 48451,
+              "global_end_ms": 51451
+            },
+            {
+              "part": 2,
+              "shape": "clause",
+              "label": "Clause B: Charge Attached directly to Source of Income",
+              "file_slug": "slide3_02_clause_b",
+              "text": "Payment obligation direct ആയി undertaking അല്ലെങ്കിൽ asset-ന്റെ source of income-ൽ attach ആയിരിക്കണം. Transferor-ന്റെ paramount title override ചെയ്യുന്ന charge ആയിരിക്കണം ഇത്.",
+              "duration_ms": 3000,
+              "slide_rel_start_ms": 3280,
+              "slide_rel_end_ms": 6280,
+              "global_start_ms": 51731,
+              "global_end_ms": 54731
+            },
+            {
+              "part": 3,
+              "shape": "clause",
+              "label": "Clause C: Subsequent Voluntary Charges are Application",
+              "file_slug": "slide3_03_clause_c",
+              "text": "Business purchase ചെയ്തതിന് ശേഷം company voluntary ആയി family members-ന് share directly pay ചെയ്യാൻ തീരുമാനിച്ചാൽ, it is purely Application of Income.",
+              "duration_ms": 3000,
+              "slide_rel_start_ms": 6560,
+              "slide_rel_end_ms": 9560,
+              "global_start_ms": 55011,
+              "global_end_ms": 58011
+            },
+            {
+              "part": 4,
+              "shape": "clause",
+              "label": "Clause D: Allocation of Profits Post Audit",
+              "file_slug": "slide3_04_clause_d",
+              "text": "Annual audit-ന് ശേഷം profits allocate ചെയ്യുന്നത് Application of Income ആണ്. Direct pre-accrual charge on source of income മാത്രമാണ് Diversion of Income-ൽ qualify ചെയ്യുന്നത്.",
+              "duration_ms": 3000,
+              "slide_rel_start_ms": 9840,
+              "slide_rel_end_ms": 12840,
+              "global_start_ms": 58291,
+              "global_end_ms": 61291
+            }
+          ]
+        }
+      ]
     },
     {
       "subject": "dt",
@@ -1705,7 +2609,7 @@
       "topic_title": "Section 32(1) Proviso: Depreciation Apportionment in Amalgamation",
       "provision_presentation_markdown": "| Statutory Provision | Legal Requirement / Limit | Apportionment Criterion | Tax Impact |\n| :--- | :--- | :--- | :--- |\n| **5th Proviso to Section 32(1)** | Total combined Depreciation capped at normal PY amount | Apportioned based on number of days used by each entity | No extra depreciation due to corporate reorganisation |\n| **2nd Proviso to Section 32(1)** | Assets acquired during PY used < 180 days restricted to 50% rate | Applies prior to day-based apportionment between entities | Half-rate constraint preserved post-amalgamation |\n| **Section 47(vi) & Section 43(6)** | Transfer price agreed in amalgamation is completely ignored | Tax WDV of amalgamating company carries forward | Revaluation / transfer price has zero tax impact |\n\n- **Aggregate Ceiling Rule**: Aggregate deduction allowed to amalgamating and amalgamated companies shall not exceed the normal depreciation calculated at prescribed rates as if amalgamation had not taken place.\n- **Apportionment Mechanism**: Depreciation calculated for the full year is allocated between amalgamating entity and amalgamated entity in the ratio of the number of days for which assets were used by each entity.\n- **Restricted Rate Assets**: Additions put to use for less than 180 days receive 50% of normal depreciation rate before allocating the resulting amount between entities based on usage days.\n\n> [!IMPORTANT] Transfer Consideration Neutrality: The agreed transfer consideration or revaluation figure in an amalgamation scheme is entirely irrelevant for tax depreciation calculations under Section 32.",
       "drive_folder_id": "PARTIAL_VOICE",
-      "presentation_prompt": "SLIDE 1: Core Principles of Amalgamation Depreciation (Cards Design)\ntheme (indigo)\nheading (Section 32(1) Fifth Proviso) (Apportionment of Depreciation in Amalgamation)\nshape (man) (CA Rajesh) (left center) (dialogue: \"Welcome back students! Amalgamation nadakumbo Section 32(1) Fifth Proviso engineyanu apply cheyyunnathennu namukku padikama. Business reorganization nadannalum total allowable Depreciation-il mathram aarum excess claim cheyyan padilla!\")\nshape (list, cards) (Key Statutory Provisions) (right center) [\n  (Fifth Proviso Cap on Depreciation) (dialogue: \"Amalgamation nadannittillekill etra Depreciation kittumo, athu mathramayirikkum aggregate Depreciation limit. Corporate restructuring vachitt extra benefit onnum kittilla.\")\n  (Apportionment in Ratio of Days) (dialogue: \"Total calculated Depreciation rendered assets use cheytha exact number of days basis-il split cheyyanam. Amalgamating Company-kum Amalgamated Company-kum idayil idhu apportion cheyyanam.\")\n  (Irrelevance of Actual Transfer Price) (dialogue: \"Assets transfer cheytha ₹60 Lakhs valiya consideration value onnum calculation-il edukilla! WDV as per Section 43(6) base cheythu mathramayirikkum calculation.\")\n  (50% Rate for Assets Used Less than 180 Days) (dialogue: \"Second Proviso prakaram Previous Year-il 180 days-il thazhe put to use cheytha assets-inu half depreciation rate i.e. 7.5% mathrame allow cheyyu.\")\n]\n\nSLIDE 2: Computation & Timeline Breakdown (Timeline Design)\ntheme (cyan)\nheading (Amalgamation Apportionment Process) (Case Study: Sai Ltd. & Shirdi Ltd.)\nshape (woman) (Tax Officer) (left center) (dialogue: \"Exam question-il Sai Ltd. 01.01.2026-il Shirdi Ltd. umayi amalgamate aayi. Timeline clear-ayi note cheythu step-by-step computation nokkam!\")\nshape (list, timeline) (Execution Timeline for FY 2025-26) (right center) [\n  (Step 1: Compute Standalone Total Depreciation) (dialogue: \"First, normal full year Depreciation kandupidikkuka. Old WDV ₹40 Lakhs @ 15% = ₹6.00 Lakhs. New Addition ₹14.40 Lakhs @ 7.5% = ₹1.08 Lakhs. Total = ₹7.08 Lakhs.\")\n  (Step 2: Existing Assets Days Breakdown) (dialogue: \"Existing asset 01.04.2025 thott 31.12.2025 vare Sai Ltd. 275 days use cheythu. Balance 90 days Shirdi Ltd. use cheythu (275:90 ratio out of 365 days).\")\n  (Step 3: New Addition Assets Days Breakdown) (dialogue: \"01.11.2025-nu vanga asset 31.12.2025 vare Sai Ltd. 61 days use cheythu. Balance 01.01.2026 to 31.03.2026 (90 days) Shirdi Ltd. use cheythu (Total 151 days used).\")\n  (Step 4: Final Tax Deduction Allocation) (dialogue: \"Sai Ltd. gets ₹4,52,055 + ₹43,629 = ₹4,95,684. Shirdi Ltd. gets remaining ₹1,47,945 + ₹64,371 = ₹2,12,316. Total equals ₹7.08 Lakhs perfectly!\")\n]\n\nSLIDE 3: Statutory Checklist & Core Rules (Clause Design)\ntheme (amber)\nheading (Statutory Checklist u/s 32(1)) (Mandatory Provisions for Assessment Year 2026-27)\nshape (list, clause) (Legal Conditions Checklist) (center) [\n  (Clause A: Cap Limit Principle) (dialogue: \"Aggregate Depreciation allowed to Amalgamating Company and Amalgamated Company shall not exceed the amount calculated at prescribed rates as if the Amalgamation had not taken place.\")\n  (Clause B: Day-wise Usage Apportionment) (dialogue: \"Depreciation shall be apportioned between Amalgamating and Amalgamated companies in the ratio of the number of days for which the assets were used by them in the Previous Year.\")\n  (Clause C: 180 Days Restricted Benefit Rule) (dialogue: \"If any asset acquired during the Previous Year is put to use for less than 180 days, Depreciation rate is restricted to 50% of the normal rate for the entire block calculation.\")\n  (Clause D: Non-Cognizance of Revaluation Value) (dialogue: \"The actual consideration or agreed price for transfer of assets during Amalgamation shall be completely ignored while determining Written Down Value under Section 43(6).\")\n]",
+      "presentation_prompt": "SLIDE 1: Core Principles of Amalgamation Depreciation (Entity & Proviso Framework)\ntheme (indigo)\nshape (man) (CA Rajesh — Tax Faculty) (left top) (fade) (stay) (dialogue: \"Welcome back students! Amalgamation nadakumbo Section 32(1) Fifth Proviso engineyanu apply cheyyunnathennu namukku padikama. Business reorganization nadannalum total allowable Depreciation-il mathram aarum excess claim cheyyan padilla!\")\nshape (building) (Shirdi Ltd. — Amalgamated Co. [Cap Limit]) (right center) (pop) (stay) (dialogue: \"Amalgamation nadannittillekill etra Depreciation kittumo, athu mathramayirikkum aggregate Depreciation limit. Corporate restructuring vachitt extra benefit onnum kittilla.\")\nshape (factory) (Sai Ltd. — Amalgamating Co. [Apportionment]) (left center) (pop) (stay) (dialogue: \"Total calculated Depreciation rendered assets use cheytha exact number of days basis-il split cheyyanam. Amalgamating Company-kum Amalgamated Company-kum idayil idhu apportion cheyyanam.\")\nshape (document) (Agreed Transfer Price: ₹60 Lakhs) (center bottom) (drop) [crossed] (dialogue: \"Assets transfer cheytha ₹60 Lakhs valiya consideration value onnum calculation-il edukilla! WDV as per Section 43(6) base cheythu mathramayirikkum calculation.\")\nshape (pill) (Second Proviso: 7.5% Rate for Assets < 180 Days) (center top) (drop) (stay) (dialogue: \"Second Proviso prakaram Previous Year-il 180 days-il thazhe put to use cheytha assets-inu half depreciation rate i.e. 7.5% mathrame allow cheyyu.\")\n\nSLIDE 2: Computation & Timeline Breakdown (Timeline Design)\ntheme (cyan)\nshape (woman) (Tax Officer — Assessing Authority) (left center) (fade) (stay) (dialogue: \"Exam question-il Sai Ltd. 01.01.2026-il Shirdi Ltd. umayi amalgamate aayi. Timeline clear-ayi note cheythu step-by-step computation nokkam!\")\nshape (list, timeline) (Execution Timeline for FY 2025-26) (right center) [\n  (Step 1: Compute Standalone Total Depreciation) (dialogue: \"First, normal full year Depreciation kandupidikkuka. Old WDV ₹40 Lakhs @ 15% = ₹6.00 Lakhs. New Addition ₹14.40 Lakhs @ 7.5% = ₹1.08 Lakhs. Total = ₹7.08 Lakhs.\")\n  (Step 2: Existing Assets Days Breakdown) (dialogue: \"Existing asset 01.04.2025 thott 31.12.2025 vare Sai Ltd. 275 days use cheythu. Balance 90 days Shirdi Ltd. use cheythu (275:90 ratio out of 365 days).\")\n  (Step 3: New Addition Assets Days Breakdown) (dialogue: \"01.11.2025-nu vanga asset 31.12.2025 vare Sai Ltd. 61 days use cheythu. Balance 01.01.2026 to 31.03.2026 (90 days) Shirdi Ltd. use cheythu (Total 151 days used).\")\n  (Step 4: Final Tax Deduction Allocation) (dialogue: \"Sai Ltd. gets ₹4,52,055 + ₹43,629 = ₹4,95,684. Shirdi Ltd. gets remaining ₹1,47,945 + ₹64,371 = ₹2,12,316. Total equals ₹7.08 Lakhs perfectly!\")\n]\n\nSLIDE 3: Statutory Checklist & Core Rules (Clause Design)\ntheme (amber)\nshape (list, clause) (Legal Conditions Checklist) (center) [\n  (Clause A: Cap Limit Principle) (dialogue: \"Aggregate Depreciation allowed to Amalgamating Company and Amalgamated Company shall not exceed the amount calculated at prescribed rates as if the Amalgamation had not taken place.\")\n  (Clause B: Day-wise Usage Apportionment) (dialogue: \"Depreciation shall be apportioned between Amalgamating and Amalgamated companies in the ratio of the number of days for which the assets were used by them in the Previous Year.\")\n  (Clause C: 180 Days Restricted Benefit Rule) (dialogue: \"If any asset acquired during the Previous Year is put to use for less than 180 days, Depreciation rate is restricted to 50% of the normal rate for the entire block calculation.\")\n  (Clause D: Non-Cognizance of Revaluation Value) (dialogue: \"The actual consideration or agreed price for transfer of assets during Amalgamation shall be completely ignored while determining Written Down Value under Section 43(6).\")\n]",
       "is_kinetic_prompt": true,
       "audio_timings": [
         {
@@ -1916,844 +2820,6 @@
     }
   ],
   "mindmaps": {
-    "ch1_q1": {
-      "doctrine": "Diversion of Income by Overriding Title vs Application of Income",
-      "root": {
-        "id": "root",
-        "number": "1",
-        "title": "Diversion vs Application of Income",
-        "badge": "Section 4 & Section 5",
-        "voice_sync_text": "ഇവിടെ നമ്മൾ സെക്ഷൻ 4 ഉം Section 5 ഉം പ്രകാരം Diversion of Income ഉം Application of Income ഉം തമ്മിലുള്ള വ്യത്യാസമാണ് പഠിക്കുന്നത്.",
-        "t0": 0.0,
-        "t1": 8.67,
-        "pt_idx": 0,
-        "audio_file": "dt/ch1/q1/pt_0.mp3",
-        "drive_audio_id": "1ThREsa2Bd5myxAwFTRUAdq9-CFtJgpxB"
-      },
-      "branches": [
-        {
-          "branch_id": "branch-1",
-          "branch_title": "Diversion of Income by Overriding Title",
-          "badge": "Section 4",
-          "icon": "scales",
-          "points": [
-            {
-              "id": "beat-1-1",
-              "title": "Creation of Overriding Title",
-              "number": "1.1.1",
-              "badge": "Statutory Rule",
-              "body": [
-                "Income is diverted at the very source by an overriding legal obligation.",
-                "The recipient never gets legal ownership or right to receive the funds for themselves."
-              ],
-              "highlights": [
-                {
-                  "phrase": "diverted at the very source",
-                  "time_sec": 2.5
-                },
-                {
-                  "phrase": "overriding legal obligation",
-                  "time_sec": 6.8
-                }
-              ],
-              "table_data": null,
-              "voice_sync_text": "ആദ്യം തന്നെ ഓർക്കേണ്ടത്, income-ന്റെ source-ൽ വെച്ച് തന്നെ വേറൊരാൾക്ക് legal right ഉണ്ടാകുകയാണെങ്കിൽ അതിനെ diversion എന്ന് വിളിക്കാം.",
-              "spoken": true,
-              "t0": 9.67,
-              "t1": 19.17,
-              "pt_idx": 1,
-              "audio_file": "dt/ch1/q1/pt_1.mp3",
-              "dur": 9.52,
-              "duration_seconds": 9.52,
-              "drive_audio_id": "13vBDcGkTpJnZmaGrcwWhY7p7kK6iS3jc"
-            }
-          ],
-          "flow_summary": [],
-          "t0": 9.67,
-          "t1": 19.17
-        },
-        {
-          "branch_id": "branch-2",
-          "branch_title": "Application of Professional Income",
-          "badge": "Section 28",
-          "icon": "shield",
-          "points": [
-            {
-              "id": "beat-2-1",
-              "title": "Post-Receipt Utilization",
-              "number": "1.2.1",
-              "badge": "Tax Rule",
-              "body": [
-                "Professional fees received fully first accrue and vest in the hands of the professional.",
-                "Subsequent creation of a trust or charity amounts merely to an application of income."
-              ],
-              "highlights": [
-                {
-                  "phrase": "fully first accrue and vest",
-                  "time_sec": 2.1
-                },
-                {
-                  "phrase": "application of income",
-                  "time_sec": 6.0
-                }
-              ],
-              "table_data": null,
-              "voice_sync_text": "Professional income കൈപ്പറ്റിയ ശേഷം ആ തുക ചാരിറ്റിക്കോ ട്രസ്റ്റിനോ വേണ്ടി ഉപയോഗിച്ചാൽ അത് application മാത്രമാണ്.",
-              "spoken": true,
-              "t0": 21.17,
-              "t1": 29.17,
-              "pt_idx": 2,
-              "audio_file": "dt/ch1/q1/pt_2.mp3",
-              "dur": 7.96,
-              "duration_seconds": 7.96,
-              "drive_audio_id": "1ydfMD1v2w4s1sahp5UrJd7e5ZAxtiue4"
-            }
-          ],
-          "flow_summary": [],
-          "t0": 21.17,
-          "t1": 29.17
-        }
-      ],
-      "concept_simulation": {
-        "schema_version": "1.0",
-        "illustrative_only": true,
-        "doctrine_topic": "Diversion vs Application of Income",
-        "relevant_tax_year": "Assessment Year 2024-25",
-        "statutory_assumptions": [
-          "Professional fees received directly from client for legal services rendered.",
-          "Portion of received fee subsequently transferred to a self-created charitable trust."
-        ],
-        "intro_voice": "ഇനി ഒരു simple example വഴി ഈ concept എങ്ങനെ വർക്ക് ചെയ്യുന്നു എന്ന് നോക്കാം.",
-        "steps": [
-          {
-            "step_id": "step_1",
-            "step_order": 1,
-            "title": "Receipt of Professional Fee",
-            "metric_label": "Gross Professional Fee",
-            "metric_value": "₹ 5,00,000",
-            "voice_sync_text": "Professional സേവനങ്ങൾക്ക് ലഭിക്കുന്ന തുക പൂർണ്ണമായും ആദ്യം professional-ന്റെ കൈകളിൽ തന്നെ income ആയി accrue ചെയ്യുന്നു.",
-            "image_prompt": "Cinematic 2.5D isometric view of a corporate law office desk with professional files and currency notes under warm soft lighting.",
-            "calculation_data": null,
-            "step_number": 1,
-            "audio_file": "dt/ch1/q1/sim_1.mp3",
-            "duration_seconds": 7.6,
-            "drive_audio_id": "14kL75RTCd7tid2zIkPzHkpivPk98C1pa",
-            "image_file": "dt/ch1/q1/sim_img_1.jpg"
-          },
-          {
-            "step_id": "step_2",
-            "step_order": 2,
-            "title": "Subsequent Trust Creation",
-            "metric_label": "Charitable Trust Contribution",
-            "metric_value": "₹ 5,00,000",
-            "voice_sync_text": "പിന്നീട് ആ തുക ഉപയോഗിച്ച് സ്വന്തമായി trust ഉണ്ടാക്കിയാൽ അത് diversion അല്ല, മറിച്ച് application of income ആണ്.",
-            "image_prompt": "Cinematic 2.5D isometric view of a legal trust deed document being signed with a fountain pen.",
-            "calculation_data": null,
-            "step_number": 2,
-            "audio_file": "dt/ch1/q1/sim_2.mp3",
-            "duration_seconds": 8.28,
-            "drive_audio_id": "1X0L-YwVLLYjjrE8IhuUhOiqvM-aJ5tR6",
-            "image_file": "dt/ch1/q1/sim_img_2.jpg"
-          },
-          {
-            "step_id": "step_3",
-            "step_order": 3,
-            "title": "Tax Chargeability u/s 28",
-            "metric_label": "Taxable PGBP Income",
-            "metric_value": "₹ 5,00,000",
-            "voice_sync_text": "അതുകൊണ്ട് ഈ മുഴുവൻ തുകയും Profits and Gains of Business or Profession എന്ന തലത്തിൽ tax ചെയ്യപ്പെടും.",
-            "image_prompt": "Cinematic 2.5D isometric view of an income tax computation sheet showing total taxable professional receipts.",
-            "calculation_data": {
-              "headers": [
-                "Particulars",
-                "Amount (INR)"
-              ],
-              "rows": [
-                [
-                  "Gross Professional Receipt",
-                  "5,00,000"
-                ],
-                [
-                  "Less: Diversion by Overriding Title",
-                  "0"
-                ],
-                [
-                  "Taxable PGBP Income",
-                  "5,00,000"
-                ]
-              ]
-            },
-            "step_number": 3,
-            "audio_file": "dt/ch1/q1/sim_3.mp3",
-            "duration_seconds": 7.32,
-            "drive_audio_id": "1HcKI-evOiJUPGYVRwe_Cmy_FooYtxQSh",
-            "image_file": "dt/ch1/q1/sim_img_3.jpg"
-          }
-        ],
-        "intro_audio_file": "dt/ch1/q1/sim_intro.mp3",
-        "intro_dur": 3.76,
-        "intro_drive_audio_id": "1BIfLv1JkmYh4WQr_eXojWYxgoLgkexQ3"
-      },
-      "screenplay": {
-        "doctrine": "Diversion of Income by Overriding Title",
-        "beats": [
-          {
-            "beat_order": 1,
-            "t_start": 0.0,
-            "t_end": 4.5,
-            "beat_type": "kinetic_headline",
-            "headline": "Section 4: Diversion vs Application",
-            "badge": "Section 4 & 5",
-            "subtext": "Mastering the legal distinction in professional receipts",
-            "metric_chip": null,
-            "voice_sync_text": "ഇന്ന് നമ്മൾ ചർച്ച ചെയ്യുന്നത് Diversion of Income ഉം Application of Income ഉം തമ്മിലുള്ള വ്യത്യാസമാണ്.",
-            "image_required": false,
-            "image_prompt": null,
-            "highlights": [
-              {
-                "phrase": "Diversion of Income",
-                "time_sec": 1.5
-              },
-              {
-                "phrase": "Application of Income",
-                "time_sec": 3.0
-              }
-            ]
-          },
-          {
-            "beat_order": 2,
-            "t_start": 4.6,
-            "t_end": 10.0,
-            "beat_type": "statutory_trigger",
-            "headline": "Professional Income & Trust Creation",
-            "badge": "Section 28",
-            "subtext": "Self-created trusts out of professional receipts",
-            "metric_chip": null,
-            "voice_sync_text": "Client നൽകുന്ന പണം കൊണ്ട് professional സ്വന്തമായി trust ഉണ്ടാക്കിയാൽ അവിടെ diversion നടക്കില്ല.",
-            "image_required": true,
-            "image_prompt": "Cinematic 2.5D isometric view of a Supreme Court advocate desk with legal briefs and a charitable trust ledger under studio lighting.",
-            "highlights": [
-              {
-                "phrase": "professional receipts",
-                "time_sec": 5.5
-              },
-              {
-                "phrase": "application of income",
-                "time_sec": 8.5
-              }
-            ]
-          }
-        ]
-      },
-      "total_duration": 31.17,
-      "drive_folder_id": "1OJE3VX5UcvnBEZSbBYcoiixVB8ag_AAX",
-      "total_points_count": 3,
-      "completed_points_count": 7,
-      "is_partially_complete": false
-    },
-    "q1": {
-      "doctrine": "Diversion of Income by Overriding Title vs Application of Income",
-      "root": {
-        "id": "root",
-        "number": "1",
-        "title": "Diversion vs Application of Income",
-        "badge": "Section 4 & Section 5",
-        "voice_sync_text": "ഇവിടെ നമ്മൾ സെക്ഷൻ 4 ഉം Section 5 ഉം പ്രകാരം Diversion of Income ഉം Application of Income ഉം തമ്മിലുള്ള വ്യത്യാസമാണ് പഠിക്കുന്നത്.",
-        "t0": 0.0,
-        "t1": 8.67,
-        "pt_idx": 0,
-        "audio_file": "dt/ch1/q1/pt_0.mp3",
-        "drive_audio_id": "1ThREsa2Bd5myxAwFTRUAdq9-CFtJgpxB"
-      },
-      "branches": [
-        {
-          "branch_id": "branch-1",
-          "branch_title": "Diversion of Income by Overriding Title",
-          "badge": "Section 4",
-          "icon": "scales",
-          "points": [
-            {
-              "id": "beat-1-1",
-              "title": "Creation of Overriding Title",
-              "number": "1.1.1",
-              "badge": "Statutory Rule",
-              "body": [
-                "Income is diverted at the very source by an overriding legal obligation.",
-                "The recipient never gets legal ownership or right to receive the funds for themselves."
-              ],
-              "highlights": [
-                {
-                  "phrase": "diverted at the very source",
-                  "time_sec": 2.5
-                },
-                {
-                  "phrase": "overriding legal obligation",
-                  "time_sec": 6.8
-                }
-              ],
-              "table_data": null,
-              "voice_sync_text": "ആദ്യം തന്നെ ഓർക്കേണ്ടത്, income-ന്റെ source-ൽ വെച്ച് തന്നെ വേറൊരാൾക്ക് legal right ഉണ്ടാകുകയാണെങ്കിൽ അതിനെ diversion എന്ന് വിളിക്കാം.",
-              "spoken": true,
-              "t0": 9.67,
-              "t1": 19.17,
-              "pt_idx": 1,
-              "audio_file": "dt/ch1/q1/pt_1.mp3",
-              "dur": 9.52,
-              "duration_seconds": 9.52,
-              "drive_audio_id": "13vBDcGkTpJnZmaGrcwWhY7p7kK6iS3jc"
-            }
-          ],
-          "flow_summary": [],
-          "t0": 9.67,
-          "t1": 19.17
-        },
-        {
-          "branch_id": "branch-2",
-          "branch_title": "Application of Professional Income",
-          "badge": "Section 28",
-          "icon": "shield",
-          "points": [
-            {
-              "id": "beat-2-1",
-              "title": "Post-Receipt Utilization",
-              "number": "1.2.1",
-              "badge": "Tax Rule",
-              "body": [
-                "Professional fees received fully first accrue and vest in the hands of the professional.",
-                "Subsequent creation of a trust or charity amounts merely to an application of income."
-              ],
-              "highlights": [
-                {
-                  "phrase": "fully first accrue and vest",
-                  "time_sec": 2.1
-                },
-                {
-                  "phrase": "application of income",
-                  "time_sec": 6.0
-                }
-              ],
-              "table_data": null,
-              "voice_sync_text": "Professional income കൈപ്പറ്റിയ ശേഷം ആ തുക ചാരിറ്റിക്കോ ട്രസ്റ്റിനോ വേണ്ടി ഉപയോഗിച്ചാൽ അത് application മാത്രമാണ്.",
-              "spoken": true,
-              "t0": 21.17,
-              "t1": 29.17,
-              "pt_idx": 2,
-              "audio_file": "dt/ch1/q1/pt_2.mp3",
-              "dur": 7.96,
-              "duration_seconds": 7.96,
-              "drive_audio_id": "1ydfMD1v2w4s1sahp5UrJd7e5ZAxtiue4"
-            }
-          ],
-          "flow_summary": [],
-          "t0": 21.17,
-          "t1": 29.17
-        }
-      ],
-      "concept_simulation": {
-        "schema_version": "1.0",
-        "illustrative_only": true,
-        "doctrine_topic": "Diversion vs Application of Income",
-        "relevant_tax_year": "Assessment Year 2024-25",
-        "statutory_assumptions": [
-          "Professional fees received directly from client for legal services rendered.",
-          "Portion of received fee subsequently transferred to a self-created charitable trust."
-        ],
-        "intro_voice": "ഇനി ഒരു simple example വഴി ഈ concept എങ്ങനെ വർക്ക് ചെയ്യുന്നു എന്ന് നോക്കാം.",
-        "steps": [
-          {
-            "step_id": "step_1",
-            "step_order": 1,
-            "title": "Receipt of Professional Fee",
-            "metric_label": "Gross Professional Fee",
-            "metric_value": "₹ 5,00,000",
-            "voice_sync_text": "Professional സേവനങ്ങൾക്ക് ലഭിക്കുന്ന തുക പൂർണ്ണമായും ആദ്യം professional-ന്റെ കൈകളിൽ തന്നെ income ആയി accrue ചെയ്യുന്നു.",
-            "image_prompt": "Cinematic 2.5D isometric view of a corporate law office desk with professional files and currency notes under warm soft lighting.",
-            "calculation_data": null,
-            "step_number": 1,
-            "audio_file": "dt/ch1/q1/sim_1.mp3",
-            "duration_seconds": 7.6,
-            "drive_audio_id": "14kL75RTCd7tid2zIkPzHkpivPk98C1pa",
-            "image_file": "dt/ch1/q1/sim_img_1.jpg"
-          },
-          {
-            "step_id": "step_2",
-            "step_order": 2,
-            "title": "Subsequent Trust Creation",
-            "metric_label": "Charitable Trust Contribution",
-            "metric_value": "₹ 5,00,000",
-            "voice_sync_text": "പിന്നീട് ആ തുക ഉപയോഗിച്ച് സ്വന്തമായി trust ഉണ്ടാക്കിയാൽ അത് diversion അല്ല, മറിച്ച് application of income ആണ്.",
-            "image_prompt": "Cinematic 2.5D isometric view of a legal trust deed document being signed with a fountain pen.",
-            "calculation_data": null,
-            "step_number": 2,
-            "audio_file": "dt/ch1/q1/sim_2.mp3",
-            "duration_seconds": 8.28,
-            "drive_audio_id": "1X0L-YwVLLYjjrE8IhuUhOiqvM-aJ5tR6",
-            "image_file": "dt/ch1/q1/sim_img_2.jpg"
-          },
-          {
-            "step_id": "step_3",
-            "step_order": 3,
-            "title": "Tax Chargeability u/s 28",
-            "metric_label": "Taxable PGBP Income",
-            "metric_value": "₹ 5,00,000",
-            "voice_sync_text": "അതുകൊണ്ട് ഈ മുഴുവൻ തുകയും Profits and Gains of Business or Profession എന്ന തലത്തിൽ tax ചെയ്യപ്പെടും.",
-            "image_prompt": "Cinematic 2.5D isometric view of an income tax computation sheet showing total taxable professional receipts.",
-            "calculation_data": {
-              "headers": [
-                "Particulars",
-                "Amount (INR)"
-              ],
-              "rows": [
-                [
-                  "Gross Professional Receipt",
-                  "5,00,000"
-                ],
-                [
-                  "Less: Diversion by Overriding Title",
-                  "0"
-                ],
-                [
-                  "Taxable PGBP Income",
-                  "5,00,000"
-                ]
-              ]
-            },
-            "step_number": 3,
-            "audio_file": "dt/ch1/q1/sim_3.mp3",
-            "duration_seconds": 7.32,
-            "drive_audio_id": "1HcKI-evOiJUPGYVRwe_Cmy_FooYtxQSh",
-            "image_file": "dt/ch1/q1/sim_img_3.jpg"
-          }
-        ],
-        "intro_audio_file": "dt/ch1/q1/sim_intro.mp3",
-        "intro_dur": 3.76,
-        "intro_drive_audio_id": "1BIfLv1JkmYh4WQr_eXojWYxgoLgkexQ3"
-      },
-      "screenplay": {
-        "doctrine": "Diversion of Income by Overriding Title",
-        "beats": [
-          {
-            "beat_order": 1,
-            "t_start": 0.0,
-            "t_end": 4.5,
-            "beat_type": "kinetic_headline",
-            "headline": "Section 4: Diversion vs Application",
-            "badge": "Section 4 & 5",
-            "subtext": "Mastering the legal distinction in professional receipts",
-            "metric_chip": null,
-            "voice_sync_text": "ഇന്ന് നമ്മൾ ചർച്ച ചെയ്യുന്നത് Diversion of Income ഉം Application of Income ഉം തമ്മിലുള്ള വ്യത്യാസമാണ്.",
-            "image_required": false,
-            "image_prompt": null,
-            "highlights": [
-              {
-                "phrase": "Diversion of Income",
-                "time_sec": 1.5
-              },
-              {
-                "phrase": "Application of Income",
-                "time_sec": 3.0
-              }
-            ]
-          },
-          {
-            "beat_order": 2,
-            "t_start": 4.6,
-            "t_end": 10.0,
-            "beat_type": "statutory_trigger",
-            "headline": "Professional Income & Trust Creation",
-            "badge": "Section 28",
-            "subtext": "Self-created trusts out of professional receipts",
-            "metric_chip": null,
-            "voice_sync_text": "Client നൽകുന്ന പണം കൊണ്ട് professional സ്വന്തമായി trust ഉണ്ടാക്കിയാൽ അവിടെ diversion നടക്കില്ല.",
-            "image_required": true,
-            "image_prompt": "Cinematic 2.5D isometric view of a Supreme Court advocate desk with legal briefs and a charitable trust ledger under studio lighting.",
-            "highlights": [
-              {
-                "phrase": "professional receipts",
-                "time_sec": 5.5
-              },
-              {
-                "phrase": "application of income",
-                "time_sec": 8.5
-              }
-            ]
-          }
-        ]
-      },
-      "total_duration": 31.17,
-      "drive_folder_id": "1OJE3VX5UcvnBEZSbBYcoiixVB8ag_AAX",
-      "total_points_count": 3,
-      "completed_points_count": 7,
-      "is_partially_complete": false
-    },
-    "ch1_q2": {
-      "doctrine": "Diversion of Income by Overriding Title vs. Application of Income",
-      "root": {
-        "id": "root",
-        "number": "1",
-        "title": "Diversion vs Application of Income",
-        "badge": "Section 4 · Judicial Doctrine",
-        "voice_sync_text": "നമസ്കാരം! ഇന്ന് നമ്മൾ CA Final Direct Tax-ലെ വളരെ പ്രധാനപ്പെട്ട ഒരു ജുഡീഷ്യൽ ഡോക്ട്രിൻ ആണ് പഠിക്കുന്നത് - Diversion of Income by Overriding Title versus Application of Income. ഒരു വരുമാനം നികുതിദായകന്റെ കൈകളിൽ ടാക്സ് ചെയ്യപ്പെടേണ്ടതുണ്ടോ എന്ന് തീരുമാനിക്കുന്നതിൽ ഈ തത്വം വളരെ നിർണ്ണായകമാണ്.",
-        "t0": 0.0,
-        "t1": 19.33,
-        "pt_idx": 0,
-        "audio_file": "dt/ch1/q2/pt_0.mp3",
-        "drive_audio_id": "1yR5ijcqkgwyEq25La01BFb6n3VvSl-i8"
-      },
-      "branches": [
-        {
-          "branch_id": "branch-1",
-          "branch_title": "Statutory Principle & Benchmark Test",
-          "badge": "Sitaldas Tirathdas Rule",
-          "icon": "scales",
-          "points": [
-            {
-              "id": "beat-1-1",
-              "title": "Diversion by Overriding Title",
-              "number": "1.1.1",
-              "badge": "Non-Taxable",
-              "body": [
-                "Obligation attaches directly to the source of income before it reaches the assessee",
-                "Income is diverted at source to a third party under an enforceable paramount title",
-                "Excluded from total income computation of the assessee"
-              ],
-              "table_data": null,
-              "voice_sync_text": "Diversion of income എന്ന് പറഞ്ഞാൽ, വരുമാനത്തിന്റെ സോഴ്സിൽ തന്നെ ഒരു ഓവർറൈഡിംഗ് ലീഗൽ ഒബ്ലിഗേഷൻ ഉണ്ടാവുകയും, അത് അസ്സസ്സിയുടെ കൈകളിൽ എത്തുന്നതിന് മുൻപ് തന്നെ മൂന്നാമതൊരാളിലേക്ക് വഴിതിരിച്ചു വിടപ്പെടുകയും ചെയ്യുകയാണ്. ഇത് അസ്സസ്സിയുടെ ടോട്ടൽ ഇൻകത്തിൽ ഉൾപ്പെടില്ല.",
-              "spoken": true,
-              "t0": 20.33,
-              "t1": 38.9,
-              "pt_idx": 1,
-              "audio_file": "dt/ch1/q2/pt_1.mp3",
-              "drive_audio_id": "19Z52EnIByf9j78Tlbaem4NS2b48NPwWr"
-            },
-            {
-              "id": "beat-1-2",
-              "title": "Application of Income",
-              "number": "1.1.2",
-              "badge": "Taxable",
-              "body": [
-                "Income reaches or accrues to the assessee first as their property",
-                "Subsequently applied to discharge an obligation, personal debt, or contractual commitment",
-                "Fully taxable in the hands of the assessee"
-              ],
-              "table_data": null,
-              "voice_sync_text": "എന്നാൽ Application of income-ൽ, വരുമാനം ആദ്യം അസ്സസ്സിക്ക് അക്രൂ ചെയ്യുകയോ കൈകളിൽ എത്തുകയോ ചെയ്യുന്നു. അതിനുശേഷമാണ് അത് മറ്റെന്തെങ്കിലും ബാധ്യത തീർക്കാൻ ചിലവഴിക്കുന്നത്. അതിനാൽ ഇത് അസ്സസ്സിയുടെ കൈകളിൽ പൂർണ്ണമായും ടാക്സബിൾ ആണ്.",
-              "spoken": true,
-              "t0": 39.7,
-              "t1": 55.84,
-              "pt_idx": 2,
-              "audio_file": "dt/ch1/q2/pt_2.mp3",
-              "drive_audio_id": "14g7r-SYBjCfUi58ytxKvqMC5YkXJDKti"
-            }
-          ],
-          "flow_summary": [],
-          "t0": 20.33,
-          "t1": 55.84
-        },
-        {
-          "branch_id": "branch-2",
-          "branch_title": "Comparative Analysis Matrix",
-          "badge": "Distinction Matrix",
-          "icon": "gear",
-          "points": [
-            {
-              "id": "beat-2-1",
-              "title": "Key Legal Criteria",
-              "number": "1.2.1",
-              "badge": "Legal Test",
-              "body": [
-                "Time of attachment: Before accrual vs After accrual",
-                "Nature of title: Paramount title on source vs Personal covenant"
-              ],
-              "table_data": {
-                "headers": [
-                  "Criteria",
-                  "Diversion of Income",
-                  "Application of Income"
-                ],
-                "rows": [
-                  [
-                    "Point of Charge",
-                    "Attaches to source before accrual",
-                    "Attaches after income accrues"
-                  ],
-                  [
-                    "Receiving Right",
-                    "Assessee has no right to receive",
-                    "Assessee receives as legal owner"
-                  ],
-                  [
-                    "Taxability",
-                    "Not taxable in Assessee's hands",
-                    "Fully taxable in Assessee's hands"
-                  ]
-                ]
-              },
-              "voice_sync_text": "ഈ രണ്ട് സങ്കൽപ്പങ്ങളും തമ്മിലുള്ള വ്യത്യാസം കാണിക്കുന്ന ടേബിൾ ശ്രദ്ധിക്കൂ. ഇൻകം എവിടെ വെച്ചാണ് കൈമാറ്റം ചെയ്യപ്പെടുന്നത് എന്നതാണ് പ്രധാന മാനദണ്ഡം. അക്രൂവലിന് മുൻപെങ്കിൽ Diversion, അക്രൂവലിന് ശേഷമെങ്കിൽ Application.",
-              "spoken": true,
-              "t0": 57.84,
-              "t1": 73.13,
-              "pt_idx": 3,
-              "audio_file": "dt/ch1/q2/pt_3.mp3",
-              "drive_audio_id": "1vgs_o7SD8pIhHzfkhJt60OEe_u-5SVDl"
-            }
-          ],
-          "flow_summary": [],
-          "t0": 57.84,
-          "t1": 73.13
-        },
-        {
-          "branch_id": "branch-3",
-          "branch_title": "Judicial Application: Business Takeover Case",
-          "badge": "Jit & Pal X-Rays Case",
-          "icon": "building",
-          "points": [
-            {
-              "id": "beat-3-1",
-              "title": "Jit & Pal X-Rays (P.) Ltd. Ratio",
-              "number": "1.3.1",
-              "badge": "(2004) 267 ITR 370 (All)",
-              "body": [
-                "Overriding charge embedded in the sale deed for acquiring sole proprietorship",
-                "Condition of purchase explicitly charged ₹ 15,000 p.a. on net profits to proprietor's wife",
-                "Obligation attached to the very source of income transferred",
-                "Held: Diversion of income by overriding title; not taxable in assessee's hands"
-              ],
-              "table_data": null,
-              "voice_sync_text": "അലഹാബാദ് ഹൈക്കോടതിയുടെ Jit and Pal X-Rays കേസിൽ, ഒരു സോളെ പ്രൊപ്രൈറ്റർഷിപ്പ് ബിസിനസ്സ് വാങ്ങുമ്പോൾ തന്നെ സെയിൽ ഡീഡിൽ ഒരു കണ്ടീഷൻ വെയ്ക്കുന്നു - അവിടുത്തെ നെറ്റ് പ്രോഫിറ്റിൽ നിന്നും പ്രൊപ്രൈറ്ററുടെ ഭാര്യക്ക് 15,000 രൂപ പ്രതിവർഷം നൽകണം. ഈ ബാധ്യത ബിസിനസ്സ് വാങ്ങുന്നതിന്റെ സോഴ്സിനോട് തന്നെ ഘടിപ്പിച്ചിരിക്കുന്നതിനാൽ, ഇത് Diversion of Income ആണ് എന്ന് കോടതി വിധി എഴുതി.",
-              "spoken": true,
-              "t0": 75.13,
-              "t1": 101.2,
-              "pt_idx": 4,
-              "audio_file": "dt/ch1/q2/pt_4.mp3",
-              "drive_audio_id": "1JvmHKqm7vYHq_oSj4-YtWIOzDm8ONrZu"
-            }
-          ],
-          "flow_summary": [],
-          "t0": 75.13,
-          "t1": 101.2
-        },
-        {
-          "branch_id": "branch-4",
-          "branch_title": "Practical Assessment Checklist",
-          "badge": "Exam Rules",
-          "icon": "check",
-          "points": [
-            {
-              "id": "beat-4-1",
-              "title": "Steps to Determine Tax Liability",
-              "number": "1.4.1",
-              "badge": "Checklist",
-              "body": [
-                "Check 1: Was the charge created simultaneously with or prior to acquiring the asset?",
-                "Check 2: Is the charge enforceable against the source itself?",
-                "If YES to both -> Diversion (Exclude from income). If NO -> Application (Include in income)."
-              ],
-              "table_data": null,
-              "voice_sync_text": "പരീക്ഷയിൽ ചോദ്യം വരുമ്പോൾ രണ്ട് കാര്യങ്ങൾ പരിശോധിക്കുക: ഒന്ന്, ഇൻകം സോഴ്സ് സ്വന്തമാക്കുന്ന ആ നിമിഷത്തിൽ തന്നെയാണോ ബാധ്യത ഉണ്ടായത്? രണ്ട്, അത് പ്രസ്തുത സോഴ്സിൽ നേരിട്ടുള്ള ചാർജ്ജ് ആണോ? ഈ രണ്ട് ചോദ്യങ്ങൾക്കും ഉത്തരം യെസ് എന്നാണെങ്കിൽ അത് Diversion of income ആയിരിക്കും.",
-              "spoken": true,
-              "t0": 103.2,
-              "t1": 122.27,
-              "pt_idx": 5,
-              "audio_file": "dt/ch1/q2/pt_5.mp3",
-              "drive_audio_id": "1uigrL-8O3w4OiwgOpW5gUzrHeayejfPw"
-            }
-          ],
-          "flow_summary": [],
-          "t0": 103.2,
-          "t1": 122.27
-        }
-      ],
-      "total_duration": 124.27,
-      "drive_folder_id": "1U5kSCxHL4P4EdTtSBH_c8TCH3cWlzmQh",
-      "total_points_count": 6,
-      "completed_points_count": 6,
-      "is_partially_complete": false
-    },
-    "q2": {
-      "doctrine": "Diversion of Income by Overriding Title vs. Application of Income",
-      "root": {
-        "id": "root",
-        "number": "1",
-        "title": "Diversion vs Application of Income",
-        "badge": "Section 4 · Judicial Doctrine",
-        "voice_sync_text": "നമസ്കാരം! ഇന്ന് നമ്മൾ CA Final Direct Tax-ലെ വളരെ പ്രധാനപ്പെട്ട ഒരു ജുഡീഷ്യൽ ഡോക്ട്രിൻ ആണ് പഠിക്കുന്നത് - Diversion of Income by Overriding Title versus Application of Income. ഒരു വരുമാനം നികുതിദായകന്റെ കൈകളിൽ ടാക്സ് ചെയ്യപ്പെടേണ്ടതുണ്ടോ എന്ന് തീരുമാനിക്കുന്നതിൽ ഈ തത്വം വളരെ നിർണ്ണായകമാണ്.",
-        "t0": 0.0,
-        "t1": 19.33,
-        "pt_idx": 0,
-        "audio_file": "dt/ch1/q2/pt_0.mp3",
-        "drive_audio_id": "1yR5ijcqkgwyEq25La01BFb6n3VvSl-i8"
-      },
-      "branches": [
-        {
-          "branch_id": "branch-1",
-          "branch_title": "Statutory Principle & Benchmark Test",
-          "badge": "Sitaldas Tirathdas Rule",
-          "icon": "scales",
-          "points": [
-            {
-              "id": "beat-1-1",
-              "title": "Diversion by Overriding Title",
-              "number": "1.1.1",
-              "badge": "Non-Taxable",
-              "body": [
-                "Obligation attaches directly to the source of income before it reaches the assessee",
-                "Income is diverted at source to a third party under an enforceable paramount title",
-                "Excluded from total income computation of the assessee"
-              ],
-              "table_data": null,
-              "voice_sync_text": "Diversion of income എന്ന് പറഞ്ഞാൽ, വരുമാനത്തിന്റെ സോഴ്സിൽ തന്നെ ഒരു ഓവർറൈഡിംഗ് ലീഗൽ ഒബ്ലിഗേഷൻ ഉണ്ടാവുകയും, അത് അസ്സസ്സിയുടെ കൈകളിൽ എത്തുന്നതിന് മുൻപ് തന്നെ മൂന്നാമതൊരാളിലേക്ക് വഴിതിരിച്ചു വിടപ്പെടുകയും ചെയ്യുകയാണ്. ഇത് അസ്സസ്സിയുടെ ടോട്ടൽ ഇൻകത്തിൽ ഉൾപ്പെടില്ല.",
-              "spoken": true,
-              "t0": 20.33,
-              "t1": 38.9,
-              "pt_idx": 1,
-              "audio_file": "dt/ch1/q2/pt_1.mp3",
-              "drive_audio_id": "19Z52EnIByf9j78Tlbaem4NS2b48NPwWr"
-            },
-            {
-              "id": "beat-1-2",
-              "title": "Application of Income",
-              "number": "1.1.2",
-              "badge": "Taxable",
-              "body": [
-                "Income reaches or accrues to the assessee first as their property",
-                "Subsequently applied to discharge an obligation, personal debt, or contractual commitment",
-                "Fully taxable in the hands of the assessee"
-              ],
-              "table_data": null,
-              "voice_sync_text": "എന്നാൽ Application of income-ൽ, വരുമാനം ആദ്യം അസ്സസ്സിക്ക് അക്രൂ ചെയ്യുകയോ കൈകളിൽ എത്തുകയോ ചെയ്യുന്നു. അതിനുശേഷമാണ് അത് മറ്റെന്തെങ്കിലും ബാധ്യത തീർക്കാൻ ചിലവഴിക്കുന്നത്. അതിനാൽ ഇത് അസ്സസ്സിയുടെ കൈകളിൽ പൂർണ്ണമായും ടാക്സബിൾ ആണ്.",
-              "spoken": true,
-              "t0": 39.7,
-              "t1": 55.84,
-              "pt_idx": 2,
-              "audio_file": "dt/ch1/q2/pt_2.mp3",
-              "drive_audio_id": "14g7r-SYBjCfUi58ytxKvqMC5YkXJDKti"
-            }
-          ],
-          "flow_summary": [],
-          "t0": 20.33,
-          "t1": 55.84
-        },
-        {
-          "branch_id": "branch-2",
-          "branch_title": "Comparative Analysis Matrix",
-          "badge": "Distinction Matrix",
-          "icon": "gear",
-          "points": [
-            {
-              "id": "beat-2-1",
-              "title": "Key Legal Criteria",
-              "number": "1.2.1",
-              "badge": "Legal Test",
-              "body": [
-                "Time of attachment: Before accrual vs After accrual",
-                "Nature of title: Paramount title on source vs Personal covenant"
-              ],
-              "table_data": {
-                "headers": [
-                  "Criteria",
-                  "Diversion of Income",
-                  "Application of Income"
-                ],
-                "rows": [
-                  [
-                    "Point of Charge",
-                    "Attaches to source before accrual",
-                    "Attaches after income accrues"
-                  ],
-                  [
-                    "Receiving Right",
-                    "Assessee has no right to receive",
-                    "Assessee receives as legal owner"
-                  ],
-                  [
-                    "Taxability",
-                    "Not taxable in Assessee's hands",
-                    "Fully taxable in Assessee's hands"
-                  ]
-                ]
-              },
-              "voice_sync_text": "ഈ രണ്ട് സങ്കൽപ്പങ്ങളും തമ്മിലുള്ള വ്യത്യാസം കാണിക്കുന്ന ടേബിൾ ശ്രദ്ധിക്കൂ. ഇൻകം എവിടെ വെച്ചാണ് കൈമാറ്റം ചെയ്യപ്പെടുന്നത് എന്നതാണ് പ്രധാന മാനദണ്ഡം. അക്രൂവലിന് മുൻപെങ്കിൽ Diversion, അക്രൂവലിന് ശേഷമെങ്കിൽ Application.",
-              "spoken": true,
-              "t0": 57.84,
-              "t1": 73.13,
-              "pt_idx": 3,
-              "audio_file": "dt/ch1/q2/pt_3.mp3",
-              "drive_audio_id": "1vgs_o7SD8pIhHzfkhJt60OEe_u-5SVDl"
-            }
-          ],
-          "flow_summary": [],
-          "t0": 57.84,
-          "t1": 73.13
-        },
-        {
-          "branch_id": "branch-3",
-          "branch_title": "Judicial Application: Business Takeover Case",
-          "badge": "Jit & Pal X-Rays Case",
-          "icon": "building",
-          "points": [
-            {
-              "id": "beat-3-1",
-              "title": "Jit & Pal X-Rays (P.) Ltd. Ratio",
-              "number": "1.3.1",
-              "badge": "(2004) 267 ITR 370 (All)",
-              "body": [
-                "Overriding charge embedded in the sale deed for acquiring sole proprietorship",
-                "Condition of purchase explicitly charged ₹ 15,000 p.a. on net profits to proprietor's wife",
-                "Obligation attached to the very source of income transferred",
-                "Held: Diversion of income by overriding title; not taxable in assessee's hands"
-              ],
-              "table_data": null,
-              "voice_sync_text": "അലഹാബാദ് ഹൈക്കോടതിയുടെ Jit and Pal X-Rays കേസിൽ, ഒരു സോളെ പ്രൊപ്രൈറ്റർഷിപ്പ് ബിസിനസ്സ് വാങ്ങുമ്പോൾ തന്നെ സെയിൽ ഡീഡിൽ ഒരു കണ്ടീഷൻ വെയ്ക്കുന്നു - അവിടുത്തെ നെറ്റ് പ്രോഫിറ്റിൽ നിന്നും പ്രൊപ്രൈറ്ററുടെ ഭാര്യക്ക് 15,000 രൂപ പ്രതിവർഷം നൽകണം. ഈ ബാധ്യത ബിസിനസ്സ് വാങ്ങുന്നതിന്റെ സോഴ്സിനോട് തന്നെ ഘടിപ്പിച്ചിരിക്കുന്നതിനാൽ, ഇത് Diversion of Income ആണ് എന്ന് കോടതി വിധി എഴുതി.",
-              "spoken": true,
-              "t0": 75.13,
-              "t1": 101.2,
-              "pt_idx": 4,
-              "audio_file": "dt/ch1/q2/pt_4.mp3",
-              "drive_audio_id": "1JvmHKqm7vYHq_oSj4-YtWIOzDm8ONrZu"
-            }
-          ],
-          "flow_summary": [],
-          "t0": 75.13,
-          "t1": 101.2
-        },
-        {
-          "branch_id": "branch-4",
-          "branch_title": "Practical Assessment Checklist",
-          "badge": "Exam Rules",
-          "icon": "check",
-          "points": [
-            {
-              "id": "beat-4-1",
-              "title": "Steps to Determine Tax Liability",
-              "number": "1.4.1",
-              "badge": "Checklist",
-              "body": [
-                "Check 1: Was the charge created simultaneously with or prior to acquiring the asset?",
-                "Check 2: Is the charge enforceable against the source itself?",
-                "If YES to both -> Diversion (Exclude from income). If NO -> Application (Include in income)."
-              ],
-              "table_data": null,
-              "voice_sync_text": "പരീക്ഷയിൽ ചോദ്യം വരുമ്പോൾ രണ്ട് കാര്യങ്ങൾ പരിശോധിക്കുക: ഒന്ന്, ഇൻകം സോഴ്സ് സ്വന്തമാക്കുന്ന ആ നിമിഷത്തിൽ തന്നെയാണോ ബാധ്യത ഉണ്ടായത്? രണ്ട്, അത് പ്രസ്തുത സോഴ്സിൽ നേരിട്ടുള്ള ചാർജ്ജ് ആണോ? ഈ രണ്ട് ചോദ്യങ്ങൾക്കും ഉത്തരം യെസ് എന്നാണെങ്കിൽ അത് Diversion of income ആയിരിക്കും.",
-              "spoken": true,
-              "t0": 103.2,
-              "t1": 122.27,
-              "pt_idx": 5,
-              "audio_file": "dt/ch1/q2/pt_5.mp3",
-              "drive_audio_id": "1uigrL-8O3w4OiwgOpW5gUzrHeayejfPw"
-            }
-          ],
-          "flow_summary": [],
-          "t0": 103.2,
-          "t1": 122.27
-        }
-      ],
-      "total_duration": 124.27,
-      "drive_folder_id": "1U5kSCxHL4P4EdTtSBH_c8TCH3cWlzmQh",
-      "total_points_count": 6,
-      "completed_points_count": 6,
-      "is_partially_complete": false
-    },
     "ch1_q3": {
       "doctrine": "Diversion of Income by Overriding Title vs Application of Income",
       "root": {
@@ -15374,212 +15440,6 @@
     }
   },
   "screenplays": {
-    "dt-c1-q1": {
-      "question_id": "dt-c1-q1",
-      "audio_url": "data/audio/dt-c1-q1.mp3",
-      "duration_sec": 95.78,
-      "sync_offset_sec": 0.0,
-      "context_pill": "Section 4 & 28: Diversion vs Application of Income",
-      "fallback": false,
-      "beats": [
-        {
-          "id": "b1",
-          "layout": "statute_quote",
-          "voice_sync_text": "Nammude assessee Mr. Bhargava, Supreme Court-il oru company-kku vendi appear cheyyan ₹ 5,00,000 fee negotiate cheythu. Pakshe condition: ee amount ayal create cheyyunna oru public charitable trust-ilekku povanam. Section 4 charging principles prakaram ithu Diversion of Income aano atho mere Application of Income aano?",
-          "title": {
-            "text": "The Advocate's Charitable Condition",
-            "at": 0.5
-          },
-          "quote_box": {
-            "statute": "Section 4 vs Section 28(i) of Income-tax Act, 1961",
-            "text": "Whether professional fees received subject to a self-imposed obligation to transfer the funds to a charitable trust constitutes Diversion by Overriding Title or taxable Application of Professional Income?",
-            "highlight": "Diversion by Overriding Title or taxable Application of Professional Income",
-            "at": 2.0
-          },
-          "result_card": {
-            "badge": "Legal Question",
-            "title": "Taxability of Professional Receipt",
-            "val": 500000,
-            "at": 6.0
-          },
-          "start": 0.0,
-          "end": 20.0
-        },
-        {
-          "id": "b2",
-          "layout": "fork",
-          "voice_sync_text": "Ivide legal characterization check cheyyan Income Tax-il randu paths und. Superior legal title vazhi income assessee-kku kittunnathinu mumbey divert aayal ath Diversion of Income aanu, non-taxable. Ennal income assess-kku reach cheytha sesham, assessee-yude voluntary act vazhi mathram transfer cheythal ath Application of Income aayi maarum.",
-          "title": {
-            "text": "Two Paths of Income Flow",
-            "at": 0.5
-          },
-          "story_steps": [
-            {
-              "badge": "Brief Accepted",
-              "title": "Professional Engagement",
-              "sub": "SC Defense for Company",
-              "val": 500000,
-              "at": 2.0
-            }
-          ],
-          "divider": {
-            "text": "Test of Stage of Interception",
-            "at": 4.0
-          },
-          "branches": [
-            {
-              "side": "left",
-              "label": "Diversion by Overriding Title",
-              "facts": [
-                {
-                  "text": "Intercepted before reaching assessee",
-                  "at": 6.0
-                },
-                {
-                  "text": "Created by superior legal obligation",
-                  "at": 8.0
-                }
-              ],
-              "outcome": {
-                "text": "NOT Taxable in Assessee's Hands",
-                "at": 10.0
-              }
-            },
-            {
-              "side": "right",
-              "label": "Application of Income",
-              "facts": [
-                {
-                  "text": "Reaches assessee / Accrues first",
-                  "at": 7.0
-                },
-                {
-                  "text": "Voluntary obligation by assessee",
-                  "at": 9.0
-                }
-              ],
-              "outcome": {
-                "text": "FULLY TAXABLE under PGBP",
-                "at": 11.0
-              }
-            }
-          ],
-          "result_card": {
-            "badge": "Applicable Path",
-            "title": "Application of Income",
-            "val": 500000,
-            "at": 13.0
-          },
-          "start": 20.25,
-          "end": 40.7
-        },
-        {
-          "id": "b3",
-          "layout": "case_card",
-          "voice_sync_text": "Landmark precedent Supreme Court-inte CIT v. Sitaldas Tirathdas aanu. Ee judgment-il Supreme Court theerth paranju: Income source-il ninnum assessee-yude adukkal ethunnathinu mumbey legal title vazhi divert cheythal mathrame exclusion kittu. Bhargava-yude case-il, client alla trust create cheythathu, client-inu obligation onnum illayirunnu. Obligation create cheythathu Mr. Bhargava thanneyanu.",
-          "title": {
-            "text": "The Landmark Judicial Compass",
-            "at": 0.5
-          },
-          "case_details": {
-            "court": "Supreme Court of India",
-            "citation": "CIT v. Sitaldas Tirathdas (1961) 41 ITR 367 (SC)",
-            "bench": "Cardinal True Legal Test",
-            "at": 2.0
-          },
-          "ratio_box": {
-            "principle": "Stage of Interception Test",
-            "verdict": "Does the amount reach the assessee first as his own income and then applied? If yes, it is an Application of Income. A self-imposed obligation by the recipient does NOT create an overriding title.",
-            "at": 5.0
-          },
-          "result_card": {
-            "badge": "Precedent Impact",
-            "title": "Overriding Title Rejected",
-            "val": 500000,
-            "at": 8.0
-          },
-          "start": 40.95,
-          "end": 62.31
-        },
-        {
-          "id": "b4",
-          "layout": "ledger",
-          "voice_sync_text": "Ini namukk Mr. Bhargava-yude Assessment Year computation nokkam. Company nalkiya ₹ 5,00,000 ayalude Professional Receipts aanu. Ayal trust execute cheythu transfer cheythathu mere post-receipt application mathramayanu. So full ₹ 5,00,000 PGBP head-il assessable aakum.",
-          "title": {
-            "text": "Computation of Professional Income",
-            "at": 0.5
-          },
-          "ledger_rows": [
-            {
-              "desc": "Professional Fees received from Company",
-              "amount": 500000,
-              "flow": "plus",
-              "tag": "Section 28(i)",
-              "at": 2.0
-            },
-            {
-              "desc": "Less: Claim of Diversion by Overriding Title",
-              "amount": 0,
-              "flow": "neutral",
-              "tag": "Disallowed (No Superior Title)",
-              "at": 4.5
-            },
-            {
-              "desc": "Less: Transfer to Self-Created Trust",
-              "amount": 0,
-              "flow": "neutral",
-              "tag": "Application of Income",
-              "at": 7.0
-            }
-          ],
-          "result_card": {
-            "badge": "Taxable Income",
-            "title": "Total Income under PGBP",
-            "val": 500000,
-            "at": 10.0
-          },
-          "start": 62.56,
-          "end": 78.01
-        },
-        {
-          "id": "b5",
-          "layout": "takeaway",
-          "voice_sync_text": "CA Final exam point of view-il ee 3 Golden Rules eppozhum orkuka. Rule 1: Source of obligation check cheyyuka. Rule 2: Stage of interception examine cheyyuka. Rule 3: Self-imposed trusts are always Application of Income, taxable under PGBP.",
-          "title": {
-            "text": "Exam Takeaways: Diversion Doctrine",
-            "at": 0.5
-          },
-          "rules": [
-            {
-              "num": "01",
-              "rule": "Origin of Legal Obligation",
-              "exp": "Overriding title exists only if an external superior law, court decree, or payer creates the obligation before income reaches the assessee.",
-              "at": 2.0
-            },
-            {
-              "num": "02",
-              "rule": "Interception vs Destination",
-              "exp": "Diversion occurs at the source (interception). Applying funds after earning title or receipt is mere destination (application).",
-              "at": 5.0
-            },
-            {
-              "num": "03",
-              "rule": "Professional Fee Trap",
-              "exp": "A professional directing clients to pay fees into their own trust is fully taxable under Section 28 as PGBP; Chapter VI-A (Section 80G) can only be explored separately.",
-              "at": 8.0
-            }
-          ],
-          "result_card": {
-            "badge": "Final Verdict",
-            "title": "Assessable in Hands of Bhargava",
-            "val": 500000,
-            "at": 11.0
-          },
-          "start": 78.26,
-          "end": 95.53
-        }
-      ]
-    },
     "dt-c2-q25": {
       "question_id": "dt-c2-q25",
       "audio_url": "data/audio/dt-c2-q25.mp3",
