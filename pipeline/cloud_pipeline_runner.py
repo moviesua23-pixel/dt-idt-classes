@@ -535,6 +535,7 @@ def run_pipeline(limit=None, target_chapter=None, target_question=None, target_s
         current_mm_data = existing_mm
         current_topic = existing.get('topic') if existing else None
         current_prov_md = existing.get('prov_md') if existing else None
+        current_prompt = existing.get('summary_json') if existing else None
 
         api_attempts_before = rotator.api_attempts
         try:
@@ -563,16 +564,42 @@ def run_pipeline(limit=None, target_chapter=None, target_question=None, target_s
                 print(f"  Canonical Doctrine: '{canonical_topic}'")
 
             # 1. Generate kinetic presentation prompt from Column 6 statutory provision summary
-            print(f"\n---> [{subject} Ch{chapter_no} Q{q_num}] Generating Universal Kinetic Studio Prompt (DSL)...")
-            presentation_prompt = generate_presentation_prompt(
-                canonical_topic=canonical_topic,
-                prov_summary_md=formatted_provision_matrix,
-                q_text=q_text,
-                ans_text=ans_text,
-                subject=subject,
-                chapter_no=chapter_no,
-                q_num=q_num
-            )
+            # Check if prompt DSL is already cached in Sheets to save quota
+            if (current_prompt and not current_prompt.startswith('{') and not current_prompt.startswith('[') 
+                and len(current_prompt) >= 500 and ('SLIDE 2' in current_prompt or 'SCENE 2' in current_prompt)):
+                print(f"  [PROMPT REUSE] Reusing existing Kinetic Studio prompt from Google Sheets for {subject} Ch{chapter_no} Q{q_num}")
+                presentation_prompt = current_prompt
+            else:
+                print(f"\n---> [{subject} Ch{chapter_no} Q{q_num}] Generating Universal Kinetic Studio Prompt (DSL)...")
+                presentation_prompt = generate_presentation_prompt(
+                    canonical_topic=canonical_topic,
+                    prov_summary_md=formatted_provision_matrix,
+                    q_text=q_text,
+                    ans_text=ans_text,
+                    subject=subject,
+                    chapter_no=chapter_no,
+                    q_num=q_num
+                )
+
+            # Pre-save question row to Google Sheets immediately to guarantee progress is NEVER lost
+            existing_drive_id = existing.get('drive_id', '') if existing else ''
+            initial_drive_id = existing_drive_id if is_audio_ready(existing_drive_id) else 'PENDING_VOICE'
+            existing_status = existing.get('status', '') if existing else ''
+
+            pre_row = [
+                subject,                      # Col A (idx 0)
+                chapter_no,                   # Col B (idx 1)
+                q_num,                        # Col C (idx 2)
+                canonical_topic,              # Col D (idx 3)
+                q_text,                       # Col E (idx 4)
+                ans_text,                     # Col F (idx 5)
+                formatted_provision_matrix,   # Col G (idx 6) - Provision Summary
+                presentation_prompt,          # Col H (idx 7) - Presentation Prompt
+                initial_drive_id,             # Col I (idx 8) - Drive Audio File ID
+                existing_status               # Col J (idx 9) - Timings / Status
+            ]
+            upsert_row_to_sheets(pre_row)
+            print(f"  [SHEETS PRE-SAVE] Safeguarded legal provision and prompt DSL to Google Sheets for {subject} Ch{chapter_no} Q{q_num}.")
 
             # 2. Synthesize Aoede expressive voice for prompt dialogues and upload to Google Drive
             print(f"  [AUDIO SYNTHESIS] Synthesizing dialogues with Aoede voice & uploading to Google Drive...")
@@ -631,9 +658,41 @@ def run_pipeline(limit=None, target_chapter=None, target_question=None, target_s
             print(f"  [GEMINI USAGE] {subject} Ch{chapter_no} Q{q_num}: {rotator.api_attempts - api_attempts_before} API attempts before quota pause.")
             print("\n" + "="*75)
             print("[QUOTA PAUSE] Gemini API quota limit reached across all active keys.")
-            print("Exiting gracefully without modifying sheet prompts (exit code 0).")
-            print("="*75)
+            
+            # Check partial audio progress from disk timings
+            timings_file = os.path.join(PROJECT_ROOT, 'data', 'audio', subject.lower(), f"ch{chapter_no}", f"q{q_num}", 'timings.json')
+            timings_str = ""
+            if os.path.exists(timings_file):
+                try:
+                    with open(timings_file, 'r', encoding='utf-8') as tf:
+                        timings_str = tf.read().strip()
+                except Exception:
+                    pass
+
+            partial_drive_id = "PARTIAL_VOICE" if timings_str and '"drive_file_id":' in timings_str else "PENDING_VOICE"
+            fallback_prompt = presentation_prompt if 'presentation_prompt' in locals() and presentation_prompt else (current_prompt or "")
+            fallback_matrix = formatted_provision_matrix if 'formatted_provision_matrix' in locals() and formatted_provision_matrix else (current_prov_md or "")
+            fallback_topic = canonical_topic if 'canonical_topic' in locals() and canonical_topic else (current_topic or f"Ch{chapter_no} Q{q_num}")
+
+            if fallback_prompt:
+                partial_row = [
+                    subject,                      # Col A (idx 0)
+                    chapter_no,                   # Col B (idx 1)
+                    q_num,                        # Col C (idx 2)
+                    fallback_topic,               # Col D (idx 3)
+                    q_text,                       # Col E (idx 4)
+                    ans_text,                     # Col F (idx 5)
+                    fallback_matrix,              # Col G (idx 6) - Provision Summary
+                    fallback_prompt,              # Col H (idx 7) - Presentation Prompt
+                    partial_drive_id,             # Col I (idx 8) - Drive Audio File ID
+                    timings_str                   # Col J (idx 9) - Timings JSON
+                ]
+                upsert_row_to_sheets(partial_row)
+                print(f"  [SHEETS CHECKPOINT] Safeguarded prompt & partial progress for {subject} Ch{chapter_no} Q{q_num} in Google Sheets!")
+
             export_sheets_to_local_cache()
+            print("Exiting gracefully (exit code 0). Next run will automatically resume without repeating completed steps.")
+            print("="*75)
             sys.exit(0)
 
     export_sheets_to_local_cache()

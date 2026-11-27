@@ -19,13 +19,14 @@ PROJECT_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
 
-from pipeline.key_rotator import rotator
+from pipeline.key_rotator import rotator, AllKeysQuotaExhaustedError
 from pipeline.synthesize_discrete_points import (
     synthesize_point_audio,
     upload_audio_to_drive,
     get_or_create_drive_subfolder,
     VOICE_DT_FOLDER_ID,
-    VOICE_IDT_FOLDER_ID
+    VOICE_IDT_FOLDER_ID,
+    drive_service
 )
 
 # Universal Domain Principle prompt instructions for Gemini
@@ -322,6 +323,49 @@ def extract_dialogues_from_prompt(prompt_text: str) -> List[Dict[str, Any]]:
 
     return slides
 
+def build_and_save_timings_manifest(slides: list, output_dir: str) -> list:
+    """
+    Builds and saves exact millisecond timings manifest for shapes & dialogues into timings.json.
+    Can be called incrementally to safeguard partial progress.
+    """
+    slides_timings = []
+    c_time_ms = 0
+    item_pause_ms = 280
+    slide_pause_ms = 500
+    for s_info in slides:
+        s_idx = s_info['slide_idx']
+        cues = s_info.get('cues', [])
+        s_start_ms = c_time_ms
+        for cue in cues:
+            clip_filename = cue.get('file_name', f"{cue['file_slug']}.mp3")
+            c_path = os.path.join(output_dir, clip_filename)
+            c_dur = len(AudioSegment.from_mp3(c_path)) if os.path.exists(c_path) else 3000
+            cue_rel_start = c_time_ms - s_start_ms
+            cue['duration_ms'] = c_dur
+            cue['slide_rel_start_ms'] = cue_rel_start
+            cue['slide_rel_end_ms'] = cue_rel_start + c_dur
+            cue['global_start_ms'] = c_time_ms
+            cue['global_end_ms'] = c_time_ms + c_dur
+            c_time_ms += c_dur + item_pause_ms
+
+        s_end_ms = max(s_start_ms, c_time_ms - item_pause_ms)
+        slides_timings.append({
+            "slide_idx": s_idx,
+            "start_ms": s_start_ms,
+            "end_ms": s_end_ms,
+            "duration_ms": s_end_ms - s_start_ms,
+            "cues": cues
+        })
+        c_time_ms += slide_pause_ms
+
+    timings_path = os.path.join(output_dir, "timings.json")
+    try:
+        with open(timings_path, 'w', encoding='utf-8') as tf:
+            json.dump(slides_timings, tf, indent=2)
+    except Exception as ex:
+        print(f"  [WARN] Failed to save timings manifest: {ex}")
+    return slides_timings
+
 def synthesize_and_upload_prompt_audio(
     prompt_text: str,
     subject: str,
@@ -332,8 +376,9 @@ def synthesize_and_upload_prompt_audio(
     """
     Synthesizes expressive Aoede voice for each slide's shapes/elements individually,
     saves each with slide+sequence+shape naming, uploads every discrete voice clip to
-    the Google Drive question folder (Voice/[Subject]/Ch[Ch]_Q[Q]), builds a millisecond
-    timings manifest with discrete file IDs, and concatenates a master fallback MP3.
+    the Google Drive question folder (Voice/[Subject]/Ch[Ch]_Q[Q]), builds an incremental
+    millisecond timings manifest with discrete file IDs, and concatenates a master fallback MP3.
+    Safeguards partial progress to timings.json so no work is lost on quota exhaustion.
     Returns: Master Google Drive Audio File ID.
     """
     if not output_dir:
@@ -362,6 +407,22 @@ def synthesize_and_upload_prompt_audio(
     q_folder_id = get_or_create_drive_subfolder(parent_folder_id, q_folder_name)
     print(f"  [GOOGLE DRIVE FOLDER] Using {subject.upper()} folder: {q_folder_name} (ID: {q_folder_id})")
 
+    # Load existing timings to reuse already uploaded Drive file IDs across resumes
+    existing_cue_map = {}
+    timings_path = os.path.join(output_dir, "timings.json")
+    if os.path.exists(timings_path):
+        try:
+            with open(timings_path, 'r', encoding='utf-8') as tf:
+                old_timings = json.load(tf)
+                for sm in old_timings:
+                    for c in sm.get('cues', []):
+                        slug = c.get('file_slug')
+                        fid = c.get('drive_file_id')
+                        if slug and fid and not str(fid).startswith('DRIVE_'):
+                            existing_cue_map[slug] = fid
+        except Exception:
+            pass
+
     slide_audio_segments = []
     item_pause = AudioSegment.silent(duration=280)   # 280ms pause between list items / actors
     slide_pause = AudioSegment.silent(duration=500)  # 500ms pause between slides
@@ -381,11 +442,12 @@ def synthesize_and_upload_prompt_audio(
             d_idx = cue['part'] - 1
             d_text = cue['text']
             file_slug = cue['file_slug']
-            clip_path = os.path.join(output_dir, f"{file_slug}.mp3")
+            clip_filename = f"{file_slug}.mp3"
+            clip_path = os.path.join(output_dir, clip_filename)
             legacy_clip_path = os.path.join(output_dir, f"slide_{s_idx}_part_{d_idx+1}.mp3")
             txt_path = os.path.join(output_dir, f"{file_slug}.txt")
 
-            # Check if audio can be reused
+            # Check if audio can be reused from disk
             text_matches = False
             active_clip_path = clip_path if os.path.exists(clip_path) else legacy_clip_path
             if os.path.exists(active_clip_path) and os.path.getsize(active_clip_path) > 1000:
@@ -405,29 +467,45 @@ def synthesize_and_upload_prompt_audio(
                     shutil.copy2(legacy_clip_path, clip_path)
             else:
                 print(f"    [TTS Slide {s_idx} Part {d_idx+1}/{len(cues)}] Synthesizing Aoede voice ({len(d_text.split())} words)...")
-                synthesize_point_audio(d_text, clip_path)
+                try:
+                    synthesize_point_audio(d_text, clip_path)
+                except AllKeysQuotaExhaustedError:
+                    print(f"    [QUOTA PAUSE] Saving partial timings before exiting...")
+                    build_and_save_timings_manifest(slides, output_dir)
+                    raise
                 try:
                     with open(txt_path, 'w', encoding='utf-8') as f:
                         f.write(d_text.strip())
                 except Exception:
                     pass
 
-            # Upload discrete file to Google Drive folder
+            # Check if this clip was already uploaded to Drive in a previous run
+            if file_slug in existing_cue_map:
+                cue['drive_file_id'] = existing_cue_map[file_slug]
+                cue['stream_url'] = f"https://drive.google.com/uc?export=download&id={existing_cue_map[file_slug]}"
+                cue['file_name'] = clip_filename
+                cue['audio_file'] = f"{subject.lower()}/ch{chapter_no}/q{q_num}/{clip_filename}"
+
+            # Upload discrete file to Google Drive folder if not already uploaded
             if os.path.exists(clip_path):
-                clip_filename = f"{file_slug}.mp3"
-                try:
-                    clip_drive_id = upload_audio_to_drive(clip_path, q_folder_id, clip_filename)
-                    cue['drive_file_id'] = clip_drive_id
-                    cue['stream_url'] = f"https://drive.google.com/uc?export=download&id={clip_drive_id}"
-                    cue['file_name'] = clip_filename
-                    cue['audio_file'] = f"{subject.lower()}/ch{chapter_no}/q{q_num}/{clip_filename}"
-                    print(f"    ✓ Uploaded discrete voice to Drive: {clip_filename} -> {clip_drive_id}")
-                except Exception as ex:
-                    print(f"    [WARN] Discrete upload failed for {clip_filename}: {ex}")
-                    cue['drive_file_id'] = f"DRIVE_{file_slug.upper()}"
-                    cue['stream_url'] = ""
-                    cue['file_name'] = clip_filename
-                    cue['audio_file'] = f"{subject.lower()}/ch{chapter_no}/q{q_num}/{clip_filename}"
+                if not cue.get('drive_file_id') or str(cue.get('drive_file_id')).startswith('DRIVE_'):
+                    try:
+                        clip_drive_id = upload_audio_to_drive(clip_path, q_folder_id, clip_filename)
+                        cue['drive_file_id'] = clip_drive_id
+                        cue['stream_url'] = f"https://drive.google.com/uc?export=download&id={clip_drive_id}"
+                        cue['file_name'] = clip_filename
+                        cue['audio_file'] = f"{subject.lower()}/ch{chapter_no}/q{q_num}/{clip_filename}"
+                        existing_cue_map[file_slug] = clip_drive_id
+                        print(f"    ✓ Uploaded discrete voice to Drive: {clip_filename} -> {clip_drive_id}")
+                    except Exception as ex:
+                        print(f"    [WARN] Discrete upload failed for {clip_filename}: {ex}")
+                        cue['drive_file_id'] = f"DRIVE_{file_slug.upper()}"
+                        cue['stream_url'] = ""
+                        cue['file_name'] = clip_filename
+                        cue['audio_file'] = f"{subject.lower()}/ch{chapter_no}/q{q_num}/{clip_filename}"
+
+                # Incremental timings update on disk after each processed cue
+                build_and_save_timings_manifest(slides, output_dir)
 
                 seg = AudioSegment.from_mp3(clip_path)
                 current_slide_segs.append(seg)
@@ -452,44 +530,9 @@ def synthesize_and_upload_prompt_audio(
     combined.export(master_mp3_path, format="mp3")
     print(f"  [MASTER AUDIO COMPILED] Duration: {len(combined)/1000.0:.1f}s -> {master_mp3_path}")
 
-    # Build and save exact millisecond timing manifest for shapes & dialogues
-    try:
-        slides_timings = []
-        c_time_ms = 0
-        item_pause_ms = 280
-        slide_pause_ms = 500
-        for s_info in slides:
-            s_idx = s_info['slide_idx']
-            cues = s_info.get('cues', [])
-            s_start_ms = c_time_ms
-            for cue in cues:
-                clip_filename = cue.get('file_name', f"{cue['file_slug']}.mp3")
-                c_path = os.path.join(output_dir, clip_filename)
-                c_dur = len(AudioSegment.from_mp3(c_path)) if os.path.exists(c_path) else 3000
-                cue_rel_start = c_time_ms - s_start_ms
-                cue['duration_ms'] = c_dur
-                cue['slide_rel_start_ms'] = cue_rel_start
-                cue['slide_rel_end_ms'] = cue_rel_start + c_dur
-                cue['global_start_ms'] = c_time_ms
-                cue['global_end_ms'] = c_time_ms + c_dur
-                c_time_ms += c_dur + item_pause_ms
-
-            s_end_ms = c_time_ms - item_pause_ms
-            slides_timings.append({
-                "slide_idx": s_idx,
-                "start_ms": s_start_ms,
-                "end_ms": s_end_ms,
-                "duration_ms": s_end_ms - s_start_ms,
-                "cues": cues
-            })
-            c_time_ms += slide_pause_ms
-
-        timings_path = os.path.join(output_dir, "timings.json")
-        with open(timings_path, 'w', encoding='utf-8') as tf:
-            json.dump(slides_timings, tf, indent=2)
-        print(f"  [TIMINGS MANIFEST] Saved exact cue timestamps & Drive IDs -> {timings_path}")
-    except Exception as ex:
-        print(f"  [WARN] Failed to save timings manifest: {ex}")
+    # Build and save final millisecond timing manifest for shapes & dialogues
+    build_and_save_timings_manifest(slides, output_dir)
+    print(f"  [TIMINGS MANIFEST] Saved exact cue timestamps & Drive IDs -> {timings_path}")
 
     # Upload master presentation audio to Google Drive folder
     file_name = f"{subject.upper()}_Ch{chapter_no}_Q{q_num}_Presentation.mp3"

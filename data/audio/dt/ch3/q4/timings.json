@@ -1,0 +1,206 @@
+[
+  {
+    "slide_idx": 1,
+    "start_ms": 0,
+    "end_ms": 47920,
+    "duration_ms": 47920,
+    "cues": [
+      {
+        "part": 1,
+        "shape": "man",
+        "label": "CA Rajesh",
+        "file_slug": "slide1_01_man",
+        "text": "Welcome back students! Amalgamation nadakumbo Section 32(1) Fifth Proviso engineyanu apply cheyyunnathennu namukku padikama. Business reorganization nadannalum total allowable Depreciation-il mathram aarum excess claim cheyyan padilla!",
+        "drive_file_id": "1x9aLd3aUZvLtCfEKtfTRWabj3S3XnFGU",
+        "stream_url": "https://drive.google.com/uc?export=download&id=1x9aLd3aUZvLtCfEKtfTRWabj3S3XnFGU",
+        "file_name": "slide1_01_man.mp3",
+        "audio_file": "dt/ch3/q4/slide1_01_man.mp3",
+        "duration_ms": 17160,
+        "slide_rel_start_ms": 0,
+        "slide_rel_end_ms": 17160,
+        "global_start_ms": 0,
+        "global_end_ms": 17160
+      },
+      {
+        "part": 2,
+        "shape": "card",
+        "label": "Fifth Proviso Cap on Depreciation",
+        "file_slug": "slide1_02_card1",
+        "text": "Amalgamation nadannittillekill etra Depreciation kittumo, athu mathramayirikkum aggregate Depreciation limit. Corporate restructuring vachitt extra benefit onnum kittilla.",
+        "duration_ms": 10680,
+        "slide_rel_start_ms": 17440,
+        "slide_rel_end_ms": 28120,
+        "global_start_ms": 17440,
+        "global_end_ms": 28120,
+        "drive_file_id": "1DMGJ4buVBxVAWQpRxWNr1N7-56goE2mA",
+        "stream_url": "https://drive.google.com/uc?export=download&id=1DMGJ4buVBxVAWQpRxWNr1N7-56goE2mA",
+        "file_name": "slide1_02_card1.mp3",
+        "audio_file": "dt/ch3/q4/slide1_02_card1.mp3"
+      },
+      {
+        "part": 3,
+        "shape": "card",
+        "label": "Apportionment in Ratio of Days",
+        "file_slug": "slide1_03_card2",
+        "text": "Total calculated Depreciation rendered assets use cheytha exact number of days basis-il split cheyyanam. Amalgamating Company-kum Amalgamated Company-kum idayil idhu apportion cheyyanam.",
+        "duration_ms": 12960,
+        "slide_rel_start_ms": 28400,
+        "slide_rel_end_ms": 41360,
+        "global_start_ms": 28400,
+        "global_end_ms": 41360,
+        "drive_file_id": "109YuDIPEIJ8jSai5URpjUeeD55U4VDcj",
+        "stream_url": "https://drive.google.com/uc?export=download&id=109YuDIPEIJ8jSai5URpjUeeD55U4VDcj",
+        "file_name": "slide1_03_card2.mp3",
+        "audio_file": "dt/ch3/q4/slide1_03_card2.mp3"
+      },
+      {
+        "part": 4,
+        "shape": "card",
+        "label": "Irrelevance of Actual Transfer Price",
+        "file_slug": "slide1_04_card3",
+        "text": "Assets transfer cheytha \u20b960 Lakhs valiya consideration value onnum calculation-il edukilla! WDV as per Section 43(6) base cheythu mathramayirikkum calculation.",
+        "duration_ms": 3000,
+        "slide_rel_start_ms": 41640,
+        "slide_rel_end_ms": 44640,
+        "global_start_ms": 41640,
+        "global_end_ms": 44640
+      },
+      {
+        "part": 5,
+        "shape": "card",
+        "label": "50% Rate for Assets Used Less than 180 Days",
+        "file_slug": "slide1_05_card4",
+        "text": "Second Proviso prakaram Previous Year-il 180 days-il thazhe put to use cheytha assets-inu half depreciation rate i.e. 7.5% mathrame allow cheyyu.",
+        "duration_ms": 3000,
+        "slide_rel_start_ms": 44920,
+        "slide_rel_end_ms": 47920,
+        "global_start_ms": 44920,
+        "global_end_ms": 47920
+      }
+    ]
+  },
+  {
+    "slide_idx": 2,
+    "start_ms": 48700,
+    "end_ms": 64820,
+    "duration_ms": 16120,
+    "cues": [
+      {
+        "part": 1,
+        "shape": "woman",
+        "label": "Tax Officer",
+        "file_slug": "slide2_01_woman",
+        "text": "Exam question-il Sai Ltd. 01.01.2026-il Shirdi Ltd. umayi amalgamate aayi. Timeline clear-ayi note cheythu step-by-step computation nokkam!",
+        "duration_ms": 3000,
+        "slide_rel_start_ms": 0,
+        "slide_rel_end_ms": 3000,
+        "global_start_ms": 48700,
+        "global_end_ms": 51700
+      },
+      {
+        "part": 2,
+        "shape": "step",
+        "label": "Step 1: Compute Standalone Total Depreciation",
+        "file_slug": "slide2_02_step1",
+        "text": "First, normal full year Depreciation kandupidikkuka. Old WDV \u20b940 Lakhs @ 15% = \u20b96.00 Lakhs. New Addition \u20b914.40 Lakhs @ 7.5% = \u20b91.08 Lakhs. Total = \u20b97.08 Lakhs.",
+        "duration_ms": 3000,
+        "slide_rel_start_ms": 3280,
+        "slide_rel_end_ms": 6280,
+        "global_start_ms": 51980,
+        "global_end_ms": 54980
+      },
+      {
+        "part": 3,
+        "shape": "step",
+        "label": "Step 2: Existing Assets Days Breakdown",
+        "file_slug": "slide2_03_step2",
+        "text": "Existing asset 01.04.2025 thott 31.12.2025 vare Sai Ltd. 275 days use cheythu. Balance 90 days Shirdi Ltd. use cheythu (275:90 ratio out of 365 days).",
+        "duration_ms": 3000,
+        "slide_rel_start_ms": 6560,
+        "slide_rel_end_ms": 9560,
+        "global_start_ms": 55260,
+        "global_end_ms": 58260
+      },
+      {
+        "part": 4,
+        "shape": "step",
+        "label": "Step 3: New Addition Assets Days Breakdown",
+        "file_slug": "slide2_04_step3",
+        "text": "01.11.2025-nu vanga asset 31.12.2025 vare Sai Ltd. 61 days use cheythu. Balance 01.01.2026 to 31.03.2026 (90 days) Shirdi Ltd. use cheythu (Total 151 days used).",
+        "duration_ms": 3000,
+        "slide_rel_start_ms": 9840,
+        "slide_rel_end_ms": 12840,
+        "global_start_ms": 58540,
+        "global_end_ms": 61540
+      },
+      {
+        "part": 5,
+        "shape": "step",
+        "label": "Step 4: Final Tax Deduction Allocation",
+        "file_slug": "slide2_05_step4",
+        "text": "Sai Ltd. gets \u20b94,52,055 + \u20b943,629 = \u20b94,95,684. Shirdi Ltd. gets remaining \u20b91,47,945 + \u20b964,371 = \u20b92,12,316. Total equals \u20b97.08 Lakhs perfectly!",
+        "duration_ms": 3000,
+        "slide_rel_start_ms": 13120,
+        "slide_rel_end_ms": 16120,
+        "global_start_ms": 61820,
+        "global_end_ms": 64820
+      }
+    ]
+  },
+  {
+    "slide_idx": 3,
+    "start_ms": 65600,
+    "end_ms": 78440,
+    "duration_ms": 12840,
+    "cues": [
+      {
+        "part": 1,
+        "shape": "clause",
+        "label": "Clause A: Cap Limit Principle",
+        "file_slug": "slide3_01_clause_a",
+        "text": "Aggregate Depreciation allowed to Amalgamating Company and Amalgamated Company shall not exceed the amount calculated at prescribed rates as if the Amalgamation had not taken place.",
+        "duration_ms": 3000,
+        "slide_rel_start_ms": 0,
+        "slide_rel_end_ms": 3000,
+        "global_start_ms": 65600,
+        "global_end_ms": 68600
+      },
+      {
+        "part": 2,
+        "shape": "clause",
+        "label": "Clause B: Day-wise Usage Apportionment",
+        "file_slug": "slide3_02_clause_b",
+        "text": "Depreciation shall be apportioned between Amalgamating and Amalgamated companies in the ratio of the number of days for which the assets were used by them in the Previous Year.",
+        "duration_ms": 3000,
+        "slide_rel_start_ms": 3280,
+        "slide_rel_end_ms": 6280,
+        "global_start_ms": 68880,
+        "global_end_ms": 71880
+      },
+      {
+        "part": 3,
+        "shape": "clause",
+        "label": "Clause C: 180 Days Restricted Benefit Rule",
+        "file_slug": "slide3_03_clause_c",
+        "text": "If any asset acquired during the Previous Year is put to use for less than 180 days, Depreciation rate is restricted to 50% of the normal rate for the entire block calculation.",
+        "duration_ms": 3000,
+        "slide_rel_start_ms": 6560,
+        "slide_rel_end_ms": 9560,
+        "global_start_ms": 72160,
+        "global_end_ms": 75160
+      },
+      {
+        "part": 4,
+        "shape": "clause",
+        "label": "Clause D: Non-Cognizance of Revaluation Value",
+        "file_slug": "slide3_04_clause_d",
+        "text": "The actual consideration or agreed price for transfer of assets during Amalgamation shall be completely ignored while determining Written Down Value under Section 43(6).",
+        "duration_ms": 3000,
+        "slide_rel_start_ms": 9840,
+        "slide_rel_end_ms": 12840,
+        "global_start_ms": 75440,
+        "global_end_ms": 78440
+      }
+    ]
+  }
+]

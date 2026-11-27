@@ -98,7 +98,7 @@ def is_audio_ready(drive_id: str) -> bool:
     """Checks whether a point already has a valid Google Drive file ID."""
     if not drive_id or not isinstance(drive_id, str):
         return False
-    if drive_id.startswith('DRIVE_PT') or drive_id == 'DRIVE_FOLDER_READY':
+    if drive_id.startswith('DRIVE_PT') or drive_id in ('DRIVE_FOLDER_READY', 'PENDING_VOICE', 'PARTIAL_VOICE'):
         return False
     return True
 
