@@ -1,0 +1,31 @@
+SLIDE 1: Comparative Matrix of Income Doctrines (Cards Design)
+theme (indigo)
+heading (Section 4 Chargeability Framework) (Diversion vs Application of Income)
+shape (man) (CA Rajesh) (left center) (dialogue: "Namaskaram CA Final students! Section 4 study cheyyumpol basic chargeability test cheyyunna leading doctrine aanu Diversion of Income by Overriding Title versus Application of Income. Income diversion aayal Excluded from Total Income, but mere application aayal Total Income-il fully taxable aakum!")
+shape (list, cards) (Statutory Benchmark Matrix) (right center) [
+  (Diversion by Overriding Title: Obligation Attached at Source) (dialogue: "Income assessee-kk reach cheyyunnathinu munp identical source-il thanne pre-existing legal obligation attach aayal, athu Diversion by Overriding Title aanu.")
+  (Application of Income: Utilization Post Accrual) (dialogue: "Income first assessee-kk receive or accrue aakum, athinu shesham charitable or personal purpose-inu utilize cheythal athu mere Application of Income aanu.")
+  (Source Test: Inception Requirement) (dialogue: "Source Test strict aanu! Overriding title must exist at the very inception of the income stream, before assessee acquires any legal right.")
+  (Taxability Impact: Total Income Inclusion) (dialogue: "Diversion aayal No Tax Liability in the hands of the earner. Application aayal Fully Taxable under Profits and Gains of Business or Profession or relevant head!")
+]
+
+SLIDE 2: Judicial Application & Case Analysis (Timeline Design)
+theme (slate)
+heading (Professional Income vs Charitable Trust Creation) (Mr. Bhargava Case Study)
+shape (woman) (Tax Officer) (left center) (dialogue: "Exam perspective-il Mr. Bhargava-yude case prominent layout aanu. Transaction sequence trace cheythu continuous flow clear-aayi evaluate cheyyam.")
+shape (list, timeline) (Sequence of Transactions & Statutory Conclusion) (right center) [
+  (Step 1: Legal Representation & Stipulation) (dialogue: "Mr. Bhargava Supreme Court case defend cheyan agreed aayi on the condition that fee Public Charitable Trust-inu venam.")
+  (Step 2: Direct Receipt of ₹ 5 Lakh Professional Fees) (dialogue: "Company client ₹ 5 Lakhs professional fee Mr. Bhargava-ykk direct pay cheythu. Income right there Mr. Bhargava-yude hands-il accrue aayi.")
+  (Step 3: Post-Receipt Trust Deed Execution) (dialogue: "Amount receive cheytha shesham Mr. Bhargava voluntary-aayi Trust Deed execute cheythu public charitable trust-ilekk execute cheythu.")
+  (Step 4: Assessment under Head PGBP) (dialogue: "Client legal obligation impose cheyyathathukond, no overriding title exists at inception. Entire ₹ 5 Lakhs Profits and Gains of Business or Profession head-il taxable aanu!")
+]
+
+SLIDE 3: Legal Tests for Taxability u/s 4 (Clause Design)
+theme (amber)
+heading (Judicial Tests & Statutory Conditions) (Determining Diversion vs Application)
+shape (list, clause) (Statutory Evaluation Criteria) (center) [
+  (Clause A: Pre-Existing Obligation Test) (dialogue: "Income source-il third-party entitlement or legal charge pre-exist cheythal mathrame overriding title claim cheyyan pattൂ.")
+  (Clause B: Source Test at Inception) (dialogue: "Assessee-kk legal right to receive accrue cheyyunnathinu MUNPU thanne income divert aayirikkanam.")
+  (Clause C: Voluntary Disposition post Accrual) (dialogue: "Assessee receipt-inu shesham voluntary-aayi legal trust create cheythal, athu pure Application of Income aayi red-flag cheyyum.")
+  (Clause D: Taxability under Section 4 and Section 5) (dialogue: "Application of Income aayathukond, professional earnings fully Total Income-il include cheythu Section 4 chargeability attract cheyyum.")
+]
