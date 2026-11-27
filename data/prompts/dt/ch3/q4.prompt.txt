@@ -1,0 +1,31 @@
+SLIDE 1: Core Principles of Amalgamation Depreciation (Cards Design)
+theme (indigo)
+heading (Section 32(1) Fifth Proviso) (Apportionment of Depreciation in Amalgamation)
+shape (man) (CA Rajesh) (left center) (dialogue: "Welcome back students! Amalgamation nadakumbo Section 32(1) Fifth Proviso engineyanu apply cheyyunnathennu namukku padikama. Business reorganization nadannalum total allowable Depreciation-il mathram aarum excess claim cheyyan padilla!")
+shape (list, cards) (Key Statutory Provisions) (right center) [
+  (Fifth Proviso Cap on Depreciation) (dialogue: "Amalgamation nadannittillekill etra Depreciation kittumo, athu mathramayirikkum aggregate Depreciation limit. Corporate restructuring vachitt extra benefit onnum kittilla.")
+  (Apportionment in Ratio of Days) (dialogue: "Total calculated Depreciation rendered assets use cheytha exact number of days basis-il split cheyyanam. Amalgamating Company-kum Amalgamated Company-kum idayil idhu apportion cheyyanam.")
+  (Irrelevance of Actual Transfer Price) (dialogue: "Assets transfer cheytha ₹60 Lakhs valiya consideration value onnum calculation-il edukilla! WDV as per Section 43(6) base cheythu mathramayirikkum calculation.")
+  (50% Rate for Assets Used Less than 180 Days) (dialogue: "Second Proviso prakaram Previous Year-il 180 days-il thazhe put to use cheytha assets-inu half depreciation rate i.e. 7.5% mathrame allow cheyyu.")
+]
+
+SLIDE 2: Computation & Timeline Breakdown (Timeline Design)
+theme (cyan)
+heading (Amalgamation Apportionment Process) (Case Study: Sai Ltd. & Shirdi Ltd.)
+shape (woman) (Tax Officer) (left center) (dialogue: "Exam question-il Sai Ltd. 01.01.2026-il Shirdi Ltd. umayi amalgamate aayi. Timeline clear-ayi note cheythu step-by-step computation nokkam!")
+shape (list, timeline) (Execution Timeline for FY 2025-26) (right center) [
+  (Step 1: Compute Standalone Total Depreciation) (dialogue: "First, normal full year Depreciation kandupidikkuka. Old WDV ₹40 Lakhs @ 15% = ₹6.00 Lakhs. New Addition ₹14.40 Lakhs @ 7.5% = ₹1.08 Lakhs. Total = ₹7.08 Lakhs.")
+  (Step 2: Existing Assets Days Breakdown) (dialogue: "Existing asset 01.04.2025 thott 31.12.2025 vare Sai Ltd. 275 days use cheythu. Balance 90 days Shirdi Ltd. use cheythu (275:90 ratio out of 365 days).")
+  (Step 3: New Addition Assets Days Breakdown) (dialogue: "01.11.2025-nu vanga asset 31.12.2025 vare Sai Ltd. 61 days use cheythu. Balance 01.01.2026 to 31.03.2026 (90 days) Shirdi Ltd. use cheythu (Total 151 days used).")
+  (Step 4: Final Tax Deduction Allocation) (dialogue: "Sai Ltd. gets ₹4,52,055 + ₹43,629 = ₹4,95,684. Shirdi Ltd. gets remaining ₹1,47,945 + ₹64,371 = ₹2,12,316. Total equals ₹7.08 Lakhs perfectly!")
+]
+
+SLIDE 3: Statutory Checklist & Core Rules (Clause Design)
+theme (amber)
+heading (Statutory Checklist u/s 32(1)) (Mandatory Provisions for Assessment Year 2026-27)
+shape (list, clause) (Legal Conditions Checklist) (center) [
+  (Clause A: Cap Limit Principle) (dialogue: "Aggregate Depreciation allowed to Amalgamating Company and Amalgamated Company shall not exceed the amount calculated at prescribed rates as if the Amalgamation had not taken place.")
+  (Clause B: Day-wise Usage Apportionment) (dialogue: "Depreciation shall be apportioned between Amalgamating and Amalgamated companies in the ratio of the number of days for which the assets were used by them in the Previous Year.")
+  (Clause C: 180 Days Restricted Benefit Rule) (dialogue: "If any asset acquired during the Previous Year is put to use for less than 180 days, Depreciation rate is restricted to 50% of the normal rate for the entire block calculation.")
+  (Clause D: Non-Cognizance of Revaluation Value) (dialogue: "The actual consideration or agreed price for transfer of assets during Amalgamation shall be completely ignored while determining Written Down Value under Section 43(6).")
+]
