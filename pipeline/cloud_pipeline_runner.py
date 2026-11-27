@@ -251,13 +251,17 @@ def export_sheets_to_local_cache():
                 q_entry["is_kinetic_prompt"] = True
             if drive_folder:
                 q_entry["drive_audio_id"] = drive_folder
+            timings_str_sheet = str(r[9]).strip() if len(r) > 9 else ""
             timings_file = os.path.join(PROJECT_ROOT, 'data', 'audio', subj.lower(), f"ch{ch}", f"q{qn}", 'timings.json')
             if os.path.exists(timings_file):
                 try:
                     with open(timings_file, 'r', encoding='utf-8') as tf:
-                        timings_obj = json.load(tf)
-                        q_entry["audio_timings"] = timings_obj
-                        p_entry["audio_timings"] = timings_obj
+                        q_entry["audio_timings"] = json.load(tf)
+                except Exception:
+                    pass
+            elif timings_str_sheet and timings_str_sheet.startswith('['):
+                try:
+                    q_entry["audio_timings"] = json.loads(timings_str_sheet)
                 except Exception:
                     pass
 
@@ -579,7 +583,7 @@ def run_pipeline(limit=None, target_chapter=None, target_question=None, target_s
                 q_num=q_num
             )
 
-            # 3. Build 9-column Row for Google Sheet (Cols A to I):
+            # 3. Build 10-column Row for Google Sheet (Cols A to J):
             # Col A (idx 0): Subject
             # Col B (idx 1): Chapter No
             # Col C (idx 2): Question No
@@ -589,6 +593,16 @@ def run_pipeline(limit=None, target_chapter=None, target_question=None, target_s
             # Col G (idx 6): Provision Summary Markdown
             # Col H (idx 7): Kinetic Presentation Prompt DSL
             # Col I (idx 8): Drive Audio File ID
+            # Col J (idx 9): Discrete Timings Manifest & Drive File IDs
+            timings_file = os.path.join(PROJECT_ROOT, 'data', 'audio', subject.lower(), f"ch{chapter_no}", f"q{q_num}", 'timings.json')
+            timings_str = ""
+            if os.path.exists(timings_file):
+                try:
+                    with open(timings_file, 'r', encoding='utf-8') as tf:
+                        timings_str = tf.read().strip()
+                except Exception:
+                    pass
+
             row = [
                 subject,                      # Col A (idx 0)
                 chapter_no,                   # Col B (idx 1)
@@ -598,10 +612,11 @@ def run_pipeline(limit=None, target_chapter=None, target_question=None, target_s
                 ans_text,                     # Col F (idx 5)
                 formatted_provision_matrix,   # Col G (idx 6) - Provision Summary
                 presentation_prompt,          # Col H (idx 7) - Presentation Prompt
-                drive_audio_file_id           # Col I (idx 8) - Drive Audio File ID
+                drive_audio_file_id,          # Col I (idx 8) - Drive Audio File ID
+                timings_str                   # Col J (idx 9) - Timings JSON
             ]
 
-            # Upsert to Google Sheet (clearing any old legacy columns J & K if updating in-place)
+            # Upsert to Google Sheet
             upsert_row_to_sheets(row)
             completed_in_run += 1
             print(f"  [DONE] Successfully saved {subject} Ch{chapter_no} Q{q_num} (Kinetic Studio Prompt & Drive Audio) to Google Sheets.")
