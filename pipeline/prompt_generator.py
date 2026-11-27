@@ -23,6 +23,7 @@ from pipeline.key_rotator import rotator
 from pipeline.synthesize_discrete_points import (
     synthesize_point_audio,
     upload_audio_to_drive,
+    get_or_create_drive_subfolder,
     VOICE_DT_FOLDER_ID,
     VOICE_IDT_FOLDER_ID
 )
@@ -206,7 +207,7 @@ def extract_dialogues_from_prompt(prompt_text: str) -> List[Dict[str, Any]]:
     """
     Extracts all dialogues from the prompt grouped by slide, preserving reading order.
     Extracts from both inline `(dialogue: "...")` tags (across shapes and list items)
-    and standalone `DIALOGUE: ...` lines.
+    and standalone `DIALOGUE: ...` lines, associating each dialogue with its shape/element name.
     """
     slide_blocks = re.split(r'(?i)(?:^|\n)\s*(?:SLIDE|SCENE)\s*(\d+)?:?\s*', prompt_text)
     slides = []
@@ -222,25 +223,75 @@ def extract_dialogues_from_prompt(prompt_text: str) -> List[Dict[str, Any]]:
         current_slide = slide_idx + 1
 
         dialogues = []
-        # 1. Matches (dialogue: "...") or (dialogue: '...')
-        for m in re.finditer(r'\(dialogue\s*:\s*["\']([\s\S]+?)["\']\)', content, re.IGNORECASE):
-            text = " ".join(m.group(1).split()).strip()
-            if text:
-                dialogues.append(text)
+        cues = []
+        seq = 1
 
-        # 2. Standalone DIALOGUE: ... lines
+        design_type = "card"
+        if "timeline" in content.lower():
+            design_type = "step"
+        elif "clause" in content.lower():
+            design_type = "clause"
+
         for line in content.splitlines():
             line_s = line.strip()
-            m_diag = re.match(r'^(?:DIALOGUE|NARRATION|SPEECH|TEACHER)\s*:\s*["\']?(.*?)["\']?$', line_s, re.IGNORECASE)
-            if m_diag:
-                text = " ".join(m_diag.group(1).split()).strip()
-                if text and text not in dialogues:
-                    dialogues.append(text)
+            # 1. Standalone shape line: e.g. shape (man) (CA Rajesh) ... (dialogue: "...")
+            m_shape = re.search(r'shape\s*\(([^)]+)\)\s*(?:\(([^)]+)\))?.*?\(dialogue\s*:\s*["\']([\s\S]+?)["\']\)', line_s, re.IGNORECASE)
+            if m_shape:
+                stype = m_shape.group(1).strip().lower()
+                slabel = (m_shape.group(2) or stype).strip()
+                dtext = " ".join(m_shape.group(3).split()).strip()
+                clean_slug = re.sub(r'[^a-zA-Z0-9]+', '_', stype).strip('_').lower() or "shape"
+                cues.append({
+                    "part": seq,
+                    "shape": stype,
+                    "label": slabel,
+                    "file_slug": f"slide{slide_idx}_{seq:02d}_{clean_slug}",
+                    "text": dtext
+                })
+                dialogues.append(dtext)
+                seq += 1
+                continue
+
+            # 2. List item line: e.g. (Clause A: Condition) (dialogue: "...") or (Card 1) (dialogue: "...")
+            m_item = re.search(r'^\s*\(([^)]+)\)\s*\(dialogue\s*:\s*["\']([\s\S]+?)["\']\)', line_s, re.IGNORECASE)
+            if m_item:
+                ilabel = m_item.group(1).strip()
+                dtext = " ".join(m_item.group(2).split()).strip()
+                if design_type == "clause":
+                    slug_suffix = f"clause_{chr(96 + min(seq, 26))}" if seq <= 26 else f"clause_{seq}"
+                else:
+                    item_num = seq - 1 if seq > 1 else seq
+                    slug_suffix = f"{design_type}{item_num}"
+                cues.append({
+                    "part": seq,
+                    "shape": design_type,
+                    "label": ilabel,
+                    "file_slug": f"slide{slide_idx}_{seq:02d}_{slug_suffix}",
+                    "text": dtext
+                })
+                dialogues.append(dtext)
+                seq += 1
+                continue
+
+            # 3. Any other inline (dialogue: "...")
+            for m_gen in re.finditer(r'\(dialogue\s*:\s*["\']([\s\S]+?)["\']\)', line_s, re.IGNORECASE):
+                dtext = " ".join(m_gen.group(1).split()).strip()
+                if dtext and dtext not in dialogues:
+                    cues.append({
+                        "part": seq,
+                        "shape": "element",
+                        "label": f"Element {seq}",
+                        "file_slug": f"slide{slide_idx}_{seq:02d}_element{seq}",
+                        "text": dtext
+                    })
+                    dialogues.append(dtext)
+                    seq += 1
 
         if dialogues:
             slides.append({
                 "slide_idx": slide_idx,
                 "dialogues": dialogues,
+                "cues": cues,
                 "combined": " ".join(dialogues)
             })
 
@@ -252,9 +303,20 @@ def extract_dialogues_from_prompt(prompt_text: str) -> List[Dict[str, Any]]:
             if " ".join(m.group(1).split()).strip()
         ]
         if all_inline:
+            cues = [
+                {
+                    "part": idx + 1,
+                    "shape": "card",
+                    "label": f"Item {idx + 1}",
+                    "file_slug": f"slide1_{idx+1:02d}_card{idx+1}",
+                    "text": t
+                }
+                for idx, t in enumerate(all_inline)
+            ]
             slides.append({
                 "slide_idx": 1,
                 "dialogues": all_inline,
+                "cues": cues,
                 "combined": " ".join(all_inline)
             })
 
@@ -268,9 +330,11 @@ def synthesize_and_upload_prompt_audio(
     output_dir: Optional[str] = None
 ) -> str:
     """
-    Synthesizes expressive Aoede voice for each slide's dialogues, concatenates them into
-    a master presentation audio file, and uploads to Google Drive.
-    Returns: Google Drive Audio File ID.
+    Synthesizes expressive Aoede voice for each slide's shapes/elements individually,
+    saves each with slide+sequence+shape naming, uploads every discrete voice clip to
+    the Google Drive question folder (Voice/[Subject]/Ch[Ch]_Q[Q]), builds a millisecond
+    timings manifest with discrete file IDs, and concatenates a master fallback MP3.
+    Returns: Master Google Drive Audio File ID.
     """
     if not output_dir:
         output_dir = os.path.join(PROJECT_ROOT, 'data', 'audio', subject.lower(), f'ch{chapter_no}', f'q{q_num}')
@@ -282,8 +346,21 @@ def synthesize_and_upload_prompt_audio(
         slides = [{
             "slide_idx": 1,
             "dialogues": [f"Statutory explanation for Chapter {chapter_no} Question {q_num} under {subject}."],
+            "cues": [{
+                "part": 1,
+                "shape": "man",
+                "label": "Teacher",
+                "file_slug": "slide1_01_man",
+                "text": f"Statutory explanation for Chapter {chapter_no} Question {q_num} under {subject}."
+            }],
             "combined": f"Statutory explanation for Chapter {chapter_no} Question {q_num} under {subject}."
         }]
+
+    # Ensure Google Drive Question Folder exists: Voice > [Subject] > Ch[Ch]_Q[Q]
+    parent_folder_id = VOICE_IDT_FOLDER_ID if subject.upper() == 'IDT' else VOICE_DT_FOLDER_ID
+    q_folder_name = f"Ch{chapter_no}_Q{q_num}" if chapter_no > 1 else f"Q{q_num}"
+    q_folder_id = get_or_create_drive_subfolder(parent_folder_id, q_folder_name)
+    print(f"  [GOOGLE DRIVE FOLDER] Using {subject.upper()} folder: {q_folder_name} (ID: {q_folder_id})")
 
     slide_audio_segments = []
     item_pause = AudioSegment.silent(duration=280)   # 280ms pause between list items / actors
@@ -291,31 +368,67 @@ def synthesize_and_upload_prompt_audio(
 
     for s_info in slides:
         s_idx = s_info['slide_idx']
-        dialogues = s_info['dialogues']
+        cues = s_info.get('cues', [])
+        if not cues:
+            cues = [
+                {"part": d_i + 1, "shape": "item", "label": f"Item {d_i + 1}", "file_slug": f"slide{s_idx}_{d_i+1:02d}_item{d_i+1}", "text": dt}
+                for d_i, dt in enumerate(s_info['dialogues'])
+            ]
+            s_info['cues'] = cues
 
         current_slide_segs = []
-        for d_idx, d_text in enumerate(dialogues):
-            clip_path = os.path.join(output_dir, f"slide_{s_idx}_part_{d_idx+1}.mp3")
-            txt_path = os.path.join(output_dir, f"slide_{s_idx}_part_{d_idx+1}.txt")
+        for cue in cues:
+            d_idx = cue['part'] - 1
+            d_text = cue['text']
+            file_slug = cue['file_slug']
+            clip_path = os.path.join(output_dir, f"{file_slug}.mp3")
+            legacy_clip_path = os.path.join(output_dir, f"slide_{s_idx}_part_{d_idx+1}.mp3")
+            txt_path = os.path.join(output_dir, f"{file_slug}.txt")
+
+            # Check if audio can be reused
             text_matches = False
-            if os.path.exists(clip_path) and os.path.getsize(clip_path) > 1000 and os.path.exists(txt_path):
-                try:
-                    with open(txt_path, 'r', encoding='utf-8') as f:
-                        text_matches = (f.read().strip() == d_text.strip())
-                except Exception:
-                    text_matches = False
+            active_clip_path = clip_path if os.path.exists(clip_path) else legacy_clip_path
+            if os.path.exists(active_clip_path) and os.path.getsize(active_clip_path) > 1000:
+                if os.path.exists(txt_path):
+                    try:
+                        with open(txt_path, 'r', encoding='utf-8') as f:
+                            text_matches = (f.read().strip() == d_text.strip())
+                    except Exception:
+                        text_matches = False
+                else:
+                    text_matches = True
 
             if text_matches:
-                print(f"    [TTS Slide {s_idx} Part {d_idx+1}/{len(dialogues)}] Reusing existing audio clip: {os.path.basename(clip_path)}")
+                print(f"    [TTS Slide {s_idx} Part {d_idx+1}/{len(cues)}] Reusing existing audio clip: {os.path.basename(active_clip_path)}")
+                if not os.path.exists(clip_path) and os.path.exists(legacy_clip_path):
+                    import shutil
+                    shutil.copy2(legacy_clip_path, clip_path)
             else:
-                print(f"    [TTS Slide {s_idx} Part {d_idx+1}/{len(dialogues)}] Synthesizing Aoede voice ({len(d_text.split())} words)...")
+                print(f"    [TTS Slide {s_idx} Part {d_idx+1}/{len(cues)}] Synthesizing Aoede voice ({len(d_text.split())} words)...")
                 synthesize_point_audio(d_text, clip_path)
                 try:
                     with open(txt_path, 'w', encoding='utf-8') as f:
                         f.write(d_text.strip())
                 except Exception:
                     pass
+
+            # Upload discrete file to Google Drive folder
             if os.path.exists(clip_path):
+                clip_filename = f"{file_slug}.mp3"
+                try:
+                    clip_drive_id = upload_audio_to_drive(clip_path, q_folder_id, clip_filename)
+                    cue['drive_file_id'] = clip_drive_id
+                    cue['stream_url'] = f"https://drive.google.com/uc?export=download&id={clip_drive_id}"
+                    cue['file_name'] = clip_filename
+                    cue['audio_file'] = f"{subject.lower()}/ch{chapter_no}/q{q_num}/{clip_filename}"
+                    print(f"    ✓ Uploaded discrete voice to Drive: {clip_filename} -> {clip_drive_id}")
+                except Exception as ex:
+                    print(f"    [WARN] Discrete upload failed for {clip_filename}: {ex}")
+                    cue['drive_file_id'] = f"DRIVE_{file_slug.upper()}"
+                    cue['stream_url'] = ""
+                    cue['file_name'] = clip_filename
+                    cue['audio_file'] = f"{subject.lower()}/ch{chapter_no}/q{q_num}/{clip_filename}"
+
                 seg = AudioSegment.from_mp3(clip_path)
                 current_slide_segs.append(seg)
                 current_slide_segs.append(item_pause)
@@ -347,23 +460,20 @@ def synthesize_and_upload_prompt_audio(
         slide_pause_ms = 500
         for s_info in slides:
             s_idx = s_info['slide_idx']
-            diags = s_info['dialogues']
+            cues = s_info.get('cues', [])
             s_start_ms = c_time_ms
-            cues = []
-            for d_idx, d_text in enumerate(diags):
-                c_path = os.path.join(output_dir, f"slide_{s_idx}_part_{d_idx+1}.mp3")
+            for cue in cues:
+                clip_filename = cue.get('file_name', f"{cue['file_slug']}.mp3")
+                c_path = os.path.join(output_dir, clip_filename)
                 c_dur = len(AudioSegment.from_mp3(c_path)) if os.path.exists(c_path) else 3000
                 cue_rel_start = c_time_ms - s_start_ms
-                cues.append({
-                    "part": d_idx + 1,
-                    "duration_ms": c_dur,
-                    "slide_rel_start_ms": cue_rel_start,
-                    "slide_rel_end_ms": cue_rel_start + c_dur,
-                    "global_start_ms": c_time_ms,
-                    "global_end_ms": c_time_ms + c_dur,
-                    "text": d_text
-                })
+                cue['duration_ms'] = c_dur
+                cue['slide_rel_start_ms'] = cue_rel_start
+                cue['slide_rel_end_ms'] = cue_rel_start + c_dur
+                cue['global_start_ms'] = c_time_ms
+                cue['global_end_ms'] = c_time_ms + c_dur
                 c_time_ms += c_dur + item_pause_ms
+
             s_end_ms = c_time_ms - item_pause_ms
             slides_timings.append({
                 "slide_idx": s_idx,
@@ -377,13 +487,12 @@ def synthesize_and_upload_prompt_audio(
         timings_path = os.path.join(output_dir, "timings.json")
         with open(timings_path, 'w', encoding='utf-8') as tf:
             json.dump(slides_timings, tf, indent=2)
-        print(f"  [TIMINGS MANIFEST] Saved exact cue timestamps -> {timings_path}")
+        print(f"  [TIMINGS MANIFEST] Saved exact cue timestamps & Drive IDs -> {timings_path}")
     except Exception as ex:
         print(f"  [WARN] Failed to save timings manifest: {ex}")
 
-    # Upload to Google Drive
-    parent_folder_id = VOICE_IDT_FOLDER_ID if subject.upper() == 'IDT' else VOICE_DT_FOLDER_ID
+    # Upload master presentation audio to Google Drive folder
     file_name = f"{subject.upper()}_Ch{chapter_no}_Q{q_num}_Presentation.mp3"
-    drive_file_id = upload_audio_to_drive(master_mp3_path, parent_folder_id, file_name)
-    print(f"  [GOOGLE DRIVE UPLOADED] File ID: {drive_file_id}")
+    drive_file_id = upload_audio_to_drive(master_mp3_path, q_folder_id, file_name)
+    print(f"  [GOOGLE DRIVE MASTER UPLOADED] File ID: {drive_file_id}")
     return drive_file_id
