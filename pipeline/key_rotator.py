@@ -83,7 +83,8 @@ class KeyRotator:
                 last_error = e
                 if is_quota_error(e):
                     quota_failures += 1
-                    print(f"  [KEY ROTATION] Key {attempt + 1}/{self.total_keys} hit quota limit (429/ResourceExhausted). Rotating to next key...")
+                    print(f"  [KEY ROTATION] Key {attempt + 1}/{self.total_keys} hit quota limit (429/ResourceExhausted). Waiting 3s and rotating to next key...")
+                    time.sleep(3)
                 elif is_transient_error(e):
                     if not retry_transient:
                         raise

@@ -177,10 +177,9 @@ def synthesize_point_audio(text: str, out_mp3_path: str):
     """
     text = normalize_script_for_tts(text)
     tts_models = [
-        'gemini-3.1-flash-tts-preview',
-        'gemini-3.8-flash-tts',
-        'gemini-3.8-flash-lite-tts',
-        'gemini-2.5-flash-preview-tts'
+        'gemini-2.5-flash-preview-tts',
+        'gemini-2.5-pro-preview-tts',
+        'gemini-3.1-flash-tts-preview'
     ]
 
     def _gemini_tts_call(client):
