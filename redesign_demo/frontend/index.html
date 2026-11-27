@@ -7307,6 +7307,13 @@ function makePlayer(p, q){
        const cue = sTime.cues[cueIdx++];
        item.startMs = cue.slide_rel_start_ms;
        item.endMs = cue.slide_rel_end_ms;
+       item.drive_file_id = cue.drive_file_id;
+       item.stream_url = cue.stream_url;
+       item.file_name = cue.file_name;
+       item.audio_file = cue.audio_file;
+       item.shape = cue.shape;
+       item.label = cue.label;
+       item.text = cue.text;
       }
      });
      if (actor.items.length > 0) {
@@ -7319,6 +7326,13 @@ function makePlayer(p, q){
       const cue = sTime.cues[cueIdx++];
       actor.startMs = cue.slide_rel_start_ms;
       actor.endMs = cue.slide_rel_end_ms;
+      actor.drive_file_id = cue.drive_file_id;
+      actor.stream_url = cue.stream_url;
+      actor.file_name = cue.file_name;
+      actor.audio_file = cue.audio_file;
+      actor.shape = cue.shape;
+      actor.label = cue.label;
+      actor.text = cue.text;
      }
     }
    });
@@ -7456,7 +7470,16 @@ function makePlayer(p, q){
     const curSlide = window.PRESENTATION_PLAYER.getCurrentSlide();
     const vtdLabel = $("#vtd-label");
     if(vtdLabel && curSlide){
-     vtdLabel.textContent = `Slide ${targetSlideIdx + 1} of ${numScenes}: ${curSlide.tab_title || 'Kinetic Presentation'}`;
+     let activeCueLabel = "";
+     if (window.__kineticCueTimings && window.__kineticCueTimings[targetSlideIdx]) {
+      const curMs = (cur - slideStart) * 1000;
+      const sCues = window.__kineticCueTimings[targetSlideIdx].cues || [];
+      const foundCue = sCues.find(c => curMs >= c.slide_rel_start_ms && curMs <= c.slide_rel_end_ms);
+      if (foundCue) {
+       activeCueLabel = ` · 🎙️ ${foundCue.label || foundCue.shape || 'Voice'}`;
+      }
+     }
+     vtdLabel.textContent = `Slide ${targetSlideIdx + 1} of ${numScenes}: ${curSlide.tab_title || 'Kinetic Presentation'}${activeCueLabel}`;
     }
    }
   }
